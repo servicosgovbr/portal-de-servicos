@@ -5,6 +5,9 @@ apply plugin: 'idea'
 ext.sha = 'git rev-parse --short HEAD'.execute().in.text.trim()
 version = '1.0.' + sha + '-SNAPSHOT'
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
 buildscript {
     repositories {
         mavenLocal()
@@ -30,8 +33,10 @@ dependencies {
     compile 'org.projectlombok:lombok:1.14.4'
     compile 'org.slf4j:slf4j-api:1.7.7'
 
-    compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-starter-data-elasticsearch")
 
     compile 'org.jolokia:jolokia-osgi:1.2.2'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
