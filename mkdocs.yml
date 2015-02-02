@@ -2,6 +2,7 @@ site_name: Guia de Serviços
 pages:
 - [index.md, Principal]
 - [desenvolvimento.md, Desenvolvimento]
+- [contato.md, Contato]
 - [links.md, Referências]
 theme: readthedocs
 
