@@ -1,7 +1,7 @@
 Guia de Serviços
 ====
 
-Esta é o repositório oficial do Guia de Serviços.
+Este é o repositório oficial do Guia de Serviços.
 
 Documentação
 ----
