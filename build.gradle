@@ -79,7 +79,3 @@ idea {
 jar {
     baseName = 'guia-de-servicos-frontend'
 }
-
-task wrapper(type: Wrapper) {
-    gradleVersion = "1.12"
-}
