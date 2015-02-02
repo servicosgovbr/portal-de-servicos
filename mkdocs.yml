@@ -1,0 +1,7 @@
+site_name: Guia de Serviços
+pages:
+- [index.md, Principal]
+- [desenvolvimento.md, Desenvolvimento]
+- [links.md, Referências]
+theme: readthedocs
+
