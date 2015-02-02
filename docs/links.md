@@ -1,7 +1,7 @@
 Referências
 ====
 
-* [Github](https://github.com/thoughtworks/guia-de-servicos)
-* [Documentação](http://guia-de-servicos-frontend.readthedocs.org)
-* [Tablero](https://tablero-gds.herokuapp.com/)
-* [Snap (integração contínua)](https://snap-ci.com/thoughtworks/guia-de-servicos-frontend)
+* [Github](https://github.com/thoughtworks/guia-de-servicos): repositório e tarefas
+* [ReadTheDocs](http://guia-de-servicos-frontend.readthedocs.org): documentação
+* [Tablero](https://tablero-gds.herokuapp.com/): tarefas e atribuições
+* [Snap](https://snap-ci.com/thoughtworks/guia-de-servicos-frontend): integração contínua
