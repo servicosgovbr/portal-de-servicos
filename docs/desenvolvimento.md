@@ -115,3 +115,4 @@ Após alguns segundos, o servidor estará disponível em [localhost:8080](http:/
 [MKDOCS]:http://www.mkdocs.org
 [MARKDOWN]:http://daringfireball.net/projects/markdown/
 [RTFD]:http://guia-de-servicos-frontend.readthedocs.org
+[MIT]:http://opensource.org/licenses/MIT
