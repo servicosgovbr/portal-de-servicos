@@ -1,0 +1,86 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+apply plugin: 'idea'
+
+ext.sha = 'git rev-parse --short HEAD'.execute().in.text.trim()
+version = '1.0.' + sha + '-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.0.BUILD-SNAPSHOT'
+        classpath 'org.springframework:springloaded:1.2.1.BUILD-SNAPSHOT'
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "http://repo.spring.io/snapshot" }
+    maven { url "http://repo.spring.io/milestone" }
+    maven { url "https://oss.sonatype.org/content/repositories/public" }
+}
+
+dependencies {
+    compile 'org.projectlombok:lombok:1.14.4'
+    compile 'org.slf4j:slf4j-api:1.7.7'
+
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.springframework.boot:spring-boot-starter-integration'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+
+    compile 'org.jolokia:jolokia-osgi:1.2.2'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-core:1.9.5'
+}
+
+test {
+    testLogging {
+        showStandardStreams = false
+        exceptionFormat "full"
+    }
+}
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+
+    project {
+        ipr.withXml { xmlFile ->
+            // enable 'Annotation Processors'
+            xmlFile.asNode().component.find {
+                it.@name == 'CompilerConfiguration'
+            }['annotationProcessing'][0].replaceNode {
+                annotationProcessing {
+                    profile(default: true, name: 'Default', useClasspath: 'true', enabled: true)
+                }
+            }
+
+            // setup Git root
+            xmlFile.asNode().component.find { it.@name == 'VcsDirectoryMappings' }.replaceNode {
+                component(name: 'VcsDirectoryMappings') {
+                    mapping(directory: "", vcs: "")
+                    mapping(directory: "\$PROJECT_DIR\$", vcs: 'Git')
+                }
+            }
+
+        }
+    }
+}
+
+jar {
+    baseName = 'guiadeservicos'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "1.12"
+}
