@@ -1,4 +1,5 @@
-h1. Como desenvolver
+Como desenvolver
+====
 
 Tentamos facilitar o desenvolvimento de novas funcionalidades por
 membros da comunidade, e todas as contribuições são bem-vindas.
