@@ -31,6 +31,28 @@ A seguir, gere o arquivo de projeto do [IntelliJ IDEA][IDEA14CE]:
 Abra o arquivo `guia-de-servicos-frontend.ipr` no IntelliJ IDEA e você
 está pronto para desenvolver.
 
+
+Dados criptografados
+----
+
+Todo o código-fonte do projeto é aberto e segue a [licença MIT][MIT], mas algumas informações pertinentes a ambientes de
+execução em homologação e produção são exclusivos a certas pessoas. Caso você seja uma delas, e precise ver o conteúdo
+destes arquivos (residentes no diretório `secrets`), é necessário que sua chave GPG esteja adicionada no banco `git-crypt`
+do repositório.
+
+Peça a um dos mantenedores do projeto para adicionar sua chave, e quando isto for feito, basta executar:
+
+```
+git crypt unlock
+```
+
+O `git-crypt` pedirá para destravar sua chave GPG e vai imediatamente decriptar todos os arquivos secretos de forma
+transparente. A partir daí, a utilização do repositório pode continuar normalmente.
+
+*IMPORTANTE:* Entre em contato com os mantenedores imediatamente caso haja uma suspeita de que sua chave tenha sido 
+comprometida.
+
+
 Construção e execução de testes
 ----
 
