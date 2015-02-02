@@ -1,13 +1,21 @@
 Desenvolvimento
 ====
 
+Introdução
+----
+
+Para o desenvolvimento da aplicação, optamos pela plataforma Java, dada a sua ubiquidade e facilidade de manutenção,
+ferramental existente e bibliotecas maduras. Além disso, Java é amplamente utilizada em aplicações existentes na atual
+infra-estrutura do Governo Brasileiro, o que faz com que seu suporte e desenvolvimento continuado sejam garantidos.
+
+Pretendemos utilizar e acompahar as ferramentas e bibliotecas mais adequadas às necessidades do desenvolvimento,
+testando com as versões mais recentes das mesmas sempre que possível.
+
 Ambiente local
 ----
 
-Tentamos facilitar o desenvolvimento de novas funcionalidades por
-membros da comunidade, e todas as contribuições são bem-vindas.
-Para começar, você vai precisar de um ambiente de desenvolvimento
-Java atualizado, com:
+Tentamos facilitar o desenvolvimento de novas funcionalidades por membros da comunidade, e todas as contribuições são
+bem-vindas. Para começar, você vai precisar de um ambiente de desenvolvimento Java atualizado, com:
 
 * [git][GIT]
 * [git-crypt][GITCRYPT]
@@ -28,8 +36,7 @@ A seguir, gere o arquivo de projeto do [IntelliJ IDEA][IDEA14CE]:
 ./gradlew clean idea
 ```
 
-Abra o arquivo `guia-de-servicos-frontend.ipr` no IntelliJ IDEA e você
-está pronto para desenvolver.
+Abra o arquivo `guia-de-servicos-frontend.ipr` no IntelliJ IDEA e você está pronto para desenvolver.
 
 
 Dados criptografados
@@ -90,7 +97,7 @@ A pré-visualização deve estar disponível no endereço [http://localhost:8000
 Execução da aplicação
 ----
 
-Para rodar a aplicação localmente, utilizamos um servidor web [Tomcat][TOMCAT], embutido no [Spring-Boot][SPRINGBOOT]:
+Para rodar a aplicação localmente, utilizamos um servidor web [Tomcat][TOMCAT], embutido pelo [Spring-Boot][SPRINGBOOT]:
 
 ```
 ./gradlew run
