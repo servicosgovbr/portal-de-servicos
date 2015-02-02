@@ -32,7 +32,6 @@ dependencies {
 
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-security'
-    compile 'org.springframework.boot:spring-boot-starter-integration'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
 
     compile 'org.jolokia:jolokia-osgi:1.2.2'
@@ -78,7 +77,7 @@ idea {
 }
 
 jar {
-    baseName = 'guiadeservicos'
+    baseName = 'guia-de-servicos-frontend'
 }
 
 task wrapper(type: Wrapper) {
