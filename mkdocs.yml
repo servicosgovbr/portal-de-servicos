@@ -7,4 +7,4 @@ pages:
 - [autores.md, Autores]
 - [license.md, Licença]
 theme: readthedocs
-
+repo_url: https://github.com/thoughtworks/guia-de-servicos-frontend
