@@ -3,8 +3,31 @@
 <head>
     <title>Guia de Serviços</title>
     <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/barra-brasil.css"/>
 </head>
+
 <body>
-<h1>Olá mundo!</h1>
+<div th:replace="fragments/barra-brasil :: top"></div>
+<div th:replace="fragments/header :: header"></div>
+
+<div id="wrapper">
+    <div id="main" role="main">
+        <div id="plone-content">
+            <h1>Olá, mundo!</h1>
+        </div>
+
+        <div class="clear"></div>
+        <div id="voltar-topo">
+            <a href="#wrapper">Voltar para o topo</a>
+        </div>
+
+    </div>
+</div>
+
+<div th:replace="fragments/barra-brasil :: script"></div>
+<div th:replace="fragments/barra-brasil :: footer"></div>
 </body>
+
 </html>
