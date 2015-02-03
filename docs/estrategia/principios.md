@@ -1,4 +1,4 @@
-Princípios orientadores do produto
+Princípios Orientadores do Produto
 ----
 
 1. O cidadão é o principal beneficiado. O benefício maior do Guia de Serviços
@@ -15,5 +15,7 @@ que o cidadão precisa e usa.
 
 4. Os serviços estão em constante evolução: Diversos serviços estarão em diferentes graus de maturidade. Ou seja, não é preciso que um serviço esteja "pronto" para estar no Guia de Serviços. Ele irá agregar o valor possível dentro de seu nível de maturidade.
 
-5. Os serviços devem ser tangíveis: a experiência do serviço deve ser presente, com pontos de contato claros, para ser 
+5. Adoção a partir de exemplos. Em vez de uma abordagem impositiva, a adoção dos novos padrões e modelo de maturidade de serviços por parte dos órgãos públicos deve ocorrer através através de exemplos de boas práticas e resultados positivos.
+ 
+6. Os serviços devem ser tangíveis: a experiência do serviço deve ser presente, com pontos de contato claros, para ser 
 percebida e influenciadora.
