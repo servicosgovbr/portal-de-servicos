@@ -3,25 +3,29 @@ os usuários possam encontrar serviços do Governo de forma rápida e fácil.
 
 Estudamos algumas ferramentas existentes, e decidimos basear nossa implementação no [ElasticSearch][ES].
 
+Características
+----
+
+O [ElasticSearch][ES] é um mecanismo de indexação e busca de código aberto, que utiliza o [Apache Lucene][LUCENE] 
+como meio de armazenamento, e incorpora diversas funcionalidades adicionais, necesárias para volumes de dados maiores, 
+como replicação e particionamento dos índices em vários nodos em _cluster_.
+
+Seu acesso é por meio de APIs [REST][REST], ou programaticamente, em Java.
+
 Prós
 ----
 
-* Usa Apache Lucene por trás para a parte de armazenamento
-* Utiliza nodes, shards, para redundância, replicação, para escalar
-* É um DB sem esquema de dados, não é necessário definir os tipos de documentos em configurações, ou metadados
-* Por não ter esquema de dados, os documentos e os tipos de dados dos campos são inferidos, e se algum documento for adicionado posteriormente com campos novos, o Elasticsearch se ajusta
+* É um DB schemaless, não é necessário definir os tipos de documentos em configurações, ou metadados
+* Por ser schemaless, os documentos e os tipos de dados dos campos são inferidos, e se algum documento for adicionado posteriormente com campos novos, o ES se ajusta
 * Ao mesmo tempo oferece suporte, mediante configuração, para forçar uso de tipos definidos
 * Vários documentos podem ir em um único índice
 * Suporta subdocumentos/subtipos
-* API REST para se comunicar
 * Queries podem ser feitas no corpo do request em formato JSON, para queries mais complexas
 * Suporta versionamento de documentos, isso também evita document locking ao fazer queries/inserções
 * É possível utilizar parametrização para fazer roteamento de requests manualmente, assim é possível, mesmo sendo de mesmo tipo de documentos, dados de certas entidades estarem em nodes/shards específicas, ou seja divisão pode ser feita por regras de domínio, não ficando preso ao esquema de dados
 * Suporta "percolation", que, ao invés de armazenar documentos e pegá-los de volta com queries, é possível armazenar queries, e ver as queries que dão um match dado um documento. É uma operação reversa para descobrir queries para um documento. É muito utilizado para alertas e monitoramento.
 * Várias configurações podem ser alteradas em tempo de execução, inclusive algumas para adicionar novos nodes
 * O projeto do Elasticsearch está utilizando também os testes [Jepsen][JEPSEN], que são uma bateria de testes para bases distribuidas, desenvolvidos pela comunidade Opensource bem completa
-* Opensource
-* É possível gerenciar os nodes através da API REST
 
 Contras
 ----
