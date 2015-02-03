@@ -16,7 +16,7 @@ Fazendo
 Pensando
 ----
 
-* Quais as exigencias específicas de cada país?
+* Quais as exigências específicas de cada país?
 * O que precisa preparar
 * Qual o custo
 * Falta clareza dos passos, etapas
