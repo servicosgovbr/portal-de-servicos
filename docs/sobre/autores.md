@@ -1,6 +1,3 @@
-Autores
-====
-
 (em ordem alfabética)
 
 Time da [ThoughtWorks](http://thoughtworks.com)

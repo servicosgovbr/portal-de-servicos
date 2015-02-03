@@ -1,6 +1,3 @@
-Referências
-====
-
 * [Github](https://github.com/thoughtworks/guia-de-servicos): repositório e tarefas
 * [ReadTheDocs](http://guia-de-servicos-frontend.readthedocs.org): documentação
 * [Tablero](https://tablero-gds.herokuapp.com/): tarefas e atribuições

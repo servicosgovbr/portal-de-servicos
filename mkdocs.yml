@@ -1,10 +1,15 @@
 site_name: Guia de Serviços
 pages:
 - [index.md, Principal]
-- [desenvolvimento.md, Desenvolvimento]
-- [contato.md, Contato]
-- [links.md, Referências]
-- [autores.md, Autores]
-- [license.md, Licença]
+- ['desenvolvimento/introducao.md', 'Desenvolvimento', 'Introdução']
+- ['desenvolvimento/ambientes.md', 'Desenvolvimento', 'Ambientes']
+- ['desenvolvimento/dados-criptografados.md', 'Desenvolvimento', 'Dados Criptografados']
+- ['desenvolvimento/execucao.md', 'Desenvolvimento', 'Execução']
+- ['desenvolvimento/testes.md', 'Desenvolvimento', 'Testes']
+- ['sobre/links.md', 'Sobre o projeto', 'Referências']
+- ['sobre/autores.md', 'Sobre o projeto', 'Autores']
+- ['sobre/contato.md', 'Sobre o projeto', 'Contato']
+- ['sobre/license.md', 'Sobre o projeto', 'Licença']
+
 theme: readthedocs
 repo_url: https://github.com/thoughtworks/guia-de-servicos-frontend

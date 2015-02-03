@@ -1,5 +1,5 @@
-Contato
-====
+Listas de Discussão
+----
 
 Criamos duas listas de discussão para o desenvolvimento do Guia de Serviços: uma para a discussão geral sobre o projeto
 (com links, dúvidas, debates, etc.) e outra para anúncios (de baixo tráfego, somente para informativos gerais, novas
