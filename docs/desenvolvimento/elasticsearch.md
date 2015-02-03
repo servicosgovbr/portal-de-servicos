@@ -49,3 +49,4 @@ Referências
 [JEPSEN]:https://aphyr.com/posts/317-call-me-maybe-elasticsearch
 [SOLR-ES1]:http://solr-vs-elasticsearch.com/
 [SOLR-ES2]:http://stackoverflow.com/questions/10213009/solr-vs-elasticsearch
+[LUCENE]:http://lucene.apache.org/
