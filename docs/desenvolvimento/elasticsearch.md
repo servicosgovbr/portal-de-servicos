@@ -15,25 +15,27 @@ Seu acesso é por meio de APIs [REST][REST], ou programaticamente, em Java.
 Prós
 ----
 
-* É um DB schemaless, não é necessário definir os tipos de documentos em configurações, ou metadados
-* Por ser schemaless, os documentos e os tipos de dados dos campos são inferidos, e se algum documento for adicionado posteriormente com campos novos, o ES se ajusta
-* Ao mesmo tempo oferece suporte, mediante configuração, para forçar uso de tipos definidos
-* Vários documentos podem ir em um único índice
-* Suporta subdocumentos/subtipos
-* Queries podem ser feitas no corpo do request em formato JSON, para queries mais complexas
-* Suporta versionamento de documentos, isso também evita document locking ao fazer queries/inserções
-* É possível utilizar parametrização para fazer roteamento de requests manualmente, assim é possível, mesmo sendo de mesmo tipo de documentos, dados de certas entidades estarem em nodes/shards específicas, ou seja divisão pode ser feita por regras de domínio, não ficando preso ao esquema de dados
-* Suporta "percolation", que, ao invés de armazenar documentos e pegá-los de volta com queries, é possível armazenar queries, e ver as queries que dão um match dado um documento. É uma operação reversa para descobrir queries para um documento. É muito utilizado para alertas e monitoramento.
-* Várias configurações podem ser alteradas em tempo de execução, inclusive algumas para adicionar novos nodes
-* O projeto do Elasticsearch está utilizando também os testes [Jepsen][JEPSEN], que são uma bateria de testes para bases distribuidas, desenvolvidos pela comunidade Opensource bem completa
+* Também age como um banco de dados sem esquema (_schema-less_), onde não é necessário definir os tipos de documentos em 
+configurações ou metadados
+* Documentos e tipos de dados dos campos são inferidos (e ajustados posteriormente caso hajam alterações)
+* Vários tipos diferentes de documentos podem ser indexados em um único índice
+* Sub-documentos e sub-tipos são suportados, para pesquisas mais específicas
+* Consultas podem ser feitas de forma flexível (tanto na _query string_ quanto no corpo da requisição, em formato JSON)
+* Suporta versionamento de documentos, o que evita _document locking_ ao fazer consultas e inserções em paralelo
+* É possível utilizar parametrização para fazer roteamento de requisições manualmente, garantindo que certos dados 
+estarão em nodos ou partições específicas, para maior performance
+* Suporta operações de _percolation_, onde pode-se consultar as próprias consultas que retornam um determinado documento, 
+o que facilita o desenvolvimento de ferramentas de alerta e monitoramento.
+* A maioria das configurações pode ser alterada em tempo de execução, simplificando a operação do índice
+* Estabilidade em situações de carga anormal garantidas por testes automatizados do [Jepsen][JEPSEN]
 
 Contras
 ----
 
-* Ao mudar algumas configurações, principalmente relativos a mudanças de infraestrutura (Shards/Replicação), é necessário resetar o Elasticsearch
-* Apesar de não ter esquema de dados, algumas mudanças no formato do documento, ou se estiver com a configuração para forçar o esquema de dados, é necessário reindexação dos documentos
-* Não é muito seguro por si só, o ElasticSearch deve estar em uma rede interna, ou por trás de algum proxy para uso
-* Para melhorar performance é necessário algumas boas configurações de infraestrutura (nodes/shards/índices), apesar de já ter uma performance muito boa por meio de um sem esquema de dados node
+* Ainda é necessário reiniciar o servidor após a mudança de algumas configurações de _cluster_
+* Algumas mudanças no esquema de documentos requerem a reindexação dos mesmos
+* Não oferece mecanismos de controle de acesso e permissões próprios; estes devem ser providos por outras partes da arquitetura
+* Configurações de infraestrutura necessárias para obter redundância e performance ideal
 
 Referências
 ---
@@ -42,7 +44,7 @@ Referências
 * [Comparativo Solr vs ElasticSearch][SOLR-ES1]
 * [StackOverflow, comparação Solr vs Elasticsearch][SOLR-ES1]
 
-
+[REST]:http://pt.wikipedia.org/wiki/REST
 [ES]:http://www.elasticsearch.org/
 [JEPSEN]:https://aphyr.com/posts/317-call-me-maybe-elasticsearch
 [SOLR-ES1]:http://solr-vs-elasticsearch.com/
