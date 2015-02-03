@@ -3,7 +3,7 @@ os usuários possam encontrar serviços do Governo de forma rápida e fácil.
 
 Estudamos algumas ferramentas existentes, e decidimos basear nossa implementação no [ElasticSearch][ES].
 
-Prós:
+Prós
 ----
 
 * Usa Apache Lucene por trás para a parte de armazenamento
@@ -23,7 +23,7 @@ Prós:
 * Opensource
 * É possível gerenciar os nodes através da API REST
 
-Cons
+Contras
 ----
 
 * Ao mudar algumas configurações, principalmente relativos a mudanças de infraestrutura (Shards/Replicação), é necessário resetar o Elasticsearch
@@ -32,7 +32,7 @@ Cons
 * Para melhorar performance é necessário algumas boas configurações de infraestrutura (nodes/shards/índices), apesar de já ter uma performance muito boa por meio de um sem esquema de dados node
 
 Referências
-----
+---
 
 * [Testes Jepsen][JEPSEN]
 * [Comparativo Solr vs ElasticSearch][SOLR-ES1]
