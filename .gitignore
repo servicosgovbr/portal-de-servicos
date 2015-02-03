@@ -5,3 +5,4 @@ guia-de-servicos-frontend.ipr
 guia-de-servicos-frontend.iws
 data
 .vagrant
+*.swp
