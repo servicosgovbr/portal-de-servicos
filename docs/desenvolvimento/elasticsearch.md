@@ -7,7 +7,7 @@ Características
 ----
 
 O [ElasticSearch][ES] é um mecanismo de indexação e busca de código aberto, que utiliza o [Apache Lucene][LUCENE] 
-como meio de armazenamento, e incorpora diversas funcionalidades adicionais, necesárias para volumes de dados maiores, 
+como meio de armazenamento, e incorpora diversas funcionalidades adicionais, necessárias para volumes de dados maiores, 
 como replicação e particionamento dos índices em vários nodos em _cluster_.
 
 Seu acesso é por meio de APIs [REST][REST], ou programaticamente, em Java.
