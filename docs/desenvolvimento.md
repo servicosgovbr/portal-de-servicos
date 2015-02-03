@@ -8,7 +8,7 @@ Para o desenvolvimento da aplicação, optamos pela plataforma Java, dada a sua 
 ferramental existente e bibliotecas maduras. Além disso, Java é amplamente utilizada em aplicações existentes na atual
 infra-estrutura do Governo Brasileiro, o que faz com que seu suporte e desenvolvimento continuado sejam garantidos.
 
-Pretendemos utilizar e acompahar as ferramentas e bibliotecas mais adequadas às necessidades do desenvolvimento,
+Pretendemos utilizar e acompanhar as ferramentas e bibliotecas mais adequadas às necessidades do desenvolvimento,
 testando com as versões mais recentes das mesmas sempre que possível.
 
 Ambiente local
