@@ -1,4 +1,9 @@
-Prós
+Um mecanismo de busca eficiente e fácil de customizar e manter é uma parte importante do nosso objetivo de fazer com que
+os usuários possam encontrar serviços do Governo de forma rápida e fácil.
+
+Estudamos algumas ferramentas existentes, e decidimos basear nossa implementação no [ElasticSearch][ES].
+
+Prós:
 ----
 
 * Usa Apache Lucene por trás para a parte de armazenamento
@@ -33,6 +38,8 @@ Referências
 * [Comparativo Solr vs ElasticSearch][SOLR-ES1]
 * [StackOverflow, comparação Solr vs Elasticsearch][SOLR-ES1]
 
+
+[ES]:http://www.elasticsearch.org/
 [JEPSEN]:https://aphyr.com/posts/317-call-me-maybe-elasticsearch
 [SOLR-ES1]:http://solr-vs-elasticsearch.com/
 [SOLR-ES2]:http://stackoverflow.com/questions/10213009/solr-vs-elasticsearch
