@@ -1,6 +1,9 @@
 site_name: Guia de Serviços
 pages:
 - [index.md, Principal]
+- ['estrategia/index.md', 'Estratégia', 'Introdução']
+- ['estrategia/personas.md', 'Estratégia', 'Personas']
+- ['estrategia/jornadas.md', 'Estratégia', 'Jornadas']
 - ['desenvolvimento/introducao.md', 'Desenvolvimento', 'Introdução']
 - ['desenvolvimento/ambientes.md', 'Desenvolvimento', 'Ambientes']
 - ['desenvolvimento/dados-criptografados.md', 'Desenvolvimento', 'Dados Criptografados']

@@ -1,10 +1,8 @@
-Jornadas
+Aposentando
 ====
 
-Aposentando
+Pré-jornada
 ----
-
-### Pré-jornada
 
 * Campanha da previdência?
 * Notícias sobre alteração nas regras.
@@ -13,13 +11,15 @@ Aposentando
 * Não consegui entender o processo sozinho, ou qual processo seguir
 * Eu não sabia que fiquei sem contribuir
 
-### Expectativas
+Expectativas
+----
 
 * Vou ganhar pouco
 * Isso vai dar trabalho
 * Vou precisar de muitos comprovantes
 
-### Jornada
+Jornada
+----
 
 * Quanto eu já contribui de fato?
 * Quanto eu vou receber?
@@ -32,7 +32,8 @@ Aposentando
 * Como agendar/começar?
 * Como acompanhar?
 
-### Pós-jornada
+Pós-jornada
+----
 
 * Informações sobre mudanças em regras
 * Uma vez ao ano, confirmar cadastro
@@ -41,21 +42,24 @@ Aposentando
 * Estou satisfeito, apesar do trabalho
 
 Estudante
-----
+====
 
-### Pré-jornada
+Pré-jornada
+----
 
 * Propaganda na TV sobre FIES
 * Perguntar aos amigos no Face
 * Ouvi dizer que tem financiamento do governo para estudante em faculdades particulares
 * Em outras relações com o governo não teve experiências positivas
 
-### Expectativa
+Expectativa
+----
 
 * Encontrar e entender rapidamente quais as etapas para conseguir o financiamento
 * As condições acessíveis e que seja fácil pagar o financiamento
 
-### Jornada
+Jornada
+----
 
 * Pesquisa no Google até encontrar informações 
 * Realiza primeiro acesso no SISFIES do MEC
@@ -72,22 +76,25 @@ Estudante
 * Após 1.5 ano, começa a pagar
 * Quita o financiamento
 
-### Pós-jornada
+Pós-jornada
+----
 
 * Aditamento e renovação do contrato (semestral)
 * Verificar condições de manutenção
 * Reclamar das dificuldades nas redes sociais
 * Trocar experiências com os colegas
 
-### Satisfação
+Satisfação
+----
 
 * Informações necessárias estão espalhadas e várias etapas presenciais são repetitivas
 * Processo do serviço com muitas etapas intercalando presencial e virtual
 
 Exportador
-----
+====
 
-### Pré-jornada
+Pré-jornada
+----
 
 * Não achamos info nas redes sociais
 * Consultoria com o mesmo da SECOM
@@ -95,13 +102,15 @@ Exportador
 * Guia de serviços não tem exportação
 * Sites gov informações dispersas
 
-### Expectativas
+Expectativas
+----
 
 * Saber por onde começo
 * Processo linear
 * Saber quando estará feito/pronto
 
-### Jornada
+Jornada
+----
 
 * Leio orientações ao exportador
 * Elaboro fatura pro-forma
@@ -124,13 +133,15 @@ Exportador
 * Liquido cambio e recebo os reais
 * Envio carta de agradecimento ao importador
 
-### Pós-jornada
+Pós-jornada
+----
 
 Busca de mais info e serviços para ampliar minha exportação (novos produtos e países)
 Compartilhar experiência em mídias sociais
 Reclamar na internet
 Ajudar pessoas que estão começando
 
-### Satisfação
+Satisfação
+----
 
 * Consegui escalar uma montanha

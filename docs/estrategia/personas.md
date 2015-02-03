@@ -1,10 +1,8 @@
-Personas
+Exportador
 ====
 
-Exportador
+Fazendo
 ----
-
-### Fazendo
 
 * Adequar embalagens e questões técnicas
 * Buscando informações sobre mercado e preço
@@ -15,7 +13,8 @@ Exportador
 * Identificando órgãos federais relacionados ao tema
 * Compartilhando experiencias e dificuldades nas redes sociais
 
-### Pensando
+Pensando
+----
 
 * Quais as exigencias específicas de cada país?
 * O que precisa preparar
@@ -31,7 +30,8 @@ Exportador
 * Como faço com o transporte?
 * Informações complexas
 
-### Sentindo
+Sentindo
+----
 
 * Angustiada - muita coisa para fazer
 * Desconfiada - não quer deixar so por conta do serviço de frete
@@ -44,9 +44,10 @@ Exportador
 * Perdida - Falta de informação online
 
 Estudante
-----
+====
 
-### Fazendo
+Fazendo
+----
 
 * Tentando entrar na faculdade mas não tem dinheiro
 * Pesquisa na internet
@@ -54,7 +55,8 @@ Estudante
 * Encontra conteúdo sobre FIES
 * Entra no site do MEC
 
-### Pensando
+Pensando
+----
 
 * Ouvi dizer que o governo ajuda: como?
 * O que fazer?
@@ -66,7 +68,8 @@ Estudante
 * Gostaria de um canal com essas informações
 * Vou encontrar mais sobre isso no google
 
-### Sentindo
+Sentindo
+----
 
 * Ansiedade
 * Dúvida
@@ -77,9 +80,10 @@ Estudante
 
 
 Aposentando
-----
+====
 
-### Fazendo
+Fazendo
+----
 
 * Trabalhando na ativa
 * Sabe usar ferramentas sociais (Facebook, Whatsapp...)
@@ -88,7 +92,8 @@ Aposentando
 * Reforma da casa do sitio
 * Usa internet para se informar sobre tópicos
 
-### Pensando
+Pensando
+----
 
 * Buscar infos na internet
 * Meu tempo de contribuição vale?
@@ -97,7 +102,8 @@ Aposentando
 * Continua buscando info dentro do guia
 * Pode ser difícil achar info e concluir o processo
 
-### Sentindo
+Sentindo
+----
 
 * Sem problemas de saúde
 * Sente que pode continuar a trabalhar
