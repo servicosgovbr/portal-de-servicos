@@ -6,6 +6,7 @@ pages:
 - ['estrategia/jornadas.md', 'Estratégia', 'Jornadas']
 - ['desenvolvimento/introducao.md', 'Desenvolvimento', 'Introdução']
 - ['desenvolvimento/ambientes.md', 'Desenvolvimento', 'Ambientes']
+- ['desenvolvimento/elasticsearch.md', 'Desenvolvimento', 'Ambientes', 'Elasticsearch']
 - ['desenvolvimento/dados-criptografados.md', 'Desenvolvimento', 'Dados Criptografados']
 - ['desenvolvimento/execucao.md', 'Desenvolvimento', 'Execução']
 - ['desenvolvimento/testes.md', 'Desenvolvimento', 'Testes']
