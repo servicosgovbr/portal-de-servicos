@@ -5,6 +5,7 @@ pages:
 - ['estrategia/personas.md', 'Estratégia', 'Personas']
 - ['estrategia/jornadas.md', 'Estratégia', 'Jornadas']
 - ['estrategia/principios.md', 'Estratégia', 'Princípios']
+- ['estrategia/kpis.md', 'Estratégia', 'Métricas']
 - ['desenvolvimento/introducao.md', 'Desenvolvimento', 'Introdução']
 - ['desenvolvimento/ambientes.md', 'Desenvolvimento', 'Ambientes']
 - ['desenvolvimento/elasticsearch.md', 'Desenvolvimento', 'Elasticsearch']
