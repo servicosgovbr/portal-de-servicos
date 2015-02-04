@@ -16,3 +16,4 @@ Colaboradores
 
 * [Gabriel Such](mailto:gabrielsuch@gmail.com)
 * [Rodrigo Alencar](mailto:ralencar@thoughtworks.com)
+* [Thiago Felix](mailto:tfelix@thoughtworks.com)
