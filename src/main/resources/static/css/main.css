@@ -5,8 +5,12 @@
     margin-bottom: 14px
 }
 
+#wrapper * {
+    font-family: "Open Sans";
+}
+
 #wrapper h1 {
     font-size: 34px;
     font-weight: bold;
-    font-family: "Open Sans";
+    margin: 14px 0 14px 0;
 }
