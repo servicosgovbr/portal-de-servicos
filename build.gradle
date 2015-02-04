@@ -81,5 +81,5 @@ idea {
 }
 
 jar {
-    baseName = 'guia-de-servicos-frontend'
+    baseName = 'guia-de-servicos'
 }

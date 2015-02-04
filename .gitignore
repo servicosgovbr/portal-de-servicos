@@ -1,8 +1,8 @@
 .gradle
 build
-guia-de-servicos-frontend.iml
-guia-de-servicos-frontend.ipr
-guia-de-servicos-frontend.iws
+guia-de-servicos.iml
+guia-de-servicos.ipr
+guia-de-servicos.iws
 data
 .vagrant
 *.swp
