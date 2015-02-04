@@ -14,7 +14,7 @@ Para começar, clone o repositório:
 
 ```
 cd ~/projetos # ou o diretório de sua preferência
-git clone "https://github.com/thoughtworks/guia-de-servicos-frontend.git"
+git clone "https://github.com/servicosgovbr/guia-de-servicos.git"
 ```
 
 A seguir, gere o arquivo de projeto do [IntelliJ IDEA][IDEA14CE]:

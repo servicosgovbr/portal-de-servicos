@@ -19,6 +19,6 @@ mkdocs serve
 
 A pré-visualização deve estar disponível no endereço [http://localhost:8000](http://localhost:8000).
 
-[RTFD]:http://guia-de-servicos-frontend.readthedocs.org
+[RTFD]:http://guia-de-servicos.readthedocs.org
 [MKDOCS]:http://www.mkdocs.org
 [MARKDOWN]:http://daringfireball.net/projects/markdown/

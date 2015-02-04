@@ -28,5 +28,5 @@ Caso você seja desenvolvedor, seria ainda melhor se você puder incluir um test
 comportamento esperado não está ocorrendo. Seu objetivo deve ser o de tornar mais fácil para si mesmo - e outros - para 
 replicar o bug e descobrir uma correção.
 
-[GHISSUES]:https://github.com/thoughtworks/guia-de-servicos-frontend/issues
-[GHINEW]:https://github.com/thoughtworks/guia-de-servicos-frontend/issues/new
+[GHISSUES]:https://github.com/servicosgovbr/guia-de-servicos/issues
+[GHINEW]:https://github.com/servicosgovbr/guia-de-servicos/issues/new

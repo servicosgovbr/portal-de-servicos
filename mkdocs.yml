@@ -19,4 +19,4 @@ pages:
 - ['sobre/license.md', 'Sobre o projeto', 'Licença']
 
 theme: readthedocs
-repo_url: https://github.com/thoughtworks/guia-de-servicos-frontend
+repo_url: https://github.com/servicosgovbr/guia-de-servicos
