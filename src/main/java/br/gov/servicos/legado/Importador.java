@@ -11,34 +11,49 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.IOException;
 import java.net.URL;
-import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 @Component
 @ManagedResource(
         objectName = "ServicosGovBr:type=Importador",
         description = "Importa XML do Guia legado para o ElasticSearch"
 )
-public class Importador {
+class Importador {
 
-    private ServicoRepository sr;
+    private static final String XML_LEGADO = "guiadeservicos.xml";
+    private final ServicoRepository servicos;
 
     @Autowired
-    public Importador(ServicoRepository sr) {
-        this.sr = sr;
+    Importador(ServicoRepository servicos) {
+        this.servicos = servicos;
     }
 
     @ManagedOperation
     public Iterable<Servico> importar() throws IOException, JAXBException {
-        Dados dados = (Dados) unmarshaller().unmarshal(new URL(new ClassPathResource("guiadeservicos.xml").getURL().toString()));
-
-        sr.save(
-                dados.getServicos().getServico().stream().map(Servico::new).collect(Collectors.toList())
+        servicos.save(
+                servicosLegados()
+                        .map(Servico::servicoLegadoToServico)
+                        .collect(toList())
         );
 
-        return sr.findAll();
+        return servicos.findAll();
     }
 
-    private Unmarshaller unmarshaller() throws JAXBException {
+    private static Stream<Dados.Servicos.Servico> servicosLegados() throws IOException, JAXBException {
+        return unmarshallDadosLegados()
+                .getServicos()
+                .getServico()
+                .stream();
+    }
+
+    private static Dados unmarshallDadosLegados() throws IOException, JAXBException {
+        URL xmlLegado = new ClassPathResource(XML_LEGADO).getURL();
+        return (Dados) unmarshaller().unmarshal(xmlLegado);
+    }
+
+    private static Unmarshaller unmarshaller() throws JAXBException {
         JAXBContext contexto = JAXBContext.newInstance("br.gov.servicos.legado");
         return contexto.createUnmarshaller();
     }

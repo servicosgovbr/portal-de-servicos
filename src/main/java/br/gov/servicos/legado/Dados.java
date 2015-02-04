@@ -309,7 +309,7 @@ import javax.xml.bind.annotation.XmlType;
     "portaisServico"
 })
 @XmlRootElement(name = "dados")
-public class Dados {
+class Dados {
 
     @XmlElement(required = true)
     protected Dados.Servicos servicos;

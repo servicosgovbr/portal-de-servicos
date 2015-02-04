@@ -7,28 +7,28 @@ import org.springframework.data.elasticsearch.annotations.Document;
 
 @Value
 @Document(indexName = "guia-legado", type = "servico")
-public class Servico {
+class Servico {
+
     @Id
-    String id;
+    private final String id = null;
 
     @Version
-    Long version;
+    private final Long version = null;
 
-    String titulo;
-    String descricao;
+    private final String titulo;
+    private final String descricao;
 
-    private Servico() {
-        this(null, null, null, null);
+    Servico() {
+        this(null, null);
     }
 
-    public Servico(String id, Long version, String titulo, String descricao) {
-        this.id = id;
-        this.version = version;
+    public Servico(String titulo, String descricao) {
         this.titulo = titulo;
         this.descricao = descricao;
     }
 
-    public Servico(Dados.Servicos.Servico legado) {
-        this(null, null, legado.getTitulo(), legado.getDescricao());
+    static Servico servicoLegadoToServico(Dados.Servicos.Servico legado) {
+        return new Servico(legado.titulo, legado.descricao);
     }
+
 }
