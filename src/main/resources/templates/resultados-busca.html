@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Guia de Serviços</title>
     <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="/css/header.css"/>
@@ -16,7 +16,7 @@
 <div id="wrapper">
     <div id="main" role="main">
         <div id="plone-content">
-            <h1>Resultados da busca</h1>
+            <h1>Resultados da busca por "<span th:text="${termo}">termo</span>"</h1>
 
             <ul id="resultados-busca" th:each="resultado : ${resultados}">
                 <li>

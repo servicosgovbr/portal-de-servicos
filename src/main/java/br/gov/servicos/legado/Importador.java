@@ -1,5 +1,7 @@
 package br.gov.servicos.legado;
 
+import br.gov.servicos.servicos.Servico;
+import br.gov.servicos.servicos.ServicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jmx.export.annotation.ManagedOperation;

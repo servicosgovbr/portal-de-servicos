@@ -1,5 +1,6 @@
-package br.gov.servicos.legado;
+package br.gov.servicos.servicos;
 
+import br.gov.servicos.legado.Dados;
 import lombok.Value;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Version;
@@ -7,18 +8,18 @@ import org.springframework.data.elasticsearch.annotations.Document;
 
 @Value
 @Document(indexName = "guia-legado", type = "servico")
-class Servico {
+public class Servico {
 
     @Id
-    private final String id = null;
+    String id = null;
 
     @Version
-    private final Long version = null;
+    Long version = null;
 
-    private final String titulo;
-    private final String descricao;
+    String titulo;
+    String descricao;
 
-    Servico() {
+    public Servico() {
         this(null, null);
     }
 
@@ -27,8 +28,8 @@ class Servico {
         this.descricao = descricao;
     }
 
-    static Servico servicoLegadoToServico(Dados.Servicos.Servico legado) {
-        return new Servico(legado.titulo, legado.descricao);
+    public static Servico servicoLegadoToServico(Dados.Servicos.Servico legado) {
+        return new Servico(legado.getTitulo(), legado.getDescricao());
     }
 
 }
