@@ -207,7 +207,6 @@
 }/*#SPAN_25*/
 
 #H1_26 {
-    color: rgb(255, 220, 25);
     height: 40px;
     letter-spacing: -2.00999999046326px;
     width: 672px;
@@ -220,6 +219,11 @@
     margin: 30px 0px 46px;
     outline: rgb(255, 220, 25) none 0px;
 }/*#H1_26*/
+
+#H1_26 a, #H1_26 a:link, #H1_26 a:visited, #H1_26 a:hover, #H1_26 a:active {
+    text-decoration: none;
+    color: white;
+}
 
 #SPAN_27 {
     bottom: 24px;
