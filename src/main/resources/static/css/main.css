@@ -32,3 +32,13 @@
 #resultados-busca p {
     font-size: 80%;
 }
+
+#comecar {
+    border: 1px solid black;
+    padding: 8px;
+    background: green;
+    color: white;
+    text-decoration: none;
+    margin-top: 14px;
+    display: inline-block;
+}

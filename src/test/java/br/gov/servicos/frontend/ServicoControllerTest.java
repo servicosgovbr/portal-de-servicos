@@ -37,7 +37,8 @@ public class ServicoControllerTest {
                         "posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. " +
                         "Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque " +
                         "laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, " +
-                        "consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean massa.");
+                        "consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean massa.",
+                null);
 
         given(sr.findOne("1")).willReturn(s1);
 

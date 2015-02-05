@@ -16,22 +16,26 @@ public class Servico {
 
     String titulo;
     String descricao;
+    String url;
 
-    public Servico() {
-        this(null, null, null);
+    private Servico() {
+        this(null, null, null, null);
     }
 
-    public Servico(String id, String titulo, String descricao) {
+    public Servico(String id, String titulo, String descricao, String url) {
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
+        this.url = url;
     }
 
     public static Servico servicoLegadoToServico(Dados.Servicos.Servico legado) {
+
         return new Servico(
                 UUID.randomUUID().toString(),
-                legado.getTitulo(), 
-                legado.getDescricao()
+                legado.getTitulo(),
+                legado.getDescricao(),
+                legado.getUrl()
         );
     }
 

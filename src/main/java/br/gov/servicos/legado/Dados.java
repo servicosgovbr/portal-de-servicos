@@ -1695,6 +1695,15 @@ public class Dados {
             protected Object errosAcesso;
             protected int quantidadeAcessosServico;
 
+            public String getUrl() {
+                String url = null;
+                if (this.getCanaisPrestacaoServico() != null
+                        && this.getCanaisPrestacaoServico().getCanalPrestacaoServico() != null) {
+                    url = this.getCanaisPrestacaoServico().getCanalPrestacaoServico().getUrl();
+                }
+                return url;
+            }
+
             /**
              * Gets the value of the titulo property.
              * 

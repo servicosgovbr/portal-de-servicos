@@ -21,6 +21,8 @@
             <p th:text="${servico.descricao}">
                 Descrição do serviço
             </p>
+            
+            <a th:if="${not #strings.isEmpty(servico.url)}" id="comecar" th:href="${servico.url}">Começar</a>
         </div>
 
         <div class="clear"></div>
