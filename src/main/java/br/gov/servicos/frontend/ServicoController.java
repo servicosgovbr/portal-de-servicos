@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.HashMap;
 
@@ -22,8 +23,13 @@ class ServicoController {
     @RequestMapping("/servico/{id}")
     ModelAndView get(@PathVariable("id") String id) {
         HashMap<String, Object> model = new HashMap<>();
-        model.put("servico", sr.findOne(id));
+        model.put("servico", sr.save(sr.findOne(id).withNovoAcesso()));
         return new ModelAndView("servico", model);
+    }
+
+    @RequestMapping("/navegar/{id}")
+    RedirectView navegar(@PathVariable("id") String id) {
+        return new RedirectView(sr.save(sr.findOne(id).withNovaAtivacao()).getUrl());
     }
 
 }

@@ -22,7 +22,9 @@
                 Descrição do serviço
             </p>
             
-            <a th:if="${not #strings.isEmpty(servico.url)}" id="comecar" th:href="${servico.url}">Começar</a>
+            <a th:if="${not #strings.isEmpty(servico.url)}" id="comecar" th:href="@{/navegar/{id}(id=${servico.id})}">
+                Começar
+            </a>
         </div>
 
         <div class="clear"></div>
