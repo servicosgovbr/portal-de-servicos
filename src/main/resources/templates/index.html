@@ -15,14 +15,34 @@
 
 <div id="wrapper">
     <div id="main" role="main">
-        <div id="plone-content">
-            <h1>Olá, mundo!</h1>
+        
+        <div class="bloco">
+            <h3>Serviços mais consultados</h3>
+            <ul>
+                <li th:each="servico : ${acessos}">
+                    <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">
+                        Titulo do serviço
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bloco">
+            <h3>Serviços mais utilizados</h3>
+            <ul>
+                <li th:each="servico : ${ativacoes}">
+                    <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">
+                        Titulo do serviço
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="clear"></div>
         <div id="voltar-topo">
             <a href="#wrapper">Voltar para o topo</a>
         </div>
+
 
     </div>
 </div>

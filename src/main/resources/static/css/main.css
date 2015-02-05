@@ -42,3 +42,20 @@
     margin-top: 14px;
     display: inline-block;
 }
+
+.bloco {
+    vertical-align: top;
+    width: 45%;
+    margin: 14px 14px 14px 14px;
+    display: inline-block;
+}
+
+.bloco h3 {
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.bloco li {
+    margin-bottom: 7px;
+}
+
