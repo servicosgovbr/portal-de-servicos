@@ -18,10 +18,13 @@
         <div id="plone-content">
             <h1>Resultados da busca por "<span th:text="${termo}">termo</span>"</h1>
 
-            <ul id="resultados-busca" th:each="resultado : ${resultados}">
-                <li>
-                    <h3 th:text="${resultado.titulo}">Título</h3>
-
+            <ul id="resultados-busca">
+                <li th:each="resultado : ${resultados}">
+                    <h3>
+                        <a th:href="@{/servico/{id}(id=${resultado.id})}" th:text="${resultado.titulo}">
+                            Título
+                        </a>
+                    </h3>
                     <p th:text="${resultado.descricao}">Descrição</p>
                 </li>
             </ul>
