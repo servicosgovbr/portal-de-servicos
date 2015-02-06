@@ -4,6 +4,7 @@
     margin-top: 14px;
     margin-bottom: 14px;
     overflow: hidden;
+    line-height: 150%;
 }
 
 #wrapper * {
@@ -71,3 +72,8 @@
     margin-bottom: 7px;
 }
 
+.orgao-prestador, .orgao-responsavel {
+    margin: 14px 0 14px 0;
+    font-style: italic;
+}
+    

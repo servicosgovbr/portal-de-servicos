@@ -34,6 +34,16 @@
                 </span>
             </div>
 
+            <div class="orgao-responsavel">
+                <p th:if="${not #strings.isEmpty(servico.responsavel.nome)}" th:text="${servico.responsavel.nome}">
+                    Órgão responsavel
+                </p>
+            
+                <span th:if="${not #strings.isEmpty(servico.responsavel.telefone)}" th:text="${servico.responsavel.telefone}">
+                    (61) 5555-1234
+                </span>
+            </div>
+
             <a th:if="${not #strings.isEmpty(servico.url)}" id="comecar" th:href="@{/navegar/{id}(id=${servico.id})}">
                 Começar
             </a>
