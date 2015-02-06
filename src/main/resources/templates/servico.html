@@ -23,7 +23,17 @@
             <p th:text="${servico.descricao}">
                 Descrição do serviço
             </p>
+
+            <div class="orgao-prestador">
+                <p th:if="${not #strings.isEmpty(servico.prestador.nome)}" th:text="${servico.prestador.nome}">
+                    Órgão prestador
+                </p>
             
+                <span th:if="${not #strings.isEmpty(servico.prestador.telefone)}" th:text="${servico.prestador.telefone}">
+                    (61) 5555-1234
+                </span>
+            </div>
+
             <a th:if="${not #strings.isEmpty(servico.url)}" id="comecar" th:href="@{/navegar/{id}(id=${servico.id})}">
                 Começar
             </a>
@@ -39,6 +49,8 @@
     <div class="aside">
       <div th:replace="fragments/barra-busca :: .caixa"/>
     </div>
+    
+
 
 </div>
 

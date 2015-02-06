@@ -8,6 +8,8 @@
 
 package br.gov.servicos.legado;
 
+import br.gov.servicos.servicos.Orgao;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -1695,6 +1697,15 @@ public class Dados {
             protected Object errosAcesso;
             protected int quantidadeAcessosServico;
 
+            public Orgao getOrgaoPrestador2() {
+                OrgaoPrestador prestador = this.getOrgaoPrestador();
+                String nome = prestador == null ? null : prestador.getTitulo();
+                String telefone = prestador == null ? null : prestador.getTelefone();
+                String endereco = prestador == null ? null : prestador.getEndereco().toString();
+                
+                return new Orgao(nome, telefone);
+            }
+
             public String getUrl() {
                 String url = null;
                 if (this.getCanaisPrestacaoServico() != null
@@ -2078,6 +2089,11 @@ public class Dados {
              */
             public void setQuantidadeAcessosServico(int value) {
                 this.quantidadeAcessosServico = value;
+            }
+
+            public Orgao getOrgaoResponsavel2() {
+                OrgaoResponsavel responsavel = this.getOrgaoResponsavel();
+                return responsavel == null ? null : new Orgao(responsavel.getTitulo(), null);
             }
 
 
