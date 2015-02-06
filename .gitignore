@@ -6,3 +6,5 @@ guia-de-servicos.iws
 data
 .vagrant
 *.swp
+.idea
+*.iml
