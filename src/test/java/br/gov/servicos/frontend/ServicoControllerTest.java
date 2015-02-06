@@ -27,7 +27,7 @@ public class ServicoControllerTest {
 
     @Test
     public void buscaRetornaView() throws Exception {
-        given(sr.findOne("1")).willReturn(new Servico("1", null, null, null, 0L, 0L, 0L));
+        given(sr.findOne("1")).willReturn(new Servico("1", null, null, null, 0L, 0L));
         assertThat(controller.get("1").getViewName(), is("servico"));
     }
 
@@ -38,7 +38,7 @@ public class ServicoControllerTest {
                                 "posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. " +
                                 "Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque " +
                                 "laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, " +
-                                "consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean massa.", null, 0L, 0L, 0L);
+                                "consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean massa.", null, 0L, 0L);
 
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
@@ -52,7 +52,7 @@ public class ServicoControllerTest {
 
     @Test
     public void redirecionaUsuarioParaLinkDoServico() throws Exception {
-        Servico s1 = new Servico("1", "Como adicionar um novo emprego à sua Carteira de Trabalho", "desc", "URL://blah", 0L, 0L, 0L);
+        Servico s1 = new Servico("1", "Como adicionar um novo emprego à sua Carteira de Trabalho", "desc", "URL://blah", 0L, 0L);
 
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
         
