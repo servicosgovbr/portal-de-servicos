@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="/css/main.css"/>
     <link rel="stylesheet" type="text/css" href="/css/barra-brasil.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 
 <body>
@@ -15,6 +16,8 @@
 
 <div id="wrapper">
     <div id="main" role="main">
+        
+        <div th:replace="fragments/barra-busca :: .caixa"></div>
         
         <div class="bloco">
             <h3>Serviços mais consultados</h3>
