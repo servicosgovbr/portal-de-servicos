@@ -10,6 +10,7 @@ import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.IOException;
@@ -38,16 +39,16 @@ class Importador {
         this.servicos = servicos;
     }
 
-    private static Stream<Dados.Servicos.Servico> servicosLegados() throws IOException, JAXBException {
+    private static Stream<ServicoType> servicosLegados() throws IOException, JAXBException {
         return unmarshallDadosLegados()
                 .getServicos()
                 .getServico()
                 .stream();
     }
 
-    private static Dados unmarshallDadosLegados() throws IOException, JAXBException {
+    private static DadosType unmarshallDadosLegados() throws IOException, JAXBException {
         URL xmlLegado = new ClassPathResource(XML_LEGADO).getURL();
-        return (Dados) unmarshaller().unmarshal(xmlLegado);
+        return (DadosType) ((JAXBElement) unmarshaller().unmarshal(xmlLegado)).getValue();
     }
 
     private static Unmarshaller unmarshaller() throws JAXBException {

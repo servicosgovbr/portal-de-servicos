@@ -27,25 +27,18 @@ public class ServicoControllerTest {
 
     @Test
     public void buscaRetornaView() throws Exception {
-        given(sr.findOne("1")).willReturn(new Servico("1", null, null, null, null, null, 0L, 0L));
+        given(sr.findOne("1")).willReturn(new Servico("1", null, null, null, null, null, null, 0L, 0L));
         assertThat(controller.get("1").getViewName(), is("servico"));
     }
 
     @Test
     public void buscaRetornaServicoNoModel() throws Exception {
-        Servico s1 = new Servico(
-                "1",
-                "Como adicionar um novo emprego à sua Carteira de Trabalho", "Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, " +
-                "cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, " +
-                "posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. " +
-                "Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque " +
-                "laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, " +
-                "consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean massa.",
-                null,
-                null,
-                null,
-                0L,
-                0L);
+        Servico s1 = new Servico("1", "Como adicionar um novo emprego à sua Carteira de Trabalho", "Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, " +
+                        "cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, " +
+                        "posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. " +
+                        "Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque " +
+                        "laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, " +
+                        "consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean massa.", null, null, null, null, 0L, 0L);
 
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
@@ -59,15 +52,7 @@ public class ServicoControllerTest {
 
     @Test
     public void redirecionaUsuarioParaLinkDoServico() throws Exception {
-        Servico s1 = new Servico(
-                "1",
-                "Como adicionar um novo emprego à sua Carteira de Trabalho", "desc",
-                "URL://blah",
-                null,
-                null,
-                0L,
-                0L
-        );
+        Servico s1 = new Servico("1", "Como adicionar um novo emprego à sua Carteira de Trabalho", "desc", "URL://blah", null, null, null, 0L, 0L);
 
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
