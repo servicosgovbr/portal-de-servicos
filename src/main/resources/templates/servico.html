@@ -20,9 +20,9 @@
         <div id="plone-content">
             <h1 th:text="${servico.titulo}">Nome do Serviço</h1>
 
-            <p th:text="${servico.descricao}">
+            <pre style="white-space: pre-wrap;" th:text="${servico.descricao}">
                 Descrição do serviço
-            </p>
+            </pre>
 
             <p th:if="${not #strings.isEmpty(servico.taxa)}">
               Valor/taxa: <span th:text="${servico.taxa}">R$ 999,99</span>
