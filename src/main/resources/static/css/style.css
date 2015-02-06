@@ -4,7 +4,7 @@
 	font-family: Open Sans, arial, sans-serif;
 	font-size: 13px;
 	border-top: 4px solid #A8A7A7;
-	width: 97%;
+	width: 88%;
 }
 
 .caixa p {
@@ -22,6 +22,7 @@ input[type="text"] {
 	border-radius: 5px;
 	border: 1px solid #cfcfcf;
 	margin-top: 5px;
+	padding-right: 0;
 }
 
 input[type="submit"] {

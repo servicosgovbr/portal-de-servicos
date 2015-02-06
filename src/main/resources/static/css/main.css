@@ -17,13 +17,14 @@
 }
 
 #wrapper #main {
-width: 720px;
-float: left;
+    width: 690px;
+    float: left;
 }
 
 #wrapper .aside {
     width: 240px;
     float: left;
+    margin-left: 30px
 }
 
 #resultados-busca {
