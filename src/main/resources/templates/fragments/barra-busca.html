@@ -9,7 +9,7 @@
   <div class="caixa">
     <p>Pesquisa</p>
     <form method="get" action="/busca">
-      <input type="text" name="q" value=""/>
+      <input type="text" name="q" value="" th:autofocus="${#httpServletRequest.requestURI} eq '/'"/>
       <input type="submit" value="BUSCAR"/>
     </form>
   </div>
