@@ -14,5 +14,4 @@ plataforma é o caminho mais adequado para entender o que o cidadão precisa, e 
 
 5. Adoção a partir de exemplos: em vez de uma abordagem impositiva, a adoção dos novos padrões e modelo de maturidade de serviços por parte dos órgãos públicos deve ocorrer através através de exemplos de boas práticas e resultados positivos.
  
-6. Os serviços devem ser tangíveis: a experiência do serviço deve ser presente, com pontos de contato claros, para ser
-percebida e influenciadora.
+6. Os serviços devem ser tangíveis: a experiência do serviço deve ser presente, com pontos de contato claros, para ser percebida e influenciadora. Métricas acionáveis deverão orientar a evolução e medir resultados.
