@@ -64,7 +64,6 @@ class Importador {
                         .map(Servico::servicoLegadoToServico)
                         .collect(toList()));
 
-
         return servicos.findAll();
     }
 

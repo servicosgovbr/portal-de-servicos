@@ -35,7 +35,14 @@ public class Servico {
     }
 
     public static Servico servicoLegadoToServico(Dados.Servicos.Servico legado) {
-        return new Servico(UUID.randomUUID().toString(), legado.getTitulo(), legado.getDescricao(), legado.getUrl(), 0L, 0L);
+        return new Servico(
+                UUID.randomUUID().toString(), 
+                legado.getTitulo(), 
+                legado.getDescricao(), 
+                legado.getUrl(), 
+                0L, 
+                0L
+        );
     }
 
     public Servico withNovoAcesso() {
