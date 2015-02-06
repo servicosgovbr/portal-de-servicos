@@ -27,9 +27,8 @@ import static java.util.stream.Collectors.toList;
 )
 class Importador {
 
-    private static final String XML_LEGADO = "guiadeservicos.xml";
     public static final String INDEX_NAME = "guia-de-servicos";
-
+    private static final String XML_LEGADO = "guiadeservicos.xml";
     private ElasticsearchTemplate es;
     private ServicoRepository servicos;
 
@@ -37,6 +36,23 @@ class Importador {
     Importador(ElasticsearchTemplate es, ServicoRepository servicos) {
         this.es = es;
         this.servicos = servicos;
+    }
+
+    private static Stream<Dados.Servicos.Servico> servicosLegados() throws IOException, JAXBException {
+        return unmarshallDadosLegados()
+                .getServicos()
+                .getServico()
+                .stream();
+    }
+
+    private static Dados unmarshallDadosLegados() throws IOException, JAXBException {
+        URL xmlLegado = new ClassPathResource(XML_LEGADO).getURL();
+        return (Dados) unmarshaller().unmarshal(xmlLegado);
+    }
+
+    private static Unmarshaller unmarshaller() throws JAXBException {
+        JAXBContext contexto = JAXBContext.newInstance("br.gov.servicos.legado");
+        return contexto.createUnmarshaller();
     }
 
     @ManagedOperation
@@ -58,23 +74,6 @@ class Importador {
         }
 
         es.createIndex(INDEX_NAME, new String(Files.readAllBytes(new ClassPathResource("/elasticsearch/settings.json").getFile().toPath()), Charset.defaultCharset()));
-    }
-
-    private static Stream<Dados.Servicos.Servico> servicosLegados() throws IOException, JAXBException {
-        return unmarshallDadosLegados()
-                .getServicos()
-                .getServico()
-                .stream();
-    }
-
-    private static Dados unmarshallDadosLegados() throws IOException, JAXBException {
-        URL xmlLegado = new ClassPathResource(XML_LEGADO).getURL();
-        return (Dados) unmarshaller().unmarshal(xmlLegado);
-    }
-
-    private static Unmarshaller unmarshaller() throws JAXBException {
-        JAXBContext contexto = JAXBContext.newInstance("br.gov.servicos.legado");
-        return contexto.createUnmarshaller();
     }
 
 }

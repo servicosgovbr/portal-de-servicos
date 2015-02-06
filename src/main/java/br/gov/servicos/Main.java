@@ -16,6 +16,10 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 @SpringBootApplication
 public class Main {
 
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
+
     @Configuration
     @EnableConfigurationProperties(ElasticsearchProperties.class)
     public static class ElasticsearchConfiguration {
@@ -34,12 +38,8 @@ public class Main {
             fb.setClusterName(this.properties.getClusterName());
             fb.setClusterNodes("localhost:9300");
             fb.afterPropertiesSet();
-            
+
             return fb.getObject();
         }
-    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
     }
 }

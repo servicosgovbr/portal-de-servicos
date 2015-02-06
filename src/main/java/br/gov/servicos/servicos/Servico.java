@@ -25,7 +25,7 @@ public class Servico {
     Long acessos;
     Long ativacoes;
 
-    private Servico() {
+    public Servico() {
         this(null, null, null, null, null, null, null);
     }
 

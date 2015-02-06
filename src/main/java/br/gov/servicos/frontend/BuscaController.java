@@ -1,6 +1,10 @@
 package br.gov.servicos.frontend;
 
+import br.gov.servicos.servicos.Busca;
+import br.gov.servicos.servicos.BuscaRepository;
+import br.gov.servicos.servicos.Servico;
 import br.gov.servicos.servicos.ServicoRepository;
+import org.elasticsearch.common.collect.Iterables;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,18 +18,29 @@ import static org.elasticsearch.index.query.QueryBuilders.queryString;
 @Controller
 class BuscaController {
 
+    BuscaRepository br;
     ServicoRepository sr;
 
     @Autowired
-    public BuscaController(ServicoRepository sr) {
+    public BuscaController(ServicoRepository sr, BuscaRepository br) {
         this.sr = sr;
+        this.br = br;
     }
 
     @RequestMapping("/busca")
     ModelAndView busca(@RequestParam(required = true) String q) {
         HashMap<String, Object> model = new HashMap<>();
         model.put("termo", q);
-        model.put("resultados", sr.search(queryString(q)));
+
+        Iterable<Servico> servicos = sr.search(queryString(q));
+        model.put("resultados", servicos);
+
+        Busca busca = br.findOne(q);
+        if (busca == null) {
+            busca = new Busca(q, (long) Iterables.size(servicos), 0L);
+        }
+        br.save(busca.withNovaAtivacao());
+
         return new ModelAndView("resultados-busca", model);
     }
 
