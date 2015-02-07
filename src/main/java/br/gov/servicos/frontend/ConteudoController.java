@@ -32,7 +32,7 @@ class ConteudoController {
     }
 
     private String read(ClassPathResource resource) throws IOException {
-        try (final BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()))) {
+        try (final BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream(), "UTF-8"))) {
             return br.lines().parallel().collect(Collectors.joining("\n"));
         }
     }
