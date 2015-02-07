@@ -502,7 +502,7 @@
     overflow: hidden;
 }/*#A_46*/
 
-#DIV_47 {
+#menu {
     clear: both;
     color: rgb(255, 255, 255);
     height: 20px;
@@ -518,7 +518,7 @@
     outline: rgb(255, 255, 255) none 0px;
     overflow: hidden;
     padding: 5px 0px;
-}/*#DIV_47*/
+}/*#menu*/
 
 #UL_48 {
     color: rgb(255, 255, 255);
