@@ -13,10 +13,11 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -30,6 +31,7 @@ public class Importador {
 
     public static final String INDEX_NAME = "guia-de-servicos";
     private static final String XML_LEGADO = "guiadeservicos.xml";
+    public static final String SETTINGS = "/elasticsearch/settings.json";
     private ElasticsearchTemplate es;
     private ServicoRepository servicos;
 
@@ -73,7 +75,13 @@ public class Importador {
             es.deleteIndex(INDEX_NAME);
         }
 
-        es.createIndex(INDEX_NAME, new String(Files.readAllBytes(new ClassPathResource("/elasticsearch/settings.json").getFile().toPath()), Charset.defaultCharset()));
+        es.createIndex(INDEX_NAME, readSettings());
     }
 
+    private String readSettings() throws IOException {
+        ClassPathResource resource = new ClassPathResource(SETTINGS);
+        try (final BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()))) {
+            return br.lines().parallel().collect(Collectors.joining("\n"));
+        }
+    }
 }
