@@ -7,6 +7,10 @@
     line-height: 150%;
 }
 
+#wrapper p {
+    margin-top: 14px;
+}
+
 #wrapper * {
     font-family: "Open Sans";
 }
