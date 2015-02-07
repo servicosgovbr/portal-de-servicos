@@ -550,12 +550,26 @@
     outline: rgb(255, 255, 255) none 0px;
 }/*#LI_49, #LI_51, #LI_53*/
 
-#A_50, #A_52 {
+#A_50 {
     color: rgb(255, 255, 255);
     text-align: right;
     text-decoration: none;
     border-top: 0px none rgb(255, 255, 255);
     border-right: 1px solid rgb(108, 144, 114);
+    border-bottom: 0px none rgb(255, 255, 255);
+    border-left: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 12px/20px "OpenSans", Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 0px 10px;
+}/*#A_50, #A_52*/
+
+#A_52 {
+    color: rgb(255, 255, 255);
+    text-align: right;
+    text-decoration: none;
+    border-top: 0px none rgb(255, 255, 255);
+    border-right: 0px solid rgb(108, 144, 114);
     border-bottom: 0px none rgb(255, 255, 255);
     border-left: 0px none rgb(255, 255, 255);
     font: normal normal normal normal 12px/20px "OpenSans", Arial, Helvetica, sans-serif;
