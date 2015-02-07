@@ -84,5 +84,5 @@ jar {
     baseName = 'guia-de-servicos'
 }
 
-task stage(dependsOn: ['run'], group: 'build') {
+task stage(dependsOn: [clean, build]) {
 }
