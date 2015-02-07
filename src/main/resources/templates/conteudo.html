@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Guia de Serviços</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/barra-brasil.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/busca.css"/>
+</head>
+
+<body>
+<div th:replace="fragments/barra-brasil :: #barra-brasil"></div>
+<div th:replace="fragments/header :: #header"></div>
+
+<div id="wrapper">
+    <div id="main" role="main">
+        <div id="plone-content" th:utext="${conteudo}">
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="voltar-topo">
+            <a href="#wrapper">Voltar para o topo</a>
+        </div>
+    </div>
+
+    <div class="aside">
+      <div th:replace="fragments/barra-busca :: .caixa"/>
+    </div>
+
+</div>
+
+<div th:replace="fragments/barra-brasil :: script"></div>
+<div th:replace="fragments/barra-brasil :: footer"></div>
+</body>
+
+</html>
