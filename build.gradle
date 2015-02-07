@@ -83,3 +83,6 @@ idea {
 jar {
     baseName = 'guia-de-servicos'
 }
+
+task stage(dependsOn: ['run'], group: 'build') {
+}
