@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Page title </title>
-  <link rel="stylesheet" type="text/css" href="/css/busca.css"/>
+    <title> Page title </title>
+    <link rel="stylesheet" type="text/css" href="/css/busca.css"/>
 </head>
 
 <body>
-  <div class="caixa">
-    <p>Pesquisa</p>
-    <form method="get" action="/busca">
-      <input id="input-busca" type="text" name="q" value="" th:autofocus="${#httpServletRequest.requestURI} eq '/'"/>
-      <input type="submit" value="BUSCAR"/>
-    </form>
-  </div>
+<div class="caixa">
 
+    <p>Pesquisa</p>
+
+    <form method="get" action="/busca">
+        <input id="input-busca" type="text" name="q" value="" th:autofocus="${#httpServletRequest.requestURI} eq '/'"/>
+        <input type="submit" value="BUSCAR"/>
+    </form>
+
+</div>
 </body>
 </html>
