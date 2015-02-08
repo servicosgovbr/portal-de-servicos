@@ -80,4 +80,19 @@
     margin: 14px 0 14px 0;
     font-style: italic;
 }
-    
+
+.similares {
+    background-color: #e5e8ea;
+    padding: 0 14px 14px 14px;
+    font-family: Open Sans, arial, sans-serif;
+    font-size: 13px;
+    border-top: 4px solid #A8A7A7;
+    margin-top: 14px;
+}
+
+.similares p {
+	margin: 14px 0 0 0;
+	color: #2c66ce;
+	text-transform: uppercase;
+	font-weight: bold;
+}

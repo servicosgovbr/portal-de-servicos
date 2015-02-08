@@ -1,7 +1,9 @@
 package br.gov.servicos.frontend;
 
+import br.gov.servicos.servicos.Servico;
 import br.gov.servicos.servicos.ServicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 class ServicoController {
@@ -22,8 +25,12 @@ class ServicoController {
 
     @RequestMapping("/servico/{id}")
     ModelAndView get(@PathVariable("id") String id) {
-        HashMap<String, Object> model = new HashMap<>();
-        model.put("servico", sr.save(sr.findOne(id).withNovoAcesso()));
+        Servico servico = sr.save(sr.findOne(id).withNovoAcesso());
+
+        Map<String, Object> model = new HashMap<>();
+        model.put("servico", servico);
+        model.put("similares", sr.searchSimilar(servico, new String[]{"titulo", "descricao"}, new PageRequest(0, 5)));
+
         return new ModelAndView("servico", model);
     }
 

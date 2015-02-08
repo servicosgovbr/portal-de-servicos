@@ -56,12 +56,13 @@
         <div class="clear"></div>
 
         <div id="voltar-topo">
-            <a href="#wrapper">Voltar para o topo</a>
+            <a style="margin-right: 260px" href="#wrapper">Voltar para o topo</a>
         </div>
     </div>
 
     <div class="aside">
-      <div th:replace="fragments/barra-busca :: .caixa"/>
+        <div th:replace="fragments/barra-busca :: .caixa"></div>
+        <div th:replace="fragments/similares::.similares(similares=${similares})"></div>
     </div>
 
 </div>
