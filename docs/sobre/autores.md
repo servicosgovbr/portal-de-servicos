@@ -11,6 +11,12 @@ Time da [ThoughtWorks](http://thoughtworks.com)
 * [Olivia Janequine](mailto:oliviaj@thoughtworks.com)
 * [Samantha Rosa](mailto:srosa@thoughtworks.com)
 
+Time do MP [Guia de Serviços](http://www.servicos.gov.br)
+----
+
+* [Fabrício Almeida](mailto:fabricio.fontenele@planejamento.gov.br)
+
+
 Colaboradores
 ----
 
