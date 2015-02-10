@@ -48,14 +48,24 @@ dependencies {
     testCompile 'org.mockito:mockito-core:1.9.5'
 }
 
+def generatedSources = ["br/gov/servicos/legado/**"]
+
 test {
     testLogging {
         showStandardStreams = false
         exceptionFormat "full"
     }
+
+    jacoco {
+        excludes = generatedSources
+    }
 }
 
 jacocoTestReport {
+    doFirst {
+        classDirectories = fileTree(dir: "${buildDir}/classes/main/").exclude(generatedSources)
+    }
+
     reports {
         xml.enabled = true // coveralls plugin depends on xml format report
         html.enabled = true
