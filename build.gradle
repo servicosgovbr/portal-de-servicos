@@ -2,6 +2,8 @@ apply plugin: 'java'
 apply plugin: 'spring-boot'
 apply plugin: 'idea'
 apply plugin: 'project-report'
+apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
 
 ext.sha = 'git rev-parse --short HEAD'.execute().in.text.trim()
 version = '1.0.' + sha + '-SNAPSHOT'
@@ -19,6 +21,7 @@ buildscript {
     dependencies {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.0.BUILD-SNAPSHOT'
         classpath 'org.springframework:springloaded:1.2.1.BUILD-SNAPSHOT'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
     }
 }
 
@@ -49,6 +52,13 @@ test {
     testLogging {
         showStandardStreams = false
         exceptionFormat "full"
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
     }
 }
 
