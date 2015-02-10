@@ -1,6 +1,6 @@
 package br.gov.servicos.frontend;
 
-import br.gov.servicos.servicos.ServicoRepository;
+import br.gov.servicos.dominio.ServicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;

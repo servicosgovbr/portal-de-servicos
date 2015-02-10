@@ -1,7 +1,7 @@
 package br.gov.servicos.frontend;
 
-import br.gov.servicos.servicos.Servico;
-import br.gov.servicos.servicos.ServicoRepository;
+import br.gov.servicos.dominio.Servico;
+import br.gov.servicos.dominio.ServicoRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;

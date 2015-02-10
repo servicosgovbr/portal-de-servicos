@@ -1,4 +1,4 @@
-package br.gov.servicos.servicos;
+package br.gov.servicos.dominio;
 
 import br.gov.servicos.legado.ServicoType;
 import lombok.Value;

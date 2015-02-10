@@ -1,7 +1,9 @@
-package br.gov.servicos.legado;
+package br.gov.servicos;
 
-import br.gov.servicos.servicos.Servico;
-import br.gov.servicos.servicos.ServicoRepository;
+import br.gov.servicos.dominio.Servico;
+import br.gov.servicos.dominio.ServicoRepository;
+import br.gov.servicos.legado.DadosType;
+import br.gov.servicos.legado.ServicoType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;

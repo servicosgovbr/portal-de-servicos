@@ -1,9 +1,9 @@
 package br.gov.servicos.frontend;
 
-import br.gov.servicos.servicos.Busca;
-import br.gov.servicos.servicos.BuscaRepository;
-import br.gov.servicos.servicos.Servico;
-import br.gov.servicos.servicos.ServicoRepository;
+import br.gov.servicos.dominio.Busca;
+import br.gov.servicos.dominio.BuscaRepository;
+import br.gov.servicos.dominio.Servico;
+import br.gov.servicos.dominio.ServicoRepository;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.junit.Before;
 import org.junit.Test;
