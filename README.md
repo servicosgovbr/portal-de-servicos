@@ -1,5 +1,6 @@
 [![Documentação](https://readthedocs.org/projects/guia-de-servicos/badge/)](http://guia-de-servicos.readthedocs.org/)
 [![Status da construção](https://snap-ci.com/servicosgovbr/guia-de-servicos/branch/master/build_image)](https://snap-ci.com/servicosgovbr/guia-de-servicos/branch/master)
+[![Cobertura de Testes](https://coveralls.io/repos/servicosgovbr/guia-de-servicos/badge.svg?branch=master)](https://coveralls.io/r/servicosgovbr/guia-de-servicos?branch=master)
 
 Guia de Serviços
 ====
