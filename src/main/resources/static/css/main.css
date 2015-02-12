@@ -48,7 +48,10 @@
 }
 
 #resultados-busca p {
-    font-size: 80%;
+    font-size: 14px;
+    color: #172938;
+    background: #fff;
+    border-bottom: 1px solid #CCC; /* NO IDG seria cor #596e7f mas fica muito ruim visualmente. */
 }
 
 #comecar {
