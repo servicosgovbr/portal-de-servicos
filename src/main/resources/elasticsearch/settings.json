@@ -20,50 +20,5 @@
         ]
       }
     }
-  },
-  "mappings": {
-    "busca": {
-      "properties": {
-        "ativacoes": {
-          "type": "long",
-          "index": "no"
-        },
-        "resultados": {
-          "type": "long",
-          "index": "no"
-        },
-        "termo": {
-          "type": "string"
-        }
-      }
-    },
-    "servico": {
-      "properties": {
-        "acessos": {
-          "type": "long",
-          "index": "no"
-        },
-        "ativacoes": {
-          "type": "long",
-          "index": "no"
-        },
-        "descricao": {
-          "type": "string"
-        },
-        "id": {
-          "type": "string"
-        },
-        "titulo": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string",
-          "index": "no"
-        },
-        "versao": {
-          "type": "long"
-        }
-      }
-    }
   }
 }

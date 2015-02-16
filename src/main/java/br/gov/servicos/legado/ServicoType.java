@@ -14,7 +14,9 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 /**
@@ -91,6 +93,15 @@ import java.util.List;
     "quantidadeAcessosServico"
 })
 public class ServicoType {
+
+    public List<String> getAreasDeInteresse() {
+        AreasInteresseType areasInteresseType = this.getAreasInteresse();
+        if(areasInteresseType == null) {
+            return Arrays.asList();
+        }
+
+        return areasInteresseType.getArea().stream().map(AreaType::getTitulo).collect(Collectors.toList());
+    }
 
     public String getUrl() {
         String url = null;
