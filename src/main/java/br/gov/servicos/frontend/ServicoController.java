@@ -29,7 +29,15 @@ class ServicoController {
 
         Map<String, Object> model = new HashMap<>();
         model.put("servico", servico);
-        model.put("similares", sr.searchSimilar(servico, new String[]{"titulo", "descricao"}, new PageRequest(0, 5)));
+        model.put("similares", sr.searchSimilar(
+                servico,
+                new String[]{
+                        "titulo",
+                        "descricao",
+                        "areasDeInteresse",
+                },
+                new PageRequest(0, 5)
+        ));
 
         return new ModelAndView("servico", model);
     }
