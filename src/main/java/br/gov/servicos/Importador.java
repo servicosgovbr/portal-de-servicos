@@ -1,5 +1,6 @@
 package br.gov.servicos;
 
+import br.gov.servicos.dominio.Busca;
 import br.gov.servicos.dominio.Servico;
 import br.gov.servicos.dominio.ServicoRepository;
 import br.gov.servicos.legado.DadosType;
@@ -78,6 +79,8 @@ public class Importador {
         }
 
         es.createIndex(INDEX_NAME, readSettings());
+        es.putMapping(Busca.class);
+        es.putMapping(Servico.class);
     }
 
     private String readSettings() throws IOException {

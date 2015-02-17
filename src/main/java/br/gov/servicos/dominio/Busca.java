@@ -6,6 +6,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
+import static org.springframework.data.elasticsearch.annotations.FieldType.Long;
 
 @Value
 @Document(indexName = "guia-de-servicos", type = "busca")
@@ -14,10 +15,10 @@ public class Busca {
     @Id
     String termo;
 
-    @Field(index = not_analyzed)
+    @Field(index = not_analyzed, type = Long)
     Long resultados;
 
-    @Field(index = not_analyzed)
+    @Field(index = not_analyzed, type = Long)
     Long ativacoes;
 
     private Busca() {

@@ -5,12 +5,15 @@ import lombok.Value;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldIndex;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.List;
 import java.util.UUID;
 
 import static org.elasticsearch.common.Strings.isEmpty;
+import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
+import static org.springframework.data.elasticsearch.annotations.FieldType.Long;
+import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Value
 @Document(indexName = "guia-de-servicos", type = "servico")
@@ -19,25 +22,31 @@ public class Servico {
     @Id
     String id;
 
+    @Field(store = true, type = String)
     String titulo;
+
+    @Field(store = true, type = String)
     String descricao;
 
-    @Field(index = FieldIndex.not_analyzed)
+    @Field(index = not_analyzed, type = String)
     String url;
 
-    @Field(index = FieldIndex.not_analyzed)
+    @Field(index = not_analyzed, type = String)
     String taxa;
 
+    @Field(type = FieldType.Object)
     Orgao prestador;
+
+    @Field(type = FieldType.Object)
     Orgao responsavel;
 
-    @Field(index = FieldIndex.not_analyzed)
+    @Field(index = not_analyzed, type = Long)
     Long acessos;
 
-    @Field(index = FieldIndex.not_analyzed)
+    @Field(index = not_analyzed, type = Long)
     Long ativacoes;
 
-    @Field(index = FieldIndex.not_analyzed)
+    @Field(index = not_analyzed, type = String)
     List<String> areasDeInteresse;
 
     public Servico() {

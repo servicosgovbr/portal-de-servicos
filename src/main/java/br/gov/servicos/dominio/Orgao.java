@@ -1,13 +1,18 @@
 package br.gov.servicos.dominio;
 
 import lombok.Value;
+import org.springframework.data.elasticsearch.annotations.Field;
 
 import static org.elasticsearch.common.Strings.isEmpty;
+import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Value
 public class Orgao {
 
+    @Field(type = String)
     String nome;
+
+    @Field(type = String)
     String telefone;
 
     public Orgao() {
