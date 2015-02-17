@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 
+import java.util.Arrays;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -23,6 +25,7 @@ public class ServicoControllerTest {
             "Gratuita",
             new Orgao("Nome", "123"),
             new Orgao("Nome", null),
+            Arrays.asList("Área de Interesse"),
             0L, 0L
     );
 
@@ -39,7 +42,7 @@ public class ServicoControllerTest {
 
     @Test
     public void buscaRetornaView() throws Exception {
-        given(sr.findOne("1")).willReturn(new Servico("1", null, null, null, null, null, null, 0L, 0L));
+        given(sr.findOne("1")).willReturn(new Servico("1", null, null, null, null, null, null, null, 0L, 0L));
         assertThat(controller.get("1").getViewName(), is("servico"));
     }
 
