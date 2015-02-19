@@ -9,5 +9,15 @@ Para rodar a aplicação localmente, utilizamos um servidor web [Tomcat][TOMCAT]
 
 Após alguns segundos, o servidor estará disponível em [localhost:8080](http://localhost:8080/).
 
+ElasticSearch externo
+----
+
+Para utilizar um servidor ElasticSearch configurado em `localhost:9300`, basta adicionar o perfil `cluster` aos perfis
+ativos do Spring:
+
+```
+SPRING_PROFILES_ACTIVE=cluster ./gradlew run
+```
+
 [TOMCAT]:http://tomcat.apache.org/
 [SPRINGBOOT]:http://projects.spring.io/spring-boot/
