@@ -18,6 +18,7 @@ Time do MP [Guia de Serviços](http://www.servicos.gov.br)
 
 * [Carlos Vieira](mailto:edu.carlos.vieira@gmail.com)
 * [Fabrício Almeida](mailto:fabricio.fontenele@planejamento.gov.br)
+* [Maurício Marinho](mailto:mauricio.formiga@planejamento.gov.br)
 
 
 Colaboradores
