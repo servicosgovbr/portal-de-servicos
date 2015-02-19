@@ -132,6 +132,30 @@ public class ServicoType {
         return responsavel == null ? null : new Orgao(responsavel.getTitulo(), null);
     }
 
+    public List<String> getLinhasDaVida() {
+        PublicosAlvoType publicosAlvoType = this.getPublicosAlvo();
+        if (publicosAlvoType == null) return Arrays.asList();
+
+        List<Serializable> publicosAlvo = publicosAlvoType.getContent();
+        if (publicosAlvo == null || publicosAlvo.isEmpty()) return Arrays.asList();
+
+        JAXBElement element = (JAXBElement) publicosAlvo.get(0);
+        if (element == null) return Arrays.asList();
+
+        PublicoAlvoType publicoAlvo = (PublicoAlvoType) element.getValue();
+        if (publicoAlvo == null) return Arrays.asList();
+
+        LinhasDaVivaType linhasDaViva = publicoAlvo.getLinhasDaViva();
+        if (linhasDaViva == null) return Arrays.asList();
+
+        List<LinhaDaVidaType> linhaDaVida = linhasDaViva.getLinhaDaVida();
+        if(linhaDaVida == null) return Arrays.asList();
+
+        return linhaDaVida.stream()
+                .map(LinhaDaVidaType::getTitulo)
+                .collect(Collectors.toList());
+    }
+    
     @XmlElement(required = true)
     protected String titulo;
     @XmlElement(required = true)

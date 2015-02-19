@@ -49,8 +49,11 @@ public class Servico {
     @Field(index = not_analyzed, type = String)
     List<String> areasDeInteresse;
 
+    @Field(index = not_analyzed, type = String)
+    List<String> linhasDaVida;
+
     public Servico() {
-        this(null, null, null, null, null, null, null, null, null, null);
+        this(null, null, null, null, null, null, null, null, null, null, null);
     }
 
     public Servico(
@@ -62,6 +65,7 @@ public class Servico {
             Orgao prestador,
             Orgao responsavel,
             List<String> areasDeInteresse,
+            List<String> linhasDaVida,
             Long acessos,
             Long ativacoes
     ) {
@@ -73,6 +77,7 @@ public class Servico {
         this.prestador = prestador;
         this.responsavel = responsavel;
         this.areasDeInteresse = areasDeInteresse;
+        this.linhasDaVida = linhasDaVida;
         this.acessos = acessos;
         this.ativacoes = ativacoes;
     }
@@ -87,17 +92,18 @@ public class Servico {
                 legado.getOrgaoPrestador2(),
                 legado.getOrgaoResponsavel2(),
                 legado.getAreasDeInteresse(),
+                legado.getLinhasDaVida(),
                 0L,
                 0L
         );
     }
 
     public Servico withNovoAcesso() {
-        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, acessos == null ? 1 : acessos + 1, ativacoes);
+        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, acessos == null ? 1 : acessos + 1, ativacoes);
     }
 
     public Servico withNovaAtivacao() {
-        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, acessos, ativacoes == null ? 1 : ativacoes + 1);
+        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, acessos, ativacoes == null ? 1 : ativacoes + 1);
     }
 
 }

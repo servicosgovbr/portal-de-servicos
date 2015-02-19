@@ -53,6 +53,18 @@
             </ul>
         </div>
 
+        <div class="bloco">
+            <h3>Linhas da Vida</h3>
+            <ul>
+                <li th:each="linha : ${linhasDaVida}">
+                    <a th:href="@{/busca?q={linha}(linha=${linha.key})}" th:text="${linha.key}">
+                        Nome da linha
+                    </a>
+                    (<span th:text="${linha.value}">10</span>)
+                </li>
+            </ul>
+        </div>
+
         <div class="clear"></div>
         <div id="voltar-topo">
             <a href="#wrapper">Voltar para o topo</a>
