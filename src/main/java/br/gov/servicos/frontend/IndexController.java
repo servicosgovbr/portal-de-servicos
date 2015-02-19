@@ -64,6 +64,22 @@ class IndexController {
                         .map((bucket) -> new HashMap.SimpleEntry<>(bucket.getKey(), bucket.getDocCount()))
                         .collect(Collectors.toList())
         ));
+        
+        model.put("eventosDasLinhasDaVida", et.query(
+                new NativeSearchQueryBuilder()
+                        .addAggregation(
+                                new TermsBuilder("top-eventos")
+                                        .field("eventosDasLinhasDaVida")
+                                        .size(600)
+
+                        ).build()
+                , response -> ((Terms) response.getAggregations()
+                        .get("top-eventos"))
+                        .getBuckets()
+                        .stream()
+                        .map((bucket) -> new HashMap.SimpleEntry<>(bucket.getKey(), bucket.getDocCount()))
+                        .collect(Collectors.toList())
+        ));
 
         return new ModelAndView("index", model);
     }

@@ -155,7 +155,40 @@ public class ServicoType {
                 .map(LinhaDaVidaType::getTitulo)
                 .collect(Collectors.toList());
     }
-    
+
+    public List<String> getEventosDasLinhasDaVida() {
+        PublicosAlvoType publicosAlvoType = this.getPublicosAlvo();
+        if (publicosAlvoType == null) return Arrays.asList();
+
+        List<Serializable> publicosAlvo = publicosAlvoType.getContent();
+        if (publicosAlvo == null || publicosAlvo.isEmpty()) return Arrays.asList();
+
+        JAXBElement element = (JAXBElement) publicosAlvo.get(0);
+        if (element == null) return Arrays.asList();
+
+        PublicoAlvoType publicoAlvo = (PublicoAlvoType) element.getValue();
+        if (publicoAlvo == null) return Arrays.asList();
+
+        LinhasDaVivaType linhasDaViva = publicoAlvo.getLinhasDaViva();
+        if (linhasDaViva == null) return Arrays.asList();
+
+        List<LinhaDaVidaType> linhaDaVida = linhasDaViva.getLinhaDaVida();
+        if (linhaDaVida == null) return Arrays.asList();
+
+        return linhaDaVida.stream()
+                .flatMap((linhaDaVidaType) -> {
+                    EventoslinhaDaVidaType eventoslinhaDaVida = linhaDaVidaType.getEventoslinhaDaVida();
+                    if (eventoslinhaDaVida == null) return null;
+
+                    List<EventolinhaDaVidaType> eventolinhaDaVida = eventoslinhaDaVida.getEventolinhaDaVida();
+                    if (eventolinhaDaVida == null) return null;
+
+                    return eventolinhaDaVida.stream().map(EventolinhaDaVidaType::getTitulo);
+                })
+                .collect(Collectors.toList());
+
+    }
+
     @XmlElement(required = true)
     protected String titulo;
     @XmlElement(required = true)

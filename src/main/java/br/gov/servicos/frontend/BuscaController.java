@@ -6,7 +6,6 @@ import br.gov.servicos.dominio.Servico;
 import br.gov.servicos.dominio.ServicoRepository;
 import org.elasticsearch.common.collect.Iterables;
 import org.elasticsearch.index.query.QueryBuilder;
-import org.elasticsearch.index.query.TermQueryBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,8 +41,12 @@ class BuscaController {
 
     @RequestMapping("/linha-da-vida")
     ModelAndView linhaDaVida(@RequestParam(required = true) String q) {
-        TermQueryBuilder linhasDaVida;
         return doSearch(q, termQuery("linhasDaVida", q));
+    }
+
+    @RequestMapping("/eventos-das-linhas-da-vida")
+    ModelAndView eventosDasLinhasDaVida(@RequestParam(required = true) String q) {
+        return doSearch(q, termQuery("eventosDasLinhasDaVida", q));
     }
 
     private ModelAndView doSearch(String q, QueryBuilder query) {

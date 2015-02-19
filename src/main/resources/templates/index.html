@@ -65,6 +65,18 @@
             </ul>
         </div>
 
+        <div class="bloco">
+            <h3>Linhas da Vida</h3>
+            <ul>
+                <li th:each="evento : ${eventosDasLinhasDaVida}">
+                    <a th:href="@{/eventos-das-linhas-da-vida?q={evento}(evento=${evento.key})}" th:text="${evento.key}">
+                        Nome do evento
+                    </a>
+                    (<span th:text="${evento.value}">10</span>)
+                </li>
+            </ul>
+        </div>
+
         <div class="clear"></div>
         <div id="voltar-topo">
             <a href="#wrapper">Voltar para o topo</a>

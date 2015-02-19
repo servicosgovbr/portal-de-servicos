@@ -52,8 +52,11 @@ public class Servico {
     @Field(index = not_analyzed, type = String)
     List<String> linhasDaVida;
 
+    @Field(index = not_analyzed, type = String)
+    List<String> eventosDasLinhasDaVida;
+
     public Servico() {
-        this(null, null, null, null, null, null, null, null, null, null, null);
+        this(null, null, null, null, null, null, null, null, null, null, null, null);
     }
 
     public Servico(
@@ -66,9 +69,11 @@ public class Servico {
             Orgao responsavel,
             List<String> areasDeInteresse,
             List<String> linhasDaVida,
+            List<String> eventosDasLinhasDaVida,
             Long acessos,
             Long ativacoes
     ) {
+        this.eventosDasLinhasDaVida = eventosDasLinhasDaVida;
         this.id = isEmpty(id) ? null : id;
         this.titulo = isEmpty(titulo) ? null : titulo;
         this.descricao = isEmpty(descricao) ? null : descricao;
@@ -93,17 +98,18 @@ public class Servico {
                 legado.getOrgaoResponsavel2(),
                 legado.getAreasDeInteresse(),
                 legado.getLinhasDaVida(),
+                legado.getEventosDasLinhasDaVida(),
                 0L,
                 0L
         );
     }
 
     public Servico withNovoAcesso() {
-        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, acessos == null ? 1 : acessos + 1, ativacoes);
+        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos == null ? 1 : acessos + 1, ativacoes);
     }
 
     public Servico withNovaAtivacao() {
-        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, acessos, ativacoes == null ? 1 : ativacoes + 1);
+        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos, ativacoes == null ? 1 : ativacoes + 1);
     }
 
 }

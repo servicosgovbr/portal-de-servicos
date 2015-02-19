@@ -27,6 +27,7 @@ public class ServicoControllerTest {
             new Orgao("Nome", null),
             Arrays.asList("Área de Interesse"),
             Arrays.asList("Linhas da Vida"),
+            Arrays.asList("Eventos das Linhas da Vida"),
             0L, 0L
     );
 
@@ -43,7 +44,7 @@ public class ServicoControllerTest {
 
     @Test
     public void buscaRetornaView() throws Exception {
-        given(sr.findOne("1")).willReturn(new Servico("1", null, null, null, null, null, null, null, null, 0L, 0L));
+        given(sr.findOne("1")).willReturn(new Servico("1", null, null, null, null, null, null, null, null, null, 0L, 0L));
         assertThat(controller.get("1").getViewName(), is("servico"));
     }
 
