@@ -45,7 +45,7 @@
             <h3>Áreas de Interesse</h3>
             <ul>
                 <li th:each="area : ${areasDeInteresse}">
-                    <a th:href="@{/busca?q={area}(area=${area.key})}" th:text="${area.key}">
+                    <a th:href="@{/area-de-interesse?q={area}(area=${area.key})}" th:text="${area.key}">
                         Nome da área
                     </a>
                     (<span th:text="${area.value}">10</span>)
@@ -57,7 +57,7 @@
             <h3>Linhas da Vida</h3>
             <ul>
                 <li th:each="linha : ${linhasDaVida}">
-                    <a th:href="@{/busca?q={linha}(linha=${linha.key})}" th:text="${linha.key}">
+                    <a th:href="@{/linha-da-vida?q={linha}(linha=${linha.key})}" th:text="${linha.key}">
                         Nome da linha
                     </a>
                     (<span th:text="${linha.value}">10</span>)
