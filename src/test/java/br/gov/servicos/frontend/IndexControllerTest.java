@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -21,12 +22,15 @@ public class IndexControllerTest {
     @Mock
     ServicoRepository sr;
     
+    @Mock
+    ElasticsearchTemplate et;
+
     IndexController controller;
 
     @Before
     public void setUp() throws Exception {
         initMocks(this);
-        controller = new IndexController(sr);
+        controller = new IndexController(sr, et);
     }
 
     @Test

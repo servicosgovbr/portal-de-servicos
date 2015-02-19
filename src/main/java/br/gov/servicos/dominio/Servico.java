@@ -53,17 +53,28 @@ public class Servico {
         this(null, null, null, null, null, null, null, null, null, null);
     }
 
-    public Servico(String id, String titulo, String descricao, String url, String taxa, Orgao prestador, Orgao responsavel, List<String> areasDeInteresse, Long acessos, Long ativacoes) {
-        this.areasDeInteresse = areasDeInteresse;
+    public Servico(
+            String id,
+            String titulo,
+            String descricao,
+            String url,
+            String taxa,
+            Orgao prestador,
+            Orgao responsavel,
+            List<String> areasDeInteresse,
+            Long acessos,
+            Long ativacoes
+    ) {
         this.id = isEmpty(id) ? null : id;
         this.titulo = isEmpty(titulo) ? null : titulo;
         this.descricao = isEmpty(descricao) ? null : descricao;
         this.url = isEmpty(url) ? null : url;
         this.taxa = isEmpty(taxa) ? null : taxa;
-        this.acessos = acessos;
-        this.ativacoes = ativacoes;
         this.prestador = prestador;
         this.responsavel = responsavel;
+        this.areasDeInteresse = areasDeInteresse;
+        this.acessos = acessos;
+        this.ativacoes = ativacoes;
     }
 
     public static Servico servicoLegadoToServico(ServicoType legado) {

@@ -41,6 +41,18 @@
             </ul>
         </div>
 
+        <div class="bloco">
+            <h3>Áreas de Interesse</h3>
+            <ul>
+                <li th:each="area : ${areasDeInteresse}">
+                    <a th:href="@{/busca?q={area}(area=${area.key})}" th:text="${area.key}">
+                        Nome da área
+                    </a>
+                    (<span th:text="${area.value}">10</span>)
+                </li>
+            </ul>
+        </div>
+
         <div class="clear"></div>
         <div id="voltar-topo">
             <a href="#wrapper">Voltar para o topo</a>
