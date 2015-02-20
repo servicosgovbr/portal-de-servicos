@@ -29,55 +29,55 @@
     font-weight: normal;
     font-style: normal;
     font-family: "open_sanslight";
-    src: url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.eot");
-    src: url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.eot?#iefix") format("embedded-opentype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.woff") format("woff"),
-         url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.ttf") format("truetype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.svg#open_sanslight") format("svg");
+    src: url("/fonts/opensans-300-webfont.eot");
+    src: url("/fonts/opensans-300-webfont.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/opensans-300-webfont.woff") format("woff"),
+         url("/fonts/opensans-300-webfont.ttf") format("truetype"),
+         url("/fonts/opensans-300-webfont.svg#open_sanslight") format("svg");
 }
 
 @font-face {
     font-weight: normal;
     font-style: normal;
     font-family: "open_sansregular";
-    src: url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.eot");
-    src: url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.eot?#iefix") format("embedded-opentype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.woff") format("woff"),
-         url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.ttf") format("truetype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.svg#open_sansregular") format("svg");
+    src: url("/fonts/opensans-400-webfont.eot");
+    src: url("/fonts/opensans-400-webfont.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/opensans-400-webfont.woff") format("woff"),
+         url("/fonts/opensans-400-webfont.ttf") format("truetype"),
+         url("/fonts/opensans-400-webfont.svg#open_sansregular") format("svg");
 }
 
 @font-face {
     font-weight: normal;
     font-style: normal;
     font-family: "open_sanssemibold";
-    src: url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.eot");
-    src: url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.eot?#iefix") format("embedded-opentype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.woff") format("woff"),
-         url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.ttf") format("truetype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.svg#open_sanssemibold") format("svg");
+    src: url("/fonts/opensans-600-webfont.eot");
+    src: url("/fonts/opensans-600-webfont.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/opensans-600-webfont.woff") format("woff"),
+         url("/fonts/opensans-600-webfont.ttf") format("truetype"),
+         url("/fonts/opensans-600-webfont.svg#open_sanssemibold") format("svg");
 }
 
 @font-face {
     font-weight: normal;
     font-style: normal;
     font-family: "open_sansbold";
-    src: url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.eot");
-    src: url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.eot?#iefix") format("embedded-opentype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.woff") format("woff"),
-         url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.ttf") format("truetype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.svg#open_sansbold") format("svg");
+    src: url("/fonts/opensans-700-webfont.eot");
+    src: url("/fonts/opensans-700-webfont.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/opensans-700-webfont.woff") format("woff"),
+         url("/fonts/opensans-700-webfont.ttf") format("truetype"),
+         url("/fonts/opensans-700-webfont.svg#open_sansbold") format("svg");
 }
 
 @font-face {
     font-weight: normal;
     font-style: normal;
     font-family: "open_sansextrabold";
-    src: url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.eot");
-    src: url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.eot?#iefix") format("embedded-opentype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.woff") format("woff"),
-         url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.ttf") format("truetype"),
-         url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.svg#open_sansextrabold") format("svg");
+    src: url("/fonts/opensans-800-webfont.eot");
+    src: url("/fonts/opensans-800-webfont.eot?#iefix") format("embedded-opentype"),
+         url("/fonts/opensans-800-webfont.woff") format("woff"),
+         url("/fonts/opensans-800-webfont.ttf") format("truetype"),
+         url("/fonts/opensans-800-webfont.svg#open_sansextrabold") format("svg");
 }
 
 
