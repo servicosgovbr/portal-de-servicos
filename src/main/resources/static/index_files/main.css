@@ -687,17 +687,17 @@ body[class*="nitf"] div.width-1\3a 2 #plone-document-byline { width: 68.7216%; }
     margin: 0;
     width: 102px;
     height: 31px;
-    background: url("++resource++brasil.gov.portal/img/mais_fotos.png") no-repeat;
+    background: url("/img/mais_fotos.png") no-repeat;
     text-indent: 100%;
     white-space: nowrap;
 }
 
 #content .newsImageContainer a[class^="photo-icon-en"] {
-    background: url("++resource++brasil.gov.portal/img/mais_fotos_en.png") no-repeat;
+    background: url("/img/mais_fotos_en.png") no-repeat;
 }
 
 #content .newsImageContainer a[class^="photo-icon-es"] {
-    background: url("++resource++brasil.gov.portal/img/mais_fotos_es.png") no-repeat;
+    background: url("/img/mais_fotos_es.png") no-repeat;
 }
 
 #content .newsImageContainer .copyright {
@@ -938,7 +938,7 @@ dl.portlet dt a:visited { color: #464a55 !important; }
 #portal-column-two dl.portletLogin dt {
     padding: 1em;
     border: none;
-    background: url("++resource++brasil.gov.portal/img/cadeado.png") 230px 10px no-repeat;
+    background: url("/img/cadeado.png") 230px 10px no-repeat;
     text-transform: uppercase;
 }
 
@@ -1076,7 +1076,7 @@ dl.portlet ul.navTreeLevel1 .navTreeItem {
 
 a.navTreeItemInPath,
 a.navTreeCurrentNode {
-    background: transparent url("++resource++brasil.gov.portal/img/menu-ativo.gif") no-repeat !important;
+    background: transparent url("/img/menu-ativo.gif") no-repeat !important;
     font-weight: bold;
 }
 
@@ -1250,7 +1250,7 @@ dl.portlet ol li { list-style: decimal outside; }
     -webkit-border-radius: 5px 0 0 5px;
     -moz-border-radius: 5px 0 0 5px;
     border-radius: 5px 0 0 5px;
-    background: #6f7681 url("++resource++brasil.gov.portal/img/em-destaque.png") right center no-repeat;
+    background: #6f7681 url("/img/em-destaque.png") right center no-repeat;
     color: #fff;
 }
 
@@ -1302,7 +1302,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .portletCollection .portletFooter {
-    background: url("++resource++brasil.gov.portal/img/portlet-footer-textmore.png") no-repeat right;
+    background: url("/img/portlet-footer-textmore.png") no-repeat right;
     text-align: right;
 }
 
@@ -1484,7 +1484,7 @@ dl.portlet ol li { list-style: decimal outside; }
 .link-externo .collection-item a {
     display: block;
     padding-right: 2em;
-    background: url("++resource++brasil.gov.portal/img/readmoredarkgray.png") no-repeat right center !important;
+    background: url("/img/readmoredarkgray.png") no-repeat right center !important;
 }
 
 .link-externo .collection-item h2,
@@ -1888,7 +1888,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .laranja .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_laranja.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_laranja.png") no-repeat scroll right 5px transparent;
 }
 
 /* Azul Petroleo - Defesa e Segurança
@@ -1913,7 +1913,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .azul-petroleo .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_azul-petroleo.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_azul-petroleo.png") no-repeat scroll right 5px transparent;
 }
 
 /* Dourado - Cultura
@@ -1938,7 +1938,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .dourado .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_dourado.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_dourado.png") no-repeat scroll right 5px transparent;
 }
 
 /* Roxo - Ciencia e Tecnologia
@@ -1963,7 +1963,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .roxo .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_roxo.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_roxo.png") no-repeat scroll right 5px transparent;
 }
 
 /* Marron Claro - Economia e Emprego
@@ -1988,7 +1988,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .marrom-claro .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_marrom-claro.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_marrom-claro.png") no-repeat scroll right 5px transparent;
 }
 
 /* Verde Escuro - Educação
@@ -2013,7 +2013,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .verde-escuro .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_verde-escuro.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_verde-escuro.png") no-repeat scroll right 5px transparent;
 }
 
 /* Verde - Esporte
@@ -2038,7 +2038,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .verde .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_verde.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_verde.png") no-repeat scroll right 5px transparent;
 }
 
 /* Azul Governo
@@ -2063,7 +2063,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .azul .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_azul.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_azul.png") no-repeat scroll right 5px transparent;
 }
 
 /* Marron - Infraestrutura
@@ -2088,7 +2088,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .marrom .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_marrom.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_marrom.png") no-repeat scroll right 5px transparent;
 }
 
 /* Verde Claro - Meio Ambiente
@@ -2113,7 +2113,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .verde-claro .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_verde-claro.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_verde-claro.png") no-repeat scroll right 5px transparent;
 }
 
 /* Azul Claro - Saúde
@@ -2138,7 +2138,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .azul-claro .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_azul-claro.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_azul-claro.png") no-repeat scroll right 5px transparent;
 }
 
 /* Azul Escuro - Turismo
@@ -2163,7 +2163,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .azul-escuro .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/seta_azul-escuro.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_azul-escuro.png") no-repeat scroll right 5px transparent;
 }
 
 /* Azul Piscinba - Turismo
@@ -2209,7 +2209,7 @@ dl.portlet ol li { list-style: decimal outside; }
 }
 
 .bege .outstanding-header .outstanding-link {
-    background: url("++resource++brasil.gov.portal/img/readmorebrown.png") no-repeat scroll right 5px transparent;
+    background: url("/img/readmorebrown.png") no-repeat scroll right 5px transparent;
 }
 
 /* Amarelo - Economia e Emprego
@@ -2319,32 +2319,32 @@ dl.portlet div.listingBar a:link {
 }
 
 .tile-sc-embedder .documentByLine .icon-type {
-    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -22px;
+    background: url("/img/sprite-icons.png") no-repeat -1px -22px;
 }
 
 .tile-audio .documentByLine .icon-type {
-    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -1px;
+    background: url("/img/sprite-icons.png") no-repeat -1px -1px;
 }
 
 .tile-externalcontent .documentByLine .icon-type,
 .tile-collective-nitf-content .documentByLine .icon-type {
-    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -64px;
+    background: url("/img/sprite-icons.png") no-repeat -1px -64px;
 }
 
 .tile-page .documentByLine .icon-type {
-    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -43px;
+    background: url("/img/sprite-icons.png") no-repeat -1px -43px;
 }
 
 .tile-image .documentByLine .icon-type {
-    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -85px;
+    background: url("/img/sprite-icons.png") no-repeat -1px -85px;
 }
 
 .tile-aplicativos .documentByLine .icon-type {
-    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -106px;
+    background: url("/img/sprite-icons.png") no-repeat -1px -106px;
 }
 
 .tile-folder .documentByLine .icon-type {
-    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -64px;
+    background: url("/img/sprite-icons.png") no-repeat -1px -64px;
 }
 
 
@@ -2597,7 +2597,7 @@ dl.portlet div.listingBar a:link {
 
 #voltar-topo a {
     padding-left: 20px;
-    background: url("++resource++brasil.gov.portal/img/voltar-topo.png") no-repeat left center;
+    background: url("/img/voltar-topo.png") no-repeat left center;
     color: #777;
     font-size: 0.9em;
 }
@@ -3201,7 +3201,7 @@ body[class*="galeria_de_fotos"] #content .descriptionAlbum {
     width: 22px;
     height: 21px;
     border-radius: 3px;
-    background-image: url("++resource++brasil.gov.portal/img/icone-navegacao-cinza.png");
+    background-image: url("/img/icone-navegacao-cinza.png");
     background-repeat: no-repeat;
     text-indent: 100%;
     white-space: nowrap;
@@ -3301,7 +3301,7 @@ ul.formTabs { padding: 0px !important; }
     }
 
     body.contraste .menuTrigger {
-        background: #000 url("++resource++brasil.gov.portal/img/bg-menu-mobile-contraste.png") top right no-repeat;
+        background: #000 url("/img/bg-menu-mobile-contraste.png") top right no-repeat;
         border-top: 1px solid #FFF;
         border-bottom: 1px solid #FFF;
     }
@@ -3312,7 +3312,7 @@ ul.formTabs { padding: 0px !important; }
 
     #navigation.ativo #portal-column-one {
         display: block;
-        background: url("++resource++brasil.gov.portal/img/shadow-bottom.gif") repeat-x bottom left;
+        background: url("/img/shadow-bottom.gif") repeat-x bottom left;
         padding-bottom: 13px;
     }
 
@@ -3339,7 +3339,7 @@ ul.formTabs { padding: 0px !important; }
         display: block;
         width: 37px;
         height: 36px;
-        background: url("++resource++brasil.gov.portal/img/bg-menu-mobile-panel.png") top center no-repeat;
+        background: url("/img/bg-menu-mobile-panel.png") top center no-repeat;
     }
 
     #portal-column-one .ativo .portletHeader a span {
@@ -3483,12 +3483,12 @@ ul.formTabs { padding: 0px !important; }
         right: 13px;
         width: 30px;
         height: 30px;
-        background: url("++resource++brasil.gov.portal/img/search-button-30px.gif") no-repeat;
+        background: url("/img/search-button-30px.gif") no-repeat;
         cursor: pointer;
     }
 
     body.contraste #header #portal-searchbox .searchButton {
-        background: url("++resource++brasil.gov.portal/img/search-button-30px-contraste.gif") no-repeat;
+        background: url("/img/search-button-30px-contraste.gif") no-repeat;
     }
 
     body.contraste #portal-searchbox .searchField {
@@ -3804,12 +3804,12 @@ body.contraste .item-central .link-publicacoes,
 body.contraste .item-central .link-fotos,
 body.contraste .item-central .link-aplicativos,
 body.contraste .item-central .link-dadosabertos {
-    background-image: url("++resource++brasil.gov.portal/img/sprite-contraste.png");
+    background-image: url("/img/sprite-contraste.png");
 }
 
 body.contraste .outstanding-header .outstanding-link,
 body.contraste .mediacarousel .mediacarousel-footer-container .mediacarousel-footer-link {
-    background: url("++resource++brasil.gov.portal/img/seta_branca.png") no-repeat scroll right 5px transparent;
+    background: url("/img/seta_branca.png") no-repeat scroll right 5px transparent;
 }
 
 body.contraste .mediacarousel .mediacarousel-footer-container .mediacarousel-footer-link {
@@ -3842,7 +3842,7 @@ body.contraste .outstanding-header {
 }
 
 body.contraste .videogallery-tile .gallery-footer a {
-    background-image: url("++resource++brasil.gov.portal/img/seta_branca.png");
+    background-image: url("/img/seta_branca.png");
 }
 
 body.contraste .gallery-element {
@@ -3864,7 +3864,7 @@ body.contraste .videogallery-tile .gallery-footer {
 }
 
 body.contraste #content .relatar-erros a {
-    background: url("++resource++brasil.gov.portal/img/icon-reportar-erros-contraste.png") no-repeat;
+    background: url("/img/icon-reportar-erros-contraste.png") no-repeat;
 }
 
 body.contraste #content .relatar-erros a:hover,
@@ -3902,14 +3902,14 @@ body.contraste .link-externo .collection-item.even {
 }
 
 body.contraste .link-externo .collection-item a {
-    background: url("++resource++brasil.gov.portal/img/seta_branca.png") no-repeat no-repeat right center !important;
+    background: url("/img/seta_branca.png") no-repeat no-repeat right center !important;
     line-height: 20px;
 }
 
 /* botões de navegação */
 body.contraste #tile_banner_rotativo li .button-nav,
 body.contraste .orderTiles .button-nav {
-    background-image: url("++resource++brasil.gov.portal/img/bullets-branco-preto.gif");
+    background-image: url("/img/bullets-branco-preto.gif");
     background-color: #000;
 }
 
@@ -4011,12 +4011,12 @@ body.contraste .sem-compromisso {
 }
 
 body.contraste .horario.comprimisso-inicio {
-    background: url(++resource++brasil.gov.portal/img/summary-view-icons-sprite.png) -653px -393px no-repeat;
+    background: url(/img/summary-view-icons-sprite.png) -653px -393px no-repeat;
     width: 0;
 }
 
 body.contraste .add-agenda {
-    background: url(++resource++brasil.gov.portal/img/summary-view-icons-sprite.png) -624px -392px no-repeat;
+    background: url(/img/summary-view-icons-sprite.png) -624px -392px no-repeat;
 }
 
 /* mapa do site */
@@ -4062,15 +4062,15 @@ body.contraste #content .mediacarousel .rights {
 }
 
 body.contraste #content .newsImageContainer .photo-icon {
-    background: url("++resource++brasil.gov.portal/img/mais_fotos-contraste.png") no-repeat;
+    background: url("/img/mais_fotos-contraste.png") no-repeat;
 }
 
 body.contraste #content .newsImageContainer a[class^="photo-icon-en"] {
-    background: url("++resource++brasil.gov.portal/img/mais_fotos_en-contraste.png") no-repeat;
+    background: url("/img/mais_fotos_en-contraste.png") no-repeat;
 }
 
 body.contraste #content .newsImageContainer a[class^="photo-icon-es"] {
-    background: url("++resource++brasil.gov.portal/img/mais_fotos_es-contraste.png") no-repeat;
+    background: url("/img/mais_fotos_es-contraste.png") no-repeat;
 }
 
 /* contraste blog view */
@@ -4100,12 +4100,12 @@ body.contraste .tasksplease li {
 /* player de audio */
 
 body.contraste .audiogallery-footer-container .audiogallery-footer-link {
-    background: url("++resource++brasil.gov.portal/img/seta_branca.png") no-repeat scroll right 0px transparent;
+    background: url("/img/seta_branca.png") no-repeat scroll right 0px transparent;
     line-height: 20px;
 }
 
 body.contraste #content .audiogallery-items-container .audiogallery-item {
-    background: url("++resource++brasil.gov.portal/img/sound-icon-contraste.png") no-repeat;
+    background: url("/img/sound-icon-contraste.png") no-repeat;
     padding-left: 25px;
 }
 
@@ -4118,79 +4118,79 @@ body.contraste div.jp-audio, div.jp-audio-stream {
 }
 
 body.contraste a.jp-play {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 0 no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 0 no-repeat;
 }
 body.contraste a.jp-play:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -41px 0 no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -41px 0 no-repeat;
 }
 body.contraste a.jp-pause {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -42px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -42px no-repeat;
 }
 body.contraste a.jp-pause:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -41px -42px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -41px -42px no-repeat;
 }
 body.contraste a.jp-previous {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -112px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -112px no-repeat;
 }
 body.contraste a.jp-previous:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -29px -112px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -29px -112px no-repeat;
 }
 body.contraste a.jp-next {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -141px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -141px no-repeat;
 }
 body.contraste a.jp-next:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -29px -141px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -29px -141px no-repeat;
 }
 body.contraste div.jp-seek-bar {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -202px repeat-x;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -202px repeat-x;
 }
 body.contraste div.jp-play-bar {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -218px repeat-x;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -218px repeat-x;
 }
 body.contraste div.jp-seeking-bg {
     background: url("++resource++brasil.gov.tiles/jplayer.blue.monday.seeking.gif");
 }
 body.contraste a.jp-mute {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -186px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -186px no-repeat;
 }
 body.contraste a.jp-mute:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -19px -186px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -19px -186px no-repeat;
 }
 body.contraste a.jp-unmute {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -60px -170px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -60px -170px no-repeat;
 }
 body.contraste a.jp-unmute:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -79px -170px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -79px -170px no-repeat;
 }
 body.contraste div.jp-volume-bar {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -250px repeat-x;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -250px repeat-x;
 }
 body.contraste div.jp-volume-bar-value {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -256px repeat-x;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -256px repeat-x;
 }
 body.contraste a.jp-full-screen {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -310px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -310px no-repeat;
 }
 body.contraste a.jp-full-screen:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -30px -310px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -30px -310px no-repeat;
 }
 body.contraste a.jp-restore-screen {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -60px -310px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -60px -310px no-repeat;
 }
 body.contraste a.jp-restore-screen:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -90px -310px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -90px -310px no-repeat;
 }
 body.contraste a.jp-shuffle {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -270px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -270px no-repeat;
 }
 body.contraste a.jp-shuffle:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -30px -270px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -30px -270px no-repeat;
 }
 body.contraste a.jp-shuffle-off {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -60px -270px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -60px -270px no-repeat;
 }
 body.contraste a.jp-shuffle-off:hover {
-    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -90px -270px no-repeat;
+    background: url("/img/jplayer.blue.monday-contraste.jpg") -90px -270px no-repeat;
 }
 
 /* contraste de evento */
@@ -4361,11 +4361,11 @@ body.contraste .portlet-static-resource-center .portletHeader,
 body.contraste .portlet-static-centrales-del-contenido .portletHeader,
 body.contraste .portlet-static-centrais-de-conteudos .portletHeader,
 body.contraste .portletNavigationTree .portletHeader {
-    background: #000 url("++resource++brasil.gov.portal/img/portlet-header-contraste.jpg") no-repeat 96% center !important;
+    background: #000 url("/img/portlet-header-contraste.jpg") no-repeat 96% center !important;
 }
 
 body.contraste .portletNavigationTree .portletHeader.ativo {
-    background: url("++resource++brasil.gov.portal/img/portlet-header-expanded-contraste.jpg") no-repeat 96% center !important;
+    background: url("/img/portlet-header-expanded-contraste.jpg") no-repeat 96% center !important;
 }
 
 /* XXX: Fix no popup de link de Products.TinyMCE.

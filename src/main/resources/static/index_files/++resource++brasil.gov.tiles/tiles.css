@@ -1750,5 +1750,5 @@ body.contraste .album-tile .cycle-hover .cycle-next {
 body.contraste .album-tile .footer a:after {
     width: 20px;
     height: 20px;
-    background: url("++resource++brasil.gov.portal/img/seta_branca.png") no-repeat transparent !important;
+    background: url("/img/seta_branca.png") no-repeat transparent !important;
 }

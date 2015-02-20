@@ -233,7 +233,7 @@
  */
 
 .list-actions .print {
-    background: url("++resource++brasil.gov.portal/img/print-icon.png") no-repeat;
+    background: url("/img/print-icon.png") no-repeat;
 }
 
 
@@ -531,7 +531,7 @@
    ========================================================================== */
 
 body.contraste .list-actions .print {
-    background: url("++resource++brasil.gov.portal/img/print-icon-altocontraste.png") no-repeat;
+    background: url("/img/print-icon-altocontraste.png") no-repeat;
 }
 
 body.contraste #content .comprimisso-pauta,
