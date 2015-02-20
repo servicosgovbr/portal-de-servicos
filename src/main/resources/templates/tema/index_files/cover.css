@@ -1,0 +1,144 @@
+/* Basic style for tiles */
+.tile-title {
+    font-size: 120%;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.tile-footer {
+    text-align: right;
+}
+
+/*loading mask*/
+.loading-mask {
+    background: #000 url('spinner.gif') scroll no-repeat center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#000;
+    opacity: 0.6 !important;
+    display: none;
+    z-index: 99;
+}
+.loading-mask.show {
+    display:block;
+}
+.loading-mask.remove-tile {
+    background-color: #833434;
+}
+
+.template-compose #content .tile {
+    outline:1px dotted #999;
+    padding-top:1em;
+}
+.template-compose .tile-container {
+    position:relative;
+}
+.template-compose .edit-tile-link,
+.template-compose .collection-link {
+    position:absolute;
+    height:1em;
+    line-height:1em;
+    top: 0;
+}
+.template-compose .collection-link {
+    right: 0;
+}
+
+.tile-select-button {
+    cursor: pointer;
+}
+
+.tile-remove-item {
+    position:absolute;
+    right: 0;
+    top: 0;
+    font-size: 1px;
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    background:transparent url('remove.png') scroll no-repeat top center;
+    background-size: 100%;
+}
+
+.tile-remove-item:hover {
+    background:transparent url("remove.png") no-repeat scroll center -14px;
+    background-size: 100%;
+}
+.tile-remove-item .text{
+    visibility: hidden;
+}
+
+/*drag and drop*/
+
+.ui-sortable-placeholder {
+    background-color:#9ad39d !important;
+    visibility:visible !important;
+    outline:1px dashed green;
+}
+.ui-sortable-helper {
+    opacity:0.5;
+    outline:1px solid #333;
+    cursor:move;
+}
+.template-compose #content .tile {
+    margin-bottom: 1em;
+    min-height: 100px;
+}
+.ui-state-default .loading-mask{
+    display:block;
+    background: #EEE url('drophere.png') scroll no-repeat center center;
+    opacity: 0.8 !important;
+}
+.ui-state-hover .loading-mask{
+    display:block;
+    background-color: #b4fca3;
+}
+.template-compose #content .sortable-tile .list-item:hover {
+    outline: 1px dotted #999999;
+}
+.ui-sortable>div:hover {
+    cursor: move;
+}
+
+
+/* images */
+.tile img.right {
+    float: right;
+    margin: 0 1em 0.5em 0;
+}
+.tile img.left {
+    float: left;
+    margin: 0 1em 0.5em 0;
+}
+.galleria-inner {
+    width: 100%;
+    height: 450px;
+}
+
+/* conflicts */
+table.invisible{visibility:visible;}
+.close {opacity: 1;}
+
+/*Skins*/
+.tile-edge {
+    border: 1px solid #DDDDDD;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.tile-dark {
+    background: #DDDDDD;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.tile-shadow {
+    border: 1px solid #DDDDDD;
+    padding: 5px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 5px 10px #C3C3C3;
+    -webkit-box-shadow: 0 5px 10px #C3C3C3;
+    box-shadow: 0 5px 10px #C3C3C3;
+}

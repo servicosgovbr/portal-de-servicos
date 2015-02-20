@@ -1,0 +1,557 @@
+/*
+ *
+ * CSS com estilos para o produto de Agenda
+ *
+ * @Autores
+ *
+ * - Simples Consultoria - www.simplesconsultoria.com.br
+ * - DESERTO Digital - www.desertodigital.com.br
+ *
+ * @Referencias
+ *
+ * Lista de padrões, convenções e boas praticas CSS que devem ser seguidas.
+ * https: //github.com/necolas/idiomatic-css/tree/master/translations/pt-BR
+ *
+ * Plugins para ordenar os atributos de CSS.
+ * http://csscomb.com/
+ *
+ * Validador de CSS do W3C.
+ * http://jigsaw.w3.org/css-validator/
+ */
+
+/* ==========================================================================
+   Title
+   ========================================================================== */
+
+.portaltype-agendadiaria #content .documentFirstHeading {
+    margin-bottom: 0.5em;
+    padding: 0 0 0.5em;
+    border-bottom: 1px dotted #bfc0c2;
+}
+
+
+/* ==========================================================================
+   Viewlet Bellow Content Title
+   ========================================================================== */
+
+/*
+ * Esconder Document By Line
+ */
+
+.portaltype-agendadiaria #plone-document-byline {
+    display: none !important;
+}
+
+/*
+ * Social Like
+ */
+
+.portaltype-agendadiaria #viewlet-social-like,
+.portaltype-agendadiaria div.width-1\3a 2 #viewlet-social-like {
+    right: -25px;
+    padding: 0.5em 0;
+    width: 100%;
+    border: none;
+    text-align: right;
+}
+
+
+/* ==========================================================================
+   Dados Agenda
+   ========================================================================== */
+
+.dados-agenda {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.brasao-agenda { margin-top: 20px; }
+
+.agenda-orgao {
+    margin-bottom: 0.2em;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.agenda-autoridade {
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.agenda-dia {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+#content .portalMessage {
+    margin-top: 30px;
+    color: #596e7f;
+    text-align: left;
+}
+
+/*
+ * Lista dos compromissos
+ */
+
+#content .list-compromissos {
+    margin-left: 0;
+    border-bottom: 1px solid #d6dcd7;
+}
+
+#content .item-compromisso {
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 24px 0 14px;
+    border-top: 1px solid #d6dcd7;
+    list-style: none;
+}
+
+
+/* ==========================================================================
+   Dados Compromisso
+   ========================================================================== */
+
+.comprimisso-horarios {
+    float: left;
+    width: 68px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.comprimisso-horarios .horario {
+    display: block;
+    padding: 0 0 10px 20px;
+    height: 14px;
+    background: url("++resource++brasil.gov.agenda/icon-horarios.png") no-repeat;
+    line-height: 14px !important;
+}
+
+.comprimisso-horarios .comprimisso-inicio { background-position: 0 0; }
+
+.comprimisso-horarios .comprimisso-fim { background-position: 0 -25px; }
+
+.comprimisso-dados {
+    float: left;
+    padding-left: 19px;
+    width: 400px;
+    border-left: 1px dotted #d6dcd7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.comprimisso-titulo {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.comprimisso-participantes { line-height: 1.25em; }
+
+#content .comprimisso-pauta,
+#content .comprimisso-local {
+    color: #596e7f;
+    line-height: 1.25em;
+    font-size: 1em;
+}
+
+
+/*
+ * Sem compromisso
+ */
+
+.sem-compromisso {
+    color: #464a55;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+/* Botões de editar e remover
+   ========================================================================== */
+
+.compromisso-acoes {
+    margin: 10px 0 !important;
+}
+
+.compromisso-acoes li { display: inline-block !important; }
+
+.adicionar_compromisso { line-height: 30px; }
+
+
+/* vCal iCal
+   ========================================================================== */
+
+.download-compromisso { line-height: 20px; }
+
+.add-agenda {
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    background: url("++resource++brasil.gov.agenda/icon-file-agenda.png") no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   Rodape Agenda
+   ========================================================================== */
+
+.footer-actions {
+    margin: 45px 0 0 0;
+    padding: 12px 0;
+    border-top: 4px solid #172938;
+    border-bottom: 2px solid #8b949b;
+}
+
+.list-actions { display: inline-block; }
+
+.list-actions .item {
+    display: block !important;
+    float: left;
+    clear: none !important;
+    margin-bottom: 0 !important;
+    width: 100px;
+    height: 20px;
+    list-style: none !important;
+}
+
+#content .print a .texto {
+    display: block;
+    margin-left: 2.273em;
+    height: 1.909em;
+    color: #172938;
+    font-size: 0.917em;
+    line-height: 1.909em;
+}
+
+/*
+ * Print Icon
+ */
+
+.list-actions .print {
+    background: url("++resource++brasil.gov.portal/img/print-icon.png") no-repeat;
+}
+
+
+/* ==========================================================================
+   Portlet laterais
+   ========================================================================== */
+
+.portletSearch,
+.portletCalendar,
+.portletSearch .portletItem,
+.portletCalendar .portletItem,
+.portletSearch .portletHeader,
+.portletCalendar .portletHeader,
+.portletSearch .portletFooter,
+.portletCalendar .portletFooter { background: #edeff1 !important; }
+
+.portletSearch .portletHeader,
+.portletCalendar .portletHeader {
+    padding: 15px 12px;
+    background: #edeff1 !important;
+    font-weight: normal;
+    font-size: 1.3em;
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+}
+
+/* Portlet de Calendario
+   ========================================================================== */
+
+.portletCalendarEx tr.month,
+.ploneCalendar .event { background: none !important; }
+
+.ploneCalendar .activeevent { background: #444 !important; }
+
+#portal-column-two dl.portlet .activeevent a:link,
+#portal-column-two dl.portlet .activeevent a:visited { color: #FFFFFF !important; }
+
+.portletCalendar .weekdays th { font-weight: normal; }
+
+.portletCalendar .ploneCalendar td { font-weight: bold; }
+
+.ploneCalendar .weekdays th { background: none; }
+
+
+/* Portlet de Busca
+   ========================================================================== */
+
+.portletSearch .portletHeader .tile { margin-bottom: 0 !important; }
+
+.portletSearch .portletItem {
+    margin: 10px 12px !important;
+    padding: 2px !important;
+    padding: 2px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff !important;
+    font-size: 80%;
+}
+
+.portletSearch .portletItem .searchField {
+    padding: 0.3em 0.35em;
+    width: 170px;
+    border: none;
+    border-right: none;
+    font-size: 1.2em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+.portletSearch .portletItem .searchButton {
+    padding: 4px 15px;
+    padding-right: 5px;
+    border: none;
+    background: transparent;
+    background-image: url("++resource++brasil.gov.agenda/icon-search-agenda.png");
+    background-position: 0px 2px;
+    background-repeat: no-repeat;
+    text-indent: -100px;
+}
+
+.portletSearch .portletText {
+    margin: 10px 13px;
+}
+
+.portletSearch .portletFooter {
+    display: none;
+}
+
+
+/* ==========================================================================
+   Tile de agenda
+   ========================================================================== */
+
+.agenda-tile {
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+}
+
+.agenda-tile .title {
+    margin: 0px;
+    padding: 1em 1em 1em 1em;
+    border-bottom: 1px solid #c1c1c1;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+}
+
+.agenda-tile .period {
+    padding: .6em 0px 0.0em 0.75em;
+    color: #162938;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content .agenda-tile .period {
+    margin-bottom: 0em;
+}
+
+#content .agenda-tile .latest-update p {
+    margin-bottom: 0px;
+    font-size: 1.1em;
+}
+
+.agenda-tile .latest-update {
+    padding: .2em 0em 1em .9em;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.agenda-tile-footer {
+    padding: .9em .6em;
+    border-top: 1px solid #c1c1c1;
+    text-align: right;
+}
+
+.agenda-tile .latest-update p,
+.agenda-tile-footer a {
+    color: #172734 !important;
+}
+
+.agenda-tile-footer a {
+    margin: 0;
+    padding: 0;
+    padding-right:0em;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: .9em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+#content .no-events {
+    padding-top: 12.2em;
+    height: 12.2em;
+    text-align: center;
+}
+
+#content .collection-events{
+    margin:0px;
+    padding:0px;
+}
+
+#content .collection-events li {
+    display: table;
+    float: left;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0.5em 0px 0.5em 1.1em;
+    width: 95%;
+    list-style: outside none;
+}
+
+.collection-events li {
+    border-bottom: 1px dotted #c1c1c1;
+}
+
+.collection-events li:last-child {
+    border-bottom: none;
+}
+
+.collection-events .timestamp-cell{
+    display:table-cell;
+    width: 15%;
+    vertical-align:middle;
+}
+
+.collection-events .timestamp {
+    float: left;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 3px;
+    width: 100%;
+    height: 15px;
+    background-image: url("++resource++brasil.gov.agenda/icon-clock.png");
+    background-position: 0px 1px;
+    background-repeat: no-repeat;
+    color: #5c6f7e;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+.collection-events .title-item {
+    display: table-cell;
+    padding: 0px 1.1em 0px 20px;
+    padding-left: 0.9em;
+    width: 90%;
+    border-left: 1px solid #c1c1c1;
+    color: #305373 !important;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 1 coluna  */
+.width-15 .collection-events,
+.width-16 .collection-events {
+    overflow: auto;
+    max-height: 21.3em;
+}
+
+.width-15 .collection-events  .timestamp-cell,
+.width-16  .collection-events .timestamp-cell{
+    width:9.3%;
+    line-height: 1.2em !important;
+}
+
+/* 2 colunas  */
+.width-8 .collection-events .timestamp-cell{
+    width:20%;
+}
+
+.width-8 .collection-events,
+.width-10 .collection-events {
+    overflow: auto;
+    height: 21.3em;
+}
+
+.width-8 .collection-events .timestamp,
+.width-10 .collection-events .timestamp {
+    /*float: left;
+      /* margin-top: .9em;
+      height: 1.3em;*/
+    border-right: none;
+    line-height: 1.2em !important;
+}
+
+.width-8 .collection-events .title-item,
+.width-10 .collection-events .title-item {
+    padding-left: .9em;
+    width: 87%;
+    border-left: 1px solid #c1c1c1;
+}
+
+/* 3 colunas */
+.width-5 .collection-events {
+    overflow: auto;
+    height:21.3em;
+}
+
+#content .width-5 .collection-events li{
+    display:inline-block;
+    width:92%;
+
+}
+
+#content .width-5 .collection-events li .timestamp-cel,
+#content .width-5 .collection-events li a
+{
+    display:inline-block;
+    overflow: hidden;
+}
+
+.width-5 .agenda-tile .collection-events .title-item{
+    padding:0;
+    width:100%;
+    border:0;
+}
+
+.width-5 .agenda-tile .collection-events .timestamp {
+    margin-bottom: 5px;
+    padding: 0px 0px 0px 19px;
+    border: none;
+    background-position: 0px 0px;
+    color: #305373;
+    text-align: left;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 14px;
+}
+
+
+/* ==========================================================================
+   Contraste Agenda
+   ========================================================================== */
+
+body.contraste .list-actions .print {
+    background: url("++resource++brasil.gov.portal/img/print-icon-altocontraste.png") no-repeat;
+}
+
+body.contraste #content .comprimisso-pauta,
+body.contraste #content .comprimisso-local,
+body.contraste #content .print a .texto,
+body.contraste #content .collection-events .timestamp { color: white; }
+
+body.contraste .footer-actions {
+    border-top: 4px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+body.contraste #content .list-compromissos {
+    border-bottom: 1px solid #fff;
+}
+
+body.contraste #content .item-compromisso {
+    border-top: 1px solid #d6dcd7;
+}
+
+body.contraste #content .collection-events .timestamp {
+    background-position: 0px -15px;
+}

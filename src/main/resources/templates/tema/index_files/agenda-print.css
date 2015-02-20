@@ -1,0 +1,137 @@
+/*
+ *
+ * CSS com estilos para impressão da Agenda
+ *
+ * @Autor
+ *
+ * - DESERTO Digital - www.desertodigital.com.br
+ *
+ * @Referencias
+ *
+ * Lista de padrões, convenções e boas praticas CSS que devem ser seguidas.
+ * https: //github.com/necolas/idiomatic-css/tree/master/translations/pt-BR
+ *
+ * Plugins para ordenar os atributos de CSS.
+ * http://csscomb.com/
+ *
+ * Validador de CSS do W3C.
+ * http://jigsaw.w3.org/css-validator/
+ */
+
+/* ==========================================================================
+   Objetos que não devem ser exibidos
+   ========================================================================== */
+
+.portaltype-agendadiaria #barra-brasil,
+.portaltype-agendadiaria #accessibility,
+.portaltype-agendadiaria #portal-siteactions,
+.portaltype-agendadiaria #portal-searchbox,
+.portaltype-agendadiaria #social-icons,
+.portaltype-agendadiaria #sobre,
+.portaltype-agendadiaria #viewlet-below-content-title,
+.portaltype-agendadiaria #navigation,
+.portaltype-agendadiaria #footer,
+.portaltype-agendadiaria #voltar-topo,
+.portaltype-agendadiaria #extra-footer,
+.portaltype-agendadiaria .download-compromisso,
+.portaltype-agendadiaria .footer-actions {
+    display: none;
+}
+
+/* ==========================================================================
+   Estilização para impressão
+   ========================================================================== */
+
+#wrapper { width: 420px; }
+
+#portal-column-content { width: 100% }
+
+/* Cabeçalho
+   ========================================================================== */
+
+.portaltype-agendadiaria #header {
+    padding: 0;
+    background: #fff;
+    color: #000;
+    font-size: 90%;
+}
+
+.portaltype-agendadiaria #logo,
+.portaltype-agendadiaria #portal-logo {
+    display: block !important;
+    color: #000 !important;
+}
+
+.portaltype-agendadiaria #content .comprimisso-pauta,
+.portaltype-agendadiaria #content .comprimisso-local,
+.portaltype-agendadiaria #portal-title { color: #000 !important; }
+
+.portaltype-agendadiaria #logo {
+    padding: 0;
+}
+
+.portaltype-agendadiaria #logo span {
+    display: block;
+    line-height: 1em;
+}
+
+.portaltype-agendadiaria #portal-logo {
+    display: block;
+    margin: 0;
+    border-bottom: none !important;
+}
+
+.portaltype-agendadiaria #portal-title {
+    margin: 0;
+    font-size: 3.35em;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.portaltype-agendadiaria #logo .logo {
+    margin-bottom: 0.2em;
+    font-size: 3em !important;
+    line-height: 1.1em;
+}
+
+.portaltype-agendadiaria #portal-title-1 { top: 30px; }
+
+.portaltype-agendadiaria #portal-description {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+/* Agenda
+   ========================================================================== */
+
+.documentFirstHeading { font-size: 150%; }
+
+.portaltype-agendadiaria #content .documentFirstHeading {
+    border-bottom: 1px solid #000 !important;
+}
+
+.brasao-agenda { margin-top: 0; }
+
+.dados-agenda { font-size: 80%; }
+
+.agenda-orgao { margin: 5px 0; }
+
+.agenda-autoridade { margin: 5px 0; }
+
+.comprimisso-dados {
+    width: 320px;
+    font-size: 90%;
+}
+
+.list-compromissos { padding-left: 0; }
+
+.comprimisso-horarios .horario {
+    padding: 0;
+    width: 60px;
+    background: none;
+    font-size: 80%;
+}
+
+.comprimisso-titulo { margin-top: 0; }
+
+label { font-weight: bold; }

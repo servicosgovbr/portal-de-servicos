@@ -1,0 +1,238 @@
+
+/* - authoring.css - */
+@media screen {
+/* @group Editing */
+
+/* @group Tabs */
+
+/* Color differences between the two tab types */
+#content ul.formTabs {
+    background-color: #ddd;
+    border: 0.3em solid #ddd;
+}
+#edit-bar {
+    background-color: #75ad0a;
+    border: 0.25em solid #75ad0a;
+    font-size: 80%;
+    min-height: 2em;
+    margin-bottom: 1em;
+    padding-top: 0.05em;
+}
+#content-views {
+    float: left;
+    background-color: #75ad0a;
+}
+/* fix shift on content views list under ie6 */
+/* .ie6 is set on <html> by Modernizr library */
+.ie6 ul#content-views{
+    margin: -2px -3px 0px -3px;
+}
+#content-views a {
+    color: White;
+}
+
+/* Shared CSS between the two tab types */
+#edit-bar,
+#content ul.formTabs,
+#content-core ul.formTabs {
+    display: block;
+    border-style: solid solid none solid;
+    margin-left: 0;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+}
+#content li.formTab,
+#content-core li.formTab {
+    display: inline;
+    margin-right:0.25em;
+}
+#content-views a,
+#content li.formTab a,
+#content-core li.formTab a {
+    /* this isn't supported by all browsers, so we keep it in a separate rule */
+    display: inline-block;
+}
+#content-views a,
+#content li.formTab a,
+#content-core li.formTab a {
+    line-height: 26px;
+    padding: 0 0.75em;
+    text-decoration: none;
+    border: none;
+    margin: 0 ;
+}
+#content-views li.selected a,
+#content li.formTab a.selected,
+#content-core li.formTab a.selected {
+    font-weight: bold;
+}
+#content-views li.selected a,
+#content-views li a:hover,
+#content li.formTab a.selected,
+#content li.formTab a:hover,
+#content-core li.formTab a.selected,
+#content-core li.formTab a:hover {
+    background: White;
+    color: Black;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+}
+#content li.formTab a.notify,
+#content-core li.formTab a.notify {
+    background-color: red;
+    color: White;
+}
+#content li.formTab a.required span:after,
+#content-core li.formTab a.required span:after,
+div.field span.required:after {
+    content: "■";
+    color: Red;
+    padding-left: 0.2em;
+}
+#content fieldset.formPanel,
+#content-core fieldset.formPanel {
+    border: none;
+}
+#content fieldset.formPanel.hidden,
+#content-core fieldset.formPanel.hidden {
+    display: none;
+}
+#content div.formControls input.hidden,
+#content-core div.formControls input.hidden {
+    display: none;
+}
+
+/* @end */
+
+/* @group Pulldown menus */
+
+/* @group Personal tools pulldown */
+#portal-personaltools dl {
+}
+#portal-personaltools dt {
+    font-weight: normal;
+}
+#portal-personaltools dt.actionMenuHeader a:after {
+    content: " ▼";
+}
+#portal-personaltools dd {
+    right: 0;
+    padding-top: 0.5em;
+}
+#portal-personaltools dd {
+    background: #e3e3e3;
+    padding-bottom: 0.5em;
+}
+#portal-personaltools dd a {
+    line-height: 2em;
+    padding: 0 0.75em;
+}
+#portal-personaltools dd a:hover {
+    background: #205c90;
+    color: White;
+}
+
+/* @end */
+
+/* @group Content pulldowns */
+
+#contentActionMenus dl.actionMenu a,
+#contentActionMenus dl.actionMenu.activated dd {
+    background-color: #75ad0a;
+    color: White;
+    z-index: 5;
+}
+#contentActionMenus dl.actionMenu.activated dd {
+    border-bottom: 0.5em solid #75ad0a;
+        right: -3px;
+}
+#contentActionMenus dl.actionMenu.activated dd a:hover,
+#contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+    background-color: White !important;
+    color: #666;
+}
+#contentActionMenus dl.actionMenu {
+    line-height: 2em;
+}
+
+#folderHeader, #contextHeader {
+        border-bottom: 2px solid white;
+}
+
+#contextHeader { margin-top: 5px; }
+
+
+/* @end */
+
+#contentActionMenus {
+    float: right;
+    background: #75ad0a;
+    margin: 0;
+    position: relative;
+    top: -0.23em;
+    right:-0.24em;
+    padding: 0.1em 0.24em 0 0;
+    border-radius: 0.5em;
+    border-top-left-radius: 0;
+    -webkit-border-radius: 0.5em;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius: 0.5em;
+    -moz-border-radius-topleft: 0;
+}
+
+.actionMenuContent {
+    padding: 0 0.25em;
+}
+
+dl.actionMenu {
+    float: right;
+    white-space: nowrap;
+    position: relative;
+    margin-left: 0.5em;
+}
+dl.actionMenu a,
+dl.actionMenu div {
+    display: block !important;
+    white-space: nowrap;
+}
+dl.actionMenu dt {
+    font-weight: normal;
+}
+span.arrowDownAlternative {
+    font-size: 80%;
+}
+dl.actionMenu.deactivated dt {
+    margin: 0 0.25em;
+}
+dl.actionMenu.deactivated dd {
+    display: none;
+}
+dl.actionMenu.activated dd {
+    position: absolute;
+    width: auto;
+    min-width: 100%;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+    -moz-border-radius-bottomleft: 0.5em;
+    -moz-border-radius-bottomright: 0.5em;
+}
+dl.actionMenu.activated dt a,
+dl.actionMenu.activated dd a,
+dl.actionMenu.activated dd div {
+    margin: 0 0.25em;
+}
+
+/* @end */
+
+}
+

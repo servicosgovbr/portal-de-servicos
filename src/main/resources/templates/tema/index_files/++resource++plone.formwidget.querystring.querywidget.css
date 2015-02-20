@@ -1,0 +1,108 @@
+.queryindex, .addIndex {
+    display: block;
+    width: 180px;
+    float: left;
+    margin-right: 0.5em;
+}
+.queryoperator, .addOperator {
+    display: block;
+    width: 100px;
+    float: left;
+    margin-right: 0.5em;
+}
+.queryresults {
+    float: right;
+}
+.previewSearchResultsHeading {
+    margin-top: 1em;
+}
+.QueryWidget .criteria {
+    margin: 0 1em 0.5em 0;
+    clear: both;
+}
+.removecriteria {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 1em;
+}
+.error.QueryWidget {
+    background-color:transparent;
+    border:0;
+    padding:0;
+}
+.sortingField {
+    clear: both;
+    padding-top: 1em;
+}
+.previewresultsLabel {
+    padding-top: 1em;
+    display: block;
+}
+.previewresults {
+    border-width: 1px;
+    border-style: solid;
+    height: 16em;
+    overflow: auto;
+}
+.querywidget dt {
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+}
+.querywidget .arrowDownAlternative {
+    float: right;
+    padding-right: 0.25em;
+}
+.widgetPulldownMenu {
+    position: absolute;
+}
+dl.multipleSelectionWidget,
+#content dl.multipleSelectionWidget {
+    margin: 0;
+ }
+.multipleSelectionWidget dt {
+    width: 198px;
+    height: 1.5em;
+    overflow: hidden;
+}
+.multipleSelectionWidget dd {
+    width: 198px;
+    background: white;
+    overflow:auto;
+}
+.multipleSelectionWidget label {
+    display: block;
+}
+.querywidget {
+    float: left;
+    width: 200px;
+}
+.referenceWidget input {
+    width: 200px;
+}
+dl.querywidget {
+    margin: 0;
+}
+#content dl.querywidget dd,
+dl.querywidget dd {
+    margin: 0;
+}
+.dateRangeWidget input {
+    width: 78px;
+}
+.criteria {
+    clear: both;
+}
+.widgetPulldownMenu {
+   border-width: 1px;
+   border-style: solid;
+   height:6.5em;
+}
+
+/* TODO: This should be fixed in public.css, so hiddenStructure will always
+   have the highest priority. */
+.multipleSelectionWidget .hiddenStructure {
+   display: none !important;
+}

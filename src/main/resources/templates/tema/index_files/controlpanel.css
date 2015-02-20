@@ -1,0 +1,159 @@
+
+/* - controlpanel.css - */
+@media screen {
+/* @group Control panel */
+
+#setup-link {
+    font-size: 90%;
+}
+
+#content ul.configlets {
+    margin: 1em 0;
+    list-style-image: none;
+    list-style: none;
+}
+#content ul.configlets li {
+    margin-bottom: 1em;
+    list-style: none;
+    display: block;
+}
+#content ul.configlets li a {
+    text-decoration: none;
+    border: none;
+}
+#content ul.configlets li a:visited {
+    color: #436976;
+    background-color: transparent;
+}
+#content ul.configlets li a:active {
+    color: #436976;
+    background-color: transparent;
+}
+#content ul.configlets li label {
+    font-weight: bold;
+}
+#content ul.configletDetails {
+    margin: 0em 1em 1em 4em;
+    list-style-image: none;
+    list-style: none;
+}
+#content ul.configletDetails li {
+    margin-bottom: 1em;
+    display: inline;
+}
+#content ul.configletDetails li a {
+    text-decoration: none;
+}
+#content ul.configletDetails li label {
+    font-weight: bold;
+}
+#content ul.configletDetails li.configletDescription {
+    display: block;
+    color: #76797c;
+    margin: 0;
+}
+.inlineDisplay {
+    display:inline
+}
+table.controlpanel-listing {
+    width:100%;
+}
+table.controlpanel-listing td, table.controlpanel-listing th {
+    font-size:120%;
+}
+table.controlpanel-listing dl {
+    margin-top:0;
+}
+table.controlpanel-listing dd {
+    margin-left: 1em;
+}
+table.controlpanel-listing dl dt a .trigger{
+    font-weight:normal;
+}
+table .controlpanel-listing td {
+    vertical-align:top;
+}
+table.controlpanel-listing td.checker{
+    text-align:center;
+}
+table.controlpanel-listing th.smallcolumn {
+    width:1.5em;
+}
+.chooser-right {
+    float:right;
+    margin-right:0;
+    margin-bottom:0;
+}
+.rule-element {
+    background-color:#EEF3F5;
+    margin:0.5em 0pt 0.5em;
+    padding:0.3em 1em 0.3em 1em;
+    width:auto;
+}
+.rule-element dl {
+}
+.rule-element dl dd {
+    margin-left:1em;
+}
+.rule-updown, .rule-operations {
+    float:right;
+    padding-top:0.8em;
+}
+/* @end */
+
+
+/* @group Portlets management */
+
+div.portletAssignments {
+    font-size: 0.8em;
+    line-height: 2em;
+}
+
+div.portletAssignments div.portletHeader {
+    padding: 0.42em 1em;
+    background: #ddd;
+    line-height: normal;
+}
+
+div.portletAssignments .managedPortletActions {
+    float: right;
+}
+div.portletAssignments .managedPortletActions a, div.portletAssignments .managedPortletActions button {
+    margin: 0 0.25em;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #205C90;
+}
+
+div.portletAssignments .managedPortletActions form {
+    display: inline;
+}
+
+.managedPortlet {
+    margin: 0.8em 0;
+}
+
+div.managePortletsLink,
+a.managePortletsFallback {
+    text-align: center;
+    padding: 0.25em 0.5em;
+    font-size: 80%;
+    margin: 0 auto 1em;
+    background: #ddd;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+a.managePortletsFallback {
+    display:inline-block; /* in order for our vertical margins to work on inline element */
+}
+#content a.managePortletsFallback {
+    display: block;
+    border-bottom: none !important;
+}
+
+/* @end */
+
+}
+

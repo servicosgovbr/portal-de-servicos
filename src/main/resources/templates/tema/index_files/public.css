@@ -1,0 +1,559 @@
+
+/* - public.css - */
+@media screen {
+/* @override
+    http://localhost:8080/4/portal_css/Sunburst%20Theme/public.css
+    http://localhost:8080/sprites/portal_css/Sunburst%20Theme/public.css
+*/
+
+
+/* +++++++++++++++++++++++++++++++
+ * SUNBURST DESIGN-SPECIFIC STYLES
+ * +++++++++++++++++++++++++++++++
+ */
+
+
+/* workflow state color "published". Other definitions in member.css */
+.state-published {
+	color: #436976 !important;
+}
+
+
+/* @group Basics */
+
+body {
+    font: 100% Arial, FreeSans, sans-serif;
+    background: White;
+    color: Black;
+    /* width: 58em; margin: 1em auto; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Arial, FreeSans, sans-serif;
+    font-weight: bold;
+    color: Black;
+    line-height: 1.5em;
+}
+h1, h2 {
+    letter-spacing: -0.05em;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.75em;
+}
+h3 {
+    font-size: 1.25em;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+    font-size: 0.8em;
+}
+h2, h3, h4, h5, h6 {
+    color: #444;
+}
+h2 a, h3 a, h4 a {
+    border-bottom: none !important;
+}
+
+p {
+}
+
+a:link, a:visited {
+    color: #205c90;
+}
+a:focus img {
+    outline: thin dotted;
+}
+dt {
+    font-weight: bold;
+}
+input {
+    font-family: "Lucida Grande", Arial, FreeSans;
+}
+
+q {
+    quotes: "“" "”" "‘" "’";
+}
+
+sup,
+sub {
+    height: 0;
+    line-height: 1;
+    vertical-align: baseline;
+    _vertical-align: bottom;
+    position: relative;
+
+}
+sup {
+    bottom: 1ex;
+}
+sub {
+    top: 0.5ex;
+}
+
+/* @end */
+
+
+/* @group Navigation/search */
+
+#portal-header {
+    position: relative;
+    z-index: 2;
+}
+
+#portal-logo {
+    display: inline-block;
+    margin: 1.375em 0;
+}
+/* removes extra space above logo in IE6 and IE7 */
+/* .ie6 and .ie7 is set on <html> by Modernizr library */
+.ie6 #portal-logo,
+.ie7 #portal-logo {
+    margin-top: 0;
+}
+
+#portal-globalnav {
+    clear: both;
+    font-size: 80%;
+    background: #ddd;
+    /* ensure top navigation dont touches portlets, content etc.. #10491 */
+    margin: 0 0 1em 0;
+}
+#portal-globalnav li {
+}
+#portal-globalnav li a {
+    display: inline-block;
+    padding: 0.5em 1em 1.8em 1em;
+    background: #ddd;
+    min-width: 6em;
+    white-space: normal;
+    /*TODO: Once we have removed the whitespace from the nav template, this can be put back*/
+    /*border-bottom: 0.1em solid White;*/
+    border-right: 0.1em solid white;
+}
+
+#portal-globalnav .selected a,
+#portal-globalnav a:hover {
+    background: #205c90;
+    color: White;
+}
+#portal-globalnav .selected a:hover {
+    background: #ddd;
+    color: #205c90;
+}
+
+#portal-personaltools {
+    float: right;
+    background: #e3e3e3;
+    position: relative;
+    z-index: 3; /* personaltools should be above #portal-header (with z-index: 2) */
+    top: 0;
+    right: 0;
+    padding: 0.25em 0.5em;
+    font-size: 80%;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+    -moz-border-radius-bottomleft: 0.5em;
+    -moz-border-radius-bottomright: 0.5em;
+}
+#portal-personaltools #anon-personalbar a {
+    float: left;
+    margin: 0 0.5em;
+}
+
+#portal-languageselector {
+    float: right;
+    background: #e3e3e3;
+    position: relative;
+    top: 0;
+    right: 1px;
+    z-index: 3; /* portal-header has 2 and we need to be above to be clickable */
+    padding: 0.25em 0.5em;
+    font-size: 80%;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+    -moz-border-radius-bottomleft: 0.5em;
+    -moz-border-radius-bottomright: 0.5em;
+    max-width: 50%;
+}
+
+#portal-searchbox {
+    float: right;
+    text-align: left;
+    clear: right;
+    margin: 1.2em 0;
+    font-size: 80%;
+}
+
+#portal-searchbox form {
+    white-space: nowrap;
+}
+
+#portal-searchbox label {
+    font-weight: normal;
+}
+
+#searchGadget {
+    width: 13em;
+}
+#searchGadget,
+.LSBox input.searchButton {
+}
+
+.LSBox .searchSection {
+}
+
+#content input.searchField {
+    margin-bottom: 1em;
+}
+
+input.searchField {
+/*  -webkit-appearance: searchfield;*/
+    -moz-appearance: searchfield;
+}
+
+/* Collapsible elements in search_form */
+
+.collapsible .collapser.collapsed {
+    padding-right: 14px;
+    background: url('arrowRight.png') center right no-repeat;
+}
+
+.collapsible .collapser.expanded {
+    padding-right: 14px;
+    background: url('arrowDown.png') center right no-repeat;
+}
+/* @end */
+
+
+/* @group LiveSearch */
+
+#LSResult {
+    position: absolute;
+    right: 0;
+    background: White;
+    margin: -1.5em 0 0 -7em;
+}
+
+#LSResult fieldset {
+    padding: 1em 0 0;
+    border: 0.1em solid #ccc;
+}
+
+#livesearchLegend {
+    background-color:#ccc;
+    padding:0.3em;
+}
+
+#LSResult .LSDescr {
+    font-size: 85%;
+    color: #666;
+}
+
+.LSRow,
+#LSNothingFound {
+    display: block;
+    padding: 0.5em 1em;
+    white-space: normal;
+    width:28em;
+}
+
+.LSHighlight {
+    background: #ddd;
+}
+
+/* @end */
+
+
+/* @group Path indicator (breadcrumbs) */
+
+#portal-breadcrumbs {
+    font-size: 80%;
+    margin-bottom: 1em;
+    margin-left: 0.25em;
+}
+#portal-breadcrumbs a {
+    border-bottom: none;
+    display: inline-block;
+}
+
+.breadcrumbSeparator {
+      color: #666666;
+}
+
+/* @end */
+
+
+/* @group Site actions */
+
+#portal-siteactions {
+    font-size: 85%;
+    padding-bottom: 2em;
+    text-align: center;
+    clear: left;
+}
+#portal-siteactions li {
+    margin-right: 0.5em;
+}
+#portal-siteactions li a:hover {
+    color: #75ad0a
+}
+
+/* @end */
+
+
+/* @group Listings */
+
+a.link-parent {
+}
+
+a.link-anchor {
+    border: none !important;
+    color: Black !important;
+    cursor: default !important;
+}
+#content a.link-overlay {
+    border-bottom: 1px dotted #205c90 !important;
+}
+
+dl dt .documentByLine {
+    font-weight: normal;
+}
+
+dl dt span.summary a {
+    border: none !important;
+}
+
+/* @end */
+
+
+/* @group Content Area */
+
+#content {
+    line-height: 1.5em;
+    clear: both;
+    font-size: 80%;
+    margin: 1em 0.25em 2em 0.25em;
+}
+
+/* Special case of #content - TinyMCE */
+body#content {
+    margin: 1em;
+}
+
+#content h1 {
+    margin-top: 0.5em;
+}
+
+#content h1.documentFirstHeading {
+    margin-top: 0;
+}
+
+#content p,
+#content table,
+#content dl,
+dl.portlet p,
+dl.portlet {
+    margin-bottom: 1em;
+}
+
+#content ul,
+#content ol {
+
+}
+
+#content a:link,
+dl.portlet a:link {
+    color: #205c90;
+    border-bottom: 0.1em solid #ccc;
+}
+
+#content a:visited,
+dl.portlet a:visited {
+    color: #427597;
+    border-bottom: 0.1em solid #ccc;
+}
+#content a:hover,
+dl.portlet a:hover {
+    color: #75ad0a !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+}
+#content a:target {
+    background-color: #ffb;
+}
+#content span.link-external a {
+    background: transparent url(link_icon.png) 0px 1px no-repeat;
+    padding: 1px 0px 1px 16px;
+}
+
+#category {
+    font-size: 75%;
+    margin-bottom: 1em;
+    color: #666;
+    text-align: right;
+}
+
+#category a.link-category, span.selectedTag {
+    color: black;
+    padding: 0.25em 0.5em;
+    background: #ddd;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+#category a.link-category:hover {
+    background: #205c90;
+    color: White;
+    border-color: #205c90;
+}
+#category .separator {
+    display: none;
+}
+
+#content dt {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+#content-core dd {
+    margin: 0 0 1em 2em;
+}
+
+#content pre {
+    background-color: #222;
+    color: White;
+    font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    padding: 1em;
+    overflow-x: auto;
+    font-size: 90%;
+    margin-bottom: 1em;
+    line-height: 1.25em;
+}
+#content pre.python {
+    background-color: White;
+}
+
+#content code {
+    font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+#content table {
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+#content .documentDescription,
+#content #description {
+    color: #666;
+    margin-left: 0;
+    font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
+}
+
+#content div.newsImageContainer a {
+    border-bottom: none;
+}
+#content div.newsImageContainer p.discreet {
+    margin: 0;
+    padding: 0.5em;
+    background-color: #666;
+    background-color: rgba(40,40,40,0.7);
+    color: White;
+    font-weight: bold;
+    position: relative;
+    width: 190px;
+    top: -3em;
+}
+
+/* For event view template, changed headerless table to headings and divs,
+ * for better accessibility.  */
+
+#content .eventDetails {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 0.08em;
+    width: 22em;
+    margin-top: 1em;
+}
+#content .eventDetails h2 {
+    background-color: #DDDDDD;
+    font-size: 100%;
+    letter-spacing: 0;
+    padding: 0.5em;
+    padding-left: 1em;
+}
+#content .eventDetails .eventDetail h3,
+#content .eventDetails .eventDetail div {
+    padding: 2%;
+}
+#content .eventDetails .eventDetail h3 {
+    float: left;
+    font-size: 100%;
+    text-align: right;
+    width: 37%;
+}
+#content .eventDetails .eventDetail div {
+    float: left;
+    width: 55%;
+}
+/* @end */
+
+
+/* @group Image alignment classes */
+
+/*note: the tricky thing here is that image-inline|image-left|image-right
+can both be on an image and a wrapper element e.g. a dl tag*/
+img.image-left,
+img.image-right,
+.captioned img {
+    border: 1px solid #ddd;
+}
+dd.image-caption {
+    text-align: left;
+    padding: 0 0 0 3px; /*image padding+border with*/
+    margin: 0;
+    color: #666;
+    font-size: 85%;
+}
+
+/* @end */
+
+
+/* @group Footer */
+
+#portal-footer {
+    font-size: 75%;
+    background: #ddd;
+    padding: 1em;
+    margin: 1em 0;
+    line-height: 2em;
+}
+
+#portal-colophon {
+    font-size: 70%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#portal-colophon li {
+    padding:0 0.75em;
+}
+
+#portal-colophon a {
+    color: #444;
+}
+
+/* @end */
+
+}
+

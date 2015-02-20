@@ -1,0 +1,4383 @@
+/*
+ *
+ * CSS com estilos genéricos para todos os temas
+ *
+ * @Autores
+ *
+ * - Simples Consultoria - www.simplesconsultoria.com.br
+ * - DESERTO Digital - www.desertodigital.com.br
+ * - Serpro - www.serpro.gov.br
+ *
+ * @Referencias
+ *
+ * Lista de padrões, convenções e boas praticas CSS que devem ser seguidas.
+ * https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR
+ *
+ * Plugins para ordenar os atributos de CSS.
+ * http://csscomb.com/
+ *
+ * Validador de CSS do W3C.
+ * http://jigsaw.w3.org/css-validator/
+ */
+
+
+/* ==========================================================================
+   Font-face local para fonte "Open Sans"
+   ========================================================================== */
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "open_sanslight";
+    src: url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.eot");
+    src: url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.eot?#iefix") format("embedded-opentype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.woff") format("woff"),
+         url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.ttf") format("truetype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-300-webfont.svg#open_sanslight") format("svg");
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "open_sansregular";
+    src: url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.eot");
+    src: url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.eot?#iefix") format("embedded-opentype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.woff") format("woff"),
+         url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.ttf") format("truetype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-400-webfont.svg#open_sansregular") format("svg");
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "open_sanssemibold";
+    src: url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.eot");
+    src: url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.eot?#iefix") format("embedded-opentype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.woff") format("woff"),
+         url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.ttf") format("truetype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-600-webfont.svg#open_sanssemibold") format("svg");
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "open_sansbold";
+    src: url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.eot");
+    src: url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.eot?#iefix") format("embedded-opentype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.woff") format("woff"),
+         url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.ttf") format("truetype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-700-webfont.svg#open_sansbold") format("svg");
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "open_sansextrabold";
+    src: url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.eot");
+    src: url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.eot?#iefix") format("embedded-opentype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.woff") format("woff"),
+         url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.ttf") format("truetype"),
+         url("++resource++brasil.gov.portal/fonts/opensans-800-webfont.svg#open_sansextrabold") format("svg");
+}
+
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+}
+
+
+/* ==========================================================================
+   Estilos básicos
+   ========================================================================== */
+
+/* Cores e fontes
+   ========================================================================== */
+
+body {
+    background-color: #fff;
+    color: #000000;
+    font-size: 62.5%;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+#content h1 { margin-top: 0 !important; }
+
+.modal { top: 50% !important; }
+
+a:link,
+#content a:link,
+dl.portlet a:link {
+    border-bottom: none;
+    color: #2c67cd;
+}
+
+a:visited,
+#content a:visited,
+dl.portlet a:visited { color: #2c67cd; }
+
+#content a:hover,
+dl.portlet a:hover { color: #000 !important; }
+
+body div.overlaybg div.close,
+body div.overlay div.close {
+    right: -14px;
+    left: auto;
+}
+
+a:focus { outline: 2px solid #f1ca7f; }
+
+/* bug fix on click in firefox */
+a:hover,
+a:active { outline: none; }
+
+h1 {
+    border-bottom: none;
+    color: #172838;
+    font-size: 2em;
+}
+
+h2, h3, h4, h5, h6 { color: #231f20; }
+
+h1 {
+    margin: 0.5em 0 0.5em;
+    line-height: 1.3em;
+}
+
+h2, h3 {
+    margin: 0 0 0.5em 0;
+    line-height: 1.3em;
+}
+
+p {
+    margin: 0 0 1em 0;
+    line-height: 1.8em;
+}
+
+
+/* ==========================================================================
+   Estrutura principal
+   ========================================================================== */
+
+#wrapper {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+#main {
+    margin: 0 auto;
+    padding: 0 0 1.5em;
+    max-width: 960px;
+    background: #fff;
+    font-size: 1.3em;
+}
+
+.section-home #main {
+    padding-top: 4.104em;
+}
+
+/* Tamanho das colunas */
+#portal-column-one {
+    margin-left: -100%;
+    width: 15.625%;
+}
+
+#portal-column-two {
+    margin-left: -24.0625%;
+    width: 24.0625%;
+}
+
+/* Grids
+   ========================================================================== */
+
+div.width-1\3a 2 {
+    margin-left: -78.295% !important;
+    width: 51.25%;
+}
+
+div.width-2 { width: 13.061%; }
+
+div.width-2.position-2 { margin-left: -80.982%; }
+div.width-2.position-4 { margin-left: -64.002%; }
+div.width-2.position-6 { margin-left: -47.022%; }
+div.width-2.position-8 { margin-left: -30.042%; }
+div.width-2.position-10 { margin-left: -13.061%; }
+
+div.width-3\3a 4 { width: 79.75%; }
+
+div.width-5 { width: 30.042%; }
+
+div.width-8 { width: 47.022%; }
+
+div.width-8.position-8 { margin-left: -47.022%; }
+
+div.width-10 { width: 64.002%; }
+
+div.width-15,
+div.width-16 { width: 97.963%; }
+
+div.position-0 { margin-left: -97.963%; }
+
+div.position-1\3a 4 { margin-left: -79.755%; }
+
+div.position-3\3a 4 { margin-left: -16.75%; }
+
+div.position-5 { margin-left: -64.002%; }
+
+div.position-10 { margin-left: -30.042%; }
+
+#featured-content div.position-0 { margin-left: -100%; }
+
+#featured-content div.width-16 { width: 100%; }
+
+/* ==========================================================================
+   Cabeçalho do portal
+   ========================================================================== */
+
+#header > div {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#brasilgov {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ffcc00;
+    background: #00510f;
+    color: #fff;
+}
+
+/* Menu de Acessibilidade
+   ========================================================================== */
+
+#accessibility {
+    display: block !important;
+    float: left;
+    width: 50%;
+    font-size: 0.88em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#accessibility a { margin-right: 8px; }
+
+#accessibility span { padding: 0 4px; }
+
+/* Titulo do portal
+   ========================================================================== */
+
+#logo {
+    float: left;
+    padding: 0;
+    width: 70%;
+}
+
+#logo span {
+    position: absolute;
+    display: block;
+    line-height: 1em;
+}
+
+#portal-logo {
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+#portal-title {
+    margin: 0;
+    margin: 30px 0 46px;
+    color: #fff;
+    font-size: 3.35em;
+    font-family: "open_sansextrabold", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 1em;
+}
+
+#logo .logo {
+    margin-bottom: 0.2em;
+    font-size: 3em !important;
+    line-height: 1.1em;
+}
+
+#portal-title-1 { top: 30px; }
+
+#portal-description {
+    bottom: 24px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+/* Personal Tools - Menu de administração */
+#portal-personaltools {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    float: left;
+    font-size: 1.2em;
+}
+
+/* Menu de idioma
+   ========================================================================== */
+
+#language {
+    float: right;
+    margin-left: 20px;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted #9bc2a3;
+    font-size: 0.93em;
+}
+
+#language li { display: inline; }
+
+#language a {
+    padding: 4px 0 4px 10px;
+    color: #d9ffe3;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#language a, #language a:hover { color: #fff !important; }
+
+#language .language-en {
+    margin-right: 0.5em;
+}
+
+#language .language-es a {
+    padding-left: 0px;
+}
+
+/* Menu site actions - Acessibilidade, Alto Contraste, Mapa do site
+   ========================================================================== */
+
+#portal-siteactions {
+    display: block;
+    float: right;
+    clear: none;
+    padding-bottom: 2px;
+    font-size: 0.93em;
+}
+
+#portal-siteactions li { display: inline; }
+
+#portal-siteactions a {
+    padding: 4px 0 4px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#siteaction-accessibility a { padding-left: 0; }
+
+#portal-siteactions .last-item { margin-right: 0; }
+
+#portal-sitemap .navTree { background: none !important; }
+
+#portal-sitemap .state-published { color: #1a2a39 !important; }
+
+/* Links de redes sociais
+   ========================================================================== */
+
+#social-icons {
+    float: right;
+    clear: right;
+    margin: 1.167em 0;
+}
+
+#social-icons li { display: inline-block; }
+
+#social-icons a {
+    display: block;
+    overflow: hidden;
+    margin: 0 0 0 5px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    text-indent: 100%;
+    white-space: nowrap;
+    opacity: .85;
+    filter: alpha(opacity=85);
+    border-radius: 4px;
+}
+
+#social-icons a:focus,
+#social-icons a:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#portalredes-facebook a { background-position: -80px -25px; }
+#portalredes-twitter a { background-position: -155px -25px; }
+#portalredes-youtube a { background-position: -130px -25px; }
+#portalredes-flickr a { background-position: -105px -25px; }
+#portalredes-googleplus a { background-position: -130px 0; }
+#portalredes-slideshare a { background-position: 45px 0; }
+#portalredes-soundcloud a { background-position: 20px 0; }
+#portalredes-rss a { background-position: 145px -25px; }
+#portalredes-instagram a { background-position: 69px -49px; }
+#portalredes-tumblr a { background-position: 96px -49px; }
+
+
+/* Menu sobre o portal
+   ========================================================================== */
+
+#sobre {
+    clear: both;
+    margin: 0;
+    padding: 5px 0;
+    max-width: 100% !important;
+    line-height: 20px;
+}
+
+#sobre ul {
+    margin: 0 auto;
+    max-width: 960px;
+    text-align: right;
+}
+
+#sobre .portalservicos-item a { padding: 0 10px; }
+
+#sobre .last-item a {
+    padding: 0 0 0 10px;
+    border-right: none !important;
+}
+
+/* Formulário de busca
+   ========================================================================== */
+
+.LSBox {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+input.searchField { -moz-appearance: none; }
+
+#portal-searchbox {
+    float: right;
+    clear: right !important;
+    margin: 3.12em 0 0 0;
+    padding: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff;
+    text-align: right;
+    font-size: 80%;
+}
+
+#portal-searchbox .searchField {
+    padding: 0.3em 0.35em;
+    width: 186px;
+    border: none;
+    border-right: none;
+    font-size: 1.2em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+#portal-searchbox .searchSection label { cursor: pointer; }
+
+#searchGadget,
+#header input.searchButton {
+    padding: 0.3em;
+    padding: 4px 15px;
+    border: none;
+    background: transparent;
+    text-indent: -2000px;
+}
+
+#header input.searchButton { background-position: 0px 2px; padding-right: 5px; }
+
+#LSResult {
+    z-index: 1;
+    margin-top: 0.5%;
+}
+
+
+/* ==========================================================================
+   Conteúdo
+   ========================================================================== */
+
+/* Breadcrumb
+   ========================================================================== */
+
+.section-home #portal-breadcrumbs,
+.portaltype-plone-site #portal-breadcrumbs { display: none; }
+
+.section-home #main,
+.portaltype-plone-site #portal-breadcrumbs { padding-top: 3.078em; }
+
+#portal-breadcrumbs span#breadcrumbs-you-are-here {
+    color: #000;
+    margin-right: 0.5em;
+}
+
+#portal-breadcrumbs a,
+#portal-breadcrumbs span {
+    color: #2C66CE;
+    text-transform: uppercase;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+#portal-breadcrumbs > span { font-size: 0.833em; }
+
+#portal-breadcrumbs > span > a,
+#portal-breadcrumbs > span > span { font-size: 1em; }
+
+#portal-breadcrumbs > span > span.breadcrumbSeparator { color: #2C66CE; }
+
+#portal-breadcrumbs > span > a:hover { text-decoration: underline; }
+
+#main #portal-breadcrumbs {
+    margin-top: 1.923em;
+    margin-bottom: 1.923em;
+}
+
+#content { margin: 0; }
+
+#content .field { position: relative; }
+
+.documentDescription { margin-top: 1.5em; }
+
+
+/* ==========================================================================
+   NITF
+   ========================================================================== */
+
+#content div.newsLeftPane {
+    position: relative;
+    float: left;
+    margin: 0.9615em 1em 0.5em 0;
+}
+
+#content div.newsImageContainer {
+    float: none;
+    margin: 0;
+}
+
+#content div.newsImageContainer p.discreet {
+    top: 0;
+    margin-top: .400em;
+    background-color: transparent;
+    color: #172938;
+    font-weight: normal;
+    font-size: .85em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.36340em;
+}
+
+
+/* ==========================================================================
+   Estilos de texto
+   ========================================================================== */
+
+#content-core {
+    clear: both;
+    margin-top: 40px;
+}
+
+#content-core p { font-size: 110%; }
+
+.hidden { display: none; }
+
+.clear { clear: both; }
+
+.pb-ajax, .pb-image,
+.overlay iframe { font-size: 1.4em; }
+
+.portlet img, #content img {
+    max-width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#content h1.documentFirstHeading {
+    margin: 5px 0;
+    padding-bottom: 0.4em;
+    color: #1a2a39;
+    text-transform: none;
+    font-size: 3em;
+}
+
+p.section {
+    margin-bottom: 15px !important;
+    color: #2c67cd;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    line-height: 1em;
+}
+
+#related-items { width: 203px; }
+
+p.section a { color: #2c67cd; }
+
+#viewlet-below-content-title {
+    position: relative;
+    overflow: hidden;
+}
+
+#viewlet-social-like {
+    position: absolute;
+    right: 10px;
+    float: right;
+    margin: 0 0 15px 0;
+    padding: 0.6416em 0 0 1.3634em;
+    width: 40%;
+    border-left: 1px dotted #bfc0c2;
+}
+
+#plone-document-byline { width: 55%; }
+
+/* correção dos tamanhos quando 4 colunas */
+div.width-1\3a 2 #viewlet-social-like { width: 58%; }
+
+body[class*="nitf"] div.width-1\3a 2 #viewlet-social-like {
+    top: -1.041em;
+    width: 25.0794%;
+}
+
+div.width-1\3a 2 #plone-document-byline { width: 35%; }
+
+body[class*="nitf"] div.width-1\3a 2 #plone-document-byline { width: 68.7216%; }
+
+.portaltype-collection #viewlet-social-like { top: -6px; }
+
+.nitfByline { color: #3b72cf; }
+
+#viewlet-social-like iframe {
+    margin-left: -20px;
+    width: 120px !important;
+}
+
+#content .pullquote {
+    margin: 0 1em 0.5em 1em;
+    padding: 1em 0 !important;
+    border-top: 4px solid #172937;
+    border-bottom: 1px solid #79838c;
+    color: #9fa9b3;
+    font-size: 1.6em;
+}
+
+#content div.newsImageContainer > div:first-child {
+    background: #e5e5e5;
+    text-align: center;
+}
+
+#content div.newsImageContainer > div:first-child p { text-align: left; }
+
+#content .newsImageContainer .photo-icon {
+    position: relative;
+    top: 24px;
+    right: -8px;
+    float: right;
+    clear: none;
+    overflow: hidden;
+    margin: 0;
+    width: 102px;
+    height: 31px;
+    background: url("++resource++brasil.gov.portal/img/mais_fotos.png") no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+#content .newsImageContainer a[class^="photo-icon-en"] {
+    background: url("++resource++brasil.gov.portal/img/mais_fotos_en.png") no-repeat;
+}
+
+#content .newsImageContainer a[class^="photo-icon-es"] {
+    background: url("++resource++brasil.gov.portal/img/mais_fotos_es.png") no-repeat;
+}
+
+#content .newsImageContainer .copyright {
+    float: left;
+    line-height: 31px;
+}
+
+#content .newsImageContainer .carrossel-images { display: none; }
+
+.newsImageContainer .parent-nitf-image { display: block; }
+
+#content .newsImageContainer a.link-overlay { border: 0 none !important; }
+
+/* tabela */
+table.listing {
+    border-bottom: 1px solid #aeb3b6;
+    border-left: 0;
+}
+
+table.listing tr.odd th,
+table.listing tr.even th {
+    border: 0;
+    font-size: 1.2em;
+}
+
+table.listing tbody tr td {
+    background: #f5f5f5;
+    border-bottom: 1px dotted #d5d5d5;
+}
+
+table.listing tbody tr.odd td { background: #fff; }
+
+table.listing tbody th {
+    border-width: 4px 0 1px 0;
+    border-top: 4px solid #172838 !important;
+    border-bottom: 1px solid #79838c!important;
+    background: #fff;
+    font-weight: bold;
+}
+
+/* lista */
+.template-view.portaltype-collective-nitf-content #content-core ul,
+.template-view.portaltype-collective-nitf-content #content ol {
+    margin-bottom: 2em;
+    margin-left: 0;
+    padding: 1em;
+    border: 1px solid #d5d5d5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    list-style-type: disc;
+}
+
+.template-view.portaltype-collective-nitf-content #content-core li {
+    padding: 1em;
+    border-bottom: 1px dotted #d5d5d5;
+    list-style-position: inside !important;
+}
+
+.template-view.portaltype-collective-nitf-content #content-core ol li {
+    list-style-type: decimal !important;
+}
+
+
+/* ==========================================================================
+   Itens relacionados
+   ========================================================================== */
+
+#content .newsRelatedItems,
+#content #newsRelatedItems {
+    clear: both;
+    margin: 1.4em 0 .100em 0;
+    padding: 0;
+    width: 228px;
+    border: 1px solid #c0c1c3;
+    border-radius: 3px;
+    background-color: #eeeff1;
+    font-size: 16px; /* root size */
+}
+
+#content .newsRelatedItems fieldset,
+#content #newsRelatedItems fieldset {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: 0 none;
+}
+
+#content .newsRelatedItems legend,
+#content #newsRelatedItems legend {
+    float: left;
+    clear: both;
+    margin: 0;
+    padding: .600em 0 .600em .875em;
+    color: #454545;
+    font-weight: normal;
+    font-size: 1em;
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+    line-height: 1em;
+}
+
+#content #form-widgets-relatedItems {
+    display: block;
+    clear: both;
+    border-top: 1px solid #c0c1c3;
+    font-weight: bold;
+    font-size: 0.875em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content #form-widgets-relatedItems div {
+    clear: both;
+    border-top: 1px dotted #c0c1c3;
+} #content #form-widgets-relatedItems div:first-child { border-top: 0 none; }
+
+#content #form-widgets-relatedItems div a {
+    float: left;
+    margin: .500em 1em;
+    color: #335277;
+}
+
+fieldset#folder-listing legend {
+    position: absolute;
+    padding: 1em 0 0 0;
+    color: #444;
+}
+
+
+/* ==========================================================================
+   VCGE - TAGS
+   ========================================================================== */
+
+#category,
+#category-vcge {
+    clear: both;
+    margin: 0;
+    color: #3a70d1;
+    text-align: left;
+    font-size: .7em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#category {
+    margin-top: 2.5em;
+    padding-top: 1em;
+    border-top: 4px solid #172937;
+}
+
+#category-vcge {
+    display: block;
+    margin: 1em 0 0 0;
+    padding: 1em 0;
+    border-top: 1px solid #8b949b;
+    border-bottom: 1px solid #8b949b;
+}
+
+/* tags e assuntos */
+#category a.link-category,
+#category span.selectedTag,
+#category-vcge a.link-category,
+#category-vcge span.selectedTag {
+    margin: 0;
+    padding: 4px 9px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    background-color: #e9e8ed;
+    color: #3a70d1;
+}
+
+#category-vcge .link-category:hover,
+#category-vcge .link-category:focus {
+    border-color: #205c90;
+    background: #205c90;
+    color: #fff;
+}
+
+#category span,
+#category-vcge span {
+    display: inline-block;
+    margin-left: 5px;
+    line-height: 30px;
+}
+
+/* embedder fix */
+#alt_cont a { cursor: pointer; }
+
+
+/* ==========================================================================
+   Portles
+   ========================================================================== */
+
+dl.portlet { margin-bottom: 0; }
+
+dl.portlet dt.hiddenStructure { display: none; }
+
+#portal-column-one dl.portlet { border: none; }
+
+#portal-column-one .portletNavigationTree { margin-bottom: 3.61em; }
+
+#portal-column-one .nav-menu-de-relevancia .first-item-nav a { color: #2c66ce; }
+
+#portal-column-two dl.portlet {
+    border: 1px solid #c1c1c1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #eeefff;
+}
+
+#portal-column-two dl.portlet a:link,
+#portal-column-two dl.portlet a:visited { color: #464a55 !important; }
+
+dl.portlet dt {
+    border-bottom: 1px solid #c1c1c1;
+    background: transparent;
+    color: #444444;
+    text-transform: uppercase;
+}
+
+dl.portlet dt a:link,
+dl.portlet dt a:visited { color: #464a55 !important; }
+
+#portal-column-two > .portletWrapper { margin-bottom: 1.9230em; }
+#portal-column-two > .portletWrapper:first-child { margin-top: 1.7307em; }
+
+#portal-column-two > .portletWrapper > .portletStaticText a,
+#portal-column-two > .portletWrapper > .portletStaticText img { display: block; }
+#portal-column-two > .portletWrapper > .portletStaticText p { margin: 0; }
+
+/* Portlet de login
+   ========================================================================== */
+#portal-column-two dl.portletLogin {
+    border: none;
+    background: #093a89;
+    color: #fff;
+}
+
+#portal-column-two dl.portletLogin dt {
+    padding: 1em;
+    border: none;
+    background: url("++resource++brasil.gov.portal/img/cadeado.png") 230px 10px no-repeat;
+    text-transform: uppercase;
+}
+
+#portal-column-two dl.portletLogin a:link,
+#portal-column-two dl.portletLogin dt a:link { color: #fff !important; }
+
+.portletLogin .field input { width: 97% !important; }
+
+.portletLogin div.formControls { text-align: right; }
+
+.portletLogin div.formControls input {
+    margin-right: -10px;
+    padding: 0.3em 1em;
+    border: none;
+    background: #012154;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.portletLogin .even { border-top: 1px solid #5c7ba7; }
+
+/* Portlet com data
+   ========================================================================== */
+.portletNews .portletItem,
+.portletCollection .portletItem {
+    clear: both;
+    min-height: 45px;
+    border-bottom: 1px solid #ccc;
+}
+
+.portletNews .portletItem a,
+.portletCollection .portletItem a {
+    display: block;
+    float: right;
+    clear: both;
+    margin: 1em 0;
+    width: 65%;
+    font-size: 1em;
+}
+
+.portletCollection .portletItem a { clear: none; }
+
+.portletNews .portletItem .portletItemDetails,
+.portletCollection .portletItem .portletItemDetails {
+    display: block;
+    float: left;
+    margin: 1em 0 1em 1em;
+    width: 24%;
+    color: #596e7f;
+    text-align: center;
+}
+
+.portletCollection .portletItem .portletItemDetails { clear: left; }
+
+.portletFooter {
+    color: #444b53;
+    text-transform: uppercase;
+}
+
+.portletFooter a { color: #444b53; }
+
+/* Portlet de eventos */
+.portletEvents .portletItem a.tile {
+    margin-left: 9px;
+    font-size: 1.2em;
+}
+
+/* Portlet de navegação
+   ========================================================================== */
+
+.portlet-static-contents-central .portletHeader,
+.portlet-static-resource-center .portletHeader,
+.portlet-static-centrales-del-contenido .portletHeader,
+.portlet-static-centrais-de-conteudos .portletHeader,
+.portletNavigationTree .portletHeader {
+    margin: 0;
+    padding: 8px 8px 24px 10px;
+    border-bottom: none;
+    background: #edeff1;
+    text-transform: uppercase;
+    /* reseta font-weight: bold do public.css */
+    font-weight: normal;
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+}
+
+.portletNavigationTree > .portletItem > .navTree > .navTreeItem > a > span,
+.portletStaticText > .portletItem > .list-central > .item-central > a {
+    font-size: 1.15em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+.portletNavigationTree { border-bottom: 1px solid #ddd; }
+
+.portletNavigationTree li { list-style: none !important; }
+
+.portletNavigationTree > .portletItem a span,
+.item-central .link-central { color: #172938 !important; }
+
+dl.portlet ul.navTreeLevel0 > .navTreeItem {
+    margin: 0;
+    padding: 0 !important;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: none;
+    list-style: none;
+}
+
+dl.portlet ul.navTreeLevel0 > .last-item { border-bottom: 1px solid #dfdfdf; }
+
+dl.portlet ul.navTree .navTreeCurrentItem {
+    margin-right: 0;
+    margin-left: 0;
+    border-left: none !important;
+    background-color: transparent;
+}
+
+/*
+ * Backgound colors
+ */
+
+.navTreeLevel0 > li.navTreeItemInPath,
+.navTreeLevel0 > li.navTreeCurrentNode { background-color: #edeff1; }
+
+.navTreeLevel1 { background: #e6e8ea !important; }
+.navTreeLevel2 { background: #dfe1e3 !important; }
+.navTreeLevel3 { background: #d9dbdd !important; }
+.navTreeLevel4 { background: #d3d5d7 !important; }
+.navTreeLevel5 { background: #cbcdcf !important; }
+
+dl.portlet ul.navTreeLevel1 .navTreeItem {
+    margin-bottom: 0;
+    padding-left: 0em !important;
+    border-top: 1px solid #d0d4d5;
+}
+
+a.navTreeItemInPath,
+a.navTreeCurrentNode {
+    background: transparent url("++resource++brasil.gov.portal/img/menu-ativo.gif") no-repeat !important;
+    font-weight: bold;
+}
+
+/*
+ * Apenas para o primeiro menu
+ */
+
+.first-item a.navTreeItemInPath,
+.first-item a.navTreeCurrentNode { background-image: none !important; }
+
+.nav-menu-de-relevancia .first-item-nav .portletHeader { display: none; }
+
+ul.navTreeLevel0 li a.navTreeItemInPath,
+ul.navTreeLevel0 li a.navTreeCurrentNode {
+    background-position: 4px 12px !important;
+}
+
+ul.navTreeLevel1 li a.navTreeItemInPath,
+ul.navTreeLevel1 li a.navTreeCurrentNode {
+    background-position: 14px 12px !important;
+}
+
+ul.navTreeLevel2 li a.navTreeItemInPath,
+ul.navTreeLevel2 li a.navTreeCurrentNode {
+    background-position: 24px 12px !important;
+}
+
+ul.navTreeLevel3 li a.navTreeItemInPath,
+ul.navTreeLevel3 li a.navTreeCurrentNode {
+    background-position: 34px 12px !important;
+}
+
+ul.navTreeLevel4 li a.navTreeItemInPath,
+ul.navTreeLevel4 li a.navTreeCurrentNode {
+    background-position: 44px 12px !important;
+}
+
+ul.navTreeLevel5 li a.navTreeItemInPath,
+ul.navTreeLevel5 li a.navTreeCurrentNode {
+    background-position: 54px 12px !important;
+}
+
+ul.navTreeLevel6 li a.navTreeItemInPath,
+ul.navTreeLevel6 li a.navTreeCurrentNode {
+    background-position: 64px 12px !important;
+}
+
+/*
+ * Deslocamento dos itens
+ */
+
+dl.portlet ul.navTree li a {
+    padding: 0.55em 1.043em !important;
+    line-height: 1.3em !important;
+}
+
+dl.portlet ul.navTreeLevel0 > li  > .navTreeItemInPath {
+    padding-left: 1.043em !important;
+}
+
+dl.portlet ul.navTreeLevel1 li a {
+    padding: 0.55em 1.043em 0.55em 1.755em !important;
+    font-size: 1.05em;
+}
+
+dl.portlet ul.navTreeLevel2 li a { padding: 0.435em 1.043em 0.435em 2.519em !important; }
+dl.portlet ul.navTreeLevel3 li a { padding: 0.55em 1.043em 0.55em 3.282em !important; }
+dl.portlet ul.navTreeLevel4 li a { padding: 0.55em 1.043em 0.55em 4.05em !important; }
+dl.portlet ul.navTreeLevel5 li a { padding: 0.55em 1.043em 0.55em 4em !important; }
+dl.portlet ul.navTreeLevel6 li a { padding: 0.55em 1.043em 0.55em 4.5em !important; }
+
+#portal-column-one > .nav-menu-de-relevancia .first-item-nav a {
+    padding: 0.475em 0 !important;
+}
+
+#portal-column-one > .nav-menu-de-relevancia .first-item-nav a span {
+    font-size: 110%;
+}
+
+.portlet img,
+#content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Portlet de Centrais de Conteúdos
+   ========================================================================== */
+
+.portlet-static-contents-central .portletItem,
+.portlet-static-resource-center .portletItem,
+.portlet-static-centrales-del-contenido .portletItem,
+.portlet-static-centrais-de-conteudos .portletItem {
+    padding: 0 !important;
+}
+
+.portlet-static-contents-central .list-central,
+.portlet-static-resource-center .list-central,
+.portlet-static-centrales-del-contenido .list-central,
+.portlet-static-centrais-de-conteudos .list-central {
+    margin: 0;
+    padding: 0;
+}
+
+.list-central .item-central {
+    padding: 4px 0 3px;
+    border-bottom: 1px solid #d6dcd7;
+    list-style: none;
+}
+
+.list-central .item-central.first { border-top: 1px solid #d6dcd7; }
+
+.item-central .link-central {
+    display: block;
+    padding-left: 50px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* Icones da Central de conteudo
+   ========================================================================== */
+
+.item-central .link-videos { background-position: 0 -156px; }
+.item-central .link-audios { background-position: -1px -108px; }
+.item-central .link-fotos { background-position: -1px -300px; }
+.item-central .link-infograficos { background-position: -1px -204px; }
+.item-central .link-publicacoes { background-position: -1px -252px; }
+.item-central .link-aplicativos { background-position: -1px -350px; }
+.item-central .link-dadosabertos { background-position: -1px -400px; }
+
+/* Portlet de Lista
+   ========================================================================== */
+
+#content li,
+dl.portlet li {
+    margin-bottom: 0.25em;
+    list-style: square outside;
+    line-height: 1.5em !important;
+}
+
+#content ol li,
+dl.portlet ol li { list-style: decimal outside; }
+
+/* Menu em destaque
+   ========================================================================== */
+
+#em-destaque ul {
+    display: table;
+    margin-bottom: 2em;
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #e8e7e7;
+}
+
+#em-destaque li {
+    display: table-cell;
+    padding: 0.45em 1em;
+    border-right: 1px solid #d2d2d2;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em !important;
+}
+
+#em-destaque li.last-item { border-right: none !important; }
+
+#em-destaque a { color: #2C5496; }
+
+#em-destaque li#em-destaque-titulo {
+    border-right: none;
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+    background: #6f7681 url("++resource++brasil.gov.portal/img/em-destaque.png") right center no-repeat;
+    color: #fff;
+}
+
+#portal-features {
+    text-align: right;
+    font-size: 80%;
+}
+
+/*
+ * Ajuste Banner Lançamento
+ */
+
+#portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f636c69656e7465732f62726173696c2f62726173696c0a61706f696f a.navTreeItemInPath,
+#portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f636c69656e7465732f62726173696c2f62726173696c0a61706f696f a.navTreeCurrentNode {
+    background-image: none !important;
+}
+
+#portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f636c69656e7465732f62726173696c2f62726173696c0a61706f696f .portletNavigationTree .portletHeader {
+    display: none;
+}
+
+#portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f636c69656e7465732f62726173696c2f62726173696c0a61706f696f dl.portlet ul.navTree li a {
+    padding: 0.2em 0 !important;
+    color: #2c67cd !important;
+    font-size: 110%;
+}
+
+/* Portlet de politicas
+   ========================================================================== */
+
+.portletCollection {
+    border: 1px solid #c0c1c3;
+    border-radius: 5px;
+    background: #eeeff1 !important;
+}
+
+.portletCollection .portletHeader {
+    margin: 0;
+    padding: 1em;
+    border-bottom: 1px solid #c0c1c3;
+    color: #464a53;
+    text-transform: uppercase;
+}
+
+.portletCollection .portletItem .tile {
+    display: inline;
+    float: none;
+    color: #436976;
+}
+
+.portletCollection .portletFooter {
+    background: url("++resource++brasil.gov.portal/img/portlet-footer-textmore.png") no-repeat right;
+    text-align: right;
+}
+
+.portletCollection .portletFooter span {
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.portletCollection .portletFooter a {
+    display: block;
+    float: right;
+    width: 133px;
+    height: 100%;
+}
+
+.portletCollection .portletItem .portletItemDetails {
+    margin: 0;
+    width: 0;
+}
+
+
+/* ==========================================================================
+   Collective Cover
+   ========================================================================== */
+
+.portaltype-collective-cover-content #content .row {
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiles
+   ========================================================================== */
+
+.tile {
+    clear: both;
+    margin-bottom: 1.8em;
+}
+
+.tile h1 {
+    margin: 0 0 10px 0;
+    border-bottom: none;
+    text-transform: none;
+    font-size: 2.8em;
+    line-height: 1.1em;
+}
+
+.tile h2 {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.25em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.345em;
+}
+
+#content .cover-collection-tile h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tile[data-tile*=collective\.cover\.basic] h1,
+.tile[data-tile*=collective\.cover\.basic] h2.gigante,
+.tile[data-tile*=collective\.cover\.basic] h2.grande,
+.tile[data-tile*=collective\.cover\.basic] h2,
+.tile[data-tile*=collective\.cover\.basic] h3,
+.tile[data-tile*=collective\.cover\.basic] h4,
+.tile[data-tile*=nitf] h1,
+.tile[data-tile*=nitf] h2.gigante,
+.tile[data-tile*=nitf] h2.grande,
+.tile[data-tile*=nitf] h2,
+.tile[data-tile*=nitf] h3,
+.tile[data-tile*=nitf] h4 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content .cover-collection-tile h2 a { color: #172938; }
+
+.tile h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2em;
+}
+
+.tile h4 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    line-height: 1.1em;
+}
+
+.tile.fio-separador { margin-bottom: 2.4em; }
+
+.tile .tile-subtitle {
+    margin-bottom: 0.7em !important;
+    color: #2c67cd;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.link-externo {
+    overflow: hidden;
+    border: 1px solid #c0c1c3;
+    border-radius: 5px;
+}
+
+#content .tile-description { margin: 0; }
+
+/* Tile Basic
+   ========================================================================== */
+
+.tile[data-tile*=collective\.cover\.basic] h1 { font-size: 2.72em; }
+.tile[data-tile*=collective\.cover\.basic] h2.gigante { font-size: 2.72em; }
+.tile[data-tile*=collective\.cover\.basic] h2.grande { font-size: 1.9em; }
+.tile[data-tile*=collective\.cover\.basic] h2 { font-size: 1.25em; }
+.tile[data-tile*=collective\.cover\.basic] h3 { font-size: 1.21em; }
+.tile[data-tile*=collective\.cover\.basic] h4 { font-size: 1.1em; }
+
+/* Tile Basic News Article (nitf)
+   ========================================================================== */
+
+.tile[data-tile*=nitf] h1 { font-size: 2.72em; }
+.tile[data-tile*=nitf] h2.gigante { font-size: 2.72em; }
+.tile[data-tile*=nitf] h2.grande { font-size: 1.9em; }
+.tile[data-tile*=nitf] h2 { font-size: 1.25em; }
+.tile[data-tile*=nitf] h3 { font-size: 1.21em; }
+.tile[data-tile*=nitf] h4 { font-size: 1.1em; }
+
+.cover-list-tile .tile-header h1,
+.cover-list-tile .tile-header h2,
+.cover-list-tile .tile-header h3,
+.cover-list-tile .tile-header h4,
+.cover-collection-tile .tile-header span {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #444A53;
+    font-weight: normal;
+    font-family: open_sansbold, Arial, Helvetica, sans-serif;
+}
+
+/* Link externo
+   ========================================================================== */
+
+.link-externo .tile-header,
+.link-externo .tile-title {
+    padding: 1em;
+    border-bottom: 1px solid #bec2c1;
+    background: #434a54;
+}
+
+.link-externo .tile-header span,
+.link-externo .tile-header h2,
+.link-externo .tile-title h2 {
+    margin: 0;
+    color: #fff !important;
+    font-weight: normal;
+}
+
+.link-externo .tile-header { text-transform: uppercase; }
+
+.tile-header span { font-size: 1.4em; }
+
+.link-externo .tile-footer {
+    padding: 0.5em 1em;
+    background: #c2c3c5;
+    text-transform: uppercase;
+}
+
+.link-externo .collection-item {
+    padding: 1em;
+    border-bottom: 1px dotted #bec2c1;
+}
+
+.link-externo .collection-item.odd { background: #eeeff1; }
+.link-externo .collection-item.even { background: #fff; }
+
+.link-externo .collection-item a {
+    display: block;
+    padding-right: 2em;
+    background: url("++resource++brasil.gov.portal/img/readmoredarkgray.png") no-repeat right center !important;
+}
+
+.link-externo .collection-item h2,
+.link-externo .collection-item h3 {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.link-externo .collection-item p {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+}
+
+/* Lista horizontal
+   ========================================================================== */
+
+.lista-horizontal {
+    border: 1px solid #c0c1c3;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #eeeff1 !important;
+}
+
+.lista-horizontal .tile-header,
+.lista-horizontal .tile-title {
+    margin: 0;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #c0c1c3;
+    color: #464a53;
+    text-transform: uppercase;
+}
+
+.lista-horizontal .tile-footer {
+    float: left;
+    margin: 0;
+    padding: 1% 2.5%;
+    width: 95%;
+    border-top: 1px solid #c0c1c3;
+    color: #464a53;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.lista-horizontal .list-item a,
+.lista-horizontal .collection-item a { color: #365073 !important; }
+
+.lista-horizontal .list-item,
+.lista-horizontal .collection-item {
+    float: left;
+    padding: 2% 1% 2% 3%;
+    width: 29%;
+    border-left: 1px dotted #ccc;
+}
+
+/* Lista vertical - Tile List e Tile Collection
+   ========================================================================== */
+
+.lista-vertical {
+    border: 1px solid #c0c1c3;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #eeeff1 !important;
+}
+
+.lista-vertical .tile-header,
+.lista-vertical .tile-title,
+.lista-vertical .collection-header,
+.lista-vertical .collection-title {
+    margin: 0;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #c0c1c3;
+    color: #464a53;
+    text-transform: uppercase;
+}
+
+.lista-vertical .tile-header h3,
+.lista-vertical .tile-header span {
+    font-size: 1.3em;
+}
+
+.lista-vertical .tile-footer,
+.lista-vertical .collection-footer {
+    float: left;
+    margin: 0;
+    padding: 1% 2.5%;
+    width: 95%;
+    border-top: 1px solid #c0c1c3;
+    color: #464a53;
+    text-transform: uppercase;
+}
+
+.lista-vertical .tile-footer a,
+.lista-vertical .collection-footer a {
+    font-size: 11px;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+.lista-vertical .list-item a,
+.lista-vertical .collection-item a { color: #365073 !important; }
+
+.lista-vertical .list-item,
+.lista-vertical .collection-item {
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 0 9px;
+    border-bottom: 1px dotted #c1c2c2;
+    position: relative;
+}
+
+.lista-vertical .list-item h1,
+.lista-vertical .list-item h2,
+.lista-vertical .list-item h3,
+.lista-vertical .collection-item h1,
+.lista-vertical .collection-item h2,
+.lista-vertical .collection-item h3 {
+    margin: 1.2em 0 !important;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.lista-vertical .list-item a h1,
+.lista-vertical .list-item a h2,
+.lista-vertical .list-item a h3,
+.lista-vertical .collection-item a h1,
+.lista-vertical .collection-item a h2,
+.lista-vertical .collection-item a h3 { color: #596e7f; }
+
+.lista-vertical .list-item img[width="200"],
+.lista-vertical .collection-item img[width="200"] {
+    float: left;
+    margin: 0 .8em 0 0 !important;
+    max-width: 115px;
+    width: 115px;
+}
+
+.lista-vertical p.data,
+.lista-vertical p.date {
+    float: left;
+    margin: 0 1.4em 0 0 !important;
+    color: #748494;
+}
+
+.lista-vertical .list-item p,
+.lista-vertical .collection-item p { color: #46494e; }
+
+/* Cores Section */
+.laranja .tile-subtitle { color: #ba4a00; }
+.azul-petroleo .tile-subtitle { color: #3b7390; }
+.dourado .tile-subtitle { color: #b97a00; }
+.roxo .tile-subtitle { color: #643c67; }
+.marrom-claro .tile-subtitle { color: #826938; }
+.verde-escuro .tile-subtitle { color: #1d571f; }
+.verde .tile-subtitle { color: #017b16; }
+.azul .tile-subtitle { color: #1a55dd; }
+.marrom .tile-subtitle { color: #753900; }
+.verde-claro .tile-subtitle { color: #56762b; }
+.azul-claro .tile-subtitle { color: #3867b7; }
+.azul-escuro .tile-subtitle { color: #00439e; }
+.azul-turquesa .tile-subtitle { color: #097495; }
+.bege .tile-subtitle { color: #ab6600; }
+
+/* destaques com borda cinza*/
+.roxo-borda,
+.verde-borda,
+.azul-claro-borda,
+.azul-turquesa-borda,
+.laranja-borda,
+.bege-borda {
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid #ccc;
+}
+
+.roxo-borda a { color: #5c1285 !important; }
+.verde-borda a { color: #01971c !important; }
+.azul-claro-borda a { color: #8fd9e4 !important; }
+.azul-claro-turquesa a { color: #097495 !important; }
+.laranja-borda a { color: #e07f48 !important; }
+.bege-borda a { color: #ab6600 !important; }
+
+.tile p {
+    color: #172938;
+    font-size: 1.15em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.25em !important;
+}
+
+.left {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.right {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+/* Collection tile */
+.tile-title {
+    margin-bottom: 5px;
+    padding: 7px 0.3em;
+    border-top: 4px solid #172838;
+    border-bottom: 1px solid #ccc;
+    background: #eeeff1;
+    font-weight: normal;
+    font-size: 1.7em;
+}
+
+.collection-item h1,
+.collection-item h2,
+.collection-item h3,
+.collection-item h4,
+.list-item h1,
+.list-item h2,
+.list-item h3,
+.list-item h4 { margin-bottom: 0.5em; }
+
+.roxo .tile-title {
+    border-top: 4px solid #5b1285;
+    color: #5b1285;
+}
+
+.verde .tile-title {
+    border-top: 4px solid #01971c;
+    color: #01971c;
+}
+
+.azul-claro .tile-title {
+    border-top: 4px solid #018bb9;
+    color: #018bb9;
+}
+
+.laranja .tile-title {
+    border-top: 4px solid #d25501;
+    color: #d25501;
+}
+
+.bege .tile-title {
+    border-top: 4px solid #ad6500;
+    color: #ad6500;
+}
+
+.cover-collection-tile .collection-item h1,
+.cover-collection-tile .collection-item h2,
+.cover-collection-tile .collection-item h3,
+.cover-collection-tile .collection-item h4 {
+    letter-spacing: normal;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cover-collection-tile .collection-item h1 {
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+
+.cover-collection-tile .collection-item h2 {
+    font-size: 1.19em;
+    line-height: 1.19em;
+}
+
+.cover-collection-tile .collection-item h3 {
+    font-size: 1.16em;
+    line-height: 1.16em;
+}
+
+.cover-collection-tile .collection-item h4 {
+    font-size: 0.937em;
+    line-height: 0.937em;
+}
+
+.cover-collection-tile .tile-footer a { font-size: 0.9em; }
+
+
+/* List tile */
+
+.cover-list-tile .list-item h1,
+.cover-list-tile .list-item h2,
+.cover-list-tile .list-item h3,
+.cover-list-tile .list-item h4 {
+    letter-spacing: normal;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cover-list-tile .list-item h1 {
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+.cover-list-tile .list-item h2 {
+    font-size: 1.19em;
+    line-height: 1.19em;
+}
+.cover-list-tile .list-item h3 {
+    font-size: 1.16em;
+    line-height: 1.16em;
+}
+.cover-list-tile .list-item h4 {
+    font-size: 0.937em;
+    line-height: 0.937em;
+}
+
+/* Tile header
+   ========================================================================== */
+
+#content .outstanding-header h1,
+#content .outstanding-header h2,
+#content .outstanding-header h3,
+#content .outstanding-header h4 {
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+.outstanding-header .outstanding-title {
+    margin-left: 0 !important;
+    padding: 0.45em;
+    border-top: 2px solid #172838;
+    border-bottom: 1px solid #CCCCCC;
+    color: #2C67CD;
+    font-size: 1.7em;
+    line-height: 1em;
+}
+
+#content .tile .outstanding-header .outstanding-title {
+    margin-bottom: 0.85em;
+    padding-right: 3.464em;
+    padding-bottom: 0;
+    font-weight: normal !important;
+}
+
+.outstanding-header h1 {
+    text-transform: uppercase;
+    font-weight: bold !important;
+    font-size: 1.91em !important;
+}
+
+.outstanding-header h2 {
+    min-height: 48px;
+    font-size: 1.62em !important;
+}
+
+.outstanding-header h3 {
+    min-height: 48px;
+    font-size: 1.42em !important;
+}
+
+.outstanding-header h4 {
+    min-height: 48px;
+    font-size: 1.3em !important;
+}
+
+#content .outstanding-header .outstanding-link {
+    position: static;
+    display: block;
+    margin: 0.9em 0.9em 0.9em 0.6em;
+    padding: 0.3em 2.7em 0.3em 0.3em;
+    min-height: 1.3em;
+    width: auto;
+    background-position: right 50%;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+    line-height: 1.2em;
+}
+
+
+/* Paleta de cores - cor-editoria
+   ========================================================================== */
+
+.tile.padrao { margin-bottom: 13px; }
+
+.padrao .outstanding-header { border-top: 2px solid #172838; }
+
+.padrao .outstanding-header h2 { min-height: 31px; }
+
+/* Laranja - Cidadania e Justiça
+   ========================================================================== */
+
+.laranja .tile-title {
+    border-top: 4px solid #ba4a00;
+    color: #ba4a00;
+}
+
+.laranja .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #ba4a00;
+    background: #eeeff1;
+}
+
+.laranja .outstanding-header .outstanding-title {
+    border-color: #ba4a00;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #ba4a00;
+}
+
+.laranja .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_laranja.png") no-repeat scroll right 5px transparent;
+}
+
+/* Azul Petroleo - Defesa e Segurança
+   ========================================================================== */
+
+.azul-petroleo .tile-title {
+    border-top: 4px solid #3b7390;
+    color: #3b7390;
+}
+
+.azul-petroleo .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #3b7390;
+    background: #eeeff1;
+}
+
+.azul-petroleo .outstanding-header .outstanding-title {
+    border-color: #3b7390;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #3b7390;
+}
+
+.azul-petroleo .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_azul-petroleo.png") no-repeat scroll right 5px transparent;
+}
+
+/* Dourado - Cultura
+   ========================================================================== */
+
+.dourado .tile-title {
+    border-top: 4px solid #b97a00;
+    color: #b97a00;
+}
+
+.dourado .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #b97a00;
+    background: #eeeff1;
+}
+
+.dourado .outstanding-header .outstanding-title {
+    border-color: #b97a00;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #b97a00;
+}
+
+.dourado .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_dourado.png") no-repeat scroll right 5px transparent;
+}
+
+/* Roxo - Ciencia e Tecnologia
+   ========================================================================== */
+
+.roxo .tile-title {
+    border-top: 4px solid #643c67;
+    color: #643c67;
+}
+
+.roxo .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #643c67;
+    background: #eeeff1;
+}
+
+.roxo .outstanding-header .outstanding-title {
+    border-color: #643c67;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #643c67;
+}
+
+.roxo .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_roxo.png") no-repeat scroll right 5px transparent;
+}
+
+/* Marron Claro - Economia e Emprego
+   ========================================================================== */
+
+.marrom-claro .tile-title {
+    border-top: 4px solid #826938;
+    color: #826938;
+}
+
+.marrom-claro .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #826938;
+    background: #eeeff1;
+}
+
+.marrom-claro .outstanding-header .outstanding-title {
+    border-color: #826938;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #826938;
+}
+
+.marrom-claro .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_marrom-claro.png") no-repeat scroll right 5px transparent;
+}
+
+/* Verde Escuro - Educação
+   ========================================================================== */
+
+.verde-escuro .tile-title {
+    border-top: 4px solid #1D571F;
+    color: #1d571f;
+}
+
+.verde-escuro .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #1d571f;
+    background: #eeeff1;
+}
+
+.verde-escuro .outstanding-header .outstanding-title {
+    border-color: #1d571f;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #1d571f;
+}
+
+.verde-escuro .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_verde-escuro.png") no-repeat scroll right 5px transparent;
+}
+
+/* Verde - Esporte
+   ========================================================================== */
+
+.verde .tile-title {
+    border-top: 4px solid #017b16;
+    color: #017B16;
+}
+
+.verde .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #017b16;
+    background: #eeeff1;
+}
+
+.verde .outstanding-header .outstanding-title {
+    border-color: #017b16;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #017b16;
+}
+
+.verde .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_verde.png") no-repeat scroll right 5px transparent;
+}
+
+/* Azul Governo
+   ========================================================================== */
+
+.azul .tile-title {
+    border-top: 4px solid #1a55dd;
+    color: #1a55dd;
+}
+
+.azul .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #1a55dd;
+    background: #eeeff1;
+}
+
+.azul .outstanding-header .outstanding-title {
+    border-color: #1a55dd;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #1a55dd;
+}
+
+.azul .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_azul.png") no-repeat scroll right 5px transparent;
+}
+
+/* Marron - Infraestrutura
+   ========================================================================== */
+
+.marrom .tile-title {
+    border-top: 4px solid #753900;
+    color: #753900;
+}
+
+.marrom .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #753900;
+    background: #eeeff1;
+}
+
+.marrom .outstanding-header .outstanding-title {
+    border-color: #753900;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #753900;
+}
+
+.marrom .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_marrom.png") no-repeat scroll right 5px transparent;
+}
+
+/* Verde Claro - Meio Ambiente
+   ========================================================================== */
+
+.verde-claro .tile-title {
+    border-top: 4px solid #56762b;
+    color: #56762b;
+}
+
+.verde-claro .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #56762b;
+    background: #eeeff1;
+}
+
+.verde-claro .outstanding-header .outstanding-title {
+    border-color: #56762b;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #56762b;
+}
+
+.verde-claro .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_verde-claro.png") no-repeat scroll right 5px transparent;
+}
+
+/* Azul Claro - Saúde
+   ========================================================================== */
+
+.azul-claro .tile-title {
+    border-top: 4px solid #3867b7;
+    color: #3867b7;
+}
+
+.azul-claro .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #3867b7;
+    background: #eeeff1;
+}
+
+.azul-claro .outstanding-header .outstanding-title {
+    border-color: #3867b7;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #3867b7;
+}
+
+.azul-claro .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_azul-claro.png") no-repeat scroll right 5px transparent;
+}
+
+/* Azul Escuro - Turismo
+   ========================================================================== */
+
+.azul-escuro .tile-title {
+    border-top: 4px solid #00439e;
+    color: #00439e;
+}
+
+.azul-escuro .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #00439e;
+    background: #eeeff1;
+}
+
+.azul-escuro .outstanding-header .outstanding-title {
+    border-color: #00439e;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #00439e;
+}
+
+.azul-escuro .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/seta_azul-escuro.png") no-repeat scroll right 5px transparent;
+}
+
+/* Azul Piscinba - Turismo
+   ========================================================================== */
+
+.azul-piscina .tile-title {
+    border-top: 4px solid #00A0DB;
+    color: #00A0DB;
+}
+
+.azul-piscina .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #00A0DB;
+    background: #eeeff1;
+}
+
+.azul-piscina .outstanding-header .outstanding-title {
+    border-color: #00A0DB;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #00A0DB;
+}
+
+/* Bege
+   ========================================================================== */
+
+.bege .tile-title {
+    border-top: 4px solid #AD6500;
+    color: #AD6500;
+}
+
+.bege .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #AD6500;
+    background: #eeeff1;
+}
+
+.bege .outstanding-header .outstanding-title {
+    border-color: #AD6500;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #AD6500;
+}
+
+.bege .outstanding-header .outstanding-link {
+    background: url("++resource++brasil.gov.portal/img/readmorebrown.png") no-repeat scroll right 5px transparent;
+}
+
+/* Amarelo - Economia e Emprego
+   ========================================================================== */
+
+.amarelo .tile-title {
+    border-top: 4px solid #DE9200;
+    color: #DE9200;
+}
+
+.amarelo .outstanding-header {
+    min-height: 40px;
+    border-top: 2px solid #DE9200;
+    background: #eeeff1;
+}
+
+.amarelo .outstanding-header .outstanding-title {
+    border-color: #DE9200;
+    border-bottom: none;
+    background: #eeeff1;
+    color: #DE9200;
+}
+
+/* fio separador */
+.fio-separador .outstanding-header { border-top: 1px solid #ddd; }
+
+
+/* ==========================================================================
+   Collections
+   ========================================================================== */
+
+div.listingBar a:link,
+#content div.listingBar a:link,
+dl.portlet div.listingBar a:link {
+    border-bottom: 0.1em solid #CCCCCC !important;
+}
+
+/* Paginação */
+#plone-content #content .paginacao {
+    display: block;
+    text-align: center;
+    margin: 72px 0 20px 0;
+    font-size: 11px;
+    font-weight: normal;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+#plone-content #content .paginacao li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#plone-content #content .paginacao li a {
+    text-transform: uppercase;
+    min-width: 25px;
+    height: 25px;
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+    display: block;
+    line-height: 25px;
+    color: #36424d;
+    margin: 0 4px;
+}
+
+#plone-content #content .paginacao li a:hover,
+#plone-content #content .paginacao li a:focus {
+    text-decoration: underline;
+}
+
+#plone-content #content .paginacao li a.anterior,
+#plone-content #content .paginacao li a.proximo {
+    border: none;
+    width: auto;
+    height: auto;
+    color: #2c66ce;
+}
+
+#plone-content #content .paginacao li a.anterior { margin-right: 26px; }
+#plone-content #content .paginacao li a.proximo { margin-left: 26px; }
+
+#plone-content #content .paginacao li span {
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
+/*
+ * Sprite de icones
+ */
+
+.tileItem .documentByLine {
+    /* generico, sem icone especifico */
+    background: transparent;
+}
+
+.documentByLine .icon-type {
+    display: block;
+    overflow: hidden;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.tile-sc-embedder .documentByLine .icon-type {
+    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -22px;
+}
+
+.tile-audio .documentByLine .icon-type {
+    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -1px;
+}
+
+.tile-externalcontent .documentByLine .icon-type,
+.tile-collective-nitf-content .documentByLine .icon-type {
+    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -64px;
+}
+
+.tile-page .documentByLine .icon-type {
+    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -43px;
+}
+
+.tile-image .documentByLine .icon-type {
+    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -85px;
+}
+
+.tile-aplicativos .documentByLine .icon-type {
+    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -106px;
+}
+
+.tile-folder .documentByLine .icon-type {
+    background: url("++resource++brasil.gov.portal/img/sprite-icons.png") no-repeat -1px -64px;
+}
+
+
+/* ==========================================================================
+   Resultado da busca
+   ========================================================================== */
+
+.template-search #content h1.documentFirstHeading {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+    color: #2c67cd;
+    text-transform: uppercase;
+    letter-spacing: 0.001em;
+    font-weight: bold;
+    font-size: 2.4em;
+    line-height: 1em;
+}
+
+.template-search .searchResults dt a {
+    padding-left: 23px;
+    color: #172734 !important;
+    font-size: 1.3em;
+}
+
+.template-search .searchResults dt.contenttype-collective-nitf-content a {
+    padding-left: 7px;
+}
+
+.template-search #search-results-bar {
+    font-size: 1.2em;
+    padding: 25px 0;
+}
+
+.template-search #search-results-bar a { color: #000000; }
+
+.template-search .searchResults dt {
+    padding-top: 15px;
+    border-top: 1px solid #D3D3D3;
+}
+
+.template-search .searchResults dt:first-child { border-top: 0; }
+
+.template-search #search-results {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.template-search .searchResults dd cite {
+    padding-top: 10px;
+    color: #647788;
+    font-style: normal;
+    font-size: 0.8em;
+}
+
+.template-search #content .searchResults dd a { color: #647788; }
+
+.template-search .optionsToggle {
+    border: transparent;
+    background-color: transparent;
+}
+
+#search-results {
+    width: 66.5% !important;
+    padding: 0;
+}
+
+#search-results > dl.searchResults > dd > span.discreet > span {
+    float: left;
+    width: 100%;
+}
+
+#search-results-bar {
+    position: absolute !important;
+    right: 0;
+    margin-top: 25px;
+    padding: 0 !important;
+    width: 317px !important;
+    border-top: 0 none !important;
+    border-top: 0 !important;
+    border-bottom: 0 none !important;
+    border-bottom: 0 !important;
+    background: #fff;
+    font-size: 0.9em;
+}
+
+#search-results-bar > span:first-child {
+    margin: 2px 0 0 20px;
+    width: 90%;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#search-results-bar > span:first-child + dl { margin-left: 20px; }
+
+#content-core form.searchPage dd {
+    overflow: hidden;
+    margin: 0 0 1.5em 0;
+}
+
+#search-filter,
+#search-filter .field { background: transparent !important; }
+#search-filter .field { padding: 1em 0 !important; }
+#search-filter .field div { width: 100%; }
+#search-filter .field input { margin-right: 8px; }
+
+#search-results-bar dd.actionMenuContent,
+#search-results-bar .activated dd.actionMenuContent { display: block }
+
+#search-results-bar .deactivated dd.actionMenuContent { display: none }
+
+#search-results-bar dl.actionMenu.activated dd { position: relative; }
+
+.template-search #search-results-bar dl {
+    margin-left: 20px !important;
+    width: 97%;
+}
+
+.template-search #rss-subscription,
+.template-search .actionMenuHeader {
+    display: none;
+}
+
+#search-results-wrapper { min-height: 600px; }
+
+.optionsToggle {
+    border: medium none transparent;
+    background-color: transparent;
+    font-size: 100%;
+}
+
+#searchResultsSort > span:first-child,
+#content #search-filter legend {
+    padding-right: 0 !important;
+    padding-bottom: 5px !important;
+    padding-left: 0 !important;
+    width: 88%;
+    border-bottom: 1px solid #D3D3D3;
+    background: transparent !important;
+    text-transform: none !important;
+    font-weight: normal !important;
+    font-size: 1.25em !important;
+}
+
+#searchResultsSort > span:first-child {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#searchResultsSort {
+    float: left;
+    padding: 0 20px 20px 20px;
+    width: 98%;
+}
+
+.template-search #content .cell {
+    padding-bottom: 20px;
+    width: 96% !important;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.template-search #search-term {
+    font-weight: bold !important;
+}
+
+#content #sorting-options > span { display: none; }
+
+#content #sorting-options a {
+    display: block;
+    border-bottom: 0;
+    color: #000;
+    text-transform: capitalize;
+    line-height: 1.6em;
+}
+
+.template-search .searchResults dd div {
+    color: #000000;
+    font-size: 1.3em;
+}
+
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * Formulário de contato
+ */
+
+.field input[type="text"],
+#content .field textarea {
+    margin: 0;
+    padding: 3px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    text-indent: 2px;
+    font-size: 12px;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+#content .field textarea { resize: none; }
+
+/* fix some bootstrap mess */
+.label:empty,
+.badge:empty { display: inline; }
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#wrapper #footer {
+    padding: 20px 0;
+    min-height: 50px;
+    width: 100%;
+}
+
+#wrapper #footer > div {
+    margin: 2em auto;
+    padding-top: 1em;
+    max-width: 960px;
+}
+
+#wrapper #footer .footer-logos {
+    margin: 0 0 -20px;
+    padding: 2em 0;
+    max-width: 100%;
+    background: #00420c;
+}
+
+.footer-logos > div {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#wrapper #footer .logo-brasil img { float: right; }
+
+#extra-footer p {
+    margin: 1em auto;
+    max-width: 960px;
+}
+
+#voltar-topo {
+    margin-top: 1.915em;
+    text-align: right;
+}
+
+#voltar-topo a {
+    padding-left: 20px;
+    background: url("++resource++brasil.gov.portal/img/voltar-topo.png") no-repeat left center;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Doormat
+   ========================================================================== */
+
+#doormat-container { float: none; }
+
+#doormat-container dl { margin: 0 0 20px 0; }
+
+#doormat-container .doormatColumn { text-align: left; }
+
+#doormat-container dt {
+    padding-left: .6em;
+    font-size: 2em;
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+}
+
+#doormat-container dd {
+    padding: .5em 1.2em 0 1.2em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+#doormat-container dd a { font-size: 1.4em; }
+
+#doormat-container.columns-4 .doormatColumn { width: 22%; }
+
+/*
+ * Social Like
+ */
+
+#viewlet-social-like > div {
+    display: block;
+    float: right;
+    margin-left: 3px;
+}
+
+.sociallike-network-facebook {
+    padding-left: 20px;
+}
+
+/* correção de espaçamento dos icones de tiles na aba layout */
+#tiles-list .last-item { float: left; }
+
+/* Correção no tamanho de itens relacionados (tela de gestão) */
+.template-edit.portaltype-collective-nitf-content #content #form-widgets-relatedItems-input-fields > span.option {
+    margin-bottom: 5px;
+}
+
+.template-edit.portaltype-collective-nitf-content #content .relationlist-field {
+    float: left;
+    margin-right: 5px;
+    line-height: 14px;
+}
+
+.template-edit.portaltype-collective-nitf-content #content #content-core #form fieldset {
+    width: 100%;
+}
+
+.template-edit.portaltype-collective-nitf-content #content #content-core #form fieldset #formfield-form-widgets-relatedItems {
+    width: 496px;
+}
+
+.template-edit.portaltype-collective-nitf-content #content .relationlist-field + label > span.label {
+    display: block;
+    overflow: hidden;
+    width: 92%;
+    text-overflow: ellipsis;
+    line-height: 14px;
+}
+
+#add-on-list { display: none; }
+form.inline-form { display: inline; }
+
+/* altura para visualizar botoes do social like */
+#content div.documentByLine { min-height: 30px; }
+
+/* ==========================================================================
+   Especificação de estilos para Páginas
+   ========================================================================== */
+
+/* Legenda de Imagem alinhada à esquerda */
+.template-document_view #content-core .image-left dd.image-caption {
+    margin-left: 0;
+}
+
+/* ==========================================================================
+   Especificação de estilos para NITF
+   ========================================================================== */
+
+/* Título da sessão */
+body[class*="nitf"] #content p.section {
+    margin-bottom: 1.5em !important;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+}
+
+/* Título da notícia */
+body[class*="nitf"] #content h1.documentFirstHeading {
+    margin-bottom: 0.7444em;
+    padding-bottom: 0;
+    color: #172938;
+    letter-spacing: normal;
+    font-weight: bold;
+    font-size: 2.5833em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.1788em;
+}
+
+body[class*="nitf"] #content h2.nitfSubtitle {
+    margin-bottom: 1.9230em;
+    color: #2c66ce;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.500em;
+}
+
+body[class*="nitf"] #content .documentDescription {
+    margin-top: 0;
+    padding-bottom: 1.5390em;
+    border-bottom: 1px solid #d7dcd8;
+    color: #172938;
+    font-weight: normal;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body[class*="nitf"] #content .documentAuthor,
+body[class*="nitf"] #content .documentPublished,
+body[class*="nitf"] #content .documentModified {
+    display: block;
+}
+
+body[class*="nitf"] #content .documentAuthor {
+    margin: 0;
+    color: #2c66ce;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+}
+
+body[class*="nitf"] #content .documentPublished > span:first-child,
+body[class*="nitf"] #content .documentModified > span:first-child {
+    display: block;
+    float: left;
+}
+
+body[class*="nitf"] #content .documentPublished > span:first-letter,
+body[class*="nitf"] #content .documentModified > span:first-letter {
+    text-transform: uppercase;
+}
+
+/* Social Like
+   ========================================================================== */
+
+body[class*="nitf"] #plone-document-byline { padding-top: .600em; }
+body[class*="nitf"] #content #viewlet-social-like {
+    position: static;
+    right: 0 !important;
+}
+
+div.width-1\3a 2 #viewlet-social-like > div {
+    float: left;
+    margin-bottom: 0.6410em;
+}
+
+#content #viewlet-social-like > div {
+    height: 20px;
+    text-align: right;
+}
+
+#content #viewlet-social-like .sociallike-network-facebook {
+    padding-left: 20px;
+    width: 90px;
+}
+
+#content #viewlet-social-like .sociallike-network-gplus {
+    width: 78px;
+}
+
+#content #viewlet-social-like .sociallike-network-twitter {
+    width: 93px;
+}
+
+#content #viewlet-social-like .sociallike-network-twitter iframe {
+    margin-left: 0;
+}
+
+/* Paragrafo da noticia */
+body[class*="nitf"] #content article div[property*="articleBody"] p {
+    margin: 1.5em 0;
+    color: #172938;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+}
+
+#nitf-section-filter-spinner { display: none; }
+
+/* Fonte da noticia */
+#content article .external-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9em;
+    color: #3a70d1;
+}
+
+/* Data e histórico da notícia */
+#content article #viewlet-below-content-title .documentPublished,
+#content article #viewlet-below-content-title .documentModified,
+#content article #viewlet-below-content-title .contentHistory a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: #2c66ce;
+}
+
+/* Relatar erros */
+#content .relatar-erros {
+    float: left;
+    clear: left;
+    margin: 0 0 2em;
+    padding: 0;
+    font-size: 1em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+#content .relatar-erros a {
+    float: left;
+    height: 21px;
+}
+
+#content .relatar-erros a:hover,
+#content .relatar-erros a:focus {
+    background-position: 0 -21px;
+}
+
+#content .relatar-erros a .texto {
+    display: block;
+    margin-left: 2.273em;
+    height: 1.909em;
+    color: #172938;
+    font-size: 0.917em;
+    line-height: 1.909em;
+}
+
+/* ==========================================================================
+   Modo de exibição - Visão Sumária
+   ========================================================================== */
+
+.template-summary_view #content-core,
+.template-folder_summary_view #content-core,
+.template-facetednavigation_view #content-core { margin-top: 40px; }
+
+.template-summary_view #content h1.documentFirstHeading,
+.template-folder_summary_view #content h1.documentFirstHeading,
+.template-facetednavigation_view #content h1.documentFirstHeading {
+    margin: .85em 0 5px;
+    padding: 0 0 .70em 0;
+    border: 0;
+    border-bottom: 1px solid #d9dbda;
+    color: #2c66ce;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 2.25em;
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+    line-height: 1em;
+}
+
+.template-summary_view #content .tileItem,
+.template-folder_summary_view #content .tileItem,
+.template-facetednavigation_view #content .tileItem {
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    margin: 0;
+    padding: 2em 0 2em 7.5em;
+    border-bottom: 1px solid #d7dbda;
+    font-size: 1em;
+}
+
+.template-summary_view #content .tileItem:first-child,
+.template-folder_summary_view #content .tileItem:first-child,
+.template-facetednavigation_view #content .tileItem:first-child { padding-top: 0; }
+
+.template-summary_view #content .tileContent,
+.template-folder_summary_view #content .tileContent,
+.template-facetednavigation_view #content .tileContent {
+    overflow: hidden;
+    padding-left: 1.8em;
+    min-height: 75px;
+    border-left: 1px dotted #D6D6D6;
+}
+
+.template-summary_view #content .tileImage,
+.template-folder_summary_view #content .tileImage,
+.template-facetednavigation_view #content .tileImage {
+    float: none;
+    margin: 0 1em 0.5em 0;
+}
+
+.template-summary_view #content .tileImage img,
+.template-folder_summary_view #content .tileImage img,
+.template-facetednavigation_view #content .tileImage img { float: left; }
+
+.template-summary_view #content .tileItem .subtitle,
+.template-folder_summary_view #content .tileItem .subtitle,
+.template-facetednavigation_view #content .tileItem .subtitle {
+    display: block;
+    margin: 0 0 .6em;
+    padding: 0;
+    font-weight: normal;
+    font-size: 1em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+.template-summary_view #content .tileItem .tileHeadline,
+.template-folder_summary_view #content .tileItem .tileHeadline,
+.template-facetednavigation_view #content .tileItem .tileHeadline {
+    margin: 0 0 0.438em;
+    padding: 0;
+    color: #172938;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.template-summary_view #content .tileItem .tileHeadline a,
+.template-folder_summary_view #content .tileItem .tileHeadline a,
+.template-summary_view #content .tileItem .description,
+.template-folder_summary_view #content .tileItem .description,
+.template-facetednavigation_view #content .tileItem .tileHeadline a,
+.template-facetednavigation_view #content .tileItem .description {
+    margin: 0;
+    padding: 0;
+    color: #172938;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.template-summary_view #content .tileItem .description,
+.template-folder_summary_view #content .tileItem .description,
+.template-facetednavigation_view #content .tileItem .description { line-height: 1.75em; }
+
+.template-summary_view #content .tileItem p,
+.template-folder_summary_view #content .tileItem p,
+.template-facetednavigation_view #content .tileItem p {
+    margin: 0;
+    padding: 0;
+}
+
+.template-summary_view #content .tileItem .keywords,
+.template-folder_summary_view #content .tileItem .keywords,
+.template-facetednavigation_view #content .tileItem .keywords {
+    margin: 15px 0 0;
+    padding: 0;
+    color: #596e7f;
+    font-weight: normal;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3em;
+}
+
+.template-summary_view #content .tileItem .documentByLine,
+.template-folder_summary_view #content .tileItem .documentByLine,
+.template-facetednavigation_view #content .tileItem .documentByLine {
+    margin: 2em 0 0;
+    padding: 0;
+    min-width: 7.5em;
+    min-height: 10.4em;
+    color: #596E7F;
+    font-size: 1em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.template-summary_view #content .tileItem:first-child .documentByLine,
+.template-folder_summary_view #content .tileItem:first-child .documentByLine,
+.template-facetednavigation_view #content .tileItem:first-child .documentByLine { margin-top: 0; }
+
+.template-summary_view #content .documentByLine .summary-view-icon,
+.template-folder_summary_view #content .documentByLine .summary-view-icon,
+.template-facetednavigation_view #content .documentByLine .summary-view-icon {
+    display: block;
+    margin: 0 0 1em;
+    color: #596e7f;
+    font-size: 1em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+    line-height: 1.2em;
+}
+
+/* Icones */
+#content .summary-view-icon [class*="icon"] {
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 1px;
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+}
+
+#content .summary-view-icon .icon-audio { background-position: -3px -391px; }
+#content .summary-view-icon .icon-day,
+#content .summary-view-icon .icon-agenda { background-position: -244px -392px; width: 13px; }
+#content .summary-view-icon .icon-image { background-position: -123px -391px; }
+#content .summary-view-icon .icon-hour { background-position: -273px -393px; }
+#content .summary-view-icon .icon-file { background-position: -303px -393px; width: 15px; }
+#content .summary-view-icon .icon-noticia,
+#content .summary-view-icon .icon-news,
+#content .summary-view-icon .icon-page { background-position: -94px -391px; }
+#content .summary-view-icon .icon-multimidia { background-position: -33px -391px; }
+
+/* ==========================================================================
+   Galeria de álbuns
+   ========================================================================== */
+body[class*="galeria_de_albuns"] #content .documentFirstHeading,
+body[class*="galeria_de_fotos"] #content .documentFirstHeading {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid #d6dcd7;
+    color: #2c66ce;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 2.25em;
+    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
+}
+
+body[class*="galeria_de_albuns"] #content .descriptionAlbum,
+body[class*="galeria_de_fotos"] #content .descriptionAlbum {
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172938;
+    margin: 1.5em 0 0;
+}
+
+.template-galeria_de_albuns #content {
+    overflow: hidden;
+}
+
+#content #gallery_albums {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 0 0 72px;
+    padding: 0;
+    width: 784px;
+    font-size: 1em;
+}
+
+#content #gallery_albums li {
+    float: left;
+    padding: 2.5em 1.5em 0.5em 0;
+    margin: 0;
+    max-width: 240px;
+    width: 100%;
+    list-style: outside none;
+}
+
+#content #gallery_albums .thumb {
+    display: block;
+    float: left;
+    border: 1px solid #d5d5d5 !important;
+    border-radius: 5px;
+}
+
+#content #gallery_albums .thumb img {
+    display: block;
+    float: left;
+}
+
+#content #gallery_albums .title {
+    display: block;
+    float: left;
+    clear: both;
+    margin: .95em 0;
+    padding-right: 1em;
+    color: #172938;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3em;
+}
+
+#content #gallery_albums .descr,
+#content #gallery_albums .date {
+    color: #172938;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content #gallery_albums .descr {
+    display: block;
+    padding-right: 1em;
+    font-size: 13px;
+    clear: both;
+}
+
+#content #gallery_albums .day {
+    display: block;
+    clear: both;
+    margin: 1.667em 0 1.25em 0;
+    font-size: 1em;
+}
+
+#content #gallery_albums .amount {
+    bottom: 29px;
+    display: block;
+    margin-bottom: 0.833em;
+    width: 100%;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 960px) {
+    body[class*="galeria_de_albuns"] #content #gallery_albums {
+        width: 100%
+    }
+}
+
+/* Separador */
+#content #gallery_albums .separator {
+    float: left;
+    clear: both;
+    margin-top: 0.75em;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #d6dcd7;
+}
+
+/* ==========================================================================
+   Galeria de fotos
+   ========================================================================== */
+#galeria_de_fotos,
+.galeria_container {
+    margin-top: 2em;
+    padding-bottom: 9px;
+    max-width: 748px;
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    background-color: #edeff1;
+    clear: both;
+}
+
+.slideshow-player {
+    margin: 0;
+    padding: 0;
+}
+
+.cycle-player {
+    width: 100%;
+}
+
+.cycle-player .cycle-slide img {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+}
+
+.cycle-player .cycle-overlay {
+    margin: .8em;
+    color: #454545;
+    font-size: 1.05em;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cycle-slideshow > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.rights {
+    display: block;
+    font-style: italic;
+}
+
+.slideshow-carrossel {
+   position: relative;
+   margin: 0 9px;
+   height: 69px;
+   border: 1px solid #ddd;
+   border-radius: 3px;
+   background: #fff;
+}
+
+.slideshow-carrossel .cycle-prev,
+.slideshow-carrossel .cycle-next {
+    position: absolute;
+    top: 23px;
+    display: block;
+    overflow: hidden;
+    width: 22px;
+    height: 21px;
+    border-radius: 3px;
+    background-image: url("++resource++brasil.gov.portal/img/icone-navegacao-cinza.png");
+    background-repeat: no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.slideshow-carrossel .cycle-prev { left: 7px; background-position: 0px 0px; }
+
+.slideshow-carrossel .cycle-next { right: 7px; background-position: 0px -21px; }
+
+.cycle-sentinel { padding: 0 9px; }
+
+.cycle-carrossel {
+    margin: 0 auto;
+    max-width: 666px;
+    height: 69px;
+}
+
+.cycle-carrossel .cycle-slide {
+    margin: 8px 4px;
+    width: 87px;
+    height: 49px;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.cycle-carrossel .cycle-slide-active {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.cycle-carrossel .cycle-slide img {
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    min-height: 49px;
+    min-width: 100%;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+.menuTrigger { display: none; }
+
+div.listingBar { clear: both; }
+
+ul.formTabs { padding: 0px !important; }
+
+#searchbt,
+#nav #seletor { display: none; }
+
+#nav #seletor { color: #fff; }
+
+/* Smartphone
+   ========================================================================== */
+
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+
+    #header { padding-top: 1em !important; }
+
+    #portal-siteactions {
+        position: static;
+        float: none;
+        clear: both;
+        padding: 0 0 0.5em;
+        font-size: 0.9em;
+    }
+
+    #main,
+    .section-home #main {
+        padding-top: 0;
+        max-width: 100% !important;
+    }
+
+    #sobre .last-item a { padding: 0 10px; }
+
+    #portal-breadcrumbs,
+    #accessibility,
+    #doormat-container,
+    #em-destaque,
+    #portal-features { display: none !important; }
+
+    #portal-column-content {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .menuTrigger {
+        display: block;
+        height: 73px;
+        text-indent: -9999px;
+        cursor: pointer;
+    }
+
+    body.contraste .menuTrigger {
+        background: #000 url("++resource++brasil.gov.portal/img/bg-menu-mobile-contraste.png") top right no-repeat;
+        border-top: 1px solid #FFF;
+        border-bottom: 1px solid #FFF;
+    }
+
+    #navigation.ativo .menuTrigger { background-position: bottom right; }
+
+    #navigation #portal-column-one { display: none; }
+
+    #navigation.ativo #portal-column-one {
+        display: block;
+        background: url("++resource++brasil.gov.portal/img/shadow-bottom.gif") repeat-x bottom left;
+        padding-bottom: 13px;
+    }
+
+    .portlet-static-contents-central .portletHeader,
+    .portlet-static-resource-center .portletHeader,
+    .portlet-static-centrales-del-contenido .portletHeader,
+    .portlet-static-centrais-de-conteudos .portletHeader,
+    .portletNavigationTree .portletHeader {
+        position: relative;
+        margin: 0;
+        padding: 30px 0;
+        border-top: none;
+        border-bottom: 1px solid #cdd4d0;
+        text-indent: 30px;
+        text-transform: uppercase;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .portletNavigationTree .portletHeader a span {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        display: block;
+        width: 37px;
+        height: 36px;
+        background: url("++resource++brasil.gov.portal/img/bg-menu-mobile-panel.png") top center no-repeat;
+    }
+
+    #portal-column-one .ativo .portletHeader a span {
+        background-position: bottom center;
+    }
+
+    #portal-column-one .portletNavigationTree .portletHeader a {
+        padding: 20px 35px;
+        color: #00500f !important;
+        font-size: 24px;
+    }
+
+    #portal-column-one dl.portlet { margin-bottom: 0; }
+
+    #portal-column-one .portletStaticText,
+    #portal-column-one dl.portlet dd {
+        display: none;
+    }
+
+    #portal-column-one dl.ativo dd { display: block; }
+
+    dl.portlet ul.navTreeLevel0 > .navTreeItem {
+        border-top: none;
+        border-bottom: 1px solid #d2d2d2;
+    }
+
+    dl.portlet ul.navTreeLevel0 > .navTreeItem a {
+        padding: 20px 35px !important;
+        color: #454545;
+        font-size: 24px;
+        line-height: 1.2em;
+    }
+}
+
+/* iPad portrait
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+
+    #wrapper { max-width: 100%; }
+
+    #logo { min-width: 140px; }
+
+    #main { max-width: 90%; }
+
+    /* Columns */
+    #portal-column-one,
+    #portal-column-two,
+    #portal-column-content {
+        clear: both;
+        margin-left: -98.875%;
+        width: 97.75%;
+    }
+
+    /* Search */
+    #portal-searchbox { display: none; }
+
+    .overlay.overlay-ajax { top: 10px !important; }
+
+    .overlay.overlay-ajax input.searchPage {
+        margin-bottom: 1em;
+        width: 90%;
+        font-size: 200% !important;
+    }
+
+    .overlay.overlay-ajax #searchform .discreet { text-align: left; }
+
+    .overlay.overlay-ajax #content-core strong { display: none; }
+
+    .overlay.overlay-ajax input.searchPage.searchButton { width: auto; }
+}
+
+/* iPhone 4s and greater than
+   ========================================================================== */
+
+@media screen and (max-width: 480px) {
+
+    /* barra de acessibilidade */
+    #portal-siteactions a { padding-left: 0; }
+
+    #portal-siteactions .last-item { margin-right: 0; }
+
+    #voltar-topo a { margin-right: .5em; }
+
+    #viewlet-social-like { right: 0; }
+
+    #portal-description { bottom: 62px; }
+
+    #sobre { background: none; }
+
+    #social-icons { display: none; }
+
+    #header {
+        padding: 1em 0.5em;
+        padding: 0 4%;
+        width: 100%;
+    }
+
+    #header > div { width: 92% }
+
+    #header #accessibility { display: none !important; }
+
+    #header #sobre {
+        padding: 0 4%;
+        width: 92%;
+    }
+
+    #sobre .last-item a { padding: 0 0 0 10px; }
+
+    #portal-searchbox {
+        position: relative;
+        display: block;
+        clear: left !important;
+        margin: 0 !important;
+        padding: 0;
+        height: 41px;
+        border: 0 none;
+        border-radius: 0;
+        background: none;
+    }
+
+    #portal-searchbox .searchField {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 39px;
+        border: 0 none;
+        border-top: 2px solid #ccc;
+        border-radius: 6px;
+        background-color: #fff;
+        color: #064d13;
+        text-indent: 13px;
+        font-size: 18px;
+        font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+        line-height: 39px;
+    }
+
+    #header #portal-searchbox .searchButton {
+        position: absolute;
+        top: 7px;
+        right: 13px;
+        width: 30px;
+        height: 30px;
+        background: url("++resource++brasil.gov.portal/img/search-button-30px.gif") no-repeat;
+        cursor: pointer;
+    }
+
+    body.contraste #header #portal-searchbox .searchButton {
+        background: url("++resource++brasil.gov.portal/img/search-button-30px-contraste.gif") no-repeat;
+    }
+
+    body.contraste #portal-searchbox .searchField {
+        border: 1px #FFF solid;
+        width: 99%;
+    }
+
+    #portal-title {
+        margin: 30px 0 36px;
+    }
+
+    #header #portal-searchbox {
+        border: none;
+        margin-bottom: 10px !important;
+    }
+
+    #language {
+        float: left;
+        margin-left: 0.5em;
+    }
+
+    #logo #portal-title {
+        font-size: 3.5em;
+        line-height: 1em;
+    }
+
+    #portal-searchbox {
+        float: none;
+        clear: both;
+        margin: 0 auto 2%;
+        width: 100%;
+    }
+
+    .cell {
+        float: none !important;
+        margin-left: -100% !important;
+        width: 100% !important;
+    }
+
+    .left { float: none !important; }
+
+    #portal-column-two {
+        float: none !important;
+        margin-left: -100% !important;
+        width: 100% !important;
+    }
+
+    #logo { width: 100% !important; }
+
+    #wrapper #footer p { clear: both; }
+
+    #wrapper #footer > div { text-align: center; }
+
+    #wrapper #footer img {
+        float: none;
+        margin: 1em;
+        max-width: 40%;
+    }
+
+    .portaltype-collection .tileImage { float: none; }
+
+    #extra-footer p { text-align: center; }
+}
+
+
+/* Barra de identidade do governo
+   ========================================================================== */
+
+@media screen and (max-width: 960px) {
+
+    #barra-brasil { min-width: 100% !important; }
+
+    #barra-brasil .barra { width: 98% !important; }
+}
+
+
+/* Upload de imagens (collective.upload)
+   ========================================================================== */
+
+#fileupload table, #fileupload table tr { width: 100%; }
+#fileupload tr td { vertical-align: middle; }
+#fileupload tr td.name { width: 40%; }
+
+#fileupload tr td.name * {
+    float: left;
+    margin: 0 0 0.2em 5%;
+    width: 90%;
+}
+
+#fileupload tr td.size {
+    width: 15%;
+    text-align: center;
+}
+
+#fileupload tr.template-upload td .progress {
+    margin-top: 9%;
+    margin-left: 5%;
+    max-width: 90%;
+}
+
+#fileupload tr.template-download td.rights span {
+    margin-left: 5%;
+    max-width: 90%;
+}
+
+#fileupload tr.template-upload td.cancel .btn { margin-left: 5%; }
+#fileupload tr.template-download td.empty { width: 20%; }
+#fileupload tr.template-download td.delete { text-align: right; }
+
+
+/* ==========================================================================
+   Contraste
+   ========================================================================== */
+
+body.contraste,
+body.contraste #header,
+body.contraste #footer,
+body.contraste #main,
+body.contraste #doormat-container,
+body.contraste #em-destaque ul,
+body.contraste #em-destaque li#em-destaque-titulo,
+body.contraste .outstanding-header .outstanding-title,
+body.contraste .audiogallery-tile,
+body.contraste .videogallery-tile,
+body.contraste ul.css-tabs a,
+body.contraste .timeline,
+body.contraste .timeline a,
+body.contraste #content .poll-tile {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+body.contraste #accessibility span {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+body.contraste a,
+body.contraste h1,
+body.contraste h2,
+body.contraste h3,
+body.contraste h4,
+body.contraste h5,
+body.contraste h6,
+body.contraste #plone-document-byline,
+body.contraste #doormat-container dt,
+body.contraste #content .documentDescription,
+body.contraste #content #description,
+body.contraste .nitfByline,
+body.contraste p.section,
+body.contraste #portal-column-one > .nav-menu-de-relevancia .first-item-nav a,
+body.contraste #portal-column-one > .nav-menu-de-relevancia .first-item-nav a span,
+body.contraste .portletNavigationTree > .portletItem a span,
+body.contraste #portal-breadcrumbs > span > span.breadcrumbSeparator,
+body.contraste #portal-breadcrumbs a,
+body.contraste #portal-breadcrumbs span,
+body.contraste #content a:hover,
+body.contraste dl.portlet a:hover,
+body.contraste #category,
+body.contraste #category-vcge,
+body.contraste .tile-subtitle,
+body.contraste .tile-content p,
+body.contraste .tile p,
+body.contraste .tile a,
+body.contraste #content .gallery-element-metadata .title,
+body.contraste .videogallery-tile .description,
+body.contraste .item-central .link-central,
+body.contraste #content #tile_banner_rotativo .title,
+body.contraste #content #tile_banner_rotativo .descr,
+body.contraste #content #tile_banner_rotativo .credito,
+body.contraste #portal-siteactions a,
+body.contraste #portal-siteactions a:hover,
+body.contraste #logo #portal-logo,
+body.contraste #logo #portal-title,
+body.contraste .cover-collection-tile p,
+body.contraste.template-summary_view #content .tileItem .subtitle,
+body.folder_contraste.template-summary_view #content .tileItem .subtitle,
+body.contraste.template-summary_view #content .tileItem .tileHeadline a,
+body.folder_contraste.template-summary_view #content .tileItem .tileHeadline a,
+body.contraste.template-summary_view #content .tileItem .description,
+body.folder_contraste.template-summary_view #content .tileItem .description,
+body.contraste.template-summary_view #content .tileItem .keywords,
+body.folder_contraste.template-summary_view #content .tileItem .keywords,
+body.contraste.template-summary_view #content .tileItem .documentByLine,
+body.folder_contraste.template-summary_view #content .tileItem .documentByLine,
+body.contraste #content .documentByLine .summary-view-icon,
+body.contraste #content .subtitle,
+body.contraste.template-summary_view #content .tileItem .keywords,
+body.contraste.template-folder_summary_view #content .tileItem .keywords,
+body.contraste.template-facetednavigation_view #content .tileItem .keywords,
+body.contraste .videogallery-tile .subtitle,
+body.contraste .outstanding-header .outstanding-link,
+body.contraste #content .outstanding-header .outstanding-link:hover,
+body.contraste .galleria-info-description,
+body.contraste .galleria-info-title a,
+body.contraste .galleria-info-title a:hover,
+body.contraste .galleria-info-text .rights,
+body.contraste .lista-vertical .tile-header h3,
+body.contraste .lista-vertical .tile-header span,
+body.contraste .cover-collection-tile .tile-header span,
+body.contraste #content article div[property*="articleBody"] p,
+body.contraste #content div.newsImageContainer p.discreet,
+body.contraste #content article #viewlet-below-content-title .documentPublished,
+body.contraste #content article #viewlet-below-content-title .documentModified,
+body.contraste #content article #viewlet-below-content-title .contentHistory a,
+body.contraste #content .pullquote,
+body.contraste .cycle-player .cycle-overlay,
+body.contraste #galeria_de_fotos,
+body.contraste .galeria_container,
+body.contraste #content .gallery-footer a,
+body.contraste #content .gallery-footer a:hover,
+body.contraste #content .poll-tile .tile-content-wrapper>form>input[type=radio]+span,
+body.contraste #content .poll-tile .poll-tile-header>.header {
+    color: #fff !important;
+}
+
+body.contraste #content .poll-tile .tile-content-wrapper>h3 {
+    background-color: #000;
+    border-bottom: 1px solid #FFF;
+}
+
+body.contraste #content .poll-tile .tile-content-wrapper>form>input[type=submit] {
+    background-color: #000;
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+}
+
+body.contraste .lista-horizontal,
+body.contraste .portletHeader,
+body.contraste .portletHeader a,
+body.contraste dl.portlet dt a:visited,
+body.contraste #doormat-container .doormatColumn,
+body.contraste .mediacarousel,
+body.contraste .galleria-thumbnails-container {
+    border-color: #fff !important;
+    background: #000 !important;
+    color: #fff !important;
+}
+
+body.contraste #portal-siteactions {
+    border-bottom: 1px dotted #fff;
+}
+
+body.contraste #sobre .portalservicos-item a {
+    border-right: 1px solid #fff;
+}
+
+body.contraste .lista-horizontal .collection-item,
+body.contraste .width-8 .gallery-element-wrapper,
+body.contraste .width-10 .gallery-element-wrapper,
+body.contraste .gallery-2-columns .gallery-element-wrapper {
+    border-left: 1px dotted #fff;
+}
+
+body.contraste .lista-horizontal .tile-footer,
+body.contraste .width-8 .galery-items,
+body.contraste .width-10 .galery-items,
+body.contraste .width-5 .galery-items,
+body.contraste .gallery-2-columns .galery-items {
+    border-top: 1px solid #fff;
+}
+
+body.contraste .lista-horizontal .tile-header,
+body.contraste #content .videogallery-tile .gallery-tile {
+    border-bottom: 1px solid #fff;
+}
+
+body.contraste .navTreeLevel0 > li.navTreeItemInPath,
+body.contraste .navTreeLevel0 > li.navTreeCurrentNode {
+    border-top: 2px solid #fff !important;
+    border-bottom: 2px solid #fff !important;
+}
+
+body.contraste .navTreeLevel0 > li.navTreeItemInPath,
+body.contraste .navTreeLevel0 > li.navTreeCurrentNode,
+body.contraste .navTreeLevel1,
+body.contraste dl.portlet ul.navTreeLevel1 .navTreeItem,
+body.contraste dl.portlet ul.navTreeLevel1 .navTreeItem,
+body.contraste #galeria_de_fotos,
+body.contraste .galeria_container,
+body.contraste .slideshow-carrossel {
+    background-color: #000;
+}
+
+body.contraste #category {
+    border-top: 4px solid #fff;
+}
+
+body.contraste #category a.link-category,
+body.contraste span.selectedTag,
+body.contraste #category a.link-category:hover,
+body.contraste #category-vcge a.link-category {
+    border-color: #fff !important;
+    background: #fff !important;
+    color: #000 !important;
+}
+
+body.contraste #doormat-container dl {
+    border-left: 1px dotted #fff;
+}
+
+body.contraste #footer .footer-logos,
+body.contraste #sobre {
+    background: #333;
+}
+
+body.contraste #social-icons a,
+body.contraste #header input.searchButton,
+body.contraste .item-central .link-videos,
+body.contraste .item-central .link-audios,
+body.contraste .item-central .link-infograficos,
+body.contraste .item-central .link-publicacoes,
+body.contraste .item-central .link-fotos,
+body.contraste .item-central .link-aplicativos,
+body.contraste .item-central .link-dadosabertos {
+    background-image: url("++resource++brasil.gov.portal/img/sprite-contraste.png");
+}
+
+body.contraste .outstanding-header .outstanding-link,
+body.contraste .mediacarousel .mediacarousel-footer-container .mediacarousel-footer-link {
+    background: url("++resource++brasil.gov.portal/img/seta_branca.png") no-repeat scroll right 5px transparent;
+}
+
+body.contraste .mediacarousel .mediacarousel-footer-container .mediacarousel-footer-link {
+    background-position: right 0;
+}
+
+body.contraste #portal-searchbox {
+    border-color: #FFF;
+    background-color: #000;
+}
+
+body.contraste #portal-searchbox .searchField {
+    background-color: #000;
+    color: #FFF !important;
+}
+
+body.contraste #header input.searchButton {
+    background-color: #000;
+    background-position: 0px 2px;
+}
+
+body.contraste .outstanding-header .outstanding-title {
+    border-top: 2px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+body.contraste .outstanding-header {
+    border-top: 2px solid #fff;
+    background: #000;
+}
+
+body.contraste .videogallery-tile .gallery-footer a {
+    background-image: url("++resource++brasil.gov.portal/img/seta_branca.png");
+}
+
+body.contraste .gallery-element {
+    border-bottom: 1px dotted #fff;
+}
+
+body.contraste .width-16 .gallery-3-columns .player-holder,
+body.contraste .width-15 .gallery-3-columns .player-holder {
+    border-right: 1px dotted #fff;
+}
+
+body.contraste .videogallery-tile {
+    border: 1px solid #fff;
+}
+
+body.contraste .videogallery-tile .gallery-footer {
+    border-top: 1px dotted #fff;
+    background-color: #000;
+}
+
+body.contraste #content .relatar-erros a {
+    background: url("++resource++brasil.gov.portal/img/icon-reportar-erros-contraste.png") no-repeat;
+}
+
+body.contraste #content .relatar-erros a:hover,
+body.contraste #content .relatar-erros a:focus {
+    background-position: 0 -21px;
+    color: #3a3a3a !important;
+}
+
+body.contraste #content .relatar-erros a .texto { color: #fff; }
+
+body.contraste #barra-brasil .link-barra {
+    color: #606060 !important;
+}
+
+body.contraste #content .summary-view-icon .icon-audio { background-position: -383px -391px; }
+body.contraste #content .summary-view-icon .icon-day,
+body.contraste #content .summary-view-icon .icon-agenda { background-position: -624px -392px; width: 13px; }
+body.contraste #content .summary-view-icon .icon-image { background-position: -503px -391px; }
+body.contraste #content .summary-view-icon .icon-hour { background-position: -653px -393px; }
+body.contraste #content .summary-view-icon .icon-file { background-position: -683px -393px; width: 15px; }
+body.contraste #content .summary-view-icon .icon-noticia,
+body.contraste #content .summary-view-icon .icon-page { background-position: -474px -391px; }
+body.contraste #content .summary-view-icon .icon-multimidia { background-position: -413px -391px; }
+
+/* estilo Link Externo de tile */
+body.contraste .link-externo .tile-header,
+body.contraste .link-externo .tile-title,
+body.contraste .link-externo .tile-footer,
+body.contraste .link-externo .collection-item.odd {
+    background: #000;
+}
+
+body.contraste .link-externo .collection-item.even {
+    background: #222;
+}
+
+body.contraste .link-externo .collection-item a {
+    background: url("++resource++brasil.gov.portal/img/seta_branca.png") no-repeat no-repeat right center !important;
+    line-height: 20px;
+}
+
+/* botões de navegação */
+body.contraste #tile_banner_rotativo li .button-nav,
+body.contraste .orderTiles .button-nav {
+    background-image: url("++resource++brasil.gov.portal/img/bullets-branco-preto.gif");
+    background-color: #000;
+}
+
+body.contraste #tile_banner_rotativo .activeSlide .button-nav,
+body.contraste #tile_banner_rotativo li .button-nav:hover,
+body.contraste #tile_banner_rotativo li .button-nav:focus {
+    background-color: #fff;
+}
+
+body.contraste .lista-vertical {
+    border: 1px solid #fff;
+    background: #000 !important;
+}
+
+body.contraste #content .pullquote {
+    border-top: 4px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+body.contraste #faceted-form #top-area {
+    border: 1px solid #FFF;
+    background-color: #000;
+    border-top: 5px solid #FFF;
+}
+
+body.contraste #content #faceted-form #faceted-right-column .faceted-daterange-widget-form input,
+body.contraste #faceted-form #top-area .searchButton,
+body.contraste #faceted-form #top-area input[type="text"],
+body.contraste #faceted-right-column,
+body.contraste .css-panes .pane,
+body.contraste #search-results-bar {
+    border: 1px solid #FFF !important;
+    background-color: #000;
+    color: #FFF !important;
+}
+
+body.contraste #faceted-right-column .faceted-widget {
+    border-bottom: 1px dotted #fff;
+}
+
+body.contraste #search-results-bar > span:first-child {
+    background-color: #000;
+    color: #FFF !important;
+}
+
+body.contraste #faceted-form #top-area legend,
+body.contraste #content #faceted-form label,
+body.contraste #content #faceted-form .faceted-checkbox-item-disabled span,
+body.contraste #content #faceted-form #faceted-right-column legend,
+body.contraste.template-facetednavigation_view #content .tileItem .description,
+body.contraste.template-facetednavigation_view #content .tileItem .keywords,
+body.contraste #search-results > dl.searchResults > dd > span.discreet > span,
+body.contraste #search-filter .field label {
+    color: #fff !important;
+}
+
+body.contraste .highlightedSearchTerm {
+    background-color: #919191;
+}
+
+
+
+/* contraste que influenciam portlets */
+
+body.contraste #portal-column-two dl.portlet a:link,
+body.contraste #portal-column-two dl.portlet a:visited {
+    color: #EEE !important;
+}
+
+body.contraste .ploneCalendar .todayevent,
+body.contraste .ploneCalendar .todaynoevent {
+    background-color: #000;
+    border: 2px solid #FFF;
+    font-weight: bold;
+}
+
+body.contraste .portletSearch,
+body.contraste .portletCalendar,
+body.contraste .portletCalendar .portletItem,
+body.contraste .portletSearch .portletHeader,
+body.contraste .portletCalendar .portletHeader,
+body.contraste .portletSearch .portletFooter,
+body.contraste .portletCalendar .portletFooter,
+body.contraste .portletCollection {
+    background: #000 !important;
+}
+
+body.contraste #content .callout {
+    background: #333;
+}
+
+ /* afeta visão de agenda */
+body.contraste #content .portalMessage {
+    color: #FFF !important;
+}
+
+body.contraste .sem-compromisso {
+    color: #FFF;
+}
+
+body.contraste .horario.comprimisso-inicio {
+    background: url(++resource++brasil.gov.portal/img/summary-view-icons-sprite.png) -653px -393px no-repeat;
+    width: 0;
+}
+
+body.contraste .add-agenda {
+    background: url(++resource++brasil.gov.portal/img/summary-view-icons-sprite.png) -624px -392px no-repeat;
+}
+
+/* mapa do site */
+body.contraste #portal-sitemap .state-published {
+    color: #FFF !important;
+}
+
+body[class*="nitf"].contraste #content .documentAuthor {
+    color: #FFF;
+}
+
+/* contraste galeria de álbuns e galeria de fotos */
+body[class*="galeria_de_albuns"].contraste #content .download,
+body[class*="galeria_de_fotos"].contraste #content .download {
+    background-position: 0 -28px;
+}
+body[class*="galeria_de_fotos"].contraste #content .download.album {
+    background-position: 10px -28px;
+}
+body[class*="galeria_de_albuns"].contraste #content .descriptionAlbum,
+body[class*="galeria_de_fotos"].contraste #content .descriptionAlbum {
+    color: #FFF;
+}
+
+/* contraste de formulários */
+body.contraste #content li.formTab a.required span:after,
+body.contraste #content-core li.formTab a.required span:after,
+body.contraste div.field span.required:after {
+    content: "■";
+    color: #FFF;
+}
+
+body.contraste .formHelp {
+    color: #DDD;
+}
+
+/* contraste de visão de notícia */
+
+body.contraste #content .banner-tile .copyright,
+body.contraste #content .newsImageContainer .copyright,
+body.contraste #content .mediacarousel .rights {
+    color: #FFF;
+}
+
+body.contraste #content .newsImageContainer .photo-icon {
+    background: url("++resource++brasil.gov.portal/img/mais_fotos-contraste.png") no-repeat;
+}
+
+body.contraste #content .newsImageContainer a[class^="photo-icon-en"] {
+    background: url("++resource++brasil.gov.portal/img/mais_fotos_en-contraste.png") no-repeat;
+}
+
+body.contraste #content .newsImageContainer a[class^="photo-icon-es"] {
+    background: url("++resource++brasil.gov.portal/img/mais_fotos_es-contraste.png") no-repeat;
+}
+
+/* contraste blog view */
+
+body[class*="folder_summary_view"].contraste #content .tileItem .description {
+    color: #FFF;
+}
+
+/* contraste de visão de imagens */
+
+body.contraste #content .discreet,
+body.contraste #sidebar .discreet {
+    color: #DDD;
+}
+
+/* contraste de enquete */
+
+body.contraste .pollresultholder .bar {
+    background: #FFF !important;
+}
+
+body.contraste .tasksplease li {
+    background-color: #666;
+}
+
+
+/* player de audio */
+
+body.contraste .audiogallery-footer-container .audiogallery-footer-link {
+    background: url("++resource++brasil.gov.portal/img/seta_branca.png") no-repeat scroll right 0px transparent;
+    line-height: 20px;
+}
+
+body.contraste #content .audiogallery-items-container .audiogallery-item {
+    background: url("++resource++brasil.gov.portal/img/sound-icon-contraste.png") no-repeat;
+    padding-left: 25px;
+}
+
+body.contraste div.jp-interface {
+    background-color: #FFF;
+}
+
+body.contraste div.jp-audio, div.jp-audio-stream {
+    color: #000;
+}
+
+body.contraste a.jp-play {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 0 no-repeat;
+}
+body.contraste a.jp-play:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -41px 0 no-repeat;
+}
+body.contraste a.jp-pause {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -42px no-repeat;
+}
+body.contraste a.jp-pause:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -41px -42px no-repeat;
+}
+body.contraste a.jp-previous {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -112px no-repeat;
+}
+body.contraste a.jp-previous:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -29px -112px no-repeat;
+}
+body.contraste a.jp-next {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -141px no-repeat;
+}
+body.contraste a.jp-next:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -29px -141px no-repeat;
+}
+body.contraste div.jp-seek-bar {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -202px repeat-x;
+}
+body.contraste div.jp-play-bar {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -218px repeat-x;
+}
+body.contraste div.jp-seeking-bg {
+    background: url("++resource++brasil.gov.tiles/jplayer.blue.monday.seeking.gif");
+}
+body.contraste a.jp-mute {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -186px no-repeat;
+}
+body.contraste a.jp-mute:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -19px -186px no-repeat;
+}
+body.contraste a.jp-unmute {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -60px -170px no-repeat;
+}
+body.contraste a.jp-unmute:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -79px -170px no-repeat;
+}
+body.contraste div.jp-volume-bar {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -250px repeat-x;
+}
+body.contraste div.jp-volume-bar-value {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -256px repeat-x;
+}
+body.contraste a.jp-full-screen {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -310px no-repeat;
+}
+body.contraste a.jp-full-screen:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -30px -310px no-repeat;
+}
+body.contraste a.jp-restore-screen {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -60px -310px no-repeat;
+}
+body.contraste a.jp-restore-screen:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -90px -310px no-repeat;
+}
+body.contraste a.jp-shuffle {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") 0 -270px no-repeat;
+}
+body.contraste a.jp-shuffle:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -30px -270px no-repeat;
+}
+body.contraste a.jp-shuffle-off {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -60px -270px no-repeat;
+}
+body.contraste a.jp-shuffle-off:hover {
+    background: url("++resource++brasil.gov.portal/img/jplayer.blue.monday-contraste.jpg") -90px -270px no-repeat;
+}
+
+/* contraste de evento */
+
+body.contraste table.listing tbody th {
+    border-top: 4px solid #ccc !important;
+    border-bottom: 1px solid #ccc!important;
+    background: #000;
+    color: #FFF;
+}
+
+body.contraste table.listing tbody tr td {
+    background: #333;
+}
+
+body.contraste table.listing tbody tr.odd td {
+    background: #111;
+}
+
+/* date picker */
+
+body.contraste .ui-state-default,
+body.contraste .ui-widget-content .ui-state-default,
+body.contraste .ui-widget-header .ui-state-default {
+    background: #222;
+}
+
+body.contraste .ui-state-highlight,
+body.contraste .ui-widget-content .ui-state-highlight,
+body.contraste .ui-widget-header .ui-state-highlight {
+    border: #333;
+    background: #FFF;
+    color: #000 !important;
+}
+
+body.contraste .ui-state-hover,
+body.contraste .ui-widget-content .ui-state-hover,
+body.contraste .ui-widget-header .ui-state-hover,
+body.contraste .ui-state-focus,
+body.contraste .ui-widget-content .ui-state-focus,
+body.contraste .ui-widget-header .ui-state-focus {
+    background: #555;
+    color: #FFF;
+}
+
+body.contraste .ui-widget-header {
+    background: #000;
+}
+
+body.contraste .ui-datepicker .ui-datepicker-prev span,
+body.contraste .ui-datepicker .ui-datepicker-next span {
+    background-color: #FFF;
+}
+
+body.contraste .ui-widget-header .ui-icon {
+    background-image: url(++resource++jquery-ui-themes/sunburst/images/ui-icons_444444_256x240.png);
+}
+
+/* contraste de gestão */
+
+body.contraste div.managePortletsLink,
+body.contraste a.managePortletsFallback {
+    background: #555;
+}
+
+body.contraste #edit-bar {
+    background-color: #000;
+    border: 0.25em solid #FFF;
+}
+
+body.contraste #content-views li.selected a,
+body.contraste #content-views li a:hover,
+body.contraste #content li.formTab a.selected,
+body.contraste #content li.formTab a:hover,
+body.contraste #content-core li.formTab a.selected,
+body.contraste #content-core li.formTab a:hover,
+body.contraste #portal-personaltools,
+body.contraste #portal-personaltools dd {
+    background: #666;
+}
+
+body.contraste #contentActionMenus {
+    background: #000;
+    border: 0.25em solid #FFF;
+    border-top: none;
+}
+
+body.contraste #contentActionMenus dl.actionMenu.activated dd a:hover,
+body.contraste #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+    background-color: #666 !important;
+}
+
+body.contraste #portal-personaltools dd a:hover {
+    background: #999;
+}
+
+body.contraste dl.portalMessage,
+body.contraste div.attention,
+body.contraste div.caution,
+body.contraste div.danger,
+body.contraste div.error,
+body.contraste div.hint,
+body.contraste div.important,
+body.contraste div.note,
+body.contraste div.tip,
+body.contraste div.warning,
+body.contraste dl.portalMessage dt,
+body.contraste div > .admonition-title {
+    border: 1px solid #FFF;
+    background-color: #000;
+}
+
+body.contraste #content a.link-overlay {
+    border-bottom: 1px dotted #FFF !important;
+}
+
+body.contraste .layout .cover-tile,
+body.contraste .tile-placeholder {
+    background-color: #666;
+}
+
+body.contraste .btn {
+    background-color: #666;
+    background-image: linear-gradient(to bottom, #000, #666);
+    border-color: #666;
+}
+
+body.contraste .state-published {
+    color: #EEE !important;
+}
+
+body.contraste table.listing td.draggable {
+    background: #333 !important;
+}
+
+body.contraste table.listing th {
+    color: #FFF;
+    border: #FFF;
+    background: #222;
+}
+
+body.contraste .current,
+body.contraste .ui-widget-content,
+body.contraste #sidebar.fixed {
+    background: #000;
+}
+
+body.contraste #content-views,
+body.contraste #contentActionMenus dl.actionMenu a,
+body.contraste #contentActionMenus dl.actionMenu.activated dd,
+body.contraste #contentchooser-content-search,
+body.contraste .warning > dd,
+body.contraste .warning > .last,
+body.contraste .pb-ajax, .pb-image,
+body.contraste .overlay iframe,
+body.contraste .modal {
+    background-color: #000;
+}
+
+body.contraste #content ul.formTabs,
+body.contraste .label,
+body.contraste .badge {
+    background-color: #333;
+}
+
+body.contraste .portlet-static-contents-central .portletHeader,
+body.contraste .portlet-static-resource-center .portletHeader,
+body.contraste .portlet-static-centrales-del-contenido .portletHeader,
+body.contraste .portlet-static-centrais-de-conteudos .portletHeader,
+body.contraste .portletNavigationTree .portletHeader {
+    background: #000 url("++resource++brasil.gov.portal/img/portlet-header-contraste.jpg") no-repeat 96% center !important;
+}
+
+body.contraste .portletNavigationTree .portletHeader.ativo {
+    background: url("++resource++brasil.gov.portal/img/portlet-header-expanded-contraste.jpg") no-repeat 96% center !important;
+}
+
+/* XXX: Fix no popup de link de Products.TinyMCE.
+É necessário sobrescrever a definição de #content presente em
+https://github.com/collective/collective.cover/blob/master/src/collective/cover/static/contentchooser.css#L1
+uma vez que no iframe do Products.TinyMCE também existe uma div#content, dando
+conflito nas regras e posicionando a div "Upload" por cima dos itens impedindo
+a seleção dos mesmos.
+Esse fix deve ser temporário, enquanto o bug mencionado em
+https://github.com/collective/collective.cover/issues/450
+não for corrigido.
+*/
+#plonebrowser #content {
+    position: static !important;
+}

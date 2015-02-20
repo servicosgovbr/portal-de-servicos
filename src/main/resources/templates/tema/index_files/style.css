@@ -1,0 +1,411 @@
+/*
+ *
+ * CSS com estilos específicos do tema verde
+ *
+ * @Autores
+ *
+ * - Simples Consultoria - www.simplesconsultoria.com.br
+ * - DESERTO Digital - www.desertodigital.com.br
+ *
+ * @Referencias
+ *
+ * Lista de padrões, convenções e boas praticas CSS que devem ser seguidas.
+ * https: //github.com/necolas/idiomatic-css/tree/master/translations/pt-BR
+ *
+ * Plugins para ordenar os atributos de CSS.
+ * http://csscomb.com/
+ *
+ * Validador de CSS do W3C.
+ * http://jigsaw.w3.org/css-validator/
+ */
+
+
+/* ==========================================================================
+   Cabeçalho do portal
+   ========================================================================== */
+
+#header {
+    padding: 14px 0 0 0;
+    background-color: #19882c;
+    /* Old browsers */
+    background-color: #0A5517;
+    background-image: -moz-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
+    /* FF3.6+ */
+    background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#19882c), color-stop(100%, #025310));
+    /* Chrome,Safari4+ */
+    background-image: -webkit-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
+    /* Chrome10+,Safari5.1+ */
+    background-image: -o-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
+    /* Opera 12+ */
+    background-image: -ms-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
+    /* IE10+ */
+    background-image: radial-gradient(ellipse at center, #19882c 1%, #025310 100%);
+    color: #fff;
+    /* IE6-9 fallback on horizontal gradient */
+    filter:progid: DXImageTransform.Microsoft.gradient( startColorstr="#19882c", endColorstr="#025310",GradientType=1);
+}
+
+/* Menu de Acessibilidade
+   ========================================================================== */
+
+#accessibility a {
+    color: #fff;
+}
+
+#accessibility span {
+    background: url("../img/bg-acess-key.gif") center center no-repeat;
+    color: #006600;
+}
+
+/* Titulo do portal
+   ========================================================================== */
+
+#portal-logo,
+#portal-title { color: #fff !important; }
+
+/* Menu site actions - Acessibilidade, Alto Contraste, Mapa do site
+   ========================================================================== */
+
+#portal-siteactions,
+#portal-language { border-bottom: 1px dotted #9bc2a3; }
+
+#portal-siteactions a,
+#portal-siteactions a:hover,
+#portal-language a,
+#portal-language a:hover { color: #fff !important; }
+
+/* Menu sobre o portal
+   ========================================================================== */
+
+#sobre { background: #00420c; }
+
+#sobre a { color: #fff; }
+
+#sobre .portalservicos-item a { border-right: 1px solid #6c9072; }
+
+/* Formulário de busca
+   ========================================================================== */
+
+#portal-searchbox { border: 1px solid #CCCCCC; }
+
+
+/* ==========================================================================
+   Sprinte Icons
+   ========================================================================== */
+
+/* icones de redes sociais */
+#social-icons a,
+/* central de conteudo */
+.item-central .link-videos,
+.item-central .link-audios,
+.item-central .link-infograficos,
+.item-central .link-publicacoes,
+.item-central .link-fotos,
+.item-central .link-aplicativos,
+.item-central .link-dadosabertos,
+/* icone do botão de busca */
+#header input.searchButton { background-image: url("../img/sprite.png"); }
+/* icone do botão de relatar erros */
+#content .relatar-erros a { background: url("../img/icon-reportar-erros.png") no-repeat; }
+
+/* Summary view */
+#content .summary-view-icon [class*="icon"] {
+    background-image: url("../img/summary-view-icons-sprite.png");
+}
+
+
+/* ==========================================================================
+   Portles
+   ========================================================================== */
+
+/* Portlet de navegação
+   ========================================================================== */
+
+#portal-column-one > .nav-menu-de-relevancia .first-item-nav a,
+#portal-column-one > .nav-menu-de-relevancia .first-item-nav a span {
+    color: #2c67cd !important;
+}
+
+.portlet-static-contents-central .portletHeader,
+.portlet-static-resource-center .portletHeader,
+.portlet-static-centrales-del-contenido .portletHeader,
+.portlet-static-centrais-de-conteudos .portletHeader,
+.portletNavigationTree .portletHeader {
+    border-top: 4px solid #00510f;
+    color: #00510f;
+}
+
+.portletNavigationTree .portletHeader a { color: #00510f !important; }
+
+.navTreeLevel0 > li.navTreeItemInPath,
+.navTreeLevel0 > li.navTreeCurrentNode {
+    border-top: 2px solid #64946e !important;
+    border-bottom: 2px solid #64946e !important;
+}
+
+
+/* ==========================================================================
+   Collective Cover
+   ========================================================================== */
+
+/* Tile Banner Rotativo
+   ========================================================================== */
+
+/* Cores dos botões */
+
+#tile_banner_rotativo li .button-nav,
+.orderTiles .button-nav {
+    border-right: 1px solid #446b5d;
+    background-color: #0e561f;
+}
+
+#tile_banner_rotativo .activeSlide .button-nav,
+#tile_banner_rotativo li .button-nav:hover,
+#tile_banner_rotativo li .button-nav:focus {
+    background-color: #ffb400;
+}
+
+/* ícone do botão */
+
+#content  #tile_banner_rotativo li .button-nav,
+.orderTiles .button-nav {
+    background-image: url("../img/bullet-banner-rotativo.gif");
+}
+
+/* Tiles
+   ========================================================================== */
+
+.tile a { color: #162937 !important; }
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#footer {
+    background: #034811;
+    color: #fff;
+}
+
+#footer a { color: #fff; }
+
+#wrapper #footer .footer-logos { background: #00420c; }
+
+/* Doormat
+   ========================================================================== */
+
+#doormat-container { background: #034811; }
+
+#doormat-container dl { border-left: 1px dotted #7dc48a; }
+
+#doormat-container dt { color: #7dc48a; }
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Smartphone
+   ========================================================================== */
+
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+
+    .menuTrigger {
+        background: #065116 url("../img/bg-menu-mobile.png") top right no-repeat;
+    }
+
+    .portlet-static-contents-central .portletHeader,
+    .portlet-static-resource-center .portletHeader,
+    .portlet-static-centrales-del-contenido .portletHeader,
+    .portlet-static-centrais-de-conteudos .portletHeader,
+    .portletNavigationTree .portletHeader {
+        background: #edeff1 url("../img/portlet-header.gif") no-repeat 96% center;
+    }
+
+    .portletNavigationTree .portletHeader.ativo {
+        background: url("../img/portlet-header-expanded.gif") no-repeat 96% center;
+    }
+
+}
+
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  #header #portal-searchbox .searchButton {
+    background: url("../img/search-button-30px.png") no-repeat;
+  }
+}
+
+
+/* ==========================================================================
+   Comentários
+   ========================================================================== */
+
+#viewlet-below-content .discussion {
+  border-top: 4px solid #000000;
+  padding-top: 20px;
+  margin-top: 15px;
+}
+
+#viewlet-below-content .comment a {
+  color: #345179;
+}
+
+#viewlet-below-content .comment .documentByLine {
+  color: #345179;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.replyTreeLevel0 {
+    background: #eeeff1;
+    padding: 15px 0px 10px;
+    clear: both;
+}
+
+.replyTreeLevel1 {
+    border-left: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    clear: both;
+}
+
+.replyTreeLevel2 {
+    border-left: 1px solid #eeeff1;
+    border-top: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    padding-left: 20px;
+    clear: both;
+}
+
+.replyTreeLevel3 {
+    border-left: 1px solid #eeeff1;
+    border-top: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    padding-left: 40px;
+    clear: both;
+}
+
+.replyTreeLevel4 {
+    border-left: 1px solid #eeeff1;
+    border-top: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    padding-left: 60px;
+    clear: both;
+}
+
+.replyTreeLevel5 {
+    border-left: 1px solid #eeeff1;
+    border-top: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    padding-left: 80px;
+    clear: both;
+}
+
+.replyTreeLevel6 {
+    border-left: 1px solid #eeeff1;
+    border-top: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    padding-left: 100px;
+    clear: both;
+}
+
+.replyTreeLevel7 {
+    border-left: 1px solid #eeeff1;
+    border-top: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    padding-left: 120px;
+    clear: both;
+}
+
+.replyTreeLevel8 {
+    border-left: 1px solid #eeeff1;
+    border-top: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    padding-left: 140px;
+    clear: both;
+}
+
+.replyTreeLevel9 {
+    border-left: 1px solid #eeeff1;
+    border-top: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    padding-left: 160px;
+    clear: both;
+}
+
+.replyTreeLevel10 {
+    border-left: 1px solid #eeeff1;
+    border-top: 1px solid #eeeff1;
+    margin: 0 0 10px 0;
+    padding-top: 10px;
+    padding-left: 180px;
+    clear: both;
+}
+
+#viewlet-below-content .comment .documentByLine .commentDate {
+  font-size: 1.0em;
+  color: #172a38;
+  font-weight: normal;
+  padding-top: 0;
+}
+
+.commentBody {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    overflow: visible;
+}
+
+button.context.reply-to-comment-button {
+    margin-left: 20px;
+}
+
+.commentActions {
+    float: left;
+    margin-left: 10px;
+}
+
+.commentBody p {
+    font-size: 1.2em;
+    color: #172a38;
+    padding: 0 10px 10px;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 10px;
+    float: none;
+}
+
+.row #commenting textarea,
+.row .discussion textarea {
+    font: 1.2em "open_sansregular", Arial, Helvetica, sans-serif;
+    width: 100%;
+    border: 1px solid #eeeff1;
+}
+
+#commenting p {
+    font-size: 1.2em;
+}
+
+.row #commenting label, .row .discussion label {
+    font-size: 1.1em;
+}
+
+.discussion .reply {
+    clear: both;
+    color: #000000;
+    padding-top: 5px;
+}

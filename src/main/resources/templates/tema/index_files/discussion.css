@@ -1,0 +1,225 @@
+/* plone.app.discussion stylesheet */
+
+.discussion .hide {
+    display: none;
+}
+
+
+/* Comments Viewlet
+   -------------------------------------------------------------------------- */
+
+.discussion,
+#commenting {
+    /* Clear "float: left" from "manage portlets" div above the
+       comment viewlet. This will get fixed in the next Plone 4
+       release. */
+    clear: both;
+}
+
+.comment {
+}
+
+.commentImage {
+    float: left;
+    margin-right: 0.5em;
+    height: 3.5em;
+}
+
+.commentImage a:link {
+    /* Override the default bottom border of links in Plone 4. */
+    border: 0px;
+}
+
+.commentImage img {
+
+}
+
+.commentDate {
+    display: block;
+    font-size: 85%;
+    line-height: 1.5em;
+    padding-top: 0.5em;
+    color: #76797C;
+}
+
+.commentBody {
+    clear: both;
+    margin: 1em 0;
+    overflow: auto;
+    border: 1px solid #ccc;
+}
+
+.commentBody p {
+    float: left;
+ }
+
+.discussion .documentByLine {
+    float: left;
+    margin-left: 0;
+    margin-bottom: 0.5em;
+}
+
+.commentActions {
+    float: right;
+    text-align: right;
+}
+
+.discussion .discreet {
+    color: #666666;
+    font-size: 85%;
+}
+.loginbutton {
+    margin-bottom: 1.25em;
+}
+.commentactionsform {
+    display: inline;
+}
+
+.replyTreeLevel0 {
+    margin-left: 0em;
+}
+.replyTreeLevel1 {
+    margin-left: 1em;
+}
+.replyTreeLevel2 {
+    margin-left: 2em;
+}
+.replyTreeLevel3 {
+    margin-left: 3em;
+}
+.replyTreeLevel4 {
+    margin-left: 4em;
+}
+.replyTreeLevel5 {
+    margin-left: 5em;
+}
+.replyTreeLevel6 {
+    margin-left: 6em;
+}
+.replyTreeLevel7 {
+    margin-left: 7em;
+}
+.replyTreeLevel8 {
+    margin-left: 8em;
+}
+.replyTreeLevel9 {
+    margin-left: 9em;
+}
+.replyTreeLevel10 {
+    margin-left: 10em;
+}
+.defaultuserimg {
+    border: 0;
+}
+
+
+/* Reply Form
+   -------------------------------------------------------------------------- */
+
+.reply fieldset {
+    /* Fix bouncing fieldset when reply form is shown. */
+    margin: 0 !important;
+}
+
+.reply .text-widget {
+    /* Make sure the input fields are always below the label. This sometimes
+     * break when the reply form is copied from the main comment form.
+     */
+    display: block;
+}
+
+.reply-to-comment-button {
+   /* Hide the reply-to-comment button and show it only if Javascript
+    * is enabled. Since the reply functions rely on jQuery.
+    */
+    display: none;
+}
+
+.cancelreplytocomment {
+    /* Hide the cancel button in the comment form, show it only in the reply form
+     * in order to close it.
+     */
+    display: none;
+}
+
+
+/* Moderation View
+   -------------------------------------------------------------------------- */
+
+#bulkactions {
+    text-align: left;
+}
+
+#dobulkaction {
+    margin: 0.3em 0;
+}
+
+.comment-publish-button {
+    float: left;
+    margin-right: 0.5em;
+}
+
+.comment-delete-button {
+    float: left;
+}
+
+#review-comments {
+    margin: 0;
+    width: 100%;
+}
+#review-comments tbody tr {
+    vertical-align: top
+}
+
+#fieldset-moderate-comments {
+    padding: 2em 1em;
+}
+
+/* Discussion Control Panel
+   -------------------------------------------------------------------------- */
+
+.template-discussion-settings .unclickable {
+    opacity: 0.6;
+    filter: alpha(opacity = 50);
+}
+
+/* Plone 4 Styles
+   -------------------------------------------------------------------------- */
+
+/* These styles are only applied for Plone 4, since Plone 3.x does
+    not have a .row class for portal-column-content. */
+
+.row #dobulkaction {
+    margin: 0;
+}
+
+.row #commenting {
+    font-size: 80%;
+}
+
+.row #commenting .formControls {
+    margin: 0;
+}
+
+.row #commenting textarea,
+.row .discussion textarea {
+    font: 100% Monaco, "Courier New", Courier, monospace;
+    width: 100%;
+}
+
+.row #commenting fieldset,
+.row .discussion fieldset {
+    border: 0.1em solid #329fd7;
+    border-style: solid none none none;
+}
+
+.row #commenting legend,
+.row .discussion legend {
+    padding: 0.5em 0.5em 0.5em 0;
+    font-size: 85%;
+}
+
+.row #commenting label,
+.row .discussion label {
+    font-weight:bold;
+}

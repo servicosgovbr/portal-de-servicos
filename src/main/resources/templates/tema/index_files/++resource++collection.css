@@ -1,0 +1,12 @@
+/* using plone contenttypes sprite for collection */
+
+.icons-on .contenttype-collection {
+    background: no-repeat transparent 0 -1724px url(contenttypes-sprite.png);
+}
+
+.icons-on .contenttype-collection {
+    line-height: 2em;
+    display: inline-block;
+    *display: block;
+    padding-left: 20px !important;
+}
