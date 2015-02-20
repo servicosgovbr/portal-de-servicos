@@ -2550,10 +2550,6 @@ dl.portlet div.listingBar a:link {
 
 #content .field textarea { resize: none; }
 
-/* fix some bootstrap mess */
-.label:empty,
-.badge:empty { display: inline; }
-
 
 /* ==========================================================================
    Footer
