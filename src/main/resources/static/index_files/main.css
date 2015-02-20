@@ -3561,40 +3561,6 @@ ul.formTabs { padding: 0px !important; }
 }
 
 
-/* Upload de imagens (collective.upload)
-   ========================================================================== */
-
-#fileupload table, #fileupload table tr { width: 100%; }
-#fileupload tr td { vertical-align: middle; }
-#fileupload tr td.name { width: 40%; }
-
-#fileupload tr td.name * {
-    float: left;
-    margin: 0 0 0.2em 5%;
-    width: 90%;
-}
-
-#fileupload tr td.size {
-    width: 15%;
-    text-align: center;
-}
-
-#fileupload tr.template-upload td .progress {
-    margin-top: 9%;
-    margin-left: 5%;
-    max-width: 90%;
-}
-
-#fileupload tr.template-download td.rights span {
-    margin-left: 5%;
-    max-width: 90%;
-}
-
-#fileupload tr.template-upload td.cancel .btn { margin-left: 5%; }
-#fileupload tr.template-download td.empty { width: 20%; }
-#fileupload tr.template-download td.delete { text-align: right; }
-
-
 /* ==========================================================================
    Contraste
    ========================================================================== */
