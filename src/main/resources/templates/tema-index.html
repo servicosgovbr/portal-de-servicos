@@ -43,8 +43,6 @@
     <script type="text/javascript" src="./index_files/nodeutilities.js"></script>
     <script type="text/javascript" src="./index_files/cookie_functions.js"></script>
     <script type="text/javascript" src="./index_files/modernizr.js"></script>
-    <script type="text/javascript" src="./index_files/livesearch.js"></script>
-    <script type="text/javascript" src="./index_files/++resource++search.js"></script>
     <script type="text/javascript" src="./index_files/select_all.js"></script>
     <script type="text/javascript" src="./index_files/dragdropreorder.js"></script>
     <script type="text/javascript" src="./index_files/collapsiblesections.js"></script>
@@ -217,13 +215,13 @@ $(document).ready(function() {
 
             <div id="portal-searchbox">
 
-                <form id="nolivesearchGadget_form" action="/@@busca">
+                <form action="/busca">
                     <fieldset class="LSBox">
                         <legend class="hiddenStructure">Buscar no portal</legend>
-                        <label class="hiddenStructure" for="nolivesearchGadget">Buscar no portal</label>
+                        <label class="hiddenStructure" for="buscar">Buscar no portal</label>
 
-                        <input name="SearchableText" type="text" size="18" title="Buscar no portal"
-                               placeholder="Buscar no portal" class="searchField" id="nolivesearchGadget">
+                        <input name="q" type="text" size="18" title="Buscar no portal"
+                               placeholder="Buscar no portal" class="searchField" id="buscar">
                         </input>
                         <input class="searchButton" type="submit" value="Buscar no portal">
                         </input>
