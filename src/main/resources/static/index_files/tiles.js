@@ -188,18 +188,6 @@ $(function() {
             init: function(){
                 var audio_url = self.get_audio_url();
                 var media = self.get_media(audio_url);
-
-                ae.jPlayer({
-                    ready: function () {
-                        $(this).jPlayer("setMedia", media.media_urls);
-                    },
-                    swfPath: "/++resource++brasil.gov.tiles",
-                    supplied: media.supplied,
-                    cssSelectorAncestor: cssSelectorAncestor,
-                    solution:"html,flash",
-                    wmode: "window",
-                    preload: "none"
-                });
             },
 
             /**
@@ -262,19 +250,10 @@ $(function() {
              * requires just a media url
              **/
             update_player: function(new_url) {
-                //clear all media (even if is running)
-                //ae.jPlayer("clearMedia");
                 conf.audio_url = new_url;
 
                 var audio_url = self.get_audio_url();
                 var media = self.get_media(audio_url);
-
-                ae.jPlayer( "clearMedia" );
-                ae.jPlayer("option", 'swfPath', '/++resource++brasil.gov.tiles');
-
-                ae.jPlayer("option", "supplied", media.supplied);
-                ae.jPlayer("setMedia", media.media_urls);
-
             }
         });
         self.init();
