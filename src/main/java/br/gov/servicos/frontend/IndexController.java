@@ -12,7 +12,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.AbstractMap;
 import java.util.HashMap;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
@@ -33,55 +35,29 @@ class IndexController {
         model.put("acessos", sr.findAll(new PageRequest(0, 5, new Sort(Sort.Direction.DESC, "acessos"))));
         model.put("ativacoes", sr.findAll(new PageRequest(0, 5, new Sort(Sort.Direction.DESC, "ativacoes"))));
 
-        model.put("areasDeInteresse", et.query(
-                new NativeSearchQueryBuilder()
-                        .addAggregation(
-                                new TermsBuilder("top-areas")
-                                        .field("areasDeInteresse")
-                                        .size(600)
-
-                        ).build()
-                , response -> ((Terms) response.getAggregations()
-                        .get("top-areas"))
-                        .getBuckets()
-                        .stream()
-                        .map((bucket) -> new HashMap.SimpleEntry<>(bucket.getKey(), bucket.getDocCount()))
-                        .collect(Collectors.toList())
-        ));
-        
-        model.put("linhasDaVida", et.query(
-                new NativeSearchQueryBuilder()
-                        .addAggregation(
-                                new TermsBuilder("top-linhas")
-                                        .field("linhasDaVida")
-                                        .size(600)
-
-                        ).build()
-                , response -> ((Terms) response.getAggregations()
-                        .get("top-linhas"))
-                        .getBuckets()
-                        .stream()
-                        .map((bucket) -> new HashMap.SimpleEntry<>(bucket.getKey(), bucket.getDocCount()))
-                        .collect(Collectors.toList())
-        ));
-        
-        model.put("eventosDasLinhasDaVida", et.query(
-                new NativeSearchQueryBuilder()
-                        .addAggregation(
-                                new TermsBuilder("top-eventos")
-                                        .field("eventosDasLinhasDaVida")
-                                        .size(600)
-
-                        ).build()
-                , response -> ((Terms) response.getAggregations()
-                        .get("top-eventos"))
-                        .getBuckets()
-                        .stream()
-                        .map((bucket) -> new HashMap.SimpleEntry<>(bucket.getKey(), bucket.getDocCount()))
-                        .collect(Collectors.toList())
-        ));
+        model.put("areasDeInteresse", queryAgg("top-areas", "areasDeInteresse"));
+        model.put("linhasDaVida", queryAgg("top-linhas", "linhasDaVida"));
+        model.put("eventosDasLinhasDaVida", queryAgg("top-eventos", "eventosDasLinhasDaVida"));
 
         return new ModelAndView("index", model);
+    }
+
+    private List<AbstractMap.SimpleEntry<String, Long>> queryAgg(String nome, String campo) {
+        return et.query(
+                new NativeSearchQueryBuilder()
+                        .addAggregation(
+                                new TermsBuilder(nome)
+                                        .field(campo)
+                                        .size(600)
+
+                        ).build()
+                , response -> ((Terms) response.getAggregations()
+                        .get(nome))
+                        .getBuckets()
+                        .stream()
+                        .map((bucket) -> new HashMap.SimpleEntry<>(bucket.getKey(), bucket.getDocCount()))
+                        .collect(Collectors.toList())
+        );
     }
 
 }
