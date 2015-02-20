@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Guia de Serviços</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/barra-brasil.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/busca.css"/>
+</head>
+
+<body>
+<div th:replace="fragments/barra-brasil :: #barra-brasil"></div>
+<div th:replace="fragments/header :: #header"></div>
+
+<div id="wrapper">
+    <div th:replace="fragments/barra-busca :: .caixa"></div>
+
+    <div id="main" role="main">
+
+        <div class="bloco">
+            <h3>Buscas mais comuns</h3>
+            <ul>
+                <li th:each="busca : ${topAtivacoes}">
+                    <a th:href="@{/busca?q={q}(q=${busca.termo})}" th:text="${busca.termo}">
+                        Termo
+                    </a>
+                    (<span th:text="${busca.ativacoes}">10</span>)
+                </li>
+            </ul>
+        </div>
+
+        <div class="bloco">
+            <h3>Buscas com mais resultados</h3>
+            <ul>
+                <li th:each="busca : ${topResultados}">
+                    <a th:href="@{/busca?q={q}(q=${busca.termo})}" th:text="${busca.termo}">
+                        Termo
+                    </a>
+                    (<span th:text="${busca.ativacoes}">10</span>)
+                </li>
+            </ul>
+        </div>
+
+        <div class="bloco">
+            <h3>Buscas com menos resultados</h3>
+            <ul>
+                <li th:each="busca : ${bottomResultados}">
+                    <a th:href="@{/busca?q={q}(q=${busca.termo})}" th:text="${busca.termo}">
+                        Termo
+                    </a>
+                    (<span th:text="${busca.ativacoes}">10</span>)
+                </li>
+            </ul>
+        </div>
+
+        <div class="bloco">
+            <h3>Serviços mais consultados</h3>
+            <ul>
+                <li th:each="servico : ${topServicosAcessados}">
+                    <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">
+                        Titulo do serviço
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bloco">
+            <h3>Serviços mais utilizados</h3>
+            <ul>
+                <li th:each="servico : ${topServicosAtivados}">
+                    <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">
+                        Titulo do serviço
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+        <div id="voltar-topo">
+            <a href="#wrapper">Voltar para o topo</a>
+        </div>
+
+
+    </div>
+</div>
+
+<div th:replace="fragments/barra-brasil :: script"></div>
+<div th:replace="fragments/barra-brasil :: footer"></div>
+</body>
+
+</html>
