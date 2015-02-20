@@ -1,0 +1,82 @@
+/* - calendar.css - */
+@media screen {
+
+.portletCalendarEx dt {
+    background-color: #eee;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.6em;
+    border-bottom: none;
+}
+
+.portletCalendar dd {
+    margin: 0;
+    padding: 0;
+}
+
+.portletCalendarEx tr.month {
+    background-color: #eee;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6em;
+    border-bottom: none;
+}
+
+.portletCalendarEx th a#calendar-previous {
+    float: left;
+    padding: 0 1em;
+    margin: 0 -.5em;
+}
+
+.portletCalendarEx th a#calendar-next {
+    float: right;
+    padding: 0 1em;
+    margin: 0 -.5em;
+}
+
+.portletCalendar a, .portletCalendar a:focus,
+.portletCalendar a, .portletCalendar a:hover {
+    text-decoration: none;
+}
+
+.ploneCalendar {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.ploneCalendar a {
+    text-decoration: none;
+    border-bottom: none !important;
+}
+
+.ploneCalendar td {
+    background-color: transparent;
+    width: 14%;
+    text-align: center;
+    padding: 2px;
+}
+
+.ploneCalendar .weekdays th {
+    background-color: #eee;
+    text-align: center;
+    padding: 2px;
+    font-weight: normal;
+}
+
+.ploneCalendar .event {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+.ploneCalendar .todayevent {
+    background-color: #eee;
+    border: 2px solid #205C90;
+    font-weight: bold;
+}
+
+.ploneCalendar .todaynoevent {
+    border: 2px solid #205C90;
+}
+
+}
+

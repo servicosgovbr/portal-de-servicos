@@ -1,0 +1,18 @@
+form .counter {
+    color: #CCCCCC;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+form .warning {
+    color: #660000;
+}
+form .exceeded {
+    color: #EE0000;
+}
+.portaltype-collective-nitf-content .field {
+    position: relative;
+}

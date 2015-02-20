@@ -1,0 +1,43 @@
+#doormat-container {
+  background:none repeat scroll 0 0 #DDDDDD;
+  font-size:75%;
+  margin:1em 0;
+  float: left;
+  width: 100%;
+}
+#doormat-container h2 {
+  margin: 0.5em 0.5em 0px 0.5em;
+}
+#doormat-container h3 {
+  margin: 0.5em 0px;
+}
+#doormat-container dl {
+  margin: 0.5em 0px;
+}
+#doormat-container dl dd {
+  margin-left: 0px;
+}
+#doormat-container .doormatColumn {
+  float: left;
+  margin: 0px 1em;
+}
+
+/* Make all columns equally wide */
+#doormat-container.columns-2 .doormatColumn {
+  width: 48%;
+}
+#doormat-container.columns-3 .doormatColumn {
+  width: 31%;
+}
+#doormat-container.columns-4 .doormatColumn {
+  width: 23%;
+}
+#doormat-container.columns-5 .doormatColumn {
+  width: 18%;
+}
+#doormat-container.columns-6 .doormatColumn {
+  width: 14%;
+}
+#doormat-container.columns-7 .doormatColumn {
+  width: 12%;
+}

@@ -1,0 +1,98 @@
+.contenttreeWidget {
+    bottom: 3.5em;
+    height: auto;
+    left: 0px;
+    overflow-y: auto;
+    margin: 0em 1em;
+    position: absolute;
+    right: 0px;
+    top: 6em;
+    width: auto;
+    border: 1px solid #8CACBB;
+}
+
+.contenttreeWidget li {
+    display: block;
+    padding-left: 1em;
+}
+
+.contenttreeWidget .navTreeCurrentItem {
+    font-weight: bold;
+}
+.contenttreeWidget .navTreeCurrentItem li {
+    font-weight: normal;
+}
+
+.contenttreeWidget li a {
+    border-bottom: solid 1px transparent;
+}
+
+.contenttreeWidget .navTreeItem a {
+    border: none;
+    display: block;
+    text-decoration: none;
+    padding-top: 0.2em;
+    padding-bottom: 0.25em;
+}
+.contenttreeWidget .navTreeItem a:hover {
+    outline: 1px dotted #205C90;
+}
+.contenttreeWidget li.navTreeCurrentItem {
+    border: none !important;
+    background-color: transparent;
+}
+.contenttreeWidget li.navTreeCurrentItem > a,
+.contenttreeWidget li.navTreeCurrentItem > a:hover {
+    border: none;
+    outline: none;
+    background-color: #205C90;
+    color: #fff !important;
+}
+
+/* Another workaround for broken Internet Explorer */
+* html .contentTreeWidget li.navTreeCurrentItem a,
+* html .contentTreeWidget li.navTreeCurrentItem a:hover {
+    height: 1.6em;
+}
+
+.contenttreeWindow {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    background-color: white;
+    z-index: 100;
+}
+
+.contenttreeWindow h2 {
+    display: block;
+    top: 0px;
+    margin: 0px;
+}
+
+.contenttreeWindowHeader {
+    padding: 1em;
+}
+
+.contenttreeWindowActions {
+    position: absolute;
+    width: 100%;
+    top: auto;
+    bottom: 0px;
+    padding: 1em;
+}
+.contenttreeWindowBlocker {
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    _position: absolute;
+    _top: expression(eval((document.body.scrollTop)?document.body.scrollTop:document.documentElement.scrollTop));
+}
+
+.option {
+    display: block;
+}
