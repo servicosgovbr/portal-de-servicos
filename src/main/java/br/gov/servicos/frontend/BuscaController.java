@@ -14,8 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 
-import static org.elasticsearch.index.query.QueryBuilders.queryString;
-import static org.elasticsearch.index.query.QueryBuilders.termQuery;
+import static org.elasticsearch.index.query.QueryBuilders.*;
 
 @Controller
 class BuscaController {
@@ -47,6 +46,11 @@ class BuscaController {
     @RequestMapping("/eventos-das-linhas-da-vida")
     ModelAndView eventosDasLinhasDaVida(@RequestParam(required = true) String q) {
         return doSearch(q, termQuery("eventosDasLinhasDaVida", q));
+    }
+
+    @RequestMapping("/orgao")
+    ModelAndView orgao(@RequestParam(required = true) String q) {
+        return doSearch(q, fuzzyLikeThisQuery("prestador.nome", "responsavel.nome").likeText(q));
     }
 
     private ModelAndView doSearch(String q, QueryBuilder query) {

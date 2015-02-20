@@ -28,9 +28,11 @@
             </p>
 
             <div class="orgao-prestador">
-                <p th:if="${not #strings.isEmpty(servico.prestador.nome)}" th:text="${servico.prestador.nome}">
+                <a th:if="${not #strings.isEmpty(servico.prestador.nome)}"  
+                   th:href="@{/orgao?q={orgao}(orgao=${servico.prestador.nome})}"
+                   th:text="${servico.prestador.nome}">
                     Órgão prestador
-                </p>
+                </a>
             
                 <span th:if="${not #strings.isEmpty(servico.prestador.telefone)}" th:text="${servico.prestador.telefone}">
                     (61) 5555-1234
@@ -39,9 +41,11 @@
             
             
             <div class="orgao-responsavel">
-                <p th:if="${not #strings.isEmpty(servico.responsavel.nome)}" th:text="${servico.responsavel.nome}">
+                <a th:if="${not #strings.isEmpty(servico.prestador.nome)}"
+                   th:href="@{/orgao?q={orgao}(orgao=${servico.prestador.nome})}"
+                   th:text="${servico.prestador.nome}">
                     Órgão responsavel
-                </p>
+                </a>
             
                 <span th:if="${not #strings.isEmpty(servico.responsavel.telefone)}" th:text="${servico.responsavel.telefone}">
                     (61) 5555-1234
