@@ -10,7 +10,7 @@
 
 /*loading mask*/
 .loading-mask {
-    background: #000 url('spinner.gif') scroll no-repeat center center;
+    background: #000 url('/index_files/spinner.gif') scroll no-repeat center center;
     width: 100%;
     height: 100%;
     position: absolute;
