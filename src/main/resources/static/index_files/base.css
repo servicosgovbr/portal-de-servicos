@@ -400,10 +400,6 @@ input.searchPage {
 	float: left;
 	line-height: 3em;
 }
-#search-results-bar .actionMenuContent {
-    margin-top: 1em;
-    padding: 0;
-}
 #search-filter {
     background: #ddd;
     margin: 0;
@@ -458,19 +454,6 @@ form.searchPage h1.documentFirstHeading .highlightedSearchTerm {
     border-top: 1px solid #DDD;
     border-bottom: 1px solid #DDD;
     padding: 1em 0;
-}
-#search-results-bar dl.actionMenu {
-    margin-bottom: 0;
-}
-#search-results-bar dd.actionMenuContent {
-    margin-left: 0;
-    padding-left: 0;
-}
-#search-results-bar dt.actionMenuHeader a {
-    border-bottom: none;
-}
-#search-results-bar dt.actionMenuHeader a::after {
-	content: " ▼";
 }
 #search-results {
     padding: 1em;
