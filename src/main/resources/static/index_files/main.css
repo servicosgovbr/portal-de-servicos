@@ -3641,10 +3641,6 @@ body.contraste.template-facetednavigation_view #content .tileItem .keywords,
 body.contraste .videogallery-tile .subtitle,
 body.contraste .outstanding-header .outstanding-link,
 body.contraste #content .outstanding-header .outstanding-link:hover,
-body.contraste .galleria-info-description,
-body.contraste .galleria-info-title a,
-body.contraste .galleria-info-title a:hover,
-body.contraste .galleria-info-text .rights,
 body.contraste .lista-vertical .tile-header h3,
 body.contraste .lista-vertical .tile-header span,
 body.contraste .cover-collection-tile .tile-header span,
@@ -3680,8 +3676,7 @@ body.contraste .portletHeader,
 body.contraste .portletHeader a,
 body.contraste dl.portlet dt a:visited,
 body.contraste #doormat-container .doormatColumn,
-body.contraste .mediacarousel,
-body.contraste .galleria-thumbnails-container {
+body.contraste .mediacarousel {
     border-color: #fff !important;
     background: #000 !important;
     color: #fff !important;
