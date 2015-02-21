@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
+<html lang="pt-br" dir="ltr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-    <title>Guia de Serviços</title>
+    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">Guia de Serviços</title>
 
     <link rel="stylesheet" type="text/css" href="/assets/reset.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="/assets/base.css" media="screen"/>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout-verde">
+
+<head>
+    <title>Bem-vindo!</title>
+</head>
+
+<body>
+
+<div id="wrapper">
+    <div th:replace="fragments/barra-busca :: .caixa"></div>
+
+    <div id="main" role="main">
+        <div class="bloco">
+            <h3>Serviços mais consultados</h3>
+            <ul>
+                <li th:each="servico : ${acessos}">
+                    <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">
+                        Titulo do serviço
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bloco">
+            <h3>Serviços mais utilizados</h3>
+            <ul>
+                <li th:each="servico : ${ativacoes}">
+                    <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">
+                        Titulo do serviço
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bloco">
+            <h3>Áreas de Interesse</h3>
+            <ul>
+                <li th:each="area : ${areasDeInteresse}">
+                    <a th:href="@{/area-de-interesse?q={area}(area=${area.key})}" th:text="${area.key}">
+                        Nome da área
+                    </a>
+                    (<span th:text="${area.value}">10</span>)
+                </li>
+            </ul>
+        </div>
+
+        <div class="bloco">
+            <h3>Linhas da Vida</h3>
+            <ul>
+                <li th:each="linha : ${linhasDaVida}">
+                    <a th:href="@{/linha-da-vida?q={linha}(linha=${linha.key})}" th:text="${linha.key}">
+                        Nome da linha
+                    </a>
+                    (<span th:text="${linha.value}">10</span>)
+                </li>
+            </ul>
+        </div>
+
+        <div class="bloco">
+            <h3>Eventos das Linhas da Vida</h3>
+            <ul>
+                <li th:each="evento : ${eventosDasLinhasDaVida}">
+                    <a th:href="@{/eventos-das-linhas-da-vida?q={evento}(evento=${evento.key})}"
+                       th:text="${evento.key}">
+                        Nome do evento
+                    </a>
+                    (<span th:text="${evento.value}">10</span>)
+                </li>
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+        <div id="voltar-topo">
+            <a href="#wrapper">Voltar para o topo</a>
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>

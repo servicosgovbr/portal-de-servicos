@@ -31,9 +31,9 @@ class IndexController {
 
     @RequestMapping("/tema")
     ModelAndView indexTema() {
-        return new ModelAndView("tema-index");
+        return new ModelAndView("index2", index().getModel());
     }
-    
+
     @RequestMapping("/")
     ModelAndView index() {
         HashMap<String, Object> model = new HashMap<>();
