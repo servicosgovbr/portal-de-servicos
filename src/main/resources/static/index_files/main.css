@@ -561,23 +561,6 @@ input.searchField { -moz-appearance: none; }
     margin: 0.9615em 1em 0.5em 0;
 }
 
-#content div.newsImageContainer {
-    float: none;
-    margin: 0;
-}
-
-#content div.newsImageContainer p.discreet {
-    top: 0;
-    margin-top: .400em;
-    background-color: transparent;
-    color: #172938;
-    font-weight: normal;
-    font-size: .85em;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.36340em;
-}
-
-
 /* ==========================================================================
    Estilos de texto
    ========================================================================== */
@@ -670,46 +653,6 @@ body[class*="nitf"] div.width-1\3a 2 #plone-document-byline { width: 68.7216%; }
     font-size: 1.6em;
 }
 
-#content div.newsImageContainer > div:first-child {
-    background: #e5e5e5;
-    text-align: center;
-}
-
-#content div.newsImageContainer > div:first-child p { text-align: left; }
-
-#content .newsImageContainer .photo-icon {
-    position: relative;
-    top: 24px;
-    right: -8px;
-    float: right;
-    clear: none;
-    overflow: hidden;
-    margin: 0;
-    width: 102px;
-    height: 31px;
-    background: url("/img/mais_fotos.png") no-repeat;
-    text-indent: 100%;
-    white-space: nowrap;
-}
-
-#content .newsImageContainer a[class^="photo-icon-en"] {
-    background: url("/img/mais_fotos_en.png") no-repeat;
-}
-
-#content .newsImageContainer a[class^="photo-icon-es"] {
-    background: url("/img/mais_fotos_es.png") no-repeat;
-}
-
-#content .newsImageContainer .copyright {
-    float: left;
-    line-height: 31px;
-}
-
-#content .newsImageContainer .carrossel-images { display: none; }
-
-.newsImageContainer .parent-nitf-image { display: block; }
-
-#content .newsImageContainer a.link-overlay { border: 0 none !important; }
 
 /* tabela */
 table.listing {
@@ -3527,7 +3470,6 @@ body.contraste .lista-vertical .tile-header h3,
 body.contraste .lista-vertical .tile-header span,
 body.contraste .cover-collection-tile .tile-header span,
 body.contraste #content article div[property*="articleBody"] p,
-body.contraste #content div.newsImageContainer p.discreet,
 body.contraste #content article #viewlet-below-content-title .documentPublished,
 body.contraste #content article #viewlet-below-content-title .documentModified,
 body.contraste #content article #viewlet-below-content-title .contentHistory a,
@@ -3873,21 +3815,8 @@ body.contraste .formHelp {
 
 /* contraste de visão de notícia */
 
-body.contraste #content .banner-tile .copyright,
-body.contraste #content .newsImageContainer .copyright {
+body.contraste #content .banner-tile .copyright {
     color: #FFF;
-}
-
-body.contraste #content .newsImageContainer .photo-icon {
-    background: url("/img/mais_fotos-contraste.png") no-repeat;
-}
-
-body.contraste #content .newsImageContainer a[class^="photo-icon-en"] {
-    background: url("/img/mais_fotos_en-contraste.png") no-repeat;
-}
-
-body.contraste #content .newsImageContainer a[class^="photo-icon-es"] {
-    background: url("/img/mais_fotos_es-contraste.png") no-repeat;
 }
 
 /* contraste blog view */

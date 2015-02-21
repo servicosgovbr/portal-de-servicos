@@ -420,21 +420,6 @@ dl.portlet a:hover {
     font: bold 1.25em "Helvetica Neue", Arial, FreeSans, sans-serif;
 }
 
-#content div.newsImageContainer a {
-    border-bottom: none;
-}
-#content div.newsImageContainer p.discreet {
-    margin: 0;
-    padding: 0.5em;
-    background-color: #666;
-    background-color: rgba(40,40,40,0.7);
-    color: White;
-    font-weight: bold;
-    position: relative;
-    width: 190px;
-    top: -3em;
-}
-
 /* For event view template, changed headerless table to headings and divs,
  * for better accessibility.  */
 

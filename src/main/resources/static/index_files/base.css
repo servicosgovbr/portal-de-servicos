@@ -63,8 +63,7 @@ div.portletStaticText li {
     color: #666;
 }
 
-#content img.tileImage,
-#content div.newsImageContainer {
+#content img.tileImage {
     float: right;
     margin: 0 1em 0.5em 1em;
 }
