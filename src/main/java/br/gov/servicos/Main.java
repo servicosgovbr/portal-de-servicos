@@ -17,30 +17,6 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 @SpringBootApplication
 public class Main {
 
-    @Configuration
-    @Profile("cluster")
-    @EnableConfigurationProperties(ElasticsearchProperties.class)
-    public static class ElasticsearchConfiguration {
-
-        @Autowired
-        private ElasticsearchProperties properties;
-
-        @Bean
-        public ElasticsearchTemplate elasticsearchTemplate() throws Exception {
-            return new ElasticsearchTemplate(esClient());
-        }
-
-        @Bean
-        public Client esClient() throws Exception {
-            TransportClientFactoryBean fb = new TransportClientFactoryBean();
-            fb.setClusterName(this.properties.getClusterName());
-            fb.setClusterNodes("localhost:9300");
-            fb.afterPropertiesSet();
-
-            return fb.getObject();
-        }
-    }
-    
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
