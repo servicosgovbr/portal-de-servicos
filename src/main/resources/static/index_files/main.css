@@ -4110,7 +4110,7 @@ body.contraste div.jp-play-bar {
     background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -218px repeat-x;
 }
 body.contraste div.jp-seeking-bg {
-    background: url("++resource++brasil.gov.tiles/jplayer.blue.monday.seeking.gif");
+    background: url("/index_files/jplayer.blue.monday.seeking.gif");
 }
 body.contraste a.jp-mute {
     background: url("/img/jplayer.blue.monday-contraste.jpg") 0 -186px no-repeat;

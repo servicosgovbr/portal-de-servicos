@@ -272,7 +272,7 @@
 }
 
 .mediacarousel .mediacarousel-footer-container .mediacarousel-footer-link {
-    background: url("++resource++brasil.gov.tiles/footer-arrow.png") no-repeat scroll right center transparent;
+    background: url("/index_files/footer-arrow.png") no-repeat scroll right center transparent;
     text-transform: uppercase;
     display: block;
     clear: both;

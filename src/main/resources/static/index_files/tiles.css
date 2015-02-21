@@ -60,7 +60,7 @@
     display: inline-block;
     padding-right: 25px;
     height: 20px;
-    background: url("++resource++brasil.gov.tiles/footer-arrow.jpg") no-repeat scroll right 0 transparent;
+    background: url("/index_files/footer-arrow.jpg") no-repeat scroll right 0 transparent;
     color: #D1E2FF !important;
     line-height: 20px;
 }
@@ -293,7 +293,7 @@
 #content .audiogallery-items-container .audiogallery-item {
     display: block;
     padding-left: 20px;
-    background: url("++resource++brasil.gov.tiles/sound-icon.png") no-repeat scroll left 0 transparent;
+    background: url("/index_files/sound-icon.png") no-repeat scroll left 0 transparent;
     font-weight: normal;
     font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
 }
@@ -307,7 +307,7 @@
     display: inline-block;
     margin-bottom: 6px;
     padding-right: 25px;
-    background: url("++resource++brasil.gov.tiles/footer-arrow.png") no-repeat scroll right 0 transparent;
+    background: url("/index_files/footer-arrow.png") no-repeat scroll right 0 transparent;
     text-transform: uppercase;
     font-size: 0.916em;
     line-height: 14px;
@@ -790,7 +790,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
     width: 100%;
     height: 20px;
     border-radius: 0 0 5px 5px;
-    background: url("++resource++brasil.gov.tiles/shadow-50.png") repeat top left;
+    background: url("/index_files/shadow-50.png") repeat top left;
     color: #fff;
     float: left;
 }
@@ -808,7 +808,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
     height: 20px;
     border-right: 1px solid #446b5d;
     background-color: #0e561f;
-    background-image: url("++resource++brasil.gov.tiles/bullets-branco-verde.gif");
+    background-image: url("/index_files/bullets-branco-verde.gif");
     background-repeat: no-repeat;
     text-indent: 100%;
     white-space: nowrap;
@@ -855,7 +855,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
     margin: -57px 0 0;
     height: 41px;
     border-radius: 0 0 5px 5px;
-    background: url("++resource++brasil.gov.tiles/shadow-50.png") repeat top left;
+    background: url("/index_files/shadow-50.png") repeat top left;
     color: #fff;
     position: relative;
     padding: 5px 4.5em 10px 1em;
@@ -881,7 +881,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
     margin: -20px 0 0;
     height: 20px;
     border-radius: 0 0 5px 5px;
-    background: url("++resource++brasil.gov.tiles/shadow-50.png") repeat top left;
+    background: url("/index_files/shadow-50.png") repeat top left;
     color: #fff;
     position: relative;
     text-indent: 1em;
@@ -1083,7 +1083,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
     margin-top: -20px;
     width: 42px;
     height: 40px;
-    background: url("++resource++brasil.gov.tiles/icons-setas.png");
+    background: url("/index_files/icons-setas.png");
     text-indent: 100%;
     white-space: nowrap;
 }
@@ -1141,7 +1141,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
     margin-top: -11px;
     width: 22px;
     height: 22px;
-    background: url("++resource++brasil.gov.tiles/icons-setas-min.png");
+    background: url("/index_files/icons-setas-min.png");
     text-indent: 100%;
     white-space: nowrap;
 }
@@ -1184,7 +1184,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
     overflow: hidden;
     width: 22px;
     height: 22px;
-    background-image: url("++resource++brasil.gov.tiles/icon-camera-download.png");
+    background-image: url("/index_files/icon-camera-download.png");
     white-space: nowrap;
 }
 
@@ -1221,7 +1221,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
     height: 14px;
     content: "";
     margin-left: 7px;
-    background: url("++resource++brasil.gov.tiles/footer-arrow.png") no-repeat scroll right center transparent;
+    background: url("/index_files/footer-arrow.png") no-repeat scroll right center transparent;
 }
 
 
@@ -1229,7 +1229,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
    ========================================================================== */
 
 #tiles-list #audiogallery img {
-  background: url("++resource++brasil.gov.tiles/tile-audiogallery.png") no-repeat center center;
+  background: url("/index_files/tile-audiogallery.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1239,7 +1239,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #audio img {
-  background: url("++resource++brasil.gov.tiles/tile-audio.png") no-repeat center center;
+  background: url("/index_files/tile-audio.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1249,7 +1249,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #nitf img {
-  background: url("++resource++brasil.gov.tiles/tile-article.png") no-repeat center center;
+  background: url("/index_files/tile-article.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1259,7 +1259,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #videogallery img {
-  background: url("++resource++brasil.gov.tiles/tile-mediagallery.png") no-repeat center center;
+  background: url("/index_files/tile-mediagallery.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1269,7 +1269,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #video img {
-  background: url("++resource++brasil.gov.tiles/tile-media.png") no-repeat center center;
+  background: url("/index_files/tile-media.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1279,7 +1279,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #social img {
-  background: url("++resource++brasil.gov.tiles/tile-social.png") no-repeat center center;
+  background: url("/index_files/tile-social.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1289,7 +1289,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #poll img {
-  background: url("++resource++brasil.gov.tiles/tile-poll.png") no-repeat center center;
+  background: url("/index_files/tile-poll.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1299,7 +1299,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #standaloneheader img {
-  background: url("++resource++brasil.gov.tiles/tile-header.png") no-repeat center center;
+  background: url("/index_files/tile-header.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1309,7 +1309,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #agenda img {
-  background: url("++resource++brasil.gov.tiles/tile-agenda.png") no-repeat center center;
+  background: url("/index_files/tile-agenda.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1319,7 +1319,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #destaque img {
-  background: url("++resource++brasil.gov.tiles/tile-destaque.png") no-repeat center center;
+  background: url("/index_files/tile-destaque.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1329,7 +1329,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #em_destaque img {
-  background: url("++resource++brasil.gov.tiles/tile-em_destaque.png") no-repeat center center;
+  background: url("/index_files/tile-em_destaque.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1339,7 +1339,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #albuns img {
-  background: url("++resource++brasil.gov.tiles/tile-albuns.png") no-repeat center center;
+  background: url("/index_files/tile-albuns.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1349,7 +1349,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #mediacarousel img {
-  background: url("++resource++brasil.gov.tiles/tile-mediacarousel.png") no-repeat center center;
+  background: url("/index_files/tile-mediacarousel.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1359,7 +1359,7 @@ div[data-tile*="collective.cover.embed"] .samba-player embed {
 }
 
 #tiles-list #banner_rotativo img {
-  background: url("++resource++brasil.gov.tiles/tile-banner_rotativo.png") no-repeat center center;
+  background: url("/index_files/tile-banner_rotativo.png") no-repeat center center;
   padding-left: 32px;
   width: 32px;
   height: 32px;
@@ -1381,7 +1381,7 @@ body.contraste .album-tile .album-title {
 
 body.contraste .album-tile .icon-camera,
 body.contraste .album-tile .icon-download {
-    background-image: url("++resource++brasil.gov.tiles/icon-camera-download-contraste.png") !important;
+    background-image: url("/index_files/icon-camera-download-contraste.png") !important;
 }
 
 body.contraste .album-tile .carousel {
@@ -1391,12 +1391,12 @@ body.contraste .album-tile .carousel {
 
 body.contraste .album-tile .cycle-nagivation .cycle-prev,
 body.contraste .album-tile .cycle-nagivation .cycle-next {
-    background-image: url("++resource++brasil.gov.tiles/icons-setas-min-contraste.png");
+    background-image: url("/index_files/icons-setas-min-contraste.png");
 }
 
 body.contraste .album-tile .cycle-hover .cycle-prev,
 body.contraste .album-tile .cycle-hover .cycle-next {
-    background-image: url("++resource++brasil.gov.tiles/icons-setas-contraste.png");
+    background-image: url("/index_files/icons-setas-contraste.png");
 }
 
 body.contraste .album-tile .footer a:after {
