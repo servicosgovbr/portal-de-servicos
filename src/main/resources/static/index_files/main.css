@@ -1348,12 +1348,6 @@ dl.portlet ol li { list-style: decimal outside; }
     font-size: 0.9em;
 }
 
-.link-externo {
-    overflow: hidden;
-    border: 1px solid #c0c1c3;
-    border-radius: 5px;
-}
-
 #content .tile-description { margin: 0; }
 
 /* Tile Basic
@@ -1386,62 +1380,6 @@ dl.portlet ol li { list-style: decimal outside; }
     color: #444A53;
     font-weight: normal;
     font-family: open_sansbold, Arial, Helvetica, sans-serif;
-}
-
-/* Link externo
-   ========================================================================== */
-
-.link-externo .tile-header,
-.link-externo .tile-title {
-    padding: 1em;
-    border-bottom: 1px solid #bec2c1;
-    background: #434a54;
-}
-
-.link-externo .tile-header span,
-.link-externo .tile-header h2,
-.link-externo .tile-title h2 {
-    margin: 0;
-    color: #fff !important;
-    font-weight: normal;
-}
-
-.link-externo .tile-header { text-transform: uppercase; }
-
-.tile-header span { font-size: 1.4em; }
-
-.link-externo .tile-footer {
-    padding: 0.5em 1em;
-    background: #c2c3c5;
-    text-transform: uppercase;
-}
-
-.link-externo .collection-item {
-    padding: 1em;
-    border-bottom: 1px dotted #bec2c1;
-}
-
-.link-externo .collection-item.odd { background: #eeeff1; }
-.link-externo .collection-item.even { background: #fff; }
-
-.link-externo .collection-item a {
-    display: block;
-    padding-right: 2em;
-    background: url("/img/readmoredarkgray.png") no-repeat right center !important;
-}
-
-.link-externo .collection-item h2,
-.link-externo .collection-item h3 {
-    margin-bottom: 0;
-    font-weight: normal;
-}
-
-.link-externo .collection-item p {
-    position: absolute !important;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
 }
 
 /* Lista horizontal
@@ -3656,22 +3594,6 @@ body.contraste #content .summary-view-icon .icon-noticia,
 body.contraste #content .summary-view-icon .icon-page { background-position: -474px -391px; }
 body.contraste #content .summary-view-icon .icon-multimidia { background-position: -413px -391px; }
 
-/* estilo Link Externo de tile */
-body.contraste .link-externo .tile-header,
-body.contraste .link-externo .tile-title,
-body.contraste .link-externo .tile-footer,
-body.contraste .link-externo .collection-item.odd {
-    background: #000;
-}
-
-body.contraste .link-externo .collection-item.even {
-    background: #222;
-}
-
-body.contraste .link-externo .collection-item a {
-    background: url("/img/seta_branca.png") no-repeat no-repeat right center !important;
-    line-height: 20px;
-}
 
 /* botões de navegação */
 body.contraste .orderTiles .button-nav {

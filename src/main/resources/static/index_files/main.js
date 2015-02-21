@@ -75,9 +75,4 @@ jQuery(document).ready(function($) {
     }
   }
 
-  if ($('.link-externo').length > 0) {
-    $('.link-externo .collection-item:even').addClass('even');
-    $('.link-externo .collection-item:odd').addClass('odd');
-  }
-
 });
