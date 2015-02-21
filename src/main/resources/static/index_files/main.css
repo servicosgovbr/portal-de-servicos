@@ -3618,9 +3618,6 @@ body.contraste .tile a,
 body.contraste #content .gallery-element-metadata .title,
 body.contraste .videogallery-tile .description,
 body.contraste .item-central .link-central,
-body.contraste #content #tile_banner_rotativo .title,
-body.contraste #content #tile_banner_rotativo .descr,
-body.contraste #content #tile_banner_rotativo .credito,
 body.contraste #portal-siteactions a,
 body.contraste #portal-siteactions a:hover,
 body.contraste #logo #portal-logo,
@@ -3869,16 +3866,9 @@ body.contraste .link-externo .collection-item a {
 }
 
 /* botões de navegação */
-body.contraste #tile_banner_rotativo li .button-nav,
 body.contraste .orderTiles .button-nav {
     background-image: url("/img/bullets-branco-preto.gif");
     background-color: #000;
-}
-
-body.contraste #tile_banner_rotativo .activeSlide .button-nav,
-body.contraste #tile_banner_rotativo li .button-nav:hover,
-body.contraste #tile_banner_rotativo li .button-nav:focus {
-    background-color: #fff;
 }
 
 body.contraste .lista-vertical {
