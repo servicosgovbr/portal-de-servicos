@@ -3129,116 +3129,6 @@ body[class*="galeria_de_fotos"] #content .descriptionAlbum {
 }
 
 /* ==========================================================================
-   Galeria de fotos
-   ========================================================================== */
-#galeria_de_fotos,
-.galeria_container {
-    margin-top: 2em;
-    padding-bottom: 9px;
-    max-width: 748px;
-    width: 100%;
-    border: 1px solid #d5d5d5;
-    border-radius: 3px;
-    background-color: #edeff1;
-    clear: both;
-}
-
-.slideshow-player {
-    margin: 0;
-    padding: 0;
-}
-
-.cycle-player {
-    width: 100%;
-}
-
-.cycle-player .cycle-slide img {
-    width: 100%;
-    border-radius: 3px 3px 0 0;
-}
-
-.cycle-player .cycle-overlay {
-    margin: .8em;
-    color: #454545;
-    font-size: 1.05em;
-    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.cycle-slideshow > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.rights {
-    display: block;
-    font-style: italic;
-}
-
-.slideshow-carrossel {
-   position: relative;
-   margin: 0 9px;
-   height: 69px;
-   border: 1px solid #ddd;
-   border-radius: 3px;
-   background: #fff;
-}
-
-.slideshow-carrossel .cycle-prev,
-.slideshow-carrossel .cycle-next {
-    position: absolute;
-    top: 23px;
-    display: block;
-    overflow: hidden;
-    width: 22px;
-    height: 21px;
-    border-radius: 3px;
-    background-image: url("/img/icone-navegacao-cinza.png");
-    background-repeat: no-repeat;
-    text-indent: 100%;
-    white-space: nowrap;
-}
-
-.slideshow-carrossel .cycle-prev { left: 7px; background-position: 0px 0px; }
-
-.slideshow-carrossel .cycle-next { right: 7px; background-position: 0px -21px; }
-
-.cycle-sentinel { padding: 0 9px; }
-
-.cycle-carrossel {
-    margin: 0 auto;
-    max-width: 666px;
-    height: 69px;
-}
-
-.cycle-carrossel .cycle-slide {
-    margin: 8px 4px;
-    width: 87px;
-    height: 49px;
-    opacity: .7;
-    filter: alpha(opacity=70);
-    overflow: hidden;
-    border-radius: 3px;
-}
-
-.cycle-carrossel .cycle-slide-active {
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-.cycle-carrossel .cycle-slide img {
-    display: block;
-    margin: 0;
-    cursor: pointer;
-    min-height: 49px;
-    min-width: 100%;
-}
-
-/* ==========================================================================
    Media Queries
    ========================================================================== */
 
@@ -3650,11 +3540,6 @@ body.contraste #content article #viewlet-below-content-title .documentPublished,
 body.contraste #content article #viewlet-below-content-title .documentModified,
 body.contraste #content article #viewlet-below-content-title .contentHistory a,
 body.contraste #content .pullquote,
-body.contraste .cycle-player .cycle-overlay,
-body.contraste #galeria_de_fotos,
-body.contraste .galeria_container,
-body.contraste #content .gallery-footer a,
-body.contraste #content .gallery-footer a:hover,
 body.contraste #content .poll-tile .tile-content-wrapper>form>input[type=radio]+span,
 body.contraste #content .poll-tile .poll-tile-header>.header {
     color: #fff !important;
@@ -3675,8 +3560,7 @@ body.contraste .lista-horizontal,
 body.contraste .portletHeader,
 body.contraste .portletHeader a,
 body.contraste dl.portlet dt a:visited,
-body.contraste #doormat-container .doormatColumn,
-body.contraste .mediacarousel {
+body.contraste #doormat-container .doormatColumn {
     border-color: #fff !important;
     background: #000 !important;
     color: #fff !important;
@@ -3761,13 +3645,8 @@ body.contraste .item-central .link-dadosabertos {
     background-image: url("/img/sprite-contraste.png");
 }
 
-body.contraste .outstanding-header .outstanding-link,
-body.contraste .mediacarousel .mediacarousel-footer-container .mediacarousel-footer-link {
+body.contraste .outstanding-header .outstanding-link {
     background: url("/img/seta_branca.png") no-repeat scroll right 5px transparent;
-}
-
-body.contraste .mediacarousel .mediacarousel-footer-container .mediacarousel-footer-link {
-    background-position: right 0;
 }
 
 body.contraste #portal-searchbox {
@@ -4003,8 +3882,7 @@ body.contraste .formHelp {
 /* contraste de visão de notícia */
 
 body.contraste #content .banner-tile .copyright,
-body.contraste #content .newsImageContainer .copyright,
-body.contraste #content .mediacarousel .rights {
+body.contraste #content .newsImageContainer .copyright {
     color: #FFF;
 }
 
