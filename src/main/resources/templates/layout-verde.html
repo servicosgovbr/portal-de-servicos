@@ -37,47 +37,10 @@
 
 <div id="wrapper">
 
-    <!-- HEADER -->
-
     <div id="header" role="banner">
-
         <div>
-
-            <ul id="accessibility">
-                <li>
-                    <a accesskey="1" href="#acontent" id="link-conteudo">
-                        Ir para o conteúdo
-                        <span>1</span>
-                    </a>
-                </li>
-                <li>
-                    <a accesskey="2" href="#anavigation" id="link-navegacao">
-                        Ir para o menu
-                        <span>2</span>
-                    </a>
-                </li>
-                <li>
-                    <a accesskey="3" href="#SearchableText" id="link-buscar">
-                        Ir para a busca
-                        <span>3</span>
-                    </a>
-                </li>
-                <li class="last-item">
-                    <a accesskey="4" href="#afooter" id="link-rodape">
-                        Ir para o rodapé
-                        <span>4</span>
-                    </a>
-                </li>
-            </ul>
-
-            <ul id="portal-siteactions">
-                <li id="siteaction-accessibility"><a href="/acessibilidade" title="Acessibilidade" accesskey="5">Acessibilidade</a>
-                </li>
-                <li id="siteaction-contraste"><a href="#" title="Alto Contraste" accesskey="6">Alto Contraste</a></li>
-                <li id="siteaction-mapadosite" class="last-item"><a href="/mapadosite" title="Mapa do Site"
-                                                                    accesskey="7">Mapa do Site</a></li>
-            </ul>
-
+            <ul id="accessibility" th:replace="fragments2/acessibilidade :: #accessibility"></ul>
+            <ul id="portal-siteactions" th:replace="fragments2/atalhos-teclado :: #portal-siteactions"></ul>
             <div id="logo" th:replace="fragments2/logo :: #logo"></div>
             <div id="portal-searchbox" th:replace="fragments2/busca :: #portal-searchbox"></div>
             <div id="social-icons" th:replace="fragments2/redes-sociais :: #social-icons"></div>
