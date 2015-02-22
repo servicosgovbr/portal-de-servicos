@@ -77,33 +77,12 @@
                 <li id="siteaction-mapadosite" class="last-item"><a href="/mapadosite" title="Mapa do Site"
                                                                     accesskey="7">Mapa do Site</a></li>
             </ul>
-            <div id="logo">
-                <a id="portal-logo" title="Descrição do Portal Padrão" href="/assets/index.html">
-                    <span id="portal-title-1">Denominação do órgão</span>
 
-                    <h1 id="portal-title" class="corto">Nome principal</h1>
-                    <span id="portal-description">Subordinação</span>
-                </a>
-            </div>
-
-            <div id="portal-searchbox">
-
-                <form action="/busca">
-                    <fieldset class="LSBox">
-                        <legend class="hiddenStructure">Buscar no portal</legend>
-                        <label class="hiddenStructure" for="buscar">Buscar no portal</label>
-
-                        <input name="q" type="text" size="18" title="Buscar no portal"
-                               placeholder="Buscar no portal" class="searchField" id="buscar"/>
-                        <input class="searchButton" type="submit" value="Buscar no portal"/>
-                    </fieldset>
-                </form>
-
-            </div>
-
+            <div id="logo" th:replace="fragments2/logo :: #logo"></div>
+            <div id="portal-searchbox" th:replace="fragments2/busca :: #portal-searchbox"></div>
             <div id="social-icons" th:replace="fragments2/redes-sociais :: #social-icons"></div>
-
         </div>
+
         <div id="sobre">
             <ul>
                 <li id="portalservicos-perguntas-frequentes" class="portalservicos-item"><a
