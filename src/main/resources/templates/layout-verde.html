@@ -46,22 +46,7 @@
             <div id="social-icons" th:replace="fragments2/redes-sociais :: #social-icons"></div>
         </div>
 
-        <div id="sobre">
-            <ul>
-                <li id="portalservicos-perguntas-frequentes" class="portalservicos-item"><a
-                        href="/servicos/perguntas-frequentes" title="Perguntas frequentes">Perguntas frequentes</a></li>
-                <li id="portalservicos-contato" class="portalservicos-item"><a href="/servicos/contato" title="Contato">Contato</a>
-                </li>
-                <li id="portalservicos-acesso-a-sistemas" class="portalservicos-item"><a
-                        href="/servicos/acesso-a-sistemas" title="Serviços da [Denominação]">Serviços da
-                    [Denominação]</a></li>
-                <li id="portalservicos-dados-abertos" class="portalservicos-item"><a href="/servicos/dados-abertos"
-                                                                                     title="Dados abertos">Dados
-                    abertos</a></li>
-                <li id="portalservicos-area-de-imprensa" class="portalservicos-item last-item"><a
-                        href="/servicos/area-de-imprensa" title="Área de imprensa">Área de imprensa</a></li>
-            </ul>
-        </div>
+        <div id="sobre" th:replace="fragments2/barra-servicos :: #sobre"></div>
     </div>
 
     <!-- content -->
