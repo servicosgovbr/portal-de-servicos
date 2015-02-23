@@ -2128,58 +2128,6 @@ dl.portlet div.listingBar a:link {
     border-bottom: 0.1em solid #CCCCCC !important;
 }
 
-/* Paginação */
-#plone-content #content .paginacao {
-    display: block;
-    text-align: center;
-    margin: 72px 0 20px 0;
-    font-size: 11px;
-    font-weight: normal;
-    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
-}
-
-#plone-content #content .paginacao li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
-#plone-content #content .paginacao li a {
-    text-transform: uppercase;
-    min-width: 25px;
-    height: 25px;
-    border: 1px solid #c2c2c2;
-    border-radius: 3px;
-    display: block;
-    line-height: 25px;
-    color: #36424d;
-    margin: 0 4px;
-}
-
-#plone-content #content .paginacao li a:hover,
-#plone-content #content .paginacao li a:focus {
-    text-decoration: underline;
-}
-
-#plone-content #content .paginacao li a.anterior,
-#plone-content #content .paginacao li a.proximo {
-    border: none;
-    width: auto;
-    height: auto;
-    color: #2c66ce;
-}
-
-#plone-content #content .paginacao li a.anterior { margin-right: 26px; }
-#plone-content #content .paginacao li a.proximo { margin-left: 26px; }
-
-#plone-content #content .paginacao li span {
-    font-family: "open_sansbold", Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    width: 25px;
-    height: 25px;
-    display: block;
-}
-
 /*
  * Sprite de icones
  */
