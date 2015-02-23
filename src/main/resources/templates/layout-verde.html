@@ -16,11 +16,11 @@
     <div id="header" role="banner" th:replace="fragments2/header :: #header"></div>
     <div id="main" role="main">
         <div id="portal-columns" class="row">
-            <div id="viewlet-above-content" th:replace="fragments2/migalhas-de-pao :: #viewlet-above-content"></div>
-            <div id="navigation" th:replace="fragments2/coluna-de-menus :: #navigation"></div>
+            <div th:replace="fragments2/migalhas-de-pao :: #migalhas-de-pao"></div>
+            <div th:replace="fragments2/coluna-de-menus :: #navigation"></div>
             <div id="portal-column-content" class="cell width-3:4 position-1:4">
                 <a name="acontent" id="acontent"></a>
-                <div id="content" th:replace="fragments2/corpo :: #content"></div>
+                <div th:replace="fragments2/corpo :: #content"></div>
             </div>
         </div>
 
