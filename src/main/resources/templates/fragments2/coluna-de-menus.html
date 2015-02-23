@@ -1,0 +1,44 @@
+<div id="navigation">
+    <a name="anavigation" id="anavigation"></a>
+    <span class="menuTrigger">Menu</span>
+
+    <div id="portal-column-one" class="cell width-1:4 position-0">
+
+        <div class="portletWrapper first-item">
+            <dl class="portlet portletNavigationTree first-item-nav">
+                <dt class="portletHeader hiddenStructure">
+                    <span class="portletTopLeft"></span>
+                    Navegação
+                    <span class="portletTopRight"></span>
+                </dt>
+
+                <dd class="portletItem lastItem">
+                    <ul class="navTree navTreeLevel0">
+
+                        <li class="navTreeItem visualNoMarker section-nova-identidade-digital">
+                            <a href="/conteudos-de-marcacao/conheca-o-novo-modelo-da-identidade-digital-padrao-do-governo-federal"
+                               title="" class="state-published contenttype-link">
+                                <span>Conheça a identidade digital do governo</span>
+                            </a>
+                        </li>
+
+                        <li class="navTreeItem visualNoMarker section-manuais last-item">
+                            <a href="http://secom.gov.br/atuacao/comunicacao-digital/portal-institucional-padrao"
+                               title="" class="state-published contenttype-link">
+                                <span>Manuais</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <span class="portletBottomLeft"></span>
+                    <span class="portletBottomRight"></span>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="portletWrapper" th:replace="fragments2/editorias :: .portletWrapper"></div>
+        <div class="portletWrapper" th:replace="fragments2/acesso-a-informacao :: .portletWrapper"></div>
+        <div class="portletWrapper" th:replace="fragments2/centrais-de-conteudos :: .portletWrapper"></div>
+    </div>
+</div>
