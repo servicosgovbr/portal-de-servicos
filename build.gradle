@@ -76,6 +76,7 @@ idea {
     module {
         inheritOutputDirs = false
         outputDir = file("$buildDir/classes/main/")
+        excludeDirs += files(".git-crypt", ".vagrant", "data", "gradle")
     }
 
     project {
