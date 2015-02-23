@@ -42,23 +42,14 @@
 
     <div id="main" role="main">
         <div id="portal-features">
-
             <div id="featured-content"></div>
         </div>
-        <div id="plone-content">
 
-            <!-- Demo Plone Content -->
+        <div id="plone-content">
 
             <div id="portal-columns" class="row">
 
-                <div id="viewlet-above-content">
-                    <div id="portal-breadcrumbs">
-                        <span id="breadcrumbs-you-are-here">Você está aqui:</span>
-                        <span id="breadcrumbs-home">
-                            <a href="/assets/index.html">Página Inicial</a>
-                        </span>
-                    </div>
-                </div>
+                <div id="viewlet-above-content" th:replace="fragments2/migalhas-de-pao :: #viewlet-above-content"></div>
 
                 <!-- Column 1 -->
                 <div id="navigation">
