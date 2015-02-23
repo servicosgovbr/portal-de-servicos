@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-	<ShortName>Serviços de Governo Brasileiro</ShortName>
-	<Description>Procure serviços de governo.</Description>
-	<Tags>serviços governo</Tags>
-	<Contact>govbr@planejamento.gov.br</Contact>
-	<Url type="text/html"
-		template="http://gds-alpha.herokuapp.com/busca?q={searchTerms}"/>
-	<LongName>Busca de serviços</LongName>
-	<Image height="72" width="72" type="image/png">http://gds-alpha.herokuapp.com/img/touch_icon.png</Image>
-	<Developer>ThoughtWorks</Developer>
+    <ShortName>Guia de Serviços</ShortName>
+    <LongName>Guia de Serviços do Governo do Brasil</LongName>
+    <Description>Procure serviços do Governo do Brasil</Description>
+    <Tags>serviços governo</Tags>
+    <Contact>servicos@planejamento.gov.br</Contact>
+    <Url type="text/html" template="http://gds-alpha.herokuapp.com/busca?q={searchTerms}"/>
+    <Image height="72" width="72" type="image/png">http://gds-alpha.herokuapp.com/img/touch_icon.png</Image>
+    <Developer>Ministério do Planejamento, Orçamento e Gestão - MPOG</Developer>
 </OpenSearchDescription>
