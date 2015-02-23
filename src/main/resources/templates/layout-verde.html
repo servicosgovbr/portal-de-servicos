@@ -5,33 +5,21 @@
 <head>
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-
     <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">Guia de Serviços</title>
-
     <link rel="stylesheet" type="text/css" href="/assets/main.css" media="screen"/>
-
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
 </head>
 
 <body class="template-view portaltype-collective-cover-content">
-
 <div id="barra-brasil" th:replace="fragments2/barra-brasil :: #barra-brasil"></div>
-
 <div id="wrapper">
-
     <div id="header" role="banner" th:replace="fragments2/header :: #header"></div>
-
     <div id="main" role="main">
-
         <div id="portal-columns" class="row">
-
             <div id="viewlet-above-content" th:replace="fragments2/migalhas-de-pao :: #viewlet-above-content"></div>
-
             <div id="navigation" th:replace="fragments2/coluna-de-menus :: #navigation"></div>
-
             <div id="portal-column-content" class="cell width-3:4 position-1:4">
                 <a name="acontent" id="acontent"></a>
-
                 <div id="content" th:replace="fragments2/corpo :: #content"></div>
             </div>
         </div>
