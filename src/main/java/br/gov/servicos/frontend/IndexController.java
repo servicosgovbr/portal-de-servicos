@@ -37,7 +37,7 @@ class IndexController {
     @RequestMapping("/")
     ModelAndView index() {
         HashMap<String, Object> model = new HashMap<>();
-        model.put("acessos", sr.findAll(new PageRequest(0, 6, new Sort(Sort.Direction.DESC, "acessos"))).getContent());
+        model.put("acessos", sr.findAll(new PageRequest(0, 6, new Sort(Sort.Direction.DESC, "acessos"))));
         model.put("ativacoes", sr.findAll(new PageRequest(0, 6, new Sort(Sort.Direction.DESC, "ativacoes"))));
 
         model.put("areasDeInteresse", queryAgg("top-areas", "areasDeInteresse"));
