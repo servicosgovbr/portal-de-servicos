@@ -7,9 +7,9 @@
         <dd class="portletItem lastItem">
             <ul class="navTree navTreeLevel0">
 
-                <li class="navTreeItem" th:each="categoria : ${categorias}">
-                    <a th:href="@{/linha-da-vida?q={categoria}(categoria=${categoria.key})}">
-                        <span th:text="${categoria.key}">Título da categoria</span>
+                <li class="navTreeItem" th:each="linhaDaVida : ${@linhasDaVidaRepository.findAll()}">
+                    <a th:href="@{/linha-da-vida?q={linhaDaVida}(linhaDaVida=${linhaDaVida.titulo})}">
+                        <span th:text="${linhaDaVida.titulo}">Título da Linha da Vida</span>
                     </a>
                 </li>
 

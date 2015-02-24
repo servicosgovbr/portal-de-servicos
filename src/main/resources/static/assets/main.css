@@ -246,6 +246,10 @@
     width: 29%;
   }
 
+  div.width-8 {
+    width: 47.022%
+  }
+
   div.width-16 {
     width: 97.75%;
   }
@@ -256,6 +260,10 @@
 
   div.position-5 {
     margin-left: -67.625%;
+  }
+
+  div.position-8 {
+    margin-left: -47.022%;
   }
 
   div.position-10 {
@@ -1745,4 +1753,17 @@ body.contraste .busca-principal {
   border: 1px solid #7d7d7d;
   border-radius: 4px;
   font-weight: bold;
+}
+
+ul.detalhes-erro {
+  padding: 10px;
+  border: 1px dotted black;
+}
+
+ul.detalhes-erro > li {
+  display: block;
+}
+
+ul.detalhes-erro > li > span {
+  float: right;
 }
