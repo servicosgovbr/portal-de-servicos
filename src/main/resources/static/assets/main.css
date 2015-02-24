@@ -2487,3 +2487,6 @@ não for corrigido.
    Comentários
    ========================================================================== */
 
+h2.titulo-destaque {
+  font-weight: bold;
+}
