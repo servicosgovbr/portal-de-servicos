@@ -46,7 +46,7 @@ public class BuscaControllerTest {
                 .when(servicos)
                 .search(any(QueryBuilder.class));
 
-        controller = new BuscaController(servicos, buscas, buscador);
+        controller = new BuscaController(buscador);
     }
 
     @Test
@@ -94,4 +94,14 @@ public class BuscaControllerTest {
 
         assertCompareListModelAttribute(controller.eventosDasLinhasDaVida("Cooperativa"), "resultados", umServico);
     }
+
+    @Test
+    public void buscaPorOrgao() throws Exception {
+        doReturn(umServico)
+                .when(buscador)
+                .buscaSemelhante(of("Planejamento"), "prestado.nome", "responsavel.nome");
+
+        assertCompareListModelAttribute(controller.orgao("Planejamento"), "resultados", umServico);
+    }
+    
 }

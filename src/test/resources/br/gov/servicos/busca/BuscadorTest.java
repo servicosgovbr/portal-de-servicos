@@ -32,7 +32,7 @@ public class BuscadorTest {
     private Buscador buscador;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         servico = new Servico("1", "Um Serviço", "Uma descrição", null, null, null, null, null, null, null, null, null);
 
         doReturn(asList(servico))
@@ -43,28 +43,33 @@ public class BuscadorTest {
     }
 
     @Test
-    public void buscaPorServico() throws Exception {
+    public void buscaPorServico() {
         assertThat(buscador.busca(of("um serviço")), hasItem(servico));
     }
 
     @Test
-    public void buscaPorParteDoServico() throws Exception {
+    public void buscaPorParteDoServico() {
         assertThat(buscador.buscaPor("areaDeInteresse", of("qualquer interesse")), hasItem(servico));
     }
 
     @Test
-    public void quandoUmServicoEBuscadoOTermoUtilizadoESalvo() throws Exception {
+    public void buscaPorSemelhanca() {
+        assertThat(buscador.buscaSemelhante(of("qualquer interesse"), "campos.para", "buscar"), hasItem(servico));
+    }
+
+    @Test
+    public void quandoUmServicoEBuscadoOTermoUtilizadoESalvo() {
         doReturn(null)
                 .when(buscas)
                 .findOne("um serviço");
-        
+
         buscador.busca(of("um serviço"));
-        
+
         verify(buscas).save(new Busca("um serviço", 1, 1));
     }
-    
+
     @Test
-    public void quandoUmServicoEBuscadoOTermoUtilizadoEAtualizado() throws Exception {
+    public void quandoUmServicoEBuscadoOTermoUtilizadoEAtualizado() {
         doReturn(new Busca("um serviço", 1, 1))
                 .when(buscas)
                 .findOne("um serviço");
@@ -73,5 +78,4 @@ public class BuscadorTest {
 
         verify(buscas).save(new Busca("um serviço", 1, 2));
     }
-    
 }
