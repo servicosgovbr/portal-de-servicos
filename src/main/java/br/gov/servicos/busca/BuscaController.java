@@ -1,4 +1,4 @@
-package br.gov.servicos.frontend;
+package br.gov.servicos.busca;
 
 import br.gov.servicos.dominio.Busca;
 import br.gov.servicos.dominio.BuscaRepository;
@@ -23,7 +23,7 @@ class BuscaController {
     ServicoRepository sr;
 
     @Autowired
-    public BuscaController(ServicoRepository sr, BuscaRepository br) {
+    BuscaController(ServicoRepository sr, BuscaRepository br) {
         this.sr = sr;
         this.br = br;
     }
