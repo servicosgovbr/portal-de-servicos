@@ -19,9 +19,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.UUID;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 @Component
@@ -68,8 +68,10 @@ class Importador {
 
     private static String readSettings() throws IOException {
         ClassPathResource resource = new ClassPathResource(SETTINGS);
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()))) {
-            return br.lines().parallel().collect(Collectors.joining("\n"));
+        InputStreamReader reader = new InputStreamReader(resource.getInputStream());
+
+        try (BufferedReader br = new BufferedReader(reader)) {
+            return br.lines().collect(joining("\n"));
         }
     }
 
@@ -82,7 +84,9 @@ class Importador {
 
     private static DadosType unmarshallDadosLegados() throws IOException, JAXBException {
         URL xmlLegado = new ClassPathResource(XML_LEGADO).getURL();
-        return (DadosType) ((JAXBElement) unmarshaller().unmarshal(xmlLegado)).getValue();
+        JAXBElement element = (JAXBElement) unmarshaller().unmarshal(xmlLegado);
+
+        return (DadosType) element.getValue();
     }
 
     private static Unmarshaller unmarshaller() throws JAXBException {
