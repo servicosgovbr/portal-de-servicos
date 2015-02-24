@@ -29,7 +29,7 @@ import static java.util.stream.Collectors.toList;
         objectName = "ServicosGovBr:type=Importador",
         description = "Importa XML do Guia legado para o ElasticSearch"
 )
-class Importador {
+public class Importador {
 
     private static final String INDEX_NAME = "guia-de-servicos";
     private static final String XML_LEGADO = "guiadeservicos.xml";
