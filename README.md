@@ -1,7 +1,8 @@
 [![Status da construção](https://snap-ci.com/servicosgovbr/guia-de-servicos/branch/master/build_image)](https://snap-ci.com/servicosgovbr/guia-de-servicos/branch/master)
 [![Documentação](https://readthedocs.org/projects/guia-de-servicos/badge/)](http://guia-de-servicos.readthedocs.org/)
 [![Cobertura de Testes](https://coveralls.io/repos/servicosgovbr/guia-de-servicos/badge.svg?branch=master)](https://coveralls.io/r/servicosgovbr/guia-de-servicos?branch=master)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/servicosgovbr/guia-de-servicos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Nossas hipóteses](https://badge.waffle.io/servicosgovbr/guia-de-servicos.svg?label=in%20progress&title=Nossas%20hipóteses)](http://waffle.io/servicosgovbr/guia-de-servicos)
+[![Gitter](https://badges.gitter.im/Fale%20conosco.svg)](https://gitter.im/servicosgovbr/guia-de-servicos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Guia de Serviços
 ====
