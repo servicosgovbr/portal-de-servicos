@@ -1,0 +1,18 @@
+<div class="tile tile-default">
+    <div class="tile-content">
+        <a class="imag"
+           th:href="${link}"
+           th:title="${titulo}">
+            <img th:alt="${titulo}"
+                 th:src="${imagem}"
+                 width="230" height="136" class="left"/></a>
+
+        <h2 class="titulo-destaque">
+            <a th:href="${link}" th:title="${titulo}" th:text="${titulo}"></a>
+        </h2>
+
+        <p class="tile-description" th:text="${descricao}"></p>
+
+        <div class="visualClear"></div>
+    </div>
+</div>
