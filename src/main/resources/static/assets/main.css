@@ -80,10 +80,6 @@
 
 @media screen {
 
-  .state-published {
-    color: #436976 !important;
-  }
-
   body {
     font: 100% Arial, FreeSans, sans-serif;
     background: White;
@@ -1572,10 +1568,6 @@ body.contraste #barra-brasil .link-barra {
 body.contraste .lista-vertical {
   border: 1px solid #fff;
   background: #000 !important;
-}
-
-body.contraste .state-published {
-  color: #eee !important;
 }
 
 body.contraste .portlet-static-centrais-de-conteudos .portletHeader,
