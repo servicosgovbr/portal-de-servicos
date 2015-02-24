@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
     "descricao",
     "url"
 })
-public class InformacaoUtilType {
+class InformacaoUtilType {
 
     @XmlElement(required = true)
     protected TipoInformacaoUtilType tipoInformacaoUtil;

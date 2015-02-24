@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "eventolinhaDaVidaType", propOrder = {
     "titulo"
 })
-public class EventolinhaDaVidaType {
+class EventolinhaDaVidaType {
 
     @XmlElement(required = true)
     protected String titulo;

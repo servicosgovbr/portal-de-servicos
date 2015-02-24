@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "orgaoResponsavelType", propOrder = {
     "titulo"
 })
-public class OrgaoResponsavelType {
+class OrgaoResponsavelType {
 
     @XmlElement(required = true)
     protected String titulo;

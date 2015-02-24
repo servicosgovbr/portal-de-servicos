@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "linhasDaVivaType", propOrder = {
     "linhaDaVida"
 })
-public class LinhasDaVivaType {
+class LinhasDaVivaType {
 
     protected List<LinhaDaVidaType> linhaDaVida;
 

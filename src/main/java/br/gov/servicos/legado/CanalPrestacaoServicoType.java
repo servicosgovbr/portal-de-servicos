@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
     "descricao",
     "url"
 })
-public class CanalPrestacaoServicoType {
+class CanalPrestacaoServicoType {
 
     @XmlElement(required = true)
     protected TipoCanalPrestacaoServicoType tipoCanalPrestacaoServico;

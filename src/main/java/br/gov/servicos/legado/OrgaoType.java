@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
     "codigo",
     "nome"
 })
-public class OrgaoType {
+class OrgaoType {
 
     protected Integer codigo;
     @XmlElement(required = true)

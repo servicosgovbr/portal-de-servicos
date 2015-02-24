@@ -29,7 +29,7 @@ import javax.xml.namespace.QName;
  * 
  */
 @XmlRegistry
-public class ObjectFactory {
+class ObjectFactory {
 
     private final static QName _Dados_QNAME = new QName("", "dados");
     private final static QName _PublicosAlvoTypePublicoAlvo_QNAME = new QName("", "publicoAlvo");

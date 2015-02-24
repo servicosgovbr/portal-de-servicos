@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "areaType", propOrder = {
     "titulo"
 })
-public class AreaType {
+class AreaType {
 
     @XmlElement(required = true)
     protected String titulo;

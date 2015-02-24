@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
     "titulo",
     "eventoslinhaDaVida"
 })
-public class LinhaDaVidaType {
+class LinhaDaVidaType {
 
     @XmlElement(required = true)
     protected String titulo;

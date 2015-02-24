@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
     "ouvidorias",
     "portaisServico"
 })
-public class DadosType {
+class DadosType {
 
     @XmlElement(required = true)
     protected ServicosType servicos;

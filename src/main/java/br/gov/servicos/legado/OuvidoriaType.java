@@ -49,7 +49,7 @@ import javax.xml.bind.annotation.XmlType;
     "fax",
     "orgao"
 })
-public class OuvidoriaType {
+class OuvidoriaType {
 
     @XmlElement(required = true)
     protected String titulo;

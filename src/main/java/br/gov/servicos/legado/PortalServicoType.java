@@ -45,7 +45,7 @@ import javax.xml.bind.annotation.XmlType;
     "uf",
     "municipio"
 })
-public class PortalServicoType {
+class PortalServicoType {
 
     @XmlElement(required = true)
     protected String titulo;

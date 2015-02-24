@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "publicosAlvoType", propOrder = {
     "content"
 })
-public class PublicosAlvoType {
+class PublicosAlvoType {
 
     @XmlElementRef(name = "publicoAlvo", type = JAXBElement.class, required = false)
     @XmlMixed

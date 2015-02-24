@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "requisitosType", propOrder = {
     "requisito"
 })
-public class RequisitosType {
+class RequisitosType {
 
     protected RequisitoType requisito;
 

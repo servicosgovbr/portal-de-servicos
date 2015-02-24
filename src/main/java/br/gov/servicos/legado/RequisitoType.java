@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
     "titulo",
     "url"
 })
-public class RequisitoType {
+class RequisitoType {
 
     @XmlElement(required = true)
     protected String titulo;

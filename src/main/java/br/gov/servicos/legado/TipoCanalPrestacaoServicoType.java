@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "tipoCanalPrestacaoServicoType", propOrder = {
     "titulo"
 })
-public class TipoCanalPrestacaoServicoType {
+class TipoCanalPrestacaoServicoType {
 
     @XmlElement(required = true)
     protected String titulo;

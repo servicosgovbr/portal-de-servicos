@@ -92,7 +92,7 @@ import java.util.stream.Collectors;
     "errosAcesso",
     "quantidadeAcessosServico"
 })
-public class ServicoType {
+class ServicoType {
 
     public List<String> getAreasDeInteresse() {
         AreasInteresseType areasInteresseType = this.getAreasInteresse();

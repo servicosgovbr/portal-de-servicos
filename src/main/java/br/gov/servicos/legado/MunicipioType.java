@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "municipioType", propOrder = {
     "nome"
 })
-public class MunicipioType {
+class MunicipioType {
 
     @XmlElement(required = true)
     protected String nome;

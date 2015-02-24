@@ -1,6 +1,5 @@
 package br.gov.servicos.dominio;
 
-import br.gov.servicos.legado.ServicoType;
 import lombok.Value;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -8,7 +7,6 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.List;
-import java.util.UUID;
 
 import static org.elasticsearch.common.Strings.isEmpty;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
@@ -85,23 +83,6 @@ public class Servico {
         this.linhasDaVida = linhasDaVida;
         this.acessos = acessos;
         this.ativacoes = ativacoes;
-    }
-
-    public static Servico servicoLegadoToServico(ServicoType legado) {
-        return new Servico(
-                UUID.randomUUID().toString(),
-                legado.getTitulo(),
-                legado.getDescricao(),
-                legado.getUrl(),
-                legado.getTaxa(),
-                legado.getOrgaoPrestador2(),
-                legado.getOrgaoResponsavel2(),
-                legado.getAreasDeInteresse(),
-                legado.getLinhasDaVida(),
-                legado.getEventosDasLinhasDaVida(),
-                0L,
-                0L
-        );
     }
 
     public Servico withNovoAcesso() {

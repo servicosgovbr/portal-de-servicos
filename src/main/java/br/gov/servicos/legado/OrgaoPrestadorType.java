@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
     "endereco",
     "telefone"
 })
-public class OrgaoPrestadorType {
+class OrgaoPrestadorType {
 
     @XmlElement(required = true)
     protected String titulo;

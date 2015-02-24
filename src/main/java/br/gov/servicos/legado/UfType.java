@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
     "sigla",
     "nome"
 })
-public class UfType {
+class UfType {
 
     @XmlElement(required = true)
     protected String sigla;

@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "portaisServicoType", propOrder = {
     "portalServico"
 })
-public class PortaisServicoType {
+class PortaisServicoType {
 
     protected List<PortalServicoType> portalServico;
 

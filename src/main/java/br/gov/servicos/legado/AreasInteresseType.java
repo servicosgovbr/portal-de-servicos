@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "areasInteresseType", propOrder = {
     "area"
 })
-public class AreasInteresseType {
+class AreasInteresseType {
 
     protected List<AreaType> area;
 
