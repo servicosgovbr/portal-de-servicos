@@ -14,41 +14,47 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Function;
 
+import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
-import static org.elasticsearch.index.query.QueryBuilders.*;
+import static org.elasticsearch.index.query.QueryBuilders.fuzzyLikeThisQuery;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class BuscaController {
-    
+
     BuscaRepository br;
     ServicoRepository sr;
+    Buscador buscador;
 
     @Autowired
-    BuscaController(ServicoRepository sr, BuscaRepository br) {
+    BuscaController(ServicoRepository sr, BuscaRepository br, Buscador buscador) {
         this.sr = sr;
         this.br = br;
+        this.buscador = buscador;
     }
 
     @RequestMapping("/busca")
-    ModelAndView busca(@RequestParam(required = true) String q) {
-        return doSearch(q, queryString(q));
+    ModelAndView busca(@RequestParam(required = true) String termoBuscado) {
+        return buscaUtilizando(termoBuscado, buscador::busca);
     }
 
     @RequestMapping("/area-de-interesse")
-    ModelAndView areaDeInteresse(@RequestParam(required = true) String q) {
-        return doSearch(q, termQuery("areasDeInteresse", q));
+    ModelAndView areaDeInteresse(@RequestParam(required = true) String termoBuscado) {
+        return buscaUtilizando(termoBuscado, q -> buscador.buscaPor("areasDeInteresse", q));
     }
 
     @RequestMapping("/linha-da-vida")
-    ModelAndView linhaDaVida(@RequestParam(required = true) String q) {
-        return doSearch(q, termQuery("linhasDaVida", q));
+    ModelAndView linhaDaVida(@RequestParam(required = true) String termoBuscado) {
+        return buscaUtilizando(termoBuscado, q -> buscador.buscaPor("linhasDaVida", q));
     }
 
     @RequestMapping("/eventos-das-linhas-da-vida")
-    ModelAndView eventosDasLinhasDaVida(@RequestParam(required = true) String q) {
-        return doSearch(q, termQuery("eventosDasLinhasDaVida", q));
+    ModelAndView eventosDasLinhasDaVida(@RequestParam(required = true) String termoBuscado) {
+        return buscaUtilizando(termoBuscado, q -> buscador.buscaPor("eventosDasLinhasDaVida", q));
     }
 
     @RequestMapping("/orgao")
@@ -68,6 +74,16 @@ class BuscaController {
             busca = new Busca(q, Iterables.size(servicos), 0);
         }
         br.save(busca.withNovaAtivacao());
+
+        return new ModelAndView("resultados-busca", model);
+    }
+
+    private ModelAndView buscaUtilizando(String termoBuscado, Function<Optional<String>, List<Servico>> executaBusca) {
+        Optional<String> termo = ofNullable(termoBuscado);
+        
+        HashMap<String, Object> model = new HashMap<>();
+        model.put("termo", termoBuscado);
+        model.put("resultados", executaBusca.apply(termo));
 
         return new ModelAndView("resultados-busca", model);
     }
