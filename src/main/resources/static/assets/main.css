@@ -2270,7 +2270,7 @@ não for corrigido.
 
 .tile img.right {
   float: right;
-  margin: 0 1em .5em 0;
+  margin: 0 0 .5em 0;
 }
 
 .tile img.left {
