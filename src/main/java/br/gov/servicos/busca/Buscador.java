@@ -4,24 +4,26 @@ import br.gov.servicos.dominio.BuscaRepository;
 import br.gov.servicos.dominio.Servico;
 import br.gov.servicos.dominio.ServicoRepository;
 import lombok.experimental.FieldDefaults;
+import org.elasticsearch.common.collect.Lists;
 import org.elasticsearch.index.query.QueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 
-import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
-import static org.elasticsearch.common.collect.Lists.newLinkedList;
-import static org.elasticsearch.index.query.QueryBuilders.*;
+import static org.elasticsearch.index.query.QueryBuilders.fuzzyLikeThisQuery;
+import static org.elasticsearch.index.query.QueryBuilders.termQuery;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class Buscador {
 
-    private static final List<Servico> SEM_RESULTADOS = Collections.<Servico>emptyList();
+    private static final LinkedList<Servico> SEM_RESULTADOS = new LinkedList<>();
 
     ServicoRepository servicos;
     BuscaRepository buscas;
@@ -33,35 +35,35 @@ class Buscador {
     }
 
     List<Servico> busca(Optional<String> termoBuscado) {
-        return termoBuscado
-                .map(termo -> executaBusca(termo, queryString(termo)))
-                .orElse(SEM_RESULTADOS);
+        return executaQuery(termoBuscado, QueryBuilders::queryString);
     }
 
     List<Servico> buscaPor(String area, Optional<String> termoBuscado) {
-        return termoBuscado
-                .map(termo -> executaBusca(termo, termQuery(area, termo)))
-                .orElse(SEM_RESULTADOS);
-    }
-    
-    List<Servico> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
-        return termoBuscado
-                .map(termo -> executaBusca(termo, fuzzyLikeThisQuery(campos).likeText(termo)))
-                .orElse(SEM_RESULTADOS);
+        return executaQuery(termoBuscado, termo -> termQuery(area, termo));
     }
 
-    private List<Servico> executaBusca(String termoBuscado, QueryBuilder query) {
-        List<Servico> resultados = newLinkedList(servicos.search(query));
+    List<Servico> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
+        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery(campos).likeText(termo));
+    }
+
+    private List<Servico> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
+        LinkedList<Servico> resultados = termoBuscado
+                .map(criaQuery)
+                .map(servicos::search)
+                .map(Lists::newLinkedList)
+                .orElse(SEM_RESULTADOS);
+
         registraBuscaEfetuada(termoBuscado, resultados);
 
         return resultados;
     }
 
-    private void registraBuscaEfetuada(String termoBuscado, List<Servico> resultados) {
-        Busca busca = ofNullable(buscas.findOne(termoBuscado))
+    private void registraBuscaEfetuada(Optional<String> termoBuscado, LinkedList<Servico> resultados) {
+        Busca busca = termoBuscado
+                .map(buscas::findOne)
                 .map(Busca::withNovaAtivacao)
-                .orElseGet(() -> new Busca(termoBuscado, resultados.size(), 1));
-        
+                .orElseGet(() -> new Busca(termoBuscado.get(), resultados.size(), 1));
+
         buscas.save(busca);
     }
 
