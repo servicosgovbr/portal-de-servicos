@@ -1,4 +1,4 @@
-package br.gov.servicos.dominio;
+package br.gov.servicos.busca;
 
 import lombok.Value;
 import org.springframework.data.annotation.Id;

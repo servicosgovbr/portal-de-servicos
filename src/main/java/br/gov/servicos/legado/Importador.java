@@ -1,6 +1,6 @@
 package br.gov.servicos.legado;
 
-import br.gov.servicos.dominio.Busca;
+import br.gov.servicos.busca.Busca;
 import br.gov.servicos.dominio.Servico;
 import br.gov.servicos.dominio.ServicoRepository;
 import lombok.experimental.FieldDefaults;
