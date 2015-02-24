@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout-verde">
+
 <head>
-    <meta charset="UTF-8"/>
-    <title>Guia de Serviços</title>
-    <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/header.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/barra-brasil.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/busca.css"/>
+    <title>Bem-vindo!</title>
 </head>
-
 <body>
-<div th:replace="fragments/barra-brasil :: #barra-brasil"></div>
-<div th:replace="fragments/header :: #header"></div>
 
-<div id="wrapper">
-    <div id="main" role="main">
-        <div id="plone-content">
+<div layout:fragment="corpo">
+
+    <div class="row">
+        <div class="cell width-16 position-0">
+
             <h1>Resultados da busca por "<span th:text="${termo}">termo</span>"</h1>
 
             <ul id="resultados-busca">
@@ -26,27 +22,14 @@
                             Título
                         </a>
                     </h3>
+
                     <p th:text="${resultado.descricao}">Descrição</p>
                 </li>
             </ul>
+
         </div>
-
-        <div class="clear"></div>
-
-        <div id="voltar-topo">
-            <a href="#wrapper">Voltar para o topo</a>
-        </div>
-
     </div>
-
-    <div class="aside">
-        <div th:replace="fragments/barra-busca :: .caixa"/>
-    </div>
-
 </div>
 
-<div th:replace="fragments/barra-brasil :: script"></div>
-<div th:replace="fragments/barra-brasil :: footer"></div>
 </body>
-
 </html>
