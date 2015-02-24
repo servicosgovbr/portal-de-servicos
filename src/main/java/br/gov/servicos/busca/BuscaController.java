@@ -4,6 +4,7 @@ import br.gov.servicos.dominio.Busca;
 import br.gov.servicos.dominio.BuscaRepository;
 import br.gov.servicos.dominio.Servico;
 import br.gov.servicos.dominio.ServicoRepository;
+import lombok.experimental.FieldDefaults;
 import org.elasticsearch.common.collect.Iterables;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 
+import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 @Controller
+@FieldDefaults(level = PRIVATE, makeFinal = true)
 class BuscaController {
-
+    
     BuscaRepository br;
     ServicoRepository sr;
 
@@ -62,7 +65,7 @@ class BuscaController {
 
         Busca busca = br.findOne(q);
         if (busca == null) {
-            busca = new Busca(q, (long) Iterables.size(servicos), 0L);
+            busca = new Busca(q, Iterables.size(servicos), 0);
         }
         br.save(busca.withNovaAtivacao());
 

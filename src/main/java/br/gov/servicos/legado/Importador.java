@@ -3,6 +3,7 @@ package br.gov.servicos.legado;
 import br.gov.servicos.dominio.Busca;
 import br.gov.servicos.dominio.Servico;
 import br.gov.servicos.dominio.ServicoRepository;
+import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
@@ -23,8 +24,10 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
+import static lombok.AccessLevel.PRIVATE;
 
 @Component
+@FieldDefaults(level = PRIVATE, makeFinal = true)
 @ManagedResource(
         objectName = "ServicosGovBr:type=Importador",
         description = "Importa XML do Guia legado para o ElasticSearch"
@@ -35,8 +38,8 @@ public class Importador {
     private static final String XML_LEGADO = "guiadeservicos.xml";
     private static final String SETTINGS = "/elasticsearch/settings.json";
 
-    private final ElasticsearchTemplate es;
-    private final ServicoRepository servicos;
+    ElasticsearchTemplate es;
+    ServicoRepository servicos;
 
     @Autowired
     Importador(ElasticsearchTemplate es, ServicoRepository servicos) {

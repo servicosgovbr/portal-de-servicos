@@ -84,7 +84,7 @@ public class BuscaControllerTest {
                 .findOne("trabalho");
 
         assertModelAttributeValue(controller.busca("trabalho"), "termo", "trabalho");
-        verify(buscas).save(new Busca("trabalho", 2L, 1L));
+        verify(buscas).save(new Busca("trabalho", 2, 1));
     }
 
     @Test
@@ -95,12 +95,12 @@ public class BuscaControllerTest {
                 .when(servicos)
                 .search(any(QueryBuilder.class));
 
-        doReturn(new Busca("trabalho", 2L, 1L))
+        doReturn(new Busca("trabalho", 2, 1))
                 .when(buscas)
                 .findOne("trabalho");
 
         assertModelAttributeValue(controller.busca("trabalho"), "termo", "trabalho");
-        verify(buscas).save(new Busca("trabalho", 2L, 2L));
+        verify(buscas).save(new Busca("trabalho", 2, 2));
     }
 
 }
