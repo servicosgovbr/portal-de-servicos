@@ -1,4 +1,4 @@
-<div id="portal-searchbox">
+<div id="portal-searchbox" th:if="${#httpServletRequest.requestURI} != '/tema'">
     <form action="/busca">
         <fieldset class="LSBox">
             <legend class="hiddenStructure">Buscar</legend>
