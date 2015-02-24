@@ -41,7 +41,7 @@ public class IndexControllerTest {
     @Test
     public void retornaMetricasDeAcessoNoModel() throws Exception {
         Page page = mock(Page.class);
-        given(sr.findAll(new PageRequest(0, 5, new Sort(Sort.Direction.DESC, "acessos")))).willReturn(page);
+        given(sr.findAll(new PageRequest(0, 6, new Sort(Sort.Direction.DESC, "acessos")))).willReturn(page);
         Page<Servico> actual = (Page<Servico>) controller.index().getModel().get("acessos");
         assertThat(actual, is(page));
     }
@@ -49,7 +49,7 @@ public class IndexControllerTest {
     @Test
     public void retornaMetricasDeAtivacaoNoModel() throws Exception {
         Page page = mock(Page.class);
-        given(sr.findAll(new PageRequest(0, 5, new Sort(Sort.Direction.DESC, "ativacoes")))).willReturn(page);
+        given(sr.findAll(new PageRequest(0, 6, new Sort(Sort.Direction.DESC, "ativacoes")))).willReturn(page);
         Page<Servico> actual = (Page<Servico>) controller.index().getModel().get("ativacoes");
         assertThat(actual, is(page));
     }

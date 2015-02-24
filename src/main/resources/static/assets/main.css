@@ -1728,6 +1728,10 @@ h2.titulo-destaque {
   font-weight: bold;
 }
 
+body.contraste .busca-principal {
+  background-color: black;
+}
+
 .busca-principal > form > input[type="text"] {
   width: 98%;
   display: block;
