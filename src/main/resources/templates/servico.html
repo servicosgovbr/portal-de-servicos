@@ -4,7 +4,7 @@
       layout:decorator="layout-verde">
 
 <head>
-    <title>Bem-vindo!</title>
+    <title th:text="${servico.titulo}">Nome do Serviço</title>
 </head>
 <body>
 
@@ -34,7 +34,6 @@
                     (61) 5555-1234
                 </span>
             </div>
-
 
             <div class="orgao-responsavel">
                 <a th:if="${not #strings.isEmpty(servico.prestador.nome)}"
