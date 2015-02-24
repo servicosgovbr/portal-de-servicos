@@ -462,10 +462,6 @@ dl.portlet a:hover {
   color: #000 !important;
 }
 
-a:focus {
-  outline: 2px solid #f1ca7f;
-}
-
 a:hover,
 a:active {
   outline: none;
