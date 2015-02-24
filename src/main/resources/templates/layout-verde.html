@@ -11,9 +11,9 @@
 </head>
 
 <body class="template-view portaltype-collective-cover-content">
-<div id="barra-brasil" th:replace="fragments2/barra-brasil :: #barra-brasil"></div>
+<div th:replace="fragments2/barra-brasil :: #barra-brasil"></div>
 <div id="wrapper">
-    <div id="header" role="banner" th:replace="fragments2/header :: #header"></div>
+    <div th:replace="fragments2/header :: #header"></div>
     <div id="main" role="main">
         <div id="portal-columns" class="row">
             <div th:replace="fragments2/migalhas-de-pao :: #migalhas-de-pao"></div>
@@ -23,18 +23,12 @@
                 <div th:replace="fragments2/corpo :: #content"></div>
             </div>
         </div>
-
         <div class="clear"></div>
-
         <div id="voltar-topo">
             <a href="#wrapper">Voltar para o topo</a>
         </div>
-
     </div>
-
-    <!-- Footer -->
-    <div id="footer" role="contentinfo" th:replace="fragments2/rodape :: #footer"></div>
-
+    <div th:replace="fragments2/rodape :: #footer"></div>
 </div>
 <div id="ajax-spinner" style="display: none;"><img src="/assets/spinner.gif" width="16" height="16" alt=""/></div>
 <script type="text/javascript" src="/assets/jquery.min.js"></script>
