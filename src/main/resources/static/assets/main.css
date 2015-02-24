@@ -1,17 +1,4 @@
-/*** uncss> filename: http://localhost:8080/assets/reset.css ***/
-
-/* - reset.css - */
-
 @media screen {
-  /* @group CSS Reset */
-
-  /* Remove implicit browser styles to have a neutral starting point:
-   - No elements should have implicit margin/padding
-   - No underline by default on links (we add it explicitly in the body text)
-   - When we want markers on lists, we will be explicit about it, and they render inline by default
-   - Browsers are inconsistent about hX/pre/code, reset
-   - Linked images should not have borders
-   */
 
   * {
     margin: 0;
@@ -50,76 +37,15 @@
   img {
     vertical-align: text-bottom;
   }
-
-  /* @end */
 }
 
-/*** uncss> filename: http://localhost:8080/assets/base.css ***/
-
-/* - base.css - */
-
 @media screen {
-  /* @group Content Area */
-
-  /* Content list styles */
 
   dl.portlet li {
     margin-bottom: .25em;
     line-height: 1.5em;
     display: list-item;
   }
-
-  /* Editor styles */
-
-  /* Content layout styles */
-
-  /* @end */
-
-  /* @group Data tables */
-
-  /* Vertical table data listings */
-
-  /* Grid table listings */
-
-  /* @end */
-
-  /* @group Status messages */
-
-  /* Additional specificity for when status is shown inside #content */
-
-  /* @end */
-
-  /* for highlighting of search terms */
-
-  /* for greying out inherited roles */
-
-  /* for highlighting current items, like the language or today in the calendar */
-
-  /* @end */
-
-  /* @group Search results page */
-
-  /* @end */
-
-  /* @group Image alignment classes */
-
-  /* @end */
-
-  /* @group Table of Contents */
-
-  /*Table of Contents styling - essentially a portlet with smaller fonts and aligned right + limited in width*/
-
-  /* @end */
-
-  /* @group Sitemap */
-
-  /* @end */
-
-  /* @group Album view classes */
-
-  /* @end */
-
-  /* @group Invisibles */
 
   .hiddenStructure {
     display: block;
@@ -134,73 +60,9 @@
     width: 1px;
   }
 
-  /* ensures hidden elements don't take up space */
-
-  /* .ie6 is set on <html> by Modernizr library */
-
   .visualClear {
     clear: both;
   }
-
-  /* @end */
-
-  /* @group Accessibility elements, applied by JS */
-
-  /* @end */
-
-  /* @group Overlay windows */
-
-  /* styling for overlays (popups) */
-
-  /* default close button positioned on upper-left corner */
-
-  /* Hide form elements that don't make sense within an overlay. */
-
-  /* lets play nice with paragraphs, links, tabbed pages in overlay e.g. when plone.openid is installed */
-
-  /* @end */
-
-  /* @group Content History */
-
-  /* @end */
-
-  /* @group Core content type sprites */
-
-  /* Generated using http://spritegen.website-performance.org, with the following
-   parameters:
-   - Build direction: Vertical
-   - Horizontal offset: (doesn't matter, but can't be 0)
-   - Vertical offset: 200px
-   - Compress image with OptiPNG: yes
-   - Class prefix: contenttype-
-   - Display width and height: no
-  Then, add 4 px to the background-position to line up the icons to text.
-
-.contenttype-document_icon { background-position: 0 0;  }
-.contenttype-event_icon { background-position: 0 -216px;  }
-.contenttype-file_icon { background-position: 0 -432px;  }
-.contenttype-folder_icon { background-position: 0 -648px;  }
-.contenttype-image_icon { background-position: 0 -864px;  }
-.contenttype-link_icon { background-position: 0 -1080px;  }
-.contenttype-newsitem_icon { background-position: 0 -1296px;  }
-.contenttype-site_icon { background-position: 0 -1512px;  }
-.contenttype-topic_icon { background-position: 0 -1728px;  }
-
-*/
-
-  /* These should only appear in the add menu */
-
-  /* @end */
-
-  /* @group jQuery Tag multiple selector */
-
-  /* IE7: fixes super-wide div for JavaScript Tag selector */
-
-  /* .ie7 is set on <html> by Modernizr library */
-
-  /* IE7: fixes super-wide div for JavaScript Tag selector */
-
-  /* .ie7 is set on <html> by Modernizr library */
 
   #ajax-spinner {
     display: none;
@@ -214,37 +76,18 @@
     margin-left: -10px;
   }
 
-  /* @end */
 }
 
-/*** uncss> filename: http://localhost:8080/assets/public.css ***/
-
-/* - public.css - */
-
 @media screen {
-  /* @override
-    http://localhost:8080/4/portal_css/Sunburst%20Theme/public.css
-    http://localhost:8080/sprites/portal_css/Sunburst%20Theme/public.css
-*/
-
-  /* +++++++++++++++++++++++++++++++
- * SUNBURST DESIGN-SPECIFIC STYLES
- * +++++++++++++++++++++++++++++++
- */
-
-  /* workflow state color "published". Other definitions in member.css */
 
   .state-published {
     color: #436976 !important;
   }
 
-  /* @group Basics */
-
   body {
     font: 100% Arial, FreeSans, sans-serif;
     background: White;
     color: Black;
-    /* width: 58em; margin: 1em auto; */
   }
 
   h1,
@@ -283,8 +126,6 @@
     border-bottom: none !important;
   }
 
-
-
   a:link,
   a:visited {
     color: #205c90;
@@ -302,18 +143,10 @@
     font-family: 'Lucida Grande', Arial, FreeSans;
   }
 
-  /* @end */
-
-  /* @group Navigation/search */
-
   #portal-logo {
     display: inline-block;
     margin: 1.375em 0;
   }
-
-  /* removes extra space above logo in IE6 and IE7 */
-
-  /* .ie6 and .ie7 is set on <html> by Modernizr library */
 
   #portal-searchbox {
     float: right;
@@ -331,18 +164,9 @@
     font-weight: normal;
   }
 
-
-
   input.searchField {
-    /*  -webkit-appearance: searchfield;*/
     -moz-appearance: searchfield;
   }
-
-  /* Collapsible elements in search_form */
-
-  /* @end */
-
-  /* @group Path indicator (breadcrumbs) */
 
   #portal-breadcrumbs {
     font-size: 80%;
@@ -354,10 +178,6 @@
     border-bottom: none;
     display: inline-block;
   }
-
-  /* @end */
-
-  /* @group Site actions */
 
   #portal-siteactions {
     font-size: 85%;
@@ -374,22 +194,12 @@
     color: #75ad0a;
   }
 
-  /* @end */
-
-  /* @group Listings */
-
-  /* @end */
-
-  /* @group Content Area */
-
   #content {
     line-height: 1.5em;
     clear: both;
     font-size: 80%;
     margin: 1em .25em 2em .25em;
   }
-
-  /* Special case of #content - TinyMCE */
 
   #content h1 {
     margin-top: .5em;
@@ -415,43 +225,13 @@
   #content a:hover,
   dl.portlet a:hover {
     color: #75ad0a !important;
-    /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
   }
 
   #content a:target {
     background-color: #ffb;
   }
 
-  /* For event view template, changed headerless table to headings and divs,
- * for better accessibility.  */
-
-  /* @end */
-
-  /* @group Image alignment classes */
-
-  /*note: the tricky thing here is that image-inline|image-left|image-right
-can both be on an image and a wrapper element e.g. a dl tag*/
-
-  /* @end */
-
-  /* @group Footer */
-
-  /* @end */
-}
-
-/*** uncss> filename: http://localhost:8080/assets/columns.css ***/
-
-/* - columns.css - */
-
 @media screen {
-  /* The 16-column Deco Grid System.
- * For the 12-column variant, see decogrids-12.css.
- *
- * Cells are 4% width, 1.125% left/right margin.
- *
- * If page width is fixed to 960px width:
- * Cell will be equivalent to 40px, left/right margin will be 10px.
- */
 
   div.row {
     float: left;
@@ -466,13 +246,6 @@ can both be on an image and a wrapper element e.g. a dl tag*/
     left: 100%;
   }
 
-  /* IE8: keeps livesearch from falling behind content area,
-   and display menu from falling behind footer
-   Keeping float for IE7, so the portlets don't fall */
-
-  /* Width classes.
-   For a given cell width, the calculation is: width: (6.25*n - 2.25)% */
-
   div.width-5 {
     width: 29%;
   }
@@ -480,11 +253,6 @@ can both be on an image and a wrapper element e.g. a dl tag*/
   div.width-16 {
     width: 97.75%;
   }
-
-  /* Positioning classes, these are subtracting from a rightmost
-   position, which is why they seem the wrong way around */
-
-  /* For a given position, the calculation is margin-left: -100 + (6.25*n) + 1.125 */
 
   div.position-0 {
     margin-left: -98.875%;
@@ -498,53 +266,20 @@ can both be on an image and a wrapper element e.g. a dl tag*/
     margin-left: -36.375%;
   }
 
-  /* End of the core Deco Grid System */
-
-  /* Convenience classes — ¼, ½, ¾ widths and ¼, ½, ¾ positions.
-   Not strictly necessary. */
-
-  /* .width-1:2 */
-
   div.width-1\3a 4 {
     width: 22.75%;
   }
-
-  /* .width-1:4 */
 
   div.width-3\3a 4 {
     width: 72.75%;
   }
 
-  /* .width-3:4 */
-
   div.position-1\3a 4 {
     margin-left: -73.875%;
   }
-
-  /* .position-1:4 */
-
-  /* .position-1:2 */
-
-  /* .position-3:4 */
-
-  /* Special classes for ⅓, ⅔ widths and ⅓, ⅔ positions.
-These do not strictly conform to the grid, but are useful for certain layouts. */
-
-  /* .width-1:3 */
-
-  /* .width-2:3 */
-
-  /* .position-1:3 */
-
-  /* .position-2:3 */
 }
 
-/*** uncss> filename: http://localhost:8080/assets/portlets.css ***/
-
-/* - portlets.css - */
-
 @media screen {
-  /* @group Portlets */
 
   dl.portlet {
     margin: 0 0 1em;
@@ -565,17 +300,11 @@ These do not strictly conform to the grid, but are useful for certain layouts. *
     padding: 1em;
   }
 
-  /* @end */
-
-  /* @group Navigation portlet */
-
   dl.portlet ul.navTree li a {
     border: none;
     display: block;
     zoom: 1;
   }
-
-
 
   dl.portletNavigationTree dd.portletItem {
     padding: 0;
@@ -586,20 +315,9 @@ These do not strictly conform to the grid, but are useful for certain layouts. *
     border-bottom: .1em dotted #ddd;
     line-height: 2em;
   }
-
-  /* @end */
-
-  /* @group Calendar portlet */
-
-  /* @end */
 }
 
-/*** uncss> filename: http://localhost:8080/assets/forms.css ***/
-
-/* - forms.css - */
-
 @media screen {
-  /* @group Forms */
 
   fieldset {
     line-height: 1.5em;
@@ -608,10 +326,6 @@ These do not strictly conform to the grid, but are useful for certain layouts. *
     width: auto;
   }
 
-  /* Emulates the styling from the h1 tag */
-
-  /* Emulates styling from the description's view */
-
   input[type='text']:focus {
     background-color: #ffffe0;
   }
@@ -619,15 +333,7 @@ These do not strictly conform to the grid, but are useful for certain layouts. *
   label {
     font-weight: bold;
   }
-
-  /* @group Login form */
-
-  /* @end */
-
-  /* @end */
 }
-
-/*** uncss> filename: http://localhost:8080/assets/doormat.css ***/
 
 #doormat-container {
   background: none repeat scroll 0 0 #ddd;
@@ -650,39 +356,9 @@ These do not strictly conform to the grid, but are useful for certain layouts. *
   margin: 0 1em;
 }
 
-/* Make all columns equally wide */
-
 #doormat-container.columns-4 .doormatColumn {
   width: 23%;
 }
-
-/*** uncss> filename: http://localhost:8080/assets/main.css ***/
-
-/*
- *
- * CSS com estilos genéricos para todos os temas
- *
- * @Autores
- *
- * - Simples Consultoria - www.simplesconsultoria.com.br
- * - DESERTO Digital - www.desertodigital.com.br
- * - Serpro - www.serpro.gov.br
- *
- * @Referencias
- *
- * Lista de padrões, convenções e boas praticas CSS que devem ser seguidas.
- * https://github.com/necolas/idiomatic-css/tree/master/translations/pt-BR
- *
- * Plugins para ordenar os atributos de CSS.
- * http://csscomb.com/
- *
- * Validador de CSS do W3C.
- * http://jigsaw.w3.org/css-validator/
- */
-
-/* ==========================================================================
-   Font-face local para fonte "Open Sans"
-   ========================================================================== */
 
 @font-face {
   font-weight: normal;
@@ -739,23 +415,12 @@ These do not strictly conform to the grid, but are useful for certain layouts. *
   url('/fonts/opensans-800-webfont.svg#open_sansextrabold') format('svg');
 }
 
-/* ==========================================================================
-   Reset
-   ========================================================================== */
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   vertical-align: baseline;
 }
-
-/* ==========================================================================
-   Estilos básicos
-   ========================================================================== */
-
-/* Cores e fontes
-   ========================================================================== */
 
 body {
   background-color: #fff;
@@ -797,8 +462,6 @@ a:focus {
   outline: 2px solid #f1ca7f;
 }
 
-/* bug fix on click in firefox */
-
 a:hover,
 a:active {
   outline: none;
@@ -831,10 +494,6 @@ p {
   line-height: 1.8em;
 }
 
-/* ==========================================================================
-   Estrutura principal
-   ========================================================================== */
-
 #wrapper {
   margin: 0 auto;
   width: 100%;
@@ -849,15 +508,10 @@ p {
   font-size: 1.3em;
 }
 
-/* Tamanho das colunas */
-
 #portal-column-one {
   margin-left: -100%;
   width: 15.625%;
 }
-
-/* Grids
-   ========================================================================== */
 
 div.width-3\3a 4 {
   width: 79.75%;
@@ -887,19 +541,12 @@ div.position-10 {
   margin-left: -30.042%;
 }
 
-/* ==========================================================================
-   Cabeçalho do portal
-   ========================================================================== */
-
 #header > div {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
   max-width: 960px;
 }
-
-/* Menu de Acessibilidade
-   ========================================================================== */
 
 #accessibility {
   display: block !important;
@@ -916,9 +563,6 @@ div.position-10 {
 #accessibility span {
   padding: 0 4px;
 }
-
-/* Titulo do portal
-   ========================================================================== */
 
 #logo {
   float: left;
@@ -958,14 +602,6 @@ div.position-10 {
   font-size: 1.2em;
 }
 
-/* Personal Tools - Menu de administração */
-
-/* Menu de idioma
-   ========================================================================== */
-
-/* Menu site actions - Acessibilidade, Alto Contraste, Mapa do site
-   ========================================================================== */
-
 #portal-siteactions {
   display: block;
   float: right;
@@ -991,9 +627,6 @@ div.position-10 {
 #portal-siteactions .last-item {
   margin-right: 0;
 }
-
-/* Links de redes sociais
-   ========================================================================== */
 
 #social-icons {
   float: right;
@@ -1065,9 +698,6 @@ div.position-10 {
   background-position: 96px -49px;
 }
 
-/* Menu sobre o portal
-   ========================================================================== */
-
 #sobre {
   clear: both;
   margin: 0;
@@ -1090,9 +720,6 @@ div.position-10 {
   padding: 0 0 0 10px;
   border-right: none !important;
 }
-
-/* Formulário de busca
-   ========================================================================== */
 
 .LSBox {
   margin: 0;
@@ -1139,13 +766,6 @@ input.searchField {
   padding-right: 5px;
 }
 
-/* ==========================================================================
-   Conteúdo
-   ========================================================================== */
-
-/* Breadcrumb
-   ========================================================================== */
-
 #portal-breadcrumbs span#breadcrumbs-you-are-here {
   color: #000;
   margin-right: .5em;
@@ -1179,14 +799,6 @@ input.searchField {
   margin: 0;
 }
 
-/* ==========================================================================
-   NITF
-   ========================================================================== */
-
-/* ==========================================================================
-   Estilos de texto
-   ========================================================================== */
-
 .clear {
   clear: both;
 }
@@ -1197,28 +809,6 @@ input.searchField {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-
-/* correção dos tamanhos quando 4 colunas */
-
-/* tabela */
-
-/* lista */
-
-/* ==========================================================================
-   Itens relacionados
-   ========================================================================== */
-
-/* ==========================================================================
-   VCGE - TAGS
-   ========================================================================== */
-
-/* tags e assuntos */
-
-/* embedder fix */
-
-/* ==========================================================================
-   Portles
-   ========================================================================== */
 
 dl.portlet {
   margin-bottom: 0;
@@ -1243,17 +833,6 @@ dl.portlet dt {
   text-transform: uppercase;
 }
 
-/* Portlet de login
-   ========================================================================== */
-
-/* Portlet com data
-   ========================================================================== */
-
-/* Portlet de eventos */
-
-/* Portlet de navegação
-   ========================================================================== */
-
 .portlet-static-centrais-de-conteudos .portletHeader,
 .portletNavigationTree .portletHeader {
   margin: 0;
@@ -1261,7 +840,6 @@ dl.portlet dt {
   border-bottom: none;
   background: #edeff1;
   text-transform: uppercase;
-  /* reseta font-weight: bold do public.css */
   font-weight: normal;
   font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
 }
@@ -1297,18 +875,6 @@ dl.portlet ul.navTreeLevel0 > .last-item {
   border-bottom: 1px solid #dfdfdf;
 }
 
-/*
- * Backgound colors
- */
-
-/*
- * Apenas para o primeiro menu
- */
-
-/*
- * Deslocamento dos itens
- */
-
 dl.portlet ul.navTree li a {
   padding: .55em 1.043em !important;
   line-height: 1.3em !important;
@@ -1318,9 +884,6 @@ dl.portlet ul.navTree li a {
   max-width: 100%;
   height: auto;
 }
-
-/* Portlet de Centrais de Conteúdos
-   ========================================================================== */
 
 .portlet-static-centrais-de-conteudos .portletItem {
   padding: 0 !important;
@@ -1348,9 +911,6 @@ dl.portlet ul.navTree li a {
   line-height: 40px;
 }
 
-/* Icones da Central de conteudo
-   ========================================================================== */
-
 .item-central .link-videos {
   background-position: 0 -156px;
 }
@@ -1375,36 +935,16 @@ dl.portlet ul.navTree li a {
   background-position: -1px -350px;
 }
 
-/* Portlet de Lista
-   ========================================================================== */
-
 dl.portlet li {
   margin-bottom: .25em;
   list-style: square outside;
   line-height: 1.5em !important;
 }
 
-/* Menu em destaque
-   ========================================================================== */
-
-/*
- * Ajuste Banner Lançamento
- */
-
-/* Portlet de politicas
-   ========================================================================== */
-
-/* ==========================================================================
-   Collective Cover
-   ========================================================================== */
-
 .portaltype-collective-cover-content #content .row {
   margin: 0;
   padding: 0;
 }
-
-/* Tiles
-   ========================================================================== */
 
 .tile {
   clear: both;
@@ -1447,12 +987,6 @@ dl.portlet li {
   margin: 0;
 }
 
-/* Tile Basic
-   ========================================================================== */
-
-/* Tile Basic News Article (nitf)
-   ========================================================================== */
-
 .cover-collection-tile .tile-header span {
   display: block;
   margin-bottom: .5em;
@@ -1460,12 +994,6 @@ dl.portlet li {
   font-weight: normal;
   font-family: open_sansbold, Arial, Helvetica, sans-serif;
 }
-
-/* Lista horizontal
-   ========================================================================== */
-
-/* Lista vertical - Tile List e Tile Collection
-   ========================================================================== */
 
 .lista-vertical {
   border: 1px solid #c0c1c3;
@@ -1522,10 +1050,6 @@ dl.portlet li {
   line-height: 1em;
 }
 
-/* Cores Section */
-
-/* destaques com borda cinza*/
-
 .tile p {
   color: #172938;
   font-size: 1.15em;
@@ -1542,8 +1066,6 @@ dl.portlet li {
   float: right;
   margin: 0 0 10px 10px;
 }
-
-/* Collection tile */
 
 .collection-item h3 {
   margin-bottom: .5em;
@@ -1563,11 +1085,6 @@ dl.portlet li {
 .cover-collection-tile .tile-footer a {
   font-size: .9em;
 }
-
-/* List tile */
-
-/* Tile header
-   ========================================================================== */
 
 #content .outstanding-header h2 {
   font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
@@ -1610,42 +1127,6 @@ dl.portlet li {
   line-height: 1.2em;
 }
 
-/* Paleta de cores - cor-editoria
-   ========================================================================== */
-
-/* Laranja - Cidadania e Justiça
-   ========================================================================== */
-
-/* Azul Petroleo - Defesa e Segurança
-   ========================================================================== */
-
-/* Dourado - Cultura
-   ========================================================================== */
-
-/* Roxo - Ciencia e Tecnologia
-   ========================================================================== */
-
-/* Marron Claro - Economia e Emprego
-   ========================================================================== */
-
-/* Verde Escuro - Educação
-   ========================================================================== */
-
-/* Verde - Esporte
-   ========================================================================== */
-
-/* Azul Governo
-   ========================================================================== */
-
-/* Marron - Infraestrutura
-   ========================================================================== */
-
-/* Verde Claro - Meio Ambiente
-   ========================================================================== */
-
-/* Azul Claro - Saúde
-   ========================================================================== */
-
 .azul-claro .outstanding-header {
   min-height: 40px;
   border-top: 2px solid #3867b7;
@@ -1662,44 +1143,6 @@ dl.portlet li {
 .azul-claro .outstanding-header .outstanding-link {
   background: url('/img/seta_azul-claro.png') no-repeat scroll right 5px transparent;
 }
-
-/* Azul Escuro - Turismo
-   ========================================================================== */
-
-/* Azul Piscinba - Turismo
-   ========================================================================== */
-
-/* Bege
-   ========================================================================== */
-
-/* Amarelo - Economia e Emprego
-   ========================================================================== */
-
-/* fio separador */
-
-/* ==========================================================================
-   Collections
-   ========================================================================== */
-
-/*
- * Sprite de icones
- */
-
-/* ==========================================================================
-   Resultado da busca
-   ========================================================================== */
-
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-
-/*
- * Formulário de contato
- */
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
 
 #wrapper #footer {
   padding: 20px 0;
@@ -1724,9 +1167,6 @@ dl.portlet li {
   color: #777;
   font-size: .9em;
 }
-
-/* Doormat
-   ========================================================================== */
 
 #doormat-container {
   float: none;
@@ -1759,63 +1199,9 @@ dl.portlet li {
   width: 22%;
 }
 
-/*
- * Social Like
- */
-
-/* correção de espaçamento dos icones de tiles na aba layout */
-
-/* Correção no tamanho de itens relacionados (tela de gestão) */
-
-/* altura para visualizar botoes do social like */
-
-/* ==========================================================================
-   Especificação de estilos para Páginas
-   ========================================================================== */
-
-/* Legenda de Imagem alinhada à esquerda */
-
-/* ==========================================================================
-   Especificação de estilos para NITF
-   ========================================================================== */
-
-/* Título da sessão */
-
-/* Título da notícia */
-
-/* Social Like
-   ========================================================================== */
-
-/* Paragrafo da noticia */
-
-/* Fonte da noticia */
-
-/* Data e histórico da notícia */
-
-/* Relatar erros */
-
-/* ==========================================================================
-   Modo de exibição - Visão Sumária
-   ========================================================================== */
-
-/* Icones */
-
-/* ==========================================================================
-   Galeria de álbuns
-   ========================================================================== */
-
-/* Separador */
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
 .menuTrigger {
   display: none;
 }
-
-/* Smartphone
-   ========================================================================== */
 
 @media only screen and (min-width : 320px) and (max-width : 768px) {
   #header {
@@ -1908,9 +1294,6 @@ dl.portlet li {
   }
 }
 
-/* iPad portrait
-   ========================================================================== */
-
 @media screen and (max-width: 768px) {
   #wrapper {
     max-width: 100%;
@@ -1924,8 +1307,6 @@ dl.portlet li {
     max-width: 90%;
   }
 
-  /* Columns */
-
   #portal-column-one,
   #portal-column-content {
     clear: both;
@@ -1933,18 +1314,12 @@ dl.portlet li {
     width: 97.75%;
   }
 
-  /* Search */
-
   #portal-searchbox {
     display: none;
   }
 }
 
-/* iPhone 4s and greater than
-   ========================================================================== */
-
 @media screen and (max-width: 480px) {
-  /* barra de acessibilidade */
 
   #portal-siteactions a {
     padding-left: 0;
@@ -2080,18 +1455,11 @@ dl.portlet li {
   }
 }
 
-/* Barra de identidade do governo
-   ========================================================================== */
-
 @media screen and (max-width: 960px) {
   #barra-brasil {
     min-width: 100% !important;
   }
 }
-
-/* ==========================================================================
-   Contraste
-   ========================================================================== */
 
 body.contraste,
 body.contraste #header,
@@ -2201,38 +1569,10 @@ body.contraste #barra-brasil .link-barra {
   color: #606060 !important;
 }
 
-/* botões de navegação */
-
 body.contraste .lista-vertical {
   border: 1px solid #fff;
   background: #000 !important;
 }
-
-/* contraste que influenciam portlets */
-
-/* afeta visão de agenda */
-
-/* mapa do site */
-
-/* contraste galeria de álbuns e galeria de fotos */
-
-/* contraste de formulários */
-
-/* contraste de visão de notícia */
-
-/* contraste blog view */
-
-/* contraste de visão de imagens */
-
-/* contraste de enquete */
-
-/* player de audio */
-
-/* contraste de evento */
-
-/* date picker */
-
-/* contraste de gestão */
 
 body.contraste .state-published {
   color: #eee !important;
@@ -2243,30 +1583,9 @@ body.contraste .portletNavigationTree .portletHeader {
   background: #000 url('/img/portlet-header-contraste.jpg') no-repeat 96% center !important;
 }
 
-/* XXX: Fix no popup de link de Products.TinyMCE.
-É necessário sobrescrever a definição de #content presente em
-https://github.com/collective/collective.cover/blob/master/src/collective/cover/static/contentchooser.css#L1
-uma vez que no iframe do Products.TinyMCE também existe uma div#content, dando
-conflito nas regras e posicionando a div "Upload" por cima dos itens impedindo
-a seleção dos mesmos.
-Esse fix deve ser temporário, enquanto o bug mencionado em
-https://github.com/collective/collective.cover/issues/450
-não for corrigido.
-*/
-
-/*** uncss> filename: http://localhost:8080/assets/cover.css ***/
-
-/* Basic style for tiles */
-
 .tile-footer {
   text-align: right;
 }
-
-/*loading mask*/
-
-/*drag and drop*/
-
-/* images */
 
 .tile img.right {
   float: right;
@@ -2278,60 +1597,19 @@ não for corrigido.
   margin: 0 1em .5em 0;
 }
 
-/* conflicts */
-
-/*Skins*/
-
-/*** uncss> filename: http://localhost:8080/assets/style.css ***/
-
-/*
- *
- * CSS com estilos específicos do tema verde
- *
- * @Autores
- *
- * - Simples Consultoria - www.simplesconsultoria.com.br
- * - DESERTO Digital - www.desertodigital.com.br
- *
- * @Referencias
- *
- * Lista de padrões, convenções e boas praticas CSS que devem ser seguidas.
- * https: //github.com/necolas/idiomatic-css/tree/master/translations/pt-BR
- *
- * Plugins para ordenar os atributos de CSS.
- * http://csscomb.com/
- *
- * Validador de CSS do W3C.
- * http://jigsaw.w3.org/css-validator/
- */
-
-/* ==========================================================================
-   Cabeçalho do portal
-   ========================================================================== */
-
 #header {
   padding: 14px 0 0 0;
   background-color: #19882c;
-  /* Old browsers */
   background-color: #0a5517;
   background-image: -moz-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
-  /* FF3.6+ */
   background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#19882c), color-stop(100%, #025310));
-  /* Chrome,Safari4+ */
   background-image: -webkit-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
-  /* Chrome10+,Safari5.1+ */
   background-image: -o-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
-  /* Opera 12+ */
   background-image: -ms-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
-  /* IE10+ */
   background-image: radial-gradient(ellipse at center, #19882c 1%, #025310 100%);
   color: #fff;
-  /* IE6-9 fallback on horizontal gradient */
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#19882c', endColorstr='#025310',GradientType=1);
 }
-
-/* Menu de Acessibilidade
-   ========================================================================== */
 
 #accessibility a {
   color: #fff;
@@ -2342,16 +1620,10 @@ não for corrigido.
   color: #060;
 }
 
-/* Titulo do portal
-   ========================================================================== */
-
 #portal-logo,
 #portal-title {
   color: #fff !important;
 }
-
-/* Menu site actions - Acessibilidade, Alto Contraste, Mapa do site
-   ========================================================================== */
 
 #portal-siteactions {
   border-bottom: 1px dotted #9bc2a3;
@@ -2361,9 +1633,6 @@ não for corrigido.
 #portal-siteactions a:hover {
   color: #fff !important;
 }
-
-/* Menu sobre o portal
-   ========================================================================== */
 
 #sobre {
   background: #00420c;
@@ -2377,42 +1646,20 @@ não for corrigido.
   border-right: 1px solid #6c9072;
 }
 
-/* Formulário de busca
-   ========================================================================== */
-
 #portal-searchbox {
   border: 1px solid #ccc;
 }
 
-/* ==========================================================================
-   Sprinte Icons
-   ========================================================================== */
-
-/* icones de redes sociais */
-
 #social-icons a,
-/* central de conteudo */
 .item-central .link-videos,
 .item-central .link-audios,
 .item-central .link-infograficos,
 .item-central .link-publicacoes,
 .item-central .link-fotos,
 .item-central .link-aplicativos,
-/* icone do botão de busca */
 #header input.searchButton {
   background-image: url('../img/sprite.png');
 }
-
-/* icone do botão de relatar erros */
-
-/* Summary view */
-
-/* ==========================================================================
-   Portles
-   ========================================================================== */
-
-/* Portlet de navegação
-   ========================================================================== */
 
 .portlet-static-centrais-de-conteudos .portletHeader,
 .portletNavigationTree .portletHeader {
@@ -2420,20 +1667,9 @@ não for corrigido.
   color: #00510f;
 }
 
-/* ==========================================================================
-   Collective Cover
-   ========================================================================== */
-
-/* Tiles
-   ========================================================================== */
-
 .tile a {
   color: #162937 !important;
 }
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
 
 #footer {
   background: #034811;
@@ -2443,9 +1679,6 @@ não for corrigido.
 #footer a {
   color: #fff;
 }
-
-/* Doormat
-   ========================================================================== */
 
 #doormat-container {
   background: #034811;
@@ -2458,13 +1691,6 @@ não for corrigido.
 #doormat-container dt {
   color: #7dc48a;
 }
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-/* Smartphone
-   ========================================================================== */
 
 @media only screen and (min-width : 320px) and (max-width : 768px) {
   .menuTrigger {
@@ -2482,10 +1708,6 @@ não for corrigido.
     background: url('../img/search-button-30px.png') no-repeat;
   }
 }
-
-/* ==========================================================================
-   Comentários
-   ========================================================================== */
 
 h2.titulo-destaque {
   font-weight: bold;
