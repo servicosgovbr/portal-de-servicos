@@ -1,0 +1,19 @@
+<div class="portletWrapper">
+    <dl class="portlet portletNavigationTree">
+        <dt class="portletHeader">
+            Categorias
+        </dt>
+
+        <dd class="portletItem lastItem">
+            <ul class="navTree navTreeLevel0">
+
+                <li class="navTreeItem" th:each="categoria : ${categorias}">
+                    <a th:href="@{/linha-da-vida?q={categoria}(categoria=${categoria.key})}">
+                        <span th:text="${categoria.key}">Título da categoria</span>
+                    </a>
+                </li>
+
+            </ul>
+        </dd>
+    </dl>
+</div>

@@ -31,7 +31,11 @@ class IndexController {
 
     @RequestMapping("/tema")
     ModelAndView indexTema() {
-        return new ModelAndView("index2", index().getModel());
+        HashMap<String, Object> model = new HashMap<>();
+        model.put("acessos", sr.findAll(new PageRequest(0, 6, new Sort(Sort.Direction.DESC, "acessos"))));
+        model.put("categorias", queryAgg("top-linhas", "linhasDaVida"));
+
+        return new ModelAndView("index2", model);
     }
 
     @RequestMapping("/")
