@@ -1767,3 +1767,23 @@ ul.detalhes-erro > li {
 ul.detalhes-erro > li > span {
   float: right;
 }
+
+.markdown h1,
+.markdown h2 {
+  margin-bottom: .5em;
+}
+
+.markdown ul li {
+  display: list-item;
+  list-style-type: circle;
+  list-style-position: inside;
+  font-size: 1.15em;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
+
+.markdown ul li a {
+  text-decoration: underline;
+  color: blue !important;
+}
+}

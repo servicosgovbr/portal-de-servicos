@@ -36,7 +36,7 @@ implementado nos sites da Internet.
 Leis e decretos sobre acessibilidade:
 
 * [Decreto nº 5.296 de 02 de dezembro de 2004](http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Decreto/D5296.htm)
-* [Decreto nº 6.949, de 25 de agosto de 2009] (http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d6949.htm) -Promulga a Convenção Internacional sobre os Direitos das Pessoas com Deficiência e seu Protocolo Facultativo, assinados em Nova York, em 30 de março de 2007.
+* [Decreto nº 6.949, de 25 de agosto de 2009] (http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d6949.htm) - Promulga a Convenção Internacional sobre os Direitos das Pessoas com Deficiência e seu Protocolo Facultativo, assinados em Nova York, em 30 de março de 2007.
 * [Decreto nº 7.724, de 16 de Maio de 2012](http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/Decreto/D7724.htm) - Regulamenta a Lei No 12.527, que dispõe sobre o acesso a informações.
 * [Modelo de Acessibilidade de Governo Eletrônico](http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG)
 * [Portaria nº 03, de 07 de Maio de 2007](http://www.governoeletronico.gov.br/biblioteca/arquivos/portaria-no-03-de-07-05-2007) - formato .pdf (35,5Kb) - Institucionaliza o Modelo de Acessibilidade em Governo Eletrônico – e-MAG
