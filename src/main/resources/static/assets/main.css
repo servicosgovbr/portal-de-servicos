@@ -1786,4 +1786,13 @@ ul.detalhes-erro > li > span {
   text-decoration: underline;
   color: blue !important;
 }
+
+#comecar {
+  border: 1px solid black;
+  padding: 8px;
+  background: green;
+  color: white !important;
+  text-decoration: none;
+  margin-top: 14px;
+  display: inline-block;
 }
