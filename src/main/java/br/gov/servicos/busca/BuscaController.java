@@ -53,12 +53,10 @@ class BuscaController {
     }
 
     private ModelAndView buscaUtilizando(String q, Function<Optional<String>, List<Servico>> executaBusca) {
-        Optional<String> termoBuscado = ofNullable(q).filter(s -> !s.isEmpty());
-
         HashMap<String, Object> model = new HashMap<>();
         model.put("termo", q);
-        model.put("resultados", executaBusca.apply(termoBuscado));
-        
+        model.put("resultados", executaBusca.apply(ofNullable(q)));
+
         return new ModelAndView("resultados-busca", model);
     }
 
