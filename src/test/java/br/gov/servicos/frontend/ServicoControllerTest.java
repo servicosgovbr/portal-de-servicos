@@ -5,19 +5,23 @@ import br.gov.servicos.dominio.Servico;
 import br.gov.servicos.dominio.ServicoRepository;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
-import java.util.Arrays;
-
+import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.BDDMockito.given;
-import static org.mockito.MockitoAnnotations.initMocks;
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.doReturn;
+import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
+import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
+@RunWith(MockitoJUnitRunner.class)
 public class ServicoControllerTest {
 
-    static final Servico SERVICO = new Servico(
+    private static final Servico SERVICO = new Servico(
             "1",
             "Título",
             "Descrição",
@@ -25,49 +29,56 @@ public class ServicoControllerTest {
             "Gratuita",
             new Orgao("Nome", "123"),
             new Orgao("Nome", null),
-            Arrays.asList("Área de Interesse"),
-            Arrays.asList("Linhas da Vida"),
-            Arrays.asList("Eventos das Linhas da Vida"),
+            asList("Área de Interesse"),
+            asList("Linhas da Vida"),
+            asList("Eventos das Linhas da Vida"),
             0L, 0L
     );
 
     @Mock
-    ServicoRepository sr;
-
-    ServicoController controller;
+    private ServicoRepository servicos;
+    private ServicoController controller;
 
     @Before
-    public void setUp() throws Exception {
-        initMocks(this);
-        controller = new ServicoController(sr);
+    public void setUp() {
+        doReturn(SERVICO).when(servicos).findOne("1");
+        doReturn(SERVICO).when(servicos).save(any(Servico.class));
+
+        controller = new ServicoController(servicos);
     }
 
     @Test
-    public void buscaRetornaView() throws Exception {
-        given(sr.findOne("1")).willReturn(new Servico("1", null, null, null, null, null, null, null, null, null, 0L, 0L));
-        assertThat(controller.get("1").getViewName(), is("servico"));
+    public void redirecionaParaAPaginaDeServicos() {
+        assertViewName(controller.get("1"), "servico");
     }
 
     @Test
-    public void buscaRetornaServicoNoModel() throws Exception {
+    public void retornaOServicoBuscado() {
+        assertModelAttributeValue(controller.get("1"), "servico", SERVICO);
+    }
+
+    @Test
+    public void incrementaONumeroDeAcessosAoServico() {
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
-        given(sr.findOne("1")).willReturn(SERVICO);
-        given(sr.save(captor.capture())).willReturn(SERVICO);
+        doReturn(SERVICO)
+                .when(servicos)
+                .save(captor.capture());
 
-        Servico actual = (Servico) controller.get("1").getModel().get("servico");
-        assertThat(actual, is(SERVICO));
+        controller.get("1");
         assertThat(captor.getValue().getAcessos(), is(1L));
     }
 
     @Test
-    public void redirecionaUsuarioParaLinkDoServico() throws Exception {
+    public void redirecionaUsuarioParaLinkDoServico() {
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
-        given(sr.findOne("1")).willReturn(SERVICO);
-        given(sr.save(captor.capture())).willReturn(SERVICO);
+        doReturn(SERVICO)
+                .when(servicos)
+                .save(captor.capture());
 
         String actual = controller.navegar("1").getUrl();
+
         assertThat(actual, is(SERVICO.getUrl()));
         assertThat(captor.getValue().getAtivacoes(), is(1L));
     }
