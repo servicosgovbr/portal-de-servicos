@@ -1,31 +1,34 @@
 package br.gov.servicos.frontend;
 
+import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.HashMap;
+import static org.springframework.data.domain.Sort.Direction.DESC;
 
 @Controller
 class IndexController {
 
-    ServicoRepository sr;
+    ServicoRepository servicos;
 
     @Autowired
-    public IndexController(ServicoRepository sr) {
-        this.sr = sr;
+    IndexController(ServicoRepository servicos) {
+        this.servicos = servicos;
     }
 
     @RequestMapping("/")
     ModelAndView index() {
-        HashMap<String, Object> model = new HashMap<>();
-        model.put("acessos", sr.findAll(new PageRequest(0, 9, new Sort(Sort.Direction.DESC, "acessos"))));
+        return new ModelAndView("index", "acessos", servicosMaisAcessados());
+    }
 
-        return new ModelAndView("index", model);
+    private Page<Servico> servicosMaisAcessados() {
+        return servicos.findAll(new PageRequest(0, 9, new Sort(DESC, "acessos")));
     }
 
 }
