@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.Optional;
+
 import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -36,8 +38,9 @@ class ServicoController {
     @RequestMapping("/navegar/{id}")
     RedirectView navegar(@PathVariable("id") String id) {
         Servico servico = servicos.save(buscaServico(id).withNovaAtivacao());
-
-        return servico.getUrl()
+        Optional<String> url = ofNullable(servico.getUrl());
+        
+        return url
                 .map(RedirectView::new)
                 .orElseThrow(ConteudoNaoEncontrado::new);
     }

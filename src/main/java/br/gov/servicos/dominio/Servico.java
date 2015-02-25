@@ -7,7 +7,6 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.elasticsearch.common.Strings.isEmpty;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
@@ -92,9 +91,5 @@ public class Servico {
 
     public Servico withNovaAtivacao() {
         return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos, ativacoes == null ? 1 : ativacoes + 1);
-    }
-    
-    public Optional<String> getUrl() {
-        return Optional.ofNullable(url);
     }
 }

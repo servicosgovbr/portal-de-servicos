@@ -85,7 +85,7 @@ public class ServicoControllerTest {
 
         String actual = controller.navegar("1").getUrl();
 
-        assertThat(actual, is(SERVICO.getUrl().get()));
+        assertThat(actual, is(SERVICO.getUrl()));
         assertThat(captor.getValue().getAtivacoes(), is(1L));
     }
 
