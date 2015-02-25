@@ -68,15 +68,6 @@ public class BuscaControllerTest {
     }
 
     @Test
-    public void buscaPorAreasDeInteresse() {
-        doReturn(umServico)
-                .when(buscador)
-                .buscaPor("areasDeInteresse", of("negócios"));
-
-        assertCompareListModelAttribute(controller.areaDeInteresse("negócios"), "resultados", umServico);
-    }
-
-    @Test
     public void buscaPorLinhasDaVida() {
         doReturn(umServico)
                 .when(buscador)
@@ -86,19 +77,10 @@ public class BuscaControllerTest {
     }
 
     @Test
-    public void buscaPorEventosDaLinhaDaVida() {
-        doReturn(umServico)
-                .when(buscador)
-                .buscaPor("eventosDasLinhasDaVida", of("Cooperativa"));
-
-        assertCompareListModelAttribute(controller.eventosDasLinhasDaVida("Cooperativa"), "resultados", umServico);
-    }
-
-    @Test
     public void buscaPorOrgao() {
         doReturn(umServico)
                 .when(buscador)
-                .buscaSemelhante(of("Planejamento"), "prestado.nome", "responsavel.nome");
+                .buscaSemelhante(of("Planejamento"), "prestador.nome", "responsavel.nome");
 
         assertCompareListModelAttribute(controller.orgao("Planejamento"), "resultados", umServico);
     }

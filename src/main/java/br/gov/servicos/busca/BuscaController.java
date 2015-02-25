@@ -32,24 +32,14 @@ class BuscaController {
         return buscaUtilizando(q, buscador::busca);
     }
 
-    @RequestMapping("/area-de-interesse")
-    ModelAndView areaDeInteresse(@RequestParam(required = true) String q) {
-        return buscaUtilizando(q, termo -> buscador.buscaPor("areasDeInteresse", termo));
-    }
-
     @RequestMapping("/linha-da-vida")
     ModelAndView linhaDaVida(@RequestParam(required = true) String q) {
         return buscaUtilizando(q, termo -> buscador.buscaPor("linhasDaVida", termo));
     }
 
-    @RequestMapping("/eventos-das-linhas-da-vida")
-    ModelAndView eventosDasLinhasDaVida(@RequestParam(required = true) String q) {
-        return buscaUtilizando(q, termo -> buscador.buscaPor("eventosDasLinhasDaVida", termo));
-    }
-
     @RequestMapping("/orgao")
     ModelAndView orgao(@RequestParam(required = true) String q) {
-        return buscaUtilizando(q, termo -> buscador.buscaSemelhante(termo, "prestado.nome", "responsavel.nome"));
+        return buscaUtilizando(q, termo -> buscador.buscaSemelhante(termo, "prestador.nome", "responsavel.nome"));
     }
 
     private ModelAndView buscaUtilizando(String q, Function<Optional<String>, List<Servico>> executaBusca) {
