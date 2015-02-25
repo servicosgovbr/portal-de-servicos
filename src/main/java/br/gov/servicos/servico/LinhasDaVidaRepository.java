@@ -25,7 +25,7 @@ class LinhasDaVidaRepository {
         this.et = et;
     }
 
-    List<LinhaDaVida> findAll() {
+    public List<LinhaDaVida> findAll() {
         return et.query(
                 new NativeSearchQueryBuilder()
                         .addAggregation(
