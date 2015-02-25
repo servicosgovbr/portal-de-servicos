@@ -47,22 +47,24 @@ class Buscador {
     }
 
     private List<Servico> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
-        LinkedList<Servico> resultados = termoBuscado
+        Optional<String> termo = termoBuscado.filter(t -> !t.isEmpty());
+
+        LinkedList<Servico> resultados = termo
                 .map(criaQuery)
                 .map(servicos::search)
                 .map(Lists::newLinkedList)
                 .orElse(SEM_RESULTADOS);
 
-        registraBuscaEfetuada(termoBuscado, resultados);
+        registraBuscaEfetuada(termo, resultados);
 
         return resultados;
     }
 
-    private void registraBuscaEfetuada(Optional<String> termoBuscado, LinkedList<Servico> resultados) {
-        Busca busca = termoBuscado
+    private void registraBuscaEfetuada(Optional<String> termo, LinkedList<Servico> resultados) {
+        Busca busca = termo
                 .map(buscas::findOne)
                 .map(Busca::withNovaAtivacao)
-                .orElseGet(() -> new Busca(termoBuscado.get(), resultados.size(), 1));
+                .orElseGet(() -> new Busca(termo.orElse("[BUSCA VAZIA]"), resultados.size(), 1));
 
         buscas.save(busca);
     }

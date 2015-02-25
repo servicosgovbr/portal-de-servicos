@@ -11,12 +11,16 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static java.util.Arrays.asList;
+import static java.util.Collections.emptyList;
+import static java.util.Optional.empty;
 import static java.util.Optional.of;
 import static org.hamcrest.CoreMatchers.hasItem;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyZeroInteractions;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BuscadorTest {
@@ -76,5 +80,31 @@ public class BuscadorTest {
         buscador.busca(of("um serviço"));
 
         verify(buscas).save(new Busca("um serviço", 1, 2));
+    }
+
+    @Test
+    public void deveRegistrarBuscasSemResultado() throws Exception {
+        doReturn(emptyList())
+                .when(servicos)
+                .search(any(QueryBuilder.class));
+        
+        buscador.busca(of("serviço não existente"));
+        verify(buscas).save(new Busca("serviço não existente", 0, 1));
+    }
+
+    @Test
+    public void retornaUmaListaVaziaQuandoNaoHouverTermoDeBusca() throws Exception {
+        assertThat(buscador.busca(empty()), is(emptyList()));
+        
+        verifyZeroInteractions(servicos);
+        verify(buscas).save(new Busca("[BUSCA VAZIA]", 0, 1));
+    }
+
+    @Test
+    public void deveConsiderarTermoDeBuscaVazioComoEmpty() throws Exception {
+        assertThat(buscador.busca(of("")), is(emptyList()));
+        
+        verifyZeroInteractions(servicos);
+        verify(buscas).save(new Busca("[BUSCA VAZIA]", 0, 1));
     }
 }
