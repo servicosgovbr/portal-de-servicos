@@ -3,6 +3,7 @@ package br.gov.servicos.frontend;
 import br.gov.servicos.dominio.Orgao;
 import br.gov.servicos.dominio.Servico;
 import br.gov.servicos.dominio.ServicoRepository;
+import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +14,9 @@ import org.mockito.runners.MockitoJUnitRunner;
 import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
+import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.doReturn;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
@@ -42,7 +45,10 @@ public class ServicoControllerTest {
     @Before
     public void setUp() {
         doReturn(SERVICO).when(servicos).findOne("1");
-        doReturn(SERVICO).when(servicos).save(any(Servico.class));
+        
+        doAnswer(returnsFirstArg())
+                .when(servicos)
+                .save(any(Servico.class));
 
         controller = new ServicoController(servicos);
     }
@@ -54,7 +60,7 @@ public class ServicoControllerTest {
 
     @Test
     public void retornaOServicoBuscado() {
-        assertModelAttributeValue(controller.get("1"), "servico", SERVICO);
+        assertModelAttributeValue(controller.get("1"), "servico", SERVICO.withNovoAcesso());
     }
 
     @Test
@@ -79,8 +85,26 @@ public class ServicoControllerTest {
 
         String actual = controller.navegar("1").getUrl();
 
-        assertThat(actual, is(SERVICO.getUrl()));
+        assertThat(actual, is(SERVICO.getUrl().get()));
         assertThat(captor.getValue().getAtivacoes(), is(1L));
     }
 
+    @Test(expected = ConteudoNaoEncontrado.class)
+    public void retorna404QuandoServicoNaoExiste() {
+        controller.get("servico-nao-existente");
+    }
+
+    @Test(expected = ConteudoNaoEncontrado.class)
+    public void retorna404QuandoRedirecionaParaServicoNaoExistente() {
+        controller.navegar("servico-nao-existente");
+    }
+
+    @Test(expected = ConteudoNaoEncontrado.class)
+    public void retorna404QuandoRedirecionaParaServicoSemURL() {
+        doReturn(new Servico())
+                .when(servicos)
+                .findOne("servico-sem-url");
+        
+        controller.navegar("servico-sem-url");
+    }
 }
