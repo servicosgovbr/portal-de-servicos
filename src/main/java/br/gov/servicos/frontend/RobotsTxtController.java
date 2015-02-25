@@ -11,12 +11,12 @@ import static org.springframework.http.HttpStatus.OK;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-public class RobotsTxtController {
+class RobotsTxtController {
 
     @RequestMapping(value = "/robots.txt", produces = "text/plain")
     @ResponseStatus(OK)
     @ResponseBody
-    public String robotsTxt() {
+    String robotsTxt() {
         return "User-agent: *\n" +
                 "Disallow: /\n";
     }
