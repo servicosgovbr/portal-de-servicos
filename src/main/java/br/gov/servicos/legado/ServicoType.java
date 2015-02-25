@@ -8,7 +8,7 @@
 
 package br.gov.servicos.legado;
 
-import br.gov.servicos.dominio.Orgao;
+import br.gov.servicos.servico.Orgao;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.*;

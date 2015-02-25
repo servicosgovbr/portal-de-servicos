@@ -1,4 +1,4 @@
-package br.gov.servicos.dominio;
+package br.gov.servicos.servico;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 

@@ -1,8 +1,8 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.busca.Busca;
-import br.gov.servicos.dominio.Servico;
-import br.gov.servicos.dominio.ServicoRepository;
+import br.gov.servicos.servico.Servico;
+import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;

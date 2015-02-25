@@ -1,6 +1,5 @@
-package br.gov.servicos.dominio;
+package br.gov.servicos.servico;
 
-import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsBuilder;
@@ -13,19 +12,20 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static java.lang.Integer.MAX_VALUE;
+import static lombok.AccessLevel.PRIVATE;
 
 @Component
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class LinhasDaVidaRepository {
+@FieldDefaults(level = PRIVATE, makeFinal = true)
+class LinhasDaVidaRepository {
 
     ElasticsearchTemplate et;
 
     @Autowired
-    public LinhasDaVidaRepository(ElasticsearchTemplate et) {
+    LinhasDaVidaRepository(ElasticsearchTemplate et) {
         this.et = et;
     }
 
-    public List<LinhaDaVida> findAll() {
+    List<LinhaDaVida> findAll() {
         return et.query(
                 new NativeSearchQueryBuilder()
                         .addAggregation(

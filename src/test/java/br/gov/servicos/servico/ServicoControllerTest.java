@@ -1,8 +1,5 @@
-package br.gov.servicos.frontend;
+package br.gov.servicos.servico;
 
-import br.gov.servicos.dominio.Orgao;
-import br.gov.servicos.dominio.Servico;
-import br.gov.servicos.dominio.ServicoRepository;
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,7 +1,5 @@
-package br.gov.servicos.frontend;
+package br.gov.servicos.servico;
 
-import br.gov.servicos.dominio.Servico;
-import br.gov.servicos.dominio.ServicoRepository;
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
@@ -11,8 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
-
-import java.util.Optional;
 
 import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
@@ -24,7 +20,7 @@ class ServicoController {
     ServicoRepository servicos;
 
     @Autowired
-    public ServicoController(ServicoRepository servicos) {
+    ServicoController(ServicoRepository servicos) {
         this.servicos = servicos;
     }
 
@@ -38,9 +34,8 @@ class ServicoController {
     @RequestMapping("/navegar/{id}")
     RedirectView navegar(@PathVariable("id") String id) {
         Servico servico = servicos.save(buscaServico(id).withNovaAtivacao());
-        Optional<String> url = ofNullable(servico.getUrl());
-        
-        return url
+
+        return ofNullable(servico.getUrl())
                 .map(RedirectView::new)
                 .orElseThrow(ConteudoNaoEncontrado::new);
     }

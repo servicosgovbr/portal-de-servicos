@@ -1,7 +1,7 @@
 package br.gov.servicos.busca;
 
-import br.gov.servicos.dominio.Servico;
-import br.gov.servicos.dominio.ServicoRepository;
+import br.gov.servicos.servico.Servico;
+import br.gov.servicos.servico.ServicoRepository;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.junit.Before;
 import org.junit.Test;

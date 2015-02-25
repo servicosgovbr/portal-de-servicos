@@ -1,6 +1,6 @@
 package br.gov.servicos.busca;
 
-import br.gov.servicos.dominio.Servico;
+import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

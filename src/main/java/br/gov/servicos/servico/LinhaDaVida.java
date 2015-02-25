@@ -1,19 +1,19 @@
-package br.gov.servicos.dominio;
+package br.gov.servicos.servico;
 
 import lombok.Value;
 
 @Value
-public class LinhaDaVida {
+class LinhaDaVida {
 
     String titulo;
 
     Long servicos;
 
-    public LinhaDaVida() {
+    LinhaDaVida() {
         this(null, null);
     }
 
-    public LinhaDaVida(String titulo, Long servicos) {
+    LinhaDaVida(String titulo, Long servicos) {
         this.titulo = titulo;
         this.servicos = servicos;
     }
