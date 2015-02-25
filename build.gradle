@@ -76,15 +76,14 @@ idea {
     module {
         inheritOutputDirs = false
         outputDir = file("$buildDir/classes/main/")
+        testOutputDir = file("$buildDir/classes/test/")
         excludeDirs += files(".git-crypt", ".vagrant", "data", "gradle")
     }
 
     project {
         ipr.withXml { xmlFile ->
             // enable 'Annotation Processors'
-            xmlFile.asNode().component.find {
-                it.@name == 'CompilerConfiguration'
-            }['annotationProcessing'][0].replaceNode {
+            xmlFile.asNode().component.find { it.@name == 'CompilerConfiguration' }['annotationProcessing'][0].replaceNode {
                 annotationProcessing {
                     profile(default: true, name: 'Default', useClasspath: 'true', enabled: true)
                 }
