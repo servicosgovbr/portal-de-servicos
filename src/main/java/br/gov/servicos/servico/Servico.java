@@ -71,7 +71,6 @@ public class Servico {
             Long acessos,
             Long ativacoes
     ) {
-        this.eventosDasLinhasDaVida = eventosDasLinhasDaVida;
         this.id = isEmpty(id) ? null : id;
         this.titulo = isEmpty(titulo) ? null : titulo;
         this.descricao = isEmpty(descricao) ? null : descricao;
@@ -81,6 +80,7 @@ public class Servico {
         this.responsavel = responsavel;
         this.areasDeInteresse = areasDeInteresse;
         this.linhasDaVida = linhasDaVida;
+        this.eventosDasLinhasDaVida = eventosDasLinhasDaVida;
         this.acessos = acessos;
         this.ativacoes = ativacoes;
     }

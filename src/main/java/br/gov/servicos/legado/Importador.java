@@ -1,10 +1,8 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.busca.Busca;
-import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
-import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -20,10 +18,7 @@ import javax.xml.bind.Unmarshaller;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.Serializable;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.joining;
@@ -44,13 +39,13 @@ public class Importador {
 
     ElasticsearchTemplate es;
     ServicoRepository servicos;
-    Slugify slugify;
+    ServicoTypeMapper servicoTypeMapper;
 
     @Autowired
-    Importador(ElasticsearchTemplate es, ServicoRepository servicos, Slugify slugify) {
+    Importador(ElasticsearchTemplate es, ServicoRepository servicos, ServicoTypeMapper servicoTypeMapper) {
         this.es = es;
         this.servicos = servicos;
-        this.slugify = slugify;
+        this.servicoTypeMapper = servicoTypeMapper;
     }
 
     @ManagedOperation
@@ -59,7 +54,7 @@ public class Importador {
 
         servicos.save(
                 servicosLegados()
-                        .map(this::servicoLegadoToServico)
+                        .map(servicoTypeMapper)
                         .collect(toList()));
 
         return servicos.findAll();
@@ -70,12 +65,12 @@ public class Importador {
             es.deleteIndex(INDEX_NAME);
         }
 
-        es.createIndex(INDEX_NAME, readSettings());
+        es.createIndex(INDEX_NAME, settings());
         es.putMapping(Busca.class);
         es.putMapping(Servico.class);
     }
 
-    private static String readSettings() throws IOException {
+    private static String settings() throws IOException {
         ClassPathResource resource = new ClassPathResource(SETTINGS);
         InputStreamReader reader = new InputStreamReader(resource.getInputStream());
 
@@ -102,117 +97,5 @@ public class Importador {
         JAXBContext contexto = JAXBContext.newInstance("br.gov.servicos.legado");
         return contexto.createUnmarshaller();
     }
-
-    private Servico servicoLegadoToServico(ServicoType legado) {
-        return new Servico(
-                slugify.slugify(legado.getTitulo()),
-                legado.getTitulo(),
-                legado.getDescricao(),
-                getUrl(legado),
-                legado.getTaxa(),
-                getOrgaoPrestador2(legado),
-                getOrgaoResponsavel2(legado),
-                getAreasDeInteresse(legado),
-                getLinhasDaVida(legado),
-                getEventosDasLinhasDaVida(legado),
-                0L,
-                0L
-        );
-    }
-
-    private static List<String> getLinhasDaVida(ServicoType servicoType) {
-        PublicosAlvoType publicosAlvoType = servicoType.getPublicosAlvo();
-        if (publicosAlvoType == null) return Arrays.asList();
-
-        List<Serializable> publicosAlvo = publicosAlvoType.getContent();
-        if (publicosAlvo == null || publicosAlvo.isEmpty()) return Arrays.asList();
-
-        JAXBElement element = (JAXBElement) publicosAlvo.get(0);
-        if (element == null) return Arrays.asList();
-
-        PublicoAlvoType publicoAlvo = (PublicoAlvoType) element.getValue();
-        if (publicoAlvo == null) return Arrays.asList();
-
-        LinhasDaVivaType linhasDaViva = publicoAlvo.getLinhasDaViva();
-        if (linhasDaViva == null) return Arrays.asList();
-
-        List<LinhaDaVidaType> linhaDaVida = linhasDaViva.getLinhaDaVida();
-        if(linhaDaVida == null) return Arrays.asList();
-
-        return linhaDaVida.stream()
-                .map(LinhaDaVidaType::getTitulo)
-                .collect(toList());
-    }
-
-
-    private static Orgao getOrgaoPrestador2(ServicoType servicoType) {
-        OrgaoPrestadorType prestador = servicoType.getOrgaoPrestador();
-        String nome = prestador == null ? null : prestador.getTitulo();
-        String telefone = prestador == null ? null : prestador.getTelefone();
-
-        return new Orgao(nome, telefone);
-    }
-
-    private static Orgao getOrgaoResponsavel2(ServicoType servicoType) {
-        OrgaoResponsavelType responsavel = servicoType.getOrgaoResponsavel();
-        return responsavel == null ? null : new Orgao(responsavel.getTitulo(), null);
-    }
-
-    private static List<String> getEventosDasLinhasDaVida(ServicoType servicoType) {
-        PublicosAlvoType publicosAlvoType = servicoType.getPublicosAlvo();
-        if (publicosAlvoType == null) return Arrays.asList();
-
-        List<Serializable> publicosAlvo = publicosAlvoType.getContent();
-        if (publicosAlvo == null || publicosAlvo.isEmpty()) return Arrays.asList();
-
-        JAXBElement element = (JAXBElement) publicosAlvo.get(0);
-        if (element == null) return Arrays.asList();
-
-        PublicoAlvoType publicoAlvo = (PublicoAlvoType) element.getValue();
-        if (publicoAlvo == null) return Arrays.asList();
-
-        LinhasDaVivaType linhasDaViva = publicoAlvo.getLinhasDaViva();
-        if (linhasDaViva == null) return Arrays.asList();
-
-        List<LinhaDaVidaType> linhaDaVida = linhasDaViva.getLinhaDaVida();
-        if (linhaDaVida == null) return Arrays.asList();
-
-        return linhaDaVida.stream()
-                .flatMap((linhaDaVidaType) -> {
-                    EventoslinhaDaVidaType eventoslinhaDaVida = linhaDaVidaType.getEventoslinhaDaVida();
-                    if (eventoslinhaDaVida == null) return null;
-
-                    List<EventolinhaDaVidaType> eventolinhaDaVida = eventoslinhaDaVida.getEventolinhaDaVida();
-                    if (eventolinhaDaVida == null) return null;
-
-                    return eventolinhaDaVida.stream().map(EventolinhaDaVidaType::getTitulo);
-                })
-                .collect(toList());
-
-    }
-
-    private static List<String> getAreasDeInteresse(ServicoType servicoType) {
-        AreasInteresseType areasInteresseType = servicoType.getAreasInteresse();
-        if(areasInteresseType == null) {
-            return Arrays.asList();
-        }
-
-        return areasInteresseType.getArea().stream().map(AreaType::getTitulo).collect(toList());
-    }
-
-    private static String getUrl(ServicoType servicoType) {
-        if (servicoType.getCanaisPrestacaoServico() == null || servicoType.getCanaisPrestacaoServico().getCanalPrestacaoServico() == null) {
-            return null;
-        }
-
-        for (CanalPrestacaoServicoType canal : servicoType.getCanaisPrestacaoServico().getCanalPrestacaoServico()) {
-            if(canal.getUrl() != null) {
-                return canal.getUrl();
-            }
-        }
-
-        return null;
-    }
-
 
 }
