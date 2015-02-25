@@ -1,6 +1,5 @@
 package br.gov.servicos.cms;
 
-import br.gov.servicos.frontend.NotFoundException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
