@@ -1,4 +1,4 @@
-package br.gov.servicos.frontend;
+package br.gov.servicos.cms;
 
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
@@ -14,16 +14,16 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-public class Markdown {
+class Markdown {
 
     PegDownProcessor pegdown;
 
-    public Markdown() {
+    Markdown() {
         pegdown = new PegDownProcessor();
     }
 
     @SneakyThrows
-    public String toHtml(ClassPathResource resource) {
+    String toHtml(ClassPathResource resource) {
         InputStreamReader input = new InputStreamReader(resource.getInputStream(), "UTF-8");
 
         try (BufferedReader br = new BufferedReader(input)) {

@@ -1,6 +1,5 @@
 package br.gov.servicos.cms;
 
-import br.gov.servicos.frontend.Markdown;
 import br.gov.servicos.frontend.NotFoundException;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,17 +15,17 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-public class ConteudoController {
+class ConteudoController {
 
     Markdown markdown;
 
     @Autowired
-    public ConteudoController(Markdown markdown) {
+    ConteudoController(Markdown markdown) {
         this.markdown = markdown;
     }
 
     @RequestMapping("/conteudo/{id}")
-    public ModelAndView conteudo(@PathVariable("id") String id) throws NotFoundException {
+    ModelAndView conteudo(@PathVariable("id") String id) throws NotFoundException {
         ClassPathResource pagina = new ClassPathResource(format("/conteudo/%s.md", id));
 
         return of(pagina)

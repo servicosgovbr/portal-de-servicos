@@ -1,4 +1,4 @@
-package br.gov.servicos.frontend;
+package br.gov.servicos.cms;
 
 import org.junit.Before;
 import org.junit.Test;
