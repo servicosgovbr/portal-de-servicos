@@ -29,17 +29,17 @@ public class ConteudoControllerTest {
     }
 
     @Test
-    public void redirecionaParaAPaginaDeConteudo() throws NotFoundException {
+    public void redirecionaParaAPaginaDeConteudo() throws ConteudoNaoEncontrado {
         assertViewName(controller.conteudo("pagina"), "conteudo");
     }
 
-    @Test(expected = NotFoundException.class)
-    public void retorna404QuandoArquivoNaoExiste() throws NotFoundException {
+    @Test(expected = ConteudoNaoEncontrado.class)
+    public void retorna404QuandoArquivoNaoExiste() throws ConteudoNaoEncontrado {
         controller.conteudo("arquivo-nao-existente");
     }
 
     @Test
-    public void compilaOMarkdownDoConteudo() throws NotFoundException {
+    public void compilaOMarkdownDoConteudo() throws ConteudoNaoEncontrado {
         assertModelAttributeValue(controller.conteudo("pagina"), "conteudo", "<h1>Conteúdo</h1>");
     }
 

@@ -24,14 +24,14 @@ class ConteudoController {
     }
 
     @RequestMapping("/conteudo/{id}")
-    ModelAndView conteudo(@PathVariable("id") String id) throws NotFoundException {
+    ModelAndView conteudo(@PathVariable("id") String id) throws ConteudoNaoEncontrado {
         ClassPathResource pagina = new ClassPathResource(format("/conteudo/%s.md", id));
 
         return of(pagina)
                 .filter(ClassPathResource::exists)
                 .map(markdown::toHtml)
                 .map(html -> new ModelAndView("conteudo", "conteudo", html))
-                .orElseThrow(NotFoundException::new);
+                .orElseThrow(ConteudoNaoEncontrado::new);
     }
 
 }
