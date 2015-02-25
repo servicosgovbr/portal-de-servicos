@@ -8,15 +8,11 @@
 
 package br.gov.servicos.legado;
 
-import br.gov.servicos.servico.Orgao;
-
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 /**
@@ -93,101 +89,6 @@ import java.util.stream.Collectors;
     "quantidadeAcessosServico"
 })
 class ServicoType {
-
-    public List<String> getAreasDeInteresse() {
-        AreasInteresseType areasInteresseType = this.getAreasInteresse();
-        if(areasInteresseType == null) {
-            return Arrays.asList();
-        }
-
-        return areasInteresseType.getArea().stream().map(AreaType::getTitulo).collect(Collectors.toList());
-    }
-
-    public String getUrl() {
-        String url = null;
-
-        if (this.getCanaisPrestacaoServico() == null || this.getCanaisPrestacaoServico().getCanalPrestacaoServico() == null) {
-            return null;
-        }
-
-        for (CanalPrestacaoServicoType canal : this.getCanaisPrestacaoServico().getCanalPrestacaoServico()) {
-            if(canal.getUrl() != null) {
-                return canal.getUrl();
-            }
-        }
-        
-        return null;
-    }
-
-    public Orgao getOrgaoPrestador2() {
-        OrgaoPrestadorType prestador = this.getOrgaoPrestador();
-        String nome = prestador == null ? null : prestador.getTitulo();
-        String telefone = prestador == null ? null : prestador.getTelefone();
-
-        return new Orgao(nome, telefone);
-    }
-
-    public Orgao getOrgaoResponsavel2() {
-        OrgaoResponsavelType responsavel = this.getOrgaoResponsavel();
-        return responsavel == null ? null : new Orgao(responsavel.getTitulo(), null);
-    }
-
-    public List<String> getLinhasDaVida() {
-        PublicosAlvoType publicosAlvoType = this.getPublicosAlvo();
-        if (publicosAlvoType == null) return Arrays.asList();
-
-        List<Serializable> publicosAlvo = publicosAlvoType.getContent();
-        if (publicosAlvo == null || publicosAlvo.isEmpty()) return Arrays.asList();
-
-        JAXBElement element = (JAXBElement) publicosAlvo.get(0);
-        if (element == null) return Arrays.asList();
-
-        PublicoAlvoType publicoAlvo = (PublicoAlvoType) element.getValue();
-        if (publicoAlvo == null) return Arrays.asList();
-
-        LinhasDaVivaType linhasDaViva = publicoAlvo.getLinhasDaViva();
-        if (linhasDaViva == null) return Arrays.asList();
-
-        List<LinhaDaVidaType> linhaDaVida = linhasDaViva.getLinhaDaVida();
-        if(linhaDaVida == null) return Arrays.asList();
-
-        return linhaDaVida.stream()
-                .map(LinhaDaVidaType::getTitulo)
-                .collect(Collectors.toList());
-    }
-
-    public List<String> getEventosDasLinhasDaVida() {
-        PublicosAlvoType publicosAlvoType = this.getPublicosAlvo();
-        if (publicosAlvoType == null) return Arrays.asList();
-
-        List<Serializable> publicosAlvo = publicosAlvoType.getContent();
-        if (publicosAlvo == null || publicosAlvo.isEmpty()) return Arrays.asList();
-
-        JAXBElement element = (JAXBElement) publicosAlvo.get(0);
-        if (element == null) return Arrays.asList();
-
-        PublicoAlvoType publicoAlvo = (PublicoAlvoType) element.getValue();
-        if (publicoAlvo == null) return Arrays.asList();
-
-        LinhasDaVivaType linhasDaViva = publicoAlvo.getLinhasDaViva();
-        if (linhasDaViva == null) return Arrays.asList();
-
-        List<LinhaDaVidaType> linhaDaVida = linhasDaViva.getLinhaDaVida();
-        if (linhaDaVida == null) return Arrays.asList();
-
-        return linhaDaVida.stream()
-                .flatMap((linhaDaVidaType) -> {
-                    EventoslinhaDaVidaType eventoslinhaDaVida = linhaDaVidaType.getEventoslinhaDaVida();
-                    if (eventoslinhaDaVida == null) return null;
-
-                    List<EventolinhaDaVidaType> eventolinhaDaVida = eventoslinhaDaVida.getEventolinhaDaVida();
-                    if (eventolinhaDaVida == null) return null;
-
-                    return eventolinhaDaVida.stream().map(EventolinhaDaVidaType::getTitulo);
-                })
-                .collect(Collectors.toList());
-
-    }
 
     @XmlElement(required = true)
     protected String titulo;
