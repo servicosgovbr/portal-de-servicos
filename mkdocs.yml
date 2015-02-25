@@ -8,6 +8,7 @@ pages:
 - ['estrategia/modelomaturidade.md', 'Estratégia', 'Modelo de Maturidade']
 - ['estrategia/kpis.md', 'Estratégia', 'Métricas']
 - ['estrategia/escolhaservicos.md', 'Estratégia', 'Critérios para Escolha de Serviços']
+- ['estrategia/etapasoferta.md', 'Estratégia', 'Etapas da Oferta de Serviços']
 - ['desenvolvimento/introducao.md', 'Desenvolvimento', 'Introdução']
 - ['desenvolvimento/ambientes.md', 'Desenvolvimento', 'Ambientes']
 - ['desenvolvimento/elasticsearch.md', 'Desenvolvimento', 'Elasticsearch']
