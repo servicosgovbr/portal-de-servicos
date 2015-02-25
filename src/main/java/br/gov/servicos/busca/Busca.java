@@ -21,7 +21,7 @@ public class Busca {
     @Field(index = not_analyzed, type = Integer)
     Integer ativacoes;
     
-    private Busca() {
+    Busca() {
         this(null, null, null);
     }
 

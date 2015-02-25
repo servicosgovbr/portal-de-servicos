@@ -35,7 +35,7 @@ public class BuscaControllerTest {
     private BuscaController controller;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         Servico servico = new Servico("1", "Como adicionar um novo emprego à sua Carteira de Trabalho",
                 "Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.",
                 null, null, null, null, null, null, null, 0L, 0L);
@@ -50,12 +50,12 @@ public class BuscaControllerTest {
     }
 
     @Test
-    public void buscaRedirecionaParaPaginaDeResultados() throws Exception {
+    public void buscaRedirecionaParaPaginaDeResultados() {
         assertViewName(controller.busca(null), "resultados-busca");
     }
 
     @Test
-    public void buscaRetornaTermoBuscado() throws Exception {
+    public void buscaRetornaTermoBuscado() {
         assertModelAttributeValue(controller.busca("trabalho"), "termo", "trabalho");
     }
 
@@ -87,7 +87,7 @@ public class BuscaControllerTest {
     }
 
     @Test
-    public void buscaPorEventosDaLinhaDaVida() throws Exception {
+    public void buscaPorEventosDaLinhaDaVida() {
         doReturn(umServico)
                 .when(buscador)
                 .buscaPor("eventosDasLinhasDaVida", of("Cooperativa"));
@@ -96,12 +96,12 @@ public class BuscaControllerTest {
     }
 
     @Test
-    public void buscaPorOrgao() throws Exception {
+    public void buscaPorOrgao() {
         doReturn(umServico)
                 .when(buscador)
                 .buscaSemelhante(of("Planejamento"), "prestado.nome", "responsavel.nome");
 
         assertCompareListModelAttribute(controller.orgao("Planejamento"), "resultados", umServico);
     }
-    
+
 }
