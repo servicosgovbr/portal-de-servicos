@@ -3,6 +3,7 @@ package br.gov.servicos.legado;
 import br.gov.servicos.busca.Busca;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
+import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -19,7 +20,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.util.UUID;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.joining;
@@ -40,11 +40,13 @@ public class Importador {
 
     ElasticsearchTemplate es;
     ServicoRepository servicos;
+    Slugify slugify;
 
     @Autowired
-    Importador(ElasticsearchTemplate es, ServicoRepository servicos) {
+    Importador(ElasticsearchTemplate es, ServicoRepository servicos, Slugify slugify) {
         this.es = es;
         this.servicos = servicos;
+        this.slugify = slugify;
     }
 
     @ManagedOperation
@@ -53,7 +55,7 @@ public class Importador {
 
         servicos.save(
                 servicosLegados()
-                        .map(Importador::servicoLegadoToServico)
+                        .map(this::servicoLegadoToServico)
                         .collect(toList()));
 
         return servicos.findAll();
@@ -97,9 +99,9 @@ public class Importador {
         return contexto.createUnmarshaller();
     }
 
-    private static Servico servicoLegadoToServico(ServicoType legado) {
+    private Servico servicoLegadoToServico(ServicoType legado) {
         return new Servico(
-                UUID.randomUUID().toString(),
+                slugify.slugify(legado.getTitulo()),
                 legado.getTitulo(),
                 legado.getDescricao(),
                 legado.getUrl(),
