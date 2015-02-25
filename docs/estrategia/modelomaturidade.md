@@ -5,3 +5,5 @@ Modelo de Maturidade de Serviços
 2. As necessidades básicas do usuário são atendidas
 3. O serviço é melhorado e as necessidades do usuário são atendidas plenamente
 4. As expectativas do usuário são superadas através da melhoria contínua do serviço
+
+![Modelo de Maturidade](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/modelomaturidade.png)

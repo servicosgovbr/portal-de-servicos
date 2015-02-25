@@ -7,4 +7,4 @@ A oferta de um serviço no Guia pode ser dividida em três etapas:
 * Escolha
 * Acompanhamento
 
-![Etapas de Oferta](https://github.com/servicosgovbr/guia-de-servicos/tree/master/docs/estrategia/etapasoferta.png)
+![Etapas de Oferta](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/etapasoferta.png)
