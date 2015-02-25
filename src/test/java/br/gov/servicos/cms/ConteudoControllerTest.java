@@ -9,8 +9,6 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.core.io.ClassPathResource;
 
-import java.io.IOException;
-
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
@@ -25,25 +23,25 @@ public class ConteudoControllerTest {
 
     @Before
     public void setUp() {
-        controller = new ConteudoController(markdown);
-    }
-
-    @Test
-    public void redirecionaParaAPaginaDeConteudo() throws NotFoundException, IOException {
-        assertViewName(controller.conteudo("pagina"), "conteudo");
-    }
-
-    @Test(expected = NotFoundException.class)
-    public void retorna404QuandoArquivoNaoExiste() throws NotFoundException, IOException {
-        controller.conteudo("arquivo-nao-existente");
-    }
-
-    @Test
-    public void compilaOMarkdownDoConteudo() throws NotFoundException, IOException {
         doReturn("<h1>Conteúdo</h1>")
                 .when(markdown)
                 .toHtml(any(ClassPathResource.class));
 
+        controller = new ConteudoController(markdown);
+    }
+
+    @Test
+    public void redirecionaParaAPaginaDeConteudo() throws NotFoundException {
+        assertViewName(controller.conteudo("pagina"), "conteudo");
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void retorna404QuandoArquivoNaoExiste() throws NotFoundException {
+        controller.conteudo("arquivo-nao-existente");
+    }
+
+    @Test
+    public void compilaOMarkdownDoConteudo() throws NotFoundException {
         assertModelAttributeValue(controller.conteudo("pagina"), "conteudo", "<h1>Conteúdo</h1>");
     }
 

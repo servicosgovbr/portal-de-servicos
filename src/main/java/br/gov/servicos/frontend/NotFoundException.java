@@ -6,8 +6,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @ResponseStatus(value = NOT_FOUND, reason = "Documento não encontrado")
 public class NotFoundException extends Exception {
-
-    public NotFoundException(String message) {
-        super(message);
-    }
+    
+    private static final long serialVersionUID = -7299858067001144911L;
+    
 }

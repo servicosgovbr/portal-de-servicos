@@ -30,7 +30,7 @@ public class ConteudoController {
         ClassPathResource pagina = new ClassPathResource(format("/conteudo/%s.md", id));
 
         return of(pagina)
-                .filter(p -> !p.exists())
+                .filter(ClassPathResource::exists)
                 .map(markdown::toHtml)
                 .map(html -> new ModelAndView("conteudo", "conteudo", html))
                 .orElseThrow(NotFoundException::new);
