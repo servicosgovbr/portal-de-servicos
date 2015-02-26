@@ -296,12 +296,18 @@ Os cenários de testes propostos devem representar os fluxos das funcionalidades
 
 Cada cenário deve conter o seguinte conjunto de informações:
 
-- Objetivo: descreve, de forma resumida, o objetivo do teste realizado pelo cenário;
-- Critérios de Sucesso: Os critérios de aceite do teste;
-- Parâmetros de Teste: Descreve qual a massa de dados utilizada pelo teste. Define tanto os perfis dos usuários quanto as informações dos objetos que serão consultados, criados, alterados ou excluídos pela execução do cenário;
-- Procedimentos de Teste: Define a quantidade de usuários (requisições) e parâmetros de simultaneidade e iterações. Além disso, define os passos do cenário.
-- Evidências a serem coletadas: As informações coletadas após a execução do teste;
-- Melhorias propostas/implementadas;
+- Objetivo: descreve, de forma resumida, o objetivo do teste realizado pelo cenário
+- Critérios de sucesso
+- Parâmetros de teste
+  - Massa de dados
+  - Perfis dos usuários
+  - Informações sobre objetos que serão consultados, criados, alterados ou excluídos pela execução do cenário
+- Procedimentos de teste
+  - Quantidade de usuários (requisições)
+  - Parâmetros de simultaneidade e iterações
+  - Passos do cenário
+- Evidências a serem coletadas
+- Melhorias propostas/implementadas
 
 ## Sazonalidade
 
