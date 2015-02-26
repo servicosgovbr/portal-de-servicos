@@ -95,9 +95,11 @@ Espera-se que, para um artefato seja considerado aceitável:
 
 **Checagem de Bugs Prováveis**
 
-Todo o código deve ser checado automaticamente por bugs prováveis, utilizando ferramentas como [PMD](http://pmd.sourceforge.net/) e [FindBugs](http://findbugs.sourceforge.net).
+Todo o código deve ser checado automaticamente por bugs prováveis, utilizando as ferramentas [PMD](http://pmd.sourceforge.net/) e [FindBugs](http://findbugs.sourceforge.net), ou o equivalente apropriado em outras linguagens.
 
-Recomenda-se manter a configuração destas ferramentas em seus padrões. Caso haja alguma modificação nelas, é exigida documentação e racionalização explícita para cada caso, na configuração em si, ou se possível em um comentário no próprio código (acima da anotação `@SuppressWarnings`, por exemplo).
+Deve-se manter a configuração destas ferramentas em seus padrões, e violações dos limites estabelecidos devem impedir a construção de artefatos candidatos a homologação.
+
+Caso haja alguma modificação nelas, é exigida documentação e racionalização explícita para cada caso, na configuração em si, ou se possível em um comentário no próprio código (acima da anotação `@SuppressWarnings`, por exemplo).
 
 **Nível de Duplicação de Código**
 
@@ -116,7 +118,7 @@ Deve ser reestruturado todo trecho de código duplicado, considerando a quantida
 
 **Documentação do Código**
 
-O indicador de documentação do código visa medir o nível de documentação adicionada aos métodos do projeto. Espera-se que todos os métodos das classes que implementam regras de negócio e integração tenham documentação de acordo com as boas práticas de comentário de código estabelecidas para o projeto.
+Recomenda-se evitar a documentação do código através de comentários, e sim através de testes automatizados. Trechos de código comentados como maneira de evitar sua execução, ou blocos `if(false)` são extremamente desencorajados.
 
 **Complexidade Ciclomática (CCN por Método)**
 
