@@ -21,6 +21,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.stream.Stream;
 
+import static java.nio.charset.Charset.defaultCharset;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
@@ -72,7 +73,7 @@ public class Importador {
 
     private static String settings() throws IOException {
         ClassPathResource resource = new ClassPathResource(SETTINGS);
-        InputStreamReader reader = new InputStreamReader(resource.getInputStream());
+        InputStreamReader reader = new InputStreamReader(resource.getInputStream(), defaultCharset());
 
         try (BufferedReader br = new BufferedReader(reader)) {
             return br.lines().collect(joining("\n"));
