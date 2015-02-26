@@ -189,24 +189,6 @@ O _ticket_ deve utilizar o último bloco de dígitos do identificador da transa�
 
 Já as falhas de negócio (erros de validação, por exemplo) devem retornar mensagens amigáveis, informando ao usuário o contexto da falha e a ação a ser tomada. Estas falhas não devem produzir erros de nível `WARN`, `ERROR` ou `FATAL`, já que não há o que o administrador do sistema possa fazer para remediá-las.
 
-### Campos Persistidos em BD em Caso de Falha
-
-- Timestamp;
-- ID de sessão (jsessionid ou equivalente);
-- IP da máquina de origem da requisição;
-- IP do servidor que atendeu à requisição;
-- ID do usuário (caso autenticado);
-- Página URL;
-- Tipo da exceção (exception type);
-- Detalhe da exceção: stacktrace do erro;
-- Transação: obtido do componente de autorização, caso o usuário esteja logado. Poderá ficar em branco, caso o usuário não esteja logado;
-- Ticket: detalhado na seção 4.2;
-- Mensagem do usuário (opcional).
-
-Os dois primeiros campos acima são utilizados para formar o _ticket _descrito na seção anterior e são armazenados separados no _log_.
-
-No momento da ocorrência do erro, os campos são persistidos e a mensagem é enviada para o usuário. Caso o usuário deseje enviar uma mensagem, o sistema deverá associá-la ao ticket oculto.
-
 ## Auditoria Mínima
 
 Também em consonância com o princípio de segurança do não repúdio, as ações de homologação, publicação, desativação e exclusão de Serviços Públicos que contêm registros de informações em banco de dados devem conter os seguintes campos:
