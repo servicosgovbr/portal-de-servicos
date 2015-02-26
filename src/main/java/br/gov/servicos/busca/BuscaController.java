@@ -38,9 +38,9 @@ class BuscaController {
         return buscaUtilizando(id, termo -> buscador.buscaPor("linhasDaVida.id", termo));
     }
 
-    @RequestMapping("/orgao")
-    ModelAndView orgao(@RequestParam(required = true) String q) {
-        return buscaUtilizando(q, termo -> buscador.buscaSemelhante(termo, "prestador.nome", "responsavel.nome"));
+    @RequestMapping("/orgao/{id}")
+    ModelAndView orgao(@PathVariable String id) {
+        return buscaUtilizando(id, termo -> buscador.buscaSemelhante(termo, "prestador.id", "responsavel.id"));
     }
 
     private ModelAndView buscaUtilizando(String q, Function<Optional<String>, List<Servico>> executaBusca) {

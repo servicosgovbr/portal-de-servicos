@@ -31,7 +31,7 @@
 
             <div class="orgao-prestador">
                 <a th:if="${not #strings.isEmpty(servico.prestador.nome)}"
-                   th:href="@{/orgao?q={orgao}(orgao=${servico.prestador.nome})}"
+                   th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
                    th:text="${servico.prestador.nome}">
                     Órgão prestador
                 </a>
@@ -43,7 +43,7 @@
 
             <div class="orgao-responsavel">
                 <a th:if="${not #strings.isEmpty(servico.prestador.nome)}"
-                   th:href="@{/orgao?q={orgao}(orgao=${servico.prestador.nome})}"
+                   th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
                    th:text="${servico.prestador.nome}">
                     Órgão responsavel
                 </a>

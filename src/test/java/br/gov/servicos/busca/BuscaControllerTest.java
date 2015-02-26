@@ -80,7 +80,7 @@ public class BuscaControllerTest {
     public void buscaPorOrgao() {
         doReturn(umServico)
                 .when(buscador)
-                .buscaSemelhante(of("Planejamento"), "prestador.nome", "responsavel.nome");
+                .buscaSemelhante(of("Planejamento"), "prestador.id", "responsavel.id");
 
         assertCompareListModelAttribute(controller.orgao("Planejamento"), "resultados", umServico);
     }
