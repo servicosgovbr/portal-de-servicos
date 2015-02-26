@@ -4,11 +4,11 @@ Este documento tem o objetivo de definir requisitos não funcionais e de comport
 
 # Codificação
 
-## Codificação de caracteres (Encoding)
+## Codificação de Caracteres (Encoding)
 
 Usar UTF-8 em todos os arquivos de código, dados, configuração e documentação.
 
-## Organização do código
+## Organização do Código
 
 O código Java deve ser organizado em pacotes, a partir de `br.gov.servicos`. Código de produção deve estar em um diretório separado do código de testes automatizados, mas ambos podem compartilhar o esquema de pacotes, afim de facilitar a escrita de testes unitários que dependem de membros com modificadores de acesso mais fechados.
 
@@ -16,13 +16,13 @@ O código Java deve ser organizado em pacotes, a partir de `br.gov.servicos`. C�
 
 O código escrito deverá estar em conformidade com as convenções e regras de estilo de codificação da sua respectiva linguagem ou plataforma de desenvolvimento.
 
-## Modificadores de acesso
+## Modificadores de Acesso
 
 Elementos no código devem apresentar modificadores de acesso condizentes com a menor permissão possível, visando manter o encapsulamento o mais estrito possível. Métodos e propriedades acessíveis apenas ao mesmo objeto deverão ser marcados como `private`, a objetos do mesmo pacote como `default`, e assim por diante. É recomendado evitar declarar métodos e propriedades como `public`, a menos que façam de fato parte da interface pública daquele objeto.
 
 Uma exceção se faz para quando métodos ou propriedades devem ser acessados por frameworks ou bibliotecas. Nestes casos, a declaração deve acompanhar um comentário explicitando a dependência, como por exemplo `/* usado apenas pelo Spring */`.
 
-## Testes automatizados
+## Testes Automatizados
 
 Visando a clareza do código, a simplicidade no entendimento e a facilidade corretiva e evolutiva, a codificação do sistema deverá possuir testes automatizados descritivos de todas suas funcionalidades.
 
@@ -50,9 +50,38 @@ O uso de arquivos de configuração em texto deve ser minimizado ao máximo, e c
 
 Opções de linha de comando ou variáveis de ambiente utilizadas que possam alterar o comportamento do sistema devem ser documentadas _in loco_.
 
-## Métricas de qualidade de Código
+### Artefatos
 
-Todas as métricas de qualidade de código devem ser comprovadas através de relatórios gerados automaticamente por ferramentas especializadas de medição e monitoramento de código e entreguesem períodos a serem acordados com o contratante como evidência do alcance das metas estabelecidas.
+A construção do código deve gerar artefatos únicos, com as seguintes características:
+
+**Reproduzíveis**
+
+Dada uma revisão do repositório (por exemplo, `9359cd`), duas máquinas diferentes devem construir exatamente o mesmo artefato, com exceção a _timestamps_ e informações sobre o ambiente de construção que podem ser incluídas no artefato em si. Todas as funcionalidades e características dos dois artefatos gerados devem ser idênticas.
+
+**Atômicos**
+
+Artefatos não podem ser construídos parcialmente. Caso sua construção falhe, eles devem ser imediatamente descartados pelo sistema de builds.
+
+**Específicos**
+
+Um artefato pode depender de uma plataforma (por exemplo, `Linux`), uma arquitetura (`x86-64`), uma distribuição (`CentOS`) e um conjunto de pacotes instalados no ambiente (`build-essentials`, `elasticsearch`, etc). Sempre que possível, as versões exatas destes devem ser especificadas e verificadas durante a instalação e execução do artefato.
+
+É extremamente desaconselhável depender de versões flutuantes (`-SNAPSHOT`), e recomenda-se utilizar as versões mais recentes assim que possível, especialmente em caso de atualizações de segurança.
+
+**Descritivos**
+
+Deve ser possível inspecionar um artefato para verificar informações sobre ele. Nestas, devem estar contidos:
+
+* Versão ou revisão
+* Data de geração do artefato
+* Dependências e suas versões
+* Requisitos de plataforma, arquitetura, distribuição e as versões das mesmas
+* Arquivos contidos, e suas permissões e assinaturas (MD5, SHA1, etc)
+* Localização onde estes arquivos serão instalados
+
+## Métricas de Qualidade
+
+Todas as métricas de qualidade de código devem ser comprovadas através de relatórios gerados automaticamente por ferramentas especializadas de medição e monitoramento de código, e disponibilizados para cada artefato construído.
 
 As métricas apresentadas abaixo consideram pelo menos as classes que implementam a Regra de Negócio (tanto do lado do servidor quanto do lado do cliente) e Integração.
 
