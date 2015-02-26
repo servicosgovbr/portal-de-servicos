@@ -77,7 +77,7 @@ A utilização do Github reforça nosso compromisso com a transparência com rel
 
 Uma nova organização foi criada no Github para de agrupar qualquer projeto ou subprojeto relacionado ao Guia de Serviços.
 
-![Github](images/github.png)
+![Github](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/plano_iteracoes/images/github.png)
 
 Referências:
 
@@ -90,7 +90,7 @@ Ferramenta integrada ao Github que permite a criação de tarefas a serem analis
 
 Por ser uma ferramenta aberta, ela permite a colaboração de quaisquer interessados no projeto, seja sugerindo novas hipóteses, melhorias, reportando problemas ou, até mesmo, contribuindo com código e documentações.
 
-![Github Issues](images/github_issues.png)
+![Github Issues](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/plano_iteracoes/images/github_issues.png)
 
 Referências:
 
@@ -102,7 +102,7 @@ Waffle é um quadro virtual e integrado ao Github Issues que gera visualizaçõe
 
 Utilizaremos esta ferramenta para dar mais visibilidade com relação as tarefas que estão sendo desenvolvidas pelo time e quem é o responsável por ela.
 
-![Waffle](images/waffle.png)
+![Waffle](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/plano_iteracoes/images/waffle.png)
 
 Referências:
 
@@ -116,7 +116,7 @@ Inicialmente estamos publicando as novas versões no Heroku. Uma plataforma grat
 
 Ao automatizar o processo de publicação do projeto, permitimos ciclos de feedback mais curtos, para identificar e agir sobre qualquer problema o mais rápido possível, melhorando assim a qualidade do produto final.
 
-![Snap-CI](images/snap_ci.png)
+![Snap-CI](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/plano_iteracoes/images/snap_ci.png)
 
 Referências:
 
@@ -128,7 +128,7 @@ Acreditamos que TDD, Test Driven Development (desenvolvimento orientado a testes
 
 Coveralls permite visualizar a porcentagem de cobertura de testes da aplicação visando garantir o acompanhamento constante da qualidade de nossos testes automatizados.
 
-![Coveralls](images/coveralls.png)
+![Coveralls](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/plano_iteracoes/images/coveralls.png)
 
 Referências:
 
@@ -140,7 +140,7 @@ Read the Docs é uma ferramenta que compila textos escritos em formato Markdown 
 
 A documentação do projeto será escrita em formato Markdown, armazenada no Github do próprio projeto e, a cada alteração, Read the Docs irá automaticamente gerar uma nova versão da documentação e disponibilizá-la online.
 
-![Read the Docs](images/read_the_docs.png)
+![Read the Docs](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/plano_iteracoes/images/read_the_docs.png)
 
 Referências:
 
@@ -150,7 +150,7 @@ Referências:
 
 Gitter é um comunicador instantâneo que permite a participação de qualquer interessado no projeto.
 
-![Gitter](images/gitter.png)
+![Gitter](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/plano_iteracoes/images/gitter.png)
 
 Referências:
 
