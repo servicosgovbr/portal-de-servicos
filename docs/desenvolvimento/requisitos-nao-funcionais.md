@@ -214,14 +214,6 @@ O sistema deverá bloquear qualquer acesso a URLs privadas da aplicação, sendo
 
 Estas tentativas de acesso devem ser logadas com nível `WARN` para posterior análise.
 
-### Níveis de autenticação (Evolução do projeto – Versão 2.0)
-
-Haverá necessidade de autenticação, preferencialmente fazendo uso de mecanismo padronizado (SSO), que possa ser aproveitado para autenticação e autorização em outros sistemas. Deverão ser atribuídos níveis de autenticação dependendo das informações ou tipo de autenticação feita por parte do cidadão. Poderá haver alguns tipos de autenticação: cadastro simples validado com CPF, nome e data de nascimento do usuário na Receita Federal; autenticação digital; confirmação de autenticação por sistemas externos (Bancos, Correios, etc).
-
-### Single Sign On/Single Sign Out(Evolução do projeto – Versão 2.0)
-
-Deverá ser adotado o conceito de Single Sign On\Single Sign Out, com o intuito de centralizar a autenticação\logout do usuário no ambiente de forma transparente para o usuário, permitindo que, ao realizar a autenticação\logout em uma tela única de acesso seja também realizada sua autenticação\logout nas demais aplicações do governo. Será utilizado o Forge Rock/OpemAM alinhado com a DTI.
-
 ## Sigilo dos dados
 
 Há crucial necessidade de garantir confidencialidade das informações dos cidadãos armazenadas e trafegadas entre o Guia e os órgãos.
