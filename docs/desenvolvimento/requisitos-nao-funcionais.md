@@ -323,11 +323,7 @@ Obter no mínimo 85 pontos no [PageSpeed Insights](https://developers.google.com
 
 # Documentação do sistema
 
-## Documentos de Engenharia de Software
-
-A documentação de Engenharia de software é o conjunto de documentos textuais e visuais (diagramas) utilizados para definir e explicar os componentes, as APIs, estruturas de dados e algoritmos presentes na solução.
-
-Documentos de Projeto/Arquitetura
+## Documentos de Projeto/Arquitetura
 
 Os documentos de especificação de projeto do sistema (diagramas UML) integrada ao código. **Não há a intenção de avaliar previamente tais artefatos para fins de validação**.
 
