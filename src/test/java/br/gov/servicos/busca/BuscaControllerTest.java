@@ -68,7 +68,7 @@ public class BuscaControllerTest {
     }
 
     @Test
-    public void buscaPorLinhasDaVida() {
+    public void buscaPorLinhasDaVidaRetornaServicos() {
         doReturn(umServico)
                 .when(buscador)
                 .buscaPor("linhasDaVida.id", of("Aposentar-se"));
@@ -77,7 +77,7 @@ public class BuscaControllerTest {
     }
 
     @Test
-    public void buscaPorOrgao() {
+    public void buscaPorOrgaoRetornaServicos() {
         doReturn(umServico)
                 .when(buscador)
                 .buscaSemelhante(of("Planejamento"), "prestador.id", "responsavel.id");
