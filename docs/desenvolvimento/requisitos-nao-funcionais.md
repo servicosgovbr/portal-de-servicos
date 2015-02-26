@@ -256,34 +256,6 @@ O ambiente deve seguir as normas estabelecidas nos [Padrões Web de Governo Elet
 
 Utilizar design responsivo e resolução conforme [orientações](http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-mai201409.pdf).
 
-# Qualidade Técnica e Arquitetural da Solução
-
-Com o objetivo de garantir um alto padrão de qualidade para o código-fonte do sistema, e dessa forma minimizar os custos com correções e evoluções, aumentando a produtividade efetiva dos desenvolvedores, um conjunto de indicadores deve ser estabelecido e acompanhado com esse intuito.
-
-As métricas devem favorecer os princípios abaixo:
-
-- Eliminar duplicação de código-fonte
-- Restringir a complexidade local do código-fonte
-- Garantir que as unidades do código-fonte foram testadas suficientemente
-- Promover a clareza do código-fonte
-- Reduzir o acoplamento entre classes
-
-A seguir a proposta de métricas a serem mensuradas e respeitadas para o projeto:
-
-- Todos os testes de unidade devem concluir com sucessoMeta: 100 % de sucesso nos testes unitários;
-- Medir a porcentagem de linhas de código que devem estar cobertas por testes de unidade. Somente classes dos pacotes de negócio e fachada são consideradas.Meta: 75 % de cobertura de testes unitários;
-- O número de trechos de código duplicados, considerando cem ou mais tokens, mesmo entre módulos diferentes deve ser igual a zero.Meta: Nível de duplicação de código: 0;
-- Todas as classes dos pacotes de fachada, negócio e persistência devem possuir documentação javadoc para si e para todos os seus métodos públicos e protegidos, excetuando-se os getters,setters e construtores. Meta: Documentação de código: 100 %;
-- Porcentagem de classes que podem ter mais de mil linhas.Meta: Percentual de classes com número de linhas > 1000: até 5 %;
-- Porcentagem de métodosque podem ter mais de cem linhas.Meta: Percentual de métodos com número de linhas > 100: até 5 %;
-- O percentual de métodos com complexidade ciclomática superior a 20 e inferior a 50 deve ser menor ou igual a 5%.Meta: Complexidade Ciclomática > 20 e < 50: < 5%;
-- Nenhum método pode ter complexidade ciclomática superior a 50.Meta: Complexidade Ciclomática > 50: 0%;
-- Nenhuma violação de camadas é permitida. Um objeto em uma camada somente pode acessar objetos nessa mesma camada ou na camada imediatamente inferior.Meta: Violação de Camadas: 0;
-
-# Serviços de Integração (Evolução do projeto – Versão 2.0)
-
-_(a ser definido)_
-
 # Tecnologia e infraestrutura
 
 ## Ambientes
