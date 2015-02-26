@@ -109,7 +109,7 @@ Recomenda-se evitar a documentação do código através de comentários, e sim 
 
 A utilização de reflexões em qualquer forma (_annotations_, _aspects_, etc.) deve ser detalhadamente comentada e deve estar bem descrita no documento de arquitetura, ou na documentação do framework/biblioteca que a provê.
 
-# Confiabilidade e disponibilidade
+# Confiabilidade e Disponibilidade
 
 ## Dos Dados
 
@@ -117,11 +117,11 @@ O sistema deverá garantir que os dados persistidos sejam íntegros e consistent
 
 O sistema deverá garantir que consultas realizadas a conjuntos de dados que possuam semântica implícita para mais de um registro sejam sempre consistentes e íntegras, impossibilitando leitura de dados que foram inseridos por outra transação.
 
-## Horário de disponibilidade
+## Horário de Disponibilidade
 
 O sistema deverá estar disponível ininterruptamente. Paradas de manutenção deverão ser avisadas previamente com 3 dias de antecedência através de mensagem para os gestores do projeto.
 
-## Tolerância à perda de dados
+## Tolerância à Perda de Dados
 
 Nenhuma transação efetivada pode ser perdida. Ao ser apresentada uma mensagem de confirmação de transação efetivada com sucesso, deve-se garantir que nenhum dado foi perdido.
 
@@ -145,29 +145,28 @@ Os níveis de log devem seguir os seguintes critérios:
 
 O log deve conter os seguintes campos:
 
-- Versão: Versão do layout para o Log (valor inicial 1) 
-- Timestamp do início da operação;
-- Nível de Evento (Conforme definido na seção anterior);
-- Transação: obtido do componente de autorização caso o usuário esteja logado. Poderá ficar em branco, caso o usuário não esteja logado; ???
-- Pacote e Método;
-- ID do usuário (caso autenticado);
-- Tempo de Execução (em milissegundos);
-- Informações da Funcionalidade;
-- Versão do sistema.
-- (Módulo do sistema – se for dividido em módulos).
-- Ticket do erro (Caso tenha ocorrido o erro).
+- Timestamp do início da operação
+- Tempo de execução, em milissegundos
+- Nível de evento (conforme definido na seção anterior)
+- Identificação do ambiente (IP ou nome da máquina)
+- Pacote, classe e, se possível, método
+- Transação: identificador único de transação (UUID, serial, etc)
+- ID do usuário, caso autenticado
+- Informações da funcionalidade
+- Ticket do erro, caso tenha ocorrido um erro
 
-Por exemplo, no caso do usuário salvar uma informação relativa a um Órgão/Entidade do sistema, o _log_ poderia conter as seguintes informações:
+Por exemplo, no caso do usuário executar uma busca que não obeteve resultados, mas ocorreu com sucesso:
 
 ```
-Versão: 1
-Timestamp: 14:33:14,872000000
-Nível de Evento: Info
-Transação: MANORGENT
-Pacote e Método: pacote.pacote.pacote.salvarOrgaoEntidade
-ID do usuário: 05163217658
-Tempo de Execução: 850
-Informações da Funcionalidade: Codigo:99;Denominacao:Ministério do Planejamento, Orçamento e Gestão;Sigla:MP;
+- Timestamp: "1424985454"
+- Tempo de execução: "4"
+- Nível de evento: "INFO"
+- Identificação do ambiente: "vm01"
+- Pacote, classe e, se possível, método: "br.gov.servicos.busca.BuscaController#busca(String)"
+- Transação: "08644dd6-bdfd-11e4-8eab-7831c1d2da14"
+- ID do usuário: "null"
+- Informações da funcionalidade: "Busca por '' não obteve resultados"
+- Ticket do erro: "null"
 ```
 
 ### Escolha de Funcionalidades de _Log_
