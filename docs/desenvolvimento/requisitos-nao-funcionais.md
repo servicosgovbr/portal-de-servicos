@@ -111,7 +111,7 @@ A utilização de reflexões em qualquer forma (_annotations_, _aspects_, etc.) 
 
 # Confiabilidade e disponibilidade
 
-## Prevenção de _Dirty Read_ (Leitura Suja)
+## Dos Dados
 
 O sistema deverá garantir que os dados persistidos sejam íntegros e consistentes de forma que transações que aconteçam em paralelo no mesmo conjunto de dados, possuam controles de concorrência para evitar estas inconsistências.
 
@@ -131,17 +131,15 @@ Nenhuma transação efetivada pode ser perdida. Ao ser apresentada uma mensagem 
 
 O sistema deverá possuir um mecanismo de registro de eventos durante a sua execução (_log_) que armazene estes eventos primariamente em um banco de dados criado para tal finalidade. O sistema deve guardar o log das operações com o SGBD e log do servidor web.
 
-Senhas jamais devem ser registradas em quaisquer dos níveis de log (nem para depuração) e sob nenhuma condição. A garantia de "não repúdio", um dos princípios de segurança de sistemas, só será atingida através de medidas estritas como esta, inclusive.
+Senhas ou outros dados secretos jamais devem ser registrados em quaisquer dos níveis de log e sob nenhuma condição.
 
-### Níveis de Eventos (Evolução do projeto – Versão 2.0)
+Os níveis de log devem seguir os seguintes critérios:
 
-Os critérios para _log_ em duplicidade no banco de dados devem ser estabelecidos através de uma configuração do sistema pela escolha de um ou mais tipos de eventos registrados segundo os níveis descritos a seguir.
-
-- Info: registro de execução de operações relacionadas ao negócio, eventos de login, etc. É o registro padrão de operações que deve conter informações valiosas para futura análise de comportamento em caso de falhas, como por exemplo o endereço IP da requisição, o login do usuário caso autenticado, o timestamp, etc.
-- Warn: registro de eventos menos esperados que podem causar instabilidades na aplicação. Falhas previstas de concorrência de operações que demandaram um rollback, etc.
-- Error: registro de eventos fatais à operação das aplicações e serviços, mas que não afetem a sua integridade e não envolvam perda de dados. Timeout de conexão com o banco de dados, dados ausentes em uma operação que deveria retornar dados mandatoriamente, serviço externo não acessível, etc.
-- Fatal: qualquer erro que impeça que a aplicação registre corretamente informações e incorra em perda de informações ou comprometa a sua integridade. Impossibilidade de conexão com o banco de dados, falhas de escrita no log, etc. Implica na parada da aplicação e notificação imediata à administração do sistema para que o problema seja sanado e a aplicação retome seu funcionamento. Neste estado a aplicação não deve permitir nem mesmo o login de usuários por estar incapaz de registrar as tentativas de login e seus IPs de origem.
-- Debug e Trace: estes níveis ficam a cargo da equipe de desenvolvimento, sendo mantida a regra do não registro de senhas sob qualquer condição. Em caso de necessidade de debug ou trace de senhas, estas devem ser feitas em memória através do debugger da própria plataforma, mas nunca no log.
+* Debug/Trace: quaisquer informações relevantes ao desenvolvimento da aplicação. Podem estar habilitados durante homologação e produção, mas é necessário considerar seu uso demasiado de memória caso a aplicação enfrente períodos de alta demanda.
+* Info: registro de execução e eventos de operações relacionadas ao negócio. Due deve conter informações valiosas para futura análise de comportamento: endereço IP da requisição, identificador da transação ou requisição, _timestamp_, etc.
+* Warn: registro de eventos menos esperados que podem causar instabilidades na aplicação: falha ao se comunicar com um serviço externo que pode ser tentada novamente, por exemplo.
+* Error: registro de eventos fatais à operação das aplicações e serviços, mas que não afetem a sua integridade e não envolvam perda de dados: timeout de conexão com o banco de dados, dados ausentes em uma operação que deveria retornar dados mandatoriamente, serviço externo não acessível, etc.
+* Fatal: qualquer erro que impeça que a aplicação registre corretamente informações e incorra em perda de informações ou comprometa a sua integridade. Implica na parada da aplicação e notificação imediata à administração do sistema para que o problema seja sanado e a aplicação retome seu funcionamento. Neste estado a aplicação não deve permitir o acesso de usuários.
 
 ### Campos de Log
 
