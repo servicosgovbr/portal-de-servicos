@@ -276,36 +276,6 @@ A contratada tem liberdade para definir a infraestrutura mantendo o compromisso 
 
 A contratada tem liberdade para definir a tecnologia mantendo o compromisso de atender aos níveis de serviço definidos, desde que todo o sistema seja construído utilizando plataformas de software livre e considerando os princípios da administração pública, inclusive o da economicidade, propondo uma solução durável e flexível para evolução a custos razoáveis ao longo do tempo.
 
-## Mecanismos arquiteturais
-
-Sugere-se que o Repositório de Componentes Reutilizáveis documente, no mínimo, os seguintes componentes e mecanismos arquiteturais:
-
-- Validação de dados (tanto do lado Cliente como Servidor);
-- Exibição de mensagens (erro, atenção, sucesso, etc.);
-- Integração com sistemas externos e legados;
-- Paginação de dados;
-- Geração de relatórios;
-- Controle de transações;
-- Tratamento de exceções;
-- Parametrizações do sistema;
-- Controle de concorrência (deve ser tratado no Banco de Dados e, em função disso, a aplicação deve nascer clusterizável);
-- Habilitação e Autorização (segurança);
-- Componente de persistência;
-- Componentes visuais (grids, tabelas, menus, formulários, etc);
-- Componentes de pesquisa;
-- Monitoramento, log e cache de objetos.
-
-Além destes mecanismos gerais, é de responsabilidade da contratada, junto à sua equipe de Arquitetura de Sistemas, identificar componentes reutilizáveis específicos para o negócio sob modelagem.
-
-## Conformidade com padrões
-
-Para o desenvolvimento e construção do sistema, os principais padrões a serem considerados são:
-
-- Padrão arquitetural: A ser definido pela contratada. Cenários arquiteturalmente relevantes podem ser detalhados em um Documento de Arquitetura específico.
-- Padrão de Programação e Convenções de Escrita de Código: Dependente da linguagem de programação.
-- Padrões de Mecanismos Arquiteturais e Componentes de Software: a serem definidos no Repositório de Componentes Reutilizáveis.
-- Padrão de Interoperabilidade entre sistemas: protocolos padrão W3C para Web Services.
-
 # Desempenho
 
 ## Quantidade de acesso diário
