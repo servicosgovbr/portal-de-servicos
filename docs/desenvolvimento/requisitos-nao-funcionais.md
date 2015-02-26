@@ -242,7 +242,7 @@ Deverão ser seguidas as recomendações descritas na última versão da [Cartil
 
 # Acessibilidade
 
-O ambiente deve estar aderente às recomendações da última versão disponível do Modelo de Acessibilidade de Governo Eletrônico e-MAG disponíveis em ( [http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG](http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG)). O sítio deve ter percentual de 100% segundo métrica desenvolvida pela SLTI. No AccessMonitor ( [www.acessibilidade.gov.pt/accessmonitor/](http://www.acessibilidade.gov.pt/accessmonitor/)) deve obter média máxima. A conformidade com os padrões será verificada pela equipe de consultores do SISP.
+O ambiente deve estar aderente às recomendações da última versão disponível do [Modelo de Acessibilidade de Governo Eletrônico (e-MAG)](http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG). O sítio deve ter percentual de 100% segundo métrica desenvolvida pela SLTI. No [AccessMonitor](http://www.acessibilidade.gov.pt/accessmonitor/), deve obter média máxima. A conformidade com os padrões será verificada pela equipe de consultores do SISP.
 
 ### Internacionalização (Evolução do projeto – Versão 2.0)
 
