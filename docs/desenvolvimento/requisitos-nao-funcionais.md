@@ -191,13 +191,12 @@ Já as falhas de negócio (erros de validação, por exemplo) devem retornar men
 
 ## Auditoria Mínima
 
-Também em consonância com o princípio de segurança do não repúdio, as ações de homologação, publicação, desativação e exclusão de Serviços Públicos que contêm registros de informações em banco de dados devem conter os seguintes campos:
+Quaisquer transações de escrita (modificação ou remoção) iniciadas por um usuário devem conter os seguintes detalhes no log:
 
-- IP de acesso do qual partiu a requisição;
-- ID do usuário;
-- timestamp da operação;
-- Ação;
-- Referência textual ao conteúdo publicado.
+- IP de acesso do qual partiu a requisição
+- ID do usuário
+- Ação
+- Referência textual ao conteúdo alterado
 
 ## Bloqueio de Acesso ao Log
 
