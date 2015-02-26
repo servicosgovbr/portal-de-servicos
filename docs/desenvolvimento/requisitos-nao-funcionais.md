@@ -315,9 +315,11 @@ Os picos ocorrem nos períodos dos serviços mais utilizados (Declaração de Im
 
 ## Configuração do servidor Web
 
-- O servidor Web deve comprimir os recursos com ferramentas como Gzip e/ou Deflate;
-- O servidor deve definir a validade máxima do cache para os recursos estáticos. Para os recursos que são relacionados a dados privados, não devem ser permitidos o cache;
-- Obter no mínimo de 85 pontos no PageSpeed Insights no mobile e no desktop e nenhum erro (vermelho) relacionado ao próprio servidor.https://developers.google.com/speed/pagespeed/insights/ 
+Para requisições compatíveis, o servidor web deve utilizar compressão gzip e/ou deflate.
+
+O servidor deve definir a validade máxima do cache para os recursos estáticos. Para os recursos que são relacionados a dados privados, não deve ser permitido mantê-los em cache.
+
+Obter no mínimo 85 pontos no [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/), tanto em dispositívos móveis quanto desktops, e nenhum erro (vermelho) relacionado ao próprio servidor.
 
 # Documentação do sistema
 
