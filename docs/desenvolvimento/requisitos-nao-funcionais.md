@@ -232,24 +232,13 @@ Todas as funcionalidades deverão funcionar corretamente nos principais navegado
 
 # Usabilidade
 
-## Interface com usuário
+## Interface com Usuário
 
 Em termos de comportamento, padronização e consistência de componentes visuais, devem ser seguidas as orientações descritas no [Guia de Estilo do Portal Institucional Padrão](http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf), versão 5.0 ou a mais recente disponível.
 
-## Padrões do governo
+## Padrões do Governo
 
 Deverão ser seguidas as recomendações descritas na última versão da [Cartilha de Usabilidade do Governo Eletrônico](http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov/cartilha-de-usabilidade).
-
-## Prevenção de erros do usuário
-
-A descrição das mensagens de erro deve ser clara para o usuário e orientá-lo sobre como resolver o problema, ou seja, ao notificar um erro deve-se mostrar como resolvê-lo, detalhando o que precisa ser realizado para a operação ocorrer com sucesso.
-
-Exemplos:
-
-- O CPF precisa ser um valor válido.
-- O título do serviço não pode conter mais de XXX caracteres.
-
-O sistema deve solicitar a confirmação de ações mais críticas, como por exemplo, exclusões.
 
 # Acessibilidade
 
