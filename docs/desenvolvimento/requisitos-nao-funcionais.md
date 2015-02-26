@@ -228,7 +228,7 @@ Recomenda-se a criptografia de dados em descanso, utilizando algoritmos padrão 
 
 ## Navegadores
 
-Todas as funcionalidades do ambiente deverão funcionar corretamente nos principais navegadores para desktops e dispositivos móveis em suas versões mais recentes e nas versões posteriores à implantação do sistema. A codificação deve feita em **HTML 5**. Deve ser utilizada uma maneira mais segura de manter o código compatível nivelando o desenvolvimento pelos motores de renderização. Cada browser utiliza um motor de renderização que é responsável pelo processamento do código da página.
+Todas as funcionalidades deverão funcionar corretamente nos principais navegadores para desktops e dispositivos móveis em suas versões mais recentes e na versão posterior a esta (n-1). A codificação deve feita em **HTML 5**.
 
 # Usabilidade
 
