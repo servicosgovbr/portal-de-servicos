@@ -214,13 +214,15 @@ O sistema deverá bloquear qualquer acesso a URLs privadas da aplicação, sendo
 
 Estas tentativas de acesso devem ser logadas com nível `WARN` para posterior análise.
 
-## Sigilo dos dados
+# Sigilo dos Dados
 
 Há crucial necessidade de garantir confidencialidade das informações dos cidadãos armazenadas e trafegadas entre o Guia e os órgãos.
 
-## Políticas de segurança (Evolução do projeto – Versão 2.0)
+## Políticas de Segurança
 
-Devem ser utilizados mecanismos para garantia de segurança nas informações como um todo, desde elaboração de políticas de renovação de senhas fortes como utilização de algoritmos de estado segundo Decreto nº 7845, Art 2º.
+Recomenda-se a elaboração políticas de criação e renovação de senhas fortes.
+
+Recomenda-se a criptografia de dados em descanso, utilizando algoritmos padrão de mercado.
 
 # Portabilidade
 
