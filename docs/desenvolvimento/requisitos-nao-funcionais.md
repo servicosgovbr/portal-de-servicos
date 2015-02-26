@@ -97,6 +97,8 @@ Espera-se que, para um artefato seja considerado aceitável:
 
 Todo o código deve ser checado automaticamente por bugs prováveis, utilizando ferramentas como [PMD](http://pmd.sourceforge.net/) e [FindBugs](http://findbugs.sourceforge.net).
 
+Recomenda-se manter a configuração destas ferramentas em seus padrões. Caso haja alguma modificação nelas, é exigida documentação e racionalização explícita para cada caso, na configuração em si, ou se possível em um comentário no próprio código (acima da anotação `@SuppressWarnings`, por exemplo).
+
 **Nível de Duplicação de Código**
 
 O indicador de Nível de Duplicação de Código visa encontrar trechos de códigos replicados sem a utilização correta de técnicas de reuso. A prática de copiar trechos de códigos aumenta desnecessariamente o tamanho do projeto, amplia as possibilidades de defeitos e dificulta a manutenção.
