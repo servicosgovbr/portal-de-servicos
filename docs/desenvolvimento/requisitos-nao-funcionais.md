@@ -135,11 +135,11 @@ Senhas ou outros dados secretos jamais devem ser registrados em quaisquer dos n�
 
 Os níveis de log devem seguir os seguintes critérios:
 
-* Debug/Trace: quaisquer informações relevantes ao desenvolvimento da aplicação. Podem estar habilitados durante homologação e produção, mas é necessário considerar seu uso demasiado de memória caso a aplicação enfrente períodos de alta demanda.
-* Info: registro de execução e eventos de operações relacionadas ao negócio. Due deve conter informações valiosas para futura análise de comportamento: endereço IP da requisição, identificador da transação ou requisição, _timestamp_, etc.
-* Warn: registro de eventos menos esperados que podem causar instabilidades na aplicação: falha ao se comunicar com um serviço externo que pode ser tentada novamente, por exemplo.
-* Error: registro de eventos fatais à operação das aplicações e serviços, mas que não afetem a sua integridade e não envolvam perda de dados: timeout de conexão com o banco de dados, dados ausentes em uma operação que deveria retornar dados mandatoriamente, serviço externo não acessível, etc.
-* Fatal: qualquer erro que impeça que a aplicação registre corretamente informações e incorra em perda de informações ou comprometa a sua integridade. Implica na parada da aplicação e notificação imediata à administração do sistema para que o problema seja sanado e a aplicação retome seu funcionamento. Neste estado a aplicação não deve permitir o acesso de usuários.
+* `DEBUG` e `TRACE`: quaisquer informações relevantes ao desenvolvimento da aplicação. Podem estar habilitados durante homologação e produção, mas é necessário considerar seu uso demasiado de memória caso a aplicação enfrente períodos de alta demanda.
+* `INFO`: registro de execução e eventos de operações relacionadas ao negócio. Due deve conter informações valiosas para futura análise de comportamento: endereço IP da requisição, identificador da transação ou requisição, _timestamp_, etc.
+* `WARN`: registro de eventos menos esperados que podem causar instabilidades na aplicação: falha ao se comunicar com um serviço externo que pode ser tentada novamente, por exemplo.
+* `ERROR`: registro de eventos fatais à operação das aplicações e serviços, mas que não afetem a sua integridade e não envolvam perda de dados: timeout de conexão com o banco de dados, dados ausentes em uma operação que deveria retornar dados mandatoriamente, serviço externo não acessível, etc.
+* `FATAL`: qualquer erro que impeça que a aplicação registre corretamente informações e incorra em perda de informações ou comprometa a sua integridade. Implica na parada da aplicação e notificação imediata à administração do sistema para que o problema seja sanado e a aplicação retome seu funcionamento. Neste estado a aplicação não deve permitir o acesso de usuários.
 
 ### Campos de Log
 
@@ -150,7 +150,7 @@ O log deve conter os seguintes campos:
 - Nível de evento (conforme definido na seção anterior)
 - Identificação do ambiente (IP ou nome da máquina)
 - Pacote, classe e, se possível, método
-- Transação: identificador único de transação (UUID, serial, etc)
+- Transação: identificador único de transação em formato [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier)
 - ID do usuário, caso autenticado
 - Informações da funcionalidade
 - Ticket do erro, caso tenha ocorrido um erro
@@ -169,29 +169,25 @@ Por exemplo, no caso do usuário executar uma busca que não obeteve resultados,
 - Ticket do erro: "null"
 ```
 
-### Escolha de Funcionalidades de _Log_
+### Escolha de Funcionalidades de Log
 
 As funcionalidades a serem logadas devem ser escolhidas de acordo com cada módulo ou sistema, obedecendo os critérios desejados e objetivando a visualização dos eventos significativos pelos usuários administradores do sistema.
 
 A rigor, cada transação está eleita para ser logada.
 
-## Tratamento de Erro (Evolução do projeto – Versão 2.0)
+## Tratamento de Erros
 
-Este requisito visa principalmente a segurança do sistema. Em concordância com boas práticas de segurança, o usuário não deve ter acesso a nenhum detalhe interno da aplicação a fim de evitar que usuários mal intencionados explorem possíveis vulnerabilidades nos sistemas.
+Este requisito visa principalmente a segurança do sistema. O usuário não deve ter acesso a nenhum detalhe interno da aplicação, como nomes de classes ou dependências utilizadas.
 
-Seguindo esta abordagem, o sistema deve possuir um mecanismo de tratamento de erro orientado a "_ticket_" no qual todos os erros que não forem de negócio devem ser informados para o usuário ocultados por um número de _ticket_. Exemplo:
+O sistema deve possuir um mecanismo de tratamento de erro orientado a _tickets_, no qual todas as mensagens de erro exibidas ao usuário (classes de erro HTTP acima de 400) devem ser informados para o usuário ocultados por um número de _ticket_. Por exemplo:
 
-_"A aplicação detectou uma falha inesperada. Por favor, tente a operação novamente. Caso a falha persista, entre em contato com o suporte"._
+```
+A aplicação detectou uma falha inesperada. Por favor, tente a operação novamente. Caso a falha persista, entre em contato com o suporte utilizando o identificador *7831c1d2da14*.
+```
 
-O sistema deve disponibilizar opção para envio de mensagem na mesma tela que contém a mensagem do erro que deverá estar associado a um ticket.
+O _ticket_ deve utilizar o último bloco de dígitos do identificador da transação, com 12 caracteres hexadecimais. Todas as mensagens de log relacionadas à ação do usuário na mesma requisição HTTP devem estar atreladas ao mesmo UUID, o que facilita a busca e depuração.
 
-O _ticket_ deve ter o seguinte formato:
-
-[timestamp] + [primeiros 10 caracteres do session\_id]
-
-O código da falha pode ser visto no _log_ do sistema e deve ser registrado de uma forma que viabilize a implementação de uma funcionalidade de administração (fora do escopo deste documento) que permita a consulta às falhas e às pilhas de exceção contendo todos os detalhes das mesmas incluindo a mensagem opcional do usuário. As falhas devem ser registradas de acordo com todas as práticas definidas neste documento.
-
-Já as falhas de negócio retornam mensagens amigáveis, informando ao usuário o contexto da falha e a ação a ser tomada. A visualização das falhas de negócio são requisitos funcionais que ultrapassam o escopo deste documento e devem ser detalhadas nos documentos de requisitos funcionais de cada módulo ou sistema.
+Já as falhas de negócio (erros de validação, por exemplo) devem retornar mensagens amigáveis, informando ao usuário o contexto da falha e a ação a ser tomada. Estas falhas não devem produzir erros de nível `WARN`, `ERROR` ou `FATAL`, já que não há o que o administrador do sistema possa fazer para remediá-las.
 
 ### Campos Persistidos em BD em Caso de Falha
 
