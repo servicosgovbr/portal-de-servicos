@@ -198,9 +198,9 @@ Quaisquer transações de escrita (modificação ou remoção) iniciadas por um 
 - Ação
 - Referência textual ao conteúdo alterado
 
-## Bloqueio de Acesso ao Log
+## Segurança de Acesso ao Log
 
-O armazenamento do _log_ deverá ser feito de forma que impeça que um usuário mal-intencionado com acesso ao servidor de aplicação, edite ou apague o conteúdo do log. Desta forma, o usuário do servidor de aplicação que escreverá no log, deverá possuir apenas permissão para "_appendar_" o arquivo.
+Logs deverão ser armazenados de forma que um usuário mal-intencionado que consiga acesso a eles não possa corrompê-los. Recomenda-se fortemente não permitir que logs sejam alterados por nenhum usuário do sistema, exceto por um processo de rotação que move registros de logs antigos para outro local, afim de liberar espaço em disco.
 
 ## Autenticação
 
