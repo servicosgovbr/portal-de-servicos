@@ -262,25 +262,19 @@ Utilizar design responsivo e resolução conforme [orientações](http://www.sec
 
 Desenvolvimento, homologação e produção.
 
-## Dedicação da infraestrutura
+## Dedicação da Infraestrutura
 
 A contratada tem liberdade para definir a infraestrutura mantendo o compromisso de atender aos níveis de serviço definidos.
 
-## Hardware e topologia
+## Hardware e Topologia
 
 A contratada tem liberdade para definir a infraestrutura mantendo o compromisso de atender aos níveis de serviço definidos.
 
-# Tecnologia e infraestrutura
+# Tecnologia e Infraestrutura
 
-## Linguagem de programação e Framework de desenvolvimento
+## Linguagem de Programação e Frameworks de Desenvolvimento
 
-A contratada tem liberdade para definir a tecnologia mantendo o compromisso de atender aos níveis de serviço definidos, desde que todo o sistema seja construído utilizando plataforma livre e considerando os princípios da administração pública, inclusive o da economicidade, propondo uma solução durável e flexível para evolução a custos razoáveis ao longo do tempo.
-
-## Componentes de SW
-
-Devem ser considerados componentes proprietários ou de mercado que sejam comuns ao desenvolvimento de todo o sistema. Tais componentes serão armazenados no Repositório de Componentes Reutilizáveis do Projeto e devem trazer informações acerca da sua aplicabilidade, requisitos e restrições arquiteturais, configurações, interfaces e exemplos de uso.
-
-Estes componentes, que serão utilizados na implementação dos mecanismos arquiteturais listados abaixo, devem ser altamente coesos e fracamente acoplados, sendo construídos com o foco em reuso.
+A contratada tem liberdade para definir a tecnologia mantendo o compromisso de atender aos níveis de serviço definidos, desde que todo o sistema seja construído utilizando plataformas de software livre e considerando os princípios da administração pública, inclusive o da economicidade, propondo uma solução durável e flexível para evolução a custos razoáveis ao longo do tempo.
 
 ## Mecanismos arquiteturais
 
