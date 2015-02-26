@@ -83,16 +83,19 @@ Deve ser possível inspecionar um artefato para verificar informações sobre el
 
 Todas as métricas de qualidade de código devem ser comprovadas através de relatórios gerados automaticamente por ferramentas especializadas de medição e monitoramento de código, e disponibilizados para cada artefato construído.
 
-As métricas apresentadas abaixo consideram pelo menos as classes que implementam a Regra de Negócio (tanto do lado do servidor quanto do lado do cliente) e Integração.
+**Cobertura de Testes Unitários**
 
-**Cobertura de Teste Unitário**
+O indicador de cobertura de testes unitários busca identificar o percentual de código do sistema que é processado durante a execução do conjunto de testes unitários.
 
-O indicador de Cobertura de Teste Unitário busca identificar o percentual de código do sistema que é processado durante a execução da Suite de Testes. Para possibilitar a extração dessa métrica a suíte de testes deve ser executada de forma automática, enquanto for necessário.
+Espera-se que, para um artefato seja considerado aceitável:
 
-Considerando pelo menos as classes que implementam a Regra de Negócio e Integração, espera-se os seguintes resultados:
+* 100% dos testes unitários executem corretamente
+* 100% dos testes unitários possuam validações (`verify…`, `assert…`, etc)
+* 75% do código de produção (ou mais) seja executado
 
-- Percentual de sucesso na execução da Suíte de Testes: Manter 100% de sucesso com relação aos resultados dos testes unitários implementados, de modo a torná-los efetivos como testes de regressão.
-- Percentual de cobertura de testes: pelo menos 75% das linhas de códigos das classes de negócio e integração devem possuir testes associados.
+**Checagem de Bugs Prováveis**
+
+Todo o código deve ser checado automaticamente por bugs prováveis, utilizando ferramentas como [PMD](http://pmd.sourceforge.net/) e [FindBugs](http://findbugs.sourceforge.net).
 
 **Nível de Duplicação de Código**
 
