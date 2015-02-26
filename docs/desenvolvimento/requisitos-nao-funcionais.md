@@ -101,49 +101,9 @@ Deve-se manter a configuração destas ferramentas em seus padrões, e violaçõ
 
 Caso haja alguma modificação nelas, é exigida documentação e racionalização explícita para cada caso, na configuração em si, ou se possível em um comentário no próprio código (acima da anotação `@SuppressWarnings`, por exemplo).
 
-**Nível de Duplicação de Código**
-
-O indicador de Nível de Duplicação de Código visa encontrar trechos de códigos replicados sem a utilização correta de técnicas de reuso. A prática de copiar trechos de códigos aumenta desnecessariamente o tamanho do projeto, amplia as possibilidades de defeitos e dificulta a manutenção.
-
-Considerando o método de extração da métrica para todo o código implementado, agrupando o resultado em função dos principais elementos da arquitetura, tais como:
-
-- Classes contendo a lógica de apresentação 
-- Classes com código de integração entre sistemas
-- Classes de acesso ao banco de dados
-- Classes contendo a regra de negócio
-
-Para encontrar trechos de código duplicados, é importante definir a quantidade de tokens que será considerado para análise, onde um token representa um conjunto de caracteres com real significado. Por exemplo, utilizando a linguagem de programação JAVA, o comando System.out.println seria quebrado em cinco tokens: "System" "." "out" "." "println".
-
-Deve ser reestruturado todo trecho de código duplicado, considerando a quantidade de tokens igual a 100. Ou seja, é considerado um trecho de código duplicado quando esse possuir 100 ou mais tokens presentes em outro trecho.
-
 **Documentação do Código**
 
 Recomenda-se evitar a documentação do código através de comentários, e sim através de testes automatizados. Trechos de código comentados como maneira de evitar sua execução, ou blocos `if(false)` são extremamente desencorajados.
-
-**Complexidade Ciclomática (CCN por Método)**
-
-O indicador de CCN (Cyclomatic Complexity Number) por método visa calcular a complexidade dos métodos, considerando principalmente os desvios de execução no código, e identificar possíveis riscos e melhorias arquiteturais, tendo como objetivo principal manter os métodos com CCN inferior ao valor determinado, normalmente 20. Um valor elevado em um método pode indicar um mau design (excesso de responsabilidade) e o valor constantemente pequeno pode indicar excesso de delegação e, consequentemente, baixa coesão e dispersão.
-
-Considerando-se somente os métodos das classes que implementam as regras de negócio e a integração, deve-se evitar totalmente CCN >= 51 e manter em até 5% do código na faixa de CCN > 20 e <= 50.
-
-| CCN | Descrição |
-| --- | --- |
-| 1 até 10 | Código simples sem risco |
-| 11 até 20 | Código normal |
-| 21 até 50 | Código complexo, alto risco |
-| >= 50 | Código não testável, risco altíssimo |
-
-**Granularidade (LOC por Elemento Estrutural)**
-
-O indicador LOC (Lines of Code) extrai informações sobre o tamanho de um elemento estrutural, permitindo apontar potenciais riscos ao projeto. No mínimo 95% das classes devem ter no máximo 1000 linhas de código e 95% dos métodos deve ter no máximo 100 linhas de código.
-
-**Divisão em camadas - ausência de violações de camadas**
-
-Esse indicador identifica as chamadas entre camadas não permitidas pela arquitetura. Em um sistema cuja arquitetura está baseada em camadas, duas regras fundamentais devem ser obedecidas: camadas superiores devem acessar somente a camada imediatamente inferior e uma camada inferior nunca deve acessar uma superior. Entende-se por violação de camadas, quando uma das duas regras citadas acima for infringida.
-
-Além das violações de dependência, esse indicador também identifica as violações de responsabilidades das camadas. Por exemplo: classes na camada de negócio não devem montar trechos de código SQL (Structured Query Language), que é de responsabilidade da camada de persistência, ou métodos na camada de negócio não devem construir trechos de tela HTML (HyperText Markup Language), que é responsabilidade da camada de apresentação.
-
-Deve-se evitar a ocorrência de violação de camadas no sistema, a não ser em casos excepcionais onde for justificada tal prática, por razões técnicas previamente acordadas.
 
 ## Reflection (Reflexão)
 
