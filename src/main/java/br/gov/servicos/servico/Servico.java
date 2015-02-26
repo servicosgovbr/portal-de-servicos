@@ -4,13 +4,13 @@ import lombok.Value;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.List;
 
 import static org.elasticsearch.common.Strings.isEmpty;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Long;
+import static org.springframework.data.elasticsearch.annotations.FieldType.Object;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Value
@@ -32,10 +32,10 @@ public class Servico {
     @Field(index = not_analyzed, type = String)
     String taxa;
 
-    @Field(type = FieldType.Object)
+    @Field(type = Object)
     Orgao prestador;
 
-    @Field(type = FieldType.Object)
+    @Field(type = Object)
     Orgao responsavel;
 
     @Field(index = not_analyzed, type = Long)
@@ -44,11 +44,11 @@ public class Servico {
     @Field(index = not_analyzed, type = Long)
     Long ativacoes;
 
-    @Field(index = not_analyzed, type = String)
-    List<String> areasDeInteresse;
+    @Field(index = not_analyzed, type = Object)
+    List<AreaDeInteresse> areasDeInteresse;
 
-    @Field(index = not_analyzed, type = String)
-    List<String> linhasDaVida;
+    @Field(index = not_analyzed, type = Object)
+    List<LinhaDaVida> linhasDaVida;
 
     @Field(index = not_analyzed, type = String)
     List<String> eventosDasLinhasDaVida;
@@ -65,8 +65,8 @@ public class Servico {
             String taxa,
             Orgao prestador,
             Orgao responsavel,
-            List<String> areasDeInteresse,
-            List<String> linhasDaVida,
+            List<AreaDeInteresse> areasDeInteresse,
+            List<LinhaDaVida> linhasDaVida,
             List<String> eventosDasLinhasDaVida,
             Long acessos,
             Long ativacoes

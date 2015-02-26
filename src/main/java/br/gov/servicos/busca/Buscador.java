@@ -37,8 +37,8 @@ class Buscador {
         return executaQuery(termoBuscado, QueryBuilders::queryString);
     }
 
-    List<Servico> buscaPor(String area, Optional<String> termoBuscado) {
-        return executaQuery(termoBuscado, termo -> termQuery(area, termo));
+    List<Servico> buscaPor(String campo, Optional<String> termoBuscado) {
+        return executaQuery(termoBuscado, termo -> termQuery(campo, termo));
     }
 
     List<Servico> buscaSemelhante(Optional<String> termoBuscado, String... campos) {

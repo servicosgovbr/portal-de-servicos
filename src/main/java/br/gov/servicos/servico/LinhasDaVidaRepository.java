@@ -1,5 +1,6 @@
 package br.gov.servicos.servico;
 
+import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsBuilder;
@@ -18,11 +19,13 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class LinhasDaVidaRepository {
 
+    Slugify slugify;
     ElasticsearchTemplate et;
 
     @Autowired
-    LinhasDaVidaRepository(ElasticsearchTemplate et) {
+    LinhasDaVidaRepository(ElasticsearchTemplate et, Slugify slugify) {
         this.et = et;
+        this.slugify = slugify;
     }
 
     public List<LinhaDaVida> findAll() {
@@ -30,14 +33,14 @@ class LinhasDaVidaRepository {
                 new NativeSearchQueryBuilder()
                         .addAggregation(
                                 new TermsBuilder("linhasDaVida")
-                                        .field("linhasDaVida")
+                                        .field("linhasDaVida.titulo")
                                         .size(MAX_VALUE)
                         ).build()
                 , response -> ((Terms) response.getAggregations()
                         .get("linhasDaVida"))
                         .getBuckets()
                         .stream()
-                        .map((bucket) -> new LinhaDaVida(bucket.getKey(), bucket.getDocCount()))
+                        .map((bucket) -> new LinhaDaVida(slugify.slugify(bucket.getKey()), bucket.getKey(), bucket.getDocCount()))
                         .collect(Collectors.toList())
         );
     }

@@ -27,10 +27,10 @@ public class ServicoControllerTest {
             "Descrição",
             "url://site",
             "Gratuita",
-            new Orgao("Nome", "123"),
-            new Orgao("Nome", null),
-            asList("Área de Interesse"),
-            asList("Linhas da Vida"),
+            new Orgao("1", "Nome", "123"),
+            new Orgao("2", "Nome", null),
+            asList(new AreaDeInteresse("3", "Área de Interesse")),
+            asList(new LinhaDaVida("4", "Linha da Vida")),
             asList("Eventos das Linhas da Vida"),
             0L, 0L
     );

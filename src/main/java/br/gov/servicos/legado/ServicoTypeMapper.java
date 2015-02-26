@@ -1,13 +1,20 @@
 package br.gov.servicos.legado;
 
+import br.gov.servicos.servico.AreaDeInteresse;
+import br.gov.servicos.servico.LinhaDaVida;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.Servico;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.expression.BeanFactoryResolver;
+import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
+import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.function.Function;
@@ -20,11 +27,13 @@ import static lombok.AccessLevel.PRIVATE;
 class ServicoTypeMapper implements Function<ServicoType, Servico> {
     Slugify slugify;
 
-    SpelExpressionParser parser = new SpelExpressionParser();
+    BeanFactory beanFactory;
+    ExpressionParser parser = new SpelExpressionParser();
 
     @Autowired
-    public ServicoTypeMapper(Slugify slugify) {
+    public ServicoTypeMapper(Slugify slugify, BeanFactory beanFactory) {
         this.slugify = slugify;
+        this.beanFactory = beanFactory;
     }
 
     @Override
@@ -46,26 +55,48 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
     }
 
     @SuppressWarnings("unchecked")
-    private List<String> linhasDaVida(ServicoType servicoType) {
-        return ((List<List<String>>)
-                parser.parseExpression(
-                        "publicosAlvo?.content.![value?.linhasDaViva?.linhaDaVida.![titulo]]?:{}")
-                        .getValue(servicoType))
-                .stream()
-                .flatMap(Collection::stream)
-                .collect(Collectors.toList());
+    private String url(ServicoType servicoType) {
+        List<String> urls = parser.parseExpression(
+                "canaisPrestacaoServico?.canalPrestacaoServico?.![url]?:{}")
+                .getValue(context(servicoType), List.class);
+
+        return urls.isEmpty() ? null : urls.get(0);
     }
 
     private Orgao orgaoPrestador(ServicoType servicoType) {
         return parser.parseExpression(
-                "new br.gov.servicos.servico.Orgao(orgaoPrestador?.titulo, orgaoPrestador?.telefone)")
-                .getValue(servicoType, Orgao.class);
+                "new br.gov.servicos.servico.Orgao(@slugify.slugify(orgaoPrestador?.titulo), orgaoPrestador?.titulo, orgaoPrestador?.telefone)")
+                .getValue(context(servicoType), Orgao.class);
     }
 
     private Orgao orgaoResponsavel(ServicoType servicoType) {
         return parser.parseExpression(
-                "new br.gov.servicos.servico.Orgao(orgaoResponsavel?.titulo, null)")
-                .getValue(servicoType, Orgao.class);
+                "new br.gov.servicos.servico.Orgao(@slugify.slugify(orgaoPrestador?.titulo), orgaoResponsavel?.titulo, null)")
+                .getValue(context(servicoType), Orgao.class);
+    }
+
+    @SuppressWarnings("unchecked")
+    private List<AreaDeInteresse> areasDeInteresse(ServicoType servicoType) {
+        return new ArrayList<>(
+                ((List<String>) parser.parseExpression(
+                        "areasInteresse?.area?.![titulo]?:{}")
+                        .getValue(context(servicoType)))
+                        .stream()
+                        .map(s -> new AreaDeInteresse(slugify.slugify(s), s))
+                        .collect(Collectors.toSet()));
+    }
+
+    @SuppressWarnings("unchecked")
+    private List<LinhaDaVida> linhasDaVida(ServicoType servicoType) {
+        return new ArrayList<>(
+                ((List<List<String>>)
+                parser.parseExpression(
+                        "publicosAlvo?.content.![value?.linhasDaViva?.linhaDaVida.![titulo]]?:{}")
+                        .getValue(context(servicoType)))
+                .stream()
+                .flatMap(Collection::stream)
+                .map(x -> new LinhaDaVida(slugify.slugify(x), x))
+                .collect(Collectors.toSet()));
     }
 
     @SuppressWarnings("unchecked")
@@ -73,26 +104,16 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
         return ((List<List<List<String>>>)
                 parser.parseExpression(
                         "publicosAlvo?.content.![value?.linhasDaViva?.linhaDaVida.![eventoslinhaDaVida?.eventolinhaDaVida?.![titulo]]]?:{}")
-                        .getValue(servicoType))
+                        .getValue(context(servicoType)))
                 .stream()
                 .flatMap(Collection::stream)
                 .flatMap(Collection::stream)
                 .collect(Collectors.toList());
     }
 
-    @SuppressWarnings("unchecked")
-    private List<String> areasDeInteresse(ServicoType servicoType) {
-        return parser.parseExpression(
-                "areasInteresse?.area?.![titulo]?:{}")
-                .getValue(servicoType, List.class);
-    }
-
-    @SuppressWarnings("unchecked")
-    private String url(ServicoType servicoType) {
-        List<String> urls = parser.parseExpression(
-                "canaisPrestacaoServico?.canalPrestacaoServico?.![url]?:{}")
-                .getValue(servicoType, List.class);
-
-        return urls.isEmpty() ? null : urls.get(0);
+    private StandardEvaluationContext context(ServicoType servicoType) {
+        StandardEvaluationContext context = new StandardEvaluationContext(servicoType);
+        context.setBeanResolver(new BeanFactoryResolver(this.beanFactory));
+        return context;
     }
 }

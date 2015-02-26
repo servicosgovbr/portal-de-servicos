@@ -8,28 +8,21 @@ import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Value
-public class LinhaDaVida {
+public class AreaDeInteresse {
 
     @Id
     @Field(type = String, index = not_analyzed)
     String id;
 
-    @Field(type = String, index = not_analyzed)
+    @Field(type = String)
     String titulo;
 
-    Long servicos;
-
-    public LinhaDaVida() {
-        this(null, null, null);
+    public AreaDeInteresse() {
+        this(null, null);
     }
 
-    public LinhaDaVida(String id, String titulo) {
-        this(id, titulo, null);
-    }
-
-    public LinhaDaVida(String id, String titulo, Long servicos) {
+    public AreaDeInteresse(String id, String titulo) {
         this.id = id;
         this.titulo = titulo;
-        this.servicos = servicos;
     }
 }

@@ -4,6 +4,7 @@ import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -32,9 +33,9 @@ class BuscaController {
         return buscaUtilizando(q, buscador::busca);
     }
 
-    @RequestMapping("/linha-da-vida")
-    ModelAndView linhaDaVida(@RequestParam(required = true) String q) {
-        return buscaUtilizando(q, termo -> buscador.buscaPor("linhasDaVida", termo));
+    @RequestMapping("/linha-da-vida/{id}")
+    ModelAndView linhaDaVida(@PathVariable String id) {
+        return buscaUtilizando(id, termo -> buscador.buscaPor("linhasDaVida.id", termo));
     }
 
     @RequestMapping("/orgao")
