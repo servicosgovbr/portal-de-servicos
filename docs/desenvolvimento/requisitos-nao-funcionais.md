@@ -244,13 +244,9 @@ Deverão ser seguidas as recomendações descritas na última versão da [Cartil
 
 O ambiente deve estar aderente às recomendações da última versão disponível do [Modelo de Acessibilidade de Governo Eletrônico (e-MAG)](http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG). O sítio deve ter percentual de 100% segundo métrica desenvolvida pela SLTI. No [AccessMonitor](http://www.acessibilidade.gov.pt/accessmonitor/), deve obter média máxima. A conformidade com os padrões será verificada pela equipe de consultores do SISP.
 
-### Internacionalização (Evolução do projeto – Versão 2.0)
+### Internacionalização
 
 Pelo fato de a solução ser utilizada por usuários brasileiros e estrangeiros, deve estar prevista a incorporação de recursos de internacionalização ao sistema para futuras traduções.
-
-### Solicitação assíncrona de informação
-
-A atualização de um objeto específico na página deve apenas carregar o objeto solicitado e não a página inteira. Como exemplo, na criação de listas com campos complexos (canais de prestação do serviço, por exemplo) dentro do serviço, a página de serviço não deve ser recarregada a cada inserção de elemento da lista. Também pode-se citar como exemplo o acesso aos itens de menu de opções do sistema.
 
 ## Padrões web em Governo Eletrônico
 
