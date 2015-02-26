@@ -234,12 +234,11 @@ Todas as funcionalidades deverão funcionar corretamente nos principais navegado
 
 ## Interface com usuário
 
-Em termos de comportamento, padronização e consistência de componentes visuais, devem ser seguidas as orientações descritas em   
-http://www.secom.gov.br/orientacoes-gerais#b\_start=0&c6=%2Fclientes%2Fsecom%2Fsecom%2Forientacoes-gerais%2Fcomunicacao-digital&c1=Manuais.
+Em termos de comportamento, padronização e consistência de componentes visuais, devem ser seguidas as orientações descritas no [Guia de Estilo do Portal Institucional Padrão](http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf), versão 5.0 ou a mais recente disponível.
 
 ## Padrões do governo
 
-Deverão ser seguidas as recomendações descritas na última versão da Cartilha de Usabilidade do Governo Eletrônico disponível em [http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov/cartilha-de-](http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov/cartilha-de-usabilidade) [usabilidade](http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov/cartilha-de-usabilidade)
+Deverão ser seguidas as recomendações descritas na última versão da [Cartilha de Usabilidade do Governo Eletrônico](http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov/cartilha-de-usabilidade).
 
 ## Prevenção de erros do usuário
 
