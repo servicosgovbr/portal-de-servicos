@@ -325,19 +325,13 @@ Obter no mínimo 85 pontos no [PageSpeed Insights](https://developers.google.com
 
 ## Documentos de Projeto/Arquitetura
 
-Os documentos de especificação de projeto do sistema (diagramas UML) integrada ao código. **Não há a intenção de avaliar previamente tais artefatos para fins de validação**.
+Diagramas compartilhados durante o desenvolvimento do projeto devem ser mantidos em um local acessível e organizado de forma a facilitar o acesso posterior. Caso seja utilizada uma lista de discussão para tal, é necessário que ela tenha uma ferramentas de busca adequada.
 
-Entretanto, para fins de gestão do conhecimento e controle do ciclo de vida do produto, quando aplicável, devem ser entregues os seguintes documentos, em períodos a serem definidos **:**
+Demais artefatos de documentação podem ser solicitados durante a execução do projeto.
 
-- Modelo de Classes;
-- Modelo de Dados;
-- Outros diagramas UML (Statemachine, Atividades, Componentes, etc.), quando necessários, para esclarecer partes complexas do sistema ou quando forem requeridos pelo cliente, de maneira previamente acordada.
+É recomendável o uso de [UML As Sketch](http://martinfowler.com/bliki/UmlAsSketch.html), em preferência à geração de documentação extensiva, porém de baixo valor.
 
-Obs: podem ser geradas versões preliminares destes documentos durante a execução das iterações do projeto, com objetivo de ser avaliadas antecipadamente pelo Ministério do Planejamento – MP.
-
-Demais artefatos de documentação podem ser solicitados durante a execução do projeto, em comum acordo entre Contratada e MP.
-
-Documentação do código
+## Documentação do código
 
 **É obrigatório documentar o código das principais classes de serviços (negócio) e de integração**** bem como do código dos scripts do lado cliente**. Os implementadores devem fazer uso dos recursos de documentação integrados à plataforma ou à linguagem (por exemplo, Javadoc), e gerar os relatórios apropriados. Deve contemplar:
 
