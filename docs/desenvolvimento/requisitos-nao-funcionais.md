@@ -206,13 +206,13 @@ Logs deverão ser armazenados de forma que um usuário mal-intencionado que cons
 
 ### HTTPS
 
-O sistema estará sujeito a acesso autorizado por usuários espalhados por todo o Brasil e exterior, em todas as esferas de governo. Por este motivo o acesso às partes restritas do sistema, incluindo interface de login, deverá ser feito exclusivamente através do protocolo HTTPS.
+O acesso às partes restritas do sistema deverá ser feito exclusivamente através do protocolo HTTPS.
 
 ### Bloqueio de Acesso a URL sem Autenticação/Autorização
 
-O sistema deverá bloquear qualquer acesso a URLs privadas da aplicação, sendo que no caso de usuário não autenticado, o mesmo deverá ser redirecionado para a página de login. No caso de usuários autenticados, mas que não possuem acesso à URL solicitada, o mesmo deverá ser redirecionado a uma página de erro, com a seguinte informação: "Acesso não autorizado a esta página."
+O sistema deverá bloquear qualquer acesso a URLs privadas da aplicação, sendo que no caso de usuário não autenticado, o mesmo deverá ser redirecionado para a página de login.
 
-Estas tentativas de acesso devem ser logadas com nível **WARN** para posterior análise, caso necessário. (Evolução do projeto – Versão 2.0)
+Estas tentativas de acesso devem ser logadas com nível `WARN` para posterior análise.
 
 ### Níveis de autenticação (Evolução do projeto – Versão 2.0)
 
