@@ -107,9 +107,7 @@ Recomenda-se evitar a documentação do código através de comentários, e sim 
 
 ## Reflection (Reflexão)
 
-A utilização de reflexões em qualquer forma (_annotations_, _aspects_, etc.) deve ser detalhadamente comentada e deve estar bem descrita no documento de arquitetura.
-
-Deve-se ter em mente a dificuldade natural de entendimento do funcionamento de reflexões, dado o poder de transformação de comportamento deste recurso. Por estes mesmos motivos, sua utilização deve ser restrita às fases de desenvolvimento do sistema e às fases posteriores de evolução, mas nunca devem ser criadas em ações corretivas sem uma devida análise arquitetural de forma a evitar um estado de caos no código fonte que impeça a evolução posterior do sistema.
+A utilização de reflexões em qualquer forma (_annotations_, _aspects_, etc.) deve ser detalhadamente comentada e deve estar bem descrita no documento de arquitetura, ou na documentação do framework/biblioteca que a provê.
 
 # Confiabilidade e disponibilidade
 
