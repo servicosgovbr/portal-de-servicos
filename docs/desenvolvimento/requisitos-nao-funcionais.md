@@ -6,29 +6,49 @@ Este documento tem o objetivo de definir requisitos não funcionais e de comport
 
 ## Codificação de caracteres (Encoding)
 
-Visando a compatibilidade entre múltiplas plataformas de software, ambientes de desenvolvimento e navegadores clientes, no sentido de evitar os tradicionais problemas de decodificação errônea de caracteres especiais, o sistema deverá ser codificado inteiramente no padrão universal UTF-8.
+Usar UTF-8 em todos os arquivos de código, dados, configuração e documentação.
 
-## Comentários de Código
+## Organização do código
 
-Visando a clareza do código, a simplicidade no entendimento e a facilidade corretiva e evolutiva, a codificação do sistema deverá ser comentada seguindo as diretrizes a seguir.
-
-### Classes
-
-Todas as classes devem conter um comentário com uma descrição objetiva do seu propósito e funcionamento geral como "objeto" dentro do sistema.
-
-### Métodos e Funções Procedurais
-
-Os métodos devem conter uma descrição do comportamento para o qual foram criados, excluindo-se os métodos padrões ("getters", "setters", construtores).
-
-Ademais, lógicas complexas devem ser ostensivamente comentadas dentro dos métodos de forma a deixar claro seu funcionamento. Deve-se ter em mente que técnicos de suporte irão dar manutenção ao sistema posteriormente sem necessariamente possuir todo o conhecimento do sistema que a equipe de desenvolvimento detém. Por este motivo os comentários devem permitir um entendimento rápido e preciso da lógica interna de métodos complexos.
-
-### Arquivos de Configuração
-
-Arquivos de configuração em texto (XML, _properties_, etc.) devem estar comentados em todos os parâmetros. Por exemplo, uma conexão de banco de dados que deve ter um usuário apenas com permissão de escrita deve ter este requisito comentado no arquivo de configuração correspondente de forma a reforçar esta necessidade ou requisito.
+O código Java deve ser organizado em pacotes, a partir de `br.gov.servicos`. Código de produção deve estar em um diretório separado do código de testes automatizados, mas ambos podem compartilhar o esquema de pacotes, afim de facilitar a escrita de testes unitários que dependem de membros com modificadores de acesso mais fechados.
 
 ### Convenções de Estilo de Codificação
 
 O código escrito deverá estar em conformidade com as convenções e regras de estilo de codificação da sua respectiva linguagem ou plataforma de desenvolvimento.
+
+## Modificadores de acesso
+
+Elementos no código devem apresentar modificadores de acesso condizentes com a menor permissão possível, visando manter o encapsulamento o mais estrito possível. Métodos e propriedades acessíveis apenas ao mesmo objeto deverão ser marcados como `private`, a objetos do mesmo pacote como `default`, e assim por diante. É recomendado evitar declarar métodos e propriedades como `public`, a menos que façam de fato parte da interface pública daquele objeto.
+
+Uma exceção se faz para quando métodos ou propriedades devem ser acessados por frameworks ou bibliotecas. Nestes casos, a declaração deve acompanhar um comentário explicitando a dependência, como por exemplo `/* usado apenas pelo Spring */`.
+
+## Testes automatizados
+
+Visando a clareza do código, a simplicidade no entendimento e a facilidade corretiva e evolutiva, a codificação do sistema deverá possuir testes automatizados descritivos de todas suas funcionalidades.
+
+Excetuam-se testes automatizados para funcionalidades existentes em frameworks ou bibliotecas utilizados, a menos que necessários como forma de documentar o comportamento de uma funcionalidade específica dos mesmos, ou explicitar um defeito encontrado.
+
+### Classes
+
+Todas as classes devem possuir um teste unitário equivalente. Por convenção, este teste deve estar no mesmo pacote que a classe a ser testada, com o acréscimo da palavra `Test` em seu nome. Por exemplo, para `br.gov.servicos.busca.BuscaController` deve existir uma classe `br.gov.servicos.busca.BuscaControllerTest`.
+
+Algumas classes podem possuir um teste de integração, onde são testadas interações com outras módulos do sistema. Nestes casos, convencionou-se sufiá-los com `IntegrationTest`, e seus nomes não precisam necessariamente estar atrelados a uma classe existente, mas sim a uma fatia de funcionalidade do sistema. Por exemplo, `br.gov.servicos.busca.BuscasComunsIntegrationTest`
+
+### Métodos
+
+Um ou mais testes unitários devem existir para todos os métodos públicos de uma classe, com nomes que detalham seu funcionamento e comportamento esperado para as entradas daquele teste. Por exemplo, se o método `busca(String termo)` retorna uma objeto `List<Servico>` com os serviços ordenados pela relevância em relação ao termo, deve haver um teste unitário chamado `buscaPorTermoRetornaListaComServicosOrdenadosPorRelevancia`, com as verificações pertinentes.
+
+Encoraja-se fazer apenas uma verificação (`assert…` ou `verify…`) por teste unitário.
+
+### Pacotes
+
+Pacotes devem conter fatias _horizontais_ de funcionalidade, de uma ponta a outra no sistema. Por exemplo, `br.gov.servicos.servico` pode conter objetos de domínio e seus agregados (`Servico`, `LinhaDaVida`, `AreDeInteresse`), repositórios (`ServicoRepository`), controllers (`ServicoController`) e outras classes que colaboram entre si para oferecer a funcionalidade.
+
+### Arquivos de Configuração
+
+O uso de arquivos de configuração em texto deve ser minimizado ao máximo, e configuração declarativa e programática deve ser utilizada sempre que for uma opção.
+
+Opções de linha de comando ou variáveis de ambiente utilizadas que possam alterar o comportamento do sistema devem ser documentadas _in loco_.
 
 ## Métricas de qualidade de Código
 
