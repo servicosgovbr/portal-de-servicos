@@ -284,16 +284,9 @@ Atualmente a quantidade de visitas diárias está em torno de 60.000. A previsã
 
 ## Tempo de Resposta
 
-O tempo de resposta equivale ao tempo (em milisegundos) entre a entrada de uma requisição (botão, link, etc.) nos servidores do Guia de Serviços e sua respectiva saída, incluindo o tempo de interoperação com sistemas externos e o tempo de resposta da intranet.
+O tempo de resposta equivale ao tempo (em milisegundos) entre o último byte da entrada de uma requisição nos servidores do Guia de Serviços e sua respectiva saída até o último byte ser enviado para o cliente.
 
-As funcionalidades serão classificadas sob duas perspectivas:
-
-- De importância para o negócio: a classificação de importância para o negócio leva em consideração a importância da funcionalidade para o negócio. Podem ser classificadas como críticas, importantes e de menor uso. Essa classificação é definida pelo cliente;
-- De complexidade de processamento: a classificação de complexidade de processamento leva em consideração vários fatores que devem ser analisados para avaliação do processamento. Podem ser classificadas como de complexidade baixa, média, alta e altíssima. Essa classificação é definida pela equipe de desenvolvimento.
-
-É importante destacar que somente os passos mais importantes devem ser classificados. O objetivo é que, para agilizar, somente os passos mais importantes e significativos sejam mensurados e avaliados conforme critérios de aceites acordados.
-
-Além disso, após a definição e refinamento dos cenários (definição dos passos), os tempos de respostas e critérios de aceites sejam definidos, levando em consideração as classificações citadas. (falta definir os cenários e tempos)
+Este tempo deve ser monitorado cotinuamente e o desvio padrão não deve ultrapassar 50%, exceto em casos de interrupção na rede ou outras circunstâncias externas.
 
 ## Cenários de Testes de Desempenho
 
