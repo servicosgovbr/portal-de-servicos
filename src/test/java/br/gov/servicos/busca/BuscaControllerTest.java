@@ -71,7 +71,7 @@ public class BuscaControllerTest {
     public void buscaPorLinhasDaVida() {
         doReturn(umServico)
                 .when(buscador)
-                .buscaPor("linhasDaVida", of("Aposentar-se"));
+                .buscaPor("linhasDaVida.id", of("Aposentar-se"));
 
         assertCompareListModelAttribute(controller.linhaDaVida("Aposentar-se"), "resultados", umServico);
     }
