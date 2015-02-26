@@ -115,7 +115,7 @@ A utilização de reflexões em qualquer forma (_annotations_, _aspects_, etc.) 
 
 O sistema deverá garantir que os dados persistidos sejam íntegros e consistentes de forma que transações que aconteçam em paralelo no mesmo conjunto de dados, possuam controles de concorrência para evitar estas inconsistências.
 
-O sistema deverá garantir que consultas realizadas a conjuntos de dados que possuam semântica implícita para mais de um registro sejam sempre consistentes e íntegras, impossibilitando leitura de dados que foram inseridos por outra transação, mas ainda não foram _comitados_ (_dirty read_). Ou seja, t_oda transação __com o__ SGBD deve respeitar as regras ACID (Atomicidade, __C__ onsistência, Isolamento e Durabilidade)_
+O sistema deverá garantir que consultas realizadas a conjuntos de dados que possuam semântica implícita para mais de um registro sejam sempre consistentes e íntegras, impossibilitando leitura de dados que foram inseridos por outra transação.
 
 ## Horário de disponibilidade
 
