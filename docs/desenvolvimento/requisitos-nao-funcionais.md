@@ -248,13 +248,13 @@ O ambiente deve estar aderente às recomendações da última versão disponíve
 
 Pelo fato de a solução ser utilizada por usuários brasileiros e estrangeiros, deve estar prevista a incorporação de recursos de internacionalização ao sistema para futuras traduções.
 
-## Padrões web em Governo Eletrônico
+## Padrões Web em Governo Eletrônico
 
-O ambiente deve seguir as normas estabelecidas nos Padrões Web de Governo Eletrônico (e-PWG) disponíveis em http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov.
+O ambiente deve seguir as normas estabelecidas nos [Padrões Web de Governo Eletrônico (e-PWG)](http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov).
 
-## Design e resolução
+## Design e Resolução
 
-Utilizar design responsivo e resoluçãoconforme orientações em http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-mai201409.pdf
+Utilizar design responsivo e resolução conforme [orientações](http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-mai201409.pdf).
 
 # Qualidade Técnica e Arquitetural da Solução
 
