@@ -5,6 +5,7 @@ apply plugin: 'project-report'
 apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: 'pmd'
+apply plugin: 'findbugs'
 
 ext.sha = 'git rev-parse --short HEAD'.execute().in.text.trim()
 version = '1.0.' + sha + '-SNAPSHOT'
@@ -60,6 +61,13 @@ test {
 
     jacoco {
         excludes = generatedSources
+    }
+}
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
     }
 }
 
