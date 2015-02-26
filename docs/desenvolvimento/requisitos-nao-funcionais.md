@@ -278,19 +278,13 @@ A contratada tem liberdade para definir a tecnologia mantendo o compromisso de a
 
 # Desempenho
 
-## Quantidade de acesso diário
+## Quantidade de Acessos Diários
 
 Atualmente a quantidade de visitas diárias está em torno de 60.000. A previsão é que aumente a cada ano.
 
-## Tempo de resposta de funcionalidade
+## Tempo de Resposta
 
-O tempo de resposta equivale ao tempo (em segundos) entre a entrada de uma requisição (botão, link, etc.) nos servidores do Guia de Serviços e sua respectiva saída, incluindo o tempo de interoperação com sistemas externos e o tempo de resposta da intranet. Este tempo equivale, desta forma, ao "tempo de host".
-
-Não serão contemplados no cálculo do tempo de resposta o tempo de transferência dos dados na internet e o processamento que o software cliente (navegador) realiza (como a renderização de uma página).
-
-A resposta esperada sempre considera o método do percentil 90%. Ou seja, o tempo de resposta especificado equivale ao tempo de resposta máximo para 90% das requisições realizadas aleatoriamente pelos usuários.
-
-As requisições não consideradas como funcionalidades (como requisições AJAX, abertura de menu, paginação, etc.) terão tempo de resposta máximo de 2 (dois) segundos.
+O tempo de resposta equivale ao tempo (em milisegundos) entre a entrada de uma requisição (botão, link, etc.) nos servidores do Guia de Serviços e sua respectiva saída, incluindo o tempo de interoperação com sistemas externos e o tempo de resposta da intranet.
 
 As funcionalidades serão classificadas sob duas perspectivas:
 
