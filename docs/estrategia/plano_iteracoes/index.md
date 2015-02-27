@@ -66,8 +66,8 @@ _Apresentações de Iteração_ serão feitas a cada iteração, comunicando nos
 
 Para nos auxiliar no desenvolvimento e acompanhamento de nossas hipóteses, escolhemos as seguintes ferramentas:
 
-Ferramentas
-===========
+Ferramentas de trabalho
+=======================
 
 ### Repositório de código fonte: [Github](https://github.com/servicosgovbr)
 
