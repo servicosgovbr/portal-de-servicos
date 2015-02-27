@@ -13,8 +13,9 @@
 </span>
 
 <span layout:fragment="link-migalha-de-pao">
-    <a th:href="@{/orgaos/{id}(id=${termo})}" th:text="${resultados.?[responsavel.id==#root.termo].get(0).responsavel.nome}">
-    Nome do Órgão
+    <a th:href="@{/orgaos/{id}(id=${termo})}"
+       th:text="${resultados.?[responsavel.id==#root.termo].get(0).responsavel.nome}">
+        Nome do Órgão
     </a>
 </span>
 
@@ -59,6 +60,7 @@
                                 Título
                             </a>
                         </h3>
+
                         <p th:text="${#strings.abbreviate(resultado.descricao, 140)}">Descrição</p>
                     </th:block>
                 </li>
