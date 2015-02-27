@@ -11,7 +11,9 @@ import org.springframework.core.io.ClassPathResource;
 
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.doThrow;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
@@ -40,6 +42,10 @@ public class ConteudoControllerTest {
 
     @Test(expected = ConteudoNaoEncontrado.class)
     public void retorna404QuandoArquivoNaoExiste() throws ConteudoNaoEncontrado {
+        doThrow(new ConteudoNaoEncontrado())
+                .when(markdown)
+                .toHtml(anyObject());
+
         controller.conteudo("arquivo-nao-existente");
     }
 
