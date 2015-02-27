@@ -1,6 +1,6 @@
 # Objetivo
 
-Este documento tem o objetivo de definir requisitos não funcionais e de comportamento do Guia de Serviços Públicos do Governo Federal que serão utilizados como parâmetro para julgá-lo operacionalmente. Além disso, esse produto de trabalho descreve a infraestrutura tecnológica de software, hardware e redes utilizada e aspectos relacionados a estas.
+Define requisitos não-funcionais e de comportamento do Guia de Serviços Públicos do Governo Federal.
 
 # Codificação
 
