@@ -59,11 +59,6 @@ dl.portlet li {
   clear: both;
 }
 
-body {
-  font: 100% Arial, FreeSans, sans-serif;
-  background: White;
-  color: Black;
-}
 
 h1,
 h2,
@@ -412,7 +407,7 @@ h3 {
 }
 
 #content h1 {
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 
 a:link,
@@ -1062,7 +1057,7 @@ dl.portlet li {
 }
 
 .outstanding-header .outstanding-title {
-  margin-left: 0 !important;
+  margin-left: 0;
   padding: .45em;
   border-top: 2px solid #172838;
   border-bottom: 1px solid #ccc;
@@ -1761,3 +1756,4 @@ ul.detalhes-erro > li > span {
   margin-top: 14px;
   display: inline-block;
 }
+

@@ -12,15 +12,21 @@
     <a href="">
         Busca
     </a>
-</span>
+</span> 
 
 <div layout:fragment="corpo">
 
     <div class="row">
         <div class="cell width-16 position-0">
+            <div class="tile azul-claro">
+                <div class="outstanding-header">
+                    <h2 class="outstanding-title"> Linha da vida</h2>
+                </div>
+            </div>
+            <div th:utext="${conteudo}" class="markdown"></div>
 
-            <h1>Linha da vida "<span th:text="${termo}">termo</span>"</h1>
 
+            <h3> Em destaque </h3>
             <ul id="resultados-busca">
                 <li th:each="resultado : ${resultados}">
                     <h3>
