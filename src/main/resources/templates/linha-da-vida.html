@@ -51,21 +51,18 @@
 
     <div class="row">
         <div class="cell width-16 position-0">
-            <h3>Você também pode estar procurando por</h3>
-
-            <div class="tile tile-default">
-                <ul id="resultados-busca">
-                    <li th:each="resultado, i : ${resultados}">
-                        <th:block th:if="${i.count &gt; 3}">
-                            <h3>
-                                <a th:href="@{/servico/{id}(id=${resultado.id})}" th:text="${resultado.titulo}">
-                                    Título
-                                </a>
-                            </h3>
-                        </th:block>
-                    </li>
-                </ul>
-            </div>
+            <ul id="resultados-linhadavida">
+                <li th:each="resultado, i : ${resultados}">
+                    <th:block th:if="${i.count &gt; 3}">
+                        <h3>
+                            <a th:href="@{/servico/{id}(id=${resultado.id})}" th:text="${resultado.titulo}">
+                                Título
+                            </a>
+                        </h3>
+                        <p th:text="${#strings.abbreviate(resultado.descricao,140)}">Descrição</p>
+                    </th:block>
+                </li>
+            </ul>
         </div>
     </div>
 
