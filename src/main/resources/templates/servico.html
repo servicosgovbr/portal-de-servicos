@@ -8,9 +8,13 @@
 </head>
 <body>
 
+<span layout:fragment="link-migalha-de-pao-pai">
+    Serviço
+</span>
+
 <span layout:fragment="link-migalha-de-pao">
-    <a href="">
-        Serviço
+    <a href="" th:text="${servico.titulo}">
+        Nome do Serviço
     </a>
 </span>
 

@@ -23,7 +23,7 @@ public class Markdown {
         pegdown = new PegDownProcessor();
     }
 
-    public String toHtml(ClassPathResource resource) {
+    public Conteudo toHtml(ClassPathResource resource) {
         if (!resource.exists()) {
             throw new ConteudoNaoEncontrado();
         }
@@ -32,8 +32,9 @@ public class Markdown {
             InputStreamReader input = new InputStreamReader(resource.getInputStream(), "UTF-8");
 
             try (BufferedReader br = new BufferedReader(input)) {
-                String conteudo = br.lines().collect(joining("\n"));
-                return pegdown.markdownToHtml(conteudo);
+                String titulo = br.readLine();
+                String conteudo = titulo + "\n" + br.lines().collect(joining("\n"));
+                return new Conteudo(titulo, pegdown.markdownToHtml(conteudo));
             }
         } catch (IOException e) {
             throw new ConteudoNaoEncontrado(e);

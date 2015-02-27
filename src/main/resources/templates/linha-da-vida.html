@@ -14,7 +14,7 @@
 
 <span layout:fragment="link-migalha-de-pao">
     <a th:href="@{/linhas-da-vida/{id}(id=${termo})}"
-       th:text="${resultados.get(0).linhasDaVida.?[id==#root.termo].get(0).titulo}">
+       th:text="${conteudo.titulo}">
     Nome da Linha da Vida
     </a>
 </span>
@@ -28,7 +28,7 @@
                     <h2 class="outstanding-title">Linha da vida</h2>
                 </div>
             </div>
-            <div th:utext="${conteudo}" class="markdown"></div>
+            <div th:utext="${conteudo.html}" class="markdown"></div>
 
             <hr/>
         </div>

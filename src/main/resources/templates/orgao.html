@@ -14,7 +14,7 @@
 
 <span layout:fragment="link-migalha-de-pao">
     <a th:href="@{/orgaos/{id}(id=${termo})}"
-       th:text="${resultados.?[responsavel.id==#root.termo].get(0).responsavel.nome}">
+       th:text="${conteudo.titulo}">
         Nome do Órgão
     </a>
 </span>
@@ -28,7 +28,7 @@
                     <h2 class="outstanding-title">Órgão</h2>
                 </div>
             </div>
-            <div th:utext="${conteudo}" class="markdown"></div>
+            <div th:utext="${conteudo.html}" class="markdown"></div>
 
             <hr/>
         </div>

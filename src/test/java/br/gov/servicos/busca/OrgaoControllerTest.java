@@ -12,6 +12,7 @@ import org.springframework.core.io.ClassPathResource;
 
 import java.util.List;
 
+import static br.gov.servicos.fixtures.TestData.CONTEUDO;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
 import static java.util.Optional.of;
@@ -49,11 +50,11 @@ public class OrgaoControllerTest {
 
     @Test
     public void exibicaoDeLinhaDaVidaRetornaConteudoDescritivo() {
-        doReturn("lorem ipsum")
+        doReturn(CONTEUDO)
                 .when(markdown)
                 .toHtml(new ClassPathResource("conteudo/orgaos/receita-federal.md"));
 
-        assertModelAttributeValue(controller.orgao("receita-federal"), "conteudo", "lorem ipsum");
+        assertModelAttributeValue(controller.orgao("receita-federal"), "conteudo", CONTEUDO);
     }
 
 }

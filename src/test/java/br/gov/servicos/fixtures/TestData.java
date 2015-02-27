@@ -1,5 +1,6 @@
 package br.gov.servicos.fixtures;
 
+import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.servico.AreaDeInteresse;
 import br.gov.servicos.servico.LinhaDaVida;
 import br.gov.servicos.servico.Orgao;
@@ -22,4 +23,7 @@ public class TestData {
             asList("Eventos das Linhas da Vida"),
             0L, 0L
     );
+
+    public static final Conteudo CONTEUDO = new Conteudo("Título", "<h1>Título</h1>\n\nConteúdo");
+
 }

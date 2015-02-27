@@ -21,7 +21,13 @@ public class MarkdownTest {
 
     @Test
     public void geraHtmlDeResource() {
-        assertThat(markdown.toHtml(new ClassPathResource("/conteudo/pagina.md")),
+        assertThat(markdown.toHtml(new ClassPathResource("/conteudo/pagina.md")).getHtml(),
                 containsString("<h1>Uma Página Qualquer</h1>"));
+    }
+
+    @Test
+    public void extraiTituloDaPaginaEmMarkdown() {
+        assertThat(markdown.toHtml(new ClassPathResource("/conteudo/pagina.md")).getTitulo(),
+                containsString("Uma Página Qualquer"));
     }
 }
