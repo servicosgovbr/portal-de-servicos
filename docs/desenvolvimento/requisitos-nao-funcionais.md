@@ -272,24 +272,6 @@ Utilizar design responsivo e resolução conforme [orientações](http://www.sec
 
 # Tecnologia e infraestrutura
 
-## Ambientes
-
-Desenvolvimento, homologação e produção.
-
-## Dedicação da Infraestrutura
-
-A contratada tem liberdade para definir a infraestrutura mantendo o compromisso de atender aos níveis de serviço definidos.
-
-## Hardware e Topologia
-
-A contratada tem liberdade para definir a infraestrutura mantendo o compromisso de atender aos níveis de serviço definidos.
-
-# Tecnologia e Infraestrutura
-
-## Linguagem de Programação e Frameworks de Desenvolvimento
-
-A contratada tem liberdade para definir a tecnologia mantendo o compromisso de atender aos níveis de serviço definidos, desde que todo o sistema seja construído utilizando plataformas de software livre e considerando os princípios da administração pública, inclusive o da economicidade, propondo uma solução durável e flexível para evolução a custos razoáveis ao longo do tempo.
-
 # Desempenho
 
 ## Quantidade de Acessos Diários
