@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
+import static java.util.Collections.unmodifiableList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.index.query.QueryBuilders.fuzzyLikeThisQuery;
 import static org.elasticsearch.index.query.QueryBuilders.termQuery;
@@ -48,7 +49,7 @@ class Buscador {
     private List<Servico> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
         Optional<String> termo = termoBuscado.filter(t -> !t.isEmpty());
 
-        LinkedList<Servico> resultados = termo
+        List<Servico> resultados = termo
                 .map(criaQuery)
                 .map(servicos::search)
                 .map(Lists::newLinkedList)
@@ -56,10 +57,10 @@ class Buscador {
 
         registraBuscaEfetuada(termo, resultados);
 
-        return resultados;
+        return unmodifiableList(resultados);
     }
 
-    private void registraBuscaEfetuada(Optional<String> termo, LinkedList<Servico> resultados) {
+    private void registraBuscaEfetuada(Optional<String> termo, List<Servico> resultados) {
         Busca busca = termo
                 .map(buscas::findOne)
                 .map(Busca::withNovaAtivacao)
