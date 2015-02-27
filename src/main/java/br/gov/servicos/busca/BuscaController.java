@@ -33,12 +33,6 @@ class BuscaController {
         return new ModelAndView("resultados-busca", buscaUtilizando(q, buscador::busca));
     }
 
-    @RequestMapping("/linha-da-vida/{id}")
-    ModelAndView linhaDaVida(@PathVariable String id) {
-        return new ModelAndView("linha-da-vida",
-                buscaUtilizando(id, termo -> buscador.buscaPor("linhasDaVida.id", termo)));
-    }
-
     @RequestMapping("/orgao/{id}")
     ModelAndView orgao(@PathVariable String id) {
         return new ModelAndView("resultados-busca",

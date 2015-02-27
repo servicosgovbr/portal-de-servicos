@@ -19,11 +19,11 @@ import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doReturn;
-import static org.springframework.test.web.ModelAndViewAssert.*;
+import static org.springframework.test.web.ModelAndViewAssert.assertCompareListModelAttribute;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
-public class BuscaControllerTest {
+public class LinhaDaVidaControllerTest {
 
     @Mock
     ServicoRepository servicos;
@@ -34,44 +34,28 @@ public class BuscaControllerTest {
     @Mock
     Buscador buscador;
 
-    List<Servico> umServico = asList(SERVICO);
-    BuscaController controller;
+    List<Servico> umServico;
+    LinhaDaVidaController controller;
 
     @Before
     public void setUp() {
+        umServico = asList(SERVICO);
+
         doReturn(emptyList())
                 .when(servicos)
                 .search(any(QueryBuilder.class));
 
-        controller = new BuscaController(buscador);
+        controller = new LinhaDaVidaController(buscador);
     }
 
     @Test
-    public void buscaRedirecionaParaPaginaDeResultados() {
-        assertViewName(controller.busca(null), "resultados-busca");
-    }
-
-    @Test
-    public void buscaRetornaTermoBuscado() {
-        assertModelAttributeValue(controller.busca("trabalho"), "termo", "trabalho");
-    }
-
-    @Test
-    public void buscaRetornaResultadosParaAPagina() {
+    public void buscaPorLinhasDaVidaRetornaServicos() {
         doReturn(umServico)
                 .when(buscador)
-                .busca(of("emprego"));
+                .buscaPor("linhasDaVida.id", of("Aposentar-se"));
 
-        assertCompareListModelAttribute(controller.busca("emprego"), "resultados", umServico);
+        assertCompareListModelAttribute(controller.linhaDaVida("Aposentar-se"), "resultados", umServico);
     }
 
-    @Test
-    public void buscaPorOrgaoRetornaServicos() {
-        doReturn(umServico)
-                .when(buscador)
-                .buscaSemelhante(of("Planejamento"), "prestador.id", "responsavel.id");
-
-        assertCompareListModelAttribute(controller.orgao("Planejamento"), "resultados", umServico);
-    }
 
 }

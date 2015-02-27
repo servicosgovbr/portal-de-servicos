@@ -1,6 +1,7 @@
 package br.gov.servicos.cms;
 
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
+import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,17 +9,20 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.core.io.ClassPathResource;
 
+import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
 @RunWith(MockitoJUnitRunner.class)
+@FieldDefaults(level = PRIVATE)
 public class ConteudoControllerTest {
 
     @Mock
-    private Markdown markdown;
-    private ConteudoController controller;
+    Markdown markdown;
+
+    ConteudoController controller;
 
     @Before
     public void setUp() {

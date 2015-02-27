@@ -1,6 +1,8 @@
 package br.gov.servicos.servico;
 
+import br.gov.servicos.fixtures.TestData;
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
+import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,7 +10,7 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static java.util.Arrays.asList;
+import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
@@ -19,29 +21,17 @@ import static org.springframework.test.web.ModelAndViewAssert.assertModelAttribu
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
 @RunWith(MockitoJUnitRunner.class)
+@FieldDefaults(level = PRIVATE)
 public class ServicoControllerTest {
 
-    private static final Servico SERVICO = new Servico(
-            "1",
-            "Título",
-            "Descrição",
-            "url://site",
-            "Gratuita",
-            new Orgao("1", "Nome", "123"),
-            new Orgao("2", "Nome", null),
-            asList(new AreaDeInteresse("3", "Área de Interesse")),
-            asList(new LinhaDaVida("4", "Linha da Vida")),
-            asList("Eventos das Linhas da Vida"),
-            0L, 0L
-    );
-
     @Mock
-    private ServicoRepository servicos;
-    private ServicoController controller;
+    ServicoRepository servicos;
+
+    ServicoController controller;
 
     @Before
     public void setUp() {
-        doReturn(SERVICO).when(servicos).findOne("1");
+        doReturn(TestData.SERVICO).when(servicos).findOne("1");
         
         doAnswer(returnsFirstArg())
                 .when(servicos)
@@ -57,14 +47,14 @@ public class ServicoControllerTest {
 
     @Test
     public void retornaOServicoBuscado() {
-        assertModelAttributeValue(controller.get("1"), "servico", SERVICO.withNovoAcesso());
+        assertModelAttributeValue(controller.get("1"), "servico", TestData.SERVICO.withNovoAcesso());
     }
 
     @Test
     public void incrementaONumeroDeAcessosAoServico() {
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
-        doReturn(SERVICO)
+        doReturn(TestData.SERVICO)
                 .when(servicos)
                 .save(captor.capture());
 
@@ -76,13 +66,13 @@ public class ServicoControllerTest {
     public void redirecionaUsuarioParaLinkDoServico() {
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
-        doReturn(SERVICO)
+        doReturn(TestData.SERVICO)
                 .when(servicos)
                 .save(captor.capture());
 
         String actual = controller.navegar("1").getUrl();
 
-        assertThat(actual, is(SERVICO.getUrl()));
+        assertThat(actual, is(TestData.SERVICO.getUrl()));
         assertThat(captor.getValue().getAtivacoes(), is(1L));
     }
 

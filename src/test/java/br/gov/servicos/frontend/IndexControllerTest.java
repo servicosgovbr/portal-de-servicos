@@ -1,6 +1,7 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.servico.ServicoRepository;
+import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 
+import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.springframework.data.domain.Sort.Direction.DESC;
@@ -17,11 +19,13 @@ import static org.springframework.test.web.ModelAndViewAssert.assertModelAttribu
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
 @RunWith(MockitoJUnitRunner.class)
+@FieldDefaults(level = PRIVATE)
 public class IndexControllerTest {
 
     @Mock
-    private ServicoRepository servicos;
-    private IndexController controller;
+    ServicoRepository servicos;
+
+    IndexController controller;
 
     @Before
     public void setUp() {

@@ -1,15 +1,18 @@
 package br.gov.servicos.cms;
 
+import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.core.io.ClassPathResource;
 
+import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.assertThat;
 
+@FieldDefaults(level = PRIVATE)
 public class MarkdownTest {
 
-    private Markdown markdown;
+    Markdown markdown;
 
     @Before
     public void setUp() {
