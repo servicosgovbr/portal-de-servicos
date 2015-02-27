@@ -65,13 +65,4 @@ public class BuscaControllerTest {
         assertCompareListModelAttribute(controller.busca("emprego"), "resultados", umServico);
     }
 
-    @Test
-    public void buscaPorOrgaoRetornaServicos() {
-        doReturn(umServico)
-                .when(buscador)
-                .buscaSemelhante(of("Planejamento"), "prestador.id", "responsavel.id");
-
-        assertCompareListModelAttribute(controller.orgao("Planejamento"), "resultados", umServico);
-    }
-
 }

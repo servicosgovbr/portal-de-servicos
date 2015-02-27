@@ -9,12 +9,12 @@
 <body>
 
 <span layout:fragment="link-migalha-de-pao-pai">
-    Linhas da Vida
+    Órgãos
 </span>
 
 <span layout:fragment="link-migalha-de-pao">
-    <a th:href="@{/linhas-da-vida/{id}(id=${termo})}" th:text="${resultados.get(0).linhasDaVida.?[id==#root.termo].get(0).titulo}">
-        Nome da Linha da Vida
+    <a th:href="@{/orgaos/{id}(id=${termo})}" th:text="${resultados.?[responsavel.id==#root.termo].get(0).responsavel.nome}">
+    Nome do Órgão
     </a>
 </span>
 
@@ -24,7 +24,7 @@
         <div class="cell width-16 position-0">
             <div class="tile azul-claro">
                 <div class="outstanding-header">
-                    <h2 class="outstanding-title">Linha da vida</h2>
+                    <h2 class="outstanding-title">Órgão</h2>
                 </div>
             </div>
             <div th:utext="${conteudo}" class="markdown"></div>
