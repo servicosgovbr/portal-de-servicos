@@ -340,19 +340,17 @@ Demais artefatos de documentação podem ser solicitados durante a execução do
 - Em língua portuguesa (excetuadas partes geradas pela ferramenta automatizada, que podem estar em língua inglesa)
 - Deve ser armazenado em repositório com controle de versionamento
 
-## Documentos de infraestrutura e produção
+## Documentos de Infraestrutura e Produção
 
-Quando aplicável, devem ser entregues os seguintes documentos, em tempos definidos pela contratante **:**
+Os seguintes documentos devem ser mantidos e relacionados:
 
-- Documentação de Hardware (HW) e Software (SW) / Configuração de Hardware e Software (CHS);
-- Memória de Cálculo para Atendimento dos Níveis de Serviço (NS) e das Características de Serviço (CNS);
-- Plano de Capacidade;
-- Testes de Capacidade e Desempenho (Plano / Execução / Resultados);
-- Procedimentos e Recursos para Monitoração / Auditoria / Acompanhamento;
-- Plano de Implantação / Plano de Contingência;
-- Análise de Segurança;
-
-Obs: podem ser geradas versões preliminares destes documentos durante a execução das iterações do projeto, com objetivo de serem avaliadas antecipadamente pelo MP.
+- Documentação do hardware utilizado
+- Documentação do software utilizado (sistema operacional, bibliotecas, etc)
+- Configuração de hardware e software (preferencialmente, automatizada)
+- Testes de Capacidade e Desempenho (Plano / Execução / Resultados)
+- Procedimentos e Recursos para Monitoração / Auditoria / Acompanhamento
+- Plano de Implantação / Plano de Contingência
+- Análise de Segurança
 
 # Restrições tecnológicas
 
