@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout-verde">
+
+<head>
+    <title th:text="'Busca por ' + ${termo}">Resultados da Busca</title>
+</head>
+<body>
+
+<span layout:fragment="link-migalha-de-pao">
+    <a href="">
+        Busca
+    </a>
+</span>
+
+<div layout:fragment="corpo">
+
+    <div class="row">
+        <div class="cell width-16 position-0">
+
+            <h1>Linha da vida "<span th:text="${termo}">termo</span>"</h1>
+
+            <ul id="resultados-busca">
+                <li th:each="resultado : ${resultados}">
+                    <h3>
+                        <a th:href="@{/servico/{id}(id=${resultado.id})}" th:text="${resultado.titulo}">
+                            Título
+                        </a>
+                    </h3>
+
+                    <p th:text="${resultado.descricao}">Descrição</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

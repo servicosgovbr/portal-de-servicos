@@ -30,25 +30,27 @@ class BuscaController {
 
     @RequestMapping("/busca")
     ModelAndView busca(@RequestParam(required = true) String q) {
-        return buscaUtilizando(q, buscador::busca);
+        return new ModelAndView("resultados-busca", buscaUtilizando(q, buscador::busca));
     }
 
     @RequestMapping("/linha-da-vida/{id}")
     ModelAndView linhaDaVida(@PathVariable String id) {
-        return buscaUtilizando(id, termo -> buscador.buscaPor("linhasDaVida.id", termo));
+        return new ModelAndView("linha-da-vida",
+                buscaUtilizando(id, termo -> buscador.buscaPor("linhasDaVida.id", termo)));
     }
 
     @RequestMapping("/orgao/{id}")
     ModelAndView orgao(@PathVariable String id) {
-        return buscaUtilizando(id, termo -> buscador.buscaSemelhante(termo, "prestador.id", "responsavel.id"));
+        return new ModelAndView("resultados-busca",
+                buscaUtilizando(id, termo -> buscador.buscaSemelhante(termo, "prestador.id", "responsavel.id")));
     }
 
-    private ModelAndView buscaUtilizando(String q, Function<Optional<String>, List<Servico>> executaBusca) {
+    private HashMap<String, Object> buscaUtilizando(String q, Function<Optional<String>, List<Servico>> executaBusca) {
         HashMap<String, Object> model = new HashMap<>();
         model.put("termo", q);
         model.put("resultados", executaBusca.apply(ofNullable(q)));
 
-        return new ModelAndView("resultados-busca", model);
+        return model;
     }
 
 }
