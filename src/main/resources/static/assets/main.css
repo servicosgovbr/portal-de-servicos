@@ -1728,6 +1728,10 @@ ul.detalhes-erro > li > span {
   float: right;
 }
 
+.markdown {
+  margin-bottom: 2em;
+}
+
 .markdown h1,
 .markdown h2 {
   margin-bottom: .5em;
@@ -1756,4 +1760,3 @@ ul.detalhes-erro > li > span {
   margin-top: 14px;
   display: inline-block;
 }
-
