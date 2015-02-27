@@ -146,6 +146,20 @@ Referências:
 
 * Documentação do projeto: [http://guia-de-servicos.readthedocs.org/pt_BR/latest/](http://guia-de-servicos.readthedocs.org/pt_BR/latest/)
 
+### Listas de email: [Google Groups](https://groups.google.com/d/forum/guiadeservicos-discussao)
+
+Duas listas de discussão foram criadas para o facilitar a comunicação no projeto: 
+
+* ***Discussão:*** uma lista para a discussões gerais sobre o projeto (com links, dúvidas, debates, etc.)
+* ***Anúncios:*** lista criada para divulgação de anúncios (de baixo tráfego, somente para informativos gerais, novas publicações e eventos maiores)
+
+![Google Groups](https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/docs/estrategia/plano_iteracoes/images/google_groups.png)
+
+Referências:
+
+* Lista de anúncios: [https://groups.google.com/d/forum/guiadeservicos-anuncios](https://groups.google.com/d/forum/guiadeservicos-anuncios)
+* Lista de discussões: [https://groups.google.com/d/forum/guiadeservicos-discussao](https://groups.google.com/d/forum/guiadeservicos-discussao)
+
 ### Comunicação por meio de mensagens instantâneas: [Gitter](https://gitter.im/servicosgovbr/guia-de-servicos)
 
 Gitter é um comunicador instantâneo que permite a participação de qualquer interessado no projeto.
