@@ -62,7 +62,7 @@ Teremos também, todos os dias pela manhã, uma reunião que chamamos de "Reuni�
 
 Um _Release_ é caracterizado como um marco de aprendizado consolidado e aumento da maturidade do Guia de Serviços.
 
-_Showcases_ serão feitos a cada iteração comunicando assim tanto nosso aprendizado com relação ao trabalho desenvolvido até então, como documentos e apresentações a serem utilizadas para o acompanhamento do projeto.
+_Apresentações de Iteração_ serão feitas a cada iteração, comunicando nosso aprendizado com relação ao trabalho desenvolvido até então através de documentos e apresentações que poderão ser utilizadas para o acompanhamento do projeto.
 
 Para nos auxiliar no desenvolvimento e acompanhamento de nossas hipóteses, escolhemos as seguintes ferramentas:
 
