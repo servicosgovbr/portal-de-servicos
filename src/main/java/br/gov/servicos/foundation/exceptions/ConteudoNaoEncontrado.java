@@ -4,9 +4,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
-@ResponseStatus(value = NOT_FOUND, reason = "Pagina não encontrada")
+@ResponseStatus(value = NOT_FOUND, reason = "Página não encontrada")
 public class ConteudoNaoEncontrado extends Exception {
-    
+
     private static final long serialVersionUID = -7299858067001144911L;
-    
+
 }
