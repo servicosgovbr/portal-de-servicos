@@ -18,7 +18,7 @@ Código de produção deve estar em um diretório separado do código de testes 
 
 Utilizar as convenções e regras de estilo de codificação da respectiva linguagem.
 
-## Modificadores de Acesso
+### Modificadores de Acesso
 
 Elementos no código devem apresentar modificadores de acesso condizentes com a menor permissão possível.
 
@@ -56,31 +56,31 @@ Pacotes devem conter fatias _horizontais_ de funcionalidade, de uma ponta a outr
 
 Por exemplo, `br.gov.servicos.servico` pode conter objetos de domínio e seus agregados (`Servico`, `LinhaDaVida`, `AreDeInteresse`), repositórios (`ServicoRepository`), controllers (`ServicoController`) e outras classes que colaboram entre si para oferecer a funcionalidade.
 
-### Arquivos de Configuração
+## Arquivos de Configuração
 
 O uso de arquivos de configuração em texto deve ser minimizado ao máximo, e configuração declarativa e programática deve ser utilizada sempre que for uma opção.
 
 Opções de linha de comando ou variáveis de ambiente utilizadas que possam alterar o comportamento do sistema devem ser documentadas _in loco_.
 
-### Artefatos
+## Artefatos
 
 A construção do código deve gerar artefatos únicos, com as seguintes características:
 
-**Reproduzíveis**
+### Reproduzíveis
 
 Dada uma revisão do repositório (por exemplo, `9359cd`), duas máquinas diferentes devem construir exatamente o mesmo artefato, com exceção a _timestamps_ e informações sobre o ambiente de construção que podem ser incluídas no artefato em si. Todas as funcionalidades e características dos dois artefatos gerados devem ser idênticas.
 
-**Atômicos**
+### Atômicos
 
 Artefatos não podem ser construídos parcialmente. Caso sua construção falhe, eles devem ser imediatamente descartados pelo sistema de builds.
 
-**Específicos**
+### Específicos
 
 Um artefato pode depender de uma plataforma (por exemplo, `Linux`), uma arquitetura (`x86-64`), uma distribuição (`CentOS`) e um conjunto de pacotes instalados no ambiente (`build-essentials`, `elasticsearch`, etc). Sempre que possível, as versões exatas destes devem ser especificadas e verificadas durante a instalação e execução do artefato.
 
 É extremamente desaconselhável depender de versões flutuantes (`-SNAPSHOT`), e recomenda-se utilizar as versões mais recentes assim que possível, especialmente em caso de atualizações de segurança.
 
-**Descritivos**
+### Descritivos
 
 Deve ser possível inspecionar um artefato para verificar informações sobre ele. Nestas, devem estar contidos:
 
@@ -95,7 +95,7 @@ Deve ser possível inspecionar um artefato para verificar informações sobre el
 
 Todas as métricas de qualidade de código devem ser comprovadas através de relatórios gerados automaticamente por ferramentas especializadas de medição e monitoramento de código, e disponibilizados para cada artefato construído.
 
-**Cobertura de Testes Unitários**
+### Cobertura de Testes Unitários
 
 O indicador de cobertura de testes unitários busca identificar o percentual de código do sistema que é processado durante a execução do conjunto de testes unitários.
 
@@ -105,7 +105,7 @@ Espera-se que, para um artefato seja considerado aceitável:
 * 100% dos testes unitários possuam validações (`verify…`, `assert…`, etc)
 * 75% do código de produção (ou mais) seja executado
 
-**Checagem de Bugs Prováveis**
+### Checagem de Bugs Prováveis
 
 Todo o código deve ser checado automaticamente por bugs prováveis, utilizando as ferramentas [PMD](http://pmd.sourceforge.net/) e [FindBugs](http://findbugs.sourceforge.net), ou o equivalente apropriado em outras linguagens.
 
@@ -113,7 +113,7 @@ Deve-se manter a configuração destas ferramentas em seus padrões, e violaçõ
 
 Caso haja alguma modificação nelas, é exigida documentação e racionalização explícita para cada caso, na configuração em si, ou se possível em um comentário no próprio código (acima da anotação `@SuppressWarnings`, por exemplo).
 
-**Documentação do Código**
+### Documentação do Código
 
 Recomenda-se evitar a documentação do código através de comentários, e sim através de testes automatizados. Trechos de código comentados como maneira de evitar sua execução, ou blocos `if(false)` são extremamente desencorajados.
 
@@ -256,11 +256,11 @@ Deverão ser seguidas as recomendações descritas na última versão da [Cartil
 
 O ambiente deve estar aderente às recomendações da última versão disponível do [Modelo de Acessibilidade de Governo Eletrônico (e-MAG)](http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG). O sítio deve ter percentual de 100% segundo métrica desenvolvida pela SLTI. No [AccessMonitor](http://www.acessibilidade.gov.pt/accessmonitor/), deve obter média máxima. A conformidade com os padrões será verificada pela equipe de consultores do SISP.
 
-### Internacionalização
+# Internacionalização
 
 Pelo fato de a solução ser utilizada por usuários brasileiros e estrangeiros, deve estar prevista a incorporação de recursos de internacionalização ao sistema para futuras traduções.
 
-## Padrões Web em Governo Eletrônico
+# Padrões Web em Governo Eletrônico
 
 O ambiente deve seguir as normas estabelecidas nos [Padrões Web de Governo Eletrônico (e-PWG)](http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov).
 
@@ -333,7 +333,7 @@ O servidor deve definir a validade máxima do cache para os recursos estáticos.
 
 Obter no mínimo 85 pontos no [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/), tanto em dispositívos móveis quanto desktops, e nenhum erro (vermelho) relacionado ao próprio servidor.
 
-# Documentação do sistema
+# Documentação do Sistema
 
 ## Documentos de Projeto/Arquitetura
 
