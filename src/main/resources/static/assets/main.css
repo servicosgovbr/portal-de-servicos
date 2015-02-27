@@ -194,7 +194,7 @@ dl.portlet a:visited {
 
 #content a:hover,
 dl.portlet a:hover {
-  color: #75ad0a !important;
+  color: #75ad0a;
 }
 
 #content a:target {
@@ -423,10 +423,6 @@ dl.portlet a:visited {
   color: #2c67cd;
 }
 
-#content a:hover,
-dl.portlet a:hover {
-  color: #000 !important;
-}
 
 a:hover,
 a:active {
@@ -1759,10 +1755,17 @@ ul.detalhes-erro > li > span {
   border: 1px solid black;
   padding: 8px;
   background: green;
-  color: white !important;
   text-decoration: none;
   margin-top: 14px;
   display: inline-block;
+}
+
+a#comecar:visited, a#comecar:link{
+  color: white;
+}
+
+a#comecar:hover{
+  color: #A0B69F;
 }
 
 #content hr{
