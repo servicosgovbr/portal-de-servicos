@@ -1760,3 +1760,7 @@ ul.detalhes-erro > li > span {
   margin-top: 14px;
   display: inline-block;
 }
+
+#content hr{
+  margin-bottom: 15px;
+}
