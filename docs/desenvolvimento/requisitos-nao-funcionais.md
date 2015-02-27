@@ -331,14 +331,14 @@ Demais artefatos de documentação podem ser solicitados durante a execução do
 
 É recomendável o uso de [UML As Sketch](http://martinfowler.com/bliki/UmlAsSketch.html), em preferência à geração de documentação extensiva, porém de baixo valor.
 
-## Documentação do código
+## Documentação do Código
 
-**É obrigatório documentar o código das principais classes de serviços (negócio) e de integração**** bem como do código dos scripts do lado cliente**. Os implementadores devem fazer uso dos recursos de documentação integrados à plataforma ou à linguagem (por exemplo, Javadoc), e gerar os relatórios apropriados. Deve contemplar:
+É obrigatório documentar, através de testes automatizados, o código de todas as funcionalidades. O relatório de execução destes testes deve contemplar:
 
-- Clareza, objetividade, ortografia e boa apresentação;
-- Padronização dos produtos conforme os modelos definidos;
-- A documentação elaborada e fornecida terá que estar em língua portuguesa, com exceção de relatórios ou outras saídas geradas por ferramenta automatizada, que poderão estar em língua inglesa.
-- O material técnico e administrativo (artefatos do projeto) deve ser armazenado em repositório com controle de versionamento e outras funcionalidades que garantam o uso concorrente e colaborativo dos seus arquivos.
+- Clareza, objetividade, ortografia e boa apresentação
+- Padronização dos produtos conforme os modelos definidos
+- Em língua portuguesa (excetuadas partes geradas pela ferramenta automatizada, que podem estar em língua inglesa)
+- Deve ser armazenado em repositório com controle de versionamento
 
 ## Documentos de infraestrutura e produção
 
