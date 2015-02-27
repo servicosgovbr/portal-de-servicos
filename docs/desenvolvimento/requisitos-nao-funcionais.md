@@ -105,6 +105,8 @@ Espera-se que, para um artefato seja considerado aceitável:
 * 100% dos testes unitários possuam validações (`verify…`, `assert…`, etc)
 * 75% do código de produção (ou mais) seja executado
 
+Devem ser feitas exclusões, para não deturpar os dados do relatório de cobertura, código que tenha sido gerado automaticamente (por exemplo, _bindings_ JAXB).
+
 ### Checagem de Bugs Prováveis
 
 Todo o código deve ser checado automaticamente por bugs prováveis, utilizando as ferramentas [PMD](http://pmd.sourceforge.net/) e [FindBugs](http://findbugs.sourceforge.net), ou o equivalente apropriado em outras linguagens.
