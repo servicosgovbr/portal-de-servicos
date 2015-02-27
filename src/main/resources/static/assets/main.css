@@ -756,6 +756,10 @@ input.searchField {
   text-decoration: underline;
 }
 
+#portal-breadcrumbs > span.breadcrumbSeparator {
+  color: black;
+}
+
 #main #portal-breadcrumbs {
   margin-top: 1.923em;
   margin-bottom: 1.923em;
