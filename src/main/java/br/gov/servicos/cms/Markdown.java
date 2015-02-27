@@ -15,7 +15,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class Markdown {
+public class Markdown {
 
     PegDownProcessor pegdown;
 
