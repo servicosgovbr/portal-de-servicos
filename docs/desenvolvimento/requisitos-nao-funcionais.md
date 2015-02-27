@@ -10,39 +10,51 @@ Usar UTF-8 em todos os arquivos de código, dados, configuração e documentaç�
 
 ## Organização do Código
 
-O código Java deve ser organizado em pacotes, a partir de `br.gov.servicos`. Código de produção deve estar em um diretório separado do código de testes automatizados, mas ambos podem compartilhar o esquema de pacotes, afim de facilitar a escrita de testes unitários que dependem de membros com modificadores de acesso mais fechados.
+O código Java deve ser organizado em pacotes, a partir de `br.gov.servicos`.
+
+Código de produção deve estar em um diretório separado do código de testes automatizados, mas ambos podem compartilhar o esquema de pacotes.
 
 ### Convenções de Estilo de Codificação
 
-O código escrito deverá estar em conformidade com as convenções e regras de estilo de codificação da sua respectiva linguagem ou plataforma de desenvolvimento.
+Utilizar as convenções e regras de estilo de codificação da respectiva linguagem.
 
 ## Modificadores de Acesso
 
-Elementos no código devem apresentar modificadores de acesso condizentes com a menor permissão possível, visando manter o encapsulamento o mais estrito possível. Métodos e propriedades acessíveis apenas ao mesmo objeto deverão ser marcados como `private`, a objetos do mesmo pacote como `default`, e assim por diante. É recomendado evitar declarar métodos e propriedades como `public`, a menos que façam de fato parte da interface pública daquele objeto.
+Elementos no código devem apresentar modificadores de acesso condizentes com a menor permissão possível.
+
+Métodos e propriedades acessíveis apenas ao mesmo objeto deverão ser marcados como `private`, a objetos do mesmo pacote como `default`, e assim por diante.
+
+É recomendado evitar declarar métodos e propriedades como `public`, a menos que façam de fato parte da interface pública daquele objeto.
 
 Uma exceção se faz para quando métodos ou propriedades devem ser acessados por frameworks ou bibliotecas. Nestes casos, a declaração deve acompanhar um comentário explicitando a dependência, como por exemplo `/* usado apenas pelo Spring */`.
 
 ## Testes Automatizados
 
-Visando a clareza do código, a simplicidade no entendimento e a facilidade corretiva e evolutiva, a codificação do sistema deverá possuir testes automatizados descritivos de todas suas funcionalidades.
+O sistema deverá possuir testes automatizados descritivos de todas suas funcionalidades.
 
 Excetuam-se testes automatizados para funcionalidades existentes em frameworks ou bibliotecas utilizados, a menos que necessários como forma de documentar o comportamento de uma funcionalidade específica dos mesmos, ou explicitar um defeito encontrado.
 
 ### Classes
 
-Todas as classes devem possuir um teste unitário equivalente. Por convenção, este teste deve estar no mesmo pacote que a classe a ser testada, com o acréscimo da palavra `Test` em seu nome. Por exemplo, para `br.gov.servicos.busca.BuscaController` deve existir uma classe `br.gov.servicos.busca.BuscaControllerTest`.
+Todas as classes devem possuir um teste unitário equivalente.
 
-Algumas classes podem possuir um teste de integração, onde são testadas interações com outras módulos do sistema. Nestes casos, convencionou-se sufiá-los com `IntegrationTest`, e seus nomes não precisam necessariamente estar atrelados a uma classe existente, mas sim a uma fatia de funcionalidade do sistema. Por exemplo, `br.gov.servicos.busca.BuscasComunsIntegrationTest`
+Por convenção, este teste deve estar no mesmo pacote que a classe a ser testada, com o acréscimo da palavra `Test` em seu nome. Por exemplo, para `br.gov.servicos.busca.BuscaController` deve existir uma classe `br.gov.servicos.busca.BuscaControllerTest`.
+
+Algumas classes podem possuir um teste de integração, onde são testadas interações com outras partes do sistema. Nestes casos, convencionou-se sufixá-los com `IntegrationTest`. Seus nomes não precisam estar atrelados a uma classe existente. Por exemplo, `br.gov.servicos.busca.BuscasComunsIntegrationTest`.
 
 ### Métodos
 
-Um ou mais testes unitários devem existir para todos os métodos públicos de uma classe, com nomes que detalham seu funcionamento e comportamento esperado para as entradas daquele teste. Por exemplo, se o método `busca(String termo)` retorna uma objeto `List<Servico>` com os serviços ordenados pela relevância em relação ao termo, deve haver um teste unitário chamado `buscaPorTermoRetornaListaComServicosOrdenadosPorRelevancia`, com as verificações pertinentes.
+Um ou mais testes unitários devem existir para todos os métodos públicos de uma classe, com nomes que detalham seu funcionamento e comportamento esperado para as entradas daquele teste.
+
+Por exemplo, se o método `busca(String termo)` retorna uma objeto `List<Servico>` com os serviços ordenados pela relevância em relação ao termo, deve haver um teste unitário chamado `buscaPorTermoRetornaListaComServicosOrdenadosPorRelevancia`, com as verificações pertinentes.
 
 Encoraja-se fazer apenas uma verificação (`assert…` ou `verify…`) por teste unitário.
 
 ### Pacotes
 
-Pacotes devem conter fatias _horizontais_ de funcionalidade, de uma ponta a outra no sistema. Por exemplo, `br.gov.servicos.servico` pode conter objetos de domínio e seus agregados (`Servico`, `LinhaDaVida`, `AreDeInteresse`), repositórios (`ServicoRepository`), controllers (`ServicoController`) e outras classes que colaboram entre si para oferecer a funcionalidade.
+Pacotes devem conter fatias _horizontais_ de funcionalidade, de uma ponta a outra no sistema.
+
+Por exemplo, `br.gov.servicos.servico` pode conter objetos de domínio e seus agregados (`Servico`, `LinhaDaVida`, `AreDeInteresse`), repositórios (`ServicoRepository`), controllers (`ServicoController`) e outras classes que colaboram entre si para oferecer a funcionalidade.
 
 ### Arquivos de Configuração
 
