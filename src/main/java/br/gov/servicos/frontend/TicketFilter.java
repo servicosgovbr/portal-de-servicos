@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.UUID;
 
 import static lombok.AccessLevel.PRIVATE;
@@ -15,9 +16,9 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class TicketFilter implements Filter {
 
-    Tickets tickets;
+    Iterator<UUID> tickets;
 
-    public TicketFilter(Tickets tickets) {
+    public TicketFilter(Iterator<UUID> tickets) {
         this.tickets = tickets;
     }
 

@@ -12,6 +12,7 @@ import org.springframework.mock.web.MockHttpServletResponse;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import java.util.Iterator;
 import java.util.UUID;
 
 import static lombok.AccessLevel.PRIVATE;
@@ -29,7 +30,7 @@ public class TicketFilterTest {
     TicketFilter filter;
 
     @Mock
-    Tickets tickets;
+    Iterator<UUID> tickets;
 
     @Before
     public void setUp() throws Exception {
@@ -78,7 +79,7 @@ public class TicketFilterTest {
 
     @Test
     public void sempreContinuaExecucaoDosFiltros() throws Exception {
-        when(tickets.next()).thenCallRealMethod();
+        when(tickets.next()).thenReturn(TICKET);
 
         MockFilterChain chain = chain();
         ServletRequest request = request();
