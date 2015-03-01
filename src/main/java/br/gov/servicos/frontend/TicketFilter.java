@@ -1,9 +1,11 @@
 package br.gov.servicos.frontend;
 
 import lombok.experimental.FieldDefaults;
-import lombok.extern.slf4j.Slf4j;
+import org.jboss.logging.MDC;
+import org.springframework.web.filter.OncePerRequestFilter;
 
-import javax.servlet.*;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -12,9 +14,10 @@ import java.util.UUID;
 
 import static lombok.AccessLevel.PRIVATE;
 
-@Slf4j
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-public class TicketFilter implements Filter {
+public class TicketFilter extends OncePerRequestFilter {
+
+    public static final String TICKET_KEY = "req.ticket";
 
     Iterator<UUID> tickets;
 
@@ -23,42 +26,16 @@ public class TicketFilter implements Filter {
     }
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-    }
-
-    @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        HttpServletRequest req = (HttpServletRequest) request;
-        HttpServletResponse res = (HttpServletResponse) response;
-
-        doFilter(req, res, chain);
-    }
-
-    private void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
-        String old = Thread.currentThread().getName();
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
         try {
-            UUID ticket = tickets.next();
+            String ticket = tickets.next().toString();
 
-            Thread.currentThread().setName(ticket.toString());
-            request.setAttribute("Ticket", ticket);
+            MDC.put(TICKET_KEY, ticket);
+            request.setAttribute(TICKET_KEY, ticket);
 
-            long start = System.currentTimeMillis();
             chain.doFilter(request, response);
-            long total = System.currentTimeMillis() - start;
-
-            log.info("{} {} {} {}ms {}",
-                    request.getRemoteHost(),
-                    request.getMethod(),
-                    request.getRequestURI(),
-                    total,
-                    response.getStatus()
-            );
         } finally {
-            Thread.currentThread().setName(old);
+            MDC.remove(TICKET_KEY);
         }
-    }
-
-    @Override
-    public void destroy() {
     }
 }

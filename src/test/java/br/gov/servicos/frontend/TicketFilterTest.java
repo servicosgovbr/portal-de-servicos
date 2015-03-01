@@ -15,6 +15,7 @@ import javax.servlet.ServletResponse;
 import java.util.Iterator;
 import java.util.UUID;
 
+import static br.gov.servicos.frontend.TicketFilter.TICKET_KEY;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
@@ -56,7 +57,7 @@ public class TicketFilterTest {
         ServletRequest request = request();
         filter.doFilter(request, response(), chain());
 
-        assertThat(request.getAttribute("Ticket"), is(TICKET));
+        assertThat(request.getAttribute(TICKET_KEY), is(TICKET.toString()));
         verify(tickets, atMost(1)).next();
     }
 
