@@ -1,5 +1,6 @@
 package br.gov.servicos.config;
 
+import br.gov.servicos.frontend.Tickets;
 import br.gov.servicos.frontend.TicketFilter;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -11,9 +12,10 @@ import static java.util.Arrays.asList;
 public class TicketFilterConfig {
 
     @Bean
-    public FilterRegistrationBean ticketFilter() {
+    public FilterRegistrationBean ticketFilter(Tickets tickets) {
         FilterRegistrationBean filters = new FilterRegistrationBean();
-        filters.setFilter(new TicketFilter());
+
+        filters.setFilter(new TicketFilter(tickets));
         filters.setUrlPatterns(asList("/*"));
 
         return filters;
