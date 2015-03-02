@@ -1715,17 +1715,9 @@ body.contraste .busca-principal {
   font-weight: bold;
 }
 
-ul.detalhes-erro {
-  padding: 10px;
-  border: 1px dotted black;
-}
-
-ul.detalhes-erro > li {
-  display: block;
-}
-
-ul.detalhes-erro > li > span {
-  float: right;
+span.ticket-erro {
+  font-weight: bold;
+  font-family: Courier, monospaced;
 }
 
 .markdown {

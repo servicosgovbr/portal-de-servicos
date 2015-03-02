@@ -16,38 +16,18 @@
 
     <div class="row">
         <div class="cell width-16 position-0">
-            <div class="tile azul-claro">
-                <div class="outstanding-header">
-                    <h2 class="outstanding-title">Ocorreu um erro</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="cell width-8 position-0">
             <div class="tile">
+                <h1>Ocorreu um erro</h1>
+
                 <p>
-                    Esta página não pode ser exibida por causa de um erro em nosso sistema.
+                    A aplicação detectou uma falha inesperada. Por favor, tente a operação novamente.
                 </p>
 
                 <p>
-                    Desculpe-nos! O administrador foi notificado automaticamente e trabalhará para resolver o problema
-                    o mais breve possível.
+                    Caso a falha persista, entre em contato com o suporte utilizando o identificador
+                    <span class="ticket-erro"
+                          th:text="${#httpServletRequest.getAttribute('req.ticket').substring(24)}"/>.
                 </p>
-            </div>
-        </div>
-
-        <div class="cell width-8 position-8">
-            <div class="tile">
-                <ul class="detalhes-erro">
-                    <li>Caminho acessado: <span th:text="${path}"></span></li>
-                    <li>Status: <span th:text="${status}"></span></li>
-                    <li>Erro: <span th:text="${error}"></span></li>
-                    <li>Hora: <span th:text="${timestamp}"></span></li>
-                    <li>Classe de erro: <span th:text="${exception}"></span></li>
-                    <li>Mensagem: <span th:text="${message}"></span></li>
-                </ul>
             </div>
         </div>
     </div>
