@@ -1019,8 +1019,7 @@ dl.portlet li {
 .tile p {
   color: #172938;
   font-size: 1.15em;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.25em !important;
+  line-height: 1.25em;
 }
 
 .left {
