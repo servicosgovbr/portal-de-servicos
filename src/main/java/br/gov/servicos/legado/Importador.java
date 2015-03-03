@@ -53,12 +53,10 @@ public class Importador {
     public Iterable<Servico> importar() throws IOException, JAXBException {
         recriarIndice();
 
-        servicos.save(
+        return servicos.save(
                 servicosLegados()
                         .map(servicoTypeMapper)
                         .collect(toList()));
-
-        return servicos.findAll();
     }
 
     private void recriarIndice() throws IOException {

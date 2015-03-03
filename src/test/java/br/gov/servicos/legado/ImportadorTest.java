@@ -6,7 +6,6 @@ import com.github.slugify.Slugify;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.BeanFactory;
@@ -15,12 +14,14 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import java.util.LinkedList;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.CoreMatchers.hasItem;
-import static org.hamcrest.CoreMatchers.is;
+import static org.elasticsearch.common.collect.Iterables.get;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Matchers.*;
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.verify;
+import static org.mockito.AdditionalAnswers.returnsFirstArg;
+import static org.mockito.Matchers.anyList;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ImportadorTest {
@@ -46,6 +47,10 @@ public class ImportadorTest {
         doReturn(slugify)
                 .when(beanFactory)
                 .getBean("slugify");
+
+        doAnswer(returnsFirstArg())
+                .when(servicos)
+                .save(anyList());
 
         importador = new Importador(elasticsearch, servicos, new ServicoTypeMapper(slugify, beanFactory));
     }
@@ -80,35 +85,79 @@ public class ImportadorTest {
 
         doReturn(servicosImportados)
                 .when(servicos)
-                .findAll();
+                .save(anyList());
 
         assertThat(importador.importar(), is(servicosImportados));
     }
 
-    @SuppressWarnings("unchecked")
     @Test
-    public void deveMapearServicoLegadoParaServico() throws Exception {
-        importador.importar();
+    public void deveCriarUmIdParaOServicoBaseaDoEmSeuTitulo() throws Exception {
+        doReturn("elaboracao-de-demostrativos-e-acordo-de-parcelamento")
+                .when(slugify)
+                .slugify("Elaboração de Demonstrativos e Acordo de Parcelamento.");
 
-        ArgumentCaptor<Iterable> captor = ArgumentCaptor.forClass(Iterable.class);
-        verify(servicos).save(captor.capture());
-
-        Servico servicoImportado = new Servico(
-                null,
-                "Elaboração de Demonstrativos e Acordo de Parcelamento.",
-                "Elaboração de Demonstrativos Previdenciário de Política de Investimentos, das Aplicações e " +
-                        "Investimentos dos Recursos e o de Resultados da Avaliação Atuarial - DRAA e o Comprovante de " +
-                        "Repasse, são preenchidos pelo ente federativo, via internet, e enviados para o CADPREV e " +
-                        "constituem critério para a emissão de CRP.",
-                "http://www.previdencia.gov.br/conteudoDinamico.php?id=1072",
-                null, null,
-                new Orgao(null, "Ministério da Previdência Social - MPS", "Ligue 135."),
-                new Orgao(null, "Ministerio da Previdencia Social - MPS", null),
-                asList(new AreaDeInteresse(null, "Previdência Social")),
-                asList(new LinhaDaVida(null, "Abrir um negócio")),
-                asList("Outros"),
-                0L, 0L
-        );
-        assertThat((Iterable<Servico>) captor.getValue(), hasItem(servicoImportado));
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getId(), equalTo("elaboracao-de-demostrativos-e-acordo-de-parcelamento"));
     }
+
+    @Test
+    public void deveImportarOTituloBaseadoNoServicoLegado() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getTitulo(), equalTo("Elaboração de Demonstrativos e Acordo de Parcelamento."));
+    }
+
+    @Test
+    public void deveImportarADescricaoDoServicoLegado() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getDescricao(), equalTo("Descrição do serviço legado"));
+    }
+
+    @Test
+    public void deveImportarUrlDoPrestadorDoServicoLegado() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getUrl(), equalTo("http://www.previdencia.gov.br/conteudoDinamico.php?id=1072"));
+    }
+
+    @Test
+    public void deveImportarUrlDeAgendamentoDoServico() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getUrlAgendamento(), equalTo("http://www2.dataprev.gov.br/prevagenda/OpcaoInicialTela.view"));
+    }
+
+    @Test
+    public void deveImportarTaxaDeServicoDoServicoLegado() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getTaxa(), equalTo("R$ 156,07"));
+    }
+
+    @Test
+    public void deveImportarOrgaoPrestadorDoServicoLegado() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getPrestador(), equalTo(new Orgao(null, "Ministério da Previdência Social - MPS", "Ligue 135.")));
+    }
+
+    @Test
+    public void deveImportarOrgaoResponsavelDoServicoLegado() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getResponsavel(), equalTo(new Orgao(null, "Ministerio da Previdencia Social - MPS", null)));
+    }
+    
+    @Test
+    public void deveImportarAreasDeInteresseDoServicoLegado() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getAreasDeInteresse(), equalTo(asList(new AreaDeInteresse(null, "Previdência Social"))));
+    }
+
+    @Test
+    public void deveImportarLinhasDaVidaDoServicoLegado() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getLinhasDaVida(), equalTo(asList(new LinhaDaVida(null, "Abrir um negócio"))));
+    }
+    
+    @Test
+    public void deveImportarEventosDaLinhaDaVidaDoServicoLegado() throws Exception {
+        Servico servico = get(importador.importar(), 0);
+        assertThat(servico.getEventosDasLinhasDaVida(), equalTo(asList("Outros")));
+    }
+    
 }
