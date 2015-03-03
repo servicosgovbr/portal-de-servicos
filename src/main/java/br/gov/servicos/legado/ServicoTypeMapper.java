@@ -6,7 +6,6 @@ import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.Servico;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
-import org.elasticsearch.common.collect.Tuple;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.expression.BeanFactoryResolver;
@@ -22,6 +21,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.Arrays.stream;
 import static lombok.AccessLevel.PRIVATE;
 
 @Component
@@ -30,7 +30,7 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
 
     Slugify slugify;
     BeanFactory beanFactory;
-    
+
     ExpressionParser parser = new SpelExpressionParser();
 
     @Autowired
@@ -69,18 +69,14 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
                 .orElse(null);
     }
 
-    @SuppressWarnings("unchecked")
     private String urlAgendamento(ServicoType servicoType) {
-        Tuple<String, String>[] tituloEUrl = parser.parseExpression(
-                "informacoesUteis?.content?.![new org.elasticsearch.common.collect.Tuple(value?.tipoInformacaoUtil.titulo, value?.url)]")
-                .getValue(context(servicoType), Tuple[].class);
+        String[] urls = parser.parseExpression(
+                "informacoesUteis?.content?." +
+                        "?[value?.tipoInformacaoUtil?.titulo == 'Agendamento' && !value?.url?.isEmpty()]." +
+                        "![value?.url]")
+                .getValue(context(servicoType), String[].class);
 
-        return Stream.of(tituloEUrl)
-                .filter(t -> t.v1().equals("Agendamento"))
-                .filter(t -> t.v2() != null && !t.v2().isEmpty())
-                .findFirst()
-                .map(Tuple::v2)
-                .orElse(null);
+        return stream(urls).findFirst().orElse(null);
     }
 
     private Orgao orgaoPrestador(ServicoType servicoType) {
