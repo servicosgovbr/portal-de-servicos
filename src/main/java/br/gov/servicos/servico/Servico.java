@@ -28,6 +28,9 @@ public class Servico {
 
     @Field(index = not_analyzed, type = String)
     String url;
+    
+    @Field(index = not_analyzed, type = String)
+    String urlAgendamento;
 
     @Field(index = not_analyzed, type = String)
     String taxa;
@@ -54,7 +57,7 @@ public class Servico {
     List<String> eventosDasLinhasDaVida;
 
     public Servico() {
-        this(null, null, null, null, null, null, null, null, null, null, null, null);
+        this(null, null, null, null, null, null, null, null, null, null, null, null, null);
     }
 
     public Servico(
@@ -62,6 +65,7 @@ public class Servico {
             String titulo,
             String descricao,
             String url,
+            String urlAgendamento,
             String taxa,
             Orgao prestador,
             Orgao responsavel,
@@ -75,6 +79,7 @@ public class Servico {
         this.titulo = isEmpty(titulo) ? null : titulo;
         this.descricao = isEmpty(descricao) ? null : descricao;
         this.url = isEmpty(url) ? null : url;
+        this.urlAgendamento = urlAgendamento;
         this.taxa = isEmpty(taxa) ? null : taxa;
         this.prestador = prestador;
         this.responsavel = responsavel;
@@ -86,10 +91,10 @@ public class Servico {
     }
 
     public Servico withNovoAcesso() {
-        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos == null ? 1 : acessos + 1, ativacoes);
+        return new Servico(id, titulo, descricao, url, urlAgendamento, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos == null ? 1 : acessos + 1, ativacoes);
     }
 
     public Servico withNovaAtivacao() {
-        return new Servico(id, titulo, descricao, url, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos, ativacoes == null ? 1 : ativacoes + 1);
+        return new Servico(id, titulo, descricao, url, urlAgendamento,taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos, ativacoes == null ? 1 : ativacoes + 1);
     }
 }

@@ -22,10 +22,11 @@ import java.util.stream.Collectors;
 
 import static lombok.AccessLevel.PRIVATE;
 
+@SuppressWarnings("unchecked")
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class ServicoTypeMapper implements Function<ServicoType, Servico> {
-    
+
     Slugify slugify;
     BeanFactory beanFactory;
     ExpressionParser parser = new SpelExpressionParser();
@@ -43,6 +44,7 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
                 legado.getTitulo(),
                 legado.getDescricao(),
                 url(legado),
+                urlAgendamento(legado),
                 legado.getTaxa(),
                 orgaoPrestador(legado),
                 orgaoResponsavel(legado),
@@ -54,13 +56,33 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
         );
     }
 
-    @SuppressWarnings("unchecked")
     private String url(ServicoType servicoType) {
         List<String> urls = parser.parseExpression(
                 "canaisPrestacaoServico?.canalPrestacaoServico?.![url]?:{}")
                 .getValue(context(servicoType), List.class);
 
         return urls.isEmpty() ? null : urls.get(0);
+    }
+
+    private String urlAgendamento(ServicoType servicoType) {
+        String[][] tituleEUrl = parser.parseExpression(
+                "new String[] { informacoesUteis?.content?.![value?.tipoInformacaoUtil.titulo], " +
+                        "informacoesUteis?.content?.![value?.url?:'NO_URL'] }")
+                .getValue(context(servicoType), String[][].class);
+
+        int titulos = 0;
+        int urls = 1;
+        
+        for (int i = 0; i < tituleEUrl[titulos].length; i++) {
+            String titulo = tituleEUrl[titulos][i];
+            String url = tituleEUrl[urls][i];
+
+            if (titulo.equals("Agendamento") && !url.equals("NO_URL"))
+                return url;
+
+        }
+
+        return null;
     }
 
     private Orgao orgaoPrestador(ServicoType servicoType) {
@@ -75,7 +97,6 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
                 .getValue(context(servicoType), Orgao.class);
     }
 
-    @SuppressWarnings("unchecked")
     private List<AreaDeInteresse> areasDeInteresse(ServicoType servicoType) {
         return new ArrayList<>(
                 ((List<String>) parser.parseExpression(
@@ -86,20 +107,18 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
                         .collect(Collectors.toSet()));
     }
 
-    @SuppressWarnings("unchecked")
     private List<LinhaDaVida> linhasDaVida(ServicoType servicoType) {
         return new ArrayList<>(
                 ((List<List<String>>)
-                parser.parseExpression(
-                        "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![titulo]]?:{}")
-                        .getValue(context(servicoType)))
-                .stream()
-                .flatMap(Collection::stream)
-                .map(x -> new LinhaDaVida(slugify.slugify(x), x))
-                .collect(Collectors.toSet()));
+                        parser.parseExpression(
+                                "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![titulo]]?:{}")
+                                .getValue(context(servicoType)))
+                        .stream()
+                        .flatMap(Collection::stream)
+                        .map(x -> new LinhaDaVida(slugify.slugify(x), x))
+                        .collect(Collectors.toSet()));
     }
 
-    @SuppressWarnings("unchecked")
     private List<String> eventosDasLinhasDaVida(ServicoType servicoType) {
         return ((List<List<List<String>>>)
                 parser.parseExpression(

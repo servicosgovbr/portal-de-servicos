@@ -15,6 +15,7 @@ public class TestData {
             "Título",
             "Descrição",
             "url://site",
+            "url://agendamento",
             "Gratuita",
             new Orgao("1", "Nome", "123"),
             new Orgao("2", "Nome", null),
