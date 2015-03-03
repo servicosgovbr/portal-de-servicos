@@ -37,19 +37,19 @@ public class ImportadorTest {
     private ServicoRepository servicos;
 
     @Mock
-    private Slugify slugify;
-
-    @Mock
     private BeanFactory beanFactory;
 
     private Importador importador;
+    private Slugify slugify;
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
+        slugify = new Slugify();
+        
         doReturn(slugify)
                 .when(beanFactory)
                 .getBean("slugify");
-
+        
         doAnswer(returnsFirstArg())
                 .when(servicos)
                 .save(anyList());
@@ -94,12 +94,8 @@ public class ImportadorTest {
 
     @Test
     public void deveCriarUmIdParaOServicoBaseaDoEmSeuTitulo() throws Exception {
-        doReturn("elaboracao-de-demostrativos-e-acordo-de-parcelamento")
-                .when(slugify)
-                .slugify("Elaboração de Demonstrativos e Acordo de Parcelamento.");
-
         assertThat(importaServico().getId(),
-                equalTo("elaboracao-de-demostrativos-e-acordo-de-parcelamento"));
+                equalTo("elaboracao-de-demonstrativos-e-acordo-de-parcelamento"));
     }
 
     @Test
@@ -134,25 +130,25 @@ public class ImportadorTest {
     @Test
     public void deveImportarOrgaoPrestadorDoServicoLegado() throws Exception {
         assertThat(importaServico().getPrestador(),
-                equalTo(new Orgao(null, "Ministério da Previdência Social - MPS", "Ligue 135.")));
+                equalTo(new Orgao("ministerio-da-previdencia-social-mps", "Ministério da Previdência Social - MPS", "Ligue 135.")));
     }
 
     @Test
     public void deveImportarOrgaoResponsavelDoServicoLegado() throws Exception {
         assertThat(importaServico().getResponsavel(),
-                equalTo(new Orgao(null, "Ministerio da Previdencia Social - MPS", null)));
+                equalTo(new Orgao("ministerio-da-previdencia-social-mps", "Ministerio da Previdencia Social - MPS", null)));
     }
 
     @Test
     public void deveImportarAreasDeInteresseDoServicoLegado() throws Exception {
         assertThat(importaServico().getAreasDeInteresse(),
-                equalTo(asList(new AreaDeInteresse(null, "Previdência Social"))));
+                equalTo(asList(new AreaDeInteresse("previdencia-social", "Previdência Social"))));
     }
 
     @Test
     public void deveImportarLinhasDaVidaDoServicoLegado() throws Exception {
         assertThat(importaServico().getLinhasDaVida(),
-                equalTo(asList(new LinhaDaVida(null, "Abrir um negócio"))));
+                equalTo(asList(new LinhaDaVida("abrir-um-negocio", "Abrir um negócio"))));
     }
 
     @Test
