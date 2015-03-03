@@ -32,7 +32,7 @@ public class ServicoControllerTest {
     @Before
     public void setUp() {
         doReturn(TestData.SERVICO).when(servicos).findOne("1");
-        
+
         doAnswer(returnsFirstArg())
                 .when(servicos)
                 .save(any(Servico.class));
@@ -70,9 +70,9 @@ public class ServicoControllerTest {
                 .when(servicos)
                 .save(captor.capture());
 
-        String actual = controller.navegar("1").getUrl();
+        assertThat(controller.navegar("1").getUrl(),
+                is(TestData.SERVICO.getUrl()));
 
-        assertThat(actual, is(TestData.SERVICO.getUrl()));
         assertThat(captor.getValue().getAtivacoes(), is(1L));
     }
 
@@ -91,7 +91,36 @@ public class ServicoControllerTest {
         doReturn(new Servico())
                 .when(servicos)
                 .findOne("servico-sem-url");
-        
+
         controller.navegar("servico-sem-url");
     }
+
+    @Test
+    public void redirecionaParaAUrlDoAgendamentoDoServico() throws Exception {
+        ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
+
+        doReturn(TestData.SERVICO)
+                .when(servicos)
+                .save(captor.capture());
+
+        assertThat(controller.agendar("1").getUrl(),
+                is(TestData.SERVICO.getUrlAgendamento()));
+
+        assertThat(captor.getValue().getAtivacoes(), is(1L));
+    }
+
+    @Test(expected = ConteudoNaoEncontrado.class)
+    public void retorna404QuandoTentaAgendarParaServicoNaoExistente() {
+        controller.agendar("servico-nao-existente");
+    }
+
+    @Test(expected = ConteudoNaoEncontrado.class)
+    public void retorna404QuandoAgendarParaServicoSemURL() {
+        doReturn(new Servico())
+                .when(servicos)
+                .findOne("servico-sem-url");
+
+        controller.agendar("servico-sem-url");
+    }
+
 }

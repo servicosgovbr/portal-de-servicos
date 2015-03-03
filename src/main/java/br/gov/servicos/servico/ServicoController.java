@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.function.Function;
+
 import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -30,12 +32,21 @@ class ServicoController {
         return new ModelAndView("servico", "servico", servico);
     }
 
-    @SneakyThrows
     @RequestMapping("/navegar/{id}")
     RedirectView navegar(@PathVariable("id") String id) {
+        return navegaPara(id, Servico::getUrl);
+    }
+
+    @RequestMapping("/agendar/{id}")
+    public RedirectView agendar(String id) {
+        return navegaPara(id, Servico::getUrlAgendamento);
+    }
+
+    private RedirectView navegaPara(String id, Function<Servico, String> url) {
         Servico servico = servicos.save(buscaServico(id).withNovaAtivacao());
 
-        return ofNullable(servico.getUrl())
+        return ofNullable(servico)
+                .map(url)
                 .map(RedirectView::new)
                 .orElseThrow(ConteudoNaoEncontrado::new);
     }
@@ -45,5 +56,4 @@ class ServicoController {
         Servico servico = servicos.findOne(id);
         return ofNullable(servico).orElseThrow(ConteudoNaoEncontrado::new);
     }
-
 }

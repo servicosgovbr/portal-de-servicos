@@ -61,6 +61,10 @@
                 Começar
             </a>
 
+            <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" id="agendar" th:href="@{/agendar/{id}(id=${servico.id})}">
+                Agendar agora
+            </a>
+
         </div>
     </div>
 </div>
