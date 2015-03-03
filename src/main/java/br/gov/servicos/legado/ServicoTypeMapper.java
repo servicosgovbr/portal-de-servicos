@@ -6,6 +6,7 @@ import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.Servico;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
+import org.elasticsearch.common.collect.Tuple;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.expression.BeanFactoryResolver;
@@ -19,16 +20,17 @@ import java.util.Collection;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static lombok.AccessLevel.PRIVATE;
 
-@SuppressWarnings("unchecked")
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class ServicoTypeMapper implements Function<ServicoType, Servico> {
 
     Slugify slugify;
     BeanFactory beanFactory;
+    
     ExpressionParser parser = new SpelExpressionParser();
 
     @Autowired
@@ -57,32 +59,28 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
     }
 
     private String url(ServicoType servicoType) {
-        List<String> urls = parser.parseExpression(
+        String[] urls = parser.parseExpression(
                 "canaisPrestacaoServico?.canalPrestacaoServico?.![url]?:{}")
-                .getValue(context(servicoType), List.class);
+                .getValue(context(servicoType), String[].class);
 
-        return urls.isEmpty() ? null : urls.get(0);
+        return Stream.of(urls)
+                .filter(url -> url != null && !url.isEmpty())
+                .findFirst()
+                .orElse(null);
     }
 
+    @SuppressWarnings("unchecked")
     private String urlAgendamento(ServicoType servicoType) {
-        String[][] tituleEUrl = parser.parseExpression(
-                "new String[] { informacoesUteis?.content?.![value?.tipoInformacaoUtil.titulo], " +
-                        "informacoesUteis?.content?.![value?.url?:'NO_URL'] }")
-                .getValue(context(servicoType), String[][].class);
+        Tuple<String, String>[] tituloEUrl = parser.parseExpression(
+                "informacoesUteis?.content?.![new org.elasticsearch.common.collect.Tuple(value?.tipoInformacaoUtil.titulo, value?.url)]")
+                .getValue(context(servicoType), Tuple[].class);
 
-        int titulos = 0;
-        int urls = 1;
-        
-        for (int i = 0; i < tituleEUrl[titulos].length; i++) {
-            String titulo = tituleEUrl[titulos][i];
-            String url = tituleEUrl[urls][i];
-
-            if (titulo.equals("Agendamento") && !url.equals("NO_URL"))
-                return url;
-
-        }
-
-        return null;
+        return Stream.of(tituloEUrl)
+                .filter(t -> t.v1().equals("Agendamento"))
+                .filter(t -> t.v2() != null && !t.v2().isEmpty())
+                .findFirst()
+                .map(Tuple::v2)
+                .orElse(null);
     }
 
     private Orgao orgaoPrestador(ServicoType servicoType) {
