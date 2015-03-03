@@ -15,11 +15,10 @@ import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static java.util.Arrays.stream;
 import static lombok.AccessLevel.PRIVATE;
@@ -63,7 +62,7 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
                 "canaisPrestacaoServico?.canalPrestacaoServico?.![url]?:{}")
                 .getValue(context(servicoType), String[].class);
 
-        return Stream.of(urls)
+        return stream(urls)
                 .filter(url -> url != null && !url.isEmpty())
                 .findFirst()
                 .orElse(null);
@@ -92,41 +91,46 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
     }
 
     private List<AreaDeInteresse> areasDeInteresse(ServicoType servicoType) {
+        String[] areasDeInteresse = parser.parseExpression("areasInteresse?.area?.![titulo]?:{}")
+                .getValue(context(servicoType), String[].class);
+
         return new ArrayList<>(
-                ((List<String>) parser.parseExpression(
-                        "areasInteresse?.area?.![titulo]?:{}")
-                        .getValue(context(servicoType)))
-                        .stream()
-                        .map(s -> new AreaDeInteresse(slugify.slugify(s), s))
-                        .collect(Collectors.toSet()));
+                stream(areasDeInteresse)
+                        .map(titulo -> new AreaDeInteresse(slugify.slugify(titulo), titulo))
+                        .collect(Collectors.toSet())
+        );
     }
 
     private List<LinhaDaVida> linhasDaVida(ServicoType servicoType) {
+        String[][] linhasDaVida = parser.parseExpression(
+                "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![titulo]]?:{}")
+                .getValue(context(servicoType), String[][].class);
+
         return new ArrayList<>(
-                ((List<List<String>>)
-                        parser.parseExpression(
-                                "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![titulo]]?:{}")
-                                .getValue(context(servicoType)))
-                        .stream()
-                        .flatMap(Collection::stream)
-                        .map(x -> new LinhaDaVida(slugify.slugify(x), x))
-                        .collect(Collectors.toSet()));
+                stream(linhasDaVida)
+                        .flatMap(Arrays::stream)
+                        .map(titulo -> new LinhaDaVida(slugify.slugify(titulo), titulo))
+                        .collect(Collectors.toSet())
+        );
     }
 
     private List<String> eventosDasLinhasDaVida(ServicoType servicoType) {
-        return ((List<List<List<String>>>)
-                parser.parseExpression(
-                        "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![eventoslinhaDaVida?.eventolinhaDaVida?.![titulo]]]?:{}")
-                        .getValue(context(servicoType)))
-                .stream()
-                .flatMap(Collection::stream)
-                .flatMap(Collection::stream)
-                .collect(Collectors.toList());
+        String[][][] eventosLinhasDaVida = parser.parseExpression(
+                "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![eventoslinhaDaVida?.eventolinhaDaVida?.![titulo]]]?:{}")
+                .getValue(context(servicoType), String[][][].class);
+
+        return new ArrayList<>(
+                stream(eventosLinhasDaVida)
+                        .flatMap(Arrays::stream)
+                        .flatMap(Arrays::stream)
+                        .collect(Collectors.toSet())
+        );
     }
 
     private StandardEvaluationContext context(ServicoType servicoType) {
         StandardEvaluationContext context = new StandardEvaluationContext(servicoType);
         context.setBeanResolver(new BeanFactoryResolver(this.beanFactory));
+        
         return context;
     }
 }
