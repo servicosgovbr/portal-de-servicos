@@ -40,13 +40,13 @@ public class Importador {
 
     ElasticsearchTemplate es;
     ServicoRepository servicos;
-    ServicoTypeMapper servicoTypeMapper;
+    ServicoLegadoParaServico servicoLegadoParaServico;
 
     @Autowired
-    Importador(ElasticsearchTemplate es, ServicoRepository servicos, ServicoTypeMapper servicoTypeMapper) {
+    Importador(ElasticsearchTemplate es, ServicoRepository servicos, ServicoLegadoParaServico servicoLegadoParaServico) {
         this.es = es;
         this.servicos = servicos;
-        this.servicoTypeMapper = servicoTypeMapper;
+        this.servicoLegadoParaServico = servicoLegadoParaServico;
     }
 
     @ManagedOperation
@@ -55,7 +55,7 @@ public class Importador {
 
         return servicos.save(
                 servicosLegados()
-                        .map(servicoTypeMapper)
+                        .map(servicoLegadoParaServico)
                         .collect(toList()));
     }
 

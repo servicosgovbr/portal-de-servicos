@@ -54,7 +54,7 @@ public class ImportadorTest {
                 .when(servicos)
                 .save(anyList());
 
-        importador = new Importador(elasticsearch, servicos, new ServicoTypeMapper(slugify, beanFactory));
+        importador = new Importador(elasticsearch, servicos, new ServicoLegadoParaServico(slugify, beanFactory));
     }
 
     @Test

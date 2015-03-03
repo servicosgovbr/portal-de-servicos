@@ -51,7 +51,7 @@ dependencies {
     testCompile 'org.mockito:mockito-core:1.9.5'
 }
 
-def generatedSources = ["br/gov/servicos/legado/**"]
+def generatedSources = ["br/gov/servicos/legado/**/*Type*", "br/gov/servicos/legado/**/ObjectFactory.class"]
 
 test {
     testLogging {

@@ -25,7 +25,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class ServicoTypeMapper implements Function<ServicoType, Servico> {
+class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
     Slugify slugify;
     BeanFactory beanFactory;
@@ -33,7 +33,7 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
     ExpressionParser parser = new SpelExpressionParser();
 
     @Autowired
-    public ServicoTypeMapper(Slugify slugify, BeanFactory beanFactory) {
+    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory) {
         this.slugify = slugify;
         this.beanFactory = beanFactory;
     }
