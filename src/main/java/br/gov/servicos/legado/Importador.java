@@ -82,7 +82,7 @@ public class Importador {
         return unmarshallDadosLegados()
                 .getServicos()
                 .getServico()
-                .stream();
+                .parallelStream();
     }
 
     private static DadosType unmarshallDadosLegados() throws IOException, JAXBException {
