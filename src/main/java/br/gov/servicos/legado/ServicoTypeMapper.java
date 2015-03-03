@@ -25,8 +25,8 @@ import static lombok.AccessLevel.PRIVATE;
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class ServicoTypeMapper implements Function<ServicoType, Servico> {
+    
     Slugify slugify;
-
     BeanFactory beanFactory;
     ExpressionParser parser = new SpelExpressionParser();
 
@@ -91,7 +91,7 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
         return new ArrayList<>(
                 ((List<List<String>>)
                 parser.parseExpression(
-                        "publicosAlvo?.content.![value?.linhasDaViva?.linhaDaVida.![titulo]]?:{}")
+                        "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![titulo]]?:{}")
                         .getValue(context(servicoType)))
                 .stream()
                 .flatMap(Collection::stream)
@@ -103,7 +103,7 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
     private List<String> eventosDasLinhasDaVida(ServicoType servicoType) {
         return ((List<List<List<String>>>)
                 parser.parseExpression(
-                        "publicosAlvo?.content.![value?.linhasDaViva?.linhaDaVida.![eventoslinhaDaVida?.eventolinhaDaVida?.![titulo]]]?:{}")
+                        "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![eventoslinhaDaVida?.eventolinhaDaVida?.![titulo]]]?:{}")
                         .getValue(context(servicoType)))
                 .stream()
                 .flatMap(Collection::stream)
