@@ -4,16 +4,21 @@
             Você está aqui:
         </span>
 
-        <span layout:fragment="link-migalha-de-pao-pai">
-            #
-        </span>
-
-        <span class="breadcrumbSeparator">
-            &gt;
-        </span>
-
-        <span layout:fragment="link-migalha-de-pao">
+        <span>
             <a href="/">Página Inicial</a>
         </span>
+
+        <th:block th:unless="${#httpServletRequest.requestURI} == '/'">
+            <span class="breadcrumbSeparator">&gt;</span>
+            <span layout:fragment="link-migalha-de-pao-pai">
+                Categoria 1
+            </span>
+
+            <span class="breadcrumbSeparator">&gt;</span>
+            <span layout:fragment="link-migalha-de-pao">
+                Categoria 2
+            </span>
+        </th:block>
+
     </div>
 </div>
