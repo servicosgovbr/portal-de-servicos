@@ -38,7 +38,7 @@ class ServicoController {
     }
 
     @RequestMapping("/agendar/{id}")
-    public RedirectView agendar(String id) {
+    public RedirectView agendar(@PathVariable("id") String id) {
         return navegaPara(id, Servico::getUrlAgendamento);
     }
 
