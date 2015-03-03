@@ -71,7 +71,7 @@ class ServicoTypeMapper implements Function<ServicoType, Servico> {
 
     private Orgao orgaoResponsavel(ServicoType servicoType) {
         return parser.parseExpression(
-                "new br.gov.servicos.servico.Orgao(@slugify.slugify(orgaoPrestador?.titulo), orgaoResponsavel?.titulo, null)")
+                "new br.gov.servicos.servico.Orgao(@slugify.slugify(orgaoResponsavel?.titulo), orgaoResponsavel?.titulo, null)")
                 .getValue(context(servicoType), Orgao.class);
     }
 
