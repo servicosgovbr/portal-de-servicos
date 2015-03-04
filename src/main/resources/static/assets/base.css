@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* :link,
+:visited {
+  text-decoration: none;
+}
+
+* ul {
+  list-style: none;
+}
+
+* li {
+  display: inline;
+}
+
+* h1,
+h2,
+h3 {
+  font-size: 1em;
+}
+
+* a img,
+:link img,
+:visited img {
+  border: none;
+}
+
+a {
+  outline: none;
+}
+
+img {
+  vertical-align: text-bottom;
+}
