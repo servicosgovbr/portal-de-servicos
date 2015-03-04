@@ -432,39 +432,6 @@ p {
   font-size: 1.3em;
 }
 
-#portal-column-one {
-  margin-left: -100%;
-  width: 15.625%;
-}
-
-div.width-3\3a 4 {
-  width: 79.75%;
-}
-
-div.width-5 {
-  width: 30.042%;
-}
-
-div.width-16 {
-  width: 97.963%;
-}
-
-div.position-0 {
-  margin-left: -97.963%;
-}
-
-div.position-1\3a 4 {
-  margin-left: -79.755%;
-}
-
-div.position-5 {
-  margin-left: -64.002%;
-}
-
-div.position-10 {
-  margin-left: -30.042%;
-}
-
 #header > div {
   position: relative;
   overflow: hidden;
