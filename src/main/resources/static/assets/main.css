@@ -329,38 +329,6 @@ input.searchField {
   padding-right: 5px;
 }
 
-#portal-breadcrumbs span#breadcrumbs-you-are-here {
-  color: #000;
-  margin-right: .5em;
-}
-
-#portal-breadcrumbs a,
-#portal-breadcrumbs span {
-  color: #2c66ce;
-  text-transform: uppercase;
-  font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-}
-
-#portal-breadcrumbs > span {
-  font-size: .833em;
-}
-
-#portal-breadcrumbs > span > a {
-  font-size: 1em;
-}
-
-#portal-breadcrumbs > span > a:hover {
-  text-decoration: underline;
-}
-
-#portal-breadcrumbs > span.breadcrumbSeparator {
-  color: black;
-}
-
-#main #portal-breadcrumbs {
-  margin-top: 1.923em;
-  margin-bottom: 1.923em;
-}
 
 #content {
   margin: 0;
