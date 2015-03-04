@@ -8,5 +8,7 @@ data
 *.swp
 .idea
 *.iml
+*.ipr
+*.iws
 .DS_Store
 *~
