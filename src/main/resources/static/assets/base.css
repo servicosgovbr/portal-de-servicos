@@ -49,3 +49,7 @@ body {
   font-size: 62.5%;
   font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
 }
+
+.visualClear {
+  clear: both;
+}
