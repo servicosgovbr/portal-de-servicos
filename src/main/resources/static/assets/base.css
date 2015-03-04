@@ -35,3 +35,17 @@ a {
 img {
   vertical-align: text-bottom;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-size: 62.5%;
+  font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+}
