@@ -33,37 +33,29 @@
                 Valor/taxa: <span th:text="${servico.taxa}">R$ 999,99</span>
             </p>
 
-            <div class="orgao-prestador">
-                <a th:if="${not #strings.isEmpty(servico.prestador.nome)}"
-                   th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
-                   th:text="${servico.prestador.nome}">
-                    Órgão prestador
-                </a>
-
-                <span th:if="${not #strings.isEmpty(servico.prestador.telefone)}" th:text="${servico.prestador.telefone}">
-                    (61) 5555-1234
-                </span>
-            </div>
-
-            <div class="orgao-responsavel">
-                <a th:if="${not #strings.isEmpty(servico.prestador.nome)}"
-                   th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
-                   th:text="${servico.prestador.nome}">
-                    Órgão responsavel
-                </a>
-
-                <span th:if="${not #strings.isEmpty(servico.responsavel.telefone)}" th:text="${servico.responsavel.telefone}">
-                    (61) 5555-1234
-                </span>
-            </div>
-
-            <a th:if="${not #strings.isEmpty(servico.url)}" id="comecar" th:href="@{/navegar/{id}(id=${servico.id})}">
+            <a th:if="${not #strings.isEmpty(servico.url)}" class="acao acao-comecar" th:href="@{/navegar/{id}(id=${servico.id})}">
                 Começar
             </a>
 
-            <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" id="comecar" th:href="@{/agendar/{id}(id=${servico.id})}">
+            <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" class="acao acao-agendar" th:href="@{/agendar/{id}(id=${servico.id})}">
                 Agendar agora
             </a>
+
+            <p th:unless="${#strings.isEmpty(servico.responsavel.nome)}">
+                Este é um serviço <span th:text="${@genero.de(servico.responsavel.id)}">do(a)</span>
+                <a th:unless="${#strings.isEmpty(servico.responsavel.nome)}"
+                   th:href="@{/orgao/{id}(id=${servico.responsavel.id})}"
+                   th:text="${servico.responsavel.nome}">
+                    Órgão responsavel
+                </a>
+                <span th:unless="${servico.responsavel.id == servico.prestador.id}">, e prestado
+                <span th:text="${@genero.per(servico.prestador.id)}">pelo(a)</span>
+                <a th:unless="${#strings.isEmpty(servico.prestador.nome)}"
+                   th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
+                   th:text="${servico.prestador.nome}">
+                    Órgão prestador
+                </a></span>.
+            </p>
 
         </div>
     </div>

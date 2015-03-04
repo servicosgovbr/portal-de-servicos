@@ -1742,32 +1742,32 @@ span.ticket-erro {
   color: blue !important;
 }
 
-#comecar {
+a.acao {
   border: 1px solid black;
   padding: 8px;
   background: green;
   text-decoration: none;
-  margin-top: 14px;
+  margin-bottom: 14px;
   display: inline-block;
 }
 
-a#comecar:visited, a#comecar:link{
-  color: white;
+a:visited.acao, a:link.acao {
+  color: white !important;
 }
 
-a#comecar:hover{
-  color: #A0B69F;
+a.acao:hover {
+  color: #A0B69F !important;
 }
 
-#content hr{
+#content hr {
   margin-bottom: 15px;
 }
 
-ul#resultados-linhadavida{
+ul#resultados-linhadavida {
     margin-top: 30px;
 }
 
-ul#resultados-linhadavida p{
+ul#resultados-linhadavida p {
   line-height: 18px;
   font-size: 14px;
   margin-bottom: 30px;
