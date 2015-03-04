@@ -17,6 +17,11 @@ dl.portlet li {
   width: 1px;
 }
 
+.visualClear {
+  clear: both;
+}
+
+
 h1,
 h2,
 h3 {
@@ -72,7 +77,7 @@ input {
 
 #portal-logo {
   display: inline-block;
-  margin: 1.375em 0;  
+  margin: 1.375em 0;
 }
 
 #portal-searchbox {
@@ -156,6 +161,59 @@ dl.portlet a:hover {
 
 #content a:target {
   background-color: #ffb;
+}
+
+div.row {
+  float: left;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+div.cell {
+  position: relative;
+  float: left;
+  left: 100%;
+}
+
+div.width-5 {
+  width: 29%;
+}
+
+div.width-8 {
+  width: 47.022%;
+}
+
+div.width-16 {
+  width: 97.75%;
+}
+
+div.position-0 {
+  margin-left: -98.875%;
+}
+
+div.position-5 {
+  margin-left: -67.625%;
+}
+
+div.position-8 {
+  margin-left: -47.022%;
+}
+
+div.position-10 {
+  margin-left: -36.375%;
+}
+
+div.width-1\3a 4 {
+  width: 22.75%;
+}
+
+div.width-3\3a 4 {
+  width: 72.75%;
+}
+
+div.position-1\3a 4 {
+  margin-left: -73.875%;
 }
 
 
