@@ -16,8 +16,7 @@
                 <p>Pesquisa</p>
 
                 <form method="get" action="/busca">
-                    <input id="input-busca" type="text" name="q" value=""
-                           th:autofocus="${#httpServletRequest.requestURI} eq '/'"/>
+                    <input id="input-busca" type="text" name="q" value=""/>
                     <input type="submit" value="BUSCAR"/>
                 </form>
             </div>
