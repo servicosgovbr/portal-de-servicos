@@ -62,10 +62,6 @@ a:focus img {
   outline: thin dotted;
 }
 
-dt {
-  font-weight: bold;
-}
-
 input {
   font-family: 'Lucida Grande', Arial, FreeSans;
 }
@@ -179,31 +175,6 @@ input[type='text']:focus {
 
 label {
   font-weight: bold;
-}
-
-#doormat-container {
-  background: none repeat scroll 0 0 #ddd;
-  font-size: 75%;
-  margin: 1em 0;
-  float: left;
-  width: 100%;
-}
-
-#doormat-container dl {
-  margin: .5em 0;
-}
-
-#doormat-container dl dd {
-  margin-left: 0;
-}
-
-#doormat-container .doormatColumn {
-  float: left;
-  margin: 0 1em;
-}
-
-#doormat-container.columns-4 .doormatColumn {
-  width: 23%;
 }
 
 h1,
@@ -667,18 +638,6 @@ dl.portlet li {
   background: url('/img/seta_azul-claro.png') no-repeat scroll right 5px transparent;
 }
 
-#wrapper #footer {
-  padding: 20px 0;
-  min-height: 50px;
-  width: 100%;
-}
-
-#wrapper #footer > div {
-  margin: 2em auto;
-  padding-top: 1em;
-  max-width: 960px;
-}
-
 #voltar-topo {
   margin-top: 1.915em;
   text-align: right;
@@ -689,37 +648,6 @@ dl.portlet li {
   background: url('/img/voltar-topo.png') no-repeat left center;
   color: #777;
   font-size: .9em;
-}
-
-#doormat-container {
-  float: none;
-}
-
-#doormat-container dl {
-  margin: 0 0 20px 0;
-}
-
-#doormat-container .doormatColumn {
-  text-align: left;
-}
-
-#doormat-container dt {
-  padding-left: .6em;
-  font-size: 2em;
-  font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
-}
-
-#doormat-container dd {
-  padding: .5em 1.2em 0 1.2em;
-  font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-}
-
-#doormat-container dd a {
-  font-size: 1.4em;
-}
-
-#doormat-container.columns-4 .doormatColumn {
-  width: 22%;
 }
 
 .menuTrigger {
@@ -765,27 +693,6 @@ dl.portlet li {
 
 .tile a {
   color: #162937 !important;
-}
-
-#footer {
-  background: #034811;
-  color: #fff;
-}
-
-#footer a {
-  color: #fff;
-}
-
-#doormat-container {
-  background: #034811;
-}
-
-#doormat-container dl {
-  border-left: 1px dotted #7dc48a;
-}
-
-#doormat-container dt {
-  color: #7dc48a;
 }
 
 h2.titulo-destaque {
