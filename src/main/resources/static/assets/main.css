@@ -78,17 +78,6 @@ input.searchField {
   -moz-appearance: searchfield;
 }
 
-#portal-breadcrumbs {
-  font-size: 80%;
-  margin-bottom: 1em;
-  margin-left: .25em;
-}
-
-#portal-breadcrumbs a {
-  border-bottom: none;
-  display: inline-block;
-}
-
 #portal-siteactions {
   font-size: 85%;
   padding-bottom: 2em;

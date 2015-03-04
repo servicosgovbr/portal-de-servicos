@@ -1,22 +1,21 @@
 <div id="migalhas-de-pao">
-    <div id="portal-breadcrumbs">
-        <span id="breadcrumbs-you-are-here">
-            Você está aqui:
+
+    <span class="voce-esta-aqui">
+        Você está aqui:
+    </span>
+
+    <span>
+        <a href="/">Página Inicial</a>
+    </span>
+
+    <th:block th:unless="${#httpServletRequest.requestURI} == '/'">
+        <span class="separador">&gt;</span>
+        <span layout:fragment="link-migalha-de-pao-pai">
+            Especiais
         </span>
 
-        <span>
-            <a href="/">Página Inicial</a>
-        </span>
+        <span class="separador">&gt;</span>
+        <span layout:fragment="link-migalha-de-pao"></span>
+    </th:block>
 
-        <th:block th:unless="${#httpServletRequest.requestURI} == '/'">
-            <span class="breadcrumbSeparator">&gt;</span>
-            <span layout:fragment="link-migalha-de-pao-pai">
-                Especiais
-            </span>
-
-            <span class="breadcrumbSeparator">&gt;</span>
-            <span layout:fragment="link-migalha-de-pao"></span>
-        </th:block>
-
-    </div>
 </div>

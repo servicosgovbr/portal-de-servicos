@@ -1,32 +1,26 @@
-#portal-breadcrumbs span#breadcrumbs-you-are-here {
-  color: #000;
+#migalhas-de-pao {
+  font-size: .666em;
+  margin-left: .25em;
+  margin-top: 1.923em;
+  margin-bottom: 1.923em;
+}
+
+#migalhas-de-pao .voce-esta-aqui {
+  color: black;
   margin-right: .5em;
 }
 
-#portal-breadcrumbs a,
-#portal-breadcrumbs span {
+#migalhas-de-pao a,
+#migalhas-de-pao span {
   color: #2c66ce;
   text-transform: uppercase;
   font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
 }
 
-#portal-breadcrumbs > span {
-  font-size: .833em;
-}
-
-#portal-breadcrumbs > span > a {
-  font-size: 1em;
-}
-
-#portal-breadcrumbs > span > a:hover {
+#migalhas-de-pao a:hover {
   text-decoration: underline;
 }
 
-#portal-breadcrumbs > span.breadcrumbSeparator {
+#migalhas-de-pao > span.separador {
   color: black;
-}
-
-#portal-breadcrumbs {
-  margin-top: 1.923em;
-  margin-bottom: 1.923em;
 }
