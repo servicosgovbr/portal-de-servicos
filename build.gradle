@@ -144,7 +144,7 @@ idea {
         inheritOutputDirs = false
         outputDir = file("$buildDir/classes/main/")
         testOutputDir = file("$buildDir/classes/test/")
-        excludeDirs += files('.git-crypt', '.vagrant', '.sass-cache', '.jruby-container', 'data', 'gradle')
+        excludeDirs += files('.git-crypt', '.vagrant', '.sass-cache', '.sass-work', '.jruby-container', 'data', 'gradle')
 
         iml.withXml { xmlFile ->
             // mark test/resource as a resource folder
