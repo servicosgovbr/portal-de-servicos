@@ -61,39 +61,12 @@ h3 a {
   border-bottom: none !important;
 }
 
-a:link,
-a:visited {
-  color: #205c90;
-}
-
-a:focus img {
-  outline: thin dotted;
-}
-
 input {
   font-family: 'Lucida Grande', Arial, FreeSans;
 }
 
 input.searchField {
   -moz-appearance: searchfield;
-}
-
-dl.portlet {
-  margin-bottom: 1em;
-}
-
-dl.portlet a:link {
-  color: #205c90;
-  border-bottom: .1em solid #ccc;
-}
-
-dl.portlet a:visited {
-  color: #427597;
-  border-bottom: .1em solid #ccc;
-}
-
-dl.portlet a:hover {
-  color: #75ad0a;
 }
 
 dl.portlet {
@@ -151,22 +124,6 @@ h2,
 h3 {
   font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
   font-weight: normal;
-}
-
-a:link,
-dl.portlet a:link {
-  border-bottom: none;
-  color: #2c67cd;
-}
-
-a:visited,
-dl.portlet a:visited {
-  color: #2c67cd;
-}
-
-a:hover,
-a:active {
-  outline: none;
 }
 
 h1 {
@@ -239,24 +196,6 @@ input.searchField {
     border-radius: 5px;
     max-width: 100%;
     height: auto;
-  }
-
-  a:link {
-    color: #205c90;
-    border-bottom: .1em solid #ccc;
-  }
-
-  a:visited {
-    color: #427597;
-    border-bottom: .1em solid #ccc;
-  }
-
-  a:hover {
-    color: #75ad0a;
-  }
-
-  a:target {
-    background-color: #ffb;
   }
 
   .row {
@@ -332,12 +271,6 @@ dl.portlet dt {
   text-transform: uppercase;
   font-weight: normal;
   font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
-}
-
-.portletNavigationTree > .portletItem > .navTree > .navTreeItem > a > span,
-.portletStaticText > .portletItem > .list-central > .item-central > a {
-  font-size: 1.15em;
-  font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
 }
 
 .portletNavigationTree {
@@ -501,14 +434,6 @@ dl.portlet li {
   text-transform: uppercase;
 }
 
-.lista-vertical .tile-footer a {
-  font-size: 11px;
-  font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-}
-
-.lista-vertical .collection-item a {
-  color: #365073 !important;
-}
 
 .lista-vertical .collection-item {
   display: block;
@@ -638,10 +563,6 @@ dl.portlet li {
 .portletNavigationTree .portletHeader {
   border-top: 4px solid #00510f;
   color: #00510f;
-}
-
-.tile a {
-  color: #162937 !important;
 }
 
 h2.titulo-destaque {
