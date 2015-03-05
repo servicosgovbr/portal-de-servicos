@@ -128,8 +128,12 @@ task watchAssets << {
 
     Thread.startDaemon {
         while(true) {
-            def key = watch.take(); key.pollEvents(); key.reset()
-            compiler.compile()
+            try {
+                def key = watch.take(); key.pollEvents(); key.reset()
+                compiler.compile()
+            } catch(Exception e) {
+                println(e)
+            }
         }
     }
 }
