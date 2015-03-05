@@ -1,3 +1,9 @@
+import static com.sun.nio.file.SensitivityWatchEventModifier.*
+import static java.nio.file.StandardWatchEventKinds.*
+import asset.pipeline.fs.*
+import asset.pipeline.*
+import java.nio.file.*
+
 apply plugin: 'java'
 apply plugin: 'spring-boot'
 apply plugin: 'idea'
@@ -6,6 +12,7 @@ apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: 'pmd'
 apply plugin: 'findbugs'
+apply plugin: 'asset-pipeline'
 
 ext.sha = 'git rev-parse --short HEAD'.execute().in.text.trim()
 version = '1.0.' + sha + '-SNAPSHOT'
@@ -19,11 +26,14 @@ buildscript {
         mavenCentral()
         maven { url "http://repo.spring.io/snapshot" }
         maven { url "http://repo.spring.io/milestone" }
+        maven { url 'http://dl.bintray.com/bertramlabs/asset-pipeline' }
     }
     dependencies {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.0.BUILD-SNAPSHOT'
         classpath 'org.springframework:springloaded:1.2.1.BUILD-SNAPSHOT'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.3.1'
+        classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.0.19'
+        classpath 'com.bertramlabs.plugins:sass-asset-pipeline:2.0.4'
     }
 }
 
@@ -82,12 +92,55 @@ jacocoTestReport {
     }
 }
 
+def mainAssets = "$projectDir/src/main/assets"
+def staticAssets = "$buildDir/resources/main/static/assets"
+
+assets {
+    assetsPath = mainAssets
+    compileDir = staticAssets
+}
+
+jar {
+    baseName = 'guia-de-servicos'
+}
+
+clean << {
+    project.file('app.jar').delete()
+}
+
+task stage(type: Copy, dependsOn: [clean, assemble]) {
+    from jar.archivePath
+    into project.rootDir
+    rename {
+        'app.jar'
+    }
+}
+stage.mustRunAfter(clean)
+
+task watchAssets << {
+    AssetPipelineConfigHolder.registerResolver(new FileSystemAssetResolver('application', mainAssets))
+
+    def compiler = new AssetCompiler([compileDir: staticAssets])
+    compiler.compile()
+
+    WatchService watch = FileSystems.getDefault().newWatchService()
+    Paths.get(mainAssets).register(watch, [ENTRY_CREATE, ENTRY_MODIFY, ENTRY_DELETE] as WatchEvent.Kind[], HIGH);
+
+    Thread.startDaemon {
+        while(true) {
+            def key = watch.take(); key.pollEvents(); key.reset()
+            compiler.compile()
+        }
+    }
+}
+bootRun.dependsOn(watchAssets)
+
 idea {
     module {
         inheritOutputDirs = false
         outputDir = file("$buildDir/classes/main/")
         testOutputDir = file("$buildDir/classes/test/")
-        excludeDirs += files(".git-crypt", ".vagrant", "data", "gradle")
+        excludeDirs += files('.git-crypt', '.vagrant', '.sass-cache', '.jruby-container', 'data', 'gradle')
 
         iml.withXml { xmlFile ->
             // mark test/resource as a resource folder
@@ -101,9 +154,7 @@ idea {
         ipr.withXml { xmlFile ->
             // enable 'Annotation Processors'
             xmlFile.asNode().component.find { it.@name == 'CompilerConfiguration' }['annotationProcessing'][0].replaceNode {
-                annotationProcessing {
-                    profile(default: true, name: 'Default', useClasspath: 'true', enabled: true)
-                }
+                annotationProcessing { profile(default: true, name: 'Default', useClasspath: 'true', enabled: true) }
             }
 
             // setup Git root
@@ -113,24 +164,6 @@ idea {
                     mapping(directory: "\$PROJECT_DIR\$", vcs: 'Git')
                 }
             }
-
         }
     }
-}
-
-jar {
-    baseName = 'guia-de-servicos'
-}
-
-task stage(type: Copy, dependsOn: [clean, assemble]) {
-    from jar.archivePath
-    into project.rootDir
-    rename {
-        'app.jar'
-    }
-}
-stage.mustRunAfter(clean)
-
-clean << {
-    project.file('app.jar').delete()
 }

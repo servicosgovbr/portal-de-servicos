@@ -1,4 +1,6 @@
 .gradle
+.jruby-container
+.sass-cache
 build
 guia-de-servicos.iml
 guia-de-servicos.ipr
