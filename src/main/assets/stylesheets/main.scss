@@ -74,10 +74,6 @@ input {
   font-family: 'Lucida Grande', Arial, FreeSans;
 }
 
-#portal-searchbox label {
-  font-weight: normal;
-}
-
 input.searchField {
   -moz-appearance: searchfield;
 }
@@ -216,29 +212,6 @@ p {
 
 input.searchField {
   -moz-appearance: none;
-}
-
-#portal-searchbox {
-  float: right;
-  clear: right !important;
-  margin: 3.12em 0 0 0;
-  padding: 2px;
-  background: #fff;
-  text-align: right;
-  font-size: 80%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-
-  .searchField {
-    padding: .3em .35em;
-    width: 186px;
-    border: none;
-    border-right: none;
-    font-size: 1.2em;
-    font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-  }
-
 }
 
 .clear {
@@ -649,12 +622,6 @@ dl.portlet li {
 .tile img.left {
   float: left;
   margin: 0 1em .5em 0;
-}
-
-
-
-#portal-searchbox {
-  border: 1px solid #ccc;
 }
 
 .item-central .link-videos,

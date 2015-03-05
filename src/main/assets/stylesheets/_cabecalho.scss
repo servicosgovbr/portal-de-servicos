@@ -138,14 +138,34 @@
 }
 
 #portal-searchbox {
-  float: right;
-  text-align: left;
+  background: #fff;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   clear: right;
-  margin: 1.2em 0;
   font-size: 80%;
+  float: right;
+  margin: 1.2em 0;
+  margin: 3.12em 0 0 0;
+  padding: 2px;
+  text-align: left;
 
   form {
     white-space: nowrap;
+  }
+
+  label {
+    font-weight: normal;
+  }
+
+  .searchField {
+    padding: .3em .35em;
+    width: 186px;
+    border: none;
+    border-right: none;
+    font-size: 1.2em;
+    font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
   }
 
 }
