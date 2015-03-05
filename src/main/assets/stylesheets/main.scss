@@ -82,21 +82,6 @@ input.searchField {
   -moz-appearance: searchfield;
 }
 
-#portal-siteactions {
-  font-size: 85%;
-  padding-bottom: 2em;
-  text-align: center;
-  clear: left;
-}
-
-#portal-siteactions li {
-  margin-right: .5em;
-}
-
-#portal-siteactions li a:hover {
-  color: #75ad0a;
-}
-
 #content {
   line-height: 1.5em;
   clear: both;
@@ -266,36 +251,23 @@ input.searchField {
   clear: right !important;
   margin: 3.12em 0 0 0;
   padding: 2px;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
   background: #fff;
   text-align: right;
   font-size: 80%;
-}
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 
-#portal-searchbox .searchField {
-  padding: .3em .35em;
-  width: 186px;
-  border: none;
-  border-right: none;
-  font-size: 1.2em;
-  font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-}
+  .searchField {
+    padding: .3em .35em;
+    width: 186px;
+    border: none;
+    border-right: none;
+    font-size: 1.2em;
+    font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+  }
 
-#header input.searchButton {
-  padding: .3em;
-  padding: 4px 15px;
-  border: none;
-  background: transparent;
-  text-indent: -2000px;
 }
-
-#header input.searchButton {
-  background-position: 0 2px;
-  padding-right: 5px;
-}
-
 
 #content {
   margin: 0;

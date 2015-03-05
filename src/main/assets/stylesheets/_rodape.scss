@@ -4,48 +4,48 @@
   width: 100%;
   background: #034811;
   color: #fff;
-}
 
-#footer > div {
-  margin: 2em auto;
-  padding-top: 1em;
-  max-width: 960px;
-}
+  > div {
+    margin: 2em auto;
+    padding-top: 1em;
+    max-width: 960px;
+  }
 
-#footer a {
-  color: white;
+  a {
+    color: white;
+  }
 }
 
 #doormat-container {
   background: #034811;
   float: none;
   font-size: 75%;
-}
 
-#doormat-container dl {
-  border-left: 1px dotted #7dc48a;
-  margin: 0 0 20px 0;
-}
+  dl {
+    border-left: 1px dotted #7dc48a;
+    margin: 0 0 20px 0;
+  }
 
-#doormat-container dt {
-  color: #7dc48a;
-  padding-left: .6em;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
-}
+  dt {
+    color: #7dc48a;
+    padding-left: .6em;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
+  }
 
-#doormat-container dd {
-  padding: .5em 1.2em 0 1.2em;
-  font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-}
+  dd {
+    padding: .5em 1.2em 0 1.2em;
+    font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
 
-#doormat-container dd > a {
-  font-size: 1.4em;
-}
+    > a {
+      font-size: 1.4em;
+    }
+  }
 
-#doormat-container .column {
-  float: left;
-  width: 22%;
-  margin: 0 1em;
+  .column {
+    float: left;
+    width: 22%;
+    margin: 0 1em;
+  }
 }

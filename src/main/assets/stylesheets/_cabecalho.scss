@@ -5,31 +5,36 @@
 }
 
 #accessibility {
-  display: block !important;
+  display: block;
   float: left;
   width: 50%;
   font-size: .88em;
   font-family: Arial, Helvetica, sans-serif;
+
+  a {
+    margin-right: 8px;
+    color: #fff;
+  }
+
+  span {
+    padding: 0 4px;
+    background: url('../img/bg-acess-key.gif') center center no-repeat;
+    color: #060;
+  }
+
 }
 
-#accessibility a {
-  margin-right: 8px;
-}
-
-#accessibility span {
-  padding: 0 4px;
-}
 
 #logo {
   float: left;
   padding: 0;
   width: 70%;
-}
 
-#logo span {
-  position: absolute;
-  display: block;
-  line-height: 1em;
+  span {
+    position: absolute;
+    display: block;
+    line-height: 1em;
+  }
 }
 
 #portal-logo {
@@ -59,59 +64,69 @@
 }
 
 #portal-siteactions {
+  text-align: center;
   display: block;
   float: right;
   clear: none;
   padding-bottom: 2px;
   font-size: .93em;
-}
+  border-bottom: 1px dotted #9bc2a3;
 
-#portal-siteactions li {
-  display: inline;
-}
+  li {
+    display: inline;
+    margin-right: .5em;
+  }
 
-#portal-siteactions a {
-  padding: 4px 0 4px 10px;
-  text-decoration: none;
-  text-transform: uppercase;
+  a {
+    padding: 4px 0 4px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  a:hover {
+    color: #75ad0a;
+  }
+
+  .last-item {
+    margin-right: 0;
+  }
+
 }
 
 #siteaction-accessibility a {
   padding-left: 0;
 }
 
-#portal-siteactions .last-item {
-  margin-right: 0;
-}
-
 #social-icons {
   float: right;
   clear: right;
   margin: 1.167em 0;
-}
 
-#social-icons li {
-  display: inline-block;
-}
+  li {
+    display: inline-block;
+  }
 
-#social-icons a {
-  display: block;
-  overflow: hidden;
-  margin: 0 0 0 5px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  text-indent: 100%;
-  white-space: nowrap;
-  opacity: .85;
-  filter: alpha(opacity=85);
-  border-radius: 4px;
-}
+  a {
+    display: block;
+    overflow: hidden;
+    margin: 0 0 0 5px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    text-indent: 100%;
+    white-space: nowrap;
+    opacity: .85;
+    filter: alpha(opacity=85);
+    border-radius: 4px;
+  }
 
-#social-icons a:focus,
-#social-icons a:hover {
-  opacity: 1;
-  filter: alpha(opacity=100);
+  a:focus,
+  a:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
 }
 
 #portalredes-facebook a {
@@ -165,28 +180,31 @@
   background-image:     -ms-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
   background-image:         radial-gradient(ellipse at center, #19882c 1%, #025310 100%);
   color: #fff;
-}
 
-#accessibility a {
-  color: #fff;
-}
+  > div {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 960px;
+  }
 
-#accessibility span {
-  background: url('../img/bg-acess-key.gif') center center no-repeat;
-  color: #060;
+  input.searchButton {
+    padding: .3em;
+    padding: 4px 15px;
+    border: none;
+    background: transparent;
+    text-indent: -2000px;
+  }
+
+  input.searchButton {
+    background-position: 0 2px;
+    padding-right: 5px;
+  }
+
 }
 
 #portal-logo,
 #portal-title {
-  color: #fff !important;
-}
-
-#portal-siteactions {
-  border-bottom: 1px dotted #9bc2a3;
-}
-
-#portal-siteactions a,
-#portal-siteactions a:hover {
   color: #fff !important;
 }
 
@@ -196,50 +214,39 @@
   clear: right;
   margin: 1.2em 0;
   font-size: 80%;
-}
 
-#portal-searchbox form {
-  white-space: nowrap;
-}
+  form {
+    white-space: nowrap;
+  }
 
-#header > div {
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  max-width: 960px;
 }
 
 #sobre {
   background: #00420c;
-}
-
-#sobre a {
-  color: #fff;
-}
-
-#sobre .portalservicos-item a {
-  border-right: 1px solid #6c9072;
-}
-
-#sobre {
   clear: both;
   margin: 0;
   padding: 5px 0;
   max-width: 100% !important;
   line-height: 20px;
-}
 
-#sobre ul {
-  margin: 0 auto;
-  max-width: 960px;
-  text-align: right;
-}
+  a {
+    color: #fff;
+  }
 
-#sobre .portalservicos-item a {
-  padding: 0 10px;
-}
+  .portalservicos-item a {
+    border-right: 1px solid #6c9072;
+    padding: 0 10px;
+  }
 
-#sobre .last-item a {
-  padding: 0 0 0 10px;
-  border-right: none !important;
+  ul {
+    margin: 0 auto;
+    max-width: 960px;
+    text-align: right;
+  }
+
+  .last-item a {
+    padding: 0 0 0 10px;
+    border-right: none !important;
+  }
+
 }
