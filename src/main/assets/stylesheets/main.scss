@@ -1,3 +1,11 @@
+@import 'base';
+@import 'cabecalho';
+@import 'migalhas-de-pao';
+@import 'rodape';
+@import 'grid';
+@import 'acessibilidade';
+@import 'media-queries';
+
 dl.portlet li {
   margin-bottom: .25em;
   line-height: 1.5em;
