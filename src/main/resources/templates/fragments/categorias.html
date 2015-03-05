@@ -7,7 +7,7 @@
         <dd class="portletItem lastItem">
             <ul class="navTree navTreeLevel0">
 
-                <li class="navTreeItem" th:each="linhaDaVida : ${@linhasDaVidaRepository.findAll()}">
+                <li th:each="linhaDaVida : ${@linhasDaVidaRepository.findAll()}">
                     <a th:href="@{/linha-da-vida/{id}(id=${linhaDaVida.id})}">
                         <span th:text="${linhaDaVida.titulo}">Título da Linha da Vida</span>
                     </a>
