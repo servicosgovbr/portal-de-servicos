@@ -14,6 +14,10 @@ public class ConteudoNaoEncontrado extends RuntimeException {
     public ConteudoNaoEncontrado() {
     }
 
+    public ConteudoNaoEncontrado(String cause) {
+        super(cause);
+    }
+
     public ConteudoNaoEncontrado(IOException cause) {
         super(cause);
     }

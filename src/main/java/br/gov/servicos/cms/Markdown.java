@@ -25,7 +25,7 @@ public class Markdown {
 
     public Conteudo toHtml(ClassPathResource resource) {
         if (!resource.exists()) {
-            throw new ConteudoNaoEncontrado();
+            throw new ConteudoNaoEncontrado(resource.getPath());
         }
 
         try {
