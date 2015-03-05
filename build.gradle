@@ -119,9 +119,7 @@ stage.mustRunAfter(clean)
 
 task watchAssets << {
     AssetPipelineConfigHolder.registerResolver(new FileSystemAssetResolver('application', mainAssets))
-
     def compiler = new AssetCompiler([compileDir: staticAssets])
-    compiler.compile()
 
     WatchService watch = FileSystems.getDefault().newWatchService()
     Paths.get(mainAssets).register(watch, [ENTRY_CREATE, ENTRY_MODIFY, ENTRY_DELETE] as WatchEvent.Kind[], HIGH);
@@ -138,6 +136,7 @@ task watchAssets << {
     }
 }
 bootRun.dependsOn(watchAssets)
+processResources.dependsOn(assetCompile)
 
 idea {
     module {
