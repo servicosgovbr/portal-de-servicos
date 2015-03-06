@@ -6,6 +6,10 @@
 @import 'acessibilidade';
 @import 'media-queries';
 
+.hidden {
+  display: none;
+}
+
 .hiddenStructure {
   display: block;
   background: transparent;

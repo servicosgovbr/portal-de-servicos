@@ -1,4 +1,4 @@
-<div id="portal-searchbox" th:unless="${#httpServletRequest.requestURI} == '/'">
+<div id="portal-searchbox" th:class="${#httpServletRequest.requestURI} == '/' ? 'hidden'">
     <form action="/busca">
         <fieldset class="LSBox">
             <legend class="hiddenStructure">Buscar</legend>

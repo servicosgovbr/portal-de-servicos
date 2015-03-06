@@ -12,7 +12,7 @@
 
     <div class="row">
         <div class="cell width-16 position-0">
-            <div class="tile busca-principal">
+            <div class="tile busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
                 <p>Pesquisa</p>
 
                 <form method="get" action="/busca">

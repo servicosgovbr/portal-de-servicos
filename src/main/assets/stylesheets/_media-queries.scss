@@ -28,16 +28,21 @@
   }
 
   #portal-searchbox {
+    display: block;
     float: none;
-    position: relative;
-    margin-top: 110px;
-    width: 295px;
     left: 10px;
+    margin-top: 110px;
     margin-bottom: 10px;
+    position: relative;
+    width: 295px;
 
     .searchField {
       width: 260px;
     }
+  }
+
+  .busca-principal {
+    display: none !important;
   }
 
   .cell {
