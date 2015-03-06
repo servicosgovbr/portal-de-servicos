@@ -10,19 +10,6 @@
   display: none;
 }
 
-.hiddenStructure {
-  display: block;
-  background: transparent;
-  background-image: none;
-  /* safari bug */
-  border: none;
-  height: .1em;
-  overflow: hidden;
-  padding: 0;
-  margin: -.1em 0 0 -.1em;
-  width: 1px;
-}
-
 h1,
 h2,
 h3 {
@@ -207,10 +194,6 @@ dl.portlet {
   border: none;
   font-size: 80%;
 
-  dt.hiddenStructure {
-    display: none;
-  }
-
   dt {
     background: #edeff1;
     border-bottom: 1px solid #dfdfdf;
@@ -222,10 +205,6 @@ dl.portlet {
     text-transform: uppercase;
     font-weight: normal;
     font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
-  }
-
-  dt.hiddenStructure {
-    padding: 0;
   }
 
   ul.navTree li a {
