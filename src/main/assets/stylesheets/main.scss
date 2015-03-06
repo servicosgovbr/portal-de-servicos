@@ -432,14 +432,14 @@ a.acao {
   text-decoration: none;
   margin-bottom: 14px;
   display: inline-block;
-}
 
-a:visited.acao, a:link.acao {
-  color: white !important;
-}
+  &:visited, &:link {
+    color: white !important;
+  }
 
-a.acao:hover {
-  color: #A0B69F !important;
+  &:hover {
+    color: #A0B69F !important;
+  }
 }
 
 ul#resultados-linhadavida {
