@@ -1,19 +1,17 @@
-<div class="portletWrapper">
-    <dl class="portlet portletNavigationTree">
-        <dt class="portletHeader">
-            Categorias
-        </dt>
+<dl class="portlet portletNavigationTree">
+    <dt class="portletHeader">
+        Categorias
+    </dt>
 
-        <dd class="portletItem lastItem">
-            <ul class="navTree navTreeLevel0">
+    <dd class="portletItem lastItem">
+        <ul class="navTree navTreeLevel0">
 
-                <li th:each="linhaDaVida : ${@linhasDaVidaRepository.findAll()}">
-                    <a th:href="@{/linha-da-vida/{id}(id=${linhaDaVida.id})}">
-                        <span th:text="${linhaDaVida.titulo}">Título da Linha da Vida</span>
-                    </a>
-                </li>
+            <li th:each="linhaDaVida : ${@linhasDaVidaRepository.findAll()}">
+                <a th:href="@{/linha-da-vida/{id}(id=${linhaDaVida.id})}">
+                    <span th:text="${linhaDaVida.titulo}">Título da Linha da Vida</span>
+                </a>
+            </li>
 
-            </ul>
-        </dd>
-    </dl>
-</div>
+        </ul>
+    </dd>
+</dl>
