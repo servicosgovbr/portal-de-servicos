@@ -157,44 +157,35 @@ dl.portlet {
     font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
   }
 
-  ul.navTree li a {
-    border: none;
-    display: block;
-    zoom: 1;
-    padding: .55em 1.043em !important;
-    line-height: 1.3em !important;
-  }
-
-  ul > li {
-    margin: 0;
-    list-style: none;
-
-    a span {
-      font-size: 1.15em;
-      font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-    }
-  }
-
-  li {
-    margin-bottom: .25em;
-    list-style: square outside;
-    line-height: 1.5em;
+  ul li {
     display: list-item;
-    border-bottom: 1px solid #dfdfdf;
-  }
+    list-style: none;
+    margin: 0;
 
-  a:link {
-    color: #205c90;
-    border-bottom: .1em solid #ccc;
-  }
+    a {
+      border-bottom: .1em solid #ccc;
+      display: block;
+      padding: .55em 1.043em !important;
+      zoom: 1;
 
-  a:visited {
-    color: #427597;
-    border-bottom: .1em solid #ccc;
-  }
+      span {
+        font-size: 1.15em;
+      }
 
-  a:hover {
-    color: #75ad0a;
+      &:link {
+        color: #205c90;
+      }
+
+      &:visited {
+        color: #427597;
+      }
+
+      &:hover {
+        color: #75ad0a;
+      }
+
+    }
+
   }
 
 }
