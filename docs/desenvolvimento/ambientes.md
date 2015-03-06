@@ -23,7 +23,7 @@ A seguir, gere o arquivo de projeto do [IntelliJ IDEA][IDEA14CE]:
 ./gradlew clean idea
 ```
 
-Abra o arquivo `guia-de-servicos-frontend.ipr` no IntelliJ IDEA e você está pronto para desenvolver.
+Abra o arquivo `guia-de-servicos.ipr` no IntelliJ IDEA e você está pronto para desenvolver.
 
 Vagrant
 ----
