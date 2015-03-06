@@ -98,11 +98,6 @@ p {
     height: auto;
   }
 
-  .row {
-    margin: 0;
-    padding: 0;
-  }
-
   .tile-description {
     margin: 0;
   }
@@ -147,18 +142,14 @@ dl.portlet {
   dt {
     background: #edeff1;
     border-bottom: 1px solid #dfdfdf;
-    color: #444;
-    line-height: normal;
     margin: 0;
     padding: 8px 8px 24px 10px;
     text-transform: uppercase;
-    font-weight: normal;
     font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
   }
 
   ul li {
     display: list-item;
-    list-style: none;
     margin: 0;
     padding: 0.5em;
     border-bottom: .1em solid #ccc;
