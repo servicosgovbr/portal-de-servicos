@@ -282,59 +282,8 @@ dl.portlet {
   list-style: none !important;
 }
 
-.portletNavigationTree > .portletItem a span,
-.item-central .link-central {
+.portletNavigationTree > .portletItem a span {
   color: #172938 !important;
-}
-
-.portlet-static-centrais-de-conteudos .portletItem {
-  padding: 0 !important;
-}
-
-.portlet-static-centrais-de-conteudos .list-central {
-  margin: 0;
-  padding: 0;
-}
-
-.list-central .item-central {
-  padding: 4px 0 3px;
-  border-bottom: 1px solid #d6dcd7;
-  list-style: none;
-}
-
-.list-central .item-central.first {
-  border-top: 1px solid #d6dcd7;
-}
-
-.item-central .link-central {
-  display: block;
-  padding-left: 50px;
-  height: 40px;
-  line-height: 40px;
-}
-
-.item-central .link-videos {
-  background-position: 0 -156px;
-}
-
-.item-central .link-audios {
-  background-position: -1px -108px;
-}
-
-.item-central .link-fotos {
-  background-position: -1px -300px;
-}
-
-.item-central .link-infograficos {
-  background-position: -1px -204px;
-}
-
-.item-central .link-publicacoes {
-  background-position: -1px -252px;
-}
-
-.item-central .link-aplicativos {
-  background-position: -1px -350px;
 }
 
 .tile {
@@ -527,17 +476,10 @@ dl.portlet {
   margin: 0 1em .5em 0;
 }
 
-.item-central .link-videos,
-.item-central .link-audios,
-.item-central .link-infograficos,
-.item-central .link-publicacoes,
-.item-central .link-fotos,
-.item-central .link-aplicativos,
 #header input.searchButton {
   background-image: url('../img/sprite.png');
 }
 
-.portlet-static-centrais-de-conteudos .portletHeader,
 .portletNavigationTree .portletHeader {
   border-top: 4px solid #00510f;
   color: #00510f;

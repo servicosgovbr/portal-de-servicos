@@ -65,14 +65,4 @@ jQuery(document).ready(function($) {
   resize();
 
   $('#portal-column-one div:first-child').addClass('first-item');
-
-  var firstNavigation = $('#portal-column-one .portletWrapper .portletNavigationTree')[0];
-  if (firstNavigation) {
-    $(firstNavigation).addClass('first-item-nav');
-    var firstNavigationTitle = $('#portal-column-one .portletWrapper .portletNavigationTree .portletHeader')[0];
-    if (firstNavigationTitle.textContent.indexOf('Menu de relevância') > 1) {
-      $(firstNavigation).parent('div').addClass('nav-menu-de-relevancia');
-    }
-  }
-
 });

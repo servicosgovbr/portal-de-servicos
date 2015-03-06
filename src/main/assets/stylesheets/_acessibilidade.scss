@@ -14,7 +14,7 @@ body.contraste {
 
   a, h1, h2, h3, #doormat-container dt, .portletNavigationTree > .portletItem a span, #migalhas-de-pao a,
   #migalhas-de-pao span, #content a:hover, dl.portlet a:hover, .tile-subtitle, .tile-content p, .tile p, .tile a,
-  .item-central .link-central, #portal-siteactions a, #portal-siteactions a:hover, #logo #portal-logo,
+  #portal-siteactions a, #portal-siteactions a:hover, #logo #portal-logo,
   #logo #portal-title, .outstanding-header .outstanding-link, #content .outstanding-header .outstanding-link:hover,
   .lista-vertical .tile-header span, .cover-collection-tile .tile-header span {
     color: #fff !important;
@@ -43,10 +43,7 @@ body.contraste {
     background: #333;
   }
 
-  #header input.searchButton,
-  .item-central .link-videos, .item-central .link-audios,
-  .item-central .link-infograficos, .item-central .link-publicacoes,
-  .item-central .link-fotos, .item-central .link-aplicativos {
+  #header input.searchButton {
     background-image: url('/img/sprite-contraste.png');
   }
 
@@ -88,7 +85,6 @@ body.contraste {
     background: #000 !important;
   }
 
-  .portlet-static-centrais-de-conteudos .portletHeader,
   .portletNavigationTree .portletHeader {
     background: #000 url('/img/portlet-header-contraste.jpg') no-repeat 96% center !important;
   }
