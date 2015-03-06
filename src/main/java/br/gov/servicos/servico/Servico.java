@@ -1,5 +1,6 @@
 package br.gov.servicos.servico;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.Value;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -15,6 +16,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 
 @Value
 @Document(indexName = "guia-de-servicos", type = "servico")
+@XStreamAlias("servico")
 public class Servico {
 
     @Id

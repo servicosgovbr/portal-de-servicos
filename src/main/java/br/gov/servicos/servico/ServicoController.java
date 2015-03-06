@@ -14,6 +14,7 @@ import java.util.function.Function;
 
 import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
@@ -26,18 +27,18 @@ class ServicoController {
         this.servicos = servicos;
     }
 
-    @RequestMapping("/servico/{id}")
+    @RequestMapping(value = "/servico/{id}", method = GET)
     ModelAndView get(@PathVariable("id") String id) {
         Servico servico = servicos.save(buscaServico(id).withNovoAcesso());
         return new ModelAndView("servico", "servico", servico);
     }
 
-    @RequestMapping("/navegar/{id}")
+    @RequestMapping(value = "/navegar/{id}", method = GET)
     RedirectView navegar(@PathVariable("id") String id) {
         return navegaPara(id, Servico::getUrl);
     }
 
-    @RequestMapping("/agendar/{id}")
+    @RequestMapping(value = "/agendar/{id}", method = GET)
     public RedirectView agendar(@PathVariable("id") String id) {
         return navegaPara(id, Servico::getUrlAgendamento);
     }
