@@ -13,10 +13,22 @@ executando corretamente.
 Testes
 ----
 
-Para executar apenas os testes isoladamente, a tarefa `test` do [Gradle][GRADLE] deve ser suficiente:
+Para executar apenas os testes unitários isoladamente, a tarefa `test` do [Gradle][GRADLE] deve ser suficiente:
 
 ```
 ./gradlew test
+```
+
+E para executar apenas os testes de integração, que são um pouco mais demorados, basta executar a tarefa `integrationTest` do [Gradle][GRADLE]:
+
+```
+./gradlew integrationTest
+```
+
+Antes de publicar uma funcionalidade, com `git push`, recomendamos rodar todas as tasks de testes e verificação do [Gradle][GRADLE]:
+
+```
+./gradlew clean build
 ```
 
 Integração Contínua
