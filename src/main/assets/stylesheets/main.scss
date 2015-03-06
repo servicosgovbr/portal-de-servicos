@@ -150,7 +150,6 @@ dl.portlet {
     color: #444;
     line-height: normal;
     margin: 0;
-    padding: .42em 1em;
     padding: 8px 8px 24px 10px;
     text-transform: uppercase;
     font-weight: normal;
@@ -161,30 +160,9 @@ dl.portlet {
     display: list-item;
     list-style: none;
     margin: 0;
-
-    a {
-      border-bottom: .1em solid #ccc;
-      display: block;
-      padding: .55em 1.043em !important;
-      zoom: 1;
-
-      span {
-        font-size: 1.15em;
-      }
-
-      &:link {
-        color: #205c90;
-      }
-
-      &:visited {
-        color: #427597;
-      }
-
-      &:hover {
-        color: #75ad0a;
-      }
-
-    }
+    padding: 0.5em;
+    border-bottom: .1em solid #ccc;
+    font-size: 1.2em;
 
   }
 
@@ -193,10 +171,6 @@ dl.portlet {
 #portal-column-one .portletNavigationTree {
   margin-bottom: 3.61em;
   border-bottom: 1px solid #ddd;
-
-  li {
-    list-style: none !important;
-  }
 
   > dd a span {
     color: #172938;
