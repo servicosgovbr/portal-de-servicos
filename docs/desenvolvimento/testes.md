@@ -25,10 +25,10 @@ E para executar apenas os testes de integração, que são um pouco mais demorad
 ./gradlew integrationTest
 ```
 
-Antes de publicar uma funcionalidade, com `git push`, recomendamos rodar todas as tasks de testes e verificação do [Gradle][GRADLE]:
+Antes de publicar uma funcionalidade, com `git push`, recomendamos rodar todas as tarefas de testes e verificação do [Gradle][GRADLE]:
 
 ```
-./gradlew clean build
+./gradlew check
 ```
 
 Integração Contínua
