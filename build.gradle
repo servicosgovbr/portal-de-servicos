@@ -78,7 +78,11 @@ dependencies {
     integrationTestRuntime configurations.runtime
 }
 
-def generatedSources = ["br/gov/servicos/legado/**/*Type*", "br/gov/servicos/legado/**/ObjectFactory.class"]
+def ignoredSources = [
+        "br/gov/servicos/config/**/*Config*",
+        "br/gov/servicos/legado/**/*Type*",
+        "br/gov/servicos/legado/**/ObjectFactory.class"
+]
 
 test {
     testLogging {
@@ -87,7 +91,7 @@ test {
     }
 
     jacoco {
-        excludes = generatedSources
+        excludes = ignoredSources
     }
 }
 
@@ -100,7 +104,7 @@ tasks.withType(FindBugs) {
 
 jacocoTestReport {
     doFirst {
-        classDirectories = fileTree(dir: "${buildDir}/classes/main/").exclude(generatedSources)
+        classDirectories = fileTree(dir: "${buildDir}/classes/main/").exclude(ignoredSources)
     }
 
     reports {
