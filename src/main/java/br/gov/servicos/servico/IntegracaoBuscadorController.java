@@ -52,8 +52,7 @@ class IntegracaoBuscadorController {
         Object dataAtualizacao = null;
 
         Servico(String id, HttpServletRequest request) {
-            link = String.format("%s://%s:%s/xml/servico/%s",
-                    request.getProtocol(),
+            link = String.format("http://%s:%s/xml/servico/%s",
                     request.getServerName(),
                     request.getServerPort(),
                     id);
