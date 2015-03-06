@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
   });
 
   var menuTrigger = $('.menuTrigger');
-  var navigationEl = $('#navigation');
+  var navigationEl = $('#navegacao');
   menuTrigger.click(function(e) {
     e.preventDefault();
     navigationEl.toggleClass('ativo');

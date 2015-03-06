@@ -11,17 +11,16 @@
     <link rel="search" type="application/opensearchdescription+xml" title="Busca de serviços" th:href="@{/opensearch.xml}"/>
 </head>
 
-<body class="template-view portaltype-collective-cover-content">
+<body>
 <div th:replace="fragments/barra-brasil :: #barra-brasil"></div>
 <div id="wrapper">
     <div th:replace="fragments/header :: #header"></div>
     <div id="main" role="main">
         <div id="portal-columns" class="row">
             <div th:replace="fragments/migalhas-de-pao :: #migalhas-de-pao"></div>
-            <div th:replace="fragments/coluna-de-menus :: #navigation"></div>
-            <div id="portal-column-content" class="cell width-3:4 position-1:4">
-                <a name="acontent" id="acontent"></a>
-                <div id="content" layout:fragment="corpo"></div>
+            <div th:replace="fragments/coluna-de-menus :: #navegacao"></div>
+            <div class="cell width-3:4 position-1:4">
+                <div id="conteudo" layout:fragment="corpo"></div>
             </div>
         </div>
         <div class="clear"></div>
@@ -29,7 +28,7 @@
             <a href="#wrapper">Voltar para o topo</a>
         </div>
     </div>
-    <div th:replace="fragments/rodape :: #footer"></div>
+    <div th:replace="fragments/rodape :: #rodape"></div>
 </div>
 <script type="text/javascript" src="/assets/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/jquery.cookie.min.js"></script>

@@ -2,20 +2,20 @@ body.contraste {
   background: #000 !important;
   color: #fff !important;
 
-  #header, #footer, #main, #doormat-container, .outstanding-header .outstanding-title {
+  #header, #rodape, #main, #doormat-container, .outstanding-header .outstanding-title {
     background: #000 !important;
     color: #fff !important;
   }
 
-  #accessibility span {
+  #acessibilidade span {
     background: #fff !important;
     color: #000 !important;
   }
 
   a, h1, h2, h3, #doormat-container dt, .portletNavigationTree > dd a span, #migalhas-de-pao a,
-  #migalhas-de-pao span, #content a:hover, dl.portlet a:hover, .tile-subtitle, .tile-content p, .tile p, .tile a,
+  #migalhas-de-pao span, #conteudo a:hover, dl.portlet a:hover, .tile-subtitle, .tile p, .tile a,
   #portal-siteactions a, #portal-siteactions a:hover, #logo #portal-logo,
-  #logo #portal-title, .outstanding-header .outstanding-link, #content .outstanding-header .outstanding-link:hover,
+  #logo #portal-title, .outstanding-header .outstanding-link, #conteudo .outstanding-header .outstanding-link:hover,
   .lista-vertical .tile-header span, .cover-collection-tile .tile-header span {
     color: #fff !important;
   }
