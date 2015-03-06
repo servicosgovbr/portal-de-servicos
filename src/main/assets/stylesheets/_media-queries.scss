@@ -1,231 +1,43 @@
-@media only screen and (min-width : 320px) and (max-width : 768px) {
-  #header {
-    padding-top: 1em !important;
+@media only screen and (max-width: 480px) {
+
+  #accessibility,  #navigation, #doormat-container {
+    display: none;
   }
 
   #portal-siteactions {
-    position: static;
     float: none;
-    clear: both;
-    padding: 0 0 .5em;
-    font-size: .9em;
-  }
-
-  #main {
-    padding-top: 0;
-    max-width: 100% !important;
-  }
-
-  #sobre .last-item a {
-    padding: 0 10px;
-  }
-
-  #portal-breadcrumbs,
-  #accessibility,
-  #doormat-container {
-    display: none !important;
-  }
-
-  #portal-column-content {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 20px;
-  }
-
-  .menuTrigger {
-    display: block;
-    height: 73px;
-    text-indent: -9999px;
-    cursor: pointer;
-  }
-
-  body.contraste .menuTrigger {
-    background: #000 url('/img/bg-menu-mobile-contraste.png') top right no-repeat;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-  }
-
-  #navigation #portal-column-one {
-    display: none;
-  }
-
-  #navigation.ativo #portal-column-one {
-    display: block;
-  }
-
-  .portlet-static-centrais-de-conteudos .portletHeader,
-  .portletNavigationTree .portletHeader {
-    position: relative;
-    margin: 0;
-    padding: 30px 0;
-    border-top: none;
-    border-bottom: 1px solid #cdd4d0;
-    text-indent: 30px;
-    text-transform: uppercase;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  #portal-column-one dl.portlet {
-    margin-bottom: 0;
-  }
-
-  #portal-column-one .portletStaticText,
-  #portal-column-one dl.portlet dd {
-    display: none;
-  }
-
-  dl.portlet ul.navTreeLevel0 > li {
-    border-top: none;
-    border-bottom: 1px solid #d2d2d2;
-
-    a {
-      padding: 20px 35px !important;
-      color: #454545;
-      font-size: 24px;
-      line-height: 1.2em;
-    }
-
-  }
-
-}
-
-@media screen and (max-width: 768px) {
-  #wrapper {
-    max-width: 100%;
   }
 
   #logo {
-    min-width: 140px;
-  }
-
-  #main {
-    max-width: 90%;
-  }
-
-  #portal-column-one,
-  #portal-column-content {
-    clear: both;
-    margin-left: -98.875%;
-    width: 97.75%;
-  }
-
-  #portal-searchbox {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #portal-siteactions a {
-    padding-left: 0;
-  }
-
-  #portal-siteactions .last-item {
-    margin-right: 0;
-  }
-
-  #voltar-topo a {
-    margin-right: .5em;
-  }
-
-  #portal-description {
-    bottom: 62px;
-  }
-
-  #sobre {
-    background: none;
-  }
-
-  #header {
-    padding: 1em .5em;
-    padding: 0 4%;
     width: 100%;
-  }
+    padding: 5px;
+    margin-top: -14px;
 
-  #header > div {
-    width: 92%;
-  }
-
-  #header #accessibility {
-    display: none !important;
-  }
-
-  #header #sobre {
-    padding: 0 4%;
-    width: 92%;
-  }
-
-  #sobre .last-item a {
-    padding: 0 0 0 10px;
-  }
-
-  #portal-searchbox {
-    position: relative;
-    display: block;
-    clear: left !important;
-    margin: 0 !important;
-    padding: 0;
-    height: 41px;
-    border: 0 none;
-    border-radius: 0;
-    background: none;
-  }
-
-  #portal-searchbox .searchField {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 39px;
-    border: 0 none;
-    border-top: 2px solid #ccc;
-    border-radius: 6px;
-    background-color: #fff;
-    color: #064d13;
-    text-indent: 13px;
-    font-size: 18px;
-    font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-    line-height: 39px;
-  }
-
-  #header #portal-searchbox .searchButton {
-    position: absolute;
-    top: 7px;
-    right: 13px;
-    width: 30px;
-    height: 30px;
-    background: url('/img/search-button-30px.gif') no-repeat;
-    cursor: pointer;
-  }
-
-  body.contraste #header #portal-searchbox .searchButton {
-    background: url('/img/search-button-30px-contraste.gif') no-repeat;
-  }
-
-  body.contraste #portal-searchbox .searchField {
-    border: 1px #fff solid;
-    width: 99%;
+    span {
+      position: relative;
+      top: 0;
+    }
   }
 
   #portal-title {
-    margin: 30px 0 36px;
+    margin-bottom: 5px;
   }
 
-  #header #portal-searchbox {
-    border: none;
-    margin-bottom: 10px !important;
-  }
-
-  #logo #portal-title {
-    font-size: 3.5em;
-    line-height: 1em;
+  #sobre ul {
+    text-align: center;
   }
 
   #portal-searchbox {
     float: none;
-    clear: both;
-    margin: 0 auto 2%;
-    width: 100%;
+    position: relative;
+    margin-top: 110px;
+    width: 295px;
+    left: 10px;
+    margin-bottom: 10px;
+
+    .searchField {
+      width: 260px;
+    }
   }
 
   .cell {
@@ -234,38 +46,22 @@
     width: 100% !important;
   }
 
+  #migalhas-de-pao {
+    margin: 10px 10px 10px 10px !important;
+  }
+
+  .tile {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .row {
+    padding-left: 5px;
+    width: 98.5% !important;
+  }
+
   .left {
     float: none !important;
   }
 
-  #logo {
-    width: 100% !important;
-  }
-
-  #wrapper #footer > div {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  #barra-brasil {
-    min-width: 100% !important;
-  }
-}
-
-@media only screen and (min-width : 320px) and (max-width : 768px) {
-  .menuTrigger {
-    background: #065116 url('../img/bg-menu-mobile.png') top right no-repeat;
-  }
-
-  .portlet-static-centrais-de-conteudos .portletHeader,
-  .portletNavigationTree .portletHeader {
-    background: #edeff1 url('../img/portlet-header.gif') no-repeat 96% center;
-  }
-}
-
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-  #portal-searchbox .searchButton {
-    background: url('../img/search-button-30px.png') no-repeat;
-  }
 }
