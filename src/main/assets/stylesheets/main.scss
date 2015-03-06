@@ -10,63 +10,26 @@
   display: none;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Helvetica Neue', Arial, FreeSans, sans-serif;
-  font-weight: bold;
-  color: Black;
-  line-height: 1.5em;
-}
-
-h1,
-h2 {
-  letter-spacing: -.05em;
+.clear {
+  clear: both;
 }
 
 h1 {
+  border-bottom: none;
+  color: #172838;
   font-size: 2em;
+  letter-spacing: -.05em;
+  line-height: 1.3em;
+  margin: .5em 0 .5em;
 }
 
 h2 {
+  letter-spacing: -.05em;
   font-size: 1.75em;
 }
 
 h3 {
   font-size: 1.25em;
-}
-
-h2,
-h3 {
-  color: #444;
-}
-
-h2 a,
-h3 a {
-  border-bottom: none !important;
-}
-
-input {
-  font-family: 'Lucida Grande', Arial, FreeSans;
-}
-
-input.searchField {
-  -moz-appearance: searchfield;
-}
-
-fieldset {
-  line-height: 1.5em;
-  margin: 1em 0;
-  padding: 0 1em 1em;
-  width: auto;
-}
-
-input[type='text']:focus {
-  background-color: #ffffe0;
-}
-
-label {
-  font-weight: bold;
 }
 
 h1,
@@ -76,26 +39,27 @@ h3 {
   font-weight: normal;
 }
 
-h1 {
-  border-bottom: none;
-  color: #172838;
-  font-size: 2em;
-}
-
 h2,
 h3 {
   color: #231f20;
-}
-
-h1 {
-  margin: .5em 0 .5em;
-  line-height: 1.3em;
-}
-
-h2,
-h3 {
   margin: 0 0 .5em 0;
   line-height: 1.3em;
+}
+
+input {
+  font-family: 'Lucida Grande', Arial, FreeSans;
+}
+
+fieldset {
+  border: none;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+input[type='text']:focus {
+  background-color: #ffffe0;
 }
 
 p {
@@ -109,20 +73,6 @@ p {
   max-width: 960px;
   background: #fff;
   font-size: 1.3em;
-}
-
-.LSBox {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-input.searchField {
-  -moz-appearance: none;
-}
-
-.clear {
-  clear: both;
 }
 
 #content {
@@ -251,14 +201,11 @@ dl.portlet {
 
 #portal-column-one .portletNavigationTree {
   margin-bottom: 3.61em;
-}
-
-.portletNavigationTree {
   border-bottom: 1px solid #ddd;
-}
 
-.portletNavigationTree li {
-  list-style: none !important;
+  li {
+    list-style: none !important;
+  }
 }
 
 .portletNavigationTree > .portletItem a span {
