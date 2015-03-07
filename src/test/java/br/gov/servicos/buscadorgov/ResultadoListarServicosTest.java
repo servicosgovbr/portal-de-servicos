@@ -1,6 +1,7 @@
 package br.gov.servicos.buscadorgov;
 
 import br.gov.servicos.servico.Servico;
+import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
@@ -9,9 +10,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
+import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+@FieldDefaults(level = PRIVATE)
 public class ResultadoListarServicosTest {
 
     MockHttpServletRequest request;

@@ -1,10 +1,13 @@
 package br.gov.servicos.cms;
 
+import lombok.experimental.FieldDefaults;
 import org.junit.Test;
 
+import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
+@FieldDefaults(level = PRIVATE)
 public class GeneroTest {
 
     Genero genero = new Genero();

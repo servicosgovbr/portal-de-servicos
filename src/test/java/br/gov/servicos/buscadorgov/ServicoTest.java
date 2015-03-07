@@ -1,16 +1,19 @@
 package br.gov.servicos.buscadorgov;
 
+import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 
+import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
+@FieldDefaults(level = PRIVATE)
 public class ServicoTest {
 
-    private MockHttpServletRequest request;
+    MockHttpServletRequest request;
 
     @Before
     public void setUp() throws Exception {

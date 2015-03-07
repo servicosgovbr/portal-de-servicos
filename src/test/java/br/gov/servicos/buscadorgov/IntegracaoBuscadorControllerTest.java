@@ -1,6 +1,7 @@
 package br.gov.servicos.buscadorgov;
 
 import br.gov.servicos.servico.ServicoRepository;
+import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,16 +12,19 @@ import org.springframework.mock.web.MockHttpServletRequest;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
+import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
 
 @RunWith(MockitoJUnitRunner.class)
+@FieldDefaults(level = PRIVATE)
 public class IntegracaoBuscadorControllerTest {
 
     @Mock
     ServicoRepository servicos;
-    private IntegracaoBuscadorController controller;
+
+    IntegracaoBuscadorController controller;
 
     @Before
     public void setUp() throws Exception {

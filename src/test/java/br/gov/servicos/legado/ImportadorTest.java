@@ -3,6 +3,7 @@ package br.gov.servicos.legado;
 import br.gov.servicos.busca.Busca;
 import br.gov.servicos.servico.*;
 import com.github.slugify.Slugify;
+import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,8 +17,10 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 import static java.util.Arrays.asList;
+import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.common.collect.Iterables.get;
-import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.Matchers.anyList;
@@ -26,21 +29,22 @@ import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
+@FieldDefaults(level = PRIVATE)
 public class ImportadorTest {
 
     private static final String GUIA_DE_SERVICOS = "guia-de-servicos";
 
     @Mock
-    private ElasticsearchTemplate elasticsearch;
+    ElasticsearchTemplate elasticsearch;
 
     @Mock
-    private ServicoRepository servicos;
+    ServicoRepository servicos;
 
     @Mock
-    private BeanFactory beanFactory;
+    BeanFactory beanFactory;
 
-    private Importador importador;
-    private Slugify slugify;
+    Importador importador;
+    Slugify slugify;
 
     @Before
     public void setUp() throws Exception {
