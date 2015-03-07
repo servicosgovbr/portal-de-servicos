@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
+import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
@@ -26,24 +27,22 @@ public class LinhasDaVidaRepositoryTest {
     @Test
     public void listaLinhasDaVida() throws Exception {
         servicos.save(SERVICO
-                .withId("servico-1")
-                .withLinhasDaVida(
-                        new LinhaDaVida("meu-negocio", "Meu negócio"),
-                        new LinhaDaVida("administrar-um-negocio", "Administrar um negócio")));
+                .withId("servico-1").withLinhasDaVida(asList(
+                        new LinhaDaVida().withId("meu-negocio").withTitulo("Meu negócio"),
+                        new LinhaDaVida().withId("administrar-um-negocio").withTitulo("Administrar um negócio"))));
 
         servicos.save(SERVICO
-                .withId("servico-2")
-                .withLinhasDaVida(
-                        new LinhaDaVida("meu-negocio", "Meu negócio")));
+                .withId("servico-2").withLinhasDaVida(asList(
+                        new LinhaDaVida().withId("meu-negocio").withTitulo("Meu negócio"))));
 
         servicos.save(SERVICO
-                .withId("servico-3")
-                .withLinhasDaVida(
-                        new LinhaDaVida("aposentar-se", "Aposentar-se")));
+                .withId("servico-3").withLinhasDaVida(asList(
+                        new LinhaDaVida().withId("aposentar-se").withTitulo("Aposentar-se"))));
 
         List<LinhaDaVida> linhas = linhasDaVida.findAll();
 
         assertThat(linhas, is(not(empty())));
         assertThat(linhas.get(0).getId(), is("meu-negocio"));
+        assertThat(linhas.get(0).getServicos(), is(2L));
     }
 }

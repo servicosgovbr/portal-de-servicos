@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import static br.gov.servicos.fixtures.TestData.BUSCA;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
@@ -65,18 +66,18 @@ public class BuscadorTest {
 
         buscador.busca(of("um serviço"));
 
-        verify(buscas).save(new Busca("um serviço", 1, 1));
+        verify(buscas).save(BUSCA);
     }
 
     @Test
     public void quandoUmServicoEBuscadoOTermoUtilizadoEAtualizado() {
-        doReturn(new Busca("um serviço", 1, 1))
+        doReturn(BUSCA)
                 .when(buscas)
                 .findOne("um serviço");
 
         buscador.busca(of("um serviço"));
 
-        verify(buscas).save(new Busca("um serviço", 1, 2));
+        verify(buscas).save(BUSCA.withAtivacoes(2));
     }
 
     @Test
@@ -86,7 +87,7 @@ public class BuscadorTest {
                 .search(any(QueryBuilder.class));
         
         buscador.busca(of("serviço não existente"));
-        verify(buscas).save(new Busca("serviço não existente", 0, 1));
+        verify(buscas).save(BUSCA.withTermo("serviço não existente").withResultados(0));
     }
 
     @Test
@@ -94,7 +95,7 @@ public class BuscadorTest {
         assertThat(buscador.busca(empty()), is(emptyList()));
         
         verifyZeroInteractions(servicos);
-        verify(buscas).save(new Busca("[BUSCA VAZIA]", 0, 1));
+        verify(buscas).save(BUSCA.withTermo("[BUSCA VAZIA]").withResultados(0));
     }
 
     @Test
@@ -102,6 +103,6 @@ public class BuscadorTest {
         assertThat(buscador.busca(of("")), is(emptyList()));
         
         verifyZeroInteractions(servicos);
-        verify(buscas).save(new Busca("[BUSCA VAZIA]", 0, 1));
+        verify(buscas).save(BUSCA.withTermo("[BUSCA VAZIA]").withResultados(0));
     }
 }

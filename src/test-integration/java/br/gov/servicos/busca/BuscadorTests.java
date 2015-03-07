@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
+import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Optional.of;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.Matchers.empty;
@@ -29,7 +30,10 @@ public class BuscadorTests {
 
     @Test
     public void buscaPorTermosComErrosDeDigitacao() {
-        servicos.save(new Servico("passaporte", "Passaporte", "Emissão de passaportes", null, null, null, null, null, null, null, null, 0L, 0L));
+        servicos.save(SERVICO
+                .withId("passaporte")
+                .withTitulo("Passaporte")
+                .withDescricao("Emissão de passaportes"));
 
         List<Servico> busca = buscador.busca(of("passaprote"));
         assertThat(busca, is(not(empty())));

@@ -37,7 +37,7 @@ class Buscador {
     }
 
     List<Servico> busca(Optional<String> termoBuscado) {
-        log.debug("Executando busca simples por '{}'", termoBuscado);
+        log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
         return executaQuery(termoBuscado, (q) -> disMaxQuery()
                 .add(queryString(q).boost(5f))
                 .add(boolQuery()
@@ -79,7 +79,10 @@ class Buscador {
         Busca busca = termo
                 .map(buscas::findOne)
                 .map(Busca::withNovaAtivacao)
-                .orElseGet(() -> new Busca(termo.orElse("[BUSCA VAZIA]"), resultados.size(), 1));
+                .orElseGet(() -> new Busca()
+                        .withTermo(termo.orElse("[BUSCA VAZIA]"))
+                        .withResultados(resultados.size())
+                        .withAtivacoes(1));
 
         buscas.save(busca);
     }

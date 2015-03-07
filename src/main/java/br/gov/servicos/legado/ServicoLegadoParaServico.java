@@ -40,21 +40,20 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
     @Override
     public Servico apply(ServicoType legado) {
-        return new Servico(
-                slugify.slugify(legado.getTitulo()),
-                legado.getTitulo(),
-                legado.getDescricao(),
-                url(legado),
-                urlAgendamento(legado),
-                legado.getTaxa(),
-                orgaoPrestador(legado),
-                orgaoResponsavel(legado),
-                areasDeInteresse(legado),
-                linhasDaVida(legado),
-                eventosDasLinhasDaVida(legado),
-                0L,
-                0L
-        );
+        return new Servico()
+                .withId(slugify.slugify(legado.getTitulo()))
+                .withTitulo(legado.getTitulo())
+                .withDescricao(legado.getDescricao())
+                .withUrl(url(legado))
+                .withUrlAgendamento(urlAgendamento(legado))
+                .withTaxa(legado.getTaxa())
+                .withPrestador(orgaoPrestador(legado))
+                .withResponsavel(orgaoResponsavel(legado))
+                .withAreasDeInteresse(areasDeInteresse(legado))
+                .withLinhasDaVida(linhasDaVida(legado))
+                .withEventosDasLinhasDaVida(eventosDasLinhasDaVida(legado))
+                .withAcessos(0L)
+                .withAtivacoes(0L);
     }
 
     private String url(ServicoType servicoType) {
@@ -96,7 +95,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
         return new ArrayList<>(
                 stream(areasDeInteresse)
-                        .map(titulo -> new AreaDeInteresse(slugify.slugify(titulo), titulo))
+                        .map(titulo -> new AreaDeInteresse().withId(slugify.slugify(titulo)).withTitulo(titulo))
                         .collect(Collectors.toSet())
         );
     }
@@ -109,7 +108,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
         return new ArrayList<>(
                 stream(linhasDaVida)
                         .flatMap(Arrays::stream)
-                        .map(titulo -> new LinhaDaVida(slugify.slugify(titulo), titulo))
+                        .map(titulo -> new LinhaDaVida().withId(slugify.slugify(titulo)).withTitulo(titulo))
                         .collect(Collectors.toSet())
         );
     }
@@ -130,7 +129,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     private StandardEvaluationContext context(ServicoType servicoType) {
         StandardEvaluationContext context = new StandardEvaluationContext(servicoType);
         context.setBeanResolver(new BeanFactoryResolver(this.beanFactory));
-        
+
         return context;
     }
 }

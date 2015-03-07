@@ -34,7 +34,10 @@ public class Markdown {
             try (BufferedReader br = new BufferedReader(input)) {
                 String titulo = br.readLine();
                 String conteudo = titulo + "\n" + br.lines().collect(joining("\n"));
-                return new Conteudo(titulo, pegdown.markdownToHtml(conteudo));
+
+                return new Conteudo()
+                        .withTitulo(titulo)
+                        .withHtml(pegdown.markdownToHtml(conteudo));
             }
         } catch (IOException e) {
             throw new ConteudoNaoEncontrado(e);

@@ -1,15 +1,20 @@
 package br.gov.servicos.servico;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import lombok.AllArgsConstructor;
 import lombok.Value;
+import lombok.experimental.Wither;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Field;
 
+import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Value
 @XStreamAlias("orgao")
+@AllArgsConstructor(access = PRIVATE)
+@Wither
 public class Orgao {
 
     @Id
@@ -24,11 +29,5 @@ public class Orgao {
 
     public Orgao() {
         this(null, null, null);
-    }
-
-    public Orgao(String id, String nome, String telefone) {
-        this.id = id;
-        this.nome = nome;
-        this.telefone = telefone;
     }
 }

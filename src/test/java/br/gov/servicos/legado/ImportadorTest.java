@@ -49,11 +49,11 @@ public class ImportadorTest {
     @Before
     public void setUp() throws Exception {
         slugify = new Slugify();
-        
+
         doReturn(slugify)
                 .when(beanFactory)
                 .getBean("slugify");
-        
+
         doAnswer(returnsFirstArg())
                 .when(servicos)
                 .save(anyList());
@@ -134,25 +134,25 @@ public class ImportadorTest {
     @Test
     public void deveImportarOrgaoPrestadorDoServicoLegado() throws Exception {
         assertThat(importaServico().getPrestador(),
-                equalTo(new Orgao("ministerio-da-previdencia-social-mps", "Ministério da Previdência Social - MPS", "Ligue 135.")));
+                equalTo(new Orgao().withId("ministerio-da-previdencia-social-mps").withNome("Ministério da Previdência Social - MPS").withTelefone("Ligue 135.")));
     }
 
     @Test
     public void deveImportarOrgaoResponsavelDoServicoLegado() throws Exception {
         assertThat(importaServico().getResponsavel(),
-                equalTo(new Orgao("ministerio-da-previdencia-social-mps", "Ministerio da Previdencia Social - MPS", null)));
+                equalTo(new Orgao().withId("ministerio-da-previdencia-social-mps").withNome("Ministerio da Previdencia Social - MPS").withTelefone(null)));
     }
 
     @Test
     public void deveImportarAreasDeInteresseDoServicoLegado() throws Exception {
         assertThat(importaServico().getAreasDeInteresse(),
-                equalTo(asList(new AreaDeInteresse("previdencia-social", "Previdência Social"))));
+                equalTo(asList(new AreaDeInteresse().withId("previdencia-social").withTitulo("Previdência Social"))));
     }
 
     @Test
     public void deveImportarLinhasDaVidaDoServicoLegado() throws Exception {
         assertThat(importaServico().getLinhasDaVida(),
-                equalTo(asList(new LinhaDaVida("abrir-um-negocio", "Abrir um negócio"))));
+                equalTo(asList(new LinhaDaVida().withId("abrir-um-negocio").withTitulo("Abrir um negócio"))));
     }
 
     @Test

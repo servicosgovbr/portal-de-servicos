@@ -40,7 +40,10 @@ class LinhasDaVidaRepository {
                         .get("linhasDaVida"))
                         .getBuckets()
                         .stream()
-                        .map((bucket) -> new LinhaDaVida(slugify.slugify(bucket.getKey()), bucket.getKey(), bucket.getDocCount()))
+                        .map((bucket) -> new LinhaDaVida()
+                                .withId(slugify.slugify(bucket.getKey()))
+                                .withTitulo(bucket.getKey())
+                                .withServicos(bucket.getDocCount()))
                         .collect(Collectors.toList())
         );
     }
