@@ -79,13 +79,13 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
     private Orgao orgaoPrestador(ServicoType servicoType) {
         return parser.parseExpression(
-                "new br.gov.servicos.servico.Orgao(@slugify.slugify(orgaoPrestador?.titulo), orgaoPrestador?.titulo, orgaoPrestador?.telefone)")
+                "new br.gov.servicos.servico.Orgao().withId(@slugify.slugify(orgaoPrestador?.titulo)).withNome(orgaoPrestador?.titulo).withTelefone(orgaoPrestador?.telefone)")
                 .getValue(context(servicoType), Orgao.class);
     }
 
     private Orgao orgaoResponsavel(ServicoType servicoType) {
         return parser.parseExpression(
-                "new br.gov.servicos.servico.Orgao(@slugify.slugify(orgaoResponsavel?.titulo), orgaoResponsavel?.titulo, null)")
+                "new br.gov.servicos.servico.Orgao().withId(@slugify.slugify(orgaoResponsavel?.titulo)).withNome(orgaoResponsavel?.titulo)")
                 .getValue(context(servicoType), Orgao.class);
     }
 

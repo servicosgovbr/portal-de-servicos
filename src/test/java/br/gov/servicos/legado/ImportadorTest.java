@@ -134,25 +134,35 @@ public class ImportadorTest {
     @Test
     public void deveImportarOrgaoPrestadorDoServicoLegado() throws Exception {
         assertThat(importaServico().getPrestador(),
-                equalTo(new Orgao().withId("ministerio-da-previdencia-social-mps").withNome("Ministério da Previdência Social - MPS").withTelefone("Ligue 135.")));
+                equalTo(new Orgao()
+                        .withId("ministerio-da-previdencia-social-mps")
+                        .withNome("Ministério da Previdência Social - MPS")
+                        .withTelefone("Ligue 135.")));
     }
 
     @Test
     public void deveImportarOrgaoResponsavelDoServicoLegado() throws Exception {
         assertThat(importaServico().getResponsavel(),
-                equalTo(new Orgao().withId("ministerio-da-previdencia-social-mps").withNome("Ministerio da Previdencia Social - MPS").withTelefone(null)));
+                equalTo(new Orgao()
+                        .withId("ministerio-da-previdencia-social-mps")
+                        .withNome("Ministerio da Previdencia Social - MPS")
+                        .withTelefone(null)));
     }
 
     @Test
     public void deveImportarAreasDeInteresseDoServicoLegado() throws Exception {
         assertThat(importaServico().getAreasDeInteresse(),
-                equalTo(asList(new AreaDeInteresse().withId("previdencia-social").withTitulo("Previdência Social"))));
+                equalTo(asList(new AreaDeInteresse()
+                        .withId("previdencia-social")
+                        .withTitulo("Previdência Social"))));
     }
 
     @Test
     public void deveImportarLinhasDaVidaDoServicoLegado() throws Exception {
         assertThat(importaServico().getLinhasDaVida(),
-                equalTo(asList(new LinhaDaVida().withId("abrir-um-negocio").withTitulo("Abrir um negócio"))));
+                equalTo(asList(new LinhaDaVida()
+                        .withId("abrir-um-negocio")
+                        .withTitulo("Abrir um negócio"))));
     }
 
     @Test
