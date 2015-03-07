@@ -8,6 +8,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 
 import java.util.List;
 
+import static java.util.Arrays.asList;
 import static org.elasticsearch.common.Strings.isEmpty;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Long;
@@ -104,4 +105,7 @@ public class Servico {
         return new Servico(newId, titulo, descricao, url, urlAgendamento, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos, ativacoes);
     }
 
+    public Servico withLinhasDaVida(LinhaDaVida ... linhasDaVida) {
+        return new Servico(id, titulo, descricao, url, urlAgendamento, taxa, prestador, responsavel, areasDeInteresse, asList(linhasDaVida), eventosDasLinhasDaVida, acessos, ativacoes);
+    }
 }

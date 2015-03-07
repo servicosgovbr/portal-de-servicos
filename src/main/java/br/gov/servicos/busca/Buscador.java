@@ -3,6 +3,7 @@ package br.gov.servicos.busca;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.common.collect.Lists;
 import org.elasticsearch.index.query.FuzzyQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
@@ -20,6 +21,7 @@ import static org.elasticsearch.common.unit.Fuzziness.TWO;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 @Component
+@Slf4j
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class Buscador {
 
@@ -35,13 +37,12 @@ class Buscador {
     }
 
     List<Servico> busca(Optional<String> termoBuscado) {
+        log.debug("Executando busca simples por '{}'", termoBuscado);
         return executaQuery(termoBuscado, (q) -> disMaxQuery()
-                        .add(queryString(q).boost(5f))
-                        .add(boolQuery()
-                                .should(fuzzy(q, "titulo", 1.0f))
-                                .should(fuzzy(q, "descricao", 0.9f))
-                        )
-        );
+                .add(queryString(q).boost(5f))
+                .add(boolQuery()
+                        .should(fuzzy(q, "titulo", 1.0f))
+                        .should(fuzzy(q, "descricao", 0.9f))));
     }
 
     private FuzzyQueryBuilder fuzzy(String q, String field, float boost) {
