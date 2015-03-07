@@ -30,7 +30,7 @@ public class Servico {
 
     @Field(index = not_analyzed, type = String)
     String url;
-    
+
     @Field(index = not_analyzed, type = String)
     String urlAgendamento;
 
@@ -97,6 +97,11 @@ public class Servico {
     }
 
     public Servico withNovaAtivacao() {
-        return new Servico(id, titulo, descricao, url, urlAgendamento,taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos, ativacoes == null ? 1 : ativacoes + 1);
+        return new Servico(id, titulo, descricao, url, urlAgendamento, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos, ativacoes == null ? 1 : ativacoes + 1);
     }
+
+    public Servico withId(String newId) {
+        return new Servico(newId, titulo, descricao, url, urlAgendamento, taxa, prestador, responsavel, areasDeInteresse, linhasDaVida, eventosDasLinhasDaVida, acessos, ativacoes);
+    }
+
 }
