@@ -79,7 +79,6 @@ dependencies {
 }
 
 def ignoredSources = [
-        "br/gov/servicos/config/**/*Config*",
         "br/gov/servicos/legado/**/*Type*",
         "br/gov/servicos/legado/**/ObjectFactory.class"
 ]
@@ -134,6 +133,8 @@ task integrationTest(type: Test) {
     testClassesDir = sourceSets.integrationTest.output.classesDir
     classpath = sourceSets.integrationTest.runtimeClasspath
 }
+check.dependsOn(integrationTest)
+
 
 task stage(type: Copy, dependsOn: [clean, assemble]) {
     from jar.archivePath
