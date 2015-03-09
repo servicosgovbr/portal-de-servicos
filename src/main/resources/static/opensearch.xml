@@ -6,6 +6,7 @@
     <Tags>serviços governo</Tags>
     <Contact>servicos@planejamento.gov.br</Contact>
     <Url type="text/html" template="http://gds-alpha.herokuapp.com/busca?q={searchTerms}"/>
+    <Url type="application/x-suggestions+json" template="http://gds-alpha.herokuapp.com/sugestaobusca?q={searchTerms}"/>
     <Image height="72" width="72" type="image/png">http://gds-alpha.herokuapp.com/img/touch_icon.png</Image>
     <Developer>Ministério do Planejamento, Orçamento e Gestão - MPOG</Developer>
 </OpenSearchDescription>
