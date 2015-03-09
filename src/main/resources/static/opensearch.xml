@@ -5,8 +5,8 @@
     <Description>Procure serviços do Governo do Brasil</Description>
     <Tags>serviços governo</Tags>
     <Contact>servicos@planejamento.gov.br</Contact>
-    <Url type="text/html" template="http://localhost:8080/busca?q={searchTerms}"/>
-    <Url type="application/x-suggestions+json" template="http://localhost:8080/sugestaobusca?q={searchTerms}"/>
+    <Url type="text/html" template="http://gds-alpha.herokuapp.com/busca?q={searchTerms}"/>
+    <Url type="application/x-suggestions+json" template="http://gds-alpha.herokuapp.com/sugestaobusca?q={searchTerms}"/>
     <Image height="72" width="72" type="image/png">http://gds-alpha.herokuapp.com/img/touch_icon.png</Image>
     <Developer>Ministério do Planejamento, Orçamento e Gestão - MPOG</Developer>
 </OpenSearchDescription>
