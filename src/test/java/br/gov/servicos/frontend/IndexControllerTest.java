@@ -43,7 +43,7 @@ public class IndexControllerTest {
 
         doReturn(page)
                 .when(servicos)
-                .findAll(new PageRequest(0, 9, new Sort(DESC, "acessos")));
+                .findAll(new PageRequest(0, 15, new Sort(DESC, "acessos")));
 
         assertModelAttributeValue(controller.index(), "acessos", page);
     }

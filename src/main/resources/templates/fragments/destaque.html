@@ -1,17 +1,7 @@
 <div class="tile tile-default">
-    <a class="imag"
-       th:href="@{/servico/{id}(id=${servico.id})}"
-       th:title="${servico.titulo}">
-        <img th:alt="${servico.titulo}"
-             src="http://placehold.it/230x136"
-             width="230" height="136" class="left"/>
-    </a>
-
     <h2 class="titulo-destaque">
         <a th:href="@{/servico/{id}(id=${servico.id})}" th:title="${servico.titulo}" th:text="${servico.titulo}"></a>
     </h2>
 
     <p class="tile-description" th:text="${descricao}"></p>
-
-    <div class="visualClear"></div>
 </div>
