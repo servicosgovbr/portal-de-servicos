@@ -2,7 +2,7 @@ body.contraste {
   background: #000 !important;
   color: #fff !important;
 
-  #header, #rodape, #main, #doormat-container, .outstanding-header .outstanding-title {
+  #header, #rodape, #main, #capacho, .outstanding-header .outstanding-title {
     background: #000 !important;
     color: #fff !important;
   }
@@ -12,7 +12,7 @@ body.contraste {
     color: #000 !important;
   }
 
-  a, h1, h2, h3, #doormat-container dt, .portletNavigationTree > dd a span, #migalhas-de-pao a,
+  a, h1, h2, h3, #capacho dt, .portletNavigationTree > dd a span, #migalhas-de-pao a,
   #migalhas-de-pao span, #conteudo a:hover, dl.portlet a:hover, .tile-subtitle, .tile p, .tile a,
   #portal-siteactions a, #portal-siteactions a:hover, #logo #portal-logo,
   #logo #portal-title, .outstanding-header .outstanding-link, #conteudo .outstanding-header .outstanding-link:hover,
@@ -21,7 +21,7 @@ body.contraste {
   }
 
   .portletHeader,
-  #doormat-container .doormatColumn {
+  #capacho .doormatColumn {
     border-color: #fff !important;
     background: #000 !important;
     color: #fff !important;
@@ -35,7 +35,7 @@ body.contraste {
     border-right: 1px solid #fff;
   }
 
-  #doormat-container dl {
+  #capacho dl {
     border-left: 1px dotted #fff;
   }
 
