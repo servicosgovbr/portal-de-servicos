@@ -10,6 +10,9 @@ bem-vindas. Para começar, você vai precisar de um ambiente de desenvolvimento 
 * [JDK 8][JDK8]
 * Sua IDE favorita (nós preferimos [IntelliJ IDEA 14 CE][IDEA14CE])
 
+!!! tip "Lombok e sua IDE"
+	O plugin do lombok precisa ser manualmente instalado na sua IDE. Para o IDEA procure nos repositórios de plugins pelo _Lombok_
+
 Para começar, clone o repositório:
 
 ```

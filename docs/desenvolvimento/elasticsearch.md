@@ -37,6 +37,12 @@ Contras
 * Não oferece mecanismos de controle de acesso e permissões próprios; estes devem ser providos por outras partes da arquitetura
 * Configurações de infraestrutura necessárias para obter redundância e performance ideal
 
+Populando
+----
+No guia de serviços você pode usar um link criado [ServicosGovBr:type=Importador/importar](http://localhost:8080/jolokia/exec/ServicosGovBr:type=Importador/importar)
+para importar os dados iniciais.
+
+
 Referências
 ---
 
