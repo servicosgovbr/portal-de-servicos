@@ -16,7 +16,10 @@ import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static java.util.Optional.of;
+import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.springframework.test.web.ModelAndViewAssert.*;
@@ -65,4 +68,14 @@ public class BuscaControllerTest {
         assertCompareListModelAttribute(controller.busca("emprego"), "resultados", umServico);
     }
 
+    @Test
+    public void retornaSugestoesDeBusca() throws Exception {
+        doReturn(asList(SERVICO.withTitulo("Seguro-desemprego")))
+                .when(buscador)
+                .buscaSemelhante(ofNullable("empreg"), "titulo", "descricao");
+
+        String sugestao = controller.sugestao("empreg");
+
+        assertThat(sugestao, is("[\"empreg\", [\"Seguro-desemprego\"]]"));
+    }
 }

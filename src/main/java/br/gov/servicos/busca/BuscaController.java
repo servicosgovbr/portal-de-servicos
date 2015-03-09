@@ -12,9 +12,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
 
+import static java.lang.String.format;
 import static java.util.Optional.ofNullable;
+import static java.util.stream.Collectors.joining;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.http.HttpStatus.OK;
 
@@ -38,21 +39,18 @@ class BuscaController {
         return new ModelAndView("resultados-busca", model);
     }
 
-    @RequestMapping(value = "/sugestaobusca", produces = "text/json")
+    @RequestMapping(value = "/sugestao", produces = "text/json")
     @ResponseStatus(OK)
     @ResponseBody
-    String sugestaoBusca(@RequestParam(required = true) String q) {
-        List<Servico> listaServico = buscador.buscaSemelhante(ofNullable(q),"titulo","descricao");
+    String sugestao(@RequestParam(required = true) String q) {
+        List<Servico> listaServico = buscador.buscaSemelhante(ofNullable(q), "titulo", "descricao");
 
-        String resultado = "[\""+q+"\",";
-
-        resultado = resultado + listaServico.stream()
-                .map(Servico::getTitulo).limit(7)
-                .collect(Collectors.joining("\",\"","[\"","\"]"));
-
-        resultado = resultado +"]";
-
-        return resultado;
+        return format("[\"%s\", %s]",
+                q,
+                listaServico.stream()
+                        .map(Servico::getTitulo)
+                        .limit(7)
+                        .collect(joining("\",\"", "[\"", "\"]")));
     }
 
 }
