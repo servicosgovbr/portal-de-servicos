@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+require 'octokit'
+require 'csv'
+
+Octokit.configure do |c| 
+  c.login = 'jeankirchner'
+  c.password = 'SDzNAT wNpxcavLuJ0"b'
+end
+
+repo = 'servicosgovbr/guia-de-servicos'
+
+puts 'Requisitando todos os issues do github'
+issues = Octokit.issues repo, :per_page => 1000, :state => 'all', :filter => 'all'
+
+#Ideias => open, sem label
+#Para rodar => open, label ready
+#Em progresso => open, label in progress
+#Produção => open, label para prod
+#Aprendemos => closed, independente label
+progresso_column = 'in progress'
+producao_column = 'para prod'
+rodar_column = 'ready'
+
+puts 'Requisitando eventos das issues'
+issues.each do |issue|
+  issue.events = Octokit.issue_events repo, issue.number
+end
+
+def to_days seconds
+  return nil if seconds.nil?
+  days = seconds / 60.0 / 60.0 / 24.0
+  [1, days.round].max
+end
+
+puts "Processando issues"
+cycle_time_matrix = issues.map do |issue| 
+  puts "Processando #{issue.number} - #{issue.title}"
+
+  created_at = issue.created_at
+  rodar_label = issue.events.select {|e| e.event == 'labeled' and e.label.name == rodar_column}[0]
+  em_progresso_label = issue.events.select {|e| e.event == 'labeled' and e.label.name == progresso_column }[0]
+  em_producao_label = issue.events.select {|e| e.event == 'labeled' and e.label.name == producao_column }[0]
+  closed_at = issue.closed_at
+
+  cycle_time = em_producao_label.created_at - em_progresso_label.created_at if not em_producao_label.nil? and not em_progresso_label.nil?
+  cycle_time = closed_at - em_progresso_label.created_at if cycle_time.nil? and not closed_at.nil? and not em_progresso_label.nil?
+
+  lead_time = closed_at - rodar_label.created_at if not closed_at.nil? and not rodar_label.nil?
+  lead_time = closed_at - created_at if lead_time.nil? and not closed_at.nil?
+
+  table = {:numero => issue.number, :titulo => issue.title}
+  table[:data_hora_criacao] = created_at.getlocal.strftime("%m/%d/%y %H:%M")
+  table[:data_hora_em_rodar] = rodar_label.nil? ? nil : rodar_label.created_at.getlocal.strftime("%m/%d/%y %H:%M")
+  table[:data_hora_em_progresso] = em_progresso_label.nil? ? nil : em_progresso_label.created_at.getlocal.strftime("%m/%d/%y %H:%M")
+  table[:data_hora_em_producao] = em_producao_label.nil? ? nil : em_producao_label.created_at.getlocal.strftime("%m/%d/%y %H:%M")
+  table[:data_hora_closed] = closed_at.nil? ? nil : closed_at.getlocal.strftime("%m/%d/%y %H:%M")
+  table[:cycle_time] = to_days(cycle_time)
+  table[:lead_time] = to_days(lead_time)
+  table
+end
+
+CSV.open("data.csv", "wb") do |csv|
+  csv << cycle_time_matrix.first.keys 
+  cycle_time_matrix.each do |hash|
+    csv << hash.values
+  end
+end
+
