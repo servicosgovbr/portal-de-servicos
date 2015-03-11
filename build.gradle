@@ -105,6 +105,7 @@ tasks.withType(FindBugs) {
 jacocoTestReport {
     doFirst {
         classDirectories = fileTree(dir: "${buildDir}/classes/main/").exclude(ignoredSources)
+        executionData = fileTree(dir: "$buildDir/jacoco", include: '**/*.exec')
     }
 
     reports {
@@ -133,6 +134,11 @@ task integrationTest(type: Test) {
     description = "Run all integration tests"
     testClassesDir = sourceSets.integrationTest.output.classesDir
     classpath = sourceSets.integrationTest.runtimeClasspath
+
+    jacoco {
+        destinationFile = file("$buildDir/jacoco/integrationTest.exec")
+        classDumpFile = file("$buildDir/classes/integrationTest")
+    }
 }
 check.dependsOn(integrationTest)
 
