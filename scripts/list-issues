@@ -3,8 +3,9 @@ require 'octokit'
 require 'csv'
 
 Octokit.configure do |c| 
-  c.login = 'jeankirchner'
-  c.password = 'SDzNAT wNpxcavLuJ0"b'
+  #usuário/senha github
+  c.login = ''
+  c.password = ''
 end
 
 repo = 'servicosgovbr/guia-de-servicos'
