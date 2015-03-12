@@ -15,11 +15,14 @@
         <div class="cell width-16 position-0">
             <div class="tile busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
                 <p>Pesquisa</p>
-
-                <form method="get" action="/busca">
-                    <input id="input-busca" type="text" name="q" value=""/>
-                    <input type="submit" value="BUSCAR"/>
-                </form>
+                <span itemscope="" itemtype="http://schema.org/WebSite">
+                    <meta itemprop="url" th:content="${#httpServletRequest.requestURL}"/>
+                    <form method="get" action="/busca" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+                        <meta itemprop="target" th:content="${#httpServletRequest.requestURL}+'busca?q={q}'"/>
+                        <input itemprop="query-input" id="input-busca" type="text" name="q" value=""/>
+                        <input type="submit" value="BUSCAR"/>
+                    </form>
+                </span>
             </div>
         </div>
     </div>
