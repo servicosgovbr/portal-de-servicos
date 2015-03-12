@@ -39,7 +39,7 @@ class BuscaController {
         return new ModelAndView("resultados-busca", model);
     }
 
-    @RequestMapping(value = "/sugestao", produces = "text/json")
+    @RequestMapping(value = "/sugestao", produces = "application/json")
     @ResponseStatus(OK)
     @ResponseBody
     String sugestao(@RequestParam(required = true) String q) {
