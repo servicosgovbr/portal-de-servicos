@@ -1,0 +1,10 @@
+spring:
+  thymeleaf:
+    cache: true
+
+endpoints:
+  enabled: false
+
+jolokia:
+  config:
+    policyLocation: "classpath:/jolokia-access-prod.xml"

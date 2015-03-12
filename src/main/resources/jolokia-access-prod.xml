@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrict>
+    <remote>
+        <host>snap-ci.com</host>
+    </remote>
+    <http>
+        <method>GET</method>
+    </http>
+    <commands>
+        <command>exec</command>
+    </commands>
+    <allow>
+        <mbean>
+            <name>ServicosGovBr:type=Importador</name>
+            <operation>importar</operation>
+        </mbean>
+    </allow>
+</restrict>
