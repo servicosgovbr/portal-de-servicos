@@ -34,76 +34,12 @@
         </div>
     </div>
 
-    <th:block th:with="it=${acessos.iterator()}">
-        <div class="row">
-            <div class="cell width-5 position-0">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-5">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-10">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="cell width-5 position-0">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-5">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-10">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="cell width-5 position-0">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-5">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-10">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="cell width-5 position-0">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-5">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-10">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="cell width-5 position-0">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-5">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-
-            <div class="cell width-5 position-10">
-                <div th:replace="fragments/destaque :: .tile(servico=${it.next()})"></div>
-            </div>
-        </div>
+    <th:block th:with="it = ${acessos.iterator()}">
+        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
+        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
+        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
+        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
+        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
     </th:block>
 
 </div>
