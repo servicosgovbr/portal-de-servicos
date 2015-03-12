@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar app.jar --spring.profiles.active=prod
+web: java $JAVA_OPTS -jar app.jar --spring.profiles.active=production

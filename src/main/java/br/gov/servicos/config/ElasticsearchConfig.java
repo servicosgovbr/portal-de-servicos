@@ -10,8 +10,10 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.data.elasticsearch.client.TransportClientFactoryBean;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 
+import static br.gov.servicos.Profiles.CLUSTER;
+
 @Configuration
-@Profile("cluster")
+@Profile(CLUSTER)
 @EnableConfigurationProperties(ElasticsearchProperties.class)
 public class ElasticsearchConfig {
 

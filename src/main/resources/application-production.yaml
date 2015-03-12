@@ -1,0 +1,9 @@
+spring:
+  thymeleaf:
+    cache: true
+
+endpoints:
+  enabled: false
+
+  jolokia:
+    enabled: false
