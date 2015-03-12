@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <restrict>
     <remote>
-        <host>snap-ci.com</host>
+        <host>54.186.9.43</host><!-- Snap CI -->
     </remote>
     <http>
         <method>GET</method>
