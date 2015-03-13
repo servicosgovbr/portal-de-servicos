@@ -15,6 +15,9 @@
                 <input id="url" name="url" type="hidden"
                        th:value="@{${#httpServletRequest.requestURI ?: ''}}"/>
 
+                <input id="ticket" name="ticket" type="hidden"
+                       th:value="@{${#httpServletRequest.getAttribute('req.ticket') ?: ''}}"/>
+
                 <input id="queryString" name="queryString" type="hidden"
                        th:value="@{${#httpServletRequest.queryString ?: ''}}"/>
 

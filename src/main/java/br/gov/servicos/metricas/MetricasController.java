@@ -29,8 +29,9 @@ public class MetricasController {
             @RequestParam(required = true) String url,
             String queryString,
             @RequestParam(required = true) String tentandoFazer,
-            @RequestParam(required = true) String aconteceu)
-            throws ValidacaoFormularioException {
+            @RequestParam(required = true) String aconteceu,
+            @RequestParam(required = true) String ticket
+    ) {
 
         if (tentandoFazer == null && aconteceu == null)
             throw new ValidacaoFormularioException("Os detalhes do feedback devem ser informados");
@@ -40,7 +41,9 @@ public class MetricasController {
                 .withQueryString(queryString)
                 .withTimestamp(System.currentTimeMillis())
                 .withTentandoFazer(tentandoFazer)
-                .withAconteceu(aconteceu));
+                .withAconteceu(aconteceu)
+                .withTicket(ticket)
+        );
 
         return new RedirectView("/feedback/obrigado");
     }

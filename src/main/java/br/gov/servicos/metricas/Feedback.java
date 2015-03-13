@@ -6,9 +6,12 @@ import lombok.Value;
 import lombok.experimental.Wither;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
 
-import static java.lang.String.*;
 import static lombok.AccessLevel.PRIVATE;
+import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
+import static org.springframework.data.elasticsearch.annotations.FieldType.Long;
+import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Value
 @AllArgsConstructor(access = PRIVATE)
@@ -20,13 +23,25 @@ public class Feedback {
     @Id
     String id;
 
-    private String url;
-    private String queryString;
-    private Long timestamp;
-    private String tentandoFazer;
-    private String aconteceu;
+    @Field(store = false, type = String, index = not_analyzed)
+    String url;
+
+    @Field(store = false, type = String, index = not_analyzed)
+    String queryString;
+
+    @Field(store = false, type = Long, index = not_analyzed)
+    Long timestamp;
+
+    @Field(store = true, type = String)
+    String tentandoFazer;
+
+    @Field(store = true, type = String)
+    String aconteceu;
+
+    @Field(store = false, type = Long, index = not_analyzed)
+    String ticket;
 
     public Feedback() {
-        this(null, null, null, null, null, null);
+        this(null, null, null, null, null, null, null);
     }
 }
