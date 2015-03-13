@@ -24,6 +24,7 @@
             <div th:replace="fragments/coluna-de-menus :: #navegacao"></div>
             <div class="cell width-3:4 position-1:4">
                 <div id="conteudo" layout:fragment="corpo"></div>
+                <div th:replace="fragments/metricas :: #feedback-simples"></div>
             </div>
         </div>
         <div class="clear"></div>
@@ -33,6 +34,7 @@
     </div>
     <div th:replace="fragments/rodape :: #rodape"></div>
 </div>
+
 <script type="text/javascript" src="/assets/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/jquery.cookie.min.js"></script>
 <script type="text/javascript" src="/assets/modernizr.min.js"></script>
