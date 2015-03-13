@@ -1,0 +1,26 @@
+<div id="feedback-simples">
+    <a href="javascript:void(0)">Gostaria de nos ajudar fornecendo seu Feedback?</a>
+
+    <div style="display:none">
+        <h2>Nos ajuda a melhorar o Guia de Serviços!</h2>
+        <form accept-charset="UTF-8" action="/metricas/feedback" method="post">
+            <!-- http://www.seqmedia.com/2011/02/18/rails-forms-automatically-insert-a-hidden-utf8-field/ -->
+            <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"/></div>
+
+            <input id="url" name="url" type="hidden"
+                   th:value="@{${#httpServletRequest.requestURI?:''}}"/>
+
+            <input id="queryString" name="queryString" type="hidden"
+                   th:value="@{${#httpServletRequest.queryString?:''}}"/>
+
+            <p>Não inclua nenhuma informação pessoal ou financeira, como seus documentos ou dados de cartão de crédito.</p>
+
+            <label for="tentandoFazer">O que você estava tentando fazer?</label><br/>
+            <textarea rows="3" cols="70" id="tentandoFazer" name="tentandoFazer"/><br/><br/>
+
+            <label for="aconteceu">O que aconteceu?</label><br/>
+            <textarea rows="3" cols="70" id="aconteceu" name="aconteceu"/><br/><br/>
+            <input name="enviar" type="submit" class="searchButton" value="Enviar feedback"/>
+        </form>
+    </div>
+</div>

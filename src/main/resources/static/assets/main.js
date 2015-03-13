@@ -65,4 +65,7 @@ jQuery(document).ready(function($) {
   resize();
 
   $('#portal-column-one div:first-child').addClass('first-item');
+  $('#feedback-simples>a').on("click", function() {
+    $('#feedback-simples>div').toggle();
+  });
 });
