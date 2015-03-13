@@ -17,11 +17,11 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class MetricasController {
 
-    FeedbackRepository feedbackRepository;
+    FeedbackRepository feedbacks;
 
     @Autowired
-    MetricasController(FeedbackRepository feedbackRepository) {
-        this.feedbackRepository = feedbackRepository;
+    MetricasController(FeedbackRepository feedbacks) {
+        this.feedbacks = feedbacks;
     }
 
     @RequestMapping(value = "/feedback", method = POST)
@@ -35,7 +35,7 @@ public class MetricasController {
         if (tentandoFazer == null && aconteceu == null)
             throw new ValidacaoFormularioException("Os detalhes do feedback devem ser informados");
 
-        feedbackRepository.save(new Feedback()
+        feedbacks.save(new Feedback()
                 .withUrl(url)
                 .withQueryString(queryString)
                 .withTimestamp(System.currentTimeMillis())
