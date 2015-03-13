@@ -1,0 +1,31 @@
+<div id="feedback" class="row conteudo" th:unless="${#httpServletRequest.requestURI.startsWith('/feedback')}">
+    <div class="cell width-16 position-0">
+        <p>
+            <a href="javascript:void(0)">Ajude-nos a tornar o Guia melhor para você!</a>
+        </p>
+
+        <div class="formulario" style="display:none">
+            <p>Por favor, não inclua nenhuma informação pessoal ou financeira, como seus documentos ou dados de
+                cartão de crédito.</p>
+
+            <form accept-charset="UTF-8" action="/feedback" method="post">
+                <!-- força utf8 -->
+                <input name="utf8" type="hidden" value="✓"/>
+
+                <input id="url" name="url" type="hidden"
+                       th:value="@{${#httpServletRequest.requestURI ?: ''}}"/>
+
+                <input id="queryString" name="queryString" type="hidden"
+                       th:value="@{${#httpServletRequest.queryString ?: ''}}"/>
+
+                <label for="tentandoFazer">O que você estava tentando fazer?</label><br/>
+                <textarea rows="3" cols="70" id="tentandoFazer" name="tentandoFazer"></textarea><br/><br/>
+
+                <label for="aconteceu">O que aconteceu?</label><br/>
+                <textarea rows="3" cols="70" id="aconteceu" name="aconteceu"></textarea><br/><br/>
+
+                <input name="enviar" type="submit" class="acao" value="Enviar"/>
+            </form>
+        </div>
+    </div>
+</div>

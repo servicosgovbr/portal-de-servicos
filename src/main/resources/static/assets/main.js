@@ -66,7 +66,7 @@ jQuery(document).ready(function($) {
 
   $('#portal-column-one div:first-child').addClass('first-item');
 
-  $('#feedback-simples a').on("click", function() {
-    $('#feedback-simples #form-feedback').toggle();
+  $('#feedback a').on("click", function() {
+    $('#feedback .formulario').toggle();
   });
 });

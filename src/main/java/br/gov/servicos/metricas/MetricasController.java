@@ -7,13 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import static lombok.AccessLevel.PRIVATE;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-@RequestMapping(value = "/metricas")
 public class MetricasController {
 
     FeedbackRepository feedbackRepository;
@@ -24,7 +25,7 @@ public class MetricasController {
     }
 
     @RequestMapping(value = "/feedback", method = POST)
-    public ModelAndView feedback(
+    public RedirectView feedback(
             @RequestParam(required = true) String url,
             String queryString,
             @RequestParam(required = true) String tentandoFazer,
@@ -34,8 +35,6 @@ public class MetricasController {
         if (tentandoFazer == null && aconteceu == null)
             throw new ValidacaoFormularioException("Os detalhes do feedback devem ser informados");
 
-
-
         feedbackRepository.save(new Feedback()
                 .withUrl(url)
                 .withQueryString(queryString)
@@ -43,6 +42,11 @@ public class MetricasController {
                 .withTentandoFazer(tentandoFazer)
                 .withAconteceu(aconteceu));
 
+        return new RedirectView("/feedback/obrigado");
+    }
+
+    @RequestMapping(value = "/feedback/obrigado", method = GET)
+    public ModelAndView obrigado() {
         return new ModelAndView("obrigado");
     }
 
