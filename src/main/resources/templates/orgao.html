@@ -13,9 +13,8 @@
 </span>
 
 <span layout:fragment="link-migalha-de-pao">
-    <a th:href="@{/orgao/{id}(id=${termo})}"
-       th:text="${conteudo.titulo}">
-        Nome do Órgão
+    <a th:href="@{/orgao/{id}(id=${termo})}" itemprop="url">
+        <span th:text="${conteudo.titulo}" itemprop="title">Nome do Órgão</span>
     </a>
 </span>
 

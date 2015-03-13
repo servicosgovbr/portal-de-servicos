@@ -9,13 +9,13 @@
 </head>
 <body>
 
-<span layout:fragment="link-migalha-de-pao-pai">
+<span layout:fragment="link-migalha-de-pao-pai" itemprop="title">
     Serviços
 </span>
 
 <span layout:fragment="link-migalha-de-pao">
-    <a href="" th:text="${servico.titulo}">
-        Nome do Serviço
+    <a th:href="@{/servico/{id}(id=${servico.id})}" itemprop="url">
+        <span th:text="${servico.titulo}" itemprop="title">Nome do Serviço</span>
     </a>
 </span>
 
