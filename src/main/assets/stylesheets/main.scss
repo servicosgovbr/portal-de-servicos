@@ -377,13 +377,14 @@ span.ticket-erro {
 
 }
 
-a.acao {
-  border: 1px solid black;
+a.acao, button.acao, input[type="submit"].acao {
+border: 1px solid black;
   padding: 8px;
   background: green;
   text-decoration: none;
   margin-bottom: 14px;
   display: inline-block;
+  color: white !important;
 
   &:visited, &:link {
     color: white !important;
