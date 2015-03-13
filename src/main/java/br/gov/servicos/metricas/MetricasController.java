@@ -16,11 +16,11 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RequestMapping(value = "/metricas")
 public class MetricasController {
 
-    FeedbackRepositorio feedbackRepositorio;
+    FeedbackRepository feedbackRepository;
 
     @Autowired
-    MetricasController(FeedbackRepositorio feedbackRepositorio) {
-        this.feedbackRepositorio = feedbackRepositorio;
+    MetricasController(FeedbackRepository feedbackRepository) {
+        this.feedbackRepository = feedbackRepository;
     }
 
     @RequestMapping(value = "/feedback", method = POST)
@@ -36,7 +36,7 @@ public class MetricasController {
 
 
 
-        feedbackRepositorio.save(new Feedback()
+        feedbackRepository.save(new Feedback()
                 .withUrl(url)
                 .withQueryString(queryString)
                 .withTimestamp(System.currentTimeMillis())

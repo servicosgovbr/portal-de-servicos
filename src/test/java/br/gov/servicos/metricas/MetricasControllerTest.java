@@ -18,12 +18,12 @@ import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 @FieldDefaults(level = PRIVATE)
 public class MetricasControllerTest {
     @Mock
-    FeedbackRepositorio feedbackRepositorio;
+    FeedbackRepository feedbackRepository;
     MetricasController metricasController;
 
     @Before
     public void setup() {
-        metricasController = new MetricasController(feedbackRepositorio);
+        metricasController = new MetricasController(feedbackRepository);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class MetricasControllerTest {
     public void deveSalvarOFeedbackDoUsuario() {
         metricasController.feedback("localhost", null, "Estou tentando mandar feedback", "E está tudo certo :)");
 
-        verify(feedbackRepositorio).save(new Feedback()
+        verify(feedbackRepository).save(new Feedback()
                 .withUrl("localhost")
                 .withQueryString(null)
                 .withTimestamp(anyLong())
