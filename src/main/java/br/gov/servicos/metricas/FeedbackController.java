@@ -15,12 +15,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-public class MetricasController {
+public class FeedbackController {
 
     FeedbackRepository feedbacks;
 
     @Autowired
-    MetricasController(FeedbackRepository feedbacks) {
+    FeedbackController(FeedbackRepository feedbacks) {
         this.feedbacks = feedbacks;
     }
 

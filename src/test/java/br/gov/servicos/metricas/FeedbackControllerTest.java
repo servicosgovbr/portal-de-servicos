@@ -17,18 +17,18 @@ import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
-public class MetricasControllerTest {
+public class FeedbackControllerTest {
 
     public static final String UUID = "33c8af12-70ad-4fcd-9545-a995f68470b9";
 
     @Mock
     FeedbackRepository feedbacks;
 
-    MetricasController controller;
+    FeedbackController controller;
 
     @Before
     public void setup() {
-        controller = new MetricasController(feedbacks);
+        controller = new FeedbackController(feedbacks);
     }
 
     @Test
