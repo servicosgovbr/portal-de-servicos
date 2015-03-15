@@ -11,7 +11,7 @@ bem-vindas. Para começar, você vai precisar de um ambiente de desenvolvimento 
 * Sua IDE favorita (nós preferimos [IntelliJ IDEA 14 CE][IDEA14CE])
 
 !!! tip "Lombok e sua IDE"
-	O plugin do lombok precisa ser manualmente instalado na sua IDE. Para o IDEA procure nos repositórios de plugins pelo _Lombok_
+	O plugin do Lombok precisa ser manualmente instalado na sua IDE. Para o IntelliJ IDEA, procure nos repositórios de plugins pelo [Lombok IntelliJ Plugin][PLUGIN].
 
 Para começar, clone o repositório:
 
@@ -44,3 +44,4 @@ vagrant up
 [JDK8]:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 [IDEA14CE]:https://www.jetbrains.com/idea/download/
 [VAGRANT]:http://vagrantup.com
+[PLUGIN]:https://github.com/mplushnikov/lombok-intellij-plugin
