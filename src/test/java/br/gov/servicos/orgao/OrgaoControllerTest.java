@@ -31,12 +31,15 @@ public class OrgaoControllerTest {
     @Mock
     Markdown markdown;
 
+    @Mock
+    OrgaoRepository orgaos;
+
     List<Servico> umServico = Arrays.asList(SERVICO);
     OrgaoController controller;
 
     @Before
     public void setUp() {
-        controller = new OrgaoController(buscador, markdown);
+        controller = new OrgaoController(buscador, markdown, orgaos);
     }
 
     @Test
