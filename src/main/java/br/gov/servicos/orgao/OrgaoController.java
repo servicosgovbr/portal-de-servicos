@@ -1,5 +1,6 @@
-package br.gov.servicos.busca;
+package br.gov.servicos.orgao;
 
+import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Markdown;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,18 @@ class OrgaoController {
 
     Buscador buscador;
     Markdown markdown;
+    OrgaoRepository orgaos;
 
     @Autowired
-    OrgaoController(Buscador buscador, Markdown markdown) {
+    OrgaoController(Buscador buscador, Markdown markdown, OrgaoRepository orgaos) {
         this.buscador = buscador;
         this.markdown = markdown;
+        this.orgaos = orgaos;
+    }
+
+    @RequestMapping("/orgaos")
+    ModelAndView orgaos() {
+        return new ModelAndView("orgaos", "orgaos", orgaos.findAll());
     }
 
     @RequestMapping("/orgao/{id}")

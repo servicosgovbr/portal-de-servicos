@@ -1,25 +1,25 @@
-package br.gov.servicos.busca;
+package br.gov.servicos.orgao;
 
+import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Markdown;
+import br.gov.servicos.fixtures.TestData;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.test.web.ModelAndViewAssert;
 
+import java.util.Arrays;
 import java.util.List;
 
-import static br.gov.servicos.fixtures.TestData.CONTEUDO;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
-import static java.util.Arrays.asList;
 import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
-import static org.mockito.Mockito.doReturn;
-import static org.springframework.test.web.ModelAndViewAssert.assertCompareListModelAttribute;
-import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
@@ -31,7 +31,7 @@ public class OrgaoControllerTest {
     @Mock
     Markdown markdown;
 
-    List<Servico> umServico = asList(SERVICO);
+    List<Servico> umServico = Arrays.asList(SERVICO);
     OrgaoController controller;
 
     @Before
@@ -41,20 +41,20 @@ public class OrgaoControllerTest {
 
     @Test
     public void exibicaoDeLinhaDaVidaRetornaServicos() {
-        doReturn(umServico)
+        Mockito.doReturn(umServico)
                 .when(buscador)
                 .buscaSemelhante(of("receita-federal"), "prestador.id", "responsavel.id");
 
-        assertCompareListModelAttribute(controller.orgao("receita-federal"), "resultados", umServico);
+        ModelAndViewAssert.assertCompareListModelAttribute(controller.orgao("receita-federal"), "resultados", umServico);
     }
 
     @Test
     public void exibicaoDeLinhaDaVidaRetornaConteudoDescritivo() {
-        doReturn(CONTEUDO)
+        Mockito.doReturn(TestData.CONTEUDO)
                 .when(markdown)
                 .toHtml(new ClassPathResource("conteudo/orgaos/receita-federal.md"));
 
-        assertModelAttributeValue(controller.orgao("receita-federal"), "conteudo", CONTEUDO);
+        ModelAndViewAssert.assertModelAttributeValue(controller.orgao("receita-federal"), "conteudo", TestData.CONTEUDO);
     }
 
 }

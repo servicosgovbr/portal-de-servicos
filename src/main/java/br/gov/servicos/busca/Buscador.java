@@ -23,7 +23,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 @Component
 @Slf4j
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class Buscador {
+public class Buscador {
 
     private static final LinkedList<Servico> SEM_RESULTADOS = new LinkedList<>();
 
@@ -57,7 +57,7 @@ class Buscador {
         return executaQuery(termoBuscado, termo -> termQuery(campo, termo));
     }
 
-    List<Servico> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
+    public List<Servico> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
         return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery(campos).likeText(termo));
     }
 

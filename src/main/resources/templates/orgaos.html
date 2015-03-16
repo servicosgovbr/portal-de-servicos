@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout-verde">
+
+<head>
+    <title>Órgãos do Governo de A-Z</title>
+</head>
+<body>
+
+<span layout:fragment="link-migalha-de-pao">
+    <a href="" itemprop="url">
+        <span itemprop="title">Órgãos A-Z</span>
+    </a>
+</span>
+
+<div layout:fragment="corpo">
+
+    <div class="row">
+        <div class="cell width-16 position-0">
+
+            <h1>Órgãos do Governo de A-Z</h1>
+
+            <ul>
+                <li th:each="orgao : ${orgaos}">
+                    <a th:href="@{/orgao/{id}(id=${orgao.id})}" th:text="${orgao.nome}">
+                        Nome do Órgão
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
