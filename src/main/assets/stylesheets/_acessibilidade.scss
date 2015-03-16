@@ -91,11 +91,12 @@ body.contraste {
 }
 
 #barra-brasil {
-  position: relative;
-  top: -178px;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 #header {
  position: relative;
- top: 33px;
+ margin-top: 33px;
 }
