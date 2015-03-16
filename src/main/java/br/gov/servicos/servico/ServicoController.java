@@ -27,6 +27,11 @@ class ServicoController {
         this.servicos = servicos;
     }
 
+    @RequestMapping(value = "/servicos", method = GET)
+    ModelAndView all() {
+        return new ModelAndView("servicos");
+    }
+
     @RequestMapping(value = "/servico/{id}", method = GET)
     ModelAndView get(@PathVariable("id") String id) {
         Servico servico = servicos.save(buscaServico(id).withNovoAcesso());
