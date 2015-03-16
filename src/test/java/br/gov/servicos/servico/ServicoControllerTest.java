@@ -55,7 +55,7 @@ public class ServicoControllerTest {
 
         doReturn(servicosQueIniciamComA)
                 .when(servicos)
-                .findByTituleStartsWithIgnoreCase("A");
+                .findByTituloStartsWithIgnoreCase("A");
 
         assertModelAttributeValue(controller.all(null), "servicos", servicosQueIniciamComA);
     }
@@ -63,13 +63,13 @@ public class ServicoControllerTest {
     @Test
     public void deveConsiderarFiltroPorPrimeiraLetra() {
         controller.all("B");
-        verify(servicos).findByTituleStartsWithIgnoreCase("B");
+        verify(servicos).findByTituloStartsWithIgnoreCase("B");
     }
 
     @Test
     public void deveConsiderarFiltrarPorLetraACasoNaoHouverFiltro() {
         controller.all("");
-        verify(servicos).findByTituleStartsWithIgnoreCase("A");
+        verify(servicos).findByTituloStartsWithIgnoreCase("A");
     }
 
     @Test
