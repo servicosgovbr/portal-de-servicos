@@ -9,7 +9,10 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import java.util.List;
+
 import static br.gov.servicos.fixtures.TestData.SERVICO;
+import static java.util.Arrays.asList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -17,6 +20,7 @@ import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
@@ -42,7 +46,30 @@ public class ServicoControllerTest {
 
     @Test
     public void deveRedirecionarParaListaDeServicos() {
-        assertViewName(controller.all(), "servicos");
+        assertViewName(controller.all(null), "servicos");
+    }
+
+    @Test
+    public void deveRetornarTodosOsServicosEmOrdemAlfabetica() {
+        List<Servico> servicosQueIniciamComA = asList(SERVICO);
+
+        doReturn(servicosQueIniciamComA)
+                .when(servicos)
+                .findByTituleStartsWithIgnoreCase("A");
+
+        assertModelAttributeValue(controller.all(null), "servicos", servicosQueIniciamComA);
+    }
+
+    @Test
+    public void deveConsiderarFiltroPorPrimeiraLetra() {
+        controller.all("B");
+        verify(servicos).findByTituleStartsWithIgnoreCase("B");
+    }
+
+    @Test
+    public void deveConsiderarFiltrarPorLetraACasoNaoHouverFiltro() {
+        controller.all("");
+        verify(servicos).findByTituleStartsWithIgnoreCase("A");
     }
 
     @Test
