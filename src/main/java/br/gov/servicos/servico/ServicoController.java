@@ -29,13 +29,14 @@ class ServicoController {
     }
 
     @RequestMapping(value = "/servicos", method = GET)
-    ModelAndView all(@RequestParam String letra) {
+    ModelAndView all(@RequestParam(required = false) String letra) {
         String primeiraLetra = ofNullable(letra)
                 .filter(s -> !s.isEmpty())
                 .orElse("A");
 
-        return new ModelAndView("servicos", "servicos",
-                servicos.findByTituleStartsWithIgnoreCase(primeiraLetra));
+        Iterable<Servico> servicos = this.servicos.findByTituloStartsWithIgnoreCase(primeiraLetra);
+
+        return new ModelAndView("index", "acessos", servicos);
     }
 
     @RequestMapping(value = "/servico/{id}", method = GET)
