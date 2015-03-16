@@ -21,7 +21,7 @@
 
             <h1>Órgãos do Governo de A-Z</h1>
 
-            <ul>
+            <ul class="orgaos-a-z">
                 <li th:each="orgao : ${orgaos}">
                     <a th:href="@{/orgao/{id}(id=${orgao.id})}" th:text="${orgao.nome}">
                         Nome do Órgão

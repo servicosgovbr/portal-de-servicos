@@ -406,3 +406,10 @@ ul#resultados-linhadavida {
     padding-bottom: 20px;
   }
 }
+
+ul.orgaos-a-z {
+  li {
+    display: block;
+    list-style-type: disc outside none;
+  }
+}
