@@ -19,7 +19,7 @@ import static org.mockito.Mockito.verify;
 @FieldDefaults(level = PRIVATE)
 public class FeedbackControllerTest {
 
-    public static final String UUID = "33c8af12-70ad-4fcd-9545-a995f68470b9";
+    public static final String TICKET = "a995f68470b9";
 
     @Mock
     FeedbackRepository feedbacks;
@@ -33,19 +33,19 @@ public class FeedbackControllerTest {
 
     @Test
     public void retornaFeedbackAgradecimentoParaOUsuario() {
-        RedirectView response = controller.feedback("/", null, "a", "b", UUID);
+        RedirectView response = controller.feedback("/", null, "a", "b", TICKET);
         assertThat(response.getUrl(), is("/feedback/obrigado"));
     }
 
     @Test
     public void aceitaFeedbackDoUsuarioSeTiverApenasOQueTentouFazer() throws Exception {
-        RedirectView response = controller.feedback("/", null, "tentou fazer", null, UUID);
+        RedirectView response = controller.feedback("/", null, "tentou fazer", null, TICKET);
         assertThat(response.getUrl(), is("/feedback/obrigado"));
     }
 
     @Test
     public void aceitaFeedbackDoUsuarioSeTiverApenasOQueAcontece() throws Exception {
-        RedirectView response = controller.feedback("/", null, null, "aconteceu", UUID);
+        RedirectView response = controller.feedback("/", null, null, "aconteceu", TICKET);
         assertThat(response.getUrl(), is("/feedback/obrigado"));
     }
 
@@ -56,7 +56,7 @@ public class FeedbackControllerTest {
 
     @Test
     public void deveSalvarOFeedbackDoUsuario() {
-        controller.feedback("localhost", null, "Estou tentando mandar feedback", "E está tudo certo :)", UUID);
+        controller.feedback("localhost", null, "Estou tentando mandar feedback", "E está tudo certo :)", TICKET);
 
         verify(feedbacks).save(new Feedback()
                 .withUrl("localhost")

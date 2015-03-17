@@ -38,7 +38,7 @@ public class Feedback {
     @Field(store = true, type = String)
     String aconteceu;
 
-    @Field(store = false, type = Long, index = not_analyzed)
+    @Field(store = false, type = String, index = not_analyzed)
     String ticket;
 
     public Feedback() {

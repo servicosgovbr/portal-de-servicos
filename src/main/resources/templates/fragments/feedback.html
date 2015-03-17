@@ -13,13 +13,13 @@
                 <input name="utf8" type="hidden" value="✓"/>
 
                 <input id="url" name="url" type="hidden"
-                       th:value="@{${#httpServletRequest.requestURI ?: ''}}"/>
+                       th:value="${#httpServletRequest.requestURI ?: ''}"/>
 
                 <input id="ticket" name="ticket" type="hidden"
-                       th:value="@{${#httpServletRequest.getAttribute('req.ticket') ?: ''}}"/>
+                       th:value="${#httpServletRequest.getAttribute('req.ticket').substring(24)}"/>
 
                 <input id="queryString" name="queryString" type="hidden"
-                       th:value="@{${#httpServletRequest.queryString ?: ''}}"/>
+                       th:value="${#httpServletRequest.queryString ?: ''}"/>
 
                 <label for="tentandoFazer">O que você estava tentando fazer?</label><br/>
                 <textarea rows="3" cols="70" id="tentandoFazer" name="tentandoFazer"></textarea><br/><br/>
