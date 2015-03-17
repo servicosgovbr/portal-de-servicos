@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout-verde">
+
+<head>
+    <title>Serviços do Governo de A-Z</title>
+</head>
+<body>
+
+<span layout:fragment="link-migalha-de-pao-pai">
+    Serviços A-Z
+</span>
+
+<span layout:fragment="link-migalha-de-pao">
+    <a href="" itemprop="url">
+        <span itemprop="title" th:text="${letraAtiva}">A-Z</span>
+    </a>
+</span>
+
+<div layout:fragment="corpo">
+
+    <div class="row">
+        <div class="cell width-16 position-0">
+
+            <h1>Serviços Governo de A-Z</h1>
+            <span>Filtrar por:</span>
+            <ul>
+                <li th:each="letra : ${letras}">
+                    <a th:href="@{/servicos/?letra={filtro}(filtro=${letra})}"
+                       th:text="${letra}"
+                       th:style="${letra == letraAtiva}? 'text-decoration:underline'">A-Z</a>
+                </li>
+            </ul>
+
+            <hr/>
+
+            <ul class="resultados-busca">
+                <li th:each="servico : ${servicos}">
+                    <h3>
+                        <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">Nome do Serviço</a>
+                    </h3>
+
+                    <p th:text="${servico.descricao}">Descrição</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
