@@ -1,5 +1,6 @@
 package br.gov.servicos.legado;
 
+import br.gov.servicos.config.ConteudoConfig;
 import br.gov.servicos.servico.AreaDeInteresse;
 import br.gov.servicos.servico.LinhaDaVida;
 import br.gov.servicos.servico.Orgao;
@@ -29,13 +30,15 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
     Slugify slugify;
     BeanFactory beanFactory;
+    private ConteudoConfig conteudoConfig;
 
     ExpressionParser parser = new SpelExpressionParser();
 
     @Autowired
-    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory) {
+    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory, ConteudoConfig conteudoConfig) {
         this.slugify = slugify;
         this.beanFactory = beanFactory;
+        this.conteudoConfig = conteudoConfig;
     }
 
     @Override
@@ -113,6 +116,8 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
         return new ArrayList<>(
                 stream(linhasDaVida)
                         .flatMap(Arrays::stream)
+                        //TODO: Ainda falta remover duplicações de eventos, e testar
+                        //.map(titulo -> conteudoConfig.mapeiaTermo(titulo))
                         .map(titulo -> new LinhaDaVida().withId(slugify.slugify(titulo)).withTitulo(titulo))
                         .collect(Collectors.toSet())
         );

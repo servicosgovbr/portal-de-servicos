@@ -1,0 +1,15 @@
+spring:
+  main:
+    show-banner: false
+
+  thymeleaf:
+    mode: HTML5
+    cache: false
+
+server:
+  port: ${port:8080}
+
+gds:
+    conteudo:
+        termos:
+            Abrir um negócio:  Funciona

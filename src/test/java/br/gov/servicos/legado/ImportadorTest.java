@@ -1,12 +1,14 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.busca.Busca;
+import br.gov.servicos.config.ConteudoConfig;
 import br.gov.servicos.servico.*;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.BeanFactory;
@@ -41,6 +43,9 @@ public class ImportadorTest {
     ServicoRepository servicos;
 
     @Mock
+    ConteudoConfig conteudoConfig;
+
+    @Mock
     BeanFactory beanFactory;
 
     Importador importador;
@@ -58,7 +63,11 @@ public class ImportadorTest {
                 .when(servicos)
                 .save(anyList());
 
-        importador = new Importador(elasticsearch, servicos, new ServicoLegadoParaServico(slugify, beanFactory));
+        doAnswer(returnsFirstArg())
+                .when(conteudoConfig)
+                .mapeiaTermo(anyString());
+
+        importador = new Importador(elasticsearch, servicos, new ServicoLegadoParaServico(slugify, beanFactory, conteudoConfig));
     }
 
     @Test
