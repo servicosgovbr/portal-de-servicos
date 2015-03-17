@@ -1,6 +1,5 @@
 package br.gov.servicos.metricas;
 
-import br.gov.servicos.foundation.exceptions.ValidacaoFormularioException;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,41 +32,20 @@ public class FeedbackControllerTest {
 
     @Test
     public void retornaFeedbackAgradecimentoParaOUsuario() {
-        RedirectView response = controller.feedback("/", null, "a", "b", TICKET);
-        assertThat(response.getUrl(), is("/feedback/obrigado"));
+        RedirectView response = controller.feedback("/", "query", "tentando", "aconteceu", TICKET);
+        assertThat(response.getUrl(), is("/conteudo/obrigado-pela-contribuicao"));
     }
-
-    @Test
-    public void aceitaFeedbackDoUsuarioSeTiverApenasOQueTentouFazer() throws Exception {
-        RedirectView response = controller.feedback("/", null, "tentou fazer", null, TICKET);
-        assertThat(response.getUrl(), is("/feedback/obrigado"));
-    }
-
-    @Test
-    public void aceitaFeedbackDoUsuarioSeTiverApenasOQueAcontece() throws Exception {
-        RedirectView response = controller.feedback("/", null, null, "aconteceu", TICKET);
-        assertThat(response.getUrl(), is("/feedback/obrigado"));
-    }
-
-    @Test(expected = ValidacaoFormularioException.class)
-    public void retorna400AoPreencherFormularioComCamposVazios() {
-        controller.feedback(null, null, null, null, null);
-    }
-
+    
     @Test
     public void deveSalvarOFeedbackDoUsuario() {
-        controller.feedback("localhost", null, "Estou tentando mandar feedback", "E está tudo certo :)", TICKET);
+        controller.feedback("localhost", "query", "Estou tentando mandar feedback", "E está tudo certo :)", TICKET);
 
         verify(feedbacks).save(new Feedback()
                 .withUrl("localhost")
-                .withQueryString(null)
+                .withQueryString("query")
                 .withTimestamp(anyLong())
                 .withTentandoFazer("Estou tentando mandar feedback")
                 .withAconteceu("E está tudo certo :)"));
     }
 
-    @Test
-    public void exibeMensagemDeAgradecimento() throws Exception {
-        assertThat(controller.obrigado().getViewName(), is("obrigado"));
-    }
 }
