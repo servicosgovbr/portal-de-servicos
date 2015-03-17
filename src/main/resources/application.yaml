@@ -13,9 +13,6 @@ gds:
     conteudo:
         termos:
             Abrir um negócio:  Administrar um negócio
-            Administrar um negócio:  Administrar um negócio
-            Adolescentes:  Adolescentes
-            Aposentar-se:  Aposentar-se
             Aproveitando o tempo livre:  Aproveitar o tempo livre
             Cuidando da saúde:  Cuidar da saúde
             Emitindo meus documentos:  Emitir documentos
@@ -29,7 +26,5 @@ gds:
             Pagando contas e impostos:  Pagar contas e impostos
             Prestando serviço militar:  Prestar serviço militar
             Procurando emprego:  Trabalhar
-            Ter filhos:  Ter uma família
-            Ter uma casa:  Ter uma casa
-            Ter uma família:  Ter uma família
             Trabalhando:  Trabalhar
+            Ter filhos:  Ter uma família

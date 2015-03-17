@@ -116,8 +116,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
         return new ArrayList<>(
                 stream(linhasDaVida)
                         .flatMap(Arrays::stream)
-                        //TODO: Ainda falta remover duplicações de eventos, e testar
-                        //.map(titulo -> conteudoConfig.mapeiaTermo(titulo))
+                        .map(titulo -> conteudoConfig.mapeiaTermo(titulo))
                         .map(titulo -> new LinhaDaVida().withId(slugify.slugify(titulo)).withTitulo(titulo))
                         .collect(Collectors.toSet())
         );
