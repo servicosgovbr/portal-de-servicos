@@ -3,6 +3,7 @@ package br.gov.servicos.orgao;
 import br.gov.servicos.Main;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.ServicoRepository;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,11 @@ public class OrgaoRepositoryTest {
     @Autowired
     OrgaoRepository orgaos;
 
+    @Before
+    public void setUp() throws Exception {
+        servicos.deleteAll();
+    }
+
     @Test
     public void listaOrgaosEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
@@ -40,8 +46,8 @@ public class OrgaoRepositoryTest {
         List<Orgao> resultados = orgaos.findAll();
 
         assertThat(resultados, is(not(empty())));
-        assertThat(resultados.get(0).getId(), is("orgao-2"));
-        assertThat(resultados.get(1).getId(), is("orgao-1"));
+        assertThat(resultados.get(0).getId(), is("orgao-1"));
+        assertThat(resultados.get(1).getId(), is("orgao-2"));
         assertThat(resultados.get(2).getId(), is("orgao-3"));
     }
 }

@@ -1,6 +1,7 @@
 package br.gov.servicos.servico;
 
 import br.gov.servicos.Main;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +25,17 @@ public class LinhasDaVidaRepositoryTest {
     @Autowired
     LinhasDaVidaRepository linhasDaVida;
 
+    @Before
+    public void setUp() throws Exception {
+        servicos.deleteAll();
+    }
+
     @Test
-    public void listaLinhasDaVida() throws Exception {
+    public void listaLinhasDaVidaEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
                 .withId("servico-1").withLinhasDaVida(asList(
                         new LinhaDaVida().withId("meu-negocio").withTitulo("Meu negócio"),
-                        new LinhaDaVida().withId("administrar-um-negocio").withTitulo("Administrar um negócio"))));
+                        new LinhaDaVida().withId("indo-para-outro-pais").withTitulo("Indo para outro país"))));
 
         servicos.save(SERVICO
                 .withId("servico-2").withLinhasDaVida(asList(
@@ -42,7 +48,10 @@ public class LinhasDaVidaRepositoryTest {
         List<LinhaDaVida> linhas = linhasDaVida.findAll();
 
         assertThat(linhas, is(not(empty())));
-        assertThat(linhas.get(0).getId(), is("meu-negocio"));
-        assertThat(linhas.get(0).getServicos(), is(2L));
+        assertThat(linhas.get(0).getId(), is("aposentar-se"));
+        assertThat(linhas.get(0).getServicos(), is(1L));
+
+        assertThat(linhas.get(2).getId(), is("meu-negocio"));
+        assertThat(linhas.get(2).getServicos(), is(2L));
     }
 }

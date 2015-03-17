@@ -3,6 +3,7 @@ package br.gov.servicos.busca;
 import br.gov.servicos.Main;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,11 @@ public class BuscadorTests {
 
     @Autowired
     Buscador buscador;
+
+    @Before
+    public void setUp() throws Exception {
+        servicos.deleteAll();
+    }
 
     @Test
     public void buscaPorTermosComErrosDeDigitacao() {

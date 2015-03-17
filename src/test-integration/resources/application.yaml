@@ -11,5 +11,10 @@ server:
 
 gds:
   conteudo:
-    termos:
-      Abrir um negócio: Funciona
+    linhasDaVida:
+      Abrir um negócio: Administrar um negócio
+      Trabalhando: Trabalhar
+    orgaos:
+      Ministério do Turismo: Ministério do Turismo
+      Ministério do Turismo - MTur: Ministério do Turismo
+      Ministério do Turismo- MTur: Ministério do Turismo

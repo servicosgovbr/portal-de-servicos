@@ -26,7 +26,7 @@ class OrgaoRepository {
     }
 
     public List<Orgao> findAll() {
-        Set<Orgao> orgaos = new TreeSet<>((left, right) -> left.getNome().compareTo(right.getNome()));
+        Set<Orgao> orgaos = new TreeSet<>((left, right) -> left.getId().compareTo(right.getId()));
 
         Iterable<Servico> svcs = servicos.findAll();
         svcs.forEach(s -> orgaos.add(s.getPrestador()));

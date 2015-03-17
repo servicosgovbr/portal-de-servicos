@@ -21,8 +21,17 @@ public class ConteudoConfig {
     @Setter(/* usado pelo Spring */)
     Map<String, String> linhasDaVida;
 
+
+    @Getter
+    @Setter(/* usado pelo Spring */)
+    Map<String, String> orgaos;
+
     public String linhaDaVida(String termo) {
         return linhasDaVida.getOrDefault(termo, termo);
+    }
+
+    public String orgao(String termo) {
+        return orgaos.getOrDefault(termo, termo);
     }
 }
 
