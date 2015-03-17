@@ -1,6 +1,5 @@
 package br.gov.servicos.servico;
 
-import br.gov.servicos.fixtures.TestData;
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -9,7 +8,13 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.data.domain.Sort;
 
+import java.util.List;
+
+import static br.gov.servicos.fixtures.TestData.SERVICO;
+import static java.util.Arrays.asList;
+import static java.util.Collections.EMPTY_LIST;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -17,6 +22,7 @@ import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.doReturn;
+import static org.springframework.data.domain.Sort.Direction.ASC;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
@@ -31,7 +37,11 @@ public class ServicoControllerTest {
 
     @Before
     public void setUp() {
-        doReturn(TestData.SERVICO).when(servicos).findOne("1");
+        doReturn(SERVICO).when(servicos).findOne("1");
+
+        doReturn(EMPTY_LIST)
+                .when(servicos)
+                .findAll(any(Sort.class));
 
         doAnswer(returnsFirstArg())
                 .when(servicos)
@@ -41,20 +51,58 @@ public class ServicoControllerTest {
     }
 
     @Test
+    public void deveRedirecionarParaListaDeServicos() {
+        assertViewName(controller.all(null), "servicos");
+    }
+
+    @Test
+    public void deveRetornarTodosOsServicosEmOrdemAlfabetica() {
+        Servico servicoA = new Servico().withTitulo("A");
+        Servico servicoB = new Servico().withTitulo("B");
+
+        doReturn(asList(servicoA, servicoB))
+                .when(servicos)
+                .findAll(new Sort(ASC, "titulo"));
+
+        assertModelAttributeValue(controller.all(null), "servicos", asList(servicoA));
+        assertModelAttributeValue(controller.all('B'), "servicos", asList(servicoB));
+    }
+
+    @Test
+    public void deveRetornarLetrasDisponiveisParaFiltro() {
+        List<Servico> servicosNaoOrdenados = asList(
+                new Servico().withTitulo("x"),
+                new Servico().withTitulo("B2"),
+                new Servico().withTitulo("B1"));
+
+        doReturn(servicosNaoOrdenados)
+                .when(servicos)
+                .findAll(any(Sort.class));
+
+        assertModelAttributeValue(controller.all(null), "letras", asList('B', 'X'));
+    }
+
+    @Test
+    public void deveRetornarQualEALetraFiltrada() {
+        assertModelAttributeValue(controller.all(null), "letraAtiva", 'A');
+        assertModelAttributeValue(controller.all('B'), "letraAtiva", 'B');
+    }
+
+    @Test
     public void redirecionaParaAPaginaDeServicos() {
         assertViewName(controller.get("1"), "servico");
     }
 
     @Test
     public void retornaOServicoBuscado() {
-        assertModelAttributeValue(controller.get("1"), "servico", TestData.SERVICO.withNovoAcesso());
+        assertModelAttributeValue(controller.get("1"), "servico", SERVICO.withNovoAcesso());
     }
 
     @Test
     public void incrementaONumeroDeAcessosAoServico() {
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
-        doReturn(TestData.SERVICO)
+        doReturn(SERVICO)
                 .when(servicos)
                 .save(captor.capture());
 
@@ -66,12 +114,12 @@ public class ServicoControllerTest {
     public void redirecionaUsuarioParaLinkDoServico() {
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
-        doReturn(TestData.SERVICO)
+        doReturn(SERVICO)
                 .when(servicos)
                 .save(captor.capture());
 
         assertThat(controller.navegar("1").getUrl(),
-                is(TestData.SERVICO.getUrl()));
+                is(SERVICO.getUrl()));
 
         assertThat(captor.getValue().getAtivacoes(), is(1L));
     }
@@ -99,12 +147,12 @@ public class ServicoControllerTest {
     public void redirecionaParaAUrlDoAgendamentoDoServico() throws Exception {
         ArgumentCaptor<Servico> captor = ArgumentCaptor.forClass(Servico.class);
 
-        doReturn(TestData.SERVICO)
+        doReturn(SERVICO)
                 .when(servicos)
                 .save(captor.capture());
 
         assertThat(controller.agendar("1").getUrl(),
-                is(TestData.SERVICO.getUrlAgendamento()));
+                is(SERVICO.getUrlAgendamento()));
 
         assertThat(captor.getValue().getAtivacoes(), is(1L));
     }
