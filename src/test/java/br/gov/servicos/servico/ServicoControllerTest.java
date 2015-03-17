@@ -8,11 +8,13 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
+import static java.util.Collections.EMPTY_LIST;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -20,7 +22,7 @@ import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.verify;
+import static org.springframework.data.domain.Sort.Direction.ASC;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
@@ -37,6 +39,10 @@ public class ServicoControllerTest {
     public void setUp() {
         doReturn(SERVICO).when(servicos).findOne("1");
 
+        doReturn(EMPTY_LIST)
+                .when(servicos)
+                .findAll(any(Sort.class));
+
         doAnswer(returnsFirstArg())
                 .when(servicos)
                 .save(any(Servico.class));
@@ -51,25 +57,29 @@ public class ServicoControllerTest {
 
     @Test
     public void deveRetornarTodosOsServicosEmOrdemAlfabetica() {
-        List<Servico> servicosQueIniciamComA = asList(SERVICO);
+        Servico servicoA = new Servico().withTitulo("A");
+        Servico servicoB = new Servico().withTitulo("B");
 
-        doReturn(servicosQueIniciamComA)
+        doReturn(asList(servicoA, servicoB))
                 .when(servicos)
-                .findByTituloStartsWithIgnoreCase("A");
+                .findAll(new Sort(ASC, "titulo"));
 
-        assertModelAttributeValue(controller.all(null), "servicos", servicosQueIniciamComA);
+        assertModelAttributeValue(controller.all(null), "servicos", asList(servicoA));
+        assertModelAttributeValue(controller.all('B'), "servicos", asList(servicoB));
     }
 
     @Test
-    public void deveConsiderarFiltroPorPrimeiraLetra() {
-        controller.all("B");
-        verify(servicos).findByTituloStartsWithIgnoreCase("B");
-    }
+    public void deveRetornarLetrasDisponiveisParaFiltro() {
+        List<Servico> servicosNaoOrdenados = asList(
+                new Servico().withTitulo("x"),
+                new Servico().withTitulo("B2"),
+                new Servico().withTitulo("B1"));
 
-    @Test
-    public void deveConsiderarFiltrarPorLetraACasoNaoHouverFiltro() {
-        controller.all("");
-        verify(servicos).findByTituloStartsWithIgnoreCase("A");
+        doReturn(servicosNaoOrdenados)
+                .when(servicos)
+                .findAll(any(Sort.class));
+
+        assertModelAttributeValue(controller.all(null), "letras", asList('B', 'X'));
     }
 
     @Test
