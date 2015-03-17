@@ -36,7 +36,7 @@ class ServicoController {
     }
 
     @RequestMapping(value = "/servicos", method = GET)
-    ModelAndView all(@RequestParam(required = false) Character letra) {
+    ModelAndView todos(@RequestParam(required = false) Character letra) {
         Character primeiraLetra = ofNullable(letra).orElse('A');
 
         Map<String, Object> model = new HashMap<>();
@@ -93,8 +93,7 @@ class ServicoController {
     }
 
     private Stream<Servico> servicosOrdenadosPorTitulo() {
-        Iterable<Servico> servicosOrdenados = servicos.findAll(new Sort(ASC, "titulo"));
-        return stream(servicosOrdenados.spliterator(), false);
+        return stream(servicos.findAll(new Sort(ASC, "titulo")).spliterator(), false);
     }
 
     private char primeiraLetraDoTitulo(Servico servico) {

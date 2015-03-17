@@ -8,7 +8,6 @@ import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.BeanFactory;
@@ -43,7 +42,7 @@ public class ImportadorTest {
     ServicoRepository servicos;
 
     @Mock
-    ConteudoConfig conteudoConfig;
+    ConteudoConfig config;
 
     @Mock
     BeanFactory beanFactory;
@@ -64,10 +63,10 @@ public class ImportadorTest {
                 .save(anyList());
 
         doAnswer(returnsFirstArg())
-                .when(conteudoConfig)
-                .mapeiaTermo(anyString());
+                .when(config)
+                .linhaDaVida(anyString());
 
-        importador = new Importador(elasticsearch, servicos, new ServicoLegadoParaServico(slugify, beanFactory, conteudoConfig));
+        importador = new Importador(elasticsearch, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config));
     }
 
     @Test

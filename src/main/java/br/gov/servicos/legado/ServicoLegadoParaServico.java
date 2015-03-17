@@ -30,15 +30,15 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
     Slugify slugify;
     BeanFactory beanFactory;
-    private ConteudoConfig conteudoConfig;
+    ConteudoConfig config;
 
     ExpressionParser parser = new SpelExpressionParser();
 
     @Autowired
-    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory, ConteudoConfig conteudoConfig) {
+    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory, ConteudoConfig config) {
         this.slugify = slugify;
         this.beanFactory = beanFactory;
-        this.conteudoConfig = conteudoConfig;
+        this.config = config;
     }
 
     @Override
@@ -116,7 +116,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
         return new ArrayList<>(
                 stream(linhasDaVida)
                         .flatMap(Arrays::stream)
-                        .map(titulo -> conteudoConfig.mapeiaTermo(titulo))
+                        .map(config::linhaDaVida)
                         .map(titulo -> new LinhaDaVida().withId(slugify.slugify(titulo)).withTitulo(titulo))
                         .collect(Collectors.toSet())
         );

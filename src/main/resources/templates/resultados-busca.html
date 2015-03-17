@@ -23,13 +23,7 @@
 
             <ul id="resultados-busca">
                 <li th:each="resultado : ${resultados}">
-                    <h3>
-                        <a th:href="@{/servico/{id}(id=${resultado.id})}" th:text="${resultado.titulo}">
-                            Título
-                        </a>
-                    </h3>
-
-                    <p th:text="${resultado.descricao}">Descrição</p>
+                    <span th:replace="fragments/resultado-busca-servico(servico=${resultado})"/>
                 </li>
             </ul>
 

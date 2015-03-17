@@ -35,7 +35,7 @@ public class FeedbackControllerTest {
         RedirectView response = controller.feedback("/", "query", "tentando", "aconteceu", TICKET);
         assertThat(response.getUrl(), is("/conteudo/obrigado-pela-contribuicao"));
     }
-    
+
     @Test
     public void deveSalvarOFeedbackDoUsuario() {
         controller.feedback("localhost", "query", "Estou tentando mandar feedback", "E está tudo certo :)", TICKET);

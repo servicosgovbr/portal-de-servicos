@@ -2,21 +2,27 @@ package br.gov.servicos.config;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.FieldDefaults;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
+import static lombok.AccessLevel.PRIVATE;
+
 @Configuration
 @ConfigurationProperties("gds.conteudo")
 @EnableConfigurationProperties
-@Setter
-@Getter
+@FieldDefaults(level = PRIVATE)
 public class ConteudoConfig {
-    Map<String, String> termos;
-    public String mapeiaTermo(String termo) {
-        return termos.getOrDefault(termo, termo);
+
+    @Getter
+    @Setter(/* usado pelo Spring */)
+    Map<String, String> linhasDaVida;
+
+    public String linhaDaVida(String termo) {
+        return linhasDaVida.getOrDefault(termo, termo);
     }
 }
 

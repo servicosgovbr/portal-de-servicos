@@ -1,0 +1,9 @@
+<h3>
+    <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">
+        Título do serviço
+    </a>
+</h3>
+
+<p th:text="${#strings.abbreviate(servico.descricao, 140)}">
+    Descrição do serviço
+</p>

@@ -10,6 +10,6 @@ server:
   port: ${port:8080}
 
 gds:
-    conteudo:
-        termos:
-            Abrir um negócio:  Funciona
+  conteudo:
+    termos:
+      Abrir um negócio: Funciona

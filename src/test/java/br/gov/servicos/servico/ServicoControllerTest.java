@@ -52,7 +52,7 @@ public class ServicoControllerTest {
 
     @Test
     public void deveRedirecionarParaListaDeServicos() {
-        assertViewName(controller.all(null), "servicos");
+        assertViewName(controller.todos(null), "servicos");
     }
 
     @Test
@@ -64,8 +64,8 @@ public class ServicoControllerTest {
                 .when(servicos)
                 .findAll(new Sort(ASC, "titulo"));
 
-        assertModelAttributeValue(controller.all(null), "servicos", asList(servicoA));
-        assertModelAttributeValue(controller.all('B'), "servicos", asList(servicoB));
+        assertModelAttributeValue(controller.todos(null), "servicos", asList(servicoA));
+        assertModelAttributeValue(controller.todos('B'), "servicos", asList(servicoB));
     }
 
     @Test
@@ -79,13 +79,13 @@ public class ServicoControllerTest {
                 .when(servicos)
                 .findAll(any(Sort.class));
 
-        assertModelAttributeValue(controller.all(null), "letras", asList('B', 'X'));
+        assertModelAttributeValue(controller.todos(null), "letras", asList('B', 'X'));
     }
 
     @Test
     public void deveRetornarQualEALetraFiltrada() {
-        assertModelAttributeValue(controller.all(null), "letraAtiva", 'A');
-        assertModelAttributeValue(controller.all('B'), "letraAtiva", 'B');
+        assertModelAttributeValue(controller.todos(null), "letraAtiva", 'A');
+        assertModelAttributeValue(controller.todos('B'), "letraAtiva", 'B');
     }
 
     @Test

@@ -10,21 +10,21 @@ server:
   port: ${port:8080}
 
 gds:
-    conteudo:
-        termos:
-            Abrir um negócio:  Administrar um negócio
-            Aproveitando o tempo livre:  Aproveitar o tempo livre
-            Cuidando da saúde:  Cuidar da saúde
-            Emitindo meus documentos:  Emitir documentos
-            Estudando:  Estudar
-            Garantindo meus direitos:  Garantir direitos
-            Indo para outro país:  Viajar
-            Mantendo um veículo:  Manter um veículo
-            Meu Negócio:  Administrar um negócio
-            Meu negócio:  Administrar um negócio
-            Obter Crédito e Apoio financeiro:  Obter crédito e apoio financeiro
-            Pagando contas e impostos:  Pagar contas e impostos
-            Prestando serviço militar:  Prestar serviço militar
-            Procurando emprego:  Trabalhar
-            Trabalhando:  Trabalhar
-            Ter filhos:  Ter uma família
+  conteudo:
+    linhasDaVida:
+      Abrir um negócio: Administrar um negócio
+      Aproveitando o tempo livre: Aproveitar o tempo livre
+      Cuidando da saúde: Cuidar da saúde
+      Emitindo meus documentos: Emitir seus documentos
+      Estudando: Estudar
+      Garantindo meus direitos: Garantir seus direitos
+      Indo para outro país: Viajar para o exterior
+      Mantendo um veículo: Manter um veículo
+      Meu Negócio: Administrar um negócio
+      Meu negócio: Administrar um negócio
+      Obter Crédito e Apoio financeiro: Obter crédito e apoio financeiro
+      Pagando contas e impostos: Pagar contas e impostos
+      Prestando serviço militar: Prestar serviço militar
+      Procurando emprego: Procurar emprego
+      Trabalhando: Trabalhar
+      Ter filhos: Ter uma família

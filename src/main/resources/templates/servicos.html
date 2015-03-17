@@ -37,11 +37,7 @@
 
             <ul class="servicos-a-z">
                 <li th:each="servico : ${servicos}">
-                    <h3>
-                        <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">Nome do Serviço</a>
-                    </h3>
-
-                    <p th:text="${servico.descricao}">Descrição</p>
+                    <span th:replace="fragments/resultado-busca-servico"/>
                 </li>
             </ul>
         </div>
