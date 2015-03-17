@@ -35,7 +35,7 @@
 
             <hr/>
 
-            <ul class="resultados-busca">
+            <ul class="servicos-a-z">
                 <li th:each="servico : ${servicos}">
                     <h3>
                         <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}">Nome do Serviço</a>
