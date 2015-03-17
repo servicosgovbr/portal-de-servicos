@@ -44,6 +44,7 @@ class LinhasDaVidaRepository {
                                 .withId(slugify.slugify(bucket.getKey()))
                                 .withTitulo(bucket.getKey())
                                 .withServicos(bucket.getDocCount()))
+                        .sorted((left, right) -> left.getTitulo().compareTo(right.getTitulo()))
                         .collect(Collectors.toList())
         );
     }
