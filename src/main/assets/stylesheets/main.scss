@@ -134,6 +134,10 @@ p {
 
 }
 
+#tentandoFazer, #aconteceu{
+    width: 95%
+}
+
 dl.portlet {
   margin-bottom: 1em;
   border: none;
@@ -285,6 +289,7 @@ dl.portlet {
 
   a {
     padding-left: 20px;
+    padding-right: 10px;
     background: url('/img/voltar-topo.png') no-repeat left center;
     color: #777;
     font-size: .9em;
