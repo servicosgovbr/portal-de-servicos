@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
-import java.util.Spliterator;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
@@ -38,11 +39,12 @@ class ServicoController {
     ModelAndView all(@RequestParam(required = false) Character letra) {
         Character primeiraLetra = ofNullable(letra).orElse('A');
 
-        ModelAndView paginaDeServicos = new ModelAndView("servicos");
-        paginaDeServicos.addObject("servicos", servicosOrdenadosPorTitulo(primeiraLetra));
-        paginaDeServicos.addObject("letras", iniciaisDosServicos());
+        Map<String, Object> model = new HashMap<>();
+        model.put("servicos", servicosOrdenadosPorTitulo(primeiraLetra));
+        model.put("letras", iniciaisDosServicos());
+        model.put("letraAtiva", primeiraLetra);
 
-        return paginaDeServicos;
+        return new ModelAndView("servicos", model);
     }
 
     @RequestMapping(value = "/servico/{id}", method = GET)

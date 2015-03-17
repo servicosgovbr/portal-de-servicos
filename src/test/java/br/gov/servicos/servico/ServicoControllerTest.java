@@ -83,6 +83,12 @@ public class ServicoControllerTest {
     }
 
     @Test
+    public void deveRetornarQualEALetraFiltrada() {
+        assertModelAttributeValue(controller.all(null), "letraAtiva", 'A');
+        assertModelAttributeValue(controller.all('B'), "letraAtiva", 'B');
+    }
+
+    @Test
     public void redirecionaParaAPaginaDeServicos() {
         assertViewName(controller.get("1"), "servico");
     }
