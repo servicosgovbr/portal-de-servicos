@@ -3,6 +3,7 @@ package br.gov.servicos.fixtures;
 import br.gov.servicos.busca.Busca;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.servico.*;
+import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 
 import static java.util.Arrays.asList;
 

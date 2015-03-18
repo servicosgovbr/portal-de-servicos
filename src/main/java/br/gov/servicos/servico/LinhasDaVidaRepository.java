@@ -1,5 +1,6 @@
 package br.gov.servicos.servico;
 
+import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;

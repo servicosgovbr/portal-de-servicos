@@ -2,6 +2,7 @@ package br.gov.servicos.servico;
 
 import br.gov.servicos.ElasticSearchTest;
 import br.gov.servicos.Main;
+import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import lombok.experimental.FieldDefaults;
 import org.junit.Test;
 import org.junit.runner.RunWith;

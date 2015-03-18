@@ -2,6 +2,7 @@ package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
 import br.gov.servicos.servico.*;
+import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.BeanFactory;

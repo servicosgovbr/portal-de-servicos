@@ -1,4 +1,4 @@
-package br.gov.servicos.servico;
+package br.gov.servicos.servico.linhaDaVida;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.AllArgsConstructor;

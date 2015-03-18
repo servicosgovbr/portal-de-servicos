@@ -1,6 +1,6 @@
 package br.gov.servicos.config;
 
-import br.gov.servicos.servico.LinhaDaVida;
+import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.Orgao;
 import com.github.slugify.Slugify;
 import lombok.Getter;
