@@ -1,0 +1,17 @@
+<dl class="portlet portletNavigationTree">
+    <dt class="portletHeader">
+        Publicos Alvo
+    </dt>
+
+    <dd>
+        <ul class="navTree navTreeLevel0">
+
+            <li th:each="publico : ${@publicosAlvoRepository.findAll()}">
+                <a th:href="@{/publico-alvo/{id}(id=${publico.id})}">
+                    <span th:text="${publico.titulo}">Título do Publico Alvo</span>
+                </a>
+            </li>
+
+        </ul>
+    </dd>
+</dl>
