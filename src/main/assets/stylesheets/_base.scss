@@ -35,6 +35,54 @@ body {
   font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
+.clear {
+  clear: both;
+}
+
+h1 {
+  border-bottom: none;
+  color: #172838;
+  margin: .5em 0 .5em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+h2,
+h3 {
+  color: #231f20;
+  margin: 0 0 .5em 0;
+}
+
+input {
+  font-family: 'Lucida Grande', Arial, FreeSans;
+}
+
+fieldset {
+  border: none;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+input[type='text']:focus {
+  background-color: #ffffe0;
+}
+
+p {
+  margin: 0 0 1em 0;
+  line-height: 1.8em;
+}
+
 @font-face {
   font-weight: normal;
   font-style: normal;

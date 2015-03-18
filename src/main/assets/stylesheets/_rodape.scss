@@ -1,45 +1,38 @@
 #rodape {
-  padding: 20px 0 0;
-  min-height: 50px;
-  width: 100%;
   background: #034811;
-  color: #fff;
 
   a {
-    color: white;
+    color: #fff;
   }
 
   #footer-brasil{
     background: #00420c;
-    max-width: 100%;
-    margin: 0;
     padding: 25px 0 25px;
   }
 }
 
 #capacho {
   @include outer-container;
-  background: #034811;
-  float: none;
+  padding-top: em(32);
+  padding-bottom: em(75);
 
   dl {
     @include span-columns(3);
     border-left: 1px dotted #7dc48a;
-    margin: 0 0 20px 0;
-  }
+    }
 
   dt {
     color: #61B06F;
-    padding-left: .6em;
+    padding-left: 0.6em;
     font-family: 'open_sanssemibold', Arial, Helvetica, sans-serif;
+    font-size: em(18);
   }
 
   dd {
-    padding: .5em 1.2em 0 1.2em;
+    padding: 0.5em 0 0 0.75em;
     font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+    font-size: em(13);
 
-    > a {
-    }
   }
 
 }
