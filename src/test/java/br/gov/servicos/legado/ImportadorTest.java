@@ -13,8 +13,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 
-import javax.xml.bind.JAXBException;
-import java.io.IOException;
 import java.util.LinkedList;
 
 import static java.util.Arrays.asList;
@@ -183,7 +181,13 @@ public class ImportadorTest {
                 equalTo(asList("Outros")));
     }
 
-    private Servico importaServico() throws IOException, JAXBException {
+    @Test
+    public void deveImportarPublicoAlvo() throws Exception {
+        assertThat(importaServico().getPublicosAlvo(),
+                equalTo(asList("Serviços às empresas")));
+    }
+
+    private Servico importaServico() throws Exception {
         return get(importador.importar(), 0);
     }
 

@@ -47,6 +47,9 @@ public class Servico {
     @Field(type = Object)
     Orgao responsavel;
 
+    @Field(index = not_analyzed, type = String)
+    List<String> publicosAlvo;
+
     @Field(index = not_analyzed, type = Object)
     List<AreaDeInteresse> areasDeInteresse;
 
@@ -63,7 +66,7 @@ public class Servico {
     Long ativacoes;
 
     public Servico() {
-        this(null, null, null, null, null, null, null, null, null, null, null, null, null);
+        this(null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     }
 
     public Servico withNovoAcesso() {

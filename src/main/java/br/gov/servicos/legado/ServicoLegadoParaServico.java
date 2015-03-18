@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import static java.util.Arrays.asList;
 import static java.util.Arrays.stream;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.common.base.Strings.isNullOrEmpty;
@@ -54,6 +55,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
                 .withPrestador(orgaoPrestador(legado))
                 .withResponsavel(orgaoResponsavel(legado))
                 .withAreasDeInteresse(areasDeInteresse(legado))
+                .withPublicosAlvo(publicoAlvo(legado))
                 .withLinhasDaVida(linhasDaVida(legado))
                 .withEventosDasLinhasDaVida(eventosDasLinhasDaVida(legado))
                 .withAcessos(0L)
@@ -110,6 +112,13 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
                         .map(titulo -> new AreaDeInteresse().withId(slugify.slugify(titulo)).withTitulo(titulo))
                         .collect(Collectors.toSet())
         );
+    }
+
+    private List<String> publicoAlvo(ServicoType servicoType) {
+        String[] publicosAlvo = parser.parseExpression("publicosAlvo?.content?.![value?.titulo]?:{}")
+                .getValue(context(servicoType), String[].class);
+
+        return asList(publicosAlvo);
     }
 
     private List<LinhaDaVida> linhasDaVida(ServicoType servicoType) {
