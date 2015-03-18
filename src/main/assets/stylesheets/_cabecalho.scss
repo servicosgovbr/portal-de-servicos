@@ -7,16 +7,17 @@
   display: block;
   float: left;
   width: 50%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'open_sansregular', $helvetica;
 
   a {
-    margin-right: 8px;
+    margin-right: em(8);
     color: #fff;
+    font-size: em(11);
   }
 
   span {
-    padding: 0 4px;
-    background: url('../img/bg-acess-key.gif') center center no-repeat;
+    padding: 0 0.18em;
+    background: url('../img/bg-acess-key.gif') no-repeat;
     color: #060;
   }
 
