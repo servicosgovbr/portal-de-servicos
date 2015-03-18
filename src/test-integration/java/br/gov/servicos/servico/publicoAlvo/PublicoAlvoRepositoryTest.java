@@ -1,6 +1,7 @@
-package br.gov.servicos.servico;
+package br.gov.servicos.servico.publicoAlvo;
 
 import br.gov.servicos.Main;
+import br.gov.servicos.servico.ServicoRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,13 +16,13 @@ import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
-public class PublicosAlvoRepositoryTest {
+public class PublicoAlvoRepositoryTest {
 
     @Autowired
     ServicoRepository servicos;
 
     @Autowired
-    PublicosAlvoRepository publicosAlvo;
+    PublicoAlvoRepository publicosAlvo;
 
     @Before
     public void setUp() throws Exception {

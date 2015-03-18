@@ -1,4 +1,4 @@
-package br.gov.servicos.servico;
+package br.gov.servicos.servico.publicoAlvo;
 
 import lombok.AllArgsConstructor;
 import lombok.Value;

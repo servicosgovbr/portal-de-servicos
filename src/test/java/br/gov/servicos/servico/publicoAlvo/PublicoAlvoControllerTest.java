@@ -1,6 +1,6 @@
-package br.gov.servicos.busca;
+package br.gov.servicos.servico.publicoAlvo;
 
-import br.gov.servicos.servico.PublicoAlvo;
+import br.gov.servicos.busca.Buscador;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;

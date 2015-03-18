@@ -1,6 +1,7 @@
 package br.gov.servicos.servico;
 
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
+import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.AllArgsConstructor;
 import lombok.Value;

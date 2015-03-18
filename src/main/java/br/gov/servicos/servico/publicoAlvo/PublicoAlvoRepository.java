@@ -1,4 +1,4 @@
-package br.gov.servicos.servico;
+package br.gov.servicos.servico.publicoAlvo;
 
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
@@ -19,7 +19,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class PublicosAlvoRepository {
+class PublicoAlvoRepository {
 
     private static final String PUBLICOS_ALVO = "publicosAlvo";
     private static final String TITULO = "publicosAlvo.titulo";
@@ -28,7 +28,7 @@ class PublicosAlvoRepository {
     ElasticsearchTemplate elasticsearch;
 
     @Autowired
-    PublicosAlvoRepository(ElasticsearchTemplate elasticsearch, Slugify slugify) {
+    PublicoAlvoRepository(ElasticsearchTemplate elasticsearch, Slugify slugify) {
         this.elasticsearch = elasticsearch;
         this.slugify = slugify;
     }

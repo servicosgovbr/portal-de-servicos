@@ -4,6 +4,7 @@ import br.gov.servicos.busca.Busca;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
+import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 
 import static java.util.Arrays.asList;
 

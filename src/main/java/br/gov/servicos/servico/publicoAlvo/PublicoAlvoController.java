@@ -1,6 +1,6 @@
-package br.gov.servicos.busca;
+package br.gov.servicos.servico.publicoAlvo;
 
-import br.gov.servicos.servico.PublicoAlvo;
+import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -19,7 +19,7 @@
     <dl>
         <dt>Seções</dt>
 
-        <dd th:each="publico : ${@publicosAlvoRepository.findAll()}">
+        <dd th:each="publico : ${@publicoAlvoRepository.findAll()}">
             <a th:href="@{/publico-alvo/{id}(id=${publico.id})}">
                 <span th:text="${publico.titulo}">Título do Público Alvo</span>
             </a>

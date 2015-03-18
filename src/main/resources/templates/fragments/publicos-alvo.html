@@ -6,7 +6,7 @@
     <dd>
         <ul class="navTree navTreeLevel0">
 
-            <li th:each="publico : ${@publicosAlvoRepository.findAll()}">
+            <li th:each="publico : ${@publicoAlvoRepository.findAll()}">
                 <a th:href="@{/publico-alvo/{id}(id=${publico.id})}">
                     <span th:text="${publico.titulo}">Título do Público Alvo</span>
                 </a>
