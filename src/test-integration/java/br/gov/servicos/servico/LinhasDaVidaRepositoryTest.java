@@ -1,6 +1,7 @@
 package br.gov.servicos.servico;
 
 import br.gov.servicos.Main;
+import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,11 +13,13 @@ import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
+import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
+@FieldDefaults(level = PRIVATE)
 public class LinhasDaVidaRepositoryTest {
 
     @Autowired
