@@ -16,22 +16,22 @@
     }
 
     dt {
-      color: #61B06F;
+      color: #61b06f;
       padding-left: 0.6em;
-      font-family: 'open_sanssemibold', Arial, Helvetica, sans-serif;
+      font-family: 'open_sanssemibold', $helvetica;
       font-size: em(18);
     }
 
     dd {
       padding: 0.5em 0 0 0.75em;
-      font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+      font-family: 'open_sansregular', $helvetica;
       font-size: em(13);
     }
   }
 
   #footer-brasil{
     background: #00420c;
-    padding: 25px 0 25px;
+    padding: 1.5em 0;
   }
 
 }
