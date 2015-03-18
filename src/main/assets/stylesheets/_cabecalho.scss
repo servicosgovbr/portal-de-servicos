@@ -46,7 +46,7 @@
   margin: 0;
   margin: 30px 0 46px;
   color: #fff;
-  font-family: 'open_sansextrabold', Arial, Helvetica, sans-serif;
+  font-family: 'open_sansbold', $helvetica;
   font-weight: normal;
   line-height: 1em;
 }
@@ -61,12 +61,9 @@
 }
 
 #portal-siteactions {
-  text-align: center;
-  display: block;
   float: right;
-  clear: none;
-  padding-bottom: 2px;
-  border-bottom: 1px dotted #9bc2a3;
+  padding-bottom: em(2);
+  border-bottom: em(1) dotted #9bc2a3;
 
   li {
     display: inline;
@@ -77,7 +74,9 @@
     padding: 4px 0 4px 10px;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
+    font-size: em(11);
+    font-family: 'open_sansbold', $helvetica;
   }
 
   a:hover {
