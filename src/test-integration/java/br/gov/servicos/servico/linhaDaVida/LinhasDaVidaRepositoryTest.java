@@ -1,8 +1,8 @@
-package br.gov.servicos.servico;
+package br.gov.servicos.servico.linhaDaVida;
 
 import br.gov.servicos.ElasticSearchTest;
 import br.gov.servicos.Main;
-import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
+import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import org.junit.Test;
 import org.junit.runner.RunWith;
