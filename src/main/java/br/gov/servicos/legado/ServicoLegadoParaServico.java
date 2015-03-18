@@ -82,7 +82,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
     private Orgao orgaoPrestador(ServicoType servicoType) {
         String titulo = parser.parseExpression("orgaoPrestador?.titulo").getValue(context(servicoType), String.class);
-        if(isNullOrEmpty(titulo)) {
+        if (isNullOrEmpty(titulo)) {
             return null;
         }
 
@@ -94,7 +94,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
     private Orgao orgaoResponsavel(ServicoType servicoType) {
         String titulo = parser.parseExpression("orgaoResponsavel?.titulo").getValue(context(servicoType), String.class);
-        if(isNullOrEmpty(titulo)) {
+        if (isNullOrEmpty(titulo)) {
             return null;
         }
         return config.orgao(titulo);

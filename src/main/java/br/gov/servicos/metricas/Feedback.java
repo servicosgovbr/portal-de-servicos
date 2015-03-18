@@ -1,6 +1,5 @@
 package br.gov.servicos.metricas;
 
-import br.gov.servicos.config.ElasticSearchIndexes;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.AllArgsConstructor;
 import lombok.Value;
@@ -9,7 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 
-import static br.gov.servicos.config.ElasticSearchIndexes.*;
+import static br.gov.servicos.config.ElasticSearchIndexes.GUIA_DE_SERVICOS;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Long;

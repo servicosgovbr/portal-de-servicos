@@ -6,7 +6,6 @@ import br.gov.servicos.servico.Servico;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.stereotype.Component;
@@ -28,16 +27,8 @@ public class ElasticsearchServicosConfig {
     ElasticsearchTemplate es;
 
     @Autowired
-    public ElasticsearchServicosConfig(ElasticsearchTemplate es) { this.es = es; }
-
-    public void recriarIndices() throws IOException {
-        if (es.indexExists(GUIA_DE_SERVICOS)) {
-            es.deleteIndex(GUIA_DE_SERVICOS);
-        }
-        es.createIndex(GUIA_DE_SERVICOS, settings());
-        es.putMapping(Busca.class);
-        es.putMapping(Servico.class);
-        es.putMapping(Feedback.class);
+    public ElasticsearchServicosConfig(ElasticsearchTemplate es) {
+        this.es = es;
     }
 
     private static String settings() throws IOException {
@@ -47,6 +38,16 @@ public class ElasticsearchServicosConfig {
         try (BufferedReader br = new BufferedReader(reader)) {
             return br.lines().collect(joining("\n"));
         }
+    }
+
+    public void recriarIndices() throws IOException {
+        if (es.indexExists(GUIA_DE_SERVICOS)) {
+            es.deleteIndex(GUIA_DE_SERVICOS);
+        }
+        es.createIndex(GUIA_DE_SERVICOS, settings());
+        es.putMapping(Busca.class);
+        es.putMapping(Servico.class);
+        es.putMapping(Feedback.class);
     }
 
 }

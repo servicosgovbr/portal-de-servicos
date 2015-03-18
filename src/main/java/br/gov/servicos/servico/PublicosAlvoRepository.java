@@ -39,10 +39,10 @@ class PublicosAlvoRepository {
 
     private NativeSearchQuery publicosAlvoAgregadosPorTitulo() {
         return new NativeSearchQueryBuilder().addAggregation(
-                    new TermsBuilder(PUBLICOS_ALVO)
-                            .field(TITULO)
-                            .size(MAX_VALUE))
-                    .build();
+                new TermsBuilder(PUBLICOS_ALVO)
+                        .field(TITULO)
+                        .size(MAX_VALUE))
+                .build();
     }
 
     private ResultsExtractor<List<PublicoAlvo>> extraiPublicosAlvo() {

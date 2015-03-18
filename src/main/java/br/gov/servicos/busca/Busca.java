@@ -1,6 +1,5 @@
 package br.gov.servicos.busca;
 
-import br.gov.servicos.config.ElasticSearchIndexes;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 import lombok.experimental.Wither;
@@ -8,7 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 
-import static br.gov.servicos.config.ElasticSearchIndexes.*;
+import static br.gov.servicos.config.ElasticSearchIndexes.GUIA_DE_SERVICOS;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Integer;
@@ -27,7 +26,7 @@ public class Busca {
 
     @Field(index = not_analyzed, type = Integer)
     Integer ativacoes;
-    
+
     public Busca() {
         this(null, null, null);
     }
