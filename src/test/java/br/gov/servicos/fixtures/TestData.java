@@ -2,10 +2,7 @@ package br.gov.servicos.fixtures;
 
 import br.gov.servicos.busca.Busca;
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.servico.AreaDeInteresse;
-import br.gov.servicos.servico.LinhaDaVida;
-import br.gov.servicos.servico.Orgao;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.servico.*;
 
 import static java.util.Arrays.asList;
 
@@ -20,6 +17,7 @@ public class TestData {
             .withTaxa("Gratuita")
             .withPrestador(new Orgao().withId("1").withNome("Nome").withTelefone("123"))
             .withResponsavel(new Orgao().withId("2").withNome("Nome").withTelefone(null))
+            .withPublicosAlvo(asList(new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos cidadãos")))
             .withAreasDeInteresse(asList(new AreaDeInteresse().withId("3").withTitulo("Área de Interesse")))
             .withLinhasDaVida(asList(new LinhaDaVida().withId("4").withTitulo("Linha da Vida")))
             .withEventosDasLinhasDaVida(asList("Eventos das Linhas da Vida"))
