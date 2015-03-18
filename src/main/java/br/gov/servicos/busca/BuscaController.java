@@ -18,6 +18,7 @@ import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.joining;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.http.HttpStatus.OK;
+import static org.springframework.http.HttpStatus.MOVED_PERMANENTLY;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
@@ -39,6 +40,13 @@ class BuscaController {
         return new ModelAndView("resultados-busca", model);
     }
 
+    @ResponseStatus(MOVED_PERMANENTLY)
+    @RequestMapping("/search")
+    String search(@RequestParam(required = true) String SearchableText) {
+
+        return format("redirect:/busca?q=%s",ofNullable(SearchableText).orElse(""));
+    }
+
     @RequestMapping(value = "/sugestao", produces = "application/json")
     @ResponseStatus(OK)
     @ResponseBody
@@ -54,3 +62,4 @@ class BuscaController {
     }
 
 }
+
