@@ -2,6 +2,7 @@ package br.gov.servicos.legado;
 
 import br.gov.servicos.busca.Busca;
 import br.gov.servicos.config.ConteudoConfig;
+import br.gov.servicos.config.ElasticsearchServicosConfig;
 import br.gov.servicos.servico.*;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
@@ -11,10 +12,10 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 
 import java.util.LinkedList;
 
+import static br.gov.servicos.config.ElasticSearchIndexes.*;
 import static java.util.Arrays.asList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.common.collect.Iterables.get;
@@ -31,10 +32,8 @@ import static org.mockito.Mockito.*;
 @FieldDefaults(level = PRIVATE)
 public class ImportadorTest {
 
-    private static final String GUIA_DE_SERVICOS = "guia-de-servicos";
-
     @Mock
-    ElasticsearchTemplate elasticsearch;
+    ElasticsearchServicosConfig esConfig;
 
     @Mock
     ServicoRepository servicos;
@@ -68,25 +67,13 @@ public class ImportadorTest {
                 .when(config)
                 .orgao(anyString());
 
-        importador = new Importador(elasticsearch, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config));
+        importador = new Importador(esConfig, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config));
     }
 
     @Test
-    public void deveApagarIndiceExistente() throws Exception {
-        doReturn(true)
-                .when(elasticsearch)
-                .indexExists(GUIA_DE_SERVICOS);
-
+    public void deveRecriarIndices() throws Exception {
         importador.importar();
-        verify(elasticsearch).deleteIndex(GUIA_DE_SERVICOS);
-    }
-
-    @Test
-    public void deveCriarIndiceParaGuiaDeServicos() throws Exception {
-        importador.importar();
-        verify(elasticsearch).createIndex(eq(GUIA_DE_SERVICOS), anyString());
-        verify(elasticsearch).putMapping(Busca.class);
-        verify(elasticsearch).putMapping(Servico.class);
+        verify(esConfig).recriarIndices();
     }
 
     @Test

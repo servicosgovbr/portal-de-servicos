@@ -1,5 +1,6 @@
 package br.gov.servicos.busca;
 
+import br.gov.servicos.ElasticSearchTest;
 import br.gov.servicos.Main;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
@@ -21,18 +22,13 @@ import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
-public class BuscadorTests {
+public class BuscadorTests extends ElasticSearchTest {
 
     @Autowired
     ServicoRepository servicos;
 
     @Autowired
     Buscador buscador;
-
-    @Before
-    public void setUp() throws Exception {
-        servicos.deleteAll();
-    }
 
     @Test
     public void buscaPorTermosComErrosDeDigitacao() {

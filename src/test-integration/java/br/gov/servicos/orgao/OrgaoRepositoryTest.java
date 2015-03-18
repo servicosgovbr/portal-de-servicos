@@ -1,5 +1,6 @@
 package br.gov.servicos.orgao;
 
+import br.gov.servicos.ElasticSearchTest;
 import br.gov.servicos.Main;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.ServicoRepository;
@@ -18,18 +19,13 @@ import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
-public class OrgaoRepositoryTest {
+public class OrgaoRepositoryTest extends ElasticSearchTest {
 
     @Autowired
     ServicoRepository servicos;
 
     @Autowired
     OrgaoRepository orgaos;
-
-    @Before
-    public void setUp() throws Exception {
-        servicos.deleteAll();
-    }
 
     @Test
     public void listaOrgaosEmOrdemAlfabetica() throws Exception {

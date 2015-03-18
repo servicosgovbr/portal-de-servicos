@@ -1,5 +1,6 @@
 package br.gov.servicos.servico;
 
+import br.gov.servicos.config.ElasticSearchIndexes;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.AllArgsConstructor;
 import lombok.Value;
@@ -10,6 +11,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 
 import java.util.List;
 
+import static br.gov.servicos.config.ElasticSearchIndexes.*;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Long;
@@ -18,7 +20,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 
 @Value
 @AllArgsConstructor(access = PRIVATE)
-@Document(indexName = "guia-de-servicos", type = "servico")
+@Document(indexName = GUIA_DE_SERVICOS, type = "servico")
 @XStreamAlias("servico")
 @Wither
 public class Servico {

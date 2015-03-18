@@ -15,7 +15,7 @@ import static br.gov.servicos.Profiles.CLUSTER;
 @Configuration
 @Profile(CLUSTER)
 @EnableConfigurationProperties(ElasticsearchProperties.class)
-public class ElasticsearchConfig {
+public class ElasticsearchClusterConfig {
 
     @Autowired
     private ElasticsearchProperties properties;
