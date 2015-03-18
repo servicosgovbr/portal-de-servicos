@@ -5,34 +5,33 @@
     color: #fff;
   }
 
+  #capacho {
+    @include outer-container;
+    padding-top: em(32);
+    padding-bottom: em(75);
+
+    dl {
+      @include span-columns(3);
+      border-left: 1px dotted #7dc48a;
+    }
+
+    dt {
+      color: #61B06F;
+      padding-left: 0.6em;
+      font-family: 'open_sanssemibold', Arial, Helvetica, sans-serif;
+      font-size: em(18);
+    }
+
+    dd {
+      padding: 0.5em 0 0 0.75em;
+      font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+      font-size: em(13);
+    }
+  }
+
   #footer-brasil{
     background: #00420c;
     padding: 25px 0 25px;
-  }
-}
-
-#capacho {
-  @include outer-container;
-  padding-top: em(32);
-  padding-bottom: em(75);
-
-  dl {
-    @include span-columns(3);
-    border-left: 1px dotted #7dc48a;
-    }
-
-  dt {
-    color: #61B06F;
-    padding-left: 0.6em;
-    font-family: 'open_sanssemibold', Arial, Helvetica, sans-serif;
-    font-size: em(18);
-  }
-
-  dd {
-    padding: 0.5em 0 0 0.75em;
-    font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-    font-size: em(13);
-
   }
 
 }
