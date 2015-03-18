@@ -31,8 +31,6 @@
 
   span {
     position: absolute;
-    display: block;
-    line-height: 1em;
   }
 }
 
@@ -43,12 +41,9 @@
 }
 
 #portal-title {
-  margin: 0;
   margin: 30px 0 46px;
-  color: #fff;
-  font-family: 'open_sansbold', $helvetica;
-  font-weight: normal;
-  line-height: 1em;
+  font-family: 'open_sansextrabold', $helvetica;
+  font-size: em(40);
 }
 
 #portal-title-1 {
@@ -58,6 +53,8 @@
 #portal-description {
   bottom: 24px;
   text-transform: uppercase;
+  font-size: 14px;
+  font-family: 'open_sanssemibold', $helvetica;
 }
 
 #portal-siteactions {
@@ -184,6 +181,7 @@
     margin: 0 auto;
     max-width: 960px;
     text-align: right;
+    font-size: em(12);
   }
 
   .last-item a {
