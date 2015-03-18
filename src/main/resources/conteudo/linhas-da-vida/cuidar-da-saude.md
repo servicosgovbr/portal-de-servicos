@@ -1,4 +1,4 @@
-Cuidando da saúde
+Cuidar da saúde
 ====
 
 Serviços relacionados à saúde.

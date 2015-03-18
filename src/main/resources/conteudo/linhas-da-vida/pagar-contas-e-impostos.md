@@ -1,4 +1,4 @@
-Pagando contas e impostos
+Pagar contas e impostos
 ====
 
 Serviços relacionados ao pagamento de contas e impostos.

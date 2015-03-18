@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Arrays.stream;
 import static lombok.AccessLevel.PRIVATE;
+import static org.elasticsearch.common.base.Strings.isNullOrEmpty;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
@@ -81,20 +82,23 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     }
 
     private Orgao orgaoPrestador(ServicoType servicoType) {
-        return parser.parseExpression(
-                "new br.gov.servicos.servico.Orgao()" +
-                        ".withId(@slugify.slugify(orgaoPrestador?.titulo))" +
-                        ".withNome(orgaoPrestador?.titulo)" +
-                        ".withTelefone(orgaoPrestador?.telefone)")
-                .getValue(context(servicoType), Orgao.class);
+        String titulo = parser.parseExpression("orgaoPrestador?.titulo").getValue(context(servicoType), String.class);
+        if(isNullOrEmpty(titulo)) {
+            return null;
+        }
+
+        String telefone = parser.parseExpression("orgaoPrestador?.telefone").getValue(context(servicoType), String.class);
+
+        return config.orgao(titulo)
+                .withTelefone(telefone);
     }
 
     private Orgao orgaoResponsavel(ServicoType servicoType) {
-        return parser.parseExpression(
-                "new br.gov.servicos.servico.Orgao()" +
-                        ".withId(@slugify.slugify(orgaoResponsavel?.titulo))" +
-                        ".withNome(orgaoResponsavel?.titulo)")
-                .getValue(context(servicoType), Orgao.class);
+        String titulo = parser.parseExpression("orgaoResponsavel?.titulo").getValue(context(servicoType), String.class);
+        if(isNullOrEmpty(titulo)) {
+            return null;
+        }
+        return config.orgao(titulo);
     }
 
     private List<AreaDeInteresse> areasDeInteresse(ServicoType servicoType) {
@@ -117,7 +121,6 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
                 stream(linhasDaVida)
                         .flatMap(Arrays::stream)
                         .map(config::linhaDaVida)
-                        .map(titulo -> new LinhaDaVida().withId(slugify.slugify(titulo)).withTitulo(titulo))
                         .collect(Collectors.toSet())
         );
     }

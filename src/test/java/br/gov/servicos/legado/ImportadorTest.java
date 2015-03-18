@@ -62,9 +62,13 @@ public class ImportadorTest {
                 .when(servicos)
                 .save(anyList());
 
-        doAnswer(returnsFirstArg())
+        doReturn(new LinhaDaVida().withId("administrar-um-negocio").withTitulo("Administrar um negócio"))
                 .when(config)
                 .linhaDaVida(anyString());
+
+        doReturn(new Orgao().withId("ministerio-da-previdencia-social-mps").withNome("Ministério da Previdência Social (MPS)"))
+                .when(config)
+                .orgao(anyString());
 
         importador = new Importador(elasticsearch, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config));
     }
@@ -144,7 +148,7 @@ public class ImportadorTest {
         assertThat(importaServico().getPrestador(),
                 equalTo(new Orgao()
                         .withId("ministerio-da-previdencia-social-mps")
-                        .withNome("Ministério da Previdência Social - MPS")
+                        .withNome("Ministério da Previdência Social (MPS)")
                         .withTelefone("Ligue 135.")));
     }
 
@@ -153,7 +157,7 @@ public class ImportadorTest {
         assertThat(importaServico().getResponsavel(),
                 equalTo(new Orgao()
                         .withId("ministerio-da-previdencia-social-mps")
-                        .withNome("Ministerio da Previdencia Social - MPS")
+                        .withNome("Ministério da Previdência Social (MPS)")
                         .withTelefone(null)));
     }
 
@@ -169,8 +173,8 @@ public class ImportadorTest {
     public void deveImportarLinhasDaVidaDoServicoLegado() throws Exception {
         assertThat(importaServico().getLinhasDaVida(),
                 equalTo(asList(new LinhaDaVida()
-                        .withId("abrir-um-negocio")
-                        .withTitulo("Abrir um negócio"))));
+                        .withId("administrar-um-negocio")
+                        .withTitulo("Administrar um negócio"))));
     }
 
     @Test

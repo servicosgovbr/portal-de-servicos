@@ -12,21 +12,68 @@ server:
 gds:
   conteudo:
     linhasDaVida:
-      Abrir um negócio: Administrar um negócio
-      Aproveitando o tempo livre: Aproveitar o tempo livre
-      Cuidando da saúde: Cuidar da saúde
-      Emitindo meus documentos: Emitir seus documentos
-      Estudando: Estudar
-      Garantindo meus direitos: Garantir seus direitos
-      Indo para outro país: Viajar para o exterior
-      Mantendo um veículo: Manter um veículo
-      Meu Negócio: Administrar um negócio
-      Meu negócio: Administrar um negócio
-      Obter Crédito e Apoio financeiro: Obter crédito e apoio financeiro
-      Pagando contas e impostos: Pagar contas e impostos
-      Prestando serviço militar: Prestar serviço militar
-      Procurando emprego: Procurar emprego
-      Trabalhando: Trabalhar
-      Ter filhos: Ter uma família
+      abrir-um-negocio: "Administrar um negócio"
+      administrar-um-negocio: "Administrar um negócio"
+      adolescentes: "Adolescentes"
+      aposentar-se: "Aposentar-se"
+      ter-uma-casa: "Ter uma casa"
+      ter-uma-familia: "Ter uma família"
+      aproveitando-o-tempo-livre: "Aproveitar o tempo livre"
+      cuidando-da-saude: "Cuidar da saúde"
+      emitindo-meus-documentos: "Emitir seus documentos"
+      estudando: "Estudar"
+      garantindo-meus-direitos: "Garantir seus direitos"
+      indo-para-outro-pais: "Viajar para o exterior"
+      mantendo-um-veiculo: "Manter um veículo"
+      meu-negocio: "Administrar um negócio"
+      obter-credito-e-apoio-financeiro: "Obter crédito e apoio financeiro"
+      pagando-contas-e-impostos: "Pagar contas e impostos"
+      prestando-servico-militar: "Prestar serviço militar"
+      procurando-emprego: "Procurar emprego"
+      trabalhando: "Trabalhar"
+      ter-filhos: "Ter uma família"
     orgaos:
-      Secretária Nacional de Justiça: SNJ
+      arquivo-nacional: "Arquivo Nacional"
+      banco-central-do-brasil: "Banco Central do Brasil (BCB)"
+      banco-central-do-brasil-bcb: "Banco Central do Brasil (BCB)"
+      comissao-de-anistia: "Comissão de Anistia"
+      conselho-administrativo-de-defesa-economica-cade: "Conselho Administrativo de Defesa Econômica (CADE)"
+      defensoria-publica-da-uniao-dpu: "Defensoria Pública da União (DPU)"
+      departamento-de-policia-federal: "Departamento de Polícia Federal (DPF)"
+      departamento-de-policia-rodoviaria-federal: "Departamento de Polícia Rodoviária Federal (DPRF)"
+      departamento-de-policia-rodoviaria-federal-dprf: "Departamento de Polícia Rodoviária Federal (DPRF)"
+      empresa-brasileira-de-infraestrutura-aeroportuaria-infraero: "Empresa Brasileira de Infraestrutura Aeroportuária (Infraero)"
+      fundacao-nacional-do-indio-funai: "Fundação Nacional do Índio (Funai)"
+      governo-municipal-governo-estadual-ou-a-companhia-nacional-de-abastecimento-conab: "Companhia Nacional de Abastecimento (Conab)"
+      instituto-nacional-de-meteorologia: "Instituto Nacional de Meteorologia (Inmet)"
+      instituto-nacional-de-meteorologia-inmet: "Instituto Nacional de Meteorologia (Inmet)"
+      instituto-nacional-do-seguro-social: "Instituto Nacional do Seguro Social (INSS)"
+      instituto-nacional-do-seguro-social-inss: "Instituto Nacional do Seguro Social (INSS)"
+      ministerio-da-agricultura-pecuaria-e-abastecimento: "Ministério da Agricultura, Pecuária e Abastecimento (MAPA)"
+      ministerio-da-agricultura-pecuaria-e-abastecimento-mapa: "Ministério da Agricultura, Pecuária e Abastecimento (MAPA)"
+      ministerio-da-educacao-mec: "Ministério da Educação (MEC)"
+      ministerio-da-fazenda: "Ministério da Fazenda (MF)"
+      ministerio-da-fazenda-mf: "Ministério da Fazenda (MF)"
+      ministerio-da-justica-mj: "Ministério da Justiça (MJ)"
+      ministerio-da-pesca-e-aquicultura: "Ministério da Pesca e Aquicultura (MPA)"
+      ministerio-da-pesca-e-aquicultura-mpa: "Ministério da Pesca e Aquicultura (MPA)"
+      ministerio-da-previdencia-social: "Ministério da Previdência Social (MPS)"
+      ministerio-da-previdencia-social-mps: "Ministério da Previdência Social (MPS)"
+      ministerio-da-saude: "Ministério da Saúde (MS)"
+      ministerio-da-saude-ms: "Ministério da Saúde (MS)"
+      ministerio-do-desenvolvimento-agrario-mda: "Ministério do Desenvolvimento Agrário (MDA)"
+      ministerio-do-desenvolvimento-social-e-combate-a-fome-mds: "Ministério do Desenvolvimento Social e Combate à Fome (MDS)"
+      ministerio-do-planejamento-orcamento-e-gestao: "Ministério do Planejamento, Orçamento e Gestão (MPOG)"
+      ministerio-do-trabalho-e-emprego-mte: "Ministério do Trabalho e Emprego (MTE)"
+      ministerio-do-turismo: "Ministério do Turismo (MTur)"
+      ministerio-do-turismo-mtur: "Ministério do Turismo (MTur)"
+      municipio: "Município"
+      receita-federal: "Receita Federal"
+      receita-federal-do-brasil: "Receita Federal"
+      receital-federal: "Receita Federal"
+      secretaria-de-aviacao-civil: "Secretaria de Aviação Civil"
+      secretaria-de-planejamento-e-investimentos-estrategicos-spi: "Secretaria de Planejamento e Investimentos Estratégicos (SPI)"
+      secretaria-do-patrimonio-da-uniao-spu-mp: "Secretaria do Patrimônio da União (SPU/MP)"
+      secretaria-nacional-de-justica: "Secretaria Nacional de Justiça"
+      secretaria-nacional-de-politicas-sobre-drogas-senad: "Secretaria Nacional de Políticas sobre Drogas (Senad)"
+      secretaria-nacional-de-seguranca-publica: "Secretaria Nacional de Segurança Pública"

@@ -13,7 +13,6 @@ public class Genero {
             "defensoria",
             "empresa",
             "fundacao",
-            "municipio",
             "receita",
             "receital",
             "secretaria"

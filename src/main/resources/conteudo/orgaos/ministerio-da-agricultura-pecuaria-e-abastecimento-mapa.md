@@ -1,1 +1,0 @@
-ministerio-da-agricultura-pecuaria-e-abastecimento.md

@@ -19,14 +19,14 @@ public class ConteudoConfigTest {
 
     @Test
     public void mapeiaLinhasDaVida() throws Exception {
-        assertThat(config.linhaDaVida("Abrir um negócio"), is("Administrar um negócio"));
-        assertThat(config.linhaDaVida("Trabalhando"), is("Trabalhar"));
+        assertThat(config.linhaDaVida("Abrir um negócio").getTitulo(), is("Administrar um negócio"));
+        assertThat(config.linhaDaVida("Trabalhando").getTitulo(), is("Trabalhar"));
     }
 
     @Test
     public void mapeiaOrgaos() throws Exception {
-        assertThat(config.orgao("Ministério do Turismo"), is("Ministério do Turismo"));
-        assertThat(config.orgao("Ministério do Turismo - MTur"), is("Ministério do Turismo"));
-        assertThat(config.orgao("Ministério do Turismo- MTur"), is("Ministério do Turismo"));
+        assertThat(config.orgao("Ministério do Turismo").getNome(), is("Ministério do Turismo"));
+        assertThat(config.orgao("Ministério do Turismo - MTur").getNome(), is("Ministério do Turismo"));
+        assertThat(config.orgao("Ministério do Turismo- MTur").getNome(), is("Ministério do Turismo"));
     }
 }

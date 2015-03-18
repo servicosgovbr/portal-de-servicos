@@ -12,9 +12,9 @@ server:
 gds:
   conteudo:
     linhasDaVida:
-      Abrir um negócio: Administrar um negócio
-      Trabalhando: Trabalhar
+      abrir-um-negocio: Administrar um negócio
+      trabalhando: Trabalhar
     orgaos:
-      Ministério do Turismo: Ministério do Turismo
-      Ministério do Turismo - MTur: Ministério do Turismo
-      Ministério do Turismo- MTur: Ministério do Turismo
+      ministerio-da-previdencia-social-mps: Ministério da Previdência Social (MPS)
+      ministerio-do-turismo: Ministério do Turismo
+      ministerio-do-turismo-mtur: Ministério do Turismo

@@ -49,7 +49,7 @@
                    th:text="${servico.responsavel.nome}">
                     Órgão responsavel
                 </a>
-                <span th:unless="${servico.responsavel.id == servico.prestador.id}">, e prestado
+                <span th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">, e prestado
                 <span th:text="${@genero.per(servico.prestador.id)}">pelo(a)</span>
                 <a th:unless="${#strings.isEmpty(servico.prestador.nome)}"
                    th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
