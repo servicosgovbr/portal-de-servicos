@@ -5,12 +5,6 @@
   background: #034811;
   color: #fff;
 
-  > div {
-    margin: 2em auto;
-    padding-top: 1em;
-    max-width: 960px;
-  }
-
   a {
     color: white;
   }
@@ -24,11 +18,12 @@
 }
 
 #capacho {
+  @include outer-container;
   background: #034811;
   float: none;
-  font-size: 75%;
 
   dl {
+    @include span-columns(3);
     border-left: 1px dotted #7dc48a;
     margin: 0 0 20px 0;
   }
@@ -36,7 +31,6 @@
   dt {
     color: #61B06F;
     padding-left: .6em;
-    font-size: 18px;
     font-family: 'open_sanssemibold', Arial, Helvetica, sans-serif;
   }
 
@@ -45,15 +39,9 @@
     font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
 
     > a {
-      font-size: 1.4em;
     }
   }
 
-  .column {
-    float: left;
-    width: 22%;
-    margin: 0 1em;
-  }
 }
 
 

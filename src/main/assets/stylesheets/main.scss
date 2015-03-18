@@ -20,19 +20,9 @@
 h1 {
   border-bottom: none;
   color: #172838;
-  font-size: 2em;
   letter-spacing: -.05em;
   line-height: 1.3em;
   margin: .5em 0 .5em;
-}
-
-h2 {
-  letter-spacing: -.05em;
-  font-size: 1.75em;
-}
-
-h3 {
-  font-size: 1.25em;
 }
 
 h1,
@@ -75,13 +65,11 @@ p {
   padding: 0 0 1.5em;
   max-width: 960px;
   background: #fff;
-  font-size: 1.3em;
 }
 
 #conteudo, .conteudo {
   line-height: 1.5em;
   clear: both;
-  font-size: 80%;
   margin: 0;
 
   h1 {
@@ -126,7 +114,6 @@ p {
     background-position: right 50%;
     text-align: right;
     text-transform: uppercase;
-    font-size: .9em;
     font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
     line-height: 1.2em;
   }
@@ -144,7 +131,6 @@ p {
 dl.portlet {
   margin-bottom: 1em;
   border: none;
-  font-size: 80%;
 
   dt {
     background: #edeff1;
@@ -160,7 +146,6 @@ dl.portlet {
     margin: 0;
     padding: 0.5em;
     border-bottom: .1em solid #ccc;
-    font-size: 1.2em;
 
   }
 
@@ -189,14 +174,12 @@ dl.portlet {
     margin: 0 0 10px 0;
     border-bottom: none;
     text-transform: none;
-    font-size: 2.8em;
     line-height: 1.1em;
   }
 
   h2 {
     margin: 0;
     margin-bottom: .5em;
-    font-size: 1.25em;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.345em;
   }
@@ -204,7 +187,6 @@ dl.portlet {
   h3 {
     margin: 0;
     font-weight: bold;
-    font-size: 1.3em;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.2em;
   }
@@ -214,12 +196,10 @@ dl.portlet {
     color: #2c67cd;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: .9em;
   }
 
   p {
     color: #172938;
-    font-size: 1.15em;
     line-height: 1.25em;
   }
 
@@ -253,13 +233,11 @@ dl.portlet {
     border-top: 2px solid #172838;
     border-bottom: 1px solid #ccc;
     color: #2c67cd;
-    font-size: 1.7em;
     line-height: 1em;
   }
 
   h2 {
     min-height: 48px;
-    font-size: 1.62em !important;
   }
 
 }
@@ -295,7 +273,6 @@ dl.portlet {
     padding-right: 10px;
     background: url('/img/voltar-topo.png') no-repeat left center;
     color: #777;
-    font-size: .9em;
   }
 
 }
@@ -320,7 +297,6 @@ body.contraste .busca-principal {
   background-color: #e5e8ea;
   padding: 15px;
   font-family: Open Sans, arial, sans-serif;
-  font-size: 13px;
   border-top: 4px solid #a8a7a7;
 
   > p {
@@ -373,7 +349,6 @@ span.ticket-erro {
     display: list-item;
     list-style-type: circle;
     list-style-position: inside;
-    font-size: 1.15em;
     line-height: 1.5em;
     margin-bottom: 10px;
 
@@ -408,7 +383,6 @@ ul#resultados-linhadavida {
 
   p {
     line-height: 18px;
-    font-size: 14px;
     margin-bottom: 30px;
     border-bottom: 1px solid #D3DADF;
     padding-bottom: 20px;
