@@ -53,7 +53,7 @@ public class Buscador {
                 .transpositions(true);
     }
 
-    List<Servico> buscaPor(String campo, Optional<String> termoBuscado) {
+    public List<Servico> buscaPor(String campo, Optional<String> termoBuscado) {
         return executaQuery(termoBuscado, termo -> termQuery(campo, termo));
     }
 
