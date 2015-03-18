@@ -184,7 +184,9 @@ public class ImportadorTest {
     @Test
     public void deveImportarPublicoAlvo() throws Exception {
         assertThat(importaServico().getPublicosAlvo(),
-                equalTo(asList("Serviços às empresas")));
+                equalTo(asList(new PublicoAlvo()
+                        .withId("servicos-as-empresas")
+                        .withTitulo("Serviços às empresas"))));
     }
 
     private Servico importaServico() throws Exception {

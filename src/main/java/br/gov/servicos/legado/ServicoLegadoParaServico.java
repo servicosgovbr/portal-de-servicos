@@ -1,10 +1,7 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
-import br.gov.servicos.servico.AreaDeInteresse;
-import br.gov.servicos.servico.LinhaDaVida;
-import br.gov.servicos.servico.Orgao;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.servico.*;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.BeanFactory;
@@ -19,10 +16,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
-import static java.util.Arrays.asList;
 import static java.util.Arrays.stream;
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toSet;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.common.base.Strings.isNullOrEmpty;
 
@@ -110,15 +107,17 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
         return new ArrayList<>(
                 stream(areasDeInteresse)
                         .map(titulo -> new AreaDeInteresse().withId(slugify.slugify(titulo)).withTitulo(titulo))
-                        .collect(Collectors.toSet())
+                        .collect(toSet())
         );
     }
 
-    private List<String> publicoAlvo(ServicoType servicoType) {
+    private List<PublicoAlvo> publicoAlvo(ServicoType servicoType) {
         String[] publicosAlvo = parser.parseExpression("publicosAlvo?.content?.![value?.titulo]?:{}")
                 .getValue(context(servicoType), String[].class);
 
-        return asList(publicosAlvo);
+        return stream(publicosAlvo)
+                .map(p -> new PublicoAlvo().withId(slugify.slugify(p)).withTitulo(p))
+                .collect(toList());
     }
 
     private List<LinhaDaVida> linhasDaVida(ServicoType servicoType) {
@@ -130,7 +129,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
                 stream(linhasDaVida)
                         .flatMap(Arrays::stream)
                         .map(config::linhaDaVida)
-                        .collect(Collectors.toSet())
+                        .collect(toSet())
         );
     }
 
@@ -143,7 +142,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
                 stream(eventosLinhasDaVida)
                         .flatMap(Arrays::stream)
                         .flatMap(Arrays::stream)
-                        .collect(Collectors.toSet())
+                        .collect(toSet())
         );
     }
 

@@ -47,8 +47,8 @@ public class Servico {
     @Field(type = Object)
     Orgao responsavel;
 
-    @Field(index = not_analyzed, type = String)
-    List<String> publicosAlvo;
+    @Field(index = not_analyzed, type = Object)
+    List<PublicoAlvo> publicosAlvo;
 
     @Field(index = not_analyzed, type = Object)
     List<AreaDeInteresse> areasDeInteresse;
