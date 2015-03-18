@@ -1,6 +1,6 @@
 <dl class="portlet portletNavigationTree">
     <dt class="portletHeader">
-        Publicos Alvo
+        Públicos Alvo
     </dt>
 
     <dd>
@@ -8,7 +8,7 @@
 
             <li th:each="publico : ${@publicosAlvoRepository.findAll()}">
                 <a th:href="@{/publico-alvo/{id}(id=${publico.id})}">
-                    <span th:text="${publico.titulo}">Título do Publico Alvo</span>
+                    <span th:text="${publico.titulo}">Título do Público Alvo</span>
                 </a>
             </li>
 

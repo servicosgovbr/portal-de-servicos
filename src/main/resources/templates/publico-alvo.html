@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout-verde">
+
+<head>
+    <title th:text="'Busca por ' + ${publicoAlvo.id}">Resultados da Busca</title>
+</head>
+<body>
+
+<span layout:fragment="link-migalha-de-pao-pai">
+    Públicos Alvo
+</span>
+
+<span layout:fragment="link-migalha-de-pao">
+    <a th:href="@{/publico-alvo/{id}(id=${publicoAlvo.id})}" itemprop="url">
+        <span th:text="${publicoAlvo.titulo}" itemprop="title">Nome do Publico Alvo</span>
+    </a>
+</span>
+
+<div layout:fragment="corpo">
+    <div class="row">
+        <div class="cell width-16 position-0">
+            <h1 th:utext="${publicoAlvo.titulo}"></h1>
+            <hr/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="cell width-16 position-0">
+            <ul id="resultados-publico-alvo">
+                <li th:each="servico, i : ${servicos}">
+                    <th:block th:if="${i.count &gt; 3}">
+                        <span th:replace="fragments/resultado-busca-servico(servico=${servico})"></span>
+                    </th:block>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

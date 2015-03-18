@@ -31,6 +31,7 @@ class PublicoAlvoController {
     ModelAndView publicoAlvo(@PathVariable String id) {
         List<Servico> servicos = buscador.buscaPor("publicosAlvo.id", ofNullable(id));
 
+
         PublicoAlvo publicoAlvo = servicos.stream()
                 .flatMap(s -> s.getPublicosAlvo().stream())
                 .filter(p -> p.getId().equals(id))
