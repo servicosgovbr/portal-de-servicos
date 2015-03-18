@@ -17,13 +17,13 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class LinhasDaVidaRepository {
+class LinhaDaVidaRepository {
 
     Slugify slugify;
     ElasticsearchTemplate et;
 
     @Autowired
-    LinhasDaVidaRepository(ElasticsearchTemplate et, Slugify slugify) {
+    LinhaDaVidaRepository(ElasticsearchTemplate et, Slugify slugify) {
         this.et = et;
         this.slugify = slugify;
     }

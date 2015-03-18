@@ -21,13 +21,13 @@ import static org.junit.Assert.assertThat;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
 @FieldDefaults(level = PRIVATE)
-public class LinhasDaVidaRepositoryTest extends ElasticSearchTest {
+public class LinhaDaVidaRepositoryTest extends ElasticSearchTest {
 
     @Autowired
     ServicoRepository servicos;
 
     @Autowired
-    LinhasDaVidaRepository linhasDaVida;
+    LinhaDaVidaRepository linhasDaVida;
 
     @Test
     public void listaLinhasDaVidaEmOrdemAlfabetica() throws Exception {
