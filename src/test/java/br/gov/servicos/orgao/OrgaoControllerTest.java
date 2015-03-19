@@ -55,7 +55,7 @@ public class OrgaoControllerTest {
     public void exibicaoDeLinhaDaVidaRetornaConteudoDescritivo() {
         Mockito.doReturn(TestData.CONTEUDO)
                 .when(markdown)
-                .toHtml(new ClassPathResource("conteudo/orgaos/receita-federal.md"));
+                .toHtml(new ClassPathResource("conteudo/orgaos/secretaria-da-receita-federal-do-brasil-rfb.md"));
 
         ModelAndViewAssert.assertModelAttributeValue(controller.orgao("receita-federal"), "conteudo", TestData.CONTEUDO);
     }
