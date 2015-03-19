@@ -22,12 +22,9 @@
 
 <div layout:fragment="corpo">
 
-    <div class="row">
-        <div class="cell width-16 position-0">
-            <div th:utext="${conteudo.html}" class="markdown"></div>
-            <hr/>
-        </div>
-    </div>
+    <div th:utext="${conteudo.html}" class="markdown"></div>
+    <hr/>
+
 
     <th:block th:with="it=${resultados.iterator()}">
         <div class="row">

@@ -11,29 +11,21 @@
 
 <div layout:fragment="corpo">
 
-    <div class="row">
-        <div class="cell width-16 position-0">
-            <div class="tile busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
-                <p>Pesquisa</p>
-                <span itemscope="" itemtype="http://schema.org/WebSite">
-                    <meta itemprop="url" th:content="${#httpServletRequest.requestURL}"/>
-                    <form method="get" action="/busca" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
-                        <meta itemprop="target" th:content="${#httpServletRequest.requestURL}+'busca?q={q}'"/>
-                        <input itemprop="query-input" id="input-busca" type="text" name="q" value=""/>
-                        <input type="submit" value="BUSCAR"/>
-                    </form>
-                </span>
-            </div>
-        </div>
+    <div class="tile busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
+        <p>Pesquisa</p>
+        <span itemscope="" itemtype="http://schema.org/WebSite">
+            <meta itemprop="url" th:content="${#httpServletRequest.requestURL}"/>
+            <form method="get" action="/busca" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+                <meta itemprop="target" th:content="${#httpServletRequest.requestURL}+'busca?q={q}'"/>
+                <input itemprop="query-input" id="input-busca" type="text" name="q" value=""/>
+                <input type="submit" value="BUSCAR"/>
+            </form>
+        </span>
     </div>
 
-    <div class="row">
-        <div class="cell width-16 position-0">
-            <div class="tile azul-claro">
-                <div class="outstanding-header">
-                    <h2 class="outstanding-title">Em destaque</h2>
-                </div>
-            </div>
+    <div class="tile azul-claro">
+        <div class="outstanding-header">
+            <h2 class="outstanding-title">Em destaque</h2>
         </div>
     </div>
 

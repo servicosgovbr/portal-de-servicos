@@ -9,21 +9,14 @@
 @import 'media-queries';
 
 #main {
-  margin: 0 auto;
-  padding: 0 0 1.5em;
-  max-width: 960px;
-  background: #fff;
-}
-
-#wrapper {
-  margin: 0 auto;
-  width: 100%;
+  @include outer-container;
 }
 
 #conteudo, .conteudo {
+  @include span-columns(9);
+  @include omega();
   line-height: 1.5em;
-  clear: both;
-  margin: 0;
+
 
   h1 {
     margin-top: .5em;
@@ -76,6 +69,8 @@
   }
 
 }
+
+
 
 #tentandoFazer, #aconteceu{
     width: 95%
@@ -218,8 +213,10 @@ dl.portlet {
 }
 
 #voltar-topo {
+  @include span-columns(3);
+  @include shift(9);
+  @include omega();
   margin-top: 1.915em;
-  text-align: right;
 
   a {
     padding-left: 20px;
@@ -352,4 +349,8 @@ ul.orgaos-a-z {
   background-color: #00420c;
   max-width: 100%;
   padding: 30px 0;
+}
+
+#navegacao{
+  @include span-columns(3);
 }

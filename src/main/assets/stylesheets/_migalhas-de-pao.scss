@@ -1,7 +1,8 @@
 #migalhas-de-pao {
-  margin-left: .25em;
-  margin-top: 1.923em;
-  margin-bottom: 1.923em;
+  @include span-columns(12);
+  @include omega();
+  margin-top: em(30);
+  margin-bottom: em(30);
 
   .voce-esta-aqui {
     color: black;
