@@ -1,0 +1,62 @@
+<div id="capacho">
+
+    <dl>
+        <dt>Informações</dt>
+        <dd>
+            <a href="/conteudo/sobre-o-guia" title="Sobre o Guia de Serviços">Sobre o Guia</a>
+        </dd>
+        <dd>
+            <a href="/conteudo/perguntas-frequentes" title="Perguntas frequentes">Perguntas frequentes</a>
+        </dd>
+        <dd>
+            <a href="/conteudo/sua-conta" title="Informações sobre sua conta de usuário">Sua Conta</a>
+        </dd>
+        <dd>
+            <a href="/conteudo/fale-com-o-governo" title="Fale com o Governo">Fale com o Governo</a>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt>Seções</dt>
+
+        <dd th:each="publico : ${@publicosAlvoRepository.findAll()}">
+            <a th:href="@{/publico-alvo/{id}(id=${publico.id})}">
+                <span th:text="${publico.titulo}">Título do Público Alvo</span>
+            </a>
+        </dd>
+
+        <dd>
+            <a href="/serviços" title="Todos os serviços">Todos os serviços</a>
+        </dd>
+        <dd>
+            <a href="/orgaos" title="Todos os órgãos">Todos os órgãos</a>
+        </dd>
+    </dl>
+
+    <dl style="visibility: hidden">
+        <dt>Redes sociais</dt>
+        <dd>
+            <a href="https://twitter.com/twitter" class="external-link">Twitter</a>
+        </dd>
+        <dd>
+            <a href="http://youtube.com/youtube" class="external-link">YouTube</a>
+        </dd>
+        <dd>
+            <a href="http://www.facebook.com/facebook" class="external-link">Facebook</a>
+        </dd>
+        <dd>
+            <a href="http://flickr.com/flickr" class="external-link">Flickr</a>
+        </dd>
+    </dl>
+
+    <dl>
+        <dt>Navegação</dt>
+        <dd>
+            <a href="/conteudo/acessibilidade">Acessibilidade</a>
+        </dd>
+        <dd>
+            <a href="/conteudo/mapa-do-site">Mapa do Site</a>
+        </dd>
+    </dl>
+
+</div>
