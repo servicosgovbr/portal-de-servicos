@@ -67,7 +67,7 @@
   }
 
   #logo {
-    @include span-columns(7);
+    @include span-columns(9);
   }
 
   #portal-title {
@@ -88,16 +88,12 @@
   #portal-searchbox {
     @include span-columns(3);
     @include omega();
+    @include border-top-radius(5px);
+    @include border-bottom-radius(5px);
     background: #fff;
     border: 1px solid #ccc;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    clear: right;
-    float: right;
-    margin: 1.2em 0;
-    margin: 3.12em 0 0 0;
-    padding: 2px;
+    margin-top: em(48);
+    padding: em(2);
     text-align: left;
 
     form {
