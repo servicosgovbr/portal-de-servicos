@@ -94,6 +94,7 @@ body.contraste {
   position: absolute;
   top: 0;
   width: 100%;
+  box-sizing: content-box;
 }
 
 #header {
