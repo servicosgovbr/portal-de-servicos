@@ -1,8 +1,7 @@
 package br.gov.servicos.legado;
 
-import br.gov.servicos.busca.Busca;
 import br.gov.servicos.config.ConteudoConfig;
-import br.gov.servicos.config.ElasticsearchServicosConfig;
+import br.gov.servicos.config.GuiaDeServicosIndex;
 import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
@@ -17,7 +16,6 @@ import org.springframework.beans.factory.BeanFactory;
 
 import java.util.LinkedList;
 
-import static br.gov.servicos.config.ElasticSearchIndexes.*;
 import static java.util.Arrays.asList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.common.collect.Iterables.get;
@@ -35,7 +33,7 @@ import static org.mockito.Mockito.*;
 public class ImportadorTest {
 
     @Mock
-    ElasticsearchServicosConfig esConfig;
+    GuiaDeServicosIndex esConfig;
 
     @Mock
     ServicoRepository servicos;
@@ -75,7 +73,7 @@ public class ImportadorTest {
     @Test
     public void deveRecriarIndices() throws Exception {
         importador.importar();
-        verify(esConfig).recriarIndices();
+        verify(esConfig).recriar();
     }
 
     @Test

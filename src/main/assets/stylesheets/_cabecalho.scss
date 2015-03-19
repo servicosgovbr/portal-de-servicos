@@ -16,10 +16,10 @@
   }
 
   a {
-  color: #fff;
+    color: #fff;
   }
 
-  #topo{
+  #topo {
     @include outer-container;
     margin-bottom: em(20);
   }

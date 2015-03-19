@@ -1,6 +1,6 @@
 package br.gov.servicos.legado;
 
-import br.gov.servicos.config.ElasticsearchServicosConfig;
+import br.gov.servicos.config.GuiaDeServicosIndex;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
@@ -30,21 +30,21 @@ import static lombok.AccessLevel.PRIVATE;
 public class Importador {
 
     private static final String XML_LEGADO = "guiadeservicos.xml";
-    private final ElasticsearchServicosConfig esConfig;
 
+    GuiaDeServicosIndex index;
     ServicoRepository servicos;
     ServicoLegadoParaServico servicoLegadoParaServico;
 
     @Autowired
-    Importador(ElasticsearchServicosConfig esConfig, ServicoRepository servicos, ServicoLegadoParaServico servicoLegadoParaServico) {
-        this.esConfig = esConfig;
+    Importador(GuiaDeServicosIndex index, ServicoRepository servicos, ServicoLegadoParaServico servicoLegadoParaServico) {
+        this.index = index;
         this.servicos = servicos;
         this.servicoLegadoParaServico = servicoLegadoParaServico;
     }
 
     @ManagedOperation
     public Iterable<Servico> importar() throws IOException, JAXBException {
-        esConfig.recriarIndices();
+        index.recriar();
 
         return servicos.save(
                 servicosLegados()

@@ -20,16 +20,16 @@ import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
-public class ElasticsearchServicosConfigTest {
+public class GuiaDeServicosIndexTest {
 
-    ElasticsearchServicosConfig esConfig;
+    GuiaDeServicosIndex esConfig;
 
     @Mock
     ElasticsearchTemplate es;
 
     @Before
     public void setUp() {
-        esConfig = new ElasticsearchServicosConfig(es);
+        esConfig = new GuiaDeServicosIndex(es);
     }
 
     @Test
@@ -38,14 +38,14 @@ public class ElasticsearchServicosConfigTest {
                 .when(es)
                 .indexExists(GUIA_DE_SERVICOS);
 
-        esConfig.recriarIndices();
+        esConfig.recriar();
 
         verify(es).deleteIndex(GUIA_DE_SERVICOS);
     }
 
     @Test
     public void deveCriarIndiceParaGuiaDeServicos() throws Exception {
-        esConfig.recriarIndices();
+        esConfig.recriar();
 
         verify(es).createIndex(eq(GUIA_DE_SERVICOS), anyString());
         verify(es).putMapping(Busca.class);

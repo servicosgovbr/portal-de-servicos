@@ -20,14 +20,14 @@ import static java.util.stream.Collectors.joining;
 
 @Component
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
-public class ElasticsearchServicosConfig {
+public class GuiaDeServicosIndex {
 
     static final String SETTINGS = "/elasticsearch/settings.json";
 
     ElasticsearchTemplate es;
 
     @Autowired
-    public ElasticsearchServicosConfig(ElasticsearchTemplate es) {
+    public GuiaDeServicosIndex(ElasticsearchTemplate es) {
         this.es = es;
     }
 
@@ -40,7 +40,7 @@ public class ElasticsearchServicosConfig {
         }
     }
 
-    public void recriarIndices() throws IOException {
+    public void recriar() throws IOException {
         if (es.indexExists(GUIA_DE_SERVICOS)) {
             es.deleteIndex(GUIA_DE_SERVICOS);
         }
