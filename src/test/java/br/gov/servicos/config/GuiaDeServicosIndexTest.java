@@ -11,7 +11,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 
-import static br.gov.servicos.config.ElasticSearchIndexes.GUIA_DE_SERVICOS;
+import static br.gov.servicos.config.GuiaDeServicosIndex.GUIA_DE_SERVICOS;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;

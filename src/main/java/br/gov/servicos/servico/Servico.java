@@ -12,7 +12,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 
 import java.util.List;
 
-import static br.gov.servicos.config.ElasticSearchIndexes.GUIA_DE_SERVICOS;
+import static br.gov.servicos.config.GuiaDeServicosIndex.GUIA_DE_SERVICOS;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Long;

@@ -14,7 +14,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import static br.gov.servicos.config.ElasticSearchIndexes.GUIA_DE_SERVICOS;
 import static java.nio.charset.Charset.defaultCharset;
 import static java.util.stream.Collectors.joining;
 
@@ -22,7 +21,8 @@ import static java.util.stream.Collectors.joining;
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
 public class GuiaDeServicosIndex {
 
-    static final String SETTINGS = "/elasticsearch/settings.json";
+    public static final String GUIA_DE_SERVICOS = "guia-de-servicos";
+    private static final String SETTINGS = "/elasticsearch/settings.json";
 
     ElasticsearchTemplate es;
 
