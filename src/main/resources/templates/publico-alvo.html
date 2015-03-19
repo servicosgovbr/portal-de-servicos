@@ -9,12 +9,12 @@
 <body>
 
 <span layout:fragment="link-migalha-de-pao-pai">
-    Públicos Alvo
+    <span th:text="${publicoAlvo.titulo}" itemprop="title">Nome do Publico Alvo</span>
 </span>
 
 <span layout:fragment="link-migalha-de-pao">
-    <a th:href="@{/publico-alvo/{id}(id=${publicoAlvo.id})}" itemprop="url">
-        <span th:text="${publicoAlvo.titulo}" itemprop="title">Nome do Publico Alvo</span>
+    <a th:href="@{/publico-alvo/{id}?letra={letra}(id=${publicoAlvo.id}, letra=${letraAtiva})}" itemprop="url">
+        <span th:text="${letraAtiva}" itemprop="title">Letra filtrada</span>
     </a>
 </span>
 
