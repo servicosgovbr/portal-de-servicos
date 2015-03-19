@@ -130,6 +130,7 @@
 }
 
 #portal-searchbox {
+  display: none; //só mostra com media queries
   background: #fff;
   border: 1px solid #ccc;
   -webkit-border-radius: 5px;
@@ -157,7 +158,6 @@
     border-right: none;
     font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
   }
-
 }
 
 #sobre {
