@@ -1,87 +1,6 @@
-#wrapper {
-  margin: 0 auto;
-  width: 100%;
-}
-
-#topo{
-  @include outer-container;
-  margin-bottom: em(20);
-}
-
-#acessibilidade {
-  @include span-columns(6);
-  font-family: 'open_sansregular', $helvetica;
-
-  a {
-    margin-right: em(8);
-    color: #fff;
-    font-size: em(11);
-  }
-
-  span {
-    padding: 0 0.18em;
-    background: url('../img/bg-acess-key.gif') no-repeat;
-    color: #060;
-  }
-
-}
-
-#portal-siteactions {
-  @include span-columns(4);
-  @include shift(2);
-  @include omega();
-  padding-bottom: em(2);
-  border-bottom: em(1) dotted #9bc2a3;
-
-  li {
-    margin-left: 5px;
-  }
-
-  a {
-    padding: 4px 0 4px 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: em(11);
-    font-family: 'open_sansbold', $helvetica;
-  }
-
-}
-
-#siteaction-acessibilidade a {
-  padding-left: 0;
-}
-
-#logo {
-  @include span-columns(12);
-}
-
-#portal-title {
-  font-family: 'open_sansextrabold', $helvetica;
-  font-size: em(40);
-  color: #fff;
-  margin-bottom: 0;
-}
-
-#portal-description {
-  @include span-columns(12);
-  text-transform: uppercase;
-  font-size: em(14);
-  font-family: 'open_sanssemibold', $helvetica;
-  color: #fff;
-}
-
 #header {
   padding: 14px 0 0 0;
-  background-color: #19882c;
-  background-color: #0a5517;
-  background-image:    -moz-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
-  background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#19882c), color-stop(100%, #025310));
-  background-image: -webkit-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
-  background-image:      -o-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
-  background-image:     -ms-radial-gradient(center, ellipse cover, #19882c 1%, #025310 100%);
-  background-image:         radial-gradient(ellipse at center, #19882c 1%, #025310 100%);
-  color: #fff;
+  @include radial-gradient(circle at 50% 50%, #19882c 10%, #025310, $fallback: #025310);
 
   input.searchButton {
     padding: .3em;
@@ -96,66 +15,126 @@
     padding-right: 5px;
   }
 
-}
-
-#portal-searchbox {
-  display: none; //só mostra com media queries
-  background: #fff;
-  border: 1px solid #ccc;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  clear: right;
-  float: right;
-  margin: 1.2em 0;
-  margin: 3.12em 0 0 0;
-  padding: 2px;
-  text-align: left;
-
-  form {
-    white-space: nowrap;
-  }
-
-  label {
-    font-weight: normal;
-  }
-
-  .searchField {
-    padding: .3em .35em;
-    width: 186px;
-    border: none;
-    border-right: none;
-    font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
-  }
-}
-
-#sobre {
-  background: #00420c;
-  clear: both;
-  margin: 0;
-  padding: 5px 0;
-  max-width: 100% !important;
-  line-height: 20px;
-
   a {
+  color: #fff;
+  }
+
+  #topo{
+    @include outer-container;
+    margin-bottom: em(20);
+  }
+
+  #acessibilidade {
+    @include span-columns(6);
+    font-family: 'open_sansregular', $helvetica;
+
+    a {
+      margin-right: em(8);
+      font-size: em(11);
+    }
+
+    span {
+      padding: 0 0.18em;
+      background: url('../img/bg-acess-key.gif') no-repeat;
+      color: #060;
+    }
+
+  }
+
+  #portal-siteactions {
+    @include span-columns(4);
+    @include shift(2);
+    @include omega();
+    padding-bottom: em(2);
+    border-bottom: em(1) dotted #9bc2a3;
+
+    li {
+      margin-left: em(5);
+    }
+
+    a {
+      padding: 4px 0 4px 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: em(11);
+      font-family: 'open_sansbold', $helvetica;
+    }
+
+  }
+
+  #siteaction-acessibilidade a {
+    padding-left: 0;
+  }
+
+  #logo {
+    @include span-columns(12);
+  }
+
+  #portal-title {
+    font-family: 'open_sansextrabold', $helvetica;
+    font-size: em(40);
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  #portal-description {
+    @include span-columns(12);
+    text-transform: uppercase;
+    font-size: em(14);
+    font-family: 'open_sanssemibold', $helvetica;
     color: #fff;
   }
 
-  li a {
-    border-right: 1px solid #6c9072;
-    padding: 0 10px;
+  #portal-searchbox {
+    display: none; //só mostra com media queries
+    background: #fff;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    clear: right;
+    float: right;
+    margin: 1.2em 0;
+    margin: 3.12em 0 0 0;
+    padding: 2px;
+    text-align: left;
+
+    form {
+      white-space: nowrap;
+    }
+
+    label {
+      font-weight: normal;
+    }
+
+    .searchField {
+      padding: .3em .35em;
+      width: 186px;
+      border: none;
+      border-right: none;
+      font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+    }
   }
 
-  ul {
-    margin: 0 auto;
-    max-width: 960px;
-    text-align: right;
-    font-size: em(12);
-  }
 
-  .last-item a {
-    padding: 0 0 0 10px;
-    border-right: none !important;
-  }
+  #sobre {
+    background: #00420c;
+    padding-top: em(7);
+    padding-bottom: em(7);
 
+    ul {
+      @include outer-container;
+      text-align: right;
+    }
+
+    li {
+      border-right: 1px solid #6c9072;
+      padding: 0 10px;
+      font-size: em(12);
+
+      &:last-child {
+        border-right: none !important;
+      }     
+    }
+  }
 }
