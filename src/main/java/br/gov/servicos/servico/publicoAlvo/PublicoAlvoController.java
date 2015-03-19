@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import static java.util.Comparator.comparing;
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
@@ -49,23 +48,15 @@ class PublicoAlvoController {
     }
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial(String publicoAlvo) {
-        return todosOsServicosParaPublicoAlvo(publicoAlvo)
+        return buscador.buscaPor("publicosAlvo.id", ofNullable(publicoAlvo))
                 .stream()
-                .collect(groupingBy(s -> s.getTitulo().toUpperCase().charAt(0)));
+                .collect(groupingBy(s -> s.getTitulo().trim().toUpperCase().charAt(0)));
     }
 
     private List<Character> letrasDisponiveis(Set<Character> letras) {
         return letras
                 .stream()
                 .sorted()
-                .collect(toList());
-    }
-
-    private List<Servico> todosOsServicosParaPublicoAlvo(String id) {
-        return buscador
-                .buscaPor("publicosAlvo.id", ofNullable(id))
-                .stream()
-                .sorted(comparing(Servico::getTitulo))
                 .collect(toList());
     }
 

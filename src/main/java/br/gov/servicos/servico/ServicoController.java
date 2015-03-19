@@ -87,7 +87,7 @@ class ServicoController {
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial() {
         return stream(servicos.findAll(new Sort(ASC, "titulo")).spliterator(), false)
-                .collect(groupingBy(s -> s.getTitulo().toUpperCase().charAt(0)));
+                .collect(groupingBy(s -> s.getTitulo().trim().toUpperCase().charAt(0)));
     }
 
 }

@@ -21,13 +21,21 @@
 <div layout:fragment="corpo">
 
     <h1 th:utext="${publicoAlvo.titulo}"></h1>
+
+    <span>Filtrar por:</span>
+    <ul>
+        <li th:each="letra : ${letras}">
+            <a th:href="@{/publico-alvo/{id}?letra={filtro}(filtro=${letra}, id=${publicoAlvo.id})}"
+               th:text="${letra}"
+               th:style="${letra == letraAtiva}? 'text-decoration:underline'">A-Z</a>
+        </li>
+    </ul>
+
     <hr/>
 
     <ul id="resultados-publico-alvo">
         <li th:each="servico, i : ${servicos}">
-            <th:block th:if="${i.count &gt; 3}">
-                <span th:replace="fragments/resultado-busca-servico(servico=${servico})"></span>
-            </th:block>
+            <span th:replace="fragments/resultado-busca-servico(servico=${servico})"></span>
         </li>
     </ul>
 </div>
