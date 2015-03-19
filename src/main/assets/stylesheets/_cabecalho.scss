@@ -67,7 +67,7 @@
   }
 
   #logo {
-    @include span-columns(12);
+    @include span-columns(7);
   }
 
   #portal-title {
@@ -86,6 +86,8 @@
   }
 
   #portal-searchbox {
+    @include span-columns(3);
+    @include omega();
     background: #fff;
     border: 1px solid #ccc;
     -webkit-border-radius: 5px;
