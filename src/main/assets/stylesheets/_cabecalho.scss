@@ -3,10 +3,13 @@
   width: 100%;
 }
 
+#topo{
+  @include outer-container;
+  margin-bottom: em(20);
+}
+
 #acessibilidade {
-  display: block;
-  float: left;
-  width: 50%;
+  @include span-columns(6);
   font-family: 'open_sansregular', $helvetica;
 
   a {
@@ -23,48 +26,15 @@
 
 }
 
-
-#logo {
-  float: left;
-  padding: 0;
-  width: 70%;
-
-  span {
-    position: absolute;
-  }
-}
-
-#portal-logo {
-  display: block;
-  margin: 0;
-  width: 100%;
-}
-
-#portal-title {
-  margin: 30px 0 46px;
-  font-family: 'open_sansextrabold', $helvetica;
-  font-size: em(40);
-}
-
-#portal-title-1 {
-  top: 30px;
-}
-
-#portal-description {
-  bottom: 24px;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-family: 'open_sanssemibold', $helvetica;
-}
-
 #portal-siteactions {
-  float: right;
+  @include span-columns(4);
+  @include shift(2);
+  @include omega();
   padding-bottom: em(2);
   border-bottom: em(1) dotted #9bc2a3;
 
   li {
-    display: inline;
-    margin-right: .5em;
+    margin-left: 5px;
   }
 
   a {
@@ -76,18 +46,29 @@
     font-family: 'open_sansbold', $helvetica;
   }
 
-  a:hover {
-    color: #75ad0a;
-  }
-
-  .last-item {
-    margin-right: 0;
-  }
-
 }
 
 #siteaction-acessibilidade a {
   padding-left: 0;
+}
+
+#logo {
+  @include span-columns(12);
+}
+
+#portal-title {
+  font-family: 'open_sansextrabold', $helvetica;
+  font-size: em(40);
+  color: #fff;
+  margin-bottom: 0;
+}
+
+#portal-description {
+  @include span-columns(12);
+  text-transform: uppercase;
+  font-size: em(14);
+  font-family: 'open_sanssemibold', $helvetica;
+  color: #fff;
 }
 
 #header {
@@ -102,13 +83,6 @@
   background-image:         radial-gradient(ellipse at center, #19882c 1%, #025310 100%);
   color: #fff;
 
-  > div {
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    max-width: 960px;
-  }
-
   input.searchButton {
     padding: .3em;
     padding: 4px 15px;
@@ -122,11 +96,6 @@
     padding-right: 5px;
   }
 
-}
-
-#portal-logo,
-#portal-title {
-  color: #fff !important;
 }
 
 #portal-searchbox {
