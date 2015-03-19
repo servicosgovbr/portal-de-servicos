@@ -27,8 +27,10 @@ public class PublicoAlvoControllerTest {
 
     @Before
     public void setUp() {
-        doReturn(asList(SERVICO))
-                .when(buscador)
+        doReturn(asList(
+                SERVICO.withTitulo("XXXX"),
+                SERVICO.withTitulo("AAAA")
+        )).when(buscador)
                 .buscaPor("publicosAlvo.id", of("servicos-aos-cidadaos"));
 
         publicosAlvo = new PublicoAlvoController(buscador);
@@ -36,18 +38,36 @@ public class PublicoAlvoControllerTest {
 
     @Test
     public void deveRedirecionarParaPaginaDePublicosAlvo() {
-        assertViewName(publicosAlvo.publicoAlvo("servicos-aos-cidadaos"), "publico-alvo");
+        assertViewName(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", null), "publico-alvo");
     }
 
     @Test
     public void deveRetornarOsServicosRelacionadosAoPublicoAlvo() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos"), "servicos", asList(SERVICO));
+        assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", null), "servicos",
+                asList(SERVICO.withTitulo("AAAA")));
     }
 
     @Test
     public void deveRetornarOPublicoAlvoPesquisado() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos"), "publicoAlvo",
+        assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", null), "publicoAlvo",
                 new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos cidadãos"));
+    }
+
+    @Test
+    public void deveRetornarAsLetrasDisponiveis() {
+        assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", null), "letras", asList('A', 'X'));
+    }
+
+    @Test
+    public void deveRetornarALetraAtiva() {
+        assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", null), "letraAtiva", 'A');
+        assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", 'x'), "letraAtiva", 'X');
+    }
+
+    @Test
+    public void deveFiltrarPelaLetraInformada() {
+        assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", 'X'), "servicos",
+                asList(SERVICO.withTitulo("XXXX")));
     }
 
 }
