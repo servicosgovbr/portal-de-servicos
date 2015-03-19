@@ -57,7 +57,7 @@ public class OrgaoControllerTest {
                 .when(markdown)
                 .toHtml(new ClassPathResource("conteudo/orgaos/secretaria-da-receita-federal-do-brasil-rfb.md"));
 
-        ModelAndViewAssert.assertModelAttributeValue(controller.orgao("receita-federal"), "conteudo", TestData.CONTEUDO);
+        ModelAndViewAssert.assertModelAttributeValue(controller.orgao("secretaria-da-receita-federal-do-brasil-rfb"), "conteudo", TestData.CONTEUDO);
     }
 
 }
