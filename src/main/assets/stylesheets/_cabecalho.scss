@@ -1,6 +1,8 @@
+$mobile: new-breakpoint(max-width 500px 4);
+
 #header {
   padding: 14px 0 0 0;
-  @include radial-gradient(circle at 50% 50%, #19882c 10%, #025310, $fallback: #025310);
+  @include radial-gradient(circle at 50% 50%, #17882c 10%, #00510f, $fallback: #00510f);
 
   input.searchButton {
     padding: .3em;
@@ -22,11 +24,19 @@
   #topo {
     @include outer-container;
     margin-bottom: em(20);
+    @include media($mobile){
+      padding-left: 8px;
+    }
   }
+
 
   #acessibilidade {
     @include span-columns(6);
     font-family: 'open_sansregular', $helvetica;
+    @include media($mobile) {
+      display: none !important;
+      
+    }
 
     a {
       margin-right: em(8);
@@ -47,6 +57,12 @@
     @include omega();
     padding-bottom: em(2);
     border-bottom: em(1) dotted #9bc2a3;
+    @include media($mobile) {
+      display: none !important;
+
+      
+    }
+
 
     li {
       margin-left: em(5);
@@ -75,6 +91,9 @@
     font-size: em(40);
     color: #fff;
     margin-bottom: 0;
+    @include media($mobile){
+      margin-top: 15px;
+      }
   }
 
   #portal-description {
@@ -110,15 +129,21 @@
     }
   }
 
-
   #sobre {
-    background: #00420c;
+    background: #195128;
     padding-top: em(7);
     padding-bottom: em(7);
+    @include media($mobile){
+      @include outer-container;
+    }
 
     ul {
       @include outer-container;
       text-align: right;
+      @include media($mobile){
+        text-align: left;
+    }
+
     }
 
     li {
@@ -128,7 +153,7 @@
 
       &:last-child {
         border-right: none !important;
-      }     
-    }
+      }
   }
+}
 }

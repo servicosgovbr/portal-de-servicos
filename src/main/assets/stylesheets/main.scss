@@ -8,6 +8,25 @@
 @import 'acessibilidade';
 @import 'media-queries';
 
+
+// //Cores primarias
+
+// $verde: #195128;
+// $amarelo: #f7c514;
+// $azul: #3e6731;
+// $branco: #ecedf1;
+
+// //Cores secundárias
+// $laranja: #f18f20;
+// $amarelo-cla: #fdf499;
+// $verde-cla: #18a54b;
+// $verde-esc: #454546;
+// $azul-cla: #204c90;
+// $azul-esc: #21376c;
+// $vermelho: #a41e22;
+
+$mobile: new-breakpoint(max-width 500px 4);
+
 #main {
   @include outer-container;
 }
@@ -16,7 +35,10 @@
   @include span-columns(9);
   @include omega();
   line-height: 1.5em;
-
+  @include media($mobile) {
+    @include span-columns(4);
+    }
+  
 
   h1 {
     margin-top: .5em;
@@ -70,8 +92,6 @@
 
 }
 
-
-
 #tentandoFazer, #aconteceu{
     width: 95%
 }
@@ -86,7 +106,8 @@ dl.portlet {
     margin: 0;
     padding: 8px 8px 24px 10px;
     text-transform: uppercase;
-    font-family: 'open_sansbold', Arial, Helvetica, sans-serif;
+    font-family: 'open_sansbold', $helvetica;
+    border-top: 4px solid #3867b7;
   }
 
   ul li {
@@ -355,4 +376,7 @@ ul.orgaos-a-z {
 
 #navegacao{
   @include span-columns(3);
+  @include media($mobile) {
+    display: none !important;
+    }
 }

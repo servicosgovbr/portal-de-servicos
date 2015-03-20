@@ -1,5 +1,7 @@
+$mobile: new-breakpoint(max-width 500px 4);
+
 #rodape {
-  background: #034811;
+  background: #195128;
 
   a {
     color: #fff;
@@ -9,6 +11,9 @@
     @include outer-container;
     padding-top: em(32);
     padding-bottom: em(75);
+    @include media($mobile) {
+      display: none !important;
+    }
 
     dl {
       @include span-columns(3);
