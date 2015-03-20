@@ -28,12 +28,10 @@ public class Buscador {
     private static final LinkedList<Servico> SEM_RESULTADOS = new LinkedList<>();
 
     ServicoRepository servicos;
-    BuscaRepository buscas;
 
     @Autowired
-    Buscador(ServicoRepository servicos, BuscaRepository buscas) {
+    Buscador(ServicoRepository servicos) {
         this.servicos = servicos;
-        this.buscas = buscas;
     }
 
     List<Servico> busca(Optional<String> termoBuscado) {
@@ -70,21 +68,6 @@ public class Buscador {
                 .map(Lists::newLinkedList)
                 .orElse(SEM_RESULTADOS);
 
-        registraBuscaEfetuada(termo, resultados);
-
         return unmodifiableList(resultados);
     }
-
-    private void registraBuscaEfetuada(Optional<String> termo, List<Servico> resultados) {
-        Busca busca = termo
-                .map(buscas::findOne)
-                .map(Busca::withNovaAtivacao)
-                .orElseGet(() -> new Busca()
-                        .withTermo(termo.orElse("[BUSCA VAZIA]"))
-                        .withResultados(resultados.size())
-                        .withAtivacoes(1));
-
-        buscas.save(busca);
-    }
-
 }

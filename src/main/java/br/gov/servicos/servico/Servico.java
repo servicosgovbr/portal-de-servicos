@@ -15,7 +15,6 @@ import java.util.List;
 import static br.gov.servicos.config.GuiaDeServicosIndex.GUIA_DE_SERVICOS;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
-import static org.springframework.data.elasticsearch.annotations.FieldType.Long;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Object;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
@@ -62,22 +61,8 @@ public class Servico {
     @Field(index = not_analyzed, type = String)
     List<String> eventosDasLinhasDaVida;
 
-    @Field(index = not_analyzed, type = Long)
-    Long acessos;
-
-    @Field(index = not_analyzed, type = Long)
-    Long ativacoes;
-
     public Servico() {
-        this(null, null, null, null, null, null, null, null, null, null, null, null, null, null);
-    }
-
-    public Servico withNovoAcesso() {
-        return withAcessos(acessos == null ? 1 : acessos + 1);
-    }
-
-    public Servico withNovaAtivacao() {
-        return withAtivacoes(ativacoes == null ? 1 : ativacoes + 1);
+        this(null, null, null, null, null, null, null, null, null, null, null, null);
     }
 
 }

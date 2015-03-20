@@ -1,6 +1,5 @@
 package br.gov.servicos.config;
 
-import br.gov.servicos.busca.Busca;
 import br.gov.servicos.metricas.Feedback;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
@@ -48,7 +47,6 @@ public class GuiaDeServicosIndexTest {
         esConfig.recriar();
 
         verify(es).createIndex(eq(GUIA_DE_SERVICOS), anyString());
-        verify(es).putMapping(Busca.class);
         verify(es).putMapping(Servico.class);
         verify(es).putMapping(Feedback.class);
     }

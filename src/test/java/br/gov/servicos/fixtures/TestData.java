@@ -1,8 +1,9 @@
 package br.gov.servicos.fixtures;
 
-import br.gov.servicos.busca.Busca;
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.servico.*;
+import br.gov.servicos.servico.AreaDeInteresse;
+import br.gov.servicos.servico.Orgao;
+import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 
@@ -22,15 +23,9 @@ public class TestData {
             .withPublicosAlvo(asList(new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos cidadãos")))
             .withAreasDeInteresse(asList(new AreaDeInteresse().withId("3").withTitulo("Área de Interesse")))
             .withLinhasDaVida(asList(new LinhaDaVida().withId("4").withTitulo("Linha da Vida")))
-            .withEventosDasLinhasDaVida(asList("Eventos das Linhas da Vida"))
-            .withAcessos(0L)
-            .withAtivacoes(0L);
+            .withEventosDasLinhasDaVida(asList("Eventos das Linhas da Vida"));
 
     public static final Conteudo CONTEUDO = new Conteudo()
             .withTitulo("Título")
             .withHtml("<h1>Título</h1>\n\nConteúdo");
-
-    public static final Busca BUSCA = new Busca()
-            .withTermo("um serviço")
-            .withResultados(1).withAtivacoes(1);
 }

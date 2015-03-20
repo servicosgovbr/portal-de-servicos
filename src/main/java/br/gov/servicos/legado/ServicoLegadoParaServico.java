@@ -56,9 +56,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
                 .withAreasDeInteresse(areasDeInteresse(legado))
                 .withPublicosAlvo(publicoAlvo(legado))
                 .withLinhasDaVida(linhasDaVida(legado))
-                .withEventosDasLinhasDaVida(eventosDasLinhasDaVida(legado))
-                .withAcessos(0L)
-                .withAtivacoes(0L);
+                .withEventosDasLinhasDaVida(eventosDasLinhasDaVida(legado));
     }
 
     private String url(ServicoType servicoType) {

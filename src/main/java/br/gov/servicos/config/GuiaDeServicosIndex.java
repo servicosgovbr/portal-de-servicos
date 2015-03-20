@@ -1,6 +1,5 @@
 package br.gov.servicos.config;
 
-import br.gov.servicos.busca.Busca;
 import br.gov.servicos.metricas.Feedback;
 import br.gov.servicos.servico.Servico;
 import lombok.AccessLevel;
@@ -45,7 +44,6 @@ public class GuiaDeServicosIndex {
             es.deleteIndex(GUIA_DE_SERVICOS);
         }
         es.createIndex(GUIA_DE_SERVICOS, settings());
-        es.putMapping(Busca.class);
         es.putMapping(Servico.class);
         es.putMapping(Feedback.class);
     }

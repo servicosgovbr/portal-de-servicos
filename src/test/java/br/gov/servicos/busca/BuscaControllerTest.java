@@ -32,9 +32,6 @@ public class BuscaControllerTest {
     ServicoRepository servicos;
 
     @Mock
-    BuscaRepository buscas;
-
-    @Mock
     Buscador buscador;
 
     List<Servico> umServico = asList(SERVICO);

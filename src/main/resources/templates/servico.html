@@ -39,11 +39,11 @@
                 Valor/taxa: <span th:text="${servico.taxa}">R$ 999,99</span>
             </p>
 
-            <a th:if="${not #strings.isEmpty(servico.url)}" class="acao acao-comecar" th:href="@{/navegar/{id}(id=${servico.id})}">
+            <a th:if="${not #strings.isEmpty(servico.url)}" class="acao acao-comecar" th:href="${servico.url}">
                 Começar
             </a>
 
-            <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" class="acao acao-agendar" th:href="@{/agendar/{id}(id=${servico.id})}">
+            <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" class="acao acao-agendar" th:href="${servico.urlAgendamento}">
                 Agendar agora
             </a>
 
