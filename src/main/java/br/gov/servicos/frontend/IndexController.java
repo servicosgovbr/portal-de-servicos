@@ -28,7 +28,7 @@ class IndexController {
     }
 
     private Page<Servico> servicosMaisAcessados() {
-        return servicos.findAll(new PageRequest(0, 15, new Sort(DESC, "acessos")));
+        return servicos.findAll(new PageRequest(0, 15, new Sort(DESC, "titulo")));
     }
 
 }
