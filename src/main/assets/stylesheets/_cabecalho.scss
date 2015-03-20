@@ -88,12 +88,7 @@
   #portal-searchbox {
     @include span-columns(3);
     @include omega();
-    @include border-top-radius(5px);
-    @include border-bottom-radius(5px);
-    background: #fff;
-    border: 1px solid #ccc;
     margin-top: em(48);
-    padding: em(2);
     text-align: left;
 
     form {
@@ -106,10 +101,12 @@
 
     .searchField {
       padding: .3em .35em;
-      width: 186px;
+      width: 100%;
       border: none;
       border-right: none;
       font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+      padding: 10px 8px;
+      border-radius: 5px;
     }
   }
 
