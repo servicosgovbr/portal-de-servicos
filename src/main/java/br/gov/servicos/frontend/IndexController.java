@@ -24,7 +24,7 @@ class IndexController {
 
     @RequestMapping("/")
     ModelAndView index() {
-        return new ModelAndView("index", "acessos", servicosMaisAcessados());
+        return new ModelAndView("index", "destaques", servicosMaisAcessados());
     }
 
     private Page<Servico> servicosMaisAcessados() {
