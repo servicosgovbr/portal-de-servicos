@@ -10,4 +10,17 @@
             <input class="searchButton" type="submit" value="Buscar"/>
         </fieldset>
     </form>
+
+    <script type="application/ld+json" th:inline="text">
+    {
+       "@context": "http://schema.org",
+       "@type": "WebSite",
+       "url": "[[${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}]]",
+       "potentialAction": {
+         "@type": "SearchAction",
+         "target": "[[${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}]]/search?q={search_term_string}",
+         "query-input": "required name=search_term_string"
+       }
+    }
+    </script>
 </div>
