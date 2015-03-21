@@ -14,7 +14,7 @@
     <div class="tile busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
         <p>Pesquisa</p>
         <form method="get" action="/busca">
-            <input itemprop="query-input" id="input-busca" type="text" name="q" value=""/>
+            <input id="input-busca" type="text" name="q" value=""/>
             <input type="submit" value="BUSCAR"/>
         </form>
     </div>
