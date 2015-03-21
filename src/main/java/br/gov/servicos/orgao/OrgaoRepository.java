@@ -16,7 +16,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class OrgaoRepository {
+public class OrgaoRepository {
 
     ServicoRepository servicos;
 

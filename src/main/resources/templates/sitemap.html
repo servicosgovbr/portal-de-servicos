@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        th:with="base = ${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}">
+
+    <url>
+        <loc th:text="${base + '/'}">/</loc>
+    </url>
+
+    <url>
+        <loc th:text="${base + '/conteudo/acessibilidade'}">/conteudo/acessibilidade</loc>
+    </url>
+
+    <url>
+        <loc th:text="${base + '/conteudo/fale-com-o-governo'}">/conteudo/fale-com-o-governo</loc>
+    </url>
+
+    <url>
+        <loc th:text="${base + '/conteudo/mapa-do-site'}">/conteudo/mapa-do-site</loc>
+    </url>
+
+    <url>
+        <loc th:text="${base + '/conteudo/perguntas-frequentes'}">/conteudo/perguntas-frequentes</loc>
+    </url>
+
+    <url>
+        <loc th:text="${base + '/conteudo/sobre-o-guia'}">/conteudo/sobre-o-guia</loc>
+    </url>
+
+    <url>
+        <loc th:text="${base + '/conteudo/sua-conta'}">/conteudo/sua-conta</loc>
+    </url>
+
+    <url>
+        <loc th:text="${base + '/servicos'}">/servicos</loc>
+    </url>
+
+    <url>
+        <loc th:text="${base + '/orgaos'}">/orgaos</loc>
+    </url>
+
+    <url th:each="servico : ${servicos}">
+        <loc th:text="${base + '/servico/' + servico.id}">/servico/id-do-servico</loc>
+    </url>
+
+    <url th:each="orgao: ${orgaos}">
+        <loc th:text="${base + '/orgao/' + orgao.id}">/orgao/id-do-orgao</loc>
+    </url>
+
+    <url th:each="linhaDaVida: ${linhasDaVida}">
+        <loc th:text="${base + '/linha-da-vida/' + linhaDaVida.id}">/linha-da-vida/id-da-linha-da-vida</loc>
+    </url>
+
+    <url th:each="publicoAlvo: ${publicosAlvo}">
+        <loc th:text="${base + '/publico-alvo/' + publicoAlvo.id}">/publico-alvo/id-do-publico-alvo</loc>
+    </url>
+
+</urlset>

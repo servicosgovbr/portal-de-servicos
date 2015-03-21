@@ -3,6 +3,7 @@ package br.gov.servicos.frontend;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.mock.web.MockHttpServletRequest;
 
 import static java.util.Arrays.asList;
 import static lombok.AccessLevel.PRIVATE;
@@ -21,7 +22,7 @@ public class RobotsTxtControllerTest {
 
     @Test
     public void retornaPermissoes() throws Exception {
-        assertThat(robotsTxtController.robotsTxt(),
-                stringContainsInOrder(asList("User-agent", "*", "Disallow", "/")));
+        assertThat(robotsTxtController.robotsTxt(new MockHttpServletRequest()),
+                stringContainsInOrder(asList("Sitemap", "User-agent", "*", "Disallow")));
     }
 }

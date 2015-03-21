@@ -19,7 +19,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class PublicoAlvoRepository {
+public class PublicoAlvoRepository {
 
     private static final String PUBLICOS_ALVO = "publicosAlvo";
     private static final String TITULO = "publicosAlvo.titulo";

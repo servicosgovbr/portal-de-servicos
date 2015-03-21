@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import javax.servlet.http.HttpServletRequest;
+
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.http.HttpStatus.OK;
 
@@ -16,9 +18,10 @@ class RobotsTxtController {
     @RequestMapping(value = "/robots.txt", produces = "text/plain")
     @ResponseStatus(OK)
     @ResponseBody
-    String robotsTxt() {
-        return "User-agent: *\n" +
-                "Disallow: /\n";
+    String robotsTxt(HttpServletRequest request) {
+        return "Sitemap: " + request.getRequestURL().toString().replaceAll("^(http://(.*?))/(.*)$", "$1/sitemap.xml") + "\n\n" +
+                "User-agent: *\n" +
+                "Disallow:\n";
     }
 
 }
