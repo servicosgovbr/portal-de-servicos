@@ -4,13 +4,14 @@ require 'csv'
 
 Octokit.configure do |c| 
   #usuário/senha github
-  c.login = ''
-  c.password = ''
+  c.login = 'jeankirchner '
+  c.password = '4.8D}K;)o7H.Fk48'
 end
 
 repo = 'servicosgovbr/guia-de-servicos'
 
 puts 'Requisitando todos os issues do github'
+Octokit.auto_paginate = true
 issues = Octokit.issues repo, :per_page => 1000, :state => 'all', :filter => 'all'
 
 #Ideias => open, sem label
@@ -42,6 +43,8 @@ cycle_time_matrix = issues.map do |issue|
   em_progresso_label = issue.events.select {|e| e.event == 'labeled' and e.label.name == progresso_column }[0]
   em_producao_label = issue.events.select {|e| e.event == 'labeled' and e.label.name == producao_column }[0]
   closed_at = issue.closed_at
+  labels = issue.labels.map{|l| l.name}.join(',') 
+  milestone = issue.milestone.title if not issue.milestone.nil?
 
   cycle_time = em_producao_label.created_at - em_progresso_label.created_at if not em_producao_label.nil? and not em_progresso_label.nil?
   cycle_time = closed_at - em_progresso_label.created_at if cycle_time.nil? and not closed_at.nil? and not em_progresso_label.nil?
@@ -49,7 +52,7 @@ cycle_time_matrix = issues.map do |issue|
   lead_time = closed_at - rodar_label.created_at if not closed_at.nil? and not rodar_label.nil?
   lead_time = closed_at - created_at if lead_time.nil? and not closed_at.nil?
 
-  table = {:numero => issue.number, :titulo => issue.title}
+  table = {:numero => issue.number, :titulo => issue.title, :labels => labels, :milestone => milestone}
   table[:data_hora_criacao] = created_at.getlocal.strftime("%m/%d/%y %H:%M")
   table[:data_hora_em_rodar] = rodar_label.nil? ? nil : rodar_label.created_at.getlocal.strftime("%m/%d/%y %H:%M")
   table[:data_hora_em_progresso] = em_progresso_label.nil? ? nil : em_progresso_label.created_at.getlocal.strftime("%m/%d/%y %H:%M")
