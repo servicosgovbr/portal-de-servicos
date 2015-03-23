@@ -10,7 +10,7 @@ $column: golden-ratio(1em, 3) !default;
 ///
 /// @type Number (Unit)
 
-$gutter: golden-ratio(1em, 2) !default;
+$gutter: golden-ratio(1em, 3) !default;
 
 /// Sets the total number of columns in the grid. Its value can be overridden inside a media query using the `media()` mixin. Set with the `!global` flag.
 ///
