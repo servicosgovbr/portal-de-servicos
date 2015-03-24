@@ -21,7 +21,7 @@ pushd 'gds'
   (rpm -qa | grep -q jdk1.8.0_40-1.8.0_40-fcs.x86_64) || \
     (echo 'Instalando JDK' && rpm -Uvh 'jdk-8u40-linux-x64.rpm')
 
-  $(java -version 2>&1 | grep -q "1.8.0_42") || \
+  $(java -version 2>&1 | grep -q "1.8.0_40") || \
     (echo "JDK não foi instalada corretamente" && exit -1)
 
   if [ -f elasticsearch-1.5.0.noarch.rpm ]; then
