@@ -1,6 +1,5 @@
 package br.gov.servicos.metricas;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 import lombok.experimental.Wither;
@@ -17,7 +16,6 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @Value
 @AllArgsConstructor(access = PRIVATE)
 @Document(indexName = GUIA_DE_SERVICOS, type = "feedback")
-@XStreamAlias("feedback")
 @Wither
 public class Feedback {
 

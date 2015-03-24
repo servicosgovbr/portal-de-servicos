@@ -2,7 +2,6 @@ package br.gov.servicos.servico;
 
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 import lombok.experimental.Wither;
@@ -21,7 +20,6 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @Value
 @AllArgsConstructor(access = PRIVATE)
 @Document(indexName = GUIA_DE_SERVICOS, type = "servico")
-@XStreamAlias("servico")
 @Wither
 public class Servico {
 
