@@ -1,0 +1,30 @@
+%define _tmppath /tmp
+
+Name:               guia-de-servicos
+Version:            1.0.0
+Release:            1%{?dist}
+Summary:            Guia de Serviços do Governo Federal do Brasil
+Group:              Applications
+License:            MIT
+Vendor:             ThoughtWorks, Inc
+URL:                http://servicos.gov.br
+BuildRoot:          %{tmppath}/%{name}
+Prefix:             /usr/local
+BuildArchitectures: noarch
+Requires:           jdk1.8.0_40, elasticsearch
+
+%description
+Guia de Serviços do Governo Federal do Brasil
+
+%prep
+
+%build
+
+%install
+
+%files
+
+%doc
+
+%changelog
+
