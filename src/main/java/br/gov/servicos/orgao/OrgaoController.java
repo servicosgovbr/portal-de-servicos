@@ -14,6 +14,7 @@ import java.util.HashMap;
 
 import static java.lang.String.format;
 import static java.util.Optional.ofNullable;
+import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
 @Controller
@@ -41,7 +42,10 @@ class OrgaoController {
         HashMap<String, Object> model = new HashMap<>();
         model.put("termo", id);
         model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/orgaos/%s.md", id))));
-        model.put("resultados", buscador.buscaSemelhante(ofNullable(id), "prestador.id", "responsavel.id"));
+        model.put("resultados", buscador.buscaSemelhante(ofNullable(id), "prestador.id", "responsavel.id")
+                .stream()
+                .sorted((left, right) -> left.getId().compareTo(right.getId()))
+                .collect(toList()));
 
         return new ModelAndView("orgao", model);
     }
