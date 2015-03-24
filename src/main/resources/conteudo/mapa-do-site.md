@@ -23,4 +23,3 @@ Serviços
 Navegação
 
 - [Acessibilidade](/conteudo/acessibilidade)
-- [Mapa do Site](/conteudo/mapa-do-site)
