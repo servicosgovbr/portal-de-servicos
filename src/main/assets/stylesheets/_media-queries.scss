@@ -9,7 +9,7 @@
   }
 
   #header #portal-searchbox {
-    display: initial;
+    display: inline-block !important;
     float: left;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -42,7 +42,6 @@
     text-align: center;
   }
 
-
   .busca-principal {
     display: none !important;
   }
@@ -70,5 +69,7 @@
   .left {
     float: none !important;
   }
+
+
 
 }
