@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resultadoListarServicos>
+    <listaServicos>
+        <servico th:each="servico : ${servicos}">
+            <link th:text="${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1/xml/servico/' + servico.id)}"></link>
+        </servico>
+    </listaServicos>
+</resultadoListarServicos>

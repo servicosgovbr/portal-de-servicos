@@ -1,0 +1,59 @@
+<resultadoDetalharServico>
+    <servico>
+        <id th:text="${servico.id}">
+            entrega-de-requerimento-malha-fiscal-irpf-impugnacao
+        </id>
+
+        <titulo th:text="${servico.titulo}">
+            Entrega de Requerimento Malha Fiscal IRPF– Impugnação
+        </titulo>
+
+        <descricao th:text="${servico.descricao}">
+            Entregar impugnação em resposta à intimação/notificação expedida pela Receita Federal.
+        </descricao>
+
+        <url th:text="${servico.url}">
+            http://www.receita.fazenda.gov.br/Aplicacoes/ATCTA/RequerimentosMF/SRL/SRLC0001.asp
+        </url>
+
+        <taxa th:text="${servico.taxa}">
+        </taxa>
+
+        <prestador>
+            <id th:text="${servico.prestador.id}">secretaria-da-receita-federal-do-brasil-rfb</id>
+            <nome th:text="${servico.prestador.nome}">Secretaria da Receita Federal do Brasil (RFB)</nome>
+            <telefone th:text="${servico.prestador.telefone}">0800 300 400</telefone>
+        </prestador>
+
+        <responsavel>
+            <id th:text="${servico.responsavel.id}">secretaria-da-receita-federal-do-brasil-rfb</id>
+            <nome th:text="${servico.responsavel.nome}">Secretaria da Receita Federal do Brasil (RFB)</nome>
+        </responsavel>
+
+        <publicosAlvo>
+            <publicoAlvo th:each="publico : ${servico.publicosAlvo}">
+                <id th:text="${publico.id}">servicos-aos-cidadaos</id>
+                <titulo th:text="${publico.titulo}">Serviços aos cidadãos</titulo>
+            </publicoAlvo>
+        </publicosAlvo>
+
+        <areasDeInteresse>
+            <areaDeInteresse th:each="area: ${servico.areasDeInteresse}">
+                <id th:text="${area.id}">economia-e-financas</id>
+                <titulo th:text="${area.titulo}">Economia e Finanças</titulo>
+            </areaDeInteresse>
+        </areasDeInteresse>
+
+        <linhasDaVida>
+            <linhaDaVida th:each="linha : ${servico.linhasDaVida}">
+                <id th:text="${linha.id}">administrar-um-negocio</id>
+                <titulo th:text="${linha.titulo}">Administrar um negócio</titulo>
+            </linhaDaVida>
+        </linhasDaVida>
+
+        <eventosDasLinhasDaVida th:each="evento : ${servico.eventosDasLinhasDaVida}">
+            <string th:text="${evento}">Pagar impostos</string>
+        </eventosDasLinhasDaVida>
+
+    </servico>
+</resultadoDetalharServico>
