@@ -59,8 +59,13 @@ public class Servico {
     @Field(index = not_analyzed, type = String)
     List<String> eventosDasLinhasDaVida;
 
+
+    @Field(index = not_analyzed, type = Object)
+    List<CanalDePrestacao> canaisDePrestacao;
+
+
     public Servico() {
-        this(null, null, null, null, null, null, null, null, null, null, null, null);
+        this(null, null, null, null, null, null, null, null, null, null, null, null, null);
     }
 
 }

@@ -1,7 +1,10 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
-import br.gov.servicos.servico.*;
+import br.gov.servicos.servico.AreaDeInteresse;
+import br.gov.servicos.servico.CanalDePrestacao;
+import br.gov.servicos.servico.Orgao;
+import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 import com.github.slugify.Slugify;
@@ -20,7 +23,6 @@ import java.util.List;
 import java.util.function.Function;
 
 import static java.util.Arrays.stream;
-import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.common.base.Strings.isNullOrEmpty;
@@ -56,7 +58,16 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
                 .withAreasDeInteresse(areasDeInteresse(legado))
                 .withPublicosAlvo(publicoAlvo(legado))
                 .withLinhasDaVida(linhasDaVida(legado))
+                .withCanaisDePrestacao(canaisDePrestacao(legado))
                 .withEventosDasLinhasDaVida(eventosDasLinhasDaVida(legado));
+    }
+
+    @SuppressWarnings("unchecked")
+    private List<CanalDePrestacao> canaisDePrestacao(ServicoType legado) {
+        return parser.parseExpression("canaisPrestacaoServico?.canalPrestacaoServico?.![" +
+                "new br.gov.servicos.servico.CanalDePrestacao(descricao, tipoCanalPrestacaoServico?.titulo, url)" +
+                "]")
+                .getValue(context(legado), List.class);
     }
 
     private String url(ServicoType servicoType) {
@@ -115,9 +126,10 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
         String[] publicosAlvo = parser.parseExpression("publicosAlvo?.content?.![value?.titulo]?:{}")
                 .getValue(context(servicoType), String[].class);
 
-        return stream(publicosAlvo)
-                .map(p -> new PublicoAlvo().withId(slugify.slugify(p)).withTitulo(p))
-                .collect(toList());
+        return new ArrayList<>(
+                stream(publicosAlvo)
+                        .map(p -> new PublicoAlvo().withId(slugify.slugify(p)).withTitulo(p))
+                        .collect(toSet()));
     }
 
     private List<LinhaDaVida> linhasDaVida(ServicoType servicoType) {
