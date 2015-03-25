@@ -10,6 +10,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import static br.gov.servicos.config.GuiaDeServicosIndex.GUIA_DE_SERVICOS;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
+import static org.springframework.data.elasticsearch.annotations.FieldType.Boolean;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Long;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
@@ -34,11 +35,11 @@ public class Feedback {
     @Field(store = false, type = String, index = not_analyzed)
     String ticket;
 
-    @Field(store = true, type = String)
-    String tentandoFazer;
+    @Field(store = true, type = Boolean)
+    Boolean conteudoEncontrado;
 
     @Field(store = true, type = String)
-    String aconteceu;
+    String feedback;
 
     public Feedback() {
         this(null, null, null, null, null, null, null);

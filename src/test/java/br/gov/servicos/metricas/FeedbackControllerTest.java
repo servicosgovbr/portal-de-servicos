@@ -18,6 +18,7 @@ import static org.mockito.Mockito.verify;
 @FieldDefaults(level = PRIVATE)
 public class FeedbackControllerTest {
 
+    private static final boolean ACHEI_O_QUE_PROCURAVA = true;
     private static final String TICKET = "a995f68470b9";
 
     @Mock
@@ -32,20 +33,20 @@ public class FeedbackControllerTest {
 
     @Test
     public void retornaFeedbackAgradecimentoParaOUsuario() {
-        RedirectView response = controller.feedback("/", "query", "tentando", "aconteceu", TICKET);
+        RedirectView response = controller.feedback("/", "query", TICKET, "feedback", ACHEI_O_QUE_PROCURAVA);
         assertThat(response.getUrl(), is("/conteudo/obrigado-pela-contribuicao"));
     }
 
     @Test
     public void deveSalvarOFeedbackDoUsuario() {
-        controller.feedback("localhost", "query", "Estou tentando mandar feedback", "E está tudo certo :)", TICKET);
+        controller.feedback("localhost", "query", TICKET, "Otimo site", ACHEI_O_QUE_PROCURAVA);
 
         verify(feedbacks).save(new Feedback()
                 .withUrl("localhost")
                 .withQueryString("query")
                 .withTimestamp(anyLong())
-                .withTentandoFazer("Estou tentando mandar feedback")
-                .withAconteceu("E está tudo certo :)"));
+                .withConteudoEncontrado(true)
+                .withFeedback("Otimo site"));
     }
 
 }

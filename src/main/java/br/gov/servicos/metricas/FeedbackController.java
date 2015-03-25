@@ -26,17 +26,17 @@ public class FeedbackController {
     public RedirectView feedback(
             @RequestParam String url,
             @RequestParam String queryString,
-            @RequestParam String tentandoFazer,
-            @RequestParam String aconteceu,
-            @RequestParam String ticket) {
+            @RequestParam String ticket,
+            @RequestParam String feedback,
+            @RequestParam Boolean conteudoEncontrado) {
 
         feedbacks.save(new Feedback()
-                        .withUrl(url)
-                        .withQueryString(queryString)
-                        .withTimestamp(currentTimeMillis())
-                        .withTentandoFazer(tentandoFazer)
-                        .withAconteceu(aconteceu)
-                        .withTicket(ticket));
+                .withUrl(url)
+                .withQueryString(queryString)
+                .withTimestamp(currentTimeMillis())
+                .withTicket(ticket)
+                .withConteudoEncontrado(conteudoEncontrado)
+                .withFeedback(feedback));
 
         return new RedirectView("/conteudo/obrigado-pela-contribuicao");
     }
