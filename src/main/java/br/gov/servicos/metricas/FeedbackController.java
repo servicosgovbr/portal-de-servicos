@@ -13,7 +13,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-public class FeedbackController {
+class FeedbackController {
 
     FeedbackRepository feedbacks;
 
@@ -23,7 +23,7 @@ public class FeedbackController {
     }
 
     @RequestMapping(value = "/feedback", method = POST)
-    public RedirectView feedback(
+    RedirectView feedback(
             @RequestParam String url,
             @RequestParam String queryString,
             @RequestParam String ticket,
