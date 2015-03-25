@@ -47,7 +47,7 @@ vagrant up
 Ambientes da CGSTI/DTI
 ----
 
-### Desenvolvimento (interno à CGSTI/DTI)
+### Desenvolvimento
 
 Este ambiente contém 5 máquinas virtuais:
 
@@ -85,7 +85,7 @@ CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda a aplicação sob a [J
 CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda o [ElasticSearch] sob a [Java Virtual Machine][JVM] versão `1.8.0_40` ou superior, nas portas 9200 e 9300, e um servidor [ssh] na porta 22.
 
 
-### Homologação (interno à CGSTI/DTI)
+### Homologação
 
 Este ambiente contém 5 máquinas virtuais:
 
@@ -121,7 +121,7 @@ CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda a aplicação sob a [J
 CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda o [ElasticSearch] sob a [Java Virtual Machine][JVM] versão `1.8.0_40` ou superior, nas portas 9200 e 9300, e um servidor [ssh] na porta 22.
 
 
-### Produção (interno à CGSTI/DTI)
+### Produção
 
 Este ambiente contém 5 máquinas virtuais:
 
