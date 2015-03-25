@@ -18,7 +18,7 @@ import static org.mockito.Mockito.verify;
 @FieldDefaults(level = PRIVATE)
 public class FeedbackControllerTest {
 
-    public static final String TICKET = "a995f68470b9";
+    private static final String TICKET = "a995f68470b9";
 
     @Mock
     FeedbackRepository feedbacks;

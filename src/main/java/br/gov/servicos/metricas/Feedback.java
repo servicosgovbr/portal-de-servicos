@@ -31,14 +31,14 @@ public class Feedback {
     @Field(store = false, type = Long, index = not_analyzed)
     Long timestamp;
 
+    @Field(store = false, type = String, index = not_analyzed)
+    String ticket;
+
     @Field(store = true, type = String)
     String tentandoFazer;
 
     @Field(store = true, type = String)
     String aconteceu;
-
-    @Field(store = false, type = String, index = not_analyzed)
-    String ticket;
 
     public Feedback() {
         this(null, null, null, null, null, null, null);
