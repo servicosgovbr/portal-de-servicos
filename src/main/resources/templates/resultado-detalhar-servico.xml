@@ -55,5 +55,13 @@
             <string th:text="${evento}">Pagar impostos</string>
         </eventosDasLinhasDaVida>
 
+        <canaisDePrestacao>
+            <canalDePrestacao th:each="canal : ${servico.canaisDePrestacao}">
+                <tipo th:text="${canal.tipo}"></tipo>
+                <url th:text="${canal.url}"></url>
+                <descricao th:text="${canal.descricao}"></descricao>
+            </canalDePrestacao>
+        </canaisDePrestacao>
+
     </servico>
 </resultadoDetalharServico>
