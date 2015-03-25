@@ -1,5 +1,3 @@
-%define _tmppath /tmp
-
 Name:               guia-de-servicos
 Version:            1.0.0
 Release:            1%{?dist}
@@ -8,23 +6,35 @@ Group:              Applications
 License:            MIT
 Vendor:             ThoughtWorks, Inc
 URL:                http://servicos.gov.br
-BuildRoot:          %{tmppath}/%{name}
+BuildRoot:          %{builddir}
 Prefix:             /usr/local
 BuildArchitectures: noarch
 Requires:           jdk1.8.0_40, elasticsearch
+Source:             %{sourcedir}
+
 
 %description
 Guia de Serviços do Governo Federal do Brasil
 
 %prep
+%setup -q
 
 %build
 
 %install
+mkdir -p %{buildroot}/%{prefix}/%{name}
+mkdir -p %{buildroot}/%{prefix}/%{name}/%{_javadir}
 
 %files
+%{name}/%{_javadir}/%{name}.jar
+%{name}%/%{name}
 
 %doc
 
 %changelog
+* Wed Mar 25 2015 Jean Kirchner <jkirchne@thoughtworks.com> - 1.0-1
+- Primeira versão
+
+%clean
+rm -rf %{buildroot}
 

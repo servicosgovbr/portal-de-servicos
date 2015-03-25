@@ -124,6 +124,22 @@ clean << {
     project.file('app.jar').delete()
 }
 
+def rpmBaseDir = file("$buildDir/rpmbuild")
+def rpmDirs = files("$rpmBaseDir/RPMS", "$rpmBaseDir/SRPMS", "$rpmBaseDir/BUILD","$rpmBaseDir/SOURCES","$rpmBaseDir/SPECS")
+task prepareRpm(type:Copy) {
+    delete(rpmBaseDir)
+    rpmDirs.each {f -> f.mkdirs()}
+
+    from "$buildDir/distributions/"
+    include "*.tar"
+    into "$rpmBaseDir/SOURCES"
+}
+
+task buildRpm(type:Exec) {
+    dependsOn distTar, prepareRpm
+    commandLine 'rpmbuild', '-bb', '--define', "_topdir $rpmBaseDir", "${project.name}.rpmspec"
+}
+
 task integrationTest(type: Test) {
     description = "Run all integration tests"
     testClassesDir = sourceSets.integrationTest.output.classesDir
@@ -135,7 +151,6 @@ task integrationTest(type: Test) {
     }
 }
 check.dependsOn(integrationTest)
-
 
 task stage(type: Copy, dependsOn: [clean, assemble]) {
     from jar.archivePath
