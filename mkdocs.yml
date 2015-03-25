@@ -18,6 +18,7 @@ pages:
 - ['desenvolvimento/execucao.md', 'Desenvolvimento', 'Execução']
 - ['desenvolvimento/testes.md', 'Desenvolvimento', 'Testes']
 - ['desenvolvimento/bugs.md', 'Desenvolvimento', 'Bugs']
+- ['desenvolvimento/arquitetura.md', 'Desenvolvimento', 'Arquitetura']
 - ['desenvolvimento/requisitos-nao-funcionais.md', 'Desenvolvimento', 'Requisitos Não-Funcionais']
 - ['sobre/links.md', 'Sobre o projeto', 'Referências']
 - ['sobre/autores.md', 'Sobre o projeto', 'Autores']

@@ -1,4 +1,4 @@
-Documento de Arquitetura
+Arquitetura
 ====
 
 Definição das camadas
