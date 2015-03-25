@@ -61,7 +61,6 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
-    compile 'org.springframework:spring-oxm'
 
     compile 'org.jolokia:jolokia-osgi:1.2.2'
     compile 'org.pegdown:pegdown:1.4.2'
