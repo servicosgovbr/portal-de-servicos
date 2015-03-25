@@ -4,6 +4,8 @@ echo 'Atualizando repositório Yum'
 yum makecache fast -y
 yum update -y
 
+sudo yum install rpm-build -y
+
 mkdir -p 'gds'
 pushd 'gds'
   if [ -f 'jdk-8u40-linux-x64.rpm' ]; then
