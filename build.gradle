@@ -120,10 +120,6 @@ assets {
     compileDir = staticAssets
 }
 
-jar {
-    baseName = 'guia-de-servicos'
-}
-
 clean << {
     project.file('app.jar').delete()
 }
