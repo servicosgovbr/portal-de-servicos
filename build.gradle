@@ -173,19 +173,33 @@ task stage(type: Copy, dependsOn: [clean, assemble]) {
 stage.mustRunAfter(clean)
 
 task watchAssets << {
+    def assetsSrcFolder = new File(mainAssets)
+    def lastCompilationByPath = [:]
+
+    def shouldCompileAssets = {
+        def shouldCompile = false
+
+        assetsSrcFolder.traverse {
+            def lastCompilation = lastCompilationByPath[it.absolutePath] ?: 0
+            shouldCompile = shouldCompile || lastCompilation < it.lastModified()
+            lastCompilationByPath[it.absolutePath] = it.lastModified()
+        }
+
+        shouldCompile
+    }
+
+    shouldCompileAssets() // Just fetch the last modified timestamp
+
     AssetPipelineConfigHolder.registerResolver(new FileSystemAssetResolver('application', mainAssets))
     def compiler = new AssetCompiler([compileDir: staticAssets])
-
-    WatchService watch = FileSystems.getDefault().newWatchService()
-    Paths.get(mainAssets).register(watch, [ENTRY_CREATE, ENTRY_MODIFY, ENTRY_DELETE] as WatchEvent.Kind[], HIGH);
 
     Thread.startDaemon {
         while(true) {
             try {
-                def key = watch.take(); key.pollEvents(); key.reset()
-                compiler.compile()
-            } catch(Exception e) {
-                println(e)
+                if (shouldCompileAssets()) compiler.compile()
+                Thread.sleep(500)
+            } catch(any) {
+                println any
             }
         }
     }
