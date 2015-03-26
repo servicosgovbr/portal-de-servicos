@@ -20,6 +20,10 @@ body.contraste {
     color: #fff !important;
   }
 
+  * :focus {
+    outline-color: white;
+  }
+
   .portletHeader,
   #capacho .doormatColumn {
     border-color: #fff !important;
