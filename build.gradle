@@ -78,8 +78,8 @@ dependencies {
 }
 
 def ignoredSources = [
-        "br/gov/servicos/legado/**/*Type*",
-        "br/gov/servicos/legado/**/ObjectFactory.class"
+    "br/gov/servicos/legado/**/*Type*",
+    "br/gov/servicos/legado/**/ObjectFactory.class"
 ]
 
 test {
@@ -125,19 +125,30 @@ clean << {
 }
 
 def rpmBaseDir = file("$buildDir/rpmbuild")
-def rpmDirs = files("$rpmBaseDir/RPMS", "$rpmBaseDir/SRPMS", "$rpmBaseDir/BUILD","$rpmBaseDir/SOURCES","$rpmBaseDir/SPECS")
+def rpmDirs = files(
+    "$rpmBaseDir/RPMS",
+    "$rpmBaseDir/SRPMS",
+    "$rpmBaseDir/BUILD",
+    "$rpmBaseDir/SOURCES",
+    "$rpmBaseDir/SPECS"
+)
+
 task prepareRpm(type:Copy) {
     delete(rpmBaseDir)
     rpmDirs.each {f -> f.mkdirs()}
 
-    from "$buildDir/distributions/"
-    include "*.tar"
+    from "$buildDir/libs"
+    include "${project.name}-${version}.jar"
     into "$rpmBaseDir/SOURCES"
 }
 
 task buildRpm(type:Exec) {
-    dependsOn distTar, prepareRpm
-    commandLine 'rpmbuild', '-bb', '--define', "_topdir $rpmBaseDir", "${project.name}.rpmspec"
+    dependsOn assemble, prepareRpm
+    commandLine 'rpmbuild',
+            '-v', '-bb',
+            '--define', "_topdir $rpmBaseDir",
+            "--define", "version ${version.replace('-SNAPSHOT', '')}",
+            "${project.name}.rpmspec"
 }
 
 task integrationTest(type: Test) {

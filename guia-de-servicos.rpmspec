@@ -1,40 +1,50 @@
 Name:               guia-de-servicos
-Version:            1.0.0
-Release:            1%{?dist}
+Version:            %{version}
+Release:            1
 Summary:            Guia de Serviços do Governo Federal do Brasil
 Group:              Applications
 License:            MIT
 Vendor:             ThoughtWorks, Inc
-URL:                http://servicos.gov.br
+URL:                http://github.com/servicosgovbr/guia-de-servicos
 BuildRoot:          %{builddir}
-Prefix:             /usr/local
+Prefix:             /opt/guia-de-servicos
 BuildArchitectures: noarch
 Requires:           jdk1.8.0_40, elasticsearch
-Source:             %{sourcedir}
-
+Source:             %{_sourcedir}/guia-de-servicos-%{version}-SNAPSHOT.jar
 
 %description
 Guia de Serviços do Governo Federal do Brasil
 
 %prep
-%setup -q
 
 %build
 
 %install
-mkdir -p %{buildroot}/%{prefix}/%{name}
-mkdir -p %{buildroot}/%{prefix}/%{name}/%{_javadir}
+# JAR principal
+mkdir -p %{buildroot}/%{prefix}/lib
+cp %{_sourcedir}/guia-de-servicos-%{version}-SNAPSHOT.jar %{buildroot}/%{prefix}/lib/guia-de-servicos-%{version}.jar
+
+# Configurações e variáveis de ambiente
+mkdir -p %{buildroot}/etc/default
+cat <<-EOF > %{buildroot}/etc/default/guia-de-servicos
+# Variáveis de ambiente para configuração do Guia de Serviços
+
+# Ativa os perfis "production" e "cluster" na configuração do Spring.
+# - production: desliga o Jolokia, protege URLs sensíveis
+# - cluster: conecta a um ElasticSearch externo (desliga o ElasticSearch embarcado)
+SPRING_PROFILES_ACTIVE=production,cluster
+
+EOF
+
+# Script para iniciar o processo
+mkdir -p %{buildroot}/etc/init.d
+
 
 %files
-%{name}/%{_javadir}/%{name}.jar
-%{name}%/%{name}
+%{prefix}/lib/guia-de-servicos-%{version}.jar
 
-%doc
-
-%changelog
-* Wed Mar 25 2015 Jean Kirchner <jkirchne@thoughtworks.com> - 1.0-1
-- Primeira versão
+%config
+/etc/default/guia-de-servicos
 
 %clean
 rm -rf %{buildroot}
-
