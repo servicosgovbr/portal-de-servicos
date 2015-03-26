@@ -1,10 +1,7 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
-import br.gov.servicos.servico.AreaDeInteresse;
-import br.gov.servicos.servico.CanalDePrestacao;
-import br.gov.servicos.servico.Orgao;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 import com.github.slugify.Slugify;
@@ -59,7 +56,16 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
                 .withPublicosAlvo(publicoAlvo(legado))
                 .withLinhasDaVida(linhasDaVida(legado))
                 .withCanaisDePrestacao(canaisDePrestacao(legado))
+                .withInformacoesUteis(informacoesUteis(legado))
                 .withEventosDasLinhasDaVida(eventosDasLinhasDaVida(legado));
+    }
+
+    @SuppressWarnings("unchecked")
+    private List<InformacaoUtil> informacoesUteis(ServicoType legado) {
+        return parser.parseExpression("informacoesUteis?.content?.![" +
+                "new br.gov.servicos.servico.InformacaoUtil(value?.descricao, value?.tipoInformacaoUtil?.titulo, value?.url)" +
+                "]")
+                .getValue(context(legado), List.class);
     }
 
     @SuppressWarnings("unchecked")
