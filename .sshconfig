@@ -1,0 +1,18 @@
+ChallengeResponseAuthentication no
+Compression yes
+CompressionLevel 9
+ForwardAgent yes
+GSSAPIAuthentication no
+KbdInteractiveAuthentication no
+PasswordAuthentication no
+PubkeyAuthentication yes
+RSAAuthentication no
+RequestTTY auto
+RhostsRSAAuthentication no
+StrictHostKeyChecking no
+
+Host alpha
+  HostName 52.10.77.245
+  IdentityFile ./secrets/guiaservicos.pem
+  User ec2-user
+
