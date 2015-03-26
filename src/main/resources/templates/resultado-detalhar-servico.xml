@@ -63,5 +63,13 @@
             </canalDePrestacao>
         </canaisDePrestacao>
 
+        <informacoesUteis>
+            <informacaoUtil th:each="info : ${servico.informacoesUteis}">
+                <tipo th:text="${info.tipo}"></tipo>
+                <url th:text="${info.url}"></url>
+                <descricao th:text="${info.descricao}"></descricao>
+            </informacaoUtil>
+        </informacoesUteis>
+
     </servico>
 </resultadoDetalharServico>
