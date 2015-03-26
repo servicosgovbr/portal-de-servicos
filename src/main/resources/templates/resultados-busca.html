@@ -17,8 +17,25 @@
 <div layout:fragment="corpo">
 
     <div class="row">
-        <div class="cell width-16 position-0">
 
+        <div class="cell width-16 position-0" th:if="${resultados.isEmpty()}">
+            <h1>Nenhum resultado</h1>
+
+            <p>
+                Não foram encontrados serviços com o termo "<span th:text="${termo}"></span>".
+            </p>
+            <p>
+                Sugestões:
+            </p>
+            <ul>
+                <li>Certifique-se de que todos os termos estão grafados corretamente</li>
+                <li>Tente palavras-chave diferentes</li>
+                <li>Tente palavras-chave mais genéricas</li>
+                <li>Tente menos palavras-chave</li>
+            </ul>
+        </div>
+
+        <div class="cell width-16 position-0" th:unless="${resultados.isEmpty()}">
             <h1>Resultados da busca por "<span th:text="${termo}">termo</span>"</h1>
 
             <ul id="resultados-busca">
