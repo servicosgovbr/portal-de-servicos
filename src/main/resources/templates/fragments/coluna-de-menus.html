@@ -1,10 +1,10 @@
-<div id="navegacao">
+<aside id="navegacao">
     <span class="menuTrigger">Menu</span>
 
-    <div>
+    <nav>
         <div layout:fragment="menu-contexto"></div>
         <div th:replace="fragments/categorias :: .portlet"></div>
         <div th:replace="fragments/publicos-alvo :: .portlet"></div>
         <div th:replace="fragments/outras-navegacoes :: .portlet"></div>
-    </div>
-</div>
+    </nav>
+</aside>
