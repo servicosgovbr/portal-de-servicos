@@ -38,6 +38,8 @@
         <div class="cell width-16 position-0" th:unless="${resultados.isEmpty()}">
             <h1>Resultados da busca por "<span th:text="${termo}">termo</span>"</h1>
 
+            <p><span th:text="${resultados.size()}">0</span> resultados encontrados</p>
+
             <ul id="resultados-busca">
                 <li th:each="resultado : ${resultados}">
                     <span th:replace="fragments/resultado-busca-servico(servico=${resultado})"/>
