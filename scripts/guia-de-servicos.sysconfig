@@ -1,0 +1,8 @@
+# Configz for fixtures service
+ 
+JAVA_USER="root"
+JAVA_STDOUT="/var/log/pronet/guia-de-servicos.log"
+JAVA_STDERR="/var/log/pronet/guia-de-servicos.log"
+JAVA_BIN="java"
+JAVA_APPDIR="/opt/guia-de-servicos"
+ARG1="-jar /opt/guia-de-servicos/lib/guia-de-servicos.jar"
