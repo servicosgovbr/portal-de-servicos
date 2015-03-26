@@ -139,6 +139,7 @@ dl.portlet {
     border-bottom: none;
     text-transform: none;
     line-height: 1.1em;
+    color: red;
   }
 
   h2 {
@@ -264,7 +265,7 @@ body.contraste .busca-principal {
 .busca-principal {
   background-color: #e5e8ea;
   padding: 15px;
-  font-family: Open Sans, arial, sans-serif;
+  font-family: 'open_sansregular', $helvetica;
   border-top: 4px solid #a8a7a7;
 
   > p {
@@ -292,7 +293,7 @@ body.contraste .busca-principal {
       color: #fff;
       background-color: #7d7d7d;
       display: block;
-      font-family: Open Sans, arial, sans-serif;
+      font-family: 'open_sansregular', $helvetica;
       border: 1px solid #7d7d7d;
       border-radius: 4px;
       font-weight: bold;
