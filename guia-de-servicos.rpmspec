@@ -43,12 +43,26 @@ SPRING_PROFILES_ACTIVE=production,cluster
 
 EOF
 
+mkdir -p %{buildroot}/etc/systemd/system
+cat <<-EOF > %{buildroot}/etc/systemd/system/%{name}.service
+[Unit]
+Description=Guia de Serviços
+
+[Service]
+ExecStart=/bin/sh -c 'source /etc/default/guia-de-servicos; java -jar /opt/guia-de-servicos/lib/guia-de-servicos.jar'
+User=root
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
 # Script para iniciar o processo
 mkdir -p %{buildroot}/etc/init.d
 
-
 %files
 %{prefix}/lib/%{name}.jar
+/etc/systemd/system/%{name}.service
 
 %config
 /etc/default/%{name}
