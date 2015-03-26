@@ -1,3 +1,9 @@
+#rpmbuild altera formato de compressão e isso da problemas ao rodar o jar
+#http://stackoverflow.com/questions/9292243/rpmbuild-change-compression-format
+#https://groups.google.com/forum/#!topic/linux.redhat.rpm/TKz6JZHK0ck
+%define __os_install_post %{nil}
+%define _binary_payload w9.gzdio
+
 Name:               guia-de-servicos
 Version:            %{version}
 Release:            1
