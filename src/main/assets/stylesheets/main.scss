@@ -61,7 +61,7 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   .outstanding-header h2 {
-    font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+    font-family: 'open_sansregular', $helvetica;
   }
 
   .tile .outstanding-header .outstanding-title {
@@ -81,7 +81,7 @@ $mobile: new-breakpoint(max-width 500px 4);
     background-position: right 50%;
     text-align: right;
     text-transform: uppercase;
-    font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+    font-family: 'open_sansregular', $helvetica;
     line-height: 1.2em;
   }
 
@@ -145,14 +145,14 @@ dl.portlet {
   h2 {
     margin: 0;
     margin-bottom: .5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'open_sansregular', $helvetica;
     line-height: 1.345em;
   }
 
   h3 {
     margin: 0;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'open_sansregular', $helvetica;
     line-height: 1.2em;
   }
 
