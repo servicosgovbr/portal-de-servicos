@@ -7,10 +7,11 @@ License:            MIT
 Vendor:             ThoughtWorks, Inc
 URL:                http://github.com/servicosgovbr/guia-de-servicos
 BuildRoot:          %{builddir}
-Prefix:             /opt/guia-de-servicos
+Prefix:             /opt/%{name}
 BuildArchitectures: noarch
 Requires:           jdk1.8.0_40, elasticsearch
-Source:             %{_sourcedir}/guia-de-servicos-%{version}-SNAPSHOT.jar
+
+Source0:             %{_sourcedir}/%{name}-%{version}-SNAPSHOT.jar
 
 %description
 Guia de Serviços do Governo Federal do Brasil
@@ -22,11 +23,11 @@ Guia de Serviços do Governo Federal do Brasil
 %install
 # JAR principal
 mkdir -p %{buildroot}/%{prefix}/lib
-cp %{_sourcedir}/guia-de-servicos-%{version}-SNAPSHOT.jar %{buildroot}/%{prefix}/lib/guia-de-servicos-%{version}.jar
+cp %SOURCE0 %{buildroot}/%{prefix}/lib/%{name}.jar
 
 # Configurações e variáveis de ambiente
 mkdir -p %{buildroot}/etc/default
-cat <<-EOF > %{buildroot}/etc/default/guia-de-servicos
+cat <<-EOF > %{buildroot}/etc/default/%{name}
 # Variáveis de ambiente para configuração do Guia de Serviços
 
 # Ativa os perfis "production" e "cluster" na configuração do Spring.
@@ -41,10 +42,10 @@ mkdir -p %{buildroot}/etc/init.d
 
 
 %files
-%{prefix}/lib/guia-de-servicos-%{version}.jar
+%{prefix}/lib/%{name}.jar
 
 %config
-/etc/default/guia-de-servicos
+/etc/default/%{name}
 
 %clean
 rm -rf %{buildroot}
