@@ -3,8 +3,7 @@
 echo 'Atualizando repositório Yum'
 yum makecache fast -y
 yum update -y
-
-sudo yum install rpm-build -y
+yum install rpm-build -y
 
 mkdir -p 'gds'
 pushd 'gds'
@@ -20,7 +19,7 @@ pushd 'gds'
       'http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40-linux-x64.rpm'
   fi
 
-  (rpm -qa | grep -q jdk1.8.0_40-1.8.0_40-fcs.x86_64) || \
+  $(rpm -qa | grep -q jdk1.8.0_40-1.8.0_40-fcs.x86_64) || \
     (echo 'Instalando JDK' && rpm -Uvh 'jdk-8u40-linux-x64.rpm')
 
   $(java -version 2>&1 | grep -q "1.8.0_40") || \
