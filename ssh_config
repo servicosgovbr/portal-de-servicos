@@ -1,0 +1,4 @@
+Host hom
+    IdentityFile ./secrets/guiaservicos.pem
+    HostName 52.10.77.245
+    User ec2-user
