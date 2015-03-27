@@ -12,3 +12,6 @@ instalar_jdk
 instalar_elasticsearch
 
 hostname $1
+firewall-cmd --permanent --add-port 9200/tcp
+firewall-cmd --permanent --add-port 9300/tcp
+firewall-cmd --reload

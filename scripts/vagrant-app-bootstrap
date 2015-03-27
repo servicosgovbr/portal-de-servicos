@@ -11,3 +11,5 @@ yum install lsof git rpm-build -y
 instalar_jdk
 
 hostname $1
+firewall-cmd --permanent --add-port 80/tcp
+firewall-cmd --reload
