@@ -50,7 +50,7 @@ Description=Guia de Serviços
 
 [Service]
 ExecStart=/bin/sh -c 'source /etc/default/guia-de-servicos; java -jar /opt/guia-de-servicos/lib/guia-de-servicos.jar'
-User=root
+User=guiaservicos
 TimeoutSec=300
 
 [Install]
@@ -69,3 +69,10 @@ mkdir -p %{buildroot}/etc/init.d
 
 %clean
 rm -rf %{buildroot}
+
+%pre
+getent group guiaservicos >/dev/null || groupadd -r guiaservicos
+getent passwd guiaservicos >/dev/null || \
+    useradd -r -g guiaservicos -d /home/guiaservicos -s /sbin/nologin \
+    -c "Usuário para o serviço do Guia de Serviços" guiaservicos
+exit 0
