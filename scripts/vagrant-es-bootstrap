@@ -10,3 +10,5 @@ yum install lsof git rpm-build -y
 
 instalar_jdk
 instalar_elasticsearch
+
+hostname $1

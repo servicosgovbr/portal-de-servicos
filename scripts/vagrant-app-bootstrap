@@ -9,3 +9,5 @@ yum update -y
 yum install lsof git rpm-build -y
 
 instalar_jdk
+
+hostname $1
