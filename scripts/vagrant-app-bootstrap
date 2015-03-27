@@ -8,7 +8,4 @@ yum remove puppet -y
 yum update -y
 yum install git rpm-build -y
 
-mkdir -p 'gds'
-pushd 'gds'
-  instalar_jdk
-popd
+instalar_jdk

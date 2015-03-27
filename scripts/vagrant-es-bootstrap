@@ -8,8 +8,5 @@ yum remove puppet -y
 yum update -y
 yum install git rpm-build -y
 
-mkdir -p 'gds'
-pushd 'gds'
-  instalar_jdk
-  instalar_elasticsearch
-popd
+instalar_jdk
+instalar_elasticsearch
