@@ -11,12 +11,6 @@ RequestTTY auto
 RhostsRSAAuthentication no
 StrictHostKeyChecking no
 
-Host alpha
-  HostName 52.10.77.245
-  IdentityFile ./secrets/guiaservicos.pem
-  IdentityFile ./guiaservicos.pem
-  User ec2-user
-
 Host app-vagrant
   Hostname localhost
   User vagrant
