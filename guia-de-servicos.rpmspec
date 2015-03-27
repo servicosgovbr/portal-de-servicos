@@ -40,7 +40,7 @@ cat <<-EOF > %{buildroot}/etc/default/%{name}
 # Ativa os perfis "production" e "cluster" na configuração do Spring.
 # - production: desliga o Jolokia, protege URLs sensíveis
 # - cluster: conecta a um ElasticSearch externo (desliga o ElasticSearch embarcado)
-SPRING_PROFILES_ACTIVE=production,cluster
+SPRING_PROFILES_ACTIVE=production
 
 EOF
 
