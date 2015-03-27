@@ -4,8 +4,6 @@ public interface Profiles {
 
     String PRODUCTION = "production";
 
-    String STANDALONE = "standalone";
-
-    String NOT = "!";
+    String CLUSTER = "cluster";
 
 }
