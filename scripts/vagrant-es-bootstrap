@@ -6,10 +6,13 @@ echo 'Atualizando repositório Yum'
 yum makecache fast -y
 yum remove puppet -y
 yum update -y
-yum install lsof git rpm-build -y
+yum install lsof git rpm-build augeas-y
+
+# Remove obrigação de TTY para sudoers em deployments automáticos
+augtool set '/files/etc/sudoers/Defaults[*]/requiretty/negate' ''
 
 instalar_jdk
-instalar_elasticsearch
+instalar_elasticsearch $1
 
 echo "Modificando hostname para '${1}'..."
 hostname $1

@@ -1,0 +1,4 @@
+spring:
+  data:
+    elasticsearch:
+      clusterNodes: 10.133.133.22:9300,10.133.133.33:9300
