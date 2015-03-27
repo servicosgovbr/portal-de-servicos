@@ -14,11 +14,15 @@ Vagrant.configure('2') do |config|
 
   config.vm.define 'es1' do |es|
     es.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant-es-bootstrap'
+    es.vm.network 'forwarded_port', guest: 9200, host: 9201
+    es.vm.network 'forwarded_port', guest: 9300, host: 9301
     es.vm.network 'private_network', ip: '10.133.133.22'
   end
 
   config.vm.define 'es2' do |es|
     es.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant-es-bootstrap'
+    es.vm.network 'forwarded_port', guest: 9300, host: 9302
+    es.vm.network 'forwarded_port', guest: 9300, host: 9302
     es.vm.network 'private_network', ip: '10.133.133.33'
   end
 
