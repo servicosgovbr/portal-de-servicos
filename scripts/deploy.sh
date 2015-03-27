@@ -1,8 +1,7 @@
-echo 'Parando Guia de Serviços'
-systemctl stop guia-de-servicos
+echo 'Instalando novo Guia de Serviços'
 
 rpm -Uvh $(find guia-de-servicos*.rpm -type f)
 
 systemctl daemon-reload
-systemctl start guia-de-servicos
+systemctl restart guia-de-servicos
 
