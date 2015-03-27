@@ -6,6 +6,6 @@ echo 'Atualizando repositório Yum'
 yum makecache fast -y
 yum remove puppet -y
 yum update -y
-yum install git rpm-build -y
+yum install lsof git rpm-build -y
 
 instalar_jdk
