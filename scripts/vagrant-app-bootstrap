@@ -10,6 +10,11 @@ yum install lsof git rpm-build -y
 
 instalar_jdk
 
+echo "Modificando hostname para '${1}'..."
 hostname $1
+
+echo 'Abrindo porta 80 no firewall...'
 firewall-cmd --permanent --add-port 80/tcp
+
+echo 'Salvando alterações do firewall...'
 firewall-cmd --reload

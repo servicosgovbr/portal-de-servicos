@@ -11,7 +11,12 @@ yum install lsof git rpm-build -y
 instalar_jdk
 instalar_elasticsearch
 
+echo "Modificando hostname para '${1}'..."
 hostname $1
+
+echo 'Abrindo portas 9200 e 9300 no firewall...'
 firewall-cmd --permanent --add-port 9200/tcp
 firewall-cmd --permanent --add-port 9300/tcp
+
+echo 'Salvando alterações do firewall...'
 firewall-cmd --reload
