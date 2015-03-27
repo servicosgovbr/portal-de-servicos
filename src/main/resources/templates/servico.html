@@ -16,9 +16,7 @@
 </span>
 
 <span layout:fragment="link-migalha-de-pao">
-    <a th:href="@{/servico/{id}(id=${servico.id})}" itemprop="url">
-        <span th:text="${servico.titulo}" itemprop="title">Nome do Serviço</span>
-    </a>
+    <span th:text="${servico.titulo}" itemprop="title">Nome do Serviço</span>
 </span>
 
 <span layout:fragment="menu-contexto"

@@ -13,9 +13,7 @@
 </span>
 
 <span layout:fragment="link-migalha-de-pao">
-    <a th:href="@{/publico-alvo/{id}?letra={letra}(id=${publicoAlvo.id}, letra=${letraAtiva})}" itemprop="url">
-        <span th:text="${letraAtiva}" itemprop="title">Letra filtrada</span>
-    </a>
+	<span th:text="${letraAtiva}" itemprop="title">Letra filtrada</span>
 </span>
 
 <div layout:fragment="corpo">

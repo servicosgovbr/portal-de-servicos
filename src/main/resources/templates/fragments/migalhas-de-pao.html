@@ -1,22 +1,29 @@
 <div id="migalhas-de-pao">
-
     <span class="voce-esta-aqui">
         Você está aqui:
     </span>
-    <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-    <span>
-        <a href="/" itemprop="url"><span itemprop="title">Página Inicial</span></a>
-    </span>
 
-    <th:block th:unless="${#httpServletRequest.requestURI} == '/'">
-        <span class="separador">&gt;</span>
-        <span layout:fragment="link-migalha-de-pao-pai" itemprop="title">
-            Especiais
+    <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span>
+            <a href="/" itemprop="url">
+                <span itemprop="title">Página Inicial</span>
+            </a>
         </span>
 
-        <span class="separador">&gt;</span>
-        <span layout:fragment="link-migalha-de-pao"></span>
+        <th:block th:unless="${#httpServletRequest.requestURI} == '/'">
+            <span class="separador">&gt;</span>
 
-    </th:block>
+            <span layout:fragment="link-migalha-de-pao-pai" itemprop="title">
+                Especiais
+            </span>
+
+            <span class="separador">&gt;</span>
+
+            <span>
+                <a href="" itemprop="url">
+                    <span itemprop="title" layout:fragment="link-migalha-de-pao"></span>
+                </a>
+            </span>
+        </th:block>
     </span>
 </div>
