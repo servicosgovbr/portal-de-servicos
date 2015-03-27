@@ -3,6 +3,7 @@
 #https://groups.google.com/forum/#!topic/linux.redhat.rpm/TKz6JZHK0ck
 %define __os_install_post %{nil}
 %define _binary_payload w9.gzdio
+%define _user guiaservicos
 
 Name:               guia-de-servicos
 Version:            %{version}
@@ -15,7 +16,7 @@ URL:                http://github.com/servicosgovbr/guia-de-servicos
 BuildRoot:          %{builddir}
 Prefix:             /opt/%{name}
 BuildArchitectures: noarch
-Requires:           jdk1.8.0_40, elasticsearch
+Requires:           jdk1.8.0_40
 
 Source0:             %{_sourcedir}/%{name}-%{version}-SNAPSHOT.jar
 
@@ -49,12 +50,29 @@ cat <<-EOF > %{buildroot}/etc/systemd/system/%{name}.service
 Description=Guia de Serviços
 
 [Service]
-ExecStart=/bin/sh -c 'source /etc/default/guia-de-servicos; java -jar /opt/guia-de-servicos/lib/guia-de-servicos.jar'
-User=guiaservicos
+ExecStart=/bin/sh -c 'source /etc/default/guia-de-servicos; java -jar /opt/guia-de-servicos/lib/guia-de-servicos.jar > /var/log/%{name}/%{name}.log'
+User=%{_user}
 TimeoutSec=300
 
 [Install]
 WantedBy=multi-user.target
+EOF
+
+mkdir -p %{buildroot}/var/log/%{name}
+mkdir -p %{buildroot}/etc/logrotate.d
+
+cat <<-EOF > %{buildroot}/etc/logrotate.d/%{name}
+/var/log/%{name}/*.log {
+    missingok
+    notifempty
+    daily
+    rotate 100
+    compress
+    delaycompress
+    create 640 root adm
+    sharedscripts
+    create 0640 %{_user} %{_user}
+}
 EOF
 
 # Script para iniciar o processo
@@ -63,16 +81,18 @@ mkdir -p %{buildroot}/etc/init.d
 %files
 %{prefix}/lib/%{name}.jar
 /etc/systemd/system/%{name}.service
+%dir %attr(0755, %{_user}, %{_user}) /var/log/%{name}
 
 %config
 /etc/default/%{name}
+/etc/logrotate.d/%{name}
 
 %clean
 rm -rf %{buildroot}
 
 %pre
-getent group guiaservicos >/dev/null || groupadd -r guiaservicos
-getent passwd guiaservicos >/dev/null || \
-    useradd -r -g guiaservicos -d /home/guiaservicos -s /sbin/nologin \
-    -c "Usuário para o serviço do Guia de Serviços" guiaservicos
+getent group %{_user} >/dev/null || groupadd -r %{_user}
+getent passwd %{_user} >/dev/null || \
+    useradd -r -g %{_user} -d /home/%{_user} -s /sbin/nologin \
+    -c "Usuário para o serviço do Guia de Serviços" %{_user}
 exit 0
