@@ -2,6 +2,9 @@
 
 source "$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)/common-bootstrap-functions"
 
+echo 'Parando Guia de Serviços'
+systemctl stop guia-de-servicos
+
 echo 'Atualizando repositório Yum'
 yum makecache fast -y
 yum remove puppet -y
@@ -11,3 +14,6 @@ yum install lsof git wget rpm-build -y
 instalar_jdk
 
 rpm -Uvh $(find guia-de-servicos*.rpm -type f)
+
+systemctl daemon-reload
+systemctl start guia-de-servicos
