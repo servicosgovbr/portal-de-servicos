@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source "$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)/common-bootstrap-functions"
+
+echo 'Atualizando repositório Yum'
+yum makecache fast -y
+yum remove puppet -y
+yum update -y
+yum install git rpm-build -y
+
+mkdir -p 'gds'
+pushd 'gds'
+  instalar_jdk
+popd

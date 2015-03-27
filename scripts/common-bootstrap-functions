@@ -1,14 +1,8 @@
-#!/bin/env sh
+#!/bin/bash
 
-echo 'Atualizando repositório Yum'
-yum makecache fast -y
-yum update -y
-yum install git rpm-build -y
-
-mkdir -p 'gds'
-pushd 'gds'
+function instalar_jdk() {
   if [ -f 'jdk-8u40-linux-x64.rpm' ]; then
-    echo 'Java 8 já foi baixado'
+    echo 'JDK já foi baixado'
   else
     echo 'Baixando JDK'
     wget -c \
@@ -23,8 +17,10 @@ pushd 'gds'
     (echo 'Instalando JDK' && rpm -Uvh 'jdk-8u40-linux-x64.rpm')
 
   $(java -version 2>&1 | grep -q "1.8.0_40") || \
-    (echo "JDK não foi instalada corretamente" && exit -1)
+    (echo "JDK não foi instalado corretamente" && exit -1)
+}
 
+function instalar_elasticsearch() {
   if [ -f elasticsearch-1.5.0.noarch.rpm ]; then
     echo 'ElasticSearch já foi baixado'
   else
@@ -35,9 +31,11 @@ pushd 'gds'
       https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.5.0.noarch.rpm
   fi
 
-  (rpm -qa | grep -q elasticsearch-1.5.0-1.noarch) || \
+  $(rpm -qa | grep -q elasticsearch-1.5.0-1.noarch) || \
     (echo 'Instalando ElasticSearch' && rpm -Uvh elasticsearch-1.5.0.noarch.rpm)
+
 
   systemctl daemon-reload
   systemctl enable elasticsearch.service
-popd
+  systemctl start elasticsearch.service
+}
