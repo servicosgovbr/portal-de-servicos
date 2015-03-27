@@ -1,37 +1,6 @@
 <div id="barra-feedback">
     <p>
-        Ainda estamos trabalhando neste site. Para dar a sua opinião e nos ajudar a melhorar ainda mais, por favor <a href="/feedback">clique aqui</a>.
+        Ainda estamos trabalhando neste site. Para dar a sua opinião e nos ajudar a melhorar ainda mais, por favor
+        <a th:href="@{/feedback(url=${#httpServletRequest.requestURI}, ticket=${#httpServletRequest.getAttribute('req.ticket').substring(24)}, busca=${#httpServletRequest.queryString})}">clique aqui</a>.
     </p>
-</div>
-
-<div id="formulario" class="hidden">
-    <p>
-        Por favor, não inclua nenhuma informação pessoal ou financeira, como seus documentos ou dados de cartão
-        de crédito.
-    </p>
-
-    <form accept-charset="UTF-8" action="/feedback" method="post">
-        Você encontrou o que estava procurando?
-
-        <p>
-            <input name="conteudoEncontrado" id="sim" type="radio" value="true" required="required"/>
-            <label for="sim">Sim</label><br/>
-
-            <input name="conteudoEncontrado" id="nao" type="radio" value="false"/>
-            <label for="nao">Não</label>
-        </p>
-
-        <p>
-            <label for="opiniao">Dê sua opinião:</label><br/>
-            <textarea id="opiniao" name="feedback" rows="10" cols="100"></textarea>
-        </p>
-
-        <input name="enviar" type="submit" class="acao" value="Enviar"/>
-
-        <input name="utf8" type="hidden" value="✓"/><!-- força utf8 -->
-        <input name="url" type="hidden" th:value="${#httpServletRequest.requestURI ?: ''}"/>
-        <input name="queryString" type="hidden" th:value="${#httpServletRequest.queryString ?: ''}"/>
-        <input name="ticket" type="hidden"
-               th:value="${#httpServletRequest.getAttribute('req.ticket').substring(24)}"/>
-    </form>
 </div>

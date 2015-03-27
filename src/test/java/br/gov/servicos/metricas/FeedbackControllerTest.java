@@ -8,11 +8,16 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.anyLong;
 import static org.mockito.Mockito.verify;
+import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValues;
+import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
@@ -29,6 +34,21 @@ public class FeedbackControllerTest {
     @Before
     public void setup() {
         controller = new FeedbackController(feedbacks);
+    }
+
+    @Test
+    public void deveRedirecionarParaOFormularioDeFeedBack() {
+        assertViewName(controller.formularioPara(null, null, null), "feedback");
+    }
+
+    @Test
+    public void deveRepassarDadosParaOFormulario() {
+        Map<String, Object> valores = new HashMap<>();
+        valores.put("url", "url-servico");
+        valores.put("ticket", TICKET);
+        valores.put("busca", "serviço buscado");
+
+        assertModelAttributeValues(controller.formularioPara("url-servico", TICKET, "serviço buscado"), valores);
     }
 
     @Test

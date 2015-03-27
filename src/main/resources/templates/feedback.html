@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout-verde">
+
+<head>
+    <title>De sua opinião</title>
+</head>
+<body>
+
+<span layout:fragment="link-migalha-de-pao">
+    <span itemprop="title">De sua opinião</span>
+</span>
+
+<div layout:fragment="corpo">
+
+    <div class="row">
+        <div class="cell width-16 position-0">
+
+            <h1>Nos ajude a melhorar o Guia de Serviços</h1>
+
+            <form accept-charset="UTF-8" action="/feedback" method="post">
+
+                <h2>Você encontrou o que estava procurando?</h2>
+
+                <p>
+                    <input name="conteudoEncontrado" id="sim" type="radio" value="true" required="required"/>
+                    <label for="sim">Sim</label><br/>
+
+                    <input name="conteudoEncontrado" id="nao" type="radio" value="false"/>
+                    <label for="nao">Não</label>
+                </p>
+
+                <h2>Dê sua opinião:</h2>
+
+                <p>
+                    Por favor, não inclua nenhuma informação pessoal ou financeira,
+                    como seus documentos ou dados de cartão de crédito.
+
+                    <textarea id="opiniao" name="feedback" rows="10" cols="100"></textarea>
+                </p>
+
+                <input name="enviar" type="submit" class="acao" value="Enviar"/>
+
+                <input name="utf8" type="hidden" value="✓"/><!-- força utf8 -->
+                <input name="url" type="hidden" th:value="${url}"/>
+                <input name="busca" type="hidden" th:value="${busca}"/>
+                <input name="ticket" type="hidden" th:value="${ticket}"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
