@@ -23,12 +23,10 @@
     <div th:replace="fragments/barra-brasil :: #barra-brasil"></div>
 
     <section id="main" role="main">
-        
         <div th:replace="fragments/migalhas-de-pao :: #migalhas-de-pao"></div>
         <div th:replace="fragments/coluna-de-menus :: #navegacao"></div>
-        
+
         <div id="conteudo" layout:fragment="corpo"></div>
-        <div th:replace="fragments/feedback :: #feedback"></div>
 
         <footer id="voltar-topo">
             <a href="#wrapper">Voltar para o topo</a>

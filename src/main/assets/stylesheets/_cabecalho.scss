@@ -13,7 +13,7 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   input.searchButton {
-    background-position: 0 2px; 
+    background-position: 0 2px;
     padding-right: 5px;
   }
 
@@ -35,7 +35,7 @@ $mobile: new-breakpoint(max-width 500px 4);
     font-family: 'open_sansregular', $helvetica;
     @include media($mobile) {
       display: none !important;
-      
+
     }
 
     a {
@@ -57,10 +57,9 @@ $mobile: new-breakpoint(max-width 500px 4);
     @include omega();
     padding-bottom: em(2);
     border-bottom: em(1) dotted #9bc2a3;
+
     @include media($mobile) {
       display: none !important;
-
-      
     }
 
     a {
@@ -153,7 +152,7 @@ $mobile: new-breakpoint(max-width 500px 4);
     }
   }
 
-  #barra-versao-antiga {
+  #barra-feedback {
     background-color: #e5e8ea;
 
     p {
