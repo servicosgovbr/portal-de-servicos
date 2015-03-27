@@ -16,3 +16,33 @@ Host alpha
   IdentityFile ./secrets/guiaservicos.pem
   User ec2-user
 
+Host app-vagrant
+  Hostname localhost
+  User vagrant
+  Port 2222
+  IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./secrets/server_ssh_key
+  LogLevel=quiet
+  UserKnownHostsFile=/dev/null
+  StrictHostKeyChecking=no
+
+Host es1-vagrant
+  Hostname localhost
+  User vagrant
+  Port 2200
+  IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./secrets/server_ssh_key
+  LogLevel=quiet
+  UserKnownHostsFile=/dev/null
+  StrictHostKeyChecking=no
+
+Host es2-vagrant
+  Hostname localhost
+  User vagrant
+  Port 2201
+  IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./secrets/server_ssh_key
+  LogLevel=quiet
+  UserKnownHostsFile=/dev/null
+  StrictHostKeyChecking=no
+
