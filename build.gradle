@@ -142,13 +142,37 @@ task prepareRpm(type:Copy) {
     into "$rpmBaseDir/SOURCES"
 }
 
-task buildRpm(type:Exec) {
+task buildRpm(type: Exec) {
     dependsOn assemble, prepareRpm
-    commandLine 'rpmbuild',
-            '-v', '-bb',
-            '--define', "_topdir $rpmBaseDir",
-            "--define", "version ${version.replace('-SNAPSHOT', '')}",
+
+    if (new File('/vagrant').exists()) {
+        commandLine 'bash', '-c',
+            "cd /vagrant && " +
+            "rpmbuild -v -bb " +
+            "--define '_topdir $rpmBaseDir' " +
+            "--define 'version ${version.replace('-SNAPSHOT', '')}' " +
             "${project.name}.rpmspec"
+    } else {
+        commandLine 'vagrant', 'ssh', 'app', '-c',
+            "cd /vagrant && " +
+            "rpmbuild -v -bb " +
+            "--define '_topdir /vagrant/build/rpmbuild' " +
+            "--define 'version ${version.replace('-SNAPSHOT', '')}' " +
+            "${project.name}.rpmspec"
+    }
+}
+
+task vagrantDeploy(type: Exec) {
+    dependsOn buildRpm
+
+    String cmd = "cd /vagrant && sudo bash ./scripts/vagrant-deploy " +
+            "build/rpmbuild/RPMS/noarch/${project.name}-${version.replace('-SNAPSHOT', '')}-1.noarch.rpm"
+
+    if (new File('/vagrant').exists()) {
+        commandLine 'bash', '-c', cmd
+    } else {
+        commandLine 'vagrant', 'ssh', 'app', '-c', cmd
+    }
 }
 
 task integrationTest(type: Test) {
