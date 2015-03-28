@@ -165,7 +165,7 @@ task buildRpm(type: Exec) {
 task vagrantDeploy(type: Exec) {
     dependsOn buildRpm
 
-    String cmd = "cd /vagrant && sudo bash ./scripts/vagrant-deploy " +
+    String cmd = "cd /vagrant && bash ./scripts/vagrant-deploy " +
             "build/rpmbuild/RPMS/noarch/${project.name}-${version.replace('-SNAPSHOT', '')}-1.noarch.rpm"
 
     if (new File('/vagrant').exists()) {

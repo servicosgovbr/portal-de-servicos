@@ -8,7 +8,7 @@
 Name:               guia-de-servicos
 Version:            %{version}
 Release:            1
-Summary:            Guia de Serviços do Governo Federal do Brasil
+Summary:            Guia de Serviços
 Group:              Applications
 License:            MIT
 Vendor:             ThoughtWorks, Inc
@@ -35,7 +35,7 @@ cp %SOURCE0 %{buildroot}/%{prefix}/lib/%{name}.jar
 # Configurações e variáveis de ambiente
 mkdir -p %{buildroot}/etc/default
 cat <<-EOF > %{buildroot}/etc/default/%{name}
-# Variáveis de ambiente para configuração do Guia de Serviços
+# Variáveis de ambiente para configuração do %{summary}
 
 # Ativa os perfis "production" e "cluster" na configuração do Spring.
 # - production: desliga o Jolokia, protege URLs sensíveis
@@ -47,10 +47,10 @@ EOF
 mkdir -p %{buildroot}/etc/systemd/system
 cat <<-EOF > %{buildroot}/etc/systemd/system/%{name}.service
 [Unit]
-Description=Guia de Serviços
+Description=%{summary}
 
 [Service]
-ExecStart=/bin/sh -c 'source /etc/default/guia-de-servicos; java -jar /opt/guia-de-servicos/lib/guia-de-servicos.jar > /var/log/%{name}/%{name}.log'
+ExecStart=/opt/%{name}/bin/%{name}
 User=%{_user}
 TimeoutSec=300
 
@@ -58,6 +58,7 @@ TimeoutSec=300
 WantedBy=multi-user.target
 EOF
 
+mkdir -p %{buildroot}/var/run/%{name}
 mkdir -p %{buildroot}/var/log/%{name}
 mkdir -p %{buildroot}/etc/logrotate.d
 
@@ -76,11 +77,22 @@ cat <<-EOF > %{buildroot}/etc/logrotate.d/%{name}
 EOF
 
 # Script para iniciar o processo
-mkdir -p %{buildroot}/etc/init.d
+mkdir -p %{buildroot}/%{prefix}/bin
+cat <<-EOF > %{buildroot}/%{prefix}/bin/%{name}
+#!/bin/bash
+
+pushd /var/run/%{name} > /dev/null
+  source /etc/default/%{name}
+  java -jar %{prefix}/lib/%{name}.jar > /var/log/%{name}/%{name}.log
+popd > /dev/null
+
+EOF
 
 %files
-%{prefix}/lib/%{name}.jar
-/etc/systemd/system/%{name}.service
+%attr(0755, %{_user}, %{_user}) %{prefix}/bin/%{name}
+%attr(0644, %{_user}, %{_user}) %{prefix}/lib/%{name}.jar
+%attr(0644, %{_user}, %{_user}) /etc/systemd/system/%{name}.service
+%dir %attr(0755, %{_user}, %{_user}) /var/run/%{name}
 %dir %attr(0755, %{_user}, %{_user}) /var/log/%{name}
 
 %config
