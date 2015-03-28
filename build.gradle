@@ -145,7 +145,7 @@ task prepareRpm(type:Copy) {
 task buildRpm(type: Exec) {
     dependsOn assemble, prepareRpm
 
-    if (new File('/vagrant').exists()) {
+    if (new File('/vagrant').exists() || System.getProperty("SNAP_CI").equals("true")) {
         commandLine 'bash', '-c',
             "cd /vagrant && " +
             "rpmbuild -v -bb " +
