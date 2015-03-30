@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)/common-bootstrap-functions"
+source "$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)/vagrant-bootstrap-functions"
 
 echo 'Atualizando repositório Yum'
 yum makecache fast -y
