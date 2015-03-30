@@ -1,8 +1,8 @@
 jQuery(document).ready(function($) {
 
   $('.portletNavigationTree .portletHeader').click(function() {
-    $(this).toggleClass('ativo');
     $(this).next().slideToggle();
+    $(this).find('i.fa').toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
   });
 
   var menuTrigger = $('.menuTrigger');
