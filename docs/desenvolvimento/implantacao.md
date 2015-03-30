@@ -33,9 +33,9 @@ No ambiente de desenvolvimento, também há um servidor de Integração Contínu
 
 #### Balanceador de Carga
 
-CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda um servidor [nginx] na porta 80, e um servidor [ssh] na porta 22.
+CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda um servidor [HAProxy] na porta 80, e um servidor [ssh] na porta 22.
 
-[nginx]:http://www.nginx.org
+[HAProxy]:http://www.haproxy.org/
 [ssh]:http://www.openssh.com/
 
 #### Servidores de Aplicação
@@ -70,9 +70,9 @@ Este ambiente contém 5 máquinas virtuais:
 
 #### Balanceador de Carga
 
-CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda um servidor [nginx] na porta 80, e um servidor [ssh] na porta 22.
+CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda um servidor [HAProxy] na porta 80, e um servidor [ssh] na porta 22.
 
-[nginx]:http://www.nginx.org
+[HAProxy]:http://www.haproxy.org/
 [ssh]:http://www.openssh.com/
 
 #### Servidores de Aplicação

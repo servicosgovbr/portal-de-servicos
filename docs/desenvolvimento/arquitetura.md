@@ -146,7 +146,7 @@ CPU, memória, distribuição geográfica, número de máquinas no cluster do [E
 
 ##### Qual a principal estratégia para escalar a aplicação: ampliando os nós de uma topologia fixa ou adicionando novos nós?
 
-Adicionando novos nós. O balanceamento de carga feito no [nginx] pode suportar quantos nós forem necessários, e as funcionalidades de _clustering_ do [ElasticSearch] lidam com a distribuição e _caching_ dos dados.
+Adicionando novos nós. O balanceamento de carga feito no [HAProxy] pode suportar quantos nós forem necessários, e as funcionalidades de _clustering_ do [ElasticSearch] lidam com a distribuição e _caching_ dos dados.
 
 ### Disponibilidade
 
@@ -484,10 +484,10 @@ Logs são gerados utilizando a biblioteca [Slf4j] e gravados conforme a configur
 
 ##### Servidores Web
 
-Utilizamos o [Apache Tomcat 8][Tomcat], embutido pelo [Spring-Boot], para a aplicação. Para balanceamento de carga e proxy/cache reverso, utilizamos o [nginx].
+Utilizamos o [Apache Tomcat 8][Tomcat], embutido pelo [Spring-Boot], para a aplicação. Para balanceamento de carga e proxy/cache reverso, utilizamos o [HAProxy].
 
 [Tomcat]:http://tomcat.apache.org/
-[nginx]:http://www.nginx.org/
+[HAProxy]:http://www.haproxy.org/
 
 ##### Repositórios, busca e acesso a dados
 
