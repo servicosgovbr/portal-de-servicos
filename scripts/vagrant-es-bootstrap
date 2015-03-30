@@ -6,7 +6,7 @@ echo 'Atualizando repositório Yum'
 yum makecache fast -y
 yum remove puppet -y
 yum update -y
-yum install lsof git rpm-build augeas -y
+yum install epel-release lsof git rpm-build augeas -y
 
 # Remove obrigação de TTY para sudoers em deployments automáticos
 augtool set '/files/etc/sudoers/Defaults[*]/requiretty/negate' ''
