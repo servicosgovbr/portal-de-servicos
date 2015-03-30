@@ -7,6 +7,6 @@
     <Contact>servicos@planejamento.gov.br</Contact>
     <Url type="text/html" th:attr="template=${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1/busca?q={searchTerms}')}"/>
     <Url type="application/json" th:attr="template=${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1/sugestao?q={searchTerms}')}"/>
-    <Image height="72" width="72" type="image/png">http://gds-alpha.herokuapp.com/img/touch_icon.png</Image>
+    <Image height="72" width="72" type="image/png">http://ec2-54-94-244-36.sa-east-1.compute.amazonaws.com/img/touch_icon.png</Image>
     <Developer>Ministério do Planejamento, Orçamento e Gestão - MPOG</Developer>
 </OpenSearchDescription>

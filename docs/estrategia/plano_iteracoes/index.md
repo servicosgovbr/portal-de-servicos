@@ -112,7 +112,7 @@ Referências:
 
 Snap-CI é uma ferramenta de integração contínua. Ela se integra ao Github permitindo que, a cada novo código submetido, uma nova versão da aplicação seja compilada, testada, empacotada e publicada em um ambiente predefinido.
 
-Inicialmente estamos publicando as novas versões no Heroku. Uma plataforma gratuita, na núvem, para publicação de aplicações.
+Estamos publicando as novas versões no EC2 Amazon. Máquinas virtuais gratúitas/baratas na nuvem.
 
 Ao automatizar o processo de publicação do projeto, permitimos ciclos de feedback mais curtos, para identificar e agir sobre qualquer problema o mais rápido possível, melhorando assim a qualidade do produto final.
 
