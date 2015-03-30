@@ -40,12 +40,26 @@ $mobile: new-breakpoint(max-width 500px 4);
   
 
   h1 {
-    margin-top: .5em;
+  font-size: em(35px);
+  font-family: 'open_sansbold', $helvetica;
+  color: #606060;
+  line-height: 120%;
+  margin-top: 0;
   }
 
+  // p {
+  //   color: #606060;
+  //   margin-bottom: 1em;
+
+  // }
+
   p {
-    margin-bottom: 1em;
+        font-size: em(15px);
+        line-height: 150%;
+        margin: 0px;
+
   }
+
 
   img {
     max-width: 100%;
@@ -124,7 +138,7 @@ dl.portlet {
   border-bottom: 1px solid #ddd;
 
   > dd a span {
-    color: #172938;
+    color: #606060;
   }
 
   .portletHeader {
@@ -354,7 +368,6 @@ ul#resultados-linhadavida {
   margin-top: 30px;
 
   p {
-    line-height: 18px;
     margin-bottom: 30px;
     border-bottom: 1px solid #D3DADF;
     padding-bottom: 20px;
