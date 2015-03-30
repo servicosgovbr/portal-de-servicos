@@ -1,18 +1,24 @@
 #migalhas-de-pao {
   @include span-columns(12);
   @include omega();
-  margin-top: em(30);
-  margin-bottom: em(30);
+  margin-top: em(50);
+  margin-bottom: em(50);
+  font-size: em(11);
+
 
   .voce-esta-aqui {
-    color: black;
-    margin-right: .5em;
+    color: #606060;
+    
   }
 
-  a, span {
+  a, span { 
     color: #2c66ce;
     text-transform: uppercase;
     font-family: 'open_sansregular', $helvetica;
+  }
+
+  span {
+    margin-right: .5em; 
   }
 
   a:hover {
