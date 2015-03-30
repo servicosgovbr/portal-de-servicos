@@ -36,6 +36,12 @@ Criamos também uma _box_ para o [Vagrant][VAGRANT]. Para utilizá-la, confira q
 vagrant up
 ```
 
+Se houver problemas, ou se você está com uma versão mais antiga do projeto e atualizou, recomendamos limpar o ambiente vagrant e começar novamente:
+```
+vagrant destroy
+vagrant up
+```
+
 [GIT]:http://git-scm.org
 [GITCRYPT]:https://www.agwa.name/projects/git-crypt/
 [GPG]:https://www.gnupg.org/
