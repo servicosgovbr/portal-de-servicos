@@ -96,8 +96,8 @@ EOF
 %dir %attr(0755, %{_user}, %{_user}) /var/log/%{name}
 
 %config
-/etc/default/%{name}
-/etc/logrotate.d/%{name}
+%attr(0644, %{_user}, %{_user}) /etc/default/%{name}
+%attr(0644, %{_user}, %{_user}) /etc/logrotate.d/%{name}
 
 %clean
 rm -rf %{buildroot}
