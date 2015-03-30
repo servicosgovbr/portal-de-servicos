@@ -60,7 +60,11 @@ Nossas hipóteses serão priorizadas e desenvolvidas visando iterações de duas
 
 Teremos também, todos os dias pela manhã, uma reunião que chamamos de "Reunião em Pé" (tradução do termo _stand-up meeting_). Está é uma reunião rápida, de aproximadamente 15 minutos, visando o alinhamento do time com relação ao trabalho a ser efetuado além de identificar possíveis impedimentos que precisam ser resolvidos.
 
-Um _Release_ é caracterizado como um marco de aprendizado consolidado e aumento da maturidade do Guia de Serviços.
+Um _Release_ (também chamado entrega) é caracterizado como um marco de aprendizado consolidado e aumento da maturidade do Guia de Serviços. Realizaremos uma entrega por mês, sempre composta de dois conjuntos de resultados:
+    A. Código pronto para ser colocado em produção
+>Compreende o código gerado em determinado período, de acordo com o escopo descrito e priorizado para a respectiva _release_, conforme descrito no repositório https://github.com/servicosgovbr/guia-de-servicos. A cada _release_, o código ser integrado ao repositório oficial de entrega disponível no ambiente Redmine do Governo Federal (ver item 3.9, abaixo)
+    B. Documentação
+>Compreende um conjunto de artefatos de descrição e justificativa da evolução do código que é entregue junto com este, a cada release. Esta documentação atende os critérios de aceite definidos a cada início de _release_, imediatamente após a entrega da release anterior, e corresponde às entregas dos produtos e subprodutos descritos no Termo de Referência. As datas e escopo detalhado de cada subproduto é flexível e tratado a cada início de _release_, de acordo com o disposto no Termo de Referência.
 
 _Apresentações de Iteração_ serão feitas a cada iteração, comunicando nosso aprendizado com relação ao trabalho desenvolvido até então através de documentos e apresentações que poderão ser utilizadas para o acompanhamento do projeto.
 
