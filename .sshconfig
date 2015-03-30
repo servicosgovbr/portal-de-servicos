@@ -16,7 +16,7 @@ Host alpha
   User centos
   Port 22
   IdentityFile ./secrets/guiadeservicos-kp.pem
-  #IdentityFile /var/snap-ci/repo/guiadeservicos-pk.pem
+  IdentityFile /var/snap-ci/repo/guiadeservicos-kp.pem
   LogLevel=quiet
   UserKnownHostsFile=/dev/null
   StrictHostKeyChecking=no

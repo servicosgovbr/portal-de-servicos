@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-scp -F .sshconfig alpha $(find build/rpmbuild/RPMS/noarch/guia-de-servicos*.rpm -type f) alpha:~/guia-de-servicos-latest.rpm
-ssh -F .sshconfig alpha 'bash -s' < scripts/alpha-deploy
+scp -vF .sshconfig $(find build/rpmbuild/RPMS/noarch/guia-de-servicos*.rpm -type f) alpha:~/guia-de-servicos-latest.rpm
+ssh -vF .sshconfig alpha '/bin/bash -s' < scripts/alpha-deploy

@@ -11,5 +11,5 @@ fi
 echo 'Removendo pacote instalado'
 rm -rf guia-de-servicos-latest.rpm
 
-systemctl daemon-reload
-systemctl restart guia-de-servicos
+sudo systemctl daemon-reload
+sudo systemctl restart guia-de-servicos
