@@ -11,6 +11,16 @@ RequestTTY auto
 RhostsRSAAuthentication no
 StrictHostKeyChecking no
 
+Host alpha
+  Hostname 54.94.244.36
+  User centos
+  Port 22
+  IdentityFile ./secrets/guiadeservicos-kp.pem
+  #IdentityFile /var/snap-ci/repo/guiadeservicos-pk.pem
+  LogLevel=quiet
+  UserKnownHostsFile=/dev/null
+  StrictHostKeyChecking=no
+
 Host app-vagrant
   Hostname localhost
   User vagrant
