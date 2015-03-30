@@ -27,9 +27,7 @@
         <div class="cell width-16 position-0">
             <ul id="resultados-linhadavida">
                 <li th:each="resultado, i : ${resultados}">
-                    <th:block th:if="${i.count &gt; 3}">
-                        <span th:replace="fragments/resultado-busca-servico(servico=${resultado})"/>
-                    </th:block>
+                    <span th:replace="fragments/resultado-busca-servico(servico=${resultado})"/>
                 </li>
             </ul>
         </div>
