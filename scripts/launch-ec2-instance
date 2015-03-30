@@ -11,4 +11,4 @@ aws ec2 run-instances \
     --security-group-ids sg-66185403 \
     --subnet-id subnet-749a752d \
     --associate-public-ip-address \
-    --user-data $(base64 scripts/alpha-bootstrap)
+    --user-data "$(base64 scripts/alpha-bootstrap)"
