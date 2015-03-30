@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo 'Instalando novo Guia de Serviços'
+sudo yum remove -y guia-de-servicos
 sudo yum install -y guia-de-servicos-latest.rpm
 
 if [ "$?" -ne '0' ]; then
