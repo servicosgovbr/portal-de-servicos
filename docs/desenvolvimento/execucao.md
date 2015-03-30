@@ -4,10 +4,10 @@ Execução da aplicação
 Para rodar a aplicação localmente, utilizamos um servidor web [Tomcat][TOMCAT], embutido pelo [Spring-Boot][SPRINGBOOT]:
 
 ```
-./gradlew run
+./gradlew bootRun
 ```
 
-Após alguns segundos, o servidor estará disponível em [localhost:8080](http://localhost:8080/).
+Após alguns segundos, o servidor estará disponível em [localhost:8080](http://localhost:8080/). Arquivos estáticos (html, js, css) alterados estarão disponíveis alguns segundos após alterações.
 
 ElasticSearch externo
 ----
