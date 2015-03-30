@@ -9,6 +9,11 @@ server:
   port: ${port:8080}
 
 gds:
+  destaques:
+    servicos:
+      - retificadora-on-line-extrato-da-dirpf
+      - aposentadoria-por-invalidez
+      - vistas-de-processo
   conteudo:
     linhasDaVida:
       abrir-um-negocio: "Administrar um negócio"
