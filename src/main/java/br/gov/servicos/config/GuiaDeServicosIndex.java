@@ -2,7 +2,6 @@ package br.gov.servicos.config;
 
 import br.gov.servicos.metricas.Feedback;
 import br.gov.servicos.servico.Servico;
-import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -15,9 +14,10 @@ import java.io.InputStreamReader;
 
 import static java.nio.charset.Charset.defaultCharset;
 import static java.util.stream.Collectors.joining;
+import static lombok.AccessLevel.PRIVATE;
 
 @Component
-@FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
+@FieldDefaults(makeFinal = true, level = PRIVATE)
 public class GuiaDeServicosIndex {
 
     public static final String GUIA_DE_SERVICOS = "guia-de-servicos";

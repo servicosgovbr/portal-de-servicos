@@ -33,8 +33,8 @@ public class ElasticsearchClusterConfig {
     @Profile(CLUSTER)
     public Client clusteredClient() throws Exception {
         TransportClientFactoryBean fb = new TransportClientFactoryBean();
-        fb.setClusterName(this.properties.getClusterName());
-        fb.setClusterNodes(this.properties.getClusterNodes());
+        fb.setClusterName(properties.getClusterName());
+        fb.setClusterNodes(properties.getClusterNodes());
         fb.afterPropertiesSet();
 
         return fb.getObject();
