@@ -8,7 +8,7 @@ aws ec2 run-instances \
     --count 1 \
     --instance-type t2.micro \
     --key-name cvillela \
-    --security-group-ids sg-66185403 \
-    --subnet-id subnet-749a752d \
+    --security-group-ids sg-6e8a6b0b \
+    --subnet-id subnet-7ba9481e \
     --associate-public-ip-address \
     --user-data "$(base64 scripts/alpha-bootstrap)"
