@@ -9,14 +9,14 @@
 </head>
 <body>
 
-<span layout:fragment="link-migalha-de-pao-pai" itemprop="title">
+<span layout:fragment="link-migalha-de-pao-pai">
     <a href="/servicos">
         Serviços
     </a>
 </span>
 
-<span layout:fragment="link-migalha-de-pao">
-    <span th:text="${servico.titulo}" itemprop="title">Nome do Serviço</span>
+<span layout:fragment="link-migalha-de-pao" th:text="${servico.titulo}">
+    Nome do Serviço
 </span>
 
 <span layout:fragment="menu-contexto"

@@ -8,12 +8,12 @@
 </head>
 <body>
 
-<span layout:fragment="link-migalha-de-pao-pai">
-    <span th:text="${publicoAlvo.titulo}" itemprop="title">Nome do Publico Alvo</span>
+<span layout:fragment="link-migalha-de-pao-pai" th:text="${publicoAlvo.titulo}">
+    Nome do Publico Alvo
 </span>
 
-<span layout:fragment="link-migalha-de-pao">
-	<span th:text="${letraAtiva}" itemprop="title">Letra filtrada</span>
+<span layout:fragment="link-migalha-de-pao" th:text="${letraAtiva}">
+	Letra filtrada
 </span>
 
 <div layout:fragment="corpo">
