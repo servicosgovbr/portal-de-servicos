@@ -3,6 +3,7 @@ package br.gov.servicos.busca;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -61,5 +62,9 @@ class BuscaController {
                         .collect(joining("\",\"", "[\"", "\"]")));
     }
 
+    @RequestMapping(value = "/opensearch.xml", produces = MediaType.APPLICATION_XML_VALUE)
+    ModelAndView openSearch() {
+        return new ModelAndView("opensearch");
+    }
 }
 
