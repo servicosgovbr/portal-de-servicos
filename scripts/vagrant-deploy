@@ -4,7 +4,7 @@ echo 'Instalando novo Guia de Serviços...'
 sudo yum remove -y guia-de-servicos
 sudo yum install -y $1
 
-sudo bash -c 'cat <<-EOF > /etc/default/guia-de-servicos
+sudo bash -c 'cat <<-EOF > /etc/sysconfig/guia-de-servicos
 # Variáveis de ambiente para configuração do Guia de Serviços
 
 # Ativa os perfis "cluster" e "vagrant" na configuração do Spring.

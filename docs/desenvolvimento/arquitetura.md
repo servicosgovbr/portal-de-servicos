@@ -276,7 +276,7 @@ Sim.
 
 ##### Quais os parâmetros cuja configuração é necessária nas máquinas que hospedarão a solução?
 
-Utilizar a distribuição CentOS 7.x, 64 bits, e rede em VLAN conforme descrito no diagrama físico da solução. Todos os outros parâmetros de configuração estarão em `/etc/defaults/guia-de-servicos`, com comentários descritivos no próprio arquivo.
+Utilizar a distribuição CentOS 7.x, 64 bits, e rede em VLAN conforme descrito no diagrama físico da solução. Todos os outros parâmetros de configuração estarão em `/etc/sysconfig/guia-de-servicos`, com comentários descritivos no próprio arquivo.
 
 ### Personalização
 

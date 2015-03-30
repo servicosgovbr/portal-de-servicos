@@ -33,8 +33,8 @@ mkdir -p %{buildroot}/%{prefix}/lib
 cp %SOURCE0 %{buildroot}/%{prefix}/lib/%{name}.jar
 
 # Configurações e variáveis de ambiente
-mkdir -p %{buildroot}/etc/default
-cat <<-EOF > %{buildroot}/etc/default/%{name}
+mkdir -p %{buildroot}/etc/sysconfig
+cat <<-EOF > %{buildroot}/etc/sysconfig/%{name}
 # Variáveis de ambiente para configuração do %{summary}
 
 # Ativa os perfis "production" e "cluster" na configuração do Spring.
@@ -53,6 +53,7 @@ Description=%{summary}
 ExecStart=/opt/%{name}/bin/%{name}
 User=%{_user}
 TimeoutSec=300
+EnvironmentFile=/etc/sysconfig/%{name}
 
 [Install]
 WantedBy=multi-user.target
@@ -82,7 +83,7 @@ cat <<-EOF > %{buildroot}/%{prefix}/bin/%{name}
 #!/bin/bash
 
 pushd /var/run/%{name} > /dev/null
-  source /etc/default/%{name}
+  source /etc/sysconfig/%{name}
   java -jar %{prefix}/lib/%{name}.jar > /var/log/%{name}/%{name}.log
 popd > /dev/null
 
@@ -96,7 +97,7 @@ EOF
 %dir %attr(0755, %{_user}, %{_user}) /var/log/%{name}
 
 %config
-%attr(0644, %{_user}, %{_user}) /etc/default/%{name}
+%attr(0644, %{_user}, %{_user}) /etc/sysconfig/%{name}
 %attr(0644, %{_user}, %{_user}) /etc/logrotate.d/%{name}
 
 %clean
