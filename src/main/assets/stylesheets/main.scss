@@ -217,11 +217,6 @@ dl.portlet {
   right: 33px;
 }
 
-
-body.contraste .busca-principal {
-  background-color: black;
-}
-
   .busca-principal {
     @include span-columns(12);
     @include omega();
@@ -307,7 +302,7 @@ span.ticket-erro {
 }
 
 a.acao, button.acao, input[type="submit"].acao {
-border: 1px solid black;
+  border: 1px solid black;
   padding: 8px;
   background: green;
   text-decoration: none;

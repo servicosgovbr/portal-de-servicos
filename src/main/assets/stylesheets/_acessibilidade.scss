@@ -7,6 +7,35 @@ body.contraste {
     color: #fff !important;
   }
 
+  #header {
+    #sobre {
+      background: #333;
+    }
+
+    #sobre li {
+      border-right-color: #fff;
+    }
+
+    #barra-feedback {
+      background-color: #171717;
+    }
+
+    input.searchButton {
+      background-image: url('/img/sprite-contraste.png');
+      background-color: #000;
+      background-position: 0 2px;
+    }
+  }
+
+  .busca-principal {
+    > form {
+      > input[type='submit'] {
+        background-color: #000;
+        border: 1px solid #fff;
+      }
+    }
+  }
+
   #acessibilidade span {
     background: #fff !important;
     color: #000 !important;
@@ -20,35 +49,32 @@ body.contraste {
     color: #fff !important;
   }
 
-  * :focus {
-    outline-color: white;
+  dl.portlet {
+    .fa {
+      display: none;
+    }
   }
 
-  .portletHeader,
-  #capacho .doormatColumn {
-    border-color: #fff !important;
-    background: #000 !important;
-    color: #fff !important;
+  *.acao {
+    background-color: #000;
+    border-color: #fff;
+  }
+
+  #rodape {
+    .portletHeader,
+    #capacho .doormatColumn {
+      border-color: #fff !important;
+      background: #000 !important;
+      color: #fff !important;
+    }
+
+    #capacho dl {
+      border-left: 1px dotted #fff;
+    }
   }
 
   #portal-siteactions {
     border-bottom: 1px dotted #fff;
-  }
-
-  #sobre li a {
-    border-right: 1px solid #fff;
-  }
-
-  #capacho dl {
-    border-left: 1px dotted #fff;
-  }
-
-  #sobre {
-    background: #333;
-  }
-
-  #header input.searchButton {
-    background-image: url('/img/sprite-contraste.png');
   }
 
   .outstanding-header .outstanding-link {
@@ -63,11 +89,6 @@ body.contraste {
   #portal-searchbox .searchField {
     background-color: #000;
     color: #fff !important;
-  }
-
-  #header input.searchButton {
-    background-color: #000;
-    background-position: 0 2px;
   }
 
   .outstanding-header .outstanding-title {
