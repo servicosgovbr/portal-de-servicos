@@ -1,6 +1,7 @@
 site_name: Guia de Serviços
 pages:
 - [index.md, Principal]
+- [index2.md, 'Principal (!)']
 - ['estrategia/index.md', 'Estratégia', 'Introdução']
 - ['estrategia/personas.md', 'Estratégia', 'Personas']
 - ['estrategia/jornadas.md', 'Estratégia', 'Jornadas']
