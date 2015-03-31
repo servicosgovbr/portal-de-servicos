@@ -13,13 +13,13 @@ executando corretamente.
 Testes
 ----
 
-Para executar apenas os testes unitários isoladamente, a tarefa `test` do [Gradle][GRADLE] deve ser suficiente:
+Para executar apenas os testes unitários isoladamente, utilize a tarefa `test` do [Gradle][GRADLE]:
 
 ```
 ./gradlew test
 ```
 
-E para executar apenas os testes de integração, que são um pouco mais demorados, basta executar a tarefa `integrationTest` do [Gradle][GRADLE]:
+E para executar apenas os testes de integração, que são um pouco mais demorados, execute a tarefa `integrationTest` do [Gradle][GRADLE]:
 
 ```
 ./gradlew integrationTest
@@ -34,8 +34,9 @@ Antes de publicar uma funcionalidade, com `git push`, recomendamos rodar todas a
 Integração Contínua
 ----
 
-Utilizamos o [Snap][SNAP] para gerência de [integração contínua][CI]. Eventualmente, repensaremos seu uso conforme
-ficarem mais claros os requisitos para [entrega contínua][CD].
+Utilizamos o [Snap][SNAP] para gerência de [integração contínua][CI]. 
+
+Eventualmente, repensaremos seu uso conforme ficarem mais claros os requisitos para [entrega contínua][CD].
 
 [GRADLE]:https://gradle.org/
 [SNAP]:http://snap-ci.com
