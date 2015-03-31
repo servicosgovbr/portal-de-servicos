@@ -12,16 +12,16 @@
 <div layout:fragment="corpo">
 
 
-    <div class="tile azul-claro">
+    <div class="bem-vindo">
         <header class="outstanding-header">
-            <h2 class="outstanding-title">Bem vindo ao Guia de Serviços</h2>
+            <h2>Bem vindo ao Guia de Serviços</h2>
             <p> O objetivo deste guia é facilitar o acesso dos cidadãos aos serviços prestados pelos diversos órgãos do Governo Federal. Aqui você poderá encontrar informações úteis, começar um serviço e até agendar visitas a agências do governo.</p>
         </header>
     </div>
 
 
-    <div class="tile busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
-        <p>Pesquisa</p>
+    <div class="busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
+        <h3 class="titulo-busca">O que você está procurando?</h3>
         <form method="get" action="/busca">
             <input id="input-busca" type="text" name="q" value=""/>
             <input type="submit" value="BUSCAR"/>

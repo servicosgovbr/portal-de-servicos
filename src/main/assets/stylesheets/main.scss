@@ -38,6 +38,17 @@ $mobile: new-breakpoint(max-width 500px 4);
     @include span-columns(4);
     }
   
+  header{
+    margin-bottom: em(20);
+
+    h2{
+      font-family: 'open_sansbold', $helvetica;
+      font-size: em(35);
+      margin-bottom: em(20);
+      padding-right: 3.464em;
+    }
+
+  }
 
   h1 {
   font-size: em(35px);
@@ -53,9 +64,9 @@ $mobile: new-breakpoint(max-width 500px 4);
         color: #606060;
         line-height: 150%;
         margin: 0px;
-        padding-left: .90em;
+        margin-top: -20px;
+        padding-bottom: 20px;
   }
-
 
   img {
     max-width: 100%;
@@ -65,38 +76,6 @@ $mobile: new-breakpoint(max-width 500px 4);
     max-width: 100%;
     height: auto;
   }
-
-  .tile-description {
-    margin: 0;
-  }
-
-  .outstanding-header h2 {
-    font-family: 'open_sansbold', $helvetica;
-    font-size: em(35px);
-  }
-
-  .tile .outstanding-header .outstanding-title {
-    margin-bottom: .85em;
-    padding-right: 3.464em;
-    padding-bottom: 0;
-    font-weight: normal !important;
-  }
-
-  .outstanding-header .outstanding-link {
-    position: static;
-    display: block;
-    margin: .9em .9em .9em .6em;
-    padding: .3em 2.7em .3em .3em;
-    min-height: 1.3em;
-    width: auto;
-    background-position: right 50%;
-    text-align: right;
-    text-transform: uppercase;
-    font-family: 'open_sansregular', $helvetica;
-    line-height: 1.2em;
-  }
-
-
 
   hr {
     margin-bottom: 15px;
@@ -148,8 +127,6 @@ dl.portlet {
 }
 
 .tile {
-  clear: both;
-  margin-bottom: 1.8em;
 
   h1 {
     margin: 0 0 10px 0;
@@ -167,8 +144,7 @@ dl.portlet {
 
   h3 {
     margin: 0;
-    font-weight: bold;
-    font-family: 'open_sansregular', $helvetica;
+    font-family: 'open_sansbold', $helvetica;
     line-height: 1.2em;
   }
 
@@ -211,41 +187,10 @@ dl.portlet {
   .outstanding-title,  {
     margin-left: 0;
     margin-bottom: none;
-    padding-left: .45em;
-    // border-top: 2px solid #172838;
-    // border-bottom: 1px solid #ccc;
-    // color: #2c67cd;
     line-height: 1em;
   }
-
-
-  // h2 {
-  //   min-height: 48px;
-  // }
-
 }
 
-.azul-claro {
-
-  .outstanding-header {
-    // min-height: 40px;
-    // border-top: none;
-    // background: #eeeff1;
-
-    .outstanding-title {
-      // border-color: #3867b7;
-      border-bottom: none;
-      // background: #eeeff1;
-      color: #606060;
-    }
-
-    .outstanding-link {
-      background: url('/img/seta_azul-claro.png') no-repeat scroll right 5px transparent;
-    }
-
-  }
-
-}
 
 #voltar-topo {
   @include span-columns(3);
@@ -272,49 +217,53 @@ dl.portlet {
   right: 33px;
 }
 
-h2.titulo-destaque {
-  font-weight: bold;
-}
 
 body.contraste .busca-principal {
   background-color: black;
 }
 
-.busca-principal {
-  // background-color: #e5e8ea;
-  padding-left: 15px;
-  font-family: 'open_sansregular', $helvetica;
-  // border-top: 4px solid #a8a7a7;
+  .busca-principal {
+    @include span-columns(12);
+    @include omega();
+    margin-bottom: em(20px);
 
   > p {
     margin: 0;
     color: #2c66ce;
-    text-transform: uppercase;
-    font-weight: bold;
+
+  }
+
+  h3.titulo-busca {
+    font-family: open_sansbold;
+    font-size: em(25px);
+    margin-bottom: em(15);
   }
 
   > form {
     > input[type='text'] {
-      width: 98%;
+      @include span-columns(10);
       display: block;
-      margin-bottom: 10px;
-      padding: 8px;
+      padding: 9px;
       border-radius: 5px;
-      border: 1px solid #cfcfcf;
-      margin-top: 5px;
-      padding-right: 0;
+      border: 1px solid #dcdcdc;
+
+      &:focus{
+        background-color: #EEF0F1;
+      }
     }
 
     input[type='submit'] {
-      width: 100px;
-      height: 26px;
+      @include span-columns(2);
+      @include omega();
+      // height: 26px;
       color: #fff;
-      background-color: #7d7d7d;
+      background-color: #2c66ce;
       display: block;
-      font-family: 'open_sansregular', $helvetica;
-      border: 1px solid #7d7d7d;
+      font-family: 'open_sanssemibold', $helvetica;
+      font-size: 14px;
+      padding: 9px 0px 8px 0px;
+      border: none;
       border-radius: 4px;
-      font-weight: bold;
     }
   }
 
@@ -391,5 +340,10 @@ ul.orgaos-a-z {
   @include span-columns(3);
   @include media($mobile) {
     display: none !important;
+    }
+
+    .navTree span{
+      font-size: 14px;
+
     }
 }
