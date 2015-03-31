@@ -1,6 +1,8 @@
+# Equipe
+
 O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com formação bastante diversa. A composição de equipes desta forma nos dá uma gama maior de ideias a testar, e em conjunto vivências de praticamente todo o tipo de cidadão a quem queremos atender.
 
-# Governo Federal
+## Governo Federal
 
 * [Andrea Ricciardi](mailto:andrea.ricciardi@planejamento.gov.br)
 * [Augusto Herrmann](mailto:augusto.herrmann@planejamento.gov.br)
@@ -18,7 +20,7 @@ O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com 
 * [Sergio Nascimento](mailto:sergio.nascimento@sdh.gov.br)
 * [Silvia Belarmino](mailto:silvia.belarmino@planejamento.gov.br)
 
-# ThoughtWorks
+## ThoughtWorks
 
 * [Alexandre Klaser](mailto:aklaser@thoughtworks.com)
 * [Barbara Wolff Dick](mailto:bdick@thoughtworks.com)
@@ -30,7 +32,7 @@ O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com 
 * [Olivia Janequine](mailto:oliviaj@thoughtworks.com)
 * [Samantha Rosa](mailto:srosa@thoughtworks.com)
 
-# Contribuidores
+## Contribuidores
 
 A natureza do código aberto do projeto nos trouxe alguns contribiudores externos às duas equipes, também. Somos muito gratos a:
 

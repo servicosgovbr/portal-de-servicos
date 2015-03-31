@@ -1,12 +1,12 @@
-## Metodologia de desenvolvimento
+# Metodologia de desenvolvimento
 
-### Desenvolvimento orientado a hipóteses
+## Desenvolvimento orientado a hipóteses
 
-### Kanban e Iterações
+## Kanban e Iterações
 
-#### Gerenciamento
+# Ferramentas de Gerenciamento
 
-##### Github Issues
+## Github Issues
 
-##### Waffle
+## Waffle
 

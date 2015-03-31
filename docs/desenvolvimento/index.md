@@ -1,82 +1,82 @@
-## Desenvolvimento
+# Desenvolvimento
 
-### Introdução
+## Introdução
 
-#### Objetivos técnicos
+### Objetivos técnicos
 
-### Arquitetura
+## Arquitetura
 
-#### Model-View-Controller
+### Model-View-Controller
 
-##### Apresentação (View)
+#### Apresentação (View)
 
-##### Controladores
+#### Controladores
 
-##### Modelos e objetos de domínio
+#### Modelos e objetos de domínio
 
-##### Outros componentes
+#### Outros componentes
 
-### Infra-estrutura
+## Infra-estrutura
 
-#### Ambientes de desenvolvimento
+### Ambientes de desenvolvimento
 
-#### Ambientes de homologação e produção
+### Ambientes de homologação e produção
 
-### Implantação e execução
+## Implantação e execução
 
-#### Desenvolvimento local
+### Desenvolvimento local
 
-#### Vagrant
+### Vagrant
 
-#### Amazon WebServices
+### Amazon WebServices
 
-#### Outros
+### Outros
 
-### Testes
+## Testes
 
-#### Unitários
+### Unitários
 
-#### Integração
+### Integração
 
-#### Cobertura
+### Cobertura
 
-#### Interface
+### Interface
 
-#### Checagens estáticas
+### Checagens estáticas
 
-### Requisitos Não-Funcionais
+## Requisitos Não-Funcionais
 
-#### Acessibilidade
+### Acessibilidade
 
-#### Auditabilidade
+### Auditabilidade
 
-#### Backups
+### Backups
 
-#### Capacidade
+### Capacidade
 
-#### Compatibilidade de plataformas
+### Compatibilidade de plataformas
 
-##### Servidores
+#### Servidores
 
-##### Navegadores
+#### Navegadores
 
-#### Dependências de terceiros
+### Dependências de terceiros
 
-#### Disponibilidade
+### Disponibilidade
 
-#### Documentação
+### Documentação
 
-#### Escalabilidade
+### Escalabilidade
 
-#### Extensibilidade
+### Extensibilidade
 
-#### Gerência de configuração, falhas e desastres
+### Gerência de configuração, falhas e desastres
 
-##### Interoperabilidade
+#### Interoperabilidade
 
-#### Performance
+### Performance
 
-#### Privacidade
+### Privacidade
 
-#### Usabilidade
+### Usabilidade
 

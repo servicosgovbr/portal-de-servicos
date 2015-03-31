@@ -1,10 +1,12 @@
+# Como relatar problemas
+
 Durante o desenvolvimento do projeto, muitas coisas estarão em transição e procuramos aprender o máximo possível com todos os erros e acertos ao longo do caminho. Caso algum problema tenha persistido em aparecer, a melhor maneira de vê-lo solucionado é relatando-o.
 
 A equipe do Guia de Serviços usa o [GitHub Issues][GHISSUES] para acompanhar questões, bugs e contribuições de novo código pela comunidade.
 
 Se você encontrou um problema no Guia de Serviços, ou tem uma sugestão a fazer, este é o lugar ideal para começar.
 
-# Criando um relatório de erro
+## Criando um relatório de erro
 
 É provável que seu problema já tenha sido relatado por outro membro da equipe ou contribuidor. Para evitar trabalho desnecessário, faça uma rápida busca no [GitHub Issues][GHISSUES] e veja se o problema já foi reportado antes de começar.
 

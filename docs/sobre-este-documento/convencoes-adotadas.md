@@ -1,3 +1,5 @@
+# Convenções adotadas
+
 Utilizamos níveis de cabeçalhos para facilitar a navegação entre os documentos. 
 
 Links entre documentos (e a outros, externos), sempre que possível.

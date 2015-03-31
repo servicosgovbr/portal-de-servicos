@@ -1,4 +1,6 @@
-# Listas de Discussão
+# Contato
+
+## Listas de Discussão
 
 Criamos duas listas de discussão para o desenvolvimento do Guia de Serviços: uma para a discussão geral sobre o projeto (com links, dúvidas, debates, etc.) e outra para anúncios (de baixo tráfego, somente para informativos gerais, novas publicações e eventos maiores):
 
@@ -7,7 +9,7 @@ Criamos duas listas de discussão para o desenvolvimento do Guia de Serviços: u
 
 Caso você queira apenas acompanhar o andamento do projeto, recomenda-se filiar apenas à lista de anúncios. Para desenvolvedores, o ideal é assinar ambas as listas.
 
-# Chat
+## Chat
 
 Caso queria conversar com o time do projeto, basta entrar em nossa sala no [Gitter].
 
