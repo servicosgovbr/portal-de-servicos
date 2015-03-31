@@ -27,5 +27,8 @@
   - [Arquitetura](desenvolvimento/arquitetura.md)
   - [Infra-estrutura](desenvolvimento/infra-estrutura.md)
   - [Implantação e execução](desenvolvimento/implantacao-e-execucao.md)
+    - [Local](desenvolvimento/deploy-local.md)
+    - [Vagrant](desenvolvimento/deploy-vagrant.md)
+    - [Amazon Web Services](desenvolvimento/deploy-aws.md)
   - [Testes](desenvolvimento/testes.md)
   - [Requisitos Transversais](desenvolvimento/requisitos-transversais.md)
