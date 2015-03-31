@@ -23,15 +23,11 @@
     <div th:utext="${conteudo.html}" class="markdown"></div>
     <hr/>
 
-    <div class="row">
-        <div class="cell width-16 position-0">
-            <ul id="resultados-linhadavida">
-                <li th:each="resultado, i : ${resultados}">
-                    <span th:replace="fragments/resultado-busca-servico(servico=${resultado})"/>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <ul id="resultados-linhadavida">
+        <li th:each="resultado : ${resultados}">
+            <span th:replace="fragments/resultado-busca-servico(servico=${resultado})"/>
+        </li>
+    </ul>
 
 </div>
 
