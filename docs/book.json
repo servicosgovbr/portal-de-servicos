@@ -1,0 +1,8 @@
+{
+  "language": "pt",
+  "gitbook": ">=2.0.0",
+  "title": "Guia de Serviços",
+  "structure": {
+    "readme": "index.md"
+  }
+}
