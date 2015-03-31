@@ -11,17 +11,18 @@ a:link {
   font-family: open_sansregular;
 }
 
+a:visited {
+  text-decoration: none;  
+  color: #606060;
+  font-family: open_sansregular;
+}
+
 a:hover {
   text-decoration: underline;
   color: #2c66ce;
   font-family: open_sansregular;
 }
 
-a:visited {
-  text-decoration: none;  
-  color: #606060;
-  font-family: open_sansregular;
-}
 
 * li {
   display: inline;
