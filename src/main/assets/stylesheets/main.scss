@@ -243,9 +243,19 @@ body.contraste .busca-principal {
     > input[type='text'] {
       @include span-columns(10);
       display: block;
-      padding: 9px;
+      padding: 8px;
       border-radius: 5px;
-      border: 1px solid #dcdcdc;
+      border-top: 2px solid #dcdcdc;
+      border-bottom: 0;
+      border-left: 2px solid #DCDCCC;
+      border-right: 0;
+      box-shadow: inset -2px -2px 5px -1px #e6e6e6;
+      background-color: #eee;
+      font-size: em(13);
+      font-style: italic;
+      @include placeholder {
+        color: #606060;  
+      }
 
       &:focus{
         background-color: #EEF0F1;
