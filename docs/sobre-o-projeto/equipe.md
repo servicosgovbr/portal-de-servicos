@@ -4,6 +4,8 @@ O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com 
 
 ## Governo Federal
 
+### [Ministério do Planejamento, Orçamento e Gestão](http://planejamento.gov.br)
+
 * [Andrea Ricciardi](mailto:andrea.ricciardi@planejamento.gov.br)
 * [Augusto Herrmann](mailto:augusto.herrmann@planejamento.gov.br)
 * [Bruno Palvarini](mailto:bruno.palvarini@planejamento.gov.br)
@@ -14,13 +16,16 @@ O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com 
 * [Everson Aguiar](mailto:everson.aguiar@planejamento.gov.br)
 * [Fabrício Almeida](mailto:fabricio.fontenele@planejamento.gov.br)
 * [Izabel Garcia](mailto:izabel.garcia@planejamento.gov.br)
-* [Jonathas Duarte](mailto:jonathas.duarte@inss.gov.br)
 * [Maurício Formiga](mailto:mauricio.formiga@planejamento.gov.br)
 * [Nitai Silva](mailto:nitai.silva@planejamento.gov.br)
 * [Sergio Nascimento](mailto:sergio.nascimento@sdh.gov.br)
 * [Silvia Belarmino](mailto:silvia.belarmino@planejamento.gov.br)
 
-## ThoughtWorks
+### [Ministério da Previdência Social](http://mps.gov.br)
+
+* [Jonathas Duarte](mailto:jonathas.duarte@inss.gov.br)
+
+## [ThoughtWorks](http://thoughtworks.com)
 
 * [Alexandre Klaser](mailto:aklaser@thoughtworks.com)
 * [Barbara Wolff Dick](mailto:bdick@thoughtworks.com)

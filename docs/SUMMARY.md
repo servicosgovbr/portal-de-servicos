@@ -7,6 +7,7 @@
   - [Equipe](sobre-o-projeto/equipe.md)
   - [Contato](sobre-o-projeto/contato.md)
   - [Como relatar problemas](sobre-o-projeto/como-relatar-problemas.md)
+  - [Licença de uso](./license.md)
 - [Serviços](servicos/index.md)
   - [O que é um serviço?](servicos/o-que-e-um-servico.md)
   - [Etapas da oferta de serviços](servicos/etapas-da-oferta.md)
