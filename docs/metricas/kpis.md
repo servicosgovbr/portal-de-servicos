@@ -1,3 +1,5 @@
+# KPIs
+
 KPIs (_Key Perfomance Indicators_, ou Indicadores Chave de Performance) nos ajudam a entender quais as atividades mais
 importantes que serão realizadas durante a navegação no portal.
 
@@ -17,8 +19,7 @@ Em documento de 2007 ([Indicadores de E-serviços][PDF]), os indicadores são:
 * Confiabilidade
 * Transparência
 
-Possíveis métricas: (que serão alinhadas com KPIs posteriormente)
-----
+## Possíveis métricas: (que serão alinhadas com KPIs posteriormente)
 
 * Tempo de duração das visitas
 * Quantidade de páginas visualizadas por visita
