@@ -26,6 +26,7 @@
 - [Desenvolvimento](desenvolvimento/index.md)
   - [Arquitetura](desenvolvimento/arquitetura.md)
   - [Infra-estrutura](desenvolvimento/infra-estrutura.md)
+  - [Dados Criptografados](desenvolvimento/dados-criptografados.md)
   - [Implantação e execução](desenvolvimento/implantacao-e-execucao.md)
     - [Local](desenvolvimento/deploy-local.md)
     - [Vagrant](desenvolvimento/deploy-vagrant.md)
