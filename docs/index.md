@@ -1,22 +1,14 @@
-Guia de Serviços
-====
+# Guia de Serviços
 
-Esta é a documentação oficial do frontend do Guia de Serviços.
+## Introdução
 
-O que é o Guia de Serviços?
-----
+Esta é a documentação oficial do Guia de Serviços Públicos do Governo Federal.
 
-Para o cidadão, cujo conhecimento, entendimento e acesso aos serviços públicos é limitado, o Guia de Serviços é um site na internet que o aproxima da solução. Diferentemente dos muitos canais que existem, o nosso produto organiza a
-informação sob a ótica dos cidadãos e suas necessidades.
-
-Para o servidor público, cuja responsabilidade é prestar serviços ao cidadão de maneira eficaz e eficiente, o Guia de Serviços é um novo modelo de publicação e evolução gradual de serviços que permite uma interação racional e não onerosa entre os órgãos públicos e a sociedade. Diferentemente dos mini-guias de cada órgão, o nosso produto organiza os serviços sob o ponto de vista do cidadão.
-
-Para quem é esta documentação?
-----
+### Sobre este documento
 
 Este conjunto de documentos serve aos desenvolvedores, gestores e colaboradores contribuindo com a criação do projeto, e também para aqueles que querem começar a contribuir e extrair valor tecnológico de sua implementação de alguma forma.
 
-### Convenções
+#### Convenções adotadas
 
 Utilizamos níveis de cabeçalhos para facilitar a navegação entre os documentos. 
 
