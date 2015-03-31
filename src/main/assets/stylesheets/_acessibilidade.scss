@@ -51,8 +51,12 @@ body.contraste {
 
   dl.portlet {
     .fa {
-      display: none;
+      color: #fff;
     }
+  }
+
+  .portletNavigationTree .portletHeader {
+    background: #000;
   }
 
   *.acao {
@@ -109,9 +113,6 @@ body.contraste {
     background: #000 !important;
   }
 
-  .portletNavigationTree .portletHeader {
-    background: #000 url('/img/portlet-header-contraste.jpg') no-repeat 96% center !important;
-  }
 }
 
 #barra-brasil {
