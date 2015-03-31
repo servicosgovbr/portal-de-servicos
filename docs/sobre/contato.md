@@ -1,15 +1,12 @@
 Listas de Discussão
 ----
 
-Criamos duas listas de discussão para o desenvolvimento do Guia de Serviços: uma para a discussão geral sobre o projeto
-(com links, dúvidas, debates, etc.) e outra para anúncios (de baixo tráfego, somente para informativos gerais, novas
-publicações e eventos maiores):
+Criamos duas listas de discussão para o desenvolvimento do Guia de Serviços: uma para a discussão geral sobre o projeto (com links, dúvidas, debates, etc.) e outra para anúncios (de baixo tráfego, somente para informativos gerais, novas publicações e eventos maiores):
 
 * [guiadeservicos-anuncios][ANUNCIOS] ([email](mailto:guiadeservicos-anuncios@googlegroups.com))
 * [guiadeservicos-discussao][DISCUSSAO] ([email](mailto:guiadeservicos-discussao@googlegroups.com))
 
-Caso você queira apenas acompanhar o andamento do projeto, recomenda-se filiar apenas à lista de anúncios. Para
-desenvolvedores, o ideal é assinar ambas as listas.
+Caso você queira apenas acompanhar o andamento do projeto, recomenda-se filiar apenas à lista de anúncios. Para desenvolvedores, o ideal é assinar ambas as listas.
 
 Chat
 ----
@@ -17,6 +14,8 @@ Chat
 Caso queria conversar com o time do projeto, basta entrar em nossa sala no Gitter:
 
 * [Gitter][GITTER]
+
+Estamos online geralmente nos dias úteis das 9 às 19:00, horário de Brasília.
 
 [ANUNCIOS]:https://groups.google.com/d/forum/guiadeservicos-anuncios
 [DISCUSSAO]:https://groups.google.com/d/forum/guiadeservicos-discussao
