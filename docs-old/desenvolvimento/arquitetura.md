@@ -6,11 +6,6 @@ Definição das camadas
 
 ### Apresentação
 
-Controla a interação entre usuário e aplicação. Contém componentes responsáveis pela lógica de apresentação da aplicação e tem as responsabilidades de capturar dados, apresentar os resultados e controlar a navegação.
-
-No mesmo nível estão os serviços expostos pela aplicação para interagir com outras aplicações.
-
-Por convenção, _Controllers_ são nomeados com o sufixo `Controller` e anotados com `org.springframework.stereotype.Controller` ou `org.springframework.web.bind.annotation.RestController`. _Templates_ estão em `src/main/resources/templates`. Configuramos o [Thymeleaf] para tratar tanto arquivos HTML (`*.html`) quanto XML (`*.xml`) neste diretório como templates.
 
 #### Tecnologias Utilizadas
 
@@ -30,7 +25,6 @@ Por convenção, _Controllers_ são nomeados com o sufixo `Controller` e anotado
 
 ### Componentes e atividades
 
-Coordenam atividades diversas da aplicação. Estão anotados com o estereótipo `org.springframework.stereotype.Component`.
 
 #### Tecnologias Utilizadas
 
@@ -44,7 +38,6 @@ Coordenam atividades diversas da aplicação. Estão anotados com o estereótipo
 
 ### Domínio
 
-Contém informações sobre o domínio do negócio, e mantém os objetos de negócio. Estão anotadas com `lombok.Value` (tornando-as imutáveis). Diversos objetos de domínio possuem anotações relacionadas a indexação e persistência no [ElasticSearch][ES].
 
 #### Tecnologias Utilizadas
 

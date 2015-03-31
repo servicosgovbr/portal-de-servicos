@@ -52,7 +52,7 @@ Após alguns segundos, o servidor estará disponível em [localhost:8080](http:/
 
 ## ElasticSearch externo
 
-Para utilizar um servidor ElasticSearch configurado em `localhost:9300`, basta adicionar o perfil `cluster` aos perfis
+Para utilizar um servidor [ElasticSearch](./elasticsearch.md) configurado em `localhost:9300`, basta adicionar o perfil `cluster` aos perfis
 ativos do Spring:
 
 ```

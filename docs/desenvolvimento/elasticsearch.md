@@ -1,16 +1,16 @@
+# ElasticSearch
+
 Um mecanismo de busca eficiente e fácil de customizar e manter é uma parte importante do nosso objetivo de fazer com que os usuários possam encontrar serviços do Governo de forma rápida e fácil.
 
 Estudamos algumas ferramentas existentes, e decidimos basear nossa implementação no [ElasticSearch][ES].
 
-Características
-----
+## Características
 
 O [ElasticSearch][ES] é um mecanismo de indexação e busca de código aberto, que utiliza o [Apache Lucene][LUCENE] como meio de armazenamento, e incorpora diversas funcionalidades adicionais, necessárias para volumes de dados maiores, como replicação e particionamento dos índices em vários nodos em _cluster_.
 
 Seu acesso é por meio de APIs [REST][REST], ou programaticamente, em Java.
 
-Prós
-----
+## Prós
 
 * Também age como um banco de dados sem esquema (_schema-less_), onde não é necessário definir os tipos de documentos em configurações ou metadados.
 * Documentos e tipos de dados dos campos são inferidos (e ajustados posteriormente caso hajam alterações).
@@ -23,16 +23,14 @@ Prós
 * A maioria das configurações pode ser alterada em tempo de execução, simplificando a operação do índice.
 * Estabilidade em situações de carga anormal garantidas por testes automatizados do [Jepsen][JEPSEN].
 
-Contras
-----
+## Contras
 
 * Ainda é necessário reiniciar o servidor após a mudança de algumas configurações de _cluster_.
 * Algumas mudanças no esquema de documentos requerem a reindexação dos mesmos.
 * Não oferece mecanismos de controle de acesso e permissões próprios; estes devem ser providos por outras partes da arquitetura.
 * Configurações de infraestrutura necessárias para obter redundância e performance ideal.
 
-Populando
-----
+## Populando
 
 ### Em desenvolvimento
 
@@ -43,14 +41,6 @@ Esta operação é destrutiva, e reconstrói o índice do [ElasticSearch] a part
 ### Em outros ambientes
 
 Em outros ambientes a importação dos dados se dá automaticamente quando o servidor é iniciado.
-
-
-Referências
----
-
-* [Testes Jepsen][JEPSEN]
-* [Comparativo Solr vs ElasticSearch][SOLR-ES1]
-* [StackOverflow, comparação Solr vs Elasticsearch][SOLR-ES1]
 
 [REST]:http://pt.wikipedia.org/wiki/REST
 [ES]:http://www.elasticsearch.org/
