@@ -11,6 +11,15 @@
 
 <div layout:fragment="corpo">
 
+
+    <div class="tile azul-claro">
+        <header class="outstanding-header">
+            <h2 class="outstanding-title">Bem vindo ao Guia de Serviços</h2>
+            <p> O objetivo deste guia é facilitar o acesso dos cidadãos aos serviços prestados pelos diversos órgãos do Governo Federal. Aqui você poderá encontrar informações úteis, começar um serviço e até agendar visitas a agências do governo.</p>
+        </header>
+    </div>
+
+
     <div class="tile busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
         <p>Pesquisa</p>
         <form method="get" action="/busca">
@@ -19,11 +28,6 @@
         </form>
     </div>
 
-    <div class="tile azul-claro">
-        <header class="outstanding-header">
-            <h2 class="outstanding-title">Em destaque</h2>
-        </header>
-    </div>
 
     <th:block th:with="it = ${destaques.iterator()}">
         <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>

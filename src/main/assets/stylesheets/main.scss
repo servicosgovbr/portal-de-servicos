@@ -47,17 +47,13 @@ $mobile: new-breakpoint(max-width 500px 4);
   margin-top: 0;
   }
 
-  // p {
-  //   color: #606060;
-  //   margin-bottom: 1em;
-
-  // }
 
   p {
         font-size: em(15px);
+        color: #606060;
         line-height: 150%;
         margin: 0px;
-
+        padding-left: .90em;
   }
 
 
@@ -75,7 +71,8 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   .outstanding-header h2 {
-    font-family: 'open_sansregular', $helvetica;
+    font-family: 'open_sansbold', $helvetica;
+    font-size: em(35px);
   }
 
   .tile .outstanding-header .outstanding-title {
@@ -98,6 +95,8 @@ $mobile: new-breakpoint(max-width 500px 4);
     font-family: 'open_sansregular', $helvetica;
     line-height: 1.2em;
   }
+
+
 
   hr {
     margin-bottom: 15px;
@@ -209,33 +208,35 @@ dl.portlet {
 
 .outstanding-header {
 
-  .outstanding-title {
+  .outstanding-title,  {
     margin-left: 0;
-    padding: .45em;
-    border-top: 2px solid #172838;
-    border-bottom: 1px solid #ccc;
-    color: #2c67cd;
+    margin-bottom: none;
+    padding-left: .45em;
+    // border-top: 2px solid #172838;
+    // border-bottom: 1px solid #ccc;
+    // color: #2c67cd;
     line-height: 1em;
   }
 
-  h2 {
-    min-height: 48px;
-  }
+
+  // h2 {
+  //   min-height: 48px;
+  // }
 
 }
 
 .azul-claro {
 
   .outstanding-header {
-    min-height: 40px;
-    border-top: 2px solid #3867b7;
-    background: #eeeff1;
+    // min-height: 40px;
+    // border-top: none;
+    // background: #eeeff1;
 
     .outstanding-title {
-      border-color: #3867b7;
+      // border-color: #3867b7;
       border-bottom: none;
-      background: #eeeff1;
-      color: #3867b7;
+      // background: #eeeff1;
+      color: #606060;
     }
 
     .outstanding-link {
@@ -280,10 +281,10 @@ body.contraste .busca-principal {
 }
 
 .busca-principal {
-  background-color: #e5e8ea;
-  padding: 15px;
+  // background-color: #e5e8ea;
+  padding-left: 15px;
   font-family: 'open_sansregular', $helvetica;
-  border-top: 4px solid #a8a7a7;
+  // border-top: 4px solid #a8a7a7;
 
   > p {
     margin: 0;
