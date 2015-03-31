@@ -1,5 +1,17 @@
 # Arquitetura
 
+## Padrões técnicos
+
+A implementação do Guia de Serviços é guiada por três padrões de desenho e construção de aplicações para a Web:
+
+* [ePING]
+* [ePWG]
+* [eMAG]
+
+[ePING]:http://www.governoeletronico.gov.br/acoes-e-projetos/e-ping-padroes-de-interoperabilidade
+[ePWG]:http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov
+[eMAG]:http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG
+
 ## Model-View-Controller
 
 ### Apresentação (View)

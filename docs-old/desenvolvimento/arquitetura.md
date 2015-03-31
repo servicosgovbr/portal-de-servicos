@@ -1,13 +1,3 @@
-Arquitetura
-====
-
-Definição das camadas
-----
-
-### Apresentação
-
-
-#### Tecnologias Utilizadas
 
 - [Thymeleaf]
 - [HTML 5][HTML5]
@@ -23,11 +13,6 @@ Definição das camadas
 [Modernizr]:http://modernizr.com/
 [Pegdown]:https://github.com/sirthias/pegdown
 
-### Componentes e atividades
-
-
-#### Tecnologias Utilizadas
-
 - [Lombok]
 - [Slf4j]
 - [Spring-Boot]
@@ -35,11 +20,6 @@ Definição das camadas
 - [Jolokia]
 - [Slugify]
 - [ElasticSearch]
-
-### Domínio
-
-
-#### Tecnologias Utilizadas
 
 - [Lombok]
 - [Spring Data]
