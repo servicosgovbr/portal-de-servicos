@@ -1,12 +1,16 @@
 site_name: Guia de Serviços
 pages:
 - [index.md, 'Principal']
-- [introducao/index.md, 'Introdução']
-- [principios/index.md, 'Princípios']
-- [sobre-o-projeto/index.md, 'Sobre o Projeto']
+- [sobre-este-documento/index.md, 'Sobre este Documento', 'Introdução']
+- [sobre-este-documento/convencoes-adotadas.md, 'Sobre este Documento', 'Convenções adotadas']
+- [principios/index.md, 'Princípios', 'Introdução']
+- [sobre-o-projeto/index.md, 'Sobre o Projeto', 'Introdução']
+- [sobre-o-projeto/equipe.md, 'Sobre o Projeto', 'Equipe']
+- [sobre-o-projeto/contato.md, 'Sobre o Projeto', 'Contato']
+- [sobre-o-projeto/como-relatar-problemas.md, 'Sobre o Projeto', 'Como relatar problemas']
 - [servicos/index.md, 'Serviços']
 - [metricas/index.md, 'Métricas']
-- [metodologia-de-desenvolvimento/index.md, 'Metodologia de Desenvolvimento']
+- [metodologia-de-desenvolvimento/index.md, 'Metodologia']
 - [desenvolvimento/index.md, 'Desenvolvimento']
 
 theme: readthedocs
