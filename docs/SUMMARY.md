@@ -1,11 +1,13 @@
 # Sumário
 
-- [Sobre este Documento](sobre-este-documento/index.md)
+- [Sobre este documento](sobre-este-documento/index.md)
   - [Convenções adotadas](sobre-este-documento/convencoes-adotadas.md)
+  - [Como contribuir](sobre-este-documento/como-contribuir.md)
 - [Princípios](principios/index.md)
 - [Sobre o projeto](sobre-o-projeto/index.md)
   - [Equipe](sobre-o-projeto/equipe.md)
   - [Contato](sobre-o-projeto/contato.md)
+  - [Como contribuir](sobre-o-projeto/como-contribuir.md)
   - [Como relatar problemas](sobre-o-projeto/como-relatar-problemas.md)
   - [Licença de uso](./license.md)
 - [Serviços](servicos/index.md)
@@ -33,5 +35,6 @@
     - [Vagrant](desenvolvimento/deploy-vagrant.md)
     - [Amazon Web Services](desenvolvimento/deploy-aws.md)
   - [Testes](desenvolvimento/testes.md)
+  - [Entrega Contínua](desenvolvimento/entrega-continua.md)
   - [ElasticSearch](desenvolvimento/elasticsearch.md)
   - [Requisitos Transversais](desenvolvimento/requisitos-transversais.md)
