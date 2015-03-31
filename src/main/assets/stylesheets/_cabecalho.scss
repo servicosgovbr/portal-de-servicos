@@ -78,10 +78,16 @@ $mobile: new-breakpoint(max-width 500px 4);
 
   #logo {
     @include span-columns(9);
+
+
+    a:hover {
+      text-decoration: none;
+    }    
+
   }
 
   #portal-title {
-    font-family: 'open_sansextrabold', $helvetica;
+    font-family: 'open_sansbold', $helvetica;
     font-size: em(40);
     color: #fff;
     margin-bottom: 0;
