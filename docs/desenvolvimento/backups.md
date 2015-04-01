@@ -1,6 +1,6 @@
 # Backups
 
-Backups devem ser feitos dos seguintes arquivos e diretórios:
+Backups devem ser feitos dos seguintes caminhos:
 
 ```
 /etc/systemd/system/guia-de-servicos.service
