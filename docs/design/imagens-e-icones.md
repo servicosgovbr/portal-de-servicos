@@ -1,8 +1,6 @@
 # Imagens e ícones
 
-Para o uso de ícones, estamos utilizando o Font Awesome, que é uma fonte que ao invés de letras, mostra ícones. São mais de 519 ícones que podem ser utilizados, e não requer Javascript. Por ser uma fonte, no qual os caracteres são imagens, seu uso não interfere em outros frameworks. Todo o tipo de estilização que pode ser feita em um texto, pode ser feita nesses ícones, como modificar tamanho e cores do texto.
-
-A licensa de uso da fonte é a SIL Open Font, livre para uso.
+Para o uso de ícones, estamos utilizando o [Font Awesome](http://fortawesome.github.io/Font-Awesome/), que é uma fonte que ao invés de letras, mostra ícones. São mais de 519 ícones que podem ser utilizados, e não requer Javascript. Por ser uma fonte, no qual os caracteres são imagens, seu uso não interfere em outros frameworks. Todo o tipo de estilização que pode ser feita em um texto, pode ser feita nesses ícones, como modificar tamanho e cores do texto. A licensa de uso da fonte é a SIL Open Font, livre para uso.
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
