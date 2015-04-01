@@ -22,6 +22,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
@@ -49,12 +50,12 @@ public class BuscaControllerTest {
 
     @Test
     public void buscaRedirecionaParaPaginaDeResultados() {
-        assertViewName(controller.busca(null), "resultados-busca");
+        assertViewName(controller.busca(null, 1), "resultados-busca");
     }
 
     @Test
     public void buscaRetornaTermoBuscado() {
-        assertModelAttributeValue(controller.busca("trabalho"), "termo", "trabalho");
+        assertModelAttributeValue(controller.busca("trabalho", 1), "termo", "trabalho");
     }
 
     @Test
@@ -63,7 +64,13 @@ public class BuscaControllerTest {
                 .when(buscador)
                 .busca(of("emprego"), 0);
 
-        assertModelAttributeValue(controller.busca("emprego"), "resultados", umServico);
+        assertModelAttributeValue(controller.busca("emprego", 1), "resultados", umServico);
+    }
+
+    @Test
+    public void deveUsarBase0AoBuscarResultadosPaginados() {
+        controller.busca("qualquer servico", 20);
+        verify(buscador).busca(of("qualquer servico"), 19);
     }
 
     @Test

@@ -33,10 +33,12 @@ class BuscaController {
     }
 
     @RequestMapping("/busca")
-    ModelAndView busca(@RequestParam(required = true) String q) {
+    ModelAndView busca(@RequestParam(required = true) String q,
+                       @RequestParam(required = false, defaultValue = "1") Integer pagina) {
+
         HashMap<String, Object> model = new HashMap<>();
         model.put("termo", q);
-        model.put("resultados", buscador.busca(ofNullable(q), 0));
+        model.put("resultados", buscador.busca(ofNullable(q), pagina - 1));
 
         return new ModelAndView("resultados-busca", model);
     }
