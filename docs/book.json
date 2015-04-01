@@ -3,6 +3,7 @@
   "gitbook": ">=2.0.0",
   "title": "Guia de Serviços",
   "structure": {
-    "readme": "index.md"
+    "readme": "index.md",
+    "summary": "_sumario.md"
   }
 }
