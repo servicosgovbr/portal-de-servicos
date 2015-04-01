@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+if [ ! -d "$SNAP_CACHE_DIR" ]; then
+  echo "Diretório de cache do Snap ($SNAP_CACHE_DIR) não configurado"
+  exit -1
+fi
+
+mkdir -p "${SNAP_CACHE_DIR}/gh-pages"
+rm -rf "${SNAP_CACHE_DIR}/gh-pages/*"
+git clone -b 'gh-pages' git@github.com:servicosgovbr/guia-de-servicos.git "${SNAP_CACHE_DIR}/gh-pages"
+
+pushd docs
+  ln -s "${SNAP_CACHE_DIR}/node_modules" "node_modules"
+  npm install gitbook-cli
+  ./node_modules/.bin/gitbook build
+
+  rm -rf "${SNAP_CACHE_DIR}/gh-pages/*"
+  mv _books/* "${SNAP_CACHE_DIR}/gh-pages/" 
+popd
+
+pushd "${SNAP_CACHE_DIR}/gh-pages"
+  git add -A
+  git commit -am "Atualiza documentação para a versão ${SNAP_COMMIT_SHORT:-desconhecida} (build #${SNAP_PIPELINE_COUNTER:-desconhecida})"
+  git push origin gh-pages
+popd
