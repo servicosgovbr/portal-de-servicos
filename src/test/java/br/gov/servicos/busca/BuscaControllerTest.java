@@ -9,8 +9,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
@@ -22,7 +22,8 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doReturn;
-import static org.springframework.test.web.ModelAndViewAssert.*;
+import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
+import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
@@ -34,7 +35,7 @@ public class BuscaControllerTest {
     @Mock
     Buscador buscador;
 
-    List<Servico> umServico = asList(SERVICO);
+    Page<Servico> umServico = new FacetedPageImpl<>(asList(SERVICO));
     BuscaController controller;
 
     @Before
@@ -62,7 +63,7 @@ public class BuscaControllerTest {
                 .when(buscador)
                 .busca(of("emprego"), 0);
 
-        assertCompareListModelAttribute(controller.busca("emprego"), "resultados", umServico);
+        assertModelAttributeValue(controller.busca("emprego"), "resultados", umServico);
     }
 
     @Test

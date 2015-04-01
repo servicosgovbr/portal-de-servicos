@@ -4,7 +4,6 @@ import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.common.collect.Lists;
 import org.elasticsearch.index.query.FuzzyQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +12,12 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 import org.springframework.stereotype.Component;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
+import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;
-import static java.util.Collections.unmodifiableList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.common.unit.Fuzziness.TWO;
 import static org.elasticsearch.index.query.QueryBuilders.*;
@@ -29,7 +27,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class Buscador {
 
-    private static final LinkedList<Servico> SEM_RESULTADOS = new LinkedList<>();
+    private static final FacetedPageImpl<Servico> SEM_RESULTADOS = new FacetedPageImpl<>(emptyList());
     private static final int PAGE_SIZE = 20;
 
     ServicoRepository servicos;
@@ -52,6 +50,10 @@ public class Buscador {
         return executaQuery(termoBuscado, termo -> termQuery(campo, termo));
     }
 
+    public List<Servico> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
+        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery(campos).likeText(termo));
+    }
+
     private FuzzyQueryBuilder fuzzy(String q, String field, float boost) {
         return fuzzyQuery(field, q)
                 .boost(boost)
@@ -60,28 +62,25 @@ public class Buscador {
                 .transpositions(true);
     }
 
-    public List<Servico> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
-        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery(campos).likeText(termo));
+    private List<Servico> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
+        return executaQuery(termoBuscado, 0, MAX_VALUE, criaQuery).getContent();
     }
 
-    private Page<Servico> executaQuery(Optional<String> termoBuscado, Integer paginaAtual, Function<String, QueryBuilder> criaQuery) {
+    private Page<Servico> executaQuery(Optional<String> termoBuscado, Integer paginaAtual,
+                                       Function<String, QueryBuilder> criaQuery) {
+
+        return executaQuery(termoBuscado, paginaAtual, PAGE_SIZE, criaQuery);
+    }
+
+    private Page<Servico> executaQuery(Optional<String> termoBuscado, Integer paginaAtual,
+                                       Integer quantidadeDeResultados, Function<String, QueryBuilder> criaQuery) {
+
         Optional<String> termo = termoBuscado.filter(t -> !t.isEmpty());
 
         return termo
                 .map(criaQuery)
-                .map(q -> servicos.search(q, new PageRequest(paginaAtual, PAGE_SIZE)))
-                .orElse(new FacetedPageImpl<>(emptyList()));
-    }
-
-    private List<Servico> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
-        Optional<String> termo = termoBuscado.filter(t -> !t.isEmpty());
-
-        List<Servico> resultados = termo
-                .map(criaQuery)
-                .map(servicos::search)
-                .map(Lists::newLinkedList)
+                .map(q -> servicos.search(q, new PageRequest(paginaAtual, quantidadeDeResultados)))
                 .orElse(SEM_RESULTADOS);
-
-        return unmodifiableList(resultados);
     }
+
 }
