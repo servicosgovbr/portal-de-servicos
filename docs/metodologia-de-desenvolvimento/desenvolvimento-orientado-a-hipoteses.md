@@ -1,2 +1,0 @@
-# Desenvolvimento orientado a hipóteses
-
