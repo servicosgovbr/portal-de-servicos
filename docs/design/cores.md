@@ -12,7 +12,12 @@
 }
 </style>
  
-Com base no tema branco, definios as cores a serem utilizadas no site do Guia de Serviços. Foram cinco cores selecionadas, e que são utilizadas em proporções que fazem sentido para a melhor legibilidade, organização, contraste, acessibilidade.
+Definimos as cores a serem utilizadas no site do Guia de Serviços com base no [tema branco] do [Guia de Estilos do Governo Federal][estilos].
+
+Foram seis cores selecionadas, que são utilizadas em proporções que fazem sentido para a melhor legibilidade, organização, contraste e acessibilidade.
+
+[tema branco]:https://github.com/plonegovbr/brasil.gov.temas#id6
+[estilos]:http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf
 
 ## Preto
 
