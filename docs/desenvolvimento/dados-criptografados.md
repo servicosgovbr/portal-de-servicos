@@ -8,7 +8,7 @@ Para tal, peça a um dos mantenedores do projeto para adicionar sua chave, e qua
 git crypt unlock
 ```
 
-O `git-crypt` pedirá para destravar sua chave GPG e vai imediatamente decriptar todos os arquivos secretos de forma
+O `git-crypt` pedirá para destravar sua chave [GPG] e vai imediatamente decriptar todos os arquivos secretos de forma
 transparente ao uso do [Git][GIT]. A partir daí, a utilização do repositório pode continuar normalmente.
 
 Para travar o repositório novamente, de forma que os arquivos criptografados não sejam mais visíveis, execute:
