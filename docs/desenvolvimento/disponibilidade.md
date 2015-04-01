@@ -4,3 +4,4 @@ O sistema garante que os dados persistidos são íntegros e consistentes de form
 
 Exceto por manutenções programadas ou eventos fora do controle da equipe, o sistema estará disponível ininterruptamente. Paradas de manutenção serão comunicadas com antecedência.
 
+A disponibilidade requerida da plataforma (infra-estrutura, aplicação, etc) é de 97% (aproximadamente 50 minutos ao dia) a 99.8% (aproximadamente 3 minutos ao dia), e pode variar em função do número de publicações (deployments) feitos.

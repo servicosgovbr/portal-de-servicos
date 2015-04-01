@@ -1,25 +1,4 @@
 
-Requisitos Arquiteturais
-----
-
-Esta seção é um checklist cujo resultado final são os requisitos arquiteturais da aplicação.
-
-Deve ser respondida, de forma sucinta, ao longo da execução do projeto. As questões que não se aplicam devem ser respondidas com “N/A”.
-
-### Desempenho
-
-##### Há diferentes classes de operações para as quais os usuários têm expectativas diferentes?
-
-Não.
-
-##### Existe janela batch? O que executa nela?
-
-Não.
-
-##### Há batches com restrições de desempenho específicas? Em caso afirmativo, especifique.
-
-Não.
-
 ##### Há dados com alta taxa de acesso para leitura/gravação que podem ser mantidos em memória nas diferentes camadas da arquitetura?
 
 Sim, e os caches estão configurados para o ambiente de produção para que o [Thymeleaf] e o [ElasticSearch] façam bom uso da memória disponível.
@@ -65,36 +44,6 @@ Interação com sistemas externos:
 ##### Qual o máximo de usuários esperado realizando que tipos de operações?
 
 Pico de 270 a 300 mil acessos ao dia, com média de 100 mil acessos ao dia.
-
-##### Qual a perspectiva de crescimento em quais tabelas críticas sem impactar o desempenho da aplicação?
-
-N/A.
-
-##### Há possibilidade de saturar um link de comunicação que não pode ter a capacidade/velocidade aumentada?
-
-Não.
-
-##### Que dimensões podem ser escaladas?
-
-CPU, memória, distribuição geográfica, número de máquinas no cluster do [ElasticSearch], número de servidores de aplicação.
-
-##### Qual a principal estratégia para escalar a aplicação: ampliando os nós de uma topologia fixa ou adicionando novos nós?
-
-Adicionando novos nós. O balanceamento de carga feito no [HAProxy] pode suportar quantos nós forem necessários, e as funcionalidades de _clustering_ do [ElasticSearch] lidam com a distribuição e _caching_ dos dados.
-
-### Disponibilidade
-
-##### Qual o percentual de disponibilidade requerido?
-
-De 97% (aproximadamente 50 minutos ao dia) a 99.8% (aproximadamente 3 minutos ao dia).
-
-##### A disponibilidade varia ao longo do dia, da semana, do mês ou do ano ou em função de localização?
-
-Não, mas pode variar em função do número de publicações (deployments) feitos.
-
-##### Há interrupções controladas planejadas? Qual a programação?
-
-Ao menos uma cada vez a cada duas semanas (novas publicações). Entretanto, a estratégia azul/verde será utilizada para evitar interrupções completas no acesso ao serviço.
 
 ### Confiabilidade
 
