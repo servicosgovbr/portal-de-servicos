@@ -1,0 +1,1 @@
+# Gerência de configuração, falhas e desastres
