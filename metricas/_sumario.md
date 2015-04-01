@@ -1,0 +1,2 @@
+- [Métricas](/metricas/index.md)
+  - [KPIs](/metricas/kpis.md)

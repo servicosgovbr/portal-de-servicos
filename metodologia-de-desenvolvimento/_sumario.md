@@ -1,0 +1,5 @@
+- [Metodologia de desenvolvimento](/metodologia-de-desenvolvimento/index.md)
+  - [Hipóteses](/metodologia-de-desenvolvimento/hipoteses.md)
+  - [Métricas](/metodologia-de-desenvolvimento/metricas.md)
+  - [Fluxo de trabalho](/metodologia-de-desenvolvimento/fluxo-de-trabalho.md)
+  - [Kanban e Iterações](/metodologia-de-desenvolvimento/kanban-e-iteracoes.md)
