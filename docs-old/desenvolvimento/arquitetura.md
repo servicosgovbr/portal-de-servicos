@@ -1,39 +1,4 @@
 
-- [Thymeleaf]
-- [HTML 5][HTML5]
-- [SASS]
-- [jQuery]
-- [Modernizr]
-- [Pegdown]
-
-[Thymeleaf]:http://thymeleaf.org/
-[HTML5]:http://www.w3.org/TR/html5/
-[SASS]:http://sass-lang.com/
-[jQuery]:http://jquery.org/
-[Modernizr]:http://modernizr.com/
-[Pegdown]:https://github.com/sirthias/pegdown
-
-- [Lombok]
-- [Slf4j]
-- [Spring-Boot]
-- [Spring MVC][MVC]
-- [Jolokia]
-- [Slugify]
-- [ElasticSearch]
-
-- [Lombok]
-- [Spring Data]
-- [ElasticSearch]
-
-[Lombok]:http://projectlombok.org/
-[Slf4j]:http://slf4j.org
-[Spring-Boot]:https://github.com/spring-projects/spring-boot/
-[Spring Data]:http://projects.spring.io/spring-data/
-[MVC]:http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html
-[Jolokia]:http://jolokia.org
-[Slugify]:https://github.com/slugify/slugify
-[ElasticSearch]:https://www.elastic.co/products/elasticsearch
-
 Requisitos Arquiteturais
 ----
 
