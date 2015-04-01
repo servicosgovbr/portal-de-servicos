@@ -10,6 +10,10 @@ Formulários seguem as convenções do [eMAG].
   border: 1px solid #f7f7f7;
   background-color: #ffffff;
 }
+
+.exemplo > label {
+  display: block;
+}
 </style>
 
 ## Entrada de texto
