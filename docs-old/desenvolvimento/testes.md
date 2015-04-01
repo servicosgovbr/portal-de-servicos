@@ -10,26 +10,6 @@ Para construir o projeto, basta utilizar:
 As tarefas padrão devem ser suficientes para garantir que a compilação, testes automatizados e empacotamento estão
 executando corretamente.
 
-Testes
-----
-
-Para executar apenas os testes unitários isoladamente, utilize a tarefa `test` do [Gradle][GRADLE]:
-
-```
-./gradlew test
-```
-
-E para executar apenas os testes de integração, que são um pouco mais demorados, execute a tarefa `integrationTest` do [Gradle][GRADLE]:
-
-```
-./gradlew integrationTest
-```
-
-Antes de publicar uma funcionalidade, com `git push`, recomendamos rodar todas as tarefas de testes e verificação do [Gradle][GRADLE]:
-
-```
-./gradlew check
-```
 
 Integração Contínua
 ----
