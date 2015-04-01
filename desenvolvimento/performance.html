@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.9.12" data-basepath=".." data-revision="Wed Apr 01 2015 14:59:07 GMT+0000 (UTC)">
+    <div class="book" data-level="8.9.12" data-basepath=".." data-revision="Wed Apr 01 2015 15:02:25 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1184,6 +1184,21 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="performance">Performance</h1>
+<p>Dadas as seguintes m&#xE9;tricas de performance de aplica&#xE7;&#xF5;es web:</p>
+<h4 id="ttfb-time-to-first-byte">TTFB (<em>Time to First Byte</em>)</h4>
+<p>Tempo que o servidor levou para come&#xE7;ar a enviar a resposta da requisi&#xE7;&#xE3;o principal, desconsiderando assets (imagens, javascript, css etc).</p>
+<h4 id="ttlb-time-to-last-byte">TTLB (<em>Time to Last Byte</em>)</h4>
+<p>Idem ao &#xED;tem anterior, mas conta o tempo que o servidor levou para enviar o &#xFA;ltimo byte da resposta. Geralmente estes dois n&#xFA;meros diferem se o conte&#xFA;do for processado em blocos e enviado usando APIs de streaming.</p>
+<h4 id="ttrs-time-to-render-start">TTRS (<em>Time to Render Start</em>)</h4>
+<p>Tempo at&#xE9; que o navegador comece a renderizar a p&#xE1;gina. Pode depender de algumas requisi&#xE7;&#xF5;es a assets al&#xE9;m do conte&#xFA;do principal.</p>
+<h4 id="ttup-time-to-usable-page">TTUP (<em>Time to Usable Page</em>)</h4>
+<p>Tempo que leva para o usu&#xE1;rio ter uma p&#xE1;gina us&#xE1;vel/&#xFA;til em m&#xE3;os, mesmo que nem todo o conte&#xFA;do tenha terminado de carregar ainda.</p>
+<h4 id="atft-above-the-fold-time">ATFT (<em>Above-The-Fold Time</em>)</h4>
+<p>Tempo que a parte acima da dobra (<em>above the fold</em>) da p&#xE1;gina leva para renderizar. Relacionado ao TTUP, mas pode acontecer antes ou depois dele, dependendo do navegador e quantidade de assets carregados de forma ass&#xED;ncrona.</p>
+<h4 id="tplt-total-page-load-time">TPLT (<em>Total Page Load Time</em>)</h4>
+<p>Tempo total de carga, parsing e exibi&#xE7;&#xE3;o da p&#xE1;gina, incluindo todos os assets. Esta medida &#xE9; importante pois &#xE9; o tempo em que navegador marca a p&#xE1;gina como &quot;carregando&quot; para o usu&#xE1;rio, sem otimiza&#xE7;&#xF5;es de carga ass&#xED;ncrona.</p>
+<h2 id="m%C3%A9tricas-utilizadas">M&#xE9;tricas utilizadas</h2>
+<p>Para o Guia de Servi&#xE7;os, decidimos medir apenas <strong>TTFB</strong> na requisi&#xE7;&#xE3;o principal (a URL diretamente acessada pelo usu&#xE1;rio), que deve estar abaixo de 1 segundo, e <strong>TLPT</strong>, inferior a 5 segundos (+/- 1 segundo).</p>
 
                     
                     </section>
