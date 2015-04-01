@@ -19,38 +19,11 @@ Foram seis cores selecionadas, que são utilizadas em proporções que fazem sen
 [tema branco]:https://github.com/plonegovbr/brasil.gov.temas#id6
 [estilos]:http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf
 
-## Preto
-
-`#000000`
-
-<div class="swatch" style="background-color: #000000">&nbsp;</div>
-
-## Cinza escuro
-
-`#606060`
-
-<div class="swatch" style="background-color: #606060">&nbsp;</div>
-
-## Cinza médio
-
-`#dcdcdc`
-
-<div class="swatch" style="background-color: #dcdcdc">&nbsp;</div>
-
-## Cinza claro
-
-`#eef0f1`
-
-<div class="swatch" style="background-color: #eef0f1">&nbsp;</div>
-
-## Branco
-
-`#ffffff`
-
-<div class="swatch" style="background-color: #ffffff">&nbsp;</div>
-
-## Azul
-
-`#2c66ce`
-
-<div class="swatch" style="background-color: #2c66ce">&nbsp;</div>
+| Cor                                                                                            |
+| ----------- | :---------: | ------------------------------------------------------------------ |
+| Preto       | `#000000`   | <div class="swatch" style="background-color: #000000">&nbsp;</div> |
+| Cinza escuro| `#606060`   | <div class="swatch" style="background-color: #606060">&nbsp;</div> |
+| Cinza médio | `#dcdcdc`   | <div class="swatch" style="background-color: #dcdcdc">&nbsp;</div> |
+| Cinza claro | `#eef0f1`   | <div class="swatch" style="background-color: #eef0f1">&nbsp;</div> |
+| Branco      | `#ffffff`   | <div class="swatch" style="background-color: #ffffff">&nbsp;</div> |
+| Azul        | `#2c66ce`   | <div class="swatch" style="background-color: #2c66ce">&nbsp;</div> |
