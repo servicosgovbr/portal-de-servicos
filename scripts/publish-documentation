@@ -13,7 +13,7 @@ git clone -b 'gh-pages' git@github.com:servicosgovbr/guia-de-servicos.git "${SNA
 
 pushd "${SNAP_CACHE_DIR}/gh-pages"
   rm -rf *
-  
+
   pushd docs
     ln -s "${SNAP_CACHE_DIR}/node_modules" "node_modules"
     npm install gitbook-cli

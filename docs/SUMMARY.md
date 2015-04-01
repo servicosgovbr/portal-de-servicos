@@ -27,7 +27,6 @@
   - [KPIs](metricas/kpis.md)
 - [Metodologia de desenvolvimento](metodologia-de-desenvolvimento/index.md)
   - [Desenvolvimento orientado a hipóteses](metodologia-de-desenvolvimento/desenvolvimento-orientado-a-hipoteses.md)
-  - [Ferramentas de gerenciamento](metodologia-de-desenvolvimento/ferramentas-de-gerenciamento.md)
   - [Kanban e Iterações](metodologia-de-desenvolvimento/kanban-e-iteracoes.md)
 - [Desenvolvimento](desenvolvimento/index.md)
   - [Arquitetura](desenvolvimento/arquitetura.md)
