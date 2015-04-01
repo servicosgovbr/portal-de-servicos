@@ -11,6 +11,8 @@
   border: 1px solid black;
 }
 </style>
+ 
+Com base no tema branco, definios as cores a serem utilizadas no site do Guia de Serviços. Foram cinco cores selecionadas, e que são utilizadas em proporções que fazem sentido para a melhor legibilidade, organização, contraste, acessibilidade.
 
 ## Preto
 
