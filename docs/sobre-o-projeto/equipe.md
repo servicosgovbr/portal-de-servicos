@@ -44,5 +44,6 @@ A natureza do código aberto do projeto nos trouxe alguns contribiudores externo
 * [Gabriel Such](mailto:gabrielsuch@gmail.com)
 * [Rodrigo Alencar](mailto:ralencar@thoughtworks.com)
 * [Thiago Felix](mailto:tfelix@thoughtworks.com)
+* [Bruno Tavares](mailto:btavares@thoughtworks.com)
 
 Em seções seguintes, detalharemos como contribuir com o código aberto do Guia de Serviços.
