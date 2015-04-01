@@ -42,7 +42,7 @@ public class BuscadorTest {
 
     @Test
     public void buscaPorServico() {
-        assertThat(buscador.busca(of("um serviço")), hasItem(SERVICO));
+        assertThat(buscador.busca(of("um serviço"), 0), hasItem(SERVICO));
     }
 
     @Test
@@ -57,15 +57,13 @@ public class BuscadorTest {
 
     @Test
     public void retornaUmaListaVaziaQuandoNaoHouverTermoDeBusca() throws Exception {
-        assertThat(buscador.busca(empty()), is(emptyList()));
-
+        assertThat(buscador.busca(empty(), 0), is(emptyList()));
         verifyZeroInteractions(servicos);
     }
 
     @Test
     public void deveConsiderarTermoDeBuscaVazioComoEmpty() throws Exception {
-        assertThat(buscador.busca(of("")), is(emptyList()));
-
+        assertThat(buscador.busca(of(""), 0), is(emptyList()));
         verifyZeroInteractions(servicos);
     }
 }

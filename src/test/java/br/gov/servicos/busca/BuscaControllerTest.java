@@ -60,7 +60,7 @@ public class BuscaControllerTest {
     public void buscaRetornaResultadosParaAPagina() {
         doReturn(umServico)
                 .when(buscador)
-                .busca(of("emprego"));
+                .busca(of("emprego"), 0);
 
         assertCompareListModelAttribute(controller.busca("emprego"), "resultados", umServico);
     }

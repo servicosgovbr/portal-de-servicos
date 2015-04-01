@@ -36,7 +36,7 @@ class BuscaController {
     ModelAndView busca(@RequestParam(required = true) String q) {
         HashMap<String, Object> model = new HashMap<>();
         model.put("termo", q);
-        model.put("resultados", buscador.busca(ofNullable(q)));
+        model.put("resultados", buscador.busca(ofNullable(q), 0));
 
         return new ModelAndView("resultados-busca", model);
     }
@@ -44,7 +44,6 @@ class BuscaController {
     @ResponseStatus(MOVED_PERMANENTLY)
     @RequestMapping("/search")
     String search(@RequestParam(required = true) String SearchableText) {
-
         return format("redirect:/busca?q=%s", ofNullable(SearchableText).orElse(""));
     }
 

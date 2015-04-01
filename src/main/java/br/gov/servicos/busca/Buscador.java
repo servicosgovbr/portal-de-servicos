@@ -34,7 +34,7 @@ public class Buscador {
         this.servicos = servicos;
     }
 
-    List<Servico> busca(Optional<String> termoBuscado) {
+    List<Servico> busca(Optional<String> termoBuscado, Integer paginaAtual) {
         log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
         return executaQuery(termoBuscado, (q) -> disMaxQuery()
                 .add(queryString(q).boost(5f))

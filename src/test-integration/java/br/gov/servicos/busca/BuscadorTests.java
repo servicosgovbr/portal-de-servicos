@@ -4,7 +4,6 @@ import br.gov.servicos.ElasticSearchTest;
 import br.gov.servicos.Main;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +36,7 @@ public class BuscadorTests extends ElasticSearchTest {
                 .withTitulo("Passaporte")
                 .withDescricao("Emissão de passaportes"));
 
-        List<Servico> busca = buscador.busca(of("passaprote"));
+        List<Servico> busca = buscador.busca(of("passaprote"), 0);
         assertThat(busca, is(not(empty())));
 
         Servico resultado = busca.iterator().next();
