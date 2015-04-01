@@ -18,7 +18,7 @@ pushd docs
   ./node_modules/.bin/gitbook build
 
   rm -rf "${SNAP_CACHE_DIR}/gh-pages/*"
-  mv _books/* "${SNAP_CACHE_DIR}/gh-pages/" 
+  mv _book/* "${SNAP_CACHE_DIR}/gh-pages/"
 popd
 
 pushd "${SNAP_CACHE_DIR}/gh-pages"
