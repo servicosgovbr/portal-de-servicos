@@ -12,6 +12,12 @@
 }
 </style>
 
+## Preto
+
+`#000000`
+
+<div class="swatch" style="background-color: #000000">&nbsp;</div>
+
 ## Cinza escuro
 
 `#606060`
