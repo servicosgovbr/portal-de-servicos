@@ -8,10 +8,6 @@ Deve ser respondida, de forma sucinta, ao longo da execução do projeto. As que
 
 ### Desempenho
 
-##### Qual a velocidade de resposta esperada da aplicação?
-
-Tempo ao primeiro byte recebido pelo browser na requisição principal inferior a 1 segundo em ao menos 80% das requisições, e tempo de carga médio total inferior a 5 segundos (+/- 1 segundo).
-
 ##### Há diferentes classes de operações para as quais os usuários têm expectativas diferentes?
 
 Não.
