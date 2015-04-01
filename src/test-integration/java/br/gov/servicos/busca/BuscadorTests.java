@@ -10,12 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.List;
-
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Optional.of;
-import static org.hamcrest.CoreMatchers.not;
-import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -36,9 +32,7 @@ public class BuscadorTests extends ElasticSearchTest {
                 .withTitulo("Passaporte")
                 .withDescricao("Emissão de passaportes"));
 
-        List<Servico> busca = buscador.busca(of("passaprote"), 0);
-        assertThat(busca, is(not(empty())));
-
+        Iterable<Servico> busca = buscador.busca(of("passaprote"), 0);
         Servico resultado = busca.iterator().next();
         assertThat(resultado.getId(), is("passaporte"));
     }
