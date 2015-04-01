@@ -1,5 +1,5 @@
 # Design
 
-Esta seção define a identidade visual revisada, que utiliza o [tema branco] de portais do Governo Federal. 
+Nesta seção você encontra as definições da identidade visual revisada do Guia de Serviços, e que utiliza o Tema Branco de portais do Governo Federal. 
 
-Aqui estão dispostas várias escolhas feitas em relação a tipografia, cores, icones, disposição e formato visual de formulário, botões, textos e grade de layout, bem como exemplos de código de como esses estilos são utilizados.
+Aqui estão dispostas as decisões feitas em relação a tipografia, cores, ícones, disposição e formato visual de formulário, botões, textos e grade de layout, bem como exemplos de código de como esses estilos estão sendo utilizados.

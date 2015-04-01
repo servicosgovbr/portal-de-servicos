@@ -1,5 +1,7 @@
 # Tipografia
 
+Optamos pelo uso da fonte Open Sans, pois está já era utilizada nos sites do Governo Federal. Também escolhemos ela, pois acreditamos que esta é uma fonte neutra, e ainda assim amigável (como descrita por seu autor) e é flexível, possuindo diversos pesos que auxiliam na composição de uma hierarquia visual. Esta fonte é otimizada para impressos web e mobile, e tem ótimas características de legibilidade. Além de tudo, é uma fonte com licença livre (Apache License 2.0), sendo possível utiliza-la em todos os principais sistemas operacionais e navegadores. Abaixo você pode ver como utilizamos esta família de fontes no Guia de Serviços.
+
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <style>
 .exemplo {
