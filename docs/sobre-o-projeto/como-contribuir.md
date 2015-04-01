@@ -15,3 +15,5 @@ Uma vez feitas as configurações necessárias para executar o [ambiente de dese
 - Faça o push para o repositório criado através do fork
 
 Após estes passos, seu repositório estará à frente do repositório original. Você já está apto a submeter suas modificações usando o recurso de pull request.
+
+[GHISSUES]:https://github.com/servicosgovbr/guia-de-servicos/issues
