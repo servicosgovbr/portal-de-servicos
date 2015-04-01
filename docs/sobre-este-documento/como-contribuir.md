@@ -2,7 +2,7 @@
 
 Esta documentação é escrita no formato [Markdown], e a versão mais recente é publicada automaticamente através do maquinário de [Entrega Contínua](../desenvolvimento/entrega-continua.md).
 
-Para atualizar um documento, basta editá-lo a partir do próprio [Github do projeto] e seguir as convenções do formato [Markdown]. O Github disponibiliza uma pré-visualização no próprio editor.
+Para atualizar um documento, basta editá-lo a partir do próprio [Github do projeto][github] e seguir as convenções do formato [Markdown]. O Github disponibiliza uma pré-visualização no próprio editor.
 
 Caso queira ter uma cópia local da documentação que queira editar, ou seja um desenvolvedor que quer atualizar a documentação em conjunto com novas funcionalidades antes de gerar um _commit_, instale a ferramenta [gitbook-cli] e rode:
 
