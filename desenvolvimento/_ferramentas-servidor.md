@@ -4,7 +4,9 @@ Devida à sua ubiquidade e facilidade de manutenção, ferramental existente, bi
 
 ### [Lombok](http://projectlombok.org/)
 
-Gerador de código cerimonial para Java com diversos utilitários e extensões à sintaxe da linguagem. Para a utilização em IDEs, é necessário um [plugin](https://github.com/mplushnikov/lombok-intellij-plugin).
+Gerador de código cerimonial para Java com diversos utilitários e extensões à sintaxe da linguagem. Para a utilização no [IntelliJ IDEA][IDEA], é necessário um [plugin](https://github.com/mplushnikov/lombok-intellij-plugin).
+
+[IDEA]:https://www.jetbrains.com/idea/
 
 ### [Tomcat](http://tomcat.apache.org)
 

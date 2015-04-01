@@ -22,6 +22,8 @@ Ferramenta de controle de versão amplamente utilizada.
 
 Permite gerenciar arquivos com informações sigilosas, mesmo em repositórios Git públicos, através de [GPG].
 
+[GPG]:https://www.gnupg.org/
+
 ### [GitBook](http://gitbook.com)
 
 Ferramenta de formatação e geração de documentação em formatos HTML, PDF, ePub, Mobi, etc.
