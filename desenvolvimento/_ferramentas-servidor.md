@@ -51,3 +51,7 @@ Processador de [Markdown] em Java.
 ### [Slugify](https://github.com/slugify/slugify)
 
 Gerador de _slugs_, strings de texto simples e que podem ser utilizadas seguramente em trechos de URLs ou identificadores internos de objetos.
+
+### [HAProxy](http://www.haproxy.org)
+
+Balanceador de carga entre servidores HTTP de alta disponibilidade e fácil configuração. 
