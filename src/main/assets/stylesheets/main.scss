@@ -39,7 +39,7 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   h1 {
-    font-size: em(35px);
+    font-size: em(35);
     font-family: 'open_sansbold', $helvetica;
     color: #606060;
     line-height: 120%;
@@ -47,12 +47,10 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   p {
-    font-size: em(15px);
+    font-size: em(15);
     color: #606060;
     line-height: 150%;
-    margin: 0px;
-    margin-top: -20px;
-    padding-bottom: 20px;
+    margin-top: -10px;
   }
 
   img {
@@ -307,9 +305,12 @@ ul#resultados-linhadavida {
   margin-top: 30px;
 
   p {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #D3DADF;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #DCDCDC;
     padding-bottom: 20px;
+    color: #606060;
+    line-height: 140%;
   }
 }
 
