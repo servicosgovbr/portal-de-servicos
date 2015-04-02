@@ -5,7 +5,6 @@ Implantação
 
 Diagrama geral de um ambiente:
 
-[![Diagrama de um ambiente similar à produção](./ambiente.jpg)](./ambiente.graphml)
 
 O sistema pode ser escalado através da adição de máquinas, tanto servidores de aplicação quanto de servidores de busca, permitindo escalabilidade horizontal.
 

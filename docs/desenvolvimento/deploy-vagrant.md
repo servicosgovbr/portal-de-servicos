@@ -1,5 +1,7 @@
 # Vagrant
 
+[![Diagrama da rede no Vagrant](/desenvolvimento/ambiente-vagrant.jpg)](/desenvolvimento/ambiente-vagrant.graphml)
+
 Criamos também um conjunto de _boxes_ para o [Vagrant][VAGRANT]. Para utilizá-lo, confira que você está usando uma versão recente do Vagrant (ao menos 1.6.5) e rode:
 
 ```

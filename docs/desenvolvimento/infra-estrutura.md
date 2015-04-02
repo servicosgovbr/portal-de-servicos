@@ -1,5 +1,7 @@
 # Infra-estrutura
 
+[![Diagrama da rede em ambiente similar a produção](/desenvolvimento/ambiente-producao.jpg)](/desenvolvimento/ambiente-producao.graphml)
+
 ## Ambientes de desenvolvimento e homologação
 
 Estes ambientes contém 5 máquinas virtuais:
