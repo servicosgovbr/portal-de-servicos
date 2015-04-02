@@ -22,22 +22,20 @@
         <div class="cell width-16 position-0">
 
             <h1>Serviços do Governo de A-Z</h1>
-            <span>Filtrar por:</span>
-            <ul>
-                <li th:each="letra : ${letras}">
-                    <a th:href="@{/servicos/?letra={filtro}(filtro=${letra})}"
-                       th:text="${letra}"
-                       th:style="${letra == letraAtiva}? 'text-decoration:underline'">A-Z</a>
-                </li>
-            </ul>
 
-            <hr/>
+            <div th:replace="fragments/paginacao ::
+                conteudo-paginado(${letraAtiva}, ${letras}, 'letra=${pagina}')">
 
-            <ul class="servicos-a-z">
-                <li th:each="servico : ${servicos}">
-                    <span th:replace="fragments/resultado-busca-servico"/>
-                </li>
-            </ul>
+                <span layout:fragment="titulo">
+                    Filtrar por:
+                </span>
+
+                <ul layout:fragment="conteudo" class="servicos-a-z">
+                    <li th:each="servico : ${servicos}">
+                        <span th:replace="fragments/resultado-busca-servico"/>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

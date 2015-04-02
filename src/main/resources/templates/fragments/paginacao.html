@@ -1,0 +1,17 @@
+<div th:fragment="paginacao-simples(paginaAtual, paginas, parametros)">
+    <span layout:fragment="titulo">Paginas:</span>
+
+    <ul style="display: inline-block">
+        <li th:each="pagina : ${paginas}">
+            <a th:href="@{${url}(__${parametros}__)}"
+               th:style="${pagina == paginaAtual}? 'text-decoration:underline'"
+               th:text="${pagina}">1-N...</a>
+        </li>
+    </ul>
+</div>
+
+<div th:fragment="conteudo-paginado(paginaAtual, paginas, parametros)">
+    <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})"/><hr/>
+    <div layout:fragment="conteudo"/><hr/>
+    <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})"/>
+</div>

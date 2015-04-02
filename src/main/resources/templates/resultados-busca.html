@@ -22,6 +22,7 @@
             <p>
                 Não foram encontrados serviços com o termo "<span th:text="${termo}"></span>".
             </p>
+
             <p>
                 Sugestões:
             </p>
@@ -34,26 +35,22 @@
         </div>
 
         <div class="cell width-16 position-0" th:if="${resultados.hasContent()}">
+
             <h1>Resultados da busca por "<span th:text="${termo}">termo</span>"</h1>
 
-            <p><span th:text="${resultados.totalElements}">0</span> resultados encontrados</p>
+            <p>
+                <span th:text="${resultados.totalElements}">0</span> resultados encontrados
+            </p>
 
-            <span>Paginas:</span>
-            <ul>
-                <li th:each="page : ${#numbers.sequence(1, resultados.totalPages)}">
-                    <a th:href="@{${url}(q=${termo}, pagina=${page})}"
-                       th:style="${page == resultados.number+1}? 'text-decoration:underline'"
-                       th:text="${page}">1-N...</a>
-                </li>
-            </ul>
+            <div th:replace="fragments/paginacao ::
+                conteudo-paginado(${resultados.number+1}, ${#numbers.sequence(1, resultados.totalPages)}, 'q=${termo}, pagina=${pagina}')">
 
-            <hr/>
-
-            <ul id="resultados-busca">
-                <li th:each="resultado : ${resultados}">
-                    <span th:replace="fragments/resultado-busca-servico(servico=${resultado})"/>
-                </li>
-            </ul>
+                <ul layout:fragment="conteudo" id="resultados-busca">
+                    <li th:each="resultado : ${resultados}">
+                        <span th:replace="fragments/resultado-busca-servico(servico=${resultado})"/>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
