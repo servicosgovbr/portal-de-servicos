@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Amazon Web Services | Guia de Serviços</title>
+        <title>Infraestrutura | Guia de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../desenvolvimento/deploy-homologacao-producao.html" />
+    <link rel="next" href="../desenvolvimento/dados-criptografados.html" />
     
     
-    <link rel="prev" href="../desenvolvimento/deploy-vagrant.html" />
+    <link rel="prev" href="../desenvolvimento/ferramentas-utilizadas.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.5.3" data-basepath=".." data-revision="Thu Apr 02 2015 02:50:34 GMT+0000 (UTC)">
+    <div class="book" data-level="8.3" data-basepath=".." data-revision="Thu Apr 02 2015 02:50:34 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -700,7 +700,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8.3" data-path="desenvolvimento/infraestrutura.html">
+        <li class="chapter active" data-level="8.3" data-path="desenvolvimento/infraestrutura.html">
             
                 
                     <a href="../desenvolvimento/infraestrutura.html">
@@ -776,7 +776,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="8.5.3" data-path="desenvolvimento/deploy-aws.html">
+        <li class="chapter " data-level="8.5.3" data-path="desenvolvimento/deploy-aws.html">
             
                 
                     <a href="../desenvolvimento/deploy-aws.html">
@@ -1153,14 +1153,171 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="amazon-web-services">Amazon Web Services</h1>
-<p>Para criar uma inst&#xE2;ncia da aplica&#xE7;&#xE3;o na AWS EC2, &#xE9; necess&#xE1;rio utilizar uma imagem CentOS 7, 64 bits em uma inst&#xE2;ncia com mem&#xF3;ria e processamento adequados. Para testes e utiliza&#xE7;&#xE3;o leve, o <em>free tier</em> das m&#xE1;quinas <code>t2.micro</code> &#xE9; suficiente.</p>
-<p>O script <code>scripts/launch-ec2-instance</code> pode ser usado como base.</p>
-<p>Ap&#xF3;s a cria&#xE7;&#xE3;o da inst&#xE2;ncia, &#xE9; necess&#xE1;ria a instala&#xE7;&#xE3;o do pacote RPM gerado (<code>guia-de-servicos-1.0.*-1.noarch.rpm</code>) na inst&#xE2;ncia. Para isto, basta copiar o arquivo para a inst&#xE2;ncia e instalar o RPM usando <code>yum install</code>. O servi&#xE7;o deve ser reiniciado ap&#xF3;s a instala&#xE7;&#xE3;o, utilizando o <code>systemctl</code>:</p>
-<pre><code>sudo systemctl daemon-reload
-sudo systemctl restart guia-de-servicos
-</code></pre><h2 id="entrega-cont%C3%ADnua">Entrega Cont&#xED;nua</h2>
-<p>Os passos descritos na se&#xE7;&#xE3;o anterior s&#xE3;o feitos automaticamente a cada <em>push</em>, atrav&#xE9;s do script <code>scripts/alpha-deploy</code>. Para mais detalhes, veja a se&#xE7;&#xE3;o <a href="entrega-continua.html">Entrega Cont&#xED;nua</a>.</p>
+                        <h1 id="infraestrutura">Infraestrutura</h1>
+<p><a href="desenvolvimento/ambiente-producao.graphml"><img src="ambiente-producao.jpg" alt="Diagrama da rede em ambiente similar a produ&#xE7;&#xE3;o"></a></p>
+<h2 id="ambientes-de-desenvolvimento-e-homologa%C3%A7%C3%A3o">Ambientes de desenvolvimento e homologa&#xE7;&#xE3;o</h2>
+<p>Estes ambientes cont&#xE9;m 5 m&#xE1;quinas virtuais:</p>
+<ul>
+<li>Balanceador de carga</li>
+<li>Servidor de Aplica&#xE7;&#xE3;o 1 (Azul)</li>
+<li>Servidor de Aplica&#xE7;&#xE3;o 2 (Verde)</li>
+<li>Servidor de Busca 1</li>
+<li>Servidor de Busca 2</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>VM</th>
+<th>OS</th>
+<th>Vers&#xE3;o</th>
+<th>Arquitetura</th>
+<th>Cores</th>
+<th>Mem&#xF3;ria</th>
+<th>Disco</th>
+<th>Portas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Balanceador</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>2</td>
+<td>2 GB</td>
+<td>50+ GB</td>
+<td>22, 80</td>
+</tr>
+<tr>
+<td>Aplica&#xE7;&#xE3;o 1</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>2</td>
+<td>2 GB</td>
+<td>50+ GB</td>
+<td>22, 8080</td>
+</tr>
+<tr>
+<td>Aplica&#xE7;&#xE3;o 2</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>2</td>
+<td>2 GB</td>
+<td>50+ GB</td>
+<td>22, 8080</td>
+</tr>
+<tr>
+<td>Busca 1</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>2</td>
+<td>2 GB</td>
+<td>50+ GB</td>
+<td>22, 9200, 9300</td>
+</tr>
+<tr>
+<td>Busca 2</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>2</td>
+<td>2 GB</td>
+<td>50+ GB</td>
+<td>22, 9200, 9300</td>
+</tr>
+</tbody>
+</table>
+<p>No ambiente de desenvolvimento, tamb&#xE9;m h&#xE1; um servidor de Integra&#xE7;&#xE3;o Cont&#xED;nua (Jenkins), j&#xE1; provisionado e configurado, que deve ter acesso <a href="http://www.openssh.com/" target="_blank">ssh</a> &#xE0;s m&#xE1;quinas acima, atrav&#xE9;s de chaves compartilhadas com a equipe de desenvolvimento do sistema.</p>
+<h4 id="balanceador-de-carga">Balanceador de Carga</h4>
+<p>CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda um servidor <a href="http://www.haproxy.org/" target="_blank">HAProxy</a> na porta 80, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
+<h4 id="servidores-de-aplica%C3%A7%C3%A3o">Servidores de Aplica&#xE7;&#xE3;o</h4>
+<p>CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda a aplica&#xE7;&#xE3;o sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, na porta 8080, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
+<h4 id="servidores-de-busca">Servidores de Busca</h4>
+<p>CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda o <a href="https://www.elastic.co/products/elasticsearch" target="_blank">ElasticSearch</a> sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, nas portas 9200 e 9300, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
+<h2 id="ambientes-de-produ%C3%A7%C3%A3o">Ambientes de produ&#xE7;&#xE3;o</h2>
+<p>Este ambiente cont&#xE9;m 5 m&#xE1;quinas virtuais:</p>
+<ul>
+<li>Balanceador de carga</li>
+<li>Servidor de Aplica&#xE7;&#xE3;o 1 (Azul)</li>
+<li>Servidor de Aplica&#xE7;&#xE3;o 2 (Verde)</li>
+<li>Servidor de Busca 1</li>
+<li>Servidor de Busca 2</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>VM</th>
+<th>OS</th>
+<th>Vers&#xE3;o</th>
+<th>Arquitetura</th>
+<th>Cores</th>
+<th>Mem&#xF3;ria</th>
+<th>Disco</th>
+<th>Portas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Balanceador</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>4</td>
+<td>4 GB</td>
+<td>100+ GB</td>
+<td>22, 80</td>
+</tr>
+<tr>
+<td>Aplica&#xE7;&#xE3;o 1</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>4</td>
+<td>4 GB</td>
+<td>100+ GB</td>
+<td>22, 8080</td>
+</tr>
+<tr>
+<td>Aplica&#xE7;&#xE3;o 2</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>4</td>
+<td>4 GB</td>
+<td>100+ GB</td>
+<td>22, 8080</td>
+</tr>
+<tr>
+<td>Busca 1</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>4</td>
+<td>4 GB</td>
+<td>100+ GB</td>
+<td>22, 9200, 9300</td>
+</tr>
+<tr>
+<td>Busca 2</td>
+<td>CentOS</td>
+<td>7</td>
+<td>64bit</td>
+<td>4</td>
+<td>4 GB</td>
+<td>100+ GB</td>
+<td>22, 9200, 9300</td>
+</tr>
+</tbody>
+</table>
+<h4 id="balanceador-de-carga">Balanceador de Carga</h4>
+<p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda um servidor <a href="http://www.haproxy.org/" target="_blank">HAProxy</a> na porta 80, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
+<h4 id="servidores-de-aplica%C3%A7%C3%A3o">Servidores de Aplica&#xE7;&#xE3;o</h4>
+<p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda a aplica&#xE7;&#xE3;o sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, na porta 8080, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
+<h4 id="servidores-de-busca">Servidores de Busca</h4>
+<p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda o <a href="https://www.elastic.co/products/elasticsearch" target="_blank">ElasticSearch</a> sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, nas portas 9200 e 9300, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
 
                     
                     </section>
@@ -1171,10 +1328,10 @@ sudo systemctl restart guia-de-servicos
         </div>
 
         
-        <a href="../desenvolvimento/deploy-vagrant.html" class="navigation navigation-prev " aria-label="Previous page: Vagrant"><i class="fa fa-angle-left"></i></a>
+        <a href="../desenvolvimento/ferramentas-utilizadas.html" class="navigation navigation-prev " aria-label="Previous page: Ferramentas utilizadas"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../desenvolvimento/deploy-homologacao-producao.html" class="navigation navigation-next " aria-label="Next page: Homologação e Produção"><i class="fa fa-angle-right"></i></a>
+        <a href="../desenvolvimento/dados-criptografados.html" class="navigation navigation-next " aria-label="Next page: Dados Criptografados"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
