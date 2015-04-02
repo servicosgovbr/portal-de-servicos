@@ -203,17 +203,16 @@ dl.portlet {
 .busca-principal {
   @include span-columns(12);
   @include omega();
-  margin-bottom: em(20px);
+  margin-bottom: em(20);
 
   > p {
     margin: 0;
     color: #2c66ce;
-
   }
 
   h3.titulo-busca {
     font-family: open_sansbold;
-    font-size: em(25px);
+    font-size: em(25);
     margin-bottom: em(15);
   }
 
@@ -221,7 +220,7 @@ dl.portlet {
     > input[type='text'] {
       @include span-columns(10);
       display: block;
-      padding: 8px;
+      padding: 10px;
       border-radius: 5px;
       border-top: 2px solid #dcdcdc;
       border-bottom: 0;
@@ -246,9 +245,9 @@ dl.portlet {
       color: #fff;
       background-color: #2c66ce;
       display: block;
-      font-family: 'open_sanssemibold', $helvetica;
-      font-size: 14px;
-      padding: 9px 0px 8px 0px;
+      font-family: 'open_sansbold', $helvetica;
+      font-size: 16px;
+      padding: 9px 0px 9px 0px;
       border: none;
       border-radius: 4px;
     }
@@ -284,20 +283,27 @@ span.ticket-erro {
 }
 
 a.acao, button.acao, input[type="submit"].acao {
-  border: 1px solid black;
-  padding: 8px;
-  background: green;
+  padding: 8px 13px 8px 13px;
+  background: #2c66ce;
   text-decoration: none;
-  margin-bottom: 14px;
+  margin: 10px 0px 30px 0px;
   display: inline-block;
-  color: white !important;
+  color: white !important;  
+  border: none;
+  border-radius: 4px;
+  font-family: open_sansbold;
+  font-size: 16px;
 
   &:visited, &:link {
     color: white !important;
   }
 
   &:hover {
-    color: #A0B69F !important;
+    color: #fff !important;
+    background-color: #2153ae;
+    border: none;
+    border-radius: 4px;
+
   }
 }
 
