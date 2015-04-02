@@ -8,22 +8,6 @@
 @import 'acessibilidade';
 @import 'media-queries';
 
-// //Cores primarias
-
-// $verde: #195128;
-// $amarelo: #f7c514;
-// $azul: #3e6731;
-// $branco: #ecedf1;
-
-// //Cores secundárias
-// $laranja: #f18f20;
-// $amarelo-cla: #fdf499;
-// $verde-cla: #18a54b;
-// $verde-esc: #454546;
-// $azul-cla: #204c90;
-// $azul-esc: #21376c;
-// $vermelho: #a41e22;
-
 $mobile: new-breakpoint(max-width 500px 4);
 
 #main {
@@ -34,41 +18,41 @@ $mobile: new-breakpoint(max-width 500px 4);
   @include span-columns(9);
   @include omega();
   line-height: 1.5em;
+
   @include media($mobile) {
     @include span-columns(4);
-    }
+  }
   
-  header{
+  header {
     margin-bottom: em(20);
 
-    h2{
+    h2 {
       font-family: 'open_sansbold', $helvetica;
       font-size: em(35);
       margin-bottom: em(20);
       padding-right: 3.464em;
-      @include media($mobile){
+
+      @include media($mobile) {
         line-height: 85%;
       }
     }
-
   }
 
   h1 {
-  font-size: em(35px);
-  font-family: 'open_sansbold', $helvetica;
-  color: #606060;
-  line-height: 120%;
-  margin-top: 0;
+    font-size: em(35px);
+    font-family: 'open_sansbold', $helvetica;
+    color: #606060;
+    line-height: 120%;
+    margin-top: 0;
   }
 
-
   p {
-        font-size: em(15px);
-        color: #606060;
-        line-height: 150%;
-        margin: 0px;
-        margin-top: -20px;
-        padding-bottom: 20px;
+    font-size: em(15px);
+    color: #606060;
+    line-height: 150%;
+    margin: 0px;
+    margin-top: -20px;
+    padding-bottom: 20px;
   }
 
   img {
@@ -103,7 +87,6 @@ dl.portlet {
     margin: 0;
     padding: 0.5em;
     border-bottom: .1em solid #ccc;
-
   }
 
   .fa {
@@ -187,13 +170,12 @@ dl.portlet {
 
 .outstanding-header {
 
-  .outstanding-title,  {
+  .outstanding-title {
     margin-left: 0;
     margin-bottom: none;
     line-height: 1em;
   }
 }
-
 
 #voltar-topo {
   @include span-columns(3);
@@ -220,10 +202,10 @@ dl.portlet {
   right: 33px;
 }
 
-  .busca-principal {
-    @include span-columns(12);
-    @include omega();
-    margin-bottom: em(20px);
+.busca-principal {
+  @include span-columns(12);
+  @include omega();
+  margin-bottom: em(20px);
 
   > p {
     margin: 0;
@@ -263,7 +245,6 @@ dl.portlet {
     input[type='submit'] {
       @include span-columns(2);
       @include omega();
-      // height: 26px;
       color: #fff;
       background-color: #2c66ce;
       display: block;
@@ -344,14 +325,13 @@ ul.orgaos-a-z {
   padding: 30px 0;
 }
 
-#navegacao{
+#navegacao {
   @include span-columns(3);
   @include media($mobile) {
     display: none !important;
-    }
+  }
 
-    .navTree span{
-      font-size: 14px;
-
-    }
+  .navTree span {
+    font-size: 14px;
+  }
 }

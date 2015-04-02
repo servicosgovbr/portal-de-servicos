@@ -29,13 +29,11 @@ $mobile: new-breakpoint(max-width 500px 4);
     }
   }
 
-
   #acessibilidade {
     @include span-columns(6);
     font-family: 'open_sansregular', $helvetica;
     @include media($mobile) {
       display: none !important;
-
     }
 
     a {
@@ -91,10 +89,11 @@ $mobile: new-breakpoint(max-width 500px 4);
     font-size: em(40);
     color: #fff;
     margin-bottom: 0;
-    @include media($mobile){
-      margin-top: 15px;
+
+    @include media($mobile) {
+       margin-top: 15px;
 	   margin-bottom: 5px;
-      }
+    }
   }
 
   #portal-description {
@@ -134,16 +133,18 @@ $mobile: new-breakpoint(max-width 500px 4);
     background: #195128;
     padding-top: em(7);
     padding-bottom: em(7);
-    @include media($mobile){
+
+    @include media($mobile) {
       @include outer-container;
     }
 
     ul {
       @include outer-container;
       text-align: right;
-      @include media($mobile){
+
+      @include media($mobile) {
         text-align: left;
-    }
+      }
 
     }
 
