@@ -1,4 +1,4 @@
-# Infra-estrutura
+# Infraestrutura
 
 [![Diagrama da rede em ambiente similar a produção](/desenvolvimento/ambiente-producao.jpg)](/desenvolvimento/ambiente-producao.graphml)
 

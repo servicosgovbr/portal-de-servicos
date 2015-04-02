@@ -1,6 +1,6 @@
 ### [Java 8](https://www.java.com/)
 
-Devida à sua ubiquidade e facilidade de manutenção, ferramental existente, bibliotecas maduras e ampla adoção na infra-estrutura do Governo Brasileiro.
+Devida à sua ubiquidade e facilidade de manutenção, ferramental existente, bibliotecas maduras e ampla adoção na infraestrutura do Governo Brasileiro.
 
 ### [Lombok](http://projectlombok.org/)
 
