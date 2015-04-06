@@ -18,7 +18,7 @@ Prefix:             /opt/%{name}
 BuildArchitectures: noarch
 Requires:           jdk1.8.0_40
 
-Source0:             %{_sourcedir}/%{name}-%{version}-SNAPSHOT.jar
+Source0:             %{_sourcedir}/%{name}-%{version}.jar
 
 %description
 Guia de Serviços do Governo Federal do Brasil

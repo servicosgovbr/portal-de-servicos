@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+if [ ! -d "${SNAP_CACHE_DIR}" ]; then
+  echo "Diretório de cache do Snap (\$SNAP_CACHE_DIR) não configurado"
+  exit -1
+fi
+
+if [ ! -d "${SNAP_CACHE_DIR}/rpm-s3" ]; then
+  pushd "${SNAP_CACHE_DIR}"
+    git clone https://github.com/crohr/rpm-s3 --recurse-submodules
+  popd
+fi
+
+${SNAP_CACHE_DIR}/rpm-s3/bin/rpm-s3 \
+    -b servicosgovbr \
+    -p "centos/7" \
+    $(find build/rpmbuild/RPMS/noarch/guia-de-servicos*.rpm -type f)

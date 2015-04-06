@@ -14,7 +14,7 @@ apply plugin: 'asset-pipeline'
 if (System.getenv("SNAP_CI").equals("true") && System.getenv("SNAP_PIPELINE_COUNTER") != null) {
     version = "1.0.${System.getenv("SNAP_PIPELINE_COUNTER")}"
 } else {
-    version = '1.0.0-SNAPSHOT'
+    version = '1.0.0'
 }
 
 sourceCompatibility = 1.8
@@ -138,7 +138,7 @@ task prepareRpm(type:Copy) {
     rpmDirs.each {f -> f.mkdirs()}
 
     from "$buildDir/libs"
-    include "${project.name}-1.0.0-SNAPSHOT.jar"
+    include "${project.name}-1.0.0.jar"
     into "$rpmBaseDir/SOURCES/${project.name}-${version}.jar"
 }
 
@@ -149,7 +149,7 @@ task buildRpm(type: Exec) {
         commandLine 'bash', '-c',
             "rpmbuild -v -bb " +
             "--define '_topdir $rpmBaseDir' " +
-            "--define 'version ${version.replace('-SNAPSHOT', '')}' " +
+            "--define 'version ${version}' " +
             "${project.name}.rpmspec"
     }
     else if (new File('/vagrant').exists()) {
@@ -157,14 +157,14 @@ task buildRpm(type: Exec) {
             "cd /vagrant && " +
             "rpmbuild -v -bb " +
             "--define '_topdir $rpmBaseDir' " +
-            "--define 'version ${version.replace('-SNAPSHOT', '')}' " +
+            "--define 'version ${version}' " +
             "${project.name}.rpmspec"
     } else {
         commandLine 'vagrant', 'ssh', 'app', '-c',
             "cd /vagrant && " +
             "rpmbuild -v -bb " +
             "--define '_topdir /vagrant/build/rpmbuild' " +
-            "--define 'version ${version.replace('-SNAPSHOT', '')}' " +
+            "--define 'version ${version}' " +
             "${project.name}.rpmspec"
     }
 }
@@ -173,7 +173,7 @@ task vagrantDeploy(type: Exec) {
     dependsOn buildRpm
 
     String cmd = "cd /vagrant && bash ./scripts/vagrant-deploy " +
-            "build/rpmbuild/RPMS/noarch/${project.name}-${version.replace('-SNAPSHOT', '')}-1.noarch.rpm"
+            "build/rpmbuild/RPMS/noarch/${project.name}-${version}-1.noarch.rpm"
 
     if (new File('/vagrant').exists()) {
         commandLine 'bash', '-c', cmd
