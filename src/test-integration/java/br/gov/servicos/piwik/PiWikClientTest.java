@@ -2,6 +2,7 @@ package br.gov.servicos.piwik;
 
 import br.gov.servicos.config.PiWikConfig;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,6 +20,7 @@ public class PiWikClientTest {
     }
 
     @Test
+    @Ignore("Depende de token, ainda falta colocar em algum local seguro")
     public void deveRetonarUrlsParaODia04042015() throws Exception {
         String date = "04-04-2015";
         String period = "day";

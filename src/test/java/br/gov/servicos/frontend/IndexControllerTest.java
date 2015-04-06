@@ -1,6 +1,8 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.DestaquesConfig;
+import br.gov.servicos.piwik.PiWikClient;
+import br.gov.servicos.piwik.PiWikPage;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
@@ -12,6 +14,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+
+import java.util.Collections;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
@@ -31,11 +35,14 @@ public class IndexControllerTest {
     @Mock
     DestaquesConfig destaques;
 
+    @Mock
+    PiWikClient piWikClient;
+
     IndexController controller;
 
     @Before
     public void setUp() {
-        controller = new IndexController(servicos, destaques);
+        controller = new IndexController(servicos, destaques, piWikClient);
 
         doReturn(new PageImpl<>(asList(SERVICO)))
                 .when(servicos)
@@ -70,6 +77,43 @@ public class IndexControllerTest {
                 .findOne("servico-em-destaque");
 
         assertModelAttributeValue(controller.index(), "destaques", asList(servicoEmDestaque, SERVICO));
+    }
+
+    @Test
+    public void devePedirUrlsMaisAcessadasParaOPiWiki() throws Exception {
+        doReturn(Collections
+                .singletonList(
+                    new PiWikPage()
+                        .withLabel("/servico/servico-mais-acessado")
+                        .withVisitors(3L)
+                        .withUniqueVisitors(1L)))
+                .when(piWikClient)
+                .getPageUrls(anyString(), anyString());
+
+        Servico servicoMaisAcessado = new Servico().withId("servico-mais-acessado");
+        doReturn(servicoMaisAcessado)
+                .when(servicos)
+                .findOne("servico-mais-acessado");
+
+        assertModelAttributeValue(controller.maisAcessados(), "destaques", asList(servicoMaisAcessado, SERVICO));
+    }
+
+    @Test
+    public void deveFiltrarServicosMaisAcessadosNaoEncontrados() throws Exception {
+        doReturn(Collections
+                .singletonList(
+                        new PiWikPage()
+                                .withLabel("/servico/servico-nao-existe")
+                                .withVisitors(3L)
+                                .withUniqueVisitors(1L)))
+                .when(piWikClient)
+                .getPageUrls(anyString(), anyString());
+
+        doReturn(null)
+                .when(servicos)
+                .findOne("servico-nao-existe");
+
+        assertModelAttributeValue(controller.maisAcessados(), "destaques", asList(SERVICO));
     }
 
     @Test
