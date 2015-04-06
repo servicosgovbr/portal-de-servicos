@@ -1,7 +1,6 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.Main;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,17 +27,6 @@ public class FrontendTest {
     @Test
     public void abrePaginaInfoComSucesso() throws Exception {
         realizaRequisicaoComSucesso(String.format("http://localhost:%d/info", port));
-    }
-
-    @Test
-    @Ignore("Depende de token, ainda falta colocar em algum local seguro")
-    public void abrePaginaMaisAcessadosComSucesso() throws Exception {
-        realizaRequisicaoComSucesso(String.format("http://localhost:%d/maisAcessados", port));
-    }
-
-    @Test
-    public void abrePaginaPrincipalComSucesso() throws Exception {
-        realizaRequisicaoComSucesso(String.format("http://localhost:%d", port));
     }
 
     private void realizaRequisicaoComSucesso(String url) throws Exception {
