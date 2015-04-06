@@ -17,27 +17,18 @@
 </span>
 
 <div layout:fragment="corpo">
+    <h1>Serviços de A-Z</h1>
 
-    <div class="row">
-        <th:block>
-            <h1>
-                Serviços de A-Z
-            </h1>
+    <div th:replace="fragments/paginacao :: conteudo-paginado(${letraAtiva}, ${letras}, 'letra=${pagina}')">
+        <span layout:fragment="titulo">
+            Filtrar por:
+        </span>
 
-            <div th:replace="fragments/paginacao ::
-                conteudo-paginado(${letraAtiva}, ${letras}, 'letra=${pagina}')">
-
-                <span layout:fragment="titulo">
-                    Filtrar por:
-                </span>
-
-                <ul layout:fragment="conteudo" class="servicos-a-z">
-                    <li th:each="servico : ${servicos}">
-                        <span th:replace="fragments/resultado-busca-servico"/>
-                    </li>
-                </ul>
-            </div>
-        </th:block>
+        <ul layout:fragment="conteudo" class="servicos-a-z">
+            <li th:each="servico : ${servicos}">
+                <span th:replace="fragments/resultado-busca-servico"/>
+            </li>
+        </ul>
     </div>
 </div>
 

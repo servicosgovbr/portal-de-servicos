@@ -17,28 +17,19 @@
 </span>
 
 <div layout:fragment="corpo">
-
     <h1 th:utext="${publicoAlvo.titulo}"></h1>
 
-    <span class="paginacao-busca">
-      Filtrar por:
-    </span>
-    
-    <ul>
-        <li th:each="letra : ${letras}">
-            <a th:href="@{/publico-alvo/{id}?letra={filtro}(filtro=${letra}, id=${publicoAlvo.id})}"
-               th:text="${letra}"
-               th:style="${letra == letraAtiva}? 'text-decoration:underline'">A-Z</a>
-        </li>
-    </ul>
+    <div th:replace="fragments/paginacao :: conteudo-paginado(${letraAtiva}, ${letras}, 'letra=${pagina}')">
+        <span layout:fragment="titulo">
+            Filtrar por:
+        </span>
 
-    <hr/>
-
-    <ul id="resultados-publico-alvo">
-        <li th:each="servico, i : ${servicos}">
-            <span th:replace="fragments/resultado-busca-servico(servico=${servico})"></span>
-        </li>
-    </ul>
+        <ul layout:fragment="conteudo" class="servicos-a-z">
+            <li th:each="servico : ${servicos}">
+                <span th:replace="fragments/resultado-busca-servico"/>
+            </li>
+        </ul>
+    </div>
 </div>
 
 </body>
