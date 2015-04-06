@@ -11,10 +11,11 @@ apply plugin: 'pmd'
 apply plugin: 'findbugs'
 apply plugin: 'asset-pipeline'
 
+ext.sha = 'git rev-parse --short HEAD'.execute().in.text.trim()
+
 if (System.getenv("SNAP_CI").equals("true") && System.getenv("SNAP_PIPELINE_COUNTER") != null) {
     version = "1.0.${System.getenv("SNAP_PIPELINE_COUNTER")}"
 } else {
-    ext.sha = 'git rev-parse --short HEAD'.execute().in.text.trim()
     version = '1.0.' + sha + '-SNAPSHOT'
 }
 
@@ -139,8 +140,8 @@ task prepareRpm(type:Copy) {
     rpmDirs.each {f -> f.mkdirs()}
 
     from "$buildDir/libs"
-    include "${project.name}-${version}.jar"
-    into "$rpmBaseDir/SOURCES"
+    include "${project.name}-1.0.${ext.sha}-SNAPSHOT.jar"
+    into "$rpmBaseDir/SOURCES/${project.name}-${version}.jar"
 }
 
 task buildRpm(type: Exec) {
