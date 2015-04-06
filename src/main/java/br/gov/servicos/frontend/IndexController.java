@@ -1,7 +1,7 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.DestaquesConfig;
-import br.gov.servicos.piwik.PiWikClient;
+import br.gov.servicos.piwik.PiwikClient2;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
@@ -27,15 +27,15 @@ import static org.springframework.data.domain.Sort.Direction.DESC;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class IndexController {
 
-    PiWikClient piWikClient;
+    PiwikClient2 piwikClient;
     ServicoRepository servicos;
     DestaquesConfig destaques;
 
     @Autowired
-    IndexController(ServicoRepository servicos, DestaquesConfig destaques, PiWikClient piWikClient) {
+    IndexController(ServicoRepository servicos, DestaquesConfig destaques, PiwikClient2 piwikClient) {
         this.servicos = servicos;
         this.destaques = destaques;
-        this.piWikClient = piWikClient;
+        this.piwikClient = piwikClient;
     }
 
     @RequestMapping("/")
@@ -53,14 +53,13 @@ class IndexController {
     }
 
     private Stream<Servico> servicosMaisAcessados() {
-        return this.piWikClient.getPageUrls("week", "yesterday").stream()
+        return this.piwikClient.getPageUrls("month", "yesterday").stream()
                 .filter(p -> p.getLabel().startsWith("/servico/"))
                 .sorted((a, b) -> a.getUniqueVisitors().compareTo(b.getUniqueVisitors()))
                 .map(p -> p.getLabel().replace("/servico/", ""))
                 .map(servicos::findOne)
                 .filter(Objects::nonNull);
     }
-
 
     private List<Servico> servicosParaExibir() {
         return concat(buscaDestaquesSeNecessario(), outrosServicos()).collect(toList());

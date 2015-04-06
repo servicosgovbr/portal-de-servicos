@@ -1,8 +1,8 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.DestaquesConfig;
-import br.gov.servicos.piwik.PiWikClient;
-import br.gov.servicos.piwik.PiWikPage;
+import br.gov.servicos.piwik.PiwikClient2;
+import br.gov.servicos.piwik.PiwikPage2;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
@@ -36,13 +36,13 @@ public class IndexControllerTest {
     DestaquesConfig destaques;
 
     @Mock
-    PiWikClient piWikClient;
+    PiwikClient2 piwikClient;
 
     IndexController controller;
 
     @Before
     public void setUp() {
-        controller = new IndexController(servicos, destaques, piWikClient);
+        controller = new IndexController(servicos, destaques, piwikClient);
 
         doReturn(new PageImpl<>(asList(SERVICO)))
                 .when(servicos)
@@ -80,14 +80,14 @@ public class IndexControllerTest {
     }
 
     @Test
-    public void devePedirUrlsMaisAcessadasParaOPiWiki() throws Exception {
+    public void devePedirUrlsMaisAcessadasParaOPiwik() throws Exception {
         doReturn(Collections
                 .singletonList(
-                    new PiWikPage()
+                    new PiwikPage2()
                         .withLabel("/servico/servico-mais-acessado")
                         .withVisitors(3L)
                         .withUniqueVisitors(1L)))
-                .when(piWikClient)
+                .when(piwikClient)
                 .getPageUrls(anyString(), anyString());
 
         Servico servicoMaisAcessado = new Servico().withId("servico-mais-acessado");
@@ -102,11 +102,11 @@ public class IndexControllerTest {
     public void deveFiltrarServicosMaisAcessadosNaoEncontrados() throws Exception {
         doReturn(Collections
                 .singletonList(
-                        new PiWikPage()
+                        new PiwikPage2()
                                 .withLabel("/servico/servico-nao-existe")
                                 .withVisitors(3L)
                                 .withUniqueVisitors(1L)))
-                .when(piWikClient)
+                .when(piwikClient)
                 .getPageUrls(anyString(), anyString());
 
         doReturn(null)

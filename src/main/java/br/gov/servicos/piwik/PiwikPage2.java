@@ -7,15 +7,16 @@ import lombok.Value;
 import lombok.experimental.Wither;
 
 /**
+ * Retorno do endpoint Actions.getPageUrls:
  * http://developer.piwik.org/api-reference/reporting-api
- * Retorno do endpoint Actions.getPageUrls
  */
 @Wither
 @Value
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PiWikPage {
+public class PiwikPage2 {
 
+    @JsonProperty("label")
     String label;
 
     @JsonProperty("nb_visits")
@@ -24,7 +25,7 @@ public class PiWikPage {
     @JsonProperty("nb_uniq_visitors")
     Long uniqueVisitors;
 
-    public PiWikPage() {
+    public PiwikPage2() {
         this("", 0L, 0L);
     }
 }
