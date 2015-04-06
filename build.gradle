@@ -139,7 +139,7 @@ task prepareRpm(type:Copy) {
 
     from "$buildDir/libs"
     include "${project.name}-${version}.jar"
-    into "$rpmBaseDir/SOURCES/${project.name}-${version}.jar"
+    into "$rpmBaseDir/SOURCES"
 }
 
 task buildRpm(type: Exec) {
