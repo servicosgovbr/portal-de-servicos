@@ -1,8 +1,11 @@
 # Tipografia
 
-Optamos pelo uso da fonte Open Sans, pois está já era utilizada nos sites do Governo Federal. Também escolhemos ela, pois acreditamos que esta é uma fonte neutra, e ainda assim amigável (como descrita por seu autor) e é flexível, possuindo diversos pesos que auxiliam na composição de uma hierarquia visual. Esta fonte é otimizada para impressos web e mobile, e tem ótimas características de legibilidade. Além de tudo, é uma fonte com licença livre (Apache License 2.0), sendo possível utiliza-la em todos os principais sistemas operacionais e navegadores. Abaixo você pode ver como utilizamos esta família de fontes no Guia de Serviços.
+A fonte [Open Sans](http://en.wikipedia.org/wiki/Open_Sans), recomendada pelo [Guia de Estilos][estilos], é utilizada em todos os estilos do Guia de Serviços.
+
+[estilos]:http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
 <style>
 .exemplo {
   font-family: 'Open Sans';
@@ -108,4 +111,3 @@ Optamos pelo uso da fonte Open Sans, pois está já era utilizada nos sites do G
 ```
 <a href="...">Blitz prende ex-vesgo com cheque fajuto</a>
 ```
-
