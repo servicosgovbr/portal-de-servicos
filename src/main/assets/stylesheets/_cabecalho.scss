@@ -2,7 +2,8 @@ $mobile: new-breakpoint(max-width 500px 4);
 
 #header {
   padding: 14px 0 0 0;
-  @include radial-gradient(circle at 50% 50%, #17882c 10%, #00510f, $fallback: #00510f);
+  // @include radial-gradient(circle at 50% 50%, #17882c 10%, #00510f, $fallback: #00510f);
+  background-color: #eeeff1;
 
   input.searchButton {
     padding: .3em;
@@ -18,7 +19,7 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   a {
-    color: #fff;
+    color: #606060;
   }
 
   #topo {
@@ -42,9 +43,10 @@ $mobile: new-breakpoint(max-width 500px 4);
     }
 
     span {
-      padding: 0 0.18em;
-      background: url('../img/bg-acess-key.gif') no-repeat;
-      color: #060;
+      // padding: 0 0.18em;
+      padding: 0px 4px 0px 4px;
+      background: #cfd0d2;
+      color: #2c66ce;
     }
 
   }
@@ -87,12 +89,12 @@ $mobile: new-breakpoint(max-width 500px 4);
   #portal-title {
     font-family: 'open_sansbold', $helvetica;
     font-size: em(40);
-    color: #fff;
+    color: #2c66ce;
     margin-bottom: 0;
 
     @include media($mobile) {
-       margin-top: 15px;
-	   margin-bottom: 5px;
+      margin-top: 15px;
+      margin-bottom: 5px;
     }
   }
 
@@ -101,7 +103,7 @@ $mobile: new-breakpoint(max-width 500px 4);
     text-transform: uppercase;
     font-size: em(14);
     font-family: 'open_sanssemibold', $helvetica;
-    color: #fff;
+    color: #2c66ce;
   }
 
   #portal-searchbox {
@@ -130,9 +132,9 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   #sobre {
-    background: #195128;
+    background: #dcdcdc;
     padding-top: em(7);
-    padding-bottom: em(7);
+    padding-bottom: em(9);
 
     @include media($mobile) {
       @include outer-container;
@@ -145,11 +147,10 @@ $mobile: new-breakpoint(max-width 500px 4);
       @include media($mobile) {
         text-align: left;
       }
-
     }
 
     li {
-      border-right: 1px solid #6c9072;
+      border-right: 1px solid #606060;
       padding: 0 10px;
       font-size: em(12);
 
@@ -161,16 +162,21 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   #barra-feedback {
-    background-color: #e5e8ea;
+    background-color: #2c66ce;
+    padding: 5px 0px 5px 0px;
+
 
     p {
       @include outer-container(73.80em);
       font-size: em(13px);
       padding: 5px 0 5px 0;
       margin-bottom: 0;
+      color: #ffffff;
 
       a {
-        color: #2c66ce;
+        color: #ffffff;
+        font-family: open_sansbold;
+        text-decoration: underline;
       }
     }
   }

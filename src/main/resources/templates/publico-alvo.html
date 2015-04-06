@@ -20,7 +20,10 @@
 
     <h1 th:utext="${publicoAlvo.titulo}"></h1>
 
-    <span>Filtrar por:</span>
+    <span class="paginacao-busca">
+      Filtrar por:
+    </span>
+    
     <ul>
         <li th:each="letra : ${letras}">
             <a th:href="@{/publico-alvo/{id}?letra={filtro}(filtro=${letra}, id=${publicoAlvo.id})}"
