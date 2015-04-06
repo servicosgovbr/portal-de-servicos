@@ -138,7 +138,7 @@ task prepareRpm(type:Copy) {
     rpmDirs.each {f -> f.mkdirs()}
 
     from "$buildDir/libs"
-    include "${project.name}-1.0.0.jar"
+    include "${project.name}-${version}.jar"
     into "$rpmBaseDir/SOURCES/${project.name}-${version}.jar"
 }
 
