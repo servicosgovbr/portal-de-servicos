@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tipos="http://servicos.gov.br/tipos"
+           version="1.0">
+
+    <xs:import namespace="http://servicos.gov.br/tipos" schemaLocation="../tipos.xsd"/>
+
+    <xs:element name="servico" type="Servico"/>
+
+    <xs:complexType name="Servico">
+        <xs:sequence>
+            <xs:element name="tipo" type="tipos:tipoInformacao"/>
+            <xs:element name="titulo" type="tipos:textoCurto"/>
+            <xs:element name="oQueE" type="tipos:textoLongo"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
