@@ -4,6 +4,7 @@ import br.gov.servicos.piwik.PiwikClient;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -39,24 +40,21 @@ public class PiwikConfig {
         return new PiwikClient(new RestTemplate(), url, token, site);
     }
 
+    @SneakyThrows
     private void trustSelfSignedSSL() {
-        try {
-            SSLContext ctx = SSLContext.getInstance("TLS");
-            X509TrustManager tm = new X509TrustManager() {
-                public void checkClientTrusted(X509Certificate[] xcs, String string) throws CertificateException {
-                }
+        SSLContext ctx = SSLContext.getInstance("TLS");
+        X509TrustManager tm = new X509TrustManager() {
+            public void checkClientTrusted(X509Certificate[] xcs, String string) throws CertificateException {
+            }
 
-                public void checkServerTrusted(X509Certificate[] xcs, String string) throws CertificateException {
-                }
+            public void checkServerTrusted(X509Certificate[] xcs, String string) throws CertificateException {
+            }
 
-                public X509Certificate[] getAcceptedIssuers() {
-                    return null;
-                }
-            };
-            ctx.init(null, new TrustManager[]{tm}, null);
-            SSLContext.setDefault(ctx);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+            public X509Certificate[] getAcceptedIssuers() {
+                return null;
+            }
+        };
+        ctx.init(null, new TrustManager[]{tm}, null);
+        SSLContext.setDefault(ctx);
     }
 }
