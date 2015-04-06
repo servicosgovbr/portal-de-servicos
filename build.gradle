@@ -1,8 +1,5 @@
-import static com.sun.nio.file.SensitivityWatchEventModifier.*
-import static java.nio.file.StandardWatchEventKinds.*
-import asset.pipeline.fs.*
 import asset.pipeline.*
-import java.nio.file.*
+import asset.pipeline.fs.*
 
 apply plugin: 'java'
 apply plugin: 'spring-boot'
@@ -14,8 +11,12 @@ apply plugin: 'pmd'
 apply plugin: 'findbugs'
 apply plugin: 'asset-pipeline'
 
-ext.sha = 'git rev-parse --short HEAD'.execute().in.text.trim()
-version = '1.0.' + sha + '-SNAPSHOT'
+if (System.getenv("SNAP_CI").equals("true") && System.getenv("SNAP_PIPELINE_COUNTER") != null) {
+    version = "1.0.${System.getenv("SNAP_PIPELINE_COUNTER")}"
+} else {
+    ext.sha = 'git rev-parse --short HEAD'.execute().in.text.trim()
+    version = '1.0.' + sha + '-SNAPSHOT'
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
