@@ -243,7 +243,17 @@ idea {
         inheritOutputDirs = false
         outputDir = file("$buildDir/classes/main/")
         testOutputDir = file("$buildDir/classes/test/")
-        excludeDirs += files('.git-crypt', '.vagrant', '.sass-cache', '.sass-work', '.jruby-container', 'data', 'gradle', 'docs/_book')
+        excludeDirs += files(
+                '.git-crypt',
+                '.vagrant',
+                '.sass-cache',
+                '.sass-work',
+                '.jruby-container',
+                'data',
+                'gradle',
+                'docs/_book',
+                'tmp'
+        )
 
         testSourceDirs += project.sourceSets.integrationTest.java.srcDirs
         testSourceDirs += project.sourceSets.integrationTest.resources.srcDirs
