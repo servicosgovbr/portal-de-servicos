@@ -1,7 +1,7 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.DestaquesConfig;
-import br.gov.servicos.piwik.PiwikClient2;
+import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
@@ -27,12 +27,12 @@ import static org.springframework.data.domain.Sort.Direction.DESC;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class IndexController {
 
-    PiwikClient2 piwikClient;
+    PiwikClient piwikClient;
     ServicoRepository servicos;
     DestaquesConfig destaques;
 
     @Autowired
-    IndexController(ServicoRepository servicos, DestaquesConfig destaques, PiwikClient2 piwikClient) {
+    IndexController(ServicoRepository servicos, DestaquesConfig destaques, PiwikClient piwikClient) {
         this.servicos = servicos;
         this.destaques = destaques;
         this.piwikClient = piwikClient;

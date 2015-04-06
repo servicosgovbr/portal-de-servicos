@@ -16,25 +16,25 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
 @WebAppConfiguration
-public class PiwikClient2Test {
+public class PiwikClientTest {
 
     @Autowired
-    PiwikClient2 piwikClient;
+    PiwikClient piwikClient;
 
     @Test
     @Ignore("Configure o token em GDS_PIWIK_TOKEN")
     public void deveRetonarUrlsParaODia04042015() throws Exception {
         String date = "04-04-2015";
         String period = "day";
-        List<PiwikPage2> urls = piwikClient.getPageUrls(period, date);
+        List<PiwikPage> urls = piwikClient.getPageUrls(period, date);
 
         assertEquals(urls.size(), 100);
-        assertEquals(urls.get(0), new PiwikPage2()
+        assertEquals(urls.get(0), new PiwikPage()
                 .withLabel("/index")
                 .withVisitors(13741L)
                 .withUniqueVisitors(8693L));
 
-        assertEquals(urls.get(1), new PiwikPage2()
+        assertEquals(urls.get(1), new PiwikPage()
                 .withLabel("repositorioServico")
                 .withVisitors(3855L));
     }

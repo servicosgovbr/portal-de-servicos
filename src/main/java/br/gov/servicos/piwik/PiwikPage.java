@@ -14,7 +14,7 @@ import lombok.experimental.Wither;
 @Value
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PiwikPage2 {
+public class PiwikPage {
 
     @JsonProperty("label")
     String label;
@@ -25,7 +25,7 @@ public class PiwikPage2 {
     @JsonProperty("nb_uniq_visitors")
     Long uniqueVisitors;
 
-    public PiwikPage2() {
+    public PiwikPage() {
         this("", 0L, 0L);
     }
 }

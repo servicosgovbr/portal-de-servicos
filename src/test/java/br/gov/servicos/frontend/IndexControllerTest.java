@@ -1,8 +1,8 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.DestaquesConfig;
-import br.gov.servicos.piwik.PiwikClient2;
-import br.gov.servicos.piwik.PiwikPage2;
+import br.gov.servicos.piwik.PiwikClient;
+import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
@@ -36,7 +36,7 @@ public class IndexControllerTest {
     DestaquesConfig destaques;
 
     @Mock
-    PiwikClient2 piwikClient;
+    PiwikClient piwikClient;
 
     IndexController controller;
 
@@ -83,7 +83,7 @@ public class IndexControllerTest {
     public void devePedirUrlsMaisAcessadasParaOPiwik() throws Exception {
         doReturn(Collections
                 .singletonList(
-                    new PiwikPage2()
+                    new PiwikPage()
                         .withLabel("/servico/servico-mais-acessado")
                         .withVisitors(3L)
                         .withUniqueVisitors(1L)))
@@ -102,7 +102,7 @@ public class IndexControllerTest {
     public void deveFiltrarServicosMaisAcessadosNaoEncontrados() throws Exception {
         doReturn(Collections
                 .singletonList(
-                        new PiwikPage2()
+                        new PiwikPage()
                                 .withLabel("/servico/servico-nao-existe")
                                 .withVisitors(3L)
                                 .withUniqueVisitors(1L)))

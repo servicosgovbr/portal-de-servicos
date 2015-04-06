@@ -10,21 +10,21 @@ import java.util.Arrays;
 import java.util.List;
 
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class PiwikClient2 {
+public class PiwikClient {
     RestTemplate restTemplate;
     String authToken;
     String url;
     int site;
 
     @Autowired
-    public PiwikClient2(RestTemplate restTemplate, String url, String authToken, int site) {
+    public PiwikClient(RestTemplate restTemplate, String url, String authToken, int site) {
         this.restTemplate = restTemplate;
         this.url = url;
         this.authToken = authToken;
         this.site = site;
     }
 
-    public List<PiwikPage2> getPageUrls(String period, String date) {
+    public List<PiwikPage> getPageUrls(String period, String date) {
         return Arrays.asList(
                 restTemplate.getForEntity(
                         buildCommonParams()
@@ -33,7 +33,7 @@ public class PiwikClient2 {
                                 .queryParam("date", date)
                                 .build()
                                 .toUri(),
-                        PiwikPage2[].class)
+                        PiwikPage[].class)
                         .getBody());
     }
 

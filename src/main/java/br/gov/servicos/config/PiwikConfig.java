@@ -1,6 +1,6 @@
 package br.gov.servicos.config;
 
-import br.gov.servicos.piwik.PiwikClient2;
+import br.gov.servicos.piwik.PiwikClient;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +19,7 @@ import java.security.cert.X509Certificate;
 @Configuration
 @ConfigurationProperties("gds.piwik")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class PiwikConfig2 {
+public class PiwikConfig {
 
     @Getter
     @Setter(/* usado pelo Spring */)
@@ -34,9 +34,9 @@ public class PiwikConfig2 {
     int site;
 
     @Bean
-    public PiwikClient2 piwikClient() {
+    public PiwikClient piwikClient() {
         trustSelfSignedSSL();
-        return new PiwikClient2(new RestTemplate(), url, token, site);
+        return new PiwikClient(new RestTemplate(), url, token, site);
     }
 
     private void trustSelfSignedSSL() {
