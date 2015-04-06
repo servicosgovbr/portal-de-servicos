@@ -10,6 +10,10 @@ server:
   port: ${port:8080}
 
 gds:
+  piwik:
+    url: "https://estatisticas.presidencia.gov.br"
+    token: ""
+    site: 2
   destaques:
     servicos:
       - retificadora-on-line-extrato-da-dirpf
