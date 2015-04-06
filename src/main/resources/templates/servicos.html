@@ -19,9 +19,10 @@
 <div layout:fragment="corpo">
 
     <div class="row">
-        <div class="cell width-16 position-0">
-
-            <h1>Serviços do Governo de A-Z</h1>
+        <th:block>
+            <h1>
+                Serviços do Governo de A-Z
+            </h1>
 
             <div th:replace="fragments/paginacao ::
                 conteudo-paginado(${letraAtiva}, ${letras}, 'letra=${pagina}')">
@@ -36,7 +37,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </th:block>
     </div>
 </div>
 

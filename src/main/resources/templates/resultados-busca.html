@@ -6,8 +6,8 @@
 <head>
     <title th:text="'Busca por ' + ${termo}">Resultados da Busca</title>
 </head>
-<body>
 
+<body>
 <span layout:fragment="link-migalha-de-pao">
     Busca
 </span>
@@ -16,7 +16,7 @@
 
     <div class="row">
 
-        <div class="cell width-16 position-0" th:unless="${resultados.hasContent()}">
+        <th:block th:unless="${resultados.hasContent()}">
             <h1>Nenhum resultado</h1>
 
             <p>
@@ -32,9 +32,9 @@
                 <li>Tente palavras-chave mais genéricas</li>
                 <li>Tente menos palavras-chave</li>
             </ul>
-        </div>
+        </th:block>
 
-        <div class="cell width-16 position-0" th:if="${resultados.hasContent()}">
+        <th:block th:if="${resultados.hasContent()}">
 
             <h1>Resultados da busca por "<span th:text="${termo}">termo</span>"</h1>
 
@@ -51,9 +51,9 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </th:block>
     </div>
 </div>
-
 </body>
+
 </html>

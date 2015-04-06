@@ -25,7 +25,7 @@
 <div layout:fragment="corpo">
 
     <div class="row">
-        <div class="cell width-16 position-0">
+        <th:block>
 
             <h1 th:text="${servico.titulo}">Nome do Serviço</h1>
 
@@ -64,7 +64,7 @@
             <div th:replace="fragments/canais-de-prestacao"></div>
             <div th:replace="fragments/informacoes-uteis"></div>
 
-        </div>
+        </th:block>
     </div>
 </div>
 

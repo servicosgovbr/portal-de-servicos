@@ -56,17 +56,24 @@ h1 {
   border-bottom: none;
   color: #606060;
   margin: .5em 0 .5em;
-}
-
-h1,
-h3 {
   font-family: 'open_sansregular', $helvetica;
+  color: #606060;
 }
 
-h2,
-h3 {
+
+h2 {
   color: #606060;
   margin: 0 0 .5em 0;
+}
+
+
+h3 {
+  font-family: 'open_sanssemibold', $helvetica;
+  color: #606060;
+  font-size: em(25);
+  margin-bottom: em(12); 
+  margin-top: em(40);
+
 }
 
 input {

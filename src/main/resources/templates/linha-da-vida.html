@@ -6,10 +6,10 @@
 <head>
     <title th:text="'Busca por ' + ${termo}">Resultados da Busca</title>
 </head>
-<body>
 
+<body>
 <span layout:fragment="link-migalha-de-pao-pai">
-    Linhas da Vida
+    Linha da Vida
 </span>
 
 <span layout:fragment="link-migalha-de-pao" th:text="${conteudo.titulo}">
@@ -17,7 +17,6 @@
 </span>
 
 <div layout:fragment="corpo">
-
     <div th:utext="${conteudo.html}" class="markdown"></div>
     <hr/>
 
@@ -26,8 +25,7 @@
             <span th:replace="fragments/resultado-busca-servico(servico=${resultado})"/>
         </li>
     </ul>
-
 </div>
-
 </body>
+
 </html>

@@ -21,9 +21,10 @@
 <div layout:fragment="corpo">
 
     <div class="row">
-        <div class="cell width-16 position-0">
-
-            <h1>Órgãos do Governo de A-Z</h1>
+        <th:block>
+            <h1>
+                Órgãos do Governo de A-Z
+            </h1>
 
             <ul class="orgaos-a-z">
                 <li th:each="orgao : ${orgaos}">
@@ -32,7 +33,7 @@
                     </a>
                 </li>
             </ul>
-        </div>
+        </th:block>
     </div>
 </div>
 
