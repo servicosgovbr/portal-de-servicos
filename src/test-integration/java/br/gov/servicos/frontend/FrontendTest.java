@@ -25,8 +25,17 @@ public class FrontendTest {
     int port;
 
     @Test
-    public void realizaRequisicoesComSucesso() throws Exception {
-        HttpURLConnection c = (HttpURLConnection) new URL(String.format("http://localhost:%d/info", port)).openConnection();
+    public void abrePaginaInfoComSucesso() throws Exception {
+        realizaRequisicaoComSucesso(String.format("http://localhost:%d/info", port));
+    }
+
+    @Test
+    public void abrePaginaPrincipalComSucesso() throws Exception {
+        realizaRequisicaoComSucesso(String.format("http://localhost:%d", port));
+    }
+
+    private void realizaRequisicaoComSucesso(String url) throws Exception {
+        HttpURLConnection c = (HttpURLConnection) new URL(url).openConnection();
         assertThat(c.getResponseCode(), is(200));
     }
 }
