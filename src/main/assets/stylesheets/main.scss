@@ -347,8 +347,19 @@ ul.orgaos-a-z {
   li {
     display: block;
     list-style-type: disc outside none;
+    border-bottom: 1px solid #DCDCDC;
   }
 }
+
+
+ul.servicos-a-z {
+  li {
+    display: block;
+    list-style-type: disc outside none;
+    border-bottom: 1px solid #DCDCDC;
+  }
+}
+
 .footer-logo {
   background-color: #00420c;
   max-width: 100%;

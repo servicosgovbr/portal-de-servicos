@@ -1,10 +1,10 @@
 $mobile: new-breakpoint(max-width 500px 4);
 
 #rodape {
-  background: #195128;
+  background: #edeff1;
 
   a {
-    color: #fff;
+    color: #606060;
   }
 
   #capacho {
@@ -17,11 +17,11 @@ $mobile: new-breakpoint(max-width 500px 4);
 
     dl {
       @include span-columns(3);
-      border-left: 1px dotted #7dc48a;
+      border-left: 1px dotted #606060;
     }
 
     dt {
-      color: #61b06f;
+      color: #2d66ce;
       padding-left: 0.6em;
       font-family: 'open_sanssemibold', $helvetica;
       font-size: em(18);
@@ -35,7 +35,7 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   #footer-brasil {
-    background: #00420c;
+    background: #2d66ce;
     padding: 1.5em 0;
   }
 
