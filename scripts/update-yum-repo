@@ -18,7 +18,7 @@ if [ ! -d "${SNAP_CACHE_DIR}/rpm-s3" ]; then
   popd
 fi
 
-gpg --import gpg-secret # arquivo secreto configurado no Snap
+gpg --list-secret-keys 'Guia de Serviços' || gpg --import gpg-secret # arquivo secreto configurado no Snap
 
 cat <<-EOF > ~/.rpmmacros
 %_signature gpg
