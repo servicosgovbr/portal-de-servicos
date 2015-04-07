@@ -20,6 +20,7 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.StreamSupport.stream;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.domain.Sort.Direction.ASC;
+import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
@@ -57,6 +58,14 @@ class ServicoController {
                 .orElseThrow(ConteudoNaoEncontrado::new);
 
         return new ModelAndView("servico", "servico", servico);
+    }
+
+    @RequestMapping(value = "/servico/{id}.xml", method = GET, produces = APPLICATION_XML_VALUE)
+    ModelAndView getXml(@PathVariable("id") String id) {
+        Servico servico = ofNullable(servicos.findOne(id))
+                .orElseThrow(ConteudoNaoEncontrado::new);
+
+        return new ModelAndView("servico-xml", "servico", servico);
     }
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial() {

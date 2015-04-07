@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<servico>
+    <tipo></tipo>
+    <nome th:text="${servico.titulo}"></nome>
+    <orgaoResponsavel th:attr="id=${servico.responsavel.id}" th:text="${servico.responsavel.nome}"></orgaoResponsavel>
+    <orgaoPrestador th:attr="id=${servico.prestador.id}" th:text="${servico.prestador.nome}"></orgaoPrestador>
+    <oQueE th:text="${servico.descricao.trim()}"></oQueE>
+
+    <resultadosEsperados></resultadosEsperados>
+    <quemPodeUtilizar></quemPodeUtilizar>
+    <requisitosParaSolicitacao></requisitosParaSolicitacao>
+    <tempoEstimado></tempoEstimado>
+    <custoEstimado th:text="${servico.taxa}"></custoEstimado>
+    <proximosPassos></proximosPassos>
+    <palavrasChave></palavrasChave>
+    <status></status>
+    <legislacao></legislacao>
+
+    <segmentosDaSociedade th:each="publicoAlvo : ${servico.publicosAlvo}">
+        <segmentoDaSociedade th:attr="id=${publicoAlvo.id}" th:text="${publicoAlvo.titulo}"></segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <linhasDaVida th:each="linhaDaVida : ${servico.linhasDaVida}">
+        <linhaDaVida th:attr="id=${linhaDaVida.id}" th:text="${linhaDaVida.titulo}"></linhaDaVida>
+    </linhasDaVida>
+
+    <areasDeInteresse th:each="areaDeInteresse : ${servico.areasDeInteresse}">
+        <areaDeInteresse th:attr="id=${areaDeInteresse.id}" th:text="${areaDeInteresse.titulo}"></areaDeInteresse>
+    </areasDeInteresse>
+
+    <canaisDePrestacao th:each="canalDePrestacao : ${servico.canaisDePrestacao}">
+        <canalDePrestacao th:attr="tipo=${canalDePrestacao.tipo}">
+            <descricao th:text="${canalDePrestacao.descricao}"></descricao>
+            <url th:text="${canalDePrestacao.url}"></url>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis th:each="informacaoUtil : ${servico.informacoesUteis}">
+        <informacaoUtil th:attr="tipo=${informacaoUtil.tipo}">
+            <descricao th:text="${informacaoUtil.descricao}"></descricao>
+            <url th:text="${informacaoUtil.url}"></url>
+        </informacaoUtil>
+    </informacoesUteis>
+</servico>
