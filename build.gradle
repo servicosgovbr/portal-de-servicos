@@ -147,7 +147,7 @@ task buildRpm(type: Exec) {
 
     if (System.getenv("SNAP_CI").equals("true")) {
         commandLine 'bash', '-c',
-            "rpmbuild -v -bb " +
+            "rpmbuild -v -bb --sign " +
             "--define '_topdir $rpmBaseDir' " +
             "--define 'version ${version}' " +
             "${project.name}.rpmspec"
