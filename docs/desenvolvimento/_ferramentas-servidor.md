@@ -54,4 +54,20 @@ Gerador de _slugs_, strings de texto simples e que podem ser utilizadas segurame
 
 ### [HAProxy](http://www.haproxy.org)
 
-Balanceador de carga entre servidores HTTP de alta disponibilidade e fácil configuração. 
+Balanceador de carga entre servidores HTTP de alta disponibilidade e fácil configuração.
+
+### [CentOS]
+
+Distribuição Linux de derivada do Red Hat Enterprise Linux e mantida pelo CentOS Project.
+
+[CentOS]:http://centos.org
+
+### [RPM]
+
+Sistema e formato de pacotes usado pelo [CentOS] e diversas outras distribuições Linux.
+
+[RPM]:http://www.rpm.org
+
+### [Yum](http://en.wikipedia.org/wiki/Yellowdog_Updater,_Modified)
+
+Gerencia a instalação e remoção de pacotes [RPM].
