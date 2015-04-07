@@ -134,8 +134,8 @@ $mobile: new-breakpoint(max-width 500px 4);
 
   #sobre {
     background: #dcdcdc;
-    padding-top: em(7);
-    padding-bottom: em(9);
+    padding-top: em(3);
+    padding-bottom: em(4);
 
     @include media($mobile) {
       @include outer-container;
