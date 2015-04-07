@@ -2,10 +2,7 @@ package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
 import br.gov.servicos.config.GuiaDeServicosIndex;
-import br.gov.servicos.servico.AreaDeInteresse;
-import br.gov.servicos.servico.Orgao;
-import br.gov.servicos.servico.Servico;
-import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 import com.github.slugify.Slugify;
@@ -28,6 +25,7 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.Matchers.anyList;
 import static org.mockito.Matchers.anyString;
+import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
