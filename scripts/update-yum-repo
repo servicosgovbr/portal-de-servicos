@@ -14,7 +14,10 @@ if [ ! -d "${SNAP_CACHE_DIR}/rpm-s3" ]; then
   popd
 fi
 
-${SNAP_CACHE_DIR}/rpm-s3/bin/rpm-s3 \
+sudo yum install -y python-boto deltarpm python-deltarpm
+
+# Precisamos usar o Python 2.7 embutido no CentOS
+PATH=/bin:/usr/bin ${SNAP_CACHE_DIR}/rpm-s3/bin/rpm-s3 \
     -b servicosgovbr \
     -p "centos/7" \
     $(find build/rpmbuild/RPMS/noarch/guia-de-servicos*.rpm -type f)
