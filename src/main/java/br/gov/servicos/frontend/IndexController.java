@@ -49,7 +49,9 @@ class IndexController {
     }
 
     private List<Servico> servicosParaExibirMaisAcessados() {
-        return concat(servicosMaisAcessados(), outrosServicos()).collect(toList());
+        return concat(servicosMaisAcessados(), outrosServicos())
+                .limit(15)
+                .collect(toList());
     }
 
     private Stream<Servico> servicosMaisAcessados() {
@@ -62,7 +64,9 @@ class IndexController {
     }
 
     private List<Servico> servicosParaExibir() {
-        return concat(buscaDestaquesSeNecessario(), outrosServicos()).collect(toList());
+        return concat(buscaDestaquesSeNecessario(), outrosServicos())
+                .limit(15)
+                .collect(toList());
     }
 
     private Stream<Servico> buscaDestaquesSeNecessario() {

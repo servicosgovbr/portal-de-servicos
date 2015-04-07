@@ -11,14 +11,12 @@
 
 <div layout:fragment="corpo">
 
-
     <div class="bem-vindo">
         <header class="outstanding-header">
             <h1>Bem vindo ao Guia de Serviços</h1>
             <p> O objetivo deste guia é facilitar o acesso dos cidadãos aos serviços prestados pelos diversos órgãos do Governo Federal. Aqui você poderá encontrar informações úteis, começar um serviço e até agendar visitas a agências do governo.</p>
         </header>
     </div>
-
 
     <div class="busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
         <h3 class="titulo-busca">O que você está procurando?</h3>
@@ -28,14 +26,15 @@
         </form>
     </div>
 
-
-    <th:block th:with="it = ${destaques.iterator()}">
-        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
-        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
-        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
-        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
-        <div th:replace="fragments/linha-destaques :: .row(destaques=${it})"></div>
-    </th:block>
+    <div class="auto-grid">
+        <ul th:if="${!destaques.isEmpty()}">
+            <th:block th:each="item : ${destaques}">
+                <li class="auto-cell">
+                    <div th:replace="fragments/destaque :: .tile(servico=${item})"></div>
+                </li>
+            </th:block>
+        </ul>
+    </div>
 
 </div>
 
