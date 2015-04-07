@@ -8,16 +8,26 @@ if [ ! -d "${SNAP_CACHE_DIR}" ]; then
   exit -1
 fi
 
+sudo yum install -y rpm-build python-boto deltarpm python-deltarpm
+
+./gradlew assemble buildRpm
+
 if [ ! -d "${SNAP_CACHE_DIR}/rpm-s3" ]; then
   pushd "${SNAP_CACHE_DIR}"
     git clone https://github.com/crohr/rpm-s3 --recurse-submodules
   popd
 fi
 
-sudo yum install -y python-boto deltarpm python-deltarpm
+gpg --import gpg-secret # arquivo secreto configurado no Snap
+
+cat <<-EOF > ~/.rpmmacros
+%_signature gpg
+%_gpg_name Guia de Serviços
+EOF
 
 # Precisamos usar o Python 2.7 embutido no CentOS
 PATH=/bin:/usr/bin ${SNAP_CACHE_DIR}/rpm-s3/bin/rpm-s3 \
     -b servicosgovbr \
     -p "centos/7" \
+    --sign \
     $(find build/rpmbuild/RPMS/noarch/guia-de-servicos*.rpm -type f)
