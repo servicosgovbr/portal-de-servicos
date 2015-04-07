@@ -2,6 +2,15 @@
 
 source "$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)/vagrant-bootstrap-functions"
 
+cat <<-EOF > /etc/yum.repos.d/guia-de-servicos.repo
+[guia-de-servicos]
+name = Guia de Serviços
+baseurl = https://s3-sa-east-1.amazonaws.com/servicosgovbr/centos/7/
+enabled=1
+gpgcheck=1
+gpgkey=https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/src/main/resources/static/GPG-KEY
+EOF
+
 echo 'Atualizando repositório Yum'
 yum makecache fast -y
 yum remove puppet -y
