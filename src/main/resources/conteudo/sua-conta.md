@@ -9,4 +9,4 @@ Os gestores responsáveis pelas informações dos serviços continuarão com ace
 
 As informações dos serviços continuam disponíveis para pesquisa no portal.
 
-[MP]:/orgao/ministerio-do-planejamento-orcamento-e-gestao
+[MP]:/orgao/ministerio-do-planejamento-orcamento-e-gestao-mpog
