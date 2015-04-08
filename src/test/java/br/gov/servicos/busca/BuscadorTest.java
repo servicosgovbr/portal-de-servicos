@@ -85,4 +85,9 @@ public class BuscadorTest {
         assertThat(resultados.getContent(), is(emptyList()));
         verifyZeroInteractions(servicos);
     }
+
+    @Test
+    public void desconsideraCaracteresEspeciaisAoElasticSearch() throws Exception {
+        assertThat(buscador.busca(of("/"), 0), hasItem(SERVICO));
+    }
 }

@@ -78,6 +78,7 @@ public class Buscador {
         Optional<String> termo = termoBuscado.filter(t -> !t.isEmpty());
 
         return termo
+                .map(t -> t.replace('/', ' ')) // fix #170
                 .map(criaQuery)
                 .map(q -> servicos.search(q, new PageRequest(paginaAtual, quantidadeDeResultados)))
                 .orElse(SEM_RESULTADOS);
