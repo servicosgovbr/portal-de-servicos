@@ -62,7 +62,7 @@ public class VersoesTest {
     }
 
     private URL xsd(Path versao) {
-        return versaoDe("servico.xsd", versao);
+        return versaoDe("carta.xsd", versao);
     }
 
     private StreamSource xml(Path versao) throws IOException {
