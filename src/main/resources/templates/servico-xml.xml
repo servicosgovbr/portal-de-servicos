@@ -1,64 +1,72 @@
 <?xml version="1.0"?>
-<servico th:with="base = ${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}">
-    <link rel="self" th:href="${base + '/servico/' + servico.id}"/>
+<carta xmlns="http://servicos.gov.br/carta/v1"
+       xmlns:th="http://www.thymeleaf.org">
+    <servicos>
+        <servico th:with="base = ${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}">
+            <link rel="self" th:href="${base + '/servico/' + servico.id}"/>
 
-    <tipo/>
-    <nome th:text="${servico.titulo}"/>
+            <id th:text="${servico.id}"/>
 
-    <descricao th:text="${servico.descricao.trim()}"/>
+            <nome th:text="${servico.titulo}"/>
 
-    <orgaoResponsavel>
-        <nome th:text="${servico.responsavel.nome}"/>
-        <link rel="orgao-responsavel" th:href="${base + '/orgao/' + servico.responsavel.id}"/>
-    </orgaoResponsavel>
+            <descricao th:text="${servico.descricao.trim()}"/>
 
-    <orgaoPrestador>
-        <nome th:text="${servico.prestador.nome}"/>
-        <link rel="orgao-prestador" th:href="${base + '/orgao/' + servico.prestador.id}"/>
-    </orgaoPrestador>
+            <orgaoResponsavel>
+                <nome th:text="${servico.responsavel.nome}"/>
+                <link rel="orgao-responsavel" th:href="${base + '/orgao/' + servico.responsavel.id}"/>
+            </orgaoResponsavel>
 
-    <resultadosEsperados/>
-    <quemPodeUtilizar/>
-    <requisitosParaSolicitacao/>
-    <tempoEstimado/>
-    <custoEstimado th:text="${servico.taxa}"/>
-    <proximosPassos/>
-    <palavrasChave/>
-    <status/>
-    <legislacao/>
+            <orgaoPrestador>
+                <nome th:text="${servico.prestador.nome}"/>
+                <link rel="orgao-prestador" th:href="${base + '/orgao/' + servico.prestador.id}"/>
+            </orgaoPrestador>
 
-    <segmentosDaSociedade th:each="publicoAlvo : ${servico.publicosAlvo}">
-        <segmentoDaSociedade>
-            <nome th:text="${publicoAlvo.titulo}"/>
-            <link rel="segmento-da-sociedade" th:href="${base + '/publico-alvo/' + publicoAlvo.id}"/>
-        </segmentoDaSociedade>
-    </segmentosDaSociedade>
+            <resultadosEsperados/>
+            <quemPodeUtilizar/>
+            <preRequisitos/>
+            <tempoTotalEstimado/>
+            <custoTotalEstimado th:text="${servico.taxa}"/>
+            <proximosPassos/>
+            <palavrasChave/>
+            <ativo/>
+            <legislacaoRelacionada/>
 
-    <linhasDaVida th:each="linhaDaVida : ${servico.linhasDaVida}">
-        <linhaDaVida>
-            <nome th:text="${linhaDaVida.titulo}"/>
-            <link rel="linha-da-vida" th:href="${base + '/linha-da-vida/' + linhaDaVida.id}"/>
-        </linhaDaVida>
-    </linhasDaVida>
+            <segmentosDaSociedade th:each="publicoAlvo : ${servico.publicosAlvo}">
+                <segmentoDaSociedade>
+                    <nome th:text="${publicoAlvo.titulo}"/>
+                    <link rel="segmento-da-sociedade" th:href="${base + '/publico-alvo/' + publicoAlvo.id}"/>
+                </segmentoDaSociedade>
+            </segmentosDaSociedade>
 
-    <areasDeInteresse th:each="areaDeInteresse : ${servico.areasDeInteresse}">
-        <areaDeInteresse>
-            <nome th:text="${areaDeInteresse.titulo}"/>
-            <link rel="area-de-interesse" th:href="${base + '/area-de-interesse/' + areaDeInteresse.id}"/>
-        </areaDeInteresse>
-    </areasDeInteresse>
+            <eventosDaLinhaDaVida th:each="linhaDaVida : ${servico.linhasDaVida}">
+                <eventoDaLinhaDaVida>
+                    <nome th:text="${linhaDaVida.titulo}"/>
+                    <link rel="linha-da-vida" th:href="${base + '/linha-da-vida/' + linhaDaVida.id}"/>
+                </eventoDaLinhaDaVida>
+            </eventosDaLinhaDaVida>
 
-    <canaisDePrestacao th:each="canalDePrestacao : ${servico.canaisDePrestacao}">
-        <canalDePrestacao th:attr="tipo=${canalDePrestacao.tipo}">
-            <descricao th:text="${canalDePrestacao.descricao}"/>
-            <link th:rel="${'canal-de-prestacao#' + @slugify.slugify(canalDePrestacao.tipo)}" th:href="${canalDePrestacao.url}" th:unless="${#strings.isEmpty(canalDePrestacao.url)}"/>
-        </canalDePrestacao>
-    </canaisDePrestacao>
+            <areasDeInteresse th:each="areaDeInteresse : ${servico.areasDeInteresse}">
+                <areaDeInteresse>
+                    <nome th:text="${areaDeInteresse.titulo}"/>
+                    <link rel="area-de-interesse" th:href="${base + '/area-de-interesse/' + areaDeInteresse.id}"/>
+                </areaDeInteresse>
+            </areasDeInteresse>
 
-    <informacoesUteis th:each="informacaoUtil : ${servico.informacoesUteis}">
-        <informacaoUtil th:attr="tipo=${informacaoUtil.tipo}">
-            <descricao th:text="${informacaoUtil.descricao}"/>
-            <link th:rel="${'informacao-util#' + @slugify.slugify(informacaoUtil.tipo)}" th:href="${informacaoUtil.url}" th:unless="${#strings.isEmpty(informacaoUtil.url)}"/>
-        </informacaoUtil>
-    </informacoesUteis>
-</servico>
+            <canaisDePrestacao th:each="canalDePrestacao : ${servico.canaisDePrestacao}">
+                <canalDePrestacao th:attr="tipo=${canalDePrestacao.tipo}">
+                    <descricao th:text="${canalDePrestacao.descricao}"/>
+                    <link th:rel="${'canal-de-prestacao#' + @slugify.slugify(canalDePrestacao.tipo)}"
+                          th:href="${canalDePrestacao.url}" th:unless="${#strings.isEmpty(canalDePrestacao.url)}"/>
+                </canalDePrestacao>
+            </canaisDePrestacao>
+
+            <informacoesUteis th:each="informacaoUtil : ${servico.informacoesUteis}">
+                <informacaoUtil th:attr="tipo=${informacaoUtil.tipo}">
+                    <descricao th:text="${informacaoUtil.descricao}"/>
+                    <link th:rel="${'informacao-util#' + @slugify.slugify(informacaoUtil.tipo)}"
+                          th:href="${informacaoUtil.url}" th:unless="${#strings.isEmpty(informacaoUtil.url)}"/>
+                </informacaoUtil>
+            </informacoesUteis>
+        </servico>
+    </servicos>
+</carta>
