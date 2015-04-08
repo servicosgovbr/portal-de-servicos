@@ -20,6 +20,12 @@ rm -rf gpg-public-key
 gpg --export --armor 'gpg@servicos.gov.br' > gpg-public-key
 sudo rpm --import gpg-public-key
 
+echo "Criando configuração default para o rpmbuild..."
+cat <<-EOF > ~/.rpmmacros
+%_signature gpg
+%_gpg_name gpg@servicos.gov.br
+EOF
+
 echo "Compilando e gerando RPM..."
 ./gradlew assemble buildRpm
 
