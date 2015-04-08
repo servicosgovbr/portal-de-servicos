@@ -28,19 +28,22 @@
     <legislacao/>
 
     <segmentosDaSociedade th:each="publicoAlvo : ${servico.publicosAlvo}">
-        <segmentoDaSociedade th:text="${publicoAlvo.titulo}">
+        <segmentoDaSociedade>
+            <nome th:text="${publicoAlvo.titulo}"/>
             <link rel="segmento-da-sociedade" th:href="${base + '/publico-alvo/' + publicoAlvo.id}"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
     <linhasDaVida th:each="linhaDaVida : ${servico.linhasDaVida}">
-        <linhaDaVida th:text="${linhaDaVida.titulo}">
+        <linhaDaVida>
+            <nome th:text="${linhaDaVida.titulo}"/>
             <link rel="linha-da-vida" th:href="${base + '/linha-da-vida/' + linhaDaVida.id}"/>
         </linhaDaVida>
     </linhasDaVida>
 
     <areasDeInteresse th:each="areaDeInteresse : ${servico.areasDeInteresse}">
-        <areaDeInteresse th:text="${areaDeInteresse.titulo}">
+        <areaDeInteresse>
+            <nome th:text="${areaDeInteresse.titulo}"/>
             <link rel="area-de-interesse" th:href="${base + '/area-de-interesse/' + areaDeInteresse.id}"/>
         </areaDeInteresse>
     </areasDeInteresse>
