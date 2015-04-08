@@ -1,44 +1,61 @@
 <?xml version="1.0"?>
-<servico>
-    <tipo></tipo>
-    <nome th:text="${servico.titulo}"></nome>
-    <orgaoResponsavel th:attr="id=${servico.responsavel.id}" th:text="${servico.responsavel.nome}"></orgaoResponsavel>
-    <orgaoPrestador th:attr="id=${servico.prestador.id}" th:text="${servico.prestador.nome}"></orgaoPrestador>
-    <descricao th:text="${servico.descricao.trim()}"></descricao>
+<servico th:with="base = ${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}">
+    <link rel="self" th:href="${base + '/servico/' + servico.id}"/>
 
-    <resultadosEsperados></resultadosEsperados>
-    <quemPodeUtilizar></quemPodeUtilizar>
-    <requisitosParaSolicitacao></requisitosParaSolicitacao>
-    <tempoEstimado></tempoEstimado>
-    <custoEstimado th:text="${servico.taxa}"></custoEstimado>
-    <proximosPassos></proximosPassos>
-    <palavrasChave></palavrasChave>
-    <status></status>
-    <legislacao></legislacao>
+    <tipo/>
+    <nome th:text="${servico.titulo}"/>
+
+    <descricao th:text="${servico.descricao.trim()}"/>
+
+    <orgaoResponsavel>
+        <nome th:text="${servico.responsavel.nome}"/>
+        <link rel="orgao-responsavel" th:href="${base + '/orgao/' + servico.responsavel.id}"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <nome th:text="${servico.prestador.nome}"/>
+        <link rel="orgao-prestador" th:href="${base + '/orgao/' + servico.prestador.id}"/>
+    </orgaoPrestador>
+
+    <resultadosEsperados/>
+    <quemPodeUtilizar/>
+    <requisitosParaSolicitacao/>
+    <tempoEstimado/>
+    <custoEstimado th:text="${servico.taxa}"/>
+    <proximosPassos/>
+    <palavrasChave/>
+    <status/>
+    <legislacao/>
 
     <segmentosDaSociedade th:each="publicoAlvo : ${servico.publicosAlvo}">
-        <segmentoDaSociedade th:attr="id=${publicoAlvo.id}" th:text="${publicoAlvo.titulo}"></segmentoDaSociedade>
+        <segmentoDaSociedade th:text="${publicoAlvo.titulo}">
+            <link rel="segmento-da-sociedade" th:href="${base + '/publico-alvo/' + publicoAlvo.id}"/>
+        </segmentoDaSociedade>
     </segmentosDaSociedade>
 
     <linhasDaVida th:each="linhaDaVida : ${servico.linhasDaVida}">
-        <linhaDaVida th:attr="id=${linhaDaVida.id}" th:text="${linhaDaVida.titulo}"></linhaDaVida>
+        <linhaDaVida th:text="${linhaDaVida.titulo}">
+            <link rel="linha-da-vida" th:href="${base + '/linha-da-vida/' + linhaDaVida.id}"/>
+        </linhaDaVida>
     </linhasDaVida>
 
     <areasDeInteresse th:each="areaDeInteresse : ${servico.areasDeInteresse}">
-        <areaDeInteresse th:attr="id=${areaDeInteresse.id}" th:text="${areaDeInteresse.titulo}"></areaDeInteresse>
+        <areaDeInteresse th:text="${areaDeInteresse.titulo}">
+            <link rel="area-de-interesse" th:href="${base + '/area-de-interesse/' + areaDeInteresse.id}"/>
+        </areaDeInteresse>
     </areasDeInteresse>
 
     <canaisDePrestacao th:each="canalDePrestacao : ${servico.canaisDePrestacao}">
         <canalDePrestacao th:attr="tipo=${canalDePrestacao.tipo}">
-            <descricao th:text="${canalDePrestacao.descricao}"></descricao>
-            <url th:text="${canalDePrestacao.url}"></url>
+            <descricao th:text="${canalDePrestacao.descricao}"/>
+            <link th:rel="${'canal-de-prestacao-' + @slugify.slugify(canalDePrestacao.tipo)}" th:href="${canalDePrestacao.url}" th:unless="${#strings.isEmpty(canalDePrestacao.url)}"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis th:each="informacaoUtil : ${servico.informacoesUteis}">
         <informacaoUtil th:attr="tipo=${informacaoUtil.tipo}">
-            <descricao th:text="${informacaoUtil.descricao}"></descricao>
-            <url th:text="${informacaoUtil.url}"></url>
+            <descricao th:text="${informacaoUtil.descricao}"/>
+            <link th:rel="${'informacao-util-' + @slugify.slugify(informacaoUtil.tipo)}" th:href="${informacaoUtil.url}" th:unless="${#strings.isEmpty(informacaoUtil.url)}"/>
         </informacaoUtil>
     </informacoesUteis>
 </servico>
