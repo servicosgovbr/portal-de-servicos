@@ -41,10 +41,10 @@
         <xs:sequence>
             <xs:element name="id" type="tipos:textoCurto"/>
             <xs:element name="titulo" type="tipos:textoCurto"/>
-            <xs:element name="oQueE" type="tipos:textoLongo"/>
+            <xs:element name="descricao" type="tipos:textoLongo"/>
             <xs:element name="resultadosEsperados" type="tipos:textoLongo"/>
             <xs:element name="quemPodeUtilizar" type="tipos:textoCurto"/>
-            <xs:element name="oQueENecessario" type="tipos:textoCurto"/>
+            <xs:element name="preRequisitos" type="tipos:textoCurto"/>
             <xs:element name="tempoTotalEstimado" type="tipos:textoCurto"/>
             <xs:element name="custoTotalEstimado" type="tipos:textoCurto"/>
             <xs:element name="proximosPassos" type="tipos:textoCurto"/>

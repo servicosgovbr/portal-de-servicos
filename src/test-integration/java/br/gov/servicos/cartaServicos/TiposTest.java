@@ -36,14 +36,6 @@ public class TiposTest {
     }
 
     @Test
-    public void tipoInformacaoDeveEstarEntreAsOpcoesValidas() {
-        validaTipo("tipoInformacao", "Serviço");
-        validaTipo("tipoInformacao", "Benefício");
-        validaTipo("tipoInformacao", "Dever");
-        validaTipoInvalido("tipoInformacao", "Qualquer outro texto");
-    }
-
-    @Test
     public void textoCurtoNaoDevePassarDe255Caracteres() {
         validaTipoInvalido("textoCurto", repeat("X", 256));
     }

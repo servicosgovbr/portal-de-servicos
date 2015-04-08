@@ -2,12 +2,12 @@
 <carta xmlns="http://servicos.gov.br/carta/v1">
     <servicos>
         <servico>
-            <tipo>Serviço</tipo>
+            <id></id>
             <titulo></titulo>
-            <oQueE></oQueE>
+            <descricao></descricao>
             <resultadosEsperados></resultadosEsperados>
             <quemPodeUtilizar></quemPodeUtilizar>
-            <oQueENecessario></oQueENecessario>
+            <preRequisitos></preRequisitos>
             <tempoTotalEstimado></tempoTotalEstimado>
             <custoTotalEstimado></custoTotalEstimado>
             <proximosPassos></proximosPassos>
@@ -22,4 +22,50 @@
             <outrasInformacoes></outrasInformacoes>
         </servico>
     </servicos>
+
+    <beneficios>
+        <beneficio>
+            <id></id>
+            <titulo></titulo>
+            <descricao></descricao>
+            <resultadosEsperados></resultadosEsperados>
+            <quemPodeUtilizar></quemPodeUtilizar>
+            <preRequisitos></preRequisitos>
+            <tempoTotalEstimado></tempoTotalEstimado>
+            <custoTotalEstimado></custoTotalEstimado>
+            <proximosPassos></proximosPassos>
+            <palavrasChave></palavrasChave>
+            <orgaoResponsavel></orgaoResponsavel>
+            <orgaoPrestador></orgaoPrestador>
+            <ativo></ativo>
+            <legislacaoRelacionada></legislacaoRelacionada>
+            <segmentosDaSociedade></segmentosDaSociedade>
+            <eventosDaLinhaDaVida></eventosDaLinhaDaVida>
+            <areasDeInteresse></areasDeInteresse>
+            <outrasInformacoes></outrasInformacoes>
+        </beneficio>
+    </beneficios>
+
+    <deveres>
+        <dever>
+            <id></id>
+            <titulo></titulo>
+            <descricao></descricao>
+            <resultadosEsperados></resultadosEsperados>
+            <quemPodeUtilizar></quemPodeUtilizar>
+            <preRequisitos></preRequisitos>
+            <tempoTotalEstimado></tempoTotalEstimado>
+            <custoTotalEstimado></custoTotalEstimado>
+            <proximosPassos></proximosPassos>
+            <palavrasChave></palavrasChave>
+            <orgaoResponsavel></orgaoResponsavel>
+            <orgaoPrestador></orgaoPrestador>
+            <ativo></ativo>
+            <legislacaoRelacionada></legislacaoRelacionada>
+            <segmentosDaSociedade></segmentosDaSociedade>
+            <eventosDaLinhaDaVida></eventosDaLinhaDaVida>
+            <areasDeInteresse></areasDeInteresse>
+            <outrasInformacoes></outrasInformacoes>
+        </dever>
+    </deveres>
 </carta>

@@ -5,7 +5,6 @@
 
     <xs:import namespace="http://servicos.gov.br/tipos" schemaLocation="/cartaServicos/tipos.xsd"/>
 
-    <xs:element name="tipoInformacao" type="tipos:tipoInformacao"/>
     <xs:element name="textoCurto" type="tipos:textoCurto"/>
     <xs:element name="textoLongo" type="tipos:textoLongo"/>
 
