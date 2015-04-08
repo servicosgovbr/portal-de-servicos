@@ -4,7 +4,7 @@
     <nome th:text="${servico.titulo}"></nome>
     <orgaoResponsavel th:attr="id=${servico.responsavel.id}" th:text="${servico.responsavel.nome}"></orgaoResponsavel>
     <orgaoPrestador th:attr="id=${servico.prestador.id}" th:text="${servico.prestador.nome}"></orgaoPrestador>
-    <oQueE th:text="${servico.descricao.trim()}"></oQueE>
+    <descricao th:text="${servico.descricao.trim()}"></descricao>
 
     <resultadosEsperados></resultadosEsperados>
     <quemPodeUtilizar></quemPodeUtilizar>
