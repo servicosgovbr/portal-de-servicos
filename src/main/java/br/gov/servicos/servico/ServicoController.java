@@ -61,7 +61,7 @@ class ServicoController {
     }
 
     @RequestMapping(value = "/servico/{id}.xml", method = GET, produces = APPLICATION_XML_VALUE)
-    ModelAndView getXml(@PathVariable("id") String id) {
+    ModelAndView xml(@PathVariable("id") String id) {
         Servico servico = ofNullable(servicos.findOne(id))
                 .orElseThrow(ConteudoNaoEncontrado::new);
 
