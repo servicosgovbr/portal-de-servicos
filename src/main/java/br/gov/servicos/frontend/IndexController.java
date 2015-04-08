@@ -5,6 +5,7 @@ import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -23,6 +24,7 @@ import static java.util.stream.StreamSupport.stream;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.domain.Sort.Direction.DESC;
 
+@Slf4j
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class IndexController {
@@ -55,12 +57,17 @@ class IndexController {
     }
 
     private Stream<Servico> servicosMaisAcessados() {
-        return this.piwikClient.getPageUrls("month", "yesterday").stream()
+        log.debug("Início - Obter urls Piwik");
+        Stream<Servico> servicos = this.piwikClient.getPageUrls("month", "yesterday").stream()
                 .filter(p -> p.getLabel().startsWith("/servico/"))
                 .sorted((a, b) -> a.getUniqueVisitors().compareTo(b.getUniqueVisitors()))
                 .map(p -> p.getLabel().replace("/servico/", ""))
-                .map(servicos::findOne)
+                .map(this.servicos::findOne)
                 .filter(Objects::nonNull);
+
+        log.debug("Fim - Obter urls Piwik");
+
+        return servicos;
     }
 
     private List<Servico> servicosParaExibir() {
