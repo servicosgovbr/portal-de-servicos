@@ -40,7 +40,7 @@ public class Buscador {
     Page<Servico> busca(Optional<String> termoBuscado, Integer paginaAtual) {
         log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
         return executaQuery(termoBuscado, paginaAtual, q -> disMaxQuery()
-                .add(queryString(q).boost(5f))
+                .add(simpleQueryString(q))
                 .add(boolQuery()
                         .should(fuzzy(q, "titulo", 1.0f))
                         .should(fuzzy(q, "descricao", 0.9f))));
@@ -78,7 +78,6 @@ public class Buscador {
         Optional<String> termo = termoBuscado.filter(t -> !t.isEmpty());
 
         return termo
-                .map(t -> t.replace('/', ' ')) // fix #170
                 .map(criaQuery)
                 .map(q -> servicos.search(q, new PageRequest(paginaAtual, quantidadeDeResultados)))
                 .orElse(SEM_RESULTADOS);
