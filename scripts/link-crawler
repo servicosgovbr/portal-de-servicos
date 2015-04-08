@@ -3,7 +3,7 @@
 require 'rubygems'
 require 'httpclient'
 
-@http = HTTPClient.new
+Http = HTTPClient.new
 $base_url = 'http://localhost:8081/'
 
 $all_links = Array.new
@@ -11,22 +11,16 @@ $accessed_links = Array.new
 $skipped_links = Array.new
 
 def main()
-  # Access URL
   url_access_level1 = accessUrl($base_url, 0)
   
-  # Get all hrefs from a page
   link_level1 = getHrefs(url_access_level1)
   
-  # Check each link/href
   link_level1.uniq.each_with_index do |link1, index|
   
-    # Fix the URL format
     url_level1 = fixingUrl(link1)
     
-    # Check URL and add in a list
     addList(url_level1, 1)
     
-    # Access the URL from Level 1
     if not $accessed_links.include? url_level1 and not url_level1.include? "feedback" and url_level1.include? $base_url
       url_access_level2 = accessUrl(url_level1, 1)
       link_level2 = getHrefs(url_access_level2)
@@ -34,7 +28,6 @@ def main()
         url_level2 = fixingUrl(link2)
         addList(url_level2, 2)
         
-        # Access the URL from Level 2
         if not $accessed_links.include? url_level2 and not url_level2.include? "feedback" and url_level2.include? $base_url
           url_access_level3 = accessUrl(url_level2, 2)
           link_level3 = getHrefs(url_access_level3)
@@ -42,7 +35,6 @@ def main()
             url_level3 = fixingUrl(link3)
             addList(url_level3, 3)
             
-            # Access the URL from Level 3
             if not $accessed_links.include? url_level3 and not url_level3.include? "feedback" and url_level3.include? $base_url
               url_access_level3 = accessUrl(url_level3, 3)
               link_level4 = getHrefs(url_access_level3)
@@ -57,15 +49,8 @@ def main()
     end  
   end
   
-  puts "   ########### END OF MAPPING!!!! ###########   "
-  
-  # ACCESSED LINKS
   generateReport("accessed_links_from5", $accessed_links, false)
-
-  # SKIPPED LINKS
   generateReport("skipped_links_from5", $skipped_links, false)
-  
-  # ALL LINKS WITH STATUS
   generateReport("all_links_from5", $all_links, true)
 end
 
@@ -74,9 +59,8 @@ def getHrefs(page)
 end
 
 def accessUrl(url, level)
-  url_access = @http.get url
+  url_access = Http.get url
   $accessed_links << url
-  puts "ADDED IN ACCESSED LINKS - LEVEL #{level} : " + url
   return url_access
 end
 
@@ -92,12 +76,9 @@ end
 def addList(url, level)
   if not $accessed_links.include? url and not url.include? "feedback" and not $all_links.include? url
     $all_links << url
-    puts "ADDED IN ALL LINKS - LEVEL 1 : " + url
   else
-    puts " ############### HAS FEEDBACK or ALREADY ACCESSED => " + url
     if url.include? "feedback"
       $skipped_links << url
-      puts "ADDED IN SKIPPED LINKS - LEVEL #{level} : " + url
     end
   end
 end
@@ -113,18 +94,15 @@ def generateReport(name, list, access)
     end
     list.uniq.sort.each_with_index do |link, index|
       if access == true
-        if not link.include? "www" and not link.include? "feedback" and not link.include? "http://mpa.gov.br" and not link.include? "aviacaocivil" and not link.include? "receita.fazenda"
+        if not link.include? $base_url
           begin
-              puts " Accessing the url: " + link.to_s
-            url_access = @http.get link
+            url_access = Http.get link
             url_status = url_access.status
-            puts "    Status: " + url_status.to_s
-            rescue Exception => url_status 
+          rescue Exception => url_status 
             next
             end
         else
           url_status = "External Link"
-          puts " External link: " + link.to_s
         end
       end
       r.puts "<TR>"
