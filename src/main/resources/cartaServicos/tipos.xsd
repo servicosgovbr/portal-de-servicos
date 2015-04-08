@@ -2,14 +2,6 @@
 <xs:schema targetNamespace="http://servicos.gov.br/tipos"
            xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:simpleType name="tipoInformacao">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Serviço"/>
-            <xs:enumeration value="Benefício"/>
-            <xs:enumeration value="Dever"/>
-        </xs:restriction>
-    </xs:simpleType>
-
     <xs:simpleType name="textoCurto">
         <xs:restriction base="xs:string">
             <xs:maxLength value="255"/>

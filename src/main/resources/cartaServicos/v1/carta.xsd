@@ -13,19 +13,33 @@
 
     <xs:complexType name="Carta">
         <xs:sequence>
-            <xs:element name="servicos" type="Servicos" maxOccurs="1"/>
+            <xs:element name="servicos" type="Servicos" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="beneficios" type="Beneficios" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="deveres" type="Deveres" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="Servicos">
         <xs:sequence>
-            <xs:element name="servico" type="Servico" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="servico" type="InformacoesGerais" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="Servico">
+    <xs:complexType name="Beneficios">
         <xs:sequence>
-            <xs:element name="tipo" type="tipos:tipoInformacao"/>
+            <xs:element name="beneficio" type="InformacoesGerais" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Deveres">
+        <xs:sequence>
+            <xs:element name="dever" type="InformacoesGerais" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="InformacoesGerais">
+        <xs:sequence>
+            <xs:element name="id" type="tipos:textoCurto"/>
             <xs:element name="titulo" type="tipos:textoCurto"/>
             <xs:element name="oQueE" type="tipos:textoLongo"/>
             <xs:element name="resultadosEsperados" type="tipos:textoLongo"/>
