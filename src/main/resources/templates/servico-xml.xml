@@ -48,14 +48,14 @@
     <canaisDePrestacao th:each="canalDePrestacao : ${servico.canaisDePrestacao}">
         <canalDePrestacao th:attr="tipo=${canalDePrestacao.tipo}">
             <descricao th:text="${canalDePrestacao.descricao}"/>
-            <link th:rel="${'canal-de-prestacao-' + @slugify.slugify(canalDePrestacao.tipo)}" th:href="${canalDePrestacao.url}" th:unless="${#strings.isEmpty(canalDePrestacao.url)}"/>
+            <link th:rel="${'canal-de-prestacao#' + @slugify.slugify(canalDePrestacao.tipo)}" th:href="${canalDePrestacao.url}" th:unless="${#strings.isEmpty(canalDePrestacao.url)}"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis th:each="informacaoUtil : ${servico.informacoesUteis}">
         <informacaoUtil th:attr="tipo=${informacaoUtil.tipo}">
             <descricao th:text="${informacaoUtil.descricao}"/>
-            <link th:rel="${'informacao-util-' + @slugify.slugify(informacaoUtil.tipo)}" th:href="${informacaoUtil.url}" th:unless="${#strings.isEmpty(informacaoUtil.url)}"/>
+            <link th:rel="${'informacao-util#' + @slugify.slugify(informacaoUtil.tipo)}" th:href="${informacaoUtil.url}" th:unless="${#strings.isEmpty(informacaoUtil.url)}"/>
         </informacaoUtil>
     </informacoesUteis>
 </servico>
