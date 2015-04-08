@@ -26,7 +26,6 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
-import static org.mockito.Matchers.anyList;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
 
@@ -59,7 +58,7 @@ public class ImportadorTest {
 
         doAnswer(returnsFirstArg())
                 .when(servicos)
-                .save(anyList());
+                .save(anyCollectionOf(Servico.class));
 
         doReturn(new LinhaDaVida().withId("administrar-um-negocio").withTitulo("Administrar um negócio"))
                 .when(config)
@@ -81,7 +80,7 @@ public class ImportadorTest {
     @Test
     public void deveImportarListaDeServicosLegados() throws Exception {
         importador.importar();
-        verify(servicos).save(anyList());
+        verify(servicos).save(anyCollectionOf(Servico.class));
     }
 
     @Test
@@ -90,7 +89,7 @@ public class ImportadorTest {
 
         doReturn(servicosImportados)
                 .when(servicos)
-                .save(anyList());
+                .save(anyCollectionOf(Servico.class));
 
         assertThat(importador.importar(), is(servicosImportados));
     }
