@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<servico>
-
-    <!--
-     Tipo de informação a ser descrita
-     Opções: Serviço, Benefício ou Dever
-    -->
-    <tipo>Serviço</tipo>
-
-    <!--
-     Esse é o nome que aparecerá em destaque, e deve ser curto e claro, para fácil compreensão do cidadão.
-     Caso o serviço possua um nome popular, ou seja mais conhecido por sua sigla, inclua-o em parênteses ao final do título.
-
-     Formato: Texto simples (até 255 caracteres)
-    -->
-    <titulo>Titulo do serviço</titulo>
-
-    <!--
-     É uma descrição breve, que apresenta a visão do geral do serviço. Deve situar o cidadão para que ele saiba se é
-     mesmo aquilo que ele está procurando. Para isso, escreva o que caracteriza (de que se trata) e para que serve
-     este {serviço/benefício/dever}.
-
-     Formato: Texto longo (até 500 caracteres)
-    -->
-    <oQueE>
-        O que é o serviço?
-    </oQueE>
-
-</servico>
+<carta xmlns="http://servicos.gov.br/carta/v1">
+    <servicos>
+        <servico>
+            <tipo>Serviço</tipo>
+            <titulo></titulo>
+            <oQueE></oQueE>
+            <resultadosEsperados></resultadosEsperados>
+            <quemPodeUtilizar></quemPodeUtilizar>
+            <oQueENecessario></oQueENecessario>
+            <tempoTotalEstimado></tempoTotalEstimado>
+            <custoTotalEstimado></custoTotalEstimado>
+            <proximosPassos></proximosPassos>
+            <palavrasChave></palavrasChave>
+            <orgaoResponsavel></orgaoResponsavel>
+            <orgaoPrestador></orgaoPrestador>
+            <ativo></ativo>
+            <legislacaoRelacionada></legislacaoRelacionada>
+            <segmentosDaSociedade></segmentosDaSociedade>
+            <eventosDaLinhaDaVida></eventosDaLinhaDaVida>
+            <areasDeInteresse></areasDeInteresse>
+            <outrasInformacoes></outrasInformacoes>
+        </servico>
+    </servicos>
+</carta>

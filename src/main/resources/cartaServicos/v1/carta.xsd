@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema xmlns="http://servicos.gov.br/carta/v1"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:tipos="http://servicos.gov.br/tipos"
+           targetNamespace="http://servicos.gov.br/carta/v1"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
            version="1.0">
 
     <xs:import namespace="http://servicos.gov.br/tipos" schemaLocation="/cartaServicos/tipos.xsd"/>
 
-    <xs:element name="servico" type="Servico"/>
+    <xs:element name="carta" type="Carta"/>
+
+    <xs:complexType name="Carta">
+        <xs:sequence>
+            <xs:element name="servicos" type="Servicos" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Servicos">
+        <xs:sequence>
+            <xs:element name="servico" type="Servico" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="Servico">
         <xs:sequence>
             <xs:element name="tipo" type="tipos:tipoInformacao"/>
             <xs:element name="titulo" type="tipos:textoCurto"/>
             <xs:element name="oQueE" type="tipos:textoLongo"/>
+            <xs:element name="resultadosEsperados" type="tipos:textoLongo"/>
+            <xs:element name="quemPodeUtilizar" type="tipos:textoCurto"/>
+            <xs:element name="oQueENecessario" type="tipos:textoCurto"/>
+            <xs:element name="tempoTotalEstimado" type="tipos:textoCurto"/>
+            <xs:element name="custoTotalEstimado" type="tipos:textoCurto"/>
+            <xs:element name="proximosPassos" type="tipos:textoCurto"/>
+            <xs:element name="palavrasChave" type="tipos:textoCurto"/>
+            <xs:element name="orgaoResponsavel" type="tipos:textoCurto"/>
+            <xs:element name="orgaoPrestador" type="tipos:textoCurto"/>
+            <xs:element name="ativo" type="tipos:textoCurto"/>
+            <xs:element name="legislacaoRelacionada" type="tipos:textoCurto"/>
+            <xs:element name="segmentosDaSociedade" type="tipos:textoCurto"/>
+            <xs:element name="eventosDaLinhaDaVida" type="tipos:textoCurto"/>
+            <xs:element name="areasDeInteresse" type="tipos:textoCurto"/>
+            <xs:element name="outrasInformacoes" type="tipos:textoCurto"/>
         </xs:sequence>
     </xs:complexType>
 
