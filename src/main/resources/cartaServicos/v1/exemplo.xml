@@ -2,70 +2,70 @@
 <carta xmlns="http://servicos.gov.br/carta/v1">
     <servicos>
         <servico>
-            <id></id>
-            <titulo></titulo>
-            <descricao></descricao>
-            <resultadosEsperados></resultadosEsperados>
-            <quemPodeUtilizar></quemPodeUtilizar>
-            <preRequisitos></preRequisitos>
-            <tempoTotalEstimado></tempoTotalEstimado>
-            <custoTotalEstimado></custoTotalEstimado>
-            <proximosPassos></proximosPassos>
-            <palavrasChave></palavrasChave>
-            <orgaoResponsavel></orgaoResponsavel>
-            <orgaoPrestador></orgaoPrestador>
-            <ativo></ativo>
-            <legislacaoRelacionada></legislacaoRelacionada>
-            <segmentosDaSociedade></segmentosDaSociedade>
-            <eventosDaLinhaDaVida></eventosDaLinhaDaVida>
-            <areasDeInteresse></areasDeInteresse>
-            <outrasInformacoes></outrasInformacoes>
+            <id/>
+            <titulo/>
+            <descricao/>
+            <resultadosEsperados/>
+            <quemPodeUtilizar/>
+            <preRequisitos/>
+            <tempoTotalEstimado/>
+            <custoTotalEstimado/>
+            <proximosPassos/>
+            <palavrasChave/>
+            <orgaoResponsavel/>
+            <orgaoPrestador/>
+            <ativo/>
+            <legislacaoRelacionada/>
+            <segmentosDaSociedade/>
+            <eventosDaLinhaDaVida/>
+            <areasDeInteresse/>
+            <outrasInformacoes/>
         </servico>
     </servicos>
 
     <beneficios>
         <beneficio>
-            <id></id>
-            <titulo></titulo>
-            <descricao></descricao>
-            <resultadosEsperados></resultadosEsperados>
-            <quemPodeUtilizar></quemPodeUtilizar>
-            <preRequisitos></preRequisitos>
-            <tempoTotalEstimado></tempoTotalEstimado>
-            <custoTotalEstimado></custoTotalEstimado>
-            <proximosPassos></proximosPassos>
-            <palavrasChave></palavrasChave>
-            <orgaoResponsavel></orgaoResponsavel>
-            <orgaoPrestador></orgaoPrestador>
-            <ativo></ativo>
-            <legislacaoRelacionada></legislacaoRelacionada>
-            <segmentosDaSociedade></segmentosDaSociedade>
-            <eventosDaLinhaDaVida></eventosDaLinhaDaVida>
-            <areasDeInteresse></areasDeInteresse>
-            <outrasInformacoes></outrasInformacoes>
+            <id/>
+            <titulo/>
+            <descricao/>
+            <resultadosEsperados/>
+            <quemPodeUtilizar/>
+            <preRequisitos/>
+            <tempoTotalEstimado/>
+            <custoTotalEstimado/>
+            <proximosPassos/>
+            <palavrasChave/>
+            <orgaoResponsavel/>
+            <orgaoPrestador/>
+            <ativo/>
+            <legislacaoRelacionada/>
+            <segmentosDaSociedade/>
+            <eventosDaLinhaDaVida/>
+            <areasDeInteresse/>
+            <outrasInformacoes/>
         </beneficio>
     </beneficios>
 
     <deveres>
         <dever>
-            <id></id>
-            <titulo></titulo>
-            <descricao></descricao>
-            <resultadosEsperados></resultadosEsperados>
-            <quemPodeUtilizar></quemPodeUtilizar>
-            <preRequisitos></preRequisitos>
-            <tempoTotalEstimado></tempoTotalEstimado>
-            <custoTotalEstimado></custoTotalEstimado>
-            <proximosPassos></proximosPassos>
-            <palavrasChave></palavrasChave>
-            <orgaoResponsavel></orgaoResponsavel>
-            <orgaoPrestador></orgaoPrestador>
-            <ativo></ativo>
-            <legislacaoRelacionada></legislacaoRelacionada>
-            <segmentosDaSociedade></segmentosDaSociedade>
-            <eventosDaLinhaDaVida></eventosDaLinhaDaVida>
-            <areasDeInteresse></areasDeInteresse>
-            <outrasInformacoes></outrasInformacoes>
+            <id/>
+            <titulo/>
+            <descricao/>
+            <resultadosEsperados/>
+            <quemPodeUtilizar/>
+            <preRequisitos/>
+            <tempoTotalEstimado/>
+            <custoTotalEstimado/>
+            <proximosPassos/>
+            <palavrasChave/>
+            <orgaoResponsavel/>
+            <orgaoPrestador/>
+            <ativo/>
+            <legislacaoRelacionada/>
+            <segmentosDaSociedade/>
+            <eventosDaLinhaDaVida/>
+            <areasDeInteresse/>
+            <outrasInformacoes/>
         </dever>
     </deveres>
 </carta>
