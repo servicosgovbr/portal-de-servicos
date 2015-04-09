@@ -58,7 +58,7 @@ class IndexController {
 
     private Stream<Servico> servicosMaisAcessados() {
         log.debug("Início - Obter urls Piwik");
-        Stream<Servico> servicos = this.piwikClient.getPageUrls("month", "yesterday").stream()
+        Stream<Servico> servicos = this.piwikClient.getPageUrls("week", "yesterday").stream()
                 .filter(p -> p.relativeUrl().startsWith("/servico/"))
                 .sorted((a, b) -> a.getUniqueVisitors().compareTo(b.getUniqueVisitors()))
                 .map(p -> p.getUrl().replace("/servico/", ""))
