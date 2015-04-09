@@ -12,6 +12,10 @@ A implementação do Guia de Serviços é guiada por três padrões de desenho e
 [ePWG]:http://www.governoeletronico.gov.br/acoes-e-projetos/padroes-brasil-e-gov
 [eMAG]:http://www.governoeletronico.gov.br/acoes-e-projetos/e-MAG
 
+## Visão geral
+
+[![Visão geral da arquitetura - diagrama de classes](./classes.svg)](./classes.svg)
+
 ## Model-View-Controller
 
 ### Apresentação (View)
