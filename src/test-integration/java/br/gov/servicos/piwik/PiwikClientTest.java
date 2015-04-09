@@ -28,10 +28,10 @@ public class PiwikClientTest {
         String period = "day";
         List<PiwikPage> pages = piwikClient.getPageUrls(period, date);
 
-        assertEquals(pages.get(0).relativeUrl(), "/");
+        assertEquals(pages.get(0).getPath(), "/");
         assertEquals(pages
                 .stream()
-                .filter(p -> p.relativeUrl().equals("/repositorioServico/consulta-situacao-do-requerimento-de-beneficio"))
+                .filter(p -> p.getPath().equals("/repositorioServico/consulta-situacao-do-requerimento-de-beneficio"))
                 .count(), 1);
     }
 

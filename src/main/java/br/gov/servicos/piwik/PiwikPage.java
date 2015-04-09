@@ -39,12 +39,8 @@ public class PiwikPage {
         this("", 0L, 0L, new PiwikPage[0]);
     }
 
-    public String relativeUrl() {
+    public String getPath() {
         return URI.create(url).getPath();
-    }
-
-    public String queryString() {
-        return URI.create(url).getRawQuery();
     }
 
     public Stream<PiwikPage> flattened() {
@@ -52,5 +48,9 @@ public class PiwikPage {
                 of(this),
                 stream(subPages).flatMap(PiwikPage::flattened)
         );
+    }
+
+    public boolean isServicoUrl() {
+        return getPath().startsWith("/servico/");
     }
 }

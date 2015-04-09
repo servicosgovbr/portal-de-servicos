@@ -2,6 +2,7 @@ package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.DestaquesConfig;
 import br.gov.servicos.piwik.PiwikClient;
+import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
@@ -57,16 +58,15 @@ class IndexController {
     }
 
     private Stream<Servico> servicosMaisAcessados() {
-        log.debug("Início - Obter urls Piwik");
+        log.debug("Piwik: listando serviços mais acessados...");
         Stream<Servico> servicos = this.piwikClient.getPageUrls("week", "yesterday").stream()
-                .filter(p -> p.relativeUrl().startsWith("/servico/"))
+                .filter(PiwikPage::isServicoUrl)
                 .sorted((a, b) -> a.getUniqueVisitors().compareTo(b.getUniqueVisitors()))
                 .map(p -> p.getUrl().replace("/servico/", ""))
                 .map(this.servicos::findOne)
                 .filter(Objects::nonNull);
 
-        log.debug("Fim - Obter urls Piwik");
-
+        log.debug("Piwik: serviços mais acessados obtidos");
         return servicos;
     }
 

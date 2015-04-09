@@ -34,8 +34,7 @@ public class PiwikClient {
     }
 
     public List<PiwikPage> getPageUrls(String period, String date) {
-        List<PiwikPage> piwikPages = pageUrlsRequest(period, date);
-        return piwikPages
+        return pageUrlsRequest(period, date)
                 .stream()
                 .flatMap(PiwikPage::flattened)
                 .collect(toList());
@@ -43,9 +42,9 @@ public class PiwikClient {
 
     private List<PiwikPage> pageUrlsRequest(String period, String date) {
         URI uri = buildURI(period, date);
-        log.debug("Fazendo requisição ao Piwik: {}", uri);
+        log.debug("Fazendo requisição fora do cache ao Piwik: {}", uri);
         ResponseEntity<PiwikPage[]> entity = restTemplate.getForEntity(uri, PiwikPage[].class);
-        log.debug("Resposta do Piwik: {}", entity.getStatusCode());
+        log.debug("Resposta fora do cache do Piwik: {}", entity.getStatusCode());
         return asList(entity.getBody());
     }
 
