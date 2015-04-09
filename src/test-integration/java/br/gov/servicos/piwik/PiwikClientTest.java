@@ -26,17 +26,13 @@ public class PiwikClientTest {
     public void deveRetonarUrlsParaODia04042015() throws Exception {
         String date = "04-04-2015";
         String period = "day";
-        List<PiwikPage> urls = piwikClient.getPageUrls(period, date);
+        List<PiwikPage> pages = piwikClient.getPageUrls(period, date);
 
-        assertEquals(urls.size(), 100);
-        assertEquals(urls.get(0), new PiwikPage()
-                .withLabel("/index")
-                .withVisitors(13741L)
-                .withUniqueVisitors(8693L));
-
-        assertEquals(urls.get(1), new PiwikPage()
-                .withLabel("repositorioServico")
-                .withVisitors(3855L));
+        assertEquals(pages.get(0).relativeUrl(), "/");
+        assertEquals(pages
+                .stream()
+                .filter(p -> p.relativeUrl().equals("/repositorioServico/consulta-situacao-do-requerimento-de-beneficio"))
+                .count(), 1);
     }
 
 }

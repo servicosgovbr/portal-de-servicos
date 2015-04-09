@@ -12,6 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.toList;
 import static org.springframework.web.util.UriComponentsBuilder.fromHttpUrl;
 
 @Slf4j
@@ -33,12 +34,18 @@ public class PiwikClient {
     }
 
     public List<PiwikPage> getPageUrls(String period, String date) {
-        URI uri = buildURI(period, date);
+        List<PiwikPage> piwikPages = pageUrlsRequest(period, date);
+        return piwikPages
+                .stream()
+                .flatMap(PiwikPage::flattened)
+                .collect(toList());
+    }
 
+    private List<PiwikPage> pageUrlsRequest(String period, String date) {
+        URI uri = buildURI(period, date);
         log.debug("Fazendo requisição ao Piwik: {}", uri);
         ResponseEntity<PiwikPage[]> entity = restTemplate.getForEntity(uri, PiwikPage[].class);
         log.debug("Resposta do Piwik: {}", entity.getStatusCode());
-
         return asList(entity.getBody());
     }
 
@@ -51,6 +58,7 @@ public class PiwikClient {
                 .queryParam("method", "Actions.getPageUrls")
                 .queryParam("period", period)
                 .queryParam("date", date)
+                .queryParam("expanded", 1)
                 .build()
                 .toUri();
     }

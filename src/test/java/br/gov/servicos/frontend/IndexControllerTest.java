@@ -84,7 +84,7 @@ public class IndexControllerTest {
         doReturn(Collections
                 .singletonList(
                     new PiwikPage()
-                        .withLabel("/servico/servico-mais-acessado")
+                        .withUrl("/servico/servico-mais-acessado")
                         .withVisitors(3L)
                         .withUniqueVisitors(1L)))
                 .when(piwikClient)
@@ -103,7 +103,7 @@ public class IndexControllerTest {
         doReturn(Collections
                 .singletonList(
                         new PiwikPage()
-                                .withLabel("/servico/servico-nao-existe")
+                                .withUrl("/servico/servico-nao-existe")
                                 .withVisitors(3L)
                                 .withUniqueVisitors(1L)))
                 .when(piwikClient)
