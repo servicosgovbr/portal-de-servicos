@@ -1,0 +1,12 @@
+task vagrantDeploy(type: Exec) {
+    dependsOn buildRpm
+
+    String cmd = "cd /vagrant && bash ./scripts/vagrant-deploy " +
+            "build/rpmbuild/RPMS/noarch/${project.name}-${version}-1.noarch.rpm"
+
+    if (new File('/vagrant').exists()) {
+        commandLine 'bash', '-c', cmd
+    } else {
+        commandLine 'vagrant', 'ssh', 'app', '-c', cmd
+    }
+}

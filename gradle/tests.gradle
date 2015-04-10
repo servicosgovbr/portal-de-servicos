@@ -1,0 +1,46 @@
+def ignoredSources = [
+        "br/gov/servicos/legado/**/*Type*",
+        "br/gov/servicos/legado/**/ObjectFactory.class"
+]
+
+test {
+    testLogging {
+        showStandardStreams = false
+        exceptionFormat "full"
+    }
+
+    jacoco {
+        excludes = ignoredSources
+    }
+}
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+jacocoTestReport {
+    doFirst {
+        classDirectories = fileTree(dir: "${buildDir}/classes/main/").exclude(ignoredSources)
+        executionData = fileTree(dir: "$buildDir/jacoco", include: '**/*.exec')
+    }
+
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
+}
+
+task integrationTest(type: Test) {
+    description = "Run all integration tests"
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath = sourceSets.integrationTest.runtimeClasspath
+
+    jacoco {
+        destinationFile = file("$buildDir/jacoco/integrationTest.exec")
+        classDumpFile = file("$buildDir/classes/integrationTest")
+    }
+}
+check.dependsOn(integrationTest)

@@ -1,0 +1,64 @@
+import asset.pipeline.*
+import asset.pipeline.fs.*
+
+def mainAssets = "$projectDir/src/main/assets"
+def staticAssets = "$buildDir/resources/main/static/assets"
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+        maven { url 'http://dl.bintray.com/bertramlabs/asset-pipeline' }
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.4.BUILD-SNAPSHOT'
+        classpath 'org.springframework:springloaded:1.2.4.BUILD-SNAPSHOT'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.3.1'
+        classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.0.19'
+        classpath 'com.bertramlabs.plugins:sass-asset-pipeline:2.0.4'
+    }
+}
+
+
+assets {
+    assetsPath = mainAssets
+    compileDir = staticAssets
+}
+
+task watchAssets << {
+
+    def assetsSrcFolder = new File(mainAssets)
+    def lastCompilationByPath = [:]
+
+    def shouldCompileAssets = {
+        def shouldCompile = false
+
+        assetsSrcFolder.traverse {
+            def lastCompilation = lastCompilationByPath[it.absolutePath] ?: 0
+            shouldCompile = shouldCompile || lastCompilation < it.lastModified()
+            lastCompilationByPath[it.absolutePath] = it.lastModified()
+        }
+
+        shouldCompile
+    }
+
+    shouldCompileAssets() // Just fetch the last modified timestamp
+
+    AssetPipelineConfigHolder.registerResolver(new FileSystemAssetResolver('application', mainAssets))
+    def compiler = new AssetCompiler([compileDir: staticAssets])
+
+    Thread.startDaemon {
+        while(true) {
+            try {
+                if (shouldCompileAssets()) compiler.compile()
+                Thread.sleep(500)
+            } catch(any) {
+                println any
+            }
+        }
+    }
+}
+bootRun.dependsOn(watchAssets)
+processResources.dependsOn(assetCompile)

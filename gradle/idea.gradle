@@ -1,0 +1,54 @@
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+        testOutputDir = file("$buildDir/classes/test/")
+        excludeDirs += files(
+                '.git-crypt',
+                '.vagrant',
+                '.sass-cache',
+                '.sass-work',
+                '.jruby-container',
+                'data',
+                'gradle',
+                'docs/_book',
+                'tmp'
+        )
+
+        testSourceDirs += project.sourceSets.integrationTest.java.srcDirs
+        testSourceDirs += project.sourceSets.integrationTest.resources.srcDirs
+
+        //o ideal seria ter um testResourceDirs também, para não ter que fazer o que acontece abaixo
+        iml.withXml { xmlFile ->
+            // mark test/resource as a resource folder
+            def atts = xmlFile.asNode().component.content.sourceFolder.find { it.@url == 'file://$MODULE_DIR$/src/main/resources' } .attributes()
+            atts.remove('isTestSource')
+            atts.put('type', 'java-resource')
+
+            atts = xmlFile.asNode().component.content.sourceFolder.find { it.@url == 'file://$MODULE_DIR$/src/test/resources' } .attributes()
+            atts.remove('isTestSource')
+            atts.put('type', 'java-test-resource')
+
+            atts = xmlFile.asNode().component.content.sourceFolder.find { it.@url == 'file://$MODULE_DIR$/src/test-integration/resources' } .attributes()
+            atts.remove('isTestSource')
+            atts.put('type', 'java-test-resource')
+        }
+    }
+
+    project {
+        ipr.withXml { xmlFile ->
+            // enable 'Annotation Processors'
+            xmlFile.asNode().component.find { it.@name == 'CompilerConfiguration' }['annotationProcessing'][0].replaceNode {
+                annotationProcessing { profile(default: true, name: 'Default', useClasspath: 'true', enabled: true) }
+            }
+
+            // setup Git root
+            xmlFile.asNode().component.find { it.@name == 'VcsDirectoryMappings' }.replaceNode {
+                component(name: 'VcsDirectoryMappings') {
+                    mapping(directory: "", vcs: "")
+                    mapping(directory: "\$PROJECT_DIR\$", vcs: 'Git')
+                }
+            }
+        }
+    }
+}

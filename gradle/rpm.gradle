@@ -1,0 +1,46 @@
+def rpmBaseDir = file("$buildDir/rpmbuild")
+def rpmDirs = files(
+        "$rpmBaseDir/RPMS",
+        "$rpmBaseDir/SRPMS",
+        "$rpmBaseDir/BUILD",
+        "$rpmBaseDir/SOURCES",
+        "$rpmBaseDir/SPECS"
+)
+
+task prepareRpm(type:Copy) {
+    delete(rpmBaseDir)
+    rpmDirs.each {f -> f.mkdirs()}
+
+    from "$buildDir/libs"
+    include "${project.name}-${version}.jar"
+    into "$rpmBaseDir/SOURCES"
+}
+
+task buildRpm(type: Exec) {
+    dependsOn assemble, prepareRpm
+
+    if (System.getenv("SNAP_CI").equals("true")) {
+        commandLine 'bash', '-c',
+                "rpmbuild -v -bb --sign " +
+                        "--define '_signature gpg' " +
+                        "--define '_gpg_name gpg@servicos.gov.br' " +
+                        "--define '_topdir ${rpmBaseDir}' " +
+                        "--define 'version ${version}' " +
+                        "${project.name}.rpmspec"
+    }
+    else if (new File('/vagrant').exists()) {
+        commandLine 'bash', '-c',
+                "cd /vagrant && " +
+                        "rpmbuild -v -bb " +
+                        "--define '_topdir $rpmBaseDir' " +
+                        "--define 'version ${version}' " +
+                        "${project.name}.rpmspec"
+    } else {
+        commandLine 'vagrant', 'ssh', 'app', '-c',
+                "cd /vagrant && " +
+                        "rpmbuild -v -bb " +
+                        "--define '_topdir /vagrant/build/rpmbuild' " +
+                        "--define 'version ${version}' " +
+                        "${project.name}.rpmspec"
+    }
+}
