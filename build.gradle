@@ -198,15 +198,6 @@ task integrationTest(type: Test) {
 }
 check.dependsOn(integrationTest)
 
-task stage(type: Copy, dependsOn: [clean, assemble]) {
-    from jar.archivePath
-    into project.rootDir
-    rename {
-        'app.jar'
-    }
-}
-stage.mustRunAfter(clean)
-
 task watchAssets << {
     def assetsSrcFolder = new File(mainAssets)
     def lastCompilationByPath = [:]
