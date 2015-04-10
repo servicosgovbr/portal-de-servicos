@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://servicos.gov.br/tipos"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns="http://servicos.gov.br/tipos"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://servicos.gov.br/tipos"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <xs:complexType name="link">
+        <xs:attribute name="rel" type="xs:string" use="required"/>
+        <xs:attribute name="href" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="id">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z-]+"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:simpleType name="textoCurto">
+        <xs:restriction base="textoCurtoOpcional">
+            <xs:minLength value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="textoCurtoOpcional">
         <xs:restriction base="xs:string">
             <xs:maxLength value="255"/>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="textoLongo">
+        <xs:restriction base="textoLongoOpcional">
+            <xs:minLength value="50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="textoLongoOpcional">
         <xs:restriction base="xs:string">
             <xs:maxLength value="500"/>
         </xs:restriction>
     </xs:simpleType>
-
-    <!--
-        A definir:
-            - Qual o tamanho maximo para o texto simples?
-            - Qual o tamanho minimo para os campos de texto?
-    -->
 </xs:schema>

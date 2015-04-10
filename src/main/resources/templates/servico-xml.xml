@@ -3,11 +3,13 @@
          xmlns:th="http://www.thymeleaf.org"
          th:with="base = ${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}">
 
+    <versao>1.0</versao>
+
     <link rel="self" th:href="${base + '/servico/' + servico.id}"/>
 
     <id th:text="${servico.id}"/>
 
-    <nome th:text="${servico.titulo}"/>
+    <titulo th:text="${servico.titulo}"/>
 
     <descricao th:text="${servico.descricao.trim()}"/>
 
@@ -21,8 +23,8 @@
         <link rel="orgao-prestador" th:href="${base + '/orgao/' + servico.prestador.id}"/>
     </orgaoPrestador>
 
-    <resultadosEsperados/>
     <quemPodeUtilizar/>
+    <resultadosEsperados/>
     <preRequisitos/>
     <tempoTotalEstimado/>
     <custoTotalEstimado th:text="${servico.taxa}"/>

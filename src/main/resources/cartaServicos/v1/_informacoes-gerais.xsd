@@ -10,24 +10,26 @@
 
     <xs:complexType name="InformacoesGerais">
         <xs:sequence>
-            <xs:element name="id" type="tipos:textoCurto"/>
+            <xs:element name="versao" type="xs:string"/>
+            <xs:element name="link" type="tipos:link"/>
+            <xs:element name="id" type="tipos:id"/>
             <xs:element name="titulo" type="tipos:textoCurto"/>
             <xs:element name="descricao" type="tipos:textoLongo"/>
-            <xs:element name="resultadosEsperados" type="tipos:textoLongo"/>
-            <xs:element name="quemPodeUtilizar" type="tipos:textoCurto"/>
-            <xs:element name="preRequisitos" type="tipos:textoCurto"/>
-            <xs:element name="tempoTotalEstimado" type="tipos:textoCurto"/>
-            <xs:element name="custoTotalEstimado" type="tipos:textoCurto"/>
-            <xs:element name="proximosPassos" type="tipos:textoCurto"/>
-            <xs:element name="palavrasChave" type="tipos:textoCurto"/>
-            <xs:element name="orgaoResponsavel" type="tipos:textoCurto"/>
-            <xs:element name="orgaoPrestador" type="tipos:textoCurto"/>
-            <xs:element name="ativo" type="tipos:textoCurto"/>
-            <xs:element name="legislacaoRelacionada" type="tipos:textoCurto"/>
-            <xs:element name="segmentosDaSociedade" type="tipos:textoCurto"/>
-            <xs:element name="eventosDaLinhaDaVida" type="tipos:textoCurto"/>
-            <xs:element name="areasDeInteresse" type="tipos:textoCurto"/>
-            <xs:element name="outrasInformacoes" type="tipos:textoCurto"/>
+            <xs:element name="resultadosEsperados" type="tipos:textoLongoOpcional"/>
+            <xs:element name="quemPodeUtilizar" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="preRequisitos" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="tempoTotalEstimado" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="custoTotalEstimado" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="proximosPassos" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="palavrasChave" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="orgaoResponsavel" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="orgaoPrestador" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="ativo" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="legislacaoRelacionada" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="segmentosDaSociedade" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="eventosDaLinhaDaVida" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="areasDeInteresse" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="outrasInformacoes" type="tipos:textoCurtoOpcional"/>
         </xs:sequence>
     </xs:complexType>
 

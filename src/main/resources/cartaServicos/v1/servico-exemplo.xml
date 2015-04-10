@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <servico xmlns="http://servicos.gov.br/carta/v1/servico">
-    <id/>
-    <titulo/>
-    <descricao/>
+    <versao>1.0</versao>
+    <link rel="self" href="http://localhost:8080/servicos/id-do-servico"/>
+    <id>id-do-servico</id>
+    <titulo>Titulo do serviço</titulo>
+    <descricao>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium lorem nec molestie laoreet. Phasellus
+        auctor ullamcorper lacinia. Ut ultricies sapien eu eros consequat pulvinar. Nulla eu leo pellentesque, laoreet
+        enim eu, facilisis elit. Duis sapien odio, gravida in feugiat sed, rutrum ut odio. Donec tempus urna nec turpis
+        dictum vehicula. Suspendisse scelerisque, risus quis suscipit pharetra, tellus leo vulputate.
+    </descricao>
     <resultadosEsperados/>
     <quemPodeUtilizar/>
     <preRequisitos/>
