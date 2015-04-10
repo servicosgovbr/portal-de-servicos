@@ -1,41 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://servicos.gov.br/carta/v1"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:tipos="http://servicos.gov.br/tipos"
-           targetNamespace="http://servicos.gov.br/carta/v1"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified"
            version="1.0">
 
-    <xs:import namespace="http://servicos.gov.br/tipos" schemaLocation="/cartaServicos/tipos.xsd"/>
-
-    <xs:element name="carta" type="Carta"/>
-
-    <xs:complexType name="Carta">
-        <xs:sequence>
-            <xs:element name="servicos" type="Servicos" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="beneficios" type="Beneficios" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="deveres" type="Deveres" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="Servicos">
-        <xs:sequence>
-            <xs:element name="servico" type="InformacoesGerais" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="Beneficios">
-        <xs:sequence>
-            <xs:element name="beneficio" type="InformacoesGerais" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="Deveres">
-        <xs:sequence>
-            <xs:element name="dever" type="InformacoesGerais" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
+    <xs:import namespace="http://servicos.gov.br/tipos"
+               schemaLocation="/cartaServicos/tipos.xsd"/>
 
     <xs:complexType name="InformacoesGerais">
         <xs:sequence>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beneficio xmlns="http://servicos.gov.br/carta/v1/beneficio">
+    <id/>
+    <titulo/>
+    <descricao/>
+    <resultadosEsperados/>
+    <quemPodeUtilizar/>
+    <preRequisitos/>
+    <tempoTotalEstimado/>
+    <custoTotalEstimado/>
+    <proximosPassos/>
+    <palavrasChave/>
+    <orgaoResponsavel/>
+    <orgaoPrestador/>
+    <ativo/>
+    <legislacaoRelacionada/>
+    <segmentosDaSociedade/>
+    <eventosDaLinhaDaVida/>
+    <areasDeInteresse/>
+    <outrasInformacoes/>
+</beneficio>
