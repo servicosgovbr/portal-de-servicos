@@ -29,8 +29,8 @@ buildscript {
         maven { url 'http://dl.bintray.com/bertramlabs/asset-pipeline' }
     }
     dependencies {
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.2.BUILD-SNAPSHOT'
-        classpath 'org.springframework:springloaded:1.2.2.BUILD-SNAPSHOT'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.4.BUILD-SNAPSHOT'
+        classpath 'org.springframework:springloaded:1.2.4.BUILD-SNAPSHOT'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.3.1'
         classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.0.19'
         classpath 'com.bertramlabs.plugins:sass-asset-pipeline:2.0.4'
