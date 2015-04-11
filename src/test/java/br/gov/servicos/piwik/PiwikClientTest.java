@@ -59,10 +59,10 @@ public class PiwikClientTest {
         ).thenReturn(
                 new ResponseEntity<>(
                         new PiwikPage[]{
-                                new PiwikPage("page-url", 100L, 10L, new PiwikPage[0])
+                                new PiwikPage("http://site.com:80/page-url", 100L, 10L, new PiwikPage[0])
                         }, OK));
 
         List<PiwikPage> urls = piwikClient.getPageUrls(PERIOD, DATE);
-        assertThat(urls.get(0).getPath(), is("page-url"));
+        assertThat(urls.get(0).getPath(), is("/page-url"));
     }
 }
