@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
 @WebAppConfiguration
-public class PiwikClientTest {
+public class PiwikTest {
 
     @Autowired
     PiwikClient piwikClient;
@@ -24,9 +24,7 @@ public class PiwikClientTest {
     @Test
     @Ignore("Configure o token em GDS_PIWIK_TOKEN")
     public void deveRetonarUrlsParaODia04042015() throws Exception {
-        String date = "04-04-2015";
-        String period = "day";
-        List<PiwikPage> pages = piwikClient.getPageUrls(period, date);
+        List<PiwikPage> pages = piwikClient.getPageUrls("day", "04-04-2015");
 
         assertEquals(pages.get(0).getPath(), "/");
         assertEquals(pages
