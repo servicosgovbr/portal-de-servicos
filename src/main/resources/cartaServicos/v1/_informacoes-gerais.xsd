@@ -22,14 +22,52 @@
             <xs:element name="custoTotalEstimado" type="tipos:textoCurtoOpcional"/>
             <xs:element name="proximosPassos" type="tipos:textoCurtoOpcional"/>
             <xs:element name="palavrasChave" type="tipos:textoCurtoOpcional"/>
-            <xs:element name="orgaoResponsavel" type="tipos:textoCurtoOpcional"/>
-            <xs:element name="orgaoPrestador" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="orgaoResponsavel" type="NomeELink"/>
+            <xs:element name="orgaoPrestador" type="NomeELink"/>
             <xs:element name="ativo" type="tipos:textoCurtoOpcional"/>
             <xs:element name="legislacaoRelacionada" type="tipos:textoCurtoOpcional"/>
-            <xs:element name="segmentosDaSociedade" type="tipos:textoCurtoOpcional"/>
-            <xs:element name="eventosDaLinhaDaVida" type="tipos:textoCurtoOpcional"/>
-            <xs:element name="areasDeInteresse" type="tipos:textoCurtoOpcional"/>
-            <xs:element name="outrasInformacoes" type="tipos:textoCurtoOpcional"/>
+            <xs:element name="segmentosDaSociedade" type="SegmentosDaSociedade"/>
+            <xs:element name="eventosDaLinhaDaVida" type="EventosLinhaDaVida"/>
+            <xs:element name="areasDeInteresse" type="AreasDeInteresse"/>
+            <xs:element name="informacoesUteis" type="InformacoesUteis"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SegmentosDaSociedade">
+        <xs:sequence>
+            <xs:element name="segmentoDaSociedade" type="NomeELink" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EventosLinhaDaVida">
+        <xs:sequence>
+            <xs:element name="eventoLinhaDaVida" type="NomeELink" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AreasDeInteresse">
+        <xs:sequence>
+            <xs:element name="areaDeInteresse" type="NomeELink" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="InformacoesUteis">
+        <xs:sequence>
+            <xs:element name="informacaoUtil" type="InformacaoUtil" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="InformacaoUtil">
+        <xs:sequence>
+            <xs:element name="descricao" type="tipos:textoLongo"/>
+            <xs:element name="link" type="tipos:link"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NomeELink">
+        <xs:sequence>
+            <xs:element name="nome" type="tipos:textoCurto"/>
+            <xs:element name="link" type="tipos:link"/>
         </xs:sequence>
     </xs:complexType>
 

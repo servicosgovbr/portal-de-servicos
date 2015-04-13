@@ -17,12 +17,45 @@
     <custoTotalEstimado/>
     <proximosPassos/>
     <palavrasChave/>
-    <orgaoResponsavel/>
-    <orgaoPrestador/>
+
+    <orgaoResponsavel>
+        <nome>Orgão responsável</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/responsavel"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <nome>Orgão Prestador</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/prestador"/>
+    </orgaoPrestador>
+
     <ativo/>
     <legislacaoRelacionada/>
-    <segmentosDaSociedade/>
-    <eventosDaLinhaDaVida/>
-    <areasDeInteresse/>
-    <outrasInformacoes/>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <nome>Publico alvo</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/publico"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoLinhaDaVida>
+            <nome>Evento da linha da vida</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/linhadavida"/>
+        </eventoLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <nome>Area de interesse</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/area"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <informacoesUteis>
+        <informacaoUtil>
+            <descricao>Outros tipos de informação que possam ser uteis ao cidadão</descricao>
+            <link rel="informacao-util#tipo" href="http://localhost:8080/informacao"/>
+        </informacaoUtil>
+    </informacoesUteis>
 </servico>
