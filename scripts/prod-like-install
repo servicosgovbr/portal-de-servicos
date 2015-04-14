@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Adicionando repositÃ³rio Yum do Guia de Serviços..."
+echo "Adicionando repositório Yum do Guia de Serviços..."
 cat <<-EOF > /etc/yum.repos.d/guia-de-servicos.repo
 [guia-de-servicos]
 name = Guia de Serviços
@@ -30,7 +30,7 @@ $(rpm -qa | grep -q jdk1.8.0_40-1.8.0_40-fcs.x86_64) || \
   (echo 'Instalando JDK' && sudo yum install -y 'jdk-8u40-linux-x64.rpm')
 
 $(java -version 2>&1 | grep -q "1.8.0_40") || \
-  (echo "JDK nÃ£o foi instalado corretamente" && exit -1)
+  (echo "JDK não foi instalado corretamente" && exit -1)
 
 echo 'Instalando Guia de Serviços...'
 yum install -y guia-de-servicos
