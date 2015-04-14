@@ -1,6 +1,7 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 @import 'base';
+@import 'icones';
 @import 'cabecalho';
 @import 'migalhas-de-pao';
 @import 'rodape';
@@ -378,4 +379,11 @@ ul.servicos-a-z {
   .navTree span {
     font-size: 14px;
   }
+}
+
+.destaque .linha-da-vida {
+  background-color: #edeff1;
+  margin: 1px solid lighten(#edeff1, 10%);
+  padding: 2px 5px 2px 5px;
+  font-size: em(12);
 }

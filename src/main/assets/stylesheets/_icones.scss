@@ -1,0 +1,78 @@
+@import 'font-awesome';
+
+.icone {
+  @extend .fa;
+}
+
+.icone-grande {
+  @extend .fa;
+  @extend .fa-2x;
+}
+
+.administrar-um-negocio {
+  @extend .fa-pie-chart;
+}
+
+.adolescentes {
+  @extend .fa-child;
+}
+
+.aposentar-se {
+  @extend .fa-user;
+}
+
+.aproveitar-o-tempo-livre {
+  @extend .fa-futbol-o;
+}
+
+.cuidar-da-saude {
+  @extend .fa-user-md;
+}
+
+.emitir-seus-documentos {
+  @extend .fa-file-text-o;
+}
+
+.estudar {
+  @extend .fa-graduation-cap;
+}
+
+.garantir-seus-direitos {
+  @extend .fa-gavel;
+}
+
+.manter-um-veiculo {
+  @extend .fa-car;
+}
+
+.obter-credito-e-apoio-financeiro {
+  @extend .fa-usd;
+}
+
+.pagar-contas-e-impostos {
+  @extend .fa-usd;
+}
+
+.prestar-servico-militar {
+  @extend .fa-space-shuttle;
+}
+
+.procurar-emprego {
+  @extend .fa-briefcase;
+}
+
+.ter-uma-casa {
+  @extend .fa-home;
+}
+
+.ter-uma-familia {
+  @extend .fa-child;
+}
+
+.trabalhar {
+  @extend .fa-briefcase;
+}
+
+.viajar-para-o-exterior {
+  @extend .fa-plane;
+}
