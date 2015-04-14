@@ -4,7 +4,7 @@ Durante o desenvolvimento do projeto, estamos sempre gratos por contribiuções 
 
 A equipe do Guia de Serviços usa o [GitHub Issues][GHISSUES] para acompanhar questões, bugs e contribuições de novo código.
 
-Se você é desenvolvedor em uma das [tecnologias utilizadas](../desenvolvimento/tecnologias-utilizadas.md) e encontrou um problema no Guia de Serviços, ou tem uma sugestão a fazer, este é o lugar ideal para começar.
+Se você é desenvolvedor em uma das [tecnologias utilizadas](../desenvolvimento/ferramentas-utilizadas.md) e encontrou um problema no Guia de Serviços, ou tem uma sugestão a fazer, este é o lugar ideal para começar.
 
 Uma vez feitas as configurações necessárias para executar o [ambiente de desenvolvimento local](../desenvolvimento/deploy-local.md), basta realizar as seguintes ações:
 
