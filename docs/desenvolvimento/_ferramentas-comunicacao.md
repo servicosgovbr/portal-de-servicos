@@ -15,7 +15,7 @@ A equipe se mantém diariamente conectada em uma sala de bate-papo no [Gitter], 
 
 Github é o repositório onde o código fonte do projeto é armazenado.
 
-A utilização do Github reforça nosso compromisso com a transparência com relação ao trabalho desenvolvido pelo time. Qualquer cidadão pode visualizar e revisar o código além de permitir que os interessados contribuam com novas funcionalidades, correções ou melhorias, seguindo o [guia de contribuição](../desenvolvimento/como-contribuir.md).
+A utilização do Github reforça nosso compromisso com a transparência com relação ao trabalho desenvolvido pelo time. Qualquer cidadão pode visualizar e revisar o código além de permitir que os interessados contribuam com novas funcionalidades, correções ou melhorias, seguindo o [guia de contribuição](../sobre-o-projeto/como-contribuir.md).
 
 Uma nova organização foi criada no Github para de agrupar qualquer projeto ou subprojeto relacionado ao Guia de Serviços.
 
