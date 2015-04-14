@@ -1,6 +1,6 @@
 # Como contribuir
 
-Esta documentação é escrita no formato [Markdown], e a versão mais recente é publicada automaticamente através do maquinário de [Entrega Contínua](../desenvolvimento/entrega-continua.md).
+Esta documentação é escrita no formato [Markdown], e a versão mais recente é publicada automaticamente através da infraestrutura do projeto de [Entrega Contínua](../desenvolvimento/entrega-continua.md).
 
 Para atualizar um documento, basta editá-lo a partir do próprio [Github do projeto][github] e seguir as convenções do formato [Markdown]. O Github disponibiliza uma pré-visualização no próprio editor.
 
