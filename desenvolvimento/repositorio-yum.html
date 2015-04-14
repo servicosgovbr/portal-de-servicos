@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Dados Criptografados | Guia de Serviços</title>
+        <title>Repositório Yum | Guia de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../desenvolvimento/implantacao-e-execucao.html" />
+    <link rel="next" href="../desenvolvimento/elasticsearch.html" />
     
     
-    <link rel="prev" href="../desenvolvimento/infraestrutura.html" />
+    <link rel="prev" href="../desenvolvimento/entrega-continua.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.4" data-basepath=".." data-revision="Tue Apr 14 2015 15:45:31 GMT+0000 (UTC)">
+    <div class="book" data-level="8.7.1" data-basepath=".." data-revision="Tue Apr 14 2015 15:45:31 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -715,7 +715,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="8.4" data-path="desenvolvimento/dados-criptografados.html">
+        <li class="chapter " data-level="8.4" data-path="desenvolvimento/dados-criptografados.html">
             
                 
                     <a href="../desenvolvimento/dados-criptografados.html">
@@ -842,7 +842,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="8.7.1" data-path="desenvolvimento/repositorio-yum.html">
+        <li class="chapter active" data-level="8.7.1" data-path="desenvolvimento/repositorio-yum.html">
             
                 
                     <a href="../desenvolvimento/repositorio-yum.html">
@@ -1186,18 +1186,20 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="dados-criptografados">Dados criptografados</h1>
-<p>Todo o c&#xF3;digo-fonte do projeto &#xE9; aberto e segue a <a href="sobre-o-projeto/licenca.md">licen&#xE7;a MIT</a>, mas algumas informa&#xE7;&#xF5;es pertinentes a ambientes de execu&#xE7;&#xE3;o em homologa&#xE7;&#xE3;o e produ&#xE7;&#xE3;o s&#xE3;o exclusivos a certas pessoas. Caso voc&#xEA; seja uma delas, e precise ver o conte&#xFA;do destes arquivos (residentes no diret&#xF3;rio <code>secrets</code>), &#xE9; necess&#xE1;rio que sua chave <a href="https://www.gnupg.org/" target="_blank">GPG</a> esteja adicionada no banco <a href="https://www.agwa.name/projects/git-crypt/" target="_blank">git-crypt</a> do reposit&#xF3;rio.</p>
-<p>Para tal, pe&#xE7;a a um dos mantenedores do projeto para adicionar sua chave, e quando isto for feito, basta executar:</p>
-<pre><code>git crypt unlock
-</code></pre><p>O <code>git-crypt</code> pedir&#xE1; para destravar sua chave <a href="https://www.gnupg.org/" target="_blank">GPG</a> e vai imediatamente decriptar todos os arquivos secretos de forma
-transparente ao uso do <a href="http://git-scm.org" target="_blank">Git</a>. A partir da&#xED;, a utiliza&#xE7;&#xE3;o do reposit&#xF3;rio pode continuar normalmente.</p>
-<p>Para travar o reposit&#xF3;rio novamente, de forma que os arquivos criptografados n&#xE3;o sejam mais vis&#xED;veis, execute:</p>
-<pre><code>git crypt lock
-</code></pre><p>&#xC9; recomendado n&#xE3;o manter o reposit&#xF3;rio destravado desnecessariamente.</p>
-<h2 id="aviso-importante">Aviso importante</h2>
-<p>Entre em contato com os mantenedores imediatamente caso haja uma suspeita de que sua chave tenha sido comprometida.</p>
-
+                        <h1 id="reposit%C3%B3rio-yum">Reposit&#xF3;rio Yum</h1>
+<p>Os RPMs do Guia de Servi&#xE7;os est&#xE3;o dispon&#xED;veis em um reposit&#xF3;rio Yum, com as seguintes configura&#xE7;&#xF5;es:</p>
+<pre><code>[guia-de-servicos]
+name = Guia de Servi&#xE7;os
+baseurl = https://s3-sa-east-1.amazonaws.com/servicosgovbr/centos/7/
+enabled=1
+gpgcheck=1
+gpgkey=https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/src/main/resources/static/GPG-KEY
+</code></pre><p>A chave GPG utilizada para assinar os pacotes e o reposit&#xF3;rio &#xE9;:</p>
+<pre><code>pub   2048R/2E1F2BA2 2015-04-07
+      Key fingerprint = 1F90 DD30 DAF2 DCDF 4F27  DC78 F68F 9EB4 2E1F 2BA2
+uid                  Guia de Servi&#xE7;os &lt;gpg@servicos.gov.br&gt;
+sub   2048R/BA141101 2015-04-07
+</code></pre>
                     
                     </section>
                 
@@ -1207,10 +1209,10 @@ transparente ao uso do <a href="http://git-scm.org" target="_blank">Git</a>. A p
         </div>
 
         
-        <a href="../desenvolvimento/infraestrutura.html" class="navigation navigation-prev " aria-label="Previous page: Infraestrutura"><i class="fa fa-angle-left"></i></a>
+        <a href="../desenvolvimento/entrega-continua.html" class="navigation navigation-prev " aria-label="Previous page: Entrega Contínua"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../desenvolvimento/implantacao-e-execucao.html" class="navigation navigation-next " aria-label="Next page: Implantação e execução"><i class="fa fa-angle-right"></i></a>
+        <a href="../desenvolvimento/elasticsearch.html" class="navigation navigation-next " aria-label="Next page: ElasticSearch"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
