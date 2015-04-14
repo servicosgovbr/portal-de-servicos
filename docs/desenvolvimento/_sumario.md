@@ -10,6 +10,7 @@
     - [Homologação e Produção](/desenvolvimento/deploy-homologacao-producao.md)
   - [Testes](/desenvolvimento/testes.md)
   - [Entrega Contínua](/desenvolvimento/entrega-continua.md)
+    - [Repositório Yum](/desenvolvimento/repositorio-yum.md)
   - [ElasticSearch](/desenvolvimento/elasticsearch.md)
   - [Requisitos Transversais](/desenvolvimento/requisitos-transversais.md)
     - [Acessibilidade](/desenvolvimento/acessibilidade.md)
