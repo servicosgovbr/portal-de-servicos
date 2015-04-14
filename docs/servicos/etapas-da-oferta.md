@@ -10,7 +10,7 @@ O usuário está procurando pelo serviço que melhor atende às suas necessidade
 
 ## Escolha
 
-O usuário encontrou o serviço que procurava e está obtendo informações sobre como acessá-lo corretamente. Neste ponto, ele determina os requisitos para o acesso ao serviço, entende os passos necessários por todas as partes envolvidas e é direcionado à ação.
+O usuário encontrou o serviço que procurava e está obtendo informações sobre como acessá-lo corretamente. Neste ponto, o usuário verifica os requisitos para o acesso ao serviço, entende os passos necessários por todas as partes envolvidas e é direcionado à ação.
 
 Estas ações variam de acordo com a natureza do serviço prestado. Alguns serviços oferecem ações meramente informativas, outros o preenchimento de formulários, agendamento de visitas presenciais a postos de atendimento, e em outros todos os passos para a realização do serviço podem ser executados online.
 
