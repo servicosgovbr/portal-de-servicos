@@ -382,11 +382,11 @@ ul.servicos-a-z {
 }
 
 .destaque {
+  margin-bottom: em(40);
+
   h3 {
     font-size: em(20);
   }
-  min-height: em(130);
-  margin-bottom: 1em;
 
   .linha-da-vida {
     margin-top: 6px;
