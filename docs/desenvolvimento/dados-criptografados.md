@@ -26,4 +26,4 @@ Entre em contato com os mantenedores imediatamente caso haja uma suspeita de que
 [GIT]:http://git-scm.org
 [GITCRYPT]:https://www.agwa.name/projects/git-crypt/
 [GPG]:https://www.gnupg.org/
-[MIT]:/sobre-o-projeto/licenca.md
+[MIT]:../sobre-o-projeto/licenca.md
