@@ -59,4 +59,4 @@ ativos do Spring:
 SPRING_PROFILES_ACTIVE=cluster ./gradlew run
 ```
 
-Para a inicialização funcionar desta forma, é necessário que o ElasticSearch já esteja funcionando antes de começar.
+Para a inicialização funcionar desta forma, é necessário que o ElasticSearch já esteja executando antes de começar.
