@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Endereços dos servidores de aplicação do Guia de Serviços
+APP_1_IP_ADDR='10.16.0.13'
+APP_2_IP_ADDR='10.16.0.12'
+
+set -x
 set -e
 set -o pipefail
 
@@ -39,10 +44,10 @@ frontend main *:80
 
 backend app
     balance roundrobin
-    server app1 10.0.0.1:8080 check # é necessário trocar os IPs aqui
-    server app2 10.0.0.2:8080 check #
+    server app1 ${APP_1_IP_ADDR}:8080 check
+    server app2 ${APP_2_IP_ADDR}:8080 check
 EOF
 
-sudo systemctl daemon-reload
-sudo systemctl enable haproxy
-sudo systemctl start haproxy
+systemctl daemon-reload
+systemctl enable haproxy
+systemctl start haproxy

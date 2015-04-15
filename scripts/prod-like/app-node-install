@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -x
+set -e
+set -o pipefail
+
 echo "Adicionando repositório Yum do Guia de Serviços..."
 cat <<-EOF > /etc/yum.repos.d/guia-de-servicos.repo
 [guia-de-servicos]
