@@ -8,7 +8,7 @@ Um _release_ (também chamado de _entrega_) é caracterizado como um marco de ap
 
 ##### Código pronto para ser colocado em produção
 
-Compreende o código gerado em determinado período, de acordo com o escopo descrito e priorizado para a respectiva _release_, as releases são organizadas como milestones nas [Issues no GitHub](https://github.com/servicosgovbr/guia-de-servicos/issues). A cada _release_, o código ser integrado ao repositório oficial de entrega disponível no ambiente Redmine do Governo Federal (ver item 3.9, abaixo)
+Compreende o código gerado em determinado período, de acordo com o escopo descrito e priorizado para a respectiva _release_, as releases são organizadas como milestones nas [Issues no GitHub](https://github.com/servicosgovbr/guia-de-servicos/issues).
     
 ##### Documentação
 
