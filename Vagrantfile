@@ -2,30 +2,48 @@ Vagrant.configure('2') do |config|
 
   config.vm.box = 'puppetlabs/centos-7.0-64-puppet'
   config.ssh.forward_agent = true
+  config.cache.enable :yum if Vagrant.has_plugin?("vagrant-cachier")
 
   config.vm.provider 'virtualbox' do |vb|
-    vb.customize ['modifyvm', :id, '--memory', '1024']
+    vb.customize ['modifyvm', :id, '--memory', '512']
   end
 
-  config.vm.define 'app', primary: true do |app|
-    app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant-app-bootstrap app'
-    app.vm.network 'forwarded_port', guest: 80, host: 8081
+  config.vm.define 'bastion', primary: true do |lb|
+    lb.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/bastion-node-install'
+    lb.vm.network 'private_network', ip: '10.16.0.180'
+  end
+
+  config.vm.define 'lb' do |lb|
+    lb.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/prod-like/lb-node-install 10.16.0.13 10.16.0.12'
+    lb.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/lb-node-install lb'
+    lb.vm.network 'forwarded_port', guest: 80, host: 8081
+    lb.vm.network 'private_network', ip: '10.16.0.10'
+  end
+
+  config.vm.define 'app1' do |app|
+    app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/prod-like/app-node-install'
+    app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/app-node-install app1'
     app.vm.network 'forwarded_port', guest: 8080, host: 8082
-    app.vm.network 'private_network', ip: '10.133.133.11'
+    app.vm.network 'private_network', ip: '10.16.0.13'
+  end
+
+  config.vm.define 'app2' do |app|
+    app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/prod-like/app-node-install'
+    app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/app-node-install app2'
+    app.vm.network 'forwarded_port', guest: 8080, host: 8083
+    app.vm.network 'private_network', ip: '10.16.0.12'
   end
 
   config.vm.define 'es1' do |es|
-    es.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant-es-bootstrap es1'
-    es.vm.network 'forwarded_port', guest: 9200, host: 9201
-    es.vm.network 'forwarded_port', guest: 9300, host: 9301
-    es.vm.network 'private_network', ip: '10.133.133.22'
+    es.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/prod-like/es-node-install 10.16.0.11 10.16.0.9'
+    es.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/es-node-install es1'
+    es.vm.network 'private_network', ip: '10.16.0.11'
   end
 
   config.vm.define 'es2' do |es|
-    es.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant-es-bootstrap es2'
-    es.vm.network 'forwarded_port', guest: 9200, host: 9202
-    es.vm.network 'forwarded_port', guest: 9300, host: 9302
-    es.vm.network 'private_network', ip: '10.133.133.33'
+    es.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/prod-like/es-node-install 10.16.0.9 10.16.0.11'
+    es.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/es-node-install es2'
+    es.vm.network 'private_network', ip: '10.16.0.9'
   end
 
 end

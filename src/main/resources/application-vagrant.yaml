@@ -1,4 +1,4 @@
 spring:
   data:
     elasticsearch:
-      clusterNodes: 10.133.133.22:9300,10.133.133.33:9300
+      clusterNodes: 10.16.0.11:9300,10.16.0.9:9300

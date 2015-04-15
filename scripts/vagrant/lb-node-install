@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ "$(whoami)" != "root" ]; then
+  echo 'Este script deve ser executado como super-usuário (root).'
+  exit -1
+fi
+
+set -x
+set -e
+set -o pipefail
+
+echo 'Instalando augeas...'
+yum install augeas -y
+
+echo 'Configurando /etc/sudoers...'
+# Remove obrigação de TTY para sudoers em deployments automáticos
+augtool set '/files/etc/sudoers/Defaults[*]/requiretty/negate' ''
+
+echo "Modificando hostname para '${1}'..."
+hostname $1
+
+echo 'Abrindo porta 80 no firewall...'
+firewall-cmd --permanent --add-port 80/tcp
+
+echo 'Salvando alterações do firewall...'
+firewall-cmd --reload
+

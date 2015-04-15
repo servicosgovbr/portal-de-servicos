@@ -22,29 +22,26 @@ EOF
 echo 'Atualizando repositório Yum'
 yum makecache fast -y
 yum update -y
-yum install epel-release lsof wget augeas -y
+yum install wget -y
 
-# Remove obrigação de TTY para sudoers em deployments automáticos
-augtool set '/files/etc/sudoers/Defaults[*]/requiretty/negate' ''
-
-echo 'Baixando JDK'
-wget \
+echo 'Verificando instalação da JDK...'
+if [ "$(rpm -q jdk1.8.0_40)" != "jdk1.8.0_40-1.8.0_40-fcs.x86_64" ]; then
+  echo 'Baixando JDK'
+  wget \
     --quiet \
     --no-cookies \
     --no-check-certificate \
     --header 'Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie' \
     'http://download.oracle.com/otn-pub/java/jdk/8u40-b25/jdk-8u40-linux-x64.rpm'
 
-if [ "$(sha1sum 'jdk-8u40-linux-x64.rpm' | cut -f 1 -d ' ')" != "1e91457271dbc86ede56432a461b70bff79e19b2" ]; then
-  echo "JDK possui checksum incorreto. Verifique que o download foi concluído com sucesso."
-  exit -1
+  if [ "$(sha1sum 'jdk-8u40-linux-x64.rpm' | cut -f 1 -d ' ')" != "1e91457271dbc86ede56432a461b70bff79e19b2" ]; then
+    echo "JDK possui checksum incorreto. Verifique que o download foi concluído com sucesso."
+    exit -1
+  fi
+
+  echo 'Instalando JDK'
+  yum install -y 'jdk-8u40-linux-x64.rpm'
 fi
-
-$(rpm -qa | grep -q jdk1.8.0_40-1.8.0_40-fcs.x86_64) || \
-  (echo 'Instalando JDK' && yum install -y 'jdk-8u40-linux-x64.rpm')
-
-$(java -version 2>&1 | grep -q "1.8.0_40") || \
-  (echo "JDK não foi instalado corretamente" && exit -1)
 
 echo 'Instalando Guia de Serviços...'
 yum install -y guia-de-servicos

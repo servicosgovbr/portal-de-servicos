@@ -1,12 +1,13 @@
-task vagrantDeploy(type: Exec) {
+task vagrantDeployToApp1(type: Exec) {
     dependsOn buildRpm
+    commandLine 'vagrant', 'ssh', 'app1', '-c', "bash /vagrant/scripts/vagrant/deploy"
+}
 
-    String cmd = "cd /vagrant && bash ./scripts/vagrant-deploy " +
-            "build/rpmbuild/RPMS/noarch/${project.name}-${version}-1.noarch.rpm"
+task vagrantDeployToApp2(type: Exec) {
+    dependsOn buildRpm
+    commandLine 'vagrant', 'ssh', 'app2', '-c', "bash /vagrant/scripts/vagrant/deploy"
+}
 
-    if (new File('/vagrant').exists()) {
-        commandLine 'bash', '-c', cmd
-    } else {
-        commandLine 'vagrant', 'ssh', 'app', '-c', cmd
-    }
+task vagrantDeploy {
+    dependsOn vagrantDeployToApp1, vagrantDeployToApp2
 }

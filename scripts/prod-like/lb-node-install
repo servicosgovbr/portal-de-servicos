@@ -10,13 +10,12 @@ set -e
 set -o pipefail
 
 # Endereços dos servidores de aplicação do Guia de Serviços
-APP_1_IP_ADDR='10.16.0.13'
-APP_2_IP_ADDR='10.16.0.12'
+APP_1_IP_ADDR="${1:-10.16.0.13}"
+APP_2_IP_ADDR="${2:-10.16.0.12}"
 
 yum makecache fast -y
 yum update -y
-yum install -y epel-release
-yum install -y haproxy
+yum install -y epel-release haproxy
 
 cat <<-EOF > /etc/haproxy/haproxy.cfg
 global

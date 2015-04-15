@@ -27,16 +27,8 @@ task buildRpm(type: Exec) {
                         "--define '_topdir ${rpmBaseDir}' " +
                         "--define 'version ${version}' " +
                         "${project.name}.rpmspec"
-    }
-    else if (new File('/vagrant').exists()) {
-        commandLine 'bash', '-c',
-                "cd /vagrant && " +
-                        "rpmbuild -v -bb " +
-                        "--define '_topdir $rpmBaseDir' " +
-                        "--define 'version ${version}' " +
-                        "${project.name}.rpmspec"
     } else {
-        commandLine 'vagrant', 'ssh', 'app', '-c',
+        commandLine 'vagrant', 'ssh', 'bastion', '-c',
                 "cd /vagrant && " +
                         "rpmbuild -v -bb " +
                         "--define '_topdir /vagrant/build/rpmbuild' " +
