@@ -1,13 +1,21 @@
 #!/bin/bash
 
-# Endereços dos servidores de aplicação do Guia de Serviços
-APP_1_IP_ADDR='10.16.0.13'
-APP_2_IP_ADDR='10.16.0.12'
+if [ "$(whoami)" != "root" ]; then
+  echo 'Este script deve ser executado como super-usuário (root).'
+  exit -1
+fi
 
 set -x
 set -e
 set -o pipefail
 
+# Endereços dos servidores de aplicação do Guia de Serviços
+APP_1_IP_ADDR='10.16.0.13'
+APP_2_IP_ADDR='10.16.0.12'
+
+yum makecache fast -y
+yum update -y
+yum install -y epel-release
 yum install -y haproxy
 
 cat <<-EOF > /etc/haproxy/haproxy.cfg
