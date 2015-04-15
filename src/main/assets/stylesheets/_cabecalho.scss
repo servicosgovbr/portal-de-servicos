@@ -164,7 +164,7 @@ $mobile: new-breakpoint(max-width 500px 4);
 
   #barra-feedback {
     background-color: #2c66ce;
-    padding: 5px 0px 5px 0px;
+    padding: em(5);
 
     p {
       @include outer-container(73.80em);

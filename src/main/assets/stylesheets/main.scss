@@ -168,6 +168,10 @@ dl.portlet {
 
 .outstanding-header {
 
+  @include media($mobile) {
+    padding: em(5);
+  }
+
   .outstanding-title {
     margin-left: 0;
     margin-bottom: none;
