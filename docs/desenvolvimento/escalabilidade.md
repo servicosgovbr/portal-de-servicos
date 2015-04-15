@@ -8,7 +8,7 @@ Servidores estão atualmente provisionados de acordo com a seção "[Implantaç�
 
 ## Aumentando a quantidade de servidores (horizontal)
 
-Para adicionar um servidor de aplicação, é necessário adicioná-lo ao [balanceador de carga](./capacidade.md). Para um nodo no [ElasticSearch](./elasticsearch.md), é necessário atualizar a configuração do ambiente a modificar para que o IP do novo nodo seja utilizado.
+Para adicionar um servidor de aplicação, é necessário adicioná-lo ao [balanceador de carga](./infraestrutura.md#balanceador-de-carga). Para um nodo no [ElasticSearch](./elasticsearch.md), é necessário atualizar a configuração do ambiente a modificar para que o IP do novo nodo seja utilizado.
 
 Por exemplo, para adicionar uma nova máquina com ElasticSearch ao [cluster no Vagrant](./deploy-vagrant.md), com o IP `10.133.133.44`, basta modificar o arquivo `src/main/resources/application-vagrant.yaml` para:
 
