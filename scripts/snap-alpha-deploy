@@ -4,6 +4,10 @@ set -e
 set -o pipefail
 
 ssh -F .sshconfig alpha 'sudo /bin/bash -s' <<-EOF
+set -x
+set -e
+set -o pipefail
+yum makecache fast -y
 yum install "guia-de-servicos-1.0.${SNAP_PIPELINE_COUNTER:-0}-1"
 systemctl daemon-reload
 systemctl restart guia-de-servicos
