@@ -54,4 +54,8 @@ div.position-10 {
 li.auto-cell {
   @include span-columns(4);
   @include omega(3n);
+
+  @include media($mobile) {
+    @include fill-parent();
+  }
 }
