@@ -42,7 +42,6 @@ cat <<-EOF > %{buildroot}/etc/sysconfig/%{name}
 # - production: desliga o Jolokia, protege URLs sensíveis
 # - cluster: conecta a um ElasticSearch externo (desliga o ElasticSearch embarcado)
 SPRING_PROFILES_ACTIVE=production
-
 EOF
 
 mkdir -p %{buildroot}/etc/systemd/system
@@ -55,39 +54,24 @@ ExecStart=/opt/%{name}/bin/%{name}
 User=%{_user}
 TimeoutSec=300
 EnvironmentFile=/etc/sysconfig/%{name}
+SyslogIdentifier=guia-de-servicos
+SyslogLevelPrefix=false
+StandardOutput=syslog
+StandardError=syslog
+WorkingDirectory=/var/run/%{name}
+OOMScoreAdjust=-1000
 
 [Install]
 WantedBy=multi-user.target
 EOF
 
 mkdir -p %{buildroot}/var/run/%{name}
-mkdir -p %{buildroot}/var/log/%{name}
-mkdir -p %{buildroot}/etc/logrotate.d
-
-cat <<-EOF > %{buildroot}/etc/logrotate.d/%{name}
-/var/log/%{name}/*.log {
-    missingok
-    notifempty
-    daily
-    rotate 100
-    compress
-    delaycompress
-    create 640 root adm
-    sharedscripts
-    create 0640 %{_user} %{_user}
-}
-EOF
 
 # Script para iniciar o processo
 mkdir -p %{buildroot}/%{prefix}/bin
 cat <<-EOF > %{buildroot}/%{prefix}/bin/%{name}
 #!/bin/bash
-
-pushd /var/run/%{name} > /dev/null
-  source /etc/sysconfig/%{name}
-  java -jar %{prefix}/lib/%{name}.jar > /var/log/%{name}/%{name}.log
-popd > /dev/null
-
+java -jar %{prefix}/lib/%{name}.jar
 EOF
 
 %files
@@ -95,11 +79,9 @@ EOF
 %attr(0644, %{_user}, %{_user}) %{prefix}/lib/%{name}.jar
 %attr(0644, %{_user}, %{_user}) /etc/systemd/system/%{name}.service
 %dir %attr(0755, %{_user}, %{_user}) /var/run/%{name}
-%dir %attr(0755, %{_user}, %{_user}) /var/log/%{name}
 
 %config
 %attr(0644, %{_user}, %{_user}) /etc/sysconfig/%{name}
-%attr(0644, %{_user}, %{_user}) /etc/logrotate.d/%{name}
 
 %clean
 rm -rf %{buildroot}
