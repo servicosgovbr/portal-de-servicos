@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.5.2" data-basepath=".." data-revision="Thu Apr 16 2015 13:44:06 GMT+0000 (UTC)">
+    <div class="book" data-level="8.5.2" data-basepath=".." data-revision="Thu Apr 16 2015 14:48:04 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1188,24 +1188,30 @@
                     
                         <h1 id="vagrant">Vagrant</h1>
 <p><a href="desenvolvimento/ambiente-vagrant.graphml"><img src="ambiente-vagrant.svg" alt="Diagrama da rede no Vagrant"></a></p>
-<p>Criamos tamb&#xE9;m um conjunto de <em>boxes</em> para o <a href="http://vagrantup.com" target="_blank">Vagrant</a>. Para utiliz&#xE1;-lo, confira que voc&#xEA; est&#xE1; usando uma vers&#xE3;o recente do Vagrant (ao menos 1.6.5) e rode:</p>
+<p>Criamos tamb&#xE9;m um conjunto de <em>boxes</em> para o <a href="http://vagrantup.com" target="_blank">Vagrant</a>. Para utiliz&#xE1;-lo, confira que voc&#xEA; est&#xE1; usando uma vers&#xE3;o recente do <a href="http://vagrantup.com" target="_blank">Vagrant</a> (ao menos 1.6.5) e rode:</p>
 <pre><code>vagrant up
 </code></pre><p>&#xC9; poss&#xED;vel que as m&#xE1;quinas virtuais fiquem em um estado inconsistente, ou alguma das atualiza&#xE7;&#xF5;es no c&#xF3;digo de provisionamento e instala&#xE7;&#xE3;o seja incompat&#xED;vel com vers&#xF5;es anteriores das mesmas. Nestes casos, para recri&#xE1;-las, basta:</p>
 <pre><code>vagrant destroy -f
 vagrant up
 </code></pre><h2 id="execu%C3%A7%C3%A3o-da-aplica%C3%A7%C3%A3o">Execu&#xE7;&#xE3;o da aplica&#xE7;&#xE3;o</h2>
-<p>A aplica&#xE7;&#xE3;o, uma vez instalada na m&#xE1;quina virtual <code>app</code>, fica dispon&#xED;vel nas porta <code>8081</code> da m&#xE1;quina host. Acessando <code>http://localhost:8081</code>, deve ser poss&#xED;vel ver a &#xFA;ltima vers&#xE3;o implantada.</p>
+<p>A aplica&#xE7;&#xE3;o, uma vez instalada nas m&#xE1;quinas virtuais <code>app1</code> e <code>app2</code>, fica dispon&#xED;vel nas portas <code>8082</code> e <code>8083</code> da m&#xE1;quina host. Uma outra m&#xE1;quina, <code>lb</code>, balanceia a carga entre as duas e escuta requisi&#xE7;&#xF5;es na porta <code>8081</code>. Acessando <code>http://localhost:8081</code>, deve ser poss&#xED;vel ver a &#xFA;ltima vers&#xE3;o implantada.</p>
 <p>Para atualizar a vers&#xE3;o implantada, utilize a tarefa <code>vagrantDeploy</code>: </p>
 <pre><code>./gradlew vagrantDeploy
 </code></pre><h2 id="rede-interna">Rede interna</h2>
 <p>Para acessar qualquer uma das m&#xE1;quinas atrav&#xE9;s de <code>ssh</code>, utilize o comando <code>vagrant ssh &lt;nome&gt;</code>, onde <code>nome</code> pode ser:</p>
 <ul>
-<li><code>app</code>: servidor de aplica&#xE7;&#xE3;o, com o balanceador de carga e a &#xFA;ltima vers&#xE3;o da aplica&#xE7;&#xE3;o instalada em execu&#xE7;&#xE3;o. Possui o IP <code>10.133.133.11</code>.</li>
-<li><code>es1</code>: primeiro nodo do ElasticSearch, com o IP <code>10.133.133.22</code></li>
-<li><code>es2</code>: segundo nodo do ElasticSearch, com o IP <code>10.133.133.33</code></li>
+<li><code>bastion</code>: m&#xE1;quina vazia para experimentos e desenvolvimento local, com o IP <code>10.16.0.180</code>.</li>
+<li><code>lb</code>: balanceador de carga, com o IP <code>10.16.0.10</code>.</li>
+<li><code>app1</code>: primeiro nodo servidor de aplica&#xE7;&#xE3;o, com o IP <code>10.16.0.13</code>.</li>
+<li><code>app2</code>: segundo nodo servidor de aplica&#xE7;&#xE3;o, com o IP <code>10.16.0.12</code>.</li>
+<li><code>es1</code>: primeiro nodo do ElasticSearch, com o IP <code>10.16.0.11</code></li>
+<li><code>es2</code>: segundo nodo do ElasticSearch, com o IP <code>10.16.0.9</code></li>
 </ul>
 <p>Uma alternativa mais r&#xE1;pida ao <code>vagrant ssh</code> &#xE9; utilizar o arquivo <code>.sshconfig</code> (localizado na raiz do projeto) para carregar as configura&#xE7;&#xF5;es de acesso. Acesse as m&#xE1;quinas com os seguintes comandos:</p>
-<pre><code>ssh -F .sshconfig app-vagrant
+<pre><code>ssh -F .sshconfig bastion
+ssh -F .sshconfig lb-vagrant
+ssh -F .sshconfig app1-vagrant
+ssh -F .sshconfig app2-vagrant
 ssh -F .sshconfig es1-vagrant
 ssh -F .sshconfig es2-vagrant
 </code></pre>
