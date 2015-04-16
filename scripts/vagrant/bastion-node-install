@@ -10,7 +10,7 @@ set -e
 set -o pipefail
 
 echo 'Instalando augeas...'
-yum install epel-release -y
+yum install epel-release deltarpm -y
 yum install augeas rpm-build wget -y
 
 echo 'Configurando /etc/sudoers...'

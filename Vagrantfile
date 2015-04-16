@@ -1,6 +1,6 @@
 Vagrant.configure('2') do |config|
 
-  config.vm.box = 'puppetlabs/centos-7.0-64-puppet'
+  config.vm.box = 'chef/centos-7.0'
   config.ssh.forward_agent = true
   config.cache.enable :yum if Vagrant.has_plugin?("vagrant-cachier")
 
