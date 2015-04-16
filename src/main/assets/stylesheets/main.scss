@@ -183,18 +183,20 @@ dl.portlet {
   @include span-columns(3);
   @include shift(9);
   @include omega();
+
   margin-top: em(30);
   margin-bottom: em(30);
-  color: #606060;
-  font-size: 15px;
+  font-size: em(15);
 
   a {
-    padding-left: 20px;
-    padding-right: 10px;  
-    background: url('/img/voltar-topo.png') no-repeat left center;
+    padding-left: em(20);
+    padding-right: em(10);
 
+    span.fa-caret-up {
+      color: #a0a0a0;
+      padding-right: 5px;
+    }
   }
-
 }
 
 .menuTrigger {
