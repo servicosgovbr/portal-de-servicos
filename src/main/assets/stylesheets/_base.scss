@@ -74,8 +74,18 @@ h3 {
   font-size: em(25);
   margin-bottom: em(10); 
   margin-top: em(20);
-
 }
+
+
+h4 {
+  font-size: em(15);
+  font-family: 'open_sanssemibold', $helvetica;
+  color: #606060;
+  line-height: 120%;
+  margin-top: 0;
+}
+
+
 
 input {
   font-family: 'open_sansregular', $helvetica;
