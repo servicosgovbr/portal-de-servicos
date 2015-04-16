@@ -25,7 +25,7 @@ EOF
 echo 'Atualizando repositório Yum'
 yum makecache fast -y
 yum update -y
-yum install -y wget
+yum install -y wget deltarpm
 
 echo 'Verificando instalação da JDK...'
 if [ "$(rpm -q jdk1.8.0_40)" != "jdk1.8.0_40-1.8.0_40-fcs.x86_64" ]; then
