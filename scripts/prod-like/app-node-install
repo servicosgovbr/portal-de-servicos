@@ -24,7 +24,6 @@ EOF
 
 echo 'Atualizando repositório Yum'
 yum makecache fast -y
-yum update -y
 yum install -y wget deltarpm
 
 echo 'Verificando instalação da JDK...'

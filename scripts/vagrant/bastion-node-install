@@ -9,6 +9,9 @@ set -x
 set -e
 set -o pipefail
 
+echo 'Atualizando todos os pacotes...'
+yum update -y
+
 echo 'Instalando augeas...'
 yum install epel-release deltarpm -y
 yum install augeas rpm-build wget -y
