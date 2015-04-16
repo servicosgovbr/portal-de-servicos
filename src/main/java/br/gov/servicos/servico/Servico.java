@@ -11,7 +11,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 
 import java.util.List;
 
-import static br.gov.servicos.config.GuiaDeServicosIndex.GUIA_DE_SERVICOS;
+import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_IMPORTADOR;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Object;
@@ -19,7 +19,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 
 @Value
 @AllArgsConstructor(access = PRIVATE)
-@Document(indexName = GUIA_DE_SERVICOS, type = "servico")
+@Document(indexName = GDS_IMPORTADOR, type = "servico")
 @Wither
 public class Servico {
 

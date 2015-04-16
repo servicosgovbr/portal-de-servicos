@@ -59,4 +59,5 @@ class FeedbackController {
 
         return new RedirectView("/conteudo/obrigado-pela-contribuicao");
     }
+
 }

@@ -10,12 +10,12 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 
-import static br.gov.servicos.config.GuiaDeServicosIndex.GUIA_DE_SERVICOS;
+import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_IMPORTADOR;
+import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_PERSISTENTE;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
@@ -32,23 +32,46 @@ public class GuiaDeServicosIndexTest {
     }
 
     @Test
-    public void deveApagarIndiceExistente() throws Exception {
-        doReturn(true)
-                .when(es)
-                .indexExists(GUIA_DE_SERVICOS);
-
+    public void deveCriarIndiceGDSImportadorQuandoNaoExiste() throws Exception {
         esConfig.recriar();
 
-        verify(es).deleteIndex(GUIA_DE_SERVICOS);
+        verify(es, never()).deleteIndex(eq(GDS_IMPORTADOR));
+        verify(es).createIndex(eq(GDS_IMPORTADOR), anyString());
     }
 
     @Test
-    public void deveCriarIndiceParaGuiaDeServicos() throws Exception {
+    public void deveDeletarECriarIndiceGDSImportadorQuandoExistir() throws Exception {
+        doReturn(true)
+                .when(es)
+                .indexExists(GDS_IMPORTADOR);
+
         esConfig.recriar();
 
-        verify(es).createIndex(eq(GUIA_DE_SERVICOS), anyString());
+        verify(es).deleteIndex(eq(GDS_IMPORTADOR));
+        verify(es).createIndex(eq(GDS_IMPORTADOR), anyString());
+    }
+
+    @Test
+    public void deveAdicionarMapeamentos() throws Exception {
+        esConfig.recriar();
         verify(es).putMapping(Servico.class);
         verify(es).putMapping(Feedback.class);
     }
 
+    @Test
+    public void deveCriarIndiceGDSPersistenteQuandoNaoExiste() throws Exception {
+        esConfig.recriar();
+        verify(es).createIndex(eq(GDS_PERSISTENTE), anyString());
+    }
+
+    @Test
+    public void naoDeveCriarIndiceGDSPersistenteSeExistir() throws Exception {
+        doReturn(true)
+                .when(es)
+                .indexExists(GDS_PERSISTENTE);
+
+        esConfig.recriar();
+
+        verify(es, never()).createIndex(eq(GDS_PERSISTENTE), anyString());
+    }
 }

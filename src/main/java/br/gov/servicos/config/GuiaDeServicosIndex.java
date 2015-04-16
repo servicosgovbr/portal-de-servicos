@@ -20,7 +20,9 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(makeFinal = true, level = PRIVATE)
 public class GuiaDeServicosIndex {
 
-    public static final String GUIA_DE_SERVICOS = "guia-de-servicos";
+    public static final String GDS_IMPORTADOR = "gds-importador";
+    public static final String GDS_PERSISTENTE = "gds-persistente";
+
     private static final String SETTINGS = "/elasticsearch/settings.json";
 
     ElasticsearchTemplate es;
@@ -40,12 +42,23 @@ public class GuiaDeServicosIndex {
     }
 
     public void recriar() throws IOException {
-        if (es.indexExists(GUIA_DE_SERVICOS)) {
-            es.deleteIndex(GUIA_DE_SERVICOS);
-        }
-        es.createIndex(GUIA_DE_SERVICOS, settings());
+        recriarIndiceImportador();
+        criarIndicePersistenteSeNaoExistir();
+
         es.putMapping(Servico.class);
         es.putMapping(Feedback.class);
+    }
+
+    private void criarIndicePersistenteSeNaoExistir() throws IOException {
+        if (!es.indexExists(GDS_PERSISTENTE))
+            es.createIndex(GDS_PERSISTENTE, settings());
+    }
+
+    private void recriarIndiceImportador() throws IOException {
+        if (es.indexExists(GDS_IMPORTADOR)) {
+            es.deleteIndex(GDS_IMPORTADOR);
+        }
+        es.createIndex(GDS_IMPORTADOR, settings());
     }
 
 }
