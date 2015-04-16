@@ -9,6 +9,9 @@ set -x
 set -e
 set -o pipefail
 
+echo 'Adicionando chave GPG do repositório do Guia de Serviços...'
+rpm --import https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/src/main/resources/static/GPG-KEY
+
 echo "Adicionando repositório Yum do Guia de Serviços..."
 cat <<-EOF > /etc/yum.repos.d/guia-de-servicos.repo
 [guia-de-servicos]
