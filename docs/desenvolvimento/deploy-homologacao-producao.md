@@ -14,6 +14,12 @@ Este script deve ser executado, como `root`, em uma máquina destinada a ser o b
 
 São aceitos dois parâmetros em linha de comando, um para cada IP dos servidores de aplicação (caso não informados, são utilizados `10.16.0.13` e `10.16.0.12` por padrão).
 
+Exemplo:
+
+```sh
+sudo /bin/bash scripts/prod-like/lb-node-install '10.16.0.13' '10.16.0.12'
+```
+
 ### `app-node-install`
 
 Este script deve ser executado, como `root`, em uma máquina destinada a servir a aplicação do Guia de Serviços. Este script:
@@ -22,6 +28,12 @@ Este script deve ser executado, como `root`, em uma máquina destinada a servir 
 - Instala as ferramentas `wget` e `deltarpm`, caso não existentes no sistema
 - Instala a JDK 1.8.0_40, caso não existente
 - Instala, configura e inicia o _daemon_ do Guia de Serviços (`guia-de-servicos`).
+
+Exemplo:
+
+```sh
+sudo /bin/bash scripts/prod-like/app-node-install
+```
 
 ### `es-node-install`
 
@@ -35,6 +47,10 @@ Este script:
 - Instala as ferramentas `wget` e `deltarpm`, caso não existentes no sistema
 - Instala a JDK 1.8.0_40, caso não existente
 - Instala, configura e inicia o _daemon_ do [ElasticSearch] (`elasticsearch`).
+
+```sh
+sudo /bin/bash scripts/prod-like/es-node-install '10.16.0.11' '10.16.0.9'
+```
 
 [gh]:https://github.com/servicosgovbr/guia-de-servicos/tree/master/scripts/prod-like
 [haproxy]:http://www.haproxy.org
