@@ -21,33 +21,75 @@ Host alpha
   UserKnownHostsFile=/dev/null
   StrictHostKeyChecking=no
 
-Host app-vagrant
-  Hostname localhost
+Host bastion
+  HostName 127.0.0.1
   User vagrant
   Port 2222
-  IdentityFile ~/.vagrant.d/insecure_private_key
-  IdentityFile ./secrets/server_ssh_key
-  LogLevel=quiet
-  UserKnownHostsFile=/dev/null
-  StrictHostKeyChecking=no
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
 
-Host es1-vagrant
-  Hostname localhost
+Host lb
+  HostName 127.0.0.1
   User vagrant
   Port 2200
-  IdentityFile ~/.vagrant.d/insecure_private_key
-  IdentityFile ./secrets/server_ssh_key
-  LogLevel=quiet
-  UserKnownHostsFile=/dev/null
-  StrictHostKeyChecking=no
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
 
-Host es2-vagrant
-  Hostname localhost
+Host app1
+  HostName 127.0.0.1
   User vagrant
   Port 2201
-  IdentityFile ~/.vagrant.d/insecure_private_key
-  IdentityFile ./secrets/server_ssh_key
-  LogLevel=quiet
-  UserKnownHostsFile=/dev/null
-  StrictHostKeyChecking=no
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
+
+Host app2
+  HostName 127.0.0.1
+  User vagrant
+  Port 2202
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
+
+Host es1
+  HostName 127.0.0.1
+  User vagrant
+  Port 2203
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
+
+Host es2
+  HostName 127.0.0.1
+  User vagrant
+  Port 2204
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
 
