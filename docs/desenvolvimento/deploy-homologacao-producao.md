@@ -6,7 +6,7 @@ Os ambientes possuem configuração similar ao ambiente [Vagrant](./deploy-vagra
 
 ## Instalação
 
-A instalação dos ambientes é simplificada através dos scripts existentes no diretório `scripts/prod-like, residente no [repositório no Github][gh]:
+A instalação dos ambientes é simplificada através dos scripts existentes no diretório `scripts/prod-like`, residente no [repositório no Github][gh]:
 
 ### `lb-node-install`
 
