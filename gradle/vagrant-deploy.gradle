@@ -1,11 +1,11 @@
 task vagrantDeployToApp1(type: Exec) {
     dependsOn buildRpm
-    commandLine 'vagrant', 'ssh', 'app1', '-c', "bash /vagrant/scripts/vagrant/deploy"
+    commandLine 'vagrant', 'ssh', 'app1', '-c', "sudo bash /vagrant/scripts/vagrant/deploy"
 }
 
 task vagrantDeployToApp2(type: Exec) {
     dependsOn buildRpm
-    commandLine 'vagrant', 'ssh', 'app2', '-c', "bash /vagrant/scripts/vagrant/deploy"
+    commandLine 'vagrant', 'ssh', 'app2', '-c', "sudo bash /vagrant/scripts/vagrant/deploy"
 }
 
 task vagrantDeploy {
