@@ -1,0 +1,8 @@
+#!/usr/bin/python
+import json
+import os
+
+es_data = os.popen('curl -s -XGET "localhost:9200/gds-persistente/_search"').read()
+feedbacks_json = json.loads(es_data)
+feedbacks_list = [it['_source'] for it in feedbacks_json['hits']['hits']]
+print json.dumps(feedbacks_list)
