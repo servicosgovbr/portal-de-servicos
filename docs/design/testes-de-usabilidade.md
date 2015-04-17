@@ -38,10 +38,10 @@ Este primeiro teste de usabilidade terá sua amostra formada por 6 pessoas, send
 - 2 usuários com média experiência no uso de sites
 - 1 usuário com muita experiência no uso de sites
 
-##### Limitações físicas:
-- 1 usuário cego
-- 1 usuário com limitação motora
+##### Acessibilidade:
+- 1 usuário com limitação visual (cego)
 - 1 usuário com limitação visual (daltonismo)
+- 1 usuário com limitação motora
 
 ##### Familiaridade com sites do governo:
 - 2 usuários devem ter familiaridade com sites do governo
