@@ -1,0 +1,18 @@
+#!/usr/bin/python
+import sys
+import json
+import os
+
+data = sys.stdin.read()
+feebacks_json = json.loads(data)
+
+request_data = [json.dumps(it) for it in feebacks_json]
+bulk_request_item_template = """{{ "create" : {{ "_index" : "gds-persistente", "_type" : "feedback", "_id": "" }} }}
+{{ "doc" : {0} }}"""
+
+full_request = [bulk_request_item_template.format(it) for it in request_data]
+full_request = '\n'.join(full_request)
+
+request_cmd = """curl -s -XPUT "localhost:9200/gds-persistente/_bulk" -d '{0}'""".format(full_request)
+
+print os.popen(request_cmd).read()
