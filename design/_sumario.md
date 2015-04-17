@@ -5,3 +5,4 @@
   - [Imagens e ícones](/design/imagens-e-icones.md)
   - [Formulários e botões](/design/formularios-e-botoes.md)
   - [Testes de Usabilidade](/design/testes-de-usabilidade.md)
+    - [Roteiro de Teste de Usabilidade](/design/roteiro-teste-de-usabilidade.md)

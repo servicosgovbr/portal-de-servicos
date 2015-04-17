@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Desenvolvimento local | Guia de Serviços</title>
+        <title>Roteiro de Teste de Usabilidade | Guia de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../desenvolvimento/deploy-vagrant.html" />
+    <link rel="next" href="../desenvolvimento/index.html" />
     
     
-    <link rel="prev" href="../desenvolvimento/implantacao-e-execucao.html" />
+    <link rel="prev" href="../design/testes-de-usabilidade.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.5.1" data-basepath=".." data-revision="Fri Apr 17 2015 19:12:21 GMT+0000 (UTC)">
+    <div class="book" data-level="7.6.1" data-basepath=".." data-revision="Fri Apr 17 2015 19:12:21 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -665,7 +665,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="7.6.1" data-path="design/roteiro-teste-de-usabilidade.html">
+        <li class="chapter active" data-level="7.6.1" data-path="design/roteiro-teste-de-usabilidade.html">
             
                 
                     <a href="../design/roteiro-teste-de-usabilidade.html">
@@ -782,7 +782,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="8.5.1" data-path="desenvolvimento/deploy-local.html">
+        <li class="chapter " data-level="8.5.1" data-path="desenvolvimento/deploy-local.html">
             
                 
                     <a href="../desenvolvimento/deploy-local.html">
@@ -1222,34 +1222,89 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="desenvolvimento-local">Desenvolvimento local</h1>
-<h2 id="configura%C3%A7%C3%A3o-inicial">Configura&#xE7;&#xE3;o inicial</h2>
-<p>Tentamos facilitar o desenvolvimento de novas funcionalidades por membros da comunidade, e todas as contribui&#xE7;&#xF5;es s&#xE3;o bem-vindas. Para come&#xE7;ar, &#xE9; necess&#xE1;rio um ambiente de desenvolvimento Java atualizado, com:</p>
+                        <h1 id="roteiro">Roteiro</h1>
+<p>As tarefas a serem realizadas pelos usu&#xE1;rios participantes do teste de usabilidade devem ser constru&#xED;das a partir de um objetivo previamente definido, e dever&#xE3;o ser mensur&#xE1;veis. </p>
+<p>Para verificarmos o quanto o site est&#xE1; f&#xE1;cil de ser utilizado por usu&#xE1;rios com pouca experi&#xEA;ncia de uso da internet poderemos ter tarefas simples ou complexas. </p>
+<p>Poss&#xED;veis assuntos a serem tocados com as tarefas:</p>
 <ul>
-<li><a href="http://git-scm.org" target="_blank">git</a></li>
-<li><a href="https://www.agwa.name/projects/git-crypt/" target="_blank">git-crypt</a></li>
-<li><a href="https://www.gnupg.org/" target="_blank">GPG</a></li>
-<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">JDK 8</a></li>
-<li>Sua IDE favorita (n&#xF3;s preferimos <a href="https://www.jetbrains.com/idea/download/" target="_blank">IntelliJ IDEA 14 CE</a>)</li>
+<li>Realizar uma busca </li>
+<li>Dar o feedback sobre o site</li>
+<li>Testar a acessibilidade</li>
+<li>Encontrar todos os servi&#xE7;os dispon&#xED;veis no site</li>
+<li>Encontrar todos os servi&#xE7;os dispon&#xED;veis para empresas no site</li>
+<li>Encontrar o servi&#xE7;o Aposentadoria por invalidez </li>
 </ul>
-<p>Para come&#xE7;ar, clone o reposit&#xF3;rio:</p>
-<pre><code>cd ~/projetos # ou o diret&#xF3;rio de sua prefer&#xEA;ncia
-git clone &quot;https://github.com/servicosgovbr/guia-de-servicos.git&quot;
-</code></pre><p>A seguir, gere o arquivo de projeto do <a href="https://www.jetbrains.com/idea/download/" target="_blank">IntelliJ IDEA</a>:</p>
-<pre><code>./gradlew clean idea
-</code></pre><p>Abra o arquivo <code>guia-de-servicos.ipr</code> no IntelliJ IDEA e voc&#xEA; est&#xE1; pronto para navegar pelo c&#xF3;digo. </p>
-<p>Caso voc&#xEA; n&#xE3;o tenha desenvolvido utilizando o <a href="http://projectlombok.org/" target="_blank">Lombok</a> antes, a IDE marcar&#xE1; diversos arquivos com problemas de compila&#xE7;&#xE3;o. Ser&#xE1; necess&#xE1;rio instalar o plugin para que as coisas funcionem normalmente. Este plugin precisa ser manualmente instalado.</p>
-<p>Para o IntelliJ IDEA, procure nos reposit&#xF3;rios de plugins pelo <a href="https://github.com/mplushnikov/lombok-intellij-plugin" target="_blank">Lombok IntelliJ Plugin</a>.</p>
-<h2 id="execu%C3%A7%C3%A3o-da-aplica%C3%A7%C3%A3o">Execu&#xE7;&#xE3;o da aplica&#xE7;&#xE3;o</h2>
-<p>Para rodar a aplica&#xE7;&#xE3;o localmente, utilizamos um servidor web <a href="http://tomcat.apache.org/" target="_blank">Tomcat</a>, embutido pelo <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring-Boot</a>:</p>
-<pre><code>./gradlew bootRun
-</code></pre><p>Ap&#xF3;s alguns segundos, o servidor estar&#xE1; dispon&#xED;vel em <a href="http://localhost:8080/" target="_blank">localhost:8080</a>. Arquivos est&#xE1;ticos (html, js, css) alterados estar&#xE3;o dispon&#xED;veis alguns segundos ap&#xF3;s altera&#xE7;&#xF5;es.</p>
-<h2 id="elasticsearch-externo">ElasticSearch externo</h2>
-<p>Para utilizar um servidor <a href="elasticsearch.html">ElasticSearch</a> configurado em <code>localhost:9300</code>, basta adicionar o perfil <code>cluster</code> aos perfis
-ativos do Spring:</p>
-<pre><code>SPRING_PROFILES_ACTIVE=cluster ./gradlew run
-</code></pre><p>Para a inicializa&#xE7;&#xE3;o funcionar desta forma, &#xE9; necess&#xE1;rio que o ElasticSearch j&#xE1; esteja executando antes de come&#xE7;ar.</p>
+<p>Neste teste de usabilidade iremos testar o novo site do Guia de Servi&#xE7;os, e cada teste levar&#xE1; entre 30 e 60 minutos. A estrutura do teste ser&#xE1;:</p>
+<h2 id="anota%C3%A7%C3%B5es-gerais">Anota&#xE7;&#xF5;es gerais</h2>
+<p>Produto: <em>Guia de Servi&#xE7;os</em></p>
+<p>Teste n&#xBA;:</p>
+<p>Data: </p>
+<p>In&#xED;cio da sess&#xE3;o:          </p>
+<p>T&#xE9;rmino da sess&#xE3;o:          </p>
+<p>Local: </p>
+<p>Entrevistador:</p>
+<p>Observador:</p>
+<h2 id="entrevista-inicial">Entrevista inicial</h2>
+<pre><code>Neste primeiro momento o entrevistador ir&#xE1; se introduzir ao entrevistado, explicar
+sobre o objetivo do encontro, explicar que o usu&#xE1;rio n&#xE3;o &#xE9; quem est&#xE1; sendo testado,
+mas sim testando o produto. Validar o perfil do usu&#xE1;rio para posteriormente conferir 
+se o produto foi testado com a amostra correta. 
 
+- Explicar que o usu&#xE1;rio n&#xE3;o est&#xE1; sendo testado.
+- Dar instru&#xE7;&#xF5;es b&#xE1;sicas de como ser&#xE1; o andamento da pesquisa.
+- Pedir para o usu&#xE1;rio silenciar o celular.
+</code></pre><p>Nome:</p>
+<p>Idade: </p>
+<p>Perfil Internet:</p>
+<pre><code>[ ] Comum
+[ ] Antenado
+[ ] teste
+</code></pre><p>Sexo: </p>
+<pre><code>[ ] Feminino
+[ ] Masculino
+</code></pre><p>Costuma utilizar sites do governo?</p>
+<pre><code>[ ] Sim 
+[ ] N&#xE3;o
+</code></pre><h2 id="realiza%C3%A7%C3%A3o-de-tarefas">Realiza&#xE7;&#xE3;o de Tarefas</h2>
+<p>Ser&#xE1; entregue uma sequencia de tarefas que dever&#xE3;o ser realizadas uma ap&#xF3;s a outra pelo usu&#xE1;rio.</p>
+<pre><code>- Explicar que dar&#xE1; in&#xED;cio ao teste.
+- Explicar que ele receber&#xE1; tarefas e estas podem ser feitas sem pressa.
+- Relembrar que ele n&#xE3;o est&#xE1; sendo testado e que sua ajuda &#xE9; fundamental.
+- Explicar que o principal da avalia&#xE7;&#xE3;o &#xE9; saber a opini&#xE3;o dele e n&#xE3;o executar a tarefa em si.
+- Pedir para pensar em voz alta.
+- Avisar que ele pode &#x201C;desistir&#x201D; caso n&#xE3;o consiga completar uma tarefa e que n&#xE3;o precisa ficar com &#x201C;vergonha&#x201D;, pois o problema &#xE9; do sistema e n&#xE3;o dele.
+- Abrir o site.
+</code></pre><h4 id="tarefa-a">Tarefa A</h4>
+<p>P&#xE1;gina atual: </p>
+<p>Objetivo: </p>
+<p>Descri&#xE7;&#xE3;o da tarefa.</p>
+<pre><code>Usu&#xE1;rio conseguiu realizar a tarefa?
+- [ ] Sim, com facilidade. 
+- [ ] Sim, com dificuldade
+- [ ] N&#xE3;o conseguiu realizar a tarefa
+</code></pre><pre><code>SUGEST&#xC3;O AO ENTREVISTADOR: Perguntar impress&#xF5;es gerais.
+</code></pre><h4 id="tarefa-b">Tarefa B</h4>
+<p>P&#xE1;gina atual: </p>
+<p>Objetivo: </p>
+<p>Descri&#xE7;&#xE3;o da tarefa. </p>
+<pre><code>Usu&#xE1;rio conseguiu realizar a tarefa?
+- [ ] Sim, com facilidade. 
+- [ ] Sim, com dificuldade
+- [ ] N&#xE3;o conseguiu realizar a tarefa
+</code></pre><pre><code>SUGEST&#xC3;O AO ENTREVISTADOR: Perguntar impress&#xF5;es gerais.
+</code></pre><h4 id="tarefa-c">Tarefa C</h4>
+<p>P&#xE1;gina atual: </p>
+<p>Objetivo: </p>
+<p>Descri&#xE7;&#xE3;o da tarefa</p>
+<pre><code>Usu&#xE1;rio conseguiu realizar a tarefa?
+- [ ] Sim, com facilidade. 
+- [ ] Sim, com dificuldade
+- [ ] N&#xE3;o conseguiu realizar a tarefa
+</code></pre><pre><code>SUGEST&#xC3;O AO ENTREVISTADOR: Perguntar impress&#xF5;es gerais.
+</code></pre><h2 id="conclus%C3%A3o">Conclus&#xE3;o</h2>
+<p>Momento para rever como o usu&#xE1;rio se sentiu realizando as tarefas, se tem algo a adicionar para contribuir com a melhoria do site.</p>
+<pre><code>SUGEST&#xC3;O AO ENTREVISTADOR: Agradecer a participa&#xE7;&#xE3;o do usu&#xE1;rio e explicar que as suas opini&#xF5;es ser&#xE3;o muito importantes para o nosso trabalho.
+</code></pre>
                     
                     </section>
                 
@@ -1259,10 +1314,10 @@ ativos do Spring:</p>
         </div>
 
         
-        <a href="../desenvolvimento/implantacao-e-execucao.html" class="navigation navigation-prev " aria-label="Previous page: Implantação e execução"><i class="fa fa-angle-left"></i></a>
+        <a href="../design/testes-de-usabilidade.html" class="navigation navigation-prev " aria-label="Previous page: Testes de Usabilidade"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../desenvolvimento/deploy-vagrant.html" class="navigation navigation-next " aria-label="Next page: Vagrant"><i class="fa fa-angle-right"></i></a>
+        <a href="../desenvolvimento/index.html" class="navigation navigation-next " aria-label="Next page: Desenvolvimento"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
