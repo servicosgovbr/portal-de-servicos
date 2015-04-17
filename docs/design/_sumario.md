@@ -4,3 +4,4 @@
   - [Cores](/design/cores.md)
   - [Imagens e ícones](/design/imagens-e-icones.md)
   - [Formulários e botões](/design/formularios-e-botoes.md)
+  - [Testes de Usabilidade](/design/testes-de-usabilidade.md)
