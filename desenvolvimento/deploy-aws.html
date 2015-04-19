@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.5.3" data-basepath=".." data-revision="Fri Apr 17 2015 21:06:05 GMT+0000 (UTC)">
+    <div class="book" data-level="8.5.3" data-basepath=".." data-revision="Sun Apr 19 2015 01:10:48 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1224,7 +1224,7 @@
                     
                         <h1 id="amazon-web-services">Amazon Web Services</h1>
 <p>Para criar uma inst&#xE2;ncia da aplica&#xE7;&#xE3;o na AWS EC2, &#xE9; necess&#xE1;rio utilizar uma imagem CentOS 7, 64 bits em uma inst&#xE2;ncia com mem&#xF3;ria e processamento adequados. Para testes e utiliza&#xE7;&#xE3;o leve, o <em>free tier</em> das m&#xE1;quinas <code>t2.micro</code> &#xE9; suficiente.</p>
-<p>O script <code>scripts/launch-ec2-instance</code> pode ser usado como base.</p>
+<p>O script <code>scripts/iniciar-instancia-ec2</code> pode ser usado como base.</p>
 <p>Ap&#xF3;s a cria&#xE7;&#xE3;o da inst&#xE2;ncia, &#xE9; necess&#xE1;ria a instala&#xE7;&#xE3;o do pacote RPM gerado (<code>guia-de-servicos-1.0.*-1.noarch.rpm</code>) na inst&#xE2;ncia. Para isto, basta copiar o arquivo para a inst&#xE2;ncia e instalar o RPM usando <code>yum install</code>. O servi&#xE7;o deve ser reiniciado ap&#xF3;s a instala&#xE7;&#xE3;o, utilizando o <code>systemctl</code>:</p>
 <pre><code>sudo systemctl daemon-reload
 sudo systemctl restart guia-de-servicos
