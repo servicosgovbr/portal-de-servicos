@@ -8,13 +8,13 @@ Utilizamos o [Snap CI](http://snap-ci.com) para realizar a execução de todos o
 
 Os seguintes passos estão configurados no _pipeline_:
 
-### TEST
+### TESTES
 
 Roda todos os testes unitários, de integração, e as checagens estáticas ([FindBugs, Checkstyle, etc.](./ferramentas-utilizadas.md)). Finalmente, publica os resultados do relatório de cobertura de testes no [Coveralls]. Todos os relatórios de execução também são publicados como artefatos, que podem ser baixados em formato HTML e XML.
 
 [Coveralls]:https://coveralls.io/r/servicosgovbr/guia-de-servicos?branch=master
 
-### ASSEMBLE
+### PACOTES
 
 Cria um arquivo JAR contendo todas as dependências do projeto (uberjar) necessárias para a execução da apliação, e embute este JAR em um arquivo RPM específico para nossa plataforma-alvo (CentOS 7 x64). Este RPM é então publicado em um [repositório Yum](./repositorio-yum.md), e fica disponível para instalação e atualização.
 
@@ -26,6 +26,6 @@ Cria um arquivo JAR contendo todas as dependências do projeto (uberjar) necess�
 
 Atualiza a _branch_ `gh-pages`, utilizada pelo [Github Pages](https://pages.github.com/) com o resultado da compilação da documentação (localizada no diretório `docs`) pelo [Gitbook](http://gitbook.com). Esta fica disponível em [servicosgovbr.github.io/guia-de-servicos](http://servicosgovbr.github.io/guia-de-servicos).
 
-### ANNOUNCE
+### AVISO
 
 Anuncia o fim do processo [na sala de bate-papo do Gitter](https://gitter.im/servicosgovbr/guia-de-servicos).
