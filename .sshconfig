@@ -28,7 +28,7 @@ Host bastion
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentityFile ~/.vagrant.d/insecure_private_key
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -40,7 +40,7 @@ Host lb
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentityFile ~/.vagrant.d/insecure_private_key
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -52,7 +52,7 @@ Host app1
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentityFile ~/.vagrant.d/insecure_private_key
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -64,7 +64,7 @@ Host app2
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentityFile ~/.vagrant.d/insecure_private_key
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -76,7 +76,7 @@ Host es1
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentityFile ~/.vagrant.d/insecure_private_key
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -88,7 +88,7 @@ Host es2
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile /Users/cvillela/.vagrant.d/insecure_private_key
+  IdentityFile ~/.vagrant.d/insecure_private_key
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
