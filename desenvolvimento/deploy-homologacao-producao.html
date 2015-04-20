@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.5.4" data-basepath=".." data-revision="Mon Apr 20 2015 22:49:34 GMT+0000 (UTC)">
+    <div class="book" data-level="8.5.4" data-basepath=".." data-revision="Mon Apr 20 2015 23:10:08 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1234,7 +1234,9 @@
 <pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/lb-node-install <span class="hljs-string">&apos;10.16.0.13&apos;</span> <span class="hljs-string">&apos;10.16.0.12&apos;</span>
 </code></pre>
 <h3 id="-app-node-install"><code>app-node-install</code></h3>
-<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir a aplica&#xE7;&#xE3;o do Guia de Servi&#xE7;os. Este script:</p>
+<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir a aplica&#xE7;&#xE3;o do Guia de Servi&#xE7;os. </p>
+<p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de busca (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.11</code> e <code>10.16.0.9</code> por padr&#xE3;o).</p>
+<p>Este script:</p>
 <ul>
 <li>Configura o [reposit&#xF3;rio Yum] do Guia de Servi&#xE7;os</li>
 <li>Instala as ferramentas <code>wget</code> e <code>deltarpm</code>, caso n&#xE3;o existentes no sistema</li>
@@ -1242,14 +1244,14 @@
 <li>Instala, configura e inicia o <em>daemon</em> do Guia de Servi&#xE7;os (<code>guia-de-servicos</code>).</li>
 </ul>
 <p>Exemplo:</p>
-<pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/app-node-install
+<pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/app-node-install <span class="hljs-string">&apos;10.16.0.11&apos;</span> <span class="hljs-string">&apos;10.16.0.9&apos;</span>
 </code></pre>
 <h3 id="-es-node-install"><code>es-node-install</code></h3>
 <p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir o motor de busca do Guia de Servi&#xE7;os, <a href="elasticsearch.html">ElasticSearch</a>.</p>
 <p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de busca (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.11</code> e <code>10.16.0.9</code> por padr&#xE3;o).</p>
 <p>Este script:</p>
 <ul>
-<li>Configura o <a href="repositorio-yum.html">reposit&#xF3;rio Yum</a> do ElasticSearch</li>
+<li>Configura o <a href="(./repositorio-yum.md)">reposit&#xF3;rio Yum</a> do ElasticSearch</li>
 <li>Instala as ferramentas <code>wget</code> e <code>deltarpm</code>, caso n&#xE3;o existentes no sistema</li>
 <li>Instala a JDK 1.8.0_40, caso n&#xE3;o existente</li>
 <li>Instala, configura e inicia o <em>daemon</em> do <a href="elasticsearch.html">ElasticSearch</a> (<code>elasticsearch</code>).</li>
