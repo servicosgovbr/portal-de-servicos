@@ -9,6 +9,10 @@ set -x
 set -e
 set -o pipefail
 
+# Endereços dos servidores do ElasticSearch
+ES_1_IP_ADDR="${1:-10.16.0.11}"
+ES_2_IP_ADDR="${2:-10.16.0.9}"
+
 echo 'Adicionando chave GPG do repositório do Guia de Serviços...'
 rpm --import https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/src/main/resources/static/GPG-KEY
 
@@ -53,6 +57,8 @@ cat <<-EOF > /etc/sysconfig/guia-de-servicos
 # Variáveis de ambiente para configuração do Guia de Serviços
 
 SPRING_PROFILES_ACTIVE=production,monitoring
+
+SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:9300"
 EOF
 
 echo 'Recarregando daemons...'
