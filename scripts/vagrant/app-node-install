@@ -21,3 +21,17 @@ augtool set '/files/etc/sudoers/Defaults[*]/requiretty/negate' ''
 
 echo "Modificando hostname para '${1}'..."
 hostname $1
+
+echo 'Reconfigurando Guia de Serviços...'
+cat <<-EOF > /etc/sysconfig/guia-de-servicos
+# Variáveis de ambiente para configuração do Guia de Serviços
+
+SPRING_PROFILES_ACTIVE=production
+
+EOF
+
+echo 'Recarregando serviços...'
+systemctl daemon-reload
+
+echo 'Reiniciando aplicação...'
+systemctl restart guia-de-servicos

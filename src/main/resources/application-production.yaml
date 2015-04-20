@@ -2,6 +2,10 @@ spring:
   thymeleaf:
     cache: true
 
+  data:
+    elasticsearch:
+      clusterNodes: 10.16.0.11:9300,10.16.0.9:9300
+
 endpoints:
   enabled: false
 

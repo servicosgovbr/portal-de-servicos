@@ -13,15 +13,13 @@ echo 'Instalando novo Guia de Serviços...'
 yum remove -y guia-de-servicos
 yum install -y /vagrant/build/rpmbuild/RPMS/noarch/guia-de-servicos-1.0.0-1.noarch.rpm
 
-echo 'Configurando variáveis de ambiente...'
-bash -c 'cat <<-EOF > /etc/sysconfig/guia-de-servicos
-# Ativa os perfis "cluster" e "vagrant" na configuração do Spring.
-# - cluster: conecta a um ElasticSearch externo (desliga o ElasticSearch embarcado)
-# - vagrant: configura IPs para o ElasticSearch de acordo com o Vagrantfile
-#
-SPRING_PROFILES_ACTIVE=cluster,vagrant
+echo 'Configurando Guia de Serviços...'
+cat <<-EOF > /etc/sysconfig/guia-de-servicos
+# Variáveis de ambiente para configuração do Guia de Serviços
+
+SPRING_PROFILES_ACTIVE=production
+
 EOF
-'
 
 echo 'Recarregando serviços...'
 systemctl daemon-reload

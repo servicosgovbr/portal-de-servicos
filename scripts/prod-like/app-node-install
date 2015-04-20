@@ -48,6 +48,13 @@ fi
 echo 'Instalando Guia de Serviços...'
 yum install -y guia-de-servicos
 
+echo 'Configurando Guia de Serviços...'
+cat <<-EOF > /etc/sysconfig/guia-de-servicos
+# Variáveis de ambiente para configuração do Guia de Serviços
+
+SPRING_PROFILES_ACTIVE=production,monitoring
+EOF
+
 echo 'Recarregando daemons...'
 systemctl daemon-reload
 
