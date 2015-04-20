@@ -46,4 +46,5 @@ public class ElasticsearchClusterConfig {
     public Client embeddedClient() throws Exception {
         return nodeBuilder().local(true).node().client();
     }
+
 }

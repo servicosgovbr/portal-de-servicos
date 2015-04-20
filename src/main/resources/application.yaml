@@ -5,6 +5,10 @@ spring:
   thymeleaf:
     cache: false
 
+endpoints:
+  health:
+    sensitive: false
+
 server:
   port: ${port:8080}
 
