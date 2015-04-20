@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.ajoberstar:gradle-git:0.6.3'
+    }
+}
+
+/**
+ * Read git branch and commit metadata for later use by other tasks.
+ * See http://ajoberstar.org/gradle-git/docs/groovydoc/org/ajoberstar/gradle/git/tasks/GitBranchList.html
+ */
+task gitMetadata(type: org.ajoberstar.gradle.git.tasks.GitBranchList) << {
+    ext {
+        branch = workingBranch?.name ?: "detached HEAD"
+        commitId = workingBranch?.commit?.abbreviatedId ?: "unknown"
+        commitTime = workingBranch?.commit?.time ? new Date(new Integer(workingBranch.commit.time).longValue() * 1000L).format("yyyy-MM-dd HH:mm") : "unknown"
+    }
+}
+
+/**
+ * Populate git commit and branch metadata for inspection at http://spring.io/info.
+ * See http://projects.spring.io/spring-boot/docs/spring-boot-actuator/docs/Features.html ("Info Endpoint")
+ */
+task writeGitPropertiesFile(dependsOn: [gitMetadata, processResources]) {
+    ext.outputFile = file("${sourceSets.main.output.resourcesDir}/git.properties")
+
+    doLast() {
+        new Properties(
+                'git.branch': gitMetadata.branch,
+                'git.commit.id': gitMetadata.commitId,
+                'git.commit.time': gitMetadata.commitTime,
+                'git.snap.build': System.getenv('SNAP_PIPELINE_COUNTER') ?: 'DEV'
+        ).store(new BufferedWriter(new FileWriter(outputFile)) {
+            public void write(String s, int off, int len) throws IOException {
+                if (s.startsWith("#")) {
+                    // suppress printing a timestamp in the properties file so Gradle can evaluate whether the
+                    // file's actual contents have changed and allow for skipping the `jar` task if they have not
+                    return
+                }
+                super.write(s, off, len)
+            }
+        }, null)
+    }
+}
+jar.inputs.file writeGitPropertiesFile.outputFile
+jar.dependsOn writeGitPropertiesFile
+
+run.dependsOn writeGitPropertiesFile
