@@ -5,5 +5,11 @@ spring:
 endpoints:
   enabled: false
 
+  info:
+    enabled: true
+
+  health:
+    enabled: true
+
   jolokia:
     enabled: false
