@@ -204,12 +204,6 @@ dl.portlet {
   display: none;
 }
 
-#header input.searchButton {
-  background-image: url('../img/sprite.png');
-  position: relative;
-  right: 33px;
-}
-
 .busca-principal { 
   @include span-columns(12);
   @include omega();

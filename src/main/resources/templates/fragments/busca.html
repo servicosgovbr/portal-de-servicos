@@ -7,7 +7,9 @@
             <input type="text" size="18" title="Buscar no portal" placeholder="Buscar"
                    class="searchField" name="q" id="buscar"
                    th:value="${(param.q?:{''})[0]}" />
-            <input class="searchButton" type="submit" value="Buscar"/>
+            <button class="searchButton">
+                <i class="fa fa-search"></i> <span class="hidden">Buscar</span>
+            </button>
         </fieldset>
     </form>
 
