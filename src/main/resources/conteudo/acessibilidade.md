@@ -1,5 +1,4 @@
-Acessibilidade
-====
+# Acessibilidade
 
 O Guia de Serviços segue o novo modelo de identidade digital padrão do governo federal, que atende às principais 
 recomendações de acessibilidade indicadas para web.
@@ -15,7 +14,7 @@ recomendações internacionais, mas estabelece padrões de comportamento acessí
 Na parte superior do Guia de Serviços existe uma barra de acessibilidade onde se encontra atalhos de navegação 
 padronizados e a opção para alterar o contraste. Essas ferramentas estão disponíveis em todas as páginas do Guia.
 
-<h2> Os padrões de atalhos do governo federal são: </h2>
+## Os padrões de atalhos do governo federal são:
 
 Teclando-se `Alt + 1` em qualquer página do portal, chega-se diretamente ao começo do conteúdo principal da página.
 
@@ -33,7 +32,7 @@ com todas as alternativas de `ACCESSKEY` da página.
 Ao final desse texto, você poderá baixar alguns arquivos que explicam melhor o termo acessibilidade e como deve ser 
 implementado nos sites da Internet.
 
-<h2>Leis e decretos sobre acessibilidade:</h2>
+## Leis e decretos sobre acessibilidade:
 
 * [Decreto nº 5.296 de 02 de dezembro de 2004](http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Decreto/D5296.htm)
 * [Decreto nº 6.949, de 25 de agosto de 2009] (http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d6949.htm) - Promulga a Convenção Internacional sobre os Direitos das Pessoas com Deficiência e seu Protocolo Facultativo, assinados em Nova York, em 30 de março de 2007.
