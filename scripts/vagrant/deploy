@@ -9,6 +9,10 @@ set -x
 set -e
 set -o pipefail
 
+# Endereços dos servidores do ElasticSearch
+ES_1_IP_ADDR="${2:-10.16.0.11}"
+ES_2_IP_ADDR="${3:-10.16.0.9}"
+
 echo 'Instalando novo Guia de Serviços...'
 yum remove -y guia-de-servicos
 yum install -y /vagrant/build/rpmbuild/RPMS/noarch/guia-de-servicos-1.0.0-1.noarch.rpm
@@ -17,8 +21,11 @@ echo 'Configurando Guia de Serviços...'
 cat <<-EOF > /etc/sysconfig/guia-de-servicos
 # Variáveis de ambiente para configuração do Guia de Serviços
 
-SPRING_PROFILES_ACTIVE=production
+SPRING_PROFILES_ACTIVE=production,cluster
+SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:9300"
 
+ENDPOINTS_ENABLED=true
+ENDPOINTS_HEALTH_SENSITIVE=false
 EOF
 
 echo 'Recarregando serviços...'

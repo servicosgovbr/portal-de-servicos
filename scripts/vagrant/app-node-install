@@ -30,9 +30,11 @@ echo 'Configurando Guia de Serviços...'
 cat <<-EOF > /etc/sysconfig/guia-de-servicos
 # Variáveis de ambiente para configuração do Guia de Serviços
 
-SPRING_PROFILES_ACTIVE=production
-
+SPRING_PROFILES_ACTIVE=production,cluster
 SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:9300"
+
+ENDPOINTS_ENABLED=true
+ENDPOINTS_HEALTH_SENSITIVE=false
 EOF
 
 echo 'Recarregando serviços...'
