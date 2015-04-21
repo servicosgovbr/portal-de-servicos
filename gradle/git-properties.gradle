@@ -31,7 +31,7 @@ task writeGitPropertiesFile(dependsOn: [gitMetadata, processResources]) {
                 'git.branch': gitMetadata.branch,
                 'git.commit.id': gitMetadata.commitId,
                 'git.commit.time': gitMetadata.commitTime,
-                'git.snap.build': System.getenv('SNAP_PIPELINE_COUNTER') ?: 'DEV'
+                'git.commit.build': System.getenv('SNAP_PIPELINE_COUNTER') ?: 'unknown'
         ).store(new BufferedWriter(new FileWriter(outputFile)) {
             public void write(String s, int off, int len) throws IOException {
                 if (s.startsWith("#")) {
