@@ -5,7 +5,7 @@ import json
 import os
 
 try:
-    print "Esperando entrada (stdin) para importacao"
+    print "Esperando entrada (stdin) para importação"
     data = sys.stdin.read()
     if (not data.strip()):
         print >> sys.stderr, "Nenhuma entrada foi informada"
@@ -14,7 +14,7 @@ try:
     try:
         feedbacks_json = json.loads(data)
     except Exception as e:
-        print >> sys.stderr, "Erro ao carregar dados, formato JSON não é valido"
+        print >> sys.stderr, "Erro ao carregar dados, formato JSON não é válido"
         print >> sys.stderr, e
         exit(1)
 
@@ -31,7 +31,7 @@ try:
     full_request = '\n'.join(full_request)
 
     try: 
-        print "Importando... Comando executado:"
+        print "Importando... Comando à ser executado:"
         request_cmd = """curl -s -XPUT "localhost:9200/gds-persistente/_bulk" -d '{0}'""".format(full_request)
         print request_cmd
         retorno = os.popen(request_cmd).read()
@@ -39,10 +39,11 @@ try:
         print "Importação concluída. Detalhes:"
         print retorno
     except Exception as e:
-        print >> sys.stderr, "Problemas durante a importação"
+        print >> sys.stderr, "Problemas durante a importação, detalhes:"
         print >> sys.stderr, e
+        exit(1)
 
 except Exception as e:
     print "Erro inesperado. Detalhes:"
     print >> sys.stderr, e
-
+    exit(1)
