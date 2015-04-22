@@ -1,4 +1,4 @@
-# Monitorabilidade
+# Monitoramento
 
 A monitoração da saúde dos hosts e instâncias da aplicação e [ElasticSearch] pode ser feita através das seguintes URLs:
 
