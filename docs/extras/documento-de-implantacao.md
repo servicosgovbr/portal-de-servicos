@@ -2,7 +2,11 @@
 
 Neste documento estão todas as informações necessárias à implantação e operação do Guia de Serviços em ambientes similares a produção.
 
-{%include '../desenvolvimento/infraestrutura.md' %}
+## Visão da infraestrutura
+
+[![Diagrama da rede em ambiente similar a produção](/desenvolvimento/ambiente-producao.svg)](/desenvolvimento/ambiente-producao.graphml)
+
+{%include '../desenvolvimento/_infraestrutura-producao.md' %}
 
 ----
 
