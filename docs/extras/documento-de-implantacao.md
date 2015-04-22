@@ -11,3 +11,7 @@ Neste documento estão todas as informações necessárias à implantação e op
 ----
 
 {%include '../desenvolvimento/deploy-homologacao-producao.md' %}
+
+----
+
+{%include '../desenvolvimento/backups.md' %}
