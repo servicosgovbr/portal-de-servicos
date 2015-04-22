@@ -2,7 +2,14 @@ Vagrant.configure('2') do |config|
 
   config.vm.box = 'chef/centos-7.0'
   config.ssh.forward_agent = true
-  config.cache.enable :yum if Vagrant.has_plugin?("vagrant-cachier")
+
+  if Vagrant.has_plugin? 'vagrant-cachier'
+    config.cache.scope = :box
+    config.cache.enable :yum
+    config.cache.enable :generic, {
+      'wget' => { cache_dir: '/var/cache/wget' }
+    }
+  end
 
   config.vm.provider 'virtualbox' do |vb|
     vb.customize ['modifyvm', :id, '--memory', '512']
