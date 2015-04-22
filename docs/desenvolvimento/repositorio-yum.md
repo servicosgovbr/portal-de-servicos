@@ -1,6 +1,6 @@
 # Repositório Yum
 
-Os RPMs do Guia de Serviços estão disponíveis em um repositório Yum, com as seguintes configurações:
+Os pacotes [RPM] do Guia de Serviços estão disponíveis em um repositório Yum, com as seguintes configurações:
 
 ```
 [guia-de-servicos]
@@ -11,7 +11,9 @@ gpgcheck=1
 gpgkey=https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/src/main/resources/static/GPG-KEY
 ```
 
-A chave GPG utilizada para assinar os pacotes e o repositório é:
+Um arquivo com estes conteúdos pode ser adicionado ao diretório `/etc/yum.repos.d`, seguido do comando `sudo yum makecache fast -y`, para que o Yum atualize as definições internas de listas de pacotes disponíveis.
+
+A chave [GPG] utilizada para assinar os pacotes e o repositório é:
 
 ```
 pub   2048R/2E1F2BA2 2015-04-07
@@ -19,3 +21,6 @@ pub   2048R/2E1F2BA2 2015-04-07
 uid                  Guia de Serviços <gpg@servicos.gov.br>
 sub   2048R/BA141101 2015-04-07
 ```
+
+[RPM]:http://www.rpm.org
+[GPG]:https://www.gnupg.org/

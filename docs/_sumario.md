@@ -8,3 +8,4 @@
 {%include './metodologia-de-desenvolvimento/_sumario.md' %}
 {%include './design/_sumario.md' %}
 {%include './desenvolvimento/_sumario.md' %}
+{%include './extras/_sumario.md' %}
