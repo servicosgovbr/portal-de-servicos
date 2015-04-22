@@ -21,6 +21,7 @@
     - [Disponibilidade](/desenvolvimento/disponibilidade.md)
     - [Documentação](/desenvolvimento/documentacao.md)
     - [Escalabilidade](/desenvolvimento/escalabilidade.md)
+    - [Monitorabilidade](/desenvolvimento/monitorabilidade.md)
     - [Performance](/desenvolvimento/performance.md)
     - [Privacidade](/desenvolvimento/privacidade.md)
     - [Segurança](/desenvolvimento/seguranca.md)

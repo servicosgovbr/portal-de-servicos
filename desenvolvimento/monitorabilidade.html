@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Sobre o projeto | Guia de Serviços</title>
+        <title>Monitorabilidade | Guia de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../sobre-o-projeto/equipe.html" />
+    <link rel="next" href="../desenvolvimento/performance.html" />
     
     
-    <link rel="prev" href="../principios/index.html" />
+    <link rel="prev" href="../desenvolvimento/escalabilidade.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="3" data-basepath=".." data-revision="Wed Apr 22 2015 13:25:45 GMT+0000 (UTC)">
+    <div class="book" data-level="8.9.9" data-basepath=".." data-revision="Wed Apr 22 2015 13:25:45 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -132,7 +132,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3" data-path="sobre-o-projeto/index.html">
+        <li class="chapter " data-level="3" data-path="sobre-o-projeto/index.html">
             
                 
                     <a href="../sobre-o-projeto/index.html">
@@ -1049,7 +1049,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8.9.9" data-path="desenvolvimento/monitorabilidade.html">
+        <li class="chapter active" data-level="8.9.9" data-path="desenvolvimento/monitorabilidade.html">
             
                 
                     <a href="../desenvolvimento/monitorabilidade.html">
@@ -1265,8 +1265,70 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="sobre-o-projeto">Sobre o projeto</h1>
-<p>Esta se&#xE7;&#xE3;o detalha informa&#xE7;&#xF5;es sobre a estrutura do projeto do Guia de Servi&#xE7;os em si: sua equipe, formas de comunica&#xE7;&#xE3;o, mecanismos para contato e como utiliz&#xE1;-los.</p>
+                        <h1 id="monitorabilidade">Monitorabilidade</h1>
+<p>A monitora&#xE7;&#xE3;o da sa&#xFA;de dos hosts e inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> pode ser feita atrav&#xE9;s das seguintes URLs:</p>
+<h2 id="aplica%C3%A7%C3%A3o">Aplica&#xE7;&#xE3;o</h2>
+<p>A URL <code>/health</code> do Guia de Servi&#xE7;os indica o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o em si e de suas conex&#xF5;es ao cluster do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>. Caso o valor da vari&#xE1;vel de ambiente <code>ENDPOINTS_HEALTH_SENSITIVE</code> seja <code>false</code>, mais informa&#xE7;&#xE3;o &#xE9; exibida:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+  <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
+    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;Freakmaster&quot;</span>,
+    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;Seth&quot;</span>,
+    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;Right-Winger&quot;</span>
+  },
+  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">96787795968</span>,
+    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
+  }
+}
+</code></pre>
+<p>Caso contr&#xE1;rio, apenas o estado geral da aplica&#xE7;&#xE3;o &#xE9; retornado:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>
+}
+</code></pre>
+<h2 id="-elasticsearch"><a href="desenvolvimento/elasticsearch.md">ElasticSearch</a></h2>
+<p>A URL <code>/_cluster/health</code> do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> disponibiliza diversas informa&#xE7;&#xF5;es sobre o estado de sa&#xFA;de e configura&#xE7;&#xE3;o do cluster. Por exemplo:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;cluster_name&quot;</span>: <span class="hljs-string">&quot;elasticsearch&quot;</span>,
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;red&quot;</span>,
+  <span class="hljs-string">&quot;timed_out&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;number_of_nodes&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;number_of_data_nodes&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;active_primary_shards&quot;</span>: <span class="hljs-number">13</span>,
+  <span class="hljs-string">&quot;active_shards&quot;</span>: <span class="hljs-number">13</span>,
+  <span class="hljs-string">&quot;relocating_shards&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;initializing_shards&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;unassigned_shards&quot;</span>: <span class="hljs-number">29</span>,
+  <span class="hljs-string">&quot;number_of_pending_tasks&quot;</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
+<p>No exemplo acima, pode-se ver que o n&#xFA;mero de nodos insuficiente (apenas 1) &#xE9; motivo de preocupa&#xE7;&#xE3;o e torna o status <em>red</em>.</p>
+<p>Quando a conex&#xE3;o entre o nodo e seus pares no cluster se estabelece com sucesso, o estado muda em alguns instantes:</p>
+<pre><code class="lang-json">{
+   <span class="hljs-string">&quot;cluster_name&quot;</span>: <span class="hljs-string">&quot;elasticsearch&quot;</span>,
+   <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;green&quot;</span>,
+   <span class="hljs-string">&quot;timed_out&quot;</span>: <span class="hljs-literal">false</span>,
+   <span class="hljs-string">&quot;number_of_nodes&quot;</span>: <span class="hljs-number">2</span>,
+   <span class="hljs-string">&quot;number_of_data_nodes&quot;</span>: <span class="hljs-number">2</span>,
+   <span class="hljs-string">&quot;active_primary_shards&quot;</span>: <span class="hljs-number">7</span>,
+   <span class="hljs-string">&quot;active_shards&quot;</span>: <span class="hljs-number">14</span>,
+   <span class="hljs-string">&quot;relocating_shards&quot;</span>: <span class="hljs-number">0</span>,
+   <span class="hljs-string">&quot;initializing_shards&quot;</span>: <span class="hljs-number">0</span>,
+   <span class="hljs-string">&quot;unassigned_shards&quot;</span>: <span class="hljs-number">0</span>,
+   <span class="hljs-string">&quot;number_of_pending_tasks&quot;</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
+<p>O estado tamb&#xE9;m pode ficar marcado como &quot;red&quot; caso o n&#xFA;mero de parti&#xE7;&#xF5;es (<em>shards</em>) n&#xE3;o seja suficiente para distribuir todos os dados. Neste caso, reiniciar a aplica&#xE7;&#xE3;o deve trazer todas as parti&#xE7;&#xF5;es necess&#xE1;rias para o cluster.</p>
+<h1 id="java-management-extensions-jmx">Java Management Extensions (JMX)</h1>
+<p>Diversas informa&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis atrav&#xE9;s do servi&#xE7;o de gerenciamento da JVM. Existem diversos <a href="http://java-source.net/open-source/jmx" target="_blank">clientes para o protocolo JMX dispon&#xED;veis</a>, e a JDK j&#xE1; vem com o <a href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html" target="_blank">JConsole</a> embutido. Ao abrir o processo do Guia de Servi&#xE7;os no JConsole, temos:</p>
+<p><img src="jconsole-overview.png" alt="JConsole: Overview"></p>
+<p>E ao listar os MBeans dispon&#xED;veis em <code>org.springframework.boot/Endpoint/environmentEndpoint/Attributes</code>:</p>
+<p><img src="jconsole-environment.png" alt="JConsole: Environments"></p>
+<p>As informa&#xE7;&#xF5;es e opera&#xE7;&#xF5;es oferecidas atrav&#xE9;s do JMX s&#xE3;o maneiras poderosas de manter e diagnosticar a sa&#xFA;de da aplica&#xE7;&#xE3;o e do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>, e devem ser manuseadas com o cuidado necess&#xE1;rio. Para mais informa&#xE7;&#xF5;es sobre seguran&#xE7;a do JMX, por favor utilize a <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html" target="_blank">documenta&#xE7;&#xE3;o de refer&#xEA;ncia oficial</a>.</p>
 
                     
                     </section>
@@ -1277,10 +1339,10 @@
         </div>
 
         
-        <a href="../principios/index.html" class="navigation navigation-prev " aria-label="Previous page: Princípios"><i class="fa fa-angle-left"></i></a>
+        <a href="../desenvolvimento/escalabilidade.html" class="navigation navigation-prev " aria-label="Previous page: Escalabilidade"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../sobre-o-projeto/equipe.html" class="navigation navigation-next " aria-label="Next page: Equipe"><i class="fa fa-angle-right"></i></a>
+        <a href="../desenvolvimento/performance.html" class="navigation navigation-next " aria-label="Next page: Performance"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
