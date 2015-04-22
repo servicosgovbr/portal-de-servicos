@@ -74,7 +74,7 @@ Quando a conexão entre o nodo e seus pares no cluster se estabelece com sucesso
 
 O estado também pode ficar marcado como "red" caso o número de partições (_shards_) não seja suficiente para distribuir todos os dados. Neste caso, reiniciar a aplicação deve trazer todas as partições necessárias para o cluster.
 
-# Java Management Extensions (JMX)
+## Java Management Extensions (JMX)
 
 Diversas informações estão disponíveis através do serviço de gerenciamento da JVM. Existem diversos [clientes para o protocolo JMX disponíveis](http://java-source.net/open-source/jmx), e a JDK já vem com o [JConsole](http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html) embutido. Ao abrir o processo do Guia de Serviços no JConsole, temos:
 
