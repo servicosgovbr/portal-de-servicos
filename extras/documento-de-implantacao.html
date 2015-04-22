@@ -34,7 +34,7 @@
     
 
         
-    <div class="book" data-level="9.1" data-basepath=".." data-revision="Wed Apr 22 2015 13:25:45 GMT+0000 (UTC)">
+    <div class="book" data-level="9.1" data-basepath=".." data-revision="Wed Apr 22 2015 17:32:42 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1047,15 +1047,15 @@
             
         </li>
     
-        <li class="chapter " data-level="8.9.9" data-path="desenvolvimento/monitorabilidade.html">
+        <li class="chapter " data-level="8.9.9" data-path="desenvolvimento/monitoramento.html">
             
                 
-                    <a href="../desenvolvimento/monitorabilidade.html">
+                    <a href="../desenvolvimento/monitoramento.html">
                         <i class="fa fa-check"></i>
                         
                             <b>8.9.9.</b>
                         
-                        Monitorabilidade
+                        Monitoramento
                     </a>
                 
             
@@ -1265,91 +1265,9 @@
                     
                         <h1 id="documento-de-implanta%C3%A7%C3%A3o">Documento de Implanta&#xE7;&#xE3;o</h1>
 <p>Neste documento est&#xE3;o todas as informa&#xE7;&#xF5;es necess&#xE1;rias &#xE0; implanta&#xE7;&#xE3;o e opera&#xE7;&#xE3;o do Guia de Servi&#xE7;os em ambientes similares a produ&#xE7;&#xE3;o.</p>
-<h1 id="infraestrutura">Infraestrutura</h1>
+<h2 id="vis%C3%A3o-da-infraestrutura">Vis&#xE3;o da infraestrutura</h2>
 <p><a href="desenvolvimento/ambiente-producao.graphml"><img src="../desenvolvimento/ambiente-producao.svg" alt="Diagrama da rede em ambiente similar a produ&#xE7;&#xE3;o"></a></p>
-<h2 id="ambientes-de-desenvolvimento-e-homologa%C3%A7%C3%A3o">Ambientes de desenvolvimento e homologa&#xE7;&#xE3;o</h2>
-<p>Estes ambientes cont&#xE9;m 5 m&#xE1;quinas virtuais:</p>
-<ul>
-<li>Balanceador de carga</li>
-<li>Servidor de Aplica&#xE7;&#xE3;o 1 (Azul)</li>
-<li>Servidor de Aplica&#xE7;&#xE3;o 2 (Verde)</li>
-<li>Servidor de Busca 1</li>
-<li>Servidor de Busca 2</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>VM</th>
-<th>OS</th>
-<th>Vers&#xE3;o</th>
-<th>Arquitetura</th>
-<th>Cores</th>
-<th>Mem&#xF3;ria</th>
-<th>Disco</th>
-<th>Portas</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Balanceador</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 80</td>
-</tr>
-<tr>
-<td>Aplica&#xE7;&#xE3;o 1</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 8080</td>
-</tr>
-<tr>
-<td>Aplica&#xE7;&#xE3;o 2</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 8080</td>
-</tr>
-<tr>
-<td>Busca 1</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 9200, 9300</td>
-</tr>
-<tr>
-<td>Busca 2</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 9200, 9300</td>
-</tr>
-</tbody>
-</table>
-<p>No ambiente de desenvolvimento, tamb&#xE9;m h&#xE1; um servidor de Integra&#xE7;&#xE3;o Cont&#xED;nua (Jenkins), j&#xE1; provisionado e configurado, que deve ter acesso <a href="http://www.openssh.com/" target="_blank">ssh</a> &#xE0;s m&#xE1;quinas acima, atrav&#xE9;s de chaves compartilhadas com a equipe de desenvolvimento do sistema.</p>
-<h4 id="balanceador-de-carga">Balanceador de Carga</h4>
-<p>CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda um servidor <a href="http://www.haproxy.org" target="_blank">HAProxy</a> na porta 80, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
-<h4 id="servidores-de-aplica%C3%A7%C3%A3o">Servidores de Aplica&#xE7;&#xE3;o</h4>
-<p>CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda a aplica&#xE7;&#xE3;o sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, na porta 8080, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
-<h4 id="servidores-de-busca">Servidores de Busca</h4>
-<p>CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda o <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, nas portas 9200 e 9300, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
-<h2 id="ambientes-de-produ%C3%A7%C3%A3o">Ambientes de produ&#xE7;&#xE3;o</h2>
+<h2 id="ambiente-de-produ%C3%A7%C3%A3o">Ambiente de produ&#xE7;&#xE3;o</h2>
 <p>Este ambiente cont&#xE9;m 5 m&#xE1;quinas virtuais:</p>
 <ul>
 <li>Balanceador de carga</li>
@@ -1492,7 +1410,7 @@ sub   2048R/BA141101 2015-04-07
 /var/log/**/*
 </code></pre><p>A reten&#xE7;&#xE3;o dos mesmos pode variar dependendo do ambiente. Recomenda-se ao menos 30 dias.</p>
 <hr>
-<h1 id="monitorabilidade">Monitorabilidade</h1>
+<h1 id="monitoramento">Monitoramento</h1>
 <p>A monitora&#xE7;&#xE3;o da sa&#xFA;de dos hosts e inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> pode ser feita atrav&#xE9;s das seguintes URLs:</p>
 <h2 id="aplica%C3%A7%C3%A3o">Aplica&#xE7;&#xE3;o</h2>
 <p>A URL <code>/health</code> do Guia de Servi&#xE7;os indica o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o em si e de suas conex&#xF5;es ao cluster do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>. Caso o valor da vari&#xE1;vel de ambiente <code>ENDPOINTS_HEALTH_SENSITIVE</code> seja <code>false</code>, mais informa&#xE7;&#xE3;o &#xE9; exibida:</p>
@@ -1550,7 +1468,7 @@ sub   2048R/BA141101 2015-04-07
 }
 </code></pre>
 <p>O estado tamb&#xE9;m pode ficar marcado como &quot;red&quot; caso o n&#xFA;mero de parti&#xE7;&#xF5;es (<em>shards</em>) n&#xE3;o seja suficiente para distribuir todos os dados. Neste caso, reiniciar a aplica&#xE7;&#xE3;o deve trazer todas as parti&#xE7;&#xF5;es necess&#xE1;rias para o cluster.</p>
-<h1 id="java-management-extensions-jmx">Java Management Extensions (JMX)</h1>
+<h2 id="java-management-extensions-jmx">Java Management Extensions (JMX)</h2>
 <p>Diversas informa&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis atrav&#xE9;s do servi&#xE7;o de gerenciamento da JVM. Existem diversos <a href="http://java-source.net/open-source/jmx" target="_blank">clientes para o protocolo JMX dispon&#xED;veis</a>, e a JDK j&#xE1; vem com o <a href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html" target="_blank">JConsole</a> embutido. Ao abrir o processo do Guia de Servi&#xE7;os no JConsole, temos:</p>
 <p><img src="../desenvolvimento/jconsole-overview.png" alt="JConsole: Overview"></p>
 <p>E ao listar os MBeans dispon&#xED;veis em <code>org.springframework.boot/Endpoint/environmentEndpoint/Attributes</code>:</p>

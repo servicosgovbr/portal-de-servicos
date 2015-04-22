@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Monitorabilidade | Guia de Serviços</title>
+        <title>Monitoramento | Guia de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.9.9" data-basepath=".." data-revision="Wed Apr 22 2015 13:25:45 GMT+0000 (UTC)">
+    <div class="book" data-level="8.9.9" data-basepath=".." data-revision="Wed Apr 22 2015 17:32:42 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1049,15 +1049,15 @@
             
         </li>
     
-        <li class="chapter active" data-level="8.9.9" data-path="desenvolvimento/monitorabilidade.html">
+        <li class="chapter active" data-level="8.9.9" data-path="desenvolvimento/monitoramento.html">
             
                 
-                    <a href="../desenvolvimento/monitorabilidade.html">
+                    <a href="../desenvolvimento/monitoramento.html">
                         <i class="fa fa-check"></i>
                         
                             <b>8.9.9.</b>
                         
-                        Monitorabilidade
+                        Monitoramento
                     </a>
                 
             
@@ -1265,7 +1265,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="monitorabilidade">Monitorabilidade</h1>
+                        <h1 id="monitoramento">Monitoramento</h1>
 <p>A monitora&#xE7;&#xE3;o da sa&#xFA;de dos hosts e inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> pode ser feita atrav&#xE9;s das seguintes URLs:</p>
 <h2 id="aplica%C3%A7%C3%A3o">Aplica&#xE7;&#xE3;o</h2>
 <p>A URL <code>/health</code> do Guia de Servi&#xE7;os indica o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o em si e de suas conex&#xF5;es ao cluster do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>. Caso o valor da vari&#xE1;vel de ambiente <code>ENDPOINTS_HEALTH_SENSITIVE</code> seja <code>false</code>, mais informa&#xE7;&#xE3;o &#xE9; exibida:</p>
@@ -1323,7 +1323,7 @@
 }
 </code></pre>
 <p>O estado tamb&#xE9;m pode ficar marcado como &quot;red&quot; caso o n&#xFA;mero de parti&#xE7;&#xF5;es (<em>shards</em>) n&#xE3;o seja suficiente para distribuir todos os dados. Neste caso, reiniciar a aplica&#xE7;&#xE3;o deve trazer todas as parti&#xE7;&#xF5;es necess&#xE1;rias para o cluster.</p>
-<h1 id="java-management-extensions-jmx">Java Management Extensions (JMX)</h1>
+<h2 id="java-management-extensions-jmx">Java Management Extensions (JMX)</h2>
 <p>Diversas informa&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis atrav&#xE9;s do servi&#xE7;o de gerenciamento da JVM. Existem diversos <a href="http://java-source.net/open-source/jmx" target="_blank">clientes para o protocolo JMX dispon&#xED;veis</a>, e a JDK j&#xE1; vem com o <a href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html" target="_blank">JConsole</a> embutido. Ao abrir o processo do Guia de Servi&#xE7;os no JConsole, temos:</p>
 <p><img src="jconsole-overview.png" alt="JConsole: Overview"></p>
 <p>E ao listar os MBeans dispon&#xED;veis em <code>org.springframework.boot/Endpoint/environmentEndpoint/Attributes</code>:</p>
