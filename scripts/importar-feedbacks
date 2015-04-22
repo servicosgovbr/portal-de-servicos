@@ -1,18 +1,48 @@
 #!/usr/bin/python
+# coding=utf-8
 import sys
 import json
 import os
 
-data = sys.stdin.read()
-feebacks_json = json.loads(data)
+try:
+    print "Esperando entrada (stdin) para importacao"
+    data = sys.stdin.read()
+    if (not data.strip()):
+        print >> sys.stderr, "Nenhuma entrada foi informada"
 
-request_data = [json.dumps(it) for it in feebacks_json]
-bulk_request_item_template = """{{ "create" : {{ "_index" : "gds-persistente", "_type" : "feedback", "_id": "" }} }}
-{{ "doc" : {0} }}"""
+    print "Carregando entrada"
+    try:
+        feedbacks_json = json.loads(data)
+    except Exception as e:
+        print >> sys.stderr, "Erro ao carregar dados, formato JSON não é valido"
+        print >> sys.stderr, e
+        exit(1)
 
-full_request = [bulk_request_item_template.format(it) for it in request_data]
-full_request = '\n'.join(full_request)
+    if not feedbacks_json:
+        print >> sys.stderr, "Entrada vazia, não há nenhum feedback listado"
+        exit(1)
 
-request_cmd = """curl -s -XPUT "localhost:9200/gds-persistente/_bulk" -d '{0}'""".format(full_request)
+    print "Preparando para importação"
 
-print os.popen(request_cmd).read()
+    bulk_request_item_template = """{{ "update" : {{ "_index" : "gds-persistente", "_type" : "feedback", "_id": "{0}" }} }}
+    {{ "doc" : {1} }}"""
+
+    full_request = [bulk_request_item_template.format(it["_id"], json.dumps(it["doc"])) for it in feedbacks_json]
+    full_request = '\n'.join(full_request)
+
+    try: 
+        print "Importando... Comando executado:"
+        request_cmd = """curl -s -XPUT "localhost:9200/gds-persistente/_bulk" -d '{0}'""".format(full_request)
+        print request_cmd
+        retorno = os.popen(request_cmd).read()
+
+        print "Importação concluída. Detalhes:"
+        print retorno
+    except Exception as e:
+        print >> sys.stderr, "Problemas durante a importação"
+        print >> sys.stderr, e
+
+except Exception as e:
+    print "Erro inesperado. Detalhes:"
+    print >> sys.stderr, e
+
