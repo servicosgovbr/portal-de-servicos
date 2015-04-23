@@ -5,55 +5,50 @@ import json
 import os
 import sys
 
+
 def extrai_feedbacks(retorno_str):
-    #print "**Processando registros..."
-    #print "*retorno_str
     feedbacks_list = []
     try:
         feedbacks_json = json.loads(retorno_str)
-        feedbacks_list = [{"_id": it["_id"], "doc": it['_source']} for it in feedbacks_json['hits']['hits']]
-        #print "**Processou registros"
+        feedbacks_list = [{"_id": it["_id"], "doc": it['_source']}
+                          for it in feedbacks_json['hits']['hits']]
     except Exception as e:
-        print >> sys.stderr, "Problemas ao processar dados retornados pelo Elasticsearch: {0}".format(retorno_str)
+        print >> sys.stderr, "Problemas ao processar dados retornados pelo Elasticsearch: {0}".format(
+            retorno_str)
         print >> sys.stderr, e
 
     return feedbacks_list
 
+
 def executa_primeiro_request():
     importacao_cmd = 'curl -s -XGET "localhost:9200/gds-persistente/_search?scroll=1m&q=feedback:*"'
-    #print "**Comando: {0}".format(importacao_cmd)
     return os.popen(importacao_cmd).read()
 
+
 def extrai_scroll_id(retorno_str):
-    #print "*retorno_str
     _id = json.loads(retorno_str)['_scroll_id']
-    #print "**O id: {0}".format(_id)
     return _id
 
-def executa_scroll_request(scroll_id): 
-    #print "**Requisitando dados..."
 
-    comando_scroll = "curl -XGET -s 'localhost:9200/_search/scroll?scroll=1m' -d '{0}'".format(scroll_id)
-    #print "**Commando: {0}".format(comando_scroll)
-    retorno =  os.popen(comando_scroll).read()
-
-    return retorno
+def executa_scroll_request(scroll_id):
+    comando_scroll = "curl -XGET -s 'localhost:9200/_search/scroll?scroll=1m' -d '{0}'".format(
+        scroll_id)
+    return os.popen(comando_scroll).read()
 
 def termina_scroll(scroll_id):
-    comando_termino = "curl -XDELETE -s 'localhost:9200/_search/scroll' -d '{0}'".format(scroll_id)
-    #print "**Commando: {0}".format(comando_termino)
+    comando_termino = "curl -XDELETE -s 'localhost:9200/_search/scroll' -d '{0}'".format(
+        scroll_id)
     os.popen(comando_termino).read()
 
+
 def main():
-    #print "**Iniciando exportação de feedbacks do elasticsearch"
     try:
         retorno = executa_primeiro_request()
         feedbacks_tmp = extrai_feedbacks(retorno)
         feedbacks = feedbacks_tmp
 
-        if (feedbacks_tmp): 
+        if (feedbacks_tmp):
             while (feedbacks_tmp):
-                #print "*ASDPOIUASDPOAISUD"
                 scroll_id = extrai_scroll_id(retorno)
                 retorno = executa_scroll_request(scroll_id)
                 feedbacks_tmp = extrai_feedbacks(retorno)

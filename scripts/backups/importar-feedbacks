@@ -5,12 +5,10 @@ import json
 import os
 
 try:
-    print "Esperando entrada (stdin) para importação"
     data = sys.stdin.read()
     if (not data.strip()):
         print >> sys.stderr, "Nenhuma entrada foi informada"
 
-    print "Carregando entrada"
     try:
         feedbacks_json = json.loads(data)
     except Exception as e:
@@ -22,22 +20,18 @@ try:
         print >> sys.stderr, "Entrada vazia, não há nenhum feedback listado"
         exit(1)
 
-    print "Preparando para importação"
-
     bulk_request_item_template = """{{ "update" : {{ "_index" : "gds-persistente", "_type" : "feedback", "_id": "{0}" }} }}
     {{ "doc" : {1} }}"""
 
-    full_request = [bulk_request_item_template.format(it["_id"], json.dumps(it["doc"])) for it in feedbacks_json]
+    full_request = [bulk_request_item_template.format(
+        it["_id"], json.dumps(it["doc"])) for it in feedbacks_json]
     full_request = '\n'.join(full_request)
 
-    try: 
-        print "Importando... Comando à ser executado:"
-        request_cmd = """curl -s -XPUT "localhost:9200/gds-persistente/_bulk" -d '{0}'""".format(full_request)
-        print request_cmd
-        retorno = os.popen(request_cmd).read()
+    try:
+        request_cmd = """curl -s -XPUT "localhost:9200/gds-persistente/_bulk" -d '{0}'""".format(
+            full_request)
+        os.popen(request_cmd).read()
 
-        print "Importação concluída. Detalhes:"
-        print retorno
     except Exception as e:
         print >> sys.stderr, "Problemas durante a importação, detalhes:"
         print >> sys.stderr, e
