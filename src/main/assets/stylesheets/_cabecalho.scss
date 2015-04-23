@@ -10,6 +10,7 @@ $mobile: new-breakpoint(max-width 500px 4);
     border: none;
     background: none;
     position: relative;
+    color: #606060;
     top: 2px;
   }
 
@@ -176,7 +177,7 @@ $mobile: new-breakpoint(max-width 500px 4);
     }
 
     .fa {
-    color: #ffffff;
+    color: #606060;
     float: right;
     padding-top: 2px;
     font-size: 17px;

@@ -127,7 +127,7 @@ Página: Página onde o usuário estiver.
 
 Objetivo: Entender se está fácil para o usuário dar o feedback pelo site.
 
-Descrição da tarefa: **Você estava navegando no site, encontrou um problema e gostaria de dar a sua opinião sobre como melhora-lo. Tente encontrar uma forma de dar a sua opinião sobre o site.	**
+Descrição da tarefa: **Você estava navegando no site, encontrou um problema e gostaria de dar a sua opinião sobre como melhorá-lo. Tente encontrar uma forma de dar a sua opinião sobre o site.**
 
 ```
 Usuário conseguiu realizar a tarefa?
