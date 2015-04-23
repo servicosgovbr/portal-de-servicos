@@ -9,6 +9,7 @@ try:
     data = sys.stdin.read()
     if (not data.strip()):
         print >> sys.stderr, "Nenhuma entrada foi informada"
+        exit(1)
 
     try:
         feedbacks_json = json.loads(data)
