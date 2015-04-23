@@ -18,14 +18,16 @@
     </div>
 
     <div class="busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
-        <h3 class="titulo-busca">O que você está procurando?</h3>
+        <h2 class="titulo-home">O que você está procurando?</h2>
         <form method="get" action="/busca">
             <input id="input-busca" type="text" name="q" value="" placeholder="Você pode pesquisar por assuntos, serviços, órgãos"/>
             <input type="submit" value="BUSCAR" class="acao-busca"/>
         </form>
     </div>
 
-    <div class="auto-grid">
+
+        <div class="auto-grid">
+        <h2 class="titulo-home">Serviços em destaque</h2>
         <ul th:if="${!destaques.isEmpty()}">
             <th:block th:each="item : ${destaques}">
                 <li class="auto-cell">

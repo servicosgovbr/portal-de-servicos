@@ -63,7 +63,7 @@ $mobile: new-breakpoint(max-width 500px 4);
   }
 
   hr {
-    margin-bottom: 15px;
+    margin-bottom: em(15);
   }
 
 }
@@ -123,8 +123,8 @@ dl.portlet {
     margin: 0;
     margin-bottom: .5em;
     color: #606060;
-    font-family: 'open_sansregular', $helvetica;
-    line-height: 1.345em;
+    font-family: 'open_sansbold', $helvetica;
+    line-height: em(32);
   }
 
   h3 {
@@ -204,20 +204,22 @@ dl.portlet {
   display: none;
 }
 
+
+h2.titulo-home {
+  font-family: open_sansbold;
+  font-size: em(25);
+  line-height: em(32);
+}
+
+
 .busca-principal { 
   @include span-columns(12);
   @include omega();
-  margin-bottom: em(60);
+  margin-bottom: em(30);
 
   > p {
     margin: 0;
     color: #2c66ce;
-  }
-
-  h3.titulo-busca {
-    font-family: open_sansbold;
-    font-size: em(25);
-    margin-bottom: em(15);
   }
 
   > form {
