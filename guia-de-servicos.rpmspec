@@ -19,7 +19,9 @@ Prefix:             /opt/%{name}
 BuildArchitectures: noarch
 Requires:           jdk1.8.0_40
 
-Source0:             %{_sourcedir}/%{name}-%{version}.jar
+Source0:            %{_sourcedir}/%{name}-%{version}.jar
+Source1:            %{_sourcedir}/exportar-feedbacks
+Source2:            %{_sourcedir}/importar-feedbacks
 
 %description
 Guia de Serviços do Governo Federal do Brasil
@@ -68,6 +70,8 @@ mkdir -p %{buildroot}/var/run/%{name}
 
 # Script para iniciar o processo
 mkdir -p %{buildroot}/%{prefix}/bin
+cp %SOURCE1 %{buildroot}/%{prefix}/bin
+cp %SOURCE2 %{buildroot}/%{prefix}/bin
 cat <<-EOF > %{buildroot}/%{prefix}/bin/%{name}
 #!/bin/bash
 java -jar %{prefix}/lib/%{name}.jar
@@ -75,6 +79,8 @@ EOF
 
 %files
 %attr(0755, %{_user}, %{_user}) %{prefix}/bin/%{name}
+%attr(0755, %{_user}, %{_user}) %{prefix}/bin/exportar-feedbacks
+%attr(0755, %{_user}, %{_user}) %{prefix}/bin/importar-feedbacks
 %attr(0644, %{_user}, %{_user}) %{prefix}/lib/%{name}.jar
 %attr(0644, %{_user}, %{_user}) /etc/systemd/system/%{name}.service
 %dir %attr(0755, %{_user}, %{_user}) /var/run/%{name}
