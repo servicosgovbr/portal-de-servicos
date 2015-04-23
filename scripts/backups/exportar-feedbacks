@@ -4,7 +4,7 @@
 import json
 import os
 import sys
-
+import argparse
 
 def extrai_feedbacks(retorno_str):
     feedbacks_list = []
@@ -40,8 +40,12 @@ def termina_scroll(scroll_id):
         scroll_id)
     os.popen(comando_termino).read()
 
+def prepare_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('file', help="Define onde arquivo deve ser exportado, ou '-' para saída padrão (stdout)", type=argparse.FileType('w'))
+    return parser.parse_args()
 
-def main():
+def executa_exportacao(output):
     try:
         retorno = executa_primeiro_request()
         feedbacks_tmp = extrai_feedbacks(retorno)
@@ -59,7 +63,11 @@ def main():
         print >> sys.stderr, e
         exit(1)
 
-    print json.dumps(feedbacks)
+    print >> output, json.dumps(feedbacks)
+
+def main():
+    args = prepare_arguments()
+    executa_exportacao(args.file)
 
 if __name__ == '__main__':
     main()
