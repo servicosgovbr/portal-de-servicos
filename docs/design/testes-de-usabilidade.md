@@ -22,30 +22,30 @@ No caso do Guia de Serviços, nosso público é extenso e abrange todos os cidad
 
 É importante lembrar que o Guia de Serviços é parte do Governo Federal e trata de serviços públicos, portanto precisamos que a sua interface seja o mais inclusiva e acessível quanto possível, pois parte de seus usuários são pessoas com pouca experiência no uso de sites, assim como pessoas com deficiências físicas.
 
-Este primeiro teste de usabilidade terá sua amostra formada por 6 pessoas, sendo:
+Este teste de usabilidade terá sua amostra formada por 6 pessoas, sendo:
 
 ##### Sexo:
-- 3 homens
-- 3 mulheres
+- 50% homens
+- 50% mulheres
 
 ##### Idade:
-- 2 jovens
-- 2 adultos
-- 2 idosos
+- 30% jovens (18-35 anos)
+- 40% adultos (36-59 anos)
+- 30% idosos (a partir de 60 anos)
 
 ##### Experiência de uso da internet: 
-- 3 usuários com pouca experiência no uso de sites
-- 2 usuários com média experiência no uso de sites
-- 1 usuário com muita experiência no uso de sites
+- 60% dos usuários com pouca experiência no uso de sites
+- 30% dos usuários com média experiência no uso de sites
+- 10% dos usuários com muita experiência no uso de sites
 
 ##### Acessibilidade:
-- 1 usuário com limitação visual (cego)
-- 1 usuário com limitação visual (daltonismo)
-- 1 usuário com limitação motora
+- Testar com usuários com limitação visual (cego)
+- Testar com usuários com limitação visual (baixa visão)
+- Testar com usuários com limitação motora
 
 ##### Familiaridade com sites do governo:
-- 2 usuários devem ter familiaridade com sites do governo
-- 4 usuários não devem ter familiaridade com sites do governo
+- 30% dos usuários devem ter familiaridade com sites do governo
+- 70% dos usuários não devem ter familiaridade com sites do governo
 
   
 

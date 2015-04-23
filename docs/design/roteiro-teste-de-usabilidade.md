@@ -3,14 +3,6 @@ As tarefas a serem realizadas pelos usuários participantes do teste de usabilid
 
 Para verificarmos o quanto o site está fácil de ser utilizado por usuários com pouca experiência de uso da internet poderemos ter tarefas simples ou complexas. 
 
-Possíveis assuntos a serem tocados com as tarefas:
-- Realizar uma busca 
-- Dar o feedback sobre o site
-- Testar a acessibilidade
-- Encontrar todos os serviços disponíveis no site
-- Encontrar todos os serviços disponíveis para empresas no site
-- Encontrar o serviço Aposentadoria por invalidez 
-
 Neste teste de usabilidade iremos testar o novo site do Guia de Serviços, e cada teste levará entre 30 e 60 minutos. A estrutura do teste será:
 
 
@@ -92,11 +84,11 @@ Será entregue uma sequencia de tarefas que deverão ser realizadas uma após a 
 
 
 #### Tarefa A
-Página atual: 
+Página: Página Inicial do Guia de Serviços
 
-Objetivo: 
+Objetivo: Entender se o objetivo deste site é claro para o cidadão.
 
-Descrição da tarefa.
+Descrição da tarefa: **Navegue por alguns minutos pelo site, para conhecer o ambiente. Você sabe explicar sobre o que se trata este site?**
 
 
 ```
@@ -112,11 +104,11 @@ Perguntar impressões gerais.
 
 
 #### Tarefa B
-Página atual: 
+Página: Página Inicial do Guia de Serviços
 
-Objetivo: 
+Objetivo: Entender se está acessível encontrar informações sobre serviços.
 
-Descrição da tarefa. 
+Descrição da tarefa: **Você trocou de endereço, e precisa realizar uma atualização no seu CPF, mas para fazer isso precisa de mais informações. Utilizando o site, descubra o que você deve fazer para realizar esta atualização?**
 
 ```
 Usuário conseguiu realizar a tarefa?
@@ -131,11 +123,11 @@ Perguntar impressões gerais.
 
 
 #### Tarefa C
-Página atual: 
+Página: Página onde o usuário estiver.
 
-Objetivo: 
+Objetivo: Entender se está fácil para o usuário dar o feedback pelo site.
 
-Descrição da tarefa
+Descrição da tarefa: **Você estava navegando no site, encontrou um problema e gostaria de dar a sua opinião sobre como melhora-lo. Tente encontrar uma forma de dar a sua opinião sobre o site.	**
 
 ```
 Usuário conseguiu realizar a tarefa?
@@ -150,6 +142,15 @@ Perguntar impressões gerais.
 
 ## Conclusão
 Momento para rever como o usuário se sentiu realizando as tarefas, se tem algo a adicionar para contribuir com a melhoria do site.
+
+Se não tiver tocado nos seguintes assuntos, é possível perguntar diretamente ao usuário o que ele achou sobre:
+
+- Realizar uma busca no site
+- Dar o feedback sobre o site
+- Testar a acessibilidade do site
+- Encontrar serviços disponíveis no site
+- Comentar sobre quaisquer pontos que não foram comentados
+
 
 ```
 Agradecer o usuário e explicar o valor da sua participação.
