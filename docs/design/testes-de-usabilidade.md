@@ -1,13 +1,17 @@
 # Teste de Usabilidade
 
-Uma das formas de validar algumas das hipóteses que criamos e verdades que acreditamos é realizando testes de usabilidade. O teste de usabilidade é uma ferramenta de pesquisa qualitativa com o objetivo de testar a interface de um site para verificar se os usuários que foram identificados como público-alvo conseguem realizar determinadas tarefas, além de aprender sobre padrões importantes de uso que não haviam sido identificados previamente, e podem estar sendo negligenciados na interface. 
+Uma das formas de validar algumas das hipóteses que criamos e verdades que acreditamos é realizando testes de usabilidade. Além dos testes de usabilidade, são recolhidos dados de uso (métricas) e também feedback dos usuários através de um formulário disponibilizado no site. 
+
+O teste de usabilidade é uma ferramenta de pesquisa qualitativa com o objetivo de testar a interface de um site para verificar se os usuários que foram identificados como público-alvo conseguem realizar determinadas tarefas, além de aprender sobre padrões importantes de uso que não haviam sido identificados previamente, e podem estar sendo negligenciados na interface. 
 
 Existem diferentes modelos de testes de usabilidade que podem ser realizados, e podem variar entre testar um produto novo completo, testar uma nova feature específica de um produto já existente, realizar um teste comparativo entre produtos antigo e novo, entre outros. 
 
 
 ## Objetivo
 
-Para começar o planejamento de um teste de usabilidade é necessário definir quais são os objetivos que deverão ser alçados ao final do teste. É importante que estes objetivos sejam específicos, mensuráveis e realistas. Os objetivos deste teste de usabilidade são:
+Para começar o planejamento de um teste de usabilidade é necessário definir quais são os objetivos que deverão ser alçados ao final do teste. É importante que estes objetivos sejam específicos, mensuráveis e realistas. 
+
+Os objetivos deste teste de usabilidade são:
 
 - Entender se o site do Guia de Serviços é acessível através do computador e smartphones.
 - Entender se as informações estão dispostas de forma simples e de fácil acesso.
@@ -22,7 +26,7 @@ No caso do Guia de Serviços, nosso público é extenso e abrange todos os cidad
 
 É importante lembrar que o Guia de Serviços é parte do Governo Federal e trata de serviços públicos, portanto precisamos que a sua interface seja o mais inclusiva e acessível quanto possível, pois parte de seus usuários são pessoas com pouca experiência no uso de sites, assim como pessoas com deficiências físicas.
 
-Este teste de usabilidade terá sua amostra formada por 6 pessoas, sendo:
+Os testes de usabilidade no Guia de Serviços terão sua amostra de usuários formada por:
 
 ##### Sexo:
 - 50% homens
@@ -55,6 +59,13 @@ Para a realização dos testes de usabilidade, utilizaremos uma das salas do esc
 
 Para garantir que teremos os feedbacks corretamente documentados, sempre teremos um entrevistador que mantém contato visual com o usuário e um observador, que fará anotações de importantes pontos do teste assim como citações do usuário. 
 
-## Ciclo de realização dos testes
+## Ciclo de Testes
 
-A proposta deste formato de teste funcionará em ciclos de três fases: testar, aprender, melhorar. Este ciclo se repetirá enquanto for necessário, mas gostaríamos de realizar pelo menos 6 testes.
+Este teste funcionará em três fases: testar (o site), aprender (sobre a situação atual), melhorar (para melhor atender os cidadãos). Serão realizados pelo menos dois testes por iteração (uma iteração = duas semanas).
+
+## Mais Informações
+Para entender mais sobre testes de usabilidade são recomendadas as seguintes fontes de informação:
+
+- User Testing no Nielsen Norman Group: http://www.nngroup.com/topic/user-testing/
+- User Research no gov.uk: https://userresearch.blog.gov.uk/
+- User Research Methods: https://userresearchmethods.hackpad.com/
