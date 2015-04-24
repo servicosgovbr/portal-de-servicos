@@ -21,7 +21,7 @@
 
         <dd th:each="publico : ${@publicoAlvoRepository.findAll()}">
             <a th:href="@{/publico-alvo/{id}(id=${publico.id})}">
-                <span th:text="${publico.titulo}">Título do Público Alvo</span>
+                <span th:text="${publico.titulo}" th:title="${publico.titulo}">Título do Público Alvo</span>
             </a>
         </dd>
 
@@ -36,10 +36,10 @@
     <dl>
         <dt>Navegação</dt>
         <dd>
-            <a href="/conteudo/acessibilidade">Acessibilidade</a>
+            <a href="/conteudo/acessibilidade" title="Acessibilidade">Acessibilidade</a>
         </dd>
         <dd>
-            <a href="/conteudo/mapa-do-site">Mapa do Site</a>
+            <a href="/conteudo/mapa-do-site" title="Mapa do Site">Mapa do Site</a>
         </dd>
     </dl>
 
