@@ -63,18 +63,18 @@ $mobile: new-breakpoint(max-width 500px 4);
       display: none !important;
     }
 
+    li {
+        white-space: nowrap;
+    }
+
     a {
-      padding: 4px 0 4px 10px;
+      padding: 0px 0 0px 6px;
       text-decoration: none;
       text-transform: uppercase;
       font-size: em(11);
       font-family: 'open_sansbold', $helvetica;
     }
 
-  }
-
-  #siteaction-acessibilidade a {
-    padding-left: 0;
   }
 
   #logo {
