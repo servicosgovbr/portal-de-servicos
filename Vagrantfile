@@ -15,6 +15,10 @@ Vagrant.configure('2') do |config|
     vb.customize ['modifyvm', :id, '--memory', '512']
   end
 
+  config.vm.define 'ie11', primary: true do |ie11|
+    ie11.vm.box = "http://aka.ms/vagrant-win7-ie11"
+  end
+
   config.vm.define 'bastion', primary: true do |lb|
     lb.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/bastion-node-install'
     lb.vm.network 'private_network', ip: '10.16.0.180'

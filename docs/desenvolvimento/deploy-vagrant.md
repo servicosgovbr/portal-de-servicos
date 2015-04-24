@@ -29,6 +29,7 @@ Para atualizar a versão implantada, utilize a tarefa `vagrantDeploy`:
 
 Para acessar qualquer uma das máquinas através de `ssh`, utilize o comando `vagrant ssh <nome>`, onde `nome` pode ser:
 
+- `ie11`: máquina Windows com IE11, para testes exploratórios.
 - `bastion`: máquina vazia para experimentos e desenvolvimento local, com o IP `10.16.0.180`.
 - `lb`: balanceador de carga, com o IP `10.16.0.10`.
 - `app1`: primeiro nodo servidor de aplicação, com o IP `10.16.0.13`.
