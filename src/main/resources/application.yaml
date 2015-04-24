@@ -14,7 +14,7 @@ server:
 
 gds:
   piwik:
-    url: "https://estatisticas.presidencia.gov.br"
+    url: "estatisticas.presidencia.gov.br"
     token: ""
     site: 2
   destaques:

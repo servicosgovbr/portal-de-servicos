@@ -45,16 +45,19 @@
 <script type="text/javascript" src="/assets/main.js"></script>
 <script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
 
-<script type="text/javascript" th:if="${#arrays.contains(@environment.getActiveProfiles(),'monitoring')}">
+<script type="text/javascript" th:if="${#arrays.contains(@environment.getActiveProfiles(),'monitoring')}" th:inline="javascript">
 var _paq = _paq || [];
-(function(){ 
-	var u=(("https:" == document.location.protocol) ? "https://estatisticas.presidencia.gov.br/" : "http://estatisticas.presidencia.gov.br/");
-	_paq.push(['setSiteId', 2]);
-	_paq.push(['setTrackerUrl', u+'piwik.php']);
-	_paq.push(['trackPageView']);
-	_paq.push(['enableLinkTracking']);
-	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.defer=true; g.async=true; g.src=u+'piwik.js';
-	s.parentNode.insertBefore(g,s); 
+(function(){
+    var piwikUrl = /*[[${@environment.getProperty('gds.piwik.url')}]]*/;
+    var siteId = /*[[${@environment.getProperty('gds.piwik.site')}]]*/;
+
+    var u=(("https:" == document.location.protocol) ? 'https://' : 'http://') + piwikUrl + '/';
+    _paq.push(['setSiteId', siteId]);
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.defer=true; g.async=true; g.src=u+'piwik.js';
+    s.parentNode.insertBefore(g,s);
 })();
 </script>
 <script type="text/javascript" th:unless="${#arrays.contains(@environment.getActiveProfiles(),'monitoring')}">
