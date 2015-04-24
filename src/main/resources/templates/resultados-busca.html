@@ -23,15 +23,15 @@
                 Não foram encontrados serviços com o termo "<span th:text="${termo}"></span>".
             </p>
 
-            <p>
+            <h3>
                 Sugestões:
-            </p>
-            <ul>
-                <li>Certifique-se de que todos os termos estão grafados corretamente</li>
-                <li>Tente palavras-chave diferentes</li>
-                <li>Tente palavras-chave mais genéricas</li>
-                <li>Tente menos palavras-chave</li>
-            </ul>
+            </h3>
+                <ul>
+                    <li>Certifique-se de que todos os termos estão escritos corretamente.</li>
+                    <li>Tente palavras-chave diferentes.</li>
+                    <li>Tente palavras-chave mais genéricas.</li>
+                    <li>Tente menos palavras-chave.</li>
+                </ul>
         </th:block>
 
         <th:block th:if="${resultados.hasContent()}">

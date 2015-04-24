@@ -1,7 +1,7 @@
 Mapa do Site
 ====
 
-[Página inicial](/)
+- [Página inicial](/)
 
 Informações
 

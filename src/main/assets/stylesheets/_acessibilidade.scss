@@ -2,9 +2,13 @@ body.contraste {
   background: #000 !important;
   color: #fff !important;
 
-  #header, #rodape, #main, #capacho, .outstanding-header .outstanding-title {
+  #header, #main, .outstanding-header .outstanding-title {
     background: #000 !important;
     color: #fff !important;
+  }
+
+  #rodape {
+    background: #555;
   }
 
   #header {
@@ -30,7 +34,7 @@ body.contraste {
     }
   }
 
-  a, h1, h2, h3, #capacho dt, .portletNavigationTree > dd a span, #migalhas-de-pao a,
+  a, p, h4, .paginacao-busca, .portletHeader, h1, h2, h3, #capacho dt, .portletNavigationTree > dd a span, #migalhas-de-pao a,
   #migalhas-de-pao span, #conteudo a:hover, dl.portlet a:hover, .tile-subtitle, .tile p, .tile a,
   #portal-siteactions a, #portal-siteactions a:hover, #logo #portal-logo,
   #logo #portal-title, #portal-description, .outstanding-header .outstanding-link, #conteudo .outstanding-header .outstanding-link:hover,
