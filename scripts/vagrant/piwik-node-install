@@ -10,7 +10,7 @@ set -e
 set -o pipefail
 
 echo 'Atualizando todos os pacotes...'
-#yum update -y
+yum update -y
 
 echo 'Instalando augeas...'
 yum install augeas -y
