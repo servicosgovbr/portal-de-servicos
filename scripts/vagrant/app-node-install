@@ -13,6 +13,9 @@ set -o pipefail
 ES_1_IP_ADDR="${2:-10.16.0.11}"
 ES_2_IP_ADDR="${3:-10.16.0.9}"
 
+# Endereço do Piwik
+PIWIK_ADDR="$4"
+
 echo 'Atualizando todos os pacotes...'
 yum update -y
 
@@ -30,11 +33,15 @@ echo 'Configurando Guia de Serviços...'
 cat <<-EOF > /etc/sysconfig/guia-de-servicos
 # Variáveis de ambiente para configuração do Guia de Serviços
 
-SPRING_PROFILES_ACTIVE=production,cluster
+SPRING_PROFILES_ACTIVE=production,cluster,monitoring
 SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:9300"
 
 ENDPOINTS_ENABLED=true
 ENDPOINTS_HEALTH_SENSITIVE=false
+
+GDS_PIWIK_URL="http://${PIWIK_ADDR}"
+GDS_PIWIK_TOKEN=c0e024d9200b5705bc4804722636378a
+GDS_PIWIK_SITE=1
 EOF
 
 echo 'Recarregando serviços...'

@@ -33,14 +33,14 @@ Vagrant.configure('2') do |config|
 
   config.vm.define 'app1' do |app|
     app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/prod-like/app-node-install 10.16.0.11 10.16.0.9'
-    app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/app-node-install app1 10.16.0.11 10.16.0.9'
+    app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/app-node-install app1 10.16.0.11 10.16.0.9 10.16.0.181'
     app.vm.network 'forwarded_port', guest: 8080, host: 8082
     app.vm.network 'private_network', ip: '10.16.0.13'
   end
 
   config.vm.define 'app2' do |app|
     app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/prod-like/app-node-install 10.16.0.11 10.16.0.9'
-    app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/app-node-install app2 10.16.0.11 10.16.0.9'
+    app.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/app-node-install app2 10.16.0.11 10.16.0.9 10.16.0.181'
     app.vm.network 'forwarded_port', guest: 8080, host: 8083
     app.vm.network 'private_network', ip: '10.16.0.12'
   end

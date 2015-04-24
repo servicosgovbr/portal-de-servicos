@@ -157,7 +157,7 @@ INSERT INTO piwik_site (
   excluded_user_agents,
   \`group\`
 ) VALUES (
-  2,
+  1,
   'Guia de Servicos',
   'http://localhost:8081',
   'America/Sao_Paulo',
