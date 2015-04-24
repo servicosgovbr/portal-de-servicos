@@ -57,6 +57,11 @@ Vagrant.configure('2') do |config|
     es.vm.network 'private_network', ip: '10.16.0.9'
   end
 
+  config.vm.define 'piwik' do |pw|
+    pw.vm.provision :shell, inline: '/bin/bash /vagrant/scripts/vagrant/piwik-node-install'
+    pw.vm.network 'private_network', ip: '10.16.0.181'
+  end
+
 end
 
 # vi: ft=ruby

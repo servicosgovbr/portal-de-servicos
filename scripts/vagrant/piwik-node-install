@@ -1,0 +1,167 @@
+#!/bin/bash
+
+if [ "$(whoami)" != "root" ]; then
+  echo 'Este script deve ser executado como super-usuário (root).'
+  exit -1
+fi
+
+set -x
+set -e
+set -o pipefail
+
+echo 'Atualizando todos os pacotes...'
+#yum update -y
+
+echo 'Instalando augeas...'
+yum install augeas -y
+
+echo 'Configurando /etc/sudoers...'
+# Remove obrigação de TTY para sudoers em deployments automáticos
+augtool set '/files/etc/sudoers/Defaults[*]/requiretty/negate' ''
+
+echo "Modificando hostname para 'piwik'..."
+hostname piwik
+
+echo 'Instalando servidor http...'
+yum install httpd php php-mysql -y
+
+echo 'Verificando instalação do MYSQL'
+if [ "$(rpm -q mysql-community-release)" != "mysql-community-release-el7-5.noarch" ]; then
+  echo 'Baixando MYSQL...'
+  wget \
+    --quiet \
+    --no-cookies \
+    --no-check-certificate \
+    --timestamping \
+    --directory-prefix=/var/cache/wget \
+    'http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm'
+
+  if [ "$(sha1sum '/var/cache/wget/mysql-community-release-el7-5.noarch.rpm' | cut -f 1 -d ' ')" != "805876fade2062626f2db9aabfdce9cae500f1ca" ]; then
+    echo "MYSQL possui checksum incorreto. Verifique que o download foi concluído com sucesso."
+    exit -1
+  fi
+
+  echo 'Instalando MYSQL...'
+  yum install -y '/var/cache/wget/mysql-community-release-el7-5.noarch.rpm'
+  yum install -y mysql-community-server
+fi
+
+echo 'Recarregando daemons...'
+systemctl daemon-reload
+
+echo 'Habilitando http e mysql para iniciar no boot...'
+systemctl enable mysqld httpd
+
+echo 'Iniciando servidor http e mysql...'
+systemctl start mysqld httpd
+
+echo 'Baixando Piwik...'
+wget \
+  --quiet \
+  --no-cookies \
+  --no-check-certificate \
+  --timestamping \
+  --directory-prefix=/var/cache/wget \
+  'http://builds.piwik.org/piwik-1.12.tar.gz'
+
+echo 'Instalando Piwik...'
+tar -xf /var/cache/wget/piwik-1.12.tar.gz -C /var/www/html --strip 1
+chown -R apache:apache /var/www/html
+
+echo 'Configurando Piwik...'
+cat <<EOF > /var/www/html/config/config.ini.php
+; <?php exit; ?> DO NOT REMOVE THIS LINE
+[database]
+host = "127.0.0.1"
+username = "piwik"
+password = "piwik"
+dbname = "piwik"
+tables_prefix = "piwik_"
+charset = "utf8"
+
+[superuser]
+login = "admin"
+password = "21232f297a57a5a743894a0e4a801fc3" ;= admin
+email = "admin@admin.com"
+salt = "b4eeb7663993e4b6b6bdb47537142246"
+
+[General]
+trusted_hosts[] = "localhost:8084"
+
+[PluginsInstalled]
+PluginsInstalled[] = "Login"
+PluginsInstalled[] = "CoreAdminHome"
+PluginsInstalled[] = "UsersManager"
+PluginsInstalled[] = "SitesManager"
+PluginsInstalled[] = "Installation"
+PluginsInstalled[] = "CorePluginsAdmin"
+PluginsInstalled[] = "CoreHome"
+PluginsInstalled[] = "Proxy"
+PluginsInstalled[] = "API"
+PluginsInstalled[] = "Widgetize"
+PluginsInstalled[] = "Transitions"
+PluginsInstalled[] = "LanguagesManager"
+PluginsInstalled[] = "Actions"
+PluginsInstalled[] = "Dashboard"
+PluginsInstalled[] = "MultiSites"
+PluginsInstalled[] = "Referers"
+PluginsInstalled[] = "UserSettings"
+PluginsInstalled[] = "Goals"
+PluginsInstalled[] = "SEO"
+PluginsInstalled[] = "UserCountry"
+PluginsInstalled[] = "VisitsSummary"
+PluginsInstalled[] = "VisitFrequency"
+PluginsInstalled[] = "VisitTime"
+PluginsInstalled[] = "VisitorInterest"
+PluginsInstalled[] = "ExampleAPI"
+PluginsInstalled[] = "ExamplePlugin"
+PluginsInstalled[] = "ExampleRssWidget"
+PluginsInstalled[] = "Provider"
+PluginsInstalled[] = "Feedback"
+PluginsInstalled[] = "CoreUpdater"
+PluginsInstalled[] = "PDFReports"
+PluginsInstalled[] = "UserCountryMap"
+PluginsInstalled[] = "Live"
+PluginsInstalled[] = "CustomVariables"
+PluginsInstalled[] = "PrivacyManager"
+PluginsInstalled[] = "ImageGraph"
+PluginsInstalled[] = "DoNotTrack"
+PluginsInstalled[] = "Annotations"
+PluginsInstalled[] = "MobileMessaging"
+PluginsInstalled[] = "Overlay"
+PluginsInstalled[] = "SegmentEditor"
+EOF
+
+echo 'Criando database para o Piwik...'
+cat <<EOF | mysql -u root
+CREATE DATABASE piwik;
+CREATE USER 'piwik'@'localhost' IDENTIFIED BY 'piwik';
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES ON piwik.* TO 'piwik'@'localhost';
+EOF
+
+echo 'Criando tabelas do piwik...'
+mysql -u root piwik < /vagrant/scripts/vagrant/piwik-db.sql
+
+echo 'Cadastrando site do guia de serviços no piwik...'
+cat <<EOF | mysql -u root piwik
+INSERT INTO piwik_site (
+  idsite,
+  name,
+  main_url,
+  timezone,
+  currency,
+  ts_created,
+  sitesearch_keyword_parameters,
+  sitesearch_category_parameters,
+  excluded_ips, excluded_parameters,
+  excluded_user_agents,
+  \`group\`
+) VALUES (
+  2,
+  'Guia de Servicos',
+  'http://localhost:8081',
+  'America/Sao_Paulo',
+  'USD',
+  now(),
+  '', '', '', '', '', '');
+EOF
