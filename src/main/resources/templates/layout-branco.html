@@ -51,7 +51,7 @@ var _paq = _paq || [];
     var piwikUrl = /*[[${@environment.getProperty('gds.piwik.url')}]]*/;
     var siteId = /*[[${@environment.getProperty('gds.piwik.site')}]]*/;
 
-    var u=(("https:" == document.location.protocol) ? 'https://' : 'http://') + piwikUrl + '/';
+    var u=piwikUrl.replace(/^https*/, 'https:' == document.location.protocol ? 'https' : 'http');
     _paq.push(['setSiteId', siteId]);
     _paq.push(['setTrackerUrl', u+'piwik.php']);
     _paq.push(['trackPageView']);
