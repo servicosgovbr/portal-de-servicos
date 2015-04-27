@@ -1,6 +1,6 @@
 # Vagrant
 
-[![Diagrama da rede no Vagrant](/desenvolvimento/ambiente-vagrant.svg)](/desenvolvimento/ambiente-vagrant.graphml)
+[![Diagrama da rede no Vagrant](ambiente-vagrant.svg)](ambiente-vagrant.graphml)
 
 Criamos também um conjunto de _boxes_ para o [Vagrant]. Para utilizá-lo, confira que você está usando uma versão recente do [Vagrant] (ao menos 1.6.5) e rode:
 
@@ -34,18 +34,20 @@ Para acessar qualquer uma das máquinas através de `ssh`, utilize o comando `va
 - `lb`: balanceador de carga, com o IP `10.16.0.10`.
 - `app1`: primeiro nodo servidor de aplicação, com o IP `10.16.0.13`.
 - `app2`: segundo nodo servidor de aplicação, com o IP `10.16.0.12`.
-- `es1`: primeiro nodo do ElasticSearch, com o IP `10.16.0.11`
-- `es2`: segundo nodo do ElasticSearch, com o IP `10.16.0.9`
+- `es1`: primeiro nodo do ElasticSearch, com o IP `10.16.0.11`.
+- `es2`: segundo nodo do ElasticSearch, com o IP `10.16.0.9`.
+- `piwik`: nodo contendo uma instância do Piwik, com IP `10.16.0.181`.
 
 Uma alternativa mais rápida ao `vagrant ssh` é utilizar o arquivo `.sshconfig` (localizado na raiz do projeto) para carregar as configurações de acesso. Acesse as máquinas com os seguintes comandos:
 
 ```
 ssh -F .sshconfig bastion
-ssh -F .sshconfig lb-vagrant
-ssh -F .sshconfig app1-vagrant
-ssh -F .sshconfig app2-vagrant
-ssh -F .sshconfig es1-vagrant
-ssh -F .sshconfig es2-vagrant
+ssh -F .sshconfig lb
+ssh -F .sshconfig app1
+ssh -F .sshconfig app2
+ssh -F .sshconfig es1
+ssh -F .sshconfig es2
+ssh -F .sshconfig piwik
 ```
 
 [Vagrant]:http://vagrantup.com
