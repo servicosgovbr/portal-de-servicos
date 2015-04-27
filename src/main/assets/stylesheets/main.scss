@@ -9,8 +9,6 @@
 @import 'acessibilidade';
 @import 'media-queries';
 
-$mobile: new-breakpoint(max-width 500px 4);
-
 #main {
   @include outer-container;
 }
@@ -21,8 +19,11 @@ $mobile: new-breakpoint(max-width 500px 4);
   line-height: 1.5em;
 
   @include media($mobile) {
-  @include span-columns(4);
+    @include span-columns(12);
   }
+  @include media($tablet) {
+      @include span-columns(12);
+    }
   
   header {
     margin-bottom: em(20);
@@ -387,9 +388,14 @@ ul.servicos-a-z {
 
 #navegacao {
   @include span-columns(3);
+
   @include media($mobile) {
     display: none !important;
   }
+  @include media($tablet) {
+    display: none !important;
+  }
+
 
   .navTree span {
     font-size: 13px;

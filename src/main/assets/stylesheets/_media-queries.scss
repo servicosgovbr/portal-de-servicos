@@ -1,4 +1,7 @@
-@media only screen and (max-width: 480px) {
+$mobile: new-breakpoint(max-width 460px);
+$tablet: new-breakpoint(min-width 461px max-width 710px);
+
+@include media($mobile) {
 
   #acessibilidade {
     display: none;
