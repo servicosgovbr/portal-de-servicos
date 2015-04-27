@@ -1,8 +1,9 @@
 <div id="barra-feedback">
     <p th:unless="${#httpServletRequest.requestURI.startsWith('/feedback')}">
-        Ainda estamos trabalhando neste site, e evoluímos suas funções e conteúdo baseados na sua opinião. 
+        Estamos trabalhando neste site e precisamos da sua ajuda para evoluir suas funções e conteúdo. 
         <a th:href="@{/feedback(url=${#httpServletRequest.requestURI}, ticket=${#httpServletRequest.getAttribute('req.ticket').substring(24)}, busca=${#httpServletRequest.queryString})}">
-            Dê a sua e ajude-nos a melhorá-lo ainda mais!
+            Dê a sua opinião e torne este site ainda melhor!
         </a>
     </p>
 </div>
+
