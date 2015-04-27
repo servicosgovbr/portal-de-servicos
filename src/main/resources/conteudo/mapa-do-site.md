@@ -3,21 +3,21 @@ Mapa do Site
 
 - [Página inicial](/)
 
-<h2>Informações</h2>
+## Informações
 
 - [Perguntas frequentes](/conteudo/perguntas-frequentes)
 - [Sua Conta](/conteudo/sua-conta)
 
-<h2>Serviços</h2>
+## Serviços
 
 - [Serviços aos cidadãos](/publico-alvo/servicos-aos-cidadaos)
 - [Serviços às empresas](/publico-alvo/servicos-as-empresas)
 - [Todos os serviços](/servicos)
 
-<h2>Órgãos</h2>
+## Órgãos
 
 - [Todos os órgãos](/orgaos)
 
-<h2>Navegação</h2>
+## Navegação
 
 - [Acessibilidade](/conteudo/acessibilidade)
