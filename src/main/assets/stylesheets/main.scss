@@ -221,23 +221,31 @@ h2.titulo-home {
   @include omega();
   margin-bottom: em(30);
 
+  h2 {
+    margin-bottom: 0px;
+  }
+
   > p {
     margin: 0;
     color: #2c66ce;
   }
 
   > form {
+      background-color: #edeff1;
+      padding: 15px 15px 53px 15px;
+      border-radius: 4px;
+
     > input[type='text'] {
       @include span-columns(10);
       display: block;
       padding: 10px;
-      border-radius: 5px;
+      border-radius: 4px;
       border-top: 2px solid #dcdcdc;
       border-bottom: 0;
-      border-left: 2px solid #DCDCCC;
+      border-left: 2px solid #dcdcdc;
       border-right: 0;
       box-shadow: inset -2px -2px 5px -1px #e6e6e6;
-      background-color: #eee;
+      background-color: #ffffff;
       font-size: em(13);
       font-style: italic;
 
@@ -246,7 +254,7 @@ h2.titulo-home {
       }
 
       &:focus {
-        background-color: #EEF0F1;
+        background-color: #fff;
       } 
 
     }
