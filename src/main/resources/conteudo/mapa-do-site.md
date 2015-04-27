@@ -7,7 +7,6 @@ Mapa do Site
 
 - [Perguntas frequentes](/conteudo/perguntas-frequentes)
 - [Sua Conta](/conteudo/sua-conta)
-- [Fale com o Governo](/conteudo/fale-com-o-governo)
 
 <h2>Serviços</h2>
 
