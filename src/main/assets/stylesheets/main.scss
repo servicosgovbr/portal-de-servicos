@@ -194,10 +194,6 @@ dl.portlet {
 }
 
 #voltar-topo {
-  @include span-columns(3);
-  @include shift(9);
-  @include omega();
-
   margin-top: em(30);
   margin-bottom: em(30);
   font-size: em(15);
