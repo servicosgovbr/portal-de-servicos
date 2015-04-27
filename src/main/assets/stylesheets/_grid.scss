@@ -56,6 +56,12 @@ li.auto-cell {
   @include omega(3n);
 
   @include media($mobile) {
-    @include fill-parent();
+    @include span-columns(12);
+    @include omega(1n);
+  }
+
+  @include media($tablet) {
+      @include span-columns(12);
+      @include omega(1n);
   }
 }
