@@ -153,11 +153,6 @@ dl.portlet {
     font-weight: normal;
   }
 
-  // p {
-  //   color: #172938;
-  //   line-height: 1.25em;
-  // }
-
   img.right {
     float: right;
     margin: 0 0 .5em 0;
@@ -410,12 +405,17 @@ ul.servicos-a-z {
   }
 
   .linha-da-vida {
-    margin-top: 6px;
+    margin-top: 8px;
     display: inline-block;
-    border-radius: 4px;
-    background-color: #edeff1;
-    border: 1px solid lighten(#edeff1, 10%);
-    padding: 2px 5px 2px 5px;
+    padding: 1px 6px 0px 6px;
     font-size: em(10);
+    text-transform: uppercase;
+    background-color: #edeff1;
+    border-radius: 4px;
+
+      i {
+        font-size: 12px;
+        margin-right: 3px;
+      }
   }
 }
