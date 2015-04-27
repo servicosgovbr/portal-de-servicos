@@ -26,6 +26,8 @@ No caso do Firefox, em vez de `Alt + número`, tecle simultaneamente `Alt + Shif
 
 Sendo Firefox no Mac OS, em vez de `Alt + Shift + número`, tecle simultaneamente `Ctrl + Alt + número`.
 
+No Safari no Mac OS, tecle simultaneamente `Control + Option + número`.
+
 No Opera, as teclas são `Shift + Escape + número`. Ao teclar apenas `Shift + Escape`, o usuário encontrará uma janela 
 com todas as alternativas de `ACCESSKEY` da página.
 
