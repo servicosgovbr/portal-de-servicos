@@ -4,12 +4,12 @@
       layout:decorator="layout-branco">
 
 <head>
-    <title>Serviços de A-Z</title>
+    <title>Todos os Serviços</title>
 </head>
 <body>
 
 <span layout:fragment="link-migalha-de-pao-pai">
-    Serviços de A-Z
+    Todos os Serviços
 </span>
 
 <span layout:fragment="link-migalha-de-pao" th:text="${letraAtiva}">
@@ -17,7 +17,7 @@
 </span>
 
 <div layout:fragment="corpo">
-    <h1>Serviços de A-Z</h1>
+    <h1>Todos os Serviços</h1>
 
     <div th:replace="fragments/paginacao :: conteudo-paginado(${letraAtiva}, ${letras}, 'letra=${pagina}')">
         <span layout:fragment="titulo">
