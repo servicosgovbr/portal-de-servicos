@@ -6,7 +6,6 @@ Mapa do Site
 ## Informações
 
 - [Perguntas frequentes](/conteudo/perguntas-frequentes)
-- [Sua Conta](/conteudo/sua-conta)
 
 ## Serviços
 

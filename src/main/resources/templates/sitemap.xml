@@ -27,10 +27,6 @@
     </url>
 
     <url>
-        <loc th:text="${base + '/conteudo/sua-conta'}">/conteudo/sua-conta</loc>
-    </url>
-
-    <url>
         <loc th:text="${base + '/servicos'}">/servicos</loc>
     </url>
 
