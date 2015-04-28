@@ -21,9 +21,15 @@
   @include media($mobile) {
     @include span-columns(12);
   }
+
   @include media($tablet) {
-      @include span-columns(12);
-    }
+    @include span-columns(12);
+  }
+
+  @include media($mobile, $tablet) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 
   header {
     margin-bottom: em(20);

@@ -61,7 +61,7 @@ li.auto-cell {
   }
 
   @include media($tablet) {
-      @include span-columns(12);
-      @include omega(1n);
+    @include span-columns(12);
+    @include omega(1n);
   }
 }
