@@ -26,6 +26,9 @@ body.contraste {
   }
 
   .busca-principal {
+    .titulo-home {
+      color: #000 !important;
+    }
     > form {
       > input[type='submit'] {
         background-color: #000;
