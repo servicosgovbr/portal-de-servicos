@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +42,11 @@ class ServicoController {
 
         Map<String, Object> model = new HashMap<>();
         model.put("letraAtiva", primeiraLetra);
-        model.put("servicos", servicosPorLetra.get(primeiraLetra));
+
+        model.put("servicos", servicosPorLetra.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
+                .stream()
+                .sorted((x, y) -> x.getTitulo().compareTo(y.getTitulo())).collect(toList()));
+
         model.put("letras",
                 servicosPorLetra
                         .keySet()

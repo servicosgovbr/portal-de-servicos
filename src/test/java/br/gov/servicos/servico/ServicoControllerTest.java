@@ -14,6 +14,7 @@ import java.util.List;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
 import static java.util.Collections.EMPTY_LIST;
+import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.Matchers.any;
@@ -61,8 +62,8 @@ public class ServicoControllerTest {
                 .when(servicos)
                 .findAll(new Sort(ASC, "titulo"));
 
-        assertModelAttributeValue(controller.todos(null), "servicos", asList(servicoA));
-        assertModelAttributeValue(controller.todos('B'), "servicos", asList(servicoB));
+        assertModelAttributeValue(controller.todos(null), "servicos", singletonList(servicoA));
+        assertModelAttributeValue(controller.todos('B'), "servicos", singletonList(servicoB));
     }
 
     @Test
