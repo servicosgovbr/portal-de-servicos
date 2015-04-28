@@ -11,19 +11,11 @@
     </url>
 
     <url>
-        <loc th:text="${base + '/conteudo/fale-com-o-governo'}">/conteudo/fale-com-o-governo</loc>
-    </url>
-
-    <url>
         <loc th:text="${base + '/conteudo/mapa-do-site'}">/conteudo/mapa-do-site</loc>
     </url>
 
     <url>
         <loc th:text="${base + '/conteudo/perguntas-frequentes'}">/conteudo/perguntas-frequentes</loc>
-    </url>
-
-    <url>
-        <loc th:text="${base + '/conteudo/sobre-o-guia'}">/conteudo/sobre-o-guia</loc>
     </url>
 
     <url>
