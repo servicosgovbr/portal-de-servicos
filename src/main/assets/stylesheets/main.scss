@@ -13,6 +13,12 @@
   @include outer-container;
 }
 
+.no-mobile {
+  @include media($mobile) {
+    display: none;
+  }
+}
+
 #conteudo, .conteudo {
   @include span-columns(9);
   @include omega();

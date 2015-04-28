@@ -1,6 +1,6 @@
-<div id="barra-feedback">
+<div id="barra-feedback" xmlns:th="http://www.thymeleaf.org">
     <p th:unless="${#httpServletRequest.requestURI.startsWith('/feedback')}">
-        Estamos trabalhando neste site e precisamos da sua ajuda para evoluir suas funções e conteúdo. 
+        <span class="no-mobile">Estamos trabalhando neste site e precisamos da sua ajuda para evoluir suas funções e conteúdo.</span>
         <a th:href="@{/feedback(url=${#httpServletRequest.requestURI}, ticket=${#httpServletRequest.getAttribute('req.ticket').substring(24)}, busca=${#httpServletRequest.queryString})}">
             Dê a sua opinião e torne este site ainda melhor!
         </a>
