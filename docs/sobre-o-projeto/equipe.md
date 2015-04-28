@@ -23,7 +23,9 @@ O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com 
 
 ### [Ministério da Previdência Social](http://mps.gov.br)
 
+* [Celia Maria da Silva Torres](mailto:celia.torres@previdencia.gov.br)
 * [Jonathas Duarte](mailto:jonathas.duarte@inss.gov.br)
+* [Nicir Maria Gomes Chaves](mailto:nicir.chaves@previdencia.gov.br)
 
 ## [ThoughtWorks](http://thoughtworks.com)
 
@@ -39,9 +41,10 @@ O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com 
 
 ## Contribuidores
 
-A natureza do código aberto do projeto nos trouxe alguns contribiudores externos às duas equipes, também. Somos muito gratos a:
+A natureza do código aberto do projeto nos trouxe alguns contribiudores externos às equipes do projeto. Somos muito gratos a:
 
 * [Gabriel Such](mailto:gabrielsuch@gmail.com)
+* [Leonardo Marquezini](mailto:lmarquezini@thoughtworks.com)
 * [Rodrigo Alencar](mailto:ralencar@thoughtworks.com)
 * [Thiago Felix](mailto:tfelix@thoughtworks.com)
 * [Bruno Tavares](mailto:btavares@thoughtworks.com)
