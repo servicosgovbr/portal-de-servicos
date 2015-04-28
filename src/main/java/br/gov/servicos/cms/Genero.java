@@ -22,6 +22,14 @@ public class Genero {
         return FEMININOS.stream().anyMatch(id::startsWith) ? "da" : "do";
     }
 
+    public String lo(String id) {
+        return FEMININOS.stream().anyMatch(id::startsWith) ? "la" : "lo";
+    }
+
+    public String los(String id) {
+        return FEMININOS.stream().anyMatch(id::startsWith) ? "las" : "los";
+    }
+
     public String per(String id) {
         return FEMININOS.stream().anyMatch(id::startsWith) ? "pela" : "pelo";
     }

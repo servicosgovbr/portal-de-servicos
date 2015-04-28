@@ -19,6 +19,18 @@ public class GeneroTest {
     }
 
     @Test
+    public void escolheGeneroDeAcordoComPalavraInicialEmLo() throws Exception {
+        assertThat(genero.per("secretaria-do-secretariado"), is("la"));
+        assertThat(genero.per("ministerio-do-ministeriado"), is("lo"));
+    }
+
+    @Test
+    public void escolheGeneroDeAcordoComPalavraInicialEmLos() throws Exception {
+        assertThat(genero.per("secretaria-do-secretariado"), is("las"));
+        assertThat(genero.per("ministerio-do-ministeriado"), is("los"));
+    }
+
+    @Test
     public void escolheGeneroDeAcordoComPalavraInicialEmPer() throws Exception {
         assertThat(genero.per("secretaria-do-secretariado"), is("pela"));
         assertThat(genero.per("ministerio-do-ministeriado"), is("pelo"));

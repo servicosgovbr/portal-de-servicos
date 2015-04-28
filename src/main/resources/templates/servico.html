@@ -59,6 +59,14 @@
                    th:text="${servico.prestador.nome}">
                     Órgão prestador
                 </a></span>.
+
+                Em caso de dúvidas, reclamações ou sugestões favor
+                <th:block th:if="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
+                    contactá-<span th:text="${@genero.lo(servico.responsavel.id)}">lo(a)</span>.
+                </th:block>
+                <th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
+                    contactá-<span th:text="${@genero.los(servico.responsavel.id)}">los(as)</span>.
+                </th:block>
             </p>
 
             <div th:replace="fragments/canais-de-prestacao"></div>
