@@ -24,7 +24,7 @@
   @include media($tablet) {
       @include span-columns(12);
     }
-  
+
   header {
     margin-bottom: em(20);
 
@@ -74,7 +74,7 @@
       margin: 0;
       color: #606060;
     }
-    
+
   }
 
 }
@@ -216,7 +216,7 @@ h2.titulo-home {
 }
 
 
-.busca-principal { 
+.busca-principal {
   @include span-columns(12);
   @include omega();
   margin-bottom: em(30);
@@ -228,14 +228,9 @@ h2.titulo-home {
     margin-bottom: 0px;
   }
 
-  > p {
-    margin: 0;
-    color: #2c66ce;
-  }
-
   > form {
     > input[type='text'] {
-      @include span-columns(10);
+      @include span-columns(9 of 11);
       display: block;
       padding: 10px;
       border-radius: 4px;
@@ -248,17 +243,17 @@ h2.titulo-home {
       font-size: em(13);
 
       @include placeholder {
-        color: #606060;  
+        color: #606060;
       }
 
       &:focus {
         background-color: #fff;
-      } 
+      }
 
     }
 
     input[type='submit'] {
-      @include span-columns(2);
+      @include span-columns(2 of 11);
       @include omega();
       color: #fff;
       background-color: #2c66ce;
@@ -316,7 +311,7 @@ a.acao, button.acao, input[type="submit"].acao {
   text-decoration: none;
   margin: 10px 0px 30px 0px;
   display: inline-block;
-  color: #ffffff;  
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   font-family: open_sansbold;
@@ -350,7 +345,7 @@ ul#resultados-busca {
     padding-bottom: 20px;
     color: #606060;
     line-height: 140%;
-  }  
+  }
 }
 
 .paginacao-busca {
