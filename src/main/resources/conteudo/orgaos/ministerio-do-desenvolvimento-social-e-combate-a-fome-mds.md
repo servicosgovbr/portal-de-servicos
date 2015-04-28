@@ -29,7 +29,7 @@ Contato
 
 Página oficial: [www.mds.gov.br](http://www.mds.gov.br/)
 
-Ouvidoria: 0800 707 2003, ou através da [página do ouvidor](http://www.mds.gov.br/ouvidoria)
+Ouvidoria: através da [página do ouvidor](http://www.mds.gov.br/ouvidoria)
 
 E-mail: [bolsa.familia@mds.gov.br](mailto:bolsa.familia@mds.gov.br)
 
