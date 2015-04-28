@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout-branco">
 
 <head>
-    <title th:text="'Busca por ' + ${publicoAlvo.id}">Resultados da Busca</title>
+    <title th:text="${publicoAlvo.titulo}">Nome do Público-Alvo</title>
 </head>
 <body>
 
@@ -26,7 +27,9 @@
 
         <ul layout:fragment="conteudo" class="servicos-a-z">
             <li th:each="servico : ${servicos}">
-                <span th:replace="fragments/resultado-busca-servico"/>
+                <span th:replace="fragments/resultado-busca-servico">
+                    (bloco de resultado de busca)
+                </span>
             </li>
         </ul>
     </div>
