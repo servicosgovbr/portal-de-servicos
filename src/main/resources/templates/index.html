@@ -28,7 +28,7 @@
 
     <div class="auto-grid">
         <h2 class="titulo-home">Serviços em destaque</h2>
-        <ul th:if="${!destaques.isEmpty()}">
+        <ul id="destaques" th:if="${!destaques.isEmpty()}">
             <th:block th:each="item : ${destaques}">
                 <li class="auto-cell">
                     <div th:replace="fragments/destaque :: .tile(servico=${item})"></div>

@@ -89,6 +89,10 @@
 
   }
 
+  a {
+    color: #2c66ce;
+  }
+
 }
 
 dl.portlet {
@@ -227,6 +231,16 @@ h2.titulo-home {
   line-height: em(32);
 }
 
+#destaques {
+  a {
+    color: #606060;
+  }
+  
+  a:hover {
+    color: #2c66ce;
+  }
+}
+
 
 .busca-principal {
   @include span-columns(12);
@@ -323,7 +337,7 @@ a.acao, button.acao, input[type="submit"].acao {
   text-decoration: none;
   margin: 10px 0px 30px 0px;
   display: inline-block;
-  color: #ffffff;
+  color: #ffffff !important;
   border: none;
   border-radius: 4px;
   font-family: open_sansbold;
