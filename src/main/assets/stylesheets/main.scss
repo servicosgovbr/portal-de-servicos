@@ -220,6 +220,9 @@ h2.titulo-home {
   @include span-columns(12);
   @include omega();
   margin-bottom: em(30);
+  background-color: #edeff1;
+  padding: 5px 15px 15px 15px;
+  border-radius: 4px;
 
   h2 {
     margin-bottom: 0px;
@@ -231,10 +234,6 @@ h2.titulo-home {
   }
 
   > form {
-      background-color: #edeff1;
-      padding: 15px 15px 53px 15px;
-      border-radius: 4px;
-
     > input[type='text'] {
       @include span-columns(10);
       display: block;
@@ -247,7 +246,6 @@ h2.titulo-home {
       box-shadow: inset -2px -2px 5px -1px #e6e6e6;
       background-color: #ffffff;
       font-size: em(13);
-      font-style: italic;
 
       @include placeholder {
         color: #606060;  

@@ -1,4 +1,5 @@
-# Acessibilidade
+Acessibilidade
+====
 
 O Guia de Serviços segue o novo modelo de identidade digital padrão do governo federal, que atende às principais 
 recomendações de acessibilidade indicadas para web.
