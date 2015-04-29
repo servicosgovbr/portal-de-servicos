@@ -1,29 +1,32 @@
 Perguntas frequentes
 ====
 
-Qual o objetivo principal deste portal?
-----
-
-Para o cidadão: é um canal de comunicação centralizado e de simples navegação provendo de forma eficiente o acesso às
-informações acerca de serviços prestados pelo governo.
-
-Para as empresas: o portal também será um canal de comunicação unificador de serviços de governo para acesso de forma
-objetiva.
-
-Para os gestores públicos: é um meio disseminar informações sobre os serviços prestados pelos órgãos.
-
-Preciso me cadastrar no sistema para ter acesso às funcionalidades?
-----
-
-Não é necessário se cadastrar para encontrar as informações sobre os serviços do Governo.
-
-Eu tinha uma conta (login e senha). O que aconteceu com ela?
-----
-
-Está temporariamente indisponível, enquanto desenvolvemos o novo portal. Não será possível a realização de cadastro e o acesso à sua página personalizada. Os gestores responsáveis pelas informações dos serviços continuarão com acesso.
-
 Não consigo encontrar um serviço. O que faço?
 ----
 
-Tente utilizar menos termos na busca, ou termos alternativos. Também é possível que o serviço que você procura ainda não
-tenha sido cadastrado pelo órgão prestador.
+Tente utilizar menos termos na busca ou utilizar outras palavras. Também é possível que o serviço que você procura ainda não tenha sido cadastrado pelo órgão responsável.
+
+O que fazer caso tenha dúvidas sobre um serviço?
+----
+
+Recomendamos contactar o órgão responsável a partir das informações de contato disponíveis neste Guia.
+
+Quero fazer uma denúncia, reclamação ou sugestão. O que faço?
+----
+
+Contacte a ouvidoria do órgão responsável pelo serviço a partir das informações de contato disponíveis neste Guia.
+
+O Guia possui serviços estaduais ou municipais?
+----
+
+No momento são disponibilizados apenas serviços do Governo Federal.
+
+Encontrei o serviço mas não encontrei a informação que preciso. O que faço?
+----
+
+Recomendamos contactar o órgão responsável a partir das informações de contato disponíveis neste Guia.
+
+Qual a origem das informações sobre os serviços públicos que constam no Guia?
+----
+
+As informações são inseridas e atualizadas pelos próprios órgãos responsáveis.
