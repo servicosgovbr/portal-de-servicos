@@ -1,5 +1,5 @@
 Acessibilidade
-====
+---
 
 O Guia de Serviços segue o novo modelo de identidade digital padrão do governo federal, que atende às principais 
 recomendações de acessibilidade indicadas para web.
@@ -15,27 +15,28 @@ recomendações internacionais, mas estabelece padrões de comportamento acessí
 Na parte superior do Guia de Serviços existe uma barra de acessibilidade onde se encontra atalhos de navegação 
 padronizados e a opção para alterar o contraste. Essas ferramentas estão disponíveis em todas as páginas do Guia.
 
-## Os padrões de atalhos do governo federal são:
+### Os padrões de atalhos do governo federal são:
 
-Teclando-se `Alt + 1` em qualquer página do portal, chega-se diretamente ao começo do conteúdo principal da página.
+Conteúdo principal: Teclando-se `Alt + 1` em qualquer página do portal, chega-se diretamente ao começo do conteúdo principal da página.
 
-Teclando-se `Alt + 2` em qualquer página do portal, chega-se diretamente ao início do menu principal.
+Menu: Teclando-se `Alt + 2` em qualquer página do portal, chega-se diretamente ao início do menu principal.
 
-Teclando-se `Alt + 3` em qualquer página do portal, chega-se diretamente em sua busca interna.
+Busca: Teclando-se `Alt + 3` em qualquer página do portal, chega-se diretamente em sua busca interna.
 
-No caso do Firefox, em vez de `Alt + número`, tecle simultaneamente `Alt + Shift + número`.
+Rodapé: Teclando-se `Alt + 4` em qualquer página do portal, chega-se diretamente no rodapé da página.
 
-Sendo Firefox no Mac OS, em vez de `Alt + Shift + número`, tecle simultaneamente `Ctrl + Alt + número`.
+### Os padrões de atalhos em diferentes navegadores:
+No Firefox, em vez de `Alt + Número`, tecle simultaneamente `Alt + Shift + Número`.
 
-No Safari no Mac OS, tecle simultaneamente `Control + Option + número`.
+Sendo Firefox no Mac OS, em vez de `Alt + Shift + Número`, tecle simultaneamente `Ctrl + Alt + Número`.
 
-No Opera, as teclas são `Shift + Escape + número`. Ao teclar apenas `Shift + Escape`, o usuário encontrará uma janela 
-com todas as alternativas de `ACCESSKEY` da página.
+No Safari, tecle simultaneamente `Control + Option + Número`.
 
-Ao final desse texto, você poderá baixar alguns arquivos que explicam melhor o termo acessibilidade e como deve ser 
-implementado nos sites da Internet.
+No Opera, as teclas são `Shift + Escape + Número`. Ao teclar apenas `Shift + Escape`, o usuário encontrará uma janela 
+com todas as alternativas de `Accesskey` da página.
 
-## Leis e decretos sobre acessibilidade:
+### Leis e decretos sobre acessibilidade:
+Aqui você poderá baixar alguns arquivos que explicam melhor o termo acessibilidade e como deve ser implementado nos sites da Internet.
 
 * [Decreto nº 5.296 de 02 de dezembro de 2004](http://www.planalto.gov.br/ccivil_03/_Ato2004-2006/2004/Decreto/D5296.htm)
 * [Decreto nº 6.949, de 25 de agosto de 2009] (http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d6949.htm) - Promulga a Convenção Internacional sobre os Direitos das Pessoas com Deficiência e seu Protocolo Facultativo, assinados em Nova York, em 30 de março de 2007.

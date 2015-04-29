@@ -62,16 +62,20 @@ h1 {
 
 
 h2 {
+  border-bottom: none;
   color: #606060;
-  margin: 0 0 .5em 0;
+  margin: .5em 0 .5em;
+  font-family: 'open_sansregular', $helvetica;
+  color: #606060;
+  font-size: em(35);
 }
 
 
 h3 {
   font-family: 'open_sanssemibold', $helvetica;
   color: #606060;
-  line-height: em(20);
-  font-size: em(25);
+  font-size: em(17);
+  line-height: em(23);
   margin-bottom: em(10); 
   margin-top: em(20);
 }

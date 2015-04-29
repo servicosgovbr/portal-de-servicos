@@ -157,9 +157,9 @@ dl.portlet {
   }
 
   h3 {
-    margin: 0;
+    margin-bottom: 5px;
     font-family: 'open_sansbold', $helvetica;
-    line-height: 1.2em;
+    line-height: 1.3em;
   }
 
   .tile-subtitle {
@@ -247,7 +247,7 @@ h2.titulo-home {
   @include omega();
   margin-bottom: em(30);
   background-color: #edeff1;
-  padding: 5px 15px 15px 15px;
+  padding: 0px 15px 15px 15px;
   border-radius: 4px;
 
   h2 {
@@ -302,20 +302,31 @@ span.ticket-erro {
 .markdown {
   margin-bottom: 2em;
 
-  h1, h2 {
-    margin-bottom: .5em;
+  h2 {
+  border-bottom: none;
+  color: #606060;
+  margin: 0 0 .5em;
+  font-family: 'open_sansbold', $helvetica;
+  color: #606060;
+  font-size: em(35);
   }
 
   ul li {
     display: list-item;
-    list-style-type: circle;
+    list-style-type: disc;
+    color: #606060;
     list-style-position: inside;
     line-height: 1.5em;
     margin-bottom: 10px;
+    font-size: em(15);
 
     a {
-      text-decoration: underline;
-      color: blue !important;
+      color: #2c66ce !important;
+      font-size: em(15);
+    }
+
+    a:active, a:link, a:visited {
+      color: #2c66ce !important;
     }
   }
 }
