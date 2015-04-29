@@ -31,9 +31,9 @@ class FeedbackController {
 
     @RequestMapping(value = "/feedback", method = GET)
     ModelAndView formularioPara(
-            @RequestParam String url,
-            @RequestParam String ticket,
-            @RequestParam String busca) {
+            @RequestParam(required = false) String url,
+            @RequestParam(required = false) String ticket,
+            @RequestParam(required = false) String busca) {
 
         Map<String, Object> model = new HashMap<>();
         model.put("url", url);
@@ -45,11 +45,11 @@ class FeedbackController {
 
     @RequestMapping(value = "/feedback", method = POST)
     RedirectView feedback(
-            @RequestParam String url,
-            @RequestParam String busca,
-            @RequestParam String ticket,
-            @RequestParam String feedback,
-            @RequestParam Boolean conteudoEncontrado) {
+            @RequestParam(required = false) String url,
+            @RequestParam(required = false) String busca,
+            @RequestParam(required = false) String ticket,
+            @RequestParam(required = false) String feedback,
+            @RequestParam(required = false) Boolean conteudoEncontrado) {
 
         Feedback f = new Feedback()
                 .withUrl(url)
@@ -59,8 +59,7 @@ class FeedbackController {
                 .withConteudoEncontrado(conteudoEncontrado)
                 .withFeedback(feedback);
 
-        feedbacks.save(f);
-        mail.enviar(f);
+        mail.enviar(feedbacks.save(f));
 
         return new RedirectView("/conteudo/obrigado-pela-contribuicao");
     }
