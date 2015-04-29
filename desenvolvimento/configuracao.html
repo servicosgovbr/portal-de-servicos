@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Como relatar problemas | Guia de Serviços</title>
+        <title>Configuração | Guia de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../sobre-o-projeto/licenca.html" />
+    <link rel="next" href="../desenvolvimento/testes.html" />
     
     
-    <link rel="prev" href="../sobre-o-projeto/como-contribuir.html" />
+    <link rel="prev" href="../desenvolvimento/deploy-homologacao-producao.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="3.4" data-basepath=".." data-revision="Wed Apr 29 2015 04:37:04 GMT+0000 (UTC)">
+    <div class="book" data-level="8.6" data-basepath=".." data-revision="Wed Apr 29 2015 04:37:04 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -193,7 +193,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.4" data-path="sobre-o-projeto/como-relatar-problemas.html">
+        <li class="chapter " data-level="3.4" data-path="sobre-o-projeto/como-relatar-problemas.html">
             
                 
                     <a href="../sobre-o-projeto/como-relatar-problemas.html">
@@ -847,7 +847,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8.6" data-path="desenvolvimento/configuracao.html">
+        <li class="chapter active" data-level="8.6" data-path="desenvolvimento/configuracao.html">
             
                 
                     <a href="../desenvolvimento/configuracao.html">
@@ -1280,24 +1280,82 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="como-relatar-problemas">Como relatar problemas</h1>
-<p>Durante o desenvolvimento do projeto, muitas coisas estar&#xE3;o em transi&#xE7;&#xE3;o e procuramos aprender o m&#xE1;ximo poss&#xED;vel com todos os erros e acertos ao longo do caminho. Caso algum problema tenha persistido em aparecer, a melhor maneira de v&#xEA;-lo solucionado &#xE9; relatando-o.</p>
-<p>A equipe do Guia de Servi&#xE7;os usa o <a href="https://github.com/servicosgovbr/guia-de-servicos/issues" target="_blank">GitHub Issues</a> para acompanhar quest&#xF5;es, bugs e contribui&#xE7;&#xF5;es de novo c&#xF3;digo pela comunidade.</p>
-<p>Se voc&#xEA; encontrou um problema no Guia de Servi&#xE7;os, ou tem uma sugest&#xE3;o a fazer, este &#xE9; o lugar ideal para come&#xE7;ar.</p>
-<h2 id="criando-um-relat%C3%B3rio-de-erro">Criando um relat&#xF3;rio de erro</h2>
-<p>&#xC9; prov&#xE1;vel que seu problema j&#xE1; tenha sido relatado por outro membro da equipe ou contribuidor. Para evitar trabalho desnecess&#xE1;rio, fa&#xE7;a uma r&#xE1;pida busca no <a href="https://github.com/servicosgovbr/guia-de-servicos/issues" target="_blank">GitHub Issues</a> e veja se o problema j&#xE1; foi reportado antes de come&#xE7;ar.</p>
-<p>Caso contr&#xE1;rio, seu pr&#xF3;ximo passo ser&#xE1; <a href="https://github.com/servicosgovbr/guia-de-servicos/issues/new" target="_blank">abrir umo novo relat&#xF3;rio</a>. O ideal &#xE9; que ele contenha um t&#xED;tulo e uma descri&#xE7;&#xE3;o clara do problema, bem como toda e qualquer informa&#xE7;&#xE3;o que possa ajudar a corrigi-lo:</p>
-<ul>
-<li>Vers&#xE3;o do sistema operacional</li>
-<li>Vers&#xE3;o do navegador utilizado</li>
-<li>Ambiente utilizado (desenvolvimento, homologa&#xE7;&#xE3;o, produ&#xE7;&#xE3;o)</li>
-<li>Link da p&#xE1;gina que estava acessando</li>
-<li><em>Ticket</em> da p&#xE1;gina de erro, se houver</li>
-<li>Quaisquer <em>stack traces</em> gerados</li>
-<li>Arquivos de log relevantes</li>
-<li>Mensagens de erro no console JavaScript</li>
-</ul>
-<p>Inclua o m&#xE1;ximo poss&#xED;vel de informa&#xE7;&#xF5;es relevantes. Se poss&#xED;vel, anexe a captura de tela que demonstra o erro.</p>
+                        <h1 id="configura%C3%A7%C3%A3o">Configura&#xE7;&#xE3;o</h1>
+<p>O Guia de Servi&#xE7;os utiliza o <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config" target="_blank">sistema de configura&#xE7;&#xF5;es padr&#xE3;o</a> do <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a>, de forma simplificada. Utilizamos apenas dois dos mecanismos disponibilizados pela plataforma: vari&#xE1;veis de ambiente externas ao pacote JAR, e arquivos <a href="http://yaml.org/" target="_blank">YAML</a> com todos os defaults necess&#xE1;rios para cada perfil de utiliza&#xE7;&#xE3;o, j&#xE1; embutidos no JAR.</p>
+<h2 id="arquivos-yaml">Arquivos YAML</h2>
+<h3 id="-application-yaml"><code>application.yaml</code></h3>
+<p>O arquivo <code>application.yaml</code> est&#xE1; localizado no c&#xF3;digo-fonte em <code>src/main/resources</code>. Durante a compila&#xE7;&#xE3;o do pacote JAR, ele &#xE9; embutido e fica na raiz do <em>classpath</em> (ou seja, <code>classpath:application.yaml</code>).</p>
+<p>Nele est&#xE3;o contidas op&#xE7;&#xF5;es <em>default</em> para configura&#xE7;&#xF5;es das seguintes categorias:</p>
+<h4 id="-spring"><code>spring</code></h4>
+<p>Configura&#xE7;&#xF5;es gerais disponibilizadas (e documentadas) pelo ambiente do <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a> e algumas de suas bibliotecas.</p>
+<h4 id="-endpoints"><code>endpoints</code></h4>
+<p>Configura&#xE7;&#xF5;es das URLs de monitoramento e depura&#xE7;&#xE3;o que o <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a> disponibiliza, mas que podem oferecer riscos de seguran&#xE7;a.</p>
+<h4 id="-server"><code>server</code></h4>
+<p>Configura&#xE7;&#xF5;es do servidor web [Tomcat] embutido na aplica&#xE7;&#xE3;o. No caso do Guia de Servi&#xE7;os, configuramos apenas a porta padr&#xE3;o em que o servidor aguarda por conex&#xF5;es, <code>8080</code>. </p>
+<h4 id="-mail"><code>mail</code></h4>
+<p>Configura&#xE7;&#xF5;es de envio de email. Algumas funcionalidades do Guia de Servi&#xE7;os enviam emails de notifica&#xE7;&#xE3;o aos administradores do sistema, e para isto &#xE9; necess&#xE1;rio configurar alguns dos par&#xE2;metros da biblioteca <a href="http://www.oracle.com/technetwork/java/javamail/index.html" target="_blank">JavaMail</a>.</p>
+<h4 id="-gds"><code>gds</code></h4>
+<p>Configura&#xE7;&#xF5;es espec&#xED;ficas ao Guia de Servi&#xE7;os. Nesta se&#xE7;&#xE3;o ficam todas as configura&#xE7;&#xF5;es que afetam o comportamento espec&#xED;fico do c&#xF3;digo do Guia de Servi&#xE7;os, bem como algumas tabelas <em>de-para</em>. </p>
+<h3 id="-application-production-yaml"><code>application-production.yaml</code></h3>
+<p>&#xC9; poss&#xED;vel definir arquivos <a href="http://yaml.org/" target="_blank">YAML</a> espec&#xED;ficos para perfis de execu&#xE7;&#xE3;o no <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a>.</p>
+<p>No caso do Guia de Servi&#xE7;os, o arquivo <code>src/main/resources/application-production.yaml</code>, carregado ap&#xF3;s o <code>src/main/resources/application.yaml</code>, sobrescreve as seguintes configura&#xE7;&#xF5;es:</p>
+<h4 id="-spring-thymeleaf-cache"><code>spring.thymeleaf.cache</code></h4>
+<p>Habilita o cache do sistema de renderiza&#xE7;&#xE3;o de templates <a href="http://www.thymeleaf.org" target="_blank">Thymeleaf</a> </p>
+<h4 id="-spring-data-elasticsearch-clusternodes"><code>spring.data.elasticsearch.clusterNodes</code></h4>
+<p>Utiliza o valor <code>10.16.0.11:9300,10.16.0.9:9300</code>, apontando o cluster do <a href="elasticsearch.html">ElasticSearch</a> para as m&#xE1;quinas definidas na rede <a href="deploy-vagrant.html">Vagrant</a> e no ambiente de desenvolvimento, onde <code>es1</code> &#xE9; <code>10.16.0.11</code>, e <code>es2</code> &#xE9; <code>10.16.0.9</code>.</p>
+<h4 id="-endpoints-enabled"><code>endpoints.enabled</code></h4>
+<p>Desabilita as URLs de monitoramento e depura&#xE7;&#xE3;o que o <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a> disponibiliza, mas que podem oferecer riscos de seguran&#xE7;a.</p>
+<h4 id="-endpoints-info-enabled"><code>endpoints.info.enabled</code></h4>
+<p>Habilita a URL de monitoramento <code>/info</code>, &#xFA;til para verificar a vers&#xE3;o do corrente do sistema.</p>
+<h4 id="-endpoints-health-enabled"><code>endpoints.health.enabled</code></h4>
+<p>Habilita a URL de monitoramento <code>/health</code>, que faz uma breve verifica&#xE7;&#xE3;o do estado de sa&#xFA;de do sistema.</p>
+<h4 id="-endpoints-health-sensitive"><code>endpoints.health.sensitive</code></h4>
+<p>Exp&#xF5;e apenas o estado geral (<code>UP</code>, <code>DOWN</code>, etc) do sistema, ao inv&#xE9;s de detalhes que podem conter informa&#xE7;&#xF5;es sens&#xED;veis, como detalhes de quanto espa&#xE7;o em disco est&#xE1; dispon&#xED;vel, ou IPs da rede interna, por exemplo.</p>
+<h2 id="arquivo-de-vari%C3%A1veis-de-ambiente-do-systemd">Arquivo de vari&#xE1;veis de ambiente do <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a></h2>
+<p>A distribui&#xE7;&#xE3;o Linux CentOS 7 utiliza a ferramenta <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> para controle das opera&#xE7;&#xF5;es do sistema operacional, e permite uma diretiva em sua configura&#xE7;&#xE3;o, <a href="http://www.freedesktop.org/software/systemd/man/systemd.exec.html" target="_blank"><code>EnvironmentFile</code></a>, que utilizamos para dizer ao <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> de onde devem ser carregadas as vari&#xE1;veis de ambiente para um determinado sistema em execu&#xE7;&#xE3;o.</p>
+<p>No caso do Guia de Servi&#xE7;os, tanto em ambientes <a href="deploy-vagrant.html">Vagrant</a> quanto em <a href="deploy-homologacao-producao.html">homologa&#xE7;&#xE3;o e produ&#xE7;&#xE3;o</a>, este arquivo est&#xE1; instalado em <code>/etc/sysconfig/guia-de-servicos</code>, e deve ser revisado de acordo com o ambiente de cada instala&#xE7;&#xE3;o.</p>
+<p>A seguir est&#xE1; uma lista de todas as configura&#xE7;&#xF5;es utilizadas, seus poss&#xED;veis valores e poss&#xED;veis modifica&#xE7;&#xF5;es necess&#xE1;rias:</p>
+<h4 id="-spring-profiles-active"><code>SPRING_PROFILES_ACTIVE</code></h4>
+<p>Lista os perfis ativos do <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a>, separados por v&#xED;rgula. Por exemplo:</p>
+<pre><code class="lang-bash">SPRING_PROFILES_ACTIVE=production,clustering
+</code></pre>
+<p>Os valores podem ser uma combina&#xE7;&#xE3;o dos seguintes:</p>
+<h5 id="-production"><code>production</code></h5>
+<p>Habilita op&#xE7;&#xF5;es relacionadas &#xE0; execu&#xE7;&#xE3;o do Guia de Servi&#xE7;os em ambientes de produ&#xE7;&#xE3;o, descritas na se&#xE7;&#xE3;o <code>application-production.yaml</code> acima.</p>
+<h5 id="-clustering"><code>clustering</code></h5>
+<p>Habilita op&#xE7;&#xF5;es relacionadas &#xE0; execu&#xE7;&#xE3;o do Guia de Servi&#xE7;os utilizando um cluster de m&#xE1;quinas do <a href="elasticsearch.html">ElasticSearch</a>, ao inv&#xE9;s de inicializar um nodo embutido em mem&#xF3;ria local, &#xFA;til durante o desenvolvimento do sistema.</p>
+<h5 id="-monitoring"><code>monitoring</code></h5>
+<p>Habilita o envio de informa&#xE7;&#xF5;es de uso da aplica&#xE7;&#xE3;o ao sistema de monitoramento e m&#xE9;tricas <a href="http://www.piwik.org" target="_blank">Piwik</a>.</p>
+<h4 id="-spring-data-elasticsearch-clusternodes"><code>SPRING_DATA_ELASTICSEARCH_CLUSTERNODES</code></h4>
+<p>Sobrescreve o valor da propriedade <code>spring.data.elasticsearch.clusterNodes</code> do arquivo <code>application.yaml</code>, e deve conter uma lista dos IPs e portas dos nodos do <a href="elasticsearch.html">ElasticSearch</a> do ambiente corrente, separados por v&#xED;rgula. Por exemplo:</p>
+<pre><code class="lang-bash">SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=<span class="hljs-string">&quot;10.10.10.10:9300,10.10.10.11:9300,10.10.10.12:9300&quot;</span>
+</code></pre>
+<h4 id="-mail-protocol"><code>MAIL_PROTOCOL</code></h4>
+<p>O protocolo utilizado para envio de emails. Por default, <code>smtp</code>.</p>
+<h4 id="-mail-host"><code>MAIL_HOST</code></h4>
+<p>O servidor de emails utilizado para envio. Por default, <code>localhost</code>.</p>
+<h4 id="-mail-port"><code>MAIL_PORT</code></h4>
+<p>A porta em que o Guia de Servi&#xE7;os deve se conectar ao servidor de emails. Por default, <code>2500</code>.</p>
+<h4 id="-mail-timeout"><code>MAIL_TIMEOUT</code></h4>
+<p>O <em>timeout</em> para estabelecimento de conex&#xF5;es e espera por atividade em uma conex&#xE3;o estabelecida, em milisegundos. Por default, <code>5000</code>.</p>
+<h4 id="-mail-smtp-auth"><code>MAIL_SMTP_AUTH</code></h4>
+<p>Caso o servidor de envio de emails exija autentica&#xE7;&#xE3;o, este valor deve ser <code>true</code>. Por default, <code>false</code>.</p>
+<h4 id="-mail-smtp-starttls"><code>MAIL_SMTP_STARTTLS</code></h4>
+<p>Caso o servidor de envio de emails suporte, ou mesmo exija, a extens&#xE3;o de criptografia <a href="http://en.wikipedia.org/wiki/STARTTLS" target="_blank">STARTTLS</a>, este valor deve ser <code>true</code>. Por default, <code>false</code>. </p>
+<h4 id="-mail-from"><code>MAIL_FROM</code></h4>
+<p>O endere&#xE7;o de email que originar&#xE1; as mensagens vindas do Guia de Servi&#xE7;os. Por default, <code>nao-responda@servicos.gov.br</code>.</p>
+<h4 id="-mail-to"><code>MAIL_TO</code></h4>
+<p>O endere&#xE7;o de email para qual as mensagens de notifica&#xE7;&#xE3;o da opera&#xE7;&#xE3;o do Guia de Servi&#xE7;os ser&#xE3;o enviados. Por default, <code>servicos@planejamento.gov.br</code>.</p>
+<h4 id="-mail-username"><code>MAIL_USERNAME</code></h4>
+<p>Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, o nome do usu&#xE1;rio da conta a ser utilizada. Por default, vazio.</p>
+<h4 id="-mail-password"><code>MAIL_PASSWORD</code></h4>
+<p>Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, a senha da conta a ser utilizada. Por default, vazio.</p>
+<h4 id="-gds-piwik-url"><code>GDS_PIWIK_URL</code></h4>
+<p>A URL do servidor <a href="http://www.piwik.org" target="_blank">Piwik</a> que ser&#xE1; utilizada para monitoramento e m&#xE9;tricas, caso o perfil <code>monitoring</code> (descrito acima) esteja presente. Por default, <code>https://estatisticas.presidencia.gov.br/</code>.</p>
+<h4 id="-gds-piwik-token"><code>GDS_PIWIK_TOKEN</code></h4>
+<p>O token para acesso &#xE0; API de m&#xE9;tricas do <a href="http://www.piwik.org" target="_blank">Piwik</a>. Geralmente, 32 caracteres hexadecimais. Por default, vazio.</p>
+<h4 id="-gds-piwik-site"><code>GDS_PIWIK_SITE</code></h4>
+<p>O identificador do site dentro do <a href="http://www.piwik.org" target="_blank">Piwik</a>. Por default, <code>2</code>.</p>
 
                     
                     </section>
@@ -1308,10 +1366,10 @@
         </div>
 
         
-        <a href="../sobre-o-projeto/como-contribuir.html" class="navigation navigation-prev " aria-label="Previous page: Como contribuir"><i class="fa fa-angle-left"></i></a>
+        <a href="../desenvolvimento/deploy-homologacao-producao.html" class="navigation navigation-prev " aria-label="Previous page: Homologação e Produção"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../sobre-o-projeto/licenca.html" class="navigation navigation-next " aria-label="Next page: Licença de uso"><i class="fa fa-angle-right"></i></a>
+        <a href="../desenvolvimento/testes.html" class="navigation navigation-next " aria-label="Next page: Testes"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
