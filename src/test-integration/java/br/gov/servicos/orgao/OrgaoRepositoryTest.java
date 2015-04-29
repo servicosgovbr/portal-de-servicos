@@ -4,12 +4,12 @@ import br.gov.servicos.ElasticSearchTest;
 import br.gov.servicos.Main;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.ServicoRepository;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.List;
 
@@ -17,6 +17,7 @@ import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
+@WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
 public class OrgaoRepositoryTest extends ElasticSearchTest {
