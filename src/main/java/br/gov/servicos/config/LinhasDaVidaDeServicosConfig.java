@@ -43,7 +43,8 @@ public class LinhasDaVidaDeServicosConfig {
     }
 
     private Map<String, List<LinhaDaVida>> unmarshallLinhasDaVida() throws IOException {
-        try (CSVParser parser = CSVFormat.DEFAULT.withHeader().parse(new InputStreamReader(new ClassPathResource(CSV_LINHAS_DA_VIDA).getInputStream()))) {
+        try (CSVParser parser = CSVFormat.DEFAULT.withHeader()
+                .parse(new InputStreamReader(new ClassPathResource(CSV_LINHAS_DA_VIDA).getInputStream(), "utf-8"))) {
             return parser.getRecords().stream()
                     .collect(toMap(r -> slugify.slugify(r.get("servico")), r -> linhasDaVidaDoCsvRecord(r)));
         }
