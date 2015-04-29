@@ -44,9 +44,11 @@
       font-family: 'open_sansbold', $helvetica;
       font-size: em(35);
       padding-right: 3.464em;
+      line-height: 1.2em;
+      font-weight: bold;
 
-      @include media($mobile) {
-        line-height: 85%;
+      @include media($mobile, $tablet) {
+        line-height: 1.2em;
       }
     }
   }
@@ -59,6 +61,11 @@
     margin-top: 0;
   }
 
+  h3.titulo-home {
+  font-family: 'open_sansbold', $helvetica;
+  font-size: em(25);
+  line-height: 1.2em;
+  }
 
   p {
     font-size: em(15);
@@ -225,12 +232,6 @@ dl.portlet {
 }
 
 
-h2.titulo-home {
-  font-family: open_sansbold;
-  font-size: em(25);
-  line-height: em(32);
-}
-
 #destaques {
   a {
     color: #606060;
@@ -247,12 +248,8 @@ h2.titulo-home {
   @include omega();
   margin-bottom: em(30);
   background-color: #edeff1;
-  padding: 0px 15px 15px 15px;
+  padding: 10px 15px 15px 15px;
   border-radius: 4px;
-
-  h2 {
-    margin-bottom: 0px;
-  }
 
   > form {
     > input[type='text'] {
@@ -275,7 +272,6 @@ h2.titulo-home {
       &:focus {
         background-color: #fff;
       }
-
     }
 
     input[type='submit'] {
@@ -309,6 +305,7 @@ span.ticket-erro {
   font-family: 'open_sansbold', $helvetica;
   color: #606060;
   font-size: em(35);
+  line-height: 1.2em;
   }
 
   ul li {

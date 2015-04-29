@@ -60,11 +60,16 @@ h1 {
   color: #606060;
 }
 
+#portal-title {
+  line-height: 110%;
+}
+
+
 
 h2 {
   border-bottom: none;
   color: #606060;
-  margin: .5em 0 .5em;
+  margin: 0 0 .5em;
   font-family: 'open_sansregular', $helvetica;
   color: #606060;
   font-size: em(35);
@@ -72,12 +77,11 @@ h2 {
 
 
 h3 {
-  font-family: 'open_sanssemibold', $helvetica;
+  font-family: 'open_sansbold', $helvetica;
   color: #606060;
   font-size: em(17);
   line-height: em(23);
-  margin-bottom: em(10); 
-  margin-top: em(20);
+  margin-bottom: em(10);
 }
 
 
@@ -88,7 +92,6 @@ h4 {
   line-height: 120%;
   margin-top: 0;
 }
-
 
 
 input {
