@@ -11,6 +11,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.util.HashMap;
 import java.util.Map;
 
+import static br.gov.servicos.fixtures.TestData.FEEDBACK;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -29,11 +30,14 @@ public class FeedbackControllerTest {
     @Mock
     FeedbackRepository feedbacks;
 
+    @Mock
+    EmailDeFeedback email;
+
     FeedbackController controller;
 
     @Before
     public void setup() {
-        controller = new FeedbackController(feedbacks);
+        controller = new FeedbackController(feedbacks, email);
     }
 
     @Test
@@ -61,12 +65,14 @@ public class FeedbackControllerTest {
     public void deveSalvarOFeedbackDoUsuario() {
         controller.feedback("localhost", "query", TICKET, "Otimo site", ACHEI_O_QUE_PROCURAVA);
 
-        verify(feedbacks).save(new Feedback()
-                .withUrl("localhost")
-                .withQueryString("query")
-                .withTimestamp(anyLong())
-                .withConteudoEncontrado(true)
-                .withFeedback("Otimo site"));
+        verify(feedbacks).save(FEEDBACK.withTimestamp(anyLong()));
+    }
+
+    @Test
+    public void deveEnviarFeedbackPorEmail() {
+        controller.feedback("localhost", "query", TICKET, "Otimo site", ACHEI_O_QUE_PROCURAVA);
+
+        verify(email).enviar(FEEDBACK.withTimestamp(anyLong()));
     }
 
 }

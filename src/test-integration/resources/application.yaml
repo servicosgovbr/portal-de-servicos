@@ -9,6 +9,19 @@ spring:
 server:
   port: ${port:8080}
 
+mail:
+  protocol: smtp
+  host: localhost
+  port: 2500
+  timeout: 5000
+  smtp:
+    auth: false
+    starttls: false
+  from: nao-responda@servicos.gov.br
+  to: servicos@planejamento.gov.br
+  username: user
+  password: pass
+
 gds:
   piwik:
     url: "https://estatisticas.presidencia.gov.br"

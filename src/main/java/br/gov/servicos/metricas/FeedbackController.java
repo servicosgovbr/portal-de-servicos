@@ -21,10 +21,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 class FeedbackController {
 
     FeedbackRepository feedbacks;
+    EmailDeFeedback mail;
 
     @Autowired
-    FeedbackController(FeedbackRepository feedbacks) {
+    FeedbackController(FeedbackRepository feedbacks, EmailDeFeedback mail) {
         this.feedbacks = feedbacks;
+        this.mail = mail;
     }
 
     @RequestMapping(value = "/feedback", method = GET)
@@ -49,13 +51,16 @@ class FeedbackController {
             @RequestParam String feedback,
             @RequestParam Boolean conteudoEncontrado) {
 
-        feedbacks.save(new Feedback()
+        Feedback f = new Feedback()
                 .withUrl(url)
                 .withQueryString(busca)
                 .withTimestamp(currentTimeMillis())
                 .withTicket(ticket)
                 .withConteudoEncontrado(conteudoEncontrado)
-                .withFeedback(feedback));
+                .withFeedback(feedback);
+
+        feedbacks.save(f);
+        mail.enviar(f);
 
         return new RedirectView("/conteudo/obrigado-pela-contribuicao");
     }
