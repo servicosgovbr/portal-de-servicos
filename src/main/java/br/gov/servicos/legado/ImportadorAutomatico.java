@@ -12,10 +12,10 @@ import javax.annotation.PostConstruct;
 import static br.gov.servicos.Profiles.PRODUCTION;
 import static lombok.AccessLevel.PRIVATE;
 
+@Slf4j
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 @Profile(PRODUCTION)
-@Slf4j
 class ImportadorAutomatico {
 
     Importador importador;
@@ -30,6 +30,7 @@ class ImportadorAutomatico {
     void appCarregada() {
         log.info("Importando serviços legados para o ElasticSearch");
         importador.importar();
+        log.info("Serviços importados com sucesso");
     }
 
 }

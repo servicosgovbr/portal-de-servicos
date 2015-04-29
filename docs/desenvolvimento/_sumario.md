@@ -8,6 +8,7 @@
     - [Vagrant](/desenvolvimento/deploy-vagrant.md)
     - [Amazon Web Services](/desenvolvimento/deploy-aws.md)
     - [Homologação e Produção](/desenvolvimento/deploy-homologacao-producao.md)
+  - [Configuração](/desenvolvimento/configuracao.md)
   - [Testes](/desenvolvimento/testes.md)
   - [Entrega Contínua](/desenvolvimento/entrega-continua.md)
     - [Repositório Yum](/desenvolvimento/repositorio-yum.md)

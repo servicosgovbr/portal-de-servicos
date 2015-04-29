@@ -39,10 +39,9 @@ cp %SOURCE0 %{buildroot}/%{prefix}/lib/%{name}.jar
 mkdir -p %{buildroot}/etc/sysconfig
 cat <<-EOF > %{buildroot}/etc/sysconfig/%{name}
 # Variáveis de ambiente para configuração do %{summary}
-
-# Ativa o perfil "production" na configuração do Spring
-SPRING_PROFILES_ACTIVE=production
-
+#
+# Este arquivo é sobrescrito pelo script de instalação (scripts/app-node-install).
+#
 EOF
 
 mkdir -p %{buildroot}/etc/systemd/system

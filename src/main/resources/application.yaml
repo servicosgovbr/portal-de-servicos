@@ -22,8 +22,8 @@ mail:
     starttls: false
   from: nao-responda@servicos.gov.br
   to: servicos@planejamento.gov.br
-  username: user
-  password: pass
+  username:
+  password:
 
 gds:
   piwik:
