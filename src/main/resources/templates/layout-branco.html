@@ -16,7 +16,7 @@
     <meta property="og:image" th:content="${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1/img/ogp-logo.jpg')}"/>
 </head>
 
-<body th:class="${@cookies.isOn('contraste')} ? 'contraste'">
+<body>
 
 <article id="wrapper">
     <div th:replace="fragments/header :: #header"></div>
