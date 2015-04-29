@@ -36,7 +36,10 @@ class EmailDeFeedback {
     public void enviar(Feedback feedback) {
         try {
             MimeMessage message = prepararMensagem(feedback);
+            log.debug("Email para {} preparado com sucesso", to);
+
             mail.send(message);
+            log.info("Email para {} enviado com sucesso", to);
 
         } catch (MessagingException e) {
             log.error("Erro ao preparar o email de feedback", e);
