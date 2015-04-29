@@ -29,10 +29,9 @@ $tablet: new-breakpoint(min-width 461px max-width 710px);
       padding: 5px;
       margin-top: -14px;
 
-      // h1 {
-      //   line-height: 95%;
-      //   font-size: em(40);
-      // }
+      h1 {
+        font-size: em(39);
+      }
 
       span {
         position: relative;
