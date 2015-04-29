@@ -2,6 +2,7 @@ package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
 import br.gov.servicos.config.GuiaDeServicosIndex;
+import br.gov.servicos.config.LinhasDaVidaDeServicosConfig;
 import br.gov.servicos.servico.AreaDeInteresse;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.Servico;
@@ -17,6 +18,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.BeanFactory;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 
 import static java.util.Arrays.asList;
@@ -45,6 +47,9 @@ public class ImportadorTest {
     @Mock
     BeanFactory beanFactory;
 
+    @Mock
+    LinhasDaVidaDeServicosConfig linhasDaVidaDeServicosConfig;
+
     Importador importador;
     Slugify slugify;
 
@@ -60,15 +65,15 @@ public class ImportadorTest {
                 .when(servicos)
                 .save(anyCollectionOf(Servico.class));
 
-        doReturn(new LinhaDaVida().withId("administrar-um-negocio").withTitulo("Administrar um negócio"))
-                .when(config)
-                .linhaDaVida(anyString());
+        doReturn(Arrays.asList(new LinhaDaVida().withId("veio-do-csv").withTitulo("Veio do CSV")))
+                .when(linhasDaVidaDeServicosConfig)
+                .linhasDaVida(anyString());
 
         doReturn(new Orgao().withId("ministerio-da-previdencia-social-mps").withNome("Ministério da Previdência Social (MPS)"))
                 .when(config)
                 .orgao(anyString());
 
-        importador = new Importador(esConfig, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config));
+        importador = new Importador(esConfig, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config, linhasDaVidaDeServicosConfig));
     }
 
     @Test
@@ -156,11 +161,12 @@ public class ImportadorTest {
     }
 
     @Test
-    public void deveImportarLinhasDaVidaDoServicoLegado() throws Exception {
+    public void deveObterLinhasDaVidaParaServicoDoCsv() throws Exception {
         assertThat(importaServico().getLinhasDaVida(),
                 equalTo(asList(new LinhaDaVida()
-                        .withId("administrar-um-negocio")
-                        .withTitulo("Administrar um negócio"))));
+                        .withId("veio-do-csv")
+                        .withTitulo("Veio do CSV"))));
+        verify(linhasDaVidaDeServicosConfig).linhasDaVida(anyString());
     }
 
     @Test

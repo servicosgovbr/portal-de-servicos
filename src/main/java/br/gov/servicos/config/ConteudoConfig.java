@@ -57,4 +57,5 @@ public class ConteudoConfig {
                 .withId(slugify.slugify(nome))
                 .withNome(nome);
     }
+
 }

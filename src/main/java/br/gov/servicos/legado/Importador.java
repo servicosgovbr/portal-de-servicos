@@ -70,5 +70,4 @@ public class Importador {
         JAXBContext contexto = JAXBContext.newInstance("br.gov.servicos.legado");
         return contexto.createUnmarshaller();
     }
-
 }

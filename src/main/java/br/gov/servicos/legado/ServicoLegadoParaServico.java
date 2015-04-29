@@ -1,6 +1,7 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
+import br.gov.servicos.config.LinhasDaVidaDeServicosConfig;
 import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
@@ -31,14 +32,15 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     Slugify slugify;
     BeanFactory beanFactory;
     ConteudoConfig config;
-
+    LinhasDaVidaDeServicosConfig linhasDaVidaDeServicosConfig;
     ExpressionParser parser = new SpelExpressionParser();
 
     @Autowired
-    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory, ConteudoConfig config) {
+    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory, ConteudoConfig config, LinhasDaVidaDeServicosConfig linhasDaVidaDeServicosConfig) {
         this.slugify = slugify;
         this.beanFactory = beanFactory;
         this.config = config;
+        this.linhasDaVidaDeServicosConfig = linhasDaVidaDeServicosConfig;
     }
 
     @Override
@@ -139,16 +141,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     }
 
     private List<LinhaDaVida> linhasDaVida(ServicoType servicoType) {
-        String[][] linhasDaVida = parser.parseExpression(
-                "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![titulo]]?:{}")
-                .getValue(context(servicoType), String[][].class);
-
-        return new ArrayList<>(
-                stream(linhasDaVida)
-                        .flatMap(Arrays::stream)
-                        .map(config::linhaDaVida)
-                        .collect(toSet())
-        );
+        return linhasDaVidaDeServicosConfig.linhasDaVida(servicoType.getTitulo());
     }
 
     private List<String> eventosDasLinhasDaVida(ServicoType servicoType) {
