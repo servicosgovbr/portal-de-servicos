@@ -73,13 +73,15 @@
       text-decoration: none;
       text-transform: uppercase;
       font-size: em(11);
-      font-family: 'open_sansbold', $helvetica;
+      font-family: 'open_sanssemibold', $helvetica;
     }
 
   }
 
   #logo {
     @include span-columns(9);
+    margin-top: -10px;
+    margin-bottom: 10px;
 
     a:hover {
       text-decoration: none;
