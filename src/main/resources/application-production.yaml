@@ -15,6 +15,3 @@ endpoints:
   health:
     enabled: true
     sensitive: true
-
-  jolokia:
-    enabled: false
