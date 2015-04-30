@@ -18,7 +18,7 @@
 </span>
 
 <div layout:fragment="corpo">
-    <h1 th:utext="${publicoAlvo.titulo}"></h1>
+    <h2 th:utext="${publicoAlvo.titulo}"></h2>
 
     <div th:replace="fragments/paginacao :: conteudo-paginado(${letraAtiva}, ${letras}, 'letra=${pagina}')">
         <span layout:fragment="titulo">
