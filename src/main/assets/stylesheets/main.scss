@@ -236,7 +236,7 @@ dl.portlet {
   a {
     color: #606060;
   }
-  
+
   a:hover {
     color: #2c66ce;
   }
@@ -458,5 +458,11 @@ ul.servicos-a-z {
         font-size: 12px;
         margin-right: 3px;
       }
+  }
+}
+
+form {
+  label.error {
+    color: red;
   }
 }
