@@ -1,4 +1,4 @@
-Ter uma casa
+Ter um imóvel
 ====
 
 Serviços relacionados à habitação.
