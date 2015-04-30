@@ -16,9 +16,9 @@ Neste documento estão todas as informações necessárias à implantação e op
 
 {%include '../desenvolvimento/deploy-homologacao-producao.md' %}
 
-----
+## Configuração
 
-{%include '../desenvolvimento/configuracao.md' %}
+{% include "../desenvolvimento/_configuracao-systemd.md" %}
 
 ----
 
