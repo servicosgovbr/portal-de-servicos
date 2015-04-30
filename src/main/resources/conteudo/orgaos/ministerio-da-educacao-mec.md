@@ -1,5 +1,5 @@
-Ministério da Educação
-====
+Ministério da Educação (MEC)
+---
 
 O Ministério da Educação, órgão da administração federal direta, tem como área de competência os seguintes assuntos:
 
@@ -12,8 +12,7 @@ educação profissional, educação especial e educação a distância, exceto e
 - magistério; e
 - assistência financeira a famílias carentes para a escolarização de seus filhos ou dependentes.
 
-Contato
-----
+### Contato
 
 Página oficial: [www.mec.gov.br](http://www.mec.gov.br/)
 

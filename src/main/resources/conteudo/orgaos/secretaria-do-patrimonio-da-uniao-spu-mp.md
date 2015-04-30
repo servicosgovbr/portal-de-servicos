@@ -1,5 +1,5 @@
 Secretaria do Patrimônio da União
-====
+---
 
 A Secretaria do Patrimônio da União, ligada ao Ministério do Planejamento, Orçamento e Gestão, é o órgão legalmente imbuído de administrar, fiscalizar e outorgar a utilização, nos regimes e condições permitidos em lei, dos imóveis da União. O Decreto nº 8.189 de 21 de Janeiro de 2014, define as competências da SPU:
 

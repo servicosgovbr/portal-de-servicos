@@ -1,5 +1,5 @@
 Secretaria Nacional de Justiça
-====
+---
 
 - coordenar a política de justiça, por intermédio da articulação com os demais órgãos federais, Poder Judiciário, Poder Legislativo, Ministério Público, Governos Estaduais, agências internacionais e organizações da sociedade civil;
 - tratar dos assuntos relacionados à escala de classificação indicativa de jogos eletrônicos, das diversões públicas e dos programas de rádio e televisão e recomendar a correspondência com as faixas etárias e os horários de veiculação adequados;

@@ -394,6 +394,7 @@ ul.orgaos-a-z {
     display: block;
     list-style-type: disc outside none;
     border-bottom: 1px solid #DCDCDC;
+    padding: 8px 0px 8px 0px;
   }
 }
 
@@ -403,6 +404,11 @@ ul.servicos-a-z {
     display: block;
     list-style-type: disc outside none;
     border-bottom: 1px solid #DCDCDC;
+    padding-top: 10px;
+  }
+
+  h3 {
+    margin: 2px;
   }
 }
 

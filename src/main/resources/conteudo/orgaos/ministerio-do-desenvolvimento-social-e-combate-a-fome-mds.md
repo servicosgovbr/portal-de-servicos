@@ -1,5 +1,5 @@
 Ministério do Desenvolvimento Social e Combate a Fome
-====
+---
 
 O Ministério do Desenvolvimento Social e Combate à Fome (MDS) foi criado em janeiro de 2004, com a missão de promover a
 inclusão social, a segurança alimentar, a assistência integral e uma renda mínima de cidadania às famílias que vivem em
@@ -24,8 +24,7 @@ Hoje, as ações do MDS são realizadas nas três esferas de Governo e em parcer
 internacionais e instituições de financiamento. Essa articulação estabelece uma sólida rede de proteção e promoção
 social que quebra o ciclo de pobreza e promove a conquista da cidadania nas comunidades brasileiras.
 
-Contato
-----
+### Contato
 
 Página oficial: [www.mds.gov.br](http://www.mds.gov.br/)
 

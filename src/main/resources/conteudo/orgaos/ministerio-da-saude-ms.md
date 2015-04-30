@@ -1,5 +1,5 @@
 Ministério da Saúde
-====
+---
 
 O Ministério da Saúde é o órgão do Poder Executivo Federal responsável pela organização e elaboração de planos e
 políticas públicas voltados para a promoção, prevenção e assistência à saúde dos brasileiros.
@@ -8,8 +8,7 @@ políticas públicas voltados para a promoção, prevenção e assistência à s
 enfermidades, controlando as doenças endêmicas e parasitárias e melhorando a vigilância à saúde, dando, assim, mais
 qualidade de vida ao brasileiro.
 
-Contato
-----
+### Contato
 
 Página oficial: [portalsaude.saude.gov.br](http://portalsaude.saude.gov.br/)
 

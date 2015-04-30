@@ -1,8 +1,7 @@
-Ministério do Planejamento, Orçamento e Gestão
-====
+Ministério do Planejamento, Orçamento e Gestão (MPOG)
+---
 
-Contato
-----
+### Contato
 
 Página oficial: [planejamento.gov.br](http://planejamento.gov.br/)
 

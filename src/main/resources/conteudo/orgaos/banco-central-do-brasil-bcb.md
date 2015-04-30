@@ -1,5 +1,5 @@
 Banco Central do Brasil
-====
+---
 
 O Banco Central do Brasil foi criado pela [Lei 4.595], de 31 de dezembro de 1964. É o principal executor das orientações do Conselho Monetário Nacional e responsável por garantir o poder de compra da moeda nacional, tendo por objetivos:
 
@@ -8,8 +8,8 @@ O Banco Central do Brasil foi criado pela [Lei 4.595], de 31 de dezembro de 1964
 * estimular a formação de poupança;
 * zelar pela estabilidade e promover o permanente aperfeiçoamento do sistema financeiro.
 
-Contato
-----
+### Contato
+
 
 Página oficial: [www.bcb.gov.br](http://www.bcb.gov.br)
 

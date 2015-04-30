@@ -1,5 +1,5 @@
 Secretaria Nacional de Segurança Pública
-====
+---
 
 À Secretaria Nacional de Segurança Pública compete:
 

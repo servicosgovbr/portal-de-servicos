@@ -1,13 +1,12 @@
-Ministério da Fazenda
-====
+Ministério da Fazenda (MF)
+---
 
 O Ministério da Fazenda é o órgão que, na estrutura administrativa da República Federativa do Brasil, cuida da
 formulação e execução da política econômica nacional, da administração fazendária da União, por meio de sua
 Secretaria do Tesouro Nacional, e da administração superior da estrutura fiscal federal, por meio de sua Secretaria da
 Receita Federal. Sua autoridade superior é o Ministro de Estado da Fazenda.
 
-Contato
-----
+### Contato
 
 Página oficial: [fazenda.gov.br](http://fazenda.gov.br/)
 

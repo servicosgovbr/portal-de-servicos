@@ -1,11 +1,10 @@
-Ministério do Turismo
-====
+Ministério do Turismo (MTUR)
+---
 
 O Ministério do Turismo (MTur) objetiva desenvolver o turismo como atividade econômica auto-sustentável em geração de
 empregos e divisas, proporcionando inclusão social.
 
-Contato
-----
+### Contato
 
 Página oficial: [www.turismo.gov.br](http://www.turismo.gov.br)
 

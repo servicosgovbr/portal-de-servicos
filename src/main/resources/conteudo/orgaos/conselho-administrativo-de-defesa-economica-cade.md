@@ -1,5 +1,5 @@
-Conselho Administrativo de Defesa Econômica
-====
+Conselho Administrativo de Defesa Econômica (CADE)
+---
 
 O Conselho Administrativo de Defesa Econômica - Cade é uma autarquia federal, vinculada ao Ministério da Justiça, com sede e foro no Distrito Federal, que exerce, em todo o Território nacional, as atribuições dadas pela Lei nº 12.529/2011.
 

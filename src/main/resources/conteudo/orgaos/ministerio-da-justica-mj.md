@@ -1,8 +1,7 @@
 Ministério da Justiça
-====
+---
 
-Contato
-----
+### Contato
 
 Página oficial: [www.justica.gov.br](http://www.justica.gov.br/)
 
