@@ -1,7 +1,7 @@
 <div class="tile tile-default destaque">
-	<h3 class="titulo-destaque">
+	<h4 class="titulo-destaque">
         <a th:href="@{/servico/{id}(id=${servico.id})}" th:text="${servico.titulo}"></a>
-    </h3>
+    </h4>
 
     <div class="linha-da-vida" th:each="linha : ${servico.linhasDaVida}">
         <a th:href="@{/linha-da-vida/{id}(id=${linha.id})}">
