@@ -2,21 +2,21 @@ Mapa do Site
 ---
 Uma visão geral do conteúdo disponível no site. 
 
-- [Página inicial](/)
+- [Página Inicial](/)
 
 ### Informações
 
-- [Perguntas frequentes](/conteudo/perguntas-frequentes)
+- [Perguntas Frequentes](/conteudo/perguntas-frequentes)
 
 ### Serviços
 
-- [Serviços aos cidadãos](/publico-alvo/servicos-aos-cidadaos)
-- [Serviços às empresas](/publico-alvo/servicos-as-empresas)
-- [Todos os serviços](/servicos)
+- [Serviços aos Cidadãos](/publico-alvo/servicos-aos-cidadaos)
+- [Serviços às Empresas](/publico-alvo/servicos-as-empresas)
+- [Todos os Serviços](/servicos)
 
 ### Órgãos
 
-- [Todos os órgãos](/orgaos)
+- [Todos os Órgãos](/orgaos)
 
 ### Navegação
 

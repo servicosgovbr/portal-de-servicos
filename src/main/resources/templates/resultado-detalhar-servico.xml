@@ -33,7 +33,7 @@
         <publicosAlvo>
             <publicoAlvo th:each="publico : ${servico.publicosAlvo}">
                 <id th:text="${publico.id}">servicos-aos-cidadaos</id>
-                <titulo th:text="${publico.titulo}">Serviços aos cidadãos</titulo>
+                <titulo th:text="${publico.titulo}">Serviços aos Cidadãos</titulo>
             </publicoAlvo>
         </publicosAlvo>
 
@@ -47,12 +47,12 @@
         <linhasDaVida>
             <linhaDaVida th:each="linha : ${servico.linhasDaVida}">
                 <id th:text="${linha.id}">administrar-um-negocio</id>
-                <titulo th:text="${linha.titulo}">Administrar um negócio</titulo>
+                <titulo th:text="${linha.titulo}">Administrar um Negócio</titulo>
             </linhaDaVida>
         </linhasDaVida>
 
         <eventosDasLinhasDaVida th:each="evento : ${servico.eventosDasLinhasDaVida}">
-            <string th:text="${evento}">Pagar impostos</string>
+            <string th:text="${evento}">Pagar Impostos</string>
         </eventosDasLinhasDaVida>
 
         <canaisDePrestacao>

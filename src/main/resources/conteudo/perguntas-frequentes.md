@@ -1,4 +1,4 @@
-Perguntas frequentes
+Perguntas Frequentes
 ---
 
 Aqui você encontra algumas respostas para dúvidas comuns sobre o uso do Guia de Serviços.

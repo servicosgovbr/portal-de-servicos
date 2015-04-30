@@ -13,13 +13,13 @@
             <li th:if="${servico.responsavel}">
                 <a th:href="@{/orgao/{id}(id=${servico.responsavel.id})}"
                    th:text="${servico.responsavel.nome}">
-                    Órgão responsavel
+                    Órgão Responsavel
                 </a>
             </li>
             <li th:if="${servico.prestador} and ${servico.prestador.id != servico.responsavel.id}">
                 <a th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
                    th:text="${servico.prestador.nome}">
-                    Órgão responsavel
+                    Órgão Responsavel
                 </a>
             </li>
         </ul>

@@ -50,7 +50,7 @@ public class PublicoAlvoControllerTest {
     @Test
     public void deveRetornarOPublicoAlvoPesquisado() {
         assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", null), "publicoAlvo",
-                new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos cidadãos"));
+                new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos"));
     }
 
     @Test
