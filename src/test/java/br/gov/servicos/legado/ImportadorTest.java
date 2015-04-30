@@ -48,6 +48,9 @@ public class ImportadorTest {
     @Mock
     MapaDeLinhasDaVida mapaDeLinhasDaVida;
 
+    @Mock
+    MapaDePublicosAlvo mapaDePublicosAlvo;
+
     Importador importador;
     Slugify slugify;
 
@@ -71,7 +74,7 @@ public class ImportadorTest {
                 .when(config)
                 .orgao(anyString());
 
-        importador = new Importador(esConfig, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config, mapaDeLinhasDaVida));
+        importador = new Importador(esConfig, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config, mapaDeLinhasDaVida, mapaDePublicosAlvo));
     }
 
     @Test

@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Function;
 
 import static java.util.Arrays.stream;
@@ -32,14 +33,16 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     BeanFactory beanFactory;
     ConteudoConfig config;
     MapaDeLinhasDaVida linhasDaVida;
+    MapaDePublicosAlvo publicosAlvo;
     ExpressionParser parser = new SpelExpressionParser();
 
     @Autowired
-    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory, ConteudoConfig config, MapaDeLinhasDaVida linhasDaVida) {
+    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory, ConteudoConfig config, MapaDeLinhasDaVida linhasDaVida, MapaDePublicosAlvo publicosAlvo) {
         this.slugify = slugify;
         this.beanFactory = beanFactory;
         this.config = config;
         this.linhasDaVida = linhasDaVida;
+        this.publicosAlvo = publicosAlvo;
     }
 
     @Override
@@ -135,7 +138,8 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
         return new ArrayList<>(
                 stream(publicosAlvo)
-                        .map(p -> new PublicoAlvo().withId(slugify.slugify(p)).withTitulo(p))
+                        .map(this.publicosAlvo::mapear)
+                        .filter(Objects::nonNull)
                         .collect(toSet()));
     }
 
