@@ -15,8 +15,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
-import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
+import static java.util.Collections.singletonList;
 import static java.util.Optional.empty;
 import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
@@ -25,9 +25,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyZeroInteractions;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
@@ -40,11 +38,11 @@ public class BuscadorTest {
 
     @Before
     public void setUp() {
-        doReturn(asList(SERVICO))
+        doReturn(singletonList(SERVICO))
                 .when(servicos)
                 .search(any(QueryBuilder.class));
 
-        doReturn(new FacetedPageImpl<>(asList(SERVICO)))
+        doReturn(new FacetedPageImpl<>(singletonList(SERVICO)))
                 .when(servicos)
                 .search(any(QueryBuilder.class), any(Pageable.class));
 

@@ -14,10 +14,10 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.web.ModelAndViewAssert;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
+import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -34,7 +34,7 @@ public class OrgaoControllerTest {
     @Mock
     OrgaoRepository orgaos;
 
-    List<Servico> umServico = Arrays.asList(SERVICO);
+    List<Servico> umServico = singletonList(SERVICO);
     OrgaoController controller;
 
     @Before

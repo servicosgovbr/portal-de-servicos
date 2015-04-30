@@ -13,8 +13,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
-import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
+import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
 import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
@@ -36,7 +36,7 @@ public class BuscaControllerTest {
     @Mock
     Buscador buscador;
 
-    Page<Servico> umServico = new FacetedPageImpl<>(asList(SERVICO));
+    Page<Servico> umServico = new FacetedPageImpl<>(singletonList(SERVICO));
     BuscaController controller;
 
     @Before
@@ -75,7 +75,7 @@ public class BuscaControllerTest {
 
     @Test
     public void retornaSugestoesDeBusca() throws Exception {
-        doReturn(asList(SERVICO.withTitulo("Seguro-desemprego")))
+        doReturn(singletonList(SERVICO.withTitulo("Seguro-desemprego")))
                 .when(buscador)
                 .buscaSemelhante(ofNullable("empreg"), "titulo", "descricao");
 

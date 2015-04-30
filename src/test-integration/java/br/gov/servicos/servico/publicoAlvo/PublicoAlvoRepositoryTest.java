@@ -12,6 +12,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
@@ -36,11 +37,11 @@ public class PublicoAlvoRepositoryTest {
                         new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos"))));
 
         servicos.save(SERVICO
-                .withId("servico-2").withPublicosAlvo(asList(
+                .withId("servico-2").withPublicosAlvo(singletonList(
                         new PublicoAlvo().withId("servicos-as-empresas").withTitulo("Serviços às Empresas"))));
 
         servicos.save(SERVICO
-                .withId("servico-3").withPublicosAlvo(asList(
+                .withId("servico-3").withPublicosAlvo(singletonList(
                         new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos"))));
     }
 

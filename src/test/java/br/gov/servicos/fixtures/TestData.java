@@ -8,7 +8,7 @@ import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 
-import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 
 public class TestData {
 
@@ -21,10 +21,10 @@ public class TestData {
             .withTaxa("Gratuita")
             .withPrestador(new Orgao().withId("1").withNome("Nome").withTelefone("123"))
             .withResponsavel(new Orgao().withId("2").withNome("Nome").withTelefone(null))
-            .withPublicosAlvo(asList(new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos")))
-            .withAreasDeInteresse(asList(new AreaDeInteresse().withId("3").withTitulo("Área de Interesse")))
-            .withLinhasDaVida(asList(new LinhaDaVida().withId("4").withTitulo("Linha da Vida")))
-            .withEventosDasLinhasDaVida(asList("Eventos das Linhas da Vida"));
+            .withPublicosAlvo(singletonList(new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos")))
+            .withAreasDeInteresse(singletonList(new AreaDeInteresse().withId("3").withTitulo("Área de Interesse")))
+            .withLinhasDaVida(singletonList(new LinhaDaVida().withId("4").withTitulo("Linha da Vida")))
+            .withEventosDasLinhasDaVida(singletonList("Eventos das Linhas da Vida"));
 
     public static final Conteudo CONTEUDO = new Conteudo()
             .withTitulo("Título")

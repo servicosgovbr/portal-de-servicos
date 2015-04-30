@@ -16,6 +16,7 @@ import java.util.List;
 import static br.gov.servicos.fixtures.TestData.CONTEUDO;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Mockito.doReturn;
@@ -32,7 +33,7 @@ public class LinhaDaVidaControllerTest {
     @Mock
     Markdown markdown;
 
-    List<Servico> umServico = asList(SERVICO);
+    List<Servico> umServico = singletonList(SERVICO);
     LinhaDaVidaController controller;
 
     @Before

@@ -19,6 +19,7 @@ import java.util.Collections;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Mockito.*;
 import static org.springframework.data.domain.Sort.Direction.DESC;
@@ -44,7 +45,7 @@ public class IndexControllerTest {
     public void setUp() {
         controller = new IndexController(servicos, destaques, piwikClient);
 
-        doReturn(new PageImpl<>(asList(SERVICO)))
+        doReturn(new PageImpl<>(singletonList(SERVICO)))
                 .when(servicos)
                 .findAll(any(PageRequest.class));
     }
@@ -56,7 +57,7 @@ public class IndexControllerTest {
 
     @Test
     public void retornaServicosASeremExibidos() {
-        assertModelAttributeValue(controller.index(), "destaques", asList(SERVICO));
+        assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
     }
 
     @Test
@@ -67,7 +68,7 @@ public class IndexControllerTest {
 
     @Test
     public void deveRetornarDestaquesPrimeiro() {
-        doReturn(asList("servico-em-destaque"))
+        doReturn(singletonList("servico-em-destaque"))
                 .when(destaques)
                 .getServicos();
 
@@ -113,20 +114,20 @@ public class IndexControllerTest {
                 .when(servicos)
                 .findOne("servico-nao-existe");
 
-        assertModelAttributeValue(controller.maisAcessados(), "destaques", asList(SERVICO));
+        assertModelAttributeValue(controller.maisAcessados(), "destaques", singletonList(SERVICO));
     }
 
     @Test
     public void deveFiltrarFiltrarServicosIguais() {
-        doReturn(asList("1")).when(destaques).getServicos();
+        doReturn(singletonList("1")).when(destaques).getServicos();
         doReturn(SERVICO).when(servicos).findOne("1");
 
-        assertModelAttributeValue(controller.index(), "destaques", asList(SERVICO));
+        assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
     }
 
     @Test
     public void deveFiltrarDestaquesNaoEncontrados() {
-        doReturn(asList("destaque-nao-cadastrado")).when(destaques).getServicos();
-        assertModelAttributeValue(controller.index(), "destaques", asList(SERVICO));
+        doReturn(singletonList("destaque-nao-cadastrado")).when(destaques).getServicos();
+        assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
     }
 }

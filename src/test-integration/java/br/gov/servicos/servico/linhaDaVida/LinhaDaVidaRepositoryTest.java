@@ -15,6 +15,7 @@ import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
@@ -39,11 +40,11 @@ public class LinhaDaVidaRepositoryTest extends ElasticSearchTest {
                         new LinhaDaVida().withId("indo-para-outro-pais").withTitulo("Indo para outro país"))));
 
         servicos.save(SERVICO
-                .withId("servico-2").withLinhasDaVida(asList(
+                .withId("servico-2").withLinhasDaVida(singletonList(
                         new LinhaDaVida().withId("meu-negocio").withTitulo("Meu negócio"))));
 
         servicos.save(SERVICO
-                .withId("servico-3").withLinhasDaVida(asList(
+                .withId("servico-3").withLinhasDaVida(singletonList(
                         new LinhaDaVida().withId("aposentar-se").withTitulo("Aposentar-se"))));
 
         List<LinhaDaVida> linhas = linhasDaVida.findAll();
