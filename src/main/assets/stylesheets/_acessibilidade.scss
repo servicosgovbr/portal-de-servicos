@@ -26,9 +26,8 @@ body.contraste {
   }
 
   .busca-principal {
-    .titulo-home {
-      color: #000 !important;
-    }
+    background-color: #444;
+
     > form {
       > input[type='submit'] {
         background-color: #000;
@@ -37,13 +36,17 @@ body.contraste {
     }
   }
 
-  a, p, h4, .paginacao-busca, .portletHeader, h1, h2, h3, #capacho dt, .portletNavigationTree > dd a span, #migalhas-de-pao a,
+  a, p, h4, .paginacao-busca, a.markdown, .titulo-home, .portletHeader, h1, h2, h3, #capacho dt, .portletNavigationTree > dd a span, #migalhas-de-pao a,
   #migalhas-de-pao span, #conteudo a:hover, dl.portlet a:hover, .tile-subtitle, .tile p, .tile a,
   #portal-siteactions a, #portal-siteactions a:hover, #logo #portal-logo,
   #logo #portal-title, #portal-description, .outstanding-header .outstanding-link, #conteudo .outstanding-header .outstanding-link:hover,
   .lista-vertical .tile-header span, .cover-collection-tile .tile-header span {
     color: #fff !important;
   }
+
+#acessibilidade span {
+  color: #000 !important;
+}
 
   dl.portlet {
     .fa {
