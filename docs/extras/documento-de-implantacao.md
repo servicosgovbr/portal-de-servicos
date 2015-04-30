@@ -18,6 +18,10 @@ Neste documento estão todas as informações necessárias à implantação e op
 
 ----
 
+{%include '../desenvolvimento/configuracao.md' %}
+
+----
+
 {%include '../desenvolvimento/backups.md' %}
 
 ----
