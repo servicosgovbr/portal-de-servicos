@@ -1,7 +1,7 @@
 @import 'media-queries';
 
 #header {
-  padding: 14px 0 0 0;
+  padding: 5px 0 0px 0;
   background-color: #eeeff1;
 
   button.searchButton {
@@ -35,6 +35,11 @@
       display: none !important;
     }
 
+    @include media($tablet) {
+      display: none !important;
+    }
+
+
     a {
       margin-right: em(8);
       font-size: em(11);
@@ -56,12 +61,20 @@
     @include span-columns(4);
     @include shift(2);
     @include omega();
-    padding-bottom: em(2);
+    padding-bottom: em(5);
     border-bottom: em(1) dotted #cfd0d2;
 
     @include media($mobile) {
       display: none !important;
     }
+
+    @include media($tablet) {
+      @include span-columns(12);
+      @include shift(0);
+      @include omega();
+      text-align: center;
+    }
+
 
     li {
       white-space: nowrap;
@@ -94,11 +107,13 @@
     color: #2c66ce;
     margin-bottom: 0;
     letter-spacing: -0.05em;
+    margin-top: 30px;
 
-    @include media($mobile) {
-      margin-top: 15px;
-      margin-bottom: 5px;
+    @include media($tablet) {
+      margin-top: 45px;
     }
+
+
   }
 
   #portal-description {
