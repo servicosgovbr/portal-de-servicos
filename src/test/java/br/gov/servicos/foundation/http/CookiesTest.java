@@ -29,7 +29,7 @@ public class CookiesTest {
     }
 
     @Test
-    public void deveResponderTrueSeUmCookieTemStatusON() {
+    public void deveResponderTrueQuandoUmCookieTemStatusON() {
         doReturn(cookies(new Cookie("ativado", "on")))
                 .when(httpServletRequest)
                 .getCookies();
@@ -38,7 +38,7 @@ public class CookiesTest {
     }
 
     @Test
-    public void deveResponderFalseSeUmCookieTemStatusOFF() {
+    public void deveResponderFalseQuandoUmCookieTemStatusOFF() {
         doReturn(cookies(new Cookie("ativado", "off")))
                 .when(httpServletRequest)
                 .getCookies();
@@ -47,8 +47,17 @@ public class CookiesTest {
     }
 
     @Test
-    public void deveResponderFalseOCookieNaoEstaPresente() {
+    public void deveResponderFalseQuandoOCookieNaoEstaPresente() {
         doReturn(cookies())
+                .when(httpServletRequest)
+                .getCookies();
+
+        assertThat(cookies.isOn("ativado"), is(false));
+    }
+
+    @Test
+    public void deveResponderFalseComCookiesNulos() {
+        doReturn(null)
                 .when(httpServletRequest)
                 .getCookies();
 
