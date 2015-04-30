@@ -2,7 +2,6 @@ package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
 import br.gov.servicos.config.GuiaDeServicosIndex;
-import br.gov.servicos.config.LinhasDaVidaDeServicosConfig;
 import br.gov.servicos.servico.AreaDeInteresse;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.Servico;
@@ -18,10 +17,9 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.BeanFactory;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 
-import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.common.collect.Iterables.get;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -48,7 +46,7 @@ public class ImportadorTest {
     BeanFactory beanFactory;
 
     @Mock
-    LinhasDaVidaDeServicosConfig linhasDaVidaDeServicosConfig;
+    MapaDeLinhasDaVida mapaDeLinhasDaVida;
 
     Importador importador;
     Slugify slugify;
@@ -65,15 +63,15 @@ public class ImportadorTest {
                 .when(servicos)
                 .save(anyCollectionOf(Servico.class));
 
-        doReturn(Arrays.asList(new LinhaDaVida().withId("veio-do-csv").withTitulo("Veio do CSV")))
-                .when(linhasDaVidaDeServicosConfig)
+        doReturn(singletonList(new LinhaDaVida().withId("veio-do-csv").withTitulo("Veio do CSV")))
+                .when(mapaDeLinhasDaVida)
                 .linhasDaVida(anyString());
 
         doReturn(new Orgao().withId("ministerio-da-previdencia-social-mps").withNome("Ministério da Previdência Social (MPS)"))
                 .when(config)
                 .orgao(anyString());
 
-        importador = new Importador(esConfig, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config, linhasDaVidaDeServicosConfig));
+        importador = new Importador(esConfig, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config, mapaDeLinhasDaVida));
     }
 
     @Test
@@ -155,7 +153,7 @@ public class ImportadorTest {
     @Test
     public void deveImportarAreasDeInteresseDoServicoLegado() throws Exception {
         assertThat(importaServico().getAreasDeInteresse(),
-                equalTo(asList(new AreaDeInteresse()
+                equalTo(singletonList(new AreaDeInteresse()
                         .withId("previdencia-social")
                         .withTitulo("Previdência Social"))));
     }
@@ -163,22 +161,22 @@ public class ImportadorTest {
     @Test
     public void deveObterLinhasDaVidaParaServicoDoCsv() throws Exception {
         assertThat(importaServico().getLinhasDaVida(),
-                equalTo(asList(new LinhaDaVida()
+                equalTo(singletonList(new LinhaDaVida()
                         .withId("veio-do-csv")
                         .withTitulo("Veio do CSV"))));
-        verify(linhasDaVidaDeServicosConfig).linhasDaVida(anyString());
+        verify(mapaDeLinhasDaVida).linhasDaVida(anyString());
     }
 
     @Test
     public void deveImportarEventosDaLinhaDaVidaDoServicoLegado() throws Exception {
         assertThat(importaServico().getEventosDasLinhasDaVida(),
-                equalTo(asList("Outros")));
+                equalTo(singletonList("Outros")));
     }
 
     @Test
     public void deveImportarPublicoAlvo() throws Exception {
         assertThat(importaServico().getPublicosAlvo(),
-                equalTo(asList(new PublicoAlvo()
+                equalTo(singletonList(new PublicoAlvo()
                         .withId("servicos-as-empresas")
                         .withTitulo("Serviços às empresas"))));
     }

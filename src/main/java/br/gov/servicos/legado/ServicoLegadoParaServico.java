@@ -1,7 +1,6 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
-import br.gov.servicos.config.LinhasDaVidaDeServicosConfig;
 import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
@@ -32,15 +31,15 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     Slugify slugify;
     BeanFactory beanFactory;
     ConteudoConfig config;
-    LinhasDaVidaDeServicosConfig linhasDaVidaDeServicosConfig;
+    MapaDeLinhasDaVida linhasDaVida;
     ExpressionParser parser = new SpelExpressionParser();
 
     @Autowired
-    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory, ConteudoConfig config, LinhasDaVidaDeServicosConfig linhasDaVidaDeServicosConfig) {
+    public ServicoLegadoParaServico(Slugify slugify, BeanFactory beanFactory, ConteudoConfig config, MapaDeLinhasDaVida linhasDaVida) {
         this.slugify = slugify;
         this.beanFactory = beanFactory;
         this.config = config;
-        this.linhasDaVidaDeServicosConfig = linhasDaVidaDeServicosConfig;
+        this.linhasDaVida = linhasDaVida;
     }
 
     @Override
@@ -141,7 +140,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     }
 
     private List<LinhaDaVida> linhasDaVida(ServicoType servicoType) {
-        return linhasDaVidaDeServicosConfig.linhasDaVida(servicoType.getTitulo());
+        return linhasDaVida.linhasDaVida(servicoType.getTitulo());
     }
 
     private List<String> eventosDasLinhasDaVida(ServicoType servicoType) {
