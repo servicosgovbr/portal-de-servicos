@@ -55,7 +55,7 @@ public class MapaDeLinhasDaVidaTest {
         assertThat(linhas, equalTo(singletonList(
                 new LinhaDaVida()
                         .withId("ter-um-imovel")
-                        .withTitulo("Ter um imóvel"))));
+                        .withTitulo("Ter um Imóvel"))));
     }
 
     @Test
