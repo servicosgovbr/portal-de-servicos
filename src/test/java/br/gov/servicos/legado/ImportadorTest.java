@@ -70,6 +70,14 @@ public class ImportadorTest {
                 .when(mapaDeLinhasDaVida)
                 .linhasDaVida(anyString());
 
+        doReturn(new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos"))
+                .when(mapaDePublicosAlvo)
+                .mapear("Serviços aos cidadãos");
+
+        doReturn(new PublicoAlvo().withId("servicos-as-empresas").withTitulo("Serviços às Empresas"))
+                .when(mapaDePublicosAlvo)
+                .mapear("Serviços às empresas");
+
         doReturn(new Orgao().withId("ministerio-da-previdencia-social-mps").withNome("Ministério da Previdência Social (MPS)"))
                 .when(config)
                 .orgao(anyString());
@@ -181,7 +189,7 @@ public class ImportadorTest {
         assertThat(importaServico().getPublicosAlvo(),
                 equalTo(singletonList(new PublicoAlvo()
                         .withId("servicos-as-empresas")
-                        .withTitulo("Serviços às empresas"))));
+                        .withTitulo("Serviços às Empresas"))));
     }
 
     private Servico importaServico() throws Exception {
