@@ -2,7 +2,7 @@
 
 [![Diagrama da rede no Vagrant](ambiente-vagrant.svg)](ambiente-vagrant.graphml)
 
-Criamos também um conjunto de _boxes_ para o [Vagrant]. Para utilizá-lo, confira que você está usando uma versão recente do [Vagrant] (ao menos 1.6.5) e rode:
+Criamos também um conjunto de _boxes_ para o [Vagrant]. Para utilizá-lo, confira que você está usando uma versão recente do [Vagrant] (ao menos 1.7.0) e rode:
 
 ```
 vagrant up

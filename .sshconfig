@@ -29,6 +29,7 @@ Host bastion
   StrictHostKeyChecking no
   PasswordAuthentication no
   IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./.vagrant/machines/bastion/virtualbox/private_key 
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -41,6 +42,7 @@ Host lb
   StrictHostKeyChecking no
   PasswordAuthentication no
   IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./.vagrant/machines/lb/virtualbox/private_key 
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -53,6 +55,7 @@ Host app1
   StrictHostKeyChecking no
   PasswordAuthentication no
   IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./.vagrant/machines/app1/virtualbox/private_key 
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -65,6 +68,7 @@ Host app2
   StrictHostKeyChecking no
   PasswordAuthentication no
   IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./.vagrant/machines/app2/virtualbox/private_key 
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -77,6 +81,7 @@ Host es1
   StrictHostKeyChecking no
   PasswordAuthentication no
   IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./.vagrant/machines/es1/virtualbox/private_key 
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -89,6 +94,7 @@ Host es2
   StrictHostKeyChecking no
   PasswordAuthentication no
   IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./.vagrant/machines/es2/virtualbox/private_key 
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
@@ -101,6 +107,7 @@ Host piwik
   StrictHostKeyChecking no
   PasswordAuthentication no
   IdentityFile ~/.vagrant.d/insecure_private_key
+  IdentityFile ./.vagrant/machines/piwik/virtualbox/private_key 
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
