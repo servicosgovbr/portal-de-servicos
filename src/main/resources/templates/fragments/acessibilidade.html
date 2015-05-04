@@ -6,7 +6,11 @@
         <span><a accesskey="2" href="#navegacao">Ir para o menu <span>2</span></a></span>
     </li>
     <li>
-        <span><a accesskey="3" th:href="${#httpServletRequest.requestURI == '/' ? '#input-busca' : '#buscar'}">Ir para a busca <span>3</span></a></span>
+        <span>
+            <a accesskey="3" id="ir-para-busca" th:href="${#httpServletRequest.requestURI == '/' ? '#input-busca' : '#buscar'}">
+                Ir para a busca <span>3</span>
+            </a>
+        </span>
     </li>
     <li>
         <span><a accesskey="4" href="#rodape">Ir para o rodapé <span>4</span></a></span>
