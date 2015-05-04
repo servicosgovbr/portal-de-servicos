@@ -37,7 +37,7 @@ class PublicoAlvoController {
 
         List<Servico> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
                 .stream()
-                .sorted((x, y) -> x.getTitulo().compareToIgnoreCase(y.getTitulo()))
+                .sorted((x, y) -> x.getId().compareTo(y.getId()))
                 .collect(toList());
 
         Map<String, Object> model = new HashMap<>();

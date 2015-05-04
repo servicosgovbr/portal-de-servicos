@@ -45,7 +45,7 @@ class ServicoController {
 
         model.put("servicos", servicosPorLetra.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
                 .stream()
-                .sorted((x, y) -> x.getTitulo().compareToIgnoreCase(y.getTitulo()))
+                .sorted((x, y) -> x.getId().compareTo(y.getId()))
                 .collect(toList()));
 
         model.put("letras",
