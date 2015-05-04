@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
       layout:decorator="layout-branco">
 
 <head>
@@ -19,10 +20,11 @@
     Nome do Serviço
 </span>
 
-<span layout:fragment="menu-contexto"
-      th:replace="fragments/informacoes-relacionadas"/>
+<span layout:fragment="menu-contexto" th:replace="fragments/informacoes-relacionadas">
 
-<div layout:fragment="corpo">
+</span>
+
+<section layout:fragment="corpo">
 
     <div class="row">
         <th:block>
@@ -74,7 +76,7 @@
 
         </th:block>
     </div>
-</div>
+</section>
 
 </body>
 </html>

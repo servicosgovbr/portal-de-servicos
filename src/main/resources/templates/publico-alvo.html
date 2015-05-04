@@ -17,7 +17,7 @@
 	Letra filtrada
 </span>
 
-<div layout:fragment="corpo">
+<section layout:fragment="corpo">
     <h2 th:utext="${publicoAlvo.titulo}"></h2>
 
     <div th:replace="fragments/paginacao :: conteudo-paginado(${letraAtiva}, ${letras}, 'letra=${pagina}')">
@@ -33,7 +33,7 @@
             </li>
         </ul>
     </div>
-</div>
+</section>
 
 </body>
 </html>

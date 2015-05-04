@@ -18,15 +18,15 @@
 
 <body th:class="${@cookies.isOn('contraste')} ? 'contraste'">
 
-<article id="wrapper">
+<div id="wrapper">
     <div th:replace="fragments/header :: #header"></div>
     <div th:replace="fragments/barra-brasil :: #barra-brasil"></div>
 
-    <section id="main" role="main">
+    <div id="main" role="main">
         <div th:replace="fragments/migalhas-de-pao :: #migalhas-de-pao"></div>
         <div th:replace="fragments/coluna-de-menus :: #navegacao"></div>
 
-        <div id="conteudo" layout:fragment="corpo"></div>
+        <section id="conteudo" layout:fragment="corpo"></section>
 
         <footer id="voltar-topo" class="right">
             <a href="#wrapper">
@@ -34,9 +34,9 @@
                 Voltar para o topo
             </a>
         </footer>
-    </section>
+    </div>
     <footer th:replace="fragments/rodape :: #rodape"></footer>
-</article>
+</div>
 
 <script type="text/javascript" src="/assets/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/jquery.validate.min.js"></script>

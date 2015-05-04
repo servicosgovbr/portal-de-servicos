@@ -1,3 +1,7 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<body>
+
 <div th:fragment="paginacao-simples(paginaAtual, paginas, parametros)">
 
     <span layout:fragment="titulo" class="paginacao-busca">
@@ -15,7 +19,16 @@
 </div>
 
 <div th:fragment="conteudo-paginado(paginaAtual, paginas, parametros)">
-    <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})"/><hr/>
-    <div layout:fragment="conteudo"/><hr/>
-    <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})"/>
+    <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})">
+    </div>
+    <hr/>
+    <section layout:fragment="conteudo">
+    </section>
+    <hr/>
+    <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})">
+    </div>
 </div>
+
+
+</body>
+</html>

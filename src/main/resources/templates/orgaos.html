@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
       layout:decorator="layout-branco">
 
 <head>
@@ -20,7 +21,7 @@
     A-Z
 </span>
 
-<div layout:fragment="corpo">
+<section layout:fragment="corpo">
 
     <div class="row">
         <th:block>
@@ -38,7 +39,7 @@
             </ul>
         </th:block>
     </div>
-</div>
+</section>
 
 </body>
 </html>
