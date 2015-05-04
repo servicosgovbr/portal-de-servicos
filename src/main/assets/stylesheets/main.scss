@@ -227,11 +227,6 @@ dl.portlet {
   }
 }
 
-.menuTrigger {
-  display: none;
-}
-
-
 #destaques {
   a {
     color: #606060;
@@ -241,7 +236,6 @@ dl.portlet {
     color: #2c66ce;
   }
 }
-
 
 .busca-principal {
   @include span-columns(12);

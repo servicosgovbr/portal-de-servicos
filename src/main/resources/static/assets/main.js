@@ -5,20 +5,6 @@ jQuery(document).ready(function($) {
     $(this).find('i.fa').toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
   });
 
-  var menuTrigger = $('.menuTrigger');
-  var navigationEl = $('#navegacao');
-  menuTrigger.click(function(e) {
-    e.preventDefault();
-    navigationEl.toggleClass('ativo');
-  });
-
-  var sectionTrigger = $('.mobile .portletNavigationTree dt a');
-  sectionTrigger.append('<span></span>');
-  sectionTrigger.click(function(e) {
-    e.preventDefault();
-    $(this).parent().parent().toggleClass('ativo');
-  });
-
   $('ul li:last-child').addClass('last-item');
   
   var responsiveResize, root;
