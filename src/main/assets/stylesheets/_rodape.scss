@@ -12,7 +12,7 @@
     padding-top: em(32);
     padding-bottom: em(75);
 
-    @include media($mobile) {
+    @include mobile {
       display: none !important;
     }
 

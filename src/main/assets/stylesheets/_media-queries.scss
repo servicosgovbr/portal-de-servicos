@@ -1,12 +1,24 @@
 $mobile: new-breakpoint(max-width 460px);
 $tablet: new-breakpoint(min-width 461px max-width 768px);
 
-@include media($mobile) {
+@mixin mobile {
+    @include media($mobile) {
+        @content
+    }
+}
 
-  #acessibilidade {
-    display: none;
-  }
+@mixin tablet {
+    @include media($tablet) {
+        @content
+    }
+}
 
+@mixin mobile-tablet {
+    @include mobile { @content }
+    @include tablet { @content }
+}
+
+@include mobile {
   #portal-siteactions {
     float: none;
   }

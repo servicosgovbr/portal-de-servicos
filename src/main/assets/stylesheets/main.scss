@@ -14,7 +14,7 @@
 }
 
 .no-mobile {
-  @include media($mobile) {
+  @include mobile {
     display: none;
   }
 }
@@ -24,15 +24,8 @@
   @include omega();
   line-height: 1.5em;
 
-  @include media($mobile) {
+  @include mobile-tablet {
     @include span-columns(12);
-  }
-
-  @include media($tablet) {
-    @include span-columns(12);
-  }
-
-  @include media($mobile, $tablet) {
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -47,7 +40,7 @@
       line-height: 1.2em;
       font-weight: bold;
 
-      @include media($mobile, $tablet) {
+      @include mobile-tablet {
         line-height: 1.2em;
       }
     }
@@ -185,7 +178,7 @@ dl.portlet {
 
 .outstanding-header {
 
-  @include media($mobile) {
+  @include mobile {
     padding: em(5);
   }
 
@@ -400,14 +393,9 @@ ul.servicos-a-z {
 #navegacao {
   @include span-columns(3);
 
-  @include media($mobile) {
+  @include mobile-tablet {
     display: none !important;
   }
-
-  @include media($tablet) {
-    display: none !important;
-  }
-
 
   .navTree span {
     font-size: 13px;

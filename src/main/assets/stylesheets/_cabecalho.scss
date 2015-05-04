@@ -22,7 +22,7 @@
     @include outer-container;
     margin-bottom: em(20);
 
-    @include media($mobile) {
+    @include mobile {
       padding-left: 8px;
     }
   }
@@ -31,14 +31,9 @@
     @include span-columns(6);
     font-family: 'open_sansregular', $helvetica;
 
-    @include media($mobile) {
+    @include mobile-tablet {
       display: none !important;
     }
-
-    @include media($tablet) {
-      display: none !important;
-    }
-
 
     a {
       margin-right: em(8);
@@ -64,11 +59,11 @@
     padding-bottom: em(5);
     border-bottom: em(1) dotted #cfd0d2;
 
-    @include media($mobile) {
+    @include mobile {
       display: none !important;
     }
 
-    @include media($tablet) {
+    @include tablet {
       @include span-columns(12);
       @include shift(0);
       @include omega();
@@ -109,7 +104,7 @@
     letter-spacing: -0.05em;
     margin-top: 30px;
 
-    @include media($tablet) {
+    @include tablet {
       margin-top: 45px;
     }
 
@@ -154,7 +149,7 @@
     padding-top: em(3);
     padding-bottom: em(4);
 
-    @include media($mobile) {
+    @include mobile {
       @include outer-container;
     }
 
@@ -162,7 +157,7 @@
       @include outer-container;
       text-align: right;
 
-      @include media($mobile) {
+      @include mobile {
         text-align: left;
       }
     }
