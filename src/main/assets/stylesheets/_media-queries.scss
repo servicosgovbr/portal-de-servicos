@@ -1,5 +1,5 @@
 $mobile: new-breakpoint(max-width 460px);
-$tablet: new-breakpoint(min-width 461px max-width 710px);
+$tablet: new-breakpoint(min-width 461px max-width 768px);
 
 @include media($mobile) {
 
