@@ -17,6 +17,12 @@ Vagrant.configure('2') do |config|
 
   config.vm.define 'ie11', autostart: false do |ie11|
     ie11.vm.box = "http://aka.ms/vagrant-win7-ie11"
+    ie11.vm.communicator = :winrm
+
+    ie11.vm.provider 'virtualbox' do |ieVb|
+      ieVb.gui = true
+      ieVb.customize ['modifyvm', :id, '--memory', '1024']
+    end
   end
 
   config.vm.define 'bastion', primary: true do |lb|
