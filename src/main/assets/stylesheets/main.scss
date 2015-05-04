@@ -129,6 +129,10 @@ dl.portlet {
 }
 
 .tile {
+  @include mobile {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 
   h1 {
     margin: 0 0 10px 0;
@@ -217,6 +221,10 @@ dl.portlet {
   background-color: #edeff1;
   padding: 10px 15px 15px 15px;
   border-radius: 4px;
+
+  @include mobile {
+    display: none !important;
+  }
 
   > form {
     > input[type='text'] {

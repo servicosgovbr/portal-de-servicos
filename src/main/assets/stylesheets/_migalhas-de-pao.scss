@@ -5,6 +5,10 @@
   margin-bottom: em(37);
   font-size: em(11);
 
+  @include mobile {
+    margin: 10px 10px 10px 10px !important;
+  }
+
   .voce-esta-aqui {
     color: #606060;
   }

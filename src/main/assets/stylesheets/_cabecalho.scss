@@ -90,6 +90,21 @@
     margin-top: -10px;
     margin-bottom: 10px;
 
+    @include mobile {
+      width: 100%;
+      padding: 5px;
+      margin-top: -14px;
+
+      span {
+        position: relative;
+        top: 0;
+      }
+
+      h1 {
+        font-size: em(39);
+      }
+    }
+
     a:hover {
       text-decoration: none;
     }    
@@ -108,7 +123,6 @@
       margin-top: 45px;
     }
 
-
   }
 
   #portal-description {
@@ -124,6 +138,14 @@
     @include omega();
     margin-top: em(48);
     text-align: left;
+
+    @include mobile {
+      display: inline-block !important;
+      float: left;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
 
     form {
       white-space: nowrap;
@@ -141,36 +163,7 @@
       font-family: 'open_sansregular', $helvetica;
       padding: 10px 8px;
       border-radius: 5px;
-    }
-  }
-
-  #sobre {
-    background: #dcdcdc;
-    padding-top: em(3);
-    padding-bottom: em(4);
-
-    @include mobile {
-      @include outer-container;
-    }
-
-    ul {
-      @include outer-container;
-      text-align: right;
-
-      @include mobile {
-        text-align: left;
-      }
-    }
-
-    li {
-      border-right: 1px solid #606060;
-      padding: 0 10px;
-      font-size: em(12);
-
-      &:last-child {
-        border-right: none !important;
-        padding-right: 0;
-      }
+      @include mobile { width: 260px; }
     }
   }
 

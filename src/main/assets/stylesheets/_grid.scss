@@ -35,12 +35,23 @@ div.position-10 {
   width: 100%;
   display: block;
   position: relative;
+
+  @include mobile {
+    padding-left: 5px;
+    width: 98.5% !important;
+  } 
 }
 
 .cell {
   position: relative;
   float: left;
   left: 100%;
+
+  @include mobile {
+    float: none !important;
+    margin-left: -100% !important;
+    width: 100% !important;
+  }
 }
 
 .auto-grid {
