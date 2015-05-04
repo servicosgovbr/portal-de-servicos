@@ -60,7 +60,21 @@
     line-height: 1.2em;
   }
 
-  p {
+  h4 {
+    font-size: em(13);
+    color: #606060;
+    text-transform: uppercase;
+  }
+
+  h4.titulo-destaque {
+    font-size: em(20);
+    font-family: 'open_sanssemibold', $helvetica;
+    line-height: 120%;
+    text-transform: none;
+    margin-top: 0;
+  }
+
+  p, span, a {
     font-size: em(15);
     color: #606060;
     line-height: 140%;
@@ -376,7 +390,7 @@ ul.servicos-a-z {
     display: block;
     list-style-type: disc outside none;
     border-bottom: 1px solid #DCDCDC;
-    padding-top: 10px;
+    padding-top: 8px;
   }
 
   h3 {
