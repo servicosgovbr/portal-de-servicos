@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.groupingBy;
@@ -38,10 +35,15 @@ class PublicoAlvoController {
         Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse('A');
         Map<Character, List<Servico>> servicosPorLetraInicial = servicosAgrupadosPorLetraInicial(id);
 
+        List<Servico> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
+                .stream()
+                .sorted((x, y) -> x.getTitulo().compareToIgnoreCase(y.getTitulo()))
+                .collect(toList());
+
         Map<String, Object> model = new HashMap<>();
         model.put("letraAtiva", primeiraLetra);
         model.put("publicoAlvo", extraiPublicoAlvo(id, servicosPorLetraInicial.get(primeiraLetra)));
-        model.put("servicos", servicosPorLetraInicial.get(primeiraLetra));
+        model.put("servicos", servicos);
         model.put("letras", letrasDisponiveis(servicosPorLetraInicial.keySet()));
 
         return new ModelAndView("publico-alvo", model);
