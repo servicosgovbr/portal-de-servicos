@@ -62,9 +62,9 @@
   }
 
   h3.titulo-home {
-  font-family: 'open_sansbold', $helvetica;
-  font-size: em(25);
-  line-height: 1.2em;
+    font-family: "open_sansbold", $helvetica;
+    font-size: em(25);
+    line-height: 1.2em;
   }
 
   p {
@@ -278,13 +278,13 @@ span.ticket-erro {
   margin-bottom: 2em;
 
   h2 {
-  border-bottom: none;
-  color: #606060;
-  margin: 0 0 .5em;
-  font-family: 'open_sansbold', $helvetica;
-  color: #606060;
-  font-size: em(35);
-  line-height: 1.2em;
+    border-bottom: none;
+    color: #606060;
+    margin: 0 0 .5em;
+    font-family: "open_sansbold", $helvetica;
+    color: #606060;
+    font-size: em(35);
+    line-height: 1.2em;
   }
 
   ul li {
@@ -403,6 +403,7 @@ ul.servicos-a-z {
   @include media($mobile) {
     display: none !important;
   }
+
   @include media($tablet) {
     display: none !important;
   }
@@ -432,11 +433,10 @@ ul.servicos-a-z {
     text-transform: uppercase;
     background-color: #edeff1;
     border-radius: 4px;
-
-      i {
-        font-size: 12px;
-        margin-right: 3px;
-      }
+    i {
+      font-size: 12px;
+      margin-right: 3px;
+    }
   }
 }
 
