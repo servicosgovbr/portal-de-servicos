@@ -17,3 +17,5 @@ $tablet: new-breakpoint(min-width 461px max-width 768px);
     @include mobile { @content }
     @include tablet { @content }
 }
+
+$mobile-margin-left: 20px;

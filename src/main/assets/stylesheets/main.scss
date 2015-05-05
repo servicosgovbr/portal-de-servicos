@@ -11,6 +11,7 @@
 
 #main {
   @include outer-container;
+  padding-left: $mobile-margin-left;
 }
 
 .no-mobile {
@@ -26,8 +27,6 @@
 
   @include mobile-tablet {
     @include span-columns(12);
-    margin-left: 5px;
-    margin-right: 5px;
   }
 
   header {
@@ -130,7 +129,6 @@ dl.portlet {
 
 .tile {
   @include mobile {
-    margin-left: 5px;
     margin-right: 5px;
   }
 
@@ -176,11 +174,6 @@ dl.portlet {
 }
 
 .outstanding-header {
-
-  @include mobile {
-    padding: em(5);
-  }
-
   .outstanding-title {
     margin-left: 0;
     margin-bottom: none;

@@ -1,7 +1,7 @@
 @import 'media-queries';
 
 #header {
-  padding: 5px 0 0px 0;
+  padding-top: 5px;
   background-color: #eeeff1;
 
   button.searchButton {
@@ -23,7 +23,7 @@
     margin-bottom: em(20);
 
     @include mobile {
-      padding-left: 8px;
+      margin-left: $mobile-margin-left;
     }
   }
 
@@ -92,12 +92,12 @@
 
     @include mobile {
       width: 100%;
-      padding: 5px;
-      margin-top: -14px;
+      padding: 5px 5px 5px 0px;
+      margin-top: -10px;
 
       span {
         position: relative;
-        top: 0;
+        top: 5px;
       }
 
       h1 {
@@ -144,7 +144,6 @@
       float: left;
       margin-top: 20px;
       margin-bottom: 10px;
-      margin-left: 10px;
     }
 
     form {
@@ -169,7 +168,7 @@
 
   #barra-feedback {
     background-color: #2c66ce;
-    padding: em(5);
+    padding-left: $mobile-margin-left;
 
     p {
       @include outer-container(73.80em);
