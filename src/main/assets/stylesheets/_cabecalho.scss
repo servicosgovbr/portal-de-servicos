@@ -101,7 +101,7 @@
       }
 
       h1 {
-        font-size: em(39);
+        font-size: 2.3em;
       }
     }
 
@@ -162,7 +162,10 @@
       font-family: 'open_sansregular', $helvetica;
       padding: 10px 8px;
       border-radius: 5px;
-      @include mobile { width: 260px; }
+
+      @include mobile {
+        width: 280px;
+      }
     }
   }
 
