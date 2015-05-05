@@ -18,6 +18,10 @@ public class Genero {
             "secretaria"
     );
 
+    public String o(String id) {
+        return FEMININOS.stream().anyMatch(id::startsWith) ? "a" : "o";
+    }
+
     public String de(String id) {
         return FEMININOS.stream().anyMatch(id::startsWith) ? "da" : "do";
     }

@@ -13,6 +13,12 @@ public class GeneroTest {
     Genero genero = new Genero();
 
     @Test
+    public void escolheGeneroDeAcordoComPalavraInicialEmArtigo() throws Exception {
+        assertThat(genero.o("secretaria-do-secretariado"), is("a"));
+        assertThat(genero.o("ministerio-do-ministeriado"), is("o"));
+    }
+
+    @Test
     public void escolheGeneroDeAcordoComPalavraInicialEmDe() throws Exception {
         assertThat(genero.de("secretaria-do-secretariado"), is("da"));
         assertThat(genero.de("ministerio-do-ministeriado"), is("do"));
