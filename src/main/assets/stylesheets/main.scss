@@ -131,6 +131,13 @@ dl.portlet {
     border-bottom: .1em solid #ccc;
   }
 
+  ul {
+    li:last-child {
+      margin-bottom: 1em;
+      border-bottom: none;
+    }
+  }
+
   .fa {
     color: #2c66ce;
     float: right;
