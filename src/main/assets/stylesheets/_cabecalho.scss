@@ -140,6 +140,7 @@
     text-align: left;
 
     @include mobile {
+      width: 100%;
       display: inline-block !important;
       float: left;
       margin-top: 20px;
@@ -148,6 +149,10 @@
 
     form {
       white-space: nowrap;
+
+      @include mobile {
+        margin-right: 20px;
+      }
     }
 
     label {
@@ -162,10 +167,6 @@
       font-family: 'open_sansregular', $helvetica;
       padding: 10px 8px;
       border-radius: 5px;
-
-      @include mobile {
-        width: 280px;
-      }
     }
   }
 

@@ -90,11 +90,11 @@ body.contraste {
   #portal-searchbox {
     border-color: #fff;
     background-color: #000;
-  }
 
-  #portal-searchbox .searchField {
-    background-color: #fff;
-    color: black !important;
+    .searchField {
+      background-color: #fff;
+      color: black !important;
+    }
   }
 
   .outstanding-header .outstanding-title {
