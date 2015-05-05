@@ -6,7 +6,7 @@
             <legend class="hidden">Buscar</legend>
             <label class="hidden" for="buscar">Buscar</label>
 
-            <input type="text" size="18" title="Buscar no site" placeholder="Buscar"
+            <input type="search" size="18" title="Buscar no site" placeholder="Buscar"
                    class="searchField" name="q" id="buscar"
                    th:value="${(param.q?:{''})[0]}"/>
             <button class="searchButton">
@@ -26,7 +26,6 @@
          "query-input": "required name=search_term_string"
        }
     }
-
     </script>
 </div>
 

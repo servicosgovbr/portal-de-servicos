@@ -20,7 +20,7 @@
     <div class="busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
         <h3 class="titulo-home">O que você está procurando?</h3>
         <form method="get" action="/busca">
-            <input id="input-busca" type="text" name="q" value="" title="Buscar por assuntos, serviços ou órgãos" placeholder="Você pode pesquisar por assuntos, serviços, órgãos"/>
+            <input id="input-busca" type="search" name="q" value="" title="Buscar por assuntos, serviços ou órgãos" placeholder="Você pode pesquisar por assuntos, serviços, órgãos"/>
             <input type="submit" value="BUSCAR" class="acao-busca"/>
         </form>
     </div>
