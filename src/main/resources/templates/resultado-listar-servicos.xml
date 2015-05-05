@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resultadoListarServicos>
+<resultadoListarServicos xmlns:th="http://www.thymeleaf.org">
     <listaServicos>
         <servico th:each="servico : ${servicos}">
-            <link th:text="${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1/xml/servico/' + servico.id)}"></link>
+            <link th:text="${@baseUrl.and('/xml/servico/' + servico.id)}">link</link>
         </servico>
     </listaServicos>
 </resultadoListarServicos>

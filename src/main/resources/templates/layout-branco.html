@@ -13,7 +13,7 @@
     <meta property="og:url" th:content="${#httpServletRequest.requestURL}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="pt_BR"/>
-    <meta property="og:image" th:content="${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1/img/ogp-logo.jpg')}"/>
+    <meta property="og:image" th:content="${@baseUrl.and('/img/ogp-logo.jpg')}"/>
 </head>
 
 <body th:class="${@cookies.isOn('contraste')} ? 'contraste'">

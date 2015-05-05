@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+<OpenSearchDescription
+        xmlns="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:th="http://www.thymeleaf.org">
     <ShortName>Guia de Serviços</ShortName>
     <LongName>Guia de Serviços do Governo do Brasil</LongName>
     <Description>Procure serviços do Governo do Brasil</Description>
     <Tags>serviços governo</Tags>
     <Contact>servicos@planejamento.gov.br</Contact>
-    <Url type="text/html" th:attr="template=${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1/busca?q={searchTerms}')}"/>
-    <Url type="application/json" th:attr="template=${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1/sugestao?q={searchTerms}')}"/>
-    <Image height="72" width="72" type="image/png">http://ec2-54-94-244-36.sa-east-1.compute.amazonaws.com/img/touch_icon.png</Image>
+    <Url type="text/html" th:attr="template=${@baseUrl.and('/busca?q={searchTerms}')}"/>
+    <Url type="application/json" th:attr="template=${@baseUrl.and('/sugestao?q={searchTerms}')}"/>
+    <Image height="72" width="72" type="image/png" th:text="${@baseUrl.and('/img/touch_icon.png')}"/>
     <Developer>Ministério do Planejamento, Orçamento e Gestão - MPOG</Developer>
 </OpenSearchDescription>

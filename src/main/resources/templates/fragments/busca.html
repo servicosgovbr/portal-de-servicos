@@ -1,3 +1,5 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
 <div id="portal-searchbox" th:class="${#httpServletRequest.requestURI} == '/' ? 'hidden'">
     <form action="/busca">
         <fieldset>
@@ -6,7 +8,7 @@
 
             <input type="text" size="18" title="Buscar no site" placeholder="Buscar"
                    class="searchField" name="q" id="buscar"
-                   th:value="${(param.q?:{''})[0]}" />
+                   th:value="${(param.q?:{''})[0]}"/>
             <button class="searchButton">
                 <i class="fa fa-search"></i> <span class="hidden">Buscar</span>
             </button>
@@ -17,12 +19,15 @@
     {
        "@context": "http://schema.org",
        "@type": "WebSite",
-       "url": "[[${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}]]",
+       "url": "[[${@baseUrl.and('/')}]]",
        "potentialAction": {
          "@type": "SearchAction",
-         "target": "[[${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}]]/search?q={search_term_string}",
+         "target": "[[${@baseUrl.and('/search?q={search_term_string}')}]]",
          "query-input": "required name=search_term_string"
        }
     }
+
     </script>
 </div>
+
+</html>

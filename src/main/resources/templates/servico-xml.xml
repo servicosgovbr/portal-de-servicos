@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <servico xmlns="http://servicos.gov.br/carta/v1/servico"
-         xmlns:th="http://www.thymeleaf.org"
-         th:with="base = ${#httpServletRequest.requestURL.toString().replaceAll('^(http://(.*?))/(.*)$', '$1')}">
+         xmlns:th="http://www.thymeleaf.org">
 
     <versao>1.0</versao>
 
-    <link rel="self" th:href="${base + '/servico/' + servico.id}"/>
+    <link rel="self" th:href="${@baseUrl.and('/servico/' + servico.id)}"/>
 
     <id th:text="${servico.id}"/>
 
@@ -15,12 +14,12 @@
 
     <orgaoResponsavel>
         <nome th:text="${servico.responsavel.nome}"/>
-        <link rel="orgao-responsavel" th:href="${base + '/orgao/' + servico.responsavel.id}"/>
+        <link rel="orgao-responsavel" th:href="${@baseUrl.and('/orgao/' + servico.responsavel.id)}"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <nome th:text="${servico.prestador.nome}"/>
-        <link rel="orgao-prestador" th:href="${base + '/orgao/' + servico.prestador.id}"/>
+        <link rel="orgao-prestador" th:href="${@baseUrl.and('/orgao/' + servico.prestador.id)}"/>
     </orgaoPrestador>
 
     <quemPodeUtilizar/>
@@ -36,21 +35,21 @@
     <segmentosDaSociedade th:each="publicoAlvo : ${servico.publicosAlvo}">
         <segmentoDaSociedade>
             <nome th:text="${publicoAlvo.titulo}"/>
-            <link rel="segmento-da-sociedade" th:href="${base + '/publico-alvo/' + publicoAlvo.id}"/>
+            <link rel="segmento-da-sociedade" th:href="${@baseUrl.and('/publico-alvo/' + publicoAlvo.id)}"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
     <eventosDaLinhaDaVida th:each="linhaDaVida : ${servico.linhasDaVida}">
         <eventoDaLinhaDaVida>
             <nome th:text="${linhaDaVida.titulo}"/>
-            <link rel="linha-da-vida" th:href="${base + '/linha-da-vida/' + linhaDaVida.id}"/>
+            <link rel="linha-da-vida" th:href="${@baseUrl.and('/linha-da-vida/' + linhaDaVida.id)}"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
     <areasDeInteresse th:each="areaDeInteresse : ${servico.areasDeInteresse}">
         <areaDeInteresse>
             <nome th:text="${areaDeInteresse.titulo}"/>
-            <link rel="area-de-interesse" th:href="${base + '/area-de-interesse/' + areaDeInteresse.id}"/>
+            <link rel="area-de-interesse" th:href="${@baseUrl.and('/area-de-interesse/' + areaDeInteresse.id)}"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
