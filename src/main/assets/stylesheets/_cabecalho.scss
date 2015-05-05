@@ -22,7 +22,7 @@
     @include outer-container;
     margin-bottom: em(20);
 
-    @include mobile {
+    @include mobile-tablet {
       margin-left: $mobile-margin-left;
     }
   }

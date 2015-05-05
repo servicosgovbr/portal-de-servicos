@@ -11,7 +11,9 @@
 
 #main {
   @include outer-container;
-  padding-left: $mobile-margin-left;
+  @include mobile-tablet {
+    padding-left: $mobile-margin-left;
+  }
 }
 
 .no-mobile {
