@@ -82,16 +82,15 @@
 
   hr {
     margin-bottom: em(15);
+    border-bottom: 0px;
   }
 
   ul.resultados-busca {
-
     li {
       display: list-item;
       margin: 0;
-      color: #606060;
+      color: #606060; 
     }
-
   }
 
   a {
@@ -124,6 +123,7 @@ dl.portlet {
     color: #2c66ce;
     float: right;
     padding-top: 3px;
+    padding-right: 6px;
   }
 
 }
@@ -324,14 +324,18 @@ a.acao, button.acao, input[type="submit"].acao {
 }
 
 ul#resultados-linhadavida {
-  margin-top: 30px;
+  margin-top: 18px;
 
   p {
     margin-bottom: 20px;
     border-bottom: 1px solid #DCDCDC;
     padding-bottom: 20px;
     color: #606060;
-    line-height: 140%;
+    line-height: 130%;
+  }
+
+  h3 {
+    margin-bottom: 0px;
   }
 }
 
@@ -350,9 +354,17 @@ ul#resultados-busca {
 }
 
 .paginacao-busca {
-  font-size: em(15);
   font-family: open_sansbold;
+  font-size: 13px;
   color: #606060;
+  padding: 3px 10px 3px 10px;
+  text-transform: uppercase;
+}
+
+.paginacao-letras {
+  background-color: #edeff1;
+  padding: 5px 0px 5px 0px;
+  border-radius: 4px;
 }
 
 
@@ -362,9 +374,10 @@ ul.orgaos-a-z {
     list-style-type: disc outside none;
     border-bottom: 1px solid #DCDCDC;
     padding: 8px 0px 8px 0px;
+    font-size: em(17);
+    font-weight: bold;
   }
 }
-
 
 ul.servicos-a-z {
   li {
@@ -375,7 +388,7 @@ ul.servicos-a-z {
   }
 
   h3 {
-    margin: 2px;
+    margin: 6px 0px 2px 0px;
   }
 }
 
@@ -387,7 +400,7 @@ ul.servicos-a-z {
 
 #navegacao {
   @include span-columns(3);
-
+  margin-bottom: 35px;
   @include mobile-tablet {
     display: none !important;
   }

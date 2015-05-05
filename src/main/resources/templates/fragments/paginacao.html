@@ -2,7 +2,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <body>
 
-<div th:fragment="paginacao-simples(paginaAtual, paginas, parametros)">
+<div class="paginacao-letras" th:fragment="paginacao-simples(paginaAtual, paginas, parametros)">
 
     <span layout:fragment="titulo" class="paginacao-busca">
         Páginas:
@@ -21,10 +21,8 @@
 <div th:fragment="conteudo-paginado(paginaAtual, paginas, parametros)">
     <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})">
     </div>
-    <hr/>
     <section layout:fragment="conteudo">
     </section>
-    <hr/>
     <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})">
     </div>
 </div>
