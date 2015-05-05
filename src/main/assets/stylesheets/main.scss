@@ -58,6 +58,7 @@
     font-family: "open_sansbold", $helvetica;
     font-size: em(25);
     line-height: 1.2em;
+    margin-bottom: 10px;
   }
 
   h4 {
@@ -79,6 +80,17 @@
     color: #606060;
     line-height: 140%;
   }
+
+  span.paginacao-busca {
+    font-size: 13px;
+  }
+
+  ul.paginacao-busca {
+    li {
+      font-size: 13px;
+    }
+  }
+
 
   hr {
     margin-bottom: em(15);
@@ -211,16 +223,18 @@ dl.portlet {
 .busca-principal {
   @include span-columns(12);
   @include omega();
-  margin-bottom: em(30);
-  background-color: #edeff1;
-  padding: 10px 15px 15px 15px;
-  border-radius: 4px;
+
 
   @include mobile {
     display: none !important;
   }
 
   > form {
+      margin-bottom: em(30);
+      background-color: #edeff1;
+      padding: 15px 15px 55px 15px;
+      border-radius: 4px;
+
     > input[type='search'] {
       @include span-columns(9 of 11);
       display: block;
@@ -342,11 +356,9 @@ ul#resultados-linhadavida {
 
 
 ul#resultados-busca {
-  margin-top: 30px;
+  margin-top: 20px;
 
   p {
-    padding-top: 20px;
-    margin-bottom: 20px;
     border-bottom: 1px solid #DCDCDC;
     padding-bottom: 20px;
     color: #606060;
@@ -356,16 +368,18 @@ ul#resultados-busca {
 
 .paginacao-busca {
   font-family: open_sansbold;
-  font-size: 13px;
   color: #606060;
   padding: 3px 10px 3px 10px;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .paginacao-letras {
   background-color: #edeff1;
-  padding: 5px 0px 5px 0px;
+  padding: 5px 10px 5px 0px;
   border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 
