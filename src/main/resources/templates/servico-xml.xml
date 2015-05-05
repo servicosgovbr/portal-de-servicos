@@ -17,9 +17,14 @@
         <link rel="orgao-responsavel" th:href="${@baseUrl.and('/orgao/' + servico.responsavel.id)}"/>
     </orgaoResponsavel>
 
-    <orgaoPrestador>
+    <orgaoPrestador th:if="${servico.prestador}">
         <nome th:text="${servico.prestador.nome}"/>
         <link rel="orgao-prestador" th:href="${@baseUrl.and('/orgao/' + servico.prestador.id)}"/>
+    </orgaoPrestador>
+
+    <orgaoPrestador th:unless="${servico.prestador}">
+        <nome th:text="${servico.responsavel.nome}"/>
+        <link rel="orgao-prestador" th:href="${@baseUrl.and('/orgao/' + servico.responsavel.id)}"/>
     </orgaoPrestador>
 
     <quemPodeUtilizar/>
