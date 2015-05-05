@@ -5,7 +5,9 @@
       layout:decorator="layout-branco">
 
 <head>
-    <title></title>
+    <title th:text="${conteudo.titulo}">Nome do Órgão</title>
+    <meta property="og:title" th:content="${conteudo.titulo}"/>
+    <meta property="og:description" th:content="${'Informações sobre ' + conteudo.titulo + ' no Guia de Serviços do Governo Federal'}"/>
 </head>
 <body>
 

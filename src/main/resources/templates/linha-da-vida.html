@@ -6,6 +6,8 @@
 
 <head>
     <title th:text="${conteudo.titulo}">Nome da Linha da Vida</title>
+    <meta property="og:title" th:content="${conteudo.titulo}"/>
+    <meta property="og:description" th:content="${conteudo.titulo + ' no Guia de Serviços do Governo Federal'}"/>
 </head>
 
 <body>
