@@ -227,7 +227,7 @@ dl.portlet {
   }
 
   > form {
-    > input[type='text'] {
+    > input[type='search'] {
       @include span-columns(9 of 11);
       display: block;
       padding: 10px;
@@ -268,7 +268,6 @@ span.ticket-erro {
   font-weight: bold;
   font-family: Courier, monospaced;
 }
-
 
 .markdown {
   margin-bottom: 2em;
