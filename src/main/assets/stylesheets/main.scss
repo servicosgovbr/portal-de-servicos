@@ -64,29 +64,20 @@
     font-size: em(13);
     color: #606060;
     text-transform: uppercase;
-  }
 
-  h4.titulo-destaque {
-    font-size: em(20);
-    font-family: 'open_sanssemibold', $helvetica;
-    line-height: 120%;
-    text-transform: none;
-    margin-top: 0;
+    &.titulo-destaque {
+      font-size: em(20);
+      font-family: 'open_sanssemibold', $helvetica;
+      line-height: 120%;
+      text-transform: none;
+      margin-top: 0;
+    }
   }
 
   p, span, a {
     font-size: em(15);
     color: #606060;
     line-height: 140%;
-  }
-
-  img {
-    max-width: 100%;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    max-width: 100%;
-    height: auto;
   }
 
   hr {
@@ -166,16 +157,6 @@ dl.portlet {
     color: #2c67cd;
     text-transform: uppercase;
     font-weight: normal;
-  }
-
-  img.right {
-    float: right;
-    margin: 0 0 .5em 0;
-  }
-
-  img.left {
-    float: left;
-    margin: 0 1em .5em 0;
   }
 
 }
