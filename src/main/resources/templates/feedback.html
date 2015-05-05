@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout-branco">
 
@@ -8,15 +9,24 @@
 </head>
 <body>
 
-<span layout:fragment="link-migalha-de-pao">
-    Dê sua opinião
+<span layout:fragment="migalhas-de-pao">
+    <span class="separador">&gt;</span>
+
+    <a href="" iteprop="url">
+        <span itemprop="title">Dê sua opinião</span>
+    </a>
 </span>
 
 <section layout:fragment="corpo">
     <div class="row">
 
         <h2>Nos ajude a melhorar o Guia de Serviços</h2>
-            <p> Por favor, não inclua nenhuma informação pessoal ou financeira, como seus documentos ou dados de cartão de crédito.</p>
+
+        <p>
+            Por favor, não inclua nenhuma informação pessoal ou financeira, como seus documentos ou dados de cartão de
+            crédito.
+        </p>
+
         <form accept-charset="UTF-8" action="/feedback" method="post">
 
             <h3>Você encontrou o que estava procurando?</h3>
@@ -32,7 +42,6 @@
             </p>
 
             <h3>Dê a sua opinião sobre este site:</h3>
-
 
 
             <textarea id="opiniao" name="feedback" rows="10" class="row"></textarea>
