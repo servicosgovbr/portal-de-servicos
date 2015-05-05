@@ -9,14 +9,22 @@
 </head>
 <body>
 
-<span layout:fragment="link-migalha-de-pao-pai">
-    <a href="/orgaos">
-        Órgãos
-    </a>
-</span>
+<span layout:fragment="migalhas-de-pao">
+    <span class="separador">&gt;</span>
 
-<span layout:fragment="link-migalha-de-pao" th:text="${conteudo.titulo}">
-    Nome do Órgão
+    <a href="/orgaos" itemprop="url">
+        <span itemprop="title">
+            Todos os Órgãos
+        </span>
+    </a>
+
+    <span class="separador">&gt;</span>
+
+    <a href="" itemprop="url">
+        <span itemprop="title" th:text="${conteudo.titulo}">
+            Nome do Órgão
+        </span>
+    </a>
 </span>
 
 <section layout:fragment="corpo">

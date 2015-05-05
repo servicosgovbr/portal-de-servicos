@@ -9,12 +9,23 @@
 </head>
 
 <body>
-<span layout:fragment="link-migalha-de-pao-pai">
-    Serviços
-</span>
 
-<span layout:fragment="link-migalha-de-pao" th:text="${conteudo.titulo}">
-	Nome da Linha da Vida
+<span layout:fragment="migalhas-de-pao">
+    <span class="separador">&gt;</span>
+
+    <a href="/servicos" itemprop="url">
+        <span itemprop="title">
+            Todos os Serviços
+        </span>
+    </a>
+
+    <span class="separador">&gt;</span>
+
+    <a href="" itemprop="url">
+        <span itemprop="title" th:text="${conteudo.titulo}">
+            Nome da Linha da Vida
+        </span>
+    </a>
 </span>
 
 <section layout:fragment="corpo">

@@ -9,12 +9,22 @@
 </head>
 <body>
 
-<span layout:fragment="link-migalha-de-pao-pai">
-    Todos os Serviços
-</span>
+<span layout:fragment="migalhas-de-pao">
+    <span class="separador">&gt;</span>
 
-<span layout:fragment="link-migalha-de-pao" th:text="${letraAtiva}">
-	A-Z
+    <a href="" itemprop="url">
+        <span itemprop="title">
+            Todos os Serviços
+        </span>
+    </a>
+
+    <span class="separador">&gt;</span>
+
+    <a href="" itemprop="url">
+        <span itemprop="title" th:text="${letraAtiva}">
+            Letra filtrada
+        </span>
+    </a>
 </span>
 
 <section layout:fragment="corpo">

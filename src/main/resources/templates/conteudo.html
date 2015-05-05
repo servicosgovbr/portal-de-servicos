@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layout-branco">
 
@@ -8,12 +9,9 @@
 </head>
 <body>
 
-<span layout:fragment="link-migalha-de-pao-pai">
-    Conteúdo
-</span>
-
-<span layout:fragment="link-migalha-de-pao" th:text="${conteudo.titulo}">
-    Título do Conteúdo
+<span layout:fragment="migalhas-de-pao">
+    <span class="separador">&gt;</span>
+    <span itemprop="title" th:text="${conteudo.titulo}">Título do conteúdo</span>
 </span>
 
 <section layout:fragment="corpo">
