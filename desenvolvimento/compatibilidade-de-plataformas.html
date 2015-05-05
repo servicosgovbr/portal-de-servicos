@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.10.4" data-basepath=".." data-revision="Tue May 05 2015 20:51:21 GMT+0000 (UTC)">
+    <div class="book" data-level="8.10.4" data-basepath=".." data-revision="Tue May 05 2015 20:59:30 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1285,7 +1285,7 @@
 <p>Todos os arquivos de c&#xF3;digo, dados, configura&#xE7;&#xE3;o e documenta&#xE7;&#xE3;o est&#xE3;o em UTF-8.</p>
 <h2 id="servidores">Servidores</h2>
 <p>A aplica&#xE7;&#xE3;o &#xE9; compat&#xED;vel com qualquer sistema capaz de rodar um ambiente <a href="http://www.java.com" target="_blank">Java 8</a>. Sistemas baseados no Unix s&#xE3;o prefer&#xED;veis, e os pacotes RPM gerados pela constru&#xE7;&#xE3;o s&#xE3;o compat&#xED;veis com qualquer sistema Linux baseado em <a href="http://www.rpm.org" target="_blank">RPM</a>s e <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> moderno.</p>
-<p>A maioria da <a href="../sobre-o-projeto/equipe.html">equipe</a> utiliza sistemas MacOS X ou Linux de diversas distribui&#xE7;&#xF5;es para desenvolvimento, sem maiores problemas. </p>
+<p>A maioria da <a href="../sobre-o-projeto/equipe.html">equipe</a> utiliza sistemas MacOS X ou Linux de diversas distribui&#xE7;&#xF5;es para desenvolvimento, sem maiores problemas.</p>
 <h2 id="navegadores">Navegadores</h2>
 <p>A aplica&#xE7;&#xE3;o &#xE9; compat&#xED;vel com a maioria dos navegadores modernos, utilizando a seguinte grade de compatibilidade:</p>
 <table>
@@ -1293,49 +1293,72 @@
 <tr>
 <th>Navegador</th>
 <th>Nota C</th>
+<th>Nota B</th>
 <th>Nota A</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Internet Explorer</td>
+<td>&lt; 8</td>
 <td>&lt; 10</td>
 <td>&gt;= 10</td>
 </tr>
 <tr>
 <td>Google Chrome</td>
 <td>&lt; 30</td>
+<td></td>
 <td>&gt;= 30</td>
 </tr>
 <tr>
 <td>Apple Safari</td>
 <td>&lt; 4</td>
+<td></td>
 <td>&gt;= 4</td>
 </tr>
 <tr>
 <td>Opera</td>
 <td>&lt; 11</td>
+<td></td>
 <td>&gt;= 11</td>
 </tr>
 <tr>
 <td>Mozilla Firefox</td>
 <td>&lt; 4</td>
+<td></td>
 <td>&gt;= 4</td>
 </tr>
 <tr>
 <td>Mobile Safari (iOS)</td>
 <td>&lt; 7</td>
+<td></td>
 <td>&gt;= 7</td>
 </tr>
 <tr>
 <td>Android WebKit</td>
 <td>&lt; 4</td>
+<td></td>
 <td>&gt;= 4</td>
 </tr>
 </tbody>
 </table>
 <h3 id="nota-a">Nota A</h3>
 <p>Navegadores nota A est&#xE3;o identificados, s&#xE3;o capazes de renderizar todas as <em>tags</em> que utilizamos no HTML das p&#xE1;ginas, e relativamente comuns em uso. Bugs em navegadores nota A s&#xE3;o tratados como alta prioridade.</p>
+<p>Testamos rotineiramente com os seguintes navegadores nota A:</p>
+<ul>
+<li>Google Chrome 42</li>
+<li>Internet Explorer 11</li>
+<li>Mozilla Firefox 37</li>
+<li>Mobile Safari (iOS) 8</li>
+</ul>
+<h3 id="nota-b">Nota B</h3>
+<p>Navegadores nota B est&#xE3;o identificados, mas s&#xE3;o incapazes de renderizar todas as <em>tags</em> e diretivas CSS que utilizamos. S&#xE3;o comuns o suficiente para tratamento diferente dos navegadores nota C, e bugs s&#xE3;o tratados como alta prioridade.</p>
+<p>Testamos rotineiramente com os seguintes navegadores nota B:</p>
+<ul>
+<li>Internet Explorer 8</li>
+<li>Internet Explorer 9</li>
+<li>Internet Explorer 10</li>
+</ul>
 <h3 id="nota-c">Nota C</h3>
 <p>Navegadores nota C est&#xE3;o identificados, mas s&#xE3;o incapazes de renderizar todas as <em>tags</em> e diretivas CSS que utilizamos. S&#xE3;o relativamente incomuns, e portanto bugs nestes recebem prioridade baixa.</p>
 
