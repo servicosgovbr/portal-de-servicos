@@ -15,8 +15,8 @@ Vagrant.configure('2') do |config|
     vb.customize ['modifyvm', :id, '--memory', '512']
   end
 
-  config.vm.define 'ie11', autostart: false do |ie11|
-    ie11.vm.box = "http://aka.ms/vagrant-win7-ie11"
+  config.vm.define 'ie8', autostart: false do |ie11|
+    ie11.vm.box = "http://aka.ms/vagrant-win7-ie8"
     ie11.vm.communicator = :winrm
 
     ie11.vm.provider 'virtualbox' do |ieVb|
