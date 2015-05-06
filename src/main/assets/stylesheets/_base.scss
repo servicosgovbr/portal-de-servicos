@@ -78,6 +78,10 @@ input {
   font-family: $openSansRegular;
 }
 
+::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 input[type='text']:focus {
   background-color: $branco;
 }
