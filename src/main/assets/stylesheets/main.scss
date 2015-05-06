@@ -44,6 +44,7 @@
       font-size: em(35);
       line-height: 1.2em;
       font-weight: bold;
+      margin-top: -5px;
 
       @include mobile-tablet {
         line-height: 1.2em;
@@ -171,6 +172,7 @@ dl.portlet {
     font-family: 'open_sansbold', $helvetica;
     font-size: em(25);
     line-height: 1.2em;
+    margin-top: -5px;
   }
 
   h3 {
@@ -300,6 +302,8 @@ span.ticket-erro {
     color: $cinza-escuro;
     font-size: em(35);
     line-height: 1.2em;
+    margin-top: -5px;
+
   }
 
   ul li {
