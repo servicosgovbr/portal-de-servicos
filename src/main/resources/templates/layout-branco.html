@@ -65,7 +65,9 @@ var _paq = _paq || [];
 </script>
 <script type="text/javascript" th:unless="${@environment.getProperty('gds.piwik.enabled')}">
 (function() {
-  console.log("Tracking no Piwik desligado (GDS_PIWIK_ENABLED=false");
+  if (typeof console != 'undefined') {
+    console.log("Tracking no Piwik desligado (GDS_PIWIK_ENABLED=false");
+  }
 })();
 </script>
 
