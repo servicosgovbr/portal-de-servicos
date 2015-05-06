@@ -20,7 +20,7 @@
     <div class="row">
 
         <th:block th:unless="${resultados.hasContent()}">
-            <h1>Nenhum resultado</h1>
+            <h2>Nenhum resultado</h2>
 
             <p>
                 Não foram encontrados serviços com o termo "<span th:text="${termo}"></span>".
@@ -39,7 +39,7 @@
 
         <th:block th:if="${resultados.hasContent()}">
 
-            <h1>Resultados da busca por "<span th:text="${termo}">termo</span>"</h1>
+            <h2>Resultados da Busca por "<span th:text="${termo}">termo</span>"</h2>
 
             <p>
                 <span th:text="${resultados.totalElements}">0</span> resultados encontrados
