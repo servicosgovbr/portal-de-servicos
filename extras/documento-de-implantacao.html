@@ -34,7 +34,7 @@
     
 
         
-    <div class="book" data-level="9.1" data-basepath=".." data-revision="Wed May 06 2015 18:42:32 GMT+0000 (UTC)">
+    <div class="book" data-level="9.1" data-basepath=".." data-revision="Wed May 06 2015 20:42:04 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1450,21 +1450,12 @@ FWNjBIi/4Zz3o/QwwjUGKeAYRpllp8knOk+6foxRzuYIkov92Lg=
 <p>A distribui&#xE7;&#xE3;o Linux CentOS 7 utiliza a ferramenta <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> para controle das opera&#xE7;&#xF5;es do sistema operacional, e permite uma diretiva em sua configura&#xE7;&#xE3;o, <a href="http://www.freedesktop.org/software/systemd/man/systemd.exec.html" target="_blank"><code>EnvironmentFile</code></a>, que utilizamos para dizer ao <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> de onde devem ser carregadas as vari&#xE1;veis de ambiente para um determinado sistema em execu&#xE7;&#xE3;o.</p>
 <p>No caso do Guia de Servi&#xE7;os, tanto em ambientes <a href="deploy-vagrant.md">Vagrant</a> quanto em <a href="deploy-homologacao-producao.md">homologa&#xE7;&#xE3;o e produ&#xE7;&#xE3;o</a>, este arquivo est&#xE1; instalado em <code>/etc/sysconfig/guia-de-servicos</code>, e deve ser revisado de acordo com o ambiente de cada instala&#xE7;&#xE3;o.</p>
 <p>A seguir est&#xE1; uma lista de todas as configura&#xE7;&#xF5;es utilizadas, seus poss&#xED;veis valores e poss&#xED;veis modifica&#xE7;&#xF5;es necess&#xE1;rias:</p>
-<h4 id="-spring-profiles-active"><code>SPRING_PROFILES_ACTIVE</code></h4>
-<p>Lista os perfis ativos do <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a>, separados por v&#xED;rgula. Por exemplo:</p>
-<pre><code class="lang-bash">SPRING_PROFILES_ACTIVE=production,clustering
-</code></pre>
-<p>Os valores podem ser uma combina&#xE7;&#xE3;o dos seguintes:</p>
-<h5 id="-production"><code>production</code></h5>
-<p>Habilita op&#xE7;&#xF5;es relacionadas &#xE0; execu&#xE7;&#xE3;o do Guia de Servi&#xE7;os em ambientes de produ&#xE7;&#xE3;o, descritas na se&#xE7;&#xE3;o <code>application-production.yaml</code> acima.</p>
-<h5 id="-clustering"><code>clustering</code></h5>
-<p>Habilita op&#xE7;&#xF5;es relacionadas &#xE0; execu&#xE7;&#xE3;o do Guia de Servi&#xE7;os utilizando um cluster de m&#xE1;quinas do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>, ao inv&#xE9;s de inicializar um nodo embutido em mem&#xF3;ria local, &#xFA;til durante o desenvolvimento do sistema.</p>
-<h5 id="-monitoring"><code>monitoring</code></h5>
-<p>Habilita o envio de informa&#xE7;&#xF5;es de uso da aplica&#xE7;&#xE3;o ao sistema de monitoramento e m&#xE9;tricas <a href="http://www.piwik.org" target="_blank">Piwik</a>.</p>
 <h4 id="-spring-data-elasticsearch-clusternodes"><code>SPRING_DATA_ELASTICSEARCH_CLUSTERNODES</code></h4>
 <p>Sobrescreve o valor da propriedade <code>spring.data.elasticsearch.clusterNodes</code> do arquivo <code>application.yaml</code>, e deve conter uma lista dos IPs e portas dos nodos do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> do ambiente corrente, separados por v&#xED;rgula. Por exemplo:</p>
 <pre><code class="lang-bash">SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=<span class="hljs-string">&quot;10.10.10.10:9300,10.10.10.11:9300,10.10.10.12:9300&quot;</span>
 </code></pre>
+<h4 id="-spring-thymeleaf-cache"><code>SPRING_THYMELEAF_CACHE</code></h4>
+<p>Habilita ou desabilita o cache do sistema de renderiza&#xE7;&#xE3;o de templates <a href="http://www.thymeleaf.org" target="_blank">Thymeleaf</a>. Por default, <code>false</code>. </p>
 <h4 id="-mail-protocol"><code>MAIL_PROTOCOL</code></h4>
 <p>O protocolo utilizado para envio de emails. Por default, <code>smtp</code>.</p>
 <h4 id="-mail-host"><code>MAIL_HOST</code></h4>
@@ -1485,12 +1476,22 @@ FWNjBIi/4Zz3o/QwwjUGKeAYRpllp8knOk+6foxRzuYIkov92Lg=
 <p>Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, o nome do usu&#xE1;rio da conta a ser utilizada. Por default, vazio.</p>
 <h4 id="-mail-password"><code>MAIL_PASSWORD</code></h4>
 <p>Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, a senha da conta a ser utilizada. Por default, vazio.</p>
+<h4 id="-gds-piwik-enabled"><code>GDS_PIWIK_ENABLED</code></h4>
+<p>Habilita ou desabilita o monitoramento e m&#xE9;tricas do Piwik. Por default, <code>false</code>.</p>
 <h4 id="-gds-piwik-url"><code>GDS_PIWIK_URL</code></h4>
-<p>A URL do servidor <a href="http://www.piwik.org" target="_blank">Piwik</a> que ser&#xE1; utilizada para monitoramento e m&#xE9;tricas, caso o perfil <code>monitoring</code> (descrito acima) esteja presente. Por default, <code>https://estatisticas.presidencia.gov.br/</code>.</p>
+<p>A URL do servidor <a href="http://www.piwik.org" target="_blank">Piwik</a> que ser&#xE1; utilizada para monitoramento e m&#xE9;tricas. Por default, <code>https://estatisticas.presidencia.gov.br/</code>.</p>
 <h4 id="-gds-piwik-token"><code>GDS_PIWIK_TOKEN</code></h4>
 <p>O token para acesso &#xE0; API de m&#xE9;tricas do <a href="http://www.piwik.org" target="_blank">Piwik</a>. Geralmente, 32 caracteres hexadecimais. Por default, vazio.</p>
 <h4 id="-gds-piwik-site"><code>GDS_PIWIK_SITE</code></h4>
 <p>O identificador do site dentro do <a href="http://www.piwik.org" target="_blank">Piwik</a>. Por default, <code>2</code>.</p>
+<h4 id="-endpoints-enabled"><code>ENDPOINTS_ENABLED</code></h4>
+<p>Habilita ou desabilita as URLs de monitoramento e depura&#xE7;&#xE3;o que o <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a> disponibiliza, mas que podem oferecer riscos de seguran&#xE7;a. Por default, <code>true</code>.</p>
+<h4 id="-endpoints-info-enabled"><code>ENDPOINTS_INFO_ENABLED</code></h4>
+<p>Habilita ou desabilita a URL de monitoramento <code>/info</code>, &#xFA;til para verificar a vers&#xE3;o do corrente do sistema. Por default, <code>true</code>.</p>
+<h4 id="-endpoints-health-enabled"><code>ENDPOINTS_HEALTH_ENABLED</code></h4>
+<p>Habilita ou desabilita a URL de monitoramento <code>/health</code>, que faz uma breve verifica&#xE7;&#xE3;o do estado de sa&#xFA;de do sistema. Por default, <code>true</code>.</p>
+<h4 id="-endpoints-health-sensitive"><code>ENDPOINTS_HEALTH_SENSITIVE</code></h4>
+<p>Exp&#xF5;e apenas o estado geral (<code>UP</code>, <code>DOWN</code>, etc) do sistema, ao inv&#xE9;s de detalhes que podem conter informa&#xE7;&#xF5;es sens&#xED;veis, como detalhes de quanto espa&#xE7;o em disco est&#xE1; dispon&#xED;vel, ou IPs da rede interna, por exemplo. Por default, <code>false</code>.</p>
 <hr>
 <h1 id="backups">Backups</h1>
 <p>Backups devem ser feitos dos seguintes caminhos:</p>

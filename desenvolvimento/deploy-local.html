@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.5.1" data-basepath=".." data-revision="Wed May 06 2015 18:42:32 GMT+0000 (UTC)">
+    <div class="book" data-level="8.5.1" data-basepath=".." data-revision="Wed May 06 2015 20:42:04 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1303,9 +1303,8 @@ git clone &quot;https://github.com/servicosgovbr/guia-de-servicos.git&quot;
 <pre><code>./gradlew bootRun
 </code></pre><p>Ap&#xF3;s alguns segundos, o servidor estar&#xE1; dispon&#xED;vel em <a href="http://localhost:8080/" target="_blank">localhost:8080</a>. Arquivos est&#xE1;ticos (html, js, css) alterados estar&#xE3;o dispon&#xED;veis alguns segundos ap&#xF3;s altera&#xE7;&#xF5;es.</p>
 <h2 id="elasticsearch-externo">ElasticSearch externo</h2>
-<p>Para utilizar um servidor <a href="elasticsearch.html">ElasticSearch</a> configurado em <code>localhost:9300</code>, basta adicionar o perfil <code>cluster</code> aos perfis
-ativos do Spring:</p>
-<pre><code>SPRING_PROFILES_ACTIVE=cluster ./gradlew run
+<p>Para utilizar um servidor <a href="elasticsearch.html">ElasticSearch</a> configurado em <code>localhost:9300</code>, basta configurar a vari&#xE1;vel <code>SPRING_DATA_ELASTICSEARCH_CLUSTERNODES</code>:</p>
+<pre><code>SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=127.0.0.1:9300 ./gradlew run
 </code></pre><p>Para a inicializa&#xE7;&#xE3;o funcionar desta forma, &#xE9; necess&#xE1;rio que o ElasticSearch j&#xE1; esteja executando antes de come&#xE7;ar.</p>
 
                     
