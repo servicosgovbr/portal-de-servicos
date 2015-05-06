@@ -10,7 +10,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class BaseUrl {
+public class BaseUrl {
 
     HttpServletRequest request;
 
