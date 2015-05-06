@@ -1,5 +1,6 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
+@import 'media-queries';
 @import 'typography';
 @import 'base';
 @import 'icones';
@@ -8,7 +9,6 @@
 @import 'rodape';
 @import 'grid';
 @import 'acessibilidade';
-@import 'media-queries';
 
 #main {
   @include outer-container;
@@ -39,18 +39,6 @@
 
   header {
     margin-bottom: em(20);
-
-    h2 {
-      font-family: 'open_sansbold', $helvetica;
-      font-size: em(35);
-      line-height: 1.2em;
-      font-weight: bold;
-      margin-top: -5px;
-
-      @include mobile-tablet {
-        line-height: 1.2em;
-      }
-    }
   }
 
   h1 {
@@ -164,16 +152,6 @@ dl.portlet {
     border-bottom: none;
     text-transform: none;
     line-height: 1.1em;
-  }
-
-  h2 {
-    margin: 0;
-    margin-bottom: .5em;
-    color: $cinza-escuro;
-    font-family: 'open_sansbold', $helvetica;
-    font-size: em(25);
-    line-height: 1.2em;
-    margin-top: -5px;
   }
 
   h3 {
@@ -294,18 +272,6 @@ span.ticket-erro {
 
 .markdown {
   margin-bottom: 2em;
-
-  h2 {
-    border-bottom: none;
-    color: $cinza-escuro;
-    margin: 0 0 .5em;
-    font-family: "open_sansbold", $helvetica;
-    color: $cinza-escuro;
-    font-size: em(35);
-    line-height: 1.2em;
-    margin-top: -5px;
-
-  }
 
   ul li {
     display: list-item;

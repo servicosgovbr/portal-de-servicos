@@ -52,12 +52,14 @@ h1 {
 h2 {
   border-bottom: none;
   color: $cinza-escuro;
-  margin: 0 0 .5em;
   font-family: 'open_sansbold', $helvetica;
-  color: $cinza-escuro;
   font-size: em(35);
-  line-height: 120%;
-  margin-top: -5px;
+  line-height: 1.2em;
+  margin: -5px 0 .5em;
+
+  @include mobile {
+    font-size: em(25);
+  }
 }
 
 h3 {
