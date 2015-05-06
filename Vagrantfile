@@ -1,6 +1,6 @@
 Vagrant.configure('2') do |config|
 
-  config.vm.box = 'chef/centos-7.0'
+  config.vm.box = 'https://s3-sa-east-1.amazonaws.com/servicosgovbr/base.box'
   config.ssh.forward_agent = true
 
   if Vagrant.has_plugin? 'vagrant-cachier'
