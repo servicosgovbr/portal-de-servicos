@@ -145,13 +145,12 @@
       margin-top: 20px;
       margin-bottom: 10px;
     }
+    @include mobile-tablet {
+      padding-right: $mobile-margin-right;
+    }
 
     form {
       white-space: nowrap;
-
-      @include mobile {
-        margin-right: 20px;
-      }
     }
 
     label {
@@ -171,6 +170,7 @@
   #barra-feedback {
     background-color: $azul-claro;
     padding-left: $mobile-margin-left;
+    padding-right: $mobile-margin-right;
 
     p {
       @include outer-container(73.80em);

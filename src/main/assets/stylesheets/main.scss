@@ -14,6 +14,7 @@
   @include outer-container;
   @include mobile-tablet {
     padding-left: $mobile-margin-left;
+    padding-right: $mobile-margin-right;
   }
 }
 
