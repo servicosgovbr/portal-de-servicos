@@ -37,7 +37,6 @@ div.position-10 {
   position: relative;
 
   @include mobile {
-    padding-left: 5px;
     width: 98.5% !important;
   } 
 }
