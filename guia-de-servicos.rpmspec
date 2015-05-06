@@ -46,6 +46,9 @@ cat <<-EOF > %{buildroot}/etc/sysconfig/%{name}
 ## Lista dos IPs e portas dos nodos do ElasticSearch do ambiente, separados por vírgula.
 # SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="10.10.10.10:9300,10.10.10.11:9300,10.10.10.12:9300"
 #
+## Habilita ou desabilita o cache do sistema de renderização de templates Thymeleaf.
+# SPRING_THYMELEAF_CACHE=false
+#
 ## Protocolo utilizado para envio de emails.
 # MAIL_PROTOCOL=smtp
 #
