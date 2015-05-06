@@ -29,7 +29,6 @@
 
   #acessibilidade {
     @include span-columns(6);
-    font-family: 'open_sansregular', $helvetica;
 
     @include mobile-tablet {
       display: none !important;
@@ -164,7 +163,6 @@
       width: 100%;
       border: none;
       border-right: none;
-      font-family: 'open_sansregular', $helvetica;
       padding: 10px 8px;
       border-radius: 5px;
     }

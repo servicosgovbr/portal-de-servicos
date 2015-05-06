@@ -7,22 +7,16 @@
   vertical-align: baseline;
 }
 
-a:link {
-  text-decoration: none;
-  color: $cinza-escuro;
-  font-family: open_sansregular;
-}
+a {
+  &:link, &:visited {
+    text-decoration: none;
+    color: $cinza-escuro;
+  }
 
-a:visited {
-  text-decoration: none;
-  color: $cinza-escuro;
-  font-family: open_sansregular;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: $azul-claro;
-  font-family: open_sansregular;
+  &:hover {
+    text-decoration: underline;
+    color: $azul-claro;
+  }
 }
 
 * li {
@@ -33,7 +27,7 @@ body {
   background-color: $branco;
   color: $preto;
   font-size: em(16px);
-  font-family: 'open_sansregular', $helvetica;
+  font-family: $openSansRegular;
 }
 
 .hidden {
@@ -48,15 +42,12 @@ h1 {
   border-bottom: none;
   color: $cinza-escuro;
   margin: .5em 0 .5em;
-  font-family: 'open_sansregular', $helvetica;
   color: $cinza-escuro;
 }
 
 #portal-title {
   line-height: 110%;
 }
-
-
 
 h2 {
   border-bottom: none;
@@ -68,18 +59,11 @@ h2 {
   line-height: 120%;
 }
 
-
 h3 {
   font-family: 'open_sansbold', $helvetica;
   color: $cinza-escuro;
   font-size: em(18);
   line-height: em(23);
-}
-
-
-
-input {
-  font-family: 'open_sansregular', $helvetica;
 }
 
 fieldset {
@@ -88,6 +72,10 @@ fieldset {
   margin: 0;
   padding: 0;
   width: auto;
+}
+
+input {
+  font-family: $openSansRegular;
 }
 
 input[type='text']:focus {
@@ -100,57 +88,3 @@ p {
   color: $cinza-escuro;
 }
 
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'open_sanslight';
-  src: url('/fonts/opensans-300-webfont.eot');
-  src: url('/fonts/opensans-300-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/opensans-300-webfont.woff') format('woff'),
-  url('/fonts/opensans-300-webfont.ttf') format('truetype'),
-  url('/fonts/opensans-300-webfont.svg#open_sanslight') format('svg');
-}
-
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'open_sansregular';
-  src: url('/fonts/opensans-400-webfont.eot');
-  src: url('/fonts/opensans-400-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/opensans-400-webfont.woff') format('woff'),
-  url('/fonts/opensans-400-webfont.ttf') format('truetype'),
-  url('/fonts/opensans-400-webfont.svg#open_sansregular') format('svg');
-}
-
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'open_sanssemibold';
-  src: url('/fonts/opensans-600-webfont.eot');
-  src: url('/fonts/opensans-600-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/opensans-600-webfont.woff') format('woff'),
-  url('/fonts/opensans-600-webfont.ttf') format('truetype'),
-  url('/fonts/opensans-600-webfont.svg#open_sanssemibold') format('svg');
-}
-
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'open_sansbold';
-  src: url('/fonts/opensans-700-webfont.eot');
-  src: url('/fonts/opensans-700-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/opensans-700-webfont.woff') format('woff'),
-  url('/fonts/opensans-700-webfont.ttf') format('truetype'),
-  url('/fonts/opensans-700-webfont.svg#open_sansbold') format('svg');
-}
-
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'open_sansextrabold';
-  src: url('/fonts/opensans-800-webfont.eot');
-  src: url('/fonts/opensans-800-webfont.eot?#iefix') format('embedded-opentype'),
-  url('/fonts/opensans-800-webfont.woff') format('woff'),
-  url('/fonts/opensans-800-webfont.ttf') format('truetype'),
-  url('/fonts/opensans-800-webfont.svg#open_sansextrabold') format('svg');
-}
