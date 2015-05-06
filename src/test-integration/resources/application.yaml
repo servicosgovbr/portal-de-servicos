@@ -3,8 +3,11 @@ spring:
     show-banner: false
 
   thymeleaf:
-    mode: HTML5
     cache: false
+
+endpoints:
+  health:
+    sensitive: false
 
 server:
   port: ${port:8080}
@@ -19,12 +22,15 @@ mail:
     starttls: false
   from: nao-responda@servicos.gov.br
   to: servicos@planejamento.gov.br
-  username: user
-  password: pass
+  username:
+  password:
 
 gds:
+  permitir-robos: false
+  importar-automaticamente: false
   piwik:
-    url: "https://estatisticas.presidencia.gov.br"
+    enabled: false
+    url: "https://estatisticas.presidencia.gov.br/"
     token: ""
     site: 2
   destaques:
