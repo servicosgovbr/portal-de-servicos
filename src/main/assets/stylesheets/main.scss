@@ -294,6 +294,7 @@ span.ticket-erro {
 }
 
 a.acao, button.acao, input[type="submit"].acao, input[type="submit"].acao-busca {
+  text-transform: uppercase;
 
   &:hover {
     color: $branco;

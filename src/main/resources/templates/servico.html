@@ -48,11 +48,11 @@
             </p>
 
             <a th:if="${not #strings.isEmpty(servico.url)}" class="acao acao-comecar" th:href="${servico.url}">
-                COMEÇAR
+                Começar
             </a>
 
             <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" class="acao acao-agendar" th:href="${servico.urlAgendamento}">
-                Agendar agora
+                Agendar
             </a>
 
             <p th:unless="${#strings.isEmpty(servico.responsavel.nome)}">
