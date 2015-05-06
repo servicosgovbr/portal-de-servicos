@@ -27,6 +27,7 @@
 #conteudo, .conteudo {
   @include span-columns(9);
   @include omega();
+  clear: right;
   line-height: 1.5em;
 
   @include mobile {
