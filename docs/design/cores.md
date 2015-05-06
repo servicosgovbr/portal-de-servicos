@@ -21,7 +21,8 @@ Foram cinco cores definidas para estilizar o site, e estas são utilizadas com o
 
 | Cor         | Código		| Exemplo
 | ----------- | :---------: | ------------------------------------------------------------------ |
-| Azul        | `#2c66ce`   | <div class="swatch" style="background-color: #2c66ce">&nbsp;</div> |
+| Azul Claro  | `#2c66ce`   | <div class="swatch" style="background-color: #2c66ce">&nbsp;</div> |
+| Azul Escuro | `#2153ae`   | <div class="swatch" style="background-color: #2153ae">&nbsp;</div> |
 | Branco      | `#ffffff`   | <div class="swatch" style="background-color: #ffffff">&nbsp;</div> |
 | Cinza claro | `#eef0f1`   | <div class="swatch" style="background-color: #eef0f1">&nbsp;</div> |
 | Cinza médio | `#dcdcdc`   | <div class="swatch" style="background-color: #dcdcdc">&nbsp;</div> |
