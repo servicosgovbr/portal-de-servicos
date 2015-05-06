@@ -2,7 +2,7 @@
 
 #header {
   padding-top: 5px;
-  background-color: #eeeff1;
+  background-color: $cinza-claro;
 
   button.searchButton {
     font-size: 20px;
@@ -10,12 +10,12 @@
     border: none;
     background: none;
     position: relative;
-    color: #606060;
+    color: $cinza-escuro;
     top: 2px;
   }
 
   a {
-    color: #606060;
+    color: $cinza-escuro;
   }
 
   #topo {
@@ -46,8 +46,8 @@
 
     a span {
       padding: 0px 4px 0px 4px;
-      background: #cfd0d2;
-      color: #2c66ce;
+      background: $cinza-claro;
+      color: $azul-claro;
     }
 
   }
@@ -57,7 +57,7 @@
     @include shift(2);
     @include omega();
     padding-bottom: em(5);
-    border-bottom: em(1) dotted #cfd0d2;
+    border-bottom: em(1) dotted $cinza-claro;
 
     @include mobile {
       display: none !important;
@@ -114,7 +114,7 @@
   #portal-title {
     font-family: 'open_sansextrabold', $helvetica;
     font-size: em(40);
-    color: #2c66ce;
+    color: $azul-claro;
     margin-bottom: 0;
     letter-spacing: -0.05em;
     margin-top: 30px;
@@ -130,7 +130,7 @@
     text-transform: uppercase;
     font-size: em(14);
     font-family: 'open_sanssemibold', $helvetica;
-    color: #2c66ce;
+    color: $azul-claro;
   }
 
   #portal-searchbox {
@@ -171,7 +171,7 @@
   }
 
   #barra-feedback {
-    background-color: #2c66ce;
+    background-color: $azul-claro;
     padding-left: $mobile-margin-left;
 
     p {
@@ -179,17 +179,17 @@
       font-size: em(13px);
       padding: 5px 0 5px 0;
       margin-bottom: 0;
-      color: #ffffff;
+      color: $branco;
 
       a {
-        color: #ffffff;
+        color: $branco;
         font-family: open_sansbold;
         text-decoration: underline;
       }
     }
 
     .fa {
-      color: #606060;
+      color: $cinza-escuro;
       float: right;
       padding-top: 2px;
       font-size: 17px;

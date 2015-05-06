@@ -49,7 +49,7 @@
   h1 {
     font-size: em(35);
     font-family: 'open_sansbold', $helvetica;
-    color: #606060;
+    color: $cinza-escuro;
     line-height: 120%;
     margin-top: 0;
   }
@@ -63,7 +63,7 @@
 
   h4 {
     font-size: em(13);
-    color: #606060;
+    color: $cinza-escuro;
     text-transform: uppercase;
 
     &.titulo-destaque {
@@ -77,7 +77,7 @@
 
   p, span, a {
     font-size: em(15);
-    color: #606060;
+    color: $cinza-escuro;
     line-height: 140%;
   }
 
@@ -101,12 +101,12 @@
     li {
       display: list-item;
       margin: 0;
-      color: #606060; 
+      color: $cinza-escuro; 
     }
   }
 
   a {
-    color: #2c66ce;
+    color: $azul-claro;
   }
 
 }
@@ -114,9 +114,9 @@
 dl.portlet {
 
   dt {
-    background: #edeff1;
-    border-bottom: 1px solid #dfdfdf;
-    color: #606060;
+    background: $cinza-claro;
+    border-bottom: 1px solid $cinza-medio;
+    color: $cinza-escuro;
     cursor: pointer;
     margin: 0;
     padding: 15px 10px;
@@ -128,7 +128,7 @@ dl.portlet {
     display: list-item;
     margin: 0;
     padding: 0.5em;
-    border-bottom: .1em solid #ccc;
+    border-bottom: .1em solid $cinza-claro;
   }
 
   ul {
@@ -139,7 +139,7 @@ dl.portlet {
   }
 
   .fa {
-    color: #2c66ce;
+    color: $azul-claro;
     float: right;
     padding-top: 3px;
     padding-right: 6px;
@@ -162,7 +162,7 @@ dl.portlet {
   h2 {
     margin: 0;
     margin-bottom: .5em;
-    color: #606060;
+    color: $cinza-escuro;
     font-family: 'open_sansbold', $helvetica;
     font-size: em(25);
     line-height: 1.2em;
@@ -176,7 +176,7 @@ dl.portlet {
 
   .tile-subtitle {
     margin-bottom: .7em !important;
-    color: #2c67cd;
+    color: $azul-claro;
     text-transform: uppercase;
     font-weight: normal;
   }
@@ -211,7 +211,7 @@ dl.portlet {
     padding-right: em(10);
 
     span.fa-caret-up {
-      color: #a0a0a0;
+      color: $cinza-medio;
       padding-right: 5px;
     }
   }
@@ -219,11 +219,11 @@ dl.portlet {
 
 #destaques {
   a {
-    color: #606060;
+    color: $cinza-escuro;
   }
 
   a:hover {
-    color: #2c66ce;
+    color: $azul-claro;
   }
 }
 
@@ -238,7 +238,7 @@ dl.portlet {
 
   > form {
       margin-bottom: em(30);
-      background-color: #edeff1;
+      background-color: $cinza-claro;
       padding: 15px 15px 55px 15px;
       border-radius: 4px;
 
@@ -247,28 +247,28 @@ dl.portlet {
       display: block;
       padding: 10px;
       border-radius: 4px;
-      border-top: 2px solid #dcdcdc;
+      border-top: 2px solid $cinza-medio;
       border-bottom: 0;
-      border-left: 2px solid #dcdcdc;
+      border-left: 2px solid $cinza-medio;
       border-right: 0;
-      box-shadow: inset -2px -2px 5px -1px #e6e6e6;
-      background-color: #ffffff;
+      box-shadow: inset -2px -2px 5px -1px $cinza-claro;
+      background-color: $branco;
       font-size: em(13);
 
       @include placeholder {
-        color: #606060;
+        color: $cinza-escuro;
       }
 
       &:focus {
-        background-color: #fff;
+        background-color: $branco;
       }
     }
 
     input[type='submit'] {
       @include span-columns(2 of 11);
       @include omega();
-      color: #fff;
-      background-color: #2c66ce;
+      color: $branco;
+      background-color: $azul-claro;
       display: block;
       font-family: 'open_sansbold', $helvetica;
       font-size: 16px;
@@ -289,10 +289,10 @@ span.ticket-erro {
 
   h2 {
     border-bottom: none;
-    color: #606060;
+    color: $cinza-escuro;
     margin: 0 0 .5em;
     font-family: "open_sansbold", $helvetica;
-    color: #606060;
+    color: $cinza-escuro;
     font-size: em(35);
     line-height: 1.2em;
   }
@@ -300,19 +300,19 @@ span.ticket-erro {
   ul li {
     display: list-item;
     list-style-type: disc;
-    color: #606060;
+    color: $cinza-escuro;
     list-style-position: inside;
     line-height: 1.5em;
     margin-bottom: 10px;
     font-size: em(15);
 
     a {
-      color: #2c66ce;
+      color: $azul-claro;
       font-size: em(15);
     }
 
     a:active, a:link, a:visited {
-      color: #2c66ce;
+      color: $azul-claro;
     }
   }
 }
@@ -320,8 +320,8 @@ span.ticket-erro {
 a.acao, button.acao, input[type="submit"].acao, input[type="submit"].acao-busca {
 
   &:hover {
-    color: #ffffff;
-    background-color: #2153ae;
+    color: $branco;
+    background-color: $azul-escuro;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -330,18 +330,18 @@ a.acao, button.acao, input[type="submit"].acao, input[type="submit"].acao-busca 
 
 a.acao, button.acao, input[type="submit"].acao {
   padding: 8px 13px 8px 13px;
-  background: #2c66ce;
+  background: $azul-claro;
   text-decoration: none;
   margin: 10px 0px 30px 0px;
   display: inline-block;
-  color: #ffffff !important;
+  color: $branco !important;
   border: none;
   border-radius: 4px;
   font-family: open_sansbold;
   font-size: 16px;
 
   &:visited, &:link {
-    color: #ffffff;
+    color: $branco;
   }
 }
 
@@ -350,9 +350,9 @@ ul#resultados-linhadavida {
 
   p {
     margin-bottom: 20px;
-    border-bottom: 1px solid #DCDCDC;
+    border-bottom: 1px solid $cinza-medio;
     padding-bottom: 20px;
-    color: #606060;
+    color: $cinza-escuro;
     line-height: 130%;
   }
 
@@ -366,23 +366,23 @@ ul#resultados-busca {
   margin-top: 20px;
 
   p {
-    border-bottom: 1px solid #DCDCDC;
+    border-bottom: 1px solid $cinza-medio;
     padding-bottom: 20px;
-    color: #606060;
+    color: $cinza-escuro;
     line-height: 140%;
   }
 }
 
 .paginacao-busca {
   font-family: open_sansbold;
-  color: #606060;
+  color: $cinza-escuro;
   padding: 3px 10px 3px 10px;
   text-transform: uppercase;
   display: inline-block;
 }
 
 .paginacao-letras {
-  background-color: #edeff1;
+  background-color: $cinza-claro;
   padding: 5px 10px 5px 0px;
   border-radius: 4px;
   display: inline-block;
@@ -394,7 +394,7 @@ ul.orgaos-a-z {
   li {
     display: block;
     list-style-type: disc outside none;
-    border-bottom: 1px solid #DCDCDC;
+    border-bottom: 1px solid $cinza-medio;
     padding: 8px 0px 8px 0px;
     font-size: em(17);
     font-weight: bold;
@@ -405,19 +405,13 @@ ul.servicos-a-z {
   li {
     display: block;
     list-style-type: disc outside none;
-    border-bottom: 1px solid #DCDCDC;
+    border-bottom: 1px solid $cinza-medio;
     padding-top: 8px;
   }
 
   h3 {
     margin: 6px 0px 2px 0px;
   }
-}
-
-.footer-logo {
-  background-color: #00420c;
-  max-width: 100%;
-  padding: 30px 0;
 }
 
 #navegacao {
@@ -449,7 +443,7 @@ ul.servicos-a-z {
     padding: 1px 6px 0px 6px;
     font-size: em(10);
     text-transform: uppercase;
-    background-color: #edeff1;
+    background-color: $cinza-claro;
     border-radius: 4px;
     i {
       font-size: 12px;

@@ -1,3 +1,5 @@
+@import 'cores';
+
 * {
   margin: 0;
   padding: 0;
@@ -7,19 +9,19 @@
 
 a:link {
   text-decoration: none;
-  color: #606060;
+  color: $cinza-escuro;
   font-family: open_sansregular;
 }
 
 a:visited {
   text-decoration: none;
-  color: #606060;
+  color: $cinza-escuro;
   font-family: open_sansregular;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #2c66ce;
+  color: $azul-claro;
   font-family: open_sansregular;
 }
 
@@ -28,8 +30,8 @@ a:hover {
 }
 
 body {
-  background-color: #fff;
-  color: #000;
+  background-color: $branco;
+  color: $preto;
   font-size: em(16px);
   font-family: 'open_sansregular', $helvetica;
 }
@@ -44,10 +46,10 @@ body {
 
 h1 {
   border-bottom: none;
-  color: #606060;
+  color: $cinza-escuro;
   margin: .5em 0 .5em;
   font-family: 'open_sansregular', $helvetica;
-  color: #606060;
+  color: $cinza-escuro;
 }
 
 #portal-title {
@@ -58,10 +60,10 @@ h1 {
 
 h2 {
   border-bottom: none;
-  color: #606060;
+  color: $cinza-escuro;
   margin: 0 0 .5em;
   font-family: 'open_sansbold', $helvetica;
-  color: #606060;
+  color: $cinza-escuro;
   font-size: em(35);
   line-height: 120%;
 }
@@ -69,7 +71,7 @@ h2 {
 
 h3 {
   font-family: 'open_sansbold', $helvetica;
-  color: #606060;
+  color: $cinza-escuro;
   font-size: em(18);
   line-height: em(23);
 }
@@ -89,13 +91,13 @@ fieldset {
 }
 
 input[type='text']:focus {
-  background-color: #ffffe0;
+  background-color: $branco;
 }
 
 p {
   margin: 0 0 1em 0;
   line-height: 1.8em;
-  color: #606060;
+  color: $cinza-escuro;
 }
 
 @font-face {

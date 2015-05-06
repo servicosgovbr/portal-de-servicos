@@ -1,10 +1,12 @@
+@import 'cores';
+
 body.contraste {
-  background: #000 !important;
-  color: #fff !important;
+  background: $preto !important;
+  color: $branco !important;
 
   #header, #main, .outstanding-header .outstanding-title {
-    background: #000 !important;
-    color: #fff !important;
+    background: $preto !important;
+    color: $branco !important;
   }
 
   #rodape {
@@ -17,7 +19,7 @@ body.contraste {
     }
 
     #sobre li {
-      border-right-color: #fff;
+      border-right-color: $branco;
     }
 
     #barra-feedback {
@@ -31,8 +33,8 @@ body.contraste {
       background-color: #444;
 
       > input[type='submit'] {
-        background-color: #000;
-        border: 1px solid #fff;
+        background-color: $preto;
+        border: 1px solid $branco;
       }
     }
   }
@@ -42,46 +44,46 @@ body.contraste {
   #portal-siteactions a, #portal-siteactions a:hover, #logo #portal-logo,
   #logo #portal-title, #portal-description, .outstanding-header .outstanding-link, #conteudo .outstanding-header .outstanding-link:hover,
   .lista-vertical .tile-header span, .cover-collection-tile .tile-header span {
-    color: #fff !important;
+    color: $branco !important;
   }
   #acessibilidade span {
-    color: #000 !important;
+    color: $preto !important;
   }
   dl.portlet {
     .fa {
-      color: #fff;
+      color: $branco;
     }
   }
 
   .portletNavigationTree .portletHeader {
-    background: #000;
+    background: $preto;
   }
 
   *.acao {
-    background-color: #000;
-    border-color: #fff;
+    background-color: $preto;
+    border-color: $branco;
   }
 
   #rodape {
     .portletHeader,
     #capacho .doormatColumn {
-      border-color: #fff !important;
-      background: #000 !important;
-      color: #fff !important;
+      border-color: $branco !important;
+      background: $preto !important;
+      color: $branco !important;
     }
 
     #capacho dl {
-      border-left: 1px dotted #fff;
+      border-left: 1px dotted $branco;
     }
 
     #footer-brasil {
       background: #333;
-      color: #fff !important;
+      color: $branco !important;
     }
   }
 
   #portal-siteactions {
-    border-bottom: 1px dotted #fff;
+    border-bottom: 1px dotted $branco;
   }
 
   .outstanding-header .outstanding-link {
@@ -89,31 +91,31 @@ body.contraste {
   }
 
   #portal-searchbox {
-    border-color: #fff;
-    background-color: #000;
+    border-color: $branco;
+    background-color: $preto;
 
     .searchField {
-      background-color: #fff;
+      background-color: $branco;
       color: black !important;
     }
   }
 
   .outstanding-header .outstanding-title {
-    border-top: 2px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-top: 2px solid $branco;
+    border-bottom: 1px solid $branco;
   }
 
   .outstanding-header {
-    background: #000;
+    background: $preto;
   }
 
   #barra-brasil .link-barra {
-    color: #606060 !important;
+    color: $cinza-escuro !important;
   }
 
   .lista-vertical {
-    border: 1px solid #fff;
-    background: #000 !important;
+    border: 1px solid $branco;
+    background: $preto !important;
   }
 
   .destaque .linha-da-vida {

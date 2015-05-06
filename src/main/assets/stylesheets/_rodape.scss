@@ -1,10 +1,10 @@
 @import 'media-queries';
 
 #rodape {
-  background: #edeff1;
+  background: $cinza-claro;
 
   a {
-    color: #606060;
+    color: $cinza-escuro;
   }
 
   #capacho {
@@ -27,12 +27,12 @@
 
     dl {
       @include span-columns(3);
-      border-left: 1px dotted #606060;
+      border-left: 1px dotted $cinza-escuro;
       padding-left: 0.6em;
     }
 
     dt {
-      color: #2d66ce;
+      color: $azul-claro;
       font-family: 'open_sanssemibold', $helvetica;
       font-size: em(18);
     }
@@ -45,7 +45,7 @@
   }
 
   #footer-brasil {
-    background: #2d66ce;
+    background: $azul-claro;
     padding: 1.5em 0;
   }
 }

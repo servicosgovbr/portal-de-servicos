@@ -10,11 +10,11 @@
   }
 
   .voce-esta-aqui {
-    color: #606060;
+    color: $cinza-escuro;
   }
 
   a, span { 
-    color: #2c66ce;
+    color: $azul-claro;
     text-transform: uppercase;
     font-family: 'open_sansregular', $helvetica;
   }
