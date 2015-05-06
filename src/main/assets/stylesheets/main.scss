@@ -19,7 +19,7 @@
 
 .no-mobile {
   @include mobile {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -27,6 +27,10 @@
   @include span-columns(9);
   @include omega();
   line-height: 1.5em;
+
+  @include mobile {
+    margin-top: 15px;
+  }
 
   @include mobile-tablet {
     @include span-columns(12);
