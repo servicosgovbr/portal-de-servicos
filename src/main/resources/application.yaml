@@ -26,7 +26,10 @@ mail:
   password:
 
 gds:
+  permitir-robos: false
+  importar-automaticamente: false
   piwik:
+    enabled: false
     url: "https://estatisticas.presidencia.gov.br/"
     token: ""
     site: 2

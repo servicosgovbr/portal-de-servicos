@@ -15,3 +15,6 @@ endpoints:
   health:
     enabled: true
     sensitive: true
+gds:
+  permitir-robos: true
+  importar-automaticamente: true

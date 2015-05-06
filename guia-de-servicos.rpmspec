@@ -43,9 +43,6 @@ cat <<-EOF > %{buildroot}/etc/sysconfig/%{name}
 ## Este arquivo é sobrescrito pelo script de instalação (scripts/app-node-install).
 ##
 #
-## Lista dos perfis ativos do Spring Boot, separados por vírgula.
-# SPRING_PROFILES_ACTIVE=production,clustering,monitoring
-#
 ## Lista dos IPs e portas dos nodos do ElasticSearch do ambiente, separados por vírgula.
 # SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="10.10.10.10:9300,10.10.10.11:9300,10.10.10.12:9300"
 #
@@ -79,6 +76,9 @@ cat <<-EOF > %{buildroot}/etc/sysconfig/%{name}
 ## Caso o servidor de envio de email exija autenticação, a senha da conta a ser utilizada.
 # MAIL_PASSWORD=
 #
+## Habilita ou desabilita o monitoramento e métricas do Piwik
+# GDS_PIWIK_ENABLED=true
+#
 ## A URL do servidor Piwik que será utilizada para monitoramento e métricas, caso o perfil "monitoring" (descrito acima) esteja presente.
 # GDS_PIWIK_URL="https://estatisticas.presidencia.gov.br/"
 #
@@ -87,7 +87,13 @@ cat <<-EOF > %{buildroot}/etc/sysconfig/%{name}
 #
 ## O identificador do site dentro do Piwik.
 # GDS_PIWIK_SITE=2
-
+#
+## Habilita ou desabilita a navegação de robôs (motores de busca, etc) nesta instância.
+# GDS_PERMITIR_ROBOS=false
+#
+## Habilita ou desabilita a importação automática de dados ao iniciar o servidor.
+# GDS_IMPORTAR_AUTOMATICAMENTE=false
+#
 EOF
 
 mkdir -p %{buildroot}/etc/systemd/system

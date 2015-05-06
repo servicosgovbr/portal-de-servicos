@@ -4,28 +4,6 @@ No caso do Guia de Serviços, tanto em ambientes [Vagrant] quanto em [homologaç
 
 A seguir está uma lista de todas as configurações utilizadas, seus possíveis valores e possíveis modificações necessárias:
 
-#### `SPRING_PROFILES_ACTIVE`
-
-Lista os perfis ativos do [Spring Boot][spring-boot], separados por vírgula. Por exemplo:
-
-```bash
-SPRING_PROFILES_ACTIVE=production,clustering
-```
-
-Os valores podem ser uma combinação dos seguintes:
-
-##### `production`
-
-Habilita opções relacionadas à execução do Guia de Serviços em ambientes de produção, descritas na seção `application-production.yaml` acima.
-
-##### `clustering`
-
-Habilita opções relacionadas à execução do Guia de Serviços utilizando um cluster de máquinas do [ElasticSearch], ao invés de inicializar um nodo embutido em memória local, útil durante o desenvolvimento do sistema.
-
-##### `monitoring`
-
-Habilita o envio de informações de uso da aplicação ao sistema de monitoramento e métricas [Piwik].
-
 #### `SPRING_DATA_ELASTICSEARCH_CLUSTERNODES`
 
 Sobrescreve o valor da propriedade `spring.data.elasticsearch.clusterNodes` do arquivo `application.yaml`, e deve conter uma lista dos IPs e portas dos nodos do [ElasticSearch] do ambiente corrente, separados por vírgula. Por exemplo:
@@ -33,6 +11,10 @@ Sobrescreve o valor da propriedade `spring.data.elasticsearch.clusterNodes` do a
 ```bash
 SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="10.10.10.10:9300,10.10.10.11:9300,10.10.10.12:9300" 
 ```
+
+#### `SPRING_THYMELEAF_CACHE`
+
+Habilita ou desabilita o cache do sistema de renderização de templates [Thymeleaf]. Por default, `false`. 
 
 #### `MAIL_PROTOCOL`
 
@@ -74,9 +56,13 @@ Caso o servidor de envio de email exija autenticação, o nome do usuário da co
 
 Caso o servidor de envio de email exija autenticação, a senha da conta a ser utilizada. Por default, vazio.
 
+#### `GDS_PIWIK_ENABLED`
+
+Habilita ou desabilita o monitoramento e métricas do Piwik. Por default, `false`.
+
 #### `GDS_PIWIK_URL`
 
-A URL do servidor [Piwik] que será utilizada para monitoramento e métricas, caso o perfil `monitoring` (descrito acima) esteja presente. Por default, `https://estatisticas.presidencia.gov.br/`.
+A URL do servidor [Piwik] que será utilizada para monitoramento e métricas. Por default, `https://estatisticas.presidencia.gov.br/`.
 
 #### `GDS_PIWIK_TOKEN`
 
@@ -85,6 +71,22 @@ O token para acesso à API de métricas do [Piwik]. Geralmente, 32 caracteres he
 #### `GDS_PIWIK_SITE`
 
 O identificador do site dentro do [Piwik]. Por default, `2`.
+
+#### `ENDPOINTS_ENABLED`
+
+Habilita ou desabilita as URLs de monitoramento e depuração que o [Spring Boot][spring-boot] disponibiliza, mas que podem oferecer riscos de segurança. Por default, `true`.
+
+#### `ENDPOINTS_INFO_ENABLED`
+
+Habilita ou desabilita a URL de monitoramento `/info`, útil para verificar a versão do corrente do sistema. Por default, `true`.
+
+#### `ENDPOINTS_HEALTH_ENABLED`
+
+Habilita ou desabilita a URL de monitoramento `/health`, que faz uma breve verificação do estado de saúde do sistema. Por default, `true`.
+
+#### `ENDPOINTS_HEALTH_SENSITIVE`
+
+Expõe apenas o estado geral (`UP`, `DOWN`, etc) do sistema, ao invés de detalhes que podem conter informações sensíveis, como detalhes de quanto espaço em disco está disponível, ou IPs da rede interna, por exemplo. Por default, `false`.
 
 [spring-boot-config]:http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config
 [spring-boot]:http://projects.spring.io/spring-boot/

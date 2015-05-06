@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import static lombok.AccessLevel.PRIVATE;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -17,16 +18,21 @@ public class ImportadorAutomaticoTest {
     @Mock
     Importador importador;
 
-    ImportadorAutomatico importadorAutomatico;
-
     @Before
     public void setUp() throws Exception {
-        importadorAutomatico = new ImportadorAutomatico(importador);
     }
 
     @Test
     public void deveImportarOsServicosLegadosAoCarregarAAplicacao() throws Exception {
-        importadorAutomatico.appCarregada();
+        ImportadorAutomatico i = new ImportadorAutomatico(importador, true);
+        i.appCarregada();
         verify(importador).importar();
+    }
+
+    @Test
+    public void deveIgnorarOperacaoComAFlagDesligada() throws Exception {
+        ImportadorAutomatico i = new ImportadorAutomatico(importador, false);
+        i.appCarregada();
+        verify(importador, never()).importar();
     }
 }

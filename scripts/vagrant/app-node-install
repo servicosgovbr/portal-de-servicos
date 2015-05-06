@@ -38,7 +38,6 @@ cat <<-EOF > /etc/sysconfig/guia-de-servicos
 #
 # http://servicosgovbr.github.io/guia-de-servicos/desenvolvimento/configuracao.html
 #
-SPRING_PROFILES_ACTIVE=production,cluster,monitoring
 SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:9300"
 
 ENDPOINTS_ENABLED=true

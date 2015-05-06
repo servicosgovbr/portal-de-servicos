@@ -13,16 +13,22 @@ import static org.junit.Assert.assertThat;
 @FieldDefaults(level = PRIVATE)
 public class RobotsTxtControllerTest {
 
-    RobotsTxtController robotsTxtController;
+    RobotsTxtController controller;
 
     @Before
     public void setUp() throws Exception {
-        robotsTxtController = new RobotsTxtController();
+        controller = new RobotsTxtController();
     }
 
     @Test
-    public void retornaPermissoes() throws Exception {
-        assertThat(robotsTxtController.robotsTxt(new MockHttpServletRequest()),
-                stringContainsInOrder(asList("Sitemap", "User-agent", "*", "Disallow")));
+    public void devePermitirRobosComAFlagLigada() throws Exception {
+        assertThat(controller.robotsTxt(new MockHttpServletRequest(), true),
+                stringContainsInOrder(asList("Sitemap", "User-agent", "*", "Disallow:")));
+    }
+
+    @Test
+    public void deveBanirRobosComAFlagDesligada() throws Exception {
+        assertThat(controller.robotsTxt(new MockHttpServletRequest(), false),
+                stringContainsInOrder(asList("User-agent", "*", "Disallow: /")));
     }
 }

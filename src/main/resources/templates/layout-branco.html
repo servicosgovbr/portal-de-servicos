@@ -47,7 +47,7 @@
 <script type="text/javascript" src="/assets/main.js"></script>
 <script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
 
-<script type="text/javascript" th:if="${#arrays.contains(@environment.activeProfiles, 'monitoring')}" th:inline="javascript">
+<script type="text/javascript" th:if="${@environment.getProperty('gds.piwik.enabled')}" th:inline="javascript">
 var _paq = _paq || [];
 (function(){
     var piwikUrl = /*[[${@environment.getProperty('gds.piwik.url')}]]*/ null;
@@ -62,9 +62,9 @@ var _paq = _paq || [];
     s.parentNode.insertBefore(g,s);
 })();
 </script>
-<script type="text/javascript" th:unless="${#arrays.contains(@environment.getActiveProfiles(),'monitoring')}">
+<script type="text/javascript" th:unless="${@environment.getProperty('gds.piwik.enabled')}">
 (function() {
-  console.log("Perfil 'monitoring' não habilitado - tracking no Piwik desligado!");
+  console.log("Tracking no Piwik desligado (GDS_PIWIK_ENABLED=false");
 })();
 </script>
 

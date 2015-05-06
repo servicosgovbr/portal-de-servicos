@@ -20,8 +20,6 @@ cat <<-EOS > /etc/sysconfig/guia-de-servicos
 #
 # http://servicosgovbr.github.io/guia-de-servicos/desenvolvimento/configuracao.html
 #
-SPRING_PROFILES_ACTIVE=production
-
 ENDPOINTS_ENABLED=false
 ENDPOINTS_INFO_ENABLED=true
 ENDPOINTS_HEALTH_ENABLED=true

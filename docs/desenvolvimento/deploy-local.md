@@ -52,11 +52,10 @@ Após alguns segundos, o servidor estará disponível em [localhost:8080](http:/
 
 ## ElasticSearch externo
 
-Para utilizar um servidor [ElasticSearch](./elasticsearch.md) configurado em `localhost:9300`, basta adicionar o perfil `cluster` aos perfis
-ativos do Spring:
+Para utilizar um servidor [ElasticSearch](./elasticsearch.md) configurado em `localhost:9300`, basta configurar a variável `SPRING_DATA_ELASTICSEARCH_CLUSTERNODES`:
 
 ```
-SPRING_PROFILES_ACTIVE=cluster ./gradlew run
+SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=127.0.0.1:9300 ./gradlew run
 ```
 
 Para a inicialização funcionar desta forma, é necessário que o ElasticSearch já esteja executando antes de começar.
