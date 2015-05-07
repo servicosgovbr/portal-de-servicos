@@ -15,6 +15,10 @@ task prepareRpm(type:Copy) {
     include "${project.name}-${version}.jar"
     into "$rpmBaseDir/SOURCES"
 
+    from "$projectDir/scripts"
+    include "guia-de-servicos.default.config"
+    into "$rpmBaseDir/SOURCES"
+
     from "$projectDir/scripts/backups"
     include "*"
     into "$rpmBaseDir/SOURCES"
