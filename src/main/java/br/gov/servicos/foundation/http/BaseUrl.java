@@ -15,7 +15,7 @@ public class BaseUrl {
     HttpServletRequest request;
 
     @Autowired
-    BaseUrl(HttpServletRequest request) {
+    public BaseUrl(HttpServletRequest request) {
         this.request = request;
     }
 

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import javax.servlet.http.HttpServletRequest;
+
 import static java.lang.String.format;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.http.HttpStatus.OK;
@@ -21,13 +23,14 @@ class RobotsTxtController {
     @RequestMapping(value = "/robots.txt", produces = "text/plain")
     @ResponseStatus(OK)
     @ResponseBody
-    String robotsTxt(BaseUrl baseUrl, @Value("${gds.permitir-robos}") boolean permitirRobos) {
+    String robotsTxt(HttpServletRequest request, @Value("${gds.permitir-robos}") boolean permitirRobos) {
         if (!permitirRobos) {
             log.info("Robôs não permitidos neste ambiente (GDS_PERMITIR_ROBOS=false)");
             return format("User-agent: *%n" +
                     "Disallow: /%n");
         }
 
+        BaseUrl baseUrl = new BaseUrl(request);
         return format("Sitemap: %s%n%n" +
                 "User-agent: *%n" +
                 "Disallow:%n", baseUrl.and("/sitemap.xml"));
