@@ -55,10 +55,8 @@ echo 'Instalando Guia de Serviços...'
 yum install -y guia-de-servicos
 
 echo 'Configurando Guia de Serviços...'
-cat <<-EOF > /etc/sysconfig/guia-de-servicos
-# Guia de Serviços
-#
-# Este arquivo contém variáveis de ambiente utilizadas na configuração do Guia de Serviços.
+cat <<-EOF > /etc/sysconfig/guia-de-servicos-overrides
+# Este arquivo sobrescreve variáveis de configuração do Guia de Serviços.
 # Para mais informações, veja a documentação em:
 #
 # http://servicosgovbr.github.io/guia-de-servicos/desenvolvimento/configuracao.html

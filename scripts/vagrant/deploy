@@ -22,7 +22,7 @@ yum remove -y guia-de-servicos
 yum install -y /vagrant/build/rpmbuild/RPMS/noarch/guia-de-servicos-1.0.0-1.noarch.rpm
 
 echo 'Configurando Guia de Serviços...'
-cat <<-EOF > /etc/sysconfig/guia-de-servicos
+cat <<-EOF > /etc/sysconfig/guia-de-servicos-overrides
 # Variáveis de ambiente para configuração do Guia de Serviços
 
 SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:9300"
@@ -30,6 +30,7 @@ SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:930
 ENDPOINTS_ENABLED=true
 ENDPOINTS_HEALTH_SENSITIVE=false
 
+GDS_PIWIK_ENABLED=true
 GDS_PIWIK_URL="http://${PIWIK_ADDR}/"
 GDS_PIWIK_TOKEN=c0e024d9200b5705bc4804722636378a
 GDS_PIWIK_SITE=1

@@ -40,6 +40,13 @@ cp %{SOURCE0} %{buildroot}/%{prefix}/lib/%{name}.jar
 mkdir -p %{buildroot}/etc/sysconfig
 cp %{SOURCE3} %{buildroot}/etc/sysconfig/%{name}
 
+cat <<-EOF > %{buildroot}/etc/sysconfig/%{name}-overrides
+# Este arquivo sobrescreve variáveis de configuração do Guia de Serviços.
+# Para mais informações, veja a documentação em:
+#
+# http://servicosgovbr.github.io/guia-de-servicos/desenvolvimento/configuracao.html
+EOF
+
 mkdir -p %{buildroot}/etc/systemd/system
 cat <<-EOF > %{buildroot}/etc/systemd/system/%{name}.service
 [Unit]
@@ -50,6 +57,7 @@ ExecStart=/opt/%{name}/bin/%{name}
 User=%{_user}
 TimeoutSec=300
 EnvironmentFile=/etc/sysconfig/%{name}
+EnvironmentFile=/etc/sysconfig/%{name}-overrides
 SyslogIdentifier=guia-de-servicos
 SyslogLevelPrefix=false
 StandardOutput=syslog
@@ -82,6 +90,7 @@ EOF
 
 %config
 %attr(0644, %{_user}, %{_user}) /etc/sysconfig/%{name}
+%attr(0644, %{_user}, %{_user}) /etc/sysconfig/%{name}-overrides
 
 %clean
 rm -rf %{buildroot}
