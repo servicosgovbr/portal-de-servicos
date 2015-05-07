@@ -18,7 +18,7 @@
     <meta property="og:image" th:content="${@baseUrl.and('/img/ogp-logo.jpg')}"/>
 
     <!-- fix for font boosting: http://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 
 <body th:class="${@cookies.isOn('contraste')} ? 'contraste'">
