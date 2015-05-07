@@ -169,9 +169,12 @@
   }
 
   #barra-feedback {
-    background-color: $azul-claro;
     padding-left: $mobile-margin-left;
     padding-right: $mobile-margin-right;
+
+    div {
+      background-color: $azul-claro;
+    }
 
     p {
       @include outer-container(73.80em);
