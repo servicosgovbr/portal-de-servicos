@@ -24,6 +24,7 @@
 
     @include mobile-tablet {
       margin-left: $mobile-margin-left;
+      margin-right: $mobile-margin-right;
     }
   }
 
@@ -100,7 +101,7 @@
       }
 
       h1 {
-        font-size: 2.3em;
+        font-size: 2.1em;
       }
     }
 
