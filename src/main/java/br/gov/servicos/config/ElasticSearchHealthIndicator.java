@@ -30,19 +30,24 @@ public class ElasticSearchHealthIndicator implements HealthIndicator {
 
     @Override
     public Health health() {
-        ClusterHealthRequest request = new ClusterHealthRequest(GDS_IMPORTADOR, GDS_PERSISTENTE);
-        ClusterHealthResponse response = client.cluster().health(request).actionGet();
+        try {
+            ClusterHealthRequest request = new ClusterHealthRequest(GDS_IMPORTADOR, GDS_PERSISTENTE);
+            ClusterHealthResponse response = client.cluster().health(request).actionGet();
 
-        Health.Builder health = response.getStatus() != GREEN ? Health.down() : Health.up();
+            Health.Builder health = response.getStatus() != GREEN ? Health.down() : Health.up();
 
-        health.withDetail("status", response.getStatus())
-                .withDetail("nodes", response.getNumberOfNodes());
+            health.withDetail("status", response.getStatus())
+                    .withDetail("nodes", response.getNumberOfNodes());
 
-        NodeInfo[] nodeInfos = client.cluster().nodesInfo(new NodesInfoRequest()).actionGet().getNodes();
-        for (int i = 0; i < nodeInfos.length; i++) {
-            health = health.withDetail("node-" + i, nodeInfos[i].getNode().getName());
+            NodeInfo[] nodeInfos = client.cluster().nodesInfo(new NodesInfoRequest()).actionGet().getNodes();
+            for (int i = 0; i < nodeInfos.length; i++) {
+                health = health.withDetail("node-" + i, nodeInfos[i].getNode().getName());
+            }
+
+            return health.build();
+
+        } catch(Exception e) {
+            return Health.down().withException(e).build();
         }
-
-        return health.build();
     }
 }
