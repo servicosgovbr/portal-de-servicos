@@ -40,13 +40,14 @@ public class IndexadorConteudoTest {
     @Before
     public void setUp() throws Exception {
         indexadorConteudo = new IndexadorConteudo(linhaDaVidaRepository, orgaoRepository, conteudoRepository);
-        doReturn(TestData.ORGAOS)
-                .when(orgaoRepository)
-                .findAll();
     }
 
     @Test
-    public void deveIndexarInformacoesDeOrgaos() {
+    public void deveIndexarConteudoDeOrgaos() {
+        doReturn(TestData.ORGAOS)
+                .when(orgaoRepository)
+                .findAll();
+
         indexadorConteudo.indexar();
 
         ArgumentCaptor<List> captor = ArgumentCaptor.forClass(List.class);
@@ -61,6 +62,28 @@ public class IndexadorConteudoTest {
         Conteudo bancoCentral = conteudos.get(1);
         Assert.assertThat(bancoCentral.getTitulo(), equalTo("Banco Central do Brasil"));
         Assert.assertThat(bancoCentral.getConteudo(), containsString("O Banco Central do Brasil foi criado pela [Lei 4.595], de 31 de dezembro de 1964. É o principal executor das orientações do Conselho Monetário Nacional e responsável por garantir o poder de compra da moeda nacional, tendo por objetivos:"));
+    }
+
+    @Test
+    public void deveIndexarConteudoDeLinhasDaVida() throws Exception {
+        doReturn(TestData.LINHAS_DA_VIDA)
+                .when(linhaDaVidaRepository)
+                .findAll();
+
+        indexadorConteudo.indexar();
+
+        ArgumentCaptor<List> captor = ArgumentCaptor.forClass(List.class);
+        verify(conteudoRepository).save(captor.capture());
+
+        List<Conteudo> conteudos = captor.getValue();
+        Conteudo arquivoNacional = conteudos.get(0);
+
+        Assert.assertThat(arquivoNacional.getTitulo(), equalTo("Ter um Imóvel"));
+        Assert.assertThat(arquivoNacional.getConteudo(), containsString("Serviços relacionados à habitação"));
+
+        Conteudo bancoCentral = conteudos.get(1);
+        Assert.assertThat(bancoCentral.getTitulo(), equalTo("Obter Crédito e Apoio Financeiro"));
+        Assert.assertThat(bancoCentral.getConteudo(), containsString("Serviços relacionados à obtenção de crédito e apoio financeiro"));
     }
 
 }

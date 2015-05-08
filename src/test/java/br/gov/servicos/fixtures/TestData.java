@@ -44,4 +44,9 @@ public class TestData {
             new Orgao().withId("arquivo-nacional").withNome("Arquivo Nacional").withTelefone("(61) 1111 1111"),
             new Orgao().withId("banco-central-do-brasil-bcb").withNome("Banco Central do Brasil").withTelefone("(61) 2222 2222")
     );
+
+    public static final List<LinhaDaVida> LINHAS_DA_VIDA = Arrays.asList(
+            new LinhaDaVida().withId("ter-um-imovel").withTitulo("Ter um Imóvel"),
+            new LinhaDaVida().withId("obter-credito-e-apoio-financeiro").withTitulo("Obter Crédito e Apoio Financeiro")
+    );
 }
