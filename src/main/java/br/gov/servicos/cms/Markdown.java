@@ -23,7 +23,7 @@ public class Markdown {
         pegdown = new PegDownProcessor();
     }
 
-    public Conteudo toHtml(ClassPathResource resource) {
+    public ConteudoHtml toHtml(ClassPathResource resource) {
         if (!resource.exists()) {
             throw new ConteudoNaoEncontrado(resource.getPath());
         }
@@ -35,7 +35,7 @@ public class Markdown {
                 String titulo = br.readLine();
                 String conteudo = titulo + "\n" + br.lines().collect(joining("\n"));
 
-                return new Conteudo()
+                return new ConteudoHtml()
                         .withTitulo(titulo)
                         .withHtml(pegdown.markdownToHtml(conteudo));
             }

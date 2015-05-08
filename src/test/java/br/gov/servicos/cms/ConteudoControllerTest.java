@@ -9,7 +9,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.core.io.ClassPathResource;
 
-import static br.gov.servicos.fixtures.TestData.CONTEUDO;
+import static br.gov.servicos.fixtures.TestData.CONTEUDO_HTML;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyObject;
@@ -29,7 +29,7 @@ public class ConteudoControllerTest {
 
     @Before
     public void setUp() {
-        doReturn(CONTEUDO)
+        doReturn(CONTEUDO_HTML)
                 .when(markdown)
                 .toHtml(any(ClassPathResource.class));
 
@@ -52,7 +52,7 @@ public class ConteudoControllerTest {
 
     @Test
     public void compilaOMarkdownDoConteudo() throws ConteudoNaoEncontrado {
-        assertModelAttributeValue(controller.conteudo("pagina"), "conteudo", CONTEUDO);
+        assertModelAttributeValue(controller.conteudo("pagina"), "conteudo", CONTEUDO_HTML);
     }
 
 }

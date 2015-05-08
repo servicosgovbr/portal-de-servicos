@@ -25,7 +25,7 @@ class ConteudoController {
 
     @RequestMapping("/conteudo/{id}")
     ModelAndView conteudo(@PathVariable("id") String id) throws ConteudoNaoEncontrado {
-        Conteudo conteudo = markdown.toHtml(new ClassPathResource(format("/conteudo/%s.md", id)));
+        ConteudoHtml conteudo = markdown.toHtml(new ClassPathResource(format("/conteudo/%s.md", id)));
         return new ModelAndView("conteudo", "conteudo", conteudo);
     }
 
