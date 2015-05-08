@@ -3,4 +3,2899 @@
   http://code.google.com/p/ie7-js/
   http://www.opensource.org/licenses/mit-license.php
 */
-;(function(N,p){var h=N.IE7={version:"2.1(beta4)",toString:bT("[IE7]")};h.compat=9;var t=h.appVersion=navigator.appVersion.match(/MSIE (\d\.\d)/)[1]-0;if(/ie7_off/.test(top.location.search)||t<5.5||t>=h.compat)return;var E=t<6,bj=bT(),bx=p.documentElement,B,x,cy="!",U=":link{ie7-link:link}:visited{ie7-link:visited}",cz=/^[\w\.]+[^:]*$/;function bk(c,a){if(cz.test(c))c=(a||"")+c;return c};function by(c,a){c=bk(c,a);return c.slice(0,c.lastIndexOf("/")+1)};var bU=p.scripts[p.scripts.length-1],cA=by(bU.src);try{var V=new ActiveXObject("Microsoft.XMLHTTP")}catch(ex){}var bl={};function cB(c,a){try{c=bk(c,a);if(!bl[c]){V.open("GET",c,false);V.send();if(V.status==0||V.status==200){bl[c]=V.responseText}}}catch(ex){}return bl[c]||""};var dA=Array.prototype.slice,dB=/%([1-9])/g,cC=/^\s\s*/,cD=/\s\s*$/,cE=/([\/()[\]{}|*+-.,^$?\\])/g,bV=/\bbase\b/,bW=["constructor","toString"],bm;function F(){};F.extend=function(g,f){bm=true;var d=new this;O(d,g);bm=false;var c=d.constructor;function a(){if(!bm)c.apply(this,arguments)};d.constructor=a;a.extend=arguments.callee;O(a,f);a.prototype=d;return a};F.prototype.extend=function(a){return O(this,a)};var P="#",Q="#",bc=".",bn="/",dC=/\\(\d+)/g,cF=/\[(\\.|[^\]\\])+\]|\\.|\(\?/g,cG=/\(/g,cH=/\$(\d+)/,cI=/^\$\d+$/,cJ=/(\[(\\.|[^\]\\])+\]|\\.|\(\?)|\(/g,cK=/^<#\w+>$/,cL=/<#(\w+)>/g,G=F.extend({constructor:function(a){this[bc]=[];this[Q]={};this.merge(a)},add:function(c,a){delete this[bn];if(c instanceof RegExp){c=c.source}if(!this[P+c])this[bc].push(String(c));return this[Q][P+c]=new G.Item(c,a,this)},compile:function(a){if(a||!this[bn]){this[bn]=new RegExp(this,this.ignoreCase?"gi":"g")}return this[bn]},merge:function(c){for(var a in c)this.add(a,c[a])},exec:function(o){var k=this,l=k[bc],m=k[Q],j,i=this.compile(true).exec(o);if(i){var g=0,f=1;while((j=m[P+l[g++]])){var d=f+j.length+1;if(i[f]){if(j.replacement===0){return k.exec(o)}else{var c=i.slice(f,d),a=c.length;while(--a)c[a]=c[a]||"";c[0]={match:c[0],item:j};return c}}f=d}}return null},parse:function(o){o+="";var k=this,l=k[bc],m=k[Q];return o.replace(this.compile(),function(j){var i=[],g,f=1,d=arguments.length;while(--d)i[d]=arguments[d]||"";while((g=m[P+l[d++]])){var c=f+g.length+1;if(i[f]){var a=g.replacement;switch(typeof a){case"function":return a.apply(k,i.slice(f,c));case"number":return i[f+a];default:return a}}f=c}return j})},toString:function(){var g=[],f=this[bc],d=this[Q],c;for(var a=0;c=d[P+f[a]];a++){g[a]=c.source}return"("+g.join(")|(")+")"}},{IGNORE:null,Item:F.extend({constructor:function(k,l,m){var j=k.indexOf("(")===-1?0:G.count(k),i=m.dictionary;if(i&&k.indexOf("<#")!==-1){if(cK.test(k)){var g=i[Q][P+k.slice(2,-1)];k=g.replacement;j=g._5}else{k=i.parse(k)}}if(typeof l=="number")l=String(l);else if(l==null)l=0;if(typeof l=="string"&&cH.test(l)){if(cI.test(l)){var f=l.slice(1)-0;if(f&&f<=j)l=f}else{var d=l,c;l=function(a){if(!c){c=new RegExp(k,"g"+(this.ignoreCase?"i":""))}return a.replace(c,d)}}}this.length=j;this.source=String(k);this.replacement=l}}),count:function(a){return(String(a).replace(cF,"").match(cG)||"").length}}),cM=G.extend({parse:function(f){var d=this[Q];return f.replace(cL,function(c,a){a=d[P+a];return a?a._6:c})},add:function(g,f){if(f instanceof RegExp){f=f.source}var d=f.replace(cJ,cN);if(f.indexOf("(")!==-1){var c=G.count(f)}if(f.indexOf("<#")!==-1){f=this.parse(f);d=this.parse(d)}var a=this.base(g,f);a._6=d;a._5=c||a.length;return a},toString:function(){return"(<#"+this[PATTERNS].join(">)|(<#")+">)"}});function cN(c,a){return a||"(?:"};function O(i,g){if(i&&g){var f=(typeof g=="function"?Function:Object).prototype;var d=bW.length,c;if(bm)while(c=bW[--d]){var a=g[c];if(a!=f[c]){if(bV.test(a)){bX(i,c,a)}else{i[c]=a}}}for(c in g)if(typeof f[c]=="undefined"){var a=g[c];if(i[c]&&typeof a=="function"&&bV.test(a)){bX(i,c,a)}else{i[c]=a}}}return i};function bX(i,g,f){var d=i[g];i[g]=function(){var c=this.base;this.base=d;var a=f.apply(this,arguments);this.base=c;return a}};function cO(f,d){if(!d)d=f;var c={};for(var a in f)c[a]=d[a];return c};function H(g){var f=arguments,d=new RegExp("%([1-"+arguments.length+"])","g");return String(g).replace(d,function(c,a){return a<f.length?f[a]:c})};function bo(c,a){return String(c).match(a)||[]};function bY(a){return String(a).replace(cE,"\\$1")};function bZ(a){return String(a).replace(cC,"").replace(cD,"")};function bT(a){return function(){return a}};var ca=G.extend({ignoreCase:true}),cP=/'/g,cb=/'(\d+)'/g,dD=/\\/g,bz=/\\([nrtf'"])/g,W=[],cc=new ca({"<!\\-\\-|\\-\\->":"","\\/\\*[^*]*\\*+([^\\/][^*]*\\*+)*\\/":"","@(namespace|import)[^;\\n]+[;\\n]":"","'(\\\\.|[^'\\\\])*'":cd,'"(\\\\.|[^"\\\\])*"':cd,"\\s+":" "});function cQ(a){return cc.parse(a).replace(bz,"$1")};function bd(a){return a.replace(cb,cR)};function cd(c){var a=W.length;W[a]=c.slice(1,-1).replace(bz,"$1").replace(cP,"\\'");return"'"+a+"'"};function cR(d,c){var a=W[c];if(a==null)return d;return"'"+W[c]+"'"};function bp(a){return a.indexOf("'")===0?W[a.slice(1,-1)]:a};var cS=new G({Width:"Height",width:"height",Left:"Top",left:"top",Right:"Bottom",right:"bottom",onX:"onY"});function ce(a){return cS.parse(a)};var cf=[];function bA(a){cT(a);y(N,"onresize",a)};function y(d,c,a){d.attachEvent(c,a);cf.push(arguments)};function cU(d,c,a){try{d.detachEvent(c,a)}catch(ex){}};y(N,"onunload",function(){var a;while(a=cf.pop()){cU(a[0],a[1],a[2])}});function be(d,c,a){if(!d.elements)d.elements={};if(a)d.elements[c.uniqueID]=c;else delete d.elements[c.uniqueID];return a};y(N,"onbeforeprint",function(){if(!h.CSS.print)new cg("print");h.CSS.print.recalc()});var ch=/^\d+(px)?$/i,X=/^\d+%$/,C=function(f,d){if(ch.test(d))return parseInt(d);var c=f.style.left,a=f.runtimeStyle.left;f.runtimeStyle.left=f.currentStyle.left;f.style.left=d||0;d=f.style.pixelLeft;f.style.left=c;f.runtimeStyle.left=a;return d},bB="ie7-",ci=F.extend({constructor:function(){this.fixes=[];this.recalcs=[]},init:bj}),bC=[];function cT(a){bC.push(a)};h.recalc=function(){h.HTML.recalc();h.CSS.recalc();for(var a=0;a<bC.length;a++)bC[a]()};function bq(a){return a.currentStyle["ie7-position"]=="fixed"};function bD(c,a){return c.currentStyle[bB+a]||c.currentStyle[a]};function Y(d,c,a){if(d.currentStyle[bB+c]==null){d.runtimeStyle[bB+c]=d.currentStyle[c]}d.runtimeStyle[c]=a};function cj(c){var a=p.createElement(c||"object");a.style.cssText="position:absolute;padding:0;display:block;border:none;clip:rect(0 0 0 0);left:-9999";a.ie7_anon=true;return a};var bE="(e.nextSibling&&IE7._1(e,'next'))",ck=bE.replace(/next/g,"previous"),cl="e.nodeName>'@'",cm="if("+cl+"){",cn="(e.nodeName==='FORM'?IE7._0(e,'id'):e.id)",cV=/a(#[\w-]+)?(\.[\w-]+)?:(hover|active)/i,cW=/(.*)(:first-(line|letter))/,cX=/\s/,cY=/((?:\\.|[^{\\])+)\{((?:\\.|[^}\\])+)\}/g,cZ=/(?:\\.|[^,\\])+/g,I=p.styleSheets,bF=[];h.CSS=new(ci.extend({parser:new ca,screen:"",print:"",styles:[],rules:[],pseudoClasses:t<7?"first\\-child":"",dynamicPseudoClasses:{toString:function(){var c=[];for(var a in this)c.push(a);return c.join("|")}},init:function(){var j="^\x01$",i="\\[class=?[^\\]]*\\]",g=[];if(this.pseudoClasses)g.push(this.pseudoClasses);var f=this.dynamicPseudoClasses.toString();if(f)g.push(f);g=g.join("|");var d=t<7?["[>+~\\[(]|([:.])[\\w-]+\\1"]:[i];if(g)d.push(":("+g+")");this.UNKNOWN=new RegExp(d.join("|")||j,"i");var c=t<7?["\\[[^\\]]+\\]|[^\\s(\\[]+\\s*[+~]"]:[i],a=c.concat();if(g)a.push(":("+g+")");u.COMPLEX=new RegExp(a.join("|")||j,"ig");if(this.pseudoClasses)c.push(":("+this.pseudoClasses+")");bf.COMPLEX=new RegExp(c.join("|")||j,"i");f="not\\(:"+f.split("|").join("\\)|not\\(:")+"\\)|"+f;bf.MATCH=new RegExp(f?"(.*?):("+f+")(.*)":j,"i");this.createStyleSheet();this.refresh()},addEventHandler:function(){y.apply(null,arguments)},addFix:function(c,a){this.parser.add(c,a)},addRecalc:function(i,g,f,d){i=i.source||i;g=new RegExp("([{;\\s])"+i+"\\s*:\\s*"+g+"[^;}]*");var c=this.recalcs.length;if(typeof d=="string")d=i+":"+d;this.addFix(g,function(a){if(typeof d=="function")d=d(a);return(d?d:a)+";ie7-"+a.slice(1)+";ie7_recalc"+c+":1"});this.recalcs.push(arguments);return c},apply:function(){this.getInlineCSS();new cg("screen");this.trash()},createStyleSheet:function(){p.getElementsByTagName("head")[0].appendChild(p.createElement("style"));this.styleSheet=I[I.length-1];this.styleSheet.ie7=true;this.styleSheet.owningElement.ie7=true;this.styleSheet.cssText=U},getInlineCSS:function(){var d=p.getElementsByTagName("style"),c;for(var a=d.length-1;c=d[a];a--){if(!c.disabled&&!c.ie7){c._7=c.innerHTML}}},getText:function(d,c){try{var a=d.cssText}catch(e){a=""}if(V)a=cB(d.href,c)||a;return a},recalc:function(){this.screen.recalc();var q=/ie7_recalc\d+/g,n=U.match(/[{,]/g).length,o=this.styleSheet.rules,k,l,m,j,i,g,f,d,c;for(g=n;k=o[g];g++){var a=k.style.cssText;if(l=a.match(q)){j=J(k.selectorText);if(j.length)for(f=0;f<l.length;f++){c=l[f];m=h.CSS.recalcs[c.slice(10)][2];for(d=0;(i=j[d]);d++){if(i.currentStyle[c])m(i,a)}}}}},refresh:function(){this.styleSheet.cssText=U+this.screen+this.print},trash:function(){for(var c=0;c<I.length;c++){if(!I[c].ie7){try{var a=I[c].cssText}catch(e){a=""}if(a)I[c].cssText=""}}}}));var cg=F.extend({constructor:function(a){this.media=a;this.load();h.CSS[a]=this;h.CSS.refresh()},createRule:function(d,c){var a;if(R&&(a=d.match(R.MATCH))){return new R(a[1],a[2],c)}else if(a=d.match(bf.MATCH)){if(!cV.test(a[0])||bf.COMPLEX.test(a[0])){return new bf(d,a[1],a[2],a[3],c)}}else{return new u(d,c)}return d+" {"+c+"}"},getText:function(){var v=/@media\s+([^{]+?)\s*\{([^@]+\})\s*\}/gi,Z=/@import[^;\n]+/gi,S=/@import\s+url\s*\(\s*["']?|["']?\s*\)\s*/gi,ba=/(url\s*\(\s*['"]?)([\w\.]+[^:\)]*['"]?\))/gi,K=this,L={};function z(k,l,m,j){var i="";if(!j){m=q(k.media);j=0}if(m==="none"){k.disabled=true;return""}if(m==="all"||m===K.media){try{var g=!!k.cssText}catch(exe){}if(j<3&&g){var f=k.cssText.match(Z);for(var d=0,c;d<k.imports.length;d++){var c=k.imports[d];var a=k._2||k.href;c._2=f[d].replace(S,"");i+=z(c,by(a,l),m,j+1)}}i+=cQ(k.href?n(k,l):k.owningElement._7);i=A(i,K.media)}return i};for(var w=0;w<I.length;w++){var r=I[w];if(!r.disabled&&!r.ie7)this.cssText+=z(r)}function A(c,a){s.value=a;return c.replace(v,s)};function s(d,c,a){c=q(c);switch(c){case"screen":case"print":if(c!==s.value)return"";case"all":return a}return""};function q(d){if(!d)return"all";var c=d.toLowerCase().split(/\s*,\s*/);d="none";for(var a=0;a<c.length;a++){if(c[a]==="all")return"all";if(c[a]==="screen"){if(d==="print")return"all";d="screen"}else if(c[a]==="print"){if(d==="screen")return"all";d="print"}}return d};function n(f,d){var c=f._2||f.href,a=bk(c,d);if(L[a])return"";L[a]=f.disabled?"":o(h.CSS.getText(f,d),by(c,d));return L[a]};function o(c,a){return c.replace(ba,"$1"+a.slice(0,a.lastIndexOf("/")+1)+"$2")}},load:function(){this.cssText="";this.getText();this.parse();if(bF.length){this.cssText=da(this.cssText)}this.cssText=bd(this.cssText);bl={}},parse:function(){var j=h.CSS.parser.parse(this.cssText),o="";this.cssText=j.replace(/@charset[^;]+;|@font\-face[^\}]+\}/g,function(a){o+=a+"\n";return""});this.declarations=bd(o);var k=h.CSS.rules.length,l=[],m;while((m=cY.exec(this.cssText))){var j=m[2];if(j){var i=t<7&&j.indexOf("AlphaImageLoader")!==-1;var g=m[1].match(cZ),f;for(var d=0;f=g[d];d++){f=bZ(f);var c=h.CSS.UNKNOWN.test(f);g[d]=c?this.createRule(f,j):f+"{"+j+"}";if(i)g[d]+=this.createRule(f+">*","position:relative")}l.push(g.join("\n"))}}this.cssText=l.join("\n");this.rules=h.CSS.rules.slice(k)},recalc:function(){var c,a;for(a=0;(c=this.rules[a]);a++)c.recalc()},toString:function(){return this.declarations+"@media "+this.media+"{"+this.cssText+"}"}}),R,u=h.Rule=F.extend({constructor:function(d,c){this.id=h.CSS.rules.length;this.className=u.PREFIX+this.id;var a=d.match(cW);this.selector=(a?a[1]:d)||"*";this.selectorText=this.parse(this.selector)+(a?a[2]:"");this.cssText=c;this.MATCH=new RegExp("\\s"+this.className+"(\\s|$)","g");h.CSS.rules.push(this);this.init()},init:bj,add:function(a){a.className+=" "+this.className},recalc:function(){var c=J(this.selector);for(var a=0;a<c.length;a++)this.add(c[a])},parse:function(g){var f=g.replace(u.CHILD," ").replace(u.COMPLEX,"");if(t<7)f=f.replace(u.MULTI,"");var d=bo(f,u.TAGS).length-bo(g,u.TAGS).length,c=bo(f,u.CLASSES).length-bo(g,u.CLASSES).length+1;while(c>0&&u.CLASS.test(f)){f=f.replace(u.CLASS,"");c--}while(d>0&&u.TAG.test(f)){f=f.replace(u.TAG,"$1*");d--}f+="."+this.className;c=Math.min(c,2);d=Math.min(d,2);var a=-10*c-d;if(a>0){f=f+","+u.MAP[a]+" "+f}return f},remove:function(a){a.className=a.className.replace(this.MATCH,"$1")},toString:function(){return H("%1 {%2}",this.selectorText,this.cssText)}},{CHILD:/>/g,CLASS:/\.[\w-]+/,CLASSES:/[.:\[]/g,MULTI:/(\.[\w-]+)+/g,PREFIX:"ie7_class",TAG:/^\w+|([\s>+~])\w+/,TAGS:/^\w|[\s>+~]\w/g,MAP:{"1":"html","2":"html body","10":".ie7_html","11":"html.ie7_html","12":"html.ie7_html body","20":".ie7_html .ie7_body","21":"html.ie7_html .ie7_body","22":"html.ie7_html body.ie7_body"}}),bf=u.extend({constructor:function(g,f,d,c,a){this.negated=d.indexOf("not")===0;if(this.negated)d=d.slice(5,-1);this.attach=f||"*";this.dynamicPseudoClass=h.CSS.dynamicPseudoClasses[d];this.target=c;this.base(g,a)},recalc:function(){var f=J(this.attach),d;for(var c=0;d=f[c];c++){var a=this.target?J(this.target,d):[d];if(a.length)this.dynamicPseudoClass.apply(d,a,this)}}}),M=F.extend({constructor:function(c,a){this.name=c;this.apply=a;this.instances={};h.CSS.dynamicPseudoClasses[c]=this},register:function(g,f){var d=g[2];if(!f&&d.negated){this.unregister(g,true)}else{g.id=d.id+g[0].uniqueID;if(!this.instances[g.id]){var c=g[1],a;for(a=0;a<c.length;a++)d.add(c[a]);this.instances[g.id]=g}}},unregister:function(g,f){var d=g[2];if(!f&&d.negated){this.register(g,true)}else{if(this.instances[g.id]){var c=g[1],a;for(a=0;a<c.length;a++)d.remove(c[a]);delete this.instances[g.id]}}}}),br=new M("hover",function(c){var a=arguments;h.CSS.addEventHandler(c,"onmouseenter",function(){br.register(a)});h.CSS.addEventHandler(c,"onmouseleave",function(){br.unregister(a)})});y(p,"onmouseup",function(){var c=br.instances;for(var a in c)if(!c[a][0].contains(event.srcElement))br.unregister(c[a])});var co={"=":"%1==='%2'","~=":"(' '+%1+' ').indexOf(' %2 ')!==-1","|=":"%1==='%2'||%1.indexOf('%2-')===0","^=":"%1.indexOf('%2')===0","$=":"%1.slice(-'%2'.length)==='%2'","*=":"%1.indexOf('%2')!==-1"};co[""]="%1!=null";var T={"<#attr>":function(g,f,d,c){var a="IE7._0(e,'"+f+"')";c=bp(c);if(d.length>1){if(!c||d==="~="&&cX.test(c)){return"false&&"}a="("+a+"||'')"}return"("+H(co[d],a,c)+")&&"},"<#id>":cn+"==='$1'&&","<#class>":"e.className&&(' '+e.className+' ').indexOf(' $1 ')!==-1&&",":first-child":"!"+ck+"&&",":link":"e.currentStyle['ie7-link']=='link'&&",":visited":"e.currentStyle['ie7-link']=='visited'&&"};h.HTML=new(ci.extend({fixed:{},init:bj,addFix:function(){this.fixes.push(arguments)},apply:function(){for(var f=0;f<this.fixes.length;f++){var d=J(this.fixes[f][0]);var c=this.fixes[f][1];for(var a=0;a<d.length;a++)c(d[a])}},addRecalc:function(){this.recalcs.push(arguments)},recalc:function(){for(var j=0;j<this.recalcs.length;j++){var i=J(this.recalcs[j][0]);var g=this.recalcs[j][1],f;var d=Math.pow(2,j);for(var c=0;(f=i[c]);c++){var a=f.uniqueID;if((this.fixed[a]&d)===0){f=g(f)||f;this.fixed[a]|=d}}}}}));if(t<7){p.createElement("abbr");h.HTML.addRecalc("label",function(c){if(!c.htmlFor){var a=J("input,textarea",c,true);if(a){y(c,"onclick",function(){a.click()})}}})}var bg="[.\\d]";(function(){var v=h.Layout={};U+="*{boxSizing:content-box}";v.boxSizing=function(a){if(!a.currentStyle.hasLayout){a.style.height="0cm";if(a.currentStyle.verticalAlign==="auto")a.runtimeStyle.verticalAlign="top";Z(a)}};function Z(a){if(a!=x&&a.currentStyle.position!=="absolute"){S(a,"marginTop");S(a,"marginBottom")}};function S(g,f){if(!g.runtimeStyle[f]){var d=g.parentElement;var c=f==="marginTop";if(d&&d.currentStyle.hasLayout&&!h._1(g,c?"previous":"next"))return;var a=g[c?"firstChild":"lastChild"];if(a&&a.nodeName<"@")a=h._1(a,c?"next":"previous");if(a&&a.currentStyle.styleFloat==="none"&&a.currentStyle.hasLayout){S(a,f);margin=ba(g,g.currentStyle[f]);childMargin=ba(a,a.currentStyle[f]);if(margin<0||childMargin<0){g.runtimeStyle[f]=margin+childMargin}else{g.runtimeStyle[f]=Math.max(childMargin,margin)}a.runtimeStyle[f]="0px"}}};function ba(c,a){return a==="auto"?0:C(c,a)};var K=/^[.\d][\w]*$/,L=/^(auto|0cm)$/,z={};v.borderBox=function(a){z.Width(a);z.Height(a)};var w=function(r){z.Width=function(a){if(!X.test(a.currentStyle.width))A(a);if(r)Z(a)};function A(c,a){if(!c.runtimeStyle.fixedWidth){if(!a)a=c.currentStyle.width;c.runtimeStyle.fixedWidth=K.test(a)?Math.max(0,n(c,a))+"px":a;Y(c,"width",c.runtimeStyle.fixedWidth)}};function s(c){if(!bq(c)){var a=c.offsetParent;while(a&&!a.currentStyle.hasLayout)a=a.offsetParent}return(a||x).clientWidth};function q(c,a){if(X.test(a))return parseInt(parseFloat(a)/100*s(c));return C(c,a)};var n=function(f,d){var c=f.currentStyle["ie7-box-sizing"]==="border-box",a=0;if(E&&!c)a+=o(f)+k(f,"padding");else if(!E&&c)a-=o(f)+k(f,"padding");return q(f,d)+a};function o(a){return a.offsetWidth-a.clientWidth};function k(c,a){return q(c,c.currentStyle[a+"Left"])+q(c,c.currentStyle[a+"Right"])};U+="*{minWidth:none;maxWidth:none;min-width:none;max-width:none}";v.minWidth=function(a){if(a.currentStyle["min-width"]!=null){a.style.minWidth=a.currentStyle["min-width"]}if(be(arguments.callee,a,a.currentStyle.minWidth!=="none")){v.boxSizing(a);A(a);l(a)}};eval("IE7.Layout.maxWidth="+String(v.minWidth).replace(/min/g,"max"));function l(d){if(d==p.body){var c=d.clientWidth}else{var a=d.getBoundingClientRect();c=a.right-a.left}if(d.currentStyle.minWidth!=="none"&&c<n(d,d.currentStyle.minWidth)){d.runtimeStyle.width=d.currentStyle.minWidth}else if(d.currentStyle.maxWidth!=="none"&&c>=n(d,d.currentStyle.maxWidth)){d.runtimeStyle.width=d.currentStyle.maxWidth}else{d.runtimeStyle.width=d.runtimeStyle.fixedWidth}};function m(a){if(be(m,a,/^(fixed|absolute)$/.test(a.currentStyle.position)&&bD(a,"left")!=="auto"&&bD(a,"right")!=="auto"&&L.test(bD(a,"width")))){j(a);v.boxSizing(a)}};v.fixRight=m;function j(d){var c=q(d,d.runtimeStyle._3||d.currentStyle.left),a=s(d)-q(d,d.currentStyle.right)-c-k(d,"margin");if(parseInt(d.runtimeStyle.width)===a)return;d.runtimeStyle.width="";if(bq(d)||r||d.offsetWidth<a){if(!E)a-=o(d)+k(d,"padding");if(a<0)a=0;d.runtimeStyle.fixedWidth=a;Y(d,"width",a)}};var i=0;bA(function(){if(!x)return;var g,f=(i<x.clientWidth);i=x.clientWidth;var d=v.minWidth.elements;for(g in d){var c=d[g];var a=(parseInt(c.runtimeStyle.width)===n(c,c.currentStyle.minWidth));if(f&&a)c.runtimeStyle.width="";if(f==a)l(c)}var d=v.maxWidth.elements;for(g in d){var c=d[g];var a=(parseInt(c.runtimeStyle.width)===n(c,c.currentStyle.maxWidth));if(!f&&a)c.runtimeStyle.width="";if(f!==a)l(c)}for(g in m.elements)j(m.elements[g])});if(E){h.CSS.addRecalc("width",bg,z.Width)}if(t<7){h.CSS.addRecalc("max-width",bg,v.maxWidth);h.CSS.addRecalc("right",bg,m)}else if(t==7){if(r)h.CSS.addRecalc("height","[\\d.]+%",function(element){element.runtimeStyle.pixelHeight=parseInt(s(element)*element.currentStyle["ie7-height"].slice(0,-1)/100)})}};eval("var _8="+ce(w));w();_8(true);if(t<7){h.CSS.addRecalc("min-width",bg,v.minWidth);h.CSS.addFix(/\bmin-height\s*/,"height")}})();var bG=bk("blank.gif",cA),bH="DXImageTransform.Microsoft.AlphaImageLoader",cp="progid:"+bH+"(src='%1',sizingMethod='%2')",bh,bi=[];function cq(c){if(bh.test(c.src)){var a=new Image(c.width,c.height);a.onload=function(){c.width=a.width;c.height=a.height;a=null};a.src=c.src;c.pngSrc=c.src;bs(c)}};if(t<7){h.CSS.addFix(/background(-image)?\s*:\s*([^};]*)?url\(([^\)]+)\)([^;}]*)?/,function(g,f,d,c,a){c=bp(c);return bh.test(c)?"filter:"+H(cp,c,a.indexOf("no-repeat")===-1?"scale":"crop")+";zoom:1;background"+(f||"")+":"+(d||"")+"none"+(a||""):g});h.CSS.addRecalc(/list\-style(\-image)?/,"[^};]*url",function(f){var d=f.currentStyle.listStyleImage.slice(5,-2);if(bh.test(d)){if(f.nodeName==="LI"){cr(f,d)}else if(f.nodeName==="UL"){for(var c=0,a;a=f.childNodes[c];c++){if(a.nodeName==="LI")cr(a,d)}}}});function cr(i,g){var f=i.runtimeStyle,d=i.offsetHeight,c=new Image;c.onload=function(){var a=i.currentStyle.paddingLeft;a=a==="0px"?0:C(i,a);f.paddingLeft=(a+this.width)+"px";f.marginLeft=-this.width+"px";f.listStyleType="none";f.listStyleImage="none";f.paddingTop=Math.max(d-i.offsetHeight,0)+"px";bs(i,"crop",g);i.style.zoom="100%"};c.src=g};h.HTML.addRecalc("img,input",function(a){if(a.nodeName==="INPUT"&&a.type!=="image")return;cq(a);y(a,"onpropertychange",function(){if(!bI&&event.propertyName==="src"&&a.src.indexOf(bG)===-1)cq(a)})});var bI=false;y(N,"onbeforeprint",function(){bI=true;for(var a=0;a<bi.length;a++)db(bi[a])});y(N,"onafterprint",function(){for(var a=0;a<bi.length;a++)bs(bi[a]);bI=false})}function bs(f,d,c){var a=f.filters[bH];if(a){a.src=c||f.src;a.enabled=true}else{f.runtimeStyle.filter=H(cp,c||f.src,d||"scale");bi.push(f)}f.src=bG};function db(a){a.src=a.pngSrc;a.filters[bH].enabled=false};(function(){if(t>=7)return;h.CSS.addRecalc("position","fixed",o,"absolute");h.CSS.addRecalc("background(-attachment)?","[^};]*fixed",q);var z=E?"body":"documentElement";function w(){if(B.currentStyle.backgroundAttachment!=="fixed"){if(B.currentStyle.backgroundImage==="none"){B.runtimeStyle.backgroundRepeat="no-repeat";B.runtimeStyle.backgroundImage="url("+bG+")"}B.runtimeStyle.backgroundAttachment="fixed"}w=bj};var r=cj("img");function A(a){return a?bq(a)||A(a.parentElement):false};function s(d,c,a){setTimeout("document.all."+d.uniqueID+".runtimeStyle.setExpression('"+c+"','"+a+"')",0)};function q(a){if(be(q,a,a.currentStyle.backgroundAttachment==="fixed"&&!a.contains(B))){w();j.bgLeft(a);j.bgTop(a);n(a)}};function n(c){r.src=c.currentStyle.backgroundImage.slice(5,-2);var a=c.canHaveChildren?c:c.parentElement;a.appendChild(r);j.setOffsetLeft(c);j.setOffsetTop(c);a.removeChild(r)};function o(a){if(be(o,a,bq(a))){Y(a,"position","absolute");Y(a,"left",a.currentStyle.left);Y(a,"top",a.currentStyle.top);w();h.Layout.fixRight(a);k(a)}};function k(d,c){p.body.getBoundingClientRect();j.positionTop(d,c);j.positionLeft(d,c,true);if(!d.runtimeStyle.autoLeft&&d.currentStyle.marginLeft==="auto"&&d.currentStyle.right!=="auto"){var a=x.clientWidth-j.getPixelWidth(d,d.currentStyle.right)-j.getPixelWidth(d,d.runtimeStyle._3)-d.clientWidth;if(d.currentStyle.marginRight==="auto")a=parseInt(a/2);if(A(d.offsetParent))d.runtimeStyle.pixelLeft+=a;else d.runtimeStyle.shiftLeft=a}if(!d.runtimeStyle.fixedWidth)j.clipWidth(d);if(!d.runtimeStyle.fixedHeight)j.clipHeight(d)};function l(){var c=q.elements;for(var a in c)n(c[a]);c=o.elements;for(a in c){k(c[a],true);k(c[a],true)}m=0};var m;bA(function(){if(!m)m=setTimeout(l,100)});var j={},i=function(g){g.bgLeft=function(a){a.style.backgroundPositionX=a.currentStyle.backgroundPositionX;if(!A(a)){s(a,"backgroundPositionX","(parseInt(runtimeStyle.offsetLeft)+document."+z+".scrollLeft)||0")}};g.setOffsetLeft=function(c){var a=A(c)?"backgroundPositionX":"offsetLeft";c.runtimeStyle[a]=g.getOffsetLeft(c,c.style.backgroundPositionX)-c.getBoundingClientRect().left-c.clientLeft+2};g.getOffsetLeft=function(c,a){switch(a){case"left":case"top":return 0;case"right":case"bottom":return x.clientWidth-r.offsetWidth;case"center":return(x.clientWidth-r.offsetWidth)/2;default:if(X.test(a)){return parseInt((x.clientWidth-r.offsetWidth)*parseFloat(a)/100)}r.style.left=a;return r.offsetLeft}};g.clipWidth=function(f){var d=f.runtimeStyle.fixWidth;f.runtimeStyle.borderRightWidth="";f.runtimeStyle.width=d?g.getPixelWidth(f,d)+"px":"";if(f.currentStyle.width!=="auto"){var c=f.getBoundingClientRect();var a=f.offsetWidth-x.clientWidth+c.left-2;if(a>=0){f.runtimeStyle.borderRightWidth="0px";a=Math.max(C(f,f.currentStyle.width)-a,0);Y(f,"width",a);return a}}};g.positionLeft=function(c,a){if(!a&&X.test(c.currentStyle.width)){c.runtimeStyle.fixWidth=c.currentStyle.width}if(c.runtimeStyle.fixWidth){c.runtimeStyle.width=g.getPixelWidth(c,c.runtimeStyle.fixWidth)}c.runtimeStyle.shiftLeft=0;c.runtimeStyle._3=c.currentStyle.left;c.runtimeStyle.autoLeft=c.currentStyle.right!=="auto"&&c.currentStyle.left==="auto";c.runtimeStyle.left="";c.runtimeStyle.screenLeft=g.getScreenLeft(c);c.runtimeStyle.pixelLeft=c.runtimeStyle.screenLeft;if(!a&&!A(c.offsetParent)){s(c,"pixelLeft","runtimeStyle.screenLeft+runtimeStyle.shiftLeft+document."+z+".scrollLeft")}};g.getScreenLeft=function(d){var c=d.offsetLeft,a=1;if(d.runtimeStyle.autoLeft){c=x.clientWidth-d.offsetWidth-g.getPixelWidth(d,d.currentStyle.right)}if(d.currentStyle.marginLeft!=="auto"){c-=g.getPixelWidth(d,d.currentStyle.marginLeft)}while(d=d.offsetParent){if(d.currentStyle.position!=="static")a=-1;c+=d.offsetLeft*a}return c};g.getPixelWidth=function(c,a){return X.test(a)?parseInt(parseFloat(a)/100*x.clientWidth):C(c,a)}};eval("var _9="+ce(i));i(j);_9(j)})();if(t<7){var bJ={backgroundColor:"transparent",backgroundImage:"none",backgroundPositionX:null,backgroundPositionY:null,backgroundRepeat:null,borderTopWidth:0,borderRightWidth:0,borderBottomWidth:0,borderLeftStyle:"none",borderTopStyle:"none",borderRightStyle:"none",borderBottomStyle:"none",borderLeftWidth:0,borderLeftColor:"#000",borderTopColor:"#000",borderRightColor:"#000",borderBottomColor:"#000",height:null,marginTop:0,marginBottom:0,marginRight:0,marginLeft:0,width:"100%"};h.CSS.addRecalc("overflow","visible",function(d){if(d.currentStyle.position==="absolute")return;if(d.parentNode.ie7_wrapped)return;if(h.Layout&&d.currentStyle["max-height"]!=="auto"){h.Layout.maxHeight(d)}if(d.currentStyle.marginLeft==="auto")d.style.marginLeft=0;if(d.currentStyle.marginRight==="auto")d.style.marginRight=0;var c=p.createElement(cy);c.ie7_wrapped=d;for(var a in bJ){c.style[a]=d.currentStyle[a];if(bJ[a]!=null){d.runtimeStyle[a]=bJ[a]}}c.style.display="block";c.style.position="relative";d.runtimeStyle.position="absolute";d.parentNode.insertBefore(c,d);c.appendChild(d)})}function dc(){var s="xx-small,x-small,small,medium,large,x-large,xx-large".split(",");for(var q=0;q<s.length;q++){s[s[q]]=s[q-1]||"0.67em"}h.CSS.addFix(/(font(-size)?\s*:\s*)([\w.-]+)/,function(f,d,c,a){return d+(s[a]||a)});var n=/^\-/,o=/(em|ex)$/i,k=/em$/i,l=/ex$/i;C=function(d,c){if(ch.test(c))return parseInt(c)||0;var a=n.test(c)?-1:1;if(o.test(c))a*=j(d);m.style.width=a<0?c.slice(1):c;B.appendChild(m);c=a*m.offsetWidth;m.removeNode();return parseInt(c)};var m=cj();function j(d){var c=1;m.style.fontFamily=d.currentStyle.fontFamily;m.style.lineHeight=d.currentStyle.lineHeight;while(d!=B){var a=d.currentStyle["ie7-font-size"];if(a){if(k.test(a))c*=parseFloat(a);else if(X.test(a))c*=(parseFloat(a)/100);else if(l.test(a))c*=(parseFloat(a)/2);else{m.style.fontSize=a;return 1}}d=d.parentElement}return c};h.CSS.addFix(/cursor\s*:\s*pointer/,"cursor:hand");h.CSS.addFix(/display\s*:\s*list-item/,"display:block");function i(f){var d=f.parentElement,c=d.offsetWidth-f.offsetWidth-g(d),a=(f.currentStyle["ie7-margin"]&&f.currentStyle.marginRight==="auto")||f.currentStyle["ie7-margin-right"]==="auto";switch(d.currentStyle.textAlign){case"right":c=a?parseInt(c/2):0;f.runtimeStyle.marginRight=c+"px";break;case"center":if(a)c=0;default:if(a)c/=2;f.runtimeStyle.marginLeft=parseInt(c)+"px"}};function g(a){return C(a,a.currentStyle.paddingLeft)+C(a,a.currentStyle.paddingRight)};h.CSS.addRecalc("margin(-left|-right)?","[^};]*auto",function(a){if(be(i,a,a.parentElement&&a.currentStyle.display==="block"&&a.currentStyle.marginLeft==="auto"&&a.currentStyle.position!=="absolute")){i(a)}});bA(function(){for(var c in i.elements){var a=i.elements[c];a.runtimeStyle.marginLeft=a.runtimeStyle.marginRight="";i(a)}})};var bK="\\([^)]+\\)";cc.add(/::(before|after)/,":$1");if(t<8){if(h.CSS.pseudoClasses)h.CSS.pseudoClasses+="|";h.CSS.pseudoClasses+="before|after|lang"+bK;function da(a){return a.replace(new RegExp("([{;\\s])("+bF.join("|")+")\\s*:\\s*([^;}]+)","g"),"$1$2:$3;ie7-$2:$3")};var dd=/[\w-]+\s*:\s*inherit/g;var de=/ie7\-|\s*:\s*inherit/g;var df=/\-([a-z])/g;function dg(c,a){return a.toUpperCase()};h.CSS.addRecalc("[\\w-]+","inherit",function(g,f){if(g.parentElement){var d=f.match(dd);for(var c=0;c<d.length;c++){var a=d[c].replace(de,"");if(g.currentStyle["ie7-"+a]==="inherit"){a=a.replace(df,dg);g.runtimeStyle[a]=g.parentElement.currentStyle[a]}}}},function(a){bF.push(bY(a.slice(1).split(":")[0]));return a});var bt=new M("focus",function(c){var a=arguments;h.CSS.addEventHandler(c,"onfocus",function(){bt.unregister(a);bt.register(a)});h.CSS.addEventHandler(c,"onblur",function(){bt.unregister(a)});if(c==p.activeElement){bt.register(a)}});var bL=new M("active",function(c){var a=arguments;h.CSS.addEventHandler(c,"onmousedown",function(){bL.register(a)})});y(p,"onmouseup",function(){var c=bL.instances;for(var a in c)bL.unregister(c[a])});var dh=/^url\s*\(\s*([^)]*)\)$/;var di={before0:"beforeBegin",before1:"afterBegin",after0:"afterEnd",after1:"beforeEnd"};var R=h.PseudoElement=u.extend({constructor:function(j,i,g){this.position=i;var f=g.match(R.CONTENT),d,c;if(f){f=f[1];d=f.split(/\s+/);for(var a=0;(c=d[a]);a++){d[a]=/^attr/.test(c)?{attr:c.slice(5,-1)}:c.charAt(0)==="'"?bp(c):bd(c)}f=d}this.content=f;this.base(j,bd(g))},init:function(){this.match=J(this.selector);for(var c=0;c<this.match.length;c++){var a=this.match[c].runtimeStyle;if(!a[this.position])a[this.position]={cssText:""};a[this.position].cssText+=";"+this.cssText;if(this.content!=null)a[this.position].content=this.content}},create:function(n){var o=n.runtimeStyle[this.position];if(o){var k=[].concat(o.content||"");for(var l=0;l<k.length;l++){if(typeof k[l]=="object"){k[l]=n.getAttribute(k[l].attr)}}k=k.join("");var m=k.match(dh);var j="overflow:hidden;"+o.cssText.replace(/'/g,'"');var i=di[this.position+Number(n.canHaveChildren)];var g='ie7_pseudo'+R.count++;n.insertAdjacentHTML(i,H(R.ANON,this.className,g,j,m?"":k));if(m){var f=bp(m[1]);var d=p.getElementById(g);d.src=f;bs(d,"crop");var c=n.currentStyle.styleFloat!=="none";if(d.currentStyle.display==="inline"||c){if(t<7&&c&&n.canHaveChildren){n.runtimeStyle.display="inline";n.runtimeStyle.position="relative";d.runtimeStyle.position="absolute"}d.style.display="inline-block";if(n.currentStyle.styleFloat!=="none"){d.style.pixelWidth=n.offsetWidth}var a=new Image;a.onload=function(){d.style.pixelWidth=this.width;d.style.pixelHeight=Math.max(this.height,d.offsetHeight)};a.src=f}}n.runtimeStyle[this.position]=null}},recalc:function(){if(this.content==null)return;for(var a=0;a<this.match.length;a++){this.create(this.match[a])}},toString:function(){return"."+this.className+"{display:inline}"}},{CONTENT:/content\s*:\s*([^;]*)(;|$)/,ANON:"<ie7:! class='ie7_anon %1' id=%2 style='%3'>%4</ie7:!>",MATCH:/(.*):(before|after).*/,count:0});h._getLang=function(c){var a="";while(c&&c.nodeType===1){a=c.lang||c.getAttribute("lang")||"";if(a)break;c=c.parentNode}return a};T=O(T,{":lang\\(([^)]+)\\)":"((ii=IE7._getLang(e))==='$1'||ii.indexOf('$1-')===0)&&"})}var dj=/^(submit|reset|button)$/;h.HTML.addRecalc("button,input",function(c){if(c.nodeName==="BUTTON"){var a=c.outerHTML.match(/ value="([^"]*)"/i);c.runtimeStyle.value=a?a[1]:""}if(c.type==="submit"){y(c,"onclick",function(){c.runtimeStyle.clicked=true;setTimeout("document.all."+c.uniqueID+".runtimeStyle.clicked=false",1)})}});h.HTML.addRecalc("form",function(d){y(d,"onsubmit",function(){for(var c,a=0;c=d[a];a++){if(dj.test(c.type)&&!c.disabled&&!c.runtimeStyle.clicked){c.disabled=true;setTimeout("document.all."+c.uniqueID+".disabled=false",1)}else if(c.nodeName==="BUTTON"&&c.type==="submit"){setTimeout("document.all."+c.uniqueID+".value='"+c.value+"'",1);c.value=c.runtimeStyle.value}}})});h.HTML.addRecalc("img",function(a){if(a.alt&&!a.title)a.title=""});if(t<8){h.CSS.addRecalc("border-spacing",bg,function(a){if(a.currentStyle.borderCollapse!=="collapse"){a.cellSpacing=C(a,a.currentStyle["ie7-border-spacing"].split(" ")[0])}});h.CSS.addRecalc("box-sizing","content-box",h.Layout.boxSizing);h.CSS.addRecalc("box-sizing","border-box",h.Layout.borderBox)}if(t<8){var dk=/^image/i;h.HTML.addRecalc("object",function(a){if(dk.test(a.type)){a.body.style.cssText="margin:0;padding:0;border:none;overflow:hidden";return a}})}var bM="!IE7._a(e,'next')&&",cs=bM.replace("next","previous");if(h.CSS.pseudoClasses)h.CSS.pseudoClasses+="|";h.CSS.pseudoClasses+="(?:first|last|only)\\-(?:child|of\\-type)|empty|root|target|"+("not|nth\\-child|nth\\-last\\-child|nth\\-of\\-type|nth\\-last\\-of\\-type".split("|").join(bK+"|")+bK);var bN=new M("checked",function(c){if(typeof c.checked!=="boolean")return;var a=arguments;h.CSS.addEventHandler(c,"onpropertychange",function(){if(event.propertyName==="checked"){if(c.checked===true)bN.register(a);else bN.unregister(a)}});if(c.checked===true)bN.register(a)}),bO=new M("enabled",function(c){if(typeof c.disabled!=="boolean")return;var a=arguments;h.CSS.addEventHandler(c,"onpropertychange",function(){if(event.propertyName==="disabled"){if(c.disabled===false)bO.register(a);else bO.unregister(a)}});if(c.disabled===false)bO.register(a)}),bP=new M("disabled",function(c){if(typeof c.disabled!=="boolean")return;var a=arguments;h.CSS.addEventHandler(c,"onpropertychange",function(){if(event.propertyName==="disabled"){if(c.disabled===true)bP.register(a);else bP.unregister(a)}});if(c.disabled===true)bP.register(a)}),bQ=new M("indeterminate",function(c){if(typeof c.indeterminate!=="boolean")return;var a=arguments;h.CSS.addEventHandler(c,"onpropertychange",function(){if(event.propertyName==="indeterminate"){if(c.indeterminate===true)bQ.register(a);else bQ.unregister(a)}});h.CSS.addEventHandler(c,"onclick",function(){bQ.unregister(a)})}),bR=new M("target",function(c){var a=arguments;if(!c.tabIndex)c.tabIndex=0;h.CSS.addEventHandler(p,"onpropertychange",function(){if(event.propertyName==="activeElement"){if(c.id&&c.id===location.hash.slice(1))bR.register(a);else bR.unregister(a)}});if(c.id&&c.id===location.hash.slice(1))bR.register(a)}),ct=1,bu={_4:1};h._b=function(l,m,j){var i=l.parentNode;if(!i||i.nodeType!==1)return NaN;var g=j?l.nodeName:"";if(g==="TR"&&l.sectionRowIndex>=0){var c=l.sectionRowIndex;return m?l.parentNode.rows.length-c+1:c}if((g==="TD"||g==="TH")&&l.cellIndex>=0){c=l.cellIndex;return m?l.parentNode.cells.length-c+1:c}if(bu._4!==ct){bu={_4:ct}}var f=(i.uniqueID)+"-"+g,d=bu[f];if(!d){d={};var c=0,a=i.firstChild;while(a){if(j?a.nodeName===g:a.nodeName>"@"){d[a.uniqueID]=++c}a=a.nextSibling}d.length=c;bu[f]=d}c=d[l.uniqueID];return m?d.length-c+1:c};h._c=function(a){a=a.firstChild;while(a){if(a.nodeType===3||a.nodeName>"@")return false;a=a.nextSibling}return true};h._a=function(d,c){var a=d.nodeName;c+="Sibling";do{d=d[c];if(d&&d.nodeName===a)break}while(d);return d};var dl={"+":1,"-":-1},dm=/ /g;T=O(O({":nth(-last)?-(?:child|(of-type))\\((<#nth_arg>)\\)(<#filter>)?":function(m,j,i,g,f){g=g.replace(dm,"");var d="IE7._b(e,"+!!j+","+!!i+")";if(g==="even")g="2n";else if(g==="odd")g="2n+1";else if(!isNaN(g))g="0n"+~~g;g=g.split("n");var c=~~(dl[g[0]]||g[0]||1),b=~~g[1];if(c===0){var a=d+"==="+b}else{a="((ii="+d+")-("+b+"))%"+c+"===0&&ii"+(c<0?"<":">")+"="+b}return this.parse(f)+a+"&&"},"<#negation>":function(c,a){if(/:not/i.test(a))bv();if(/^[#.:\[]/.test(a)){a="*"+a}return"!("+D.parse(a).slice(3,-2)+")&&"}},T),{":checked":"e.checked===true&&",":disabled":"e.disabled===true&&",":enabled":"e.disabled===false&&",":last-child":"!"+bE+"&&",":only-child":"!"+ck+"&&!"+bE+"&&",":first-of-type":cs,":last-of-type":bM,":only-of-type":cs+bM,":empty":"IE7._c(e)&&",":root":"e==R&&",":target":"H&&"+cn+"===H&&"});var dn="article,aside,audio,canvas,details,figcaption,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,summary,time,video".split(",");for(var cu=0,cv;cv=dn[cu];cu++)p.createElement(cv);U+="datalist{display:none}details{padding-left:40px;display:block;margin:1em 0}meter,progress{vertical-align:-0.2em;width:5em;height:1em;display:inline-block}progress{width:10em;}article,aside,figcaption,footer,header,hgroup,summary,section,nav{display:block;margin:1em 0}figure{margin:1em 40px;display:block}mark{background:yellow}";h.CSS.addFix(/\bopacity\s*:\s*([\d.]+)/,function(c,a){return"zoom:1;filter:Alpha(opacity="+((a*100)||1)+")"});var D,J=(function(){var o0=/^[>+~]/,bw=false;function dp(f,d,c){f=bZ(f);if(!d)d=p;var a=d;bw=o0.test(f);if(bw){d=d.parentNode;f="*"+f}try{return n.create(f,bw)(d,c?null:[],a)}catch(ex){return c?null:[]}};var dq=/^(\\.|[' >+~#.\[\]:*(),\w-\^|$=]|[^\x00-\xa0])+$/,dE=/^(href|src)$/,cw={"class":"className","for":"htmlFor"},dF=/\sie7_\w+/g,dr=/^(action|cite|codebase|data|dynsrc|href|longdesc|lowsrc|src|usemap|url)$/i;h._0=function(f,d){if(f.getAttributeNode){var c=f.getAttributeNode(d)}d=cw[d.toLowerCase()]||d;if(!c)c=f.attributes[d];var a=c&&c.specified;if(f[d]&&typeof f[d]=="boolean")return d.toLowerCase();if((a&&dr.test(d))||(!c&&E)||d==="value"||d==="type"){return f.getAttribute(d,2)}if(d==="style")return f.style.cssText.toLowerCase()||null;return a?String(c.nodeValue):null};var cx="colSpan,rowSpan,vAlign,dateTime,accessKey,tabIndex,encType,maxLength,readOnly,longDesc";O(cw,cO(cx.toLowerCase().split(","),cx.split(",")));h._1=function(c,a){a+="Sibling";do{c=c[a];if(c&&c.nodeName>"@")break}while(c);return c};var ds=/(^|[, >+~])([#.:\[])/g,dG=/\)\{/g,dt=/,/,dH=/^['"]/,du=/\\([\da-f]{2,2})/gi,dI=/last/i;h._d=function(f,d){var c=f.all[d]||null;if(!c||(c.nodeType&&h._0(c,"id")===d))return c;for(var a=0;a<c.length;a++){if(h._0(c[a],"id")===d)return c[a]}return null};var bb=G.extend({dictionary:new cM({ident:/\-?(\\.|[_a-z]|[^\x00-\xa0])(\\.|[\w-]|[^\x00-\xa0])*/,combinator:/[\s>+~]/,operator:/[\^~|$*]?=/,nth_arg:/[+-]?\d+|[+-]?\d*n(?:\s*[+-]\s*\d+)?|even|odd/,tag:/\*|<#ident>/,id:/#(<#ident>)/,'class':/\.(<#ident>)/,pseudo:/\:([\w-]+)(?:\(([^)]+)\))?/,attr:/\[(<#ident>)(?:(<#operator>)((?:\\.|[^\[\]#.:])+))?\]/,negation:/:not\((<#tag>|<#id>|<#class>|<#attr>|<#pseudo>)\)/,sequence:/(\\.|[~*]=|\+\d|\+?\d*n\s*\+\s*\d|[^\s>+~,\*])+/,filter:/[#.:\[]<#sequence>/,selector:/[^>+~](\\.|[^,])*?/,grammar:/^(<#selector>)((,<#selector>)*)$/}),ignoreCase:true}),dv=new bb({"\\\\.|[~*]\\s+=|\\+\\s+\\d":G.IGNORE,"\\[\\s+":"[","\\(\\s+":"(","\\s+\\)":")","\\s+\\]":"]","\\s*([,>+~]|<#operator>)\\s*":"$1","\\s+$":"","\\s+":" "});function dw(a){a=dv.parse(a.replace(du,"\\x$1")).replace(bz,"$1").replace(ds,"$1*$2");if(!dq.test(a))bv();return a};function dJ(a){return a.replace(cb,dx)};function dx(c,a){return W[a]};var dy=/\{/g,dz=/\\{/g;function bS(a){return Array((a.replace(dz,"").match(dy)||"").length+1).join("}")};T=new bb(T);var v=/:target/i,Z=/:root/i;function S(c){var a="";if(Z.test(c))a+=",R=d.documentElement";if(v.test(c))a+=",H=d.location;H=H&&H.hash.replace('#','')";if(a||c.indexOf("#")!==-1){a=",t=c.nodeType,d=t===9?c:c.ownerDocument||(c.document||c).parentWindow.document"+a}return"var ii"+a+";"};var ba={" ":";while(e!=s&&(e=e.parentNode)&&e.nodeType===1){",">":".parentElement;if(e){","+":";while((e=e.previousSibling)&&!("+cl+"))continue;if(e){","~":";while((e=e.previousSibling)){"+cm},K=/\be\b/g;D=new bb({"(?:(<#selector>)(<#combinator>))?(<#tag>)(<#filter>)?$":function(j,i,g,f,d){var c="";if(f!=="*"){var a=f.toUpperCase();c+="if(e.nodeName==='"+a+(a===f?"":"'||e.nodeName==='"+f)+"'){"}if(d){c+="if("+T.parse(d).slice(0,-2)+"){"}c=c.replace(K,"e"+this.index);if(g){c+="var e=e"+(this.index++)+ba[g];c=c.replace(K,"e"+this.index)}if(i){c+=this.parse(i)}return c}});var L="e0=IE7._d(d,'%1');if(e0){",z="var n=c.getElementsByTagName('%1');",w="if(r==null)return e0;r[k++]=e0;",r=1,A=new bb({"^((?:<#selector>)?(?:<#combinator>))(<#tag>)(<#filter>)?$":true}),s={},q=new bb({"^(<#tag>)#(<#ident>)(<#filter>)?( [^,]*)?$":function(j,i,g,f,d){var c=H(L,g),a="}";if(f){c+=D.parse(i+f);a=bS(c)}if(d){c+="s=c=e0;"+n.parse("*"+d)}else{c+=w}return c+a},"^([^#,]+)#(<#ident>)(<#filter>)?$":function(g,f,d,c){var a=H(L,d);if(f==="*"){a+=w}else{a+=D.parse(f+c)+w+"break"}return a+bS(a)},"^.*$":""}),n=new bb({"<#grammar>":function(k,l,m){if(!this.groups)this.groups=[];var j=A.exec(" "+l);if(!j)bv();this.groups.push(j.slice(1));if(m){return this.parse(m.replace(dt,""))}var i=this.groups,g=i[0][r];for(var c=1;j=i[c];c++){if(g!==j[r]){g="*";break}}var f="",d=w+"continue filtering;";for(var c=0;j=i[c];c++){D.index=0;if(g!=="*")j[r]="*";j=j.join("");if(j===" *"){f=d;break}else{j=D.parse(j);if(bw)j+="if(e"+D.index+"==s){";f+=j+d+bS(j)}}var a=g==="*";return(a?"var n=c.all;":H(z,g))+"filtering:while((e0=n[i++]))"+(a?cm.replace(K,"e0"):"{")+f+"}"},"^.*$":bv}),o=/\&\&(e\d+)\.nodeType===1(\)\{\s*if\(\1\.nodeName=)/g;n.create=function(d){if(!s[d]){d=dw(d);this.groups=null;D.index=0;var c=this.parse(d);this.groups=null;D.index=0;if(d.indexOf("#")!==-1){var a=q.parse(d);if(a){c="if(t===1||t===11|!c.getElementById){"+c+"}else{"+a+"}"}}c=c.replace(o,"$2");c=S(d)+bd(c);s[d]=new Function("return function(c,r,s){var i=0,k=0,e0;"+c+"return r}")()}return s[d]};return dp})();function bv(){throw new SyntaxError("Invalid selector.");};h.loaded=true;(function(){try{if(!p.body)throw"continue";bx.doScroll("left")}catch(ex){setTimeout(arguments.callee,1);return}try{eval(bU.innerHTML)}catch(ex){}if(typeof IE7_PNG_SUFFIX=="object"){bh=IE7_PNG_SUFFIX}else{bh=new RegExp(bY(N.IE7_PNG_SUFFIX||"-trans.png")+"(\\?.*)?$","i")}B=p.body;x=E?B:bx;B.className+=" ie7_body";bx.className+=" ie7_html";if(E)dc();h.CSS.init();h.HTML.init();h.HTML.apply();h.CSS.apply();h.recalc()})()})(this,document);
+
+/* W3C compliance for Microsoft Internet Explorer */
+
+/* credits/thanks:
+  Shaggy, Martijn Wargers, Jimmy Cerra, Mark D Anderson,
+  Lars Dieckow, Erik Arvidsson, Gellért Gyuris, James Denny,
+  Unknown W Brackets, Benjamin Westfarer, Rob Eberhardt,
+  Bill Edney, Kevin Newman, James Crompton, Matthew Mastracci,
+  Doug Wright, Richard York, Kenneth Kolano, MegaZone,
+  Thomas Verelst, Mark 'Tarquin' Wilton-Jones, Rainer Åhlfors,
+  David Zulaica, Ken Kolano, Kevin Newman, Sjoerd Visscher,
+  Ingo Chao
+*/
+
+// timestamp: Fri, 30 Apr 2010 20:59:18
+
+(function(window, document) {
+
+var IE7 = window.IE7 = {
+  version: "2.1(beta4)",
+  toString: K("[IE7]")
+};
+IE7.compat = 9;
+var appVersion = IE7.appVersion = navigator.appVersion.match(/MSIE (\d\.\d)/)[1] - 0;
+
+if (/ie7_off/.test(top.location.search) || appVersion < 5.5 || appVersion >= IE7.compat) return;
+
+var MSIE5 = appVersion < 6;
+
+var Undefined = K();
+var documentElement = document.documentElement, body, viewport;
+var ANON = "!";
+var HEADER = ":link{ie7-link:link}:visited{ie7-link:visited}";
+
+// -----------------------------------------------------------------------
+// external
+// -----------------------------------------------------------------------
+
+var RELATIVE = /^[\w\.]+[^:]*$/;
+function makePath(href, path) {
+  if (RELATIVE.test(href)) href = (path || "") + href;
+  return href;
+};
+
+function getPath(href, path) {
+  href = makePath(href, path);
+  return href.slice(0, href.lastIndexOf("/") + 1);
+};
+
+// Get the path to this script
+var script = document.scripts[document.scripts.length - 1];
+var path = getPath(script.src);
+
+// Use microsoft's http request object to load external files
+try {
+  var httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+} catch (ex) {
+  // ActiveX disabled
+}
+
+var fileCache = {};
+function loadFile(href, path) {
+  try {
+    href = makePath(href, path);
+    if (!fileCache[href]) {
+      httpRequest.open("GET", href, false);
+      httpRequest.send();
+      if (httpRequest.status == 0 || httpRequest.status == 200) {
+        fileCache[href] = httpRequest.responseText;
+      }
+    }
+  } catch (ex) {
+    // ignore errors
+  }
+  return fileCache[href] || "";
+};
+
+// -----------------------------------------------------------------------
+// OO support
+// -----------------------------------------------------------------------
+
+
+// This is a cut-down version of base2 (http://code.google.com/p/base2/)
+
+var _slice = Array.prototype.slice;
+
+// private
+var _FORMAT = /%([1-9])/g;
+var _LTRIM = /^\s\s*/;
+var _RTRIM = /\s\s*$/;
+var _RESCAPE = /([\/()[\]{}|*+-.,^$?\\])/g;           // safe regular expressions
+var _BASE = /\bbase\b/;
+var _HIDDEN = ["constructor", "toString"];            // only override these when prototyping
+
+var prototyping;
+
+function Base(){};
+Base.extend = function(_instance, _static) {
+  // Build the prototype.
+  prototyping = true;
+  var _prototype = new this;
+  extend(_prototype, _instance);
+  prototyping = false;
+
+  // Create the wrapper for the constructor function.
+  var _constructor = _prototype.constructor;
+  function klass() {
+    // Don't call the constructor function when prototyping.
+    if (!prototyping) _constructor.apply(this, arguments);
+  };
+  _prototype.constructor = klass;
+
+  // Build the static interface.
+  klass.extend = arguments.callee;
+  extend(klass, _static);
+  klass.prototype = _prototype;
+  return klass;
+};
+Base.prototype.extend = function(source) {
+  return extend(this, source);
+};
+
+
+// A collection of regular expressions and their associated replacement values.
+// A Base class for creating parsers.
+
+var HASH     = "#";
+var ITEMS    = "#";
+var KEYS     = ".";
+var COMPILED = "/";
+
+var REGGRP_BACK_REF        = /\\(\d+)/g,
+    REGGRP_ESCAPE_COUNT    = /\[(\\.|[^\]\\])+\]|\\.|\(\?/g,
+    REGGRP_PAREN           = /\(/g,
+    REGGRP_LOOKUP          = /\$(\d+)/,
+    REGGRP_LOOKUP_SIMPLE   = /^\$\d+$/,
+    REGGRP_LOOKUPS         = /(\[(\\.|[^\]\\])+\]|\\.|\(\?)|\(/g,
+    REGGRP_DICT_ENTRY      = /^<#\w+>$/,
+    REGGRP_DICT_ENTRIES    = /<#(\w+)>/g;
+
+var RegGrp = Base.extend({
+  constructor: function(values) {
+    this[KEYS] = [];
+    this[ITEMS] = {};
+    this.merge(values);
+  },
+
+  //dictionary: null,
+  //ignoreCase: false,
+
+  add: function(expression, replacement) {
+    delete this[COMPILED];
+    if (expression instanceof RegExp) {
+      expression = expression.source;
+    }
+    if (!this[HASH + expression]) this[KEYS].push(String(expression));
+    return this[ITEMS][HASH + expression] = new RegGrp.Item(expression, replacement, this);
+  },
+
+  compile: function(recompile) {
+    if (recompile || !this[COMPILED]) {
+      this[COMPILED] = new RegExp(this, this.ignoreCase ? "gi" : "g");
+    }
+    return this[COMPILED];
+  },
+
+  merge: function(values) {
+    for (var i in values) this.add(i, values[i]);
+  },
+
+  exec: function(string) {
+    var group = this,
+        patterns = group[KEYS],
+        items = group[ITEMS], item;
+    var result = this.compile(true).exec(string);
+    if (result) {
+      // Loop through the RegGrp items.
+      var i = 0, offset = 1;
+      while ((item = items[HASH + patterns[i++]])) {
+        var next = offset + item.length + 1;
+        if (result[offset]) { // do we have a result?
+          if (item.replacement === 0) {
+            return group.exec(string);
+          } else {
+            var args = result.slice(offset, next), j = args.length;
+            while (--j) args[j] = args[j] || ""; // some platforms return null/undefined for non-matching sub-expressions
+            args[0] = {match: args[0], item: item};
+            return args;
+          }
+        }
+        offset = next;
+      }
+    }
+    return null;
+  },
+
+  parse: function(string) {
+    string += ""; // type safe
+    var group = this,
+        patterns = group[KEYS],
+        items = group[ITEMS];
+    return string.replace(this.compile(), function(match) {
+      var args = [], item, offset = 1, i = arguments.length;
+      while (--i) args[i] = arguments[i] || ""; // some platforms return null/undefined for non-matching sub-expressions
+      // Loop through the RegGrp items.
+      while ((item = items[HASH + patterns[i++]])) {
+        var next = offset + item.length + 1;
+        if (args[offset]) { // do we have a result?
+          var replacement = item.replacement;
+          switch (typeof replacement) {
+            case "function":
+              return replacement.apply(group, args.slice(offset, next));
+            case "number":
+              return args[offset + replacement];
+            default:
+              return replacement;
+          }
+        }
+        offset = next;
+      }
+      return match;
+    });
+  },
+
+  toString: function() {
+    var strings = [],
+        keys = this[KEYS],
+        items = this[ITEMS], item;
+    for (var i = 0; item = items[HASH + keys[i]]; i++) {
+      strings[i] = item.source;
+    }
+    return "(" + strings.join(")|(") + ")";
+  }
+}, {
+  IGNORE: null, // a null replacement value means that there is no replacement.
+
+  Item: Base.extend({
+    constructor: function(source, replacement, owner) {
+      var length = source.indexOf("(") === -1 ? 0 : RegGrp.count(source);
+
+      var dictionary = owner.dictionary;
+      if (dictionary && source.indexOf("<#") !== -1) {
+        if (REGGRP_DICT_ENTRY.test(source)) {
+          var entry = dictionary[ITEMS][HASH + source.slice(2, -1)];
+          source = entry.replacement;
+          length = entry._length;
+        } else {
+          source = dictionary.parse(source);
+        }
+      }
+
+      if (typeof replacement == "number") replacement = String(replacement);
+      else if (replacement == null) replacement = 0;
+
+      // Does the expression use sub-expression lookups?
+      if (typeof replacement == "string" && REGGRP_LOOKUP.test(replacement)) {
+        if (REGGRP_LOOKUP_SIMPLE.test(replacement)) { // A simple lookup? (e.g. "$2").
+          // Store the index (used for fast retrieval of matched strings).
+          var index = replacement.slice(1) - 0;
+          if (index && index <= length) replacement = index;
+        } else {
+          // A complicated lookup (e.g. "Hello $2 $1.").
+          var lookup = replacement, regexp;
+          replacement = function(match) {
+            if (!regexp) {
+              regexp = new RegExp(source, "g" + (this.ignoreCase ? "i": ""));
+            }
+            return match.replace(regexp, lookup);
+          };
+        }
+      }
+
+      this.length = length;
+      this.source = String(source);
+      this.replacement = replacement;
+    }
+  }),
+
+  count: function(expression) {
+    return (String(expression).replace(REGGRP_ESCAPE_COUNT, "").match(REGGRP_PAREN) || "").length;
+  }
+});
+
+var Dictionary = RegGrp.extend({
+  parse: function(phrase) {
+    // Prevent sub-expressions in dictionary entries from capturing.
+    var entries = this[ITEMS];
+    return phrase.replace(REGGRP_DICT_ENTRIES, function(match, entry) {
+      entry = entries[HASH + entry];
+      return entry ? entry._nonCapturing : match;
+    });
+  },
+
+  add: function(expression, replacement) {
+    // Get the underlying replacement value.
+    if (replacement instanceof RegExp) {
+      replacement = replacement.source;
+    }
+    // Translate the replacement.
+    // The result is the original replacement recursively parsed by this dictionary.
+    var nonCapturing = replacement.replace(REGGRP_LOOKUPS, _nonCapture);
+    if (replacement.indexOf("(") !== -1) {
+      var realLength = RegGrp.count(replacement);
+    }
+    if (replacement.indexOf("<#") !== -1) {
+      replacement = this.parse(replacement);
+      nonCapturing = this.parse(nonCapturing);
+    }
+    var item = this.base(expression, replacement);
+    item._nonCapturing = nonCapturing;
+    item._length = realLength || item.length; // underlying number of sub-groups
+    return item;
+  },
+
+  toString: function() {
+    return "(<#" + this[PATTERNS].join(">)|(<#") + ">)";
+  }
+});
+
+function _nonCapture(match, escaped) {
+  return escaped || "(?:"; // non-capturing
+};
+
+// =========================================================================
+// lang/extend.js
+// =========================================================================
+
+function extend(object, source) { // or extend(object, key, value)
+  if (object && source) {
+    var proto = (typeof source == "function" ? Function : Object).prototype;
+    // Add constructor, toString etc
+    var i = _HIDDEN.length, key;
+    if (prototyping) while (key = _HIDDEN[--i]) {
+      var value = source[key];
+      if (value != proto[key]) {
+        if (_BASE.test(value)) {
+          _override(object, key, value)
+        } else {
+          object[key] = value;
+        }
+      }
+    }
+    // Copy each of the source object's properties to the target object.
+    for (key in source) if (typeof proto[key] == "undefined") {
+      var value = source[key];
+      // Check for method overriding.
+      if (object[key] && typeof value == "function" && _BASE.test(value)) {
+        _override(object, key, value);
+      } else {
+        object[key] = value;
+      }
+    }
+  }
+  return object;
+};
+
+function _override(object, name, method) {
+  // Override an existing method.
+  var ancestor = object[name];
+  object[name] = function() {
+    var previous = this.base;
+    this.base = ancestor;
+    var returnValue = method.apply(this, arguments);
+    this.base = previous;
+    return returnValue;
+  };
+};
+
+function combine(keys, values) {
+  // Combine two arrays to make a hash.
+  if (!values) values = keys;
+  var hash = {};
+  for (var i in keys) hash[i] = values[i];
+  return hash;
+};
+
+function format(string) {
+  // Replace %n with arguments[n].
+  // e.g. format("%1 %2%3 %2a %1%3", "she", "se", "lls");
+  // ==> "she sells sea shells"
+  // Only %1 - %9 supported.
+  var args = arguments;
+  var _FORMAT = new RegExp("%([1-" + arguments.length + "])", "g");
+  return String(string).replace(_FORMAT, function(match, index) {
+    return index < args.length ? args[index] : match;
+  });
+};
+
+function match(string, expression) {
+  // Same as String.match() except that this function will return an empty
+  // array if there is no match.
+  return String(string).match(expression) || [];
+};
+
+function rescape(string) {
+  // Make a string safe for creating a RegExp.
+  return String(string).replace(_RESCAPE, "\\$1");
+};
+
+// http://blog.stevenlevithan.com/archives/faster-trim-javascript
+function trim(string) {
+  return String(string).replace(_LTRIM, "").replace(_RTRIM, "");
+};
+
+function K(k) {
+  return function() {
+    return k;
+  };
+};
+
+// -----------------------------------------------------------------------
+// parsing
+// -----------------------------------------------------------------------
+
+var Parser = RegGrp.extend({ignoreCase: true});
+
+var SINGLE_QUOTES       = /'/g,
+    ESCAPED             = /'(\d+)'/g,
+    ESCAPE              = /\\/g,
+    UNESCAPE            = /\\([nrtf'"])/g;
+
+var strings = [];
+
+var encoder = new Parser({
+  // comments
+  "<!\\-\\-|\\-\\->": "",
+  "\\/\\*[^*]*\\*+([^\\/][^*]*\\*+)*\\/": "",
+  // get rid
+  "@(namespace|import)[^;\\n]+[;\\n]": "",
+  // strings
+  "'(\\\\.|[^'\\\\])*'": encodeString,
+  '"(\\\\.|[^"\\\\])*"': encodeString,
+  // white space
+  "\\s+": " "
+});
+
+function encode(selector) {
+  return encoder.parse(selector).replace(UNESCAPE, "$1");
+};
+
+function decode(query) {
+  // put string values back
+  return query.replace(ESCAPED, decodeString);
+};
+
+function encodeString(string) {
+  var index = strings.length;
+  strings[index] = string.slice(1, -1)
+    .replace(UNESCAPE, "$1")
+    .replace(SINGLE_QUOTES, "\\'");
+  return "'" + index + "'";
+};
+
+function decodeString(match, index) {
+  var string = strings[index];
+  if (string == null) return match;
+  return "'" + strings[index] + "'";
+};
+
+function getString(value) {
+  return value.indexOf("'") === 0 ? strings[value.slice(1, - 1)] : value;
+};
+
+// clone a "width" function to create a "height" function
+var rotater = new RegGrp({
+  Width: "Height",
+  width: "height",
+  Left:  "Top",
+  left:  "top",
+  Right: "Bottom",
+  right: "bottom",
+  onX:   "onY"
+});
+
+function rotate(fn) {
+  return rotater.parse(fn);
+};
+
+// -----------------------------------------------------------------------
+// event handling
+// -----------------------------------------------------------------------
+
+var eventHandlers = [];
+
+function addResize(handler) {
+  addRecalc(handler);
+  addEventHandler(window, "onresize", handler);
+};
+
+// add an event handler (function) to an element
+function addEventHandler(element, type, handler) {
+  element.attachEvent(type, handler);
+  // store the handler so it can be detached later
+  eventHandlers.push(arguments);
+};
+
+// remove an event handler assigned to an element by IE7
+function removeEventHandler(element, type, handler) {
+  try {
+    element.detachEvent(type, handler);
+  } catch (ex) {
+    // write a letter of complaint to microsoft..
+  }
+};
+
+// remove event handlers (they eat memory)
+addEventHandler(window, "onunload", function() {
+  var handler;
+  while (handler = eventHandlers.pop()) {
+    removeEventHandler(handler[0], handler[1], handler[2]);
+  }
+});
+
+function register(handler, element, condition) { // -@DRE
+  //var set = handler[element.uniqueID];
+  if (!handler.elements) handler.elements = {};
+  if (condition) handler.elements[element.uniqueID] = element;
+  else delete handler.elements[element.uniqueID];
+  //return !set && condition;
+  return condition;
+};
+
+addEventHandler(window, "onbeforeprint", function() {
+  if (!IE7.CSS.print) new StyleSheet("print");
+  IE7.CSS.print.recalc();
+});
+
+// -----------------------------------------------------------------------
+// pixel conversion
+// -----------------------------------------------------------------------
+
+// this is handy because it means that web developers can mix and match
+//  measurement units in their style sheets. it is not uncommon to
+//  express something like padding in "em" units whilst border thickness
+//  is most often expressed in pixels.
+
+var PIXEL = /^\d+(px)?$/i;
+var PERCENT = /^\d+%$/;
+var getPixelValue = function(element, value) {
+  if (PIXEL.test(value)) return parseInt(value);
+  var style = element.style.left;
+  var runtimeStyle = element.runtimeStyle.left;
+  element.runtimeStyle.left = element.currentStyle.left;
+  element.style.left = value || 0;
+  value = element.style.pixelLeft;
+  element.style.left = style;
+  element.runtimeStyle.left = runtimeStyle;
+  return value;
+};
+
+// -----------------------------------------------------------------------
+// generic
+// -----------------------------------------------------------------------
+
+var $IE7 = "ie7-";
+
+var Fix = Base.extend({
+  constructor: function() {
+    this.fixes = [];
+    this.recalcs = [];
+  },
+  init: Undefined
+});
+
+// a store for functions that will be called when refreshing IE7
+var recalcs = [];
+function addRecalc(recalc) {
+  recalcs.push(recalc);
+};
+
+IE7.recalc = function() {
+  IE7.HTML.recalc();
+  // re-apply style sheet rules (re-calculate ie7 classes)
+  IE7.CSS.recalc();
+  // apply global fixes to the document
+  for (var i = 0; i < recalcs.length; i++) recalcs[i]();
+};
+
+function isFixed(element) {
+  return element.currentStyle["ie7-position"] == "fixed";
+};
+
+// original style
+function getDefinedStyle(element, propertyName) {
+  return element.currentStyle[$IE7 + propertyName] || element.currentStyle[propertyName];
+};
+
+function setOverrideStyle(element, propertyName, value) {
+  if (element.currentStyle[$IE7 + propertyName] == null) {
+    element.runtimeStyle[$IE7 + propertyName] = element.currentStyle[propertyName];
+  }
+  element.runtimeStyle[propertyName] = value;
+};
+
+// Create a temporary element which is used to inherit styles
+// from the target element.
+function createTempElement(tagName) {
+  var element = document.createElement(tagName || "object");
+  element.style.cssText = "position:absolute;padding:0;display:block;border:none;clip:rect(0 0 0 0);left:-9999";
+  element.ie7_anon = true;
+  return element;
+};
+
+
+// =========================================================================
+// ie7-css.js
+// =========================================================================
+
+var NEXT_SIBLING        = "(e.nextSibling&&IE7._getElementSibling(e,'next'))",
+    PREVIOUS_SIBLING    = NEXT_SIBLING.replace(/next/g, "previous"),
+    IS_ELEMENT          = "e.nodeName>'@'",
+    IF_ELEMENT          = "if(" + IS_ELEMENT + "){";
+
+var ID_ATTRIBUTE  = "(e.nodeName==='FORM'?IE7._getAttribute(e,'id'):e.id)";
+
+var HYPERLINK = /a(#[\w-]+)?(\.[\w-]+)?:(hover|active)/i;
+var FIRST_LINE_LETTER = /(.*)(:first-(line|letter))/;
+var SPACE = /\s/;
+var RULE = /((?:\\.|[^{\\])+)\{((?:\\.|[^}\\])+)\}/g;
+var SELECTOR = /(?:\\.|[^,\\])+/g;
+
+var styleSheets = document.styleSheets;
+
+var inheritedProperties = [];
+
+IE7.CSS = new (Fix.extend({ // single instance
+  parser: new Parser,
+  screen: "",
+  print: "",
+  styles: [],
+  rules: [],
+  pseudoClasses: appVersion < 7 ? "first\\-child" : "",
+  dynamicPseudoClasses: {
+    toString: function() {
+      var strings = [];
+      for (var pseudoClass in this) strings.push(pseudoClass);
+      return strings.join("|");
+    }
+  },
+  
+  init: function() {
+    var NONE = "^\x01$";
+    var CLASS = "\\[class=?[^\\]]*\\]";
+    var pseudoClasses = [];
+    if (this.pseudoClasses) pseudoClasses.push(this.pseudoClasses);
+    var dynamicPseudoClasses = this.dynamicPseudoClasses.toString(); 
+    if (dynamicPseudoClasses) pseudoClasses.push(dynamicPseudoClasses);
+    pseudoClasses = pseudoClasses.join("|");
+    var unknown = appVersion < 7 ? ["[>+~\\[(]|([:.])[\\w-]+\\1"] : [CLASS];
+    if (pseudoClasses) unknown.push(":(" + pseudoClasses + ")");
+    this.UNKNOWN = new RegExp(unknown.join("|") || NONE, "i");
+    var complex = appVersion < 7 ? ["\\[[^\\]]+\\]|[^\\s(\\[]+\\s*[+~]"] : [CLASS];
+    var complexRule = complex.concat();
+    if (pseudoClasses) complexRule.push(":(" + pseudoClasses + ")");
+    Rule.COMPLEX = new RegExp(complexRule.join("|") || NONE, "ig");
+    if (this.pseudoClasses) complex.push(":(" + this.pseudoClasses + ")");
+    DynamicRule.COMPLEX = new RegExp(complex.join("|") || NONE, "i");
+    dynamicPseudoClasses = "not\\(:" + dynamicPseudoClasses.split("|").join("\\)|not\\(:") + "\\)|" + dynamicPseudoClasses;
+    DynamicRule.MATCH = new RegExp(dynamicPseudoClasses ? "(.*?):(" + dynamicPseudoClasses + ")(.*)" : NONE, "i");
+    
+    this.createStyleSheet();
+    this.refresh();
+  },
+  
+	addEventHandler: function() {
+		addEventHandler.apply(null, arguments);
+	},
+  
+  addFix: function(expression, replacement) {
+    this.parser.add(expression, replacement);
+  },
+  
+  addRecalc: function(propertyName, test, handler, replacement) {
+    // recalcs occur whenever the document is refreshed using document.recalc()
+    propertyName = propertyName.source || propertyName;
+    test = new RegExp("([{;\\s])" + propertyName + "\\s*:\\s*" + test + "[^;}]*");
+    var id = this.recalcs.length;
+    if (typeof replacement == "string") replacement = propertyName + ":" + replacement;
+    this.addFix(test, function(match) {
+      if (typeof replacement == "function") replacement = replacement(match);
+      return (replacement ? replacement : match) + ";ie7-" + match.slice(1) + ";ie7_recalc" + id + ":1";
+    });
+    this.recalcs.push(arguments);
+    return id;
+  },
+  
+  apply: function() {
+    this.getInlineCSS();
+    new StyleSheet("screen");
+    this.trash();
+  },
+  
+  createStyleSheet: function() {
+    // create the IE7 style sheet
+    document.getElementsByTagName("head")[0].appendChild(document.createElement("style"));
+    this.styleSheet = styleSheets[styleSheets.length - 1];
+    // flag it so we can ignore it during parsing
+    this.styleSheet.ie7 = true;
+    this.styleSheet.owningElement.ie7 = true;
+    this.styleSheet.cssText = HEADER;
+  },
+  
+  getInlineCSS: function() {// load inline styles
+    var styleSheets = document.getElementsByTagName("style"), styleSheet;
+    for (var i = styleSheets.length - 1; styleSheet = styleSheets[i]; i--) {
+      if (!styleSheet.disabled && !styleSheet.ie7) {
+        styleSheet._cssText = styleSheet.innerHTML;
+      }
+    }
+  },
+  
+  getText: function(styleSheet, path) {
+    // Internet Explorer will trash unknown selectors (it converts them to "UNKNOWN").
+    // So we must reload external style sheets (internal style sheets can have their text
+    // extracted through the innerHTML property).
+
+    // load the style sheet text from an external file
+    try {
+      var cssText = styleSheet.cssText;
+    } catch (e) {
+      cssText = "";
+    }
+    if (httpRequest) cssText = loadFile(styleSheet.href, path) || cssText;
+    return cssText;
+  },
+  
+  recalc: function() {
+    this.screen.recalc();
+    // we're going to read through all style rules.
+    //  certain rules have had ie7 properties added to them.
+    //   e.g. p{top:0; ie7_recalc2:1; left:0}
+    //  this flags a property in the rule as needing a fix.
+    //  the selector text is then used to query the document.
+    //  we can then loop through the results of the query
+    //  and fix the elements.
+    // we ignore the IE7 rules - so count them in the header
+    var RECALCS = /ie7_recalc\d+/g;
+    var start = HEADER.match(/[{,]/g).length;
+    // only calculate screen fixes. print fixes don't show up anyway
+    var rules = this.styleSheet.rules, rule;
+    var calcs, calc, elements, element, i, j, k, id;
+    // loop through all rules
+    for (i = start; rule = rules[i]; i++) {
+      var cssText = rule.style.cssText;
+      // search for the "ie7_recalc" flag (there may be more than one)
+      if (calcs = cssText.match(RECALCS)) {
+        // use the selector text to query the document
+        elements = cssQuery(rule.selectorText);
+        // if there are matching elements then loop
+        //  through the recalc functions and apply them
+        //  to each element
+        if (elements.length) for (j = 0; j < calcs.length; j++) {
+          // get the matching flag (e.g. ie7_recalc3)
+          id = calcs[j];
+          // extract the numeric id from the end of the flag
+          //  and use it to index the collection of recalc
+          //  functions
+          calc = IE7.CSS.recalcs[id.slice(10)][2];
+          for (k = 0; (element = elements[k]); k++) {
+            // apply the fix
+            if (element.currentStyle[id]) calc(element, cssText);
+          }
+        }
+      }
+    }
+  },
+  
+  refresh: function() {
+    this.styleSheet.cssText = HEADER + this.screen + this.print;
+  },
+  
+  trash: function() {
+    // trash the old style sheets
+    for (var i = 0; i < styleSheets.length; i++) {
+      if (!styleSheets[i].ie7) {
+        try {
+          var cssText = styleSheets[i].cssText;
+        } catch (e) {
+          cssText = "";
+        }
+        if (cssText) styleSheets[i].cssText = "";
+      }
+    }
+  }
+}));
+
+// -----------------------------------------------------------------------
+//  IE7 StyleSheet class
+// -----------------------------------------------------------------------
+
+var StyleSheet = Base.extend({
+  constructor: function(media) {
+    this.media = media;
+    this.load();
+    IE7.CSS[media] = this;
+    IE7.CSS.refresh();
+  },
+  
+  createRule: function(selector, cssText) {
+    var match;
+    if (PseudoElement && (match = selector.match(PseudoElement.MATCH))) {
+      return new PseudoElement(match[1], match[2], cssText);
+    } else if (match = selector.match(DynamicRule.MATCH)) {
+      if (!HYPERLINK.test(match[0]) || DynamicRule.COMPLEX.test(match[0])) {
+        return new DynamicRule(selector, match[1], match[2], match[3], cssText);
+      }
+    } else {
+      return new Rule(selector, cssText);
+    }
+    return selector + " {" + cssText + "}";
+  },
+  
+  getText: function() {
+    // store for style sheet text
+    // parse media decalarations
+    var MEDIA        = /@media\s+([^{]+?)\s*\{([^@]+\})\s*\}/gi;
+    var IMPORTS      = /@import[^;\n]+/gi;
+    var TRIM_IMPORTS = /@import\s+url\s*\(\s*["']?|["']?\s*\)\s*/gi;
+    var URL          = /(url\s*\(\s*['"]?)([\w\.]+[^:\)]*['"]?\))/gi;
+
+    var self = this;
+    
+    // Store loaded cssText URLs
+    var fileCache = {};
+    
+    function getCSSText(styleSheet, path, media, level) {
+      var cssText = "";
+      if (!level) {
+        media = toSimpleMedia(styleSheet.media);
+        level = 0;
+      }
+      if (media === "none") {
+        styleSheet.disabled = true;
+        return "";
+      }
+      if (media === "all" || media === self.media) {
+        // IE only allows importing style sheets three levels deep.
+        // it will crash if you try to access a level below this
+        try {
+          var canAcess = !!styleSheet.cssText;
+        } catch (exe) {}
+        if (level < 3 && canAcess) {
+          var hrefs = styleSheet.cssText.match(IMPORTS);
+          // loop through imported style sheets
+          for (var i = 0, imported; i < styleSheet.imports.length; i++) {
+            var imported = styleSheet.imports[i];
+            var href = styleSheet._href || styleSheet.href;
+            imported._href = hrefs[i].replace(TRIM_IMPORTS, "");
+            // call this function recursively to get all imported style sheets
+            cssText += getCSSText(imported, getPath(href, path), media, level + 1);
+          }
+        }
+        // retrieve inline style or load an external style sheet
+        cssText += encode(styleSheet.href ? loadStyleSheet(styleSheet, path) : styleSheet.owningElement._cssText);
+        cssText = parseMedia(cssText, self.media);
+      }
+      return cssText;
+    };
+
+    // Load all style sheets in the document
+    for (var i = 0; i < styleSheets.length; i++) {
+      var styleSheet = styleSheets[i];
+      if (!styleSheet.disabled && !styleSheet.ie7) this.cssText += getCSSText(styleSheet);
+    }
+    
+    // helper functions
+    function parseMedia(cssText, media) {
+      filterMedia.value = media;
+      return cssText.replace(MEDIA, filterMedia);
+    };
+    
+    function filterMedia(match, media, cssText) {
+      media = toSimpleMedia(media);
+      switch (media) {
+        case "screen":
+        case "print":
+          if (media !== filterMedia.value) return "";
+        case "all":
+          return cssText;
+      }
+      return "";
+    };
+    
+    function toSimpleMedia(media) {
+      if (!media) return "all";
+      var split = media.toLowerCase().split(/\s*,\s*/);
+      media = "none";
+      for (var i = 0; i < split.length; i++) {
+        if (split[i] === "all") return "all";
+        if (split[i] === "screen") {
+          if (media === "print") return "all";
+          media = "screen";
+        } else if (split[i] === "print") {
+          if (media === "screen") return "all";
+          media = "print";
+        }
+      }
+      return media;
+    };
+    
+    // Load an external style sheet
+    function loadStyleSheet(styleSheet, path) {
+      var href = styleSheet._href || styleSheet.href;
+      var url = makePath(href, path);
+      // If the style sheet has already loaded then don't reload it
+      if (fileCache[url]) return "";
+      // Load from source
+      fileCache[url] = styleSheet.disabled ? "" :
+        fixUrls(IE7.CSS.getText(styleSheet, path), getPath(href, path));
+      return fileCache[url];
+    };
+
+    // Fix CSS paths.
+    // We're lumping all css text into one big style sheet so relative
+    // paths have to be fixed. This is necessary anyway because of other
+    // Internet Explorer bugs.
+    function fixUrls(cssText, pathname) {
+      // hack & slash
+      return cssText.replace(URL, "$1" + pathname.slice(0, pathname.lastIndexOf("/") + 1) + "$2");
+    };
+  },
+  
+  load: function() {
+    this.cssText = "";
+    this.getText();
+    this.parse();
+    if (inheritedProperties.length) {
+      this.cssText = parseInherited(this.cssText);
+    }
+    this.cssText = decode(this.cssText);
+    fileCache = {};
+  },
+  
+  parse: function() {
+    var cssText = IE7.CSS.parser.parse(this.cssText);
+    
+    var declarations = "";
+    this.cssText = cssText.replace(/@charset[^;]+;|@font\-face[^\}]+\}/g, function(match) {
+      declarations += match + "\n";
+      return "";
+    });
+    this.declarations = decode(declarations);
+    
+    // Parse the style sheet
+    var offset = IE7.CSS.rules.length;
+    var rules = [], rule;
+    while ((rule = RULE.exec(this.cssText))) {
+      var cssText = rule[2];
+      if (cssText) {
+        var fixDescendants = appVersion < 7 && cssText.indexOf("AlphaImageLoader") !== -1;
+        var selectors = rule[1].match(SELECTOR), selector;
+        for (var i = 0; selector = selectors[i]; i++) {
+          selector = trim(selector);
+          var isUnknown = IE7.CSS.UNKNOWN.test(selector);
+          selectors[i] = isUnknown ? this.createRule(selector, cssText) : selector + "{" + cssText + "}";
+          if (fixDescendants) selectors[i] += this.createRule(selector + ">*", "position:relative");
+        }
+        rules.push(selectors.join("\n"));
+      }
+    }
+    this.cssText = rules.join("\n");
+    this.rules = IE7.CSS.rules.slice(offset);
+  },
+  
+  recalc: function() {
+    var rule, i;
+    for (i = 0; (rule = this.rules[i]); i++) rule.recalc();
+  },
+  
+  toString: function() {
+    return this.declarations + "@media " + this.media + "{" + this.cssText + "}";
+  }
+});
+
+var PseudoElement;
+
+// -----------------------------------------------------------------------
+// IE7 style rules
+// -----------------------------------------------------------------------
+
+var Rule = IE7.Rule = Base.extend({
+  constructor: function(selector, cssText) {
+    this.id = IE7.CSS.rules.length;
+    this.className = Rule.PREFIX + this.id;
+    var pseudoElement = selector.match(FIRST_LINE_LETTER);
+    this.selector = (pseudoElement ? pseudoElement[1] : selector) || "*";
+    this.selectorText = this.parse(this.selector) + (pseudoElement ? pseudoElement[2] : "");
+    this.cssText = cssText;
+    this.MATCH = new RegExp("\\s" + this.className + "(\\s|$)", "g");
+    IE7.CSS.rules.push(this);
+    this.init();
+  },
+  
+  init: Undefined,
+  
+  add: function(element) {
+    // allocate this class
+    element.className += " " + this.className;
+  },
+  
+  recalc: function() {
+    // execute the underlying css query for this class
+    var match = cssQuery(this.selector);
+    // add the class name for all matching elements
+    for (var i = 0; i < match.length; i++) this.add(match[i]);
+  },
+
+  parse: function(selector) {
+    // attempt to preserve specificity for "loose" parsing by
+    //  removing unknown tokens from a css selector but keep as
+    //  much as we can..
+    var simple = selector.replace(Rule.CHILD, " ").replace(Rule.COMPLEX, "");
+    if (appVersion < 7) simple = simple.replace(Rule.MULTI, "");
+    var tags = match(simple, Rule.TAGS).length - match(selector, Rule.TAGS).length;
+    var classes = match(simple, Rule.CLASSES).length - match(selector, Rule.CLASSES).length + 1;
+    while (classes > 0 && Rule.CLASS.test(simple)) {
+      simple = simple.replace(Rule.CLASS, "");
+      classes--;
+    }
+    while (tags > 0 && Rule.TAG.test(simple)) {
+      simple = simple.replace(Rule.TAG, "$1*");
+      tags--;
+    }
+    simple += "." + this.className;
+    classes = Math.min(classes, 2);
+    tags = Math.min(tags, 2);
+    var score = -10 * classes - tags;
+    if (score > 0) {
+      simple = simple + "," + Rule.MAP[score] + " " + simple;
+    }
+    return simple;
+  },
+  
+  remove: function(element) {
+    // deallocate this class
+    element.className = element.className.replace(this.MATCH, "$1");
+  },
+  
+  toString: function() {
+    return format("%1 {%2}", this.selectorText, this.cssText);
+  }
+}, {
+  CHILD: />/g,
+  CLASS: /\.[\w-]+/,
+  CLASSES: /[.:\[]/g,
+  MULTI: /(\.[\w-]+)+/g,
+  PREFIX: "ie7_class",
+  TAG: /^\w+|([\s>+~])\w+/,
+  TAGS: /^\w|[\s>+~]\w/g,
+  MAP: {
+    "1":  "html",
+    "2":  "html body",
+    "10": ".ie7_html",
+    "11": "html.ie7_html",
+    "12": "html.ie7_html body",
+    "20": ".ie7_html .ie7_body",
+    "21": "html.ie7_html .ie7_body",
+    "22": "html.ie7_html body.ie7_body"
+  }
+});
+
+// -----------------------------------------------------------------------
+// IE7 dynamic style
+// -----------------------------------------------------------------------
+
+// object properties:
+// attach: the element that an event handler will be attached to
+// target: the element that will have the IE7 class applied
+
+var DynamicRule = Rule.extend({
+  // properties
+  constructor: function(selector, attach, dynamicPseudoClass, target, cssText) {
+    this.negated = dynamicPseudoClass.indexOf("not") === 0;
+    if (this.negated) dynamicPseudoClass = dynamicPseudoClass.slice(5, -1);
+    // initialise object properties
+    this.attach = attach || "*";
+    this.dynamicPseudoClass = IE7.CSS.dynamicPseudoClasses[dynamicPseudoClass];
+    this.target = target;
+    this.base(selector, cssText);
+  },
+  
+  recalc: function() {
+    // execute the underlying css query for this class
+    var attaches = cssQuery(this.attach), attach;
+    // process results
+    for (var i = 0; attach = attaches[i]; i++) {
+      // retrieve the event handler's target element(s)
+      var target = this.target ? cssQuery(this.target, attach) : [attach];
+      // attach event handlers for dynamic pseudo-classes
+      if (target.length) this.dynamicPseudoClass.apply(attach, target, this);
+    }
+  }
+});
+
+// -----------------------------------------------------------------------
+//  IE7 dynamic pseudo-classes
+// -----------------------------------------------------------------------
+
+var DynamicPseudoClass = Base.extend({
+  constructor: function(name, apply) {
+    this.name = name;
+    this.apply = apply;
+    this.instances = {};
+    IE7.CSS.dynamicPseudoClasses[name] = this;
+  },
+  
+  register: function(instance, negated) {
+    // an "instance" is actually an Arguments object
+    var _class = instance[2];
+    if (!negated && _class.negated) {
+      this.unregister(instance, true);
+    } else {
+      instance.id = _class.id + instance[0].uniqueID;
+      if (!this.instances[instance.id]) {
+        var target = instance[1], j;
+        for (j = 0; j < target.length; j++) _class.add(target[j]);
+        this.instances[instance.id] = instance;
+      }
+    }
+  },
+  
+  unregister: function(instance, negated) {
+    var _class = instance[2];
+    if (!negated && _class.negated) {
+      this.register(instance, true);
+    } else {
+      if (this.instances[instance.id]) {
+        var target = instance[1], j;
+        for (j = 0; j < target.length; j++) _class.remove(target[j]);
+        delete this.instances[instance.id];
+      }
+    }
+  }
+});
+  
+// -----------------------------------------------------------------------
+// dynamic pseudo-classes
+// -----------------------------------------------------------------------
+
+var Hover = new DynamicPseudoClass("hover", function(element) {
+  var instance = arguments;
+  IE7.CSS.addEventHandler(element, "onmouseenter", function() {
+    Hover.register(instance);
+  });
+  IE7.CSS.addEventHandler(element, "onmouseleave", function() {
+    Hover.unregister(instance);
+  });
+});
+
+// globally trap the mouseup event (thanks Martijn!)
+addEventHandler(document, "onmouseup", function() {
+  var instances = Hover.instances;
+  for (var i in instances)
+    if (!instances[i][0].contains(event.srcElement))
+      Hover.unregister(instances[i]);
+});
+
+var ATTR = {
+  "=":  "%1==='%2'",                           // "[@%1='%2']"
+  "~=": "(' '+%1+' ').indexOf(' %2 ')!==-1",   // "[contains(concat(' ',@%1,' '),' %2 ')]",
+  "|=": "%1==='%2'||%1.indexOf('%2-')===0",    // "[@%1='%2' or starts-with(@%1,'%2-')]",
+  "^=": "%1.indexOf('%2')===0",                // "[starts-with(@%1,'%2')]",
+  "$=": "%1.slice(-'%2'.length)==='%2'",       // "[ends-with(@%1,'%2')]",
+  "*=": "%1.indexOf('%2')!==-1"                // "[contains(@%1,'%2')]"
+};
+ATTR[""] = "%1!=null";                         // "[@%1]"
+
+var FILTER = {
+  "<#attr>": function(match, name, operator, value) {
+    var attr = "IE7._getAttribute(e,'" + name + "')";
+    value = getString(value);
+    if (operator.length > 1) {
+      if (!value || operator === "~=" && SPACE.test(value)) {
+        return "false&&";
+      }
+      attr = "(" + attr + "||'')";
+    }
+    return "(" + format(ATTR[operator], attr, value) + ")&&";
+  },
+
+  "<#id>":    ID_ATTRIBUTE + "==='$1'&&",
+
+  "<#class>": "e.className&&(' '+e.className+' ').indexOf(' $1 ')!==-1&&",
+
+  // PSEDUO
+  ":first-child":     "!" + PREVIOUS_SIBLING + "&&",
+  ":link":           "e.currentStyle['ie7-link']=='link'&&",
+  ":visited":        "e.currentStyle['ie7-link']=='visited'&&"
+};
+
+// =========================================================================
+// ie7-html.js
+// =========================================================================
+
+// default font-sizes
+//HEADER += "h1{font-size:2em}h2{font-size:1.5em;}h3{font-size:1.17em;}h4{font-size:1em}h5{font-size:.83em}h6{font-size:.67em}";
+
+IE7.HTML = new (Fix.extend({ // single instance  
+  fixed: {},
+  
+  init: Undefined,
+  
+  addFix: function() {
+    // fixes are a one-off, they are applied when the document is loaded
+    this.fixes.push(arguments);
+  },
+  
+  apply: function() {
+    for (var i = 0; i < this.fixes.length; i++) {
+      var match = cssQuery(this.fixes[i][0]);
+      var fix = this.fixes[i][1];
+      for (var j = 0; j < match.length; j++) fix(match[j]);
+    }
+  },
+  
+  addRecalc: function() {
+    // recalcs occur whenever the document is refreshed using document.recalc()
+    this.recalcs.push(arguments);
+  },
+  
+  recalc: function() {
+    // loop through the fixes
+    for (var i = 0; i < this.recalcs.length; i++) {
+      var match = cssQuery(this.recalcs[i][0]);
+      var recalc = this.recalcs[i][1], element;
+      var key = Math.pow(2, i);
+      for (var j = 0; (element = match[j]); j++) {
+        var uniqueID = element.uniqueID;
+        if ((this.fixed[uniqueID] & key) === 0) {
+          element = recalc(element) || element;
+          this.fixed[uniqueID] |= key;
+        }
+      }
+    }
+  }
+}));
+
+if (appVersion < 7) {  
+  // provide support for the <abbr> tag.
+  document.createElement("abbr");
+  
+  // bind to the first child control
+  IE7.HTML.addRecalc("label", function(label) {
+    if (!label.htmlFor) {
+      var firstChildControl = cssQuery("input,textarea", label, true);
+      if (firstChildControl) {
+        addEventHandler(label, "onclick", function() {
+          firstChildControl.click();
+        });
+      }
+    }
+  });
+}
+
+// =========================================================================
+// ie7-layout.js
+// =========================================================================
+
+var NUMERIC = "[.\\d]";
+
+(function() {
+  var layout = IE7.Layout = {};
+
+  // big, ugly box-model hack + min/max stuff
+
+  // #tantek > #erik > #dean { voice-family: hacker; }
+
+  // -----------------------------------------------------------------------
+  // "layout"
+  // -----------------------------------------------------------------------
+
+  HEADER += "*{boxSizing:content-box}";
+
+  // give an element "layout"
+  layout.boxSizing = function(element) {
+    if (!element.currentStyle.hasLayout) {
+    //#  element.runtimeStyle.fixedHeight =
+      element.style.height = "0cm";
+      if (element.currentStyle.verticalAlign === "auto")
+        element.runtimeStyle.verticalAlign = "top";
+      // when an element acquires "layout", margins no longer collapse correctly
+      collapseMargins(element);
+    }
+  };
+
+  // -----------------------------------------------------------------------
+  // Margin Collapse
+  // -----------------------------------------------------------------------
+
+  function collapseMargins(element) {
+    if (element != viewport && element.currentStyle.position !== "absolute") {
+      collapseMargin(element, "marginTop");
+      collapseMargin(element, "marginBottom");
+    }
+  };
+
+  function collapseMargin(element, type) {
+    if (!element.runtimeStyle[type]) {
+      var parentElement = element.parentElement;
+      var isTopMargin = type === "marginTop";
+      if (parentElement && parentElement.currentStyle.hasLayout && !IE7._getElementSibling(element, isTopMargin ? "previous" : "next")) return;
+      var child = element[isTopMargin ? "firstChild" : "lastChild"];
+      if (child && child.nodeName < "@") child = IE7._getElementSibling(child, isTopMargin ? "next" : "previous");
+      if (child && child.currentStyle.styleFloat === "none" && child.currentStyle.hasLayout) {
+        collapseMargin(child, type);
+        margin = _getMargin(element, element.currentStyle[type]);
+        childMargin = _getMargin(child, child.currentStyle[type]);
+        if (margin < 0 || childMargin < 0) {
+          element.runtimeStyle[type] = margin + childMargin;
+        } else {
+          element.runtimeStyle[type] = Math.max(childMargin, margin);
+        }
+        child.runtimeStyle[type] = "0px";
+      }
+    }
+  };
+
+  function _getMargin(element, value) {
+    return value === "auto" ? 0 : getPixelValue(element, value);
+  };
+
+  // -----------------------------------------------------------------------
+  // box-model
+  // -----------------------------------------------------------------------
+
+  // constants
+  var UNIT = /^[.\d][\w]*$/, AUTO = /^(auto|0cm)$/;
+
+  var apply = {};
+  layout.borderBox = function(element){
+    apply.Width(element);
+    apply.Height(element);
+  };
+
+  var _fixWidth = function(HEIGHT) {
+    apply.Width = function(element) {
+      if (!PERCENT.test(element.currentStyle.width)) _fixWidth(element);
+      if (HEIGHT) collapseMargins(element);
+    };
+
+    function _fixWidth(element, value) {
+      if (!element.runtimeStyle.fixedWidth) {
+        if (!value) value = element.currentStyle.width;
+        element.runtimeStyle.fixedWidth = UNIT.test(value) ? Math.max(0, getFixedWidth(element, value)) + "px" : value;
+        setOverrideStyle(element, "width", element.runtimeStyle.fixedWidth);
+      }
+    };
+
+    function layoutWidth(element) {
+      if (!isFixed(element)) {
+        var layoutParent = element.offsetParent;
+        while (layoutParent && !layoutParent.currentStyle.hasLayout) layoutParent = layoutParent.offsetParent;
+      }
+      return (layoutParent || viewport).clientWidth;
+    };
+
+    function getPixelWidth(element, value) {
+      if (PERCENT.test(value)) return parseInt(parseFloat(value) / 100 * layoutWidth(element));
+      return getPixelValue(element, value);
+    };
+
+    var getFixedWidth = function(element, value) {
+      var borderBox = element.currentStyle["ie7-box-sizing"] === "border-box";
+      var adjustment = 0;
+      if (MSIE5 && !borderBox)
+        adjustment += getBorderWidth(element) + getWidth(element, "padding");
+      else if (!MSIE5 && borderBox)
+        adjustment -= getBorderWidth(element) + getWidth(element, "padding");
+      return getPixelWidth(element, value) + adjustment;
+    };
+
+    // easy way to get border thickness for elements with "layout"
+    function getBorderWidth(element) {
+      return element.offsetWidth - element.clientWidth;
+    };
+
+    // have to do some pixel conversion to get padding/margin thickness :-(
+    function getWidth(element, type) {
+      return getPixelWidth(element, element.currentStyle[type + "Left"]) + getPixelWidth(element, element.currentStyle[type + "Right"]);
+    };
+
+    // -----------------------------------------------------------------------
+    // min/max
+    // -----------------------------------------------------------------------
+
+    HEADER += "*{minWidth:none;maxWidth:none;min-width:none;max-width:none}";
+
+    // handle min-width property
+    layout.minWidth = function(element) {
+      // IE6 supports min-height so we frig it here
+      //#if (element.currentStyle.minHeight === "auto") element.runtimeStyle.minHeight = 0;
+      if (element.currentStyle["min-width"] != null) {
+        element.style.minWidth = element.currentStyle["min-width"];
+      }
+      if (register(arguments.callee, element, element.currentStyle.minWidth !== "none")) {
+        layout.boxSizing(element);
+        _fixWidth(element);
+        resizeWidth(element);
+      }
+    };
+
+    // clone the minWidth function to make a maxWidth function
+    eval("IE7.Layout.maxWidth=" + String(layout.minWidth).replace(/min/g, "max"));
+
+    // apply min/max restrictions
+    function resizeWidth(element) {
+      // check boundaries
+      if (element == document.body) {
+        var width = element.clientWidth;
+      } else {
+        var rect = element.getBoundingClientRect();
+        width = rect.right - rect.left;
+      }
+      if (element.currentStyle.minWidth !== "none" && width < getFixedWidth(element, element.currentStyle.minWidth)) {
+        element.runtimeStyle.width = element.currentStyle.minWidth;
+      } else if (element.currentStyle.maxWidth !== "none" && width >= getFixedWidth(element, element.currentStyle.maxWidth)) {
+        element.runtimeStyle.width = element.currentStyle.maxWidth;
+      } else {
+        element.runtimeStyle.width = element.runtimeStyle.fixedWidth;
+      }
+    };
+
+    // -----------------------------------------------------------------------
+    // right/bottom
+    // -----------------------------------------------------------------------
+
+    function fixRight(element) {
+      if (register(fixRight, element, /^(fixed|absolute)$/.test(element.currentStyle.position) &&
+        getDefinedStyle(element, "left") !== "auto" &&
+        getDefinedStyle(element, "right") !== "auto" &&
+        AUTO.test(getDefinedStyle(element, "width")))) {
+          resizeRight(element);
+          layout.boxSizing(element);
+      }
+    };
+    layout.fixRight = fixRight;
+
+    function resizeRight(element) {
+      var left = getPixelWidth(element, element.runtimeStyle._left || element.currentStyle.left);
+      var width = layoutWidth(element) - getPixelWidth(element, element.currentStyle.right) -  left - getWidth(element, "margin");
+      if (parseInt(element.runtimeStyle.width) === width) return;
+      element.runtimeStyle.width = "";
+      if (isFixed(element) || HEIGHT || element.offsetWidth < width) {
+        if (!MSIE5) width -= getBorderWidth(element) + getWidth(element, "padding");
+        if (width < 0) width = 0;
+        element.runtimeStyle.fixedWidth = width;
+        setOverrideStyle(element, "width", width);
+      }
+    };
+
+  // -----------------------------------------------------------------------
+  // window.onresize
+  // -----------------------------------------------------------------------
+
+    // handle window resize
+    var clientWidth = 0;
+    addResize(function() {
+      if (!viewport) return;
+      var i, wider = (clientWidth < viewport.clientWidth);
+      clientWidth = viewport.clientWidth;
+      // resize elements with "min-width" set
+      var elements = layout.minWidth.elements;
+      for (i in elements) {
+        var element = elements[i];
+        var fixedWidth = (parseInt(element.runtimeStyle.width) === getFixedWidth(element, element.currentStyle.minWidth));
+        if (wider && fixedWidth) element.runtimeStyle.width = "";
+        if (wider == fixedWidth) resizeWidth(element);
+      }
+      // resize elements with "max-width" set
+      var elements = layout.maxWidth.elements;
+      for (i in elements) {
+        var element = elements[i];
+        var fixedWidth = (parseInt(element.runtimeStyle.width) === getFixedWidth(element, element.currentStyle.maxWidth));
+        if (!wider && fixedWidth) element.runtimeStyle.width = "";
+        if (wider !== fixedWidth) resizeWidth(element);
+      }
+      // resize elements with "right" set
+      for (i in fixRight.elements) resizeRight(fixRight.elements[i]);
+    });
+
+  // -----------------------------------------------------------------------
+  // fix CSS
+  // -----------------------------------------------------------------------
+    if (MSIE5) {
+      IE7.CSS.addRecalc("width", NUMERIC, apply.Width);
+    }
+    if (appVersion < 7) {
+      IE7.CSS.addRecalc("max-width", NUMERIC, layout.maxWidth);
+      IE7.CSS.addRecalc("right", NUMERIC, fixRight);
+    } else if (appVersion == 7) {
+      if (HEIGHT) IE7.CSS.addRecalc("height", "[\\d.]+%", function(element) {
+        element.runtimeStyle.pixelHeight = parseInt(layoutWidth(element) * element.currentStyle["ie7-height"].slice(0, -1) / 100);
+      });
+    }
+  };
+
+  eval("var _fixHeight=" + rotate(_fixWidth));
+
+  // apply box-model + min/max fixes
+  _fixWidth();
+  _fixHeight(true);
+  
+  if (appVersion < 7) {
+    IE7.CSS.addRecalc("min-width", NUMERIC, layout.minWidth);
+    IE7.CSS.addFix(/\bmin-height\s*/, "height");
+  }
+})();
+
+// =========================================================================
+// ie7-graphics.js
+// =========================================================================
+
+// a small transparent image used as a placeholder
+var BLANK_GIF = makePath("blank.gif", path);
+
+var ALPHA_IMAGE_LOADER = "DXImageTransform.Microsoft.AlphaImageLoader";
+var PNG_FILTER = "progid:" + ALPHA_IMAGE_LOADER + "(src='%1',sizingMethod='%2')";
+  
+// regular expression version of the above
+var PNG;
+
+var filtered = [];
+
+function fixImage(element) {
+  if (PNG.test(element.src)) {
+    // we have to preserve width and height
+    var image = new Image(element.width, element.height);
+    image.onload = function() {
+      element.width = image.width;
+      element.height = image.height;
+      image = null;
+    };
+    image.src = element.src;
+    // store the original url (we'll put it back when it's printed)
+    element.pngSrc = element.src;
+    // add the AlphaImageLoader thingy
+    addFilter(element);
+  }
+};
+
+if (appVersion < 7) {
+  // ** IE7 VARIABLE
+  // e.g. apply the hack to all files ending in ".png"
+  // IE7_PNG_SUFFIX = ".png";
+  // You can also set it to a RegExp
+  // IE7_PNG_SUFFIX = /\d+\.png$/;
+
+  // replace background(-image): url(..) ..  with background(-image): .. ;filter: ..;
+  IE7.CSS.addFix(/background(-image)?\s*:\s*([^};]*)?url\(([^\)]+)\)([^;}]*)?/, function(match, $1, $2, url, $4) {
+    url = getString(url);
+    return PNG.test(url) ? "filter:" + format(PNG_FILTER, url, $4.indexOf("no-repeat") === -1 ? "scale" : "crop") +
+      ";zoom:1;background" + ($1||"") + ":" + ($2||"") + "none" + ($4||"") : match;
+  });
+
+  // list-style-image
+  IE7.CSS.addRecalc(/list\-style(\-image)?/, "[^};]*url", function(element) {
+    var url = element.currentStyle.listStyleImage.slice(5, -2);
+    if (PNG.test(url)) {
+      if (element.nodeName === "LI") {
+        fixListStyleImage(element, url)
+      } else if (element.nodeName === "UL") {
+        for (var i = 0, li; li = element.childNodes[i]; i++) {
+          if (li.nodeName === "LI") fixListStyleImage(li, url);
+        }
+      }
+    }
+  });
+
+  function fixListStyleImage(element, src) {
+    var style = element.runtimeStyle;
+    var originalHeight = element.offsetHeight;
+    var image = new Image;
+    image.onload = function() {
+      var paddingLeft = element.currentStyle.paddingLeft;
+      paddingLeft = paddingLeft === "0px" ? 0 : getPixelValue(element, paddingLeft);
+      style.paddingLeft = (paddingLeft + this.width) + "px";
+      style.marginLeft = -this.width + "px";
+      style.listStyleType = "none";
+      style.listStyleImage = "none";
+      style.paddingTop = Math.max(originalHeight - element.offsetHeight, 0) + "px";
+      addFilter(element, "crop", src);
+      element.style.zoom = "100%";
+    };
+    image.src = src;
+  };
+  
+  // -----------------------------------------------------------------------
+  //  fix PNG transparency (HTML images)
+  // -----------------------------------------------------------------------
+
+  IE7.HTML.addRecalc("img,input", function(element) {
+    if (element.nodeName === "INPUT" && element.type !== "image") return;
+    fixImage(element);
+    addEventHandler(element, "onpropertychange", function() {
+      if (!printing && event.propertyName === "src" &&
+        element.src.indexOf(BLANK_GIF) === -1) fixImage(element);
+    });
+  });
+
+  // assume that background images should not be printed
+  //  (if they are not transparent then they'll just obscure content)
+  // but we'll put foreground images back...
+  var printing = false;
+  addEventHandler(window, "onbeforeprint", function() {
+    printing = true;
+    for (var i = 0; i < filtered.length; i++) removeFilter(filtered[i]);
+  });
+  addEventHandler(window, "onafterprint", function() {
+    for (var i = 0; i < filtered.length; i++) addFilter(filtered[i]);
+    printing = false;
+  });
+}
+
+// apply a filter
+function addFilter(element, sizingMethod, src) {
+  var filter = element.filters[ALPHA_IMAGE_LOADER];
+  if (filter) {
+    filter.src = src || element.src;
+    filter.enabled = true;
+  } else {
+    element.runtimeStyle.filter = format(PNG_FILTER, src || element.src, sizingMethod || "scale");
+    filtered.push(element);
+  }
+  // remove the real image
+  element.src = BLANK_GIF;
+};
+
+function removeFilter(element) {
+  element.src = element.pngSrc;
+  element.filters[ALPHA_IMAGE_LOADER].enabled = false;
+};
+
+// =========================================================================
+// ie7-fixed.js
+// =========================================================================
+
+(function() {
+  if (appVersion >= 7) return;
+  
+  // some things to consider for this hack.
+  // the document body requires a fixed background. even if
+  //  it is just a blank image.
+  // you have to use setExpression instead of onscroll, this
+  //  together with a fixed body background helps avoid the
+  //  annoying screen flicker of other solutions.
+  
+  IE7.CSS.addRecalc("position", "fixed", _positionFixed, "absolute");
+  IE7.CSS.addRecalc("background(-attachment)?", "[^};]*fixed", _backgroundFixed);
+  
+  // scrolling is relative to the documentElement (HTML tag) when in
+  //  standards mode, otherwise it's relative to the document body
+  var $viewport = MSIE5 ? "body" : "documentElement";
+  
+  function _fixBackground() {
+    // this is required by both position:fixed and background-attachment:fixed.
+    // it is necessary for the document to also have a fixed background image.
+    // we can fake this with a blank image if necessary
+    if (body.currentStyle.backgroundAttachment !== "fixed") {
+      if (body.currentStyle.backgroundImage === "none") {
+        body.runtimeStyle.backgroundRepeat = "no-repeat";
+        body.runtimeStyle.backgroundImage = "url(" + BLANK_GIF + ")"; // dummy
+      }
+      body.runtimeStyle.backgroundAttachment = "fixed";
+    }
+    _fixBackground = Undefined;
+  };
+  
+  var _tmp = createTempElement("img");
+  
+  function _isFixed(element) {
+    return element ? isFixed(element) || _isFixed(element.parentElement) : false;
+  };
+  
+  function _setExpression(element, propertyName, expression) {
+    setTimeout("document.all." + element.uniqueID + ".runtimeStyle.setExpression('" + propertyName + "','" + expression + "')", 0);
+  };
+  
+  // -----------------------------------------------------------------------
+  //  backgroundAttachment: fixed
+  // -----------------------------------------------------------------------
+  
+  function _backgroundFixed(element) {
+    if (register(_backgroundFixed, element, element.currentStyle.backgroundAttachment === "fixed" && !element.contains(body))) {
+      _fixBackground();
+      util.bgLeft(element);
+      util.bgTop(element);
+      _backgroundPosition(element);
+    }
+  };
+  
+  function _backgroundPosition(element) {
+    _tmp.src = element.currentStyle.backgroundImage.slice(5, -2);
+    var parentElement = element.canHaveChildren ? element : element.parentElement;
+    parentElement.appendChild(_tmp);
+    util.setOffsetLeft(element);
+    util.setOffsetTop(element);
+    parentElement.removeChild(_tmp);
+  };
+  
+  // -----------------------------------------------------------------------
+  //  position: fixed
+  // -----------------------------------------------------------------------
+  
+  function _positionFixed(element) {
+    if (register(_positionFixed, element, isFixed(element))) {
+      setOverrideStyle(element, "position",  "absolute");
+      setOverrideStyle(element, "left",  element.currentStyle.left);
+      setOverrideStyle(element, "top",  element.currentStyle.top);
+      _fixBackground();
+      IE7.Layout.fixRight(element);
+      //IE7.Layout.fixBottom(element);
+      _foregroundPosition(element);
+    }
+  };
+  
+  function _foregroundPosition(element, recalc) {
+    document.body.getBoundingClientRect(); // force a reflow
+    util.positionTop(element, recalc);
+    util.positionLeft(element, recalc, true);
+    if (!element.runtimeStyle.autoLeft && element.currentStyle.marginLeft === "auto" &&
+      element.currentStyle.right !== "auto") {
+      var left = viewport.clientWidth - util.getPixelWidth(element, element.currentStyle.right) -
+        util.getPixelWidth(element, element.runtimeStyle._left) - element.clientWidth;
+      if (element.currentStyle.marginRight === "auto") left = parseInt(left / 2);
+      if (_isFixed(element.offsetParent)) element.runtimeStyle.pixelLeft += left;
+      else element.runtimeStyle.shiftLeft = left;
+    }
+    if (!element.runtimeStyle.fixedWidth) util.clipWidth(element);
+    if (!element.runtimeStyle.fixedHeight) util.clipHeight(element);
+  };
+  
+  // -----------------------------------------------------------------------
+  //  capture window resize
+  // -----------------------------------------------------------------------
+  
+  function _resize() {
+    // if the window has been resized then some positions need to be
+    //  recalculated (especially those aligned to "right" or "top"
+    var elements = _backgroundFixed.elements;
+    for (var i in elements) _backgroundPosition(elements[i]);
+    elements = _positionFixed.elements;
+    for (i in elements) {
+      _foregroundPosition(elements[i], true);
+      _foregroundPosition(elements[i], true);
+    }
+    _timer = 0;
+  };
+  
+  // use a timer (sometimes this is a good way to prevent resize loops)
+  var _timer;
+  addResize(function() {
+    if (!_timer) _timer = setTimeout(_resize, 100);
+  });
+
+  // -----------------------------------------------------------------------
+  //  rotated
+  // -----------------------------------------------------------------------
+
+  var util = {};
+  
+  var _horizontal = function(util) {
+    util.bgLeft = function(element) {
+      element.style.backgroundPositionX = element.currentStyle.backgroundPositionX;
+      if (!_isFixed(element)) {
+        _setExpression(element, "backgroundPositionX", "(parseInt(runtimeStyle.offsetLeft)+document." + $viewport + ".scrollLeft)||0");
+      }
+    };
+
+    util.setOffsetLeft = function(element) {
+      var propertyName = _isFixed(element) ? "backgroundPositionX" : "offsetLeft";
+      element.runtimeStyle[propertyName] =
+        util.getOffsetLeft(element, element.style.backgroundPositionX) -
+        element.getBoundingClientRect().left - element.clientLeft + 2;
+    };
+
+    util.getOffsetLeft = function(element, position) {
+      switch (position) {
+        case "left":
+        case "top":
+          return 0;
+        case "right":
+        case "bottom":
+          return viewport.clientWidth - _tmp.offsetWidth;
+        case "center":
+          return (viewport.clientWidth - _tmp.offsetWidth) / 2;
+        default:
+          if (PERCENT.test(position)) {
+            return parseInt((viewport.clientWidth - _tmp.offsetWidth) * parseFloat(position) / 100);
+          }
+          _tmp.style.left = position;
+          return _tmp.offsetLeft;
+      }
+    };
+
+    util.clipWidth = function(element) {
+      var fixWidth = element.runtimeStyle.fixWidth;
+      element.runtimeStyle.borderRightWidth = "";
+      element.runtimeStyle.width = fixWidth ? util.getPixelWidth(element, fixWidth) + "px" : "";
+      if (element.currentStyle.width !== "auto") {
+        var rect = element.getBoundingClientRect();
+        var width = element.offsetWidth - viewport.clientWidth + rect.left - 2;
+        if (width >= 0) {
+          element.runtimeStyle.borderRightWidth = "0px";
+          width = Math.max(getPixelValue(element, element.currentStyle.width) - width, 0);
+          setOverrideStyle(element, "width",  width);
+          return width;
+        }
+      }
+    };
+
+    util.positionLeft = function(element, recalc) {
+      // if the element's width is in % units then it must be recalculated
+      //  with respect to the viewport
+      if (!recalc && PERCENT.test(element.currentStyle.width)) {
+        element.runtimeStyle.fixWidth = element.currentStyle.width;
+      }
+      if (element.runtimeStyle.fixWidth) {
+        element.runtimeStyle.width = util.getPixelWidth(element, element.runtimeStyle.fixWidth);
+      }
+      //if (recalc) {
+      //  // if the element is fixed on the right then no need to recalculate
+      //  if (!element.runtimeStyle.autoLeft) return;
+      //} else {
+        element.runtimeStyle.shiftLeft = 0;
+        element.runtimeStyle._left = element.currentStyle.left;
+        // is the element fixed on the right?
+        element.runtimeStyle.autoLeft = element.currentStyle.right !== "auto" && element.currentStyle.left === "auto";
+      //}
+      // reset the element's "left" value and get it's natural position
+      element.runtimeStyle.left = "";
+      element.runtimeStyle.screenLeft = util.getScreenLeft(element);
+      element.runtimeStyle.pixelLeft = element.runtimeStyle.screenLeft;
+      // if the element is contained by another fixed element then there is no need to
+      //  continually recalculate it's left position
+      if (!recalc && !_isFixed(element.offsetParent)) {
+        // onsrcoll produces jerky movement, so we use an expression
+        _setExpression(element, "pixelLeft", "runtimeStyle.screenLeft+runtimeStyle.shiftLeft+document." + $viewport + ".scrollLeft");
+      }
+    };
+
+    // I've forgotten how this works...
+    util.getScreenLeft = function(element) { // thanks to kevin newman (captainn)
+      var screenLeft = element.offsetLeft, nested = 1;
+      if (element.runtimeStyle.autoLeft) {
+        screenLeft = viewport.clientWidth - element.offsetWidth - util.getPixelWidth(element, element.currentStyle.right);
+      }
+      // accommodate margins
+      if (element.currentStyle.marginLeft !== "auto") {
+        screenLeft -= util.getPixelWidth(element, element.currentStyle.marginLeft);
+      }
+      while (element = element.offsetParent) {
+        if (element.currentStyle.position !== "static") nested = -1;
+        screenLeft += element.offsetLeft * nested;
+      }
+      return screenLeft;
+    };
+
+    util.getPixelWidth = function(element, value) {
+      return PERCENT.test(value) ? parseInt(parseFloat(value) / 100 * viewport.clientWidth) : getPixelValue(element, value);
+    };
+  };
+  eval("var _vertical=" + rotate(_horizontal));
+  _horizontal(util);
+  _vertical(util);
+})();
+
+// =========================================================================
+// ie7-oveflow.js
+// =========================================================================
+
+/* ---------------------------------------------------------------------
+
+  This module alters the structure of the document.
+  It may adversely affect other CSS rules. Be warned.
+
+--------------------------------------------------------------------- */
+
+if (appVersion < 7) {
+  var WRAPPER_STYLE = {
+    backgroundColor: "transparent",
+    backgroundImage: "none",
+    backgroundPositionX: null,
+    backgroundPositionY: null,
+    backgroundRepeat: null,
+    borderTopWidth: 0,
+    borderRightWidth: 0,
+    borderBottomWidth: 0,
+    borderLeftStyle: "none",
+    borderTopStyle: "none",
+    borderRightStyle: "none",
+    borderBottomStyle: "none",
+    borderLeftWidth: 0,
+    borderLeftColor: "#000",
+    borderTopColor: "#000",
+    borderRightColor: "#000",
+    borderBottomColor: "#000",
+    height: null,
+    marginTop: 0,
+    marginBottom: 0,
+    marginRight: 0,
+    marginLeft: 0,
+    width: "100%"
+  };
+
+  IE7.CSS.addRecalc("overflow", "visible", function(element) {
+    if (element.currentStyle.position === "absolute") return;
+    
+    // don't do this again
+    if (element.parentNode.ie7_wrapped) return;
+
+    // if max-height is applied, makes sure it gets applied first
+    if (IE7.Layout && element.currentStyle["max-height"] !== "auto") {
+      IE7.Layout.maxHeight(element);
+    }
+
+    if (element.currentStyle.marginLeft === "auto") element.style.marginLeft = 0;
+    if (element.currentStyle.marginRight === "auto") element.style.marginRight = 0;
+
+    var wrapper = document.createElement(ANON);
+    wrapper.ie7_wrapped = element;
+    for (var propertyName in WRAPPER_STYLE) {
+      wrapper.style[propertyName] = element.currentStyle[propertyName];
+      if (WRAPPER_STYLE[propertyName] != null) {
+        element.runtimeStyle[propertyName] = WRAPPER_STYLE[propertyName];
+      }
+    }
+    wrapper.style.display = "block";
+    wrapper.style.position = "relative";
+    element.runtimeStyle.position = "absolute";
+    element.parentNode.insertBefore(wrapper, element);
+    wrapper.appendChild(element);
+  });
+}
+
+// =========================================================================
+// ie7-quirks.js
+// =========================================================================
+
+function ie7Quirks() {
+  var FONT_SIZES = "xx-small,x-small,small,medium,large,x-large,xx-large".split(",");
+  for (var i = 0; i < FONT_SIZES.length; i++) {
+    FONT_SIZES[FONT_SIZES[i]] = FONT_SIZES[i - 1] || "0.67em";
+  }
+  
+  IE7.CSS.addFix(/(font(-size)?\s*:\s*)([\w.-]+)/, function(match, label, size, value) {
+    return label + (FONT_SIZES[value] || value);
+  });
+  
+  var NEGATIVE = /^\-/, LENGTH = /(em|ex)$/i;
+  var EM = /em$/i, EX = /ex$/i;
+
+  getPixelValue = function(element, value) {
+    if (PIXEL.test(value)) return parseInt(value)||0;
+    var scale = NEGATIVE.test(value)? -1 : 1;
+    if (LENGTH.test(value)) scale *= getFontScale(element);
+    temp.style.width = scale < 0 ? value.slice(1) : value;
+    body.appendChild(temp);
+    // retrieve pixel width
+    value = scale * temp.offsetWidth;
+    // remove the temporary element
+    temp.removeNode();
+    return parseInt(value);
+  };
+
+  var temp = createTempElement();
+  function getFontScale(element) {
+    var scale = 1;
+    temp.style.fontFamily = element.currentStyle.fontFamily;
+    temp.style.lineHeight = element.currentStyle.lineHeight;
+    //temp.style.fontSize = "";
+    while (element != body) {
+      var fontSize = element.currentStyle["ie7-font-size"];
+      if (fontSize) {
+        if (EM.test(fontSize)) scale *= parseFloat(fontSize);
+        else if (PERCENT.test(fontSize)) scale *= (parseFloat(fontSize) / 100);
+        else if (EX.test(fontSize)) scale *= (parseFloat(fontSize) / 2);
+        else {
+          temp.style.fontSize = fontSize;
+          return 1;
+        }
+      }
+      element = element.parentElement;
+    }
+    return scale;
+  };
+
+  // cursor:pointer (IE5.x)
+  IE7.CSS.addFix(/cursor\s*:\s*pointer/, "cursor:hand");
+  // display:list-item (IE5.x)
+  IE7.CSS.addFix(/display\s*:\s*list-item/, "display:block");
+  
+  // -----------------------------------------------------------------------
+  //  margin:auto
+  // -----------------------------------------------------------------------
+  
+  function fixMargin(element) {
+    var parent = element.parentElement;
+    var margin = parent.offsetWidth - element.offsetWidth - getPaddingWidth(parent);
+    var autoRight = (element.currentStyle["ie7-margin"] && element.currentStyle.marginRight === "auto") ||
+      element.currentStyle["ie7-margin-right"] === "auto";
+    switch (parent.currentStyle.textAlign) {
+      case "right":
+        margin = autoRight ? parseInt(margin / 2) : 0;
+        element.runtimeStyle.marginRight = margin + "px";
+        break;
+      case "center":
+        if (autoRight) margin = 0;
+      default:
+        if (autoRight) margin /= 2;
+        element.runtimeStyle.marginLeft = parseInt(margin) + "px";
+    }
+  };
+
+  function getPaddingWidth(element) {
+    return getPixelValue(element, element.currentStyle.paddingLeft) +
+      getPixelValue(element, element.currentStyle.paddingRight);
+  };
+  
+  IE7.CSS.addRecalc("margin(-left|-right)?", "[^};]*auto", function(element) {
+    if (register(fixMargin, element,
+      element.parentElement &&
+      element.currentStyle.display === "block" &&
+      element.currentStyle.marginLeft === "auto" &&
+      element.currentStyle.position !== "absolute")) {
+        fixMargin(element);
+    }
+  });
+  
+  addResize(function() {
+    for (var i in fixMargin.elements) {
+      var element = fixMargin.elements[i];
+      element.runtimeStyle.marginLeft =
+      element.runtimeStyle.marginRight = "";
+      fixMargin(element);
+    }
+  });
+};
+
+
+// =========================================================================
+// ie8-css.js
+// =========================================================================
+
+var BRACKETS = "\\([^)]+\\)";
+
+// pseudo-elements can be declared with a double colon
+encoder.add(/::(before|after)/, ":$1");
+
+if (appVersion < 8) {
+
+  if (IE7.CSS.pseudoClasses) IE7.CSS.pseudoClasses += "|";
+  IE7.CSS.pseudoClasses += "before|after|lang" + BRACKETS;
+
+  // -----------------------------------------------------------------------
+  // propertyName: inherit;
+  // -----------------------------------------------------------------------
+  
+  function parseInherited(cssText) {
+    return cssText.replace(new RegExp("([{;\\s])(" + inheritedProperties.join("|") + ")\\s*:\\s*([^;}]+)", "g"), "$1$2:$3;ie7-$2:$3");
+  };
+
+  var INHERITED = /[\w-]+\s*:\s*inherit/g;
+  var STRIP_IE7_FLAGS = /ie7\-|\s*:\s*inherit/g;
+  var DASH_LOWER = /\-([a-z])/g;
+  function toUpper(match, chr) {return chr.toUpperCase()};
+  
+  IE7.CSS.addRecalc("[\\w-]+", "inherit", function(element, cssText) {
+    if (element.parentElement) {
+      var inherited = cssText.match(INHERITED);
+      for (var i = 0; i < inherited.length; i++) {
+        var propertyName = inherited[i].replace(STRIP_IE7_FLAGS, "");
+        if (element.currentStyle["ie7-" + propertyName] === "inherit") {
+          propertyName = propertyName.replace(DASH_LOWER, toUpper);
+          element.runtimeStyle[propertyName] = element.parentElement.currentStyle[propertyName];
+        }
+      }
+    }
+  }, function(match) {
+    inheritedProperties.push(rescape(match.slice(1).split(":")[0]));
+    return match;
+  });
+
+  // -----------------------------------------------------------------------
+  // dynamic pseudo-classes
+  // -----------------------------------------------------------------------
+
+  var Focus = new DynamicPseudoClass("focus", function(element) {
+    var instance = arguments;
+
+    IE7.CSS.addEventHandler(element, "onfocus", function() {
+      Focus.unregister(instance); // in case it starts with focus
+      Focus.register(instance);
+    });
+
+    IE7.CSS.addEventHandler(element, "onblur", function() {
+      Focus.unregister(instance);
+    });
+
+    // check the active element for initial state
+    if (element == document.activeElement) {
+      Focus.register(instance)
+    }
+  });
+
+  var Active = new DynamicPseudoClass("active", function(element) {
+    var instance = arguments;
+    IE7.CSS.addEventHandler(element, "onmousedown", function() {
+      Active.register(instance);
+    });
+  });
+
+  // globally trap the mouseup event (thanks Martijn!)
+  addEventHandler(document, "onmouseup", function() {
+    var instances = Active.instances;
+    for (var i in instances) Active.unregister(instances[i]);
+  });
+
+  // -----------------------------------------------------------------------
+  // IE7 pseudo elements
+  // -----------------------------------------------------------------------
+
+  // constants
+  var URL = /^url\s*\(\s*([^)]*)\)$/;
+  var POSITION_MAP = {
+    before0: "beforeBegin",
+    before1: "afterBegin",
+    after0: "afterEnd",
+    after1: "beforeEnd"
+  };
+
+  var PseudoElement = IE7.PseudoElement = Rule.extend({
+    constructor: function(selector, position, cssText) {
+      // initialise object properties
+      this.position = position;
+      var content = cssText.match(PseudoElement.CONTENT), match, entity;
+      if (content) {
+        content = content[1];
+        match = content.split(/\s+/);
+        for (var i = 0; (entity = match[i]); i++) {
+          match[i] = /^attr/.test(entity) ? {attr: entity.slice(5, -1)} :
+            entity.charAt(0) === "'" ? getString(entity) : decode(entity);
+        }
+        content = match;
+      }
+      this.content = content;
+      // CSS text needs to be decoded immediately
+      this.base(selector, decode(cssText));
+    },
+
+    init: function() {
+      // execute the underlying css query for this class
+      this.match = cssQuery(this.selector);
+      for (var i = 0; i < this.match.length; i++) {
+        var runtimeStyle = this.match[i].runtimeStyle;
+        if (!runtimeStyle[this.position]) runtimeStyle[this.position] = {cssText:""};
+        runtimeStyle[this.position].cssText += ";" + this.cssText;
+        if (this.content != null) runtimeStyle[this.position].content = this.content;
+      }
+    },
+
+    create: function(target) {
+      var generated = target.runtimeStyle[this.position];
+      if (generated) {
+        // copy the array of values
+        var content = [].concat(generated.content || "");
+        for (var j = 0; j < content.length; j++) {
+          if (typeof content[j] == "object") {
+            content[j] = target.getAttribute(content[j].attr);
+          }
+        }
+        content = content.join("");
+        var url = content.match(URL);
+        var cssText = "overflow:hidden;" + generated.cssText.replace(/'/g, '"');
+        var position = POSITION_MAP[this.position + Number(target.canHaveChildren)];
+        var id = 'ie7_pseudo' + PseudoElement.count++;
+        target.insertAdjacentHTML(position, format(PseudoElement.ANON, this.className, id, cssText, url ? "" : content));
+        if (url) {
+          var src = getString(url[1]);
+          var pseudoElement = document.getElementById(id);
+          pseudoElement.src = src;
+          addFilter(pseudoElement, "crop");
+          var targetIsFloated = target.currentStyle.styleFloat !== "none";
+          if (pseudoElement.currentStyle.display === "inline" || targetIsFloated) {
+            if (appVersion < 7 && targetIsFloated && target.canHaveChildren) {
+              target.runtimeStyle.display = "inline";
+              target.runtimeStyle.position = "relative";
+              pseudoElement.runtimeStyle.position = "absolute";
+            }
+            pseudoElement.style.display = "inline-block";
+            if (target.currentStyle.styleFloat !== "none") {
+              pseudoElement.style.pixelWidth = target.offsetWidth;
+            }
+            var image = new Image;
+            image.onload = function() {
+              pseudoElement.style.pixelWidth = this.width;
+              pseudoElement.style.pixelHeight = Math.max(this.height, pseudoElement.offsetHeight);
+            };
+            image.src = src;
+          }
+        }
+        target.runtimeStyle[this.position] = null;
+      }
+    },
+
+    recalc: function() {
+      if (this.content == null) return;
+      for (var i = 0; i < this.match.length; i++) {
+        this.create(this.match[i]);
+      }
+    },
+
+    toString: function() {
+      return "." + this.className + "{display:inline}";
+    }
+  }, {
+    CONTENT: /content\s*:\s*([^;]*)(;|$)/,
+    ANON: "<ie7:! class='ie7_anon %1' id=%2 style='%3'>%4</ie7:!>",
+    MATCH: /(.*):(before|after).*/,
+
+    count: 0
+  });
+
+  IE7._getLang = function(element) {
+    var lang = "";
+    while (element && element.nodeType === 1) {
+      lang = element.lang || element.getAttribute("lang") || "";
+      if (lang) break;
+      element = element.parentNode;
+    }
+    return lang;
+  };
+
+  FILTER = extend(FILTER, {
+    ":lang\\(([^)]+)\\)":    "((ii=IE7._getLang(e))==='$1'||ii.indexOf('$1-')===0)&&"
+  });
+}
+
+// =========================================================================
+// ie8-html.js
+// =========================================================================
+
+var UNSUCCESSFUL = /^(submit|reset|button)$/;
+
+// -----------------------------------------------------------------------
+// <button>
+// -----------------------------------------------------------------------
+
+// IE bug means that innerText is submitted instead of "value"
+IE7.HTML.addRecalc("button,input", function(button) {
+  if (button.nodeName === "BUTTON") {
+    var match = button.outerHTML.match(/ value="([^"]*)"/i);
+    button.runtimeStyle.value = match ? match[1] : "";
+  }
+  // flag the button/input that was used to submit the form
+  if (button.type === "submit") {
+    addEventHandler(button, "onclick", function() {
+      button.runtimeStyle.clicked = true;
+      setTimeout("document.all." + button.uniqueID + ".runtimeStyle.clicked=false", 1);
+    });
+  }
+});
+
+// -----------------------------------------------------------------------
+// <form>
+// -----------------------------------------------------------------------
+
+// only submit "successful controls
+IE7.HTML.addRecalc("form", function(form) {
+  addEventHandler(form, "onsubmit", function() {
+    for (var element, i = 0; element = form[i]; i++) {
+      if (UNSUCCESSFUL.test(element.type) && !element.disabled && !element.runtimeStyle.clicked) {
+        element.disabled = true;
+        setTimeout("document.all." + element.uniqueID + ".disabled=false", 1);
+      } else if (element.nodeName === "BUTTON" && element.type === "submit") {
+        setTimeout("document.all." + element.uniqueID + ".value='" + element.value + "'", 1);
+        element.value = element.runtimeStyle.value;
+      }
+    }
+  });
+});
+
+// -----------------------------------------------------------------------
+// <img>
+// -----------------------------------------------------------------------
+
+// get rid of the spurious tooltip produced by the alt attribute on images
+IE7.HTML.addRecalc("img", function(img) {
+  if (img.alt && !img.title) img.title = "";
+});
+
+// =========================================================================
+// ie8-layout.js
+// =========================================================================
+
+if (appVersion < 8) {
+  IE7.CSS.addRecalc("border-spacing", NUMERIC, function(element) {
+    if (element.currentStyle.borderCollapse !== "collapse") {
+      element.cellSpacing = getPixelValue(element, element.currentStyle["ie7-border-spacing"].split(" ")[0]);
+    }
+  });
+  IE7.CSS.addRecalc("box-sizing", "content-box", IE7.Layout.boxSizing);
+  IE7.CSS.addRecalc("box-sizing", "border-box", IE7.Layout.borderBox);
+}
+
+// =========================================================================
+// ie8-graphics.js
+// =========================================================================
+
+if (appVersion < 8) {
+  // fix object[type=image/*]
+  var IMAGE = /^image/i;
+  IE7.HTML.addRecalc("object", function(element) {
+    if (IMAGE.test(element.type)) {
+      element.body.style.cssText = "margin:0;padding:0;border:none;overflow:hidden";
+      return element;
+    }
+  });
+}
+
+// =========================================================================
+// ie9-css.js
+// =========================================================================
+
+var NOT_NEXT_BY_TYPE     = "!IE7._getElementSiblingByType(e,'next')&&",
+    NOT_PREVIOUS_BY_TYPE = NOT_NEXT_BY_TYPE.replace("next", "previous");
+
+if (IE7.CSS.pseudoClasses) IE7.CSS.pseudoClasses += "|";
+IE7.CSS.pseudoClasses += "(?:first|last|only)\\-(?:child|of\\-type)|empty|root|target|" +
+  ("not|nth\\-child|nth\\-last\\-child|nth\\-of\\-type|nth\\-last\\-of\\-type".split("|").join(BRACKETS + "|") + BRACKETS);
+  
+// :checked
+var Checked = new DynamicPseudoClass("checked", function(element) {
+  if (typeof element.checked !== "boolean") return;
+  var instance = arguments;
+  IE7.CSS.addEventHandler(element, "onpropertychange", function() {
+    if (event.propertyName === "checked") {
+      if (element.checked === true) Checked.register(instance);
+      else Checked.unregister(instance);
+    }
+  });
+  // check current checked state
+  if (element.checked === true) Checked.register(instance);
+});
+
+// :enabled
+var Enabled = new DynamicPseudoClass("enabled", function(element) {
+  if (typeof element.disabled !== "boolean") return;
+  var instance = arguments;
+  IE7.CSS.addEventHandler(element, "onpropertychange", function() {
+    if (event.propertyName === "disabled") {
+      if (element.disabled === false) Enabled.register(instance);
+      else Enabled.unregister(instance);
+    }
+  });
+  // check current disabled state
+  if (element.disabled === false) Enabled.register(instance);
+});
+
+// :disabled
+var Disabled = new DynamicPseudoClass("disabled", function(element) {
+  if (typeof element.disabled !== "boolean") return;
+  var instance = arguments;
+  IE7.CSS.addEventHandler(element, "onpropertychange", function() {
+    if (event.propertyName === "disabled") {
+      if (element.disabled === true) Disabled.register(instance);
+      else Disabled.unregister(instance);
+    }
+  });
+  // check current disabled state
+  if (element.disabled === true) Disabled.register(instance);
+});
+
+// :indeterminate (Kevin Newman)
+var Indeterminate = new DynamicPseudoClass("indeterminate", function(element) {
+  if (typeof element.indeterminate !== "boolean") return;
+  var instance = arguments;
+  IE7.CSS.addEventHandler(element, "onpropertychange", function() {
+    if (event.propertyName === "indeterminate") {
+      if (element.indeterminate === true) Indeterminate.register(instance);
+      else Indeterminate.unregister(instance);
+    }
+  });
+  IE7.CSS.addEventHandler(element, "onclick", function() {
+    Indeterminate.unregister(instance);
+  });
+  // clever Kev says no need to check this up front
+});
+
+// :target
+var Target = new DynamicPseudoClass("target", function(element) {
+  var instance = arguments;
+  // if an element has a tabIndex then it can become "active".
+  //  The default is zero anyway but it works...
+  if (!element.tabIndex) element.tabIndex = 0;
+  // this doesn't detect the back button. I don't know how to do that without adding an iframe :-(
+  IE7.CSS.addEventHandler(document, "onpropertychange", function() {
+    if (event.propertyName === "activeElement") {
+      if (element.id && element.id === location.hash.slice(1)) Target.register(instance);
+      else Target.unregister(instance);
+    }
+  });
+  // check the current location
+  if (element.id && element.id === location.hash.slice(1)) Target.register(instance);
+});
+
+// Register a node and index its siblings.
+var _currentIndex = 1, // -@DRE
+    allIndexes = {_currentIndex: 1};
+
+IE7._indexOf = function(element, last, ofType) {
+  var parent = element.parentNode;
+  if (!parent || parent.nodeType !== 1) return NaN;
+
+  var tagName = ofType ? element.nodeName : "";
+  if (tagName === "TR" && element.sectionRowIndex >= 0) {
+    var index = element.sectionRowIndex;
+    return last ? element.parentNode.rows.length - index + 1 : index;
+  }
+  if ((tagName === "TD" || tagName === "TH") && element.cellIndex >= 0) {
+    index = element.cellIndex;
+    return last ? element.parentNode.cells.length - index + 1 : index;
+  }
+  if (allIndexes._currentIndex !== _currentIndex) {
+    allIndexes = {_currentIndex: _currentIndex};
+  }
+  var id = (parent.uniqueID) + "-" + tagName,
+      indexes = allIndexes[id];
+  if (!indexes) {
+    indexes = {};
+    var index = 0,
+        child = parent.firstChild;
+    while (child) {
+      if (ofType ? child.nodeName === tagName : child.nodeName > "@") {
+        indexes[child.uniqueID] = ++index;
+      }
+      child = child.nextSibling;
+    }
+    indexes.length = index;
+    allIndexes[id] = indexes;
+  }
+  index = indexes[element.uniqueID];
+  return last ? indexes.length - index + 1 : index;
+};
+
+IE7._isEmpty = function(node) {
+  node = node.firstChild;
+  while (node) {
+    if (node.nodeType === 3 || node.nodeName > "@") return false;
+    node = node.nextSibling;
+  }
+  return true;
+};
+
+IE7._getElementSiblingByType = function(node, direction) {
+  var tagName = node.nodeName;
+  direction += "Sibling";
+  do {
+    node = node[direction];
+    if (node && node.nodeName === tagName) break;
+  } while (node);
+  return node;
+};
+
+var ONE = {"+": 1, "-": -1}, SPACES = / /g;
+
+FILTER = extend(extend({
+  ":nth(-last)?-(?:child|(of-type))\\((<#nth_arg>)\\)(<#filter>)?": function(match, last, ofType, args, filters) { // :nth- pseudo classes
+    args = args.replace(SPACES, "");
+
+    var index = "IE7._indexOf(e," + !!last + "," + !!ofType + ")";
+
+    if (args === "even") args = "2n";
+    else if (args === "odd") args = "2n+1";
+    else if (!isNaN(args)) args = "0n" + ~~args;
+
+    args = args.split("n");
+    var a = ~~(ONE[args[0]] || args[0] || 1),
+        b = ~~args[1];
+    if (a === 0) {
+      var expr = index + "===" + b;
+    } else {
+      expr = "((ii=" + index + ")-(" + b + "))%" + a + "===0&&ii" + (a < 0 ? "<" : ">") + "=" + b;
+    }
+    return this.parse(filters) + expr + "&&";
+  },
+
+  "<#negation>": function(match, simple) {
+    if (/:not/i.test(simple)) throwSelectorError();
+
+    if (/^[#.:\[]/.test(simple)) {
+      simple = "*" + simple;
+    }
+    return "!(" + MATCHER.parse(simple).slice(3, -2) + ")&&";
+  }
+}, FILTER), {
+  ":checked":         "e.checked===true&&",
+  ":disabled":        "e.disabled===true&&",
+  ":enabled":         "e.disabled===false&&",
+  ":last-child":      "!" + NEXT_SIBLING + "&&",
+  ":only-child":      "!" + PREVIOUS_SIBLING + "&&!" + NEXT_SIBLING + "&&",
+  ":first-of-type":   NOT_PREVIOUS_BY_TYPE,
+  ":last-of-type":    NOT_NEXT_BY_TYPE,
+  ":only-of-type":    NOT_PREVIOUS_BY_TYPE + NOT_NEXT_BY_TYPE,
+
+  ":empty":          "IE7._isEmpty(e)&&",
+  ":root":           "e==R&&",
+  ":target":         "H&&" + ID_ATTRIBUTE + "===H&&"
+});
+
+var HTML5 = "article,aside,audio,canvas,details,figcaption,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,summary,time,video".split(",");
+for (var i = 0, tagName; tagName = HTML5[i]; i++) document.createElement(tagName);
+
+HEADER += "datalist{display:none}\
+details{padding-left:40px;display:block;margin:1em 0}\
+meter,progress{vertical-align:-0.2em;width:5em;height:1em;display:inline-block}\
+progress{width:10em;}\
+article,aside,figcaption,footer,header,hgroup,summary,section,nav{display:block;margin:1em 0}\
+figure{margin:1em 40px;display:block}\
+mark{background:yellow}";
+
+// =========================================================================
+// ie9-layout.js
+// =========================================================================
+
+// =========================================================================
+// ie9-graphics.js
+// =========================================================================
+
+IE7.CSS.addFix(/\bopacity\s*:\s*([\d.]+)/, function(match, value) {
+  return "zoom:1;filter:Alpha(opacity=" + ((value * 100) || 1) + ")";
+});
+
+var MATCHER;
+
+var cssQuery = (function() {
+  var CONTEXT = /^[>+~]/;
+  
+  var useContext = false;
+  
+  // This is not a selector engine in the strictest sense. So it's best to silently error.
+  function cssQuery(selector, context, single) {
+    selector = trim(selector);
+    if (!context) context = document;
+    var ref = context;
+    useContext = CONTEXT.test(selector);
+    if (useContext) {
+      context = context.parentNode;
+      selector = "*" + selector;
+    }
+    try {
+      return selectQuery.create(selector, useContext)(context, single ? null : [], ref);
+    } catch (ex) {
+      return single ? null : [];
+    }
+  };
+
+  var VALID_SELECTOR = /^(\\.|[' >+~#.\[\]:*(),\w-\^|$=]|[^\x00-\xa0])+$/;
+
+  var _EVALUATED = /^(href|src)$/;
+  var _ATTRIBUTES = {
+    "class": "className",
+    "for": "htmlFor"
+  };
+
+  var IE7_CLASS_NAMES = /\sie7_\w+/g;
+
+  var USE_IFLAG = /^(action|cite|codebase|data|dynsrc|href|longdesc|lowsrc|src|usemap|url)$/i;
+
+  IE7._getAttribute = function(element, name) {
+    if (element.getAttributeNode) {
+      var attribute = element.getAttributeNode(name);
+    }
+    name = _ATTRIBUTES[name.toLowerCase()] || name;
+    if (!attribute) attribute = element.attributes[name];
+    var specified = attribute && attribute.specified;
+
+    if (element[name] && typeof element[name] == "boolean") return name.toLowerCase();
+    if ((specified && USE_IFLAG.test(name)) || (!attribute && MSIE5) || name === "value" || name === "type") {
+      return element.getAttribute(name, 2);
+    }
+    if (name === "style") return element.style.cssText.toLowerCase() || null;
+
+    return specified ? String(attribute.nodeValue) : null;
+  };
+
+  var names = "colSpan,rowSpan,vAlign,dateTime,accessKey,tabIndex,encType,maxLength,readOnly,longDesc";
+  // Convert the list of strings to a hash, mapping the lowercase name to the camelCase name.
+  extend(_ATTRIBUTES, combine(names.toLowerCase().split(","), names.split(",")));
+
+  IE7._getElementSibling = function(node, direction) {
+    direction += "Sibling";
+    do {
+      node = node[direction];
+      if (node && node.nodeName > "@") break;
+    } while (node);
+    return node;
+  };
+
+  var IMPLIED_ASTERISK    = /(^|[, >+~])([#.:\[])/g,
+      BLOCKS              = /\)\{/g,
+      COMMA               = /,/,
+      QUOTED              = /^['"]/,
+      HEX_ESCAPE          = /\\([\da-f]{2,2})/gi,
+      LAST_CHILD          = /last/i;
+
+  IE7._byId = function(document, id) {
+    var result = document.all[id] || null;
+    // Returns a single element or a collection.
+    if (!result || (result.nodeType && IE7._getAttribute(result, "id") === id)) return result;
+    // document.all has returned a collection of elements with name/id
+    for (var i = 0; i < result.length; i++) {
+      if (IE7._getAttribute(result[i], "id") === id) return result[i];
+    }
+    return null;
+  };
+
+  // =========================================================================
+  // dom/selectors-api/CSSSelectorParser.js
+  // =========================================================================
+
+  // http://www.w3.org/TR/css3-selectors/#w3cselgrammar (kinda)
+  var CSSSelectorParser = RegGrp.extend({
+    dictionary: new Dictionary({
+      ident:           /\-?(\\.|[_a-z]|[^\x00-\xa0])(\\.|[\w-]|[^\x00-\xa0])*/,
+      combinator:      /[\s>+~]/,
+      operator:        /[\^~|$*]?=/,
+      nth_arg:         /[+-]?\d+|[+-]?\d*n(?:\s*[+-]\s*\d+)?|even|odd/,
+      tag:             /\*|<#ident>/,
+      id:              /#(<#ident>)/,
+      'class':         /\.(<#ident>)/,
+      pseudo:          /\:([\w-]+)(?:\(([^)]+)\))?/,
+      attr:            /\[(<#ident>)(?:(<#operator>)((?:\\.|[^\[\]#.:])+))?\]/,
+      negation:        /:not\((<#tag>|<#id>|<#class>|<#attr>|<#pseudo>)\)/,
+      sequence:        /(\\.|[~*]=|\+\d|\+?\d*n\s*\+\s*\d|[^\s>+~,\*])+/,
+      filter:          /[#.:\[]<#sequence>/,
+      selector:        /[^>+~](\\.|[^,])*?/,
+      grammar:         /^(<#selector>)((,<#selector>)*)$/
+    }),
+
+    ignoreCase: true
+  });
+
+  var normalizer = new CSSSelectorParser({
+    "\\\\.|[~*]\\s+=|\\+\\s+\\d": RegGrp.IGNORE,
+    "\\[\\s+": "[",
+    "\\(\\s+": "(",
+    "\\s+\\)": ")",
+    "\\s+\\]": "]",
+    "\\s*([,>+~]|<#operator>)\\s*": "$1",
+    "\\s+$": "",
+    "\\s+": " "
+  });
+
+  function normalize(selector) {
+    selector = normalizer.parse(selector.replace(HEX_ESCAPE, "\\x$1"))
+      .replace(UNESCAPE, "$1")
+      .replace(IMPLIED_ASTERISK, "$1*$2");
+    if (!VALID_SELECTOR.test(selector)) throwSelectorError();
+    return selector;
+  };
+
+  function unescape(query) {
+    // put string values back
+    return query.replace(ESCAPED, unescapeString);
+  };
+
+  function unescapeString(match, index) {
+    return strings[index];
+  };
+
+  var BRACES = /\{/g, BRACES_ESCAPED = /\\{/g;
+
+  function closeBlock(group) {
+    return Array((group.replace(BRACES_ESCAPED, "").match(BRACES) || "").length + 1).join("}");
+  };
+
+  FILTER = new CSSSelectorParser(FILTER);
+
+  var TARGET = /:target/i, ROOT = /:root/i;
+
+  function getConstants(selector) {
+    var constants = "";
+    if (ROOT.test(selector)) constants += ",R=d.documentElement";
+    if (TARGET.test(selector)) constants += ",H=d.location;H=H&&H.hash.replace('#','')";
+    if (constants || selector.indexOf("#") !== -1) {
+      constants = ",t=c.nodeType,d=t===9?c:c.ownerDocument||(c.document||c).parentWindow.document" + constants;
+    }
+    return "var ii" + constants + ";";
+  };
+
+  var COMBINATOR = {
+    " ":   ";while(e!=s&&(e=e.parentNode)&&e.nodeType===1){",
+    ">":   ".parentElement;if(e){",
+    "+":   ";while((e=e.previousSibling)&&!(" + IS_ELEMENT + "))continue;if(e){",
+    "~":   ";while((e=e.previousSibling)){" + IF_ELEMENT
+  };
+
+  var TOKEN = /\be\b/g;
+
+  MATCHER = new CSSSelectorParser({
+    "(?:(<#selector>)(<#combinator>))?(<#tag>)(<#filter>)?$": function(match, before, combinator, tag, filters) {
+      var group = "";
+      if (tag !== "*") {
+        var TAG = tag.toUpperCase();
+        group += "if(e.nodeName==='" + TAG + (TAG === tag ? "" : "'||e.nodeName==='" + tag) + "'){";
+      }
+      if (filters) {
+        group += "if(" + FILTER.parse(filters).slice(0, -2) + "){";
+      }
+      group = group.replace(TOKEN, "e" + this.index);
+      if (combinator) {
+        group += "var e=e" + (this.index++) + COMBINATOR[combinator];
+        group = group.replace(TOKEN, "e" + this.index);
+      }
+      if (before) {
+        group += this.parse(before);
+      }
+      return group;
+    }
+  });
+  
+  var BY_ID       = "e0=IE7._byId(d,'%1');if(e0){",
+      BY_TAG_NAME = "var n=c.getElementsByTagName('%1');",
+      STORE       = "if(r==null)return e0;r[k++]=e0;";
+
+  var TAG_NAME = 1;
+
+  var SELECTOR = new CSSSelectorParser({
+    "^((?:<#selector>)?(?:<#combinator>))(<#tag>)(<#filter>)?$": true
+  });
+
+  var cache = {};
+
+  var selectById = new CSSSelectorParser({
+    "^(<#tag>)#(<#ident>)(<#filter>)?( [^,]*)?$": function(match, tagName, id, filters, after) {
+      var block = format(BY_ID, id), endBlock = "}";
+      if (filters) {
+        block += MATCHER.parse(tagName + filters);
+        endBlock = closeBlock(block);
+      }
+      if (after) {
+        block += "s=c=e0;" + selectQuery.parse("*" + after);
+      } else {
+        block += STORE;
+      }
+      return block + endBlock;
+    },
+
+    "^([^#,]+)#(<#ident>)(<#filter>)?$": function(match, before, id, filters) {
+      var block = format(BY_ID, id);
+      if (before === "*") {
+        block += STORE;
+      } else {
+        block += MATCHER.parse(before + filters) + STORE + "break";
+      }
+      return block + closeBlock(block);
+    },
+
+    "^.*$": ""
+  });
+
+  var selectQuery = new CSSSelectorParser({
+    "<#grammar>": function(match, selector, remainingSelectors) {
+      if (!this.groups) this.groups = [];
+
+      var group = SELECTOR.exec(" " + selector);
+
+      if (!group) throwSelectorError();
+
+      this.groups.push(group.slice(1));
+
+      if (remainingSelectors) {
+        return this.parse(remainingSelectors.replace(COMMA, ""));
+      }
+
+      var groups = this.groups,
+          tagName = groups[0][TAG_NAME]; // first tag name
+
+      for (var i = 1; group = groups[i]; i++) { // search tag names
+        if (tagName !== group[TAG_NAME]) {
+          tagName = "*"; // mixed tag names, so use "*"
+          break;
+        }
+      }
+
+      var matcher = "", store = STORE + "continue filtering;";
+
+      for (var i = 0; group = groups[i]; i++) {
+        MATCHER.index = 0;
+        if (tagName !== "*") group[TAG_NAME] = "*"; // we are already filtering by tagName
+        group = group.join("");
+        if (group === " *") { // select all
+          matcher = store;
+          break;
+        } else {
+          group = MATCHER.parse(group);
+          if (useContext) group += "if(e" + MATCHER.index + "==s){";
+          matcher += group + store + closeBlock(group);
+        }
+      }
+
+      // reduce to a single loop
+      var isWild = tagName === "*";
+      return (isWild ? "var n=c.all;" : format(BY_TAG_NAME, tagName)) +
+        "filtering:while((e0=n[i++]))" +
+        (isWild ? IF_ELEMENT.replace(TOKEN, "e0") : "{") +
+          matcher +
+        "}";
+    },
+
+    "^.*$": throwSelectorError
+  });
+
+  var REDUNDANT_NODETYPE_CHECKS = /\&\&(e\d+)\.nodeType===1(\)\{\s*if\(\1\.nodeName=)/g;
+
+  selectQuery.create = function(selector) {
+    if (!cache[selector]) {
+      selector = normalize(selector);
+      this.groups = null;
+      MATCHER.index = 0;
+      var block = this.parse(selector);
+      this.groups = null;
+      MATCHER.index = 0;
+      if (selector.indexOf("#") !== -1) {
+        var byId  = selectById.parse(selector);
+        if (byId) {
+          block =
+            "if(t===1||t===11|!c.getElementById){" +
+              block +
+            "}else{" +
+              byId +
+            "}";
+        }
+      }
+      // remove redundant nodeType==1 checks
+      block = block.replace(REDUNDANT_NODETYPE_CHECKS, "$2");
+      block = getConstants(selector) + decode(block);
+      cache[selector] = new Function("return function(c,r,s){var i=0,k=0,e0;" + block + "return r}")();
+    }
+    return cache[selector];
+  };
+
+  return cssQuery;
+})();
+
+function throwSelectorError() {
+  throw new SyntaxError("Invalid selector.");
+};
+
+// -----------------------------------------------------------------------
+// initialisation
+// -----------------------------------------------------------------------
+
+IE7.loaded = true;
+
+(function() {
+  try {
+    // http://javascript.nwbox.com/IEContentLoaded/
+    if (!document.body) throw "continue";
+    documentElement.doScroll("left");
+  } catch (ex) {
+    setTimeout(arguments.callee, 1);
+    return;
+  }
+  // execute the inner text of the IE7 script
+  try {
+    eval(script.innerHTML);
+  } catch (ex) {
+    // ignore errors
+  }
+  if (typeof IE7_PNG_SUFFIX == "object") {
+    PNG = IE7_PNG_SUFFIX;
+  } else {
+    PNG = new RegExp(rescape(window.IE7_PNG_SUFFIX || "-trans.png") + "(\\?.*)?$", "i");
+  }
+
+  // frequently used references
+  body = document.body;
+  viewport = MSIE5 ? body : documentElement;
+
+  // classes
+  body.className += " ie7_body";
+  documentElement.className += " ie7_html";
+
+  if (MSIE5) ie7Quirks();
+
+  IE7.CSS.init();
+  IE7.HTML.init();
+
+  IE7.HTML.apply();
+  IE7.CSS.apply();
+
+  IE7.recalc();
+})();
+
+})(this, document);
