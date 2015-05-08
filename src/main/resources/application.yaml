@@ -110,4 +110,21 @@ gds:
     ouvidorias:
       arquivo-nacional: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an
       banco-central-do-brasil-bcb: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen
-      companhia-nacional-de-abastecimento: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/outras-estatais/companhia-nacional-de-abastecimento-conab
+      companhia-nacional-de-abastecimento-conab: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/outras-estatais/companhia-nacional-de-abastecimento-conab
+      defensoria-publica-da-uniao-dpu: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/defensoria-publica-da-uniao-dpu
+      departamento-de-policia-federal-dpf: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/departamento-de-policia-federal-dpf
+      departamento-de-policia-rodoviaria-federal-dprf: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/departamento-de-policia-rodoviaria-federal-dprf
+      empresa-brasileira-de-infraestrutura-aeroportuaria-infraero: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/outras-estatais/empresa-brasileira-de-infraestrutura-aeroportuaria-infraero
+      fundacao-nacional-do-indio-funai: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/outras-autarquias/fundacao-nacional-do-indio-funai
+      ministerio-da-agricultura-pecuaria-e-abastecimento-mapa: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-agricultura-pecuaria-e-abastecimento-mapa
+      ministerio-da-fazenda-mf: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-fazenda-mf
+      ministerio-da-justica-mj: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
+      ministerio-da-pesca-e-aquicultura-mpa: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-pesca-e-aquicultura-mpa
+      ministerio-da-previdencia-social-mps: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-previdencia-social-mps
+      ministerio-da-saude-ms: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-saude-ms
+      ministerio-do-desenvolvimento-agrario-mda: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-desenvolvimento-agrario-mda
+      ministerio-do-desenvolvimento-social-e-combate-a-fome-mds: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds
+      ministerio-do-planejamento-orcamento-e-gestao-mpog: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
+      ministerio-do-trabalho-e-emprego-mte: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-trabalho-e-emprego-mte
+      ministerio-do-turismo-mtur: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-turismo-mtur
+      secretaria-de-aviacao-civil: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/secretaria-de-aviacao-civil-sac
