@@ -37,10 +37,10 @@ public class ConteudoConfigTest {
 
     @Test
     public void mapeiaLinksParaOuvidoriasDeOrgaos() throws Exception {
-        assertThat(config.ouvidoria(ORGAOS.get(0).getId()),
+        assertThat(config.ouvidoria(ORGAOS.get(0).getId()).get(),
                 is(new URL("http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an")));
 
-        assertThat(config.ouvidoria(ORGAOS.get(1).getId()),
+        assertThat(config.ouvidoria(ORGAOS.get(1).getId()).get(),
                 is(new URL("http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen")));
     }
 }
