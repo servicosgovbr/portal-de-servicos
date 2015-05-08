@@ -8,9 +8,6 @@ import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 
-import java.util.Arrays;
-import java.util.List;
-
 import static java.util.Collections.singletonList;
 
 public class TestData {
@@ -39,9 +36,4 @@ public class TestData {
             .withTimestamp(123L)
             .withConteudoEncontrado(true)
             .withFeedback("Otimo site");
-
-    public static final List<Orgao> ORGAOS = Arrays.asList(
-            new Orgao().withId("arquivo-nacional").withNome("Arquivo Nacional").withTelefone("(61) 1111 1111"),
-            new Orgao().withId("banco-central-do-brasil-bcb").withNome("Banco Central do Brasil").withTelefone("(61) 2222 2222")
-    );
 }
