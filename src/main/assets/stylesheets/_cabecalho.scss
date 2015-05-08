@@ -169,11 +169,10 @@
   }
 
   #barra-feedback {
-    padding-left: $mobile-margin-left;
-    padding-right: $mobile-margin-right;
-
     div {
       background-color: $azul-claro;
+      padding-left: $mobile-margin-left;
+      padding-right: $mobile-margin-right;
     }
 
     p {
