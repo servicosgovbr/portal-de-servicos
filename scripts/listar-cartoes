@@ -26,12 +26,11 @@ def to_days(seconds)
   [1, days.round].max
 end
 
-repo = 'servicosgovbr/guia-de-servicos'
-
-print 'Listando os cartões no Github...'
-Octokit.auto_paginate = true
-issues = Octokit.issues repo, :per_page => 1000, :state => 'all', :filter => 'all'
-puts 'OK'
+repos = [
+  'servicosgovbr/guia-de-servicos',
+  'servicosgovbr/editor-guia-de-servicos',
+  'servicosgovbr/cartas-de-servico'
+]
 
 TF='%m/%d/%y %H:%M'
 
@@ -39,51 +38,56 @@ def label(l)
   Proc.new {|e| e.event == 'labeled' and e.label.name = l }
 end
 
-tabela = issues.map do |issue| 
-  print "Processando #{issue.number} - '#{issue.title}'..."
-
-  issue.events = Octokit.issue_events repo, issue.number
-
-  para_rodar = issue.events.first &label('ready')
-  em_progresso = issue.events.first &label('in progress')
-  para_homologacao = issue.events.first &label('para homologação')
-  em_homologacao = issue.events.first &label('homologação')
-  em_producao = issue.events.first &label('produção')
-
-  cycle_time = (em_producao.created_at - em_progresso.created_at rescue nil) ||
-               (issue.closed_at - em_progresso.created_at rescue nil)
-
-  lead_time = (issue.closed_at - para_rodar.created_at rescue nil) ||
-              (issue.closed_at - issue.created_at rescue nil)
-
-  table = {
-    numero: issue.number,
-    descricao: issue.title,
-    bug: issue.labels.any? {|l| l.name == 'BUG' },
-    tech_debt: issue.labels.any? {|l| l.name == 'tech debt' },
-    repo: 'guia-de-servicos',
-    ultima_alteracao: issue.updated_at.getlocal.strftime(TF),
-
-    ideia: issue.created_at.getlocal.strftime(TF),
-    para_rodar: (para_rodar.created_at.getlocal.strftime(TF) rescue nil),
-    em_progresso: (em_progresso.created_at.getlocal.strftime(TF) rescue nil),
-    para_homologacao: (para_homologacao.created_at.getlocal.strftime(TF) rescue nil),
-    em_homologacao: (em_homologacao.created_at.getlocal.strftime(TF) rescue nil),
-    em_producao: (em_producao.created_at.getlocal.strftime(TF) rescue nil),
-    aprendemos: (issue.closed_at.getlocal.strftime(TF) rescue nil),
-
-    cycle_time: to_days(cycle_time),
-    lead_time: to_days(lead_time),
-  }
-
+print 'Listando os cartões no Github...'
+Octokit.auto_paginate = true
+repos.each do |repo|
+  issues = Octokit.issues repo, :per_page => 1000, :state => 'all', :filter => 'all'
   puts 'OK'
-  table
-end
 
-CSV.open('data.csv', 'w') do |csv|
-  csv << tabela.first.keys
-  tabela.each do |hash|
-    csv << hash.values
+  tabela = issues.map do |issue|
+    print "Processando #{issue.number} - '#{issue.title}'..."
+
+    issue.events = Octokit.issue_events repo, issue.number
+
+    para_rodar = issue.events.first &label('ready')
+    em_progresso = issue.events.first &label('in progress')
+    para_homologacao = issue.events.first &label('para homologação')
+    em_homologacao = issue.events.first &label('homologação')
+    em_producao = issue.events.first &label('produção')
+
+    cycle_time = (em_producao.created_at - em_progresso.created_at rescue nil) ||
+                 (issue.closed_at - em_progresso.created_at rescue nil)
+
+    lead_time = (issue.closed_at - para_rodar.created_at rescue nil) ||
+                (issue.closed_at - issue.created_at rescue nil)
+
+    puts 'OK'
+    {
+      numero: issue.number,
+      descricao: issue.title,
+      bug: issue.labels.any? {|l| l.name == 'BUG' },
+      tech_debt: issue.labels.any? {|l| l.name == 'tech debt' },
+      repo: repo,
+      ultima_alteracao: issue.updated_at.getlocal.strftime(TF),
+
+      ideia: issue.created_at.getlocal.strftime(TF),
+      para_rodar: (para_rodar.created_at.getlocal.strftime(TF) rescue nil),
+      em_progresso: (em_progresso.created_at.getlocal.strftime(TF) rescue nil),
+      para_homologacao: (para_homologacao.created_at.getlocal.strftime(TF) rescue nil),
+      em_homologacao: (em_homologacao.created_at.getlocal.strftime(TF) rescue nil),
+      em_producao: (em_producao.created_at.getlocal.strftime(TF) rescue nil),
+      aprendemos: (issue.closed_at.getlocal.strftime(TF) rescue nil),
+
+      cycle_time: to_days(cycle_time),
+      lead_time: to_days(lead_time),
+    }
   end
-end
 
+  CSV.open("#{File.basename repo}.csv", 'w') do |csv|
+    csv << tabela.first.keys
+    tabela.each do |hash|
+      csv << hash.values
+    end
+  end
+
+end
