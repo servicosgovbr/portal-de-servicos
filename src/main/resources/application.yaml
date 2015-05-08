@@ -128,3 +128,33 @@ gds:
       ministerio-do-trabalho-e-emprego-mte: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-trabalho-e-emprego-mte
       ministerio-do-turismo-mtur: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-turismo-mtur
       secretaria-de-aviacao-civil: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/secretaria-de-aviacao-civil-sac
+    sitesOficiais:
+      arquivo-nacional: http://www.arquivonacional.gov.br/
+      banco-central-do-brasil-bcb: http://www.bcb.gov.br/
+      comissao-de-anistia: http://portal.mj.gov.br/anistia/
+      companhia-nacional-de-abastecimento-conab: http://www.conab.gov.br/
+      conselho-administrativo-de-defesa-economica-cade: http://www.cade.gov.br/
+      defensoria-publica-da-uniao-dpu: http://www.dpu.gov.br/
+      departamento-de-policia-federal-dpf: http://www.dpf.gov.br/
+      departamento-de-policia-rodoviaria-federal-dprf: https://www.prf.gov.br/portal/
+      empresa-brasileira-de-infraestrutura-aeroportuaria-infraero: http://www.infraero.gov.br/
+      fundacao-nacional-do-indio-funai: http://www.funai.gov.br/
+      instituto-nacional-de-meteorologia-inmet: http://www.inmet.gov.br/
+      instituto-nacional-do-seguro-social-inss: http://www.inss.gov.br/
+      ministerio-da-agricultura-pecuaria-e-abastecimento-mapa: http://www.agricultura.gov.br/ministerio
+      ministerio-da-educacao-mec: http://mec.gov.br/
+      ministerio-da-fazenda-mf: http://www.fazenda.gov.br/
+      ministerio-da-justica-mj: http://www.justica.gov.br/
+      ministerio-da-pesca-e-aquicultura-mpa: http://www.mpa.gov.br/
+      ministerio-da-previdencia-social-mps: http://mps.gov.br/
+      ministerio-da-saude-ms: http://portalsaude.saude.gov.br/
+      ministerio-do-desenvolvimento-agrario-mda: http://www.mda.gov.br/
+      ministerio-do-desenvolvimento-social-e-combate-a-fome-mds: http://mds.gov.br/
+      ministerio-do-planejamento-orcamento-e-gestao-mpog: http://www.planejamento.gov.br/
+      ministerio-do-trabalho-e-emprego-mte: http://portal.mte.gov.br/portal-mte/
+      ministerio-do-turismo-mtur: http://www.turismo.gov.br/turismo/home.html
+      secretaria-da-receita-federal-do-brasil-rfb: http://idg.receita.fazenda.gov.br/
+      secretaria-de-aviacao-civil: http://www.aviacaocivil.gov.br/
+      secretaria-nacional-de-justica: http://portal.mj.gov.br/data/Pages/MJDE2A290DITEMIDC811B50F3FA34D6AA46F27CC110930B1PTBRIE.htm
+      secretaria-nacional-de-politicas-sobre-drogas-senad: http://portal.mj.gov.br/senad/
+      secretaria-nacional-de-seguranca-publica: http://portal.mj.gov.br/main.asp?View={1BFF9F1B-2ECD-4A25-9976-661FB5A66624}&BrowserType=NN&LangID=pt-br&params=itemID%3D%7B540715BB-1C9B-47D3-9549-9FA38E3E99FA%7D%3B&UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D

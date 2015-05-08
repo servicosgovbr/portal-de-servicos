@@ -23,26 +23,3 @@ políticas públicas, que atendem dezenas de milhões de pessoas.
 Hoje, as ações do MDS são realizadas nas três esferas de Governo e em parceria com sociedade civil, organismos
 internacionais e instituições de financiamento. Essa articulação estabelece uma sólida rede de proteção e promoção
 social que quebra o ciclo de pobreza e promove a conquista da cidadania nas comunidades brasileiras.
-
-### Contato
-
-Página oficial: [www.mds.gov.br](http://www.mds.gov.br/)
-
-Ouvidoria: através da [página do ouvidor](http://www.mds.gov.br/ouvidoria)
-
-E-mail: [bolsa.familia@mds.gov.br](mailto:bolsa.familia@mds.gov.br)
-
-<script type="application/ld+json">
-{ "@context" : "http://schema.org",
-  "@type" : "GovernmentOrganization",
-  "name": "Ministério do Desenvolvimento Social e Combate a Fome",
-  "url" : "http://www.mds.gov.br/",
-  "contactPoint" : [
-    {
-      "@type": "ContactPoint",
-      "telephone" : "+55 0800 707 2003",
-      "url": "http://www.mds.gov.br/ouvidoria",
-      "email": "bolsa.familia@mds.gov.br",
-      "contactType" : "customer service"
-    }]}
-</script>

@@ -40,6 +40,10 @@ public class ConteudoConfig {
     @Setter(/* usado pelo Spring */)
     Map<String, String> ouvidorias;
 
+    @Getter
+    @Setter(/* usado pelo Spring */)
+    Map<String, String> sitesOficiais;
+
     @Autowired
     Slugify slugify;
 
@@ -71,6 +75,14 @@ public class ConteudoConfig {
     public Optional<URL> ouvidoria(String termo) {
         if(ouvidorias.containsKey(termo)) {
             return of(new URL(ouvidorias.get(termo)));
+        }
+        return empty();
+    }
+
+    @SneakyThrows
+    public Optional<URL> siteOficial(String termo) {
+        if(sitesOficiais.containsKey(termo)) {
+            return of(new URL(sitesOficiais.get(termo)));
         }
         return empty();
     }

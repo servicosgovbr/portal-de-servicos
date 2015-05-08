@@ -43,4 +43,13 @@ public class ConteudoConfigTest {
         assertThat(config.ouvidoria(ORGAOS.get(1).getId()).get(),
                 is(new URL("http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen")));
     }
+
+    @Test
+    public void mapeiaLinksParaSitesOficiaisDeOrgaos() throws Exception {
+        assertThat(config.siteOficial(ORGAOS.get(0).getId()).get(),
+                is(new URL("http://www.arquivonacional.gov.br/")));
+
+        assertThat(config.siteOficial(ORGAOS.get(1).getId()).get(),
+                is(new URL("http://www.bcb.gov.br/")));
+    }
 }
