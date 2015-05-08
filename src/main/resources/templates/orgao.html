@@ -7,7 +7,8 @@
 <head>
     <title th:text="${conteudo.titulo}">Nome do Órgão</title>
     <meta property="og:title" th:content="${conteudo.titulo}"/>
-    <meta property="og:description" th:content="${'Informações sobre ' + @genero.o(conteudo.titulo) + ' ' + conteudo.titulo + ' no Guia de Serviços do Governo Federal'}"/>
+    <meta property="og:description"
+          th:content="${'Informações sobre ' + @genero.o(conteudo.titulo) + ' ' + conteudo.titulo + ' no Guia de Serviços do Governo Federal'}"/>
 </head>
 <body>
 
@@ -32,6 +33,10 @@
 <section layout:fragment="corpo">
 
     <div th:utext="${conteudo.html}" class="markdown"></div>
+
+    <p>Para pedidos de informação pública deste órgão, consulte o
+        <a href="http://www.acessoainformacao.gov.br/sistema/site/index.html">Sistema Eletrônico do Serviço de Informações ao Cidadão (e-SIC)</a>.
+    </p>
     <hr/>
 
     <ul id="resultados-linhadavida">
