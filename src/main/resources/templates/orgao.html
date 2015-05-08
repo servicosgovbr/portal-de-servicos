@@ -34,8 +34,15 @@
 
     <div th:utext="${conteudo.html}" class="markdown"></div>
 
+    <p th:if="${@conteudoConfig.ouvidoria(termo).isPresent()}">
+        Para fazer uma reclamação, denúncia, sugestão ou elogio em relação a algum serviço deste órgão, contacte sua
+        <a th:href="${@conteudoConfig.ouvidoria(termo).get()}">ouvidoria</a>.
+    </p>
+
     <p>Para pedidos de informação pública deste órgão, consulte o
-        <a href="http://www.acessoainformacao.gov.br/sistema/site/index.html">Sistema Eletrônico do Serviço de Informações ao Cidadão (e-SIC)</a>.
+        <a href="http://www.acessoainformacao.gov.br/sistema/site/index.html">
+            Sistema Eletrônico do Serviço de Informações ao Cidadão (e-SIC)
+        </a>.
     </p>
     <hr/>
 

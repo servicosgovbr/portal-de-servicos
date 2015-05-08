@@ -107,3 +107,7 @@ gds:
       secretaria-nacional-de-justica: "Secretaria Nacional de Justiça"
       secretaria-nacional-de-politicas-sobre-drogas-senad: "Secretaria Nacional de Políticas Sobre Drogas (Senad)"
       secretaria-nacional-de-seguranca-publica: "Secretaria Nacional de Segurança Pública"
+    ouvidorias:
+      arquivo-nacional: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an
+      banco-central-do-brasil-bcb: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen
+      companhia-nacional-de-abastecimento: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/outras-estatais/companhia-nacional-de-abastecimento-conab

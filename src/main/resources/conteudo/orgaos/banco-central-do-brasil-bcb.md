@@ -10,11 +10,7 @@ O Banco Central do Brasil foi criado pela [Lei 4.595], de 31 de dezembro de 1964
 
 ### Contato
 
-
 Página oficial: [www.bcb.gov.br](http://www.bcb.gov.br)
-
-Ouvidoria: (61) 3414-2793, (61) 3414-3049 (fax), [ouvidoria@bcb.gov.br](mailto:ouvidoria@bcb.gov.br) ou na
-[página da ouvidoria](http://www.bcb.gov.br/?ouvidoria)
 
 <script type="application/ld+json">
 { "@context" : "http://schema.org",
@@ -24,9 +20,7 @@ Ouvidoria: (61) 3414-2793, (61) 3414-3049 (fax), [ouvidoria@bcb.gov.br](mailto:o
   "contactPoint" : [
     {
       "@type": "ContactPoint",
-      "telephone" : "+55 (61) 3414-2793",
-      "faxNumber" : "+55 (61) 3414-3049",
-      "url": "http://www.bcb.gov.br/?ouvidoria",
+      "url": "http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen",
       "contactType" : "customer service"
     }]}
 </script>

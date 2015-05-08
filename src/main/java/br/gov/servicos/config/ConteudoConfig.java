@@ -5,6 +5,7 @@ import br.gov.servicos.servico.Orgao;
 import com.github.slugify.Slugify;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -12,9 +13,13 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.Assert;
 
+import java.net.URL;
 import java.util.Map;
+import java.util.Optional;
 
 import static java.lang.String.format;
+import static java.util.Optional.empty;
+import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
 
 @Configuration
@@ -30,6 +35,10 @@ public class ConteudoConfig {
     @Getter
     @Setter(/* usado pelo Spring */)
     Map<String, String> orgaos;
+
+    @Getter
+    @Setter(/* usado pelo Spring */)
+    Map<String, String> ouvidorias;
 
     @Autowired
     Slugify slugify;
@@ -58,4 +67,11 @@ public class ConteudoConfig {
                 .withNome(nome);
     }
 
+    @SneakyThrows
+    public Optional<URL> ouvidoria(String termo) {
+        if(ouvidorias.containsKey(termo)) {
+            return of(new URL(ouvidorias.get(termo)));
+        }
+        return empty();
+    }
 }
