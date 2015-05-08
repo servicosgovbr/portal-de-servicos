@@ -11,6 +11,11 @@ set -o pipefail
 yum makecache fast -y
 yum install -y "guia-de-servicos-1.0.${SNAP_PIPELINE_COUNTER:-0}-1"
 
+cat <<-EOS > /etc/sysconfig/guia-de-servicos-overrides
+ENDPOINTS_ENABLED=true
+SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=""
+EOS
+
 systemctl daemon-reload
 systemctl restart guia-de-servicos
 EOF
