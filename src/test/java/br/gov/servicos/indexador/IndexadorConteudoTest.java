@@ -79,11 +79,11 @@ public class IndexadorConteudoTest {
         Conteudo arquivoNacional = conteudos.get(0);
 
         Assert.assertThat(arquivoNacional.getTitulo(), equalTo("Ter um Imóvel"));
-        Assert.assertThat(arquivoNacional.getConteudo(), containsString("Serviços relacionados à habitação"));
+        Assert.assertThat(arquivoNacional.getConteudo(), containsString("Ter um Imóvel"));
 
         Conteudo bancoCentral = conteudos.get(1);
         Assert.assertThat(bancoCentral.getTitulo(), equalTo("Obter Crédito e Apoio Financeiro"));
-        Assert.assertThat(bancoCentral.getConteudo(), containsString("Serviços relacionados à obtenção de crédito e apoio financeiro"));
+        Assert.assertThat(bancoCentral.getConteudo(), containsString("Obter Crédito e Apoio Financeiro"));
     }
 
 }
