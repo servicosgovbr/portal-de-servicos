@@ -3,7 +3,6 @@ package br.gov.servicos;
 import br.gov.servicos.config.GuiaDeServicosIndex;
 import br.gov.servicos.indexador.ImportadorConteudo;
 import br.gov.servicos.legado.ImportadorLegado;
-import com.google.common.collect.ImmutableMap;
 import lombok.AccessLevel;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
@@ -13,6 +12,7 @@ import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
@@ -40,8 +40,10 @@ public class Importador {
         log.info("Iniciando importação");
         indices.recriar();
 
-        return ImmutableMap.of(
-                "servicos", legado.importar(),
-                "conteudos", conteudo.importar());
+        Map<String, Object> retorno = new HashMap<>();
+        retorno.put("servicos", legado.importar());
+        retorno.put("conteudos", conteudo.importar());
+
+        return retorno;
     }
 }
