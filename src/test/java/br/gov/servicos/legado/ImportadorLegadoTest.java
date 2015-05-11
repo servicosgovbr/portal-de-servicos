@@ -1,7 +1,6 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.config.ConteudoConfig;
-import br.gov.servicos.config.GuiaDeServicosIndex;
 import br.gov.servicos.servico.AreaDeInteresse;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.Servico;
@@ -31,10 +30,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
-public class ImportadorTest {
-
-    @Mock
-    GuiaDeServicosIndex esConfig;
+public class ImportadorLegadoTest {
 
     @Mock
     ServicoRepository servicos;
@@ -51,7 +47,7 @@ public class ImportadorTest {
     @Mock
     MapaDePublicosAlvo mapaDePublicosAlvo;
 
-    Importador importador;
+    ImportadorLegado importadorLegado;
     Slugify slugify;
 
     @Before
@@ -82,18 +78,12 @@ public class ImportadorTest {
                 .when(config)
                 .orgao(anyString());
 
-        importador = new Importador(esConfig, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config, mapaDeLinhasDaVida, mapaDePublicosAlvo));
-    }
-
-    @Test
-    public void deveRecriarIndices() throws Exception {
-        importador.importar();
-        verify(esConfig).recriar();
+        importadorLegado = new ImportadorLegado(servicos, new ServicoLegadoParaServico(slugify, beanFactory, config, mapaDeLinhasDaVida, mapaDePublicosAlvo));
     }
 
     @Test
     public void deveImportarListaDeServicosLegados() throws Exception {
-        importador.importar();
+        importadorLegado.importar();
         verify(servicos).save(anyCollectionOf(Servico.class));
     }
 
@@ -105,7 +95,7 @@ public class ImportadorTest {
                 .when(servicos)
                 .save(anyCollectionOf(Servico.class));
 
-        assertThat(importador.importar(), is(servicosImportados));
+        assertThat(importadorLegado.importar(), is(servicosImportados));
     }
 
     @Test
@@ -193,7 +183,7 @@ public class ImportadorTest {
     }
 
     private Servico importaServico() throws Exception {
-        return get(importador.importar(), 0);
+        return get(importadorLegado.importar(), 0);
     }
 
 }

@@ -27,7 +27,7 @@ mail:
 
 gds:
   permitir-robos: false
-  importar-automaticamente: false
+  importar-automaticamente: true
   piwik:
     enabled: false
     url: "https://estatisticas.presidencia.gov.br/"

@@ -24,7 +24,7 @@ import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
-public class IndexadorConteudoTest {
+public class ImportadorConteudoTest {
 
     @Mock
     OrgaoRepository orgaoRepository;
@@ -35,11 +35,11 @@ public class IndexadorConteudoTest {
     @Mock
     ConteudoRepository conteudoRepository;
 
-    IndexadorConteudo indexadorConteudo;
+    ImportadorConteudo importadorConteudo;
 
     @Before
     public void setUp() throws Exception {
-        indexadorConteudo = new IndexadorConteudo(linhaDaVidaRepository, orgaoRepository, conteudoRepository);
+        importadorConteudo = new ImportadorConteudo(linhaDaVidaRepository, orgaoRepository, conteudoRepository);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class IndexadorConteudoTest {
                 .when(orgaoRepository)
                 .findAll();
 
-        indexadorConteudo.indexar();
+        importadorConteudo.importar();
 
         ArgumentCaptor<List> captor = ArgumentCaptor.forClass(List.class);
         verify(conteudoRepository).save(captor.capture());
@@ -70,7 +70,7 @@ public class IndexadorConteudoTest {
                 .when(linhaDaVidaRepository)
                 .findAll();
 
-        indexadorConteudo.indexar();
+        importadorConteudo.importar();
 
         ArgumentCaptor<List> captor = ArgumentCaptor.forClass(List.class);
         verify(conteudoRepository).save(captor.capture());

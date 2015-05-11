@@ -1,13 +1,12 @@
 package br.gov.servicos.legado;
 
-import br.gov.servicos.config.GuiaDeServicosIndex;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jmx.export.annotation.ManagedOperation;
-import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
 import javax.xml.bind.JAXBContext;
@@ -21,31 +20,24 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
+@Slf4j
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-@ManagedResource(
-        objectName = "ServicosGovBr:type=Importador",
-        description = "Importa XML do Guia legado para o ElasticSearch"
-)
-public class Importador {
+public class ImportadorLegado {
 
     private static final String XML_LEGADO = "guiadeservicos.xml";
 
-    GuiaDeServicosIndex index;
     ServicoRepository servicos;
     ServicoLegadoParaServico servicoLegadoParaServico;
 
     @Autowired
-    Importador(GuiaDeServicosIndex index, ServicoRepository servicos, ServicoLegadoParaServico servicoLegadoParaServico) {
-        this.index = index;
+    ImportadorLegado(ServicoRepository servicos, ServicoLegadoParaServico servicoLegadoParaServico) {
         this.servicos = servicos;
         this.servicoLegadoParaServico = servicoLegadoParaServico;
     }
 
     @ManagedOperation
     public Iterable<Servico> importar() throws IOException, JAXBException {
-        index.recriar();
-
         return servicos.save(
                 servicosLegados()
                         .map(servicoLegadoParaServico)
@@ -61,8 +53,9 @@ public class Importador {
 
     private static DadosType unmarshallDadosLegados() throws IOException, JAXBException {
         URL xmlLegado = new ClassPathResource(XML_LEGADO).getURL();
-        JAXBElement element = (JAXBElement) unmarshaller().unmarshal(xmlLegado);
+        log.info("Xml legado utilizado para importação: {}", xmlLegado);
 
+        JAXBElement element = (JAXBElement) unmarshaller().unmarshal(xmlLegado);
         return (DadosType) element.getValue();
     }
 
@@ -70,4 +63,5 @@ public class Importador {
         JAXBContext contexto = JAXBContext.newInstance("br.gov.servicos.legado");
         return contexto.createUnmarshaller();
     }
+
 }

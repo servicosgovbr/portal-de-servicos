@@ -1,4 +1,4 @@
-package br.gov.servicos.legado;
+package br.gov.servicos;
 
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
