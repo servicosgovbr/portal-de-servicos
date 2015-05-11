@@ -39,7 +39,7 @@
 
         <th:block th:if="${resultados.hasContent()}">
 
-            <h2>Resultados da Busca por "<span th:text="${termo}">termo</span>"</h2>
+            <h2>Busca por "<span th:text="${termo}">termo</span>"</h2>
 
             <div th:replace="fragments/paginacao ::
                 conteudo-paginado(${resultados.number+1}, ${#numbers.sequence(1, resultados.totalPages)}, null, 'q=${termo}, pagina=${pagina}')">
