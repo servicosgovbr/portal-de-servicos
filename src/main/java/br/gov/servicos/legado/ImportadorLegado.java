@@ -6,7 +6,6 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.stereotype.Component;
 
 import javax.xml.bind.JAXBContext;
@@ -36,14 +35,6 @@ public class ImportadorLegado {
         this.servicoLegadoParaServico = servicoLegadoParaServico;
     }
 
-    @ManagedOperation
-    public Iterable<Servico> importar() throws IOException, JAXBException {
-        return servicos.save(
-                servicosLegados()
-                        .map(servicoLegadoParaServico)
-                        .collect(toList()));
-    }
-
     private static Stream<ServicoType> servicosLegados() throws IOException, JAXBException {
         return unmarshallDadosLegados()
                 .getServicos()
@@ -63,6 +54,13 @@ public class ImportadorLegado {
     private static Unmarshaller unmarshaller() throws JAXBException {
         JAXBContext contexto = JAXBContext.newInstance("br.gov.servicos.legado");
         return contexto.createUnmarshaller();
+    }
+
+    public Iterable<Servico> importar() throws IOException, JAXBException {
+        return servicos.save(
+                servicosLegados()
+                        .map(servicoLegadoParaServico)
+                        .collect(toList()));
     }
 
 }

@@ -41,7 +41,7 @@ public class ImportadorConteudo {
         this.conteudoRepository = conteudoRepository;
     }
 
-    public void importar() {
+    public Iterable<Conteudo> importar() {
         Stream<Conteudo> conteudosOrgaos = orgaoRepository.findAll().stream()
                 .map(this::paraConteudo);
 
@@ -50,7 +50,7 @@ public class ImportadorConteudo {
 
         List<Conteudo> conteudos = Stream.concat(conteudosOrgaos, conteudoLinhasDaVida).collect(toList());
 
-        this.conteudoRepository.save(conteudos);
+        return this.conteudoRepository.save(conteudos);
     }
 
     private Conteudo paraConteudo(LinhaDaVida linhaDaVida) {

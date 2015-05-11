@@ -1,5 +1,6 @@
 package br.gov.servicos.busca;
 
+import br.gov.servicos.cms.ConteudoRepository;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
@@ -32,6 +33,8 @@ public class BuscaControllerTest {
 
     @Mock
     ServicoRepository servicos;
+    @Mock
+    ConteudoRepository conteudos;
 
     @Mock
     Buscador buscador;
@@ -44,8 +47,11 @@ public class BuscaControllerTest {
         doReturn(emptyList())
                 .when(servicos)
                 .search(any(QueryBuilder.class));
+        doReturn(emptyList())
+                .when(conteudos)
+                .search(any(QueryBuilder.class));
 
-        controller = new BuscaController(buscador);
+        controller = new BuscaController(buscador, conteudos);
     }
 
     @Test

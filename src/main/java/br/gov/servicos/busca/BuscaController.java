@@ -1,5 +1,6 @@
 package br.gov.servicos.busca;
 
+import br.gov.servicos.cms.ConteudoRepository;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ class BuscaController {
     Buscador buscador;
 
     @Autowired
-    BuscaController(Buscador buscador) {
+    BuscaController(Buscador buscador, ConteudoRepository conteudos) {
         this.buscador = buscador;
     }
 
