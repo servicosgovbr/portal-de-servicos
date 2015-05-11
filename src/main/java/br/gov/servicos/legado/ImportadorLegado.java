@@ -53,9 +53,10 @@ public class ImportadorLegado {
 
     private static DadosType unmarshallDadosLegados() throws IOException, JAXBException {
         URL xmlLegado = new ClassPathResource(XML_LEGADO).getURL();
-        log.debug("Xml legado utilizado para importação: {}", xmlLegado);
+        log.debug("XML legado utilizado para importação: {}", xmlLegado);
 
         JAXBElement element = (JAXBElement) unmarshaller().unmarshal(xmlLegado);
+        log.debug("XML legado lido com sucesso");
         return (DadosType) element.getValue();
     }
 

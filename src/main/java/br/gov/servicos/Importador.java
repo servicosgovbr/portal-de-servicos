@@ -19,14 +19,14 @@ import org.springframework.stereotype.Component;
 )
 public class Importador {
     GuiaDeServicosIndex guiaDeServicosIndex;
-    ImportadorLegado importadorLegado;
-    ImportadorConteudo importadorConteudo;
+    ImportadorLegado legado;
+    ImportadorConteudo conteudo;
 
     @Autowired
-    public Importador(GuiaDeServicosIndex guiaDeServicosIndex, ImportadorLegado importadorLegado, ImportadorConteudo importadorConteudo) {
+    public Importador(GuiaDeServicosIndex guiaDeServicosIndex, ImportadorLegado legado, ImportadorConteudo conteudo) {
         this.guiaDeServicosIndex = guiaDeServicosIndex;
-        this.importadorLegado = importadorLegado;
-        this.importadorConteudo = importadorConteudo;
+        this.legado = legado;
+        this.conteudo = conteudo;
     }
 
     public void importar() {
@@ -35,8 +35,8 @@ public class Importador {
             this.guiaDeServicosIndex.recriar();
 
             log.info("Iniciando importação");
-            importadorLegado.importar();
-            importadorConteudo.importar();
+            legado.importar();
+            conteudo.importar();
 
         } catch (Exception e) {
             log.error("Erro durante a importação", e);

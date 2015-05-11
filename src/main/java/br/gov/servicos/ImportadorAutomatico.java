@@ -28,7 +28,7 @@ class ImportadorAutomatico {
     @PostConstruct
     @SneakyThrows
     void appCarregada() {
-        if(!flag) {
+        if (!flag) {
             log.info("Importação automática desligada (GDS_IMPORTAR_AUTOMATICAMENTE=false)");
             return;
         }
