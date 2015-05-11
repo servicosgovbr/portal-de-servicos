@@ -272,7 +272,10 @@ span.ticket-erro {
 }
 
 .markdown {
-  margin-bottom: 2em;
+
+  h3 {
+    margin-bottom: 1em;
+  }
 
   ul li {
     display: list-item;
