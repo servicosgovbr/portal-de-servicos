@@ -41,12 +41,8 @@
 
             <h2>Resultados da Busca por "<span th:text="${termo}">termo</span>"</h2>
 
-            <p>
-                <span th:text="${resultados.totalElements}">0</span> resultados encontrados
-            </p>
-
             <div th:replace="fragments/paginacao ::
-                conteudo-paginado(${resultados.number+1}, ${#numbers.sequence(1, resultados.totalPages)}, 'q=${termo}, pagina=${pagina}')">
+                conteudo-paginado(${resultados.number+1}, ${#numbers.sequence(1, resultados.totalPages)}, null, 'q=${termo}, pagina=${pagina}')">
 
                 <ul layout:fragment="conteudo" id="resultados-busca">
                     <li th:each="resultado : ${resultados}">
@@ -55,7 +51,12 @@
                         </span>
                     </li>
                 </ul>
+
             </div>
+
+            <p class="total-resultados">
+                <span th:text="${resultados.totalElements}">0</span> resultados encontrados.
+            </p>
         </th:block>
     </div>
 </section>

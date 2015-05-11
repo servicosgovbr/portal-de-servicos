@@ -18,11 +18,15 @@
     </ul>
 </div>
 
-<div th:fragment="conteudo-paginado(paginaAtual, paginas, parametros)">
-    <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})">
-    </div>
+<div th:fragment="conteudo-paginado(paginaAtual, paginas, paginacaoNoTopo, parametros)">
+    <th:block th:if="${paginacaoNoTopo}">
+        <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})">
+        </div>
+    </th:block>
+
     <section layout:fragment="conteudo">
     </section>
+
     <div th:replace="fragments/paginacao :: paginacao-simples(${paginaAtual}, ${paginas}, ${parametros})">
     </div>
 </div>
