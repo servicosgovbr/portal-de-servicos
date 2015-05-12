@@ -454,3 +454,15 @@ p.formulario-feedback {
   }
 
 }
+
+#conteudo {
+  span.link-github {
+    a {
+      color: $cinza-claro;
+
+      :hover {
+        color: $cinza-escuro;
+      }
+    }
+  }
+}
