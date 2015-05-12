@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastramento de entidades que atuam em adoção internacional de crianças e adolescentes brasileiros</titulo>
-    <descricao>Monitorar o Sistema de Gerenciamento de Adoção Internacional – SIGAI, a análise e auditoria da emissão de
-        passaportes para todo menor adotado (em adoção internacional), bem como a emissão e renovação de certificados
-        para entidades que atuam em adoção internacional no Brasil.
+    <descricao>
+        <![CDATA[Monitorar o Sistema de Gerenciamento de Adoção Internacional – SIGAI, a análise e auditoria da emissão de passaportes para todo menor adotado (em adoção internacional), bem como a emissão e renovação de certificados para entidades que atuam em adoção internacional no Brasil.
 
-        1. Cadastro e controle das entidades de adoção internacional;
-        2. Emissão e renovação de certificados para entidades que atuam em adoção internacional no Brasil;
-        3. Cadastro e controle dos representantes da entidade de adoção internacional;
-        4. Controle das adoções internacionais de crianças e adolescentes brasileiros.
+1. Cadastro e controle das entidades de adoção internacional;
+2. Emissão e renovação de certificados para entidades que atuam em adoção internacional no Brasil;
+3. Cadastro e controle dos representantes da entidade de adoção internacional;
+4. Controle das adoções internacionais de crianças e adolescentes brasileiros.
 
-        O serviço é prestado somente pelo sítio do Departamento de Polícia Federal.
+O serviço é prestado somente pelo sítio do Departamento de Polícia Federal.
 
-        Após o preenchimento do formulário (vide "Formulários"), é necessário o comparecimento à unidade da Polícia
-        Federal de sua região para dar entrada no processo.
+Após o preenchimento do formulário (vide "Formulários"), é necessário o comparecimento à unidade da Polícia Federal de sua região para dar entrada no processo.
 
-        No site da Polícia Federal constam os endereços de todas as unidades descentralizadas da Polícia Federal, as
-        quais poderão atuar no cadastramento de entidade (vide "Localização das unidades").
+No site da Polícia Federal constam os endereços de todas as unidades descentralizadas da Polícia Federal, as quais poderão atuar no cadastramento de entidade (vide "Localização das unidades").]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

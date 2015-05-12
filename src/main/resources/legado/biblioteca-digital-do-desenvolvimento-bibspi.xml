@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Biblioteca Digital do Desenvolvimento - BibSPI</titulo>
-    <descricao>A Biblioteca Digital do Desenvolvimento (BibSPI) é um serviço que centraliza conteúdos, de acesso livre e
-        em formato digital, sobre o planejamento público para o desenvolvimento do Brasil. Ela disponibiliza publicações
-        de vários órgãos das esferas federal, estadual e municipal, entre eles: planos de governo, relatórios, projetos,
-        textos para discussões e artigos, entre outros, que estão organizados em 89 coleções temáticas. O conteúdo pode
-        ser pesquisado por texto livre, ou por coleção, data, autor, título, assunto, além de busca avançada por campos
-        de pesquisa escolhidos pelo usuário.
+    <descricao>
+        <![CDATA[A Biblioteca Digital do Desenvolvimento (BibSPI) é um serviço que centraliza conteúdos, de acesso livre e em formato digital, sobre o planejamento público para o desenvolvimento do Brasil. Ela disponibiliza publicações de vários órgãos das esferas federal, estadual e municipal, entre eles: planos de governo, relatórios, projetos, textos para discussões e artigos, entre outros, que estão organizados em 89 coleções temáticas. O conteúdo pode ser pesquisado por texto livre, ou por coleção, data, autor, título, assunto, além de busca avançada por campos de pesquisa escolhidos pelo usuário.]]>
     </descricao>
     <requisitos>
         <requisito>

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Balanço hidrico climático</titulo>
-    <descricao>Este serviço oferecido pela Secretaria da Receita Federal do Brasil - RFB destina-se à solicitação e à
-        emissão, pela Internet, da Certidão Negativa de Débito (CND) para fins de baixa de empresa ( finalidade de
-        registro ou arquivamento, em órgão próprio, de ato relativo à baixa de firma individual ou extinção de entidade
-        ou de sociedade empresária ou simples).
+    <descricao>
+        <![CDATA[Este serviço oferecido pela Secretaria da Receita Federal do Brasil - RFB destina-se à solicitação e à emissão, pela Internet, da Certidão Negativa de Débito (CND) para fins de baixa de empresa ( finalidade de registro ou arquivamento, em órgão próprio, de ato relativo à baixa de firma individual ou extinção de entidade ou de sociedade empresária ou simples).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

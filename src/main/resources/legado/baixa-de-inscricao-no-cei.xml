@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Baixa de Inscrição no CEI</titulo>
-    <descricao>Solicitar o cancelamento da inscrição para as pessoas físicas equiparadas a empresas e empresas
-        desobrigadas da inscrição no CNPJ.
+    <descricao>
+        <![CDATA[Solicitar o cancelamento da inscrição para as pessoas físicas equiparadas a empresas e empresas desobrigadas da inscrição no CNPJ.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

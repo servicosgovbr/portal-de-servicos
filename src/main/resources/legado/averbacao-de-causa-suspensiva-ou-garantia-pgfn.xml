@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Averbação de Causa Suspensiva ou Garantia – PGFN</titulo>
-    <descricao>Dar ciência de que determinado débito está garantido ou com a exigibilidade suspensa e requerer a
-        alteração da situação da inscrição em Dívida Ativa da União.
+    <descricao>
+        <![CDATA[Dar ciência de que determinado débito está garantido ou com a exigibilidade suspensa e requerer a alteração da situação da inscrição em Dívida Ativa da União.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

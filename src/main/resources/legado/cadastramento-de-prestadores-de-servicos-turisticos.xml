@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastramento de Prestadores de Serviços Turísticos</titulo>
-    <descricao>Sistema de cadastro de pessoas físicas e jurídicas que atuam na cadeia produtiva do turismo (CADASTUR),
-        executado pelo Ministério do Turismo, em parceria com os Órgãos Oficiais de Turismo das Unidades da Federação.
+    <descricao>
+        <![CDATA[Sistema de cadastro de pessoas físicas e jurídicas que atuam na cadeia produtiva do turismo (CADASTUR), executado pelo Ministério do Turismo, em parceria com os Órgãos Oficiais de Turismo das Unidades da Federação.
 
-        O Sistema recebe cadastros obrigatórios dos prestadores de serviços turísticos das seguintes atividades: Meios
-        de Hospedagem (albergue, condo-hotel, flat, hotel urbano, hotel de selva, hotel fazenda, hotel histórico,
-        pousada, resort e cama &amp; café); Agências de Turismo; Transportadoras Turísticas; Organizadoras de Eventos;
-        Parques Temáticos; Acampamentos Turísticos (Camping); e Guias de Turismo.
+O Sistema recebe cadastros obrigatórios dos prestadores de serviços turísticos das seguintes atividades: Meios de Hospedagem (albergue, condo-hotel, flat, hotel urbano, hotel de selva, hotel fazenda, hotel histórico, pousada, resort e cama &amp; café); Agências de Turismo; Transportadoras Turísticas; Organizadoras de Eventos; Parques Temáticos; Acampamentos Turísticos (Camping); e Guias de Turismo.
 
-        Em caráter opcional, também poderão se cadastrar: Restaurantes, Cafeterias e Bares; Centros de Convenções;
-        Parques Aquáticos; Estruturas de Apoio ao Turismo Náutico; Casas de Espetáculo; Prestadoras de Serviços de
-        Infraestrutura para Eventos; Locadoras de Veículos para Turistas; Prestadoras Especializadas em Segmentos
-        Turísticos.
+Em caráter opcional, também poderão se cadastrar: Restaurantes, Cafeterias e Bares; Centros de Convenções; Parques Aquáticos; Estruturas de Apoio ao Turismo Náutico; Casas de Espetáculo; Prestadoras de Serviços de Infraestrutura para Eventos; Locadoras de Veículos para Turistas; Prestadoras Especializadas em Segmentos Turísticos.
 
-        O cadastro permite a participação em eventos, feiras e ações realizados pelo Ministério do Turismo e pela
-        Embratur e acesso a linhas de financiamento específicas para o turismo, por meio de bancos oficiais, além da
-        participação em programas de qualificação promovidos e apoiados pelo Ministério do Turismo.
+O cadastro permite a participação em eventos, feiras e ações realizados pelo Ministério do Turismo e pela Embratur e acesso a linhas de financiamento específicas para o turismo, por meio de bancos oficiais, além da participação em programas de qualificação promovidos e apoiados pelo Ministério do Turismo.
 
-        Conforme disposto nos artigos 21 e 22 da Lei n.º 11.771, de 17 de setembro de 2008, o cadastro tornou-se
-        obrigatório e contempla os prestadores de serviços turísticos constituídos na forma de empresário individual, as
-        sociedades empresárias, sociedades simples e os serviços sociais autônomos que prestem serviços turísticos
-        remunerados e que exerçam atividades econômicas relacionadas à cadeia produtiva do turismo.
+Conforme disposto nos artigos 21 e 22 da Lei n.º 11.771, de 17 de setembro de 2008, o cadastro tornou-se obrigatório e contempla os prestadores de serviços turísticos constituídos na forma de empresário individual, as sociedades empresárias, sociedades simples e os serviços sociais autônomos que prestem serviços turísticos remunerados e que exerçam atividades econômicas relacionadas à cadeia produtiva do turismo.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

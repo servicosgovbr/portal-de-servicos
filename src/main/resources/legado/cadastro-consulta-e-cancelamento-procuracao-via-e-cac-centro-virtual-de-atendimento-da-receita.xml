@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastro, Consulta e Cancelamento – Procuração via e-CAC (centro virtual de atendimento da Receita)</titulo>
-    <descricao>Possuidor de certificado digital cadastrar procuração eletrônica para terceiro, também possuidor de
-        certificado digital, para realização de serviços dentro do Portal e-CAC. Consultar procuração eletrônica por
-        outorgante ou por procurador. Cancelar procuração eletrônica.
+    <descricao>
+        <![CDATA[Possuidor de certificado digital cadastrar procuração eletrônica para terceiro, também possuidor de certificado digital, para realização de serviços dentro do Portal e-CAC. Consultar procuração eletrônica por outorgante ou por procurador. Cancelar procuração eletrônica.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -2,8 +2,8 @@
 <servico>
     <titulo>Cadastramento e vistoria de empresas que atuam no transporte internacional de cargas e/ou passageiros
     </titulo>
-    <descricao>Cadastramento e vistoria anual de empresas que atuam no transporte internacional aéreo, marítimo, fluvial
-        e terrestre de cargas e/ou passageiros.
+    <descricao>
+        <![CDATA[Cadastramento e vistoria anual de empresas que atuam no transporte internacional aéreo, marítimo, fluvial e terrestre de cargas e/ou passageiros.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

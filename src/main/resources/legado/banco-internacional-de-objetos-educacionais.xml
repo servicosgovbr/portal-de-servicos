@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Banco Internacional de Objetos Educacionais</titulo>
-    <descricao>Este Repositório possui objetos educacionais de acesso público, em vários formatos e para todos os níveis
-        de ensino. Acesse os objetos isoladamente ou em coleções.
-        Nesse momento o Banco possui 19.676 objetos publicados, 143 sendo avaliados ou aguardando autorização dos
-        autores para a publicação e um total de 4.508.809 visitas de 183 países
+    <descricao>
+        <![CDATA[Este Repositório possui objetos educacionais de acesso público, em vários formatos e para todos os níveis de ensino. Acesse os objetos isoladamente ou em coleções. Nesse momento o Banco possui 19.676 objetos publicados, 143 sendo avaliados ou aguardando autorização dos autores para a publicação e um total de 4.508.809 visitas de 183 países.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

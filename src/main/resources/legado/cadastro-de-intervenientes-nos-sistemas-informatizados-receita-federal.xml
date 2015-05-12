@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastro de Intervenientes nos Sistemas Informatizados Receita Federal</titulo>
-    <descricao>Solicitar o cadastramento dos intervenientes do comércio exterior nos sistemas informatizados da Receita
-        Federal.
+    <descricao>
+        <![CDATA[Solicitar o cadastramento dos intervenientes do comércio exterior nos sistemas informatizados da Receita Federal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

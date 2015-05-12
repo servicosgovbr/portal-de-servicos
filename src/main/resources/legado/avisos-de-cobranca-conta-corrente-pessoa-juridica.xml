@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Avisos de Cobrança – Conta Corrente Pessoa Jurídica</titulo>
-    <descricao>Permite consultar as intimações emitidas pelo Conta Corrente da Pessoa Jurídica, com opção para a
-        impressão de documento para pagamento.
+    <descricao>
+        <![CDATA[Permite consultar as intimações emitidas pelo Conta Corrente da Pessoa Jurídica, com opção para a impressão de documento para pagamento.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

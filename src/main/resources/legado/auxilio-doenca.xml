@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Auxílio-Doença</titulo>
-    <descricao>Benefício concedido ao segurado impedido de trabalhar por doença ou acidente por mais de 15 dias
-        consecutivos. No caso dos trabalhadores com carteira assinada, os primeiros 15 dias são pagos pelo empregador,
-        exceto o doméstico, e a Previdência Social paga a partir do 16º dia de afastamento do trabalho. Para os demais
-        segurados inclusive o doméstico, a Previdência paga o auxílio desde o início da incapacidade e enquanto a mesma
-        perdurar.
+    <descricao>
+        <![CDATA[Benefício concedido ao segurado impedido de trabalhar por doença ou acidente por mais de 15 dias consecutivos. No caso dos trabalhadores com carteira assinada, os primeiros 15 dias são pagos pelo empregador, exceto o doméstico, e a Previdência Social paga a partir do 16º dia de afastamento do trabalho. Para os demais segurados inclusive o doméstico, a Previdência paga o auxílio desde o início da incapacidade e enquanto a mesma perdurar.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

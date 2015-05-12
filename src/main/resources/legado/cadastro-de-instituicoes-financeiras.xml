@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastro de instituições financeiras</titulo>
-    <descricao>Mostra todas as instituições financeiras autorizadas a funcionar pelo Banco Central do Brasil, como
-        bancos, cooperativas e administradoras de consórcio.
-        É possível pesquisar pelo nome da instituição ou do conglomerado financeiro ao qual ela pertence.
-        Mostra ainda as tarifas, os administradores, os dados cadastrais e as informações contábeis de cada instituição.
+    <descricao>
+        <![CDATA[Mostra todas as instituições financeiras autorizadas a funcionar pelo Banco Central do Brasil, como bancos, cooperativas e administradoras de consórcio. É possível pesquisar pelo nome da instituição ou do conglomerado financeiro ao qual ela pertence. Mostra ainda as tarifas, os administradores, os dados cadastrais e as informações contábeis de cada instituição.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

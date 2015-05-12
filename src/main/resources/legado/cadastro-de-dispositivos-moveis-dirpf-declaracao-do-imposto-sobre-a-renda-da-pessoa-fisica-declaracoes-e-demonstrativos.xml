@@ -3,11 +3,8 @@
     <titulo>Cadastro de Dispositivos Móveis (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações
         e Demonstrativos)
     </titulo>
-    <descricao>Cadastrar no Portal e-CAC os dispositivos móveis (celular e tablet) que poderão ser utilizados para
-        acessar o serviço "Pagando Imposto". O cadastramento estará disponível para o contribuinte que tem "imposto de
-        renda a pagar" no link "Para autorizar o acesso às cotas e à impressão do DARF, através de um dispositivo móvel
-        (tablet ou smartphones) clique aqui”, localizado dentro do “Extrato do Processamento da DIRPF”, “Extrato” item
-        "Demonstrativo de Débitos da Declaração".
+    <descricao>
+        <![CDATA[Cadastrar no Portal e-CAC os dispositivos móveis (celular e tablet) que poderão ser utilizados para acessar o serviço "Pagando Imposto". O cadastramento estará disponível para o contribuinte que tem "imposto de renda a pagar" no link "Para autorizar o acesso às cotas e à impressão do DARF, através de um dispositivo móvel (tablet ou smartphones) clique aqui”, localizado dentro do “Extrato do Processamento da DIRPF”, “Extrato” item "Demonstrativo de Débitos da Declaração".]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

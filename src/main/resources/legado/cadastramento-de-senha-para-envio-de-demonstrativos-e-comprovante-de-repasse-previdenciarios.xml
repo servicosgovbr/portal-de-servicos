@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastramento de Senha para envio de Demonstrativos e Comprovante de Repasse Previdenciários</titulo>
-    <descricao>Tem como objetivo liberar senha para os representantes legais dos entes federativos, da Unidade Gestora e
-        de seus servidores para o envio de demonstrativos e comprovante de repasse, visualização de CRP de todos os
-        municípios de um estado e consultas relativas a aplicações e investimentos.
+    <descricao>
+        <![CDATA[Tem como objetivo liberar senha para os representantes legais dos entes federativos, da Unidade Gestora e de seus servidores para o envio de demonstrativos e comprovante de repasse, visualização de CRP de todos os municípios de um estado e consultas relativas a aplicações e investimentos.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

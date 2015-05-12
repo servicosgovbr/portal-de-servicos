@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Benefício de Prestação Continuada - BPC</titulo>
-    <descricao>O Benefício de Prestação Continuada (BPC) é a garantia de um salário mínimo mensal à pessoa com
-        deficiência e ao idoso com 65 anos ou mais, que comprovem não possuir meios de garantir o próprio sustento, nem
-        podem ser sustentados pela família. Para ter direito ao BPC, a renda mensal familiar deve ser menor que ¼ (um
-        quarto) do salário mínimo por pessoa.
+    <descricao>
+        <![CDATA[O Benefício de Prestação Continuada (BPC) é a garantia de um salário mínimo mensal à pessoa com deficiência e ao idoso com 65 anos ou mais, que comprovem não possuir meios de garantir o próprio sustento, nem podem ser sustentados pela família. Para ter direito ao BPC, a renda mensal familiar deve ser menor que ¼ (um quarto) do salário mínimo por pessoa.
 
-        Há duas formas de solicitar o BPC: a pessoa pode agendar o atendimento diretamente ao Instituto Nacional do
-        Seguro Social (INSS), pelo telefone 135 (ligação gratuita) e pela internet pelo site
-        www.previdenciasocial.gov.br, ou, se preferir, o cidadão pode procurar o Cras mais próximo de sua casa, onde
-        receberá auxílio e orientação para fazer o agendamento em uma Agência da Previdência Social.
+Há duas formas de solicitar o BPC: a pessoa pode agendar o atendimento diretamente ao Instituto Nacional do Seguro Social (INSS), pelo telefone 135 (ligação gratuita) e pela internet pelo site www.previdenciasocial.gov.br, ou, se preferir, o cidadão pode procurar o Cras mais próximo de sua casa, onde receberá auxílio e orientação para fazer o agendamento em uma Agência da Previdência Social.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

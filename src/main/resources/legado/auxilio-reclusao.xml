@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Auxílio-Reclusão</titulo>
-    <descricao>Benefício devido aos dependentes do segurado recolhido à prisão, durante o período em que estiver preso
-        sob regime fechado ou semi-aberto. Não cabe concessão de auxílio-reclusão aos dependentes do segurado que
-        estiver em livramento condicional ou cumprindo pena em regime aberto.
+    <descricao>
+        <![CDATA[Benefício devido aos dependentes do segurado recolhido à prisão, durante o período em que estiver preso sob regime fechado ou semi-aberto. Não cabe concessão de auxílio-reclusão aos dependentes do segurado que estiver em livramento condicional ou cumprindo pena em regime aberto.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
