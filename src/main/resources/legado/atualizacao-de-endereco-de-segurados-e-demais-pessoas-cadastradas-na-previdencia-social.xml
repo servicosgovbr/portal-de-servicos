@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Atualização de endereço de segurados e demais pessoas cadastradas na Previdência Social</titulo>
-    <descricao>Permite atualização do endereço do segurado e demais pessoas físicas que tenham senha cadastrada na
-        Previdência Social.
+    <descricao>
+        <![CDATA[Permite atualização do endereço do segurado e demais pessoas físicas que tenham senha cadastrada na Previdência Social.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

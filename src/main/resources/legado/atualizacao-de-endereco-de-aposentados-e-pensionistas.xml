@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Atualização de endereço de aposentados e pensionistas</titulo>
-    <descricao>Permite a atualização de endereço de aposentados e pensionistas, informando o número do benefício, data
-        de nascimento, novo CEP, nome do beneficiário e o CPF.
+    <descricao>
+        <![CDATA[Permite a atualização de endereço de aposentados e pensionistas, informando o número do benefício, data de nascimento, novo CEP, nome do beneficiário e o CPF.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

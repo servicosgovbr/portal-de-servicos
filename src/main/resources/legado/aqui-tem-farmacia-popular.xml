@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Aqui tem Farmácia Popular</titulo>
-    <descricao>Na rede credenciada é possível ter acesso aos medicamentos para as doenças mais comuns entre os cidadãos.
-        O Programa possui uma rede própria de Farmácias Populares e a parceria com farmácias e drogarias da rede
-        privada, chamada de "Aqui tem Farmácia Popular".
+    <descricao>
+        <![CDATA[Na rede credenciada é possível ter acesso aos medicamentos para as doenças mais comuns entre os cidadãos. O Programa possui uma rede própria de Farmácias Populares e a parceria com farmácias e drogarias da rede privada, chamada de "Aqui tem Farmácia Popular".]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Autorizações (Especial e Prévia) - Produtos Químicos</titulo>
-    <descricao>Autorização Especial - AE: É o documento que autoriza pessoa física ou jurídica a exercer atividade
-        eventual com produtos químicos. Esta autorização permite apenas uma operação e tem validade de 60 (sessenta)
-        dias condicionada a aprovação de cadastro e natureza da atividade econômica.
+    <descricao><![CDATA[Autorização Especial - AE: É o documento que autoriza pessoa física ou jurídica a exercer atividade eventual com produtos químicos. Esta autorização permite apenas uma operação e tem validade de 60 (sessenta) dias condicionada a aprovação de cadastro e natureza da atividade econômica.
 
-        Para obtê-la, é preciso preencher o formulário Anexo VIII da Portaria 1.274/2003 (Vide "Formulários") e
-        entregá-lo juntamente com toda a documentação exigida em uma unidade da Polícia Federal (Vide "Presencial").
+        Para obtê-la, é preciso preencher o formulário Anexo VIII da Portaria 1.274/2003 (Vide "Formulários") e entregá-lo juntamente com toda a documentação exigida em uma unidade da Polícia Federal (Vide "Presencial").
 
-        Autorização Prévia - AP (Comério Exterior): Documento que autoriza a pessoa, devidamente cadastrada e licenciada
-        pela Polícia Federal, a importar, exportar ou reexportar produtos químicos sujeitos a controle e fiscalização.
-        Essa autorização é intransferível, com validade de 60 (sessenta) dias, prorrogável uma vez por igual período, e
-        permite apenas uma operação por produto.
+        Autorização Prévia - AP (Comério Exterior): Documento que autoriza a pessoa, devidamente cadastrada e licenciada pela Polícia Federal, a importar, exportar ou reexportar produtos químicos sujeitos a controle e fiscalização. Essa autorização é intransferível, com validade de 60 (sessenta) dias, prorrogável uma vez por igual período, e permite apenas uma operação por produto.
 
-        Para obter, preencha o formulário Anexo X da Portaria 1.274/2003 disponível na Internet (Vide "Formulários") e
-        entregue-o juntamente com toda a documentação em uma unidade da Polícia Federal (Vide "Presencial") ou envie
-        através de serviço de postagem (neste caso, o documento será protocolado pelo órgão central em Brasília).
+        Para obter, preencha o formulário Anexo X da Portaria 1.274/2003 disponível na Internet (Vide "Formulários") e entregue-o juntamente com toda a documentação em uma unidade da Polícia Federal (Vide "Presencial") ou envie através de serviço de postagem (neste caso, o documento será protocolado pelo órgão central em Brasília).
 
         Importante:
-        Ressaltamos que, além dos documentos necessário para obter a Autorização Prévia, é necessário que o interessado
-        tenha também o Certificado de Registro Cadastral e o Certificado de Licença de Funcionamento (vide "Serviços
-        Relacionados") ou Autorização Especial.
+
+        Ressaltamos que, além dos documentos necessário para obter a Autorização Prévia, é necessário que o interessado tenha também o Certificado de Registro Cadastral e o Certificado de Licença de Funcionamento (vide "Serviços Relacionados") ou Autorização Especial.]]>
 
     </descricao>
     <requisitos/>

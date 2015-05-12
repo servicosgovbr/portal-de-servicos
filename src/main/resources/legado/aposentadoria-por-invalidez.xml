@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Aposentadoria por Invalidez</titulo>
-    <descricao>Benefício concedido aos trabalhadores que, por doença ou acidente, forem considerados pela perícia médica
-        da Previdência Social incapacitados para exercer suas atividades ou outro tipo de serviço que lhes garanta o
-        sustento.
+    <descricao>
+        <![CDATA[Benefício concedido aos trabalhadores que, por doença ou acidente, forem considerados pela perícia médica da Previdência Social incapacitados para exercer suas atividades ou outro tipo de serviço que lhes garanta o sustento.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

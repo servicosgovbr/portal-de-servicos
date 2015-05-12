@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Alteração de Dados Bancários p/ Restituição e Ressarcimento Imposto de Renda</titulo>
-    <descricao>Alterar os dados bancários informados na solicitação de restituição ou ressarcimento, que foram
-        identificados como inválidos pela rede bancária. Obs.: Para alteração de dados bancários para recebimento de
-        restituição de imposto de renda da pessoa física consulte orientações da declaração de IRPF.
+    <descricao>
+        <![CDATA[Alterar os dados bancários informados na solicitação de restituição ou ressarcimento, que foram identificados como inválidos pela rede bancária. Obs.: Para alteração de dados bancários para recebimento de restituição de imposto de renda da pessoa física consulte orientações da declaração de IRPF.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

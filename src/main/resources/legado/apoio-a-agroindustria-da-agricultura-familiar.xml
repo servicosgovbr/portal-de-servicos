@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Apoio à Agroindústria da Agricultura Familiar</titulo>
-    <descricao>O Programa de Agroindústria apoia a inclusão dos agricultores familiares no processo de
-        agroindustrialização e comercialização da sua produção, de modo a agregar valor, gerar renda e oportunidades de
-        trabalho no meio rural.
-        Podem participar agricultores familiares, pessoas físicas e jurídicas formada por no mínimo 90% destes
-        agricultores e com no mínimo 70% da matéria-prima própria.
+    <descricao><![CDATA[O Programa de Agroindústria apoia a inclusão dos agricultores familiares no processo de agroindustrialização e comercialização da sua produção, de modo a agregar valor, gerar renda e oportunidades de trabalho no meio rural.
 
-        O Programa está estruturado em 5(cinco) linhas de ação:
+Podem participar agricultores familiares, pessoas físicas e jurídicas formada por no mínimo 90% destes agricultores e com no mínimo 70% da matéria-prima própria.
 
-        Linha de Ação I: Crédito Rural
-        Linha de Ação II: Adequação e Orientações nas Legislações Específicas
-        Linha de Ação III: Capacitação de Multiplicadores, Elaboração de Manuais Técnicos e Documentos Orientadores
-        Linha de Ação IV: Ciência e Tecnologia
-        Linha de Ação V: Promoção e Divulgação dos Produtos Agroindustriais, Identificação de Mercados e Articulação com
-        o Mercado Institucional
+O Programa está estruturado em 5(cinco) linhas de ação:
+
+Linha de Ação I: Crédito Rural
+Linha de Ação II: Adequação e Orientações nas Legislações Específicas
+Linha de Ação III: Capacitação de Multiplicadores, Elaboração de Manuais Técnicos e Documentos Orientadores
+Linha de Ação IV: Ciência e Tecnologia
+Linha de Ação V: Promoção e Divulgação dos Produtos Agroindustriais, Identificação de Mercados e Articulação com o Mercado Institucional]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

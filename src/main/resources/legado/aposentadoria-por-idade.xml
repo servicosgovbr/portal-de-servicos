@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Aposentadoria por Idade</titulo>
-    <descricao>Benefício devido aos trabalhadores urbanos do sexo masculino a partir dos 65 anos e do sexo feminino a
-        partir dos 60 anos de idade. Os trabalhadores rurais podem pedir aposentadoria por idade com cinco anos a menos:
-        a partir dos 60 anos, homens, e a partir dos 55 anos, mulheres.
+    <descricao>
+        <![CDATA[Benefício devido aos trabalhadores urbanos do sexo masculino a partir dos 65 anos e do sexo feminino a partir dos 60 anos de idade. Os trabalhadores rurais podem pedir aposentadoria por idade com cinco anos a menos: a partir dos 60 anos, homens, e a partir dos 55 anos, mulheres.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

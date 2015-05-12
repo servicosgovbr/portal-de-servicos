@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Auxílio-Acidente</titulo>
-    <descricao>Benefício pago ao trabalhador que sofre um acidente e fica com seqüelas que reduzem sua capacidade de
-        trabalho. É concedido para segurados que recebiam auxílio-doença. Têm direito ao auxílio-acidente o trabalhador
-        empregado, o trabalhador avulso e o segurador especial. O empregado doméstico, o contribuinte individual e o
-        facultativo não recebem o benefício.
-
+    <descricao>
+        <![CDATA[Benefício pago ao trabalhador que sofre um acidente e fica com seqüelas que reduzem sua capacidade de trabalho. É concedido para segurados que recebiam auxílio-doença. Têm direito ao auxílio-acidente o trabalhador empregado, o trabalhador avulso e o segurador especial. O empregado doméstico, o contribuinte individual e o facultativo não recebem o benefício.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Autorização de funcionamento no Brasil das organizações estrangeiras sem fins lucrativos</titulo>
-    <descricao>Requerimento de autorização para funcionamento no Brasil das organizações estrangeiras sem fins
-        lucrativos com personalidade jurídica de direito privado. Como não há legislação específica acerca da matéria,
-        consideram-se os seguintes dispositivos legais: a) art. 11, caput e § 1º, do Decreto-Lei nº 4.657, de 4 de
-        setembro de 1942 (Lei de Introdução às normas do Direito Brasileiro); b) arts. 1.134 a 1.141 do Código Civil –
-        CC; c) art. 1º do Decreto nº 3.441, de 26 de abril de 2000; d) art. 15 do Anexo da Portaria MJ nº 1.443, de 12
-        de setembro de 2006; e e) Portaria MJ nº 1.272, de 3 de julho de 2008.
+    <descricao>
+        <![CDATA[Requerimento de autorização para funcionamento no Brasil das organizações estrangeiras sem fins lucrativos com personalidade jurídica de direito privado. Como não há legislação específica acerca da matéria, consideram-se os seguintes dispositivos legais: a) art. 11, caput e § 1º, do Decreto-Lei nº 4.657, de 4 de setembro de 1942 (Lei de Introdução às normas do Direito Brasileiro); b) arts. 1.134 a 1.141 do Código Civil – CC; c) art. 1º do Decreto nº 3.441, de 26 de abril de 2000; d) art. 15 do Anexo da Portaria MJ nº 1.443, de 12 de setembro de 2006; e e) Portaria MJ nº 1.272, de 3 de julho de 2008.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

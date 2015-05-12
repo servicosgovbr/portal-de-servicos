@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Alteração de Codevedor Responsável – PGFN</titulo>
-    <descricao>Apresentar requerimento de alteração de codevedor e outros documentos, fim de requerer a exclusão do seu
-        nome como responsável tributário do cadastro da Dívida Ativa da União.
+    <descricao>
+        <![CDATA[Apresentar requerimento de alteração de codevedor e outros documentos, fim de requerer a exclusão do seu nome como responsável tributário do cadastro da Dívida Ativa da União.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

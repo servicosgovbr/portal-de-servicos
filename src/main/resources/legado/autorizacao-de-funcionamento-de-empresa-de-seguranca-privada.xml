@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Autorização de funcionamento de empresa de segurança privada</titulo>
-    <descricao>É o documento válido por 1 (um) ano que autoriza a empresa a desenvolver atividades de segurança privada.
+    <descricao><![CDATA[É o documento válido por 1 (um) ano que autoriza a empresa a desenvolver atividades de segurança privada.
 
-        IMPORTANTE:
-        - O requerimento de Autorização de Funcionamento deve ser encaminhado pela Internet, por meio do sistema GESP,
-        no site da Polícia Federal (vide "Mais informações").
-        - A autorização se dá por meio de Alvará publicado no Diário Oficial da União - D.O.U.
-        - A empresa interessada poderá acompanhar o andamento do seu pedido por meio do sistema GESP (vide "Mais
-        informações").
+IMPORTANTE:
+
+- O requerimento de Autorização de Funcionamento deve ser encaminhado pela Internet, por meio do sistema GESP, no site da Polícia Federal (vide "Mais informações").
+- A autorização se dá por meio de Alvará publicado no Diário Oficial da União - D.O.U.
+- A empresa interessada poderá acompanhar o andamento do seu pedido por meio do sistema GESP (vide "Mais informações").]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

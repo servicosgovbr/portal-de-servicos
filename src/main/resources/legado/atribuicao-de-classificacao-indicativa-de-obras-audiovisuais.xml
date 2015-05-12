@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Atribuição de classificação indicativa de obras audiovisuais</titulo>
-    <descricao>Atribuição de classificação indicativa de obras audiovisuais para TV, cinema, vídeo e DVD, videoclipes
-        musicais, espetáculos cênicos e musicais, jogos eletrônicos e RPG (jogos de interpretação).
+    <descricao><![CDATA[Atribuição de classificação indicativa de obras audiovisuais para TV, cinema, vídeo e DVD, videoclipes musicais, espetáculos cênicos e musicais, jogos eletrônicos e RPG (jogos de interpretação).
 
-        A classificação indicativa é a indicação à família sobre a faixa etária para a qual obras audiovisuais
-        (programação de TV, filmes, DVD, jogos eletrônicos e de interpretação – RPG) não se recomendam. A Classificação
-        vincula a faixa horária à etária na televisão aberta.
+A classificação indicativa é a indicação à família sobre a faixa etária para a qual obras audiovisuais (programação de TV, filmes, DVD, jogos eletrônicos e de interpretação – RPG) não se recomendam. A Classificação vincula a faixa horária à etária na televisão aberta.
 
-        Pode requerer a classificação indicativa o titular ou representante legal da diversão pública.
+Pode requerer a classificação indicativa o titular ou representante legal da diversão pública.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Atualização de Atividade para fins Previdenciários</titulo>
-    <descricao>Serviço que permite realizar a inclusão, alteração, encerramento, reinício e exclusão de atividade para
-        os contribuintes individuais, empregados domésticos e segurados especiais, para fins Previdenciários, junto ao
-        INSS.
+    <descricao>
+        <![CDATA[Serviço que permite realizar a inclusão, alteração, encerramento, reinício e exclusão de atividade para os contribuintes individuais, empregados domésticos e segurados especiais, para fins Previdenciários, junto ao INSS.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

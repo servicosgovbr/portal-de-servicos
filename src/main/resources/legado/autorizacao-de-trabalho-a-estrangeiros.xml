@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Autorização de Trabalho a Estrangeiros</titulo>
-    <descricao>Autorização de trabalho a estrangeiros é o ato administrativo de competência do Ministério do Trabalho e
-        Emprego que é exigido pelas autoridades consulares brasileiras, em conformidade com a legislação em vigor, para
-        efeito de concessão de vistos permanentes e/ou temporário a estrangeiros que desejem permanecer no Brasil a
-        trabalho. Delibera-se sobre os pedidos de prorrogação de estada e transformação de visto (de temporário para
-        permanente) que digam respeito a trabalho.
+    <descricao>
+        <![CDATA[Autorização de trabalho a estrangeiros é o ato administrativo de competência do Ministério do Trabalho e Emprego que é exigido pelas autoridades consulares brasileiras, em conformidade com a legislação em vigor, para efeito de concessão de vistos permanentes e/ou temporário a estrangeiros que desejem permanecer no Brasil a trabalho. Delibera-se sobre os pedidos de prorrogação de estada e transformação de visto (de temporário para permanente) que digam respeito a trabalho.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
