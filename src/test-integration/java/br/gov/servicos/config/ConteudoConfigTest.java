@@ -8,8 +8,6 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import java.net.URL;
-
 import static br.gov.servicos.fixtures.TestData.ORGAOS;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -38,18 +36,18 @@ public class ConteudoConfigTest {
     @Test
     public void mapeiaLinksParaOuvidoriasDeOrgaos() throws Exception {
         assertThat(config.ouvidoria(ORGAOS.get(0).getId()).get(),
-                is(new URL("http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an")));
+                is("http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an"));
 
         assertThat(config.ouvidoria(ORGAOS.get(1).getId()).get(),
-                is(new URL("http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen")));
+                is("http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen"));
     }
 
     @Test
     public void mapeiaLinksParaSitesOficiaisDeOrgaos() throws Exception {
         assertThat(config.siteOficial(ORGAOS.get(0).getId()).get(),
-                is(new URL("http://www.arquivonacional.gov.br/")));
+                is("http://www.arquivonacional.gov.br/"));
 
         assertThat(config.siteOficial(ORGAOS.get(1).getId()).get(),
-                is(new URL("http://www.bcb.gov.br/")));
+                is("http://www.bcb.gov.br/"));
     }
 }
