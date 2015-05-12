@@ -8,16 +8,17 @@
 
 /* credits/thanks:
   Shaggy, Martijn Wargers, Jimmy Cerra, Mark D Anderson,
-  Lars Dieckow, Erik Arvidsson, Gellért Gyuris, James Denny,
+  Lars Dieckow, Erik Arvidsson, GellÃ©rt Gyuris, James Denny,
   Unknown W Brackets, Benjamin Westfarer, Rob Eberhardt,
   Bill Edney, Kevin Newman, James Crompton, Matthew Mastracci,
   Doug Wright, Richard York, Kenneth Kolano, MegaZone,
-  Thomas Verelst, Mark 'Tarquin' Wilton-Jones, Rainer Åhlfors,
+  Thomas Verelst, Mark 'Tarquin' Wilton-Jones, Rainer Ã…hlfors,
   David Zulaica, Ken Kolano, Kevin Newman, Sjoerd Visscher,
-  Ingo Chao
+  Ingo Chao,
+  Mikhail Emelchenkov @ MyLove Company, LLC,
+  Dmitry Ilin @ MyLove Company, LLC,
+  Evan Jacobs
 */
-
-// timestamp: Fri, 30 Apr 2010 20:59:18
 
 (function(window, document) {
 
@@ -26,7 +27,9 @@ var IE7 = window.IE7 = {
   toString: K("[IE7]")
 };
 IE7.compat = 9;
-var appVersion = IE7.appVersion = navigator.appVersion.match(/MSIE (\d\.\d)/)[1] - 0;
+
+var appV = navigator.appVersion.match(/MSIE (\d\.\d)/);
+var appVersion = IE7.appVersion = (appV != null) ? appV[1] - 0 : 0;
 
 if (/ie7_off/.test(top.location.search) || appVersion < 5.5 || appVersion >= IE7.compat) return;
 
@@ -422,8 +425,7 @@ var Parser = RegGrp.extend({ignoreCase: true});
 var SINGLE_QUOTES       = /'/g,
     ESCAPED             = /'(\d+)'/g,
     ESCAPE              = /\\/g,
-    UNESCAPE            = /\\([nrtf'"])/g
-    UNICODE             = /\\([\da-fA-F]{1,4})/g;
+    UNESCAPE            = /\\([nrtf'"])/g;
 
 var strings = [];
 
@@ -452,9 +454,6 @@ function decode(query) {
 function encodeString(string) {
   var index = strings.length;
   strings[index] = string.slice(1, -1)
-    .replace(UNICODE, function(match, chr) {
-      return eval("'\\u" + "0000".slice(chr.length) + chr + "'");
-    })
     .replace(UNESCAPE, "$1")
     .replace(SINGLE_QUOTES, "\\'");
   return "'" + index + "'";
@@ -2861,11 +2860,21 @@ function throwSelectorError() {
 // -----------------------------------------------------------------------
 
 IE7.loaded = true;
+IE7.styleLoaded = false;
 
 (function() {
   try {
     // http://javascript.nwbox.com/IEContentLoaded/
-    if (!document.body) throw "continue";
+	if (!IE7.styleLoaded) {
+        // Hide <body> before applying IE fixes to avoid rendering issues
+		var headID = document.getElementsByTagName("head")[0];
+		var cssNode = document.createElement('style');
+		cssNode.type = 'text/css';
+		cssNode.styleSheet.cssText = 'body{display:none;}';
+		headID.appendChild(cssNode);
+		IE7.styleLoaded = true;
+	}
+	if (!document.body) throw "continue";
     documentElement.doScroll("left");
   } catch (ex) {
     setTimeout(arguments.callee, 1);
@@ -2900,6 +2909,9 @@ IE7.loaded = true;
   IE7.CSS.apply();
 
   IE7.recalc();
+
+  // Display <body> again after applying IE fixes
+  document.body.style.display = 'block';
 })();
 
 })(this, document);
