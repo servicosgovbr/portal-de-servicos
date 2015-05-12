@@ -15,6 +15,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.BeanFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.ResourcePatternResolver;
 
 import java.util.LinkedList;
 
@@ -31,6 +34,9 @@ import static org.mockito.Mockito.*;
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
 public class ImportadorLegadoTest {
+
+    @Mock
+    ResourcePatternResolver resolver;
 
     @Mock
     ServicoRepository servicos;
@@ -78,7 +84,10 @@ public class ImportadorLegadoTest {
                 .when(config)
                 .orgao(anyString());
 
-        importadorLegado = new ImportadorLegado(servicos, new ServicoLegadoParaServico(slugify, beanFactory, config, mapaDeLinhasDaVida, mapaDePublicosAlvo));
+        doReturn(new Resource[]{new ClassPathResource("legado/servico-legado-teste.xml")})
+                .when(resolver).getResources("classpath:legado/*.xml");
+
+        importadorLegado = new ImportadorLegado(resolver, servicos, new ServicoLegadoParaServico(slugify, beanFactory, config, mapaDeLinhasDaVida, mapaDePublicosAlvo));
     }
 
     @Test
