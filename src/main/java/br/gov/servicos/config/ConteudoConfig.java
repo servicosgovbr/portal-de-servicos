@@ -38,11 +38,11 @@ public class ConteudoConfig {
 
     @Getter
     @Setter(/* usado pelo Spring */)
-    Map<String, String> ouvidorias;
+    Map<String, URL> ouvidorias;
 
     @Getter
     @Setter(/* usado pelo Spring */)
-    Map<String, String> sitesOficiais;
+    Map<String, URL> sitesOficiais;
 
     @Autowired
     Slugify slugify;
@@ -72,17 +72,17 @@ public class ConteudoConfig {
     }
 
     @SneakyThrows
-    public Optional<URL> ouvidoria(String termo) {
+    public Optional<String> ouvidoria(String termo) {
         if(ouvidorias.containsKey(termo)) {
-            return of(new URL(ouvidorias.get(termo)));
+            return of(ouvidorias.get(termo).toString());
         }
         return empty();
     }
 
     @SneakyThrows
-    public Optional<URL> siteOficial(String termo) {
+    public Optional<String> siteOficial(String termo) {
         if(sitesOficiais.containsKey(termo)) {
-            return of(new URL(sitesOficiais.get(termo)));
+            return of(sitesOficiais.get(termo).toString());
         }
         return empty();
     }
