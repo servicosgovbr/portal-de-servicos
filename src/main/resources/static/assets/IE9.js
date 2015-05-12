@@ -425,7 +425,8 @@ var Parser = RegGrp.extend({ignoreCase: true});
 var SINGLE_QUOTES       = /'/g,
     ESCAPED             = /'(\d+)'/g,
     ESCAPE              = /\\/g,
-    UNESCAPE            = /\\([nrtf'"])/g;
+    UNESCAPE            = /\\([nrtf'"])/g
+    UNICODE             = /\\([\da-fA-F]{1,4})/g;
 
 var strings = [];
 
@@ -454,6 +455,9 @@ function decode(query) {
 function encodeString(string) {
   var index = strings.length;
   strings[index] = string.slice(1, -1)
+    .replace(UNICODE, function(match, chr) {
+        return eval("'\\u" + "0000".slice(chr.length) + chr + "'");
+    })
     .replace(UNESCAPE, "$1")
     .replace(SINGLE_QUOTES, "\\'");
   return "'" + index + "'";
