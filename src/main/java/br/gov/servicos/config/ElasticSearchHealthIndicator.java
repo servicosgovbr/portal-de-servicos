@@ -46,7 +46,7 @@ public class ElasticSearchHealthIndicator implements HealthIndicator {
 
             return health.build();
 
-        } catch(Exception e) {
+        } catch (Exception e) {
             return Health.down().withException(e).build();
         }
     }

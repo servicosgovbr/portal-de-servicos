@@ -1,7 +1,7 @@
 package br.gov.servicos.config;
 
-import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.Orgao;
+import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import com.github.slugify.Slugify;
 import lombok.Getter;
 import lombok.Setter;
@@ -73,7 +73,7 @@ public class ConteudoConfig {
 
     @SneakyThrows
     public Optional<String> ouvidoria(String termo) {
-        if(ouvidorias.containsKey(termo)) {
+        if (ouvidorias.containsKey(termo)) {
             return of(ouvidorias.get(termo).toString());
         }
         return empty();
@@ -81,7 +81,7 @@ public class ConteudoConfig {
 
     @SneakyThrows
     public Optional<String> siteOficial(String termo) {
-        if(sitesOficiais.containsKey(termo)) {
+        if (sitesOficiais.containsKey(termo)) {
             return of(sitesOficiais.get(termo).toString());
         }
         return empty();

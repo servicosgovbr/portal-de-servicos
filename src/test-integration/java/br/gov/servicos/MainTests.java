@@ -12,6 +12,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 public class MainTests {
 
     @Test
-    public void carregaContextoSemExcecoes() {}
+    public void carregaContextoSemExcecoes() {
+    }
 
 }

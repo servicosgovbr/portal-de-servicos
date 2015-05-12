@@ -18,7 +18,8 @@ public class ElasticSearchHealthIndicatorTest {
     @Autowired
     ElasticSearchHealthIndicator healthIndicator;
 
-    @Test @Ignore("teste instável")
+    @Test
+    @Ignore("teste instável")
     public void indicaStatusDoCluster() throws Exception {
         assertThat(healthIndicator.health().getStatus().getCode(), is("UP"));
     }

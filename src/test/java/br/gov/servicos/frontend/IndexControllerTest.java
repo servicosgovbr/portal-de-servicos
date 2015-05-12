@@ -84,10 +84,10 @@ public class IndexControllerTest {
     public void devePedirUrlsMaisAcessadasParaOPiwik() throws Exception {
         doReturn(Collections
                 .singletonList(
-                    new PiwikPage()
-                        .withUrl("/servico/servico-mais-acessado")
-                        .withVisitors(3L)
-                        .withUniqueVisitors(1L)))
+                        new PiwikPage()
+                                .withUrl("/servico/servico-mais-acessado")
+                                .withVisitors(3L)
+                                .withUniqueVisitors(1L)))
                 .when(piwikClient)
                 .getPageUrls(anyString(), anyString());
 

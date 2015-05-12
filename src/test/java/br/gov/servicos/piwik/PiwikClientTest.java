@@ -20,12 +20,11 @@ import static org.springframework.http.HttpStatus.OK;
 @RunWith(MockitoJUnitRunner.class)
 public class PiwikClientTest {
 
+    public static final String PERIOD = "day";
+    public static final String DATE = "04-04-2015";
     static final int SITE = 2;
     static final String AUTH_TOKEN = "authToken";
     static final String PIWIK_URL = "http://piwik";
-    public static final String PERIOD = "day";
-    public static final String DATE = "04-04-2015";
-
     PiwikClient piwikClient;
 
     @Mock(answer = RETURNS_SMART_NULLS)
