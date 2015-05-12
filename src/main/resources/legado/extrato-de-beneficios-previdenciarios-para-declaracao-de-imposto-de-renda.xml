@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Extrato de Benefícios Previdenciários para Declaração de Imposto de Renda</titulo>
-    <descricao>Permite a emissão do extrato de benefício previdenciário para fins de Declaração de Imposto de Renda de
-        Pessoa Física.
-    </descricao>
+    <descricao><![CDATA[Permite a emissão do extrato de benefício previdenciário para fins de Declaração de Imposto de Renda de Pessoa Física.]]></descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>
