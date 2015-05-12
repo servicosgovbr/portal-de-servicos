@@ -52,12 +52,14 @@ public class ImportadorConteudo {
 
     private Conteudo paraConteudo(LinhaDaVida linhaDaVida) {
         return new Conteudo()
+                .withId(linhaDaVida.getId())
                 .withTitulo(linhaDaVida.getTitulo())
                 .withConteudo(conteudo(format("/conteudo/linhas-da-vida/%s.md", linhaDaVida.getId())));
     }
 
     private Conteudo paraConteudo(Orgao orgao) {
         return new Conteudo()
+                .withId(orgao.getId())
                 .withTitulo(orgao.getNome())
                 .withConteudo(conteudo(format("/conteudo/orgaos/%s.md", orgao.getId())));
     }

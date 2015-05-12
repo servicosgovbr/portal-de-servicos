@@ -49,11 +49,11 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     public Servico apply(ServicoType legado) {
         return new Servico()
                 .withId(slugify.slugify(legado.getTitulo()))
-                .withTitulo(legado.getTitulo())
-                .withDescricao(legado.getDescricao())
+                .withTitulo(legado.getTitulo().trim())
+                .withDescricao(legado.getDescricao().trim())
                 .withUrl(url(legado))
                 .withUrlAgendamento(urlAgendamento(legado))
-                .withTaxa(legado.getTaxa())
+                .withTaxa(legado.getTaxa().trim())
                 .withPrestador(orgaoPrestador(legado))
                 .withResponsavel(orgaoResponsavel(legado))
                 .withAreasDeInteresse(areasDeInteresse(legado))
@@ -66,16 +66,16 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
     @SuppressWarnings("unchecked")
     private List<InformacaoUtil> informacoesUteis(ServicoType legado) {
-        return parser.parseExpression("informacoesUteis?.content?.![" +
-                "new br.gov.servicos.servico.InformacaoUtil(value?.descricao, value?.tipoInformacaoUtil?.titulo, value?.url)" +
-                "]")
+        return parser.parseExpression("informacoesUteis?.content?" +
+                ".?[#this instanceof T(javax.xml.bind.JAXBElement)]" +
+                ".![new br.gov.servicos.servico.InformacaoUtil(value?.descricao.trim(), value?.tipoInformacaoUtil?.titulo.trim(), value?.url.trim())]")
                 .getValue(context(legado), List.class);
     }
 
     @SuppressWarnings("unchecked")
     private List<CanalDePrestacao> canaisDePrestacao(ServicoType legado) {
         return parser.parseExpression("canaisPrestacaoServico?.canalPrestacaoServico?.![" +
-                "new br.gov.servicos.servico.CanalDePrestacao(descricao, tipoCanalPrestacaoServico?.titulo, url)" +
+                "new br.gov.servicos.servico.CanalDePrestacao(descricao.trim(), tipoCanalPrestacaoServico?.titulo.trim(), url.trim())" +
                 "]")
                 .getValue(context(legado), List.class);
     }
@@ -88,17 +88,22 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
         return stream(urls)
                 .filter(url -> url != null && !url.isEmpty())
                 .findFirst()
+                .map(String::trim)
                 .orElse(null);
     }
 
     private String urlAgendamento(ServicoType servicoType) {
         String[] urls = parser.parseExpression(
-                "informacoesUteis?.content?." +
-                        "?[value?.tipoInformacaoUtil?.titulo == 'Agendamento' && !value?.url?.isEmpty()]." +
-                        "![value?.url]")
+                "informacoesUteis?.content?" +
+                        ".?[#this instanceof T(javax.xml.bind.JAXBElement)]" +
+                        ".?[value?.tipoInformacaoUtil?.titulo == 'Agendamento' && !value?.url?.isEmpty()]" +
+                        ".![value?.url]")
                 .getValue(context(servicoType), String[].class);
 
-        return stream(urls).findFirst().orElse(null);
+        return stream(urls)
+                .findFirst()
+                .map(String::trim)
+                .orElse(null);
     }
 
     private Orgao orgaoPrestador(ServicoType servicoType) {
@@ -109,8 +114,8 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
         String telefone = parser.parseExpression("orgaoPrestador?.telefone").getValue(context(servicoType), String.class);
 
-        return config.orgao(titulo)
-                .withTelefone(telefone);
+        return config.orgao(titulo.trim())
+                .withTelefone(telefone.trim());
     }
 
     private Orgao orgaoResponsavel(ServicoType servicoType) {
@@ -118,7 +123,7 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
         if (isNullOrEmpty(titulo)) {
             return null;
         }
-        return config.orgao(titulo);
+        return config.orgao(titulo.trim());
     }
 
     private List<AreaDeInteresse> areasDeInteresse(ServicoType servicoType) {
@@ -127,13 +132,15 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
         return new ArrayList<>(
                 stream(areasDeInteresse)
-                        .map(titulo -> new AreaDeInteresse().withId(slugify.slugify(titulo)).withTitulo(titulo))
+                        .map(titulo -> new AreaDeInteresse().withId(slugify.slugify(titulo)).withTitulo(titulo.trim()))
                         .collect(toSet())
         );
     }
 
     private List<PublicoAlvo> publicoAlvo(ServicoType servicoType) {
-        String[] publicosAlvo = parser.parseExpression("publicosAlvo?.content?.![value?.titulo]?:{}")
+        String[] publicosAlvo = parser.parseExpression("publicosAlvo?.content?" +
+                ".?[#this instanceof T(javax.xml.bind.JAXBElement)]" +
+                ".![value?.titulo]?:{}")
                 .getValue(context(servicoType), String[].class);
 
         return new ArrayList<>(
@@ -144,18 +151,21 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     }
 
     private List<LinhaDaVida> linhasDaVida(ServicoType servicoType) {
-        return linhasDaVida.linhasDaVida(servicoType.getTitulo());
+        return linhasDaVida.linhasDaVida(servicoType.getTitulo().trim());
     }
 
     private List<String> eventosDasLinhasDaVida(ServicoType servicoType) {
         String[][][] eventosLinhasDaVida = parser.parseExpression(
-                "publicosAlvo?.content?.![value?.linhasDaViva?.linhaDaVida.![eventoslinhaDaVida?.eventolinhaDaVida?.![titulo]]]?:{}")
+                "publicosAlvo?.content?" +
+                        ".?[#this instanceof T(javax.xml.bind.JAXBElement)]" +
+                        ".![value?.linhasDaViva?.linhaDaVida.![eventoslinhaDaVida?.eventolinhaDaVida?.![titulo]]]?:{}")
                 .getValue(context(servicoType), String[][][].class);
 
         return new ArrayList<>(
                 stream(eventosLinhasDaVida)
                         .flatMap(Arrays::stream)
                         .flatMap(Arrays::stream)
+                        .map(String::trim)
                         .collect(toSet())
         );
     }

@@ -16,6 +16,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @AllArgsConstructor(access = PRIVATE)
 @Document(indexName = GDS_IMPORTADOR, type = "conteudo")
 public class Conteudo {
+
     @Id
     String id;
 
