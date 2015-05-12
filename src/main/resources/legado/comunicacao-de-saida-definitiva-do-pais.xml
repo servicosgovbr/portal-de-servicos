@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Comunicação de Saída Definitiva do País</titulo>
-    <descricao>Apresentar a Comunicação de Saída Definitiva do País, o contribuinte que se retirar do Brasil em caráter
-        definitivo ou passar à condição de não residente no Brasil, quando houver saído do território nacional em
-        caráter temporário.
+    <descricao>
+        <![CDATA[Apresentar a Comunicação de Saída Definitiva do País, o contribuinte que se retirar do Brasil em caráter definitivo ou passar à condição de não residente no Brasil, quando houver saído do território nacional em caráter temporário.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

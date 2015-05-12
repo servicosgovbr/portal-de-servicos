@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Confirmação Autenticidade de Certidão Emitida até 8/2/2000 (Certidão Contribuições Previdenciárias /
-        Certidões e Situação Fiscal)
+    <titulo>
+        <![CDATA[Confirmação Autenticidade de Certidão Emitida até 8/2/2000 (Certidão Contribuições Previdenciárias / Certidões e Situação Fiscal)]]>
     </titulo>
-    <descricao>Consultar a autenticidade de certidão positiva de débitos com efeitos de negativa- CPD-EN, emitida até
-        08/02/2000.
+    <descricao>
+        <![CDATA[Consultar a autenticidade de certidão positiva de débitos com efeitos de negativa- CPD-EN, emitida até 08/02/2000.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

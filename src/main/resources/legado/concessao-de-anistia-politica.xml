@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Concessão de Anistia Política</titulo>
-    <descricao>Análise, julgamento e decisão final nos requerimentos de Anistia Política, com a consequente emissão de
-        Portaria Ministerial.
+    <descricao>
+        <![CDATA[Análise, julgamento e decisão final nos requerimentos de Anistia Política, com a consequente emissão de Portaria Ministerial.
 
-        Os processos de anistia são recepcionados pela Comissão de Anistia, do Ministério da Justiça - MJ, para que
-        sejam adotados os procedimentos estabelecidos na Portaria nº 2.523/2008/MJ.
+Os processos de anistia são recepcionados pela Comissão de Anistia, do Ministério da Justiça - MJ, para que sejam adotados os procedimentos estabelecidos na Portaria nº 2.523/2008/MJ.
 
-        A Comissão de Anistia analisa os pedidos de indenização formulados pelas pessoas que foram impedidas de exercer
-        atividades econômicas por motivação exclusivamente política desde 18 de setembro de 1946 até cinco de outubro de
-        1988.
+A Comissão de Anistia analisa os pedidos de indenização formulados pelas pessoas que foram impedidas de exercer atividades econômicas por motivação exclusivamente política desde 18 de setembro de 1946 até cinco de outubro de 1988.
 
-        A Comissão da Anistia tem vínculo direto ao Gabinete do Ministro da Justiça e todos os requerimentos por ela
-        apreciados são submetidos à decisão final do Ministro da Justiça.
+A Comissão da Anistia tem vínculo direto ao Gabinete do Ministro da Justiça e todos os requerimentos por ela apreciados são submetidos à decisão final do Ministro da Justiça.
 
-        A anistia está prevista no art. 8º do Ato das Disposições Transitórias da Constituição Federal de 1988, o qual é
-        regulamentado pela Lei nº 10.559, de 13 de novembro de 2002. A reparação econômica, segundo a referida Lei,
-        poderá ser concedida em prestação única correspondente a 30 salários mínimos por ano de perseguição política até
-        o limite de 100 mil reais, ou prestação mensal que corresponderá ao posto, cargo, graduação ou emprego que o
-        anistiando ocuparia se na ativa estivesse, observado o limite do teto da remuneração do servidor público
-        federal.
+A anistia está prevista no art. 8º do Ato das Disposições Transitórias da Constituição Federal de 1988, o qual é regulamentado pela Lei nº 10.559, de 13 de novembro de 2002. A reparação econômica, segundo a referida Lei, poderá ser concedida em prestação única correspondente a 30 salários mínimos por ano de perseguição política até o limite de 100 mil reais, ou prestação mensal que corresponderá ao posto, cargo, graduação ou emprego que o anistiando ocuparia se na ativa estivesse, observado o limite do teto da remuneração do servidor público federal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Comunicação para Compensação de Ofício</titulo>
-    <descricao>Consultar e imprimir segunda via da comunicação de ofício, encaminhada anteriormente para o domicilio do
-        contribuinte ou sua caixa postal no portal e-CAC da página da Receita Federal. Os contribuintes optantes pelo
-        Domicílio Tributário Eletrônico – DTE poderão também autorizar ou recusar a compensação.
+    <descricao>
+        <![CDATA[Consultar e imprimir segunda via da comunicação de ofício, encaminhada anteriormente para o domicilio do contribuinte ou sua caixa postal no portal e-CAC da página da Receita Federal. Os contribuintes optantes pelo Domicílio Tributário Eletrônico – DTE poderão também autorizar ou recusar a compensação.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

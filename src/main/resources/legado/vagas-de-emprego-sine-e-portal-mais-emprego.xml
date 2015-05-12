@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Vagas de Emprego – SINE e Portal Mais Emprego</titulo>
-    <descricao>Essa atividade objetiva (re)colocar o trabalhador no mercado de trabalho, ou seja, auxiliar o trabalhador
-        na busca por uma oportunidade (vaga) de emprego e, por outro lado, auxiliar os empregadores a encontrarem um
-        trabalhador com perfil adequado para a vaga de emprego disponível. Essa atividade é realizada pelo Ministério do
-        Trabalho e Emprego por meio do Sistema Nacional de Emprego – SINE, o qual disponibiliza o serviço de
-        intermediação de mão de obra.
+    <descricao>
+        <![CDATA[Essa atividade objetiva (re)colocar o trabalhador no mercado de trabalho, ou seja, auxiliar o trabalhador na busca por uma oportunidade (vaga) de emprego e, por outro lado, auxiliar os empregadores a encontrarem um trabalhador com perfil adequado para a vaga de emprego disponível. Essa atividade é realizada pelo Ministério do Trabalho e Emprego por meio do Sistema Nacional de Emprego – SINE, o qual disponibiliza o serviço de intermediação de mão de obra.
 
-        Por meio do Portal MTE Mais Emprego, o trabalhador pode verificar a existência de vagas e se candidatar; para
-        concluir a ação, deverá ir ao posto SINE com os documentos necessários. Neste mesmo Portal, o empregador poderá
-        disponibilizar vagas de emprego.
+Por meio do Portal MTE Mais Emprego, o trabalhador pode verificar a existência de vagas e se candidatar; para concluir a ação, deverá ir ao posto SINE com os documentos necessários. Neste mesmo Portal, o empregador poderá disponibilizar vagas de emprego.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

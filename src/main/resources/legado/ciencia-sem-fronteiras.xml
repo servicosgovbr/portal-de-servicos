@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Ciência sem Fronteiras</titulo>
-    <descricao>O programa Ciência sem Fronteiras promove a consolidação, a expansão e a internacionalização da ciência e
-        tecnologia, da inovação e da competitividade brasileiras por meio do intercâmbio e da mobilidade internacionais.
-        É implementado em parceria pelos ministérios da Ciência, Tecnologia e Inovação e da Educação.
-        Com a meta de oferecer 101 mil bolsas de estudos no exterior até 2014, o Ciência sem Fronteiras mantém
-        intercâmbio com 35 países. A oferta de bolsas prevê as modalidades graduação-sanduíche, educação profissional e
-        tecnológica e pós-graduação — doutorado-sanduíche, doutorado pleno e pós-doutorado. Pelo programa, estudantes de
-        graduação e de pós-graduação podem fazer estágio no exterior para manter contato com sistemas educacionais
-        competitivos em relação à tecnologia e inovação. Além disso, o Ciência sem Fronteiras tenta atrair pesquisadores
-        do exterior que queiram se fixar, por tempo determinado, no Brasil ou estabelecer parcerias com os pesquisadores
-        brasileiros nas áreas prioritárias definidas no programa, bem como criar oportunidade para que pesquisadores de
-        empresas recebam treinamento especializado no exterior.
+    <descricao>
+        <![CDATA[O programa Ciência sem Fronteiras promove a consolidação, a expansão e a internacionalização da ciência e tecnologia, da inovação e da competitividade brasileiras por meio do intercâmbio e da mobilidade internacionais. É implementado em parceria pelos ministérios da Ciência, Tecnologia e Inovação e da Educação. Com a meta de oferecer 101 mil bolsas de estudos no exterior até 2014, o Ciência sem Fronteiras mantém intercâmbio com 35 países. A oferta de bolsas prevê as modalidades graduação-sanduíche, educação profissional e tecnológica e pós-graduação — doutorado-sanduíche, doutorado pleno e pós-doutorado. Pelo programa, estudantes de graduação e de pós-graduação podem fazer estágio no exterior para manter contato com sistemas educacionais competitivos em relação à tecnologia e inovação. Além disso, o Ciência sem Fronteiras tenta atrair pesquisadores do exterior que queiram se fixar, por tempo determinado, no Brasil ou estabelecer parcerias com os pesquisadores brasileiros nas áreas prioritárias definidas no programa, bem como criar oportunidade para que pesquisadores de empresas recebam treinamento especializado no exterior.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

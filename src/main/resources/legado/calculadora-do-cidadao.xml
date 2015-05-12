@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Calculadora do Cidadão</titulo>
-    <descricao>Ferramenta on-line que ajuda o cidadão a calcular:
-        O custo de um financiamento com prestações fixas;
-        O valor, no futuro, do dinheiro investido hoje;
-        Quanto o cidadão terá, no futuro, se economizar, todo mês, uma parcela da renda;
-        Quanto vale hoje, corrigido pela inflação, o dinheiro utilizado no passado.
+    <descricao>
+        <![CDATA[Ferramenta on-line que ajuda o cidadão a calcular:
+O custo de um financiamento com prestações fixas;
+O valor, no futuro, do dinheiro investido hoje;
+Quanto o cidadão terá, no futuro, se economizar, todo mês, uma parcela da renda;
+Quanto vale hoje, corrigido pela inflação, o dinheiro utilizado no passado.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

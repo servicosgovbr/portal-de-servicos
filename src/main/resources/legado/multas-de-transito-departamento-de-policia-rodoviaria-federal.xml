@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Multas de Trânsito - Departamento de Polícia Rodoviária Federal</titulo>
-    <descricao>Emissão de "Nada Consta": Consiste no fornecimento de certidão de “nada consta” de multas do Departamento
-        de Polícia Rodoviária Federal referentes a placas de veículos, CPFs ou CNPJs.
+    <descricao>
+        <![CDATA[Emissão de "Nada Consta": Consiste no fornecimento de certidão de “nada consta” de multas do Departamento de Polícia Rodoviária Federal referentes a placas de veículos, CPFs ou CNPJs.
 
-        Defesa de Autuação: Consiste no recebimento e registro de defesa prévia da notiﬁcação da autuação feita pela
-        Polícia Rodoviária Federal, em decorrência do cometimento de infração de trânsito. Quem pode solicitar: pessoa
-        física ou jurídica proprietária do veículo autuado pela Polícia Rodoviária Federal, o condutor, o embarcador e o
-        transportador responsáveis pela infração.
+Defesa de Autuação: Consiste no recebimento e registro de defesa prévia da notiﬁcação da autuação feita pela Polícia Rodoviária Federal, em decorrência do cometimento de infração de trânsito. Quem pode solicitar: pessoa física ou jurídica proprietária do veículo autuado pela Polícia Rodoviária Federal, o condutor, o embarcador e o transportador responsáveis pela infração.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

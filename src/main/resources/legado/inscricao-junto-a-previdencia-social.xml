@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Inscrição junto à Previdência Social</titulo>
-    <descricao>Permite o cadastro na Previdência Social da inscrição do Contribuinte Individual, Facultativo, Empregado
-        Doméstico e Segurado Especial.
+    <descricao>
+        <![CDATA[Permite o cadastro na Previdência Social da inscrição do Contribuinte Individual, Facultativo, Empregado Doméstico e Segurado Especial.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

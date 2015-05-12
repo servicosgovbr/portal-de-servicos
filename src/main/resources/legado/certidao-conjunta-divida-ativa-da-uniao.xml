@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Certidão Conjunta – Dívida Ativa da União</titulo>
-    <descricao>Apresentar requerimento de Certidão Conjunta - Certificação quanto à Dívida Ativa da União, e demais
-        documentos, visando a liberação da certidão, uma vez que existem pendências no âmbito da PGFN que impedem a
-        emissão desta certidão pela internet.
+    <descricao><![CDATA[Apresentar requerimento de Certidão Conjunta - Certificação quanto à Dívida Ativa da União, e demais documentos, visando a liberação da certidão, uma vez que existem pendências no âmbito da PGFN que impedem a emissão desta certidão pela internet.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

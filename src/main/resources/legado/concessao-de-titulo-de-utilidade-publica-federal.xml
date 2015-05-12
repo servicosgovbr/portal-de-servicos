@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Concessão de Título de Utilidade Pública Federal</titulo>
-    <descricao>Receber, protocolar, analisar e emitir parecer opinativo acerca dos pedidos de titulação como Utilidade
-        Pública Federal, instituída pela Lei n° 91/35 e regulamentada pelo Decreto nº 50.517/61.
+    <descricao>
+        <![CDATA[Receber, protocolar, analisar e emitir parecer opinativo acerca dos pedidos de titulação como Utilidade Pública Federal, instituída pela Lei n° 91/35 e regulamentada pelo Decreto nº 50.517/61.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

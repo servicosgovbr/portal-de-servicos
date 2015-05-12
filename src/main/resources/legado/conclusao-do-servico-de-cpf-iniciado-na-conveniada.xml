@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Conclusão do Serviço de CPF Iniciado na Conveniada</titulo>
-    <descricao>Concluir pedido no CPF cuja solicitação foi iniciada em uma conveniada e gerou um protocolo de
-        atendimento não conclusivo.
+    <descricao>
+        <![CDATA[Concluir pedido no CPF cuja solicitação foi iniciada em uma conveniada e gerou um protocolo de atendimento não conclusivo.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

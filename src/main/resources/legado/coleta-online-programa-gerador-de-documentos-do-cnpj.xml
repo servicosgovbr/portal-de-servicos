@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Coleta Online – Programa Gerador de Documentos do CNPJ</titulo>
-    <descricao>Versão para internet do Programa Gerador de Documentos do CNPJ para preenchimento de solicitações
-        (inscrição, alteração e cancelamento).
+    <descricao>
+        <![CDATA[Versão para internet do Programa Gerador de Documentos do CNPJ para preenchimento de solicitações (inscrição, alteração e cancelamento).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

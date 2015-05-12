@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Simulação da contagem de tempo de contribuição previdenciária</titulo>
-    <descricao>Permite efetuar a simulação da contagem de tempo de contribuição previdenciária, onde deverão ser
-        inseridos os períodos de vínculos e/ou contribuições junto à Previdência Social.
+    <descricao>
+        <![CDATA[Permite efetuar a simulação da contagem de tempo de contribuição previdenciária, onde deverão ser inseridos os períodos de vínculos e/ou contribuições junto à Previdência Social.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

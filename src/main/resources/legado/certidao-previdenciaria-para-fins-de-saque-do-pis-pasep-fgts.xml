@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Certidão Previdenciária para fins de saque do PIS/PASEP/FGTS</titulo>
-    <descricao>Permite ao beneficiário da Previdência Social a emissão da Certidão para fins de saque do PIS/PASEP/FGTS.
-
-
+    <descricao>
+        <![CDATA[Permite ao beneficiário da Previdência Social a emissão da Certidão para fins de saque do PIS/PASEP/FGTS.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

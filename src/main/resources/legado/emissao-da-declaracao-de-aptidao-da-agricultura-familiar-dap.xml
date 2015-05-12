@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão da Declaração de Aptidão da Agricultura Familiar - DAP</titulo>
-    <descricao>A DAP é utilizada como instrumento de identificação do agricultor familiar para acessar políticas
-        públicas, como o Pronaf. Para obtê-la, o agricultor familiar deve dirigir-se a um órgão ou entidade credenciado
-        pelo MDA, de posse do CPF e de dados acerca de seu estabelecimento de produção (área, número de pessoas
-        residentes, composição da força de trabalho e da renda, endereço completo).
+    <descricao>
+        <![CDATA[A DAP é utilizada como instrumento de identificação do agricultor familiar para acessar políticas públicas, como o Pronaf. Para obtê-la, o agricultor familiar deve dirigir-se a um órgão ou entidade credenciado pelo MDA, de posse do CPF e de dados acerca de seu estabelecimento de produção (área, número de pessoas residentes, composição da força de trabalho e da renda, endereço completo).
 
-        Para realizar o credenciamento da DAP:
+Para realizar o credenciamento da DAP:
 
-        Os órgãos e entidades autorizados a atuarem como emissores de DAP devem providenciar seu cadastramento. Devem
-        atender aos seguintes pré-requisitos:
+Os órgãos e entidades autorizados a atuarem como emissores de DAP devem providenciar seu cadastramento. Devem atender aos seguintes pré-requisitos:
 
-        • ter personalidade jurídica,
-        • ser representante legal dos agricultores familiares ou prestar serviços de assistência técnica e/ou extensão
-        rural,
-        • ter experiência mínima de um ano, devidamente comprovada, no exercício de sua atribuição ou objetivo social
-        junto aos agricultores familiares.
-        Devem também ser cadastradas e obedecer a seguinte estrutura hierárquica:
+• ter personalidade jurídica,
+• ser representante legal dos agricultores familiares ou prestar serviços de assistência técnica e/ou extensão rural,
+• ter experiência mínima de um ano, devidamente comprovada, no exercício de sua atribuição ou objetivo social junto aos agricultores familiares.
 
-        • Unidade Central de nível nacional ou Unidade Agregadora
-        • Unidades Intermediárias de nível estadual ou Unidades Sub-agregadoras
-        • Unidades Locais de nível municipal ou Unidades Emissoras.
+Devem também ser cadastradas e obedecer a seguinte estrutura hierárquica:
 
+• Unidade Central de nível nacional ou Unidade Agregadora
+• Unidades Intermediárias de nível estadual ou Unidades Sub-agregadoras
+• Unidades Locais de nível municipal ou Unidades Emissoras.
 
-        Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por sua vez, cadastram as Unidades
-        Emissoras a elas vinculadas. Essas últimas cadastram os agentes emissores – pessoas físicas que efetivamente
-        emitirão as DAP.
+Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por sua vez, cadastram as Unidades Emissoras a elas vinculadas. Essas últimas cadastram os agentes emissores – pessoas físicas que efetivamente emitirão as DAP.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

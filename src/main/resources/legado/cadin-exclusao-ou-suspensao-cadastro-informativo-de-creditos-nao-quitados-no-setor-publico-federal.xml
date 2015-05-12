@@ -2,8 +2,8 @@
 <servico>
     <titulo>CADIN - Exclusão ou Suspensão Cadastro Informativo de Créditos Não Quitados no Setor Público Federal
     </titulo>
-    <descricao>Apresentar requerimento de averbação de causa suspensiva/garantia e/ou exclusão do Cadin para a suspensão
-        ou exclusão do Cadin - Cadastro Informativo de Créditos Não Quitados no Setor Público Federal.
+    <descricao>
+        <![CDATA[Apresentar requerimento de averbação de causa suspensiva/garantia e/ou exclusão do Cadin para a suspensão ou exclusão do Cadin - Cadastro Informativo de Créditos Não Quitados no Setor Público Federal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

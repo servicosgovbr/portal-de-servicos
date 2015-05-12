@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastro e Alteração de Senha na Previdência Social - CADSENHA</titulo>
-    <descricao>Serviço destinado aos segurados que desejam obter e atualizar senha para acesso às suas informações
-        pessoais ou de benefício por meio do portal da Previdência Social.
+    <descricao>
+        <![CDATA[Serviço destinado aos segurados que desejam obter e atualizar senha para acesso às suas informações pessoais ou de benefício por meio do portal da Previdência Social.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

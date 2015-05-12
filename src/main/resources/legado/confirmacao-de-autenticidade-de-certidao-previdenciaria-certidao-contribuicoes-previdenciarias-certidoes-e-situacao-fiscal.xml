@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Confirmação de Autenticidade de Certidão Previdenciária (Certidão Contribuições Previdenciárias / Certidões
-        e Situação Fiscal)
+    <titulo>
+        <![CDATA[Confirmação de Autenticidade de Certidão Previdenciária (Certidão Contribuições Previdenciárias / Certidões e Situação Fiscal)]]>
     </titulo>
     <descricao>Consultar a autenticidade de certidão previdenciária emitida.</descricao>
     <requisitos/>

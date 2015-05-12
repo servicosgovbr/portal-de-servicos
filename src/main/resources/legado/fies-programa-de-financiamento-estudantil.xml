@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Fies — Programa de Financiamento Estudantil</titulo>
-    <descricao>O Fundo de Financiamento Estudantil (Fies) custeia a graduação de estudantes matriculados em instituições
-        não gratuitas de educação superior.
+    <descricao>
+        <![CDATA[O Fundo de Financiamento Estudantil (Fies) custeia a graduação de estudantes matriculados em instituições não gratuitas de educação superior.
 
-        Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva nos processos de aferição do
-        Ministério da Educação. São financiados de 50% a 100% dos encargos educacionais, de acordo com a renda familiar
-        mensal bruta do estudante — no máximo, 20 salários mínimos — e do comprometimento dessa renda com os custos da
-        mensalidade.
+Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva nos processos de aferição do Ministério da Educação. São financiados de 50% a 100% dos encargos educacionais, de acordo com a renda familiar mensal bruta do estudante — no máximo, 20 salários mínimos — e do comprometimento dessa renda com os custos da mensalidade.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

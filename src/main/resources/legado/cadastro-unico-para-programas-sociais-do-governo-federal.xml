@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastro Único para Programas Sociais do Governo Federal</titulo>
-    <descricao>O Cadastro Único é um banco de dados que foi criado para o Governo Federal saber melhor quem são e como
-        vivem as famílias brasileiras mais pobres. É por meio dele que o governo consegue entender quais são as
-        principais dificuldades que a sua família enfrenta e como pode ajudar a melhorar as suas condições de vida. No
-        Cadastro Único temos dados sobre renda,tipo de moradia,escolaridade,idade,e outros. O cadastro deve ser
-        atualizado a cada dois anos ou sempre que houver uma mudança na situação da sua família. Podem ser cadastradas
-        as famílias de baixa renda que ganham até meio salário mínimo mensal por pessoa; ou que ganham até 3 salários
-        mínimos de renda total por mês.
-        Para sua família ser beneficiada por programas como o Bolsa Família, a Tarifa Social de Energia Elétrica e o
-        Telefone Popular, entre outros, ela deve estar inscrita no Cadastro Único. Mas é importante saber que estar no
-        Cadastro Único não significa a entrada automática nestes programas, pois cada um deles tem suas regras.
+    <descricao>
+        <![CDATA[O Cadastro Único é um banco de dados que foi criado para o Governo Federal saber melhor quem são e como vivem as famílias brasileiras mais pobres. É por meio dele que o governo consegue entender quais são as principais dificuldades que a sua família enfrenta e como pode ajudar a melhorar as suas condições de vida. No Cadastro Único temos dados sobre renda,tipo de moradia,escolaridade,idade,e outros. O cadastro deve ser atualizado a cada dois anos ou sempre que houver uma mudança na situação da sua família. Podem ser cadastradas as famílias de baixa renda que ganham até meio salário mínimo mensal por pessoa; ou que ganham até 3 salários mínimos de renda total por mês.
+
+Para sua família ser beneficiada por programas como o Bolsa Família, a Tarifa Social de Energia Elétrica e o Telefone Popular, entre outros, ela deve estar inscrita no Cadastro Único. Mas é importante saber que estar no Cadastro Único não significa a entrada automática nestes programas, pois cada um deles tem suas regras.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

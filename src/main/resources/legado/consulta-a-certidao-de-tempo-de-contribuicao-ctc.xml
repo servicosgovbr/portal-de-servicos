@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta a Certidão de Tempo de Contribuição - CTC</titulo>
-    <descricao>Permite acompanhar o andamento da a Certidão de Tempo de Contribuição - CTC requerida pelos funcionários
-        públicos que necessitam aproveitar o tempo de contribuição do Regime Geral de Previdência Social no Regime
-        Próprio ao qual está vinculado.
+    <descricao>
+        <![CDATA[Permite acompanhar o andamento da a Certidão de Tempo de Contribuição - CTC requerida pelos funcionários públicos que necessitam aproveitar o tempo de contribuição do Regime Geral de Previdência Social no Regime Próprio ao qual está vinculado.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

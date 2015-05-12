@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta à Situação dos Voos</titulo>
-    <descricao>O Infraero Voos Online é uma ferramenta que consolida informações dos principais aeroportos brasileiros a
-        respeito da situação atual de seu voo. Ela possibilita o rastreio de status dos voos em tempo quase real.
+    <descricao>
+        <![CDATA[O Infraero Voos Online é uma ferramenta que consolida informações dos principais aeroportos brasileiros a respeito da situação atual de seu voo. Ela possibilita o rastreio de status dos voos em tempo quase real.
 
-        Além de consultar os horários de partidas e chegadas de voos, você também pode saber qual a distância de onde
-        você está até o aeroporto para onde precisa ir e a previsão do tempo na cidade onde fica o aeroporto.
+Além de consultar os horários de partidas e chegadas de voos, você também pode saber qual a distância de onde você está até o aeroporto para onde precisa ir e a previsão do tempo na cidade onde fica o aeroporto.
 
-        Consulte, antes de sair de casa, para descobrir se seu voo está no horário. Acesse a partir do website dedicado
-        ou por meio de aplicativos mobile (Android e Iphone/Ipad).
+Consulte, antes de sair de casa, para descobrir se seu voo está no horário. Acesse a partir do website dedicado ou por meio de aplicativos mobile (Android e Iphone/Ipad).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

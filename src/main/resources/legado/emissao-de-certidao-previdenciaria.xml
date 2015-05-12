@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão de Certidão Previdenciária</titulo>
-    <descricao>Solicitar a emissão de certidão de contribuições previdenciárias. A certidão para fins de averbação de
-        imóvel é emitida somente nas unidades de atendimento presencial. A Declaração de Regularidade de Situação do
-        Contribuinte Individual – DRS-CI deve ser solicitada no INSS.
+    <descricao>
+        <![CDATA[Solicitar a emissão de certidão de contribuições previdenciárias. A certidão para fins de averbação de imóvel é emitida somente nas unidades de atendimento presencial. A Declaração de Regularidade de Situação do Contribuinte Individual – DRS-CI deve ser solicitada no INSS.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

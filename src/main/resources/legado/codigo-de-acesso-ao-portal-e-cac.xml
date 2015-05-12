@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Código de Acesso ao Portal e-CAC</titulo>
-    <descricao>Gerar código de acesso para utilização de alguns serviços dentro do portal e-CAC. O código somente poderá
-        ser gerado para pessoas físicas ou pessoas jurídicas optantes pelo Simples Nacional.
+    <descricao>
+        <![CDATA[Gerar código de acesso para utilização de alguns serviços dentro do portal e-CAC. O código somente poderá ser gerado para pessoas físicas ou pessoas jurídicas optantes pelo Simples Nacional.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

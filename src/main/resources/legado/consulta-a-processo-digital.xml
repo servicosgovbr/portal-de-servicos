@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta a Processo Digital</titulo>
-    <descricao>Consultar processos administrativos criados em meio digital na Receita Federal (Receita Federal), no
-        Conselho Administrativo de Recursos Fiscais (CARF) e na Procuradoria-Geral da Fazenda Nacional (PGFN). O inteiro
-        teor dos processos digitalizados só podem ser acessados pelo contribuinte que tiver preenchido o Termo de Opção
-        por Domicílio Tributário Eletrônico, utilizando certificado digital.
+    <descricao>
+        <![CDATA[Consultar processos administrativos criados em meio digital na Receita Federal (Receita Federal), no Conselho Administrativo de Recursos Fiscais (CARF) e na Procuradoria-Geral da Fazenda Nacional (PGFN). O inteiro teor dos processos digitalizados só podem ser acessados pelo contribuinte que tiver preenchido o Termo de Opção por Domicílio Tributário Eletrônico, utilizando certificado digital.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

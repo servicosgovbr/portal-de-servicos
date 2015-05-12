@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastro de Pessoas de Contato – Contribuinte Diferenciado</titulo>
-    <descricao>Cadastrar responsáveis pela prestação das informações que forem solicitadas pela Receita Federal, no
-        âmbito do referido acompanhamento. Esta opção é restrita às pessoas jurídicas sujeitas ao acompanhamento
-        econômico-tributário diferenciado.
+    <descricao>
+        <![CDATA[Cadastrar responsáveis pela prestação das informações que forem solicitadas pela Receita Federal, no âmbito do referido acompanhamento. Esta opção é restrita às pessoas jurídicas sujeitas ao acompanhamento econômico-tributário diferenciado.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

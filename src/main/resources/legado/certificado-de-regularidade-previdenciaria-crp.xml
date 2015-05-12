@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Certificado de Regularidade Previdenciária - CRP</titulo>
-    <descricao>Serviços destinados aos Entes Federativos para emissão da Certificado de Regularidade Previdenciária -
-        CRP. Tem como objetivo conferir o cumprimento dos critérios e exigências estabelecidos na Lei nº 9.717/1998,
-        pelos regimes próprios de previdência social dos Estados, do Distrito Federal e Municípios.
+    <descricao>
+        <![CDATA[Serviços destinados aos Entes Federativos para emissão da Certificado de Regularidade Previdenciária - CRP. Tem como objetivo conferir o cumprimento dos critérios e exigências estabelecidos na Lei nº 9.717/1998, pelos regimes próprios de previdência social dos Estados, do Distrito Federal e Municípios.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

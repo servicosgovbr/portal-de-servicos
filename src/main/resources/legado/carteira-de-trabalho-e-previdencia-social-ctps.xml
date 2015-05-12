@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Carteira de Trabalho e Previdência Social - CTPS</titulo>
-    <descricao>A Carteira de Trabalho e Previdência Social - CTPS é documento obrigatório para qualquer cidadão que
-        queira prestar serviços no país. Ela garante acesso a direitos trabalhistas, como seguro-desemprego, benefícios
-        da Previdência Social e do Fundo de Garantia do Tempo de Serviço - FGTS.
+    <descricao>
+        <![CDATA[A Carteira de Trabalho e Previdência Social - CTPS é documento obrigatório para qualquer cidadão que queira prestar serviços no país. Ela garante acesso a direitos trabalhistas, como seguro-desemprego, benefícios da Previdência Social e do Fundo de Garantia do Tempo de Serviço - FGTS.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

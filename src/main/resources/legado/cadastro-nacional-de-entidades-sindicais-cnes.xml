@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cadastro Nacional de Entidades Sindicais – CNES</titulo>
-    <descricao>Possibilita elaborar pedido de registro ou de alteração estatutária de entidade sindical e consultar
-        entidades sindicais registradas, conforme Portaria/MTE n.º 326/2013.
+    <descricao>
+        <![CDATA[Possibilita elaborar pedido de registro ou de alteração estatutária de entidade sindical e consultar entidades sindicais registradas, conforme Portaria/MTE n.º 326/2013.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Carta de Concessão e Memória de Cálculo de Benefício Previdenciário</titulo>
-    <descricao>Permite que o cidadão solicite pela internet a Carta de Concessão, que traz a Memória de Cálculo do
-        Benefício. Qualquer beneficiário da previdência pode pedir a certidão, junto ao INSS.
+    <descricao>
+        <![CDATA[Permite que o cidadão solicite pela internet a Carta de Concessão, que traz a Memória de Cálculo do Benefício. Qualquer beneficiário da previdência pode pedir a certidão, junto ao INSS.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

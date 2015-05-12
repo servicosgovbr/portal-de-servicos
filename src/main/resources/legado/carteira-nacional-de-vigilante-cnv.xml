@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Carteira Nacional De Vigilante (CNV)</titulo>
-    <descricao>Documento de identidade funcional do vigilante, de uso obrigatório em serviço, com validade de 5 (cinco)
-        anos.
+    <descricao>
+        <![CDATA[Documento de identidade funcional do vigilante, de uso obrigatório em serviço, com validade de 5 (cinco) anos.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

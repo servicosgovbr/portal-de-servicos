@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Cancelamento do Pedido no CNPJ</titulo>
-    <descricao>Cancelar um pedido perante o CNPJ ( este cancelamento é possível até o instante da recepção da
-        solicitação pela Receita Federal ou convenente).
+    <descricao>
+        <![CDATA[Cancelar um pedido perante o CNPJ ( este cancelamento é possível até o instante da recepção da solicitação pela Receita Federal ou convenente).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

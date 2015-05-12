@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Comunicação de Alienação ao Cafir</titulo>
-    <descricao>Solicitar comunicação de alienação de imóvel rural, comunicado através do formulário Diac – Comunicação
-        de Alienação.
+    <descricao>
+        <![CDATA[Solicitar comunicação de alienação de imóvel rural, comunicado através do formulário Diac – Comunicação de Alienação.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

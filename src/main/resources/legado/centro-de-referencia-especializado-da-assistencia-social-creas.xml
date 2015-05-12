@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Centro de Referência Especializado da Assistência Social - CREAS</titulo>
-    <descricao>É no Centro de Referência Especializado de Assistência Social (CREAS) que pessoas e famílias que tiveram
-        direitos ameaçados ou violados por situações como: violência física, psicológica, sexual, trabalho infantil,
-        trabalho escravo, abandono, são atendidas. Alguns CREAS também atendem pessoas em situação de rua e adolescentes
-        que cumprem medidas socioeducativas.
+    <descricao><![CDATA[É no Centro de Referência Especializado de Assistência Social (CREAS) que pessoas e famílias que tiveram direitos ameaçados ou violados por situações como: violência física, psicológica, sexual, trabalho infantil, trabalho escravo, abandono, são atendidas. Alguns CREAS também atendem pessoas em situação de rua e adolescentes que cumprem medidas socioeducativas.
 
-        Além de oferecer proteção e atendimento às pessoas e famílias com direitos violados, o CREAS busca reconstruir
-        as relações familiares e comunitárias, incluir as famílias em serviços públicos, conforme a necessidade,
-        prevenindo e diminuindo as situações de violação de direitos.
+Além de oferecer proteção e atendimento às pessoas e famílias com direitos violados, o CREAS busca reconstruir as relações familiares e comunitárias, incluir as famílias em serviços públicos, conforme a necessidade, prevenindo e diminuindo as situações de violação de direitos.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

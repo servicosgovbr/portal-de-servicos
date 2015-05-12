@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Certificado de Licença de Funcionamento (CLF) - Produtos Químicos</titulo>
-    <descricao>É o documento que certifica que a pessoa jurídica em situação regular, ou pessoa física no caso de
-        produtor rural, está devidamente registrada na Divisão de Controle de Produtos Químicos do Departamento de
-        Polícia Federal.
+    <descricao>
+        <![CDATA[É o documento que certifica que a pessoa jurídica em situação regular, ou pessoa física no caso de produtor rural, está devidamente registrada na Divisão de Controle de Produtos Químicos do Departamento de Polícia Federal.
 
-        Para obtê-lo, baixe o Programa Cadastro (vide "Formulários"), preencha as informações solicitadas de acordo com
-        a Portaria 1.274/2003 (vide "Outros"), gere o arquivo com extensão XML que deverá ser salvo em um disquete ou
-        CD, imprima o requerimento, e entregue-o juntamente com toda a documentação necessária em uma unidade da Polícia
-        Federal (vide "Presencial").
+Para obtê-lo, baixe o Programa Cadastro (vide "Formulários"), preencha as informações solicitadas de acordo com a Portaria 1.274/2003 (vide "Outros"), gere o arquivo com extensão XML que deverá ser salvo em um disquete ou CD, imprima o requerimento, e entregue-o juntamente com toda a documentação necessária em uma unidade da Polícia Federal (vide "Presencial").]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

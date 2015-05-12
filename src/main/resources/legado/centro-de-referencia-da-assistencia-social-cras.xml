@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Centro de Referência da Assistência Social - CRAS</titulo>
-    <descricao>O Centro de Referência de Assistência Social (CRAS) é a porta de entrada do cidadão para o Sistema Único
-        de Assistência Social (SUAS). É pelo CRAS que ele pode ser encaminhado para serviços e programas sociais, de
-        acordo com a sua situação. As equipes do CRAS, formadas por profissionais especializados, como psicólogos e
-        assistentes sociais, oferecem acompanhamento integral para famílias e pessoas de baixa renda. O principal
-        objetivo é prevenir violações de direitos e ajudar as pessoas encontrarem melhores perspectivas de vida.
+    <descricao><![CDATA[O Centro de Referência de Assistência Social (CRAS) é a porta de entrada do cidadão para o Sistema Único de Assistência Social (SUAS). É pelo CRAS que ele pode ser encaminhado para serviços e programas sociais, de acordo com a sua situação. As equipes do CRAS, formadas por profissionais especializados, como psicólogos e assistentes sociais, oferecem acompanhamento integral para famílias e pessoas de baixa renda. O principal objetivo é prevenir violações de direitos e ajudar as pessoas encontrarem melhores perspectivas de vida.
 
-        Em vários municípios, o CRAS é responsável por inserir as famílias no Cadastro Único para Programas Sociais do
-        Governo Federal.
+Em vários municípios, o CRAS é responsável por inserir as famílias no Cadastro Único para Programas Sociais do Governo Federal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

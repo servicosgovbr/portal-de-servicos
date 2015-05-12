@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Centro de Testagem e Acolhimento (CTA) - DST/AIDS</titulo>
-    <descricao>Os Centros de Testagem e Aconselhamento (CTA) são serviços de saúde que realizam ações de diagnóstico e
-        prevenção de doenças sexualmente transmissíveis. Nesses serviços, é possível realizar testes para HIV, sífilis e
-        hepatites B e C gratuitamente. Todos os testes são realizados de acordo com a norma definida pelo Ministério da
-        Saúde e com produtos registrados na Agência Nacional de Vigilância Sanitária (Anvisa) e por ela controlados.
+    <descricao>
+        <![CDATA[Os Centros de Testagem e Aconselhamento (CTA) são serviços de saúde que realizam ações de diagnóstico e prevenção de doenças sexualmente transmissíveis. Nesses serviços, é possível realizar testes para HIV, sífilis e hepatites B e C gratuitamente. Todos os testes são realizados de acordo com a norma definida pelo Ministério da Saúde e com produtos registrados na Agência Nacional de Vigilância Sanitária (Anvisa) e por ela controlados.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
