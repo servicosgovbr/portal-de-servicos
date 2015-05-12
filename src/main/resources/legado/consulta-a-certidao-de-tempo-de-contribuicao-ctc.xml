@@ -1,1 +1,89 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Consulta a Certidão de Tempo de Contribuição - CTC</titulo><descricao>Permite acompanhar o andamento da a Certidão de Tempo de Contribuição - CTC requerida pelos funcionários públicos que necessitam aproveitar o tempo de contribuição do Regime Geral de Previdência Social no Regime Próprio ao qual está vinculado.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Consulta a CTC através do número do protocolo.</descricao><url>http://www010.dataprev.gov.br/CWS/CONTEXTO/CTC/index.html</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Telefone</titulo></tipoInformacaoUtil><descricao>Ligue 135 para obter mais informações.</descricao><url></url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministerio da Previdencia Social - MPS</titulo></orgaoResponsavel><orgaoPrestador><titulo>Ministério da Previdência Social</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Consulta de Processos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Trabalhando</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Benefícios trabalhistas</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Consulta de Processos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Trabalhando</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Benefícios trabalhistas</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Previdência Social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Consulta a Certidão de Tempo de Contribuição - CTC</titulo>
+    <descricao>Permite acompanhar o andamento da a Certidão de Tempo de Contribuição - CTC requerida pelos funcionários
+        públicos que necessitam aproveitar o tempo de contribuição do Regime Geral de Previdência Social no Regime
+        Próprio ao qual está vinculado.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Consulta a CTC através do número do protocolo.</descricao>
+            <url>http://www010.dataprev.gov.br/CWS/CONTEXTO/CTC/index.html</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Telefone</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Ligue 135 para obter mais informações.</descricao>
+            <url></url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministerio da Previdencia Social - MPS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Ministério da Previdência Social</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Consulta de Processos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Trabalhando</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Benefícios trabalhistas</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Consulta de Processos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Trabalhando</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Benefícios trabalhistas</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Previdência Social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

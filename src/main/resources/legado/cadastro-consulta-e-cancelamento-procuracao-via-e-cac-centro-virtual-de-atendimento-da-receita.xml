@@ -1,1 +1,65 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Cadastro, Consulta e Cancelamento – Procuração via e-CAC (centro virtual de atendimento da Receita)</titulo><descricao>Possuidor de certificado digital cadastrar  procuração eletrônica para terceiro, também possuidor de certificado digital, para realização de serviços dentro do Portal e-CAC. Consultar procuração eletrônica por outorgante ou por procurador. Cancelar procuração eletrônica.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Endereço eletrônico do serviço</descricao><url>https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=05020</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis/><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Receita Federal</titulo></orgaoResponsavel><orgaoPrestador><titulo>Receital Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Meu negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Pagar impostos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Meu Negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Pagar impostos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Economia e Finanças</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Cadastro, Consulta e Cancelamento – Procuração via e-CAC (centro virtual de atendimento da Receita)</titulo>
+    <descricao>Possuidor de certificado digital cadastrar procuração eletrônica para terceiro, também possuidor de
+        certificado digital, para realização de serviços dentro do Portal e-CAC. Consultar procuração eletrônica por
+        outorgante ou por procurador. Cancelar procuração eletrônica.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Endereço eletrônico do serviço</descricao>
+            <url>https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=05020</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis/>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Receita Federal</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Receital Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Meu negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Pagar impostos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Meu Negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Pagar impostos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Economia e Finanças</titulo>
+        </area>
+    </areasInteresse>
+</servico>

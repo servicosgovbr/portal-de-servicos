@@ -1,5 +1,264 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Ranking do Valor Efetivo Total - VET - das operações de câmbio</titulo><descricao>Mostra o custo de uma operação de câmbio em reais por moeda estrangeira em cada instituição autorizada a operar câmbio pelo Banco Central, como bancos e corretoras. 
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Ranking do Valor Efetivo Total - VET - das operações de câmbio</titulo>
+    <descricao>Mostra o custo de uma operação de câmbio em reais por moeda estrangeira em cada instituição autorizada a
+        operar câmbio pelo Banco Central, como bancos e corretoras.
 
-Ideal para quem comprar ou vender moeda estrangeira, como dólares ou euros, pois mostra as instituições onde essas transações tendem a ser mais vantajosas para o cidadão. Basta inserir os dados da operação desejada e fazer a simulação.
+        Ideal para quem comprar ou vender moeda estrangeira, como dólares ou euros, pois mostra as instituições onde
+        essas transações tendem a ser mais vantajosas para o cidadão. Basta inserir os dados da operação desejada e
+        fazer a simulação.
 
-O Valor Efetivo Total - VET - engloba a taxa de câmbio, as tarifas e os tributos incidentes sobre a operação.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Página do Ranking do VET</descricao><url>https://www3.bcb.gov.br/rex/vet/index.asp</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis/><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Banco Central do Brasil</titulo></orgaoResponsavel><orgaoPrestador><titulo>Banco Central do Brasil</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Meu negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Administrando seu negócio</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Meu negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Administrando seu negócio</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Meu negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Administrando seu negócio</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Indo para outro país</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Mudança para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Viagem para o exterior</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Problemas legais e outras necessidades no exterior</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Meu negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Administrando seu negócio</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Economia e Finanças</titulo></area></areasInteresse></servico>
+        O Valor Efetivo Total - VET - engloba a taxa de câmbio, as tarifas e os tributos incidentes sobre a operação.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Página do Ranking do VET</descricao>
+            <url>https://www3.bcb.gov.br/rex/vet/index.asp</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis/>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Banco Central do Brasil</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Banco Central do Brasil</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Meu negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Administrando seu negócio</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Meu negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Administrando seu negócio</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Meu negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Administrando seu negócio</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Indo para outro país</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Mudança para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Viagem para o exterior</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Problemas legais e outras necessidades no exterior</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Meu negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Administrando seu negócio</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Economia e Finanças</titulo>
+        </area>
+    </areasInteresse>
+</servico>

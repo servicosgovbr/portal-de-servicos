@@ -1,1 +1,78 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Informações sobre Condições das Rodovias e Estradas Federais</titulo><descricao>Consiste no fornecimento de informações sobre rodovias e estradas sob a circunscrição do Departamento de Polícia Rodoviária Federal, a exemplo de interdições e bloqueios, condições das vias, localizações de Postos da Polícia Rodoviária Federal, dentre outras.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Telefone</titulo></tipoCanalPrestacaoServico><descricao>191</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>E-mail</titulo></tipoCanalPrestacaoServico><descricao>Por meio dos endereços eletrônicos das “Centrais de Informações Operacionais” do Departamento de Polícia Rodoviária Federal: ciop.df@dprf.gov.br e ciop.regional@dprf.gov.br</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Em qualquer Unidade ou Equipe de Ronda do Departamento de Polícia Rodoviária Federal, cujos endereços estão disponíveis no site do órgão (vide "Localização das unidades").</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Endereços de todas as unidades do Departamente de Polícia Rodoviária Federal.</descricao><url>http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Departamento de Polícia Rodoviária Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Constituição e Legislação</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Informações sobre Condições das Rodovias e Estradas Federais</titulo>
+    <descricao>Consiste no fornecimento de informações sobre rodovias e estradas sob a circunscrição do Departamento de
+        Polícia Rodoviária Federal, a exemplo de interdições e bloqueios, condições das vias, localizações de Postos da
+        Polícia Rodoviária Federal, dentre outras.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Telefone</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>191</descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>E-mail</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Por meio dos endereços eletrônicos das “Centrais de Informações Operacionais” do Departamento de
+                Polícia Rodoviária Federal: ciop.df@dprf.gov.br e ciop.regional@dprf.gov.br
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Em qualquer Unidade ou Equipe de Ronda do Departamento de Polícia Rodoviária Federal, cujos
+                endereços estão disponíveis no site do órgão (vide "Localização das unidades").
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Endereços de todas as unidades do Departamente de Polícia Rodoviária Federal.</descricao>
+            <url>http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Departamento de Polícia Rodoviária Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Constituição e Legislação</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

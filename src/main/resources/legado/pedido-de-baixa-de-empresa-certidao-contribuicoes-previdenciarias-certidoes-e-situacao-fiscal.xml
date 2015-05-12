@@ -1,1 +1,51 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Pedido de Baixa de Empresa  (Certidão Contribuições Previdenciárias / Certidões e Situação Fiscal)</titulo><descricao>Solicitar emissão de certidão de contribuições previdenciárias  da pessoa jurídica visando baixa no cadastro previdenciário.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Endereço eletrônico do serviço</descricao><url>http://www020.dataprev.gov.br/pls/pradar/pkg_Arr_inter.pr_Baixa_Empr_ini/t_blank</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis/><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Receita Federal</titulo></orgaoResponsavel><orgaoPrestador><titulo>Receital Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Meu Negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Pagar impostos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Economia e Finanças</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Pedido de Baixa de Empresa (Certidão Contribuições Previdenciárias / Certidões e Situação Fiscal)</titulo>
+    <descricao>Solicitar emissão de certidão de contribuições previdenciárias da pessoa jurídica visando baixa no
+        cadastro previdenciário.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Endereço eletrônico do serviço</descricao>
+            <url>http://www020.dataprev.gov.br/pls/pradar/pkg_Arr_inter.pr_Baixa_Empr_ini/t_blank</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis/>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Receita Federal</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Receital Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Meu Negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Pagar impostos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Economia e Finanças</titulo>
+        </area>
+    </areasInteresse>
+</servico>

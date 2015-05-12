@@ -1,1 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Certificado de Regularidade Previdenciária - CRP</titulo><descricao>Serviços destinados aos Entes Federativos para emissão da Certificado de Regularidade Previdenciária - CRP. Tem como objetivo conferir o cumprimento dos critérios e exigências estabelecidos na Lei nº 9.717/1998, pelos regimes próprios de previdência social dos Estados, do Distrito Federal e Municípios.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Certificado de Regularidade Previdenciária - CRP</descricao><url>http://www1.previdencia.gov.br/sps/app/crp/crppesquisaente.asp</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Telefone</titulo></tipoInformacaoUtil><descricao>Ligue 135 para obter mais informações.</descricao><url></url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministerio da Previdencia Social - MPS</titulo></orgaoResponsavel><orgaoPrestador><titulo>Ministério da Previdência Social - MPS</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Previdência Social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Certificado de Regularidade Previdenciária - CRP</titulo>
+    <descricao>Serviços destinados aos Entes Federativos para emissão da Certificado de Regularidade Previdenciária -
+        CRP. Tem como objetivo conferir o cumprimento dos critérios e exigências estabelecidos na Lei nº 9.717/1998,
+        pelos regimes próprios de previdência social dos Estados, do Distrito Federal e Municípios.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Certificado de Regularidade Previdenciária - CRP</descricao>
+            <url>http://www1.previdencia.gov.br/sps/app/crp/crppesquisaente.asp</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Telefone</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Ligue 135 para obter mais informações.</descricao>
+            <url></url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministerio da Previdencia Social - MPS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Ministério da Previdência Social - MPS</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Previdência Social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

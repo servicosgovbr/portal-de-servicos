@@ -1,29 +1,148 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Acesso aos Acervos da Fundação Nacional do Índio- FUNAI</titulo><descricao>A Fundação Nacional do Índio - FUNAI - tem como missão coordenar o processo de formulação e implementação da política indigenista do Estado brasileiro, instituindo mecanismos efetivos de controle social e de gestão participativa, visando à proteção e promoção dos direitos dos povos indígenas.
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Acesso aos Acervos da Fundação Nacional do Índio- FUNAI</titulo>
+    <descricao>A Fundação Nacional do Índio - FUNAI - tem como missão coordenar o processo de formulação e implementação
+        da política indigenista do Estado brasileiro, instituindo mecanismos efetivos de controle social e de gestão
+        participativa, visando à proteção e promoção dos direitos dos povos indígenas.
 
-Os atendimentos oferecidos aos cidadãos pela FUNAI relativos ao acesso aos seus acervos são:
+        Os atendimentos oferecidos aos cidadãos pela FUNAI relativos ao acesso aos seus acervos são:
 
-- Acesso aos acervos arquivísticos (documentais) do fundo Serviço de Proteção ao Índio - SPI e aos acervos do período Funai, via Serviço de Gestão Documental – Brasília, e Serviço de Referências Documentais do Museu do Índio – Rio de Janeiro; 
+        - Acesso aos acervos arquivísticos (documentais) do fundo Serviço de Proteção ao Índio - SPI e aos acervos do
+        período Funai, via Serviço de Gestão Documental – Brasília, e Serviço de Referências Documentais do Museu do
+        Índio – Rio de Janeiro;
 
--  Acesso aos acervos bibliográficos sobre a temática indígena, ambiental e indigenista, no Serviço de Gestão de Bibliotecas – Brasília, e Biblioteca do Museu do Índio – Rio de Janeiro e;
+        - Acesso aos acervos bibliográficos sobre a temática indígena, ambiental e indigenista, no Serviço de Gestão de
+        Bibliotecas – Brasília, e Biblioteca do Museu do Índio – Rio de Janeiro e;
 
-- Acesso aos acervos etnográficos e audiovisuais – Serviço de Referências Documentais do Museu do Índio – Rio de Janeiro.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Para Acervos Arquivísticos (documentais): 
-Serviço de Gestão Documental
-SBS 02, lote 14, Ed. Cleto Meirelles 1º Subsolo
-70070-120 BRASÍLIA - DF
-Telefones: (61) 3247-6552 / 3247-6554</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Para Acervos Arquivísticos (documentais): 
-Serviço de Referências Documentais do Museu do Índio
-Rua das Palmeiras, 55 – Botafogo
-22270-070 RIO DE JANEIRO - RJ
-Telefones: (21) 3214-8725 / 3214-8726 / 3214-8727</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Para Acervos Bibliográficos:
-Biblioteca Curt Nimuendaju
-SBS 02, lote 14, Ed. Cleto Meirelles
-70070-120 BRASÍLIA - DF
-Telefones: (61) 3247-6549 / 3247-6551</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Para Acervos Bibliográficos:
-Biblioteca Marechal Rondon
-Rua das Palmeiras, 55 – Botafogo
-22270-070 RIO DE JANEIRO - RJ
-Telefones: (21) 3214-8725 / 3214-8726 / 3214-8727</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Para Acervos Etnográficos e Audiovisuais:
-Serviço de Referências Documentais do Museu do Índio
-Rua das Palmeiras, 55 – Botafogo
-22270-070 RIO DE JANEIRO - RJ
-Telefones: (21) 3214-8725 / 3214-8726 / 3214-8727</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Acesso a Acervos Arquivísticos (documentais)</descricao><url>http://base2.museudoindio.gov.br</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Lei nº 12.527/11</descricao><url>http://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12527.htm</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Para Acervos Arquivísticos (documentais): sedoc@funai.gov.br (Serviço de Gestão Documental) ou referencia.documental@museudoindio.gov.br (Museu do Índio)</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Para Acervos Bibliograficos: sebib@funai.gov.br</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Para Acervos Etnográficos e Audiovisuais : referencia.documental@museudoindio.gov.br</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Agendamento</titulo></tipoInformacaoUtil><descricao>Para Acesso aos Acervos Etnográficos e Audiovisuais: (21)3214-8736.</descricao><url></url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Fundação Nacional do Índio - FUNAI</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo/><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+        - Acesso aos acervos etnográficos e audiovisuais – Serviço de Referências Documentais do Museu do Índio – Rio de
+        Janeiro.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Para Acervos Arquivísticos (documentais):
+                Serviço de Gestão Documental
+                SBS 02, lote 14, Ed. Cleto Meirelles 1º Subsolo
+                70070-120 BRASÍLIA - DF
+                Telefones: (61) 3247-6552 / 3247-6554
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Para Acervos Arquivísticos (documentais):
+                Serviço de Referências Documentais do Museu do Índio
+                Rua das Palmeiras, 55 – Botafogo
+                22270-070 RIO DE JANEIRO - RJ
+                Telefones: (21) 3214-8725 / 3214-8726 / 3214-8727
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Para Acervos Bibliográficos:
+                Biblioteca Curt Nimuendaju
+                SBS 02, lote 14, Ed. Cleto Meirelles
+                70070-120 BRASÍLIA - DF
+                Telefones: (61) 3247-6549 / 3247-6551
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Para Acervos Bibliográficos:
+                Biblioteca Marechal Rondon
+                Rua das Palmeiras, 55 – Botafogo
+                22270-070 RIO DE JANEIRO - RJ
+                Telefones: (21) 3214-8725 / 3214-8726 / 3214-8727
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Para Acervos Etnográficos e Audiovisuais:
+                Serviço de Referências Documentais do Museu do Índio
+                Rua das Palmeiras, 55 – Botafogo
+                22270-070 RIO DE JANEIRO - RJ
+                Telefones: (21) 3214-8725 / 3214-8726 / 3214-8727
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Acesso a Acervos Arquivísticos (documentais)</descricao>
+            <url>http://base2.museudoindio.gov.br</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Lei nº 12.527/11</descricao>
+            <url>http://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Lei/L12527.htm</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Para Acervos Arquivísticos (documentais): sedoc@funai.gov.br (Serviço de Gestão Documental) ou
+                referencia.documental@museudoindio.gov.br (Museu do Índio)
+            </descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Para Acervos Bibliograficos: sebib@funai.gov.br</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Para Acervos Etnográficos e Audiovisuais : referencia.documental@museudoindio.gov.br</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Agendamento</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Para Acesso aos Acervos Etnográficos e Audiovisuais: (21)3214-8736.</descricao>
+            <url></url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Fundação Nacional do Índio - FUNAI</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo/>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

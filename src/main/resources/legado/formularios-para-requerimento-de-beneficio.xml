@@ -1,1 +1,49 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Formulários para Requerimento de Benefício</titulo><descricao>Emissão dos modelos de formulários necessários para Requerimento de Benefícios.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Emissão dos modelos de formulários necessários para Requerimento de Benefícios.</descricao><url>http://www.previdencia.gov.br/conteudoDinamico.php?id=898</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis/><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministerio da Previdencia Social - MPS</titulo></orgaoResponsavel><orgaoPrestador><titulo>Instituto  Nacional do Seguro Social - INSS.</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Constituição e Legislação</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Previdência Social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Formulários para Requerimento de Benefício</titulo>
+    <descricao>Emissão dos modelos de formulários necessários para Requerimento de Benefícios.</descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Emissão dos modelos de formulários necessários para Requerimento de Benefícios.</descricao>
+            <url>http://www.previdencia.gov.br/conteudoDinamico.php?id=898</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis/>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministerio da Previdencia Social - MPS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Instituto Nacional do Seguro Social - INSS.</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Constituição e Legislação</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Previdência Social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

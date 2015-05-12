@@ -1,15 +1,127 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Registro e Expedição de Cédula de Identidade de Estrangeiro - CIE</titulo><descricao>Registro e Expedição do documento necessário para o estrangeiro fixar residência, exercer atividade profissional ou estudar no País. O documento tem validade variável de acordo com a situação.
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Registro e Expedição de Cédula de Identidade de Estrangeiro - CIE</titulo>
+    <descricao>Registro e Expedição do documento necessário para o estrangeiro fixar residência, exercer atividade
+        profissional ou estudar no País. O documento tem validade variável de acordo com a situação.
 
-Informações importantes:
+        Informações importantes:
 
-•	O processo para registro, emissão/renovação da cédula de Identidade de Estrangeiro só é feito pessoalmente, na Polícia Federal mais próxima da residência do interessado.
-•	O estrangeiro registrado é obrigado a comunicar ao Ministério da Justiça a mudança do seu domicílio ou residência, devendo fazê-lo nos 30 (trinta) dias imediatamente seguintes à sua efetivação, conforme art. 102 da Lei 6815/80, sob pena de multa.
-•	Ao dirigir-se a uma unidade da Polícia Federal, leve consigo todos os seus documentos pessoais e procure sempre apresentar um comprovante de endereço. O preenchimento equivocado do formulário, notadamente do CEP, pode atrasar o seu atendimento. 
-•	O prazo para registro é 30 dias contados a partir da data de ingresso no território nacional (Artigo 30 da Lei nº 6.815/1980);
-•	O estrangeiro menor de idade deverá apresentar-se acompanhado dos pais ou responsável legal;
-•	Os pedidos de renovação das cédulas devem ser feitos antes do vencimento do documento, sob pena de pagamento de multa. 
-•	Estão dispensados da substituição da CIE, mesmo após o vencimento, os estrangeiros portadores de vistos permanentes, que tenham participado de recadastramento anterior e que tenham completado 60 anos até a data de vencimento da cédula ou sejam deficientes físicos.
-•	O estrangeiro permanente que se ausentar mais de 2 anos ininterruptos do território nacional, perde a permanência.
+        • O processo para registro, emissão/renovação da cédula de Identidade de Estrangeiro só é feito pessoalmente, na
+        Polícia Federal mais próxima da residência do interessado.
+        • O estrangeiro registrado é obrigado a comunicar ao Ministério da Justiça a mudança do seu domicílio ou
+        residência, devendo fazê-lo nos 30 (trinta) dias imediatamente seguintes à sua efetivação, conforme art. 102 da
+        Lei 6815/80, sob pena de multa.
+        • Ao dirigir-se a uma unidade da Polícia Federal, leve consigo todos os seus documentos pessoais e procure
+        sempre apresentar um comprovante de endereço. O preenchimento equivocado do formulário, notadamente do CEP, pode
+        atrasar o seu atendimento.
+        • O prazo para registro é 30 dias contados a partir da data de ingresso no território nacional (Artigo 30 da Lei
+        nº 6.815/1980);
+        • O estrangeiro menor de idade deverá apresentar-se acompanhado dos pais ou responsável legal;
+        • Os pedidos de renovação das cédulas devem ser feitos antes do vencimento do documento, sob pena de pagamento
+        de multa.
+        • Estão dispensados da substituição da CIE, mesmo após o vencimento, os estrangeiros portadores de vistos
+        permanentes, que tenham participado de recadastramento anterior e que tenham completado 60 anos até a data de
+        vencimento da cédula ou sejam deficientes físicos.
+        • O estrangeiro permanente que se ausentar mais de 2 anos ininterruptos do território nacional, perde a
+        permanência.
 
 
-</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Em qualquer uma das unidades da Polícia Federal no Brasil (vide "Localização das unidades").</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Endereços das unidades da Polícia Federal no Brasil.</descricao><url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Para dúvidas: estrangeiros@dpf.gov.br</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Formulários</titulo></tipoInformacaoUtil><descricao>Formulário de requerimento de registro/emissão e renovação de CIE.</descricao><url>https://servicos.dpf.gov.br/sincreWeb/</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Agendamento</titulo></tipoInformacaoUtil><descricao>Agendamento</descricao><url>https://servicos.dpf.gov.br/sincreWeb/pesquisaAgendamento.jsp</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Outros</titulo></tipoInformacaoUtil><descricao>Lei 6815/80</descricao><url>http://www.planalto.gov.br/ccivil_03/leis/l6815.htm</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Mais serviços aos estrangeiros (renovação/susbstituição da CIE, prorrogação do prazo de estada etc)</descricao><url>http://www.dpf.gov.br/servicos/estrangeiro</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Mais informações sobre entrada e permanência no Brasil</descricao><url>http://portal.mj.gov.br/data/Pages/MJA1BC41DEITEMID1F416857A0F2452DA9BE4D921C682671PTBRIE.htm</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Departamento de Polícia Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Emitindo meus documentos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>RG – Carteira de identidade</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Em qualquer uma das unidades da Polícia Federal no Brasil (vide "Localização das unidades").
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Endereços das unidades da Polícia Federal no Brasil.</descricao>
+            <url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Para dúvidas: estrangeiros@dpf.gov.br</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Formulários</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Formulário de requerimento de registro/emissão e renovação de CIE.</descricao>
+            <url>https://servicos.dpf.gov.br/sincreWeb/</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Agendamento</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Agendamento</descricao>
+            <url>https://servicos.dpf.gov.br/sincreWeb/pesquisaAgendamento.jsp</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Outros</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Lei 6815/80</descricao>
+            <url>http://www.planalto.gov.br/ccivil_03/leis/l6815.htm</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Mais serviços aos estrangeiros (renovação/susbstituição da CIE, prorrogação do prazo de estada
+                etc)
+            </descricao>
+            <url>http://www.dpf.gov.br/servicos/estrangeiro</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Mais informações sobre entrada e permanência no Brasil</descricao>
+            <url>http://portal.mj.gov.br/data/Pages/MJA1BC41DEITEMID1F416857A0F2452DA9BE4D921C682671PTBRIE.htm</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Departamento de Polícia Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Emitindo meus documentos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>RG – Carteira de identidade</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

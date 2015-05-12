@@ -1,5 +1,153 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Emissão de Certidão Negativa do Banco Central</titulo><descricao>Certifica o cidadão que não tiver trabalhado como administrador, diretor ou representante de uma instituição financeira (como banco, corretora, cooperativa) que esteja ou tenha estado em liquidação extrajudicial. A certidão refere-se aos doze meses anteriores à decretação desse regime.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao></descricao><url>http://www.bcb.gov.br/pre/portalCidadao/cadsis/certidao.asp?idpai=PORTALBCB</url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Em uma das Centrais de Atendimento ao Público do Banco Central;</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Outros</titulo></tipoCanalPrestacaoServico><descricao>Por correspondência para:
-Banco Central do Brasil 
-Divisão de Atendimento ao Cidadão 
-SBS Q. 3 Bloco B – Ed. Sede – 2º SS 
-CEP 70074-900 Brasília (DF)</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Centrais de Atendimento ao Público do Banco Central</descricao><url>http://www.bcb.gov.br/pre/bc_atende/port/centaten.asp</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Banco Central do Brasil</titulo></orgaoResponsavel><orgaoPrestador><titulo>Banco Central do Brasil</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Emitindo meus documentos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Certidões</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Certidão negativa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Procurando emprego</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Concursos públicos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Emitindo meus documentos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Certidões</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Certidão negativa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Procurando emprego</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Concursos públicos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Emitindo meus documentos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Certidões</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Certidão negativa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Procurando emprego</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Concursos públicos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Economia e Finanças</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Emissão de Certidão Negativa do Banco Central</titulo>
+    <descricao>Certifica o cidadão que não tiver trabalhado como administrador, diretor ou representante de uma
+        instituição financeira (como banco, corretora, cooperativa) que esteja ou tenha estado em liquidação
+        extrajudicial. A certidão refere-se aos doze meses anteriores à decretação desse regime.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao></descricao>
+            <url>http://www.bcb.gov.br/pre/portalCidadao/cadsis/certidao.asp?idpai=PORTALBCB</url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Em uma das Centrais de Atendimento ao Público do Banco Central;</descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Outros</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Por correspondência para:
+                Banco Central do Brasil
+                Divisão de Atendimento ao Cidadão
+                SBS Q. 3 Bloco B – Ed. Sede – 2º SS
+                CEP 70074-900 Brasília (DF)
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Centrais de Atendimento ao Público do Banco Central</descricao>
+            <url>http://www.bcb.gov.br/pre/bc_atende/port/centaten.asp</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Banco Central do Brasil</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Banco Central do Brasil</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Emitindo meus documentos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Certidões</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Certidão negativa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Procurando emprego</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Concursos públicos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Emitindo meus documentos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Certidões</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Certidão negativa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Procurando emprego</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Concursos públicos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Emitindo meus documentos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Certidões</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Certidão negativa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Procurando emprego</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Concursos públicos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Economia e Finanças</titulo>
+        </area>
+    </areasInteresse>
+</servico>

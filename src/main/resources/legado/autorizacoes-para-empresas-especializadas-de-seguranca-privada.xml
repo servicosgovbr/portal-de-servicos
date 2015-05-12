@@ -1,9 +1,85 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Autorizações para empresas especializadas de Segurança Privada</titulo><descricao>As autorizações para o exercício de atividades relativas à segurança privada são expedidas pela Polícia Federal e devem ser requeridas pelas empresas especializadas na prestação de serviços de segurança privada e outras empresas que desejam constituir serviço orgânico de segurança privada (segurança da própria empresa). As autorizações são as seguintes:
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Autorizações para empresas especializadas de Segurança Privada</titulo>
+    <descricao>As autorizações para o exercício de atividades relativas à segurança privada são expedidas pela Polícia
+        Federal e devem ser requeridas pelas empresas especializadas na prestação de serviços de segurança privada e
+        outras empresas que desejam constituir serviço orgânico de segurança privada (segurança da própria empresa). As
+        autorizações são as seguintes:
 
-Autorização para aquisição de armas, munições e pretechos - documento válido por 60 (sessenta) dias que autoriza a empresa a adquirir armas, munições e petrechos; 
+        Autorização para aquisição de armas, munições e pretechos - documento válido por 60 (sessenta) dias que autoriza
+        a empresa a adquirir armas, munições e petrechos;
 
-Autorização para aquisição de coletes balístivos - documento válido por 60 (sessenta) dias, prorrogável por igual período, que autoriza a empresa a adquirir coletes balísticos.;
+        Autorização para aquisição de coletes balístivos - documento válido por 60 (sessenta) dias, prorrogável por
+        igual período, que autoriza a empresa a adquirir coletes balísticos.;
 
-Autorização para alteração de Atos Constitutivos - documento que autoriza a empresa especializada a alterar seus atos constitutivos. 
+        Autorização para alteração de Atos Constitutivos - documento que autoriza a empresa especializada a alterar seus
+        atos constitutivos.
 
-</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Sistema GESP - Para Autorização para aquisição de armas/munições/petrechos</descricao><url>http://www.dpf.gov.br/servicos/seguranca-privada/sistemas/gesp</url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Na unidade da Polícia Federal mais próxima (vide "Localização das unidades").</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Endereços de todas as unidades da Polícia Federal no país.</descricao><url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Telefone</titulo></tipoInformacaoUtil><descricao>Mais informações: 194</descricao><url></url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Departamento de Polícia Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Segurança e Ordem Pública</titulo></area></areasInteresse></servico>
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Sistema GESP - Para Autorização para aquisição de armas/munições/petrechos</descricao>
+            <url>http://www.dpf.gov.br/servicos/seguranca-privada/sistemas/gesp</url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Na unidade da Polícia Federal mais próxima (vide "Localização das unidades").</descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Endereços de todas as unidades da Polícia Federal no país.</descricao>
+            <url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Telefone</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Mais informações: 194</descricao>
+            <url></url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Departamento de Polícia Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Segurança e Ordem Pública</titulo>
+        </area>
+    </areasInteresse>
+</servico>

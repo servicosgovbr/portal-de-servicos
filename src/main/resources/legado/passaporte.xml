@@ -1,28 +1,116 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Passaporte</titulo><descricao>Execução de atividades relacionadas ao serviço de expedição e controle de documentos de viagem, emitidos pela Polícia Federal:
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Passaporte</titulo>
+    <descricao>Execução de atividades relacionadas ao serviço de expedição e controle de documentos de viagem, emitidos
+        pela Polícia Federal:
 
-•	Passaporte comum;
-•	Passaporte para estrangeiro;
-•	Laissez-Passer;
-•	Passaporte de emergência
+        • Passaporte comum;
+        • Passaporte para estrangeiro;
+        • Laissez-Passer;
+        • Passaporte de emergência
 
-Como Obter o Passaporte:
+        Como Obter o Passaporte:
 
-•	Preencher o formulário disponível no portal da Polícia Federal . Em caso de dúvidas sobre o preenchimento, informações podem ser obtidas pelo telefone 194.
-•	Pagar a taxa devida para a emissão do documento através da Guia de Recolhimento da União – GRU, na rede bancária, respeitando sua data de vencimento.
-•	Comparecer pessoalmente nos locais de atendimento da Polícia Federal munido da documentação original exigida, da GRU paga e do protocolo da solicitação, para fornecer os dados biométricos (fotografia, impressões digitais e assinatura). 
-•	O passaporte será entregue pessoalmente a seu titular, mediante apresentação de documento de identificação.
+        • Preencher o formulário disponível no portal da Polícia Federal . Em caso de dúvidas sobre o preenchimento,
+        informações podem ser obtidas pelo telefone 194.
+        • Pagar a taxa devida para a emissão do documento através da Guia de Recolhimento da União – GRU, na rede
+        bancária, respeitando sua data de vencimento.
+        • Comparecer pessoalmente nos locais de atendimento da Polícia Federal munido da documentação original exigida,
+        da GRU paga e do protocolo da solicitação, para fornecer os dados biométricos (fotografia, impressões digitais e
+        assinatura).
+        • O passaporte será entregue pessoalmente a seu titular, mediante apresentação de documento de identificação.
 
-Observação: 
-A GRU será gerada automaticamente após o preenchimento do formulário, sendo imprescindível preencher o número do CPF do requerente ou do seu responsável, se for o caso.
+        Observação:
+        A GRU será gerada automaticamente após o preenchimento do formulário, sendo imprescindível preencher o número do
+        CPF do requerente ou do seu responsável, se for o caso.
 
-Para Passaporte de Emergência:
- 
-1. Preencher o formulário disponível no portal da Polícia Federal. Em caso de dúvidas sobre o preenchimento, informações podem ser obtidas pelo telefone 194;
-2. Comparecer pessoalmente nos locais de atendimento da Polícia Federal autorizados a emitir Passaporte de Emergência (verificar no portal), munido da documentação exigida;
-3. Aguardar o deferimento da solicitação de passaporte, uma vez que será avaliada a situação emergencial;
-4. Se deferido, pagar a taxa devida para a emissão do documento através da Guia de Recolhimento da União – GRU –, na rede bancária, respeitando sua data de vencimento.
+        Para Passaporte de Emergência:
 
-Observação:
+        1. Preencher o formulário disponível no portal da Polícia Federal. Em caso de dúvidas sobre o preenchimento,
+        informações podem ser obtidas pelo telefone 194;
+        2. Comparecer pessoalmente nos locais de atendimento da Polícia Federal autorizados a emitir Passaporte de
+        Emergência (verificar no portal), munido da documentação exigida;
+        3. Aguardar o deferimento da solicitação de passaporte, uma vez que será avaliada a situação emergencial;
+        4. Se deferido, pagar a taxa devida para a emissão do documento através da Guia de Recolhimento da União – GRU
+        –, na rede bancária, respeitando sua data de vencimento.
 
-- Na cidade de São Paulo/SP, o Passaporte de Emergência apenas é emitido no posto localizado no prédio da Superintendência Regional, na Lapa, e na cidade do Rio de Janeiro/RJ, apenas no posto localizado no Aeroporto Internacional Tom Jobim (Galeão).
-</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Requisição de Passaporte</descricao><url>http://www.dpf.gov.br/servicos/passaporte/requerer-passaporte</url></canalPrestacaoServico></canaisPrestacaoServico><taxa>R$ 156,07</taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Informações gerais sobre Passaporte</descricao><url>http://www.dpf.gov.br/servicos/passaporte</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Telefone</titulo></tipoInformacaoUtil><descricao>Dúvidas sobre Emissão de Passaportes: ligue 194</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Unidades do Departamento da Polícia Federal de cada região</descricao><url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Documentação necessária para requerer Passaporte</descricao><url>http://www.dpf.gov.br/servicos/passaporte/documentacao-necessaria</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Departamento de Polícia Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Emitindo meus documentos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Passaporte</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Transportes</titulo></area></areasInteresse></servico>
+        Observação:
+
+        - Na cidade de São Paulo/SP, o Passaporte de Emergência apenas é emitido no posto localizado no prédio da
+        Superintendência Regional, na Lapa, e na cidade do Rio de Janeiro/RJ, apenas no posto localizado no Aeroporto
+        Internacional Tom Jobim (Galeão).
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Requisição de Passaporte</descricao>
+            <url>http://www.dpf.gov.br/servicos/passaporte/requerer-passaporte</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa>R$ 156,07</taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Informações gerais sobre Passaporte</descricao>
+            <url>http://www.dpf.gov.br/servicos/passaporte</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Telefone</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Dúvidas sobre Emissão de Passaportes: ligue 194</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Unidades do Departamento da Polícia Federal de cada região</descricao>
+            <url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Documentação necessária para requerer Passaporte</descricao>
+            <url>http://www.dpf.gov.br/servicos/passaporte/documentacao-necessaria</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Departamento de Polícia Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Emitindo meus documentos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Passaporte</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Transportes</titulo>
+        </area>
+    </areasInteresse>
+</servico>

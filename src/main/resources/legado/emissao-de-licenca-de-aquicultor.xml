@@ -1,1 +1,1003 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Emissão de Licença de Aquicultor</titulo><descricao>Toda a pessoa ou empresa interessada no cultivo de organismos aquáticos (peixes, mariscos, crustáceos, algas, rãs) deve estar inscrita no Ministério da Pesca e Aquicultura para poder exercer a atividade com fins comerciais.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>O interessado deve preencher requerimento no site do Ministério da Pesca e Aquicultura e enviar pelos Correios a documentação exigida.</descricao><url>http://www.mpa.gov.br/index.php/aquiculturampa/registro-e-licenca-de-aquicultor/inscricao-e-renovacao-do-rgp</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>A licença tem renovação anual. Empreendimentos até 2 ha de lâmina d´água são isentos de taxa. Para os demais a taxa varia de R$ 137,00 até R$ 450,00 conforme o porte do empreendimento. A renovação da licença também está disponível no site do ministério.</descricao><url></url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Pesca e Aquicultura- MPA</titulo></orgaoResponsavel><orgaoPrestador><titulo></titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Meu negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Administrando seu negócio</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Obter licenças e permissões </titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Meu negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Administrando seu negócio</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Obter licenças e permissões </titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Meu negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Administrando seu negócio</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Obter licenças e permissões </titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Meu negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Administrando seu negócio</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Obter licenças e permissões </titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Cooperativa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Empreendedor Individual</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Microempresa</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Agropecuária</titulo></area><area><titulo>Alimento</titulo></area><area><titulo>Pecuária</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Emissão de Licença de Aquicultor</titulo>
+    <descricao>Toda a pessoa ou empresa interessada no cultivo de organismos aquáticos (peixes, mariscos, crustáceos,
+        algas, rãs) deve estar inscrita no Ministério da Pesca e Aquicultura para poder exercer a atividade com fins
+        comerciais.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>O interessado deve preencher requerimento no site do Ministério da Pesca e Aquicultura e enviar
+                pelos Correios a documentação exigida.
+            </descricao>
+            <url>
+                http://www.mpa.gov.br/index.php/aquiculturampa/registro-e-licenca-de-aquicultor/inscricao-e-renovacao-do-rgp
+            </url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>A licença tem renovação anual. Empreendimentos até 2 ha de lâmina d´água são isentos de taxa.
+                Para os demais a taxa varia de R$ 137,00 até R$ 450,00 conforme o porte do empreendimento. A renovação
+                da licença também está disponível no site do ministério.
+            </descricao>
+            <url></url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Pesca e Aquicultura- MPA</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo></titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Meu negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Administrando seu negócio</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Obter licenças e permissões</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Meu negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Administrando seu negócio</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Obter licenças e permissões</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Meu negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Administrando seu negócio</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Obter licenças e permissões</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Meu negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Administrando seu negócio</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Obter licenças e permissões</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Cooperativa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Empreendedor Individual</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Microempresa</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Agropecuária</titulo>
+        </area>
+        <area>
+            <titulo>Alimento</titulo>
+        </area>
+        <area>
+            <titulo>Pecuária</titulo>
+        </area>
+    </areasInteresse>
+</servico>

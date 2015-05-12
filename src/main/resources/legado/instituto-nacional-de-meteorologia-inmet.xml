@@ -1,1 +1,76 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Instituto Nacional de Meteorologia ( INMET)</titulo><descricao>O Instituto Nacional de Meteorologia (INMET) foi criado em 1909 e é órgão federal da administração direta do Ministério da Agricultura, Pecuária e Abastecimento (MAPA) com a missão de prover informações meteorológicas confiáveis à Sociedade Brasileira e influir construtivamente no processo de tomada de decisão, contribuindo para o desenvolvimento sustentável do País. Esta missão é atingida através do Monitoramento, Análise e Previsão do Tempo e Clima, fundamentados em pesquisa aplicada, no trabalho em parceria e no compartilhamento do conhecimento, com ênfase em resultados práticos e confiáveis. A máxima do Instituto é a satisfação da sociedade, vendo atendidas suas necessidades de informações em situações diversas, como no caso de desastres naturais relacionados com inundações e secas extremas que afetam as atividades rotineiras e limitam a sobrevivência.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Página do INMET</descricao><url>http://www.inmet.gov.br/</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis/><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Agricultura, Pecuária e Abastecimento- MAPA</titulo></orgaoResponsavel><orgaoPrestador><titulo>Instituto Nacional de Meteorologia - INMET</titulo><endereco>Eixo Monumental Via S1 Sudoeste Brasília-DF CEP: 70680-900</endereco><telefone>(61) 2102-4700 </telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Aproveitando o tempo livre</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Tempo e Clima</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Agropecuária</titulo></area><area><titulo>Previdência Social</titulo></area><area><titulo>Meio ambiente</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Instituto Nacional de Meteorologia ( INMET)</titulo>
+    <descricao>O Instituto Nacional de Meteorologia (INMET) foi criado em 1909 e é órgão federal da administração direta
+        do Ministério da Agricultura, Pecuária e Abastecimento (MAPA) com a missão de prover informações meteorológicas
+        confiáveis à Sociedade Brasileira e influir construtivamente no processo de tomada de decisão, contribuindo para
+        o desenvolvimento sustentável do País. Esta missão é atingida através do Monitoramento, Análise e Previsão do
+        Tempo e Clima, fundamentados em pesquisa aplicada, no trabalho em parceria e no compartilhamento do
+        conhecimento, com ênfase em resultados práticos e confiáveis. A máxima do Instituto é a satisfação da sociedade,
+        vendo atendidas suas necessidades de informações em situações diversas, como no caso de desastres naturais
+        relacionados com inundações e secas extremas que afetam as atividades rotineiras e limitam a sobrevivência.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Página do INMET</descricao>
+            <url>http://www.inmet.gov.br/</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis/>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Agricultura, Pecuária e Abastecimento- MAPA</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Instituto Nacional de Meteorologia - INMET</titulo>
+        <endereco>Eixo Monumental Via S1 Sudoeste Brasília-DF CEP: 70680-900</endereco>
+        <telefone>(61) 2102-4700</telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Aproveitando o tempo livre</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Tempo e Clima</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Agropecuária</titulo>
+        </area>
+        <area>
+            <titulo>Previdência Social</titulo>
+        </area>
+        <area>
+            <titulo>Meio ambiente</titulo>
+        </area>
+    </areasInteresse>
+</servico>

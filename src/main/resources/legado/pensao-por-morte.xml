@@ -1,1 +1,101 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Pensão por Morte</titulo><descricao>Benefício pago à família do trabalhador quando ele morre. Para concessão de pensão por morte, não há tempo mínimo de contribuição, mas é necessário que o óbito tenha ocorrido enquanto o trabalhador tinha qualidade de segurado.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Serviço prestado nas Agências da Previdência Social.</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Agendamento</titulo></tipoInformacaoUtil><descricao>Agende aqui seu atendimento.</descricao><url>http://www2.dataprev.gov.br/prevagenda/OpcaoInicialTela.view</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministerio da Previdencia Social - MPS</titulo></orgaoResponsavel><orgaoPrestador><titulo>Instituto Nacional do Seguro Social - INSS.</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Ter uma família</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Perda de um ente querido</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Recebendo pensão</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Ter uma família</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Perda de um ente querido</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Recebendo pensão</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Ter uma família</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Perda de um ente querido</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Recebendo pensão</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida><linhaDaVida><titulo>Ter uma família</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Perda de um ente querido</titulo></eventolinhaDaVida><eventolinhaDaVida><titulo>Recebendo pensão</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Previdência Social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Pensão por Morte</titulo>
+    <descricao>Benefício pago à família do trabalhador quando ele morre. Para concessão de pensão por morte, não há
+        tempo mínimo de contribuição, mas é necessário que o óbito tenha ocorrido enquanto o trabalhador tinha qualidade
+        de segurado.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Serviço prestado nas Agências da Previdência Social.</descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Agendamento</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Agende aqui seu atendimento.</descricao>
+            <url>http://www2.dataprev.gov.br/prevagenda/OpcaoInicialTela.view</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministerio da Previdencia Social - MPS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Instituto Nacional do Seguro Social - INSS.</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Ter uma família</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Perda de um ente querido</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Recebendo pensão</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Ter uma família</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Perda de um ente querido</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Recebendo pensão</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Ter uma família</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Perda de um ente querido</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Recebendo pensão</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+                <linhaDaVida>
+                    <titulo>Ter uma família</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Perda de um ente querido</titulo>
+                        </eventolinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Recebendo pensão</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Previdência Social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

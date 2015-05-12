@@ -1,1 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Centro de Testagem e Acolhimento (CTA) - DST/AIDS</titulo><descricao>Os Centros de Testagem e Aconselhamento (CTA) são serviços de saúde que realizam ações de diagnóstico e prevenção de doenças sexualmente transmissíveis. Nesses serviços, é possível realizar testes para HIV, sífilis e hepatites B e C gratuitamente. Todos os testes são realizados de acordo com a norma definida pelo Ministério da Saúde e com produtos registrados na Agência Nacional de Vigilância Sanitária (Anvisa) e por ela controlados.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Localize um Centro de Testagem e Acolhimento (CTA)</descricao><url>http://www.aids.gov.br/pagina/servicos-de-saude</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Portal sobre aids, doenças sexualmente transmissíveis e hepatites virais</descricao><url>http://www.aids.gov.br/</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Saúde- MS</titulo></orgaoResponsavel><orgaoPrestador><titulo></titulo><endereco></endereco><telefone>136</telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Cuidando da saúde</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>AIDS, Câncer, doenças de tratamento especial</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Saúde</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Centro de Testagem e Acolhimento (CTA) - DST/AIDS</titulo>
+    <descricao>Os Centros de Testagem e Aconselhamento (CTA) são serviços de saúde que realizam ações de diagnóstico e
+        prevenção de doenças sexualmente transmissíveis. Nesses serviços, é possível realizar testes para HIV, sífilis e
+        hepatites B e C gratuitamente. Todos os testes são realizados de acordo com a norma definida pelo Ministério da
+        Saúde e com produtos registrados na Agência Nacional de Vigilância Sanitária (Anvisa) e por ela controlados.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Localize um Centro de Testagem e Acolhimento (CTA)</descricao>
+            <url>http://www.aids.gov.br/pagina/servicos-de-saude</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Portal sobre aids, doenças sexualmente transmissíveis e hepatites virais</descricao>
+            <url>http://www.aids.gov.br/</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Saúde- MS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo></titulo>
+        <endereco></endereco>
+        <telefone>136</telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Cuidando da saúde</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>AIDS, Câncer, doenças de tratamento especial</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Saúde</titulo>
+        </area>
+    </areasInteresse>
+</servico>

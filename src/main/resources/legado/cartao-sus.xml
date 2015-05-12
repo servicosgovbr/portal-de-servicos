@@ -1,3 +1,70 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Cartão SUS</titulo><descricao>É um documento que facilita o acesso à rede de atendimento do Sistema Único de Saúde (SUS), contendo dados sobre quando e onde o paciente foi atendido, quais serviços foram prestados e por qual profissional e quais procedimentos foram realizados. 
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Cartão SUS</titulo>
+    <descricao>É um documento que facilita o acesso à rede de atendimento do Sistema Único de Saúde (SUS), contendo
+        dados sobre quando e onde o paciente foi atendido, quais serviços foram prestados e por qual profissional e
+        quais procedimentos foram realizados.
 
-Os objetivos do Sistema Cartão Nacional de Saúde são organizar e sistematizar dados sobre o atendimento prestado aos usuários; dotar a rede de atendimento do Sistema Único de Saúde (SUS) de um instrumento que facilite a comunicação entre os diversos serviços de saúde;  fornecer informações sobre uma pessoa usuária do SUS em qualquer ponto do País; e gerar dados confiáveis e atualizados que permitam planejamento e intercâmbio de conhecimento para subsidiar a elaboração e execução das políticas públicas de saúde.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>É possível imprimi-lo em todos os municípios do Brasil. O ideal é que o cidadão tenha o seu Cartão Nacional de Saúde entregue no seu atendimento pelo SUS.</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>O cadastro é feito em hospitais, clínicas e postos de saúde ou locais definidos pela secretaria municipal de saúde.</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Pré-cadastro do Cartão Nacional de Saúde</descricao><url>https://portaldocidadao.saude.gov.br/portalcidadao/areaCadastro.htm</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Portal de Saúde do Cidadão</descricao><url>http://portaldocidadao.saude.gov.br/</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Saúde- MS</titulo></orgaoResponsavel><orgaoPrestador><titulo>Ministério da Saúde</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo/><areasInteresse><area><titulo>Saúde</titulo></area></areasInteresse></servico>
+        Os objetivos do Sistema Cartão Nacional de Saúde são organizar e sistematizar dados sobre o atendimento prestado
+        aos usuários; dotar a rede de atendimento do Sistema Único de Saúde (SUS) de um instrumento que facilite a
+        comunicação entre os diversos serviços de saúde; fornecer informações sobre uma pessoa usuária do SUS em
+        qualquer ponto do País; e gerar dados confiáveis e atualizados que permitam planejamento e intercâmbio de
+        conhecimento para subsidiar a elaboração e execução das políticas públicas de saúde.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>É possível imprimi-lo em todos os municípios do Brasil. O ideal é que o cidadão tenha o seu
+                Cartão Nacional de Saúde entregue no seu atendimento pelo SUS.
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>O cadastro é feito em hospitais, clínicas e postos de saúde ou locais definidos pela secretaria
+                municipal de saúde.
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Pré-cadastro do Cartão Nacional de Saúde</descricao>
+            <url>https://portaldocidadao.saude.gov.br/portalcidadao/areaCadastro.htm</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Portal de Saúde do Cidadão</descricao>
+            <url>http://portaldocidadao.saude.gov.br/</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Saúde- MS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Ministério da Saúde</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo/>
+    <areasInteresse>
+        <area>
+            <titulo>Saúde</titulo>
+        </area>
+    </areasInteresse>
+</servico>

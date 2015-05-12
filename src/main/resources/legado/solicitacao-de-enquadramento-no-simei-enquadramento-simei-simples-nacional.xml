@@ -1,1 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Solicitação de Enquadramento no SIMEI (Enquadramento (SIMEI) / Simples Nacional)</titulo><descricao>Solicitar enquadramento no Simei. </descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Endereço eletrônico do serviço</descricao><url>http://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Servicos/Grupo.aspx?grp=7</url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Internet (via Portal e-CAC com certificado digital)</descricao><url>https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=05101</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Orientações gerais sobre o serviço</descricao><url>http://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Perguntas/Perguntas.aspx</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Ver todos os serviços do assunto "Simples Nacional"</descricao><url>http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/14</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Receita Federal</titulo></orgaoResponsavel><orgaoPrestador><titulo>Receital Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Meu Negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Pagar impostos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Economia e Finanças</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Solicitação de Enquadramento no SIMEI (Enquadramento (SIMEI) / Simples Nacional)</titulo>
+    <descricao>Solicitar enquadramento no Simei.</descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Endereço eletrônico do serviço</descricao>
+            <url>http://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Servicos/Grupo.aspx?grp=7</url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Internet (via Portal e-CAC com certificado digital)</descricao>
+            <url>https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=05101</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Orientações gerais sobre o serviço</descricao>
+            <url>http://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Perguntas/Perguntas.aspx</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Ver todos os serviços do assunto "Simples Nacional"</descricao>
+            <url>http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/14</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Receita Federal</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Receital Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Meu Negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Pagar impostos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Economia e Finanças</titulo>
+        </area>
+    </areasInteresse>
+</servico>

@@ -1,2 +1,72 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Acerto de Vínculos e Remunerações para fins Previdenciários</titulo><descricao>Serviço que possibilita o acerto ou atualização das informações dos vínculos e remunerações constantes no Cadastro Nacional de Informações Sociais – CNIS referente ao empregado.		
-</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Clique aqui para agendar seu atendimento.</descricao><url>http://www2.dataprev.gov.br/prevagenda/OpcaoInicialTela.view</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Telefone</titulo></tipoInformacaoUtil><descricao>Ligue 135 para mais informações.</descricao><url></url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministerio da Previdencia Social - MPS</titulo></orgaoResponsavel><orgaoPrestador><titulo>Instituto Nacional do Seguro Social - INSS</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Trabalhando</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Benefícios trabalhistas</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Previdência Social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Acerto de Vínculos e Remunerações para fins Previdenciários</titulo>
+    <descricao>Serviço que possibilita o acerto ou atualização das informações dos vínculos e remunerações constantes no
+        Cadastro Nacional de Informações Sociais – CNIS referente ao empregado.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Clique aqui para agendar seu atendimento.</descricao>
+            <url>http://www2.dataprev.gov.br/prevagenda/OpcaoInicialTela.view</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Telefone</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Ligue 135 para mais informações.</descricao>
+            <url></url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministerio da Previdencia Social - MPS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Instituto Nacional do Seguro Social - INSS</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Trabalhando</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Benefícios trabalhistas</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Previdência Social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

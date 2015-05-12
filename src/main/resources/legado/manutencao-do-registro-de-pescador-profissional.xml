@@ -1,1 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Manutenção do Registro de Pescador Profissional</titulo><descricao>O pescador registrado no Ministério da Pesca e Aquicultura, portador da Carteira de Pescador, deve, anualmente, apresentar ao ministério um relatório da sua produção para manter o seu registro ativo. </descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Para fazer a manutenção anual do registro o pescador deve procurar a Superintendência Federal de Pesca e Aquicultura no seu estado ou sua entidade representativa de classe (colônia, associação ou sindicato).</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Endereços e contatos das Superintendências Federais de Pesca e Aquicultura</descricao><url>http://www.mpa.gov.br/index.php/ministeriompa/superintendencias-federais</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Pesca e Aquicultura- MPA</titulo></orgaoResponsavel><orgaoPrestador><titulo>Ministério da Pesca e Aquicultura</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo/><areasInteresse><area><titulo>Agropecuária</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Manutenção do Registro de Pescador Profissional</titulo>
+    <descricao>O pescador registrado no Ministério da Pesca e Aquicultura, portador da Carteira de Pescador, deve,
+        anualmente, apresentar ao ministério um relatório da sua produção para manter o seu registro ativo.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Para fazer a manutenção anual do registro o pescador deve procurar a Superintendência Federal de
+                Pesca e Aquicultura no seu estado ou sua entidade representativa de classe (colônia, associação ou
+                sindicato).
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Endereços e contatos das Superintendências Federais de Pesca e Aquicultura</descricao>
+            <url>http://www.mpa.gov.br/index.php/ministeriompa/superintendencias-federais</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Pesca e Aquicultura- MPA</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Ministério da Pesca e Aquicultura</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo/>
+    <areasInteresse>
+        <area>
+            <titulo>Agropecuária</titulo>
+        </area>
+    </areasInteresse>
+</servico>

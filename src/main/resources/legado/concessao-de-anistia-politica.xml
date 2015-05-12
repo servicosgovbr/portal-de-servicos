@@ -1,9 +1,115 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Concessão de Anistia Política</titulo><descricao>Análise, julgamento e decisão final nos requerimentos de Anistia Política, com a consequente emissão de Portaria Ministerial.
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Concessão de Anistia Política</titulo>
+    <descricao>Análise, julgamento e decisão final nos requerimentos de Anistia Política, com a consequente emissão de
+        Portaria Ministerial.
 
-Os processos de anistia são recepcionados pela Comissão de Anistia, do Ministério da Justiça - MJ, para que sejam adotados os procedimentos estabelecidos na Portaria nº 2.523/2008/MJ.
+        Os processos de anistia são recepcionados pela Comissão de Anistia, do Ministério da Justiça - MJ, para que
+        sejam adotados os procedimentos estabelecidos na Portaria nº 2.523/2008/MJ.
 
-A Comissão de Anistia analisa os pedidos de indenização formulados pelas pessoas que foram impedidas de exercer atividades econômicas por motivação exclusivamente política desde 18 de setembro de 1946 até cinco de outubro de 1988.
+        A Comissão de Anistia analisa os pedidos de indenização formulados pelas pessoas que foram impedidas de exercer
+        atividades econômicas por motivação exclusivamente política desde 18 de setembro de 1946 até cinco de outubro de
+        1988.
 
-A Comissão da Anistia tem vínculo direto ao Gabinete do Ministro da Justiça e todos os requerimentos por ela apreciados são submetidos à decisão final do Ministro da Justiça.
+        A Comissão da Anistia tem vínculo direto ao Gabinete do Ministro da Justiça e todos os requerimentos por ela
+        apreciados são submetidos à decisão final do Ministro da Justiça.
 
-A anistia está prevista no art. 8º do Ato das Disposições Transitórias da Constituição Federal de 1988, o qual é regulamentado pela Lei nº 10.559, de 13 de novembro de 2002. A reparação econômica, segundo a referida Lei, poderá ser concedida em prestação única correspondente a 30 salários mínimos por ano de perseguição política até o limite de 100 mil reais, ou prestação mensal que corresponderá ao posto, cargo, graduação ou emprego que o anistiando ocuparia se na ativa estivesse, observado o limite do teto da remuneração do servidor público federal.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Ministério da Justiça. Esplanada dos Ministérios, Bloco T, anexo II, térreo T3, Brasília, DF. CEP: 70064-900.</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Outros</titulo></tipoCanalPrestacaoServico><descricao>O requerimento de Anistia Política também pode ser enviado pelos Correios ao endereço: Ministério da Justiça. Esplanada dos Ministérios, Bloco T, anexo II, térreo T3, Brasília, DF. CEP: 70064-900.</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Informações sobre Processos de Anistia Política.</descricao><url>http://portal.mj.gov.br/data/Pages/MJDC5E093DPTBRNN.htm</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>anistia@mj.gov.br</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Telefone</titulo></tipoInformacaoUtil><descricao>(61) 2025 3213/ 3150 / 3675</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Formulários</titulo></tipoInformacaoUtil><descricao>Normas procedimentais da Comissão para a formulação do requerimento de anistia</descricao><url>http://portal.mj.gov.br/data/Pages/MJABFF735EITEMIDF6425A864D1448ACB9FC7B3A1CDC1022PTBRNN.htm</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Mais informações - Anistia Política</descricao><url>http://portal.mj.gov.br/data/Pages/MJ20BF8FDBITEMIDDB66A11972EE4432A7654440E32B2B6CPTBRNN.htm</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Comissão de Anistia</titulo><endereco>Esplanada dos Ministérios, Anexo II, Térreo, sala T3  70064-900 Brasília-DF</endereco><telefone>(61) 2025-3150/3675 </telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Benefícios</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+        A anistia está prevista no art. 8º do Ato das Disposições Transitórias da Constituição Federal de 1988, o qual é
+        regulamentado pela Lei nº 10.559, de 13 de novembro de 2002. A reparação econômica, segundo a referida Lei,
+        poderá ser concedida em prestação única correspondente a 30 salários mínimos por ano de perseguição política até
+        o limite de 100 mil reais, ou prestação mensal que corresponderá ao posto, cargo, graduação ou emprego que o
+        anistiando ocuparia se na ativa estivesse, observado o limite do teto da remuneração do servidor público
+        federal.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Ministério da Justiça. Esplanada dos Ministérios, Bloco T, anexo II, térreo T3, Brasília, DF.
+                CEP: 70064-900.
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Outros</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>O requerimento de Anistia Política também pode ser enviado pelos Correios ao endereço: Ministério
+                da Justiça. Esplanada dos Ministérios, Bloco T, anexo II, térreo T3, Brasília, DF. CEP: 70064-900.
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Informações sobre Processos de Anistia Política.</descricao>
+            <url>http://portal.mj.gov.br/data/Pages/MJDC5E093DPTBRNN.htm</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>anistia@mj.gov.br</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Telefone</titulo>
+            </tipoInformacaoUtil>
+            <descricao>(61) 2025 3213/ 3150 / 3675</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Formulários</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Normas procedimentais da Comissão para a formulação do requerimento de anistia</descricao>
+            <url>http://portal.mj.gov.br/data/Pages/MJABFF735EITEMIDF6425A864D1448ACB9FC7B3A1CDC1022PTBRNN.htm</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Mais informações - Anistia Política</descricao>
+            <url>http://portal.mj.gov.br/data/Pages/MJ20BF8FDBITEMIDDB66A11972EE4432A7654440E32B2B6CPTBRNN.htm</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Comissão de Anistia</titulo>
+        <endereco>Esplanada dos Ministérios, Anexo II, Térreo, sala T3 70064-900 Brasília-DF</endereco>
+        <telefone>(61) 2025-3150/3675</telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Benefícios</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

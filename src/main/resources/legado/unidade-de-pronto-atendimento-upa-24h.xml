@@ -1,1 +1,74 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Unidade de Pronto Atendimento (UPA 24h)</titulo><descricao>As Unidades de Pronto Atendimento (UPAs) ficam abertas 24 horas e servem como um intermediário entre os postos de saúde e os hospitais. Estão equipadas para socorrer pessoas com problemas de pressão arterial, febre alta, fraturas, cortes e infartos, evitando que estes pacientes sejam sempre encaminhados aos prontos-socorros dos hospitais. As UPAS contam com equipamentos de raio-X, eletrocardiografia, laboratório de exames e leitos de observação – uma estrutura que as permite resolver, em média 97%, dos casos.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Acesse a Sala de Apoio à Gestão Estratégica e localize uma Unidade de Pronto Atendimento (UPA 24h) em sua região</descricao><url>http://sage.saude.gov.br/?link=upaFuncionamento&amp;flt=true&amp;param=null</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis/><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Saúde- MS</titulo></orgaoResponsavel><orgaoPrestador><titulo></titulo><endereco></endereco><telefone>136</telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Cuidando da saúde</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Encontrar centros especializados</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Saúde</titulo></area><area><titulo>Emergências e Urgências</titulo></area><area><titulo>Saúde da criança</titulo></area><area><titulo>Saúde da família</titulo></area><area><titulo>Saúde da mulher</titulo></area><area><titulo>Saúde do homem</titulo></area><area><titulo>Saúde do idoso</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Unidade de Pronto Atendimento (UPA 24h)</titulo>
+    <descricao>As Unidades de Pronto Atendimento (UPAs) ficam abertas 24 horas e servem como um intermediário entre os
+        postos de saúde e os hospitais. Estão equipadas para socorrer pessoas com problemas de pressão arterial, febre
+        alta, fraturas, cortes e infartos, evitando que estes pacientes sejam sempre encaminhados aos prontos-socorros
+        dos hospitais. As UPAS contam com equipamentos de raio-X, eletrocardiografia, laboratório de exames e leitos de
+        observação – uma estrutura que as permite resolver, em média 97%, dos casos.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Acesse a Sala de Apoio à Gestão Estratégica e localize uma Unidade de Pronto Atendimento (UPA
+                24h) em sua região
+            </descricao>
+            <url>http://sage.saude.gov.br/?link=upaFuncionamento&amp;flt=true&amp;param=null</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis/>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Saúde- MS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo></titulo>
+        <endereco></endereco>
+        <telefone>136</telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Cuidando da saúde</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Encontrar centros especializados</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Saúde</titulo>
+        </area>
+        <area>
+            <titulo>Emergências e Urgências</titulo>
+        </area>
+        <area>
+            <titulo>Saúde da criança</titulo>
+        </area>
+        <area>
+            <titulo>Saúde da família</titulo>
+        </area>
+        <area>
+            <titulo>Saúde da mulher</titulo>
+        </area>
+        <area>
+            <titulo>Saúde do homem</titulo>
+        </area>
+        <area>
+            <titulo>Saúde do idoso</titulo>
+        </area>
+    </areasInteresse>
+</servico>

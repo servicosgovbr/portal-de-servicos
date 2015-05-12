@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Balanço hidrico climático</titulo><descricao>Este serviço oferecido pela Secretaria da Receita Federal do Brasil - RFB destina-se à solicitação e à emissão, pela Internet, da Certidão Negativa de Débito (CND) para fins de baixa de empresa ( finalidade de registro ou arquivamento, em órgão próprio, de ato relativo à baixa de firma individual ou extinção de entidade ou de sociedade empresária ou simples).</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Balanço Hídrico Climático</descricao><url>http://www.inmet.gov.br/agrometeorologia/balanco_hidrico_climatico/bal_climatico.php</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis/><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Agricultura, Pecuária e Abastecimento- MAPA</titulo></orgaoResponsavel><orgaoPrestador><titulo>Ministério da Agricultura, Pecuária e Abastecimento </titulo><endereco>Esplanada dos Ministérios - Bloco D - Brasília/DF - CEP: 70.043-900</endereco><telefone>(61)3218-2828</telefone></orgaoPrestador><publicosAlvo/><areasInteresse><area><titulo>Abastecimento</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Balanço hidrico climático</titulo>
+    <descricao>Este serviço oferecido pela Secretaria da Receita Federal do Brasil - RFB destina-se à solicitação e à
+        emissão, pela Internet, da Certidão Negativa de Débito (CND) para fins de baixa de empresa ( finalidade de
+        registro ou arquivamento, em órgão próprio, de ato relativo à baixa de firma individual ou extinção de entidade
+        ou de sociedade empresária ou simples).
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Balanço Hídrico Climático</descricao>
+            <url>http://www.inmet.gov.br/agrometeorologia/balanco_hidrico_climatico/bal_climatico.php</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis/>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Agricultura, Pecuária e Abastecimento- MAPA</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Ministério da Agricultura, Pecuária e Abastecimento</titulo>
+        <endereco>Esplanada dos Ministérios - Bloco D - Brasília/DF - CEP: 70.043-900</endereco>
+        <telefone>(61)3218-2828</telefone>
+    </orgaoPrestador>
+    <publicosAlvo/>
+    <areasInteresse>
+        <area>
+            <titulo>Abastecimento</titulo>
+        </area>
+    </areasInteresse>
+</servico>

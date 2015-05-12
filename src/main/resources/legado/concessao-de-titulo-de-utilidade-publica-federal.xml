@@ -1,1 +1,98 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Concessão de Título de Utilidade Pública Federal</titulo><descricao>Receber, protocolar, analisar e emitir parecer opinativo acerca dos pedidos de titulação como Utilidade Pública Federal, instituída pela Lei n° 91/35 e regulamentada pelo Decreto nº 50.517/61.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Ministério da Justiça – Anexo II , Térreo Endereço: Esplanada dos Ministérios, bloco T. Brasília/DF. CEP: 70.064-900. Brasília/DF.</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Outros</titulo></tipoCanalPrestacaoServico><descricao>Os interessados podem enviar a documentação via postal no endereço: Ministério da Justiça – Anexo II , Térreo Endereço: Esplanada dos Ministérios, bloco T. Brasília/DF. CEP: 70.064-900. Brasília/DF.</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Dúvidas e orientações podem ser obtidas no e-mail: sac.dejus@mj.gov.br</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Conheça as entidades que possuem o título de Utilidade Pública Federal no Brasil</descricao><url>http://portal.mj.gov.br/data/Pages/MJ4268993FPTBRNN.htm</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Mais informações sobre Utilidade Pública Federal</descricao><url>http://portal.mj.gov.br/main.asp?ViewID=%7B8B2ED119-A874-471A-9C72-B8CCBD80B3E3%7D&amp;params=itemID=%7BC1C7F7D3-9AB2-4462-94E0-EBE35306D163%7D;&amp;UIPartUID=%7BE0EA6E2F-2D28-4749-9852-31405415DD85%7D</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Lei nº 91/35</descricao><url>http://www.planalto.gov.br/ccivil_03/Leis/1930-1949/L0091.htm</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Decreto nº 50.517/61.</descricao><url>http://www.planalto.gov.br/ccivil_03/decreto/1950-1969/D50517.htm</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Secretaria Nacional de Justiça</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Concessão de Título de Utilidade Pública Federal</titulo>
+    <descricao>Receber, protocolar, analisar e emitir parecer opinativo acerca dos pedidos de titulação como Utilidade
+        Pública Federal, instituída pela Lei n° 91/35 e regulamentada pelo Decreto nº 50.517/61.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Ministério da Justiça – Anexo II , Térreo Endereço: Esplanada dos Ministérios, bloco T.
+                Brasília/DF. CEP: 70.064-900. Brasília/DF.
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Outros</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Os interessados podem enviar a documentação via postal no endereço: Ministério da Justiça – Anexo
+                II , Térreo Endereço: Esplanada dos Ministérios, bloco T. Brasília/DF. CEP: 70.064-900. Brasília/DF.
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Dúvidas e orientações podem ser obtidas no e-mail: sac.dejus@mj.gov.br</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Conheça as entidades que possuem o título de Utilidade Pública Federal no Brasil</descricao>
+            <url>http://portal.mj.gov.br/data/Pages/MJ4268993FPTBRNN.htm</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Mais informações sobre Utilidade Pública Federal</descricao>
+            <url>http://portal.mj.gov.br/main.asp?ViewID=%7B8B2ED119-A874-471A-9C72-B8CCBD80B3E3%7D&amp;params=itemID=%7BC1C7F7D3-9AB2-4462-94E0-EBE35306D163%7D;&amp;UIPartUID=%7BE0EA6E2F-2D28-4749-9852-31405415DD85%7D</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Lei nº 91/35</descricao>
+            <url>http://www.planalto.gov.br/ccivil_03/Leis/1930-1949/L0091.htm</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Decreto nº 50.517/61.</descricao>
+            <url>http://www.planalto.gov.br/ccivil_03/decreto/1950-1969/D50517.htm</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Secretaria Nacional de Justiça</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

@@ -1,1 +1,84 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Enfrentamento ao tráfico de pessoas - denúncias e informações</titulo><descricao>Recebimento de denúncias sobre possíveis casos de tráfico de pessoas para encaminhamento aos órgãos competentes. Também é prestado ao cidadão serviço de orientação e fornecimento de material informativo sobre o enfrentamento ao tráfico de pessoas.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>E-mail</titulo></tipoCanalPrestacaoServico><descricao>traficodepessoas@mj.gov.br</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Telefone</titulo></tipoCanalPrestacaoServico><descricao>(61) 2025-9584</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Esplanada dos Ministérios, Bloco T, Anexo II, 4º. Andar, sala 429; CEP: 70064-900 – Brasília – DF</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Rede de enfrentamento ao Tráfico de Pessoas.</descricao><url>http://portal.mj.gov.br/main.asp?View={395C2E18-4401-4CAA-9961-059B959D1EE3}&amp;BrowserType=NN&amp;LangID=pt-br&amp;params=itemID%3D{07802C53-100C-4AA3-A3CD-057F1F1964D4}%3B&amp;UIPartUID={2868BA3C-1C72-4347-BE11-A26F70F4CB26}</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Outros</titulo></tipoInformacaoUtil><descricao>Outras informações sobre o Tráfico de Pessoas.</descricao><url>http://portal.mj.gov.br/data/Pages/MJ16B51547PTBRNN.htm</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Secretaria Nacional de Justiça</titulo><endereco>Esplanada dos Ministérios, Bloco T, Anexo II, 4º. Andar, sala 429; CEP: 70064-900 – Brasília – DF</endereco><telefone>(61) 2025-9584</telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Denúncias</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Enfrentamento ao tráfico de pessoas - denúncias e informações</titulo>
+    <descricao>Recebimento de denúncias sobre possíveis casos de tráfico de pessoas para encaminhamento aos órgãos
+        competentes. Também é prestado ao cidadão serviço de orientação e fornecimento de material informativo sobre o
+        enfrentamento ao tráfico de pessoas.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>E-mail</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>traficodepessoas@mj.gov.br</descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Telefone</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>(61) 2025-9584</descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Esplanada dos Ministérios, Bloco T, Anexo II, 4º. Andar, sala 429; CEP: 70064-900 – Brasília –
+                DF
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Rede de enfrentamento ao Tráfico de Pessoas.</descricao>
+            <url>http://portal.mj.gov.br/main.asp?View={395C2E18-4401-4CAA-9961-059B959D1EE3}&amp;BrowserType=NN&amp;LangID=pt-br&amp;params=itemID%3D{07802C53-100C-4AA3-A3CD-057F1F1964D4}%3B&amp;UIPartUID={2868BA3C-1C72-4347-BE11-A26F70F4CB26}</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Outros</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Outras informações sobre o Tráfico de Pessoas.</descricao>
+            <url>http://portal.mj.gov.br/data/Pages/MJ16B51547PTBRNN.htm</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Secretaria Nacional de Justiça</titulo>
+        <endereco>Esplanada dos Ministérios, Bloco T, Anexo II, 4º. Andar, sala 429; CEP: 70064-900 – Brasília – DF
+        </endereco>
+        <telefone>(61) 2025-9584</telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Denúncias</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

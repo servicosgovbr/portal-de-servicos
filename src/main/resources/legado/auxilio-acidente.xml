@@ -1,3 +1,62 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Auxílio-Acidente</titulo><descricao>Benefício pago ao trabalhador que sofre um acidente e fica com seqüelas que reduzem sua capacidade de trabalho. É concedido para segurados que recebiam auxílio-doença. Têm direito ao auxílio-acidente o trabalhador empregado, o trabalhador avulso e o segurador especial. O empregado doméstico, o contribuinte individual e o facultativo não recebem o benefício.	
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Auxílio-Acidente</titulo>
+    <descricao>Benefício pago ao trabalhador que sofre um acidente e fica com seqüelas que reduzem sua capacidade de
+        trabalho. É concedido para segurados que recebiam auxílio-doença. Têm direito ao auxílio-acidente o trabalhador
+        empregado, o trabalhador avulso e o segurador especial. O empregado doméstico, o contribuinte individual e o
+        facultativo não recebem o benefício.
 
-	</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Serviço prestado nas Agências da Previdência Social.</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Agendamento</titulo></tipoInformacaoUtil><descricao>Agende aqui seu atendimento.</descricao><url>http://www2.dataprev.gov.br/sabiweb/agendamento/inicio.view</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministerio da Previdencia Social - MPS</titulo></orgaoResponsavel><orgaoPrestador><titulo>Instituto  Nacional do Seguro Social - INSS.</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Cuidando da saúde</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Seguro de vida e patrimonial</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Previdência Social</titulo></area></areasInteresse></servico>
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Serviço prestado nas Agências da Previdência Social.</descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Agendamento</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Agende aqui seu atendimento.</descricao>
+            <url>http://www2.dataprev.gov.br/sabiweb/agendamento/inicio.view</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministerio da Previdencia Social - MPS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Instituto Nacional do Seguro Social - INSS.</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Cuidando da saúde</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Seguro de vida e patrimonial</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Previdência Social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

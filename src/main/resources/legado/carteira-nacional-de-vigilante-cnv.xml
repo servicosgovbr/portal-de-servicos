@@ -1,1 +1,81 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Carteira Nacional De Vigilante (CNV) </titulo><descricao>Documento de identidade funcional do vigilante, de uso obrigatório em serviço, com validade de 5 (cinco) anos. </descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Requerimento Eletrônico de Carteira Nacional de Vigilante</descricao><url>http://requerimentocnv.dpf.gov.br/cnv/faces/restrito/validacaoDeInformacoes.seam?cid=6365</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Telefone</titulo></tipoInformacaoUtil><descricao>Mais informações: 194</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Registro de Certificado de Formação de Vigilante</descricao><url>http://www.dpf.gov.br/servicos/seguranca-privada/servicos/registro-de-certificado-de-formacao-de-vigilante</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Departamento de Polícia Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Prestando serviço militar</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Licenças</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Meu Negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Obter licenças e permissões</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Segurança e Ordem Pública</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Carteira Nacional De Vigilante (CNV)</titulo>
+    <descricao>Documento de identidade funcional do vigilante, de uso obrigatório em serviço, com validade de 5 (cinco)
+        anos.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Requerimento Eletrônico de Carteira Nacional de Vigilante</descricao>
+            <url>http://requerimentocnv.dpf.gov.br/cnv/faces/restrito/validacaoDeInformacoes.seam?cid=6365</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Telefone</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Mais informações: 194</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Registro de Certificado de Formação de Vigilante</descricao>
+            <url>
+                http://www.dpf.gov.br/servicos/seguranca-privada/servicos/registro-de-certificado-de-formacao-de-vigilante
+            </url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Departamento de Polícia Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Prestando serviço militar</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Licenças</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Meu Negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Obter licenças e permissões</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Segurança e Ordem Pública</titulo>
+        </area>
+    </areasInteresse>
+</servico>

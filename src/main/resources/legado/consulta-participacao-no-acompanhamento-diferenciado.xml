@@ -1,1 +1,53 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Consulta Participação no Acompanhamento Diferenciado</titulo><descricao>Consultar histórico de participação no acompanhamento econômico-tributário diferenciado e especial. Esta consulta permite a todos os contribuintes pessoas jurídicas, diferenciadas ou não, realizarem consulta ao histórico de sua participação no acompanhamento econômico-tributário diferenciado de que trata a Portaria Receita Federal nº 2.356, de 14 de dezembro de 2010.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Endereço eletrônico do serviço</descricao><url>https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00074</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis/><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Receita Federal</titulo></orgaoResponsavel><orgaoPrestador><titulo>Receital Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Meu Negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Pagar impostos</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Economia e Finanças</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Consulta Participação no Acompanhamento Diferenciado</titulo>
+    <descricao>Consultar histórico de participação no acompanhamento econômico-tributário diferenciado e especial. Esta
+        consulta permite a todos os contribuintes pessoas jurídicas, diferenciadas ou não, realizarem consulta ao
+        histórico de sua participação no acompanhamento econômico-tributário diferenciado de que trata a Portaria
+        Receita Federal nº 2.356, de 14 de dezembro de 2010.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Endereço eletrônico do serviço</descricao>
+            <url>https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00074</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis/>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Receita Federal</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Receital Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Meu Negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Pagar impostos</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Economia e Finanças</titulo>
+        </area>
+    </areasInteresse>
+</servico>

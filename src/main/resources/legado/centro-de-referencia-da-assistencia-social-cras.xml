@@ -1,3 +1,67 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Centro de Referência da Assistência Social - CRAS</titulo><descricao>O Centro de Referência de Assistência Social (CRAS) é a porta de entrada do cidadão para o Sistema Único de Assistência Social (SUAS). É pelo CRAS que ele pode ser encaminhado para serviços e programas sociais, de acordo com a sua situação. As equipes do CRAS, formadas por profissionais especializados, como psicólogos e assistentes sociais, oferecem acompanhamento integral para famílias e pessoas de baixa renda. O principal objetivo é prevenir violações de direitos e ajudar as pessoas encontrarem melhores perspectivas de vida.  
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Centro de Referência da Assistência Social - CRAS</titulo>
+    <descricao>O Centro de Referência de Assistência Social (CRAS) é a porta de entrada do cidadão para o Sistema Único
+        de Assistência Social (SUAS). É pelo CRAS que ele pode ser encaminhado para serviços e programas sociais, de
+        acordo com a sua situação. As equipes do CRAS, formadas por profissionais especializados, como psicólogos e
+        assistentes sociais, oferecem acompanhamento integral para famílias e pessoas de baixa renda. O principal
+        objetivo é prevenir violações de direitos e ajudar as pessoas encontrarem melhores perspectivas de vida.
 
-Em vários municípios, o CRAS é responsável por inserir as famílias no Cadastro Único para Programas Sociais do Governo Federal. </descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Procure o CRAS mais próximo de sua residência</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Neste site você pode localizar o CRAS mais perto de sua residência. Esses dados podem ser localizados no mapa, basta escolher o seu Estado e o seu Município.</descricao><url>http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério do Desenvolvimento Social e Combate à Fome- MDS</titulo></orgaoResponsavel><orgaoPrestador><titulo>Município</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Benefícios</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Previdência Social</titulo></area></areasInteresse></servico>
+        Em vários municípios, o CRAS é responsável por inserir as famílias no Cadastro Único para Programas Sociais do
+        Governo Federal.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Procure o CRAS mais próximo de sua residência</descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Neste site você pode localizar o CRAS mais perto de sua residência. Esses dados podem ser
+                localizados no mapa, basta escolher o seu Estado e o seu Município.
+            </descricao>
+            <url>http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério do Desenvolvimento Social e Combate à Fome- MDS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Município</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Benefícios</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Previdência Social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

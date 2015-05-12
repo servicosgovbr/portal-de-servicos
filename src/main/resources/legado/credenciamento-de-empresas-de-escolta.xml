@@ -1,1 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Credenciamento de Empresas de Escolta</titulo><descricao>Consiste no credenciamento de empresas para execução dos serviços de escolta aos veículos transportadores de cargas superdimensionadas.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>E-mail</titulo></tipoCanalPrestacaoServico><descricao>Por meio das áreas de Policiamento e Fiscalização, mediante e-mail encaminhado para: spf.xx@dprf.gov.br ou nfp.xx@dprf.gov.br, em que “xx” corresponde à sigla da Unidade da Federação.</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Por meio de requerimento junto às Seções/Núcleos de Policiamento e Fiscalização das Unidades Regionais da Polícia Rodoviária Federal, cujos endereços encontram-se no site do órgão (vide "Localização das unidades").</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Endereços de todas as unidades da Polícia Rodoviária Federal.</descricao><url>http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Departamento de Polícia Rodoviária Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Administrar um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Outros</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Credenciamento de Empresas de Escolta</titulo>
+    <descricao>Consiste no credenciamento de empresas para execução dos serviços de escolta aos veículos transportadores
+        de cargas superdimensionadas.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>E-mail</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Por meio das áreas de Policiamento e Fiscalização, mediante e-mail encaminhado para:
+                spf.xx@dprf.gov.br ou nfp.xx@dprf.gov.br, em que “xx” corresponde à sigla da Unidade da Federação.
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Por meio de requerimento junto às Seções/Núcleos de Policiamento e Fiscalização das Unidades
+                Regionais da Polícia Rodoviária Federal, cujos endereços encontram-se no site do órgão (vide
+                "Localização das unidades").
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Endereços de todas as unidades da Polícia Rodoviária Federal.</descricao>
+            <url>http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Departamento de Polícia Rodoviária Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Administrar um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Outros</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

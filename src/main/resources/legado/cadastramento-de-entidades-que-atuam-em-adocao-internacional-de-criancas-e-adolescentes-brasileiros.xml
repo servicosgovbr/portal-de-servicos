@@ -1,13 +1,108 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Cadastramento de entidades que atuam em adoção internacional de crianças e adolescentes brasileiros</titulo><descricao>Monitorar o Sistema de Gerenciamento de Adoção Internacional – SIGAI, a análise e auditoria da emissão de passaportes para todo menor adotado (em adoção internacional), bem como a emissão e renovação de certificados para entidades que atuam em adoção internacional no Brasil. 
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Cadastramento de entidades que atuam em adoção internacional de crianças e adolescentes brasileiros</titulo>
+    <descricao>Monitorar o Sistema de Gerenciamento de Adoção Internacional – SIGAI, a análise e auditoria da emissão de
+        passaportes para todo menor adotado (em adoção internacional), bem como a emissão e renovação de certificados
+        para entidades que atuam em adoção internacional no Brasil.
 
-1.	Cadastro e controle das entidades de adoção internacional;
-2.	Emissão e renovação de certificados para entidades que atuam em adoção internacional no Brasil;
-3.	Cadastro e controle dos representantes da entidade de adoção internacional;
-4.	Controle das adoções internacionais de crianças e adolescentes brasileiros.
+        1. Cadastro e controle das entidades de adoção internacional;
+        2. Emissão e renovação de certificados para entidades que atuam em adoção internacional no Brasil;
+        3. Cadastro e controle dos representantes da entidade de adoção internacional;
+        4. Controle das adoções internacionais de crianças e adolescentes brasileiros.
 
-O serviço é prestado somente pelo sítio do Departamento de Polícia Federal. 
+        O serviço é prestado somente pelo sítio do Departamento de Polícia Federal.
 
-Após o preenchimento do formulário (vide "Formulários"), é necessário o comparecimento à unidade da Polícia Federal de sua região para dar entrada no processo. 
+        Após o preenchimento do formulário (vide "Formulários"), é necessário o comparecimento à unidade da Polícia
+        Federal de sua região para dar entrada no processo.
 
-No site da Polícia Federal constam os endereços de todas as unidades descentralizadas da Polícia Federal, as quais poderão atuar no cadastramento de entidade (vide "Localização das unidades").
-</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Web</titulo></tipoCanalPrestacaoServico><descricao>Cadastramento de entidades que atuam em adoção internacional de crianças e adolescentes brasileiros</descricao><url>http://www.dpf.gov.br/servicos/adocao-internacional/</url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Telefone</titulo></tipoInformacaoUtil><descricao>Em caso de dúvidas sobre Entidades de Adoção Internacional, é possível ligar para a Central de Atendimento: 194</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Outros</titulo></tipoInformacaoUtil><descricao>Em caso de dúvidas sobre Entidades de Adoção Internacional, é possível enviar email para: faleconosco@dpf.gov.br</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Endereços de todas as unidades da Polícia Federal.</descricao><url>http://www.dpf.gov.br/institucional/pf-pelo-brasil</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Formulários</titulo></tipoInformacaoUtil><descricao>Formulário de solicitação de cadastramento.</descricao><url>https://www7.dpf.gov.br/sigai-internet/exibirOperacao.do?dispatcher=solicitarCadastramentoEntidade</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Sobre a documentação necessária (Portaria 815/99-DG/DPF, de 28 de julho de 1999).</descricao><url>http://www.dpf.gov.br/servicos/adocao-internacional/portarias</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Departamento de Polícia Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Meu Negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Administrando seu negócio</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+        No site da Polícia Federal constam os endereços de todas as unidades descentralizadas da Polícia Federal, as
+        quais poderão atuar no cadastramento de entidade (vide "Localização das unidades").
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Web</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Cadastramento de entidades que atuam em adoção internacional de crianças e adolescentes
+                brasileiros
+            </descricao>
+            <url>http://www.dpf.gov.br/servicos/adocao-internacional/</url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Telefone</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Em caso de dúvidas sobre Entidades de Adoção Internacional, é possível ligar para a Central de
+                Atendimento: 194
+            </descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Outros</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Em caso de dúvidas sobre Entidades de Adoção Internacional, é possível enviar email para:
+                faleconosco@dpf.gov.br
+            </descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Endereços de todas as unidades da Polícia Federal.</descricao>
+            <url>http://www.dpf.gov.br/institucional/pf-pelo-brasil</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Formulários</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Formulário de solicitação de cadastramento.</descricao>
+            <url>https://www7.dpf.gov.br/sigai-internet/exibirOperacao.do?dispatcher=solicitarCadastramentoEntidade
+            </url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Sobre a documentação necessária (Portaria 815/99-DG/DPF, de 28 de julho de 1999).</descricao>
+            <url>http://www.dpf.gov.br/servicos/adocao-internacional/portarias</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Departamento de Polícia Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Meu Negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Administrando seu negócio</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

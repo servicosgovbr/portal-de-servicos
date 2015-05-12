@@ -1,3 +1,67 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Centro de Referência Especializado da Assistência Social - CREAS</titulo><descricao>É no Centro de Referência Especializado de Assistência Social (CREAS) que pessoas e famílias que tiveram direitos ameaçados ou violados por situações como: violência física, psicológica, sexual, trabalho infantil, trabalho escravo, abandono, são atendidas. Alguns CREAS também atendem pessoas em situação de rua e adolescentes que cumprem medidas socioeducativas. 
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Centro de Referência Especializado da Assistência Social - CREAS</titulo>
+    <descricao>É no Centro de Referência Especializado de Assistência Social (CREAS) que pessoas e famílias que tiveram
+        direitos ameaçados ou violados por situações como: violência física, psicológica, sexual, trabalho infantil,
+        trabalho escravo, abandono, são atendidas. Alguns CREAS também atendem pessoas em situação de rua e adolescentes
+        que cumprem medidas socioeducativas.
 
-Além de oferecer proteção e atendimento às pessoas e famílias com direitos violados, o CREAS busca reconstruir as relações familiares e comunitárias, incluir as famílias em serviços públicos, conforme a necessidade, prevenindo e diminuindo as situações de violação de direitos.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Procure o CREAS mais próximo de sua residência.</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Neste site você pode localizar o CREAS mais perto de sua residência. Esses dados podem ser localizados no mapa, basta escolher o seu Estado e o seu Município.</descricao><url>http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério do Desenvolvimento Social e Combate à Fome- MDS</titulo></orgaoResponsavel><orgaoPrestador><titulo>Município</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Adolescentes</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Drogas</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Previdência Social</titulo></area></areasInteresse></servico>
+        Além de oferecer proteção e atendimento às pessoas e famílias com direitos violados, o CREAS busca reconstruir
+        as relações familiares e comunitárias, incluir as famílias em serviços públicos, conforme a necessidade,
+        prevenindo e diminuindo as situações de violação de direitos.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Procure o CREAS mais próximo de sua residência.</descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Neste site você pode localizar o CREAS mais perto de sua residência. Esses dados podem ser
+                localizados no mapa, basta escolher o seu Estado e o seu Município.
+            </descricao>
+            <url>http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério do Desenvolvimento Social e Combate à Fome- MDS</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Município</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Adolescentes</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Drogas</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Previdência Social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

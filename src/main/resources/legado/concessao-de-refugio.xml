@@ -1,25 +1,118 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Concessão de Refúgio</titulo><descricao>Será reconhecido como refugiado todo indivíduo que:
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Concessão de Refúgio</titulo>
+    <descricao>Será reconhecido como refugiado todo indivíduo que:
 
-    I - devido a fundados temores de perseguição por motivos de raça, religião, nacionalidade, grupo social ou opiniões políticas encontre-se fora de seu país de nacionalidade e não possa ou não queira acolher-se à proteção de tal país;
-    II - não tendo nacionalidade e estando fora do país onde antes teve sua residência habitual, não possa ou não queira regressar a ele, em função das circunstâncias descritas no inciso anterior;
-    III - devido a grave e generalizada violação de direitos humanos, é obrigado a deixar seu país de nacionalidade para buscar refúgio em outro país.
+        I - devido a fundados temores de perseguição por motivos de raça, religião, nacionalidade, grupo social ou
+        opiniões políticas encontre-se fora de seu país de nacionalidade e não possa ou não queira acolher-se à proteção
+        de tal país;
+        II - não tendo nacionalidade e estando fora do país onde antes teve sua residência habitual, não possa ou não
+        queira regressar a ele, em função das circunstâncias descritas no inciso anterior;
+        III - devido a grave e generalizada violação de direitos humanos, é obrigado a deixar seu país de nacionalidade
+        para buscar refúgio em outro país.
 
-Os efeitos da condição dos refugiados serão extensivos ao cônjuge, aos ascendentes e descendentes, assim como aos demais membros do grupo familiar que do refugiado dependerem economicamente, desde que se encontrem em território nacional.
+        Os efeitos da condição dos refugiados serão extensivos ao cônjuge, aos ascendentes e descendentes, assim como
+        aos demais membros do grupo familiar que do refugiado dependerem economicamente, desde que se encontrem em
+        território nacional.
 
-Não se beneficiarão da condição de refugiado os indivíduos que:
+        Não se beneficiarão da condição de refugiado os indivíduos que:
 
- - já desfrutem de proteção ou assistência por parte de organismo ou instituição das Nações Unidas que não o Alto Comissariado das Nações Unidas para os Refugiados - ACNUR;
- - sejam residentes no território nacional e tenham direitos e obrigações relacionados com a condição de nacional brasileiro;
- - tenham cometido crime contra a paz, crime de guerra, crime contra a humanidade, crime hediondo, participado de atos terroristas ou tráfico de drogas;
- - sejam considerados culpados de atos contrários aos fins e princípios das Nações Unidas.
+        - já desfrutem de proteção ou assistência por parte de organismo ou instituição das Nações Unidas que não o Alto
+        Comissariado das Nações Unidas para os Refugiados - ACNUR;
+        - sejam residentes no território nacional e tenham direitos e obrigações relacionados com a condição de nacional
+        brasileiro;
+        - tenham cometido crime contra a paz, crime de guerra, crime contra a humanidade, crime hediondo, participado de
+        atos terroristas ou tráfico de drogas;
+        - sejam considerados culpados de atos contrários aos fins e princípios das Nações Unidas.
 
-O solicitante de refúgio deve procurar qualquer delegacia da Polícia Federal ou autoridade migratória na fronteira e solicitar formalmente a proteção do governo brasileiro (Vide "Presencial")
+        O solicitante de refúgio deve procurar qualquer delegacia da Polícia Federal ou autoridade migratória na
+        fronteira e solicitar formalmente a proteção do governo brasileiro (Vide "Presencial")
 
-O solicitante preencherá um formulário no qual constam as razões que ensejaram a sua saída do país de origem. Após tal procedimento, a Polícia Federal efetuará o Temo de Declaração, o qual deverá ser encaminhado ao Comitê Nacional para os Refugiados - CONARE -, órgão colegiado, vinculado ao Ministério da Justiça.
+        O solicitante preencherá um formulário no qual constam as razões que ensejaram a sua saída do país de origem.
+        Após tal procedimento, a Polícia Federal efetuará o Temo de Declaração, o qual deverá ser encaminhado ao Comitê
+        Nacional para os Refugiados - CONARE -, órgão colegiado, vinculado ao Ministério da Justiça.
 
-Após receber o Temo de Declaração, o CONARE expedirá uma declaração que autoriza a emissão de um protocolo provisório de solicitação de refúgio. O protocolo é o documento de identidade do solicitante até a análise final de seu caso. Com o protocolo, o solicitante poderá retirar cadastro de pessoa física – CPF e a carteira de trabalho. O documento tem validade de 180 dias e deverá ser renovado até o solicitante ter o seu pedido de refúgio analisado.
+        Após receber o Temo de Declaração, o CONARE expedirá uma declaração que autoriza a emissão de um protocolo
+        provisório de solicitação de refúgio. O protocolo é o documento de identidade do solicitante até a análise final
+        de seu caso. Com o protocolo, o solicitante poderá retirar cadastro de pessoa física – CPF e a carteira de
+        trabalho. O documento tem validade de 180 dias e deverá ser renovado até o solicitante ter o seu pedido de
+        refúgio analisado.
 
-Tendo feito o pedido de refúgio, o CONARE  entrará em contato com o estrangeiro, cujo endereço deverá estar sempre atualizado no Departamento de Polícia Federal, para que seja realizada a entrevista com o solicitante, nas Dependências da Defensoria Pública da União. A entrevista subsidiará os assessores do Comitê para a confecção do relatório, objetivando posterior analise do pedido de refúgio pelos representantes do Comitê.
+        Tendo feito o pedido de refúgio, o CONARE entrará em contato com o estrangeiro, cujo endereço deverá estar
+        sempre atualizado no Departamento de Polícia Federal, para que seja realizada a entrevista com o solicitante,
+        nas Dependências da Defensoria Pública da União. A entrevista subsidiará os assessores do Comitê para a
+        confecção do relatório, objetivando posterior analise do pedido de refúgio pelos representantes do Comitê.
 
-As solicitações de refúgio têm caráter sigiloso, razão pela qual somente o estrangeiro ou seu representante legal é quem poderá ter acesso às informações referentes ao seu pedido. Não constam na Internet os pedidos de refúgio formulados pelos estrangeiros.
-</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Em todas as unidades da Polícia Federal no Brasil, mediante comparecimento pessoal para prestação das informações e declarações (vide "Localização das unidades").</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Endereços de todas as unidades da Polícia Federal no Brasil.</descricao><url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Lei nº 9.474, de 22 de julho de 1997 - Regula a matéria de Refúgio no Brasil.</descricao><url>http://www.planalto.gov.br/ccivil_03/Leis/L9474.htm</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Para mais informações: estrangeiros@mj.gov.br</descricao><url></url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Secretaria Nacional de Justiça</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Garantindo meus direitos</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Benefícios</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+        As solicitações de refúgio têm caráter sigiloso, razão pela qual somente o estrangeiro ou seu representante
+        legal é quem poderá ter acesso às informações referentes ao seu pedido. Não constam na Internet os pedidos de
+        refúgio formulados pelos estrangeiros.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Em todas as unidades da Polícia Federal no Brasil, mediante comparecimento pessoal para prestação
+                das informações e declarações (vide "Localização das unidades").
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Endereços de todas as unidades da Polícia Federal no Brasil.</descricao>
+            <url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Lei nº 9.474, de 22 de julho de 1997 - Regula a matéria de Refúgio no Brasil.</descricao>
+            <url>http://www.planalto.gov.br/ccivil_03/Leis/L9474.htm</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Para mais informações: estrangeiros@mj.gov.br</descricao>
+            <url></url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Secretaria Nacional de Justiça</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Garantindo meus direitos</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Benefícios</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

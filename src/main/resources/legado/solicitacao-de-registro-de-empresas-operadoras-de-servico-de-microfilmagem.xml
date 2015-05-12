@@ -1,14 +1,102 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Solicitação de registro de empresas operadoras de serviço de microfilmagem</titulo><descricao>Receber, protocolar, analisar e emitir parecer opinativo acerca dos pedidos de registro das empresas interessadas em atuar com serviços de microfilmagem.
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Solicitação de registro de empresas operadoras de serviço de microfilmagem</titulo>
+    <descricao>Receber, protocolar, analisar e emitir parecer opinativo acerca dos pedidos de registro das empresas
+        interessadas em atuar com serviços de microfilmagem.
 
-O Ministério da Justiça é responsável pelo registro de empresas e cartórios que realizam serviços de microfilmagem de documentos. Todas essas entidades, antes de microfilmar documentos, devem solicitar ao Departamento de Justiça, Classificação, Títulos e Qualificação do Ministério da Justiça seu requerimento de autorização. Havendo parecer favorável, a autorização será publicada por meio de Portaria, no Diário Oficial da União.
+        O Ministério da Justiça é responsável pelo registro de empresas e cartórios que realizam serviços de
+        microfilmagem de documentos. Todas essas entidades, antes de microfilmar documentos, devem solicitar ao
+        Departamento de Justiça, Classificação, Títulos e Qualificação do Ministério da Justiça seu requerimento de
+        autorização. Havendo parecer favorável, a autorização será publicada por meio de Portaria, no Diário Oficial da
+        União.
 
-Concluído o processo, a requerente será notificada por correspondência, recebendo o comunicado oficial acompanhado de cópia da publicação. Após serem certificadas pelo Ministério da Justiça, as entidades sociais deverão apresentar anualmente seus relatórios de atividades, acompanhados das demonstrações financeiras, por meio do Cadastro Nacional de Entidades Sociais do Ministério da Justiça (CNES/MJ), afim de obterem a certidão de regularidade.
-</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Ministério da Justiça
-Secretaria Nacional de Justiça
-Departamento de Justiça, Classificação, Títulos e Qualificação
-Coordenação de Entidades Sociais
-Esplanada dos Ministérios, Bloco T, Anexo II, sala 209/211
-CEP 70064-900.  Brasília/DF</descricao><url></url></canalPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Outros</titulo></tipoCanalPrestacaoServico><descricao>Via postal no endereço: Ministério da Justiça/SNJ/DEJUS
-Coordenação de Entidades Sociais
-Esplanada dos Ministérios, Bloco T, Anexo II, sala 209/211
-CEP 70064-900.  Brasília/DF.</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>sac.dejus@mj.gov.br</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Consultar empresas autorizadas</descricao><url>http://portal.mj.gov.br/SistemaMicrofilmagem/Consulta.asp</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Mais informações sobre este serviço</descricao><url>http://portal.mj.gov.br/main.asp?ViewID=%7B588F847E-438A-409C-A4BF-33844CEA7A3C%7D&amp;params=itemID=%7B16BFF395-3B07-418F-84EC-C712E4D1EC59%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Secretaria Nacional de Justiça</titulo><endereco>Esplanada dos Ministérios, Bloco T, anexo II, Sala 209/211- CEP 70.0064-900</endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços às empresas</titulo><linhasDaViva><linhaDaVida><titulo>Abrir um negócio</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Associação</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+        Concluído o processo, a requerente será notificada por correspondência, recebendo o comunicado oficial
+        acompanhado de cópia da publicação. Após serem certificadas pelo Ministério da Justiça, as entidades sociais
+        deverão apresentar anualmente seus relatórios de atividades, acompanhados das demonstrações financeiras, por
+        meio do Cadastro Nacional de Entidades Sociais do Ministério da Justiça (CNES/MJ), afim de obterem a certidão de
+        regularidade.
+    </descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Ministério da Justiça
+                Secretaria Nacional de Justiça
+                Departamento de Justiça, Classificação, Títulos e Qualificação
+                Coordenação de Entidades Sociais
+                Esplanada dos Ministérios, Bloco T, Anexo II, sala 209/211
+                CEP 70064-900. Brasília/DF
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Outros</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Via postal no endereço: Ministério da Justiça/SNJ/DEJUS
+                Coordenação de Entidades Sociais
+                Esplanada dos Ministérios, Bloco T, Anexo II, sala 209/211
+                CEP 70064-900. Brasília/DF.
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>sac.dejus@mj.gov.br</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Consultar empresas autorizadas</descricao>
+            <url>http://portal.mj.gov.br/SistemaMicrofilmagem/Consulta.asp</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Mais informações sobre este serviço</descricao>
+            <url>http://portal.mj.gov.br/main.asp?ViewID=%7B588F847E-438A-409C-A4BF-33844CEA7A3C%7D&amp;params=itemID=%7B16BFF395-3B07-418F-84EC-C712E4D1EC59%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Secretaria Nacional de Justiça</titulo>
+        <endereco>Esplanada dos Ministérios, Bloco T, anexo II, Sala 209/211- CEP 70.0064-900</endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços às empresas</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Abrir um negócio</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Associação</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>

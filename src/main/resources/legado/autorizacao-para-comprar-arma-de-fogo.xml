@@ -1,1 +1,108 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><servico><titulo>Autorização para comprar arma de fogo</titulo><descricao>Documento que autoriza a compra de Arma de Fogo no comércio especializado.</descricao><requisitos/><etapas></etapas><canaisPrestacaoServico><canalPrestacaoServico><tipoCanalPrestacaoServico><titulo>Presencial</titulo></tipoCanalPrestacaoServico><descricao>Dirigir-se a uma das unidades da Polícia Federal (vide "Localização das unidades") munido de requerimento preenchido e da documentação necessária.</descricao><url></url></canalPrestacaoServico></canaisPrestacaoServico><taxa></taxa><informacoesUteis><informacaoUtil><tipoInformacaoUtil><titulo>Formulários</titulo></tipoInformacaoUtil><descricao>Formulário de Requerimento Sinarm.</descricao><url>http://www.dpf.gov.br/servicos/armas/form-sinarm</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Documentação necessária para cargos públicos específicos.</descricao><url>http://www.dpf.gov.br/servicos/armas/aquisicao-de-arma-de-fogo</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Localização das unidades</titulo></tipoInformacaoUtil><descricao>Endereços de todas as unidades da Polícia Federal no país.</descricao><url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Outros</titulo></tipoInformacaoUtil><descricao>Forma de obtenção das certidões criminais negativas em cada localidade.</descricao><url>http://www.dpf.gov.br/servicos/armas/anexos/certidoes-criminais-negativas</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Telefone</titulo></tipoInformacaoUtil><descricao>Mais informações: 194</descricao><url></url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Comunicação de ocorrências envolvendo Arma de Fogo</descricao><url>http://www.dpf.gov.br/servicos/armas/comunicacao-de-ocorrencias</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Serviços relacionados</titulo></tipoInformacaoUtil><descricao>Registro de Arma de Fogo</descricao><url>http://www.dpf.gov.br/servicos/armas/registro-de-arma-de-fogo</url></informacaoUtil><informacaoUtil><tipoInformacaoUtil><titulo>Mais informações</titulo></tipoInformacaoUtil><descricao>Sobre Arma de Fogo</descricao><url>http://www.dpf.gov.br/servicos/armas/</url></informacaoUtil></informacoesUteis><compromissosAtendimento></compromissosAtendimento><legislacoes></legislacoes><palavrasChave></palavrasChave><orgaoResponsavel><titulo>Ministério da Justiça- MJ</titulo></orgaoResponsavel><orgaoPrestador><titulo>Departamento de Polícia Federal</titulo><endereco></endereco><telefone></telefone></orgaoPrestador><publicosAlvo><publicoAlvo><titulo>Serviços aos cidadãos</titulo><linhasDaViva><linhaDaVida><titulo>Prestando serviço militar</titulo><eventoslinhaDaVida><eventolinhaDaVida><titulo>Licenças</titulo></eventolinhaDaVida></eventoslinhaDaVida></linhaDaVida></linhasDaViva></publicoAlvo></publicosAlvo><areasInteresse><area><titulo>Proteção social</titulo></area></areasInteresse></servico>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<servico>
+    <titulo>Autorização para comprar arma de fogo</titulo>
+    <descricao>Documento que autoriza a compra de Arma de Fogo no comércio especializado.</descricao>
+    <requisitos/>
+    <etapas></etapas>
+    <canaisPrestacaoServico>
+        <canalPrestacaoServico>
+            <tipoCanalPrestacaoServico>
+                <titulo>Presencial</titulo>
+            </tipoCanalPrestacaoServico>
+            <descricao>Dirigir-se a uma das unidades da Polícia Federal (vide "Localização das unidades") munido de
+                requerimento preenchido e da documentação necessária.
+            </descricao>
+            <url></url>
+        </canalPrestacaoServico>
+    </canaisPrestacaoServico>
+    <taxa></taxa>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Formulários</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Formulário de Requerimento Sinarm.</descricao>
+            <url>http://www.dpf.gov.br/servicos/armas/form-sinarm</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Documentação necessária para cargos públicos específicos.</descricao>
+            <url>http://www.dpf.gov.br/servicos/armas/aquisicao-de-arma-de-fogo</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Localização das unidades</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Endereços de todas as unidades da Polícia Federal no país.</descricao>
+            <url>http://www.dpf.gov.br/institucional/pf-pelo-brasil/</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Outros</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Forma de obtenção das certidões criminais negativas em cada localidade.</descricao>
+            <url>http://www.dpf.gov.br/servicos/armas/anexos/certidoes-criminais-negativas</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Telefone</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Mais informações: 194</descricao>
+            <url></url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Comunicação de ocorrências envolvendo Arma de Fogo</descricao>
+            <url>http://www.dpf.gov.br/servicos/armas/comunicacao-de-ocorrencias</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Serviços relacionados</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Registro de Arma de Fogo</descricao>
+            <url>http://www.dpf.gov.br/servicos/armas/registro-de-arma-de-fogo</url>
+        </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Sobre Arma de Fogo</descricao>
+            <url>http://www.dpf.gov.br/servicos/armas/</url>
+        </informacaoUtil>
+    </informacoesUteis>
+    <compromissosAtendimento></compromissosAtendimento>
+    <legislacoes></legislacoes>
+    <palavrasChave></palavrasChave>
+    <orgaoResponsavel>
+        <titulo>Ministério da Justiça- MJ</titulo>
+    </orgaoResponsavel>
+    <orgaoPrestador>
+        <titulo>Departamento de Polícia Federal</titulo>
+        <endereco></endereco>
+        <telefone></telefone>
+    </orgaoPrestador>
+    <publicosAlvo>
+        <publicoAlvo>
+            <titulo>Serviços aos cidadãos</titulo>
+            <linhasDaViva>
+                <linhaDaVida>
+                    <titulo>Prestando serviço militar</titulo>
+                    <eventoslinhaDaVida>
+                        <eventolinhaDaVida>
+                            <titulo>Licenças</titulo>
+                        </eventolinhaDaVida>
+                    </eventoslinhaDaVida>
+                </linhaDaVida>
+            </linhasDaViva>
+        </publicoAlvo>
+    </publicosAlvo>
+    <areasInteresse>
+        <area>
+            <titulo>Proteção social</titulo>
+        </area>
+    </areasInteresse>
+</servico>
