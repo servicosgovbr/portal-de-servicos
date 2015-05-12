@@ -1,38 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Seguro-Desemprego</titulo>
-    <descricao>Seguro-Desemprego Formal:
+    <descricao><![CDATA[Seguro-Desemprego Formal: Seguro-desemprego ao trabalhador formal possui como finalidade: prover assistência financeira temporária a trabalhadores desempregados sem justa causa e auxiliá-los na busca de um novo emprego, por meio de orientação, recolocação no mercado de trabalho e/ou qualificação profissional.
 
-        Seguro-desemprego ao trabalhador formal possui como finalidade: prover assistência financeira temporária a
-        trabalhadores desempregados sem justa causa e auxiliá-los na busca de um novo emprego, por meio de orientação,
-        recolocação no mercado de trabalho e/ou qualificação profissional.
+Seguro-Desemprego Pescador Artesanal: É dirigido ao pescador profissional que exerça sua atividade de forma artesanal, individual ou em regime de economia familiar, ainda que com auxílio eventual de parceiros e que teve que interromper a atividade pesqueira devido ao período de proibição da pesca, para preservação da espécie (defeso), fixado através de Instrumento Normativo publicado no Diário Oficial da União.
 
-        Seguro-Desemprego Pescador Artesanal:
+Seguro-Desemprego Empregado Doméstico: Trata-se de ação que resulta em pagamento do benefício instituído pela Lei n.º 10.208, de 23 de março de 2001, tem por finalidade prover assistência financeira temporária ao empregado doméstico dispensado sem justa causa. O valor de cada parcela é de um salário mínimo, sendo que cada segurado recebe no máximo três parcelas. Com a aprovação da Emenda Constitucional nº 72, de 2 de abril de 2013, houve equiparação de direitos trabalhistas entre o doméstico e demais trabalhadores, entretanto, necessita-se de regulamentação quanto a percepção igualitária de parcelas inerentes ao seguro-desemprego.
 
-        É dirigido ao pescador profissional que exerça sua atividade de forma artesanal, individual ou em regime de
-        economia familiar, ainda que com auxílio eventual de parceiros e que teve que interromper a atividade pesqueira
-        devido ao período de proibição da pesca, para preservação da espécie (defeso), fixado através de Instrumento
-        Normativo publicado no Diário Oficial da União.
+Seguro-Desemprego Trabalhador Resgatado: É um auxílio temporário concedido ao trabalhador comprovadamente resgatado de regime de trabalho forçado ou da condição análoga à de escravo. Tendo direito a no máximo três parcelas no valor de um salário mínimo.
 
-        Seguro-Desemprego Empregado Doméstico:
-
-        Trata-se de ação que resulta em pagamento do benefício instituído pela Lei n.º 10.208, de 23 de março de 2001,
-        tem por finalidade prover assistência financeira temporária ao empregado doméstico dispensado sem justa causa. O
-        valor de cada parcela é de um salário mínimo, sendo que cada segurado recebe no máximo três parcelas. Com a
-        aprovação da Emenda Constitucional nº 72, de 2 de abril de 2013, houve equiparação de direitos trabalhistas
-        entre o doméstico e demais trabalhadores, entretanto, necessita-se de regulamentação quanto a percepção
-        igualitária de parcelas inerentes ao seguro-desemprego.
-
-        Seguro-Desemprego Trabalhador Resgatado:
-
-        É um auxílio temporário concedido ao trabalhador comprovadamente resgatado de regime de trabalho forçado ou da
-        condição análoga à de escravo. Tendo direito a no máximo três parcelas no valor de um salário mínimo.
-
-        Seguro-Desemprego Bolsa Qualificação:
-
-        A Bolsa de Qualificação Profissional é um benefício destinado a subvencionar os trabalhadores com contrato de
-        trabalho suspenso, em conformidade com o disposto em convenção ou acordo coletivo de trabalho, devidamente
-        matriculado em curso ou programa de qualificação profissional oferecido pelo empregador.
+Seguro-Desemprego Bolsa Qualificação: A Bolsa de Qualificação Profissional é um benefício destinado a subvencionar os trabalhadores com contrato de trabalho suspenso, em conformidade com o disposto em convenção ou acordo coletivo de trabalho, devidamente matriculado em curso ou programa de qualificação profissional oferecido pelo empregador.]]>
 
     </descricao>
     <requisitos/>
