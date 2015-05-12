@@ -18,11 +18,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.List;
-import java.util.stream.Stream;
 
 import static java.lang.String.format;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
+import static java.util.stream.Stream.concat;
 import static lombok.AccessLevel.PRIVATE;
 
 @Slf4j
@@ -42,13 +42,10 @@ public class ImportadorConteudo {
     }
 
     public Iterable<Conteudo> importar() {
-        Stream<Conteudo> conteudosOrgaos = orgaoRepository.findAll().stream()
-                .map(this::paraConteudo);
-
-        Stream<Conteudo> conteudoLinhasDaVida = linhaDaVidaRepository.findAll().stream()
-                .map(this::paraConteudo);
-
-        List<Conteudo> conteudos = Stream.concat(conteudosOrgaos, conteudoLinhasDaVida).collect(toList());
+        List<Conteudo> conteudos = concat(
+                orgaoRepository.findAll().stream().map(this::paraConteudo),
+                linhaDaVidaRepository.findAll().stream().map(this::paraConteudo)
+        ).collect(toList());
 
         return this.conteudoRepository.save(conteudos);
     }
@@ -56,30 +53,20 @@ public class ImportadorConteudo {
     private Conteudo paraConteudo(LinhaDaVida linhaDaVida) {
         return new Conteudo()
                 .withTitulo(linhaDaVida.getTitulo())
-                .withConteudo(obterConteudoLinhaDaVida(linhaDaVida.getId()));
+                .withConteudo(conteudo(format("/conteudo/linhas-da-vida/%s.md", linhaDaVida.getId())));
     }
 
     private Conteudo paraConteudo(Orgao orgao) {
         return new Conteudo()
                 .withTitulo(orgao.getNome())
-                .withConteudo(obterConteudoOrgao(orgao.getId()));
+                .withConteudo(conteudo(format("/conteudo/orgaos/%s.md", orgao.getId())));
     }
 
-    private String obterConteudoLinhaDaVida(String id) {
-        String linhaDaVidaId = format("/conteudo/linhas-da-vida/%s.md", id);
-        return obterConteudo(linhaDaVidaId);
-    }
-
-    private String obterConteudoOrgao(String id) {
-        String orgaoId = format("/conteudo/orgaos/%s.md", id);
-        return obterConteudo(orgaoId);
-    }
-
-    private String obterConteudo(String conteudoId) {
+    private String conteudo(String conteudoId) {
         InputStreamReader input = null;
         try {
             URL resource = new ClassPathResource(conteudoId).getURL();
-            log.debug("Conteúdo %s, encontrado em: {}", conteudoId, resource);
+            log.debug("Conteúdo {} encontrado em: {}", conteudoId, resource);
             input = new InputStreamReader(resource.openStream(), "UTF-8");
             try (BufferedReader br = new BufferedReader(input)) {
                 return br.lines().collect(joining("\n"));
