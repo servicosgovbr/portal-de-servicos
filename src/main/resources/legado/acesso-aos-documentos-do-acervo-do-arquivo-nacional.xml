@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Acesso aos documentos do Acervo do Arquivo Nacional</titulo>
-    <descricao>Atendimento, a distância, das demandas de acesso aos documentos do acervo do Arquivo Nacional, como por
-        exemplo a reprodução de documentos, transcrições e/ou certidões probatórias e informações sobre o acervo, por
-        meio do sítio do órgão ou e-mail.
+    <descricao>
+        <![CDATA[Atendimento, a distância, das demandas de acesso aos documentos do acervo do Arquivo Nacional, como por exemplo a reprodução de documentos, transcrições e/ou certidões probatórias e informações sobre o acervo, por meio do sítio do órgão ou e-mail.
 
-        Atendimento presencial na Sala de Consultas do Arquivo Nacional. O usuário requisita e examina os documentos de
-        seu interesse, sejam os manuscritos, os filmes, as fitas audiomagnéticas, as fotografias, os mapas e plantas ou
-        os livros, periódicos, folhetos e teses pertencentes ao acervo da Biblioteca.
-
+Atendimento presencial na Sala de Consultas do Arquivo Nacional. O usuário requisita e examina os documentos de seu interesse, sejam os manuscritos, os filmes, as fitas audiomagnéticas, as fotografias, os mapas e plantas ou os livros, periódicos, folhetos e teses pertencentes ao acervo da Biblioteca.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

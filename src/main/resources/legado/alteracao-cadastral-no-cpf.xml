@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Alteração Cadastral no CPF</titulo>
-    <descricao>Realizar pedido de alteração de dados no CPF em uma conveniada (Banco do Brasil, Caixa Econômica Federal,
-        Correios) ou alteração de endereço em entidades que prestam o serviço gratuitamente.
+    <descricao>
+        <![CDATA[Realizar pedido de alteração de dados no CPF em uma conveniada (Banco do Brasil, Caixa Econômica Federal, Correios) ou alteração de endereço em entidades que prestam o serviço gratuitamente.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

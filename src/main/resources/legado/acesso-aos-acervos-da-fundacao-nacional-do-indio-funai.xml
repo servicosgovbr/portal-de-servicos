@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Acesso aos Acervos da Fundação Nacional do Índio- FUNAI</titulo>
-    <descricao>A Fundação Nacional do Índio - FUNAI - tem como missão coordenar o processo de formulação e implementação
-        da política indigenista do Estado brasileiro, instituindo mecanismos efetivos de controle social e de gestão
-        participativa, visando à proteção e promoção dos direitos dos povos indígenas.
+    <descricao><![CDATA[A Fundação Nacional do Índio - FUNAI - tem como missão coordenar o processo de formulação e implementação da política indigenista do Estado brasileiro, instituindo mecanismos efetivos de controle social e de gestão participativa, visando à proteção e promoção dos direitos dos povos indígenas.
 
-        Os atendimentos oferecidos aos cidadãos pela FUNAI relativos ao acesso aos seus acervos são:
+Os atendimentos oferecidos aos cidadãos pela FUNAI relativos ao acesso aos seus acervos são:
 
-        - Acesso aos acervos arquivísticos (documentais) do fundo Serviço de Proteção ao Índio - SPI e aos acervos do
-        período Funai, via Serviço de Gestão Documental – Brasília, e Serviço de Referências Documentais do Museu do
-        Índio – Rio de Janeiro;
+- Acesso aos acervos arquivísticos (documentais) do fundo Serviço de Proteção ao Índio - SPI e aos acervos do período Funai, via Serviço de Gestão Documental – Brasília, e Serviço de Referências Documentais do Museu do Índio – Rio de Janeiro;
 
-        - Acesso aos acervos bibliográficos sobre a temática indígena, ambiental e indigenista, no Serviço de Gestão de
-        Bibliotecas – Brasília, e Biblioteca do Museu do Índio – Rio de Janeiro e;
+- Acesso aos acervos bibliográficos sobre a temática indígena, ambiental e indigenista, no Serviço de Gestão de Bibliotecas – Brasília, e Biblioteca do Museu do Índio – Rio de Janeiro e;
 
-        - Acesso aos acervos etnográficos e audiovisuais – Serviço de Referências Documentais do Museu do Índio – Rio de
-        Janeiro.
+- Acesso aos acervos etnográficos e audiovisuais – Serviço de Referências Documentais do Museu do Índio – Rio de Janeiro.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

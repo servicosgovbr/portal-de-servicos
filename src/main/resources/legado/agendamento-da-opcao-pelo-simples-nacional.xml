@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Agendamento da Opção pelo Simples Nacional</titulo>
-    <descricao>Agendar a opção pelo Simples Nacional entre o primeiro dia útil de novembro e o penúltimo dia útil de
-        dezembro do ano anterior ao da opção.
+    <descricao>
+        <![CDATA[Agendar a opção pelo Simples Nacional entre o primeiro dia útil de novembro e o penúltimo dia útil de dezembro do ano anterior ao da opção.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

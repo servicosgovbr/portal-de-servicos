@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Acerto de Recolhimento para fins Previdenciários</titulo>
-    <descricao>Serviço destinado a correção das informações de recolhimentos de contribuinte individual, facultativo e
-        empregado doméstico, referente a competência, código de pagamento e NIT.
+    <descricao>
+        <![CDATA[Serviço destinado a correção das informações de recolhimentos de contribuinte individual, facultativo e empregado doméstico, referente a competência, código de pagamento e NIT.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

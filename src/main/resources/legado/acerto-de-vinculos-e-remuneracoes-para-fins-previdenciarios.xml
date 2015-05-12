@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Acerto de Vínculos e Remunerações para fins Previdenciários</titulo>
-    <descricao>Serviço que possibilita o acerto ou atualização das informações dos vínculos e remunerações constantes no
-        Cadastro Nacional de Informações Sociais – CNIS referente ao empregado.
+    <descricao>
+        <![CDATA[Serviço que possibilita o acerto ou atualização das informações dos vínculos e remunerações constantes no Cadastro Nacional de Informações Sociais – CNIS referente ao empregado.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

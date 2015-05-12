@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Acesso ao Sistema SISCOSERV</titulo>
-    <descricao>Registra as informações relativas às transações realizadas entre residentes ou domiciliados no Brasil e
-        residentes ou domiciliados no exterior que compreendam serviços, intangíveis e outras operações que produzam
-        variações no patrimônio das pessoas físicas, das pessoas jurídicas ou dos entes despersonalizados, de que trata
-        a Portaria Conjunta Receita Federal/SCS nº 1.908, de 19 de julho de 2012.
+    <descricao>
+        <![CDATA[Registra as informações relativas às transações realizadas entre residentes ou domiciliados no Brasil e residentes ou domiciliados no exterior que compreendam serviços, intangíveis e outras operações que produzam variações no patrimônio das pessoas físicas, das pessoas jurídicas ou dos entes despersonalizados, de que trata a Portaria Conjunta Receita Federal/SCS nº 1.908, de 19 de julho de 2012.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
