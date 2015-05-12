@@ -69,6 +69,7 @@ import java.util.List;
  * 
  * 
  */
+@XmlRootElement(name = "servico")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "servicoType", propOrder = {
     "titulo",
