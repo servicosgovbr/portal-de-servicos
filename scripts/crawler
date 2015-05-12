@@ -34,11 +34,30 @@ class Crawl
         Crawl.new(@http, @links, link, @base).crawl
       end
     else
-      @links[url] = :external
+      begin
+        page = @http.get(url)
+        @links[url] = case page.status.to_s.to_i
+        when (0..299)
+          :external_ok
+        when (300..399)
+          :external_redirect
+        when (400..499)
+          :external_client_error
+        when (500..599)
+          :external_server_error
+        end
+      rescue
+        @links[url] = :external_connection_error
+      end
     end
+    puts "#{@links[url]}: #{url}"
   end
 end
 
 links = {}
-Crawl.new(HTTPClient.new, links, 'http://localhost:8080', 'http://localhost:8080').crawl
-puts links.to_json
+
+http = HTTPClient.new
+http.ssl_config.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+Crawl.new(http, links, 'http://localhost:8080', 'http://localhost:8080').crawl
+open('crawl.json', 'w') {|f| f.write links.to_json }
