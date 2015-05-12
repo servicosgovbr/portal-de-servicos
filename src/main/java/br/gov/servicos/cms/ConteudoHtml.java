@@ -11,11 +11,12 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor(access = PRIVATE)
 public class ConteudoHtml {
 
+    String id;
     String titulo;
     String html;
 
     public ConteudoHtml() {
-        this(null, null);
+        this(null, null, null);
     }
 
 }

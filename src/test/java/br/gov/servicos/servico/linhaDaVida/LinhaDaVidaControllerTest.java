@@ -18,6 +18,8 @@ import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
+import static org.mockito.BDDMockito.given;
+import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.doReturn;
 import static org.springframework.test.web.ModelAndViewAssert.assertCompareListModelAttribute;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
@@ -42,6 +44,8 @@ public class LinhaDaVidaControllerTest {
 
     @Test
     public void exibicaoDeLinhaDaVidaRetornaServicos() {
+        given(markdown.toHtml(anyObject())).willReturn(CONTEUDO_HTML);
+
         doReturn(umServico)
                 .when(buscador)
                 .buscaPor("linhasDaVida.id", of("Aposentar-se"));
@@ -55,7 +59,7 @@ public class LinhaDaVidaControllerTest {
                 .when(markdown)
                 .toHtml(new ClassPathResource("conteudo/linhas-da-vida/aposentar-se.md"));
 
-        assertModelAttributeValue(controller.linhaDaVida("aposentar-se"), "conteudo", CONTEUDO_HTML);
+        assertModelAttributeValue(controller.linhaDaVida("aposentar-se"), "conteudo", CONTEUDO_HTML.withId("aposentar-se"));
     }
 
 }

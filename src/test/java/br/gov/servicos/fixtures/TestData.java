@@ -30,6 +30,7 @@ public class TestData {
             .withEventosDasLinhasDaVida(singletonList("Eventos das Linhas da Vida"));
 
     public static final ConteudoHtml CONTEUDO_HTML = new ConteudoHtml()
+            .withId("pagina")
             .withTitulo("Título")
             .withHtml("<h1>Título</h1>\n\nConteúdo");
 

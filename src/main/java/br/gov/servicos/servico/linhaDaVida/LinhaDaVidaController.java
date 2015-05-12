@@ -35,7 +35,7 @@ class LinhaDaVidaController {
 
         HashMap<String, Object> model = new HashMap<>();
         model.put("termo", id);
-        model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/linhas-da-vida/%s.md", id))));
+        model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/linhas-da-vida/%s.md", id))).withId(id));
         model.put("resultados", buscador.buscaPor("linhasDaVida.id", ofNullable(id))
                 .stream()
                 .sorted((x, y) -> x.getId().compareTo(y.getId()))

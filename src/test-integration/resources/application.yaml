@@ -44,8 +44,8 @@ gds:
       trabalhando: Trabalhar
     orgaos:
       ministerio-da-previdencia-social-mps: Ministério da Previdência Social (MPS)
-      ministerio-do-turismo: Ministério do Turismo
-      ministerio-do-turismo-mtur: Ministério do Turismo
+      ministerio-do-turismo: Ministério do Turismo (MTur)
+      ministerio-do-turismo-mtur: Ministério do Turismo (MTur)
     ouvidorias:
       arquivo-nacional: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an
       banco-central-do-brasil-bcb: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen

@@ -41,7 +41,7 @@ class OrgaoController {
     ModelAndView orgao(@PathVariable String id) {
         HashMap<String, Object> model = new HashMap<>();
         model.put("termo", id);
-        model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/orgaos/%s.md", id))));
+        model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/orgaos/%s.md", id))).withId(id));
         model.put("resultados", buscador.buscaSemelhante(ofNullable(id), "prestador.id", "responsavel.id")
                 .stream()
                 .sorted((left, right) -> left.getId().compareTo(right.getId()))

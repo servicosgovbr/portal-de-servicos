@@ -28,9 +28,9 @@ public class ConteudoConfigTest {
 
     @Test
     public void mapeiaOrgaos() throws Exception {
-        assertThat(config.orgao("Ministério do Turismo").getNome(), is("Ministério do Turismo"));
-        assertThat(config.orgao("Ministério do Turismo - MTur").getNome(), is("Ministério do Turismo"));
-        assertThat(config.orgao("Ministério do Turismo- MTur").getNome(), is("Ministério do Turismo"));
+        assertThat(config.orgao("Ministério do Turismo").getNome(), is("Ministério do Turismo (MTur)"));
+        assertThat(config.orgao("Ministério do Turismo - MTur").getNome(), is("Ministério do Turismo (MTur)"));
+        assertThat(config.orgao("Ministério do Turismo- MTur").getNome(), is("Ministério do Turismo (MTur)"));
     }
 
     @Test
