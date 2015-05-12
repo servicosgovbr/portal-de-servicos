@@ -20,7 +20,7 @@ import java.util.Map;
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
 @ManagedResource(
         objectName = "ServicosGovBr:type=Importador",
-        description = "Importa XML do Guia legado para o ElasticSearch"
+        description = "Importa dados para o ElasticSearch"
 )
 public class Importador {
     GuiaDeServicosIndex indices;
