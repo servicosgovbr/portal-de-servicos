@@ -14,21 +14,21 @@ def import_from_file(file):
             exit(1)
 
         try:
-            feedbacks_json = json.loads(data)
+            opinioes_json = json.loads(data)
         except Exception as e:
             print >> sys.stderr, "Erro ao carregar dados, formato JSON não é válido"
             print >> sys.stderr, e
             exit(1)
 
-        if not feedbacks_json:
-            print >> sys.stderr, "Entrada vazia, não há nenhum feedback listado"
+        if not opinioes_json:
+            print >> sys.stderr, "Entrada vazia, não há nenhuma opinião listada"
             exit(1)
 
-        bulk_request_item_template = """{{ "update" : {{ "_index" : "gds-persistente", "_type" : "feedback", "_id": "{0}" }} }}
+        bulk_request_item_template = """{{ "update" : {{ "_index" : "gds-persistente", "_type" : "opiniao", "_id": "{0}" }} }}
         {{ "doc" : {1} }}"""
 
         full_request = [bulk_request_item_template.format(
-            it["_id"], json.dumps(it["doc"])) for it in feedbacks_json]
+            it["_id"], json.dumps(it["doc"])) for it in opinioes_json]
         full_request = '\n'.join(full_request)
 
         try:
@@ -47,7 +47,7 @@ def import_from_file(file):
         exit(1)
 
 def prepare_arguments():
-    parser = argparse.ArgumentParser(description="Importa feedbacks exportados do elastic search.")
+    parser = argparse.ArgumentParser(description="Importa opinioes exportados do elastic search.")
     parser.add_argument('file', help="Informa arquivo de importação de entrada, ou '-' para stdin", type=argparse.FileType('r'))
     return parser.parse_args()
 

@@ -10,8 +10,8 @@ O usuário consegue se informar ou agir, ainda que de forma mínima, na prestaç
 
 ## O serviço é melhorado e as necessidades do usuário são atendidas plenamente
 
-O feedback dado pelos usuários mostra melhoras significativas e suas necessidades são completamente atendidas pelo Guia. Outras [KPIs](../metricas/kpis.md) melhoram.
+As opiniões dadas pelos usuários mostra melhoras significativas e suas necessidades são completamente atendidas pelo Guia. Outras [KPIs](../metricas/kpis.md) melhoram.
 
 ## As expectativas do usuário são superadas através da melhoria contínua do serviço
 
-O feedback negativo dado pelos usuários diminui significativamente, e outras [KPIs](../metricas/kpis.md) continuam a melhorar.
+As opiniões negativas dadas pelos usuários diminuem significativamente, e outras [KPIs](../metricas/kpis.md) continuam a melhorar.

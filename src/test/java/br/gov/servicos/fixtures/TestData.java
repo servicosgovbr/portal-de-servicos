@@ -2,7 +2,7 @@ package br.gov.servicos.fixtures;
 
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoHtml;
-import br.gov.servicos.metricas.Feedback;
+import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.servico.AreaDeInteresse;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.Servico;
@@ -40,12 +40,12 @@ public class TestData {
             .withTitulo("Título")
             .withConteudo("Descrição");
 
-    public static final Feedback FEEDBACK = new Feedback()
+    public static final Opiniao OPINIAO = new Opiniao()
             .withUrl("/servico/foo")
             .withQueryString("bar=baz")
             .withTimestamp(123L)
             .withConteudoEncontrado(true)
-            .withFeedback("Otimo site");
+            .withMensagem("Otimo site");
 
     public static final List<Orgao> ORGAOS = Arrays.asList(
             new Orgao().withId("arquivo-nacional").withNome("Arquivo Nacional").withTelefone("(61) 1111 1111"),

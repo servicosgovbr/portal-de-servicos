@@ -18,18 +18,18 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class FeedbackController {
+class OpiniaoController {
 
-    FeedbackRepository feedbacks;
-    EmailDeFeedback mail;
+    OpiniaoRepository opinioes;
+    EmailDeOpiniao mail;
 
     @Autowired
-    FeedbackController(FeedbackRepository feedbacks, EmailDeFeedback mail) {
-        this.feedbacks = feedbacks;
+    OpiniaoController(OpiniaoRepository opinioes, EmailDeOpiniao mail) {
+        this.opinioes = opinioes;
         this.mail = mail;
     }
 
-    @RequestMapping(value = "/feedback", method = GET)
+    @RequestMapping(value = "/opiniao", method = GET)
     ModelAndView formularioPara(
             @RequestParam(required = false) String url,
             @RequestParam(required = false) String ticket,
@@ -40,26 +40,26 @@ class FeedbackController {
         model.put("ticket", ticket);
         model.put("busca", busca);
 
-        return new ModelAndView("feedback", model);
+        return new ModelAndView("opiniao", model);
     }
 
-    @RequestMapping(value = "/feedback", method = POST)
-    RedirectView feedback(
+    @RequestMapping(value = "/opiniao", method = POST)
+    RedirectView opiniao(
             @RequestParam(required = false) String url,
             @RequestParam(required = false) String busca,
             @RequestParam(required = false) String ticket,
-            @RequestParam(required = false) String feedback,
+            @RequestParam(required = false) String mensagem,
             @RequestParam(required = false) Boolean conteudoEncontrado) {
 
-        Feedback f = new Feedback()
+        Opiniao f = new Opiniao()
                 .withUrl(url)
                 .withQueryString(busca)
                 .withTimestamp(currentTimeMillis())
                 .withTicket(ticket)
                 .withConteudoEncontrado(conteudoEncontrado)
-                .withFeedback(feedback);
+                .withMensagem(mensagem);
 
-        mail.enviar(feedbacks.save(f));
+        mail.enviar(opinioes.save(f));
 
         return new RedirectView("/conteudo/obrigado-pela-contribuicao");
     }

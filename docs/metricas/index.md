@@ -9,9 +9,9 @@ Esta seção define os princípios e métodos pelos quais o projeto do Guia de S
 - **Como iremos medir:** Análise das palavras-chave mais buscadas.
 - **Consequência:** Entregar melhores nomenclaturas, priorizar serviços por sazonalidade.
 
-#### Feedback recebido
-- **Como funciona:** Porcentagem de feedbacks positivos ou negativos.
-- **Como iremos medir:** No feedback global (barra de feedback abaixo do cabeçalho) perguntamos aos usuários se eles encontraram o que procuravam.
+#### Opiniões recebidas
+- **Como funciona:** Porcentagem de opiniões positivas ou negativas.
+- **Como iremos medir:** Nas opiniões globais (barra de opiniões abaixo do cabeçalho) perguntamos aos usuários se eles encontraram o que procuravam.
 - **Consequência:** Teremos uma porcentagem de usuários que encontraram versus não encontraram o que procuravam, e saberemos se a satisfação geral está melhorando ao longo do tempo.
 
 #### Custo por serviço
@@ -107,4 +107,4 @@ Esta seção define os princípios e métodos pelos quais o projeto do Guia de S
 - Qualidade dos serviços enviados
 - Sevidores cadastrados
 - Acesso de servidores
-- Feedback recebido
+- Opiniões recebidas

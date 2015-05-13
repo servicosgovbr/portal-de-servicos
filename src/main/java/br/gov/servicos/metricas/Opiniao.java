@@ -16,9 +16,9 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 
 @Value
 @AllArgsConstructor(access = PRIVATE)
-@Document(indexName = GDS_PERSISTENTE, type = "feedback")
+@Document(indexName = GDS_PERSISTENTE, type = "opiniao")
 @Wither
-public class Feedback {
+public class Opiniao {
 
     @Id
     String id;
@@ -39,9 +39,9 @@ public class Feedback {
     Boolean conteudoEncontrado;
 
     @Field(store = true, type = String)
-    String feedback;
+    String mensagem;
 
-    public Feedback() {
+    public Opiniao() {
         this(null, null, null, null, null, null, null);
     }
 }

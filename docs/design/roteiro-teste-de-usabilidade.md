@@ -125,7 +125,7 @@ Perguntar impressões gerais.
 #### Tarefa C
 Página: Página onde o usuário estiver.
 
-Objetivo: Entender se está fácil para o usuário dar o feedback pelo site.
+Objetivo: Entender se está fácil para o usuário dar sua opinião pelo site.
 
 Descrição da tarefa: **Você estava navegando no site, encontrou um problema e gostaria de dar a sua opinião sobre como melhorá-lo. Tente encontrar uma forma de dar a sua opinião sobre o site.**
 
@@ -146,7 +146,7 @@ Momento para rever como o usuário se sentiu realizando as tarefas, se tem algo 
 Se não tiver tocado nos seguintes assuntos, é possível perguntar diretamente ao usuário o que ele achou sobre:
 
 - Realizar uma busca no site
-- Dar o feedback sobre o site
+- Dar sua opinião sobre o site
 - Testar a acessibilidade do site
 - Encontrar serviços disponíveis no site
 - Comentar sobre quaisquer pontos que não foram comentados

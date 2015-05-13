@@ -20,8 +20,8 @@ BuildArchitectures: noarch
 Requires:           jdk1.8.0_40
 
 Source0:            %{_sourcedir}/%{name}-%{version}.jar
-Source1:            %{_sourcedir}/exportar-feedbacks
-Source2:            %{_sourcedir}/importar-feedbacks
+Source1:            %{_sourcedir}/exportar-opinioes
+Source2:            %{_sourcedir}/importar-opinioes
 Source3:            %{_sourcedir}/guia-de-servicos.default.config
 
 %description
@@ -82,8 +82,8 @@ EOF
 
 %files
 %attr(0755, %{_user}, %{_user}) %{prefix}/bin/%{name}
-%attr(0755, %{_user}, %{_user}) %{prefix}/bin/exportar-feedbacks
-%attr(0755, %{_user}, %{_user}) %{prefix}/bin/importar-feedbacks
+%attr(0755, %{_user}, %{_user}) %{prefix}/bin/exportar-opinioes
+%attr(0755, %{_user}, %{_user}) %{prefix}/bin/importar-opinioes
 %attr(0644, %{_user}, %{_user}) %{prefix}/lib/%{name}.jar
 %attr(0644, %{_user}, %{_user}) /etc/systemd/system/%{name}.service
 %dir %attr(0755, %{_user}, %{_user}) /var/run/%{name}

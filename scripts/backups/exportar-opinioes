@@ -6,22 +6,22 @@ import os
 import sys
 import argparse
 
-def extrai_feedbacks(retorno_str):
-    feedbacks_list = []
+def extrai_opinioes(retorno_str):
+    opinioes_list = []
     try:
-        feedbacks_json = json.loads(retorno_str)
-        feedbacks_list = [{"_id": it["_id"], "doc": it['_source']}
-                          for it in feedbacks_json['hits']['hits']]
+        opinioes_json = json.loads(retorno_str)
+        opinioes_list = [{"_id": it["_id"], "doc": it['_source']}
+                          for it in opinioes_json['hits']['hits']]
     except Exception as e:
         print >> sys.stderr, "Problemas ao processar dados retornados pelo Elasticsearch: {0}".format(
             retorno_str)
         print >> sys.stderr, e
 
-    return feedbacks_list
+    return opinioes_list
 
 
 def executa_primeiro_request():
-    importacao_cmd = 'curl -s -XGET "localhost:9200/gds-persistente/_search?scroll=1m&q=feedback:*"'
+    importacao_cmd = 'curl -s -XGET "localhost:9200/gds-persistente/_search?scroll=1m&q=opiniao:*"'
     return os.popen(importacao_cmd).read()
 
 
@@ -48,22 +48,22 @@ def prepare_arguments():
 def executa_exportacao(output):
     try:
         retorno = executa_primeiro_request()
-        feedbacks_tmp = extrai_feedbacks(retorno)
-        feedbacks = feedbacks_tmp
+        opinioes_tmp = extrai_opinioes(retorno)
+        opinioes = opinioes_tmp
 
-        if (feedbacks_tmp):
-            while (feedbacks_tmp):
+        if (opinioes_tmp):
+            while (opinioes_tmp):
                 scroll_id = extrai_scroll_id(retorno)
                 retorno = executa_scroll_request(scroll_id)
-                feedbacks_tmp = extrai_feedbacks(retorno)
-                feedbacks = feedbacks + feedbacks_tmp
+                opinioes_tmp = extrai_opinioes(retorno)
+                opinioes = opinioes + opinioes_tmp
             termina_scroll(scroll_id)
     except Exception as e:
         print >> sys.stderr, "Erro insperado, detalhes:"
         print >> sys.stderr, e
         exit(1)
 
-    print >> output, json.dumps(feedbacks)
+    print >> output, json.dumps(opinioes)
 
 def main():
     args = prepare_arguments()

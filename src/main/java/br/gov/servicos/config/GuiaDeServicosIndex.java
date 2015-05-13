@@ -1,6 +1,6 @@
 package br.gov.servicos.config;
 
-import br.gov.servicos.metricas.Feedback;
+import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +46,7 @@ public class GuiaDeServicosIndex {
         criarIndicePersistenteSeNaoExistir();
 
         es.putMapping(Servico.class);
-        es.putMapping(Feedback.class);
+        es.putMapping(Opiniao.class);
     }
 
     private void criarIndicePersistenteSeNaoExistir() throws IOException {

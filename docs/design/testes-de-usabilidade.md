@@ -1,6 +1,6 @@
 # Teste de Usabilidade
 
-Uma das formas de validar algumas das hipóteses que criamos e verdades que acreditamos é realizando testes de usabilidade. Além dos testes de usabilidade, são recolhidos dados de uso (métricas) e também feedback dos usuários através de um formulário disponibilizado no site. 
+Uma das formas de validar algumas das hipóteses que criamos e verdades que acreditamos é realizando testes de usabilidade. Além dos testes de usabilidade, são recolhidos dados de uso (métricas) e também opiniões dos usuários através de um formulário disponibilizado no site. 
 
 O teste de usabilidade é uma ferramenta de pesquisa qualitativa com o objetivo de testar a interface de um site para verificar se os usuários que foram identificados como público-alvo conseguem realizar determinadas tarefas, além de aprender sobre padrões importantes de uso que não haviam sido identificados previamente, e podem estar sendo negligenciados na interface. 
 
@@ -29,35 +29,39 @@ No caso do Guia de Serviços, nosso público é extenso e abrange todos os cidad
 Os testes de usabilidade no Guia de Serviços terão sua amostra de usuários formada por:
 
 ##### Sexo:
+
 - 50% homens
 - 50% mulheres
 
 ##### Idade:
+
 - 30% jovens (18-35 anos)
 - 40% adultos (36-59 anos)
 - 30% idosos (a partir de 60 anos)
 
 ##### Experiência de uso da internet: 
+
 - 60% dos usuários com pouca experiência no uso de sites
 - 30% dos usuários com média experiência no uso de sites
 - 10% dos usuários com muita experiência no uso de sites
 
 ##### Acessibilidade:
+
 - Testar com usuários com limitação visual (cego)
 - Testar com usuários com limitação visual (baixa visão)
 - Testar com usuários com limitação motora
 
 ##### Familiaridade com sites do governo:
+
 - 30% dos usuários devem ter familiaridade com sites do governo
 - 70% dos usuários não devem ter familiaridade com sites do governo
 
-  
 
 ## Ambiente
 
 Para a realização dos testes de usabilidade, utilizaremos uma das salas do escritório da ThoughtWorks Porto Alegre. Poderemos filmar o teste para ter o aprendizado documentado. No entanto, isso não será obrigatório caso o usuário não se sinta confortável com a gravação.
 
-Para garantir que teremos os feedbacks corretamente documentados, sempre teremos um entrevistador que mantém contato visual com o usuário e um observador, que fará anotações de importantes pontos do teste assim como citações do usuário. 
+Para garantir que teremos as opiniões dos usuários corretamente documentadas, sempre teremos um entrevistador que mantém contato visual com o usuário e um observador, que fará anotações de importantes pontos do teste assim como citações do usuário. 
 
 ## Ciclo de Testes
 

@@ -11,7 +11,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
-import static br.gov.servicos.fixtures.TestData.FEEDBACK;
+import static br.gov.servicos.fixtures.TestData.OPINIAO;
 import static javax.mail.Message.RecipientType.TO;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Matchers.anyString;
@@ -19,7 +19,7 @@ import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class EmailDeFeedbackTest {
+public class EmailDeOpiniaoTest {
 
     @Mock
     JavaMailSender mail;
@@ -31,10 +31,10 @@ public class EmailDeFeedbackTest {
     public void deveEnviarEmailFormatadoComSucesso() throws Exception {
         given(mail.createMimeMessage()).willReturn(message);
 
-        EmailDeFeedback email = new EmailDeFeedback(mail, "from@servicos.gov.br", "to@servicos.gov.br");
-        email.enviar(FEEDBACK);
+        EmailDeOpiniao email = new EmailDeOpiniao(mail, "from@servicos.gov.br", "to@servicos.gov.br");
+        email.enviar(OPINIAO);
 
-        verify(message).setSubject("Novo feedback para /servico/foo");
+        verify(message).setSubject("Nova opinião para /servico/foo");
         verify(message).setFrom("from@servicos.gov.br");
         verify(message).setRecipients(TO, "to@servicos.gov.br");
         verify(message).setText(anyString(), eq("utf8"), eq("html"));
@@ -47,8 +47,8 @@ public class EmailDeFeedbackTest {
         given(mail.createMimeMessage()).willReturn(message);
         doThrow(new MessagingException()).when(message).setText(anyString(), anyString(), anyString());
 
-        EmailDeFeedback email = new EmailDeFeedback(mail, "from@servicos.gov.br", "to@servicos.gov.br");
-        email.enviar(FEEDBACK);
+        EmailDeOpiniao email = new EmailDeOpiniao(mail, "from@servicos.gov.br", "to@servicos.gov.br");
+        email.enviar(OPINIAO);
 
         verify(mail, never()).send(message);
     }
@@ -58,8 +58,8 @@ public class EmailDeFeedbackTest {
         given(mail.createMimeMessage()).willReturn(message);
         doThrow(new MailSendException("")).when(mail).send(Matchers.<MimeMessage>anyObject());
 
-        EmailDeFeedback email = new EmailDeFeedback(mail, "from@servicos.gov.br", "to@servicos.gov.br");
-        email.enviar(FEEDBACK);
+        EmailDeOpiniao email = new EmailDeOpiniao(mail, "from@servicos.gov.br", "to@servicos.gov.br");
+        email.enviar(OPINIAO);
 
         // exceção não propagada
     }

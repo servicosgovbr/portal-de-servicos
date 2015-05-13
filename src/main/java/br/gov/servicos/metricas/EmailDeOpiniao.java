@@ -19,7 +19,7 @@ import static lombok.AccessLevel.PRIVATE;
 @Slf4j
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class EmailDeFeedback {
+class EmailDeOpiniao {
 
     JavaMailSender mail;
 
@@ -27,37 +27,37 @@ class EmailDeFeedback {
     String to;
 
     @Autowired
-    public EmailDeFeedback(JavaMailSender mail, @Value("${mail.from}") String from, @Value("${mail.to}") String to) {
+    public EmailDeOpiniao(JavaMailSender mail, @Value("${mail.from}") String from, @Value("${mail.to}") String to) {
         this.mail = mail;
         this.from = from;
         this.to = to;
     }
 
-    public void enviar(Feedback feedback) {
+    public void enviar(Opiniao opiniao) {
         try {
-            MimeMessage message = prepararMensagem(feedback);
+            MimeMessage message = prepararMensagem(opiniao);
             log.debug("Email para {} preparado com sucesso", to);
 
             mail.send(message);
             log.info("Email para {} enviado com sucesso", to);
 
         } catch (MessagingException e) {
-            log.error("Erro ao preparar o email de feedback", e);
+            log.error("Erro ao preparar o email de opinião", e);
 
         } catch (MailSendException e) {
-            log.error("Erro ao enviar o email de feedback", e);
+            log.error("Erro ao enviar o email de opinião", e);
         }
     }
 
-    private MimeMessage prepararMensagem(Feedback feedback) throws MessagingException {
+    private MimeMessage prepararMensagem(Opiniao opiniao) throws MessagingException {
         MimeMessage message = mail.createMimeMessage();
 
         message.setFrom(from);
-        message.setSubject("Novo feedback para " + url(feedback));
+        message.setSubject("Nova opinião para " + url(opiniao));
         message.setRecipients(TO, to);
         message.setText(format("<html><body>" +
-                        "<h1>Novo feedback enviado</h1>" +
-                        "<p>Um novo feedback foi enviado no Guia de Serviços através do formulário embutido na aplicação:</p>" +
+                        "<h1>Nova opinião enviada</h1>" +
+                        "<p>Uma nova opinião foi enviada no Guia de Serviços através do formulário embutido na aplicação:</p>" +
                         "<h2>Contexto</h2><dl>" +
                         "<dt>Horário:</dt><dd>%s</dd>" +
                         "<dt>Ticket:</dt><dd><code>%s</code></dd>" +
@@ -67,42 +67,42 @@ class EmailDeFeedback {
                         "</dl><h2>Mensagem</h2>" +
                         "<p>%s</p>" +
                         "</body></html>",
-                horario(feedback),
-                ticket(feedback),
-                url(feedback),
-                queryString(feedback),
-                conteudoEncontrado(feedback),
-                mensagem(feedback)
+                horario(opiniao),
+                ticket(opiniao),
+                url(opiniao),
+                queryString(opiniao),
+                conteudoEncontrado(opiniao),
+                mensagem(opiniao)
         ), "utf8", "html");
 
         return message;
     }
 
-    private String mensagem(Feedback feedback) {
-        return feedback.getFeedback() == null || feedback.getFeedback().trim().isEmpty() ? "(vazia)" : feedback.getFeedback();
+    private String mensagem(Opiniao opiniao) {
+        return opiniao.getMensagem() == null || opiniao.getMensagem().trim().isEmpty() ? "(vazia)" : opiniao.getMensagem();
     }
 
-    private String queryString(Feedback feedback) {
-        return feedback.getQueryString().isEmpty() ? "(vazia)" : feedback.getQueryString();
+    private String queryString(Opiniao opiniao) {
+        return opiniao.getQueryString().isEmpty() ? "(vazia)" : opiniao.getQueryString();
     }
 
-    private String ticket(Feedback feedback) {
-        return feedback.getTicket() == null || feedback.getTicket().isEmpty() ? "(vazio)" : feedback.getTicket();
+    private String ticket(Opiniao opiniao) {
+        return opiniao.getTicket() == null || opiniao.getTicket().isEmpty() ? "(vazio)" : opiniao.getTicket();
     }
 
-    private String horario(Feedback feedback) {
-        return feedback.getTimestamp() == null ? "(vazio)" : new Date(feedback.getTimestamp()).toString();
+    private String horario(Opiniao opiniao) {
+        return opiniao.getTimestamp() == null ? "(vazio)" : new Date(opiniao.getTimestamp()).toString();
     }
 
-    private String url(Feedback feedback) {
-        return feedback.getUrl() == null || feedback.getUrl().isEmpty() ? "(vazia)" : feedback.getUrl();
+    private String url(Opiniao opiniao) {
+        return opiniao.getUrl() == null || opiniao.getUrl().isEmpty() ? "(vazia)" : opiniao.getUrl();
     }
 
-    private String conteudoEncontrado(Feedback feedback) {
-        if (feedback.getConteudoEncontrado() == null) {
+    private String conteudoEncontrado(Opiniao opiniao) {
+        if (opiniao.getConteudoEncontrado() == null) {
             return "(vazio)";
         } else {
-            if (feedback.getConteudoEncontrado()) {
+            if (opiniao.getConteudoEncontrado()) {
                 return "<strong style=\"color: #008000;\">sim</strong>";
             } else {
                 return "<strong style=\"color: #800000;\">não</strong>";
