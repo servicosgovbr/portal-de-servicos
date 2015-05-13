@@ -18,16 +18,19 @@
 <section class='conteudo' layout:fragment="corpo">
 
     <div class="tile">
-        <h1>Ocorreu um erro</h1>
+        <h2>Esta página não existe</h2>
 
         <p>
-            A aplicação detectou uma falha inesperada. Por favor, tente a operação novamente.
+            Pedimos desculpas pelo inconveniente, mas a página que você estava tentando acessar não existe neste endereço. Você pode navegar nas categorias do menu, voltar para a página inicial ou realizar uma busca.
         </p>
 
-        <p>
-            Caso a falha persista, entre em contato com o suporte utilizando o identificador
-            <span class="ticket-erro" th:text="${#httpServletRequest.getAttribute('req.ticket').substring(24)}"></span>.
-        </p>
+        <div class="busca-erro">
+        <h3>Faça uma busca:</h3>
+        <form method="get" action="/busca">
+            <input id="input-busca" type="search" name="q" value="" title="Buscar por assuntos, serviços ou órgãos" placeholder="Você pode pesquisar por assuntos, serviços, órgãos"/>
+            <input type="submit" value="BUSCAR" class="acao-busca"/>
+        </form>
+        </div>
     </div>
 
 </section>

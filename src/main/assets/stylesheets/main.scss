@@ -198,7 +198,7 @@ dl.portlet {
     padding-right: em(10);
 
     span.fa-caret-up {
-      color: $cinza-medio;
+      color: $cinza-escuro;
       padding-right: 5px;
     }
   }
@@ -240,6 +240,57 @@ dl.portlet {
       border-right: 0;
       box-shadow: inset -2px -2px 5px -1px $cinza-claro;
       background-color: $branco;
+      font-size: em(13);
+
+      @include placeholder {
+        color: $cinza-escuro;
+      }
+
+      &:focus {
+        background-color: $branco;
+      }
+    }
+
+    input[type='submit'] {
+      @include span-columns(2 of 11);
+      @include omega();
+      color: $branco;
+      background-color: $azul-claro;
+      display: block;
+      font-family: 'open_sansbold', $helvetica;
+      font-size: 16px;
+      padding: 9px 0px 9px 0px;
+      border: none;
+      border-radius: 4px;
+    }
+  }
+}
+
+.busca-erro {
+  @include span-columns(12);
+  @include omega();
+
+
+  @include mobile {
+    display: none !important;
+  }
+
+  > form {
+      margin-bottom: em(30);
+      padding: 10px 0px 70px 0px;
+      border-radius: 4px;
+
+    input[type='search'] {
+      @include span-columns(9 of 11);
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      border-top: 2px solid $cinza-medio;
+      border-bottom: 0;
+      border-left: 2px solid $cinza-medio;
+      border-right: 0;
+      box-shadow: inset -2px -2px 5px -1px $cinza-claro;
+      background-color: $cinza-claro;
       font-size: em(13);
 
       @include placeholder {
