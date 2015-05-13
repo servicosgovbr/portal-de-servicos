@@ -1,5 +1,6 @@
 package br.gov.servicos.fixtures;
 
+import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoHtml;
 import br.gov.servicos.metricas.Feedback;
 import br.gov.servicos.servico.AreaDeInteresse;
@@ -33,6 +34,11 @@ public class TestData {
             .withId("pagina")
             .withTitulo("Título")
             .withHtml("<h1>Título</h1>\n\nConteúdo");
+
+    public static final Conteudo CONTEUDO = new Conteudo()
+            .withId("pagina")
+            .withTitulo("Título")
+            .withConteudo("Descrição");
 
     public static final Feedback FEEDBACK = new Feedback()
             .withUrl("/servico/foo")
