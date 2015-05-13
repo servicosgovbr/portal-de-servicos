@@ -11,7 +11,7 @@
             <tipoCanalPrestacaoServico>
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
-            <descricao>Extrato para Imposto de Renda de Pessoa Física.</descricao>
+            <descricao>Extrato para Imposto de Renda de Pessoa Física</descricao>
             <url>http://www5.dataprev.gov.br/irpf01/pages/consultarExtratoIR.xhtml</url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
