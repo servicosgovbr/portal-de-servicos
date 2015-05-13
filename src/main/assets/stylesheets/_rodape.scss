@@ -39,15 +39,12 @@
       }
       
       @include tablet {
-
-      &:first-child {
-        padding-left: 0;
-        border-left: none;
-        margin-left: 20px;
+        &:first-child {
+          padding-left: 0;
+          border-left: none;
+          margin-left: 20px;
+        }
       }
-
-      }
-
     }
 
     dt {
