@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Comprovante de Pagamento - DARF e DJE</titulo>
-    <descricao>Emitir comprovantes de arrecadação de pagamentos realizados por meio de Darf, Darf-Simples ou DJE
-        (Depósitos Judiciais ou Extrajudiciais à Ordem e à Disposição da Autoridade Judicial ou Administrativa
-        Competente).
+    <descricao>
+        <![CDATA[Emitir comprovantes de arrecadação de pagamentos realizados por meio de Darf, Darf-Simples ou DJE (Depósitos Judiciais ou Extrajudiciais à Ordem e à Disposição da Autoridade Judicial ou Administrativa Competente).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

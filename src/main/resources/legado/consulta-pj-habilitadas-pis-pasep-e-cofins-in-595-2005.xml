@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta PJ Habilitadas - PIS/Pasep e Cofins IN 595/2005</titulo>
-    <descricao>Consultar as pessoas jurídicas habilitadas no Regime de Suspensão PIS/Pasep e Cofins IN SRF nº
-        595/2005.
+    <descricao>
+        <![CDATA[Consultar as pessoas jurídicas habilitadas no Regime de Suspensão PIS/Pasep e Cofins IN SRF nº 595/2005.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

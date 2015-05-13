@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Consulta Rendimentos Informados por Fontes Pagadoras (DIRF – Declaração do Imposto de Renda Retido na Fonte
-        / Declarações e Demonstrativos)
+    <titulo>
+        <![CDATA[Consulta Rendimentos Informados por Fontes Pagadoras (DIRF – Declaração do Imposto de Renda Retido na Fonte / Declarações e Demonstrativos)]]>
     </titulo>
-    <descricao>Consultar informações de rendimentos apresentadas por fontes pagadoras de pessoas físicas e jurídicas na
-        Dirf (Declaração de Imposto de Renda Retido na Fonte).
+    <descricao>
+        <![CDATA[Consultar informações de rendimentos apresentadas por fontes pagadoras de pessoas físicas e jurídicas na Dirf (Declaração de Imposto de Renda Retido na Fonte).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

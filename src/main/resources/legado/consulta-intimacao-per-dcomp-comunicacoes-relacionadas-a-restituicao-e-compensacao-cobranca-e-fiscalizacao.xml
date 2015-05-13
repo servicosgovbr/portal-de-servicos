@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Consulta Intimação PER/DCOMP (Comunicações Relacionadas a Restituição e Compensação / Cobrança e
-        Fiscalização)
+    <titulo>
+        <![CDATA[Consulta Intimação PER/DCOMP (Comunicações Relacionadas a Restituição e Compensação / Cobrança e Fiscalização)]]>
     </titulo>
-    <descricao>Consultar e imprimir intimação para apresentação de informações complementares, emitida eletronicamente
-        referente ao PER/DCOMP (pedido eletrônico de restituição ou ressarcimento e da declaração de compensação).
+    <descricao>
+        <![CDATA[Consultar e imprimir intimação para apresentação de informações complementares, emitida eletronicamente referente ao PER/DCOMP (pedido eletrônico de restituição ou ressarcimento e da declaração de compensação).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

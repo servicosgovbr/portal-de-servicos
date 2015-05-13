@@ -2,10 +2,8 @@
 <servico>
     <titulo>Consulta Pendências - Situação Fiscal Previdenciária (Situação Fiscal / Certidões e Situação Fiscal)
     </titulo>
-    <descricao>Obter relatório com informações para a emissão de certidão das contribuições previdenciárias na
-        finalidade 4, (outras finalidades da Lei nº 8212/91) ou 5 (registro ou arquivamento de alterações contratuais).
-        As pendências apontadas são as constantes nos sistemas da Receita Federal no momento da solicitação do
-        relatório.
+    <descricao>
+        <![CDATA[Obter relatório com informações para a emissão de certidão das contribuições previdenciárias na finalidade 4, (outras finalidades da Lei nº 8212/91) ou 5 (registro ou arquivamento de alterações contratuais). As pendências apontadas são as constantes nos sistemas da Receita Federal no momento da solicitação do relatório.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

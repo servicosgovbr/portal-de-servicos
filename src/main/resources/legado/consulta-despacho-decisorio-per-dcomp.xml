@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Despacho Decisório PER/DCOMP</titulo>
-    <descricao>Consultar PER/DCOMP (Pedido de Restituição, Ressarcimento ou Reembolso e Declarações de Compensação) com
-        despachos decisórios emitidos eletronicamente, para emissão da 2ª via, informações complementares dos despachos
-        decisórios, detalhamento da compensação e impressão de Darf.
+    <descricao>
+        <![CDATA[Consultar PER/DCOMP (Pedido de Restituição, Ressarcimento ou Reembolso e Declarações de Compensação) com despachos decisórios emitidos eletronicamente, para emissão da 2ª via, informações complementares dos despachos decisórios, detalhamento da compensação e impressão de Darf.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

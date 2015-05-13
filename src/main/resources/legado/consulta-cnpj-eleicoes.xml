@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta CNPJ Eleições</titulo>
-    <descricao>Consultar o número de inscrição no Cadastro Nacional da Pessoa Jurídica (CNPJ) dos candidatos e comitês
-        financeiros para a eleição ordinária/suplementar.
+    <descricao>
+        <![CDATA[Consultar o número de inscrição no Cadastro Nacional da Pessoa Jurídica (CNPJ) dos candidatos e comitês financeiros para a eleição ordinária/suplementar.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Pedido de Restituição IRPF não Resgatada</titulo>
-    <descricao>Consultar o andamento do pedido de pagamento de restituição de imposto de renda não resgatado na rede
-        bancária no prazo de 01 (um) ano.
+    <descricao>
+        <![CDATA[Consultar o andamento do pedido de pagamento de restituição de imposto de renda não resgatado na rede bancária no prazo de 01 (um) ano.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

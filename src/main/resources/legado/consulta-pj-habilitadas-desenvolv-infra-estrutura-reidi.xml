@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta PJ Habilitadas Desenvolv Infra-Estrutura - Reidi</titulo>
-    <descricao>Consultar as pessoas jurídicas habilitadas no Regime Especial de Incentivos para o Desenvolvimento da
-        Infra-Estrutura (Reidi).
+    <descricao>
+        <![CDATA[Consultar as pessoas jurídicas habilitadas no Regime Especial de Incentivos para o Desenvolvimento da Infra-Estrutura (Reidi).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

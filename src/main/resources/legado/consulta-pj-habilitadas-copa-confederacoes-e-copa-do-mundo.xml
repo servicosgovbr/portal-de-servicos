@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta PJ Habilitadas Copa Confederações e Copa do Mundo</titulo>
-    <descricao>Consultar as pessoas jurídicas habilitadas para Copa das Confederações FIFA 2013 e Copa do Mundo FIFA
-        2014.
+    <descricao>
+        <![CDATA[Consultar as pessoas jurídicas habilitadas para Copa das Confederações FIFA 2013 e Copa do Mundo FIFA 2014.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Dados do Parcelamento do Imóvel</titulo>
-    <descricao>A Consulta Parcelamento mostrará os dados do parcelamento escolhido.
-        Mostrará, também, dados dos débitos, dos créditos e dos imóveis envolvidos no referido parcelamento.
+    <descricao>
+        <![CDATA[A Consulta Parcelamento mostrará os dados do parcelamento escolhido.
+
+Mostrará, também, dados dos débitos, dos créditos e dos imóveis envolvidos no referido parcelamento.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -3,8 +3,8 @@
     <titulo>Consulta Pendências – Situação Fiscal Previdenciária (Certidão Contribuições Previdenciárias / Dívida Ativa
         da União – DAU)
     </titulo>
-    <descricao>Verificar a situação fiscal do contribuinte com relação às contribuições previdenciárias perante a
-        Receita Federal e a Procuradoria-Geral da Fazenda Nacional.
+    <descricao>
+        <![CDATA[Verificar a situação fiscal do contribuinte com relação às contribuições previdenciárias perante a Receita Federal e a Procuradoria-Geral da Fazenda Nacional.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

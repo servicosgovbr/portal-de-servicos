@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Consulta pessoas jurídicas habilitadas no Regime Especial de Aquisição de Bens de Capital para Empresas
-        Exportadora (Recap)
+    <titulo>
+        <![CDATA[Consulta pessoas jurídicas habilitadas no Regime Especial de Aquisição de Bens de Capital para Empresas Exportadora (Recap)]]>
     </titulo>
-    <descricao>Consultar as pessoas jurídicas habilitadas no Regime Especial de Aquisição de Bens de Capital para
-        Empresas Exportadora (Recap).
+    <descricao>
+        <![CDATA[Consultar as pessoas jurídicas habilitadas no Regime Especial de Aquisição de Bens de Capital para Empresas Exportadora (Recap).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

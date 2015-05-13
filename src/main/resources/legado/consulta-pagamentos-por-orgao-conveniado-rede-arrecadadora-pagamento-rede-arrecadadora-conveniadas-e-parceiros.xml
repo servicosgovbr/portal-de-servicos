@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Consulta Pagamentos por Órgão Conveniado – Rede Arrecadadora (Pagamento - Rede Arrecadadora / Conveniadas e
-        Parceiros)
+    <titulo>
+        <![CDATA[Consulta Pagamentos por Órgão Conveniado – Rede Arrecadadora (Pagamento - Rede Arrecadadora / Conveniadas e Parceiros)]]>
     </titulo>
     <descricao>Consultar as bases de arrecadação por período e receitas específicas da entidade conveniada.</descricao>
     <requisitos/>

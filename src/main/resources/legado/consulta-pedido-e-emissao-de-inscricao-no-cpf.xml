@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Pedido e Emissão de Inscrição no CPF</titulo>
-    <descricao>Consultar o andamento do pedido de inscrição ou alteração no CPF e emissão do comprovante de inscrição
-        cadastral.
+    <descricao>
+        <![CDATA[Consultar o andamento do pedido de inscrição ou alteração no CPF e emissão do comprovante de inscrição cadastral.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

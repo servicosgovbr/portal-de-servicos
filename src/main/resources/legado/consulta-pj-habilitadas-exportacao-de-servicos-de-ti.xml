@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta PJ Habilitadas Exportação de Serviços de TI</titulo>
-    <descricao>Consultar as pessoas jurídicas habilitadas no Regime Especial de Tributação para a Plataforma de
-        Exportação de Serviços de Tecnologia da Informação.
+    <descricao>
+        <![CDATA[Consultar as pessoas jurídicas habilitadas no Regime Especial de Tributação para a Plataforma de Exportação de Serviços de Tecnologia da Informação.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

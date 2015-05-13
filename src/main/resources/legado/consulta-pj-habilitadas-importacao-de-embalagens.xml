@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta PJ Habilitadas - Importação de Embalagens</titulo>
-    <descricao>Consultar as pessoas jurídicas habilitadas no Regime Aduaneiro Especial de Importação de Embalagens.
+    <descricao>
+        <![CDATA[Consultar as pessoas jurídicas habilitadas no Regime Aduaneiro Especial de Importação de Embalagens.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

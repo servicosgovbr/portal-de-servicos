@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Débitos SIVEX – Sistema Exclusão Simples Nacional</titulo>
-    <descricao>Consultar os débitos que deram origem ao ato declaratório de exclusão - Sivex – Sistema de Exclusões do
-        Simples Nacional.
+    <descricao>
+        <![CDATA[Consultar os débitos que deram origem ao ato declaratório de exclusão - Sivex – Sistema de Exclusões do Simples Nacional.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

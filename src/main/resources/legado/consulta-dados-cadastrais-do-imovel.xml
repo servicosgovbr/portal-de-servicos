@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Dados Cadastrais do Imóvel</titulo>
-    <descricao>A Consulta Dados Cadastrais mostra os dados cadastrais do imóvel, suas benfeitorias e utilizações ativas,
-        bem como as informações do seu responsável atual. Serão apresentadas informações gerais e técnicas de endereço,
-        das testadas e do local de endereçamento das correspondências.
+    <descricao>
+        <![CDATA[A Consulta Dados Cadastrais mostra os dados cadastrais do imóvel, suas benfeitorias e utilizações ativas, bem como as informações do seu responsável atual. Serão apresentadas informações gerais e técnicas de endereço, das testadas e do local de endereçamento das correspondências.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

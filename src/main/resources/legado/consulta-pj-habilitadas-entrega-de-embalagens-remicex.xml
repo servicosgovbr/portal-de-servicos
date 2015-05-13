@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta PJ Habilitadas Entrega de Embalagens – Remicex</titulo>
-    <descricao>Consultar as pessoas jurídicas habilitadas no Regime de Entrega de Embalagens no Mercado Interno em Razão
-        da Comercialização a Empresa Sediada no Exterior (Remicex).
+    <descricao>
+        <![CDATA[Consultar as pessoas jurídicas habilitadas no Regime de Entrega de Embalagens no Mercado Interno em Razão da Comercialização a Empresa Sediada no Exterior (Remicex).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

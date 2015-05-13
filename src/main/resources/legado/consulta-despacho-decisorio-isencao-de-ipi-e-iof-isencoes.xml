@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Despacho Decisório (Isenção de IPI e IOF / Isenções)</titulo>
-    <descricao>Tomar ciência do despacho decisório expedido pela Receita Federal para o pedido de Isenção de IPI e IOF
-        e, se for deferimento, receber autorizações para aquisição do veículo.
+    <descricao>
+        <![CDATA[Tomar ciência do despacho decisório expedido pela Receita Federal para o pedido de Isenção de IPI e IOF e, se for deferimento, receber autorizações para aquisição do veículo.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

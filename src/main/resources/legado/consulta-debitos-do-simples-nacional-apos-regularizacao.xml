@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Débitos do Simples Nacional após Regularização</titulo>
-    <descricao>Consultar situação no Sivex (Sistema de Exclusões do Simples Nacional) após a regularização dos débitos
-        que deram origem ao ADE.
+    <descricao>
+        <![CDATA[Consultar situação no Sivex (Sistema de Exclusões do Simples Nacional) após a regularização dos débitos que deram origem ao ADE.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

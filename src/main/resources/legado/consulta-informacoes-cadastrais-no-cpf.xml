@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Informações Cadastrais no CPF</titulo>
-    <descricao>Consultar os dados cadastrais (endereço, título de eleitor, data de nascimento, nome da mãe) no CPF.
+    <descricao>
+        <![CDATA[Consultar os dados cadastrais (endereço, título de eleitor, data de nascimento, nome da mãe) no CPF.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -2,7 +2,9 @@
 <servico>
     <titulo>Consulta Pagamentos por Órgão Conveniado – Rede Arrecadadora (Pagamento / Pagamentos e Parcelamentos)
     </titulo>
-    <descricao>Consultar as bases de arrecadação por período e receitas específicas do órgão conveniado.</descricao>
+    <descricao>
+        <![CDATA[Consultar as bases de arrecadação por período e receitas específicas do órgão conveniado.]]>
+    </descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>

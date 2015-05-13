@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta - Prestadores de Serviços Turísticos Regulares</titulo>
-    <descricao>Consulta ao cadastro obrigatório de prestadores de serviços turísticos que operam regularmente no país.
+    <descricao>
+        <![CDATA[Consulta ao cadastro obrigatório de prestadores de serviços turísticos que operam regularmente no país.
 
-        O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das seguintes atividades: Meios de
-        Hospedagem (albergue, hotel, flat, pousada, resort e cama &amp; café); Agências de Turismo; Transportadoras
-        Turísticas; Organizadoras de Eventos; Parques Temáticos; Acampamentos Turísticos (Camping); Guias de Turismo
+O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das seguintes atividades: Meios de Hospedagem (albergue, hotel, flat, pousada, resort e cama &amp; café); Agências de Turismo; Transportadoras Turísticas; Organizadoras de Eventos; Parques Temáticos; Acampamentos Turísticos (Camping); Guias de Turismo]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

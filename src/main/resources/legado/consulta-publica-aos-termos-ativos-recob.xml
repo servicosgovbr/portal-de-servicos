@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Pública aos Termos Ativos – RECOB</titulo>
-    <descricao>Consultar optantes pelo Recob. Esta consulta limita-se a informar se a pessoa jurídica é ou não optante
-        pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e da Cofins sobre Combustíveis e
-        Bebidas, exibindo os termos ativos e a data de vigência dos mesmos.
+    <descricao>
+        <![CDATA[Consultar optantes pelo Recob. Esta consulta limita-se a informar se a pessoa jurídica é ou não optante pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e da Cofins sobre Combustíveis e Bebidas, exibindo os termos ativos e a data de vigência dos mesmos.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

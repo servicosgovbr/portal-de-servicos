@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Consulta Pessoa Jurídica Habilitada - PIS/Pasep e Cofins - IN 675/2006</titulo>
-    <descricao>Consultar as pessoas jurídicas habilitadas no Regime de Suspensão PIS/Pasep e Cofins IN SRF nº
-        675/2006.
+    <descricao>
+        <![CDATA[Consultar as pessoas jurídicas habilitadas no Regime de Suspensão PIS/Pasep e Cofins IN SRF nº 675/2006.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
