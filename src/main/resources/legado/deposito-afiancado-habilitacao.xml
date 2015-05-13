@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Depósito Afiançado – Habilitação</titulo>
-    <descricao>Solicitar a habilitação para operar o Regime de Depósito Afiançado por empresa de transporte aéreo
-        internacional.
+    <descricao>
+        <![CDATA[Solicitar a habilitação para operar o Regime de Depósito Afiançado por empresa de transporte aéreo internacional.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

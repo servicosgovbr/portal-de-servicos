@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Documento de Arrecadação do Simples Nacional- PGDAS</titulo>
-    <descricao>Declarar lançamento mensal do valor devido do Simples Nacional e gerar o DAS – Documento de Arrecadação
-        do Simples Nacional – a partir de 01/2012.
+    <descricao>
+        <![CDATA[Declarar lançamento mensal do valor devido do Simples Nacional e gerar o DAS – Documento de Arrecadação do Simples Nacional – a partir de 01/2012.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

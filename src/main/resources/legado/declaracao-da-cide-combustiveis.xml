@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Declaração da CIDE Combustíveis</titulo>
-    <descricao>Preencher e transmitir a D-Cide-Combustíveis e, posteriormente, gerar e imprimir o recibo de comprovação
-        de entrega, cancelar a declaração previamente enviada (via declaração retificadora) e recuperar o recibo.
+    <descricao>
+        <![CDATA[Preencher e transmitir a D-Cide-Combustíveis e, posteriormente, gerar e imprimir o recibo de comprovação de entrega, cancelar a declaração previamente enviada (via declaração retificadora) e recuperar o recibo.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

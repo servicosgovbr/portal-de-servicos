@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Declaração Eletrônica de Porte de Valores (e-DPV - Declaração de Porte de Valores / Declarações e
-        Demonstrativos)
+    <titulo>
+        <![CDATA[Declaração Eletrônica de Porte de Valores (e-DPV - Declaração de Porte de Valores / Declarações e Demonstrativos)]]>
     </titulo>
     <descricao>Acessar a Declaração Eletrônica de Porte de Valores.</descricao>
     <requisitos/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Declaração Eletrônica de Porte de Valores – e-DPV (Viajante / Aduana e Comércio Exterior)</titulo>
-    <descricao>Apresentar a Declaração Eletrônica de Porte de Valores (e-DPV) à fiscalização aduaneira e outros
-        documentos exigidos pela legislação.
+    <descricao>
+        <![CDATA[Apresentar a Declaração Eletrônica de Porte de Valores (e-DPV) à fiscalização aduaneira e outros documentos exigidos pela legislação.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

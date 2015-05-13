@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Declaração de Acidente de Trânsito – DAT/ DPRF</titulo>
-    <descricao>Consiste no registro de narrativa de acidente de trânsito, mediante declaração do condutor,
-        exclusivamente quando não houver vítimas (feridos e mortos), e diante da impossibilidade de realizar o
-        levantamento das informações, no local da ocorrência, por equipe da Polícia Rodoviária Federal.
+    <descricao>
+        <![CDATA[Consiste no registro de narrativa de acidente de trânsito, mediante declaração do condutor, exclusivamente quando não houver vítimas (feridos e mortos), e diante da impossibilidade de realizar o levantamento das informações, no local da ocorrência, por equipe da Polícia Rodoviária Federal.
 
-        Quem pode solicitar: somento o condutor de veículo envolvido no acidente.
+Quem pode solicitar: somento o condutor de veículo envolvido no acidente.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

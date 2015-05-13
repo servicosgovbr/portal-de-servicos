@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Declaração de Capitais Brasileiros no Exterior</titulo>
-    <descricao>Página em que o cidadão pode declarar os bens e valores que possuir no exterior.
+    <descricao>
+        <![CDATA[Página em que o cidadão pode declarar os bens e valores que possuir no exterior.
 
-        Devem declarar, todo ano, todos os residentes no País detentores de bens e valores fora do território nacional,
-        que totalizem montante igual ou superior ao equivalente US$100.000,00 (cem mil dólares dos Estados Unidos).
+Devem declarar, todo ano, todos os residentes no País detentores de bens e valores fora do território nacional, que totalizem montante igual ou superior ao equivalente US$100.000,00 (cem mil dólares dos Estados Unidos).
 
-        Para aqueles que possuem bens de valor total igual ou superior a US$100.000.000,00 (cem milhões de dólares dos
-        Estados Unidos), a declaração deve ser feita trimestralmente.
+Para aqueles que possuem bens de valor total igual ou superior a US$100.000.000,00 (cem milhões de dólares dos Estados Unidos), a declaração deve ser feita trimestralmente.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

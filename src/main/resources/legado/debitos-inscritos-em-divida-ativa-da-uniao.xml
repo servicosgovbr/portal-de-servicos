@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Débitos Inscritos em Dívida Ativa da União</titulo>
-    <descricao>Consultar os débitos inscritos na Dívida Ativa da União, emitir Darf para pagamento ou formalizar
-        parcelamento da dívida.
+    <descricao>
+        <![CDATA[Consultar os débitos inscritos na Dívida Ativa da União, emitir Darf para pagamento ou formalizar parcelamento da dívida.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

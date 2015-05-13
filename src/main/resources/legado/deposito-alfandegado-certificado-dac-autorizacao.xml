@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Depósito Alfandegado Certificado (DAC) – Autorização</titulo>
-    <descricao>Solicitar autorização para operar o Regime em Recinto Alfandegado de uso público ou em instalação
-        portuária de uso privativo misto.
+    <descricao>
+        <![CDATA[Solicitar autorização para operar o Regime em Recinto Alfandegado de uso público ou em instalação portuária de uso privativo misto.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
