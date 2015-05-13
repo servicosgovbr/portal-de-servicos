@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Revisão/Extinção de Dívida Inscrita – PGFN</titulo>
-    <descricao>Apresentar requerimento de revisão e extinção da Dívida Ativa e outros documentos, para solicitar:
-        Revisão de Dívida inscrita, de natureza tributária, por fato posterior à data da inscrição, e/ou Revisão de
-        Dívida inscrita, de natureza não-tributária, por fato posterior ou anterior à data da inscrição.
+    <descricao>
+        <![CDATA[Apresentar requerimento de revisão e extinção da Dívida Ativa e outros documentos, para solicitar: Revisão de Dívida inscrita, de natureza tributária, por fato posterior à data da inscrição, e/ou Revisão de Dívida inscrita, de natureza não-tributária, por fato posterior ou anterior à data da inscrição.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

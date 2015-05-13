@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Serviços de CPF para Pessoas Físicas Residentes no Exterior</titulo>
-    <descricao>Realizar nas Representações Diplomáticas pedido de inscrição, cancelamento, alteração de dados cadastrais
-        ou regularização de inscrição no CPF.
+    <descricao>
+        <![CDATA[Realizar nas Representações Diplomáticas pedido de inscrição, cancelamento, alteração de dados cadastrais ou regularização de inscrição no CPF.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

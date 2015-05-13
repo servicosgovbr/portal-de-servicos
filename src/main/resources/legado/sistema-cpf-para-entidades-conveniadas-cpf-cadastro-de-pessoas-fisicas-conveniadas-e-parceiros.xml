@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Sistema CPF para Entidades Conveniadas (CPF – Cadastro de Pessoas Físicas / Conveniadas e Parceiros)
+    <titulo>
+        <![CDATA[Sistema CPF para Entidades Conveniadas (CPF – Cadastro de Pessoas Físicas / Conveniadas e Parceiros)]]>
     </titulo>
     <descricao>Sistema para realização de atos cadastrais no CPF por entidades conveniadas.</descricao>
     <requisitos/>

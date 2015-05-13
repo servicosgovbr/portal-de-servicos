@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Sistema de Cálculo de Parcelamentos - SIPAR</titulo>
-    <descricao>Permite aos funcionários e gestores dos Regimes Próprios de Previdência Social - RPPS, uniformizar
-        procedimentos de atualização e consolidação de débitos previdenciários incluídos em parcelamentos.
+    <descricao>
+        <![CDATA[Permite aos funcionários e gestores dos Regimes Próprios de Previdência Social - RPPS, uniformizar procedimentos de atualização e consolidação de débitos previdenciários incluídos em parcelamentos. ]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Retificadora On Line (Extrato da DIRPF)</titulo>
-    <descricao>Alterar alguns dados da declaração, diretamente pela internet, sem a utilização do programa IRPF e nem do
-        Receitanet. Não há necessidade de preencher novamente os dados que não serão alterados.
+    <descricao>
+        <![CDATA[Alterar alguns dados da declaração, diretamente pela internet, sem a utilização do programa IRPF e nem do Receitanet. Não há necessidade de preencher novamente os dados que não serão alterados.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

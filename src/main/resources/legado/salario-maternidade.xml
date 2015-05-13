@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Salário-Maternidade</titulo>
-    <descricao>Benefício devido às seguradas empregadas, trabalhadoras avulsas, empregadas domésticas, contribuintes
-        individuais, facultativas e seguradas especiais, por ocasião do parto, inclusive o natimorto, aborto não
-        criminoso, adoção ou guarda judicial para fins de adoção.
+    <descricao>
+        <![CDATA[Benefício devido às seguradas empregadas, trabalhadoras avulsas, empregadas domésticas, contribuintes individuais, facultativas e seguradas especiais, por ocasião do parto, inclusive o natimorto, aborto não criminoso, adoção ou guarda judicial para fins de adoção.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Retirada de Documentos para o Cafir</titulo>
-    <descricao>Retirar documentos após a conclusão da solicitação de inscrição/alteração/cancelamento/alienação no
-        Cadastro de Imóvel Rural.
+    <descricao>
+        <![CDATA[Retirar documentos após a conclusão da solicitação de inscrição/alteração/cancelamento/alienação no Cadastro de Imóvel Rural.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

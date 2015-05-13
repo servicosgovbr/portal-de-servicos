@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Salário-Família</titulo>
-    <descricao>Fornece Informações sobre o Salário-Família e documentos necessários para solicitação do benefício em uma
-        Agência da Previdência Social.
+    <descricao>
+        <![CDATA[Fornece Informações sobre o Salário-Família e documentos necessários para solicitação do benefício em uma Agência da Previdência Social.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

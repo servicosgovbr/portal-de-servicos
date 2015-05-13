@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Retificação de GPS</titulo>
-    <descricao>Solicitar retificação de Guia da Previdência Social (GPS), por motivo de erro cometido no
-        preenchimento.
+    <descricao>
+        <![CDATA[Solicitar retificação de Guia da Previdência Social (GPS), por motivo de erro cometido no preenchimento.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

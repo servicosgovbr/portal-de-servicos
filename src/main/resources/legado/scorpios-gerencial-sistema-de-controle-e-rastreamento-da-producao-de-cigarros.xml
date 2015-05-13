@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Scorpios Gerencial – Sistema de Controle e Rastreamento da Produção de Cigarros</titulo>
-    <descricao>Acessar o Scorpios Gerencial (Sistema de Controle e Rastreamento da Produção de Cigarros). O acesso ao
-        Scorpios Gerencial dar-se-á, obrigatoriamente, mediante utilização de certificado digital e, após a verificação
-        do mesmo, inserção de login/senha do usuário.
+    <descricao>
+        <![CDATA[Acessar o Scorpios Gerencial (Sistema de Controle e Rastreamento da Produção de Cigarros). O acesso ao Scorpios Gerencial dar-se-á, obrigatoriamente, mediante utilização de certificado digital e, após a verificação do mesmo, inserção de login/senha do usuário.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

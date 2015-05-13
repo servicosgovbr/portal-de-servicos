@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Restituição de Valores - Multa de Trânsito/DPRF</titulo>
-    <descricao>Consiste na solicitação de restituição de valores referentes a autuações de trânsito arrecadados
-        indevidamente aos cofres da União.
+    <descricao>
+        <![CDATA[Consiste na solicitação de restituição de valores referentes a autuações de trânsito arrecadados indevidamente aos cofres da União.
 
-        Apenas em três situações é cabível: pagamento em duplicidade, cancelamento do auto de infração e pagamento de
-        valor maior que o devido.
+Apenas em três situações é cabível: pagamento em duplicidade, cancelamento do auto de infração e pagamento de valor maior que o devido.
 
-        Quem pode solicitar: o proprietário do veículo à época do pagamento da multa ou o seu procurador legalmente
-        constituído
+Quem pode solicitar: o proprietário do veículo à época do pagamento da multa ou o seu procurador legalmente constituído]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>SAMU - Serviço de Atendimento Móvel de Urgência</titulo>
-    <descricao>O Serviço de Atendimento Móvel de Urgência (SAMU) realiza o atendimento de urgência e emergência em
-        qualquer lugar: residências, locais de trabalho e vias públicas. O socorro começa com a chamada gratuita, feita
-        para o telefone 192. A ligação é atendida por técnicos que identificam a emergência e transferem o telefonema
-        para um médico, que faz o diagnóstico da situação e inicia o atendimento no mesmo instante, orientando o
-        paciente, ou a pessoa que fez a chamada, sobre as primeiras ações.
+    <descricao>
+        <![CDATA[O Serviço de Atendimento Móvel de Urgência (SAMU) realiza o atendimento de urgência e emergência em qualquer lugar: residências, locais de trabalho e vias públicas. O socorro começa com a chamada gratuita, feita para o telefone 192. A ligação é atendida por técnicos que identificam a emergência e transferem o telefonema para um médico, que faz o diagnóstico da situação e inicia o atendimento no mesmo instante, orientando o paciente, ou a pessoa que fez a chamada, sobre as primeiras ações.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

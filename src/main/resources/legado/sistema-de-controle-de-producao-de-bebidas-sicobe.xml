@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Sistema de Controle de Produção de Bebidas – SICOBE</titulo>
-    <descricao>Acessar o Sicobe Gerencial. O acesso ao Sicobe Gerencial dar-se-á obrigatoriamente mediante utilização de
-        certificado digital e, após a verificação do mesmo, inserção de login/senha do usuário fornecidos pela
-        Coordenação-Geral de Fiscalização da Secretaria da Receita Federal do Brasil.
+    <descricao>
+        <![CDATA[Acessar o Sicobe Gerencial. O acesso ao Sicobe Gerencial dar-se-á obrigatoriamente mediante utilização de certificado digital e, após a verificação do mesmo, inserção de login/senha do usuário fornecidos pela Coordenação-Geral de Fiscalização da Secretaria da Receita Federal do Brasil.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

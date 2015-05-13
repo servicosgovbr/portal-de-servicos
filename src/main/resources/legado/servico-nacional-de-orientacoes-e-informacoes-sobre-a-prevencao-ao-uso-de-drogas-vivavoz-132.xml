@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Serviço Nacional de Orientações e Informações sobre a Prevenção ao Uso de Drogas – VIVAVOZ 132</titulo>
-    <descricao>O VIVAVOZ 132 é uma central telefônica aberta a toda população. O seu atendimento é realizado por
-        consultores altamente capacitados e supervisionados por profissionais da área da saúde.
-        O VIVAVOZ 132 é um serviço de utilidade pública que presta esclarecimento, apoio e orientação sobre a prevenção
-        do uso indevido de drogas àqueles que precisam de algum tipo de ajuda e não sabem o que fazer.
+    <descricao>
+        <![CDATA[O VIVAVOZ 132 é uma central telefônica aberta a toda população. O seu atendimento é realizado por consultores altamente capacitados e supervisionados por profissionais da área da saúde. O VIVAVOZ 132 é um serviço de utilidade pública que presta esclarecimento, apoio e orientação sobre a prevenção do uso indevido de drogas àqueles que precisam de algum tipo de ajuda e não sabem o que fazer.
 
-        - O telefonema é gratuito e sigiloso;
-        - Os consultores indicam locais para tratamento e outros recursos da comunidade e oferecem aconselhamento
-        personalizado por meio de intervenção breve para pessoas que usam drogas e seus familiares;
-        - O cidadão pode participar de intervenção breve motivacional. Neste caso, fará parte de grupo de estudo
-        dirigido;
-        - Profissionais de qualquer área podem solicitar informações técnicas e receber material bibliográfico.
-
+- O telefonema é gratuito e sigiloso;
+- Os consultores indicam locais para tratamento e outros recursos da comunidade e oferecem aconselhamento personalizado por meio de intervenção breve para pessoas que usam drogas e seus familiares;
+- O cidadão pode participar de intervenção breve motivacional. Neste caso, fará parte de grupo de estudo dirigido;
+- Profissionais de qualquer área podem solicitar informações técnicas e receber material bibliográfico. ]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

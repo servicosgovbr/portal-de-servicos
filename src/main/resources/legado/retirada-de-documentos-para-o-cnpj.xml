@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Retirada de Documentos para o CNPJ</titulo>
-    <descricao>Retirar documentos após a conclusão do atendimento de pedido de inscrição/alteração/cancelamento no
-        Cadastro Nacional da Pessoa Jurídica.
+    <descricao>
+        <![CDATA[Retirar documentos após a conclusão do atendimento de pedido de inscrição/alteração/cancelamento no Cadastro Nacional da Pessoa Jurídica.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
