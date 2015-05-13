@@ -57,7 +57,7 @@
     @include shift(2);
     @include omega();
     padding-bottom: em(5);
-    border-bottom: em(1) dotted $cinza-claro;
+    border-bottom: em(1) dotted $cinza-medio;
 
     @include mobile {
       display: none !important;
