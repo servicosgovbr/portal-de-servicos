@@ -3,9 +3,8 @@
     <titulo>Parcelamento Simplificado Previdenciário DAU (Parcelamento Dívida Ativa da União – DAU / Pagamentos e
         Parcelamentos)
     </titulo>
-    <descricao>Parcelar débitos previdenciários inscritos na Dívida Ativa da União. O parcelamento simplificado é
-        destinado para débitos inscritos em DAU, cujo valor corresponda a até R$ 500.000,00 (quinhentos mil reais) e que
-        não foram parcelados anteriormente em até 60 (sessenta) parcelas mensais.
+    <descricao>
+        <![CDATA[Parcelar débitos previdenciários inscritos na Dívida Ativa da União. O parcelamento simplificado é destinado para débitos inscritos em DAU, cujo valor corresponda a até R$ 500.000,00 (quinhentos mil reais) e que não foram parcelados anteriormente em até 60 (sessenta) parcelas mensais.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

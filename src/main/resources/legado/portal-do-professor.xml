@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Portal do Professor</titulo>
-    <descricao>O Portal do Professor, acessível on-line desde 2008, em parceria com o Ministério da Ciência, Tecnologia
-        e Inovação, apoia os processos de formação dos professores brasileiros e ajuda a enriquecer a prática
-        pedagógica. No portal, os profissionais da educação podem produzir e compartilhar sugestões de aulas; buscar
-        informações diversas sobre a prática educacional; baixar coleções de recursos multimídia; obter informações
-        sobre cursos e material de estudos; interagir e colaborar com outros professores.
+    <descricao>
+        <![CDATA[O Portal do Professor, acessível on-line desde 2008, em parceria com o Ministério da Ciência, Tecnologia e Inovação, apoia os processos de formação dos professores brasileiros e ajuda a enriquecer a prática pedagógica. No portal, os profissionais da educação podem produzir e compartilhar sugestões de aulas; buscar informações diversas sobre a prática educacional; baixar coleções de recursos multimídia; obter informações sobre cursos e material de estudos; interagir e colaborar com outros professores.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

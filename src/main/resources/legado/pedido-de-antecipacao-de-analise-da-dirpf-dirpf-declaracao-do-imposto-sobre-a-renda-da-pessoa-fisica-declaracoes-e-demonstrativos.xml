@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Pedido de Antecipação de Análise da DIRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física /
-        Declarações e Demonstrativos)
+    <titulo>
+        <![CDATA[Pedido de Antecipação de Análise da DIRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações e Demonstrativos)]]>
     </titulo>
-    <descricao>Solicitar a antecipação da análise da documentação que comprova as informações para fins de liberação de
-        declaração retida em malha fiscal.
+    <descricao>
+        <![CDATA[Solicitar a antecipação da análise da documentação que comprova as informações para fins de liberação de declaração retida em malha fiscal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

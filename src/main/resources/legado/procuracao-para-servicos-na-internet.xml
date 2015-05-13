@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Procuração para Serviços na Internet</titulo>
-    <descricao>Permite que o contribuinte outorgue poderes para fins de utilização, mediante certificado digital, dos
-        serviços disponíveis no Centro Virtual de Atendimento ao Contribuinte (e-CAC). Tempo médio de espera para o
-        atendimento presencial: 25 (vinte e cinco) minutos.
+    <descricao>
+        <![CDATA[Permite que o contribuinte outorgue poderes para fins de utilização, mediante certificado digital, dos serviços disponíveis no Centro Virtual de Atendimento ao Contribuinte (e-CAC). Tempo médio de espera para o atendimento presencial: 25 (vinte e cinco) minutos.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

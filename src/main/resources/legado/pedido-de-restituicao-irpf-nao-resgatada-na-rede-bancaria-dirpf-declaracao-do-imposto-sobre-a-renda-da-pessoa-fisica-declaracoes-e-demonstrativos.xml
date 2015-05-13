@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Pedido de Restituição IRPF não Resgatada na Rede Bancária (DIRPF - Declaração do Imposto sobre a Renda da
-        Pessoa Física / Declarações e Demonstrativos)
+    <titulo>
+        <![CDATA[Pedido de Restituição IRPF não Resgatada na Rede Bancária (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações e Demonstrativos)]]>
     </titulo>
-    <descricao>Solicitar pagamento de restituição de imposto de renda não resgatado na rede bancária no prazo de 1 (um)
-        ano.
+    <descricao>
+        <![CDATA[Solicitar pagamento de restituição de imposto de renda não resgatado na rede bancária no prazo de 1 (um) ano.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

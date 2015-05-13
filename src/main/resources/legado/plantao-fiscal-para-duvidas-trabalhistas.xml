@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Plantão Fiscal para Dúvidas Trabalhistas</titulo>
-    <descricao>Serviço prestado de forma presencial pela auditoria fiscal do trabalho, para responder às dúvidas da
-        população ou coleta de denúncias.
+    <descricao>
+        <![CDATA[Serviço prestado de forma presencial pela auditoria fiscal do trabalho, para responder às dúvidas da população ou coleta de denúncias.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

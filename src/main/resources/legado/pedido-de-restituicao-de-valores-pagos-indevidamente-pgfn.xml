@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Pedido de Restituição de Valores Pagos Indevidamente – PGFN</titulo>
-    <descricao>Apresentar requerimento de restituição de pagamentos indevidos e outros documentos, visando a restituição
-        de valores pagos para quitar débitos inscritos em Dívida Ativa da União e que, posteriormente, verificou-se
-        tratar de pagamento indevido.
+    <descricao>
+        <![CDATA[Apresentar requerimento de restituição de pagamentos indevidos e outros documentos, visando a restituição de valores pagos para quitar débitos inscritos em Dívida Ativa da União e que, posteriormente, verificou-se tratar de pagamento indevido.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

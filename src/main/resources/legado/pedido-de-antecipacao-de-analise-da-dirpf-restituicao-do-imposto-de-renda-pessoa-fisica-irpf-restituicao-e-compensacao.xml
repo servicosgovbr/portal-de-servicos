@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Pedido de Antecipação de Análise da DIRPF (Restituição do Imposto de Renda Pessoa Física - IRPF /
-        Restituição e Compensação)
+    <titulo>
+        <![CDATA[Pedido de Antecipação de Análise da DIRPF (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e Compensação)]]>
     </titulo>
-    <descricao>Solicitar a antecipação da análise da documentação que comprova as informações para fins de liberação de
-        declaração retida em malha fiscal.
+    <descricao>
+        <![CDATA[Solicitar a antecipação da análise da documentação que comprova as informações para fins de liberação de declaração retida em malha fiscal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

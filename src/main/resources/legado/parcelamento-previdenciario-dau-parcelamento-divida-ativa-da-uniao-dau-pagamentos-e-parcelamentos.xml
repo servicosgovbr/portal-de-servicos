@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Parcelamento Previdenciário DAU (Parcelamento Dívida Ativa da União – DAU / Pagamentos e Parcelamentos)
+    <titulo>
+        <![CDATA[Parcelamento Previdenciário DAU (Parcelamento Dívida Ativa da União – DAU / Pagamentos e Parcelamentos)]]>
     </titulo>
     <descricao>Parcelar débitos previdenciários inscritos em DAU.</descricao>
     <requisitos/>

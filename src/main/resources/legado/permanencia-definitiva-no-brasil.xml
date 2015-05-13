@@ -1,36 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Permanência definitiva no Brasil</titulo>
-    <descricao>Em regra, somente podem requerer a permanência definitiva no Brasil estrangeiros em situação migratória
-        regular. No entanto, nas hipóteses em que o estrangeiro tiver filho ou cônjuge de brasileiro, poderá ser
-        desconsiderado o requisito da estada regular, tendo em vista o princípio Constitucional de Proteção à unidade
-        familiar. Os estrangeiros permanentes no Brasil dispõem dos mesmos direitos dos brasileiros, com exceção
-        daqueles privativos dos nacionais, conforme previsto na Constituição Federal de 1988.
+    <descricao>
+        <![CDATA[Em regra, somente podem requerer a permanência definitiva no Brasil estrangeiros em situação migratória regular. No entanto, nas hipóteses em que o estrangeiro tiver filho ou cônjuge de brasileiro, poderá ser desconsiderado o requisito da estada regular, tendo em vista o princípio Constitucional de Proteção à unidade familiar. Os estrangeiros permanentes no Brasil dispõem dos mesmos direitos dos brasileiros, com exceção daqueles privativos dos nacionais, conforme previsto na Constituição Federal de 1988.
 
-        Os pedidos devidamente instruídos com o formulário de requerimento e os demais documentos (vide "Requerimento,
-        documentação necessária e mais informações") devem ser entregues junto à Unidade do Departamento de Polícia
-        Federal mais próxima da residência do interessado (vide "Unidades do departamento da Polícia Federal no Brasil")
-        e serão analisados e decididos pelo Departamento de Estrangeiros da Secretaria Nacional de Justiça do Ministério
-        da Justiça.
+Os pedidos devidamente instruídos com o formulário de requerimento e os demais documentos (vide "Requerimento, documentação necessária e mais informações") devem ser entregues junto à Unidade do Departamento de Polícia Federal mais próxima da residência do interessado (vide "Unidades do departamento da Polícia Federal no Brasil") e serão analisados e decididos pelo Departamento de Estrangeiros da Secretaria Nacional de Justiça do Ministério da Justiça.
 
-        O acompanhamento dos pedidos de permanência pode ser realizado por meio da Central de Atendimento da Secretaria
-        Nacional de Justiça (vide "Outros") ou pela internet (vide "Acompanhamento dos pedidos de permanência").
+O acompanhamento dos pedidos de permanência pode ser realizado por meio da Central de Atendimento da Secretaria Nacional de Justiça (vide "Outros") ou pela internet (vide "Acompanhamento dos pedidos de permanência").
 
-        A permanência no Brasil poderá ser concedida com base nas disposições da Lei nº 6.815/80 e nas Resoluções
-        Normativas do Conselho Nacional de Imigração – CNIg (Vide "Mais informações"), que estabelecem os critérios para
-        a concessão de residência definitiva àqueles que se encontrem no País, nas hipóteses descritas abaixo:
+A permanência no Brasil poderá ser concedida com base nas disposições da Lei nº 6.815/80 e nas Resoluções Normativas do Conselho Nacional de Imigração – CNIg (Vide "Mais informações"), que estabelecem os critérios para a concessão de residência definitiva àqueles que se encontrem no País, nas hipóteses descritas abaixo:
 
-        - ao refugiado ou asilado;
-        - ao cônjuge de brasileiro ou genitor de prole brasileira;
-        - ao dependente legal de brasileiro ou de estrangeiro permanente ou temporário residente no País, maior de 21
-        anos;
-        - ao companheiro de brasileiro ou estrangeiro permanente, sem distinção de sexo;
-        - ao titular de visto temporário na condição de professor, técnico ou pesquisador de alto nível ou cientista
-        estrangeiro;
-        - à vítima de tráfico de pessoas, e
-        - ao estrangeiro que perdeu a condição de permanente por ausência do País por prazo superior a dois anos; e
-        - aos nacionais argentinos e residência aos nacionais dos Estados-Membros do Mercado Comum do Sul – Mercosul- e
-        Associados.
+- ao refugiado ou asilado;
+- ao cônjuge de brasileiro ou genitor de prole brasileira;
+- ao dependente legal de brasileiro ou de estrangeiro permanente ou temporário residente no País, maior de 21 anos;
+- ao companheiro de brasileiro ou estrangeiro permanente, sem distinção de sexo;
+- ao titular de visto temporário na condição de professor, técnico ou pesquisador de alto nível ou cientista estrangeiro;
+- à vítima de tráfico de pessoas, e
+- ao estrangeiro que perdeu a condição de permanente por ausência do País por prazo superior a dois anos; e
+- aos nacionais argentinos e residência aos nacionais dos Estados-Membros do Mercado Comum do Sul – Mercosul- e Associados.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

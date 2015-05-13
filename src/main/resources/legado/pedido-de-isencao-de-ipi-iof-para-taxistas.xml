@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Pedido de Isenção de IPI /IOF para Taxistas</titulo>
-    <descricao>Apresentar documentação referente ao pedido de isenção de IPI/IOF para aquisição de automóveis (táxis).
+    <descricao>
+        <![CDATA[Apresentar documentação referente ao pedido de isenção de IPI/IOF para aquisição de automóveis (táxis).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

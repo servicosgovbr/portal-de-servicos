@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Pedido de Baixa de Empresa (Certidão Contribuições Previdenciárias / Dívida Ativa da União – DAU)</titulo>
-    <descricao>Solicitar emissão de certidão de contribuições previdenciárias da pessoa jurídica visando baixa no
-        cadastro previdenciário.
+    <descricao>
+        <![CDATA[Solicitar emissão de certidão de contribuições previdenciárias da pessoa jurídica visando baixa no cadastro previdenciário.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

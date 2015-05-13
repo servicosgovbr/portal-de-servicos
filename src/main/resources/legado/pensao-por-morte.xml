@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Pensão por Morte</titulo>
-    <descricao>Benefício pago à família do trabalhador quando ele morre. Para concessão de pensão por morte, não há
-        tempo mínimo de contribuição, mas é necessário que o óbito tenha ocorrido enquanto o trabalhador tinha qualidade
-        de segurado.
+    <descricao>
+        <![CDATA[Benefício pago à família do trabalhador quando ele morre. Para concessão de pensão por morte, não há tempo mínimo de contribuição, mas é necessário que o óbito tenha ocorrido enquanto o trabalhador tinha qualidade de segurado.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

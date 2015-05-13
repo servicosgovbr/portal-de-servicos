@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Parcelamento Não Previdenciário DAU</titulo>
-    <descricao>Formalizar pedido de parcelamento de débitos inscritos na Dívida Ativa da União. Exceto
-        previdenciários.
+    <descricao>
+        <![CDATA[Formalizar pedido de parcelamento de débitos inscritos na Dívida Ativa da União. Exceto previdenciários.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

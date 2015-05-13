@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Porte de Arma de Fogo</titulo>
-    <descricao>É o documento, com validade de até 5 anos, que autoriza o cidadão a portar, transportar e trazer consigo
-        uma arma de fogo, de forma discreta, fora das dependências de sua residência ou local de trabalho.
+    <descricao>
+        <![CDATA[É o documento, com validade de até 5 anos, que autoriza o cidadão a portar, transportar e trazer consigo uma arma de fogo, de forma discreta, fora das dependências de sua residência ou local de trabalho.
 
-        IMPORTANTE
+IMPORTANTE
 
-        1.O art. 6o. da Lei 10.826/03 dispõe que o porte de arma de fogo é proibido em todo o território nacional, salvo
-        em casos excepcionais. Portanto, excepcionalmente a Polícia Federal poderá conceder porte de arma de fogo desde
-        que o requerente demonstre a sua efetiva necessidade por exercício de atividade profissional de risco ou de
-        ameaça à sua integridade física, além de atender as demais exigências do art. 10 da Lei 10.826/03.
+1.O art. 6o. da Lei 10.826/03 dispõe que o porte de arma de fogo é proibido em todo o território nacional, salvo em casos excepcionais. Portanto, excepcionalmente a Polícia Federal poderá conceder porte de arma de fogo desde que o requerente demonstre a sua efetiva necessidade por exercício de atividade profissional de risco ou de ameaça à sua integridade física, além de atender as demais exigências do art. 10 da Lei 10.826/03.
 
-        2.O porte de arma de fogo tem natureza jurídica de autorização, sendo unilateral, precário e discricionário.
-        Assim, não basta a apresentação dos documentos previstos em lei se o requerente não demonstrar sua necessidade
-        por exercício de atividade profissional de risco ou de ameaça à sua integridade física.
+2.O porte de arma de fogo tem natureza jurídica de autorização, sendo unilateral, precário e discricionário. Assim, não basta a apresentação dos documentos previstos em lei se o requerente não demonstrar sua necessidade por exercício de atividade profissional de risco ou de ameaça à sua integridade física.
 
-        3.O comprovante de capacidade técnica (Instrutores de Armamento e Tiro) e de aptidão psicológica (Psicólogos)
-        para o manuseio de arma de fogo deve ser fornecido por profissional credenciado pela Policia Federal.
+3.O comprovante de capacidade técnica (Instrutores de Armamento e Tiro) e de aptidão psicológica (Psicólogos) para o manuseio de arma de fogo deve ser fornecido por profissional credenciado pela Policia Federal.
 
-        4.A taxa de expedição de Porte Federal de Arma de Fogo somente deverá ser paga após o deferimento da autorização
-        pela Polícia Federal.
+4.A taxa de expedição de Porte Federal de Arma de Fogo somente deverá ser paga após o deferimento da autorização pela Polícia Federal.
 
-        5.A autorização de porte de arma de fogo perderá automaticamente sua eficácia caso o portador dela seja detido
-        ou abordado em estado de embriaguez ou sob efeito de substâncias químicas ou alucinógenas.
+5.A autorização de porte de arma de fogo perderá automaticamente sua eficácia caso o portador dela seja detido ou abordado em estado de embriaguez ou sob efeito de substâncias químicas ou alucinógenas.
 
-        6.O titular de porte de arma de fogo para defesa pessoal não poderá conduzi-la ostensivamente ou com ela
-        adentrar ou permanecer em locais públicos, tais como igrejas, escolas, estádios desportivos, clubes, agências
-        bancárias ou outros locais onde haja aglomeração de pessoas em virtude de eventos de qualquer natureza.
+6.O titular de porte de arma de fogo para defesa pessoal não poderá conduzi-la ostensivamente ou com ela adentrar ou permanecer em locais públicos, tais como igrejas, escolas, estádios desportivos, clubes, agências bancárias ou outros locais onde haja aglomeração de pessoas em virtude de eventos de qualquer natureza.
 
-        7.O Porte de Arma de Fogo é pessoal, intransferível e revogável a qualquer tempo, sendo válido apenas com
-        relação à arma nele especificada e com a apresentação do documento de identificação do portador.
-
+7.O Porte de Arma de Fogo é pessoal, intransferível e revogável a qualquer tempo, sendo válido apenas com relação à arma nele especificada e com a apresentação do documento de identificação do portador.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

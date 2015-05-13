@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Programa Cisternas</titulo>
-    <descricao>O Programa Cisternas garante o acesso à água potável para famílias de baixa renda que moram em áreas
-        rurais onde não há abastecimento regular por rede de água, especialmente as que vivem no Semiárido. Construídas
-        com placas de cimento, as cisternas têm capacidade para armazenar 16 mil litros de água, suficientes para
-        atender a uma família de 5 pessoas por até 8 meses.
-        O Programa Cisternas também leva às famílias de agricultores tecnologias de abastecimento de água para produção
-        agrícola, com sistemas simples e de baixo custo.
-        Para ser atendida pelo Programa Cisternas, a família deve estar inscrita no Cadastro Único para Programas
-        Sociais do Governo Federal. Se você obedece aos requisitos do programa, procure uma liderança de sua comunidade
-        para saber como ser atendida.
+    <descricao>
+        <![CDATA[O Programa Cisternas garante o acesso à água potável para famílias de baixa renda que moram em áreas rurais onde não há abastecimento regular por rede de água, especialmente as que vivem no Semiárido. Construídas com placas de cimento, as cisternas têm capacidade para armazenar 16 mil litros de água, suficientes para atender a uma família de 5 pessoas por até 8 meses.
+
+O Programa Cisternas também leva às famílias de agricultores tecnologias de abastecimento de água para produção agrícola, com sistemas simples e de baixo custo.
+
+Para ser atendida pelo Programa Cisternas, a família deve estar inscrita no Cadastro Único para Programas Sociais do Governo Federal. Se você obedece aos requisitos do programa, procure uma liderança de sua comunidade para saber como ser atendida.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
