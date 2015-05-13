@@ -19,7 +19,7 @@ public class TestData {
     public static final Servico SERVICO = new Servico()
             .withId("1")
             .withTitulo("Título")
-            .withDescricao("Descrição")
+            .withDescricao("Descrição serviço")
             .withUrl("url://site")
             .withUrlAgendamento("url://agendamento")
             .withTaxa("Gratuita")
@@ -38,7 +38,7 @@ public class TestData {
     public static final Conteudo CONTEUDO = new Conteudo()
             .withId("pagina")
             .withTitulo("Título")
-            .withConteudo("Descrição");
+            .withConteudo("Descrição conteúdo");
 
     public static final Opiniao OPINIAO = new Opiniao()
             .withUrl("/servico/foo")

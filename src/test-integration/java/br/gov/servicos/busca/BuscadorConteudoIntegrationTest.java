@@ -1,19 +1,27 @@
 package br.gov.servicos.busca;
 
 import br.gov.servicos.Main;
+import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoRepository;
 import br.gov.servicos.config.GuiaDeServicosIndex;
 import br.gov.servicos.fixtures.TestData;
+import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
-import org.junit.Ignore;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.util.List;
+
 import static java.util.Optional.of;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -32,14 +40,55 @@ public class BuscadorConteudoIntegrationTest {
     @Autowired
     BuscadorConteudo   buscadorConteudo;
 
-    @Ignore
+    @Before
+    public void setUp() throws Exception {
+        guiaDeServicosIndex.recriar();
+    }
+
     @Test
     public void deveInserirUmServicoEUmConteudoERetornarDoisConteudos() throws Exception {
-        guiaDeServicosIndex.recriar();
-
         servicoRepository.save(TestData.SERVICO);
         conteudoRepository.save(TestData.CONTEUDO);
 
-        buscadorConteudo.busca(of("Descrição"), 0);
+        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
+
+        assertThat(conteudos, hasSize(2));
+        assertThat(conteudos.get(0).getConteudo(), is("Descrição conteúdo"));
+        assertThat(conteudos.get(1).getConteudo(), is("Descrição serviço"));
     }
+
+    @Test
+    public void deveRetornarApenasConteudosQueTenhamAPalavraDescricao() throws Exception {
+        servicoRepository.save(TestData.SERVICO);
+        servicoRepository.save(new Servico().withTitulo("Um titulo").withDescricao("Texto"));
+        conteudoRepository.save(new Conteudo().withTitulo("Titulo de conteudo").withConteudo("Conteudo"));
+
+        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
+
+        assertThat(conteudos, hasSize(1));
+        assertThat(conteudos.get(0).getConteudo(), is("Descrição serviço"));
+    }
+
+    @Test
+    public void deveAcharSemAcentuacao() throws Exception {
+        servicoRepository.save(new Servico().withTitulo("Um titulo").withDescricao("Descricao"));
+
+        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
+        assertThat(conteudos, hasSize(1));
+        assertThat(conteudos.get(0).getConteudo(), is("Descricao"));
+    }
+
+    @Test
+    public void buscaNoTituloDeveTerPrioridade() throws Exception {
+        servicoRepository.save(TestData.SERVICO);
+        servicoRepository.save(new Servico().withTitulo("Descrição").withDescricao("Texto"));
+        conteudoRepository.save(new Conteudo().withTitulo("Titulo de conteudo").withConteudo("Conteudo"));
+
+        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
+
+        assertThat(conteudos, hasSize(2));
+        assertThat(conteudos.get(0).getConteudo(), is("Texto"));
+        assertThat(conteudos.get(1).getConteudo(), is("Descrição serviço"));
+    }
+
 }

@@ -14,13 +14,11 @@ import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_IMPORTADOR;
-import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
@@ -48,15 +46,9 @@ public class BuscadorConteudo {
     Page<Conteudo> busca(Optional<String> termoBuscado, Integer paginaAtual) {
         log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
         return executaQuery(termoBuscado, paginaAtual, q -> disMaxQuery()
-                .add(simpleQueryString(q))
-                .add(boolQuery()
-                        .should(fuzzy(q, "titulo", 1.0f))
-                        .should(fuzzy(q, "descricao", 0.9f))
-                        .should(fuzzy(q, "conteudo", 0.9f))));
-    }
-
-    public List<Conteudo> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
-        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery(campos).likeText(termo));
+                .add(multiMatchQuery(q, "titulo^1.0", "conteudo^0.9", "descricao^0.9")
+                        .fuzziness(TWO)
+                        .prefixLength(0)));
     }
 
     private FuzzyQueryBuilder fuzzy(String q, String field, float boost) {
@@ -67,12 +59,7 @@ public class BuscadorConteudo {
                 .transpositions(true);
     }
 
-    private List<Conteudo> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
-        return executaQuery(termoBuscado, 0, MAX_VALUE, criaQuery).getContent();
-    }
-
-    private Page<Conteudo> executaQuery(Optional<String> termoBuscado, Integer paginaAtual,
-                                        Function<String, QueryBuilder> criaQuery) {
+    private Page<Conteudo> executaQuery(Optional<String> termoBuscado, Integer paginaAtual, Function<String, QueryBuilder> criaQuery) {
         return executaQuery(termoBuscado, paginaAtual, PAGE_SIZE, criaQuery);
     }
 
@@ -85,8 +72,8 @@ public class BuscadorConteudo {
                 .map(q -> et.query(
                         new NativeSearchQueryBuilder()
                                 .withIndices(GDS_IMPORTADOR)
-                                .withTypes("servico", "conteudo")
-                                .withFields("titulo", "descricao", "conteudo")
+                                .withTypes("conteudo", "servico")
+                                .withFields("titulo", "conteudo", "descricao")
                                 .withPageable(pageable)
                                 .withQuery(q)
                                 .build(),
@@ -94,8 +81,9 @@ public class BuscadorConteudo {
                                 .map(h -> new Conteudo()
                                         .withId(slugify.slugify(h.field("titulo").value()))
                                         .withTitulo(h.field("titulo").value())
-                                        .withConteudo((String) Optional.of(h.field("descricao").value())
-                                                .orElse(h.field("conteudo").value())))
+                                        .withConteudo(Optional.ofNullable(h.field("descricao"))
+                                                .orElse(h.field("conteudo"))
+                                                .value()))
                                 .collect(toList()), pageable, r.getHits().totalHits())))
                 .orElse(SEM_RESULTADOS);
     }
