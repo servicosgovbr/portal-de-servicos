@@ -11,7 +11,7 @@
             <tipoCanalPrestacaoServico>
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
-            <descricao>Inscrição junto à Previdência Social.</descricao>
+            <descricao>Inscrição junto à Previdência Social</descricao>
             <url>http://www.dataprev.gov.br/servicos/cadint/cadint.html</url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
@@ -21,7 +21,7 @@
             <tipoInformacaoUtil>
                 <titulo>Telefone</titulo>
             </tipoInformacaoUtil>
-            <descricao>Ligue 135 para obter mais informações.</descricao>
+            <descricao>Ligue 135 para obter mais informações</descricao>
             <url></url>
         </informacaoUtil>
     </informacoesUteis>
