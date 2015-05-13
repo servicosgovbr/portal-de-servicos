@@ -13,8 +13,8 @@ Para sua família ser beneficiada por programas como o Bolsa Família, a Tarifa 
             <tipoCanalPrestacaoServico>
                 <titulo>Presencial</titulo>
             </tipoCanalPrestacaoServico>
-            <descricao>Para se inscrever no Cadastro Único você deve procurar o Centro de Referência da Assistência
-                Social - CRAS ou a Prefeitura do seu município
+            <descricao>
+                <![CDATA[Para se inscrever no Cadastro Único você deve procurar o Centro de Referência da Assistência Social - CRAS ou a Prefeitura do seu município]]>
             </descricao>
             <url></url>
         </canalPrestacaoServico>
@@ -25,9 +25,8 @@ Para sua família ser beneficiada por programas como o Bolsa Família, a Tarifa 
             <tipoInformacaoUtil>
                 <titulo>Cartilhas e Manuais</titulo>
             </tipoInformacaoUtil>
-            <descricao>Na Cartilha do Cadastro Único você encontra outras informações para a inscrição, como se calcula
-                a renda mensal familiar e alguns dos programas sociais do Governo Federal que utilizam o cadastro para
-                selecionar seus beneficiários (artigo em PDF, 591 Kb)
+            <descricao>
+                <![CDATA[Na Cartilha do Cadastro Único você encontra outras informações para a inscrição, como se calcula a renda mensal familiar e alguns dos programas sociais do Governo Federal que utilizam o cadastro para selecionar seus beneficiários (artigo em PDF, 591 Kb)]]>
             </descricao>
             <url>
                 http://www.mds.gov.br/biblioteca/secretaria-nacional-de-renda-de-cidadania-senarc/cartilhas/cartilha-do-cadastro-unico/cadastro-unico
@@ -37,8 +36,8 @@ Para sua família ser beneficiada por programas como o Bolsa Família, a Tarifa 
             <tipoInformacaoUtil>
                 <titulo>Localização das unidades</titulo>
             </tipoInformacaoUtil>
-            <descricao>Neste site você pode localizar o CRAS mais perto de sua residência. Esses dados podem ser
-                localizados no mapa, basta escolher o seu Estado e o seu Município.
+            <descricao>
+                <![CDATA[Localize o CRAS mais perto de sua residência]]>
             </descricao>
             <url>http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/</url>
         </informacaoUtil>
