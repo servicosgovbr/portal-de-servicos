@@ -11,6 +11,7 @@ O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com 
 * [Bruno Palvarini](mailto:bruno.palvarini@planejamento.gov.br)
 * [Christian Miranda](mailto:christian.miranda@planejamento.gov.br)
 * [Carlos Vieira](mailto:edu.carlos.vieira@gmail.com)
+* [Elen Serejo](mailto:elen.serejo@planejamento.gov.br)
 * [Elise Gonçalves](mailto:elise.goncalves@planejamento.gov.br)
 * [Esaú Mendes](mailto:esau.mendes@planejamento.gov.br)
 * [Everson Aguiar](mailto:everson.aguiar@planejamento.gov.br)
