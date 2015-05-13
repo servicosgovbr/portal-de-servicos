@@ -13,7 +13,8 @@
     padding-bottom: em(75);
 
     @include mobile {
-      display: none !important;
+      padding-top: em(16);
+      padding-bottom: em(16);
     }
 
     @include tablet {
@@ -29,6 +30,11 @@
       @include span-columns(3);
       border-left: 1px dotted $cinza-escuro;
       padding-left: 0.6em;
+
+      @include mobile {
+        width: 100%;
+        margin-bottom: 1em;
+      }
     }
 
     dt {
