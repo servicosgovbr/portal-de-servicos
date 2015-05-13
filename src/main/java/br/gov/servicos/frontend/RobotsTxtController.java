@@ -23,9 +23,9 @@ class RobotsTxtController {
     @RequestMapping(value = "/robots.txt", produces = "text/plain")
     @ResponseStatus(OK)
     @ResponseBody
-    String robotsTxt(HttpServletRequest request, @Value("${gds.permitir-robos}") boolean permitirRobos) {
+    String robotsTxt(HttpServletRequest request, @Value("${flags.permitir.robos}") Boolean permitirRobos) {
         if (!permitirRobos) {
-            log.info("Robôs não permitidos neste ambiente (GDS_PERMITIR_ROBOS=false)");
+            log.info("Robôs não permitidos neste ambiente (FLAGS_PERMITIR_ROBOS=false)");
             return format("User-agent: *%n" +
                     "Disallow: /%n");
         }

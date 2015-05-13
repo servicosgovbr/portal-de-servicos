@@ -25,9 +25,11 @@ mail:
   username:
   password:
 
+flags:
+  importar.automaticamente: false
+  permitir.robos: false
+
 gds:
-  permitir-robos: false
-  importar-automaticamente: false
   piwik:
     enabled: false
     url: "https://estatisticas.presidencia.gov.br/"

@@ -20,7 +20,7 @@ class ImportadorAutomatico {
     boolean flag;
 
     @Autowired
-    ImportadorAutomatico(Importador importador, @Value("${gds.importar-automaticamente}") boolean flag) {
+    ImportadorAutomatico(Importador importador, @Value("${flags.importar.automaticamente}") Boolean flag) {
         this.importador = importador;
         this.flag = flag;
     }
@@ -29,7 +29,7 @@ class ImportadorAutomatico {
     @SneakyThrows
     void appCarregada() {
         if (!flag) {
-            log.info("Importação automática desligada (GDS_IMPORTAR_AUTOMATICAMENTE=false)");
+            log.info("Importação automática desligada (FLAGS_IMPORTAR_AUTOMATICAMENTE=false)");
             return;
         }
 
