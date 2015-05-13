@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Programa para Transmissão e Validação de Declarações</titulo>
-    <descricao>Validar e transmitir, via Internet, as declarações de impostos e contribuições federais de pessoas
-        físicas e jurídicas.
+    <descricao>
+        <![CDATA[Validar e transmitir, via Internet, as declarações de impostos e contribuições federais de pessoas físicas e jurídicas.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

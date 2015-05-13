@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Registro de DSI - Bagagem Desacompanhada</titulo>
-    <descricao>Solicitar o registro de Declaração Simplificada de Importação (DSI) para bagagem desacompanhada.
+    <descricao>
+        <![CDATA[Solicitar o registro de Declaração Simplificada de Importação (DSI) para bagagem desacompanhada.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

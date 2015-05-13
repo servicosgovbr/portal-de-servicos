@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Registro de Armador de Pesca</titulo>
-    <descricao>Todo proprietário de uma ou mais embarcações pesqueiras, cuja arqueação bruta supere 20 toneladas, deve
-        obter o registro junto ao Ministério da Pesca e Aquicultura. De posse do registro o armador passa a ser
-        identificado como pescador industrial e suas atividades de contratação de pessoal passam a ser regidas pela
-        Consolidação das Leis Trabalhistas (CLT).
+    <descricao>
+        <![CDATA[Todo proprietário de uma ou mais embarcações pesqueiras, cuja arqueação bruta supere 20 toneladas, deve obter o registro junto ao Ministério da Pesca e Aquicultura. De posse do registro o armador passa a ser identificado como pescador industrial e suas atividades de contratação de pessoal passam a ser regidas pela Consolidação das Leis Trabalhistas (CLT).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

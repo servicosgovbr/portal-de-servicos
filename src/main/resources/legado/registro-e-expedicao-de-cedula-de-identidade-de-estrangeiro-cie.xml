@@ -1,31 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Registro e Expedição de Cédula de Identidade de Estrangeiro - CIE</titulo>
-    <descricao>Registro e Expedição do documento necessário para o estrangeiro fixar residência, exercer atividade
-        profissional ou estudar no País. O documento tem validade variável de acordo com a situação.
+    <descricao><![CDATA[Registro e Expedição do documento necessário para o estrangeiro fixar residência, exercer atividade profissional ou estudar no País. O documento tem validade variável de acordo com a situação.
 
-        Informações importantes:
+Informações importantes:
 
-        • O processo para registro, emissão/renovação da cédula de Identidade de Estrangeiro só é feito pessoalmente, na
-        Polícia Federal mais próxima da residência do interessado.
-        • O estrangeiro registrado é obrigado a comunicar ao Ministério da Justiça a mudança do seu domicílio ou
-        residência, devendo fazê-lo nos 30 (trinta) dias imediatamente seguintes à sua efetivação, conforme art. 102 da
-        Lei 6815/80, sob pena de multa.
-        • Ao dirigir-se a uma unidade da Polícia Federal, leve consigo todos os seus documentos pessoais e procure
-        sempre apresentar um comprovante de endereço. O preenchimento equivocado do formulário, notadamente do CEP, pode
-        atrasar o seu atendimento.
-        • O prazo para registro é 30 dias contados a partir da data de ingresso no território nacional (Artigo 30 da Lei
-        nº 6.815/1980);
-        • O estrangeiro menor de idade deverá apresentar-se acompanhado dos pais ou responsável legal;
-        • Os pedidos de renovação das cédulas devem ser feitos antes do vencimento do documento, sob pena de pagamento
-        de multa.
-        • Estão dispensados da substituição da CIE, mesmo após o vencimento, os estrangeiros portadores de vistos
-        permanentes, que tenham participado de recadastramento anterior e que tenham completado 60 anos até a data de
-        vencimento da cédula ou sejam deficientes físicos.
-        • O estrangeiro permanente que se ausentar mais de 2 anos ininterruptos do território nacional, perde a
-        permanência.
-
-
+• O processo para registro, emissão/renovação da cédula de Identidade de Estrangeiro só é feito pessoalmente, na Polícia Federal mais próxima da residência do interessado.
+• O estrangeiro registrado é obrigado a comunicar ao Ministério da Justiça a mudança do seu domicílio ou residência, devendo fazê-lo nos 30 (trinta) dias imediatamente seguintes à sua efetivação, conforme art. 102 da Lei 6815/80, sob pena de multa.
+• Ao dirigir-se a uma unidade da Polícia Federal, leve consigo todos os seus documentos pessoais e procure sempre apresentar um comprovante de endereço. O preenchimento equivocado do formulário, notadamente do CEP, pode atrasar o seu atendimento.
+• O prazo para registro é 30 dias contados a partir da data de ingresso no território nacional (Artigo 30 da Lei nº 6.815/1980);
+• O estrangeiro menor de idade deverá apresentar-se acompanhado dos pais ou responsável legal;
+• Os pedidos de renovação das cédulas devem ser feitos antes do vencimento do documento, sob pena de pagamento de multa.
+• Estão dispensados da substituição da CIE, mesmo após o vencimento, os estrangeiros portadores de vistos permanentes, que tenham participado de recadastramento anterior e que tenham completado 60 anos até a data de vencimento da cédula ou sejam deficientes físicos.
+• O estrangeiro permanente que se ausentar mais de 2 anos ininterruptos do território nacional, perde a permanência.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

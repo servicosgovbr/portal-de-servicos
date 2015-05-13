@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Programa de Aquisição de Alimentos da agricultura familiar - PAA</titulo>
-    <descricao>O Programa de Aquisição de Alimentos (PAA) é uma ação do Governo Federal que compra alimentos da
-        agricultura familiar e distribui a pessoas que precisam - aquelas que se encontram em situação de insegurança
-        alimentar e nutricional e são atendidas pela rede socioassistencial. Os alimentos também servem para abastecer
-        os restaurantes populares, cozinhas de creches e escolas públicas, de hospitais públicos e presídios - os
-        chamados equipamentos públicos de alimentação e nutrição. Os produtos também podem formar estoques públicos ou
-        estoques das organizações da agricultura familiar.
-        Os agricultores familiares podem vender para o PAA de forma individual ou coletiva - por meio de cooperativas da
-        agricultura familiar de que façam parte. As compras são realizadas pelos Governos Estaduais e Prefeituras
-        Municipais que participam do programa, e pela Companhia Nacional de Abastecimento (CONAB), com recursos do
-        Ministério do Desenvolvimento Social e Combate à Fome (MDS) e do Ministério do Desenvolvimento Agrário (MDA).
+    <descricao>
+        <![CDATA[O Programa de Aquisição de Alimentos (PAA) é uma ação do Governo Federal que compra alimentos da agricultura familiar e distribui a pessoas que precisam - aquelas que se encontram em situação de insegurança alimentar e nutricional e são atendidas pela rede socioassistencial. Os alimentos também servem para abastecer os restaurantes populares, cozinhas de creches e escolas públicas, de hospitais públicos e presídios - os chamados equipamentos públicos de alimentação e nutrição. Os produtos também podem formar estoques públicos ou estoques das organizações da agricultura familiar.
+
+Os agricultores familiares podem vender para o PAA de forma individual ou coletiva - por meio de cooperativas da agricultura familiar de que façam parte. As compras são realizadas pelos Governos Estaduais e Prefeituras Municipais que participam do programa, e pela Companhia Nacional de Abastecimento (CONAB), com recursos do Ministério do Desenvolvimento Social e Combate à Fome (MDS) e do Ministério do Desenvolvimento Agrário (MDA).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

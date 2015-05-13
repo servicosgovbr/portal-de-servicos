@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Regularização da Situação Cadastral no CPF</titulo>
-    <descricao>Realizar pedido de regularização do CPF na página da Receita Federal na internet ou em uma conveniada
-        (Banco do Brasil, Caixa Econômica Federal, Correios).
+    <descricao>
+        <![CDATA[Realizar pedido de regularização do CPF na página da Receita Federal na internet ou em uma conveniada (Banco do Brasil, Caixa Econômica Federal, Correios).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

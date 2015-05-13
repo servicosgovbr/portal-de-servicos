@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Renda Variável, Alienação de Ações, Ouro e Ativo Financeiro</titulo>
-    <descricao>Acessar o programa Renda Variável, Alienação de Ações, Ouro e Ativos Financeiros para download (anos de
-        2001 a 2004).
+    <descricao>
+        <![CDATA[Acessar o programa Renda Variável, Alienação de Ações, Ouro e Ativos Financeiros para download (anos de 2001 a 2004).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

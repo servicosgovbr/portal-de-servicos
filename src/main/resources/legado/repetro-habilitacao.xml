@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>REPETRO – Habilitação</titulo>
-    <descricao>Solicitar habilitação no Regime Aduaneiro Especial de Exportação e Importação de bens destinados às
-        atividades de pesquisa e de lavra das jazidas de petróleo e de gás natural (REPETRO).
+    <descricao>
+        <![CDATA[Solicitar habilitação no Regime Aduaneiro Especial de Exportação e Importação de bens destinados às atividades de pesquisa e de lavra das jazidas de petróleo e de gás natural (REPETRO).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

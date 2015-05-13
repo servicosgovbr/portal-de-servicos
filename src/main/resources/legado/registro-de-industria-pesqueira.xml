@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Registro de Indústria Pesqueira</titulo>
-    <descricao>Toda pessoa jurídica que exerce a atividade de captura, extração, coleta, conservação, processamento,
-        beneficiamento ou industrialização de pescado precisa estar registrada junto ao Ministério da Pesca e
-        Aquicultura para poder exercer a sua atividade.
+    <descricao>
+        <![CDATA[Toda pessoa jurídica que exerce a atividade de captura, extração, coleta, conservação, processamento, beneficiamento ou industrialização de pescado precisa estar registrada junto ao Ministério da Pesca e Aquicultura para poder exercer a sua atividade.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

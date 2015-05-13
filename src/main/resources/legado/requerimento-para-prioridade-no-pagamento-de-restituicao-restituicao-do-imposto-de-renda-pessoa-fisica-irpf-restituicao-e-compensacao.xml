@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Requerimento para Prioridade no Pagamento de Restituição (Restituição do Imposto de Renda Pessoa Física -
-        IRPF / Restituição e Compensação)
+    <titulo>
+        <![CDATA[Requerimento para Prioridade no Pagamento de Restituição (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e Compensação)]]>
     </titulo>
-    <descricao>Requerer prioridade no pagamento de restituição do imposto de renda da pessoa física (art. 69-A da Lei nº
-        9.784/99).
+    <descricao>
+        <![CDATA[Requerer prioridade no pagamento de restituição do imposto de renda da pessoa física (art. 69-A da Lei nº 9.784/99).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

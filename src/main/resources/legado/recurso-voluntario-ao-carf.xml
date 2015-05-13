@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Recurso Voluntário ao CARF</titulo>
-    <descricao>Formalizar recurso ao Conselho Administrativo de Recursos Fiscais, caso não concorde com a decisão da DRJ
-        que manteve, total ou parcialmente, a exigência de crédito relativo ao descumprimento de obrigação acessória
-        constituído através de Auto de Infração.
+    <descricao>
+        <![CDATA[Formalizar recurso ao Conselho Administrativo de Recursos Fiscais, caso não concorde com a decisão da DRJ que manteve, total ou parcialmente, a exigência de crédito relativo ao descumprimento de obrigação acessória constituído através de Auto de Infração.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

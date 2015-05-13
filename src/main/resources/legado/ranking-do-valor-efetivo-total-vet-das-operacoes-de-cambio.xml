@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Ranking do Valor Efetivo Total - VET - das operações de câmbio</titulo>
-    <descricao>Mostra o custo de uma operação de câmbio em reais por moeda estrangeira em cada instituição autorizada a
-        operar câmbio pelo Banco Central, como bancos e corretoras.
+    <descricao>
+        <![CDATA[Mostra o custo de uma operação de câmbio em reais por moeda estrangeira em cada instituição autorizada a operar câmbio pelo Banco Central, como bancos e corretoras.
 
-        Ideal para quem comprar ou vender moeda estrangeira, como dólares ou euros, pois mostra as instituições onde
-        essas transações tendem a ser mais vantajosas para o cidadão. Basta inserir os dados da operação desejada e
-        fazer a simulação.
+Ideal para quem comprar ou vender moeda estrangeira, como dólares ou euros, pois mostra as instituições onde essas transações tendem a ser mais vantajosas para o cidadão. Basta inserir os dados da operação desejada e fazer a simulação.
 
-        O Valor Efetivo Total - VET - engloba a taxa de câmbio, as tarifas e os tributos incidentes sobre a operação.
+O Valor Efetivo Total - VET - engloba a taxa de câmbio, as tarifas e os tributos incidentes sobre a operação.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

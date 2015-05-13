@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>ProUni — Programa Universidade para Todos</titulo>
-    <descricao>O Programa Universidade para Todos (ProUni), criado em 2004, oferece bolsas de estudos em instituições
-        particulares de educação superior a estudantes egressos do ensino médio da rede pública. Também são atendidos
-        bolsistas integrais oriundos da rede particular. Para a bolsa integral, o candidato precisa comprovar renda
-        bruta familiar, por pessoa, de até 1,5 salário mínimo. Para a bolsa parcial, de até três salários mínimos. Estão
-        dispensados dos requisitos de renda os professores em efetivo exercício do magistério da educação básica,
-        integrantes de quadro de pessoal permanente de instituição pública. Eles concorrem exclusivamente a bolsas para
-        cursos de licenciatura.
+    <descricao>
+        <![CDATA[O Programa Universidade para Todos (ProUni), criado em 2004, oferece bolsas de estudos em instituições particulares de educação superior a estudantes egressos do ensino médio da rede pública. Também são atendidos bolsistas integrais oriundos da rede particular. Para a bolsa integral, o candidato precisa comprovar renda bruta familiar, por pessoa, de até 1,5 salário mínimo. Para a bolsa parcial, de até três salários mínimos. Estão dispensados dos requisitos de renda os professores em efetivo exercício do magistério da educação básica, integrantes de quadro de pessoal permanente de instituição pública. Eles concorrem exclusivamente a bolsas para cursos de licenciatura.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

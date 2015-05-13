@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Realizar desistência – REFRI</titulo>
-    <descricao>Realizar desistência da opção pelo Regime Especial de Tributação das Bebidas Frias (Refri) de que trata o
-        art. 58-J da Lei nº 10.833, de 29 de dezembro de 2003.
+    <descricao>
+        <![CDATA[Realizar desistência da opção pelo Regime Especial de Tributação das Bebidas Frias (Refri) de que trata o art. 58-J da Lei nº 10.833, de 29 de dezembro de 2003.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

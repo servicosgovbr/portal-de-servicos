@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Regularização de Obras – DISO</titulo>
-    <descricao>Regularizar a obra de construção civil mediante entrega da Declaração e Informação Sobre Obra – Diso já
-        preenchida e apresentação de outros documentos para enquadramento da obra e emissão do ARO (Aviso de
-        Regularização de Obra).
+    <descricao>
+        <![CDATA[Regularizar a obra de construção civil mediante entrega da Declaração e Informação Sobre Obra – Diso já preenchida e apresentação de outros documentos para enquadramento da obra e emissão do ARO (Aviso de Regularização de Obra).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

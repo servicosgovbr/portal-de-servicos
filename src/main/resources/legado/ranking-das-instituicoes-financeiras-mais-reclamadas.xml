@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Ranking das Instituições Financeiras mais reclamadas</titulo>
-    <descricao>Mostra o ranking, atualizado todo mês, dos bancos e administradoras de consórcio que tiveram mais
-        reclamações no Banco Central.
+    <descricao><![CDATA[Mostra o ranking, atualizado todo mês, dos bancos e administradoras de consórcio que tiveram mais reclamações no Banco Central.
 
-        Os bancos estão organizados em duas categorias: com mais de um milhão de clientes e com menos de um milhão.
+Os bancos estão organizados em duas categorias: com mais de um milhão de clientes e com menos de um milhão.
 
-        Também há uma lista das reclamações mais frequentes.
+Também há uma lista das reclamações mais frequentes.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

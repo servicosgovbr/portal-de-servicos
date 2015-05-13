@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Recuperar Recibo – Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins
-        incidentes sobre Combustíveis e Bebidas (RECOB)
+    <titulo>
+        <![CDATA[Recuperar Recibo – Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins incidentes sobre Combustíveis e Bebidas (RECOB)]]>
     </titulo>
-    <descricao>Aplicativo de opção pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e
-        Cofins incidentes sobre Combustíveis e Bebidas (Recob), de que tratam o art. 52 da Lei nº10.833, de 2003, o art.
-        23 da Lei nº 10.865, de 2004, e o art. 4º da Lei nº 11.116, de 2005.
+    <descricao>
+        <![CDATA[Aplicativo de opção pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins incidentes sobre Combustíveis e Bebidas (Recob), de que tratam o art. 52 da Lei nº10.833, de 2003, o art. 23 da Lei nº 10.865, de 2004, e o art. 4º da Lei nº 11.116, de 2005.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

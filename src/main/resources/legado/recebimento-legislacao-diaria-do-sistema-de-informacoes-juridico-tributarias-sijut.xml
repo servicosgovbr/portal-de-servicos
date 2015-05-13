@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Recebimento legislação diária do Sistema de Informações Jurídico-Tributárias (Sijut)</titulo>
-    <descricao>Optar pelo recebimento, na Caixa Postal, da legislação diária do Sistema de Informações
-        Jurídico-Tributárias (Sijut).
+    <descricao>
+        <![CDATA[Optar pelo recebimento, na Caixa Postal, da legislação diária do Sistema de Informações Jurídico-Tributárias (Sijut).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

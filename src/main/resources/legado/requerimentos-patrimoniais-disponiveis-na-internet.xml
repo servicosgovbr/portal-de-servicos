@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Requerimentos Patrimoniais Disponíveis na Internet</titulo>
-    <descricao>AGORA seu REQUERIMENTO está disponível em formato editável. Escolha o requerimento e clique para abri-lo.
-        Deve preencher, imprimir, pois não é possível salvar dados digitados no formulário. O documento deve ser
-        protocolado na Superintendência do Patrimônio da Uniao em seu Estado.
+    <descricao>
+        <![CDATA[AGORA seu REQUERIMENTO está disponível em formato editável. Escolha o requerimento e clique para abri-lo. Deve preencher, imprimir, pois não é possível salvar dados digitados no formulário. O documento deve ser protocolado na Superintendência do Patrimônio da Uniao em seu Estado.
 
-        Localize no menu "Informações Úteis" a Superintendência mais próxima de você.
+Localize no menu "Informações Úteis" a Superintendência mais próxima de você.
 
-        Acesse o menu "INFORMAÇÕES ÚTEIS" para achar o link de todos os requerimentos.
+Acesse o menu "INFORMAÇÕES ÚTEIS" para achar o link de todos os requerimentos.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

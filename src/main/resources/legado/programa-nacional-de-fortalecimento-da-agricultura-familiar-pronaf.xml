@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Programa Nacional de Fortalecimento da Agricultura Familiar - PRONAF</titulo>
-    <descricao>O PRONAF financia o custeio da safra ou atividade agroindustrial, o investimento em máquinas,
-        equipamentos ou infraestrutura de produção e serviços agropecuários ou não agropecuários de projetos individuais
-        ou coletivos que gerem renda aos agricultores familiares e assentados da reforma agrária.
-        As famílias interessadas devem procurar o sindicato rural ou a empresa de Assistência Técnica e Extensão Rural
-        (Ater), como a Emater, para obtenção da Declaração de Aptidão ao Pronaf (DAP), que será emitida segundo a renda
-        anual e as atividades exploradas, direcionando o agricultor para as linhas específicas de crédito a que tem
-        direito. Para os beneficiários da reforma agrária e do crédito fundiário, o agricultor deve procurar o Instituto
-        Nacional de Colonização e Reforma Agrária (Incra) ou a Unidade Técnica Estadual (UTE).
+    <descricao>
+        <![CDATA[O PRONAF financia o custeio da safra ou atividade agroindustrial, o investimento em máquinas, equipamentos ou infraestrutura de produção e serviços agropecuários ou não agropecuários de projetos individuais ou coletivos que gerem renda aos agricultores familiares e assentados da reforma agrária. As famílias interessadas devem procurar o sindicato rural ou a empresa de Assistência Técnica e Extensão Rural (Ater), como a Emater, para obtenção da Declaração de Aptidão ao Pronaf (DAP), que será emitida segundo a renda anual e as atividades exploradas, direcionando o agricultor para as linhas específicas de crédito a que tem direito. Para os beneficiários da reforma agrária e do crédito fundiário, o agricultor deve procurar o Instituto Nacional de Colonização e Reforma Agrária (Incra) ou a Unidade Técnica Estadual (UTE).
 
-        Linhas de Crédito:
+Linhas de Crédito:
 
-        Pronaf Custeio
-        Pronaf Mais Alimentos - Investimento
-        Pronaf Agroindústria
-        Pronaf Agroecologia
-        Pronaf Eco
-        Pronaf Floresta
-        Pronaf Semiárido
-        Pronaf Mulher
-        Pronaf Jovem
-        Pronaf Custeio e Comercialização de Agroindústrias Familiares
-        Pronaf Cota-Parte
-        Microcrédito Rural
+Pronaf Custeio
+Pronaf Mais Alimentos - Investimento
+Pronaf Agroindústria
+Pronaf Agroecologia
+Pronaf Eco
+Pronaf Floresta
+Pronaf Semiárido
+Pronaf Mulher
+Pronaf Jovem
+Pronaf Custeio e Comercialização de Agroindústrias Familiares
+Pronaf Cota-Parte
+Microcrédito Rural]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

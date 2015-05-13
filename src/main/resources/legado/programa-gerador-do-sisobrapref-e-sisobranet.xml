@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Programa Gerador do SisobraPref e Sisobranet</titulo>
-    <descricao>Acessar o sistema SisobraPref para gerar mensalmente o relatório de alvarás e documentos de habite-se.
-        Acessar o Sisobranet para realizar a transmissão do relatório. Serviço disponível para as prefeituras.
+    <descricao>
+        <![CDATA[Acessar o sistema SisobraPref para gerar mensalmente o relatório de alvarás e documentos de habite-se.
+
+Acessar o Sisobranet para realizar a transmissão do relatório. Serviço disponível para as prefeituras.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

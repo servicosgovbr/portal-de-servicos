@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>REPEX – Habilitação</titulo>
-    <descricao>Solicitar habilitação no Regime Aduaneiro Especial para Importação de petróleo bruto e seus derivados,
-        para fins de exportação no mesmo estado em que foram importados (REPEX).
+    <descricao>
+        <![CDATA[Solicitar habilitação no Regime Aduaneiro Especial para Importação de petróleo bruto e seus derivados, para fins de exportação no mesmo estado em que foram importados (REPEX).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
