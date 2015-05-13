@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Elaboração de Termo de Rescisão de Contrato de Trabalho - TRCT</titulo>
-    <descricao>Para elaboração de rescisão de contrato de trabalho e consulta de rescisões confeccionadas no Sistema
-        HomologNet.
+    <descricao>
+        <![CDATA[Para elaboração de rescisão de contrato de trabalho e consulta de rescisões confeccionadas no Sistema HomologNet.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

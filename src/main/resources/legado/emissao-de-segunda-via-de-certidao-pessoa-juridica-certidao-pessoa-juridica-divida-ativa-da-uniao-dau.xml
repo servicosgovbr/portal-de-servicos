@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Emissão de Segunda Via de Certidão Pessoa Jurídica (Certidão Pessoa Jurídica / Dívida Ativa da União –
-        DAU)
+    <titulo>
+        <![CDATA[Emissão de Segunda Via de Certidão Pessoa Jurídica (Certidão Pessoa Jurídica / Dívida Ativa da União – DAU)]]>
     </titulo>
     <descricao>Emitir segunda via de certidão de pessoa jurídica.</descricao>
     <requisitos/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão de Certidão de Imóvel (SPU)</titulo>
-    <descricao>Este serviço tem por objetivo agilizar e dar autonomia aos interessados em obter certidões de um imóvel
-        de seu interesse.
+    <descricao>
+        <![CDATA[Este serviço tem por objetivo agilizar e dar autonomia aos interessados em obter certidões de um imóvel de seu interesse.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>e-DMOV – Habilitação e Cadastramento</titulo>
-    <descricao>Solicitar a habilitação de instituição financeira para realizar a movimentação física internacional de
-        valores.
+    <descricao>
+        <![CDATA[Solicitar a habilitação de instituição financeira para realizar a movimentação física internacional de valores.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

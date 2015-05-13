@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão de Licença de Aquicultor</titulo>
-    <descricao>Toda a pessoa ou empresa interessada no cultivo de organismos aquáticos (peixes, mariscos, crustáceos,
-        algas, rãs) deve estar inscrita no Ministério da Pesca e Aquicultura para poder exercer a atividade com fins
-        comerciais.
+    <descricao>
+        <![CDATA[Toda a pessoa ou empresa interessada no cultivo de organismos aquáticos (peixes, mariscos, crustáceos, algas, rãs) deve estar inscrita no Ministério da Pesca e Aquicultura para poder exercer a atividade com fins comerciais.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

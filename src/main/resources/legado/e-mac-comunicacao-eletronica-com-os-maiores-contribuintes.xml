@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>e-MAC – Comunicação Eletrônica com os Maiores Contribuintes</titulo>
-    <descricao>Estabelecer uma comunicação mais ágil entre as Equipes de Acompanhamento de Maiores Contribuintes (Eqmac)
-        e os contribuintes diferenciados, em substituição ao uso do e-mail.
+    <descricao>
+        <![CDATA[Estabelecer uma comunicação mais ágil entre as Equipes de Acompanhamento de Maiores Contribuintes (Eqmac) e os contribuintes diferenciados, em substituição ao uso do e-mail.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Domínio Público - Biblioteca digital</titulo>
-    <descricao>O Portal Domínio Público promove o compartilhamento de conhecimentos ao colocar à disposição do público,
-        pela internet, uma biblioteca virtual que serve de referência a professores, estudantes, pesquisadores e
-        leitores em geral.
+    <descricao>
+        <![CDATA[O Portal Domínio Público promove o compartilhamento de conhecimentos ao colocar à disposição do público, pela internet, uma biblioteca virtual que serve de referência a professores, estudantes, pesquisadores e leitores em geral.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

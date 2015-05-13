@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão da certidão de antecedentes criminais</titulo>
-    <descricao>Emissão do documento com validade de 90 (noventa) dias que informa a existência ou não de registros
-        criminais nos sistemas informatizados.
+    <descricao>
+        <![CDATA[Emissão do documento com validade de 90 (noventa) dias que informa a existência ou não de registros criminais nos sistemas informatizados.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

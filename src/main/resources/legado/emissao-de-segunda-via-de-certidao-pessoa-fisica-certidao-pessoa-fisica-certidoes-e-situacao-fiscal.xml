@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Emissão de Segunda Via de Certidão Pessoa Física (Certidão Pessoa Física / Certidões e Situação Fiscal)
+    <titulo>
+        <![CDATA[Emissão de Segunda Via de Certidão Pessoa Física (Certidão Pessoa Física / Certidões e Situação Fiscal)]]>
     </titulo>
     <descricao>Emitir segunda via de certidão de pessoa física.</descricao>
     <requisitos/>

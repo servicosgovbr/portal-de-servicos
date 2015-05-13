@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão de Certidão Negativa do Banco Central</titulo>
-    <descricao>Certifica o cidadão que não tiver trabalhado como administrador, diretor ou representante de uma
-        instituição financeira (como banco, corretora, cooperativa) que esteja ou tenha estado em liquidação
-        extrajudicial. A certidão refere-se aos doze meses anteriores à decretação desse regime.
+    <descricao>
+        <![CDATA[Certifica o cidadão que não tiver trabalhado como administrador, diretor ou representante de uma instituição financeira (como banco, corretora, cooperativa) que esteja ou tenha estado em liquidação extrajudicial. A certidão refere-se aos doze meses anteriores à decretação desse regime.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

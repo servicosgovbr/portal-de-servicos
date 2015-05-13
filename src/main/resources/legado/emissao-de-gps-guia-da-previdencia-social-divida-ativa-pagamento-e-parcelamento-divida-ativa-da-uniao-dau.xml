@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Emissão de GPS – Guia da Previdência Social - Dívida Ativa (Pagamento e Parcelamento / Dívida Ativa da União
-        – DAU)
+    <titulo>
+        <![CDATA[Emissão de GPS – Guia da Previdência Social - Dívida Ativa (Pagamento e Parcelamento / Dívida Ativa da União – DAU)]]>
     </titulo>
-    <descricao>Solicitar a Guia da Previdência Social – GPS para efetuar o pagamento, parcial ou integral, de débitos
-        previdenciários inscritos em Dívida Ativa da União.
+    <descricao>
+        <![CDATA[Solicitar a Guia da Previdência Social – GPS para efetuar o pagamento, parcial ou integral, de débitos previdenciários inscritos em Dívida Ativa da União.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

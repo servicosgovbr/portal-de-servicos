@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão de Documento de Arrecadação do Simples Nacional (DAS) - Parcela Mínima</titulo>
-    <descricao>Gerar o DAS da parcela mínima para pagamento de antecipações do parcelamento de débitos de Simples
-        Nacional, antes da consolidação.
+    <descricao>
+        <![CDATA[Gerar o DAS da parcela mínima para pagamento de antecipações do parcelamento de débitos de Simples Nacional, antes da consolidação.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

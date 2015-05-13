@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão de GPS – Guia da Previdência Social</titulo>
-    <descricao>Solicitar a Guia da Previdência Social – GPS para efetuar o pagamento, parcial ou integral, de débitos
-        previdenciários.
+    <descricao>
+        <![CDATA[Solicitar a Guia da Previdência Social – GPS para efetuar o pagamento, parcial ou integral, de débitos previdenciários.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

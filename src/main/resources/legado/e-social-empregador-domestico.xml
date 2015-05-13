@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>e-Social - Empregador Doméstico</titulo>
-    <descricao>Portal com orientações, funcionalidades e aplicativos para ajudar o empregador, em um primeiro momento
-        essencialmente o empregador doméstico, a cumprir obrigações trabalhistas e tributárias decorrentes das relações
-        de trabalho. O Portal foi desenvolvido em ação conjunta da Caixa Econômica Federal, do Instituto Nacional do
-        Seguro Social – INSS, do Ministério da Previdência – MPS, do Ministério do Trabalho e Emprego – MTE e da
-        Secretaria da Receita Federal do Brasil – RFB.
+    <descricao>
+        <![CDATA[Portal com orientações, funcionalidades e aplicativos para ajudar o empregador, em um primeiro momento essencialmente o empregador doméstico, a cumprir obrigações trabalhistas e tributárias decorrentes das relações de trabalho. O Portal foi desenvolvido em ação conjunta da Caixa Econômica Federal, do Instituto Nacional do Seguro Social – INSS, do Ministério da Previdência – MPS, do Ministério do Trabalho e Emprego – MTE e da Secretaria da Receita Federal do Brasil – RFB.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão de DARF à SPU - Taxa de Ocupação / Foro</titulo>
-    <descricao>O Documento de Arrecadação de Receitas Federais – DARF, deve ser utilizado para recolhimento, junto aos
-        bancos autorizados, da taxa de ocupação ou foro dos imóveis da União, além de outros débitos de caráter
-        extraordinário.
+    <descricao>
+        <![CDATA[O Documento de Arrecadação de Receitas Federais – DARF, deve ser utilizado para recolhimento, junto aos bancos autorizados, da taxa de ocupação ou foro dos imóveis da União, além de outros débitos de caráter extraordinário.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

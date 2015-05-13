@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Download de Programas e Declarações da Receita Federal</titulo>
-    <descricao>Permite que o usuário obtenha programas disponibilizados pela Receita Federal do Brasil via Internet.
-        Prazo para realização do serviço: Imediato.
+    <descricao>
+        <![CDATA[Permite que o usuário obtenha programas disponibilizados pela Receita Federal do Brasil via Internet. Prazo para realização do serviço: Imediato.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
