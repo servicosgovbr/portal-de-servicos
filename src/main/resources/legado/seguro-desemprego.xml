@@ -74,10 +74,11 @@ Seguro-Desemprego Bolsa Qualificação: A Bolsa de Qualificação Profissional �
             <tipoInformacaoUtil>
                 <titulo>Telefone</titulo>
             </tipoInformacaoUtil>
-            <descricao>Coordenação-Geral do Seguro-Desemprego:(61)2031/6679
-                Pescador Artesanal: (61)2031-6043/6973
-                Empregado Doméstico/Trabalhador Resgatado: (61)2031-6135/6226
-                Bolsa Qualificação: (61)2031-6196/6509
+            <descricao>
+                <![CDATA[Coordenação-Geral do Seguro-Desemprego: (61) 2031-6679
+Pescador Artesanal: (61) 2031-6043/6973
+Empregado Doméstico/Trabalhador Resgatado: (61) 2031-6135/6226
+Bolsa Qualificação: (61) 2031-6196/6509]]>
             </descricao>
             <url></url>
         </informacaoUtil>
