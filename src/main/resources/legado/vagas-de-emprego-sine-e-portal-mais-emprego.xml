@@ -13,9 +13,8 @@ Por meio do Portal MTE Mais Emprego, o trabalhador pode verificar a existência 
             <tipoCanalPrestacaoServico>
                 <titulo>Presencial</titulo>
             </tipoCanalPrestacaoServico>
-            <descricao>A busca por vagas de emprego é oferecida de forma presencial nos postos de atendimento do SINE,
-                instalados por meio de convênios celebrados entre o Ministério do Trabalho e Estados, DF, municípios com
-                mais de 200 mil hab.
+            <descricao>
+                <![CDATA[A busca por vagas de emprego é oferecida de forma presencial nos postos de atendimento do SINE, instalados por meio de convênios celebrados entre o Ministério do Trabalho e Estados, DF, municípios com mais de 200 mil habitantes.]]>
             </descricao>
             <url></url>
         </canalPrestacaoServico>
