@@ -78,17 +78,4 @@ public class BuscadorConteudoIntegrationTest {
         assertThat(conteudos.get(0).getConteudo(), is("Descricao"));
     }
 
-    @Test
-    public void buscaNoTituloDeveTerPrioridade() throws Exception {
-        servicoRepository.save(TestData.SERVICO);
-        servicoRepository.save(new Servico().withTitulo("Descrição").withDescricao("Texto"));
-        conteudoRepository.save(new Conteudo().withTitulo("Titulo de conteudo").withConteudo("Conteudo"));
-
-        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
-
-        assertThat(conteudos, hasSize(2));
-        assertThat(conteudos.get(0).getConteudo(), is("Texto"));
-        assertThat(conteudos.get(1).getConteudo(), is("Descrição serviço"));
-    }
-
 }
