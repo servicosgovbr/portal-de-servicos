@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Controle da Prestação de Contas da Rede Arrecadadora</titulo>
-    <descricao>Consultar os dados da prestação de contas da arrecadação. Compreende o recolhimento do produto de
-        arrecadação diária à Conta Única do Tesouro Nacional e a remessa informatizada dos dados de arrecadação à
-        Receita Federal, por intermédio do Serviço Federal de Processamento de Dados – SERPRO.
+    <descricao>
+        <![CDATA[Consultar os dados da prestação de contas da arrecadação. Compreende o recolhimento do produto de arrecadação diária à Conta Única do Tesouro Nacional e a remessa informatizada dos dados de arrecadação à Receita Federal, por intermédio do Serviço Federal de Processamento de Dados – SERPRO.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Credenciamento de Empresas de Escolta</titulo>
-    <descricao>Consiste no credenciamento de empresas para execução dos serviços de escolta aos veículos transportadores
-        de cargas superdimensionadas.
+    <descricao>
+        <![CDATA[Consiste no credenciamento de empresas para execução dos serviços de escolta aos veículos transportadores de cargas superdimensionadas.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

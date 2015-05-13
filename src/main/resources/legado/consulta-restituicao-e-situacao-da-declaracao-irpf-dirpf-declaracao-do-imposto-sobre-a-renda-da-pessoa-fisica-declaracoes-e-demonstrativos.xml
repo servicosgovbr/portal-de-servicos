@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Consulta Restituição e Situação da Declaração IRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa
-        Física / Declarações e Demonstrativos)
+    <titulo>
+        <![CDATA[Consulta Restituição e Situação da Declaração IRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações e Demonstrativos)]]>
     </titulo>
     <descricao>Consultar, por ano, se a restituição do IRPF consta ou não em algum lote já liberado.</descricao>
     <requisitos/>

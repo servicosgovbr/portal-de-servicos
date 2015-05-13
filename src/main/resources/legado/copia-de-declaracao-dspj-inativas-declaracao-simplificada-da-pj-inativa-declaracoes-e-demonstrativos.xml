@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Cópia de Declaração (DSPJ Inativas – Declaração Simplificada da PJ Inativa / Declarações e Demonstrativos)
+    <titulo>
+        <![CDATA[Cópia de Declaração (DSPJ Inativas – Declaração Simplificada da PJ Inativa / Declarações e Demonstrativos)]]>
     </titulo>
     <descricao>Solicitar cópias de declarações.</descricao>
     <requisitos/>

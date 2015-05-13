@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Cópia de Declaração (DIRF – Declaração do Imposto de Renda Retido na Fonte / Declarações e Demonstrativos)
+    <titulo>
+        <![CDATA[Cópia de Declaração (DIRF – Declaração do Imposto de Renda Retido na Fonte / Declarações e Demonstrativos)]]>
     </titulo>
     <descricao>Solicitar cópias de declarações.</descricao>
     <requisitos/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Cópia de Declaração (DCTF – Declaração de Débitos e Créditos Tributários Federais / Declarações e
-        Demonstrativos)
+    <titulo>
+        <![CDATA[Cópia de Declaração (DCTF – Declaração de Débitos e Créditos Tributários Federais / Declarações e Demonstrativos)]]>
     </titulo>
     <descricao>Solicitar cópias de declarações.</descricao>
     <requisitos/>

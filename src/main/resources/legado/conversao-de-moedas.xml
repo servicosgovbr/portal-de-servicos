@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Conversão de moedas</titulo>
-    <descricao>Sistema online que permite a conversão entre moedas internacionais. O cálculo efetuado tem caráter
-        informativo e não substitui as disposições da norma cambial brasileira para casos específicos de conversão.
+    <descricao>
+        <![CDATA[Sistema online que permite a conversão entre moedas internacionais. O cálculo efetuado tem caráter informativo e não substitui as disposições da norma cambial brasileira para casos específicos de conversão.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
