@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Informações sobre Condições das Rodovias e Estradas Federais</titulo>
-    <descricao>Consiste no fornecimento de informações sobre rodovias e estradas sob a circunscrição do Departamento de
-        Polícia Rodoviária Federal, a exemplo de interdições e bloqueios, condições das vias, localizações de Postos da
-        Polícia Rodoviária Federal, dentre outras.
+    <descricao>
+        <![CDATA[Consiste no fornecimento de informações sobre rodovias e estradas sob a circunscrição do Departamento de Polícia Rodoviária Federal, a exemplo de interdições e bloqueios, condições das vias, localizações de Postos da Polícia Rodoviária Federal, dentre outras.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

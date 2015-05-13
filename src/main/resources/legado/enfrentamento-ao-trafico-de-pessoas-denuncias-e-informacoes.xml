@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Enfrentamento ao tráfico de pessoas - denúncias e informações</titulo>
-    <descricao>Recebimento de denúncias sobre possíveis casos de tráfico de pessoas para encaminhamento aos órgãos
-        competentes. Também é prestado ao cidadão serviço de orientação e fornecimento de material informativo sobre o
-        enfrentamento ao tráfico de pessoas.
+    <descricao>
+        <![CDATA[Recebimento de denúncias sobre possíveis casos de tráfico de pessoas para encaminhamento aos órgãos competentes. Também é prestado ao cidadão serviço de orientação e fornecimento de material informativo sobre o enfrentamento ao tráfico de pessoas.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

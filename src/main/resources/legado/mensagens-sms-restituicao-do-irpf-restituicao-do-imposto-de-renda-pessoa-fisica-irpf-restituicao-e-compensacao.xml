@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Mensagens SMS - Restituição do IRPF (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e
-        Compensação)
+    <titulo>
+        <![CDATA[Mensagens SMS - Restituição do IRPF (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e Compensação)]]>
     </titulo>
     <descricao>Cadastrar número de celular para receber mensagem (SMS) sobre sua restituição do IRPF.</descricao>
     <requisitos/>

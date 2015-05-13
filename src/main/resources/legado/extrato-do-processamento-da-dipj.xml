@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Extrato do Processamento da DIPJ</titulo>
-    <descricao>Visualizar a relação das últimas declarações DIPJ (Declaração de Informações Econômico-Fiscais da Pessoa
-        Jurídica) entregues e realizar algumas consultas específicas.
+    <descricao>
+        <![CDATA[Visualizar a relação das últimas declarações DIPJ (Declaração de Informações Econômico-Fiscais da Pessoa Jurídica) entregues e realizar algumas consultas específicas.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

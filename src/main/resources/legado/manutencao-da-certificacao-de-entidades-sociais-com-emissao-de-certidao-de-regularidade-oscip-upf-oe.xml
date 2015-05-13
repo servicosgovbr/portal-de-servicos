@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Manutenção da certificação de entidades sociais com emissão de certidão de regularidade (OSCIP, UPF, OE)
+    <titulo>
+        <![CDATA[Manutenção da certificação de entidades sociais com emissão de certidão de regularidade (OSCIP, UPF, OE)]]>
     </titulo>
-    <descricao>Após serem certificadas pelo Ministério da Justiça, as entidades sociais (Organização da Sociedade Civil
-        de Interesse Público - OSCIP, Utilidade Pública Federal - UPF e Organizações Estrangeiras - OE) deverão
-        apresentar anualmente seus relatórios de atividades, acompanhados das demonstrações financeiras, por meio do
-        Cadastro Nacional de Entidades Sociais do Ministério da Justiça (CNES/MJ), a fim de obterem a certidão de
-        regularidade.
+    <descricao>
+        <![CDATA[Após serem certificadas pelo Ministério da Justiça, as entidades sociais (Organização da Sociedade Civil de Interesse Público - OSCIP, Utilidade Pública Federal - UPF e Organizações Estrangeiras - OE) deverão apresentar anualmente seus relatórios de atividades, acompanhados das demonstrações financeiras, por meio do Cadastro Nacional de Entidades Sociais do Ministério da Justiça (CNES/MJ), a fim de obterem a certidão de regularidade.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

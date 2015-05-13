@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Entrega voluntária de armas de fogo - Campanha Nacional do Desarmamento</titulo>
-    <descricao>Os proprietários ou possuidores de arma(s) de fogo, com ou sem registro, podem entregá-la(s) à Polícia
-        Federal ou às instituições credenciadas para destruição. Ao entregar uma arma, o cidadão não precisará se
-        identificar e receberá indenização que varia de R$ 150,00 a R$ 450,00, conforme o tipo da arma entregue.
+    <descricao>
+        <![CDATA[Os proprietários ou possuidores de arma(s) de fogo, com ou sem registro, podem entregá-la(s) à Polícia Federal ou às instituições credenciadas para destruição. Ao entregar uma arma, o cidadão não precisará se identificar e receberá indenização que varia de R$ 150,00 a R$ 450,00, conforme o tipo da arma entregue.
 
-        A Campanha Nacional do Desarmamento busca a mobilização da sociedade brasileira para retirar de circulação o
-        maior número possível de armas de fogo. A entrega é voluntária e pode ser feita em mais de 2 mil postos de
-        coleta em todo o Brasil.
+A Campanha Nacional do Desarmamento busca a mobilização da sociedade brasileira para retirar de circulação o maior número possível de armas de fogo. A entrega é voluntária e pode ser feita em mais de 2 mil postos de coleta em todo o Brasil.
 
-        Para a entrega de uma arma, o cidadão deverá seguir os seguintes procedimentos:
+Para a entrega de uma arma, o cidadão deverá seguir os seguintes procedimentos:
 
-        1. Acessar o site da Campanha e emitir a guia de trânsito (Vide "Emissão da guia de trânsito");
-        2. Dirigir-se até um posto credenciado de entrega voluntária (Vide "Localize o posto de entrega voluntária de
-        armas mais próximo de você") com a guia de trânsito e a arma desmuniciada (descarregada) e embalada, bem como
-        documento de registro de arma de fogo (caso disponível);
-        3. Ao efetuar a entrega, o agente de segurança fará o recebimento via Sistema Desarma e solicitará ao cidadão o
-        cadastramento de uma senha com 4 dígitos para recebimento da indenização;
-        4. Finalizado o cadastro via sistema, o cidadão receberá um documento de entrega da arma, que conterá um código
-        de indenização com 16 dígitos;
-        5. Após 24h da entrega e no prazo máximo de 30 dias, o cidadão deverá se dirigir a um autoatendimento do Banco
-        do Brasil para o saque da indenização. Para isso, é necessário apenas o código de indenização (16 dígitos) e a
-        senha cadastrada (4 dígitos);
+1. Acessar o site da Campanha e emitir a guia de trânsito (Vide "Emissão da guia de trânsito");
+2. Dirigir-se até um posto credenciado de entrega voluntária (Vide "Localize o posto de entrega voluntária de armas mais próximo de você") com a guia de trânsito e a arma desmuniciada (descarregada) e embalada, bem como documento de registro de arma de fogo (caso disponível);
+3. Ao efetuar a entrega, o agente de segurança fará o recebimento via Sistema Desarma e solicitará ao cidadão o cadastramento de uma senha com 4 dígitos para recebimento da indenização;
+4. Finalizado o cadastro via sistema, o cidadão receberá um documento de entrega da arma, que conterá um código de indenização com 16 dígitos;
+5. Após 24h da entrega e no prazo máximo de 30 dias, o cidadão deverá se dirigir a um autoatendimento do Banco do Brasil para o saque da indenização. Para isso, é necessário apenas o código de indenização (16 dígitos) e a senha cadastrada (4 dígitos);]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

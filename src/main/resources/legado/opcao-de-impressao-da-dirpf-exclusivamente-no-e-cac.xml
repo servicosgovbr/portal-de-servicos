@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Opção de Impressão da DIRPF Exclusivamente no e-CAC</titulo>
-    <descricao>Impedir que sua Declaração de Imposto de Renda Pessoa Física seja impressa nas unidades de atendimento da
-        Receita Federal. A impressão será realizada exclusivamente pelo e-CAC com certificado digital.
+    <descricao>
+        <![CDATA[Impedir que sua Declaração de Imposto de Renda Pessoa Física seja impressa nas unidades de atendimento da Receita Federal. A impressão será realizada exclusivamente pelo e-CAC com certificado digital.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

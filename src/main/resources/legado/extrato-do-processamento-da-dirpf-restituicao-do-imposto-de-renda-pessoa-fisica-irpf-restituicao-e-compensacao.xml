@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Extrato do Processamento da DIRPF (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e
-        Compensação)
+    <titulo>
+        <![CDATA[Extrato do Processamento da DIRPF (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e Compensação)]]>
     </titulo>
-    <descricao>Verificar a situação do processamento da declaração do imposto de renda sobre a pessoa física, inclusive
-        quanto à existência de eventuais pendências, imprimir Darf para pagamento de quotas, débitos em atraso, obter
-        informações sobre a restituição do IRPF, etc.
+    <descricao>
+        <![CDATA[ Verificar a situação do processamento da declaração do imposto de renda sobre a pessoa física, inclusive quanto à existência de eventuais pendências, imprimir Darf para pagamento de quotas, débitos em atraso, obter informações sobre a restituição do IRPF, etc.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

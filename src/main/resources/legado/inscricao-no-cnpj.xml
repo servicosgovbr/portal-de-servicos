@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Inscrição no CNPJ</titulo>
-    <descricao>Solicitar inscrição no Cadastro Nacional da Pessoa Jurídica, acompanhado do Documento Básico de Entrada
-        (DBE) e demais documentos necessários.
+    <descricao>
+        <![CDATA[Solicitar inscrição no Cadastro Nacional da Pessoa Jurídica, acompanhado do Documento Básico de Entrada (DBE) e demais documentos necessários.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

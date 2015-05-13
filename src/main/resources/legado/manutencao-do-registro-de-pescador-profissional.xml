@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Manutenção do Registro de Pescador Profissional</titulo>
-    <descricao>O pescador registrado no Ministério da Pesca e Aquicultura, portador da Carteira de Pescador, deve,
-        anualmente, apresentar ao ministério um relatório da sua produção para manter o seu registro ativo.
+    <descricao>
+        <![CDATA[O pescador registrado no Ministério da Pesca e Aquicultura, portador da Carteira de Pescador, deve, anualmente, apresentar ao ministério um relatório da sua produção para manter o seu registro ativo.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

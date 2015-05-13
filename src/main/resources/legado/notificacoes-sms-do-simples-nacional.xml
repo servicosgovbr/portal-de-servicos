@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Notificações SMS do Simples Nacional</titulo>
-    <descricao>Permite optar pelo recebimento de mensagens para celular com informações do processamento do pedido de
-        opção pelo Simples Nacional.
+    <descricao>
+        <![CDATA[Permite optar pelo recebimento de mensagens para celular com informações do processamento do pedido de opção pelo Simples Nacional.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

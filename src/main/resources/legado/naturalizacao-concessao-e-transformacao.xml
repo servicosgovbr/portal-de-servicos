@@ -1,61 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Naturalização - concessão e transformação</titulo>
-    <descricao>A naturalização ocorre quando um país concede a qualidade de nacional a um estrangeiro que a requeira. É
-        uma forma de adquirir uma nacionalidade diversa da nacionalidade de origem.
+    <descricao>
+        <![CDATA[A naturalização ocorre quando um país concede a qualidade de nacional a um estrangeiro que a requeira. É uma forma de adquirir uma nacionalidade diversa da nacionalidade de origem.
 
-        A aquisição da Nacionalidade Brasileira, por Naturalização, é concedida aos estrangeiros que preencham os
-        requisitos constantes no artigo 12, Inciso II, alínea “b”, da Constituição Federal ou na Lei 6.815/80,
-        regulamentada pelo Decreto 86.715/81 (Vide "Mais informações").
+A aquisição da Nacionalidade Brasileira, por Naturalização, é concedida aos estrangeiros que preencham os requisitos constantes no artigo 12, Inciso II, alínea “b”, da Constituição Federal ou na Lei 6.815/80, regulamentada pelo Decreto 86.715/81 (Vide "Mais informações").
 
-        Ao adquirir a Nacionalidade Brasileira, o naturalizado passa a gozar de todos os direitos civis e políticos
-        atribuídos aos cidadãos brasileiros, exceto os que a Constituição Federal atribui exclusivamente ao brasileiro
-        nato.
+Ao adquirir a Nacionalidade Brasileira, o naturalizado passa a gozar de todos os direitos civis e políticos atribuídos aos cidadãos brasileiros, exceto os que a Constituição Federal atribui exclusivamente ao brasileiro nato.
 
-        A Naturalização se divide em:
-        • naturalização comum, caso o estrangeiro tenha interesse em se tornar um cidadão brasileiro;
-        • extraordinária, destinada a estrangeiros que vivem no Brasil há mais de 15 anos e têm interesse em adquirir a
-        nacionalidade brasileira;
-        • especial, destinada ao estrangeiro casado com diplomata brasileiro há mais de cinco anos ou ao estrangeiro que
-        tenha mais de dez anos de serviços ininterruptos em missão diplomática ou em repartição consular brasileira; e
-        • provisória, nos casos em que o estrangeiro ingressou no Brasil nos primeiros cinco anos de vida e se
-        estabeleceu definitivamente no território nacional.
+A Naturalização se divide em:
+• naturalização comum, caso o estrangeiro tenha interesse em se tornar um cidadão brasileiro;
+• extraordinária, destinada a estrangeiros que vivem no Brasil há mais de 15 anos e têm interesse em adquirir a nacionalidade brasileira;
+• especial, destinada ao estrangeiro casado com diplomata brasileiro há mais de cinco anos ou ao estrangeiro que tenha mais de dez anos de serviços ininterruptos em missão diplomática ou em repartição consular brasileira; e
+• provisória, nos casos em que o estrangeiro ingressou no Brasil nos primeiros cinco anos de vida e se estabeleceu definitivamente no território nacional.
 
-        O pedido de naturalização deve ser feito no Departamento de Polícia Federal mais próximo da residência do
-        interessado (vide "Presencial"). Este deve preencher um formulário específico e juntá-lo à documentação
-        solicitada para o tipo de naturalização (vide "Formulários"). O processo é submetido à autoridade decisória, que
-        determinará a inclusão do nome do interessado na portaria concessiva de naturalização. Baixada essa portaria e
-        feita sua publicação no Diário Oficial da União, o Certificado de Naturalização será expedido.
+O pedido de naturalização deve ser feito no Departamento de Polícia Federal mais próximo da residência do interessado (vide "Presencial"). Este deve preencher um formulário específico e juntá-lo à documentação solicitada para o tipo de naturalização (vide "Formulários"). O processo é submetido à autoridade decisória, que determinará a inclusão do nome do interessado na portaria concessiva de naturalização. Baixada essa portaria e feita sua publicação no Diário Oficial da União, o Certificado de Naturalização será expedido.
 
-        Já a transformação de naturalização provisória em definitiva pode ser concedida ao titular do certificado
-        provisório, até dois anos após atingida a maioridade, que confirme expressamente, perante o Ministro da Justiça,
-        a intenção de continuar brasileiro (vide "Transformação de naturalização provisória em definitiva").
+Já a transformação de naturalização provisória em definitiva pode ser concedida ao titular do certificado provisório, até dois anos após atingida a maioridade, que confirme expressamente, perante o Ministro da Justiça, a intenção de continuar brasileiro (vide "Transformação de naturalização provisória em definitiva").
 
-        Observação:
+Observação:
 
-        Igualgade de direitos (Vide "Mais informações: Igualdade de direitos - Portugueses")
+Igualgade de direitos (Vide "Mais informações: Igualdade de direitos - Portugueses")
 
-        A Constituição de 1988 estabeleceu no seu art. 12, I, que aos portugueses com residência permanente no Brasil,
-        se houver reciprocidade em favor de brasileiros, serão atribuídos os direitos inerentes ao brasileiro, salvo as
-        exceções previstas na própria Constituição.
+A Constituição de 1988 estabeleceu no seu art. 12, I, que aos portugueses com residência permanente no Brasil, se houver reciprocidade em favor de brasileiros, serão atribuídos os direitos inerentes ao brasileiro, salvo as exceções previstas na própria Constituição.
 
-        Atualmente, a reciprocidade entre Brasil e Portugal no que tange à Igualdade de Direitos e Obrigações Civis e o
-        Gozo dos Direitos Políticos encontra respaldo no Decreto nº 3.927/2001 que promulgou o Tratado de Amizade,
-        Cooperação e Consulta entre os referidos países, celebrado em Porto Seguro/BA em 22/04/2000.
+Atualmente, a reciprocidade entre Brasil e Portugal no que tange à Igualdade de Direitos e Obrigações Civis e o Gozo dos Direitos Políticos encontra respaldo no Decreto nº 3.927/2001 que promulgou o Tratado de Amizade, Cooperação e Consulta entre os referidos países, celebrado em Porto Seguro/BA em 22/04/2000.
 
-        O português que se encontrar regularmente no Brasil e pretender obter os benefícios do Estatuto de Igualdade,
-        sem perder a nacionalidade originária, poderá pleitear ao Ministro da Justiça:
+O português que se encontrar regularmente no Brasil e pretender obter os benefícios do Estatuto de Igualdade, sem perder a nacionalidade originária, poderá pleitear ao Ministro da Justiça:
 
-        a) aquisição de igualdade de direitos e obrigações civis, provando, neste caso:
-        I. capacidade civil, segundo a Lei brasileira;
-        II. residência permanente no Brasil; e
-        III. gozo da nacionalidade portuguesa
+a) aquisição de igualdade de direitos e obrigações civis, provando, neste caso:
+    I. capacidade civil, segundo a Lei brasileira;
+    II. residência permanente no Brasil; e
+    III. gozo da nacionalidade portuguesa
 
-        b) aquisição do gozo dos direitos políticos, comprovando:
-        I. residência no território brasileiro pelo prazo de 3 (três) anos;
-        II. saber ler e escrever o português; e
-        III. estar no gozo dos direitos políticos no Estado de nacionalidade.
-
+b) aquisição do gozo dos direitos políticos, comprovando:
+    I. residência no território brasileiro pelo prazo de 3 (três) anos;
+    II. saber ler e escrever o português; e
+    III. estar no gozo dos direitos políticos no Estado de nacionalidade.
+]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

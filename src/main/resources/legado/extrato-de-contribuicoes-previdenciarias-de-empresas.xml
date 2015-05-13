@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Extrato de Contribuições Previdenciárias de Empresas</titulo>
-    <descricao>Consultar o extrato dos recolhimentos e visualizar as GPS – Guia da Previdencia Social, correspondentes.
-        Para empresas e equiparadas (matrícula CEI).
+    <descricao>
+        <![CDATA[Consultar o extrato dos recolhimentos e visualizar as GPS – Guia da Previdencia Social, correspondentes. Para empresas e equiparadas (matrícula CEI).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

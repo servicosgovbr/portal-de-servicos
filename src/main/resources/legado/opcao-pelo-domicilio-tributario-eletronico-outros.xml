@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Opção pelo Domicílio Tributário Eletrônico (- / Outros)</titulo>
-    <descricao>Optar ou cancelar a opção pelo domicílio tributário eletrônico, realizada pela caixa postal do Portal
-        e-CAC, como meio para ciência de atos oficiais enviados pela Receita Federal.
+    <descricao>
+        <![CDATA[Optar ou cancelar a opção pelo domicílio tributário eletrônico, realizada pela caixa postal do Portal e-CAC, como meio para ciência de atos oficiais enviados pela Receita Federal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

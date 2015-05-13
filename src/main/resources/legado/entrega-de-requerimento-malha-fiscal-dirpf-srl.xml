@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Entrega de Requerimento Malha Fiscal DIRPF – SRL</titulo>
-    <descricao>Entregar Solicitação de Revisão de Lançamento (SRL) em resposta à notificação expedida pela Receita
-        Federal.
+    <descricao>
+        <![CDATA[Entregar Solicitação de Revisão de Lançamento (SRL) em resposta à notificação expedida pela Receita Federal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Habilitação de Usuário no SPED</titulo>
-    <descricao>Habilitar usuários externos nos sistemas do Sped (Sistema Público de Escrituração Digital). Aplicação
-        exclusiva para entes conveniados.
+    <descricao>
+        <![CDATA[Habilitar usuários externos nos sistemas do Sped (Sistema Público de Escrituração Digital). Aplicação exclusiva para entes conveniados.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

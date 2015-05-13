@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Opção Convênio ITR</titulo>
-    <descricao>Optar pelo convênio com a União para exercer as atribuições de fiscalização, lançamento de ofício e
-        cobrança do Imposto sobre a Propriedade Territorial Rural (ITR), conforme disposto no art. 10 do Decreto
-        nº6.433, de 15 de abril de 2008. Este opção poderá ser realizada pelos municípios e pelo Distrito Federal.
+    <descricao>
+        <![CDATA[Optar pelo convênio com a União para exercer as atribuições de fiscalização, lançamento de ofício e cobrança do Imposto sobre a Propriedade Territorial Rural (ITR), conforme disposto no art. 10 do Decreto nº6.433, de 15 de abril de 2008. Este opção poderá ser realizada pelos municípios e pelo Distrito Federal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

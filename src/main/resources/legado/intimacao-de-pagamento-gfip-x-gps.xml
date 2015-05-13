@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Intimação de Pagamento - GFIP X GPS</titulo>
-    <descricao>Consultar pela internet o relatório de divergências e/ou apresentar documentos para contestar a cobrança
-        das divergências de uma ou várias competências identificadas na Intimação para Pagamento – IP em uma unidade de
-        atendimento.
+    <descricao>
+        <![CDATA[Consultar pela internet o relatório de divergências e/ou apresentar documentos para contestar a cobrança das divergências de uma ou várias competências identificadas na Intimação para Pagamento – IP em uma unidade de atendimento.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

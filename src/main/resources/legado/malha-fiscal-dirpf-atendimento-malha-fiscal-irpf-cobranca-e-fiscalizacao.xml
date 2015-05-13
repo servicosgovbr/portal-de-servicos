@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Malha Fiscal DIRPF - Atendimento (Malha Fiscal IRPF / Cobrança e Fiscalização)</titulo>
-    <descricao>Contestar intimação ou notificação recebidas. Neste serviço, estão relacionados os termos e documentos
-        que deverão ser entregues na unidade da Receita Federal.
+    <descricao>
+        <![CDATA[Contestar intimação ou notificação recebidas. Neste serviço, estão relacionados os termos e documentos que deverão ser entregues na unidade da Receita Federal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

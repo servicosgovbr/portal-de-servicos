@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Extrato do Cadastro Nacional de Informações Sociais – Vínculos e Remunerações</titulo>
-    <descricao>Permite obter informações sobre vínculos e remunerações que constam do Cadastro Nacional de Informações
-        Sociais (CNIS), de modo que os segurados poderão acompanhar, mensalmente, se o empregador está recolhendo suas
-        contribuições e, ainda, solicitar a correção ou inclusão de períodos que não constem do cadastro.
+    <descricao>
+        <![CDATA[Permite obter informações sobre vínculos e remunerações que constam do Cadastro Nacional de Informações Sociais (CNIS), de modo que os segurados poderão acompanhar, mensalmente, se o empregador está recolhendo suas contribuições e, ainda, solicitar a correção ou inclusão de períodos que não constem do cadastro.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

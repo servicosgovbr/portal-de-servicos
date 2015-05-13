@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Exclusão da Lista de Devedores</titulo>
-    <descricao>Solicitar a retirada do nome da lista dos devedores que possuem débitos com a Fazenda Nacional inscritos
-        em Dívida Ativa da União.
+    <descricao>
+        <![CDATA[Solicitar a retirada do nome da lista dos devedores que possuem débitos com a Fazenda Nacional inscritos em Dívida Ativa da União.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

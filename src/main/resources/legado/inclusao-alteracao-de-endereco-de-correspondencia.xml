@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Inclusão/Alteração de Endereço de Correspondência</titulo>
-    <descricao>A função ATUALIZAÇÃO DE ENDEREÇO ESPECIAL permite ao usuário incluir um endereço alternativo (que passa a
-        ser o preferencial) para o recebimento de suas cobranças, notificações e correspondências da SPU.
+    <descricao>
+        <![CDATA[A função ATUALIZAÇÃO DE ENDEREÇO ESPECIAL permite ao usuário incluir um endereço alternativo (que passa a ser o preferencial) para o recebimento de suas cobranças, notificações e correspondências da SPU.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Inscrição, Alteração e Consulta de Matrícula CEI - Cadastro Específico do INSS</titulo>
-    <descricao>Solicitar inscrição (concessão), alteração ou realizar consulta de matrícula CEI – Castrado Específico do
-        INSS. Entre outros, estão sujeitos à matrícula CEI as pessoas físicas equiparadas à empresas e empresas
-        desobrigadas da inscrição no CNPJ. Na inscrição, o número da matrícula é fornecido automaticamente. Após o
-        cadastramento, o contribuinte tem 24 horas para fazer alterações cadastrais via internet. Após este prazo, o
-        contribuinte deverá dirigir-se a qualquer unidade de atendimento.
+    <descricao>
+        <![CDATA[Solicitar inscrição (concessão), alteração ou realizar consulta de matrícula CEI – Castrado Específico do INSS. Entre outros, estão sujeitos à matrícula CEI as pessoas físicas equiparadas à empresas e empresas desobrigadas da inscrição no CNPJ. Na inscrição, o número da matrícula é fornecido automaticamente. Após o cadastramento, o contribuinte tem 24 horas para fazer alterações cadastrais via internet. Após este prazo, o contribuinte deverá dirigir-se a qualquer unidade de atendimento.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

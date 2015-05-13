@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Orientações Gerais sobre Isenção de Contribuições Sociais</titulo>
-    <descricao>Obter orientações sobre isenção de contribuições sociais para Entidades Beneficentes de Assistência
-        Social.
+    <descricao>
+        <![CDATA[Obter orientações sobre isenção de contribuições sociais para Entidades Beneficentes de Assistência Social.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

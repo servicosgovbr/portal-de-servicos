@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Entrega de Documentos para o CEI</titulo>
-    <descricao>Entregar documentos para posterior conclusão do atendimento de pedido de inscrição/alteração/cancelamento
-        para as pessoas físicas equiparadas a empresas e empresas desobrigadas da inscrição no CNPJ.
+    <descricao>
+        <![CDATA[Entregar documentos para posterior conclusão do atendimento de pedido de inscrição/alteração/cancelamento para as pessoas físicas equiparadas a empresas e empresas desobrigadas da inscrição no CNPJ.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

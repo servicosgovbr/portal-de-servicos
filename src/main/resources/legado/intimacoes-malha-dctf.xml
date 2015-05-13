@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Intimações Malha DCTF</titulo>
-    <descricao>Consultar as intimações relativas à DCTF (Declaração de Débitos e Créditos Tributários Federais) e seus
-        anexos, com opção de imprimir Darf para pagamento.
+    <descricao>
+        <![CDATA[Consultar as intimações relativas à DCTF (Declaração de Débitos e Créditos Tributários Federais) e seus anexos, com opção de imprimir Darf para pagamento.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

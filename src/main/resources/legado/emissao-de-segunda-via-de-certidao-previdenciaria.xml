@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Emissão de Segunda Via de Certidão Previdenciária</titulo>
-    <descricao>(Certidão Contribuições Previdenciárias / Dívida Ativa da União – DAU)
-        Emitir segunda via de certidão previdenciária. A segunda via de certidão para fins de averbação de obra é
-        emitida somente nas unidades de atendimento presencial.
+    <descricao>
+        <![CDATA[(Certidão Contribuições Previdenciárias / Dívida Ativa da União – DAU) Emitir segunda via de certidão previdenciária. A segunda via de certidão para fins de averbação de obra é emitida somente nas unidades de atendimento presencial.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Pagamentos e Parcelamentos DAU - Dívida Ativa da União</titulo>
-    <descricao>Apresentar o formulário requerimento de reparcelamento e outros documentos. Não se aplica para débitos
-        previdenciários.
+    <descricao>
+        <![CDATA[Apresentar o formulário requerimento de reparcelamento e outros documentos. Não se aplica para débitos previdenciários.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

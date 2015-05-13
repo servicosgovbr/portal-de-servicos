@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Notificações em Auditoria de Compensação em GFIP ( / Cobrança e Fiscalização)</titulo>
-    <descricao>Permite ao contribuinte intimado justificar a origem dos créditos compensados em Gfip. O contribuinte
-        acessará o e-Cac para responder, através do preenchimento das telas com os demonstrativos de compensações
-        efetuadas, qual a origem dos créditos compensados em Gfip.
+    <descricao>
+        <![CDATA[Permite ao contribuinte intimado justificar a origem dos créditos compensados em Gfip. O contribuinte acessará o e-Cac para responder, através do preenchimento das telas com os demonstrativos de compensações efetuadas, qual a origem dos créditos compensados em Gfip.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

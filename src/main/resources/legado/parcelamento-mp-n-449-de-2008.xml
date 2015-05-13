@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Parcelamento MP nº 449, de 2008</titulo>
-    <descricao>Optar pelo parcelamento ou pagamento à vista da MP 449, acompanhar pedido, obter código de acesso,
-        solicitar reemissão de recibo de opção e Darf da primeira parcela do parcelamento.
+    <descricao>
+        <![CDATA[Optar pelo parcelamento ou pagamento à vista da MP 449, acompanhar pedido, obter código de acesso, solicitar reemissão de recibo de opção e Darf da primeira parcela do parcelamento.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

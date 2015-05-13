@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Licença de Pescador Amador</titulo>
-    <descricao>A licença de pesca amadora é o que permite a qualquer pessoa realizar uma pescaria, para lazer ou esporte
-        (sem fins comerciais), nos rios, lagos e mar.
+    <descricao>
+        <![CDATA[A licença de pesca amadora é o que permite a qualquer pessoa realizar uma pescaria, para lazer ou esporte (sem fins comerciais), nos rios, lagos e mar.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

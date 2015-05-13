@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Instituto Nacional de Meteorologia ( INMET)</titulo>
-    <descricao>O Instituto Nacional de Meteorologia (INMET) foi criado em 1909 e é órgão federal da administração direta
-        do Ministério da Agricultura, Pecuária e Abastecimento (MAPA) com a missão de prover informações meteorológicas
-        confiáveis à Sociedade Brasileira e influir construtivamente no processo de tomada de decisão, contribuindo para
-        o desenvolvimento sustentável do País. Esta missão é atingida através do Monitoramento, Análise e Previsão do
-        Tempo e Clima, fundamentados em pesquisa aplicada, no trabalho em parceria e no compartilhamento do
-        conhecimento, com ênfase em resultados práticos e confiáveis. A máxima do Instituto é a satisfação da sociedade,
-        vendo atendidas suas necessidades de informações em situações diversas, como no caso de desastres naturais
-        relacionados com inundações e secas extremas que afetam as atividades rotineiras e limitam a sobrevivência.
+    <descricao>
+        <![CDATA[O Instituto Nacional de Meteorologia (INMET) foi criado em 1909 e é órgão federal da administração direta do Ministério da Agricultura, Pecuária e Abastecimento (MAPA) com a missão de prover informações meteorológicas confiáveis à Sociedade Brasileira e influir construtivamente no processo de tomada de decisão, contribuindo para o desenvolvimento sustentável do País. Esta missão é atingida através do Monitoramento, Análise e Previsão do Tempo e Clima, fundamentados em pesquisa aplicada, no trabalho em parceria e no compartilhamento do conhecimento, com ênfase em resultados práticos e confiáveis. A máxima do Instituto é a satisfação da sociedade, vendo atendidas suas necessidades de informações em situações diversas, como no caso de desastres naturais relacionados com inundações e secas extremas que afetam as atividades rotineiras e limitam a sobrevivência.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

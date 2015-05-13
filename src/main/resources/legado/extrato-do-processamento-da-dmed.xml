@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Extrato do Processamento da DMED</titulo>
-    <descricao>Visualizar a relação das últimas declarações Dmed (Declaração de Serviços Médicos e de Saúde) entregues e
-        realizar algumas consultas específicas.
+    <descricao>
+        <![CDATA[Visualizar a relação das últimas declarações Dmed (Declaração de Serviços Médicos e de Saúde) entregues e realizar algumas consultas específicas.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

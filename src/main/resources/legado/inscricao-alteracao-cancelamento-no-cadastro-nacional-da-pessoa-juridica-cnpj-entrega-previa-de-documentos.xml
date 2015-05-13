@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Inscrição/Alteração/Cancelamento no Cadastro Nacional da Pessoa Jurídica (CNPJ) - Entrega Prévia de
-        Documentos
+    <titulo>
+        <![CDATA[Inscrição/Alteração/Cancelamento no Cadastro Nacional da Pessoa Jurídica (CNPJ) - Entrega Prévia de Documentos]]>
     </titulo>
-    <descricao>Solicitar inscrição e alteração no Cadastro Nacional da Pessoa Jurídica, acompanhado do Documento Básico
-        de Entrada (DBE) e demais documentos necessários. Cancelar um pedido perante o CNPJ (este cancelamento é
-        possível até o instante da recepção da solicitação pela Receita Federal ou convenente). Público alvo: pessoa
-        jurídica.
+    <descricao>
+        <![CDATA[Solicitar inscrição e alteração no Cadastro Nacional da Pessoa Jurídica, acompanhado do Documento Básico de Entrada (DBE) e demais documentos necessários. Cancelar um pedido perante o CNPJ (este cancelamento é possível até o instante da recepção da solicitação pela Receita Federal ou convenente). Público alvo: pessoa jurídica.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

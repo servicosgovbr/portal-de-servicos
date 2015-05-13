@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Entrega de Declaração – DITR</titulo>
-    <descricao>Entregar declarações cujo envio não foi possível pelos meios estabelecidos na legislação (por exemplo,
-        fora do prazo obrigatório) ou que a legislação assim determine.
+    <descricao>
+        <![CDATA[Entregar declarações cujo envio não foi possível pelos meios estabelecidos na legislação (por exemplo, fora do prazo obrigatório) ou que a legislação assim determine.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

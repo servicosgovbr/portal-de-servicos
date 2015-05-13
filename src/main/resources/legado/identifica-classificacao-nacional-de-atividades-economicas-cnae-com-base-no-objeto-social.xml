@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Identifica Classificação Nacional de Atividades Econômicas - CNAE com base no objeto social</titulo>
-    <descricao>Identificar Classificação Nacional de Atividades Econômicas - CNAE com base na descrição do objeto
-        social, previamente à solicitação cadastral, para o convenente que assim o definir.
+    <descricao>
+        <![CDATA[Identificar Classificação Nacional de Atividades Econômicas - CNAE com base na descrição do objeto social, previamente à solicitação cadastral, para o convenente que assim o definir.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

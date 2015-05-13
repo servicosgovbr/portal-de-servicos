@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Intimações diversas</titulo>
-    <descricao>Entregar documentos solicitados através de correspondência (intimação/notificação) expedida por
-        divisões/seções/setores da Delegacia.
+    <descricao>
+        <![CDATA[Entregar documentos solicitados através de correspondência (intimação/notificação) expedida por divisões/seções/setores da Delegacia.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

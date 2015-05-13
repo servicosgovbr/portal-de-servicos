@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Entreposto Industrial (RECOF) – Habilitação</titulo>
-    <descricao>Solicitar a habilitação para operar o Regime de Entreposto Industrial sob controle informatizado
-        (RECOF).
+    <descricao>
+        <![CDATA[Solicitar a habilitação para operar o Regime de Entreposto Industrial sob controle informatizado (RECOF).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

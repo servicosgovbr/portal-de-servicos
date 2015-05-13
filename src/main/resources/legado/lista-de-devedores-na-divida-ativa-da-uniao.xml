@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Lista de Devedores na Dívida Ativa da União</titulo>
-    <descricao>Consultar a relação das pessoas físicas e jurídicas, que possuem débitos com a Fazenda Nacional inscritos
-        em Dívida Ativa da União, na condição de devedor principal, corresponsável ou solidário. Não estão relacionados
-        na lista aqueles devedores que tenham crédito com exigibilidade suspensa ou que tenham ação ajuizada com o
-        objetivo de discutir a natureza da obrigação ou o seu valor e com garantia idônea e suficiente ao Juízo, na
-        forma da lei.
+    <descricao>
+        <![CDATA[Consultar a relação das pessoas físicas e jurídicas, que possuem débitos com a Fazenda Nacional inscritos em Dívida Ativa da União, na condição de devedor principal, corresponsável ou solidário. Não estão relacionados na lista aqueles devedores que tenham crédito com exigibilidade suspensa ou que tenham ação ajuizada com o objetivo de discutir a natureza da obrigação ou o seu valor e com garantia idônea e suficiente ao Juízo, na forma da lei.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
