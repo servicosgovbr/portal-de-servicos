@@ -4,7 +4,6 @@ import br.gov.servicos.Main;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoRepository;
 import br.gov.servicos.config.GuiaDeServicosIndex;
-import br.gov.servicos.fixtures.TestData;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import org.junit.Before;
@@ -18,9 +17,10 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.List;
 
+import static br.gov.servicos.fixtures.TestData.CONTEUDO;
+import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Optional.of;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
 @WebAppConfiguration
@@ -47,8 +47,8 @@ public class BuscadorConteudoIntegrationTest {
 
     @Test
     public void deveInserirUmServicoEUmConteudoERetornarDoisConteudos() throws Exception {
-        servicoRepository.save(TestData.SERVICO);
-        conteudoRepository.save(TestData.CONTEUDO);
+        servicoRepository.save(SERVICO);
+        conteudoRepository.save(CONTEUDO);
 
         List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
 
@@ -59,7 +59,7 @@ public class BuscadorConteudoIntegrationTest {
 
     @Test
     public void deveRetornarApenasConteudosQueTenhamAPalavraDescricao() throws Exception {
-        servicoRepository.save(TestData.SERVICO);
+        servicoRepository.save(SERVICO);
         servicoRepository.save(new Servico().withTitulo("Um titulo").withDescricao("Texto"));
         conteudoRepository.save(new Conteudo().withTitulo("Titulo de conteudo").withConteudo("Conteudo"));
 
@@ -76,6 +76,18 @@ public class BuscadorConteudoIntegrationTest {
         List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
         assertThat(conteudos, hasSize(1));
         assertThat(conteudos.get(0).getConteudo(), is("Descricao"));
+    }
+
+    @Test
+    public void buscaSemelhante() throws Exception {
+        servicoRepository.save(SERVICO);
+        servicoRepository.save(new Servico().withTitulo("Titulo de servico").withDescricao("Texto"));
+
+        List<Conteudo> conteudos = buscadorConteudo.buscaSemelhante(of("ervic"));
+
+        assertThat(conteudos, hasSize(2));
+        assertThat(conteudos, hasItem(new Conteudo().withId("titulo").withTitulo(SERVICO.getTitulo()).withConteudo(SERVICO.getDescricao())));
+        assertThat(conteudos, hasItem(new Conteudo().withId("titulo-de-servico").withTitulo("Titulo de servico").withConteudo("Texto")));
     }
 
 }

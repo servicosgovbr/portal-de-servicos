@@ -4,7 +4,6 @@ import br.gov.servicos.cms.Conteudo;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.index.query.FuzzyQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,11 +13,13 @@ import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_IMPORTADOR;
+import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
@@ -51,12 +52,12 @@ public class BuscadorConteudo {
                         .prefixLength(0)));
     }
 
-    private FuzzyQueryBuilder fuzzy(String q, String field, float boost) {
-        return fuzzyQuery(field, q)
-                .boost(boost)
-                .fuzziness(TWO)
-                .prefixLength(0)
-                .transpositions(true);
+    public List<Conteudo> buscaSemelhante(Optional<String> termoBuscado) {
+        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery("titulo", "conteudo", "descricao").likeText(termo));
+    }
+
+    private List<Conteudo> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
+        return executaQuery(termoBuscado, 0, MAX_VALUE, criaQuery).getContent();
     }
 
     private Page<Conteudo> executaQuery(Optional<String> termoBuscado, Integer paginaAtual, Function<String, QueryBuilder> criaQuery) {
