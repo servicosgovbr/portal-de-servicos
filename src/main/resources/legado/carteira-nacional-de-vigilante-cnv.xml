@@ -12,7 +12,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Requerimento Eletrônico de Carteira Nacional de Vigilante</descricao>
-            <url>http://requerimentocnv.dpf.gov.br/cnv/faces/restrito/validacaoDeInformacoes.seam?cid=6365</url>
+            <url>http://www.dpf.gov.br/servicos/seguranca-privada/servicos/carteira-nacional-de-vigilante</url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
