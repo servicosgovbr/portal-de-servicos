@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Cadastramento da Comunicação de Acidente de Trabalho (CAT).</titulo>
+    <titulo>Cadastramento da Comunicação de Acidente de Trabalho (CAT)</titulo>
     <descricao>
         <![CDATA[Possibilita cadastrar a "Comunicação de Acidente de Trabalho - CAT" junto ao INSS, para facilitar e agilizar o registro dos Acidentes de Trabalho e das Doenças Ocupacionais, pelo Empregador, havendo ou não afastamento do trabalho por parte do acidentado. A aplicação permite também imprimir o formulário da CAT em branco para preenchimento das informações do Empregador, do Acidentado, do Acidente e do Atestado Médico.]]>
     </descricao>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Cálculo do Valor Devido e Geração do DAS (Documento de Arrecadação do Simples Nacional), até 12/2011.
+    <titulo>
+        <![CDATA[Cálculo do Valor Devido e Geração do DAS (Documento de Arrecadação do Simples Nacional), até 12/2011]]>
     </titulo>
     <descricao>Preencher PGDAS e gerar o Documento de Arrecadação do Simples Nacional – DAS – até 12/2011.</descricao>
     <requisitos/>

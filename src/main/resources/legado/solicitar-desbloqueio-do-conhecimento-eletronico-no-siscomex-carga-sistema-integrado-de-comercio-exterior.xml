@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>
-        <![CDATA[Solicitar Desbloqueio do Conhecimento Eletrônico no Siscomex Carga (Sistema Integrado de Comércio Exterior).]]>
+        <![CDATA[Solicitar Desbloqueio do Conhecimento Eletrônico no Siscomex Carga (Sistema Integrado de Comércio Exterior)]]>
     </titulo>
     <descricao>Solicitar desbloqueio do CE no sistema Siscomex Carga.</descricao>
     <requisitos/>
