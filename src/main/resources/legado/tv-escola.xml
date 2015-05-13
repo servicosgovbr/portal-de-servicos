@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>TV Escola</titulo>
-    <descricao>A TV Escola é um canal de televisão do Ministério da Educação que capacita, aperfeiçoa e atualiza
-        educadores da rede pública desde 1996. Sua programação exibe, nas 24 horas diárias, séries e documentários
-        estrangeiros e produções próprias.
-        Os principais objetivos da TV Escola são o aperfeiçoamento e valorização dos professores da rede pública, o
-        enriquecimento do processo de ensino-aprendizagem e a melhoria da qualidade do ensino.
+    <descricao>
+        <![CDATA[A TV Escola é um canal de televisão do Ministério da Educação que capacita, aperfeiçoa e atualiza educadores da rede pública desde 1996. Sua programação exibe, nas 24 horas diárias, séries e documentários estrangeiros e produções próprias.
+
+        Os principais objetivos da TV Escola são o aperfeiçoamento e valorização dos professores da rede pública, o enriquecimento do processo de ensino-aprendizagem e a melhoria da qualidade do ensino.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

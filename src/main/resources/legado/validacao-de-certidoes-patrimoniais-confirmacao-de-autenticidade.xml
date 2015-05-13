@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Validação de Certidões Patrimoniais - (Confirmação de Autenticidade)</titulo>
-    <descricao>Aqui você poderá confirmar a autenticidade de certidão emitida pela Secretaria do Patrimônio da União,
-        preenchendo os campos conforme os dados da certidão.
+    <descricao>
+        <![CDATA[Aqui você poderá confirmar a autenticidade de certidão emitida pela Secretaria do Patrimônio da União, preenchendo os campos conforme os dados da certidão. ]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

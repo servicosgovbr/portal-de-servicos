@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Sistema de Leilão Eletrônico – SLE (- / Outros)</titulo>
-    <descricao>Apresentar propostas de valor de compra para lotes de mercadorias apreendidas, com vista a classificar-se
-        para a fase de oferta de lances em leilões de mercadorias apreendidas, realizados por meio da Internet.
+    <descricao>
+        <![CDATA[Apresentar propostas de valor de compra para lotes de mercadorias apreendidas, com vista a classificar-se para a fase de oferta de lances em leilões de mercadorias apreendidas, realizados por meio da Internet.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

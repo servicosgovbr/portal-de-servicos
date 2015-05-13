@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Transferência de Arma de Fogo</titulo>
-    <descricao>Documento que autoriza a transferência de propriedade da arma de fogo entre particulares. Para o
-        transporte da arma de fogo é necessária a apresentação de guia de trânsito (ver serviço Guia de Trânsito).
+    <descricao>
+        <![CDATA[Documento que autoriza a transferência de propriedade da arma de fogo entre particulares. Para o transporte da arma de fogo é necessária a apresentação de guia de trânsito (ver serviço Guia de Trânsito).
 
-        ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve ser realizada após a autorização de
-        transferência concedida pela Polícia Federal, tendo em vista a possibilidade de indeferimento do pedido por não
-        atendimento aos requisitos legais ou regulamentares. A transferência antecipada da arma sem autorização pode
-        caracterizar o crime do porte ilegal de arma.
+ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve ser realizada após a autorização de transferência concedida pela Polícia Federal, tendo em vista a possibilidade de indeferimento do pedido por não atendimento aos requisitos legais ou regulamentares. A transferência antecipada da arma sem autorização pode caracterizar o crime do porte ilegal de arma.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

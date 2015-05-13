@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Sistema de Monitoramento Agrometeorológico</titulo>
-    <descricao>Permite aos usuários o acesso, via Internet, às informações meteorológicas e agrometeorológicas de
-        diversos municípios e estados brasileiros. Além de informar a situação climática atual, o sistema alimenta a
-        Rede Nacional de Agrometeorologia (RNA) do Ministério da Agricultura, Pecuária e Abastecimento (MAPA)com
-        informações básicas que orientam o zoneamento agrícola brasileiro.
-        O sistema permite a atualização de cadastro de estações e dados climáticos diários (temperaturas máxima e
-        mínima, e precipitação), criação de boletins agrometeorológicos e visualização de mapas que são gerados
-        dinamicamente no momento da execução dos boletins.
+    <descricao>
+        <![CDATA[Permite aos usuários o acesso, via Internet, às informações meteorológicas e agrometeorológicas de diversos municípios e estados brasileiros. Além de informar a situação climática atual, o sistema alimenta a Rede Nacional de Agrometeorologia (RNA) do Ministério da Agricultura, Pecuária e Abastecimento (MAPA)com informações básicas que orientam o zoneamento agrícola brasileiro.
+
+O sistema permite a atualização de cadastro de estações e dados climáticos diários (temperaturas máxima e mínima, e precipitação), criação de boletins agrometeorológicos e visualização de mapas que são gerados dinamicamente no momento da execução dos boletins.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Sistema Gerenciador de Séries Temporais</titulo>
-    <descricao>Mostra informações econômico-financeiras de maneira consolidada.
+    <descricao>
+        <![CDATA[Mostra informações econômico-financeiras de maneira consolidada.
 
-        As séries podem ser consultadas individualmente, em grupos ou listas personalizadas, ou de forma automática, de
-        acordo com as instruções constantes no menu Ajuda, submenu Ajuda do sistema, opção Serviços automatizados
-        (webservices).
+As séries podem ser consultadas individualmente, em grupos ou listas personalizadas, ou de forma automática, de acordo com as instruções constantes no menu Ajuda, submenu Ajuda do sistema, opção Serviços automatizados (webservices).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

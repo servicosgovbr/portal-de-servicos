@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Taxas de câmbio</titulo>
-    <descricao>Mostra todas as cotações de uma moeda estrangeira em um período; as cotações de todas as moedas
-        estrangeiras em uma data específica; e ainda boletins intermediários de uma moeda em uma data.
+    <descricao>
+        <![CDATA[Mostra todas as cotações de uma moeda estrangeira em um período; as cotações de todas as moedas estrangeiras em uma data específica; e ainda boletins intermediários de uma moeda em uma data.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Termo de Opção – RECOB (RECOB - Regime Especial de Apuração - Combustíveis e Bebidas / Regimes e Registros
-        Especiais)
+    <titulo>
+        <![CDATA[Termo de Opção – RECOB (RECOB - Regime Especial de Apuração - Combustíveis e Bebidas / Regimes e Registros Especiais)]]>
     </titulo>
-    <descricao>Realizar opção pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins
-        incidentes sobre Combustíveis e Bebidas (Recob), de que tratam o art. 52 da Lei nº10.833, de 2003, o art. 23 da
-        Lei nº 10.865, de 2004, e o art. 4º da Lei nº 11.116, de 2005.
+    <descricao>
+        <![CDATA[Realizar opção pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins incidentes sobre Combustíveis e Bebidas (Recob), de que tratam o art. 52 da Lei nº10.833, de 2003, o art. 23 da Lei nº 10.865, de 2004, e o art. 4º da Lei nº 11.116, de 2005. ]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

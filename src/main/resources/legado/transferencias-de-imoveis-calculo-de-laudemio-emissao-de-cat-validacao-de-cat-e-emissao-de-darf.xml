@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Transferências de Imóveis - Cálculo de Laudêmio, Emissão de CAT, Validação de CAT e Emissão de DARF</titulo>
-    <descricao>Este serviço tem por objetivo agilizar e dar autonomia aos interessados em obter certidões de um imóvel
-        de seu interesse.
-        CAT - Certidão de Autorização para Transferência (CAT).
+    <descricao>
+        <![CDATA[Este serviço tem por objetivo agilizar e dar autonomia aos interessados em obter certidões de um imóvel de seu interesse.
+
+CAT - Certidão de Autorização para Transferência (CAT).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

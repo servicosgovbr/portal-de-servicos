@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Substituição ou Levantamento de Garantia Extrajudicial PGFN</titulo>
-    <descricao>Apresentar o requerimento de substituição ou levantamento de garantia extrajudicial ,e outros documentos,
-        para solicitar a substituição ou o levantamento de garantias oferecidas em processo administrativo de débitos
-        inscritos em Dívida Ativa da União.
+    <descricao>
+        <![CDATA[Apresentar o requerimento de substituição ou levantamento de garantia extrajudicial ,e outros documentos, para solicitar a substituição ou o levantamento de garantias oferecidas em processo administrativo de débitos inscritos em Dívida Ativa da União.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

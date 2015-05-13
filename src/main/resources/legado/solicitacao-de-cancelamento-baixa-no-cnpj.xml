@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Solicitação de Cancelamento (Baixa) no CNPJ</titulo>
-    <descricao>Solicitar cancelamento no Cadastro Nacional da Pessoa Jurídica, acompanhado do Documento Básico de
-        Entrada (DBE) e demais documentos necessários.
+    <descricao>
+        <![CDATA[Solicitar cancelamento no Cadastro Nacional da Pessoa Jurídica, acompanhado do Documento Básico de Entrada (DBE) e demais documentos necessários.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

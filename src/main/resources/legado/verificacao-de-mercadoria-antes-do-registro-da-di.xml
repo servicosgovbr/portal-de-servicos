@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Verificação de Mercadoria Antes do Registro da DI</titulo>
-    <descricao>Solicitar a autorização para verificação de mercadoria antes do registro da Declaração de Importação
-        (DI).
+    <descricao>
+        <![CDATA[Solicitar a autorização para verificação de mercadoria antes do registro da Declaração de Importação (DI).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

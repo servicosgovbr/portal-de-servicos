@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Validação de Documentos Assinados Digitalmente</titulo>
-    <descricao>Validar a autenticidade e a integridade de documento digital emitido com código de validação pela Receita
-        Federal. Autenticidade é a garantia de que o documento foi assinado pelo o servidor público descrito na
-        assinatura. Integridade garante que o documento que está sendo entregue corresponde àquele que foi enviado. Para
-        isso, uma cópia exata do documento que foi emitido pelo remetente é guardada para que o destinatário tenha a
-        certeza da sua integridade quando do recebimento.
+    <descricao>
+        <![CDATA[Validar a autenticidade e a integridade de documento digital emitido com código de validação pela Receita Federal. Autenticidade é a garantia de que o documento foi assinado pelo o servidor público descrito na assinatura. Integridade garante que o documento que está sendo entregue corresponde àquele que foi enviado. Para isso, uma cópia exata do documento que foi emitido pelo remetente é guardada para que o destinatário tenha a certeza da sua integridade quando do recebimento.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Solicitar Reparcelamento de Débitos</titulo>
-    <descricao>Solicitar reparcelamento de débitos (não previdenciários, previdenciários e previdenciários inscritos em
-        dívida ativa).
+    <descricao>
+        <![CDATA[Solicitar reparcelamento de débitos (não previdenciários, previdenciários e previdenciários inscritos em dívida ativa).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

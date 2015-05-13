@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Sistema de Registro de Empresas de Trabalho Temporário - SIRETT</titulo>
-    <descricao>Para solicitação de registro de empresa de trabalho temporário, conforme normatizado na Lei n.º
-        6.019/1974.
+    <descricao>
+        <![CDATA[Para solicitação de registro de empresa de trabalho temporário, conforme normatizado na Lei n.º 6.019/1974.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

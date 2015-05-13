@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Solicitação de registro de empresas operadoras de serviço de microfilmagem</titulo>
-    <descricao>Receber, protocolar, analisar e emitir parecer opinativo acerca dos pedidos de registro das empresas
-        interessadas em atuar com serviços de microfilmagem.
+    <descricao>
+        <![CDATA[Receber, protocolar, analisar e emitir parecer opinativo acerca dos pedidos de registro das empresas interessadas em atuar com serviços de microfilmagem.
 
-        O Ministério da Justiça é responsável pelo registro de empresas e cartórios que realizam serviços de
-        microfilmagem de documentos. Todas essas entidades, antes de microfilmar documentos, devem solicitar ao
-        Departamento de Justiça, Classificação, Títulos e Qualificação do Ministério da Justiça seu requerimento de
-        autorização. Havendo parecer favorável, a autorização será publicada por meio de Portaria, no Diário Oficial da
-        União.
+O Ministério da Justiça é responsável pelo registro de empresas e cartórios que realizam serviços de microfilmagem de documentos. Todas essas entidades, antes de microfilmar documentos, devem solicitar ao Departamento de Justiça, Classificação, Títulos e Qualificação do Ministério da Justiça seu requerimento de autorização. Havendo parecer favorável, a autorização será publicada por meio de Portaria, no Diário Oficial da União.
 
-        Concluído o processo, a requerente será notificada por correspondência, recebendo o comunicado oficial
-        acompanhado de cópia da publicação. Após serem certificadas pelo Ministério da Justiça, as entidades sociais
-        deverão apresentar anualmente seus relatórios de atividades, acompanhados das demonstrações financeiras, por
-        meio do Cadastro Nacional de Entidades Sociais do Ministério da Justiça (CNES/MJ), afim de obterem a certidão de
-        regularidade.
+Concluído o processo, a requerente será notificada por correspondência, recebendo o comunicado oficial acompanhado de cópia da publicação. Após serem certificadas pelo Ministério da Justiça, as entidades sociais deverão apresentar anualmente seus relatórios de atividades, acompanhados das demonstrações financeiras, por meio do Cadastro Nacional de Entidades Sociais do Ministério da Justiça (CNES/MJ), afim de obterem a certidão de regularidade.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>

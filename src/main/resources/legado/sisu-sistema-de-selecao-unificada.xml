@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Sisu — Sistema de Seleção Unificada</titulo>
-    <descricao>Criado em 2010, o Sistema de Seleção Unificada (Sisu) possibilita a oferta de vagas em instituições
-        públicas de educação superior a candidatos participantes do Exame Nacional do Ensino Médio (Enem).
+    <descricao>
+        <![CDATA[Criado em 2010, o Sistema de Seleção Unificada (Sisu) possibilita a oferta de vagas em instituições públicas de educação superior a candidatos participantes do Exame Nacional do Ensino Médio (Enem).]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
