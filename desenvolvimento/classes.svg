@@ -1353,7 +1353,7 @@
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath57)" stroke="none"/>
       <image x="2" y="2" clip-path="url(#clipPath57)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAEklEQVR42mNgGAWj&#10;YBSMAggAAAQQAAGvRYgsAAAAAElFTkSuQmCC" height="16" preserveAspectRatio="none"/>
       <rect x="20" width="260" height="20" y="0" clip-path="url(#clipPath57)" stroke="none"/>
-      <text x="21" y="15" clip-path="url(#clipPath57)" fill="black" text-rendering="geometricPrecision" stroke="none" xml:space="preserve">FeedbackController(FeedbackRepository)</text>
+      <text x="21" y="15" clip-path="url(#clipPath57)" fill="black" text-rendering="geometricPrecision" stroke="none" xml:space="preserve">OpiniaoController(OpiniaoRepository)</text>
     </g>
     <g fill="gray" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(57.5,1990)" stroke="gray">
       <rect x="0" width="350" height="1" y="0" clip-path="url(#clipPath59)" stroke="none"/>
@@ -1380,7 +1380,7 @@
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath63)" stroke="none"/>
       <image x="2" y="2" clip-path="url(#clipPath63)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAEklEQVR42mNgGAWj&#10;YBSMAggAAAQQAAGvRYgsAAAAAElFTkSuQmCC" height="16" preserveAspectRatio="none"/>
       <rect x="20" width="298" height="20" y="0" clip-path="url(#clipPath63)" stroke="none"/>
-      <text x="21" y="15" clip-path="url(#clipPath63)" fill="black" text-rendering="geometricPrecision" stroke="none" xml:space="preserve">feedback(String, String, String, String, Boolean)</text>
+      <text x="21" y="15" clip-path="url(#clipPath63)" fill="black" text-rendering="geometricPrecision" stroke="none" xml:space="preserve">opiniao(String, String, String, String, Boolean)</text>
     </g>
     <g fill="rgb(238,238,238)" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(57.5,1942)" stroke="rgb(238,238,238)">
       <rect x="0" width="350" height="26" y="0" clip-path="url(#clipPath64)" stroke="none"/>
@@ -1390,7 +1390,7 @@
     </g>
     <g font-family="'Lucida Grande'" font-size="13" transform="matrix(1,0,0,1,20,20) translate(60.5,1945)">
       <image x="2" y="2" clip-path="url(#clipPath65)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAEklEQVR42mNgGAWj&#10;YBSMAggAAAQQAAGvRYgsAAAAAElFTkSuQmCC" height="16" preserveAspectRatio="none"/>
-      <text text-rendering="geometricPrecision" x="21" xml:space="preserve" y="15" clip-path="url(#clipPath65)" stroke="none">FeedbackController</text>
+      <text text-rendering="geometricPrecision" x="21" xml:space="preserve" y="15" clip-path="url(#clipPath65)" stroke="none">OpiniaoController</text>
     </g>
     <g fill="gray" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20)" stroke="gray">
       <rect x="2" width="376" height="1" y="272" clip-path="url(#clipPath66)" stroke="none"/>
@@ -2673,7 +2673,7 @@
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath251)" stroke="none"/>
       <image x="2" y="2" clip-path="url(#clipPath251)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAEklEQVR42mNgGAWj&#10;YBSMAggAAAQQAAGvRYgsAAAAAElFTkSuQmCC" height="16" preserveAspectRatio="none"/>
       <rect x="20" width="71" height="20" y="0" clip-path="url(#clipPath251)" stroke="none"/>
-      <text x="21" y="15" clip-path="url(#clipPath251)" fill="black" text-rendering="geometricPrecision" stroke="none" xml:space="preserve">Feedback()</text>
+      <text x="21" y="15" clip-path="url(#clipPath251)" fill="black" text-rendering="geometricPrecision" stroke="none" xml:space="preserve">Opiniao()</text>
     </g>
     <g fill="gray" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(2,1513)" stroke="gray">
       <rect x="0" width="461" height="1" y="0" clip-path="url(#clipPath253)" stroke="none"/>
@@ -2682,7 +2682,7 @@
       <rect x="0" width="461" height="22" y="0" clip-path="url(#clipPath250)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(396,1515)">
-      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Feedback</text>
+      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Opiniao</text>
     </g>
     <g fill="white" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(4,1515)" stroke="white">
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath107)" stroke="none"/>
@@ -2696,7 +2696,7 @@
       <rect x="0" width="461" height="22" y="0" clip-path="url(#clipPath250)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(396,1537)">
-      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Feedback</text>
+      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Opiniao</text>
     </g>
     <g fill="white" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(4,1537)" stroke="white">
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath81)" stroke="none"/>
@@ -2710,7 +2710,7 @@
       <rect x="0" width="461" height="22" y="0" clip-path="url(#clipPath250)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(396,1559)">
-      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Feedback</text>
+      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Opiniao</text>
     </g>
     <g fill="white" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(4,1559)" stroke="white">
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath258)" stroke="none"/>
@@ -2724,7 +2724,7 @@
       <rect x="0" width="461" height="22" y="0" clip-path="url(#clipPath250)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(396,1581)">
-      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Feedback</text>
+      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Opiniao</text>
     </g>
     <g fill="white" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(4,1581)" stroke="white">
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath260)" stroke="none"/>
@@ -2738,7 +2738,7 @@
       <rect x="0" width="461" height="22" y="0" clip-path="url(#clipPath250)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(396,1603)">
-      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Feedback</text>
+      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Opiniao</text>
     </g>
     <g fill="white" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(4,1603)" stroke="white">
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath262)" stroke="none"/>
@@ -2752,7 +2752,7 @@
       <rect x="0" width="461" height="22" y="0" clip-path="url(#clipPath250)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(396,1625)">
-      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Feedback</text>
+      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Opiniao</text>
     </g>
     <g fill="white" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(4,1625)" stroke="white">
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath264)" stroke="none"/>
@@ -2766,7 +2766,7 @@
       <rect x="0" width="461" height="22" y="0" clip-path="url(#clipPath250)" stroke="none"/>
     </g>
     <g text-rendering="geometricPrecision" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(396,1647)">
-      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Feedback</text>
+      <text x="3" xml:space="preserve" y="15" clip-path="url(#clipPath255)" stroke="none">Opiniao</text>
     </g>
     <g fill="white" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(4,1647)" stroke="white">
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath266)" stroke="none"/>
@@ -2774,7 +2774,7 @@
       <rect x="20" width="135" height="20" y="0" clip-path="url(#clipPath266)" stroke="none"/>
     </g>
     <g font-style="italic" text-rendering="geometricPrecision" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(4,1647)">
-      <text x="21" xml:space="preserve" y="15" clip-path="url(#clipPath266)" stroke="none">withFeedback(String)</text>
+      <text x="21" xml:space="preserve" y="15" clip-path="url(#clipPath266)" stroke="none">withMensagem(String)</text>
     </g>
     <g fill="white" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(2,1668)" stroke="white">
       <rect x="0" width="461" height="22" y="0" clip-path="url(#clipPath250)" stroke="none"/>
@@ -2872,7 +2872,7 @@
       <rect x="20" width="91" height="20" y="0" clip-path="url(#clipPath141)" stroke="none"/>
     </g>
     <g font-style="italic" text-rendering="geometricPrecision" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(4,1801)">
-      <text x="21" xml:space="preserve" y="15" clip-path="url(#clipPath141)" stroke="none">getFeedback()</text>
+      <text x="21" xml:space="preserve" y="15" clip-path="url(#clipPath141)" stroke="none">getOpiniao()</text>
     </g>
     <g fill="white" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(2,1822)" stroke="white">
       <rect x="0" width="461" height="22" y="0" clip-path="url(#clipPath250)" stroke="none"/>
@@ -2924,7 +2924,7 @@
     </g>
     <g font-family="'Lucida Grande'" font-size="13" transform="matrix(1,0,0,1,20,20) translate(5,1468)">
       <image x="2" y="2" clip-path="url(#clipPath282)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAEklEQVR42mNgGAWj&#10;YBSMAggAAAQQAAGvRYgsAAAAAElFTkSuQmCC" height="16" preserveAspectRatio="none"/>
-      <text text-rendering="geometricPrecision" x="21" xml:space="preserve" y="15" clip-path="url(#clipPath282)" stroke="none">Feedback</text>
+      <text text-rendering="geometricPrecision" x="21" xml:space="preserve" y="15" clip-path="url(#clipPath282)" stroke="none">Opiniao</text>
     </g>
     <g fill="gray" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(939.25,1119)" stroke="gray">
       <rect x="2" width="508" height="1" y="96" clip-path="url(#clipPath284)" stroke="none"/>
