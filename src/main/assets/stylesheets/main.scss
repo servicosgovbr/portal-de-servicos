@@ -97,7 +97,7 @@
     li {
       display: list-item;
       margin: 0;
-      color: $cinza-escuro; 
+      color: $cinza-escuro;
     }
   }
 
@@ -109,6 +109,12 @@
 
 dl.portlet {
 
+  @include mobile {
+    dd {
+      display: none;
+    }
+  }
+
   dt {
     background: $cinza-claro;
     border-bottom: 1px solid $cinza-medio;
@@ -118,6 +124,11 @@ dl.portlet {
     padding: 15px 10px;
     text-transform: capitalize;
     font-family: 'open_sansbold', $helvetica;
+
+    @include mobile {
+      padding: em(7) $mobile-margin-right em(7) $mobile-margin-left;
+      margin: 0 -6%;
+    }
   }
 
   ul li {
@@ -452,8 +463,9 @@ ul.servicos-a-z {
 #navegacao {
   @include span-columns(3);
   margin-bottom: 35px;
-  @include mobile-tablet {
-    display: none !important;
+
+  @include mobile {
+    @include fill-parent();
   }
 
   .navTree span {
@@ -463,6 +475,7 @@ ul.servicos-a-z {
   .navTree a {
     font-size: 13px;
   }
+
 }
 
 .destaque {
