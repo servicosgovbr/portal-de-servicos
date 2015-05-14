@@ -10,7 +10,8 @@
                 <titulo>Presencial</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Unidades de atendimento ao Contribuinte</descricao>
-            <url>http://www.receita.fazenda.gov.br/atendcontrib/Atendimento/UnidAtendimento/centroAtendimento.htm</url>
+            <url><![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=48&idArea=1&idAssunto=22
+]]></url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
