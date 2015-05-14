@@ -7,6 +7,8 @@ import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStreamReader;
 
+import static java.nio.charset.Charset.defaultCharset;
+
 public class ValidadorYamlTest {
 
     private Yaml yaml;
@@ -19,6 +21,6 @@ public class ValidadorYamlTest {
     @Test
     public void deveSerVálido() throws Exception {
         ClassPathResource resource = new ClassPathResource("file:src/main/resources/application.yaml");
-        yaml.parse(new InputStreamReader(resource.getInputStream()));
+        yaml.parse(new InputStreamReader(resource.getInputStream(), defaultCharset()));
     }
 }
