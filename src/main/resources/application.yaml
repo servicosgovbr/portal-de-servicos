@@ -124,13 +124,19 @@ gds:
     ouvidorias:
       arquivo-nacional: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an
       banco-central-do-brasil-bcb: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen
+      comissao-de-anistia: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
       companhia-nacional-de-abastecimento-conab: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/outras-estatais/companhia-nacional-de-abastecimento-conab
+      conselho-administrativo-de-defesa-economica-cade: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
       defensoria-publica-da-uniao-dpu: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/defensoria-publica-da-uniao-dpu
       departamento-de-policia-federal-dpf: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/departamento-de-policia-federal-dpf
       departamento-de-policia-rodoviaria-federal-dprf: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/departamento-de-policia-rodoviaria-federal-dprf
       empresa-brasileira-de-infraestrutura-aeroportuaria-infraero: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/outras-estatais/empresa-brasileira-de-infraestrutura-aeroportuaria-infraero
+      fundacao-nacional-do-indio-funai: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
       fundacao-nacional-do-indio-funai: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/outras-autarquias/fundacao-nacional-do-indio-funai
+      instituto-nacional-de-meteorologia-inmet: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-agricultura-pecuaria-e-abastecimento-mapa
+      instituto-nacional-do-seguro-social-inss: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-previdencia-social-mps
       ministerio-da-agricultura-pecuaria-e-abastecimento-mapa: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-agricultura-pecuaria-e-abastecimento-mapa
+      ministerio-da-educacao-mec:
       ministerio-da-fazenda-mf: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-fazenda-mf
       ministerio-da-justica-mj: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
       ministerio-da-pesca-e-aquicultura-mpa: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-pesca-e-aquicultura-mpa
@@ -141,7 +147,14 @@ gds:
       ministerio-do-planejamento-orcamento-e-gestao-mpog: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
       ministerio-do-trabalho-e-emprego-mte: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-trabalho-e-emprego-mte
       ministerio-do-turismo-mtur: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-turismo-mtur
+      municipio: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds
+      secretaria-da-receita-federal-do-brasil-rfb: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-fazenda-mf
       secretaria-de-aviacao-civil: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/secretaria-de-aviacao-civil-sac
+      secretaria-de-planejamento-e-investimentos-estrategicos-spi: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
+      secretaria-do-patrimonio-da-uniao-spu-mp: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
+      secretaria-nacional-de-justica: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
+      secretaria-nacional-de-politicas-sobre-drogas-senad: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
+      secretaria-nacional-de-seguranca-publica: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
     sitesOficiais:
       arquivo-nacional: http://www.arquivonacional.gov.br/
       banco-central-do-brasil-bcb: http://www.bcb.gov.br/
