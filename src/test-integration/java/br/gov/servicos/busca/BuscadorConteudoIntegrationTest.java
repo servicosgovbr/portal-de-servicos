@@ -11,17 +11,20 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.data.domain.Page;
 import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.List;
 
-import static br.gov.servicos.fixtures.TestData.CONTEUDO;
-import static br.gov.servicos.fixtures.TestData.CONTEUDO_DE_SERVICO;
-import static br.gov.servicos.fixtures.TestData.SERVICO;
+import static br.gov.servicos.fixtures.TestData.*;
+import static java.util.Collections.emptyList;
+import static java.util.Optional.empty;
 import static java.util.Optional.of;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertThat;
 
 @WebAppConfiguration
@@ -33,13 +36,13 @@ public class BuscadorConteudoIntegrationTest {
     GuiaDeServicosIndex guiaDeServicosIndex;
 
     @Autowired
-    ServicoRepository servicoRepository;
+    ServicoRepository servicos;
 
     @Autowired
-    ConteudoRepository conteudoRepository;
+    ConteudoRepository conteudos;
 
     @Autowired
-    BuscadorConteudo   buscadorConteudo;
+    BuscadorConteudo buscador;
 
     @Before
     public void setUp() throws Exception {
@@ -48,10 +51,10 @@ public class BuscadorConteudoIntegrationTest {
 
     @Test
     public void deveInserirUmServicoEUmConteudoERetornarDoisConteudos() throws Exception {
-        servicoRepository.save(SERVICO);
-        conteudoRepository.save(CONTEUDO);
+        servicos.save(SERVICO);
+        conteudos.save(CONTEUDO);
 
-        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
+        List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
         assertThat(conteudos, hasSize(2));
         assertThat(conteudos, hasItem(CONTEUDO));
@@ -60,11 +63,11 @@ public class BuscadorConteudoIntegrationTest {
 
     @Test
     public void deveRetornarApenasConteudosQueTenhamAPalavraDescricao() throws Exception {
-        servicoRepository.save(SERVICO);
-        servicoRepository.save(new Servico().withTitulo("Um titulo").withDescricao("Texto"));
-        conteudoRepository.save(new Conteudo().withTitulo("Titulo de conteudo").withConteudo("Conteudo"));
+        servicos.save(SERVICO);
+        servicos.save(new Servico().withTitulo("Um titulo").withDescricao("Texto"));
+        conteudos.save(new Conteudo().withTitulo("Titulo de conteudo").withConteudo("Conteudo"));
 
-        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
+        List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
         assertThat(conteudos, hasSize(1));
         assertThat(conteudos.get(0).getConteudo(), is("Descrição serviço"));
@@ -72,19 +75,19 @@ public class BuscadorConteudoIntegrationTest {
 
     @Test
     public void deveAcharSemAcentuacao() throws Exception {
-        servicoRepository.save(new Servico().withTitulo("Um titulo").withDescricao("Descricao"));
+        servicos.save(new Servico().withTitulo("Um titulo").withDescricao("Descricao"));
 
-        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
+        List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
         assertThat(conteudos, hasSize(1));
         assertThat(conteudos.get(0).getConteudo(), is("Descricao"));
     }
 
     @Test
     public void buscaSemelhante() throws Exception {
-        servicoRepository.save(SERVICO);
-        servicoRepository.save(new Servico().withTitulo("Titulo de servico").withDescricao("Texto"));
+        servicos.save(SERVICO);
+        servicos.save(new Servico().withTitulo("Titulo de servico").withDescricao("Texto"));
 
-        List<Conteudo> conteudos = buscadorConteudo.buscaSemelhante(of("ervic"));
+        List<Conteudo> conteudos = buscador.buscaSemelhante(of("ervic"));
 
         assertThat(conteudos, hasSize(2));
         assertThat(conteudos, hasItem(CONTEUDO_DE_SERVICO));
@@ -95,15 +98,40 @@ public class BuscadorConteudoIntegrationTest {
                 .withConteudo("Texto")));
     }
 
+
+    @Test
+    public void deveConsiderarTermoDeBuscaVazioComoEmpty() throws Exception {
+        Page<Conteudo> resultados = buscador.busca(of(""), 0);
+        assertThat(resultados.getContent(), is(emptyList()));
+    }
+
+    @Test
+    public void retornaUmaListaVaziaQuandoNaoHouverTermoDeBusca() throws Exception {
+        Page<Conteudo> resultados = buscador.busca(empty(), 0);
+        assertThat(resultados.getContent(), is(emptyList()));
+    }
+
     @Test
     public void deveConterTipoConteudo() throws Exception {
-        servicoRepository.save(SERVICO);
-        conteudoRepository.save(CONTEUDO);
+        servicos.save(SERVICO);
+        conteudos.save(CONTEUDO);
 
-        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
+        List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
         assertThat(conteudos, hasSize(2));
         assertThat(conteudos, hasItem(CONTEUDO_DE_SERVICO));
         assertThat(conteudos, hasItem(CONTEUDO));
+    }
+
+    @Test
+    public void buscaPorTermosComErrosDeDigitacao() {
+        servicos.save(SERVICO
+                .withId("passaporte")
+                .withTitulo("Passaporte")
+                .withDescricao("Emissão de passaportes"));
+
+        Iterable<Conteudo> busca = buscador.busca(of("passaprote"), 0);
+        Conteudo resultado = busca.iterator().next();
+        assertThat(resultado.getId(), is("passaporte"));
     }
 }

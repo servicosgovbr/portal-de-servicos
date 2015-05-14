@@ -28,22 +28,11 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Buscador {
 
     private static final FacetedPageImpl<Servico> SEM_RESULTADOS = new FacetedPageImpl<>(emptyList());
-    private static final int PAGE_SIZE = 20;
-
     ServicoRepository servicos;
 
     @Autowired
     Buscador(ServicoRepository servicos) {
         this.servicos = servicos;
-    }
-
-    Page<Servico> busca(Optional<String> termoBuscado, Integer paginaAtual) {
-        log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
-        return executaQuery(termoBuscado, paginaAtual, q -> disMaxQuery()
-                .add(simpleQueryString(q))
-                .add(boolQuery()
-                        .should(fuzzy(q, "titulo", 1.0f))
-                        .should(fuzzy(q, "descricao", 0.9f))));
     }
 
     public List<Servico> buscaPor(String campo, Optional<String> termoBuscado) {
@@ -54,22 +43,8 @@ public class Buscador {
         return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery(campos).likeText(termo));
     }
 
-    private FuzzyQueryBuilder fuzzy(String q, String field, float boost) {
-        return fuzzyQuery(field, q)
-                .boost(boost)
-                .fuzziness(TWO)
-                .prefixLength(0)
-                .transpositions(true);
-    }
-
     private List<Servico> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
         return executaQuery(termoBuscado, 0, MAX_VALUE, criaQuery).getContent();
-    }
-
-    private Page<Servico> executaQuery(Optional<String> termoBuscado, Integer paginaAtual,
-                                       Function<String, QueryBuilder> criaQuery) {
-
-        return executaQuery(termoBuscado, paginaAtual, PAGE_SIZE, criaQuery);
     }
 
     private Page<Servico> executaQuery(Optional<String> termoBuscado, Integer paginaAtual,
