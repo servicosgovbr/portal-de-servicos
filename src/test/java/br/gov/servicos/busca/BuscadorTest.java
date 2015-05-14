@@ -11,6 +11,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 
+import static br.gov.servicos.fixtures.TestData.CONTEUDO_DE_SERVICO;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
@@ -44,12 +45,12 @@ public class BuscadorTest {
 
     @Test
     public void buscaPorParteDoServico() {
-        assertThat(buscador.buscaPor("areaDeInteresse", of("qualquer interesse")), hasItem(SERVICO));
+        assertThat(buscador.buscaServicosPor("areaDeInteresse", of("qualquer interesse")), hasItem(SERVICO));
     }
 
     @Test
     public void buscaPorSemelhanca() {
-        assertThat(buscador.buscaSemelhante(of("qualquer interesse"), "campos.para", "buscar"), hasItem(SERVICO));
+        assertThat(buscador.buscaSemelhante(of("qualquer interesse"), "campos.para", "buscar"), hasItem(CONTEUDO_DE_SERVICO));
     }
 
 }

@@ -38,8 +38,8 @@
         </span>
 
         <ul layout:fragment="conteudo" class="servicos-a-z">
-            <li th:each="servico : ${servicos}">
-                <span th:replace="fragments/resultado-busca-servico"></span>
+            <li th:each="conteudo : ${servicos}">
+                <span th:replace="fragments/resultado-busca-item"></span>
             </li>
         </ul>
     </div>

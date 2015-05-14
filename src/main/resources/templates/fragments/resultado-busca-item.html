@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h3>
+    <a th:href="@{/{tipo}/{id}(id=${conteudo.id},tipo=${conteudo.tipoConteudo})}" th:text="${conteudo.titulo}">
+        Título do do conteúdo
+    </a>
+</h3>
+
+<p th:text="${#strings.abbreviate(conteudo.conteudo, 140)}">
+    Conteúdo principal
+</p>
+
+</body>
+</html>

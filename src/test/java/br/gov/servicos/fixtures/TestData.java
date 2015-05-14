@@ -32,8 +32,8 @@ public class TestData {
 
     public static final Conteudo CONTEUDO_DE_SERVICO = new Conteudo()
             .withId(SERVICO.getId())
-            .withTipoConteudo("servico")
             .withTitulo(SERVICO.getTitulo())
+            .withTipoConteudo("servico")
             .withConteudo(SERVICO.getDescricao());
 
     public static final ConteudoHtml CONTEUDO_HTML = new ConteudoHtml()

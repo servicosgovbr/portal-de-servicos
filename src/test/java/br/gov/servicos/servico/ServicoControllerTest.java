@@ -1,5 +1,6 @@
 package br.gov.servicos.servico;
 
+import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -62,8 +63,8 @@ public class ServicoControllerTest {
                 .when(servicos)
                 .findAll(new Sort(ASC, "titulo"));
 
-        assertModelAttributeValue(controller.todos(null), "servicos", singletonList(servicoA));
-        assertModelAttributeValue(controller.todos('B'), "servicos", singletonList(servicoB));
+        assertModelAttributeValue(controller.todos(null), "servicos", singletonList(new Conteudo().withTipoConteudo("servico").withTitulo("A")));
+        assertModelAttributeValue(controller.todos('B'), "servicos", singletonList(new Conteudo().withTipoConteudo("servico").withTitulo("B")));
     }
 
     @Test

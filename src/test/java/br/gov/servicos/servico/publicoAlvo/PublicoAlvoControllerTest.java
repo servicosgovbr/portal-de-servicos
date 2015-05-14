@@ -32,7 +32,7 @@ public class PublicoAlvoControllerTest {
                 SERVICO.withTitulo("XXXX"),
                 SERVICO.withTitulo("AAAA")
         )).when(buscador)
-                .buscaPor("publicosAlvo.id", of("servicos-aos-cidadaos"));
+                .buscaServicosPor("publicosAlvo.id", of("servicos-aos-cidadaos"));
 
         publicosAlvo = new PublicoAlvoController(buscador);
     }

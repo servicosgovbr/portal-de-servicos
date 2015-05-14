@@ -1,8 +1,8 @@
 package br.gov.servicos.servico.linhaDaVida;
 
 import br.gov.servicos.busca.Buscador;
+import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.Markdown;
-import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,8 +13,8 @@ import org.springframework.core.io.ClassPathResource;
 
 import java.util.List;
 
+import static br.gov.servicos.fixtures.TestData.CONTEUDO;
 import static br.gov.servicos.fixtures.TestData.CONTEUDO_HTML;
-import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
@@ -34,7 +34,7 @@ public class LinhaDaVidaControllerTest {
     @Mock
     Markdown markdown;
 
-    List<Servico> umServico = singletonList(SERVICO);
+    List<Conteudo> umConteudo = singletonList(CONTEUDO);
     LinhaDaVidaController controller;
 
     @Before
@@ -46,11 +46,11 @@ public class LinhaDaVidaControllerTest {
     public void exibicaoDeLinhaDaVidaRetornaServicos() {
         given(markdown.toHtml(anyObject())).willReturn(CONTEUDO_HTML);
 
-        doReturn(umServico)
+        doReturn(umConteudo)
                 .when(buscador)
-                .buscaPor("linhasDaVida.id", of("Aposentar-se"));
+                .buscaConteudosPor("linhasDaVida.id", of("Aposentar-se"));
 
-        assertCompareListModelAttribute(controller.linhaDaVida("Aposentar-se"), "resultados", umServico);
+        assertCompareListModelAttribute(controller.linhaDaVida("Aposentar-se"), "resultados", umConteudo);
     }
 
     @Test

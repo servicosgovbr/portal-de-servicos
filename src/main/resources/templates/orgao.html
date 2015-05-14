@@ -79,7 +79,7 @@
 
     <ul id="resultados-linhadavida">
         <li th:each="resultado : ${resultados}">
-            <span th:replace="fragments/resultado-busca-servico(servico=${resultado})">
+            <span th:replace="fragments/resultado-busca-item(conteudo=${resultado})">
                 (bloco de resultado de busca)
             </span>
         </li>

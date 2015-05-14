@@ -1,5 +1,6 @@
 package br.gov.servicos.servico;
 
+import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,11 @@ class ServicoController {
         model.put("servicos", servicosPorLetra.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
                 .stream()
                 .sorted((x, y) -> x.getId().compareTo(y.getId()))
+                .map(s -> new Conteudo()
+                        .withId(s.getId())
+                        .withTipoConteudo("servico")
+                        .withTitulo(s.getTitulo())
+                        .withConteudo(s.getDescricao()))
                 .collect(toList()));
 
         model.put("letras",

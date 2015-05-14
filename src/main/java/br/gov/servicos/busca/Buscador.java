@@ -1,10 +1,10 @@
 package br.gov.servicos.busca;
 
+import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.index.query.FuzzyQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,9 +18,10 @@ import java.util.function.Function;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;
+import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
-import static org.elasticsearch.common.unit.Fuzziness.TWO;
-import static org.elasticsearch.index.query.QueryBuilders.*;
+import static org.elasticsearch.index.query.QueryBuilders.fuzzyLikeThisQuery;
+import static org.elasticsearch.index.query.QueryBuilders.termQuery;
 
 @Component
 @Slf4j
@@ -35,16 +36,30 @@ public class Buscador {
         this.servicos = servicos;
     }
 
-    public List<Servico> buscaPor(String campo, Optional<String> termoBuscado) {
+    public List<Conteudo> buscaConteudosPor(String campo, Optional<String> termoBuscado) {
+        return paraConteudo(buscaServicosPor(campo, termoBuscado));
+    }
+
+    public List<Servico> buscaServicosPor(String campo, Optional<String> termoBuscado) {
         return executaQuery(termoBuscado, termo -> termQuery(campo, termo));
     }
 
-    public List<Servico> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
-        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery(campos).likeText(termo));
+    public List<Conteudo> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
+        return paraConteudo(executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery(campos).likeText(termo)));
     }
 
     private List<Servico> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
         return executaQuery(termoBuscado, 0, MAX_VALUE, criaQuery).getContent();
+    }
+
+    private List<Conteudo> paraConteudo(List<Servico> buscados) {
+        return buscados.stream()
+                .map(s -> new Conteudo()
+                        .withId(s.getId())
+                        .withTitulo(s.getTitulo())
+                        .withTipoConteudo("servico")
+                        .withConteudo(s.getDescricao()))
+                .collect(toList());
     }
 
     private Page<Servico> executaQuery(Optional<String> termoBuscado, Integer paginaAtual,

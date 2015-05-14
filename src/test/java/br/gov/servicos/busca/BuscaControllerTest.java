@@ -1,10 +1,7 @@
 package br.gov.servicos.busca;
 
-import br.gov.servicos.cms.ConteudoRepository;
-import br.gov.servicos.servico.Servico;
-import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.cms.Conteudo;
 import lombok.experimental.FieldDefaults;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,15 +10,13 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.domain.Page;
 import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 
-import static br.gov.servicos.fixtures.TestData.SERVICO;
-import static java.util.Collections.emptyList;
+import static br.gov.servicos.fixtures.TestData.CONTEUDO;
 import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
 import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
@@ -32,26 +27,14 @@ import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 public class BuscaControllerTest {
 
     @Mock
-    ServicoRepository servicos;
-    @Mock
-    ConteudoRepository conteudos;
+    BuscadorConteudo buscador;
 
-    @Mock
-    Buscador buscador;
-
-    Page<Servico> umServico = new FacetedPageImpl<>(singletonList(SERVICO));
+    Page<Conteudo> umConteudo = new FacetedPageImpl<>(singletonList(CONTEUDO));
     BuscaController controller;
 
     @Before
     public void setUp() {
-        doReturn(emptyList())
-                .when(servicos)
-                .search(any(QueryBuilder.class));
-        doReturn(emptyList())
-                .when(conteudos)
-                .search(any(QueryBuilder.class));
-
-        controller = new BuscaController(buscador, conteudos);
+        controller = new BuscaController(buscador);
     }
 
     @Test
@@ -66,11 +49,11 @@ public class BuscaControllerTest {
 
     @Test
     public void buscaRetornaResultadosParaAPagina() {
-        doReturn(umServico)
+        doReturn(umConteudo)
                 .when(buscador)
                 .busca(of("emprego"), 0);
 
-        assertModelAttributeValue(controller.busca("emprego", 1), "resultados", umServico);
+        assertModelAttributeValue(controller.busca("emprego", 1), "resultados", umConteudo);
     }
 
     @Test
@@ -81,9 +64,9 @@ public class BuscaControllerTest {
 
     @Test
     public void retornaSugestoesDeBusca() throws Exception {
-        doReturn(singletonList(SERVICO.withTitulo("Seguro-desemprego")))
+        doReturn(singletonList(CONTEUDO.withTitulo("Seguro-desemprego")))
                 .when(buscador)
-                .buscaSemelhante(ofNullable("empreg"), "titulo", "descricao");
+                .buscaSemelhante(ofNullable("empreg"));
 
         String sugestao = controller.sugestao("empreg");
 
