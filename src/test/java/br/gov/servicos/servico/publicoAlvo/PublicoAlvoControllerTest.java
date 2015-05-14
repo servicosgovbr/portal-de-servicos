@@ -69,7 +69,7 @@ public class PublicoAlvoControllerTest {
     @Test
     public void deveFiltrarPelaLetraInformada() {
         assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", 'X'), "servicos",
-                singletonList(SERVICO.withTitulo("XXXX")));
+                singletonList(Conteudo.fromServico(SERVICO.withTitulo("XXXX"))));
     }
 
 }
