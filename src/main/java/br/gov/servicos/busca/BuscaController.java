@@ -45,8 +45,8 @@ class BuscaController {
 
     @ResponseStatus(MOVED_PERMANENTLY)
     @RequestMapping("/search")
-    String search(@RequestParam(required = true) String SearchableText) {
-        return format("redirect:/busca?q=%s", ofNullable(SearchableText).orElse(""));
+    String search(@RequestParam(value = "SearchableText", required = true) String q) {
+        return format("redirect:/busca?q=%s", ofNullable(q).orElse(""));
     }
 
     @RequestMapping(value = "/sugestao", produces = "application/json")

@@ -72,4 +72,9 @@ public class BuscaControllerTest {
 
         assertThat(sugestao, is("[\"empreg\", [\"Seguro-desemprego\"]]"));
     }
+
+    @Test
+    public void deveRedirecionarEmUrlsDeBuscaLegada() {
+        assertThat(controller.search("blah"), is("redirect:/busca?q=blah"));
+    }
 }
