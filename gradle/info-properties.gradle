@@ -1,0 +1,26 @@
+import java.text.DateFormat
+
+task writeInfoPropertiesFile(dependsOn: [processResources]) {
+    ext.outputFile = file("${sourceSets.main.output.resourcesDir}/application.properties")
+
+    doLast() {
+        new Properties(
+                'info.build': System.getenv('SNAP_PIPELINE_COUNTER') ?: 'unknown',
+                'info.time': new Date().toString()
+        ).store(new BufferedWriter(new FileWriter(outputFile)) {
+            public void write(String s, int off, int len) throws IOException {
+                if (s.startsWith("#")) {
+                    // suppress printing a timestamp in the properties file so Gradle can evaluate whether the
+                    // file's actual contents have changed and allow for skipping the `jar` task if they have not
+                    return
+                }
+                super.write(s, off, len)
+            }
+        }, null)
+    }
+}
+jar.inputs.file writeInfoPropertiesFile.outputFile
+jar.dependsOn writeInfoPropertiesFile
+
+run.dependsOn writeInfoPropertiesFile
+bootRun.dependsOn writeInfoPropertiesFile

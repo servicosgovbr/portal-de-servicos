@@ -34,6 +34,7 @@ buildscript {
 }
 
 apply from: "${rootProject.rootDir}/gradle/dependencies.gradle"
+apply from: "${rootProject.rootDir}/gradle/info-properties.gradle"
 apply from: "${rootProject.rootDir}/gradle/git-properties.gradle"
 apply from: "${rootProject.rootDir}/gradle/rpm.gradle"
 apply from: "${rootProject.rootDir}/gradle/vagrant-deploy.gradle"
