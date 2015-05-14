@@ -47,11 +47,7 @@ class ServicoController {
         model.put("servicos", servicosPorLetra.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
                 .stream()
                 .sorted((x, y) -> x.getId().compareTo(y.getId()))
-                .map(s -> new Conteudo()
-                        .withId(s.getId())
-                        .withTipoConteudo("servico")
-                        .withTitulo(s.getTitulo())
-                        .withConteudo(s.getDescricao()))
+                .map(Conteudo::fromServico)
                 .collect(toList()));
 
         model.put("letras",

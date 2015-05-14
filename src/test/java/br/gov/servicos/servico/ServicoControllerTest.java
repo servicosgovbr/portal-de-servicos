@@ -63,8 +63,8 @@ public class ServicoControllerTest {
                 .when(servicos)
                 .findAll(new Sort(ASC, "titulo"));
 
-        assertModelAttributeValue(controller.todos(null), "servicos", singletonList(new Conteudo().withTipoConteudo("servico").withTitulo("A")));
-        assertModelAttributeValue(controller.todos('B'), "servicos", singletonList(new Conteudo().withTipoConteudo("servico").withTitulo("B")));
+        assertModelAttributeValue(controller.todos(null), "servicos", singletonList(Conteudo.fromServico(servicoA)));
+        assertModelAttributeValue(controller.todos('B'), "servicos", singletonList(Conteudo.fromServico(servicoB)));
     }
 
     @Test

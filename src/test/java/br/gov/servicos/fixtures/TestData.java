@@ -30,11 +30,7 @@ public class TestData {
             .withLinhasDaVida(singletonList(new LinhaDaVida().withId("4").withTitulo("Linha da Vida")))
             .withEventosDasLinhasDaVida(singletonList("Eventos das Linhas da Vida"));
 
-    public static final Conteudo CONTEUDO_DE_SERVICO = new Conteudo()
-            .withId(SERVICO.getId())
-            .withTitulo(SERVICO.getTitulo())
-            .withTipoConteudo("servico")
-            .withConteudo(SERVICO.getDescricao());
+    public static final Conteudo CONTEUDO_DE_SERVICO = Conteudo.fromServico(SERVICO);
 
     public static final ConteudoHtml CONTEUDO_HTML = new ConteudoHtml()
             .withId("pagina")

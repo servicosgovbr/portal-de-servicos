@@ -54,11 +54,7 @@ public class Buscador {
 
     private List<Conteudo> paraConteudo(List<Servico> buscados) {
         return buscados.stream()
-                .map(s -> new Conteudo()
-                        .withId(s.getId())
-                        .withTitulo(s.getTitulo())
-                        .withTipoConteudo("servico")
-                        .withConteudo(s.getDescricao()))
+                .map(Conteudo::fromServico)
                 .collect(toList());
     }
 
