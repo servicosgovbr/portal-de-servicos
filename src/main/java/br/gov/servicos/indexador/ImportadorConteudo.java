@@ -53,6 +53,7 @@ public class ImportadorConteudo {
     private Conteudo paraConteudo(LinhaDaVida linhaDaVida) {
         return new Conteudo()
                 .withId(linhaDaVida.getId())
+                .withTipoConteudo("linha-da-vida")
                 .withTitulo(linhaDaVida.getTitulo())
                 .withConteudo(conteudo(format("/conteudo/linhas-da-vida/%s.md", linhaDaVida.getId())));
     }
@@ -60,6 +61,7 @@ public class ImportadorConteudo {
     private Conteudo paraConteudo(Orgao orgao) {
         return new Conteudo()
                 .withId(orgao.getId())
+                .withTipoConteudo("orgao")
                 .withTitulo(orgao.getNome())
                 .withConteudo(conteudo(format("/conteudo/orgaos/%s.md", orgao.getId())));
     }
