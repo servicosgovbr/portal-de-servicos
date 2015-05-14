@@ -18,6 +18,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.CONTEUDO;
+import static br.gov.servicos.fixtures.TestData.CONTEUDO_DE_SERVICO;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Optional.of;
 import static org.hamcrest.Matchers.*;
@@ -53,8 +54,8 @@ public class BuscadorConteudoIntegrationTest {
         List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
 
         assertThat(conteudos, hasSize(2));
-        assertThat(conteudos.get(0).getConteudo(), is("Descrição conteúdo"));
-        assertThat(conteudos.get(1).getConteudo(), is("Descrição serviço"));
+        assertThat(conteudos, hasItem(CONTEUDO));
+        assertThat(conteudos, hasItem(CONTEUDO_DE_SERVICO));
     }
 
     @Test
@@ -86,8 +87,23 @@ public class BuscadorConteudoIntegrationTest {
         List<Conteudo> conteudos = buscadorConteudo.buscaSemelhante(of("ervic"));
 
         assertThat(conteudos, hasSize(2));
-        assertThat(conteudos, hasItem(new Conteudo().withId("titulo").withTitulo(SERVICO.getTitulo()).withConteudo(SERVICO.getDescricao())));
-        assertThat(conteudos, hasItem(new Conteudo().withId("titulo-de-servico").withTitulo("Titulo de servico").withConteudo("Texto")));
+        assertThat(conteudos, hasItem(CONTEUDO_DE_SERVICO));
+        assertThat(conteudos, hasItem(new Conteudo()
+                .withId("titulo-de-servico")
+                .withTitulo("Titulo de servico")
+                .withTipoConteudo("servico")
+                .withConteudo("Texto")));
     }
 
+    @Test
+    public void deveConterTipoConteudo() throws Exception {
+        servicoRepository.save(SERVICO);
+        conteudoRepository.save(CONTEUDO);
+
+        List<Conteudo> conteudos = ((FacetedPageImpl) buscadorConteudo.busca(of("Descrição"), 0)).getContent();
+
+        assertThat(conteudos, hasSize(2));
+        assertThat(conteudos, hasItem(CONTEUDO_DE_SERVICO));
+        assertThat(conteudos, hasItem(CONTEUDO));
+    }
 }

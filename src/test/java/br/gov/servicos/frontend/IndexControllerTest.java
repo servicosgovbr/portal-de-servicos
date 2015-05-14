@@ -119,8 +119,8 @@ public class IndexControllerTest {
 
     @Test
     public void deveFiltrarFiltrarServicosIguais() {
-        doReturn(singletonList("1")).when(destaques).getServicos();
-        doReturn(SERVICO).when(servicos).findOne("1");
+        doReturn(singletonList("titulo")).when(destaques).getServicos();
+        doReturn(SERVICO).when(servicos).findOne("titulo");
 
         assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
     }

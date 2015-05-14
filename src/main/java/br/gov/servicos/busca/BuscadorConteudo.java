@@ -5,6 +5,7 @@ import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.index.query.QueryBuilder;
+import org.elasticsearch.search.SearchHitField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,6 +15,7 @@ import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilde
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Stream;
@@ -33,7 +35,6 @@ public class BuscadorConteudo {
 
     private static final FacetedPageImpl<Conteudo> SEM_RESULTADOS = new FacetedPageImpl<>(emptyList());
     private static final int PAGE_SIZE = 20;
-
 
     ElasticsearchTemplate et;
     private Slugify slugify;
@@ -74,13 +75,17 @@ public class BuscadorConteudo {
                         new NativeSearchQueryBuilder()
                                 .withIndices(GDS_IMPORTADOR)
                                 .withTypes("conteudo", "servico")
-                                .withFields("titulo", "conteudo", "descricao")
+                                .withFields("tipoConteudo", "titulo", "conteudo", "descricao")
                                 .withPageable(pageable)
                                 .withQuery(q)
                                 .build(),
                         r -> new FacetedPageImpl<>(Stream.of(r.getHits().getHits())
                                 .map(h -> new Conteudo()
                                         .withId(slugify.slugify(h.field("titulo").value()))
+                                        .withTipoConteudo((String) Optional.ofNullable(h.field("tipoConteudo"))
+                                                .filter(Objects::nonNull)
+                                                .map(SearchHitField::value)
+                                                .orElse("servico"))
                                         .withTitulo(h.field("titulo").value())
                                         .withConteudo(Optional.ofNullable(h.field("descricao"))
                                                 .orElse(h.field("conteudo"))

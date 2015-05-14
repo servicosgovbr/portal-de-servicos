@@ -17,7 +17,7 @@ import static java.util.Collections.singletonList;
 public class TestData {
 
     public static final Servico SERVICO = new Servico()
-            .withId("1")
+            .withId("titulo")
             .withTitulo("Título")
             .withDescricao("Descrição serviço")
             .withUrl("url://site")
@@ -30,14 +30,21 @@ public class TestData {
             .withLinhasDaVida(singletonList(new LinhaDaVida().withId("4").withTitulo("Linha da Vida")))
             .withEventosDasLinhasDaVida(singletonList("Eventos das Linhas da Vida"));
 
+    public static final Conteudo CONTEUDO_DE_SERVICO = new Conteudo()
+            .withId(SERVICO.getId())
+            .withTipoConteudo("servico")
+            .withTitulo(SERVICO.getTitulo())
+            .withConteudo(SERVICO.getDescricao());
+
     public static final ConteudoHtml CONTEUDO_HTML = new ConteudoHtml()
             .withId("pagina")
             .withTitulo("Título")
             .withHtml("<h1>Título</h1>\n\nConteúdo");
 
     public static final Conteudo CONTEUDO = new Conteudo()
-            .withId("pagina")
-            .withTitulo("Título")
+            .withId("pagina-orgao")
+            .withTipoConteudo("orgao")
+            .withTitulo("Página órgão")
             .withConteudo("Descrição conteúdo");
 
     public static final Opiniao OPINIAO = new Opiniao()

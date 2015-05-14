@@ -26,7 +26,10 @@ public class Conteudo {
     @Field(store = true, type = String)
     String conteudo;
 
+    @Field(store = true, type = String)
+    String tipoConteudo;
+
     public Conteudo() {
-        this(null, null, null);
+        this(null, null, null, null);
     }
 }
