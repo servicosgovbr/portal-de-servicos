@@ -74,6 +74,11 @@ public class BuscaControllerTest {
     }
 
     @Test
+    public void deveExibirXmlDoOpenSearch() {
+        assertThat(controller.openSearch().getViewName(), is("opensearch"));
+    }
+
+    @Test
     public void deveRedirecionarEmUrlsDeBuscaLegada() {
         assertThat(controller.search("blah"), is("redirect:/busca?q=blah"));
     }
