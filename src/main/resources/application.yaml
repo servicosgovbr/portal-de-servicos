@@ -109,7 +109,6 @@ gds:
       ministerio-do-trabalho-e-emprego-mte: "Ministério do Trabalho e Emprego (MTE)"
       ministerio-do-turismo: "Ministério do Turismo (MTur)"
       ministerio-do-turismo-mtur: "Ministério do Turismo (MTur)"
-      municipio: "Município"
       receita-federal: "Secretaria da Receita Federal do Brasil (RFB)"
       receita-federal-do-brasil: "Secretaria da Receita Federal do Brasil (RFB)"
       receita-federal-do-brasil-rfb: "Secretaria da Receita Federal do Brasil (RFB)"
@@ -145,7 +144,6 @@ gds:
       ministerio-do-planejamento-orcamento-e-gestao-mpog: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
       ministerio-do-trabalho-e-emprego-mte: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-trabalho-e-emprego-mte
       ministerio-do-turismo-mtur: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-turismo-mtur
-      municipio: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds
       secretaria-da-receita-federal-do-brasil-rfb: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-fazenda-mf
       secretaria-de-aviacao-civil: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/secretaria-de-aviacao-civil-sac
       secretaria-de-planejamento-e-investimentos-estrategicos-spi: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
