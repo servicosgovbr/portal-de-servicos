@@ -1,11 +1,9 @@
 package br.gov.servicos.config;
 
 import br.gov.servicos.piwik.PiwikClient;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.SneakyThrows;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
+import lombok.experimental.Wither;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,24 +18,25 @@ import java.security.cert.X509Certificate;
 @Configuration
 @ConfigurationProperties("gds.piwik")
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Getter
+@Wither
+@Setter(/* usado pelo Spring */)
+@AllArgsConstructor
+@NoArgsConstructor
 public class PiwikConfig {
 
-    @Getter
-    @Setter(/* usado pelo Spring */)
+    Boolean enabled;
+
     String url;
 
-    @Getter
-    @Setter(/* usado pelo Spring */)
     String token;
 
-    @Getter
-    @Setter(/* usado pelo Spring */)
     int site;
 
     @Bean
-    public PiwikClient piwikClient() {
+    public PiwikClient piwikClient(PiwikConfig config) {
         trustSelfSignedSSL();
-        return new PiwikClient(new RestTemplate(), url, token, site);
+        return new PiwikClient(new RestTemplate(), config);
     }
 
     @SneakyThrows
@@ -56,5 +55,9 @@ public class PiwikConfig {
         };
         ctx.init(null, new TrustManager[]{tm}, null);
         SSLContext.setDefault(ctx);
+    }
+
+    public Boolean isEnabled() {
+        return getEnabled();
     }
 }
