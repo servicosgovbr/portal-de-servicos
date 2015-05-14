@@ -1,4 +1,4 @@
-package br.gov.servicos.indexador;
+package br.gov.servicos.importador;
 
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoRepository;
