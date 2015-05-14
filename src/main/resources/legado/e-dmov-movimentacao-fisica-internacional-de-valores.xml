@@ -10,7 +10,7 @@
                 <titulo>Presencial</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Unidades de atendimento ao Contribuinte</descricao>
-            <url>http://www.receita.fazenda.gov.br/Legislacao/LegisAssunto/e-DIMOV.htm</url>
+            <url><![CDATA[http://www.receita.fazenda.gov.br/Legislacao/LegisAssunto/e-DIMOV.htm]]></url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
