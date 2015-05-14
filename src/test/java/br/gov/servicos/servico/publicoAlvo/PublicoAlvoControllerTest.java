@@ -1,6 +1,7 @@
 package br.gov.servicos.servico.publicoAlvo;
 
 import br.gov.servicos.busca.Buscador;
+import br.gov.servicos.cms.Conteudo;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +46,7 @@ public class PublicoAlvoControllerTest {
     @Test
     public void deveRetornarOsServicosRelacionadosAoPublicoAlvo() {
         assertModelAttributeValue(publicosAlvo.publicoAlvo("servicos-aos-cidadaos", null), "servicos",
-                singletonList(SERVICO.withTitulo("AAAA")));
+                singletonList(Conteudo.fromServico(SERVICO.withTitulo("AAAA"))));
     }
 
     @Test

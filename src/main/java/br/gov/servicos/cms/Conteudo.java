@@ -1,5 +1,6 @@
 package br.gov.servicos.cms;
 
+import br.gov.servicos.servico.Servico;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 import lombok.experimental.Wither;
@@ -31,5 +32,13 @@ public class Conteudo {
 
     public Conteudo() {
         this(null, null, null, null);
+    }
+
+    public static Conteudo fromServico(Servico servico) {
+        return new Conteudo()
+                .withId(servico.getId())
+                .withTipoConteudo("servico")
+                .withTitulo(servico.getTitulo())
+                .withConteudo(servico.getDescricao());
     }
 }

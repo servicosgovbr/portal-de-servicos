@@ -1,8 +1,10 @@
 package br.gov.servicos.servico.publicoAlvo;
 
 import br.gov.servicos.busca.Buscador;
+import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +19,7 @@ import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
+@Slf4j
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class PublicoAlvoController {
@@ -35,9 +38,10 @@ class PublicoAlvoController {
         Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse('A');
         Map<Character, List<Servico>> servicosPorLetraInicial = servicosAgrupadosPorLetraInicial(id);
 
-        List<Servico> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
+        List<Conteudo> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
                 .stream()
                 .sorted((x, y) -> x.getId().compareTo(y.getId()))
+                .map(Conteudo::fromServico)
                 .collect(toList());
 
         Map<String, Object> model = new HashMap<>();
