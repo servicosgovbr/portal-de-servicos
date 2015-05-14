@@ -1,5 +1,5 @@
 <html xmlns:th="http://www.thymeleaf.org">
-<th:block th:unless="${servico.canaisDePrestacao.isEmpty() or (servico.canaisDePrestacao.size() == 1 and servico.canaisDePrestacao[0].tipo.equalsIgnoreCase('web'))}">
+<th:block th:unless="${servico.canaisDePrestacao.isEmpty()}">
 
     <h3>Canais</h3>
 

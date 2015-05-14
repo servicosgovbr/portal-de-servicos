@@ -21,6 +21,7 @@ import java.util.Objects;
 import java.util.function.Function;
 
 import static java.util.Arrays.stream;
+import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.common.base.Strings.isNullOrEmpty;
@@ -66,18 +67,24 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
 
     @SuppressWarnings("unchecked")
     private List<InformacaoUtil> informacoesUteis(ServicoType legado) {
-        return parser.parseExpression("informacoesUteis?.content?" +
+        return (List<InformacaoUtil>) parser.parseExpression("informacoesUteis?.content?" +
                 ".?[#this instanceof T(javax.xml.bind.JAXBElement)]" +
                 ".![new br.gov.servicos.servico.InformacaoUtil(value?.descricao.trim(), value?.tipoInformacaoUtil?.titulo.trim(), value?.url.trim())]")
-                .getValue(context(legado), List.class);
+                .getValue(context(legado), List.class)
+                .stream()
+                .filter(i -> !((InformacaoUtil) i).getUrl().equals(urlAgendamento(legado)))
+                .collect(toList());
     }
 
     @SuppressWarnings("unchecked")
     private List<CanalDePrestacao> canaisDePrestacao(ServicoType legado) {
-        return parser.parseExpression("canaisPrestacaoServico?.canalPrestacaoServico?.![" +
+        return (List<CanalDePrestacao>) parser.parseExpression("canaisPrestacaoServico?.canalPrestacaoServico?.![" +
                 "new br.gov.servicos.servico.CanalDePrestacao(descricao.trim(), tipoCanalPrestacaoServico?.titulo.trim(), url.trim())" +
                 "]")
-                .getValue(context(legado), List.class);
+                .getValue(context(legado), List.class)
+                .stream()
+                .filter(i -> !((CanalDePrestacao) i).getUrl().equals(url(legado)))
+                .collect(toList());
     }
 
     private String url(ServicoType servicoType) {
