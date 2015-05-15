@@ -12,7 +12,7 @@
                 <titulo>Presencial</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Unidades de atendimento ao Contribuinte</descricao>
-            <url>http://www.receita.fazenda.gov.br/atendcontrib/Atendimento/UnidAtendimento/centroAtendimento.htm</url>
+            <url><![CDATA[https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CB4QFjAA&url=http%3A%2F%2Fwww.receita.fazenda.gov.br%2Fpublico%2Fformularios%2FRequerimento_Prioridade_Pgto_Restituicao_PF.doc&ei=S_VQVajiLcHAggSJhIDACQ&usg=AFQjCNEbEB7b5AHTaZzFKZAVT4Yi-SM_Lg&sig2=YaZqZY9-8ctC34eMF709_Q]]></url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
