@@ -8,7 +8,6 @@ import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVidaRepository;
-import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +45,6 @@ public class ImportadorConteudo {
         this.conteudoRepository = conteudoRepository;
     }
 
-    @SneakyThrows
     public Iterable<Conteudo> importar() {
         List<Conteudo> conteudos = concat(concat(
                         orgaoRepository.findAll().stream().map(this::paraConteudo),
