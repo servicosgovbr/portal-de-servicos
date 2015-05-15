@@ -10,7 +10,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
-            <url>https://www.receita.fazenda.gov.br/PessoaJuridica/SIMPLES/PJ2008/programapJ2008.htm</url>
+            <url>http://hom.receita.fazenda.gov.br/Principal/Informacoes/InfoDeclara/declaraPJSimples.htm</url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
