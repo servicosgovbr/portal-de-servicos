@@ -14,8 +14,7 @@ ES_1_IP_ADDR="${2:-10.16.0.11}"
 ES_2_IP_ADDR="${3:-10.16.0.9}"
 
 # Endereço do piwik
-PIWIK_ADDR="${4:-10.16.0.181}"
-
+PIWIK_ADDR="${4:-http://10.16.0.181/}"
 
 echo 'Instalando novo Guia de Serviços...'
 yum remove -y guia-de-servicos
@@ -31,7 +30,7 @@ ENDPOINTS_ENABLED=true
 ENDPOINTS_HEALTH_SENSITIVE=false
 
 GDS_PIWIK_ENABLED=true
-GDS_PIWIK_URL="http://${PIWIK_ADDR}/"
+GDS_PIWIK_URL="${PIWIK_ADDR}"
 GDS_PIWIK_TOKEN=c0e024d9200b5705bc4804722636378a
 GDS_PIWIK_SITE=1
 EOF

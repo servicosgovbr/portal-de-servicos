@@ -56,7 +56,7 @@ frontend main *:80
     rspadd X-Frame-Options:\ DENY
     rspadd X-XSS-Protection:\ 0
     rspadd X-Content-Type-Options:\ nosniff
-    rspadd Content-Security-Policy:\ script-src:\ 'self'\ 'unsafe-inline'\ 'http://10.16.0.181:8084/'\ 'barra.brasil.gov.br';\ default-src:\ 'self'
+    rspadd Content-Security-Policy:\ script-src:\ 'self'\ 'unsafe-inline'\ 'http://10.16.0.181/'\ 'barra.brasil.gov.br';\ default-src:\ 'self'
 
 backend app
     balance roundrobin

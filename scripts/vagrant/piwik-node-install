@@ -25,9 +25,9 @@ hostname piwik
 echo 'Instalando servidor http...'
 yum install httpd php php-mysql -y
 
-echo 'Verificando instalação do MYSQL'
+echo 'Verificando instalação do MySQL'
 if [ "$(rpm -q mysql-community-release)" != "mysql-community-release-el7-5.noarch" ]; then
-  echo 'Baixando MYSQL...'
+  echo 'Baixando MySQL...'
   wget \
     --quiet \
     --no-cookies \
@@ -37,7 +37,7 @@ if [ "$(rpm -q mysql-community-release)" != "mysql-community-release-el7-5.noarc
     'http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm'
 
   if [ "$(sha1sum '/var/cache/wget/mysql-community-release-el7-5.noarch.rpm' | cut -f 1 -d ' ')" != "805876fade2062626f2db9aabfdce9cae500f1ca" ]; then
-    echo "MYSQL possui checksum incorreto. Verifique que o download foi concluído com sucesso."
+    echo "MySQL possui checksum incorreto. Verifique que o download foi concluído com sucesso."
     exit -1
   fi
 
@@ -49,10 +49,10 @@ fi
 echo 'Recarregando daemons...'
 systemctl daemon-reload
 
-echo 'Habilitando http e mysql para iniciar no boot...'
+echo 'Habilitando httpd e mysqld para iniciar no boot...'
 systemctl enable mysqld httpd
 
-echo 'Iniciando servidor http e mysql...'
+echo 'Iniciando httpd e mysqld...'
 systemctl start mysqld httpd
 
 echo 'Baixando Piwik...'
