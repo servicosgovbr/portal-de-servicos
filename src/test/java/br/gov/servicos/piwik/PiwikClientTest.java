@@ -32,7 +32,6 @@ public class PiwikClientTest {
     static final String AUTH_TOKEN = "authToken";
     static final String PIWIK_URL = "http://piwik";
 
-
     @Mock(answer = RETURNS_SMART_NULLS)
     RestTemplate restTemplate;
 
