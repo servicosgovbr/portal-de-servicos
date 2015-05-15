@@ -21,3 +21,47 @@ augtool set '/files/etc/sudoers/Defaults[*]/requiretty/negate' ''
 
 echo "Modificando hostname para '${1}'..."
 hostname $1
+
+cat <<-EOF > /etc/haproxy/haproxy.cfg
+global
+    log 127.0.0.1 local2
+    chroot /var/lib/haproxy
+    pidfile /var/run/haproxy.pid
+    maxconn 4000
+    user haproxy
+    group haproxy
+    daemon
+    stats socket /var/lib/haproxy/stats
+
+defaults
+    mode http
+    log global
+    option httplog
+    option dontlognull
+    option http-server-close
+    option forwardfor except 127.0.0.0/8
+    option redispatch
+    retries 3
+    timeout http-request 10s
+    timeout queue 1m
+    timeout connect 10s
+    timeout client 1m
+    timeout server 1m
+    timeout http-keep-alive 10s
+    timeout check 10s
+    maxconn 3000
+
+frontend main *:80
+    default_backend app
+    rspadd X-Frame-Options:\ DENY
+    rspadd X-XSS-Protection:\ 0
+    rspadd X-Content-Type-Options:\ nosniff
+    rspadd Content-Security-Policy:\ script-src:\ 'self'\ 'unsafe-inline'\ 'http://10.16.0.181:8084/'\ 'barra.brasil.gov.br';\ default-src:\ 'self'
+
+backend app
+    balance roundrobin
+    server app1 10.16.0.13:8080 check
+    server app2 10.16.0.12:8080 check
+EOF
+
+systemctl restart haproxy
