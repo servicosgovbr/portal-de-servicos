@@ -9,6 +9,11 @@
     margin: 10px 10px 10px 0px !important;
   }
 
+  @include tablet {
+    position: relative;
+    top: em(45);
+  }
+
   .voce-esta-aqui {
     color: $cinza-escuro;
   }
