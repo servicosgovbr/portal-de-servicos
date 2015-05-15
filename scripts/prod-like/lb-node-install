@@ -48,6 +48,7 @@ defaults
 frontend main *:80
     default_backend app
     rspadd X-Frame-Options:\ DENY
+    rspadd X-XSS-Protection:\ 0
 
 backend app
     balance roundrobin
