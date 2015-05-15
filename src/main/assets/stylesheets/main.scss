@@ -24,6 +24,12 @@
   }
 }
 
+.no-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
 #conteudo, .conteudo {
   @include span-columns(9);
   @include omega();
