@@ -1,7 +1,9 @@
 package br.gov.servicos.config;
 
 import org.apache.coyote.http11.AbstractHttp11Protocol;
+import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
+import org.springframework.boot.context.embedded.MimeMappings;
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,12 +22,15 @@ public class ServletContainerConfig {
             "text/plain",
             "application/json",
             "application/javascript",
+            "application/x-font-woff",
             "text/css"
     }, ',');
 
     @Bean
     public EmbeddedServletContainerCustomizer servletContainerCustomizer() {
         return servletContainer -> {
+            addMimeMappingsForFonts(servletContainer);
+
             TomcatEmbeddedServletContainerFactory container = (TomcatEmbeddedServletContainerFactory) servletContainer;
 
             container.setRegisterJspServlet(false);
@@ -40,6 +45,16 @@ public class ServletContainerConfig {
                     }
             );
         };
+    }
+
+    private void addMimeMappingsForFonts(ConfigurableEmbeddedServletContainer servletContainer) {
+        MimeMappings mappings = new MimeMappings(MimeMappings.DEFAULT);
+        mappings.add("eot", "application/vnd.ms-fontobject");
+        mappings.add("ttf", "application/font-sfnt");
+        mappings.add("otf", "application/font-sfnt");
+        mappings.add("woff", "application/font-woff");
+        mappings.add("woff2", "application/font-woff");
+        servletContainer.setMimeMappings(mappings);
     }
 
     @Bean
