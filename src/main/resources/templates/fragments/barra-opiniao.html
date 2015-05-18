@@ -1,13 +1,8 @@
-<div id="barra-opiniao" xmlns:th="http://www.thymeleaf.org">
-    <div th:unless="${#httpServletRequest.requestURI.startsWith('/opiniao')}">
-        <p>
-            <span class="no-mobile">Estamos trabalhando neste site e precisamos da sua ajuda para evoluir suas funções e conteúdo.</span>
-            <a th:href="@{/opiniao(url=${#httpServletRequest.requestURI}, ticket=${#httpServletRequest.getAttribute('req.ticket').substring(24)}, busca=${#httpServletRequest.queryString})}">
-                Dê a sua opinião e torne este site ainda melhor!
-            </a>
-        </p>
-    </div>
-    <p th:if="${#httpServletRequest.requestURI.startsWith('/opiniao')}">
-        &nbsp;
+<div id="barra-opiniao" xmlns:th="http://www.thymeleaf.org" th:unless="${#httpServletRequest.requestURI.startsWith('/opiniao')}">
+    <p>
+        <span class="no-mobile">Estamos trabalhando neste site e precisamos da sua ajuda para evoluir suas funções e conteúdo.</span>
+        <a th:href="@{/opiniao(url=${#httpServletRequest.requestURI}, ticket=${#httpServletRequest.getAttribute('req.ticket').substring(24)}, busca=${#httpServletRequest.queryString})}">
+            Dê a sua opinião e torne este site ainda melhor!
+        </a>
     </p>
 </div>

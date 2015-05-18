@@ -20,7 +20,7 @@
 
   #topo {
     @include outer-container;
-    margin-bottom: em(20);
+    padding-bottom: em(20);
 
     @include mobile-tablet {
       margin-left: $mobile-margin-left;
@@ -107,7 +107,7 @@
 
     a:hover {
       text-decoration: none;
-    }    
+    }
 
   }
 
@@ -173,11 +173,9 @@
   }
 
   #barra-opiniao {
-    div {
-      background-color: $azul-claro;
-      padding-left: $mobile-margin-left;
-      padding-right: $mobile-margin-right;
-    }
+    background-color: $azul-claro;
+    padding-left: $mobile-margin-left;
+    padding-right: $mobile-margin-right;
 
     p {
       @include outer-container(73.80em);
