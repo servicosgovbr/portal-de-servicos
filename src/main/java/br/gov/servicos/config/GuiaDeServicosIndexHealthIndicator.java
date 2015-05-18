@@ -45,7 +45,7 @@ public class GuiaDeServicosIndexHealthIndicator implements HealthIndicator {
             }
             return health;
         } catch (Exception e) {
-            return Health.down().withDetail(indice, "exception").withException(e);
+            return health.down().withDetail(indice, "exception").withException(e);
         }
     }
 }

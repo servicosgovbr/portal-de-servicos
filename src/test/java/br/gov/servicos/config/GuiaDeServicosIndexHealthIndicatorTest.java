@@ -55,4 +55,18 @@ public class GuiaDeServicosIndexHealthIndicatorTest {
         assertThat(health.getDetails().get(GDS_IMPORTADOR), is("missing"));
         assertThat(health.getDetails().get(GDS_PERSISTENTE), is("missing"));
     }
+
+    @Test
+    public void retornaDownParaExcecoes() throws Exception {
+        given(es.indexExists(GDS_IMPORTADOR)).willReturn(false);
+        given(es.indexExists(GDS_PERSISTENTE)).willThrow(new RuntimeException("boom"));
+
+        Health health = indicator.health();
+
+        assertThat(health.getStatus(), is(Status.DOWN));
+        assertThat(health.getDetails().get(GDS_PERSISTENTE), is("exception"));
+        assertThat(health.getDetails().get(GDS_PERSISTENTE), is("exception"));
+        assertThat(health.getDetails().get("error"), is("java.lang.RuntimeException: boom"));
+    }
+
 }
