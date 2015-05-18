@@ -56,11 +56,24 @@
     margin-top: 0;
   }
 
-  h3.titulo-home {
+p.titulo-bem-vindo {
+  color: $cinza-escuro;
+  font-family: open_sansbold, $helvetica;
+  font-size: em(35);
+  margin: -5px 0px 5px 0px;
+  line-height: 1.2em;
+  font-weight: bold;
+
+    @include mobile {
+    font-size: em(27);
+  }
+}
+
+  h2.titulo-home {
     font-family: "open_sansbold", $helvetica;
     font-size: em(25);
     line-height: 1.2em;
-    margin-bottom: 10px;
+    margin: 10px 0px 10px 0px;
   }
 
   h4 {

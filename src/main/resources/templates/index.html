@@ -13,13 +13,13 @@
 
 <section layout:fragment="corpo">
 
-    <div class="bem-vindo">
-        <header class="outstanding-header" th:utext="${@markdown.toHtml('/conteudo/bem-vindo-ao-guia.md').html}">
-        </header>
+    <div>
+        <p class="titulo-bem-vindo">Bem-vindo ao Guia de Serviços!</p>
+        <p>O objetivo deste ambiente é facilitar o acesso aos serviços prestados pelos diversos órgãos do Governo Federal. Aqui você poderá encontrar informações úteis, agendar um atendimento, entrar em contato com os órgãos e até começar um serviço.</p>
     </div>
 
     <div class="busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
-        <h3 class="titulo-home">O que você está procurando?</h3>
+        <h2 class="titulo-home">O que você está procurando?</h2>
         <form method="get" action="/busca">
             <input id="input-busca" type="search" name="q" value="" title="Buscar por assuntos, serviços ou órgãos" placeholder="Você pode pesquisar por assuntos, serviços, órgãos"/>
             <input type="submit" value="BUSCAR" class="acao-busca"/>
@@ -28,7 +28,7 @@
 
 
     <div class="auto-grid">
-        <h3 class="titulo-home">Serviços em destaque</h3>
+        <h2 class="titulo-home">Serviços em destaque</h2>
         <ul id="destaques" th:if="${!destaques.isEmpty()}">
             <th:block th:each="item : ${destaques}">
                 <li class="auto-cell">
