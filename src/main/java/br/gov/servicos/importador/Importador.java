@@ -1,7 +1,6 @@
-package br.gov.servicos;
+package br.gov.servicos.importador;
 
 import br.gov.servicos.config.GuiaDeServicosIndex;
-import br.gov.servicos.importador.ImportadorConteudo;
 import br.gov.servicos.legado.ImportadorLegado;
 import lombok.AccessLevel;
 import lombok.SneakyThrows;

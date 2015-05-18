@@ -1,4 +1,4 @@
-package br.gov.servicos;
+package br.gov.servicos.importador;
 
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;

@@ -1,5 +1,6 @@
 package br.gov.servicos;
 
+import br.gov.servicos.importador.Importador;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.junit.Test;
