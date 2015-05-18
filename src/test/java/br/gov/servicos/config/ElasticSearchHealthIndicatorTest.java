@@ -14,6 +14,7 @@ import static org.elasticsearch.action.admin.cluster.health.ClusterHealthStatus.
 import static org.elasticsearch.action.admin.cluster.health.ClusterHealthStatus.RED;
 import static org.elasticsearch.action.admin.cluster.health.ClusterHealthStatus.YELLOW;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Matchers.anyObject;
@@ -56,5 +57,14 @@ public class ElasticSearchHealthIndicatorTest {
 
         assertThat(indicator.health().getStatus(), is(Status.DOWN));
         assertThat(indicator.health().getDetails().get("status"), is(RED));
+    }
+
+    @Test
+    public void deveRetornarDownQuandoHáExceçãoConsultandoOCluster() throws Exception {
+        given(admin.cluster().health(anyObject()).actionGet().getStatus()).willThrow(new RuntimeException("boom"));
+
+        assertThat(indicator.health().getStatus(), is(Status.DOWN));
+        assertThat(indicator.health().getDetails().get("status"), is(nullValue()));
+        assertThat(indicator.health().getDetails().get("error"), is("java.lang.RuntimeException: boom"));
     }
 }
