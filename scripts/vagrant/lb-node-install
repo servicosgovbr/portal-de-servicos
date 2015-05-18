@@ -53,10 +53,12 @@ defaults
 
 frontend main *:80
     default_backend app
-    rspadd X-Frame-Options:\ DENY
-    rspadd X-XSS-Protection:\ 0
-    rspadd X-Content-Type-Options:\ nosniff
-    rspadd Content-Security-Policy:\ script-src:\ 'self'\ 'unsafe-inline'\ 'http://10.16.0.181/'\ 'barra.brasil.gov.br';\ default-src:\ 'self'
+    stats enable
+    stats hide-version
+    stats refresh 5s
+    stats show-node
+    stats auth guia-de-servicos:7621892f9a37e0e08812c07f8b70533f2c286297
+    stats uri /lb-stats
 
 backend app
     balance roundrobin
