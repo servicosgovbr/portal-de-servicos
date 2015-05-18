@@ -34,7 +34,7 @@
   @include span-columns(9);
   @include omega();
   clear: right;
-  line-height: 1.4em;
+  line-height: $baseLineHeight;
 
   @include mobile {
     margin-top: 15px;
@@ -52,7 +52,7 @@
     font-size: em(35);
     font-family: 'open_sansbold', $helvetica;
     color: $cinza-escuro;
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
     margin-top: 0;
   }
 
@@ -61,7 +61,7 @@
     font-family: open_sansbold, $helvetica;
     font-size: em(35);
     margin: -10px 0 5px 0;
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
     font-weight: bold;
 
     @include mobile {
@@ -72,7 +72,7 @@
   h2.titulo-home {
     font-family: "open_sansbold", $helvetica;
     font-size: em(25);
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
     margin: 10px 0 10px 0;
   }
 
@@ -84,7 +84,7 @@
     &.titulo-destaque {
       font-size: em(20);
       font-family: 'open_sanssemibold', $helvetica;
-      line-height: 1.4em;
+      line-height: $baseLineHeight;
       text-transform: none;
       margin-top: 0;
     }
@@ -93,7 +93,7 @@
   p, span, a {
     font-size: em(15);
     color: $cinza-escuro;
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
   }
 
   span.paginacao-busca {
@@ -189,13 +189,13 @@ dl.portlet {
     margin: 0 0 10px 0;
     border-bottom: none;
     text-transform: none;
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
   }
 
   h3 {
     margin-bottom: 5px;
     font-family: 'open_sansbold', $helvetica;
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
   }
 
   .tile-subtitle {
@@ -221,7 +221,7 @@ dl.portlet {
   .outstanding-title {
     margin-left: 0;
     margin-bottom: none;
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
   }
 }
 
@@ -388,7 +388,7 @@ span.ticket-erro {
     list-style-type: disc;
     color: $cinza-escuro;
     list-style-position: inside;
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
     margin-bottom: 10px;
     font-size: em(15);
 
@@ -440,7 +440,7 @@ ul#resultados-linhadavida {
     border-bottom: 1px solid $cinza-medio;
     padding-bottom: 20px;
     color: $cinza-escuro;
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
   }
 
   h3 {
@@ -456,7 +456,7 @@ ul#resultados-busca {
     border-bottom: 1px solid $cinza-medio;
     padding-bottom: 20px;
     color: $cinza-escuro;
-    line-height: 1.4em;
+    line-height: $baseLineHeight;
   }
 }
 

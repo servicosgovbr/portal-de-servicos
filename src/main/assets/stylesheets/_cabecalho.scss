@@ -183,7 +183,7 @@
       padding: 5px 0 5px 0;
       margin-bottom: 0;
       color: $branco;
-      line-height: 1.8em;
+      line-height: $baseLineHeight + 0.2em;
 
       a {
         color: $branco;
