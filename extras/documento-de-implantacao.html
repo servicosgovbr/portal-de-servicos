@@ -34,7 +34,7 @@
     
 
         
-    <div class="book" data-level="9.1" data-basepath=".." data-revision="Mon May 18 2015 18:37:23 GMT+0000 (UTC)">
+    <div class="book" data-level="9.1" data-basepath=".." data-revision="Mon May 18 2015 18:39:23 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1494,11 +1494,11 @@ ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
 <span class="hljs-comment">## Protocolo utilizado para envio de emails.</span>
 <span class="hljs-comment"># MAIL_PROTOCOL=smtp</span>
 
-<span class="hljs-comment">## Servidor de emails utilizado para envio.</span>
-<span class="hljs-comment"># MAIL_HOST=localhost</span>
+<span class="hljs-comment">## Servidor de emails utilizado para envio (mesmo IP do balanceador de carga, geralmente).</span>
+<span class="hljs-comment"># MAIL_HOST=10.16.0.10</span>
 
 <span class="hljs-comment">## Porta em que o Guia de Servi&#xE7;os deve se conectar ao servidor de emails.</span>
-<span class="hljs-comment"># MAIL_PORT=2500</span>
+<span class="hljs-comment"># MAIL_PORT=25</span>
 
 <span class="hljs-comment">## Timeout para estabelecimento de conex&#xF5;es e espera por atividade em uma conex&#xE3;o estabelecida, em milisegundos</span>
 <span class="hljs-comment"># MAIL_TIMEOUT=5000</span>
@@ -1520,7 +1520,6 @@ ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
 
 <span class="hljs-comment">## Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, a senha da conta a ser utilizada.</span>
 <span class="hljs-comment"># MAIL_PASSWORD=</span>
-
 </code></pre>
 
 <hr>
