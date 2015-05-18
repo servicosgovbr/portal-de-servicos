@@ -39,9 +39,11 @@ public class ElasticSearchHealthIndicator implements HealthIndicator {
             health.withDetail("status", response.getStatus())
                     .withDetail("nodes", response.getNumberOfNodes());
 
-            NodeInfo[] nodeInfos = client.cluster().nodesInfo(new NodesInfoRequest()).actionGet().getNodes();
-            for (int i = 0; i < nodeInfos.length; i++) {
-                health = health.withDetail("node-" + i, nodeInfos[i].getNode().getName());
+            if (response.getNumberOfNodes() > 0) {
+                NodeInfo[] nodeInfos = client.cluster().nodesInfo(new NodesInfoRequest()).actionGet().getNodes();
+                for (int i = 0; i < nodeInfos.length; i++) {
+                    health = health.withDetail("node-" + i, nodeInfos[i].getNode().getName());
+                }
             }
 
             return health.build();
