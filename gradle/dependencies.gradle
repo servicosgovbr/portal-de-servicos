@@ -18,11 +18,11 @@ sourceSets {
 dependencies {
     compile 'org.projectlombok:lombok:1.16.2'
     compile 'org.slf4j:slf4j-api:1.7.7'
-    compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    compile 'org.springframework.boot:spring-boot-starter-actuator'
-    compile 'org.springframework.boot:spring-boot-starter-mail'
-    compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+    compile 'org.springframework.boot:spring-boot-starter-web:1.2.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf:1.2.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-actuator:1.2.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-mail:1.2.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch:1.2.3.RELEASE'
     compile 'org.springframework:spring-context-support:4.1.6.RELEASE'
 
     compile 'com.google.guava:guava:11.0.2'
