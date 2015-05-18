@@ -6,7 +6,7 @@
   font-size: em(11);
 
   @include mobile {
-    margin: 10px 10px 10px 0px !important;
+    margin: 10px 10px 10px 0 !important;
   }
 
   @include tablet {

@@ -60,7 +60,7 @@
     color: $cinza-escuro;
     font-family: open_sansbold, $helvetica;
     font-size: em(35);
-    margin: -5px 0px 5px 0px;
+    margin: -5px 0 5px 0;
     line-height: 1.2em;
     font-weight: bold;
 
@@ -73,7 +73,7 @@
     font-family: "open_sansbold", $helvetica;
     font-size: em(25);
     line-height: 1.2em;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0 10px 0;
   }
 
   h4 {
@@ -109,7 +109,7 @@
 
   hr {
     margin-bottom: em(15);
-    border-bottom: 0px;
+    border-bottom: 0;
   }
 
   ul.resultados-busca {
@@ -296,7 +296,7 @@ dl.portlet {
       display: block;
       font-family: 'open_sansbold', $helvetica;
       font-size: 16px;
-      padding: 9px 0px 9px 0px;
+      padding: 9px 0 9px 0;
       border: none;
       border-radius: 4px;
     }
@@ -314,7 +314,7 @@ dl.portlet {
 
   > form {
       margin-bottom: em(30);
-      padding: 10px 0px 70px 0px;
+      padding: 10px 0 70px 0;
       border-radius: 4px;
 
     input[type='search'] {
@@ -347,7 +347,7 @@ dl.portlet {
       display: block;
       font-family: 'open_sansbold', $helvetica;
       font-size: 16px;
-      padding: 9px 0px 9px 0px;
+      padding: 9px 0 9px 0;
       border: none;
       border-radius: 4px;
     }
@@ -401,7 +401,7 @@ a.acao, button.acao, input[type="submit"].acao {
   padding: 8px 13px 8px 13px;
   background: $azul-claro;
   text-decoration: none;
-  margin: 10px 0px 30px 0px;
+  margin: 10px 0 30px 0;
   display: inline-block;
   color: $branco !important;
   border: none;
@@ -426,7 +426,7 @@ ul#resultados-linhadavida {
   }
 
   h3 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -452,7 +452,7 @@ ul#resultados-busca {
 
 .paginacao-letras {
   background-color: $cinza-claro;
-  padding: 5px 10px 5px 0px;
+  padding: 5px 10px 5px 0;
   border-radius: 4px;
   display: inline-block;
   margin-top: 10px;
@@ -467,7 +467,7 @@ ul.orgaos-a-z {
     display: block;
     list-style-type: disc outside none;
     border-bottom: 1px solid $cinza-medio;
-    padding: 8px 0px 8px 0px;
+    padding: 8px 0 8px 0;
     font-size: em(17);
     font-weight: bold;
   }
@@ -482,7 +482,7 @@ ul.servicos-a-z {
   }
 
   h3 {
-    margin: 6px 0px 2px 0px;
+    margin: 6px 0 2px 0;
   }
 }
 
@@ -521,7 +521,7 @@ ul.servicos-a-z {
   .linha-da-vida {
     margin-top: 8px;
     display: inline-block;
-    padding: 1px 6px 0px 6px;
+    padding: 1px 6px 0 6px;
     font-size: em(10);
     text-transform: uppercase;
     background-color: $cinza-claro;

@@ -45,7 +45,7 @@
     }
 
     a span {
-      padding: 0px 4px 0px 4px;
+      padding: 0 4px 0 4px;
       background: $cinza-medio;
       color: $azul-claro;
     }
@@ -76,7 +76,7 @@
     }
 
     a {
-      padding: 0px 0 0px 6px;
+      padding: 0 0 0 6px;
       text-decoration: none;
       text-transform: uppercase;
       font-size: em(11);
@@ -92,7 +92,7 @@
 
     @include mobile {
       width: 100%;
-      padding: 5px 5px 5px 0px;
+      padding: 5px 5px 5px 0;
       margin-top: -10px;
 
       span {
