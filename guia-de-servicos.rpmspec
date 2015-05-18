@@ -90,6 +90,7 @@ EOF
 
 %config
 %attr(0644, %{_user}, %{_user}) /etc/sysconfig/%{name}
+%config(noreplace)
 %attr(0644, %{_user}, %{_user}) /etc/sysconfig/%{name}-overrides
 
 %clean
