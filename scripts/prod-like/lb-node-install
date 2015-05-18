@@ -47,10 +47,6 @@ defaults
 
 frontend main *:80
     default_backend app
-    rspadd X-Frame-Options:\ DENY
-    rspadd X-XSS-Protection:\ 0
-    rspadd X-Content-Type-Options:\ nosniff
-    rspadd Content-Security-Policy:\ script-src:\ 'self'\ 'unsafe-inline'\ 'estatisticas.presidencia.gov.br'\ 'barra.brasil.gov.br';\ default-src:\ 'self'
 
 backend app
     balance roundrobin
