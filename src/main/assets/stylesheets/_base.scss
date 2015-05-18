@@ -46,7 +46,7 @@ h1 {
 }
 
 #portal-title {
-  line-height: 110%;
+  line-height: 1.4em;
 }
 
 h2 {
@@ -54,8 +54,8 @@ h2 {
   color: $cinza-escuro;
   font-family: 'open_sansbold', $helvetica;
   font-size: em(35);
-  line-height: 1.2em;
-  margin: -5px 0 .5em;
+  line-height: 1.4em;
+  margin: -10px 0 .5em;
 
   @include mobile {
     font-size: em(27);
@@ -66,12 +66,12 @@ h3 {
   font-family: 'open_sansbold', $helvetica;
   color: $cinza-escuro;
   font-size: em(18);
-  line-height: em(23);
+  line-height: 1.4em;
 }
 
 fieldset {
   border: none;
-  line-height: 1.5em;
+  line-height: 1.4em;
   margin: 0;
   padding: 0;
   width: auto;
@@ -97,7 +97,7 @@ input[type='text']:focus {
 
 p {
   margin: 0 0 1em 0;
-  line-height: 1.8em;
+  line-height: 1.4em;
   color: $cinza-escuro;
 }
 
