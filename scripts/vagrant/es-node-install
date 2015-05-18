@@ -9,12 +9,6 @@ set -x
 set -e
 set -o pipefail
 
-echo 'Atualizando todos os pacotes...'
-yum update -y
-
-echo 'Instalando augeas...'
-yum install augeas -y
-
 echo 'Configurando /etc/sudoers...'
 # Remove obrigação de TTY para sudoers em deployments automáticos
 augtool set '/files/etc/sudoers/Defaults[*]/requiretty/negate' ''
