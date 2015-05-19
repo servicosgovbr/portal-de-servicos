@@ -1,2 +1,2 @@
-Obter Crédito e Apoio Financeiro
+Obter crédito e apoio financeiro
 ---
