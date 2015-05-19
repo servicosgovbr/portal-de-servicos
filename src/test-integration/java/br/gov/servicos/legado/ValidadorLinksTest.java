@@ -8,7 +8,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.web.client.ResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -19,22 +21,24 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
+import java.io.IOException;
 import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.Collection;
+import java.util.function.Function;
 
 import static com.google.common.base.Strings.isNullOrEmpty;
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 import static javax.xml.xpath.XPathConstants.NODESET;
+import static org.junit.Assert.fail;
 
 @RunWith(ParallelizedParameterized.class)
 public class ValidadorLinksTest {
 
-    XPathExpression expression;
 
     @SneakyThrows
     @Parameterized.Parameters(name = "{0}")
@@ -46,33 +50,69 @@ public class ValidadorLinksTest {
                 .collect(toList());
     }
 
-    Resource input;
-    RestTemplate http;
+    final XPathExpression expression;
+    final Resource input;
+    final RestTemplate http;
 
     public ValidadorLinksTest(String name, Resource input) throws Exception {
         desabilitaVerificaçãoSSL();
 
         this.input = input;
         this.http = new RestTemplate();
+        this.expression = XPathFactory.newInstance().newXPath().compile("//url");
 
         HttpComponentsClientHttpRequestFactory rf = new HttpComponentsClientHttpRequestFactory();
         rf.setConnectTimeout(1000);
         rf.setReadTimeout(3000);
 
         http.setRequestFactory(rf);
-        expression = XPathFactory.newInstance().newXPath().compile("//url");
+        http.setErrorHandler(new ResponseErrorHandler() {
+            @Override
+            public boolean hasError(ClientHttpResponse response) throws IOException {
+                return response.getRawStatusCode() <= 199 || response.getRawStatusCode() >= 400;
+            }
+
+            @Override
+            public void handleError(ClientHttpResponse response) throws IOException {
+                fail(response.getRawStatusCode() + " " + response.getStatusText());
+            }
+        });
+    }
+
+    @Test
+    public void deveTerLinksVálidos() throws Exception {
+        testaLinks(node -> {
+            try {
+                new URL(node.getTextContent()).toURI();
+                return null;
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+    }
+
+    private void testaLinks(Function<Node, Void> fn) throws Exception {
+        NodeList results;
+        synchronized (ValidadorLinksTest.class) { // bug JDK-8047329
+            results = (NodeList) expression.evaluate(new InputSource(input.getInputStream()), NODESET);
+        }
+        for (int i = 0; i < results.getLength(); i++) {
+            Node node = results.item(i);
+            if (!isNullOrEmpty(node.getTextContent())) {
+                fn.apply(node);
+            }
+        }
     }
 
     @Test
     @Ignore("Muitas URLs ainda estão falhando")
-    public void deveTerLinksVálidos() throws Exception {
-        NodeList results = (NodeList) expression.evaluate(new InputSource(input.getInputStream()), NODESET);
-        for (int i = 0; i < results.getLength(); i++) {
-            Node node = results.item(i);
-            if (!isNullOrEmpty(node.getTextContent())) {
-                http.headForHeaders(new URL(node.getTextContent()).toURI());
-            }
-        }
+    public void deveTerLinksComRepostasVálidas() throws Exception {
+        testaLinks(node -> {
+            http.headForHeaders(node.getTextContent().trim());
+            return null;
+        });
+
     }
 
     private void desabilitaVerificaçãoSSL() throws NoSuchAlgorithmException, KeyManagementException {
