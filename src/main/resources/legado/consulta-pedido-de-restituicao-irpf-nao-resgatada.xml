@@ -12,7 +12,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
-            <url>https://www.receita.fazenda.gov.br/Aplicacoes/SSL/ATPAE/PedPgtoRestituicao/Consulta_Processos.htm</url>
+            <url><![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=233&idArea=6&idAssunto=61]]></url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
