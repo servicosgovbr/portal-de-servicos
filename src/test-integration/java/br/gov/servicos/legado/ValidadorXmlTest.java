@@ -1,6 +1,7 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.testutil.ParallelizedParameterized;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.SneakyThrows;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,11 +32,9 @@ public class ValidadorXmlTest {
                 .collect(toList());
     }
 
-    String name;
     Resource input;
 
-    public ValidadorXmlTest(String name, Resource input) throws Exception {
-        this.name = name;
+    public ValidadorXmlTest(@SuppressFBWarnings(justification = "JUnit") String name, Resource input) throws Exception {
         this.input = input;
         this.xmlReader = XMLReaderFactory.createXMLReader();
     }
