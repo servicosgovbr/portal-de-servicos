@@ -1,2 +1,2 @@
-Ter um Imóvel
+Ter um imóvel
 ---

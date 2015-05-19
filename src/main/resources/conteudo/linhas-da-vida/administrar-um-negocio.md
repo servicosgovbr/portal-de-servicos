@@ -1,2 +1,2 @@
-Administrar um Negócio
+Administrar um negócio
 ---

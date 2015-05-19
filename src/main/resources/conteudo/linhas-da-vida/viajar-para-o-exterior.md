@@ -1,2 +1,2 @@
-Viajar para o Exterior
+Viajar para o exterior
 ---
