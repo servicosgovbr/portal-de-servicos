@@ -14,7 +14,7 @@ class Crawl
   end
   
   def crawl()
-    return if /^mailto/.match(@url)
+    return if /^mailto/.match(@url) || /github\.com/.match(@url)
     url = @url.match(/http(s)?:\/\//) ? @url : "#{@base}#{@url}"
     return if @links.has_key?(url)
     
@@ -30,8 +30,11 @@ class Crawl
       when (500..599)
         :server_error
       end
-      page.body.scan(/href="(.*?)"/i).flatten.each do |link|
-        Crawl.new(@http, @links, link, @base).crawl
+
+      if page.headers['Content-Type'] =~ /^text\//
+        page.body.scan(/href="(.*?)"/i).flatten.each do |link|
+          Crawl.new(@http, @links, link, @base).crawl
+        end
       end
     else
       begin
