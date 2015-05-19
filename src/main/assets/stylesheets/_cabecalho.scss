@@ -88,7 +88,7 @@
   #logo {
     @include span-columns(9);
     margin-top: -10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     @include mobile {
       width: 100%;
@@ -136,7 +136,7 @@
   #portal-searchbox {
     @include span-columns(3);
     @include omega();
-    margin-top: em(48);
+    margin-top: em(50);
     text-align: left;
 
     @include mobile {
@@ -161,8 +161,8 @@
     .searchField {
       padding: .3em .35em;
       width: 100%;
-      padding: 10px 8px;
-      border-radius: 4px;
+      padding: 7px 8px;
+      border-radius: 5px;
       border-top: 2px solid $cinza-medio;
       border-bottom: 0;
       border-left: 2px solid $cinza-medio;
