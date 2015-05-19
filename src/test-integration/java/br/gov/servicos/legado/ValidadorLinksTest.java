@@ -40,7 +40,7 @@ import static lombok.AccessLevel.PRIVATE;
 import static org.junit.Assert.fail;
 
 @RunWith(ParallelizedParameterized.class)
-@FieldDefaults(level = PRIVATE, makeFinal = false)
+@FieldDefaults(level = PRIVATE, makeFinal = true)
 public class ValidadorLinksTest {
 
     @SneakyThrows
