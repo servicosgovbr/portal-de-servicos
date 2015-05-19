@@ -38,7 +38,7 @@
                 <titulo>Mais informações</titulo>
             </tipoInformacaoUtil>
             <descricao>Rede de enfrentamento ao Tráfico de Pessoas.</descricao>
-            <url>http://portal.mj.gov.br/main.asp?View={395C2E18-4401-4CAA-9961-059B959D1EE3}&amp;BrowserType=NN&amp;LangID=pt-br&amp;params=itemID%3D{07802C53-100C-4AA3-A3CD-057F1F1964D4}%3B&amp;UIPartUID={2868BA3C-1C72-4347-BE11-A26F70F4CB26}</url>
+            <url>http://portal.mj.gov.br/main.asp?View=%7B395C2E18-4401-4CAA-9961-059B959D1EE3%7D&amp;BrowserType=NN&amp;LangID=pt-br&amp;params=itemID%3D%7B07802C53-100C-4AA3-A3CD-057F1F1964D4%7D%3B&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D</url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
