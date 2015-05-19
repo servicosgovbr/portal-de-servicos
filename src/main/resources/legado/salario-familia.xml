@@ -2,7 +2,7 @@
 <servico>
     <titulo>Salário-Família</titulo>
     <descricao>
-        <![CDATA[Fornece Informações sobre o Salário-Família e documentos necessários para solicitação do benefício em uma Agência da Previdência Social.]]>
+        <![CDATA[Fornece informações sobre o Salário-Família e documentos necessários para solicitação do benefício em uma Agência da Previdência Social.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
