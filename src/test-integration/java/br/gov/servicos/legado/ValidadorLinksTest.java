@@ -1,7 +1,9 @@
 package br.gov.servicos.legado;
 
 import br.gov.servicos.testutil.ParallelizedParameterized;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.SneakyThrows;
+import lombok.experimental.FieldDefaults;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,17 +30,18 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.Collection;
-import java.util.function.Function;
+import java.util.function.Consumer;
 
 import static com.google.common.base.Strings.isNullOrEmpty;
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 import static javax.xml.xpath.XPathConstants.NODESET;
+import static lombok.AccessLevel.PRIVATE;
 import static org.junit.Assert.fail;
 
 @RunWith(ParallelizedParameterized.class)
+@FieldDefaults(level = PRIVATE, makeFinal = false)
 public class ValidadorLinksTest {
-
 
     @SneakyThrows
     @Parameterized.Parameters(name = "{0}")
@@ -50,11 +53,11 @@ public class ValidadorLinksTest {
                 .collect(toList());
     }
 
-    final XPathExpression expression;
-    final Resource input;
-    final RestTemplate http;
+    XPathExpression expression;
+    Resource input;
+    RestTemplate http;
 
-    public ValidadorLinksTest(String name, Resource input) throws Exception {
+    public ValidadorLinksTest(@SuppressFBWarnings(justification = "JUnit") String name, Resource input) throws Exception {
         desabilitaVerificaçãoSSL();
 
         this.input = input;
@@ -84,25 +87,10 @@ public class ValidadorLinksTest {
         testaLinks(node -> {
             try {
                 new URL(node.getTextContent()).toURI();
-                return null;
             } catch (Exception e) {
-                throw new RuntimeException(e);
+                fail(e.getMessage());
             }
         });
-
-    }
-
-    private void testaLinks(Function<Node, Void> fn) throws Exception {
-        NodeList results;
-        synchronized (ValidadorLinksTest.class) { // bug JDK-8047329
-            results = (NodeList) expression.evaluate(new InputSource(input.getInputStream()), NODESET);
-        }
-        for (int i = 0; i < results.getLength(); i++) {
-            Node node = results.item(i);
-            if (!isNullOrEmpty(node.getTextContent())) {
-                fn.apply(node);
-            }
-        }
     }
 
     @Test
@@ -110,7 +98,6 @@ public class ValidadorLinksTest {
     public void deveTerLinksComRepostasVálidas() throws Exception {
         testaLinks(node -> {
             http.headForHeaders(node.getTextContent().trim());
-            return null;
         });
 
     }
@@ -131,4 +118,18 @@ public class ValidadorLinksTest {
         ctx.init(null, new TrustManager[]{tm}, null);
         SSLContext.setDefault(ctx);
     }
+
+    private void testaLinks(Consumer<Node> fn) throws Exception {
+        NodeList results;
+        synchronized (ValidadorLinksTest.class) { // bug JDK-8047329
+            results = (NodeList) expression.evaluate(new InputSource(input.getInputStream()), NODESET);
+        }
+        for (int i = 0; i < results.getLength(); i++) {
+            Node node = results.item(i);
+            if (!isNullOrEmpty(node.getTextContent())) {
+                fn.accept(node);
+            }
+        }
+    }
+
 }
