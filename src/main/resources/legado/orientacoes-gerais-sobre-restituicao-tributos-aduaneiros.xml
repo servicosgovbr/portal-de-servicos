@@ -11,7 +11,7 @@
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
             <url>
-                http://www.receita.fazenda.gov.br/GuiaContribuinte/RestRessarComp/RestCredAdmin/RestDecCancelamento/default.htm
+                <![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=109&idArea=1&idAssunto=31]]>
             </url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
