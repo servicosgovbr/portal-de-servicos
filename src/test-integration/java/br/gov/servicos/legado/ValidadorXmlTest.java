@@ -1,5 +1,6 @@
 package br.gov.servicos.legado;
 
+import br.gov.servicos.testutil.ParallelizedParameterized;
 import lombok.SneakyThrows;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,24 +14,28 @@ import org.xml.sax.helpers.XMLReaderFactory;
 import java.util.Collection;
 
 import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.toList;
 
-@RunWith(Parameterized.class)
+@RunWith(ParallelizedParameterized.class)
 public class ValidadorXmlTest {
 
     private XMLReader xmlReader;
 
     @SneakyThrows
-    @Parameterized.Parameters
-    public static Collection<Resource> data() {
-        Resource[] resources = new PathMatchingResourcePatternResolver()
-                .getResources("file:src/main/resources/legado/*.xml");
-
-        return asList(resources);
+    @Parameterized.Parameters(name = "{0}")
+    public static Collection<Object[]> data() {
+        return asList(new PathMatchingResourcePatternResolver()
+                .getResources("file:src/main/resources/legado/*.xml"))
+                .stream()
+                .map(r -> new Object[]{r.getFilename(), r})
+                .collect(toList());
     }
 
+    String name;
     Resource input;
 
-    public ValidadorXmlTest(Resource input) throws Exception {
+    public ValidadorXmlTest(String name, Resource input) throws Exception {
+        this.name = name;
         this.input = input;
         this.xmlReader = XMLReaderFactory.createXMLReader();
     }

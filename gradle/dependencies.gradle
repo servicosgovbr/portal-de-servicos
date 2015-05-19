@@ -26,6 +26,7 @@ dependencies {
     compile 'org.springframework:spring-context-support:4.1.6.RELEASE'
 
     compile 'com.google.guava:guava:11.0.2'
+    compile 'org.apache.httpcomponents:httpclient:4.4.1'
     compile 'org.jolokia:jolokia-osgi:1.2.2'
     compile 'org.pegdown:pegdown:1.4.2'
     compile 'com.github.slugify:slugify:2.1.3'
