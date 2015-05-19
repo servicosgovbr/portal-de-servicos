@@ -14,7 +14,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Cadastro Nacional de Entidades de Utilidade Pública - Cadastro e Prestação de Contas</descricao>
-            <url>http://portal.mj.gov.br/main.asp?View={FC1E6BD5-BD5D-44AB-A646-6BC137CF9C97}&amp;BrowserType=IE&amp;LangID=pt-br&amp;params=itemID%3D%7B06BA3852-2781-46B8-95AF-51A7B23AA002%7D%3B&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D</url>
+            <url><![CDATA[http://portal.mj.gov.br/main.asp?View=%7BFC1E6BD5-BD5D-44AB-A646-6BC137CF9C97%7D&BrowserType=IE&LangID=pt-br&params=itemID%253D%257B06BA3852-2781-46B8-95AF-51A7B23AA002%257D%253B%26UIPartUID%3D%257B2868BA3C-1C72-4347-BE11-A26F70F4CB26%257D]]></url>
         </canalPrestacaoServico>
         <canalPrestacaoServico>
             <tipoCanalPrestacaoServico>
@@ -47,7 +47,7 @@
                 <titulo>Serviços relacionados</titulo>
             </tipoInformacaoUtil>
             <descricao>Consulta de entidades qualificadas no Ministério da Justiça</descricao>
-            <url>http://portal.mj.gov.br/main.asp?View={AFE5E30D-EE44-4EC7-B535-10F6F53FC483}</url>
+            <url><![CDATA[http://portal.mj.gov.br/main.asp?View=%7BAFE5E30D-EE44-4EC7-B535-10F6F53FC483%7D]]></url>
         </informacaoUtil>
     </informacoesUteis>
     <compromissosAtendimento></compromissosAtendimento>
