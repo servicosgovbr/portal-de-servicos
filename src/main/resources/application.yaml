@@ -118,7 +118,8 @@ gds:
       secretaria-de-aviacao-civil-sac: "Secretaria de Aviação Civil (SAC)"
       secretaria-de-planejamento-e-investimentos-estrategicos-spi: "Secretaria de Planejamento e Investimentos Estratégicos (SPI)"
       secretaria-do-patrimonio-da-uniao-spu-mp: "Secretaria do Patrimônio da União (SPU/MP)"
-      secretaria-nacional-de-justica: "Secretaria Nacional de Justiça"
+      secretaria-nacional-de-justica: "Secretaria Nacional de Justiça (SNJ)"
+      secretaria-nacional-de-justica-snj: "Secretaria Nacional de Justiça (SNJ)"
       secretaria-nacional-de-politicas-sobre-drogas-senad: "Secretaria Nacional de Políticas Sobre Drogas (Senad)"
       secretaria-nacional-de-seguranca-publica: "Secretaria Nacional de Segurança Pública (Senasp)"
       secretaria-nacional-de-seguranca-publica-senasp: "Secretaria Nacional de Segurança Pública (Senasp)"
@@ -150,7 +151,7 @@ gds:
       secretaria-de-aviacao-civil-sac: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/secretaria-de-aviacao-civil-sac
       secretaria-de-planejamento-e-investimentos-estrategicos-spi: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
       secretaria-do-patrimonio-da-uniao-spu-mp: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
-      secretaria-nacional-de-justica: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
+      secretaria-nacional-de-justica-snj: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
       secretaria-nacional-de-politicas-sobre-drogas-senad: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
       secretaria-nacional-de-seguranca-publica-senasp: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
     sitesOficiais:
@@ -180,6 +181,6 @@ gds:
       ministerio-do-turismo-mtur: http://www.turismo.gov.br/turismo/home.html
       secretaria-da-receita-federal-do-brasil-rfb: http://idg.receita.fazenda.gov.br/
       secretaria-de-aviacao-civil-sac: http://www.aviacaocivil.gov.br/
-      secretaria-nacional-de-justica: http://portal.mj.gov.br/data/Pages/MJDE2A290DITEMIDC811B50F3FA34D6AA46F27CC110930B1PTBRIE.htm
+      secretaria-nacional-de-justica-snj: http://portal.mj.gov.br/data/Pages/MJDE2A290DITEMIDC811B50F3FA34D6AA46F27CC110930B1PTBRIE.htm
       secretaria-nacional-de-politicas-sobre-drogas-senad: http://portal.mj.gov.br/senad/
       secretaria-nacional-de-seguranca-publica-senasp: http://portal.mj.gov.br/main.asp?View={1BFF9F1B-2ECD-4A25-9976-661FB5A66624}&BrowserType=NN&LangID=pt-br&params=itemID%3D%7B540715BB-1C9B-47D3-9549-9FA38E3E99FA%7D%3B&UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D
