@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.doReturn;
+import static org.mockito.BDDMockito.given;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
@@ -30,36 +30,28 @@ public class CookiesTest {
 
     @Test
     public void deveResponderTrueQuandoUmCookieTemStatusON() {
-        doReturn(cookies(new Cookie("ativado", "on")))
-                .when(httpServletRequest)
-                .getCookies();
+        given(httpServletRequest.getCookies()).willReturn(cookies(new Cookie("ativado", "on")));
 
         assertThat(cookies.isOn("ativado"), is(true));
     }
 
     @Test
     public void deveResponderFalseQuandoUmCookieTemStatusOFF() {
-        doReturn(cookies(new Cookie("ativado", "off")))
-                .when(httpServletRequest)
-                .getCookies();
+        given(httpServletRequest.getCookies()).willReturn(cookies(new Cookie("ativado", "off")));
 
         assertThat(cookies.isOn("ativado"), is(false));
     }
 
     @Test
     public void deveResponderFalseQuandoOCookieNaoEstaPresente() {
-        doReturn(cookies())
-                .when(httpServletRequest)
-                .getCookies();
+        given(httpServletRequest.getCookies()).willReturn(cookies());
 
         assertThat(cookies.isOn("ativado"), is(false));
     }
 
     @Test
     public void deveResponderFalseComCookiesNulos() {
-        doReturn(null)
-                .when(httpServletRequest)
-                .getCookies();
+        given(httpServletRequest.getCookies()).willReturn(null);
 
         assertThat(cookies.isOn("ativado"), is(false));
     }
