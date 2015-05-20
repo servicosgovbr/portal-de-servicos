@@ -120,7 +120,8 @@ gds:
       secretaria-do-patrimonio-da-uniao-spu-mp: "Secretaria do Patrimônio da União (SPU/MP)"
       secretaria-nacional-de-justica: "Secretaria Nacional de Justiça"
       secretaria-nacional-de-politicas-sobre-drogas-senad: "Secretaria Nacional de Políticas Sobre Drogas (Senad)"
-      secretaria-nacional-de-seguranca-publica: "Secretaria Nacional de Segurança Pública"
+      secretaria-nacional-de-seguranca-publica: "Secretaria Nacional de Segurança Pública (Senasp)"
+      secretaria-nacional-de-seguranca-publica-senasp: "Secretaria Nacional de Segurança Pública (Senasp)"
     ouvidorias:
       arquivo-nacional: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an
       banco-central-do-brasil-bcb: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen
@@ -151,7 +152,7 @@ gds:
       secretaria-do-patrimonio-da-uniao-spu-mp: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
       secretaria-nacional-de-justica: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
       secretaria-nacional-de-politicas-sobre-drogas-senad: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
-      secretaria-nacional-de-seguranca-publica: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
+      secretaria-nacional-de-seguranca-publica-senasp: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
     sitesOficiais:
       arquivo-nacional: http://www.arquivonacional.gov.br/
       banco-central-do-brasil-bcb: http://www.bcb.gov.br/
@@ -181,4 +182,4 @@ gds:
       secretaria-de-aviacao-civil-sac: http://www.aviacaocivil.gov.br/
       secretaria-nacional-de-justica: http://portal.mj.gov.br/data/Pages/MJDE2A290DITEMIDC811B50F3FA34D6AA46F27CC110930B1PTBRIE.htm
       secretaria-nacional-de-politicas-sobre-drogas-senad: http://portal.mj.gov.br/senad/
-      secretaria-nacional-de-seguranca-publica: http://portal.mj.gov.br/main.asp?View={1BFF9F1B-2ECD-4A25-9976-661FB5A66624}&BrowserType=NN&LangID=pt-br&params=itemID%3D%7B540715BB-1C9B-47D3-9549-9FA38E3E99FA%7D%3B&UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D
+      secretaria-nacional-de-seguranca-publica-senasp: http://portal.mj.gov.br/main.asp?View={1BFF9F1B-2ECD-4A25-9976-661FB5A66624}&BrowserType=NN&LangID=pt-br&params=itemID%3D%7B540715BB-1C9B-47D3-9549-9FA38E3E99FA%7D%3B&UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D

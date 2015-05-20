@@ -1,4 +1,4 @@
-Secretaria Nacional de Segurança Pública
+Secretaria Nacional de Segurança Pública (Senasp)
 ---
 
 À Secretaria Nacional de Segurança Pública compete:
