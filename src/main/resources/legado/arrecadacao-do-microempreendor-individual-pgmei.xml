@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Arrecadação do Microempreendor Individual - PGMEI</titulo>
-    <descricao>Declarar lançamento mensal do valor devido do Simei. Simples Nacional</descricao>
+    <descricao>
+        <![CDATA[O Programa Gerador do Documento de Arrecadação do Simples Nacional para o Microempreendedor Individual (PGMEI) é um sistema eletrônico de geração do Documento de Arrecadação do Simples Nacional (DAS) para o Microempreendedor Individual.
+        
+        O acesso ao PGMEI se dá exclusivamente via Portal do Simples Nacional na internet e tem como objetivo gerar o Documento de Arrecadação do Simples Nacional para o Microempreendedor Individual (DAS) para recolhimento na rede bancária.]]>
+    </descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>
@@ -14,7 +18,15 @@
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
-    <informacoesUteis/>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais Informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Manual do PGMEI</descricao>
+            <url>http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/MANUAL_PGMEI_2013.pdf</url>
+        </informacaoUtil>
+    </informacoesUteis>
     <compromissosAtendimento></compromissosAtendimento>
     <legislacoes></legislacoes>
     <palavrasChave></palavrasChave>
