@@ -10,7 +10,7 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 |----------------------------------|------------------------------------|:------------------------------------------:|
 | Empreendedorismo e negócios      | `empreendedorismo-e-negocios`      | <i class="fa fa-lg fa-pie-chart"></i>      |
 | Aposentadoria                    | `aposentadoria`                    | <i class="fa fa-lg fa-user"></i>           |
-| Cuidar da Saúde                  | `cuidar-da-saude`                  | <i class="fa fa-lg fa-user-md"></i>        |
+| Cuidados com a saúde             | `cuidados-com-a-saude`             | <i class="fa fa-lg fa-user-md"></i>        |
 | Emitir seus Documentos           | `emitir-seus-documentos`           | <i class="fa fa-lg fa-file-text-o"></i>    |
 | Estudar                          | `estudar`                          | <i class="fa fa-lg fa-graduation-cap"></i> |
 | Exportar Produtos e Serviços     | `exportar-produtos-e-servicos`     | <i class="fa fa-lg fa-ship"></i>           |
@@ -27,11 +27,11 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 Para exibir um ícone de qualquer uma das linhas da vida, basta utilizar uma tag `i`:
 
 ```
-<i class="icone cuidar-da-saude"></i>
+<i class="icone cuidados-com-a-saude"></i>
 ```
 
 Para exibição de ícones em tamanho maior, pode ser utilizada a classe `icone-grande`:
 
 ```
-<i class="icone-grande cuidar-da-saude"></i>
+<i class="icone-grande cuidados-com-a-saude"></i>
 ```
