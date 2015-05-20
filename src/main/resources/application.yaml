@@ -75,7 +75,8 @@ gds:
       trabalhando: "Trabalhar"
       ter-filhos: "Ter uma família"
     orgaos:
-      arquivo-nacional: "Arquivo Nacional"
+      arquivo-nacional: "Arquivo Nacional (AN)"
+      arquivo-nacional-an: "Arquivo Nacional (AN)"
       banco-central-do-brasil: "Banco Central do Brasil (BCB)"
       banco-central-do-brasil-bcb: "Banco Central do Brasil (BCB)"
       comissao-de-anistia: "Comissão de Anistia"
@@ -124,7 +125,7 @@ gds:
       secretaria-nacional-de-seguranca-publica: "Secretaria Nacional de Segurança Pública (Senasp)"
       secretaria-nacional-de-seguranca-publica-senasp: "Secretaria Nacional de Segurança Pública (Senasp)"
     ouvidorias:
-      arquivo-nacional: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an
+      arquivo-nacional-an: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an
       banco-central-do-brasil-bcb: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/bancos/banco-central-do-brasil-bacen
       comissao-de-anistia: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
       companhia-nacional-de-abastecimento-conab: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/outras-estatais/companhia-nacional-de-abastecimento-conab
@@ -155,7 +156,7 @@ gds:
       secretaria-nacional-de-politicas-sobre-drogas-senad: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
       secretaria-nacional-de-seguranca-publica-senasp: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
     sitesOficiais:
-      arquivo-nacional: http://www.arquivonacional.gov.br/
+      arquivo-nacional-an: http://www.arquivonacional.gov.br/
       banco-central-do-brasil-bcb: http://www.bcb.gov.br/
       comissao-de-anistia: http://portal.mj.gov.br/anistia/
       companhia-nacional-de-abastecimento-conab: http://www.conab.gov.br/

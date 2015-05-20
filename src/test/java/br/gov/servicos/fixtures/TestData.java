@@ -51,7 +51,7 @@ public class TestData {
             .withMensagem("Otimo site");
 
     public static final List<Orgao> ORGAOS = Arrays.asList(
-            new Orgao().withId("arquivo-nacional").withNome("Arquivo Nacional").withTelefone("(61) 1111 1111"),
+            new Orgao().withId("arquivo-nacional-an").withNome("Arquivo Nacional").withTelefone("(61) 1111 1111"),
             new Orgao().withId("banco-central-do-brasil-bcb").withNome("Banco Central do Brasil").withTelefone("(61) 2222 2222")
     );
 
