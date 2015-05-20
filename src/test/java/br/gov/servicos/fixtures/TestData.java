@@ -9,10 +9,11 @@ import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 
-import java.util.Arrays;
 import java.util.List;
 
+import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
+import static java.util.Collections.unmodifiableList;
 
 public class TestData {
 
@@ -50,13 +51,13 @@ public class TestData {
             .withConteudoEncontrado(true)
             .withMensagem("Otimo site");
 
-    public static final List<Orgao> ORGAOS = Arrays.asList(
+    public static final List<Orgao> ORGAOS = unmodifiableList(asList(
             new Orgao().withId("arquivo-nacional-an").withNome("Arquivo Nacional").withTelefone("(61) 1111 1111"),
             new Orgao().withId("banco-central-do-brasil-bcb").withNome("Banco Central do Brasil").withTelefone("(61) 2222 2222")
-    );
+    ));
 
-    public static final List<LinhaDaVida> LINHAS_DA_VIDA = Arrays.asList(
+    public static final List<LinhaDaVida> LINHAS_DA_VIDA = unmodifiableList(asList(
             new LinhaDaVida().withId("imoveis").withTitulo("Imóveis"),
             new LinhaDaVida().withId("apoio-financeiro-e-credito").withTitulo("Apoio financeiro e crédito")
-    );
+    ));
 }
