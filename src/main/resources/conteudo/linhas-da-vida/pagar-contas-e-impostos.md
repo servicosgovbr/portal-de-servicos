@@ -1,2 +1,0 @@
-Pagar contas e impostos
----

@@ -17,7 +17,7 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 | Importação de produtos e serviços | `importacao-de-produtos-e-servicos` | <i class="fa fa-lg fa-ship"></i>           |
 | Veículos                          | `veiculos`                          | <i class="fa fa-lg fa-car"></i>            |
 | Apoio financeiro e crédito        | `apoio-financeiro-e-credito`        | <i class="fa fa-lg fa-usd"></i>            |
-| Pagar Contas e Impostos           | `pagar-contas-e-impostos`           | <i class="fa fa-lg fa-usd"></i>            |
+| Contas e Impostos                 | `contas-e-impostos`                 | <i class="fa fa-lg fa-usd"></i>            |
 | Ter um Imóvel                     | `ter-um-imovel`                     | <i class="fa fa-lg fa-home"></i>           |
 | Ter uma Família                   | `ter-uma-familia`                   | <i class="fa fa-lg fa-child"></i>          |
 | Trabalhar                         | `trabalhar`                         | <i class="fa fa-lg fa-briefcase"></i>      |
