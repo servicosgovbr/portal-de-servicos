@@ -27,7 +27,7 @@ certificado-de-licenca-de-funcionamento-clf-produtos-quimicos,Empreendedorismo e
 pensao-por-morte,Família,
 concessao-de-anistia-politica,,
 auxilio-acidente,Cuidados com a saúde,
-taxas-de-cambio,Viagem ao exterior,Vir para o Brasil
+taxas-de-cambio,Viagem ao exterior,Estrangeiros no Brasil
 portal-do-professor,Profissão e trabalho,
 beneficio-de-prestacao-continuada,,
 vagas-de-emprego-sine-e-portal-mais-emprego,Profissão e trabalho,
@@ -38,7 +38,7 @@ auxilio-reclusao,,
 cadastro-de-instituicoes-financeiras,,
 previsao-do-tempo,,
 licenca-de-pescador-amador,Empreendedorismo e negócios,Profissão e trabalho
-conversao-de-moedas,Viagem ao exterior,Vir para o Brasil
+conversao-de-moedas,Viagem ao exterior,Estrangeiros no Brasil
 sistema-de-monitoramento-agrometeorologico,,
 salario-familia,Família,Profissão e trabalho
 formularios-para-requerimento-de-beneficio,,
@@ -47,7 +47,7 @@ calculadora-do-cidadao,Empreendedorismo e negócios,
 procuracao-para-servicos-na-internet,Empreendedorismo e negócios,
 atualizacao-de-dados-para-fins-previdenciarios-pessoa-fisica,,
 download-de-programas-e-declaracoes-da-receita-federal,Contas e Impostos,
-autorizacao-de-trabalho-a-estrangeiros,Vir para o Brasil,Profissão e trabalho
+autorizacao-de-trabalho-a-estrangeiros,Estrangeiros no Brasil,Profissão e trabalho
 registro-de-arma-de-fogo,,
 cadastro-unico-para-programas-sociais-do-governo-federal,,
 declaracao-de-capitais-brasileiros-no-exterior,Viagem ao exterior,
@@ -122,7 +122,7 @@ solicitacao-de-registro-de-empresas-operadoras-de-servico-de-microfilmagem,Empre
 atualizacao-de-atividade-para-fins-previdenciarios,Aposentadoria,
 inscricao-junto-a-previdencia-social,Profissão e trabalho,Aposentadoria
 orientacoes-gerais-sobre-regimes-especiais-aduaneiros,,
-permanencia-definitiva-no-brasil,Vir para o Brasil,
+permanencia-definitiva-no-brasil,Estrangeiros no Brasil,
 centro-de-referencia-especializado-da-assistencia-social-creas,,
 programa-cisternas,,
 cancelamento-do-pedido-no-cnpj,Empreendedorismo e negócios,
@@ -145,7 +145,7 @@ consulta-pendencias-situacao-fiscal-previdenciaria-consultas-divida-ativa-da-uni
 programa-de-aquisicao-de-alimentos-da-agricultura-familiar-paa,,
 atualizacao-cadastral-de-imovel-rural-cafir,Imóveis,
 recuperar-recibo-regime-especial-de-apuracao-e-pagamento-da-contribuicao-para-o-pis-pasep-e-cofins-incidentes-sobre-combustiveis-e-bebidas-recob,Empreendedorismo e negócios,
-prorrogacao-do-prazo-de-estada-no-brasil-vistos,Vir para o Brasil,
+prorrogacao-do-prazo-de-estada-no-brasil-vistos,Estrangeiros no Brasil,
 registro-de-industria-pesqueira,Empreendedorismo e negócios,Profissão e trabalho
 certificado-de-regularidade-previdenciaria-crp,Empreendedorismo e negócios,Profissão e trabalho
 identifica-classificacao-nacional-de-atividades-economicas-cnae-com-base-no-objeto-social,Empreendedorismo e negócios,
@@ -223,7 +223,7 @@ apoio-a-agroindustria-da-agricultura-familiar,Profissão e trabalho,
 calculo-e-emissao-de-darf-imposto-para-bagagem-acompanhada,Importação de produtos e serviços,
 concessao-do-regime-especial-de-exportacao-temporaria,Exportação de produtos e serviços,
 pre-cadastro-renavam,Veículos,
-servicos-de-cpf-para-estrangeiros-e-de-cujus,Vir para o Brasil,
+servicos-de-cpf-para-estrangeiros-e-de-cujus,Estrangeiros no Brasil,
 reparcelamento-dau-pagamento-e-parcelamento-divida-ativa-da-uniao-dau,Contas e Impostos,
 consulta-a-processo,,
 consulta-pj-habilitadas-desenvolv-infra-estrutura-reidi,Empreendedorismo e negócios,
@@ -287,7 +287,7 @@ scorpios-gerencial-sistema-de-controle-e-rastreamento-da-producao-de-cigarros,Em
 codigo-de-acesso-ao-portal-e-cac,,
 cadastro-de-procuracao-para-o-portal-e-cac-presencial,,
 orientacoes-gerais-sobre-siscomex-carga,Importação de produtos e serviços,Exportação de produtos e serviços
-sistema-eletronico-de-porte-de-valores-e-dpv,Viagem ao exterior,Vir para o Brasil
+sistema-eletronico-de-porte-de-valores-e-dpv,Viagem ao exterior,Estrangeiros no Brasil
 consulta-pedido-e-emissao-de-inscricao-no-cpf,Documentos e certidões,
 cadastro-de-pessoas-de-contato-contribuinte-diferenciado,,
 confirmacao-de-autenticidade-de-certidao-imovel-rural,Imóveis,
@@ -351,7 +351,7 @@ cancelamento-no-cafir,Imóveis,
 retirada-de-documentos-para-o-cafir,Imóveis,
 recurso-voluntario-ao-carf,Empreendedorismo e negócios,
 recurso-especial-a-camara-superior-de-recursos-fiscais,Empreendedorismo e negócios,
-declaracao-eletronica-de-porte-de-valores-e-dpv-declaracao-de-porte-de-valores-declaracoes-e-demonstrativos,Viagem ao exterior,Vir para o Brasil
+declaracao-eletronica-de-porte-de-valores-e-dpv-declaracao-de-porte-de-valores-declaracoes-e-demonstrativos,Viagem ao exterior,Estrangeiros no Brasil
 programa-gerador-da-declaracao-pgd-dprev-e-receitanet,Contas e Impostos,
 certidao-conjunta-divida-ativa-da-uniao,,
 revisao-extincao-de-divida-inscrita-pgfn,,
@@ -419,7 +419,7 @@ extrato-do-processamento-da-dirf,Contas e Impostos,
 consulta-rendimentos-informados-por-fontes-pagadoras-dipj-declaracao-de-informacoes-economico-fiscais-da-pj-declaracoes-e-demonstrativos,Empreendedorismo e negócios,
 consulta-debitos-do-simples-nacional-apos-regularizacao,Empreendedorismo e negócios,
 declaracao-anual-do-simples-nacional-ano-calendario-ate-2011,Empreendedorismo e negócios,
-naturalizacao-concessao-e-transformacao,Vir para o Brasil,
+naturalizacao-concessao-e-transformacao,Estrangeiros no Brasil,
 credenciamento-de-empresas-de-escolta,Empreendedorismo e negócios,
 declaracao-de-exportacao-recepcao,Exportação de produtos e serviços,
 despacho-simplificado-de-exportacao-averbacao,Exportação de produtos e serviços,
