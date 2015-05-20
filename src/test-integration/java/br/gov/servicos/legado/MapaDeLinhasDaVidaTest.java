@@ -43,8 +43,8 @@ public class MapaDeLinhasDaVidaTest {
 
         assertThat(linhas, equalTo(singletonList(
                 new LinhaDaVida()
-                        .withId("emitir-seus-documentos")
-                        .withTitulo("Emitir seus Documentos"))));
+                        .withId("documentos-e-certidoes")
+                        .withTitulo("Documentos e certidões"))));
     }
 
     @Test

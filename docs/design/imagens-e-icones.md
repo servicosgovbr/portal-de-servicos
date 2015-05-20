@@ -11,7 +11,7 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 | Empreendedorismo e negócios      | `empreendedorismo-e-negocios`      | <i class="fa fa-lg fa-pie-chart"></i>      |
 | Aposentadoria                    | `aposentadoria`                    | <i class="fa fa-lg fa-user"></i>           |
 | Cuidados com a saúde             | `cuidados-com-a-saude`             | <i class="fa fa-lg fa-user-md"></i>        |
-| Emitir seus Documentos           | `emitir-seus-documentos`           | <i class="fa fa-lg fa-file-text-o"></i>    |
+| Documentos e certidões           | `documentos-e-certidoes`           | <i class="fa fa-lg fa-file-text-o"></i>    |
 | Estudar                          | `estudar`                          | <i class="fa fa-lg fa-graduation-cap"></i> |
 | Exportar Produtos e Serviços     | `exportar-produtos-e-servicos`     | <i class="fa fa-lg fa-ship"></i>           |
 | Importar Produtos e Serviços     | `importar-produtos-e-servicos`     | <i class="fa fa-lg fa-ship"></i>           |

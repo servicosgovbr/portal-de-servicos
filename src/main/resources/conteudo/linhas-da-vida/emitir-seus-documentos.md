@@ -1,2 +1,0 @@
-Emitir seus documentos
----
