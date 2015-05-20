@@ -12,7 +12,7 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 | Aposentadoria                    | `aposentadoria`                    | <i class="fa fa-lg fa-user"></i>           |
 | Cuidados com a saúde             | `cuidados-com-a-saude`             | <i class="fa fa-lg fa-user-md"></i>        |
 | Documentos e certidões           | `documentos-e-certidoes`           | <i class="fa fa-lg fa-file-text-o"></i>    |
-| Estudar                          | `estudar`                          | <i class="fa fa-lg fa-graduation-cap"></i> |
+| Estudos                          | `estudos`                          | <i class="fa fa-lg fa-graduation-cap"></i> |
 | Exportar Produtos e Serviços     | `exportar-produtos-e-servicos`     | <i class="fa fa-lg fa-ship"></i>           |
 | Importar Produtos e Serviços     | `importar-produtos-e-servicos`     | <i class="fa fa-lg fa-ship"></i>           |
 | Manter um Veículo                | `manter-um-veiculo`                | <i class="fa fa-lg fa-car"></i>            |
