@@ -32,6 +32,7 @@ echo "Compilando e gerando RPM..."
 echo "Verificando assinatura no RPM..."
 rpm --checksig $(find build/rpmbuild/RPMS/noarch/guia-de-servicos*.rpm -type f)
 
+rm -rf "${SNAP_CACHE_DIR}/rpm-s3"
 if [ ! -d "${SNAP_CACHE_DIR}/rpm-s3" ]; then
   echo "Instalando rpm-s3..."
   pushd "${SNAP_CACHE_DIR}"
