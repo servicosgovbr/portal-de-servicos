@@ -28,8 +28,8 @@ public class MapaDeLinhasDaVidaTest {
 
         assertThat(linhas, equalTo(asList(
                 new LinhaDaVida()
-                        .withId("trabalhar")
-                        .withTitulo("Trabalhar"),
+                        .withId("profissao-e-trabalho")
+                        .withTitulo("Profissão e trabalho"),
 
                 new LinhaDaVida()
                         .withId("aposentadoria")

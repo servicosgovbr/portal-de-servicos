@@ -1,53 +1,53 @@
 servico,linha-1,linha-2
-consulta-situacao-do-requerimento-de-beneficio-previdenciario,Trabalhar,Aposentadoria
-certidao-previdenciaria-para-fins-de-saque-do-pis-pasep-fgts,Trabalhar,
-simulacao-da-contagem-de-tempo-de-contribuicao-previdenciaria,Trabalhar,Aposentadoria
-carta-de-concessao-e-memoria-de-calculo-de-beneficio-previdenciario,Trabalhar,Aposentadoria
-extrato-do-cadastro-nacional-de-informacoes-sociais-vinculos-e-remuneracoes,Trabalhar,
+consulta-situacao-do-requerimento-de-beneficio-previdenciario,Profissão e trabalho,Aposentadoria
+certidao-previdenciaria-para-fins-de-saque-do-pis-pasep-fgts,Profissão e trabalho,
+simulacao-da-contagem-de-tempo-de-contribuicao-previdenciaria,Profissão e trabalho,Aposentadoria
+carta-de-concessao-e-memoria-de-calculo-de-beneficio-previdenciario,Profissão e trabalho,Aposentadoria
+extrato-do-cadastro-nacional-de-informacoes-sociais-vinculos-e-remuneracoes,Profissão e trabalho,
 extrato-de-beneficios-previdenciarios-para-declaracao-de-imposto-de-renda,Contas e Impostos,
 consulta-a-certidao-de-tempo-de-contribuicao-ctc,Aposentadoria,
 autorizacao-para-comprar-arma-de-fogo,,
 carteira-nacional-de-vigilante-cnv,Documentos e certidões,
 cadastro-no-sicaf,Empreendedorismo e negócios,
 transferencia-de-arma-de-fogo,,
-carteira-de-trabalho-e-previdencia-social-ctps,Documentos e certidões,Trabalhar
+carteira-de-trabalho-e-previdencia-social-ctps,Documentos e certidões,Profissão e trabalho
 comprovante-de-situacao-cadastral-no-cpf,Documentos e certidões,
 salario-maternidade,Família,
-extrato-de-informacoes-previdenciarias,Trabalhar,
+extrato-de-informacoes-previdenciarias,Profissão e trabalho,
 enem-exame-nacional-do-ensino-medio,Estudos,
 atualizacao-de-endereco-de-aposentados-e-pensionistas,Aposentadoria,
 auxilio-doenca,Cuidados com a saúde,
 autorizacao-de-funcionamento-de-empresa-de-seguranca-privada,Empreendedorismo e negócios,
 aviso-para-requerimento-de-beneficio,Aposentadoria,
 instituto-nacional-de-meteorologia-inmet,,
-aposentadoria-por-tempo-de-contribuicao,Aposentadoria,Trabalhar
-cadastramento-da-comunicacao-de-acidente-de-trabalho-cat,Empreendedorismo e negócios,Trabalhar
-certificado-de-registro-cadastral-crc-produtos-quimicos,Empreendedorismo e negócios,Trabalhar
-certificado-de-licenca-de-funcionamento-clf-produtos-quimicos,Empreendedorismo e negócios,Trabalhar
+aposentadoria-por-tempo-de-contribuicao,Aposentadoria,Profissão e trabalho
+cadastramento-da-comunicacao-de-acidente-de-trabalho-cat,Empreendedorismo e negócios,Profissão e trabalho
+certificado-de-registro-cadastral-crc-produtos-quimicos,Empreendedorismo e negócios,Profissão e trabalho
+certificado-de-licenca-de-funcionamento-clf-produtos-quimicos,Empreendedorismo e negócios,Profissão e trabalho
 pensao-por-morte,Família,
 concessao-de-anistia-politica,,
 auxilio-acidente,Cuidados com a saúde,
 taxas-de-cambio,Viajar para o Exterior,Vir para o Brasil
-portal-do-professor,Trabalhar,
+portal-do-professor,Profissão e trabalho,
 beneficio-de-prestacao-continuada,,
-vagas-de-emprego-sine-e-portal-mais-emprego,Trabalhar,
+vagas-de-emprego-sine-e-portal-mais-emprego,Profissão e trabalho,
 aposentadoria-por-idade,Aposentadoria,
 aposentadoria-por-invalidez,Aposentadoria,
 balanco-hidrico-climatico,,
 auxilio-reclusao,,
 cadastro-de-instituicoes-financeiras,,
 previsao-do-tempo,,
-licenca-de-pescador-amador,Empreendedorismo e negócios,Trabalhar
+licenca-de-pescador-amador,Empreendedorismo e negócios,Profissão e trabalho
 conversao-de-moedas,Viajar para o Exterior,Vir para o Brasil
 sistema-de-monitoramento-agrometeorologico,,
-salario-familia,Família,Trabalhar
+salario-familia,Família,Profissão e trabalho
 formularios-para-requerimento-de-beneficio,,
-aposentadoria-especial,Aposentadoria,Trabalhar
+aposentadoria-especial,Aposentadoria,Profissão e trabalho
 calculadora-do-cidadao,Empreendedorismo e negócios,
 procuracao-para-servicos-na-internet,Empreendedorismo e negócios,
 atualizacao-de-dados-para-fins-previdenciarios-pessoa-fisica,,
 download-de-programas-e-declaracoes-da-receita-federal,Contas e Impostos,
-autorizacao-de-trabalho-a-estrangeiros,Vir para o Brasil,Trabalhar
+autorizacao-de-trabalho-a-estrangeiros,Vir para o Brasil,Profissão e trabalho
 registro-de-arma-de-fogo,,
 cadastro-unico-para-programas-sociais-do-governo-federal,,
 declaracao-de-capitais-brasileiros-no-exterior,Viajar para o Exterior,
@@ -58,18 +58,18 @@ dominio-publico-biblioteca-digital,Estudos,
 sistema-gerenciador-de-series-temporais,,
 passaporte,Viajar para o Exterior,Documentos e certidões
 aqui-tem-farmacia-popular,Cuidados com a saúde,
-fundo-de-garantia-do-tempo-de-servico-fgts,Trabalhar,
+fundo-de-garantia-do-tempo-de-servico-fgts,Profissão e trabalho,
 pronatec-programa-nacional-de-acesso-ao-ensino-profissional-e-emprego,Estudos,
 restituicao-e-situacao-da-declaracao-do-imposto-de-renda-pessoa-fisica-irpf,Empreendedorismo e negócios,
-seguro-desemprego,Apoio financeiro e crédito,Trabalhar
+seguro-desemprego,Apoio financeiro e crédito,Profissão e trabalho
 extratos-de-pagamentos-de-beneficios-previdenciarios,,
 comprovante-de-inscricao-e-de-situacao-cadastral-no-cnpj,Empreendedorismo e negócios,
 fies-programa-de-financiamento-estudantil,Estudos,Apoio financeiro e crédito
 emissao-de-gps-guia-da-previdencia-social,Aposentadoria,
 consulta-a-situacao-dos-voos,Viajar para o Exterior,
-sistema-de-registro-de-empresas-de-trabalho-temporario-sirett,Empreendedorismo e negócios,Trabalhar
+sistema-de-registro-de-empresas-de-trabalho-temporario-sirett,Empreendedorismo e negócios,Profissão e trabalho
 emissao-da-certidao-de-antecedentes-criminais,Documentos e certidões,
-elaboracao-de-termo-de-rescisao-de-contrato-de-trabalho-trct,Trabalhar,Documentos e certidões
+elaboracao-de-termo-de-rescisao-de-contrato-de-trabalho-trct,Profissão e trabalho,Documentos e certidões
 emissao-de-darf-pagamentos-e-parcelamentos,Contas e Impostos,Empreendedorismo e negócios
 siscodi-acesso-ao-sistema-web,Exportação de produtos e serviços,Importação de produtos e serviços
 atribuicao-de-classificacao-indicativa-de-obras-audiovisuais,,
@@ -78,11 +78,11 @@ restituicao-de-valores-multa-de-transito-dprf,Veículos,
 emissao-de-certidao-negativa-do-banco-central,Documentos e certidões,
 consulta-comprovante-de-pagamento-gps,Empreendedorismo e negócios,
 sisutec-sistema-de-selecao-unificada-da-educacao-profissional-e-tecnologica,Estudos,
-cadastro-nacional-de-entidades-sindicais-cnes,Trabalhar,
+cadastro-nacional-de-entidades-sindicais-cnes,Profissão e trabalho,
 autorizacao-de-funcionamento-no-brasil-das-organizacoes-estrangeiras-sem-fins-lucrativos,Empreendedorismo e negócios,
 emissao-de-certidao-pessoa-juridica-certidoes-e-situacao-fiscal,Empreendedorismo e negócios,
 registro-e-expedicao-de-cedula-de-identidade-de-estrangeiro-cie,Documentos e certidões,
-acerto-de-vinculos-e-remuneracoes-para-fins-previdenciarios,Trabalhar,
+acerto-de-vinculos-e-remuneracoes-para-fins-previdenciarios,Profissão e trabalho,
 inscricao-no-cpf,Documentos e certidões,
 plantao-fiscal-para-duvidas-trabalhistas,Empreendedorismo e negócios,
 cadastramento-e-vistoria-de-empresas-que-atuam-no-transporte-internacional-de-cargas-e-ou-passageiros,Empreendedorismo e negócios,
@@ -97,7 +97,7 @@ programa-bolsa-familia-pbf,Família,Apoio financeiro e crédito
 consulta-prestadores-de-servicos-turisticos-regulares,Empreendedorismo e negócios,
 manutencao-da-certificacao-de-entidades-sociais-com-emissao-de-certidao-de-regularidade-oscip-upf-oe,Empreendedorismo e negócios,
 arrecadacao-do-microempreendor-individual-pgmei,Empreendedorismo e negócios,
-comprovante-de-inscricao-no-cpf,Trabalhar,
+comprovante-de-inscricao-no-cpf,Profissão e trabalho,
 inscricao-alteracao-e-consulta-de-matricula-cei-cadastro-especifico-do-inss,Empreendedorismo e negócios,
 unidade-de-pronto-atendimento-upa-24h,Cuidados com a saúde,
 servico-nacional-de-orientacoes-e-informacoes-sobre-a-prevencao-ao-uso-de-drogas-vivavoz-132,Cuidados com a saúde,
@@ -120,7 +120,7 @@ coleta-online-programa-gerador-de-documentos-do-cnpj,Empreendedorismo e negócio
 atendimento-a-acidentes-de-transito-dprf,Veículos,
 solicitacao-de-registro-de-empresas-operadoras-de-servico-de-microfilmagem,Empreendedorismo e negócios,
 atualizacao-de-atividade-para-fins-previdenciarios,Aposentadoria,
-inscricao-junto-a-previdencia-social,Trabalhar,Aposentadoria
+inscricao-junto-a-previdencia-social,Profissão e trabalho,Aposentadoria
 orientacoes-gerais-sobre-regimes-especiais-aduaneiros,,
 permanencia-definitiva-no-brasil,Vir para o Brasil,
 centro-de-referencia-especializado-da-assistencia-social-creas,,
@@ -131,7 +131,7 @@ consulta-pendencias-situacao-fiscal-certidao-pessoa-juridica-certidoes-e-situaca
 analise-de-atos-de-concentracao-economica-defesa-da-concorrencia,Empreendedorismo e negócios,
 centro-de-referencia-da-assistencia-social-cras,,
 orientacoes-gerais-sobretransito-aduaneiro,,
-cadastramento-de-prestadores-de-servicos-turisticos,Trabalhar,
+cadastramento-de-prestadores-de-servicos-turisticos,Profissão e trabalho,
 samu-servico-de-atendimento-movel-de-urgencia,Cuidados com a saúde,
 emissao-da-declaracao-de-aptidao-da-agricultura-familiar-dap,Empreendedorismo e negócios,
 calculo-e-emissao-de-darf-para-pagamento-de-quotas-do-irpf,Empreendedorismo e negócios,Contas e Impostos
@@ -141,18 +141,18 @@ banco-internacional-de-objetos-educacionais,Estudos,
 emissao-de-gps-guia-da-previdencia-social-divida-ativa-pagamento-parcelamentos,Empreendedorismo e negócios,Contas e Impostos
 orientacoes-gerais-para-viajantes,Viajar para o Exterior,
 simulacao-de-aliquota-efetiva-irpf-calculo,Empreendedorismo e negócios,Contas e Impostos
-consulta-pendencias-situacao-fiscal-previdenciaria-consultas-divida-ativa-da-uniao-dau,Empreendedorismo e negócios,Trabalhar
+consulta-pendencias-situacao-fiscal-previdenciaria-consultas-divida-ativa-da-uniao-dau,Empreendedorismo e negócios,Profissão e trabalho
 programa-de-aquisicao-de-alimentos-da-agricultura-familiar-paa,,
 atualizacao-cadastral-de-imovel-rural-cafir,Imóveis,
 recuperar-recibo-regime-especial-de-apuracao-e-pagamento-da-contribuicao-para-o-pis-pasep-e-cofins-incidentes-sobre-combustiveis-e-bebidas-recob,Empreendedorismo e negócios,
 prorrogacao-do-prazo-de-estada-no-brasil-vistos,Vir para o Brasil,
-registro-de-industria-pesqueira,Empreendedorismo e negócios,Trabalhar
-certificado-de-regularidade-previdenciaria-crp,Empreendedorismo e negócios,Trabalhar
+registro-de-industria-pesqueira,Empreendedorismo e negócios,Profissão e trabalho
+certificado-de-regularidade-previdenciaria-crp,Empreendedorismo e negócios,Profissão e trabalho
 identifica-classificacao-nacional-de-atividades-economicas-cnae-com-base-no-objeto-social,Empreendedorismo e negócios,
 malha-fiscal-dirpf-atendimento-malha-fiscal-irpf-cobranca-e-fiscalizacao,Empreendedorismo e negócios,Contas e Impostos
-e-social-empregador-domestico,Trabalhar,
+e-social-empregador-domestico,Profissão e trabalho,
 acesso-ao-sped-sistema-publico-de-escrituracao-digital,Empreendedorismo e negócios,Contas e Impostos
-registro-de-pescador-profissional,Trabalhar,
+registro-de-pescador-profissional,Profissão e trabalho,
 sisu-sistema-de-selecao-unificada,Estudos,
 cadastramento-de-senha-para-envio-de-demonstrativos-e-comprovante-de-repasse-previdenciarios,,
 tv-escola,Estudos,
@@ -210,7 +210,7 @@ regularizacao-de-obras-diso,Empreendedorismo e negócios,
 averbacao-de-causa-suspensiva-ou-garantia-pgfn,Empreendedorismo e negócios,
 consulta-cadastro-de-imoveis-rurais-cafir,Imóveis,
 pedido-de-restituicao-irpf-nao-resgatada-na-rede-bancaria-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao,Contas e Impostos,
-registro-de-armador-de-pesca,Empreendedorismo e negócios,Trabalhar
+registro-de-armador-de-pesca,Empreendedorismo e negócios,Profissão e trabalho
 habilitacao-pessoa-juridica-em-sistemas-de-comercio-exterior,Exportação de produtos e serviços,Importação de produtos e serviços
 admissao-temporaria-prorrogacao,Importação de produtos e serviços,
 inscricao-alteracao-cancelamento-no-cadastro-nacional-da-pessoa-juridica-cnpj-entrega-previa-de-documentos,Empreendedorismo e negócios,
@@ -219,7 +219,7 @@ consulta-pessoa-juridica-habilitada-pis-pasep-e-cofins-in-675-2006,Empreendedori
 cadastro-de-senha-para-auto-atendimento-previdenciario,,
 consulta-intimacao-per-dcomp-comunicacoes-relacionadas-a-restituicao-e-compensacao-cobranca-e-fiscalizacao,Empreendedorismo e negócios,
 ranking-do-valor-efetivo-total-vet-das-operacoes-de-cambio,Viajar para o Exterior,
-apoio-a-agroindustria-da-agricultura-familiar,Trabalhar,
+apoio-a-agroindustria-da-agricultura-familiar,Profissão e trabalho,
 calculo-e-emissao-de-darf-imposto-para-bagagem-acompanhada,Importação de produtos e serviços,
 concessao-do-regime-especial-de-exportacao-temporaria,Exportação de produtos e serviços,
 pre-cadastro-renavam,Veículos,
@@ -274,7 +274,7 @@ parcelamento-simplificado-nao-previdenciario-dau-pagamento-e-parcelamento-divida
 consulta-ao-resultado-do-agendamento-da-opcao-pelo-simples-nacional,Empreendedorismo e negócios,
 consulta-debitos-sivex-sistema-exclusao-simples-nacional,Empreendedorismo e negócios,
 alteracao-cadastral-no-cpf,Documentos e certidões,
-emissao-de-licenca-de-aquicultor,Trabalhar,
+emissao-de-licenca-de-aquicultor,Profissão e trabalho,
 siscomex-mantra-desdobramento-de-conhecimento-de-carga,Empreendedorismo e negócios,
 despacho-simplificado-de-exportacao-cancelamento,Exportação de produtos e serviços,
 autorizacao-para-registro-de-di-unica,Importação de produtos e serviços,
@@ -336,7 +336,7 @@ extrato-do-processamento-da-dirpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-p
 cancelamento-do-agendamento-da-opcao-pelo-simples-nacional,Empreendedorismo e negócios,
 exclusao-do-simples-nacional,Empreendedorismo e negócios,
 consulta-acao-fiscal-do-simples-nacional-simples-nacional-cobranca-e-fiscalizacao,Empreendedorismo e negócios,
-manutencao-do-registro-de-pescador-profissional,Trabalhar,
+manutencao-do-registro-de-pescador-profissional,Profissão e trabalho,
 autorizacoes-para-empresas-especializadas-de-seguranca-privada,Empreendedorismo e negócios,
 pedido-de-vinculacao-por-conta-e-ordem-encomendante,Importação de produtos e serviços,
 solicitar-desbloqueio-do-conhecimento-eletronico-no-siscomex-carga-sistema-integrado-de-comercio-exterior,Exportação de produtos e serviços,Importação de produtos e serviços

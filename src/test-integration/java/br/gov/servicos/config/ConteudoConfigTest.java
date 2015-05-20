@@ -23,7 +23,7 @@ public class ConteudoConfigTest {
     @Test
     public void mapeiaLinhasDaVida() throws Exception {
         assertThat(config.linhaDaVida("Abrir um negócio").getTitulo(), is("Empreendedorismo e negócios"));
-        assertThat(config.linhaDaVida("Trabalhando").getTitulo(), is("Trabalhar"));
+        assertThat(config.linhaDaVida("Trabalhando").getTitulo(), is("Profissão e trabalho"));
     }
 
     @Test
