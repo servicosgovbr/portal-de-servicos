@@ -60,7 +60,7 @@ Observação: O Conselho Administrativo de Defesa Econômica - Cade é uma autar
             </tipoInformacaoUtil>
             <descricao>Anexo I da RESOLUÇÃO Nº 2/2012 - CADE</descricao>
             <url>
-                http://www.cade.gov.br/upload/Resolu%C3%A7%C3%A3o%202_2012%20-%20An%C3%A1lise%20Atos%20Concentra%C3%A7%C3%A3o.pdf
+                <![CDATA[http://www.cade.gov.br/upload/Resolu%C3%A7%C3%A3o%202_2012%20-%20An%C3%A1lise%20Atos%20Concentra%C3%A7%C3%A3o.pdf]]>
             </url>
         </informacaoUtil>
         <informacaoUtil>
@@ -68,7 +68,7 @@ Observação: O Conselho Administrativo de Defesa Econômica - Cade é uma autar
                 <titulo>Mais informações</titulo>
             </tipoInformacaoUtil>
             <descricao>Regimento Interno - CADE</descricao>
-            <url>http://www.cade.gov.br/upload/RICADE%20atual..pdf</url>
+            <url><![CDATA[http://www.cade.gov.br/upload/RICADE%20atual..pdf]]></url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>

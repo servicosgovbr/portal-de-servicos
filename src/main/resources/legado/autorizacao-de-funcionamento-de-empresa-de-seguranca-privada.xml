@@ -49,7 +49,7 @@ IMPORTANTE:
             </tipoInformacaoUtil>
             <descricao>PORTARIA Nº 3.233/2012-DG/DPF</descricao>
             <url>
-                http://www.dpf.gov.br/servicos/seguranca-privada/legislacao-normas-e-orientacoes/portarias/Portaria%20n3233.12.DG-DPF.pdf/view
+                <![CDATA[http://www.dpf.gov.br/servicos/seguranca-privada/legislacao-normas-e-orientacoes/portarias/Portaria%20n3233.12.DG-DPF.pdf/view]]>
             </url>
         </informacaoUtil>
         <informacaoUtil>
