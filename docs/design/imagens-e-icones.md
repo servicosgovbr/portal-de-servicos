@@ -14,7 +14,7 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 | Documentos e certidões            | `documentos-e-certidoes`            | <i class="fa fa-lg fa-file-text-o"></i>    |
 | Estudos                           | `estudos`                           | <i class="fa fa-lg fa-graduation-cap"></i> |
 | Exportação de produtos e serviços | `exportacao-de-produtos-e-servicos` | <i class="fa fa-lg fa-ship"></i>           |
-| Importar Produtos e Serviços      | `importar-produtos-e-servicos`      | <i class="fa fa-lg fa-ship"></i>           |
+| Importação de produtos e serviços | `importacao-de-produtos-e-servicos` | <i class="fa fa-lg fa-ship"></i>           |
 | Manter um Veículo                 | `manter-um-veiculo`                 | <i class="fa fa-lg fa-car"></i>            |
 | Obter Crédito e Apoio Financeiro  | `obter-credito-e-apoio-financeiro`  | <i class="fa fa-lg fa-usd"></i>            |
 | Pagar Contas e Impostos           | `pagar-contas-e-impostos`           | <i class="fa fa-lg fa-usd"></i>            |
