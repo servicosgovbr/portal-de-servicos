@@ -21,7 +21,7 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 | Imóveis                           | `imoveis`                           | <i class="fa fa-lg fa-home"></i>           |
 | Família                           | `familia`                           | <i class="fa fa-lg fa-child"></i>          |
 | Profissão e trabalho              | `profissao-e-trabalho`              | <i class="fa fa-lg fa-briefcase"></i>      |
-| Viajar para o Exterior            | `viajar-para-o-exterior`            | <i class="fa fa-lg fa-plane"></i>          |
+| Viagem ao exterior                | `viagem-ao-exterior`                | <i class="fa fa-lg fa-plane"></i>          |
 | Vir para o Brasil                 | `vir-para-o-brasil`                 | <i class="fa fa-lg fa-plane"></i>          |
 
 Para exibir um ícone de qualquer uma das linhas da vida, basta utilizar uma tag `i`:
