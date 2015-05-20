@@ -57,28 +57,27 @@
             </a>
 
             <p th:unless="${#strings.isEmpty(servico.responsavel.nome)}">
-                <span>Este é um serviço </span>
-                <span th:text="${@genero.de(servico.responsavel.id)}">do(a) </span>
-                <span><a th:unless="${#strings.isEmpty(servico.responsavel.nome)}"
+                Este é um serviço
+                <th:block th:text="${@genero.de(servico.responsavel.id)}">do(a) </th:block>
+                <a th:unless="${#strings.isEmpty(servico.responsavel.nome)}"
                          th:href="@{/orgao/{id}(id=${servico.responsavel.id})}"
                          th:text="${servico.responsavel.nome}">
                     Órgão responsavel
-                </a></span>
+                </a>
                 <th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                    <span>, prestado</span>
-                    <span th:text="${@genero.per(servico.prestador.id)}">pelo(a)</span>
-                <span><a th:unless="${#strings.isEmpty(servico.prestador.nome)}"
+                    , prestado
+                    <th:block th:text="${@genero.per(servico.prestador.id)}">pelo(a)</th:block>
+                <a th:unless="${#strings.isEmpty(servico.prestador.nome)}"
                          th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
                          th:text="${servico.prestador.nome}">
                     Órgão prestador
-                </a></span></th:block>.
-
-                <span>Em caso de dúvidas, reclamações ou sugestões favor</span>
+                </a></th:block>.
+                Em caso de dúvidas, reclamações ou sugestões favor
                 <th:block th:if="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                    <span>contactá-</span><span th:text="${@genero.lo(servico.responsavel.id)}">lo(a)</span>.
+                    contactá-<th:block th:text="${@genero.lo(servico.responsavel.id)}">lo(a)</th:block>.
                 </th:block>
                 <th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                    <span>contactá-</span><span th:text="${@genero.los(servico.responsavel.id)}">los(as)</span>.
+                    contactá-<th:block th:text="${@genero.los(servico.responsavel.id)}">los(as)</th:block>.
                 </th:block>
             </p>
 
