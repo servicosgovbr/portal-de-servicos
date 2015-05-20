@@ -114,7 +114,8 @@ gds:
       receita-federal-do-brasil-rfb: "Secretaria da Receita Federal do Brasil (RFB)"
       receital-federal: "Secretaria da Receita Federal do Brasil (RFB)"
       secretaria-da-receita-federal-do-brasil-rfb: "Secretaria da Receita Federal do Brasil (RFB)"
-      secretaria-de-aviacao-civil: "Secretaria de Aviação Civil"
+      secretaria-de-aviacao-civil: "Secretaria de Aviação Civil (SAC)"
+      secretaria-de-aviacao-civil-sac: "Secretaria de Aviação Civil (SAC)"
       secretaria-de-planejamento-e-investimentos-estrategicos-spi: "Secretaria de Planejamento e Investimentos Estratégicos (SPI)"
       secretaria-do-patrimonio-da-uniao-spu-mp: "Secretaria do Patrimônio da União (SPU/MP)"
       secretaria-nacional-de-justica: "Secretaria Nacional de Justiça"
@@ -145,7 +146,7 @@ gds:
       ministerio-do-trabalho-e-emprego-mte: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-trabalho-e-emprego-mte
       ministerio-do-turismo-mtur: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-turismo-mtur
       secretaria-da-receita-federal-do-brasil-rfb: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-fazenda-mf
-      secretaria-de-aviacao-civil: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/secretaria-de-aviacao-civil-sac
+      secretaria-de-aviacao-civil-sac: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/secretaria-de-aviacao-civil-sac
       secretaria-de-planejamento-e-investimentos-estrategicos-spi: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
       secretaria-do-patrimonio-da-uniao-spu-mp: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-do-planejamento-orcamento-e-gestao-mpog
       secretaria-nacional-de-justica: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/ministerio-da-justica-mj
@@ -177,7 +178,7 @@ gds:
       ministerio-do-trabalho-e-emprego-mte: http://portal.mte.gov.br/portal-mte/
       ministerio-do-turismo-mtur: http://www.turismo.gov.br/turismo/home.html
       secretaria-da-receita-federal-do-brasil-rfb: http://idg.receita.fazenda.gov.br/
-      secretaria-de-aviacao-civil: http://www.aviacaocivil.gov.br/
+      secretaria-de-aviacao-civil-sac: http://www.aviacaocivil.gov.br/
       secretaria-nacional-de-justica: http://portal.mj.gov.br/data/Pages/MJDE2A290DITEMIDC811B50F3FA34D6AA46F27CC110930B1PTBRIE.htm
       secretaria-nacional-de-politicas-sobre-drogas-senad: http://portal.mj.gov.br/senad/
       secretaria-nacional-de-seguranca-publica: http://portal.mj.gov.br/main.asp?View={1BFF9F1B-2ECD-4A25-9976-661FB5A66624}&BrowserType=NN&LangID=pt-br&params=itemID%3D%7B540715BB-1C9B-47D3-9549-9FA38E3E99FA%7D%3B&UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D
