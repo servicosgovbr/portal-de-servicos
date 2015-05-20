@@ -9,22 +9,8 @@ set -x
 set -e
 set -o pipefail
 
-# Endereços dos servidores do ElasticSearch
-ES_1_IP_ADDR="${1:-10.16.0.11}"
-ES_2_IP_ADDR="${2:-10.16.0.9}"
-
 echo 'Instalando Guia de Serviços...'
 yum update -y guia-de-servicos
-
-echo 'Configurando Guia de Serviços...'
-cat <<-EOF > /etc/sysconfig/guia-de-servicos-overrides
-# Este arquivo sobrescreve variáveis de configuração do Guia de Serviços.
-# Para mais informações, veja a documentação em:
-#
-# http://servicosgovbr.github.io/guia-de-servicos/desenvolvimento/configuracao.html
-#
-SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:9300"
-EOF
 
 echo 'Recarregando daemons...'
 systemctl daemon-reload
