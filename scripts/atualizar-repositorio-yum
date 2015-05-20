@@ -36,7 +36,7 @@ rm -rf "${SNAP_CACHE_DIR}/rpm-s3"
 if [ ! -d "${SNAP_CACHE_DIR}/rpm-s3" ]; then
   echo "Instalando rpm-s3..."
   pushd "${SNAP_CACHE_DIR}"
-    git clone https://github.com/cv/rpm-s3 --recurse-submodules
+    git clone https://github.com/cv/rpm-s3 --recurse-submodules -b patch-2
   popd
 fi
 
