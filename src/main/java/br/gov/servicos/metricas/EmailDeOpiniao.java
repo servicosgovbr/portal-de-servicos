@@ -53,7 +53,7 @@ class EmailDeOpiniao {
         MimeMessage message = mail.createMimeMessage();
 
         message.setFrom(from);
-        message.setSubject("Nova opinião para " + url(opiniao));
+        message.setSubject("Nova opinião em " + url(opiniao));
         message.setRecipients(TO, to);
         message.setText(format("<html><body>" +
                         "<h1>Nova opinião enviada</h1>" +
