@@ -48,18 +48,18 @@ public class LinhaDaVidaControllerTest {
 
         doReturn(umConteudo)
                 .when(buscador)
-                .buscaConteudosPor("linhasDaVida.id", of("Aposentar-se"));
+                .buscaConteudosPor("linhasDaVida.id", of("Aposentadoria"));
 
-        assertCompareListModelAttribute(controller.linhaDaVida("Aposentar-se"), "resultados", umConteudo);
+        assertCompareListModelAttribute(controller.linhaDaVida("Aposentadoria"), "resultados", umConteudo);
     }
 
     @Test
     public void exibicaoDeLinhaDaVidaRetornaConteudoDescritivo() {
         doReturn(CONTEUDO_HTML)
                 .when(markdown)
-                .toHtml(new ClassPathResource("conteudo/linhas-da-vida/aposentar-se.md"));
+                .toHtml(new ClassPathResource("conteudo/linhas-da-vida/aposentadoria.md"));
 
-        assertModelAttributeValue(controller.linhaDaVida("aposentar-se"), "conteudo", CONTEUDO_HTML.withId("aposentar-se"));
+        assertModelAttributeValue(controller.linhaDaVida("aposentadoria"), "conteudo", CONTEUDO_HTML.withId("aposentadoria"));
     }
 
 }

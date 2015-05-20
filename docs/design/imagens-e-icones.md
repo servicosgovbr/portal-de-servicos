@@ -9,7 +9,7 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 | Linha da Vida                    | Classe                             | Ícone                                      |
 |----------------------------------|------------------------------------|:------------------------------------------:|
 | Empreendedorismo e negócios      | `empreendedorismo-e-negocios`      | <i class="fa fa-lg fa-pie-chart"></i>      |
-| Aposentar-se                     | `aposentar-se`                     | <i class="fa fa-lg fa-user"></i>           |
+| Aposentadoria                    | `aposentadoria`                    | <i class="fa fa-lg fa-user"></i>           |
 | Cuidar da Saúde                  | `cuidar-da-saude`                  | <i class="fa fa-lg fa-user-md"></i>        |
 | Emitir seus Documentos           | `emitir-seus-documentos`           | <i class="fa fa-lg fa-file-text-o"></i>    |
 | Estudar                          | `estudar`                          | <i class="fa fa-lg fa-graduation-cap"></i> |

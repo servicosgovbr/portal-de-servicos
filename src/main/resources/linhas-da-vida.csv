@@ -1,11 +1,11 @@
 servico,linha-1,linha-2
-consulta-situacao-do-requerimento-de-beneficio-previdenciario,Trabalhar,Aposentar-se
+consulta-situacao-do-requerimento-de-beneficio-previdenciario,Trabalhar,Aposentadoria
 certidao-previdenciaria-para-fins-de-saque-do-pis-pasep-fgts,Trabalhar,
-simulacao-da-contagem-de-tempo-de-contribuicao-previdenciaria,Trabalhar,Aposentar-se
-carta-de-concessao-e-memoria-de-calculo-de-beneficio-previdenciario,Trabalhar,Aposentar-se
+simulacao-da-contagem-de-tempo-de-contribuicao-previdenciaria,Trabalhar,Aposentadoria
+carta-de-concessao-e-memoria-de-calculo-de-beneficio-previdenciario,Trabalhar,Aposentadoria
 extrato-do-cadastro-nacional-de-informacoes-sociais-vinculos-e-remuneracoes,Trabalhar,
 extrato-de-beneficios-previdenciarios-para-declaracao-de-imposto-de-renda,Pagar Contas e Impostos,
-consulta-a-certidao-de-tempo-de-contribuicao-ctc,Aposentar-se,
+consulta-a-certidao-de-tempo-de-contribuicao-ctc,Aposentadoria,
 autorizacao-para-comprar-arma-de-fogo,,
 carteira-nacional-de-vigilante-cnv,Emitir seus Documentos,
 cadastro-no-sicaf,Empreendedorismo e negócios,
@@ -15,12 +15,12 @@ comprovante-de-situacao-cadastral-no-cpf,Emitir seus Documentos,
 salario-maternidade,Ter uma Família,
 extrato-de-informacoes-previdenciarias,Trabalhar,
 enem-exame-nacional-do-ensino-medio,Estudar,
-atualizacao-de-endereco-de-aposentados-e-pensionistas,Aposentar-se,
+atualizacao-de-endereco-de-aposentados-e-pensionistas,Aposentadoria,
 auxilio-doenca,Cuidar da Saúde,
 autorizacao-de-funcionamento-de-empresa-de-seguranca-privada,Empreendedorismo e negócios,
-aviso-para-requerimento-de-beneficio,Aposentar-se,
+aviso-para-requerimento-de-beneficio,Aposentadoria,
 instituto-nacional-de-meteorologia-inmet,,
-aposentadoria-por-tempo-de-contribuicao,Aposentar-se,Trabalhar
+aposentadoria-por-tempo-de-contribuicao,Aposentadoria,Trabalhar
 cadastramento-da-comunicacao-de-acidente-de-trabalho-cat,Empreendedorismo e negócios,Trabalhar
 certificado-de-registro-cadastral-crc-produtos-quimicos,Empreendedorismo e negócios,Trabalhar
 certificado-de-licenca-de-funcionamento-clf-produtos-quimicos,Empreendedorismo e negócios,Trabalhar
@@ -31,8 +31,8 @@ taxas-de-cambio,Viajar para o Exterior,Vir para o Brasil
 portal-do-professor,Trabalhar,
 beneficio-de-prestacao-continuada,,
 vagas-de-emprego-sine-e-portal-mais-emprego,Trabalhar,
-aposentadoria-por-idade,Aposentar-se,
-aposentadoria-por-invalidez,Aposentar-se,
+aposentadoria-por-idade,Aposentadoria,
+aposentadoria-por-invalidez,Aposentadoria,
 balanco-hidrico-climatico,,
 auxilio-reclusao,,
 cadastro-de-instituicoes-financeiras,,
@@ -42,7 +42,7 @@ conversao-de-moedas,Viajar para o Exterior,Vir para o Brasil
 sistema-de-monitoramento-agrometeorologico,,
 salario-familia,Ter uma Família,Trabalhar
 formularios-para-requerimento-de-beneficio,,
-aposentadoria-especial,Aposentar-se,Trabalhar
+aposentadoria-especial,Aposentadoria,Trabalhar
 calculadora-do-cidadao,Empreendedorismo e negócios,
 procuracao-para-servicos-na-internet,Empreendedorismo e negócios,
 atualizacao-de-dados-para-fins-previdenciarios-pessoa-fisica,,
@@ -65,7 +65,7 @@ seguro-desemprego,Obter Crédito e Apoio Financeiro,Trabalhar
 extratos-de-pagamentos-de-beneficios-previdenciarios,,
 comprovante-de-inscricao-e-de-situacao-cadastral-no-cnpj,Empreendedorismo e negócios,
 fies-programa-de-financiamento-estudantil,Estudar,Obter Crédito e Apoio Financeiro
-emissao-de-gps-guia-da-previdencia-social,Aposentar-se,
+emissao-de-gps-guia-da-previdencia-social,Aposentadoria,
 consulta-a-situacao-dos-voos,Viajar para o Exterior,
 sistema-de-registro-de-empresas-de-trabalho-temporario-sirett,Empreendedorismo e negócios,Trabalhar
 emissao-da-certidao-de-antecedentes-criminais,Emitir seus Documentos,
@@ -119,8 +119,8 @@ emissao-de-segunda-via-de-certidao-previdenciaria-certidao-contribuicoes-previde
 coleta-online-programa-gerador-de-documentos-do-cnpj,Empreendedorismo e negócios,
 atendimento-a-acidentes-de-transito-dprf,Manter um Veículo,
 solicitacao-de-registro-de-empresas-operadoras-de-servico-de-microfilmagem,Empreendedorismo e negócios,
-atualizacao-de-atividade-para-fins-previdenciarios,Aposentar-se,
-inscricao-junto-a-previdencia-social,Trabalhar,Aposentar-se
+atualizacao-de-atividade-para-fins-previdenciarios,Aposentadoria,
+inscricao-junto-a-previdencia-social,Trabalhar,Aposentadoria
 orientacoes-gerais-sobre-regimes-especiais-aduaneiros,,
 permanencia-definitiva-no-brasil,Vir para o Brasil,
 centro-de-referencia-especializado-da-assistencia-social-creas,,

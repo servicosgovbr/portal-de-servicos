@@ -32,8 +32,8 @@ public class MapaDeLinhasDaVidaTest {
                         .withTitulo("Trabalhar"),
 
                 new LinhaDaVida()
-                        .withId("aposentar-se")
-                        .withTitulo("Aposentar-se"))));
+                        .withId("aposentadoria")
+                        .withTitulo("Aposentadoria"))));
     }
 
     @Test

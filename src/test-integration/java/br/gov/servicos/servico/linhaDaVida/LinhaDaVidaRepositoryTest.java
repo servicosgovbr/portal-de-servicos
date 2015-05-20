@@ -45,12 +45,12 @@ public class LinhaDaVidaRepositoryTest extends ElasticSearchTest {
 
         servicos.save(SERVICO
                 .withId("servico-3").withLinhasDaVida(singletonList(
-                        new LinhaDaVida().withId("aposentar-se").withTitulo("Aposentar-se"))));
+                        new LinhaDaVida().withId("aposentadoria").withTitulo("Aposentadoria"))));
 
         List<LinhaDaVida> linhas = linhasDaVida.findAll();
 
         assertThat(linhas, is(not(empty())));
-        assertThat(linhas.get(0).getId(), is("aposentar-se"));
+        assertThat(linhas.get(0).getId(), is("aposentadoria"));
         assertThat(linhas.get(0).getServicos(), is(1L));
 
         assertThat(linhas.get(2).getId(), is("meu-negocio"));
