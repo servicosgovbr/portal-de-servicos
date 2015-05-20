@@ -120,8 +120,8 @@ public class ImportadorConteudoTest {
         List<Conteudo> conteudos = captor.getValue();
         Conteudo arquivoNacional = conteudos.get(0);
 
-        Assert.assertThat(arquivoNacional.getTitulo(), equalTo("Ter um Imóvel"));
-        Assert.assertThat(arquivoNacional.getConteudo(), containsString("Ter um Imóvel"));
+        Assert.assertThat(arquivoNacional.getTitulo(), equalTo("Imóveis"));
+        Assert.assertThat(arquivoNacional.getConteudo(), containsString("Imóveis"));
 
         Conteudo bancoCentral = conteudos.get(1);
         Assert.assertThat(bancoCentral.getTitulo(), equalTo("Apoio financeiro e crédito"));
