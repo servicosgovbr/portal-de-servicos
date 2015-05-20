@@ -35,7 +35,7 @@ rpm --checksig $(find build/rpmbuild/RPMS/noarch/guia-de-servicos*.rpm -type f)
 if [ ! -d "${SNAP_CACHE_DIR}/rpm-s3" ]; then
   echo "Instalando rpm-s3..."
   pushd "${SNAP_CACHE_DIR}"
-    git clone https://github.com/crohr/rpm-s3 --recurse-submodules
+    git clone https://github.com/cv/rpm-s3 --recurse-submodules
   popd
 fi
 
