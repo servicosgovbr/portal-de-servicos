@@ -39,13 +39,6 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
             <tipoInformacaoUtil>
                 <titulo>Mais informações</titulo>
             </tipoInformacaoUtil>
-            <descricao>Solicitação e Liberação dos Logins e Senhas</descricao>
-            <url>http://comunidades.mda.gov.br/portal/saf/arquivos/view/dap/ModeloDeSolicitacaoLoginDAPWeb.xls</url>
-        </informacaoUtil>
-        <informacaoUtil>
-            <tipoInformacaoUtil>
-                <titulo>Mais informações</titulo>
-            </tipoInformacaoUtil>
             <descricao>Extrato da DAP individual</descricao>
             <url>http://smap14.mda.gov.br/dap/extrato/pf/PesquisaTitular.aspx</url>
         </informacaoUtil>
