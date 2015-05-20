@@ -1,2 +1,0 @@
-Ter uma família
----

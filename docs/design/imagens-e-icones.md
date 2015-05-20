@@ -19,7 +19,7 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 | Apoio financeiro e crédito        | `apoio-financeiro-e-credito`        | <i class="fa fa-lg fa-usd"></i>            |
 | Contas e Impostos                 | `contas-e-impostos`                 | <i class="fa fa-lg fa-usd"></i>            |
 | Imóveis                           | `imoveis`                           | <i class="fa fa-lg fa-home"></i>           |
-| Ter uma Família                   | `ter-uma-familia`                   | <i class="fa fa-lg fa-child"></i>          |
+| Família                           | `familia`                           | <i class="fa fa-lg fa-child"></i>          |
 | Trabalhar                         | `trabalhar`                         | <i class="fa fa-lg fa-briefcase"></i>      |
 | Viajar para o Exterior            | `viajar-para-o-exterior`            | <i class="fa fa-lg fa-plane"></i>          |
 | Vir para o Brasil                 | `vir-para-o-brasil`                 | <i class="fa fa-lg fa-plane"></i>          |

@@ -63,7 +63,8 @@ gds:
       ter-uma-casa: "Imóveis"
       ter-um-imovel: "Imóveis"
       imoveis: "Imóveis"
-      ter-uma-familia: "Ter uma família"
+      familia: "Família"
+      ter-uma-familia: "Família"
       aproveitando-o-tempo-livre: "Aproveitar o tempo livre"
       cuidar-da-saude: "Cuidados com a saúde"
       cuidando-da-saude: "Cuidados com a saúde"
@@ -87,7 +88,7 @@ gds:
       prestando-servico-militar: "Prestar serviço militar"
       procurando-emprego: "Procurar emprego"
       trabalhando: "Trabalhar"
-      ter-filhos: "Ter uma família"
+      ter-filhos: "Família"
     orgaos:
       arquivo-nacional: "Arquivo Nacional (AN)"
       arquivo-nacional-an: "Arquivo Nacional (AN)"
