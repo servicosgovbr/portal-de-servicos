@@ -1,2 +1,0 @@
-Administrar um negócio
----

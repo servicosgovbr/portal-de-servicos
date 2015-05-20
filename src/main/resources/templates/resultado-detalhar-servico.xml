@@ -46,8 +46,8 @@
 
         <linhasDaVida>
             <linhaDaVida th:each="linha : ${servico.linhasDaVida}">
-                <id th:text="${linha.id}">administrar-um-negocio</id>
-                <titulo th:text="${linha.titulo}">Administrar um Negócio</titulo>
+                <id th:text="${linha.id}">empreendedorismo-e-negocios</id>
+                <titulo th:text="${linha.titulo}">Empreendedorismo e negócios</titulo>
             </linhaDaVida>
         </linhasDaVida>
 

@@ -54,8 +54,9 @@ gds:
       - extrato-de-beneficios-previdenciarios-para-declaracao-de-imposto-de-renda
   conteudo:
     linhasDaVida:
-      abrir-um-negocio: "Administrar um negócio"
-      administrar-um-negocio: "Administrar um negócio"
+      abrir-um-negocio: "Empreendedorismo e negócios"
+      administrar-um-negocio:  "Empreendedorismo e negócios"
+      empreendedorismo-e-negocios: "Empreendedorismo e negócios"
       adolescentes: "Adolescentes"
       aposentar-se: "Aposentar-se"
       ter-uma-casa: "Ter uma casa"
@@ -67,7 +68,7 @@ gds:
       garantindo-meus-direitos: "Garantir seus direitos"
       indo-para-outro-pais: "Viajar para o exterior"
       mantendo-um-veiculo: "Manter um veículo"
-      meu-negocio: "Administrar um negócio"
+      meu-negocio: "Empreendedorismo e negócios"
       obter-credito-e-apoio-financeiro: "Obter crédito e apoio financeiro"
       pagando-contas-e-impostos: "Pagar contas e impostos"
       prestando-servico-militar: "Prestar serviço militar"
