@@ -57,6 +57,6 @@ public class TestData {
 
     public static final List<LinhaDaVida> LINHAS_DA_VIDA = Arrays.asList(
             new LinhaDaVida().withId("ter-um-imovel").withTitulo("Ter um Imóvel"),
-            new LinhaDaVida().withId("obter-credito-e-apoio-financeiro").withTitulo("Obter Crédito e Apoio Financeiro")
+            new LinhaDaVida().withId("apoio-financeiro-e-credito").withTitulo("Apoio financeiro e crédito")
     );
 }

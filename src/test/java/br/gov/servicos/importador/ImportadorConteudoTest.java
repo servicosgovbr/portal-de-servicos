@@ -124,8 +124,8 @@ public class ImportadorConteudoTest {
         Assert.assertThat(arquivoNacional.getConteudo(), containsString("Ter um Imóvel"));
 
         Conteudo bancoCentral = conteudos.get(1);
-        Assert.assertThat(bancoCentral.getTitulo(), equalTo("Obter Crédito e Apoio Financeiro"));
-        Assert.assertThat(bancoCentral.getConteudo(), containsString("Obter Crédito e Apoio Financeiro"));
+        Assert.assertThat(bancoCentral.getTitulo(), equalTo("Apoio financeiro e crédito"));
+        Assert.assertThat(bancoCentral.getConteudo(), containsString("Apoio financeiro e crédito"));
     }
 
 }
