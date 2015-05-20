@@ -12,10 +12,6 @@
 
 #main {
   @include outer-container;
-  @include mobile-tablet {
-    padding-left: $mobile-margin-left;
-    padding-right: $mobile-margin-right;
-  }
 }
 
 .no-mobile {
@@ -33,6 +29,7 @@
 #conteudo, .conteudo {
   @include span-columns(9);
   @include omega();
+
   clear: right;
   line-height: $baseLineHeight;
 
@@ -42,6 +39,8 @@
 
   @include mobile-tablet {
     @include span-columns(12);
+    padding-left: $mobile-margin-left;
+    padding-right: $mobile-margin-right;
   }
 
   header {
@@ -229,6 +228,11 @@ dl.portlet {
   margin-top: em(30);
   margin-bottom: em(30);
   font-size: em(15);
+
+  @include mobile-tablet {
+    margin-left: $mobile-margin-left;
+    margin-right: $mobile-margin-right;
+  }
 
   a {
     padding-left: em(20);
@@ -510,6 +514,8 @@ ul.servicos-a-z {
 
   @include mobile-tablet {
     @include fill-parent();
+    margin-left: 0;
+    margin-right: 0;
   }
 
   @include tablet {
@@ -517,6 +523,13 @@ ul.servicos-a-z {
     top: em(-66);
     background-color: $branco;
     margin-bottom: 0;
+  }
+
+  .portletHeader {
+    @include mobile-tablet {
+        margin-left: 0;
+        margin-right: 0;
+    }
   }
 
   .navTree span {
