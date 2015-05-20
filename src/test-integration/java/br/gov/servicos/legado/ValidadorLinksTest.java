@@ -29,12 +29,11 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.function.Consumer;
+import java.util.List;
 
 import static com.google.common.base.Strings.isNullOrEmpty;
-import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.toList;
 import static javax.xml.xpath.XPathConstants.NODESET;
 import static lombok.AccessLevel.PRIVATE;
 import static org.junit.Assert.fail;
@@ -44,29 +43,39 @@ import static org.junit.Assert.fail;
 public class ValidadorLinksTest {
 
     @SneakyThrows
-    @Parameterized.Parameters(name = "{0}")
+    @Parameterized.Parameters(name = "{0}:{1}")
     public static Collection<Object[]> data() {
-        return asList(new PathMatchingResourcePatternResolver()
-                .getResources("file:src/main/resources/legado/*.xml"))
-                .stream()
-                .map(r -> new Object[]{r.getFilename(), r})
-                .collect(toList());
+        XPathExpression expression = XPathFactory.newInstance().newXPath().compile("//url");
+
+        List<Object[]> results = new ArrayList<>();
+        for (Resource resource : new PathMatchingResourcePatternResolver().getResources("file:src/main/resources/legado/*.xml")) {
+            NodeList nodes;
+            synchronized (ValidadorLinksTest.class) { // bug JDK-8047329
+                nodes = (NodeList) expression.evaluate(new InputSource(resource.getInputStream()), NODESET);
+            }
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Node node = nodes.item(i);
+                if (!isNullOrEmpty(node.getTextContent())) {
+                    results.add(new Object[]{resource.getFilename(), node.getTextContent().trim()});
+                }
+            }
+        }
+
+        return results;
     }
 
-    XPathExpression expression;
-    Resource input;
+    String url;
     RestTemplate http;
 
-    public ValidadorLinksTest(@SuppressFBWarnings(justification = "JUnit") String name, Resource input) throws Exception {
+    public ValidadorLinksTest(@SuppressFBWarnings(justification = "JUnit") String name, String url) throws Exception {
         desabilitaVerificaçãoSSL();
 
-        this.input = input;
+        this.url = url;
         this.http = new RestTemplate();
-        this.expression = XPathFactory.newInstance().newXPath().compile("//url");
 
         HttpComponentsClientHttpRequestFactory rf = new HttpComponentsClientHttpRequestFactory();
-        rf.setConnectTimeout(1000);
-        rf.setReadTimeout(3000);
+        rf.setConnectTimeout(5000);
+        rf.setReadTimeout(10000);
 
         http.setRequestFactory(rf);
         http.setErrorHandler(new ResponseErrorHandler() {
@@ -83,23 +92,15 @@ public class ValidadorLinksTest {
     }
 
     @Test
-    public void deveTerLinksVálidos() throws Exception {
-        testaLinks(node -> {
-            try {
-                new URL(node.getTextContent()).toURI();
-            } catch (Exception e) {
-                fail(e.getMessage());
-            }
-        });
+    public void deveSerLinksVálido() throws Exception {
+        new URL(url).toURI();
     }
 
     @Test
     @Ignore("Muitas URLs ainda estão falhando")
-    public void deveTerLinksComRepostasVálidas() throws Exception {
-        testaLinks(node -> {
-            http.headForHeaders(node.getTextContent().trim());
-        });
-
+    public void deveSerLinkComRepostaVálida() throws Exception {
+        System.out.println(url);
+        http.getForObject(url, String.class);
     }
 
     private void desabilitaVerificaçãoSSL() throws NoSuchAlgorithmException, KeyManagementException {
@@ -117,19 +118,6 @@ public class ValidadorLinksTest {
         };
         ctx.init(null, new TrustManager[]{tm}, null);
         SSLContext.setDefault(ctx);
-    }
-
-    private void testaLinks(Consumer<Node> fn) throws Exception {
-        NodeList results;
-        synchronized (ValidadorLinksTest.class) { // bug JDK-8047329
-            results = (NodeList) expression.evaluate(new InputSource(input.getInputStream()), NODESET);
-        }
-        for (int i = 0; i < results.getLength(); i++) {
-            Node node = results.item(i);
-            if (!isNullOrEmpty(node.getTextContent())) {
-                fn.accept(node);
-            }
-        }
     }
 
 }
