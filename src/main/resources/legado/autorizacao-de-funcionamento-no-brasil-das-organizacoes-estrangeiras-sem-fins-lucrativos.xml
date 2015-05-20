@@ -59,20 +59,6 @@
             <descricao>Decreto nº 3.441/2000</descricao>
             <url>http://www.planalto.gov.br/ccivil_03/decreto/D3441.htm</url>
         </informacaoUtil>
-        <informacaoUtil>
-            <tipoInformacaoUtil>
-                <titulo>Mais informações</titulo>
-            </tipoInformacaoUtil>
-            <descricao>Portaria MJ nº 1.443/2006</descricao>
-            <url>http://www.in.gov.br/visualiza/index.jsp?jornal=1&amp;pagina=41&amp;data=13/09/2006</url>
-        </informacaoUtil>
-        <informacaoUtil>
-            <tipoInformacaoUtil>
-                <titulo>Mais informações</titulo>
-            </tipoInformacaoUtil>
-            <descricao>Portaria MJ nº 1.272/2008</descricao>
-            <url>http://www.in.gov.br/visualiza/index.jsp?jornal=1&amp;pagina=188&amp;data=04/07/2008</url>
-        </informacaoUtil>
     </informacoesUteis>
     <compromissosAtendimento></compromissosAtendimento>
     <legislacoes></legislacoes>
