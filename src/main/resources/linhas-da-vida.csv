@@ -71,7 +71,7 @@ sistema-de-registro-de-empresas-de-trabalho-temporario-sirett,Empreendedorismo e
 emissao-da-certidao-de-antecedentes-criminais,Documentos e certidões,
 elaboracao-de-termo-de-rescisao-de-contrato-de-trabalho-trct,Trabalhar,Documentos e certidões
 emissao-de-darf-pagamentos-e-parcelamentos,Pagar Contas e Impostos,Empreendedorismo e negócios
-siscodi-acesso-ao-sistema-web,Exportar Produtos e Serviços,Importar Produtos e Serviços
+siscodi-acesso-ao-sistema-web,Exportação de produtos e serviços,Importar Produtos e Serviços
 atribuicao-de-classificacao-indicativa-de-obras-audiovisuais,,
 declaracao-de-acidente-de-transito-dat-dprf,Manter um Veículo,
 restituicao-de-valores-multa-de-transito-dprf,Manter um Veículo,
@@ -189,7 +189,7 @@ extrato-do-processamento-da-ditr,Ter um Imóvel,
 consulta-processamento-per-dcomp,,
 consulta-despacho-decisorio-per-dcomp,,
 pedido-de-antecipacao-de-analise-da-dirpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos,Pagar Contas e Impostos,
-sistema-de-leilao-eletronico-sle-mercadorias-e-residuos-aduana-e-comercio-exterior,Exportar Produtos e Serviços,Importar Produtos e Serviços
+sistema-de-leilao-eletronico-sle-mercadorias-e-residuos-aduana-e-comercio-exterior,Exportação de produtos e serviços,Importar Produtos e Serviços
 sistema-de-calculo-de-parcelamentos-sipar,,
 programa-gerador-da-declaracao-pgd-sinco-e-receitanet,Empreendedorismo e negócios,
 sistema-de-controle-de-producao-de-bebidas-sicobe,Empreendedorismo e negócios,
@@ -205,13 +205,13 @@ retificacao-de-documento-de-arrecadacao-de-receitas-federais-darf-redarf,Empreen
 cadastro-consulta-e-cancelamento-procuracao-via-e-cac-centro-virtual-de-atendimento-da-receita,,
 emissao-de-documento-de-arrecadacao-do-simples-nacional-das-parcela-minima,Empreendedorismo e negócios,
 transformacao-de-vistos,Viajar para o Exterior,
-siscomex-radar-termos-de-responsabilidade,Exportar Produtos e Serviços,Importar Produtos e Serviços
+siscomex-radar-termos-de-responsabilidade,Exportação de produtos e serviços,Importar Produtos e Serviços
 regularizacao-de-obras-diso,Empreendedorismo e negócios,
 averbacao-de-causa-suspensiva-ou-garantia-pgfn,Empreendedorismo e negócios,
 consulta-cadastro-de-imoveis-rurais-cafir,Ter um Imóvel,
 pedido-de-restituicao-irpf-nao-resgatada-na-rede-bancaria-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao,Pagar Contas e Impostos,
 registro-de-armador-de-pesca,Empreendedorismo e negócios,Trabalhar
-habilitacao-pessoa-juridica-em-sistemas-de-comercio-exterior,Exportar Produtos e Serviços,Importar Produtos e Serviços
+habilitacao-pessoa-juridica-em-sistemas-de-comercio-exterior,Exportação de produtos e serviços,Importar Produtos e Serviços
 admissao-temporaria-prorrogacao,Importar Produtos e Serviços,
 inscricao-alteracao-cancelamento-no-cadastro-nacional-da-pessoa-juridica-cnpj-entrega-previa-de-documentos,Empreendedorismo e negócios,
 comunicacao-de-alienacao-ao-cafir,Ter um Imóvel,
@@ -221,7 +221,7 @@ consulta-intimacao-per-dcomp-comunicacoes-relacionadas-a-restituicao-e-compensac
 ranking-do-valor-efetivo-total-vet-das-operacoes-de-cambio,Viajar para o Exterior,
 apoio-a-agroindustria-da-agricultura-familiar,Trabalhar,
 calculo-e-emissao-de-darf-imposto-para-bagagem-acompanhada,Importar Produtos e Serviços,
-concessao-do-regime-especial-de-exportacao-temporaria,Exportar Produtos e Serviços,
+concessao-do-regime-especial-de-exportacao-temporaria,Exportação de produtos e serviços,
 pre-cadastro-renavam,Manter um Veículo,
 servicos-de-cpf-para-estrangeiros-e-de-cujus,Vir para o Brasil,
 reparcelamento-dau-pagamento-e-parcelamento-divida-ativa-da-uniao-dau,Pagar Contas e Impostos,
@@ -237,22 +237,22 @@ consulta-pendencias-situacao-fiscal-certidao-pessoa-juridica-divida-ativa-da-uni
 opcao-pelo-regime-de-apuracao-de-receitas-simples-nacional,Empreendedorismo e negócios,
 entrega-voluntaria-de-armas-de-fogo-campanha-nacional-do-desarmamento,,
 consulta-obras-do-ministerio-do-turismo-em-seu-municipio,,
-siscomex-radar-retificacao-de-informacao,Importar Produtos e Serviços,Exportar Produtos e Serviços
+siscomex-radar-retificacao-de-informacao,Importar Produtos e Serviços,Exportação de produtos e serviços
 registro-de-dsi-bagagem-desacompanhada,Importar Produtos e Serviços,
 autorizacao-para-retirada-de-residuo-pedido,Empreendedorismo e negócios,
 impugnacao-de-auto-de-infracao,,
 cnpj-previdenciario-alteracao,Empreendedorismo e negócios,
 consulta-relatorio-de-erros-da-doi,Ter um Imóvel,Pagar Contas e Impostos
 consulta-despacho-decisorio-isencao-de-ipi-e-iof-isencoes,Empreendedorismo e negócios,
-consulta-pessoas-juridicas-habilitadas-no-regime-especial-de-aquisicao-de-bens-de-capital-para-empresas-exportadora-recap,Exportar Produtos e Serviços,
+consulta-pessoas-juridicas-habilitadas-no-regime-especial-de-aquisicao-de-bens-de-capital-para-empresas-exportadora-recap,Exportação de produtos e serviços,
 consulta-pj-habilitadas-entrega-de-embalagens-remicex,Empreendedorismo e negócios,
 informacao-de-selos-de-controle-substituidos,,
 consulta-rendimentos-informados-por-fontes-pagadoras-dirf-declaracao-do-imposto-de-renda-retido-na-fonte-declaracoes-e-demonstrativos,Pagar Contas e Impostos,
 extrato-do-processamento-da-dipj,Empreendedorismo e negócios,
 agendamento-da-opcao-pelo-simples-nacional,Empreendedorismo e negócios,
 calculo-do-valor-devido-e-geracao-do-das-documento-de-arrecadacao-do-simples-nacional-ate-12-2011,Empreendedorismo e negócios,
-solicitar-prorrogacao-do-prazo-de-permanencia-no-regime-de-entreposto-aduaneiro,Importar Produtos e Serviços,Exportar Produtos e Serviços
-solicitar-prorrogacao-do-regime-especial-de-exportacao-temporaria,Exportar Produtos e Serviços,
+solicitar-prorrogacao-do-prazo-de-permanencia-no-regime-de-entreposto-aduaneiro,Importar Produtos e Serviços,Exportação de produtos e serviços
+solicitar-prorrogacao-do-regime-especial-de-exportacao-temporaria,Exportação de produtos e serviços,
 manifestacao-de-inconformidade-despacho-decisorio-cobranca-e-fiscalizacao,,
 programa-para-transmissao-e-validacao-de-declaracoes,Pagar Contas e Impostos,
 alteracao-de-codevedor-responsavel-pgfn,,
@@ -262,7 +262,7 @@ pagamentos-e-parcelamentos-dau-divida-ativa-da-uniao,Pagar Contas e Impostos,
 consulta-pj-habilitadas-copa-confederacoes-e-copa-do-mundo,Empreendedorismo e negócios,
 programa-per-dcomp-e-receitanet,Pagar Contas e Impostos,
 manifestacao-de-inconformidade-isencao-de-ipi-e-iof-isencoes,Empreendedorismo e negócios,
-mantra-acesso-ao-sistema-web,Importar Produtos e Serviços,Exportar Produtos e Serviços
+mantra-acesso-ao-sistema-web,Importar Produtos e Serviços,Exportação de produtos e serviços
 simulador-tratamento-trib-e-administrativo-das-importacoes,Importar Produtos e Serviços,
 alteracao-cadastral-no-cnpj,Empreendedorismo e negócios,
 solicitacao-de-cancelamento-baixa-no-cnpj,Empreendedorismo e negócios,
@@ -276,7 +276,7 @@ consulta-debitos-sivex-sistema-exclusao-simples-nacional,Empreendedorismo e neg�
 alteracao-cadastral-no-cpf,Documentos e certidões,
 emissao-de-licenca-de-aquicultor,Trabalhar,
 siscomex-mantra-desdobramento-de-conhecimento-de-carga,Empreendedorismo e negócios,
-despacho-simplificado-de-exportacao-cancelamento,Exportar Produtos e Serviços,
+despacho-simplificado-de-exportacao-cancelamento,Exportação de produtos e serviços,
 autorizacao-para-registro-de-di-unica,Importar Produtos e Serviços,
 orientacoes-gerais-despachante-ajudante-perito-aduaneiro,,
 autorizacao-para-acesso-provisorio-a-recinto-alfandegado,,
@@ -286,7 +286,7 @@ solicitar-reparcelamento-de-debitos,Pagar Contas e Impostos,
 scorpios-gerencial-sistema-de-controle-e-rastreamento-da-producao-de-cigarros,Empreendedorismo e negócios,
 codigo-de-acesso-ao-portal-e-cac,,
 cadastro-de-procuracao-para-o-portal-e-cac-presencial,,
-orientacoes-gerais-sobre-siscomex-carga,Importar Produtos e Serviços,Exportar Produtos e Serviços
+orientacoes-gerais-sobre-siscomex-carga,Importar Produtos e Serviços,Exportação de produtos e serviços
 sistema-eletronico-de-porte-de-valores-e-dpv,Viajar para o Exterior,Vir para o Brasil
 consulta-pedido-e-emissao-de-inscricao-no-cpf,Documentos e certidões,
 cadastro-de-pessoas-de-contato-contribuinte-diferenciado,,
@@ -300,7 +300,7 @@ solicitacao-de-opcao-pelo-simples-nacional,Empreendedorismo e negócios,
 acompanhamento-da-formalizacao-da-opcao-simples-nacional,Empreendedorismo e negócios,
 destruicao-de-mercadoria-pedido,Empreendedorismo e negócios,
 solicitar-extincao-do-regime-especial-de-admissao-temporaria,Importar Produtos e Serviços,
-solicitar-extincao-do-regime-especial-de-exportacao-temporaria,Exportar Produtos e Serviços,
+solicitar-extincao-do-regime-especial-de-exportacao-temporaria,Exportação de produtos e serviços,
 doacoes-de-mercadorias-apreendidas,,
 vistoria-aduaneira-solicitacao,,
 registro-de-despachante-ajudante-aduaneiro-inscricao,,
@@ -320,7 +320,7 @@ consulta-pj-habilitadas-importacao-de-embalagens,Importar Produtos e Serviços,
 ressarcimento-do-ipi-a-missoes-diplomaticas,Empreendedorismo e negócios,
 validador-de-assinaturas-digitais-certificado-digital,,
 codigo-de-acesso-parcelamento-mp-303-paex-e-timemania,,
-consulta-protocolo-debito-com-estorno-pendente-aduana,Exportar Produtos e Serviços,Importar Produtos e Serviços
+consulta-protocolo-debito-com-estorno-pendente-aduana,Exportação de produtos e serviços,Importar Produtos e Serviços
 complementacao-de-informacoes-cadastrais-no-cpf,Documentos e certidões,
 regularizacao-do-cpf-contribuintes-no-exterior,Viajar para o Exterior,
 confirmacao-de-autenticidade-de-certidao-pessoa-fisica-certidao-pessoa-fisica-certidoes-e-situacao-fiscal,,
@@ -339,7 +339,7 @@ consulta-acao-fiscal-do-simples-nacional-simples-nacional-cobranca-e-fiscalizaca
 manutencao-do-registro-de-pescador-profissional,Trabalhar,
 autorizacoes-para-empresas-especializadas-de-seguranca-privada,Empreendedorismo e negócios,
 pedido-de-vinculacao-por-conta-e-ordem-encomendante,Importar Produtos e Serviços,
-solicitar-desbloqueio-do-conhecimento-eletronico-no-siscomex-carga-sistema-integrado-de-comercio-exterior,Exportar Produtos e Serviços,Importar Produtos e Serviços
+solicitar-desbloqueio-do-conhecimento-eletronico-no-siscomex-carga-sistema-integrado-de-comercio-exterior,Exportação de produtos e serviços,Importar Produtos e Serviços
 solicitacao-de-selos-de-controle-do-ipi-importacao-aduana-e-comercio-exterior,Empreendedorismo e negócios,
 transito-aduaneiro-inclusao-de-rota-transito-aduaneiro-aduana-e-comercio-exterior,,
 orientacoes-gerais-sobre-container,,
@@ -363,7 +363,7 @@ pagamentos-p-dirpf-carne-leao-ganho-de-capital-etc,Pagar Contas e Impostos,
 requerimento-para-prioridade-no-pagamento-de-restituicao-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao,Pagar Contas e Impostos,
 pedido-de-restituicao-de-receitas-nao-administradas-pela-receita-federal,,
 calculo-de-restituicao-e-reembolso-previdenciarios,,
-siscomex-exportacao-acesso-ao-sistema-web,Exportar Produtos e Serviços,
+siscomex-exportacao-acesso-ao-sistema-web,Exportação de produtos e serviços,
 siscomex-internacao-zona-franca-de-manaus,Empreendedorismo e negócios,
 sist-inf-de-controle-regime-de-tributacao-unificada-rtu,Empreendedorismo e negócios,
 regularizacao-da-situacao-cadastral-no-cpf,Documentos e certidões,
@@ -383,8 +383,8 @@ cadastro-de-intervenientes-nos-sistemas-informatizados-receita-federal,,
 siscomex-carga-retificacao,,
 siscomex-carga-termos-de-responsabilidade,,
 siscomex-mantra-solicitacao-de-redisponibilizacao,,
-despacho-simplificado-de-exportacao-retificacao,Exportar Produtos e Serviços,
-repetro-habilitacao,Exportar Produtos e Serviços,Importar Produtos e Serviços
+despacho-simplificado-de-exportacao-retificacao,Exportação de produtos e serviços,
+repetro-habilitacao,Exportação de produtos e serviços,Importar Produtos e Serviços
 declaracao-de-transito-aduaneiro-retificacao,,
 intimacoes-aduana-entrega-de-documentos,,
 cnpj-previdenciario-inclusao,Empreendedorismo e negócios,
@@ -400,12 +400,12 @@ consulta-sobre-interpretacao-da-legislacao-tributaria,,
 consulta-pagamentos-por-orgao-conveniado-rede-arrecadadora-pagamento-pagamentos-e-parcelamentos,,
 parcelamento-especial-paes-refis-ii,Pagar Contas e Impostos,
 validacao-de-documentos-assinados-digitalmente,Documentos e certidões,
-orientacoes-gerais-habilitacao-e-cadastramento-siscomex,Exportar Produtos e Serviços,Importar Produtos e Serviços
-siscomex-carga-acesso-ao-sistema-web,Exportar Produtos e Serviços,Importar Produtos e Serviços
-siscomex-transito-acesso-ao-sistema-web,Exportar Produtos e Serviços,Importar Produtos e Serviços
+orientacoes-gerais-habilitacao-e-cadastramento-siscomex,Exportação de produtos e serviços,Importar Produtos e Serviços
+siscomex-carga-acesso-ao-sistema-web,Exportação de produtos e serviços,Importar Produtos e Serviços
+siscomex-transito-acesso-ao-sistema-web,Exportação de produtos e serviços,Importar Produtos e Serviços
 siscomex-importacao-acesso-ao-sistema-web,Importar Produtos e Serviços,
 sistema-de-leilao-eletronico-sle-outros,,
-orientacoes-gerais-sobre-restituicao-tributos-aduaneiros,Exportar Produtos e Serviços,Importar Produtos e Serviços
+orientacoes-gerais-sobre-restituicao-tributos-aduaneiros,Exportação de produtos e serviços,Importar Produtos e Serviços
 orientacoes-gerais-sobre-intimacoes-aduana,Empreendedorismo e negócios,
 inscricao-no-cnpj,Empreendedorismo e negócios,
 consulta-cadastro-previdenciario,,
@@ -421,17 +421,17 @@ consulta-debitos-do-simples-nacional-apos-regularizacao,Empreendedorismo e negó
 declaracao-anual-do-simples-nacional-ano-calendario-ate-2011,Empreendedorismo e negócios,
 naturalizacao-concessao-e-transformacao,Vir para o Brasil,
 credenciamento-de-empresas-de-escolta,Empreendedorismo e negócios,
-declaracao-de-exportacao-recepcao,Exportar Produtos e Serviços,
-despacho-simplificado-de-exportacao-averbacao,Exportar Produtos e Serviços,
+declaracao-de-exportacao-recepcao,Exportação de produtos e serviços,
+despacho-simplificado-de-exportacao-averbacao,Exportação de produtos e serviços,
 despacho-simplificado-de-importacao-retificacao,Importar Produtos e Serviços,
 entrega-antecipada-de-mercadoria-importacao,Importar Produtos e Serviços,
 verificacao-de-mercadoria-antes-do-registro-da-di,Importar Produtos e Serviços,
-deposito-especial-habilitacao,Exportar Produtos e Serviços,Importar Produtos e Serviços
+deposito-especial-habilitacao,Exportação de produtos e serviços,Importar Produtos e Serviços
 repex-habilitacao,Importar Produtos e Serviços,
 pedido-de-cadastramento-de-veiculos-e-condutores-para-o-rtu,Manter um Veículo,
-devolucao-de-container-pedido,Exportar Produtos e Serviços,Importar Produtos e Serviços
-autorizacao-para-acesso-permanente-a-recinto-alfandegado,Exportar Produtos e Serviços,Importar Produtos e Serviços
-outros-assuntos-aduana-entrega-de-documentos,Exportar Produtos e Serviços,Importar Produtos e Serviços
+devolucao-de-container-pedido,Exportação de produtos e serviços,Importar Produtos e Serviços
+autorizacao-para-acesso-permanente-a-recinto-alfandegado,Exportação de produtos e serviços,Importar Produtos e Serviços
+outros-assuntos-aduana-entrega-de-documentos,Exportação de produtos e serviços,Importar Produtos e Serviços
 orientacoes-gerais-sobre-renavam,Manter um Veículo,
 inscricao-no-cafir,Ter um Imóvel,
 notificacao-de-compensacao-de-oficio-da-malha-debito-intimacoes-relacionadas-a-cobranca-cobranca-e-fiscalizacao,Pagar Contas e Impostos,
@@ -446,8 +446,8 @@ parcelamento-refis-programa-de-recuperacao-fiscal,Pagar Contas e Impostos,
 consulta-publica-refri,Empreendedorismo e negócios,
 pedido-de-registro-especial-para-papel-imune,Empreendedorismo e negócios,
 consulta-pj-habilitadas-pis-pasep-e-cofins-in-595-2005,Empreendedorismo e negócios,
-consulta-pj-habilitadas-exportacao-de-servicos-de-ti,Exportar Produtos e Serviços,
-orientacoes-gerais-acesso-aos-sist-de-comercio-exterior,Exportar Produtos e Serviços,
+consulta-pj-habilitadas-exportacao-de-servicos-de-ti,Exportação de produtos e serviços,
+orientacoes-gerais-acesso-aos-sist-de-comercio-exterior,Exportação de produtos e serviços,
 sistema-cpf-para-entidades-conveniadas-cpf-cadastro-de-pessoas-fisicas-conveniadas-e-parceiros,,
 emissao-de-certidao-pessoa-fisica-divida-ativa-da-uniao-dau,Pagar Contas e Impostos,
 emissao-de-certidao-pessoa-juridica-certidao-pessoa-juridica-divida-ativa-da-uniao-dau,Empreendedorismo e negócios,
@@ -468,14 +468,14 @@ comunicacao-para-compensacao-de-oficio,Pagar Contas e Impostos,
 acompanhamento-da-solicitacao-de-enquadramento-no-simei,Empreendedorismo e negócios,
 caixa-postal,,
 cadastro-de-dispositivos-moveis-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos,Pagar Contas e Impostos,
-despacho-simplificado-de-exportacao-recepcao,Exportar Produtos e Serviços,
-alteracao-de-dados-de-embarque,Exportar Produtos e Serviços,Importar Produtos e Serviços
+despacho-simplificado-de-exportacao-recepcao,Exportação de produtos e serviços,
+alteracao-de-dados-de-embarque,Exportação de produtos e serviços,Importar Produtos e Serviços
 entrega-fracionada-de-mercadoria-importacao,Importar Produtos e Serviços,
 orientacoes-gerais-sobre-importacao,Importar Produtos e Serviços,
 entreposto-industrial-recof-habilitacao,Empreendedorismo e negócios,
-transito-aduaneiro-habilitacao-transito-aduaneiro-aduana-e-comercio-exterior,Exportar Produtos e Serviços,Importar Produtos e Serviços
-procedimento-simplificado-taps,Exportar Produtos e Serviços,Importar Produtos e Serviços
-desova-de-container-pedido,Exportar Produtos e Serviços,Importar Produtos e Serviços
+transito-aduaneiro-habilitacao-transito-aduaneiro-aduana-e-comercio-exterior,Exportação de produtos e serviços,Importar Produtos e Serviços
+procedimento-simplificado-taps,Exportação de produtos e serviços,Importar Produtos e Serviços
+desova-de-container-pedido,Exportação de produtos e serviços,Importar Produtos e Serviços
 e-dmov-movimentacao-fisica-internacional-de-valores,Importar Produtos e Serviços,
 programa-gerador-da-declaracao-pgd-derex-e-receitanet,,
 programa-gerador-da-declaracao-pgd-dcp-e-receitanet,,
@@ -490,9 +490,9 @@ dif-papel-imune-declaracao-do-papel-imune,Pagar Contas e Impostos,
 inscricao-no-regime-especial-para-produtores-e-importadores,Importar Produtos e Serviços,
 codigo-de-acesso-ao-portal-do-simples-nacional,Empreendedorismo e negócios,
 dasn-simei-declaracao-anual-para-o-microempreendedor-individual,Pagar Contas e Impostos,
-mercosul-certificados-ccptc-acesso-ao-sistema-web,Exportar Produtos e Serviços,Importar Produtos e Serviços
+mercosul-certificados-ccptc-acesso-ao-sistema-web,Exportação de produtos e serviços,Importar Produtos e Serviços
 declaracao-de-mov-fisica-internacional-de-valores-e-dmov,Viajar para o Exterior,
-orientacoes-gerais-sobre-encomenda-aerea-internacional,Exportar Produtos e Serviços,Importar Produtos e Serviços
+orientacoes-gerais-sobre-encomenda-aerea-internacional,Exportação de produtos e serviços,Importar Produtos e Serviços
 consulta-cnpj-eleicoes,Empreendedorismo e negócios,
 atualizacao-das-bases-pessoa-fisica-bancos-credenciados,,
 atualizacao-das-bases-pessoa-juridica-bancos-credenciados,,
@@ -505,13 +505,13 @@ notificacoes-em-auditoria-de-compensacao-em-gfip-cobranca-e-fiscalizacao,Pagar C
 consulta-de-declaracao-transmitida-do-simples-nacional,Pagar Contas e Impostos,
 requerimentos-patrimoniais-disponiveis-na-internet,Ter um Imóvel,
 autorizacoes-especial-e-previa-produtos-quimicos,Empreendedorismo e negócios,
-declaracao-de-exportacao-averbacao,Exportar Produtos e Serviços,
+declaracao-de-exportacao-averbacao,Exportação de produtos e serviços,
 declaracao-de-importacao-registro-antecipado,Importar Produtos e Serviços,
-devolucao-de-mercadoria-ao-exterior,Exportar Produtos e Serviços,Importar Produtos e Serviços
-deposito-afiancado-habilitacao,Exportar Produtos e Serviços,Importar Produtos e Serviços
-deposito-alfandegado-certificado-dac-autorizacao,Exportar Produtos e Serviços,Importar Produtos e Serviços
-linha-azul-habilitacao,Exportar Produtos e Serviços,Importar Produtos e Serviços
-declaracao-de-transito-aduaneiro-recepcao,Exportar Produtos e Serviços,Importar Produtos e Serviços
+devolucao-de-mercadoria-ao-exterior,Exportação de produtos e serviços,Importar Produtos e Serviços
+deposito-afiancado-habilitacao,Exportação de produtos e serviços,Importar Produtos e Serviços
+deposito-alfandegado-certificado-dac-autorizacao,Exportação de produtos e serviços,Importar Produtos e Serviços
+linha-azul-habilitacao,Exportação de produtos e serviços,Importar Produtos e Serviços
+declaracao-de-transito-aduaneiro-recepcao,Exportação de produtos e serviços,Importar Produtos e Serviços
 credenciamento-para-realizar-auditoria-de-sistemas,Empreendedorismo e negócios,
 descredenciamento-para-realizar-auditoria-de-sistemas,Empreendedorismo e negócios,
 conclusao-do-servico-de-cpf-iniciado-na-conveniada,,
@@ -549,14 +549,14 @@ opcao-pelo-domicilio-tributario-eletronico-outros,Pagar Contas e Impostos,
 consulta-dados-do-parcelamento-do-imovel,Ter um Imóvel,
 despacho-simplificado-de-importacao-cancelamento,Importar Produtos e Serviços,
 entreposto-aduaneiro-na-importacao-credenciamento,Importar Produtos e Serviços,
-entreposto-aduaneiro-na-exportacao-credenciamento,Exportar Produtos e Serviços,
+entreposto-aduaneiro-na-exportacao-credenciamento,Exportação de produtos e serviços,
 vistas-de-processo,Empreendedorismo e negócios,Pagar Contas e Impostos
 validacao-do-comprovante-de-arrecadacao,Pagar Contas e Impostos,
 parcelamento-previdenciario-dau-parcelamento-divida-ativa-da-uniao-dau-pagamentos-e-parcelamentos,Pagar Contas e Impostos,
 notificacao-de-compensacao-de-oficio-da-malha-debito-compensacao-de-oficio-restituicao-e-compensacao,Pagar Contas e Impostos,
 declaracoes-simplificadas-de-pessoa-juridica-simples-2008,Pagar Contas e Impostos,
-cadastro-de-representante-legal-sist-de-comercio-exterior,Exportar Produtos e Serviços,Importar Produtos e Serviços
-lince-aladi-acesso-ao-sistema-web,Exportar Produtos e Serviços,Importar Produtos e Serviços
+cadastro-de-representante-legal-sist-de-comercio-exterior,Exportação de produtos e serviços,Importar Produtos e Serviços
+lince-aladi-acesso-ao-sistema-web,Exportação de produtos e serviços,Importar Produtos e Serviços
 extrato-do-processamento-da-dirpf-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao,Pagar Contas e Impostos,
 malha-fiscal-dirpf-atendimento-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos,Pagar Contas e Impostos,
 opcao-de-impressao-da-dirpf-exclusivamente-no-e-cac,Pagar Contas e Impostos,
@@ -568,7 +568,7 @@ notificacoes-sms-do-simples-nacional,Pagar Contas e Impostos,
 consulta-declaracao-do-microempreendedor-individual,Pagar Contas e Impostos,
 emissao-de-certidao-de-imovel-spu,Ter um Imóvel,
 consulta-dados-cadastrais-do-imovel,Ter um Imóvel,
-habilitacao-pessoa-fisica-em-sistemas-de-comercio-exterior,Exportar Produtos e Serviços,Importar Produtos e Serviços
+habilitacao-pessoa-fisica-em-sistemas-de-comercio-exterior,Exportação de produtos e serviços,Importar Produtos e Serviços
 declaracao-de-importacao-recepcao,Importar Produtos e Serviços,
 declaracao-de-importacao-retificacao,Importar Produtos e Serviços,
 declaracao-de-importacao-cancelamento,Importar Produtos e Serviços,
