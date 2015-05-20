@@ -19,7 +19,7 @@
                 <titulo>Presencial</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Unidades de atendimento presencial (apenas na jurisdição do contribuinte)</descricao>
-            <url>http://www.receita.fazenda.gov.br/AtendContrib/Atendimento/UnidAtendimento/CentroAtendimento.htm</url>
+            <url>https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento</url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
