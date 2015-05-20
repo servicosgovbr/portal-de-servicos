@@ -1,2 +1,0 @@
-Manter um veículo
----

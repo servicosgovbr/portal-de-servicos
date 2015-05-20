@@ -53,7 +53,7 @@ cadastro-unico-para-programas-sociais-do-governo-federal,,
 declaracao-de-capitais-brasileiros-no-exterior,Viajar para o Exterior,
 declaracao-do-censo-de-capitais-estrangeiros-no-pais,,
 endereco-das-agencias-da-previdencia-social,,
-multas-de-transito-departamento-de-policia-rodoviaria-federal,Manter um Veículo,
+multas-de-transito-departamento-de-policia-rodoviaria-federal,Veículos,
 dominio-publico-biblioteca-digital,Estudos,
 sistema-gerenciador-de-series-temporais,,
 passaporte,Viajar para o Exterior,Documentos e certidões
@@ -73,8 +73,8 @@ elaboracao-de-termo-de-rescisao-de-contrato-de-trabalho-trct,Trabalhar,Documento
 emissao-de-darf-pagamentos-e-parcelamentos,Pagar Contas e Impostos,Empreendedorismo e negócios
 siscodi-acesso-ao-sistema-web,Exportação de produtos e serviços,Importação de produtos e serviços
 atribuicao-de-classificacao-indicativa-de-obras-audiovisuais,,
-declaracao-de-acidente-de-transito-dat-dprf,Manter um Veículo,
-restituicao-de-valores-multa-de-transito-dprf,Manter um Veículo,
+declaracao-de-acidente-de-transito-dat-dprf,Veículos,
+restituicao-de-valores-multa-de-transito-dprf,Veículos,
 emissao-de-certidao-negativa-do-banco-central,Documentos e certidões,
 consulta-comprovante-de-pagamento-gps,Empreendedorismo e negócios,
 sisutec-sistema-de-selecao-unificada-da-educacao-profissional-e-tecnologica,Estudos,
@@ -117,7 +117,7 @@ qualificacao-como-organizacao-da-sociedade-civil-de-interesse-publico-oscip,Empr
 cadastramento-de-entidades-que-atuam-em-adocao-internacional-de-criancas-e-adolescentes-brasileiros,Empreendedorismo e negócios,
 emissao-de-segunda-via-de-certidao-previdenciaria-certidao-contribuicoes-previdenciarias-certidoes-e-situacao-fiscal,Empreendedorismo e negócios,
 coleta-online-programa-gerador-de-documentos-do-cnpj,Empreendedorismo e negócios,
-atendimento-a-acidentes-de-transito-dprf,Manter um Veículo,
+atendimento-a-acidentes-de-transito-dprf,Veículos,
 solicitacao-de-registro-de-empresas-operadoras-de-servico-de-microfilmagem,Empreendedorismo e negócios,
 atualizacao-de-atividade-para-fins-previdenciarios,Aposentadoria,
 inscricao-junto-a-previdencia-social,Trabalhar,Aposentadoria
@@ -222,7 +222,7 @@ ranking-do-valor-efetivo-total-vet-das-operacoes-de-cambio,Viajar para o Exterio
 apoio-a-agroindustria-da-agricultura-familiar,Trabalhar,
 calculo-e-emissao-de-darf-imposto-para-bagagem-acompanhada,Importação de produtos e serviços,
 concessao-do-regime-especial-de-exportacao-temporaria,Exportação de produtos e serviços,
-pre-cadastro-renavam,Manter um Veículo,
+pre-cadastro-renavam,Veículos,
 servicos-de-cpf-para-estrangeiros-e-de-cujus,Vir para o Brasil,
 reparcelamento-dau-pagamento-e-parcelamento-divida-ativa-da-uniao-dau,Pagar Contas e Impostos,
 consulta-a-processo,,
@@ -428,11 +428,11 @@ entrega-antecipada-de-mercadoria-importacao,Importação de produtos e serviços
 verificacao-de-mercadoria-antes-do-registro-da-di,Importação de produtos e serviços,
 deposito-especial-habilitacao,Exportação de produtos e serviços,Importação de produtos e serviços
 repex-habilitacao,Importação de produtos e serviços,
-pedido-de-cadastramento-de-veiculos-e-condutores-para-o-rtu,Manter um Veículo,
+pedido-de-cadastramento-de-veiculos-e-condutores-para-o-rtu,Veículos,
 devolucao-de-container-pedido,Exportação de produtos e serviços,Importação de produtos e serviços
 autorizacao-para-acesso-permanente-a-recinto-alfandegado,Exportação de produtos e serviços,Importação de produtos e serviços
 outros-assuntos-aduana-entrega-de-documentos,Exportação de produtos e serviços,Importação de produtos e serviços
-orientacoes-gerais-sobre-renavam,Manter um Veículo,
+orientacoes-gerais-sobre-renavam,Veículos,
 inscricao-no-cafir,Ter um Imóvel,
 notificacao-de-compensacao-de-oficio-da-malha-debito-intimacoes-relacionadas-a-cobranca-cobranca-e-fiscalizacao,Pagar Contas e Impostos,
 outros-recursos-ao-carf,,
@@ -522,7 +522,7 @@ programa-gerador-da-declaracao-pgd-dnf-e-receitanet,Empreendedorismo e negócios
 programa-gerador-da-declaracao-pgd-doi-e-receitanet,Empreendedorismo e negócios,
 parcelamento-simplificado-previdenciario-dau-pagamento-e-parcelamento-divida-ativa-da-uniao-dau,Pagar Contas e Impostos,
 parcelamento-nao-previdenciario-dau,Pagar Contas e Impostos,
-pedido-de-isencao-de-ipi-iof-para-deficiente-e-autista,Manter um Veículo,
+pedido-de-isencao-de-ipi-iof-para-deficiente-e-autista,Veículos,
 parcelamento-simplificado-nao-previdenciario,Pagar Contas e Impostos,
 pedido-de-reenquadramento-bebidas-quentes,Pagar Contas e Impostos,
 solicita-altera-cancela-substituicao-tributaria-ipi,Pagar Contas e Impostos,
