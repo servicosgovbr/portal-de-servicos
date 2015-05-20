@@ -516,6 +516,7 @@ ul.servicos-a-z {
     @include fill-parent();
     margin-left: 0;
     margin-right: 0;
+    border-top: 1px solid $cinza-medio;
   }
 
   @include tablet {
