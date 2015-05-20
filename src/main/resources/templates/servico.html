@@ -51,31 +51,34 @@
                 Começar
             </a>
 
-            <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" class="acao acao-agendar" th:href="${servico.urlAgendamento}">
+            <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" class="acao acao-agendar"
+               th:href="${servico.urlAgendamento}">
                 Agendar
             </a>
 
             <p th:unless="${#strings.isEmpty(servico.responsavel.nome)}">
-                Este é um serviço <span th:text="${@genero.de(servico.responsavel.id)}">do(a)</span>
-                <a th:unless="${#strings.isEmpty(servico.responsavel.nome)}"
-                   th:href="@{/orgao/{id}(id=${servico.responsavel.id})}"
-                   th:text="${servico.responsavel.nome}">
+                <span>Este é um serviço </span>
+                <span th:text="${@genero.de(servico.responsavel.id)}">do(a) </span>
+                <span><a th:unless="${#strings.isEmpty(servico.responsavel.nome)}"
+                         th:href="@{/orgao/{id}(id=${servico.responsavel.id})}"
+                         th:text="${servico.responsavel.nome}">
                     Órgão responsavel
-                </a>
-                <span th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">, prestado
-                <span th:text="${@genero.per(servico.prestador.id)}">pelo(a)</span>
-                <a th:unless="${#strings.isEmpty(servico.prestador.nome)}"
-                   th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
-                   th:text="${servico.prestador.nome}">
+                </a></span>
+                <th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
+                    <span>, prestado</span>
+                    <span th:text="${@genero.per(servico.prestador.id)}">pelo(a)</span>
+                <span><a th:unless="${#strings.isEmpty(servico.prestador.nome)}"
+                         th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
+                         th:text="${servico.prestador.nome}">
                     Órgão prestador
-                </a></span>.
+                </a></span></th:block>.
 
-                Em caso de dúvidas, reclamações ou sugestões favor
+                <span>Em caso de dúvidas, reclamações ou sugestões favor</span>
                 <th:block th:if="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                    contactá-<span th:text="${@genero.lo(servico.responsavel.id)}">lo(a)</span>.
+                    <span>contactá-</span><span th:text="${@genero.lo(servico.responsavel.id)}">lo(a)</span>.
                 </th:block>
                 <th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                    contactá-<span th:text="${@genero.los(servico.responsavel.id)}">los(as)</span>.
+                    <span>contactá-</span><span th:text="${@genero.los(servico.responsavel.id)}">los(as)</span>.
                 </th:block>
             </p>
 
