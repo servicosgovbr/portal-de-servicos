@@ -34,7 +34,7 @@ gds:
     enabled: false
     url: "https://estatisticas.presidencia.gov.br/"
     token: ""
-    site: 2
+    site: 52
   destaques:
     servicos:
       - consulta-situacao-do-requerimento-de-beneficio-previdenciario
