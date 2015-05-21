@@ -30,6 +30,8 @@ import static org.springframework.data.domain.Sort.Direction.DESC;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class IndexController {
 
+    private static final int QTD_SERVICOS_DESTAQUES = 10;
+
     PiwikClient piwikClient;
     ServicoRepository servicos;
     DestaquesConfig destaques;
@@ -53,7 +55,7 @@ class IndexController {
 
     private List<Servico> servicosParaExibirMaisAcessados() {
         return concat(servicosMaisAcessados(), outrosServicos())
-                .limit(10)
+                .limit(QTD_SERVICOS_DESTAQUES)
                 .collect(toList());
     }
 
@@ -72,7 +74,7 @@ class IndexController {
 
     private List<Servico> servicosParaExibir() {
         return concat(buscaDestaquesSeNecessario(), outrosServicos())
-                .limit(15)
+                .limit(QTD_SERVICOS_DESTAQUES)
                 .collect(toList());
     }
 
