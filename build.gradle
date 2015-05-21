@@ -7,6 +7,7 @@ apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: 'pmd'
 apply plugin: 'findbugs'
 apply plugin: 'asset-pipeline'
+apply plugin: "sonar-runner"
 
 if (System.getenv("SNAP_CI").equals("true") && System.getenv("SNAP_PIPELINE_COUNTER") != null) {
     version = "1.0.${System.getenv("SNAP_PIPELINE_COUNTER")}"

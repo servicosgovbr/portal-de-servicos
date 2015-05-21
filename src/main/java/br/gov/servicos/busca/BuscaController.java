@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static java.lang.String.format;
 import static java.util.Optional.ofNullable;
@@ -36,7 +37,7 @@ class BuscaController {
     ModelAndView busca(@RequestParam(required = true) String q,
                        @RequestParam(required = false, defaultValue = "1") Integer pagina) {
 
-        HashMap<String, Object> model = new HashMap<>();
+        Map<String, Object> model = new HashMap<>();
         model.put("termo", q);
         model.put("resultados", buscador.busca(ofNullable(q), pagina - 1));
 

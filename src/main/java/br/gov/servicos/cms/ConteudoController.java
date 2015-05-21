@@ -1,6 +1,5 @@
 package br.gov.servicos.cms;
 
-import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -24,7 +23,7 @@ class ConteudoController {
     }
 
     @RequestMapping("/conteudo/{id}")
-    ModelAndView conteudo(@PathVariable("id") String id) throws ConteudoNaoEncontrado {
+    ModelAndView conteudo(@PathVariable("id") String id) {
         ConteudoHtml conteudo = markdown.toHtml(new ClassPathResource(format("/conteudo/%s.md", id))).withId(id);
         return new ModelAndView("conteudo", "conteudo", conteudo);
     }

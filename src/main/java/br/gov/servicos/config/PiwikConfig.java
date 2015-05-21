@@ -43,14 +43,17 @@ public class PiwikConfig {
     private void trustSelfSignedSSL() {
         SSLContext ctx = SSLContext.getInstance("TLS");
         X509TrustManager tm = new X509TrustManager() {
+            @Override
             public void checkClientTrusted(X509Certificate[] xcs, String string) throws CertificateException {
             }
 
+            @Override
             public void checkServerTrusted(X509Certificate[] xcs, String string) throws CertificateException {
             }
 
+            @Override
             public X509Certificate[] getAcceptedIssuers() {
-                return null;
+                return new X509Certificate[0];
             }
         };
         ctx.init(null, new TrustManager[]{tm}, null);

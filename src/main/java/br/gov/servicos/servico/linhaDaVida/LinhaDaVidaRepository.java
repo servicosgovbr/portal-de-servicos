@@ -40,7 +40,7 @@ public class LinhaDaVidaRepository {
                         .get("linhasDaVida"))
                         .getBuckets()
                         .stream()
-                        .map((bucket) -> new LinhaDaVida()
+                        .map(bucket -> new LinhaDaVida()
                                 .withId(slugify.slugify(bucket.getKey()))
                                 .withTitulo(bucket.getKey())
                                 .withServicos(bucket.getDocCount()))

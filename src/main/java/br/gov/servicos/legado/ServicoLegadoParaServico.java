@@ -145,13 +145,13 @@ class ServicoLegadoParaServico implements Function<ServicoType, Servico> {
     }
 
     private List<PublicoAlvo> publicoAlvo(ServicoType servicoType) {
-        String[] publicosAlvo = parser.parseExpression("publicosAlvo?.content?" +
+        String[] publicos = parser.parseExpression("publicosAlvo?.content?" +
                 ".?[#this instanceof T(javax.xml.bind.JAXBElement)]" +
                 ".![value?.titulo]?:{}")
                 .getValue(context(servicoType), String[].class);
 
         return new ArrayList<>(
-                stream(publicosAlvo)
+                stream(publicos)
                         .map(this.publicosAlvo::mapear)
                         .filter(Objects::nonNull)
                         .collect(toSet()));
