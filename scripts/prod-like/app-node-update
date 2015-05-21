@@ -9,8 +9,17 @@ set -x
 set -e
 set -o pipefail
 
+echo 'Atualizando repositórios Yum...'
+yum makecache fast -y
+
+echo "Fazendo backup das configurações..."
+cp /etc/sysconfig/guia-de-servicos-overrides /tmp/guia-de-servicos-overrides.backup
+
 echo 'Instalando Guia de Serviços...'
-yum update -y guia-de-servicos
+yum update guia-de-servicos -y
+
+echo "Restaurando backup das configurações..."
+mv /tmp/guia-de-servicos-overrides.backup /etc/sysconfig/guia-de-servicos-overrides
 
 echo 'Recarregando daemons...'
 systemctl daemon-reload
