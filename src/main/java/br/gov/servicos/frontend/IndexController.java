@@ -54,7 +54,15 @@ class IndexController {
     }
 
     private List<Servico> servicosParaExibirMaisAcessados() {
-        return concat(servicosMaisAcessados(), outrosServicos())
+        return completaSevicos(servicosMaisAcessados());
+    }
+
+    private List<Servico> servicosParaExibir() {
+        return completaSevicos(buscaDestaquesSeNecessario());
+    }
+
+    private List<Servico> completaSevicos(Stream<Servico> servicosBase) {
+        return concat(servicosBase, outrosServicos())
                 .limit(QTD_SERVICOS_DESTAQUES)
                 .collect(toList());
     }
@@ -70,12 +78,6 @@ class IndexController {
 
         log.debug("Piwik: serviços mais acessados obtidos");
         return servicos;
-    }
-
-    private List<Servico> servicosParaExibir() {
-        return concat(buscaDestaquesSeNecessario(), outrosServicos())
-                .limit(QTD_SERVICOS_DESTAQUES)
-                .collect(toList());
     }
 
     private Stream<Servico> buscaDestaquesSeNecessario() {
