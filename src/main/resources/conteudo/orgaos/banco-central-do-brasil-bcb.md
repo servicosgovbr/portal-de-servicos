@@ -1,6 +1,8 @@
 Banco Central do Brasil
 ---
 
-Autarquia federal vinculada ao Ministério da Fazenda, tem por finalidade a formulação, a execução, o acompanhamento e o controle das políticas monetária, cambial, de crédito e de relações financeiras com o exterior; a organização, disciplina e fiscalização do Sistema Financeiro Nacional (SFN) e do Sistema de Consórcio; a gestão do Sistema de Pagamentos Brasileiro (SPB) e dos serviços do meio circulante.
+Autarquia federal vinculada ao [Ministério da Fazenda], tem por finalidade a formulação, a execução, o acompanhamento e o controle das políticas monetária, cambial, de crédito e de relações financeiras com o exterior; a organização, disciplina e fiscalização do Sistema Financeiro Nacional (SFN) e do Sistema de Consórcio; a gestão do Sistema de Pagamentos Brasileiro (SPB) e dos serviços do meio circulante.
 
 Dentre os serviços ofertados ao público estão ranking de Instituições por Índice de Reclamações; emissão de certidão negativa do Banco Central e a calculadora cidadão.
+
+[Ministério da Fazenda]:/orgao/ministerio-da-fazenda-mf
