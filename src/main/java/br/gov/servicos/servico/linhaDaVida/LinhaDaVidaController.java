@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import static java.lang.String.format;
 import static java.util.Optional.ofNullable;
@@ -32,8 +33,8 @@ class LinhaDaVidaController {
 
     @RequestMapping("/linha-da-vida/{id}")
     ModelAndView linhaDaVida(@PathVariable String id) {
+        Map<String, Object> model = new HashMap<>();
 
-        HashMap<String, Object> model = new HashMap<>();
         model.put("termo", id);
         model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/linhas-da-vida/%s.md", id))).withId(id));
         model.put("resultados", buscador.buscaConteudosPor("linhasDaVida.id", ofNullable(id))
