@@ -24,8 +24,8 @@ class Cookies {
 
     public boolean isOn(String nome) {
         return stream(ofNullable(httpServletRequest.getCookies()).orElse(new Cookie[0]))
-                .filter(c -> c.getName().equals(nome))
-                .filter(c -> c.getValue().equals("on"))
+                .filter(c -> nome.equals(c.getName()))
+                .filter(c -> "on".equals(c.getValue()))
                 .findAny().isPresent();
     }
 
