@@ -1,6 +1,6 @@
 Conselho Administrativo de Defesa Econômica (CADE)
 ---
 
-O Conselho Administrativo de Defesa Econômica - Cade é uma autarquia federal, vinculada ao Ministério da Justiça, com sede e foro no Distrito Federal, que exerce, em todo o Território nacional, as atribuições dadas pela Lei nº 12.529/2011.
+Autarquia federal vinculada ao Ministério da Justiça, com missão de zelar pela livre concorrência no mercado, sendo a entidade responsável por investigar e decidir, em última instância, sobre a matéria concorrencial, bem como fomentar e disseminar a cultura da livre concorrência.
 
-O Cade tem como missão zelar pela livre concorrência no mercado, sendo a entidade responsável, no âmbito do Poder Executivo, não só por investigar e decidir, em última instância, sobre a matéria concorrencial, como também fomentar e disseminar a cultura da livre concorrência.
+Dentre os serviços ofertadoos ao público estão a consulta a processos em tramitação e julgados no âmbito do Cade; autenticação de documentos; e procedimentos para notificação e julgamento de atos de concentração.

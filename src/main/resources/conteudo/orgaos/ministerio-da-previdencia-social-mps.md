@@ -1,7 +1,6 @@
 Ministério da Previdência Social
 ---
 
-A Previdência Social é o seguro social para a pessoa que contribui. É uma instituição pública que tem como objetivo
-reconhecer e conceder direitos aos seus segurados. A renda transferida pela Previdência Social é utilizada para
-substituir a renda do trabalhador contribuinte, quando ele perde a capacidade de trabalho, seja pela doença, invalidez,
-idade avançada, morte e desemprego involuntário, ou mesmo a maternidade e a reclusão.
+Órgão do governo federal responsável pela concessão de direitos aos segurados da Previdência Social, transferindo renda do trabalhador contribuinte quando da perda da capacidade de trabalho, seja por doença, invalidez, idade avançada, morte, desemprego involuntário, maternidade ou reclusão.
+
+Dentre os serviços ofertados público estão o agendamento eletrônico de atendimento na Previdência Social e a inscrição junto à Previdência Social.

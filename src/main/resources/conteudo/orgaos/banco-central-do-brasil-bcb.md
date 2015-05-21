@@ -1,11 +1,6 @@
 Banco Central do Brasil
 ---
 
-O Banco Central do Brasil foi criado pela [Lei 4.595], de 31 de dezembro de 1964. É o principal executor das orientações do Conselho Monetário Nacional e responsável por garantir o poder de compra da moeda nacional, tendo por objetivos:
+Autarquia federal vinculada ao Ministério da Fazenda, tem por finalidade a formulação, a execução, o acompanhamento e o controle das políticas monetária, cambial, de crédito e de relações financeiras com o exterior; a organização, disciplina e fiscalização do Sistema Financeiro Nacional (SFN) e do Sistema de Consórcio; a gestão do Sistema de Pagamentos Brasileiro (SPB) e dos serviços do meio circulante.
 
-* zelar pela adequada liquidez da economia;
-* manter as reservas internacionais em nível adequado;
-* estimular a formação de poupança;
-* zelar pela estabilidade e promover o permanente aperfeiçoamento do sistema financeiro.
-
-[Lei 4.595]:http://www.planalto.gov.br/CCIVIL_03/leis/L4595.htm
+Dentre os serviços ofertados ao público estão ranking de Instituições por Índice de Reclamações; emissão de certidão negativa do Banco Central e a calculadora cidadão.

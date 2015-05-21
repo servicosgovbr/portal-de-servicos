@@ -1,4 +1,6 @@
-Secretaria Nacional de Políticas Sobre Drogas
+Secretaria Nacional de Políticas Sobre Drogas (Senad)
 ---
 
-A política pública brasileira sobre drogas é comandada pela Senad, Secretaria Nacional de Políticas Sobre Drogas, que foi criada pela medida provisória nº 1669, de 1998 e posteriormente transferida para a estrutura do Ministério da Justiça pelo Decreto Nº 7.426, de 7 de Janeiro de 2011.
+Unidade do Ministério da Justiça que coordena a política pública brasileira sobre drogas.
+
+Dentre os serviços ofertados ao público está o serviço nacional de orientações e informações sobre a prevenção ao uso de drogas.

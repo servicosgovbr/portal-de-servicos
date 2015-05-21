@@ -1,4 +1,6 @@
 Instituto Nacional de Meteorologia (INMET)
 ---
 
-A missão do Instituto Nacional de Meteorologia (INMET), órgão do Ministério da Agricultura, Pecuária e Abastecimento, é prover informações meteorológicas à sociedade brasileira e influir construtivamente no processo de tomada de decisão, contribuindo para o desenvolvimento sustentável do País. Esta missão é alcançada por meio de monitoramento, análise e previsão de tempo e de clima, que se fundamentam em pesquisa aplicada, trabalho em parceria e ,compartilhamento do conhecimento, com ênfase em resultados práticos e confiáveis.
+Órgão subordinado ao Ministério da Agricultura, Pecuária e Abastecimento  que provê dados meteorológicas do tempo e do clima, gerando informações para situações diversas, como no caso de desastres naturais, inundações e secas extremas que afetam, limitam ou interferem nas atividades cotidianas da sociedade brasileira.
+
+Dentre os serviços ofertados ao público está o de previsão do tempo.

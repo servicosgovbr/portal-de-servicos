@@ -1,5 +1,6 @@
 Secretaria de Planejamento e Investimentos Estratégicos (SPI)
 ---
 
-A Secretaria de Planejamento e Investimentos Estratégicos (SPI/MP) é responsável pela elaboração do Plano Plurianual (PPA), instrumento de planejamento governamental previsto pelo Artigo 165 da Constituição brasileira que apresenta os compromissos de governo para um período de quatro anos, articulando as políticas públicas de acordo com a estratégia de desenvolvimento nele organizada.
+Unidade do Ministério do Planejamento, Orçamento e Gestão que tem como missão conhecer, zelar e garantir que cada imóvel da União cumpra sua função socioambiental, em harmonia com a função arrecadadora, em apoio aos programas estratégicos para a Nação.
 
+Dentre os serviços ofertados ao público estão a emissão de certidão do imóvel e a consulta aos dados do parcelamento do imóvel.

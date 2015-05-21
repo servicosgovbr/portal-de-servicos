@@ -1,4 +1,6 @@
 Defensoria Pública da União
 ---
 
-A Defensoria Pública da União é a Instituição que presta assistência jurídica ao cidadão carente. O Defensor Público é o advogado do pobre.
+Órgão autônomo que presta assistência jurídica integral e gratuita à população, garantindo aos necessitados o conhecimento e a defesa de seus direitos. 
+
+Dentre os serviços ofertados ao público estão a assistência jurídica integral e gratuita; e a concessão de refúgio.

@@ -1,9 +1,6 @@
 Ministério da Saúde
 ---
 
-O Ministério da Saúde é o órgão do Poder Executivo Federal responsável pela organização e elaboração de planos e
-políticas públicas voltados para a promoção, prevenção e assistência à saúde dos brasileiros.
+Órgão do governo federal responsável pela promoção, proteção e recuperação da saúde da população, reduzindo as enfermidades, controlando as doenças endêmicas e parasitárias e melhorando a vigilância à saúde. 
 
-É função do ministério dispor de condições para a proteção e recuperação da saúde da população, reduzindo as
-enfermidades, controlando as doenças endêmicas e parasitárias e melhorando a vigilância à saúde, dando, assim, mais
-qualidade de vida ao brasileiro.
+Dentre os serviços ofertados ao público estão o cartão SUS e o SAMU - Serviço de Atendimento Móvel de Urgência.

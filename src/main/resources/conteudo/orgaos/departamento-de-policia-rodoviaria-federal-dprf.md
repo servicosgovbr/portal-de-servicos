@@ -1,4 +1,6 @@
 Departamento de Polícia Rodoviária Federal (DPRF)
 ---
 
-O Departamento de Polícia Rodoviária Federal (DPRF) é uma instituição policial federal brasileira, subordinada ao Ministério da Justiça, cuja principal função é realizar o patrulhamento ostensivo das rodovias federais. Assim, além de combater as mais variadas formas de crime nas rodovias federais do Brasil, também monitora e fiscaliza o trânsito de veículos, bens e pessoas.
+Órgão  subordinado ao Ministério da Justiça, com principal função de garantir a segurança com cidadania nas rodovias federais em áreas de interesse da União, fiscalizando e zelando pela vida daqueles que utilizam a malha viária federal para exercer o direito constitucional da livre locomoção.
+
+Dentre os serviços ofertados ao público estão a declaração de acidente de trânsito (DAT) e a restituição de valores de multa de trânsito.

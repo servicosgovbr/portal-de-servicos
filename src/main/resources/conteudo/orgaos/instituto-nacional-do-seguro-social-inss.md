@@ -1,6 +1,6 @@
 Instituto Nacional do Seguro Social (INSS)
 ---
 
-O Instituto Nacional do Seguro Social (INSS) é uma autarquia do Governo Federal do Brasil vinculada ao [Ministério da Previdência Social][MPS] que recebe as contribuições para a manutenção do Regime Geral da Previdência Social, sendo responsável pelo pagamento da aposentadoria, pensão por morte, auxílio-doença, auxílio-acidente e outros benefícios para aqueles que adquirirem o direito a estes benefícios segundo o previsto em lei. O INSS trabalha junto à Dataprev, empresa de tecnologia que faz o processamento de todos os dados da Previdência.
+Autarquia federal vinculada ao Ministério da Previdência Social, com finalidade de promover o reconhecimento de direito ao recebimento de benefícios administrados pela Previdência Social, assegurando agilidade, comodidade aos seus usuários e ampliação do controle social.
 
-[MPS]:/orgao/ministerio-da-previdencia-social-mps
+Dentre os serviços ofertados ao público estão a consulta situação do requerimento de benefício previdenciário; a emissão de extratos de pagamentos de benefícios; e a carta de concessão e memória de cálculo de benefício previdenciário.
