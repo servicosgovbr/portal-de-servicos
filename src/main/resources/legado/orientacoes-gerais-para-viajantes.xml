@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Orientações Gerais para Viajantes</titulo>
-    <descricao>Obter orientações gerais.</descricao>
+    <descricao>
+        Informações sobre montante máximo de moeda nacional, bebidas alcoólicas e fumos, de acordo com o método de transporte.
+        Traz também diversas indicações sobre o que fazer e o que não fazer enquanto viajante estrangeiro, no Brasil, no momento de saída ou de entrada no país.
+    </descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>
