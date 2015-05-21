@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Orientações Gerais para Viajantes</titulo>
-    <descricao>Obter orientações gerais.</descricao>
+    <descricao>
+        <![CDATA[Traz dados sobre montante máximo de moeda nacional, bebidas alcoólicas e fumos, de acordo com o método de transporte.
+        
+Traz também diversas indicações sobre o que fazer e o que não fazer enquanto viajante estrangeiro, no Brasil, no momento de saída ou de entrada no país, e informações para viajantes em condições especiais.]]>
+    </descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>
@@ -11,7 +15,7 @@
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
             <url>
-                http://idg.receita.fazenda.gov.br/orientacao/aduaneira/viagens-internacionais/viajantes/dicas-para-os-viajantes
+                http://idg.receita.fazenda.gov.br/orientacao/aduaneira/viagens-internacionais/viajantes
             </url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
