@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import static java.lang.String.format;
 import static java.util.Optional.ofNullable;
@@ -39,7 +40,8 @@ class OrgaoController {
 
     @RequestMapping("/orgao/{id}")
     ModelAndView orgao(@PathVariable String id) {
-        HashMap<String, Object> model = new HashMap<>();
+        Map<String, Object> model = new HashMap<>();
+
         model.put("termo", id);
         model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/orgaos/%s.md", id))).withId(id));
         model.put("resultados", buscador.buscaSemelhante(ofNullable(id), "prestador.id", "responsavel.id")
