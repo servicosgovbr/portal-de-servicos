@@ -1,4 +1,4 @@
-Defensoria Pública da União
+Defensoria Pública da União (DPU)
 ---
 
 Órgão autônomo que presta assistência jurídica integral e gratuita à população, garantindo aos necessitados o conhecimento e a defesa de seus direitos. 

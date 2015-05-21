@@ -1,4 +1,4 @@
-Ministério do Turismo (MTUR)
+Ministério do Turismo (MTur)
 ---
 
 Órgão do governo federal que trata do desenvolvimento do turismo como atividade econômica sustentável, com papel relevante na geração de empregos e divisas, proporcionando a inclusão social.

@@ -1,4 +1,4 @@
-Fundação Nacional do Índio (FUNAI)
+Fundação Nacional do Índio (Funai)
 ---
 
 Entidade vinculada ao [Ministério da Justiça] que estabelece e executa a política indigenista no Brasil e que busca a proteção e a promoção dos direitos dos povos indígenas. 

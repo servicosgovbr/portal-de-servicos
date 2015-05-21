@@ -1,4 +1,4 @@
-Companhia Nacional de Abastecimento
+Companhia Nacional de Abastecimento (Conab)
 ---
 
 Empresa pública federal vinculada ao [Ministério da Agricultura, Pecuária e Abastecimento]. Trata da gestão das políticas agrícolas e de abastecimento com vistas a assegurar o atendimento das necessidades básicas da sociedade, preservando e estimulando os mecanismos de mercado. 
