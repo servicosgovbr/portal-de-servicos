@@ -30,7 +30,7 @@ import static org.springframework.data.domain.Sort.Direction.DESC;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class IndexController {
 
-    private static final int QTD_SERVICOS_DESTAQUES = 10;
+    private static final int QTD_SERVICOS_DESTAQUES = 15;
 
     PiwikClient piwikClient;
     ServicoRepository servicos;
