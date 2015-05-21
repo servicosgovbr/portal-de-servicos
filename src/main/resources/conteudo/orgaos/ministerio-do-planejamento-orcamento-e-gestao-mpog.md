@@ -1,4 +1,9 @@
 Ministério do Planejamento, Orçamento e Gestão (MPOG)
 ---
 
-Órgão do governo federal com função de planejar a administração governamental e seus custos, analisar a viabilidade de projetos, controlar orçamentos, liberar fundos para estados e projetos do governo.
+Órgão federal com a missão de:
+
+* participação na formulação do planejamento estratégico nacional;
+* coordenação da gestão de parcerias público-privadas;
+* coordenação e gestão dos sistemas de planejamento e orçamento federal, das ações de organização e modernização da administração pública, bem como das contratações públicas e governo eletrônico;
+* administração do patrimônio imobiliário da União; dentre outros.
