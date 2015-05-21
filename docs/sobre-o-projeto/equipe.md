@@ -54,5 +54,6 @@ A natureza do código aberto do projeto nos trouxe alguns contribiudores externo
 * [Lucas Beier](mailto:lbeier@thoughtworks.com)
 * [Edilson Junior](mailto:ejunior@thoughtworks.com)
 * [Vinicius Gama](mailto:vgama@thoughtworks.com)
+* [Otavio Machado](mailto:omachado@thoughtworks.com)
 
 Em seções seguintes, detalharemos como contribuir com o código aberto do Guia de Serviços.
