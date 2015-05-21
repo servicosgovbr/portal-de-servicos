@@ -45,10 +45,12 @@ public class PiwikConfig {
         X509TrustManager tm = new X509TrustManager() {
             @Override
             public void checkClientTrusted(X509Certificate[] xcs, String string) throws CertificateException {
+                // não implementa nenhuma checagem
             }
 
             @Override
             public void checkServerTrusted(X509Certificate[] xcs, String string) throws CertificateException {
+                // não implementa nenhuma checagem
             }
 
             @Override
