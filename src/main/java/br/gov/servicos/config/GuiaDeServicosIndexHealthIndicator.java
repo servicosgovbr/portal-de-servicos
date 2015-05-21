@@ -35,17 +35,19 @@ public class GuiaDeServicosIndexHealthIndicator implements HealthIndicator {
     }
 
     private Health.Builder indice(Health.Builder health, String indice) {
+        Health.Builder result = health;
         try {
 
             if (es.indexExists(indice)) {
                 long count = es.count(new NativeSearchQueryBuilder().withIndices(indice).build());
-                health = health.up().withDetail(indice, format("ok (%d docs)", count));
+                result = health.up().withDetail(indice, format("ok (%d docs)", count));
             } else {
-                health = health.down().withDetail(indice, "missing");
+                result = health.down().withDetail(indice, "missing");
             }
-            return health;
+            return result;
+
         } catch (Exception e) {
-            return health.down().withDetail(indice, "exception").withException(e);
+            return result.down().withDetail(indice, "exception").withException(e);
         }
     }
 }
