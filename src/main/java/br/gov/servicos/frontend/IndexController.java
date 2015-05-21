@@ -53,7 +53,7 @@ class IndexController {
 
     private List<Servico> servicosParaExibirMaisAcessados() {
         return concat(servicosMaisAcessados(), outrosServicos())
-                .limit(15)
+                .limit(10)
                 .collect(toList());
     }
 
