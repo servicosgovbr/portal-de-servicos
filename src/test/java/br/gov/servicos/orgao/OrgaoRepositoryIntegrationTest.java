@@ -1,9 +1,10 @@
 package br.gov.servicos.orgao;
 
-import br.gov.servicos.ElasticSearchTest;
 import br.gov.servicos.Main;
+import br.gov.servicos.config.GuiaDeServicosIndex;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.ServicoRepository;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.io.IOException;
 import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
@@ -20,13 +22,21 @@ import static org.junit.Assert.assertThat;
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
-public class OrgaoRepositoryTest extends ElasticSearchTest {
+public class OrgaoRepositoryIntegrationTest {
 
     @Autowired
     ServicoRepository servicos;
 
     @Autowired
     OrgaoRepository orgaos;
+
+    @Autowired
+    GuiaDeServicosIndex esConfig;
+
+    @Before
+    public void setup() throws IOException {
+        esConfig.recriar();
+    }
 
     @Test
     public void listaOrgaosEmOrdemAlfabetica() throws Exception {

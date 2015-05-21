@@ -15,7 +15,7 @@ import static org.junit.Assert.assertThat;
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
-public class ConteudoConfigTest {
+public class ConteudoConfigIntegrationTest {
 
     @Autowired
     ConteudoConfig config;

@@ -13,7 +13,7 @@ import static java.util.Collections.singletonList;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-public class MapaDeLinhasDaVidaTest {
+public class MapaDeLinhasDaVidaIntegrationTest {
 
     @Test
     public void deveRetornarListaVaziaSeMapeamentoDeServicoNaoExistir() throws IOException {

@@ -19,7 +19,7 @@ import static org.junit.Assert.assertThat;
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
-public class PublicoAlvoRepositoryTest {
+public class PublicoAlvoRepositoryIntegrationTest {
 
     @Autowired
     ServicoRepository servicos;

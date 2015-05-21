@@ -1,6 +1,6 @@
-package br.gov.servicos;
+package br.gov.servicos.importador;
 
-import br.gov.servicos.importador.Importador;
+import br.gov.servicos.Main;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.junit.Test;
@@ -15,6 +15,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ImportadorIntegrationTest {
+
     @Autowired
     Importador importador;
 

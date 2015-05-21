@@ -32,15 +32,3 @@ jacocoTestReport {
         html.enabled = true
     }
 }
-
-task integrationTest(type: Test) {
-    description = "Run all integration tests"
-    testClassesDir = sourceSets.integrationTest.output.classesDir
-    classpath = sourceSets.integrationTest.runtimeClasspath
-
-    jacoco {
-        destinationFile = file("$buildDir/jacoco/integrationTest.exec")
-        classDumpFile = file("$buildDir/classes/integrationTest")
-    }
-}
-check.dependsOn(integrationTest)

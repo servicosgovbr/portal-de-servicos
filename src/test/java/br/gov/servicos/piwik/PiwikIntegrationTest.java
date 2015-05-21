@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
 @WebAppConfiguration
-public class PiwikTest {
+public class PiwikIntegrationTest {
 
     @Autowired
     PiwikClient piwikClient;

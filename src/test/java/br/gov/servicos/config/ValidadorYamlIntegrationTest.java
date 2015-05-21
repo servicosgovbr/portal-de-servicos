@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 
 import static java.nio.charset.Charset.defaultCharset;
 
-public class ValidadorYamlTest {
+public class ValidadorYamlIntegrationTest {
 
     private Yaml yaml;
 

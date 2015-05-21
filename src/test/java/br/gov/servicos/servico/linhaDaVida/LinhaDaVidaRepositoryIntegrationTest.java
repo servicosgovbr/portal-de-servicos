@@ -1,9 +1,10 @@
 package br.gov.servicos.servico.linhaDaVida;
 
-import br.gov.servicos.ElasticSearchTest;
 import br.gov.servicos.Main;
+import br.gov.servicos.config.GuiaDeServicosIndex;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.io.IOException;
 import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
@@ -24,13 +26,21 @@ import static org.junit.Assert.assertThat;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
 @FieldDefaults(level = PRIVATE)
-public class LinhaDaVidaRepositoryTest extends ElasticSearchTest {
+public class LinhaDaVidaRepositoryIntegrationTest {
 
     @Autowired
     ServicoRepository servicos;
 
     @Autowired
     LinhaDaVidaRepository linhasDaVida;
+
+    @Autowired
+    GuiaDeServicosIndex esConfig;
+
+    @Before
+    public void setup() throws IOException {
+        esConfig.recriar();
+    }
 
     @Test
     public void listaLinhasDaVidaEmOrdemAlfabetica() throws Exception {

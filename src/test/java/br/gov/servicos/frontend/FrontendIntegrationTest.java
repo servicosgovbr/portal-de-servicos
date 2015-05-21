@@ -19,7 +19,7 @@ import static org.junit.Assert.assertThat;
 @SpringApplicationConfiguration(classes = Main.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
-public class FrontendTest {
+public class FrontendIntegrationTest {
 
     @Value("${local.server.port}")
     int port;

@@ -40,7 +40,7 @@ import static org.junit.Assert.fail;
 
 @RunWith(ParallelizedParameterized.class)
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-public class ValidadorLinksTest {
+public class ValidadorLinksIntegrationTest {
 
     @SneakyThrows
     @Parameterized.Parameters(name = "{0}:{1}")
@@ -50,7 +50,7 @@ public class ValidadorLinksTest {
         List<Object[]> results = new ArrayList<>();
         for (Resource resource : new PathMatchingResourcePatternResolver().getResources("file:src/main/resources/legado/*.xml")) {
             NodeList nodes;
-            synchronized (ValidadorLinksTest.class) { // bug JDK-8047329
+            synchronized (ValidadorLinksIntegrationTest.class) { // bug JDK-8047329
                 nodes = (NodeList) expression.evaluate(new InputSource(resource.getInputStream()), NODESET);
             }
             for (int i = 0; i < nodes.getLength(); i++) {
@@ -67,7 +67,7 @@ public class ValidadorLinksTest {
     String url;
     RestTemplate http;
 
-    public ValidadorLinksTest(@SuppressFBWarnings(justification = "JUnit") String name, String url) throws Exception {
+    public ValidadorLinksIntegrationTest(@SuppressFBWarnings(justification = "JUnit") String name, String url) throws Exception {
         desabilitaVerificaçãoSSL();
 
         this.url = url;

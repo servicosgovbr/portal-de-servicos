@@ -18,7 +18,7 @@ import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 
 @RunWith(ParallelizedParameterized.class)
-public class ValidadorXmlTest {
+public class ValidadorXmlntegrationTest {
 
     private XMLReader xmlReader;
 
@@ -34,7 +34,7 @@ public class ValidadorXmlTest {
 
     Resource input;
 
-    public ValidadorXmlTest(@SuppressFBWarnings(justification = "JUnit") String name, Resource input) throws Exception {
+    public ValidadorXmlntegrationTest(@SuppressFBWarnings(justification = "JUnit") String name, Resource input) throws Exception {
         this.input = input;
         this.xmlReader = XMLReaderFactory.createXMLReader();
     }
