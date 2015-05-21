@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Solicitação de Enquadramento no SIMEI (Enquadramento (SIMEI) / Simples Nacional)</titulo>
-    <descricao>
-        Endereço para solicitar o enquadramento no Sistema de Recolhimento em Valores Fixos Mensais dos Tributos Abrangidos pelo Simples Nacional (SIMEI). 
-        
-        O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor fixo mensal por meio do Documento de Arrecadação do Simples Nacional (DAS). Para informações de enquadramento e no que constitui o valor dos tributos acesse o endereço "Orientações gerais sobre o serviço" listado abaixo.
+    <descricao><![CDATA[Endereço para solicitar o enquadramento no Sistema de Recolhimento em Valores Fixos Mensais dos Tributos Abrangidos pelo Simples Nacional (SIMEI).
+
+O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor fixo mensal por meio do Documento de Arrecadação do Simples Nacional (DAS). Para informações de enquadramento e no que constitui o valor dos tributos acesse o endereço "Orientações gerais sobre o serviço" listado abaixo.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
