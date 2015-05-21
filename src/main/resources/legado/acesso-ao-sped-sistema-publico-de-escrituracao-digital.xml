@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Acesso ao Sped - Sistema Público de Escrituração Digital</titulo>
-    <descricao>Acessar os programas validadores da escrituração.</descricao>
+    <descricao>
+Instituído pelo Decreto nº 6.022, de 22 de janeiro de 2007, o Sistema Público de Escrituração Digital (Sped) faz parte do Programa de Aceleração do Crescimento do Governo Federal (PAC 2007-2010) e constitui-se em mais um avanço na informatização da relação entre o fisco e os contribuintes.
+
+De modo geral, consiste na modernização da sistemática atual do cumprimento das obrigações acessórias, transmitidas pelos contribuintes às administrações tributárias e aos órgãos fiscalizadores, utilizando-se da certificação digital para fins de assinatura dos documentos eletrônicos, garantindo assim a validade jurídica dos mesmos apenas na sua forma digital.
+    </descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>
