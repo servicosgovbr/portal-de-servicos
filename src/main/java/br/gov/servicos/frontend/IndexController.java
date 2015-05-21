@@ -54,14 +54,14 @@ class IndexController {
     }
 
     private List<Servico> servicosParaExibirMaisAcessados() {
-        return completaSevicos(servicosMaisAcessados());
+        return completaSevicosAteOLimite(servicosMaisAcessados());
     }
 
     private List<Servico> servicosParaExibir() {
-        return completaSevicos(buscaDestaquesSeNecessario());
+        return completaSevicosAteOLimite(buscaDestaquesSeNecessario());
     }
 
-    private List<Servico> completaSevicos(Stream<Servico> servicosBase) {
+    private List<Servico> completaSevicosAteOLimite(Stream<Servico> servicosBase) {
         return concat(servicosBase, outrosServicos())
                 .limit(QTD_SERVICOS_DESTAQUES)
                 .collect(toList());
