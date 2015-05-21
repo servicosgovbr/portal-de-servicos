@@ -40,6 +40,13 @@ Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva
             <descricao>Perguntas frequentes sobre o Fies</descricao>
             <url>http://sisfiesportal.mec.gov.br/faq.html</url>
         </informacaoUtil>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Dúvidas e informações sobre o FIES</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Central de Atendimento – 0800 616161</descricao>
+            <url></url>
+        </informacaoUtil>
     </informacoesUteis>
     <compromissosAtendimento></compromissosAtendimento>
     <legislacoes></legislacoes>
