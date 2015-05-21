@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Desenquadramento do SIMEI</titulo>
-    <descricao>Efetuar o desenquadramento do Simei.</descricao>
+    <descricao>
+        Endereço para solicitar o desenquadramento no Sistema de Recolhimento em Valores Fixos Mensais dos Tributos Abrangidos pelo Simples Nacional (SIMEI).
+        
+        O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor fixo mensal por meio do Documento de Arrecadação do Simples Nacional (DAS).
+    </descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>
@@ -14,7 +18,15 @@
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
-    <informacoesUteis/>
+    <informacoesUteis>
+        <informacaoUtil>
+            <tipoInformacaoUtil>
+                <titulo>Mais informações</titulo>
+            </tipoInformacaoUtil>
+            <descricao>Orientações gerais sobre o serviço - Seção 19. Desenquadramento do SIMEI</descricao>
+            <url>http://www8.receita.fazenda.gov.br/SimplesNacional/Perguntas/Perguntas.aspx</url>
+        </informacaoUtil>
+    </informacoesUteis>
     <compromissosAtendimento></compromissosAtendimento>
     <legislacoes></legislacoes>
     <palavrasChave></palavrasChave>
