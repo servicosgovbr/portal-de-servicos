@@ -20,16 +20,7 @@ class Crawl
     
     if /^#{@base}/.match(url)
       page = @http.get(url)
-      @links[url] = case page.status.to_s.to_i
-      when (0..299)
-        :ok
-      when (300..399)
-        :redirect
-      when (400..499)
-        :client_error
-      when (500..599)
-        :server_error
-      end
+      @links[url] = page.status.to_s.to_i
 
       if page.headers['Content-Type'] =~ /^text\//
         page.body.scan(/href="(.*?)"/i).flatten.each do |link|
@@ -39,18 +30,9 @@ class Crawl
     else
       begin
         page = @http.get(url)
-        @links[url] = case page.status.to_s.to_i
-        when (0..299)
-          :external_ok
-        when (300..399)
-          :external_redirect
-        when (400..499)
-          :external_client_error
-        when (500..599)
-          :external_server_error
-        end
+        @links[url] = page.status.to_s.to_i
       rescue
-        @links[url] = :external_connection_error
+        @links[url] = -1
       end
     end
     puts "#{@links[url]}: #{url}"
