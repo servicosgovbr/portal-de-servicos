@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.7" data-basepath=".." data-revision="Wed May 20 2015 20:42:07 GMT+0000 (UTC)">
+    <div class="book" data-level="8.7" data-basepath=".." data-revision="Thu May 21 2015 01:46:56 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1281,18 +1281,13 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="testes">Testes</h1>
-<h2 id="unit%C3%A1rios">Unit&#xE1;rios</h2>
-<p>Para executar apenas os testes unit&#xE1;rios isoladamente, utilize a tarefa <code>test</code> do <a href="http://www.gradle.org" target="_blank">Gradle</a>:</p>
+<h2 id="unit%C3%A1rios-e-integra%C3%A7%C3%A3o">Unit&#xE1;rios e Integra&#xE7;&#xE3;o</h2>
+<p>Para executar apenas os testes unit&#xE1;rios e de integra&#xE7;&#xE3;o isoladamente, utilize a tarefa <code>test</code> do <a href="http://www.gradle.org" target="_blank">Gradle</a>:</p>
 <pre><code>./gradlew test
-</code></pre><h2 id="integra%C3%A7%C3%A3o">Integra&#xE7;&#xE3;o</h2>
-<p>E para executar apenas os testes de integra&#xE7;&#xE3;o, que s&#xE3;o um pouco mais demorados, execute a tarefa <code>integrationTest</code> do <a href="http://www.gradle.org" target="_blank">Gradle</a>:</p>
-<pre><code>./gradlew integrationTest
 </code></pre><h2 id="cobertura">Cobertura</h2>
-<p>Ap&#xF3;s executar as tarefas <code>test</code> ou <code>integrationTest</code>, descritas acima, um relat&#xF3;rio de cobertura de c&#xF3;digo pode ser gerado atrav&#xE9;s da tarefa <code>jacocoTestReport</code>:</p>
+<p>Ap&#xF3;s executar a tarefa <code>test</code>, descrita acima, um relat&#xF3;rio de cobertura de c&#xF3;digo pode ser gerado atrav&#xE9;s da tarefa <code>jacocoTestReport</code>:</p>
 <pre><code>./gradlew jacocoTestReport
 </code></pre><p>Os relat&#xF3;rios ficam dispon&#xED;veis no diret&#xF3;rio <code>build/reports/jacoco/</code>, em formatos XML e HTML, ap&#xF3;s a execu&#xE7;&#xE3;o.</p>
-<h2 id="interface">Interface</h2>
-<!-- TODO -->
 <h2 id="checagens-est%C3%A1ticas">Checagens est&#xE1;ticas</h2>
 <p>Antes de publicar uma funcionalidade, com <code>git push</code>, &#xE9; necess&#xE1;rio rodar todas as tarefas de testes e verifica&#xE7;&#xE3;o do <a href="http://www.gradle.org" target="_blank">Gradle</a>:</p>
 <pre><code>./gradlew check
