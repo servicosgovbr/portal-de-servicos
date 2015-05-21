@@ -48,6 +48,12 @@ Para rodar a aplicação localmente, utilizamos um servidor web [Tomcat][TOMCAT]
 ./gradlew bootRun
 ```
 
+Caso queira que o conteúdo do site seja gerado automaticamente, basta configurar a variável `FLAGS_IMPORTAR_AUTOMATICAMENTE`:
+
+```
+FLAGS_IMPORTAR_AUTOMATICAMENTE=true ./gradlew bootRun
+```
+
 Após alguns segundos, o servidor estará disponível em [localhost:8080](http://localhost:8080/). Arquivos estáticos (html, js, css) alterados estarão disponíveis alguns segundos após alterações.
 
 ## ElasticSearch externo
