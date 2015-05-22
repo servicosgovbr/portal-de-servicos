@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Confirmação de Autenticidade de Certidão Pessoa Física ( / Dívida Ativa da União – DAU)</titulo>
+    <titulo>Confirmação de Autenticidade de Certidão Pessoa Física (Dívida Ativa da União – DAU)</titulo>
     <descricao>Consultar a autenticidade de certidão de pessoa física emitida.</descricao>
     <requisitos/>
     <etapas></etapas>
