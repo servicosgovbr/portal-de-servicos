@@ -2,6 +2,8 @@ Vagrant.configure('2') do |config|
 
   config.vm.box = 'https://s3-sa-east-1.amazonaws.com/servicosgovbr/base.box'
   config.ssh.forward_agent = true
+  config.ssh.username = 'vagrant'
+  config.ssh.password = 'vagrant'
 
   if Vagrant.has_plugin? 'vagrant-cachier'
     config.cache.scope = :box
