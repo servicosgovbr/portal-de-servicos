@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Validação da Cópia de Declaração – DIRPF</titulo>
-    <descricao>Consultar validade da cópia da declaração.</descricao>
+    <descricao>Consultar validade da cópia da Declaração do Imposto de Renda de Pessoa Física - DIRPF</descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>
