@@ -21,7 +21,7 @@ Informações sobre o serviço de defesa de autuação, que consiste no recebime
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Emissão de "Nada Consta"</descricao>
-            <url>http://www.dprf.gov.br/PortalInternet/nadaConsta.faces</url>
+            <url>https://www.prf.gov.br/nda_internet/</url>
         </canalPrestacaoServico>
         <canalPrestacaoServico>
             <tipoCanalPrestacaoServico>
