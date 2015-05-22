@@ -69,6 +69,7 @@ repos.each do |repo|
       bug: issue.labels.any? {|l| l.name == 'BUG' },
       tech_debt: issue.labels.any? {|l| l.name == 'tech debt' },
       pull_request: issue.respond_to?(:pull_request),
+      colaborador: issue.user.login,
       repo: repo,
       ultima_alteracao: issue.updated_at.getlocal.strftime(TF),
 
