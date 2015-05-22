@@ -56,6 +56,10 @@ FLAGS_IMPORTAR_AUTOMATICAMENTE=true ./gradlew bootRun
 
 Após alguns segundos, o servidor estará disponível em [localhost:8080](http://localhost:8080/). Arquivos estáticos (html, js, css) alterados estarão disponíveis alguns segundos após alterações.
 
+## Atualizar conteúdo do site
+
+Caso tenha alterado algum contéudo estático do site, para que sua instancia local reflita as mudanças realizadas, você terá reiniciar a aplicação com o comando mostrado na sessão acima. Caso não queira reiniciar a aplicação, também é possível obter o mesmo resultando simplesmente acessando o endereço [http://localhost:8080/jolokia/exec/ServicosGovBr:type=Importador/importar](http://localhost:8080/jolokia/exec/ServicosGovBr:type=Importador/importar)
+
 ## ElasticSearch externo
 
 Para utilizar um servidor [ElasticSearch](./elasticsearch.md) configurado em `localhost:9300`, basta configurar a variável `SPRING_DATA_ELASTICSEARCH_CLUSTERNODES`:
