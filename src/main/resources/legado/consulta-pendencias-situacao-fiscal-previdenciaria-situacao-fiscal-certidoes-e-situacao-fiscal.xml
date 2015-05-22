@@ -13,7 +13,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
-            <url>http://www010.dataprev.gov.br/CWS/CONTEXTO/CNDFISCO/CNDFISCO.HTML</url>
+            <url><![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=187&idArea=3&idAssunto=45]]></url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
