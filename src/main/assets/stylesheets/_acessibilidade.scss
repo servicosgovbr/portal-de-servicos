@@ -47,6 +47,11 @@ body.contraste {
     color: $branco !important;
   }
 
+  #conteudo a.acao {
+    background-color: $branco;
+    color: $preto !important;
+  }
+
   #acessibilidade span {
     color: $preto !important;
   }
