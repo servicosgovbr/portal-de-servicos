@@ -21,10 +21,7 @@
             <tipoCanalPrestacaoServico>
                 <titulo>Presencial</titulo>
             </tipoCanalPrestacaoServico>
-            <descricao>A CTPS, para estrangeiros, é emitida pela rede de atendimento do Ministério do Trabalho e
-                Emprego, ou seja, nas Superintendências Regionais de Trabalho e Emprego – SRTEs e suas respectivas
-                Gerências.
-            </descricao>
+            <descricao><![CDATA[A CTPS, para estrangeiros, é emitida pela rede de atendimento do Ministério do Trabalho e Emprego, ou seja, nas Superintendências Regionais de Trabalho e Emprego – SRTEs e suas respectivas Gerências.]]></descricao>
             <url></url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
