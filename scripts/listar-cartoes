@@ -13,7 +13,7 @@ Token de acesso ao Github não encontrado!
 * Crie um: https://help.github.com/articles/creating-an-access-token-for-command-line-use
 * Passe-o para este script através da variável de ambiente TOKEN:
 
-    
+  TOKEN=da39a3ee5e6b4b0d3255bfef95601890afd80709 ruby #{__FILE__}
 
 EOM
   end
