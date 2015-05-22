@@ -9,7 +9,7 @@
         <h4 th:text="${informacaoUtil.tipo}"></h4>
 
         <th:block th:if="${not #strings.isEmpty(informacaoUtil.url)}">
-            <a th:href="${informacaoUtil.url}" th:text="${informacaoUtil.descricao}"></a>
+            <a th:href="${informacaoUtil.url}" th:text="${#strings.isEmpty(informacaoUtil.descricao) ? 'Endereço eletrônico' : informacaoUtil.descricao}"></a>
         </th:block>
 
         <th:block th:if="${#strings.isEmpty(informacaoUtil.url)}">
