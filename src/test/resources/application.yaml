@@ -54,3 +54,6 @@ gds:
     sitesOficiais:
       arquivo-nacional-an: http://www.arquivonacional.gov.br/
       banco-central-do-brasil-bcb: http://www.bcb.gov.br/
+    telefones:
+      arquivo-nacional-an: "123"
+      banco-central-do-brasil-bcb: "0800 456 789"

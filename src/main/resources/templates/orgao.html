@@ -38,11 +38,17 @@
         <h3>Contato</h3>
 
         <th:block th:if="${@conteudoConfig.siteOficial(termo).isPresent()}">
-
             <p>
                 Página oficial:
                 <a th:href="${@conteudoConfig.siteOficial(termo).get()}"
                    th:text="${#strings.abbreviate(@conteudoConfig.siteOficial(termo).get(), 50)}"></a>
+            </p>
+        </th:block>
+
+        <th:block th:if="${@conteudoConfig.telefone(termo).isPresent()}">
+            <p>
+                Telefone:
+                <span th:text="${@conteudoConfig.telefone(termo).get()}">0800 555 123</span>
             </p>
         </th:block>
 
@@ -69,6 +75,7 @@
         {
           "@type": "ContactPoint",
           "url": /*[[${@conteudoConfig.ouvidoria(termo).orElse(null)}]]*/ null,
+          "telephone": /*[[${@conteudoConfig.telefone(termo).orElse(null)}]]*/ null,
           "contactType" : "customer service"
         }
       ]

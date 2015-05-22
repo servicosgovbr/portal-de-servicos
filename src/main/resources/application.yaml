@@ -201,3 +201,11 @@ gds:
       secretaria-nacional-de-justica-snj: http://portal.mj.gov.br/data/Pages/MJDE2A290DITEMIDC811B50F3FA34D6AA46F27CC110930B1PTBRIE.htm
       secretaria-nacional-de-politicas-sobre-drogas-senad: http://portal.mj.gov.br/senad/
       secretaria-nacional-de-seguranca-publica-senasp: http://portal.mj.gov.br/main.asp?View={1BFF9F1B-2ECD-4A25-9976-661FB5A66624}&BrowserType=NN&LangID=pt-br&params=itemID%3D%7B540715BB-1C9B-47D3-9549-9FA38E3E99FA%7D%3B&UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D
+    telefones:
+      ministerio-da-educacao-mec: "0800 61 61 61"
+      ministerio-da-saude-ms: "136"
+      ministerio-do-desenvolvimento-social-e-combate-a-fome-mds: "0800 707 2003"
+      instituto-nacional-do-seguro-social-inss: "135"
+      ministerio-da-previdencia-social-mps: "135"
+      secretaria-da-receita-federal-do-brasil-rfb: "146 para ligações realizadas no Brasil, ou (+55) (11) 3003-0146 para chamadas originadas do exterior."
+      ministerio-da-fazenda-mf: "0800 702 1111"

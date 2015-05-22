@@ -50,4 +50,13 @@ public class ConteudoConfigIntegrationTest {
         assertThat(config.siteOficial(ORGAOS.get(1).getId()).get(),
                 is("http://www.bcb.gov.br/"));
     }
+
+    @Test
+    public void mapeiaTelefonesDeOrgaos() throws Exception {
+        assertThat(config.telefone(ORGAOS.get(0).getId()).get(),
+                is("123"));
+
+        assertThat(config.telefone(ORGAOS.get(1).getId()).get(),
+                is("0800 456 789"));
+    }
 }
