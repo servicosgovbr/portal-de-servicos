@@ -54,7 +54,7 @@ h2 {
   color: $cinza-escuro;
   font-family: 'open_sansbold', $helvetica;
   font-size: em(35);
-  line-height: $baseLineHeight;
+  line-height: $h2LineHeight;
   margin: -10px 0 .5em;
 
   @include mobile {
