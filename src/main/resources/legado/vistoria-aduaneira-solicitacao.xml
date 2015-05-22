@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Vistoria Aduaneira – Solicitação</titulo>
-    <descricao>Solicitar a vistoria aduaneira de mercadoria.</descricao>
+    <descricao>A vistoria aduaneira destina-se a verificar a ocorrência de avaria ou de extravio de mercadoria estrangeira entrada no território aduaneiro, a identificar o responsável e a apurar o crédito tributário dele exigível. 
+    
+Solicitar a vistoria aduaneira de mercadoria.</descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>
