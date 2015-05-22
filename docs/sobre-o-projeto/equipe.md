@@ -44,17 +44,18 @@ O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com 
 
 A natureza do código aberto do projeto nos trouxe alguns contribiudores externos às equipes do projeto. Somos muito gratos a:
 
+* [Bruno Tavares](mailto:btavares@thoughtworks.com)
+* [Bruno Trecenti](mailto:btrecenti@thoughtworks.com)
+* [Douglas Detoni](mailto:ddetoni@thoughtworks.com)
+* [Edilson Junior](mailto:ejunior@thoughtworks.com)
 * [Gabriel Such](mailto:gabrielsuch@gmail.com)
 * [Leonardo Marquezini](mailto:lmarquezini@thoughtworks.com)
-* [Rodrigo Alencar](mailto:ralencar@thoughtworks.com)
-* [Thiago Felix](mailto:tfelix@thoughtworks.com)
-* [Bruno Tavares](mailto:btavares@thoughtworks.com)
-* [Romulo Santos](mailto:rsantos@thoughtworks.com)
-* [Bruno Trecenti](mailto:btrecenti@thoughtworks.com)
 * [Lucas Beier](mailto:lbeier@thoughtworks.com)
-* [Edilson Junior](mailto:ejunior@thoughtworks.com)
-* [Vinicius Gama](mailto:vgama@thoughtworks.com)
 * [Otavio Machado](mailto:omachado@thoughtworks.com)
-* [Douglas Detoni](mailto:ddetoni@thoughtworks.com)
+* [Rodrigo Alencar](mailto:ralencar@thoughtworks.com)
+* [Romulo Santos](mailto:rsantos@thoughtworks.com)
+* [Thiago Felix](mailto:tfelix@thoughtworks.com)
+* [Valessio Brito](mailto:valessio@debianart.org)
+* [Vinicius Gama](mailto:vgama@thoughtworks.com)
 
 Em seções seguintes, detalharemos como contribuir com o código aberto do Guia de Serviços.
