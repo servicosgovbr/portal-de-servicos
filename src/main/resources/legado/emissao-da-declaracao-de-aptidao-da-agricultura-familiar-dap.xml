@@ -40,21 +40,21 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
                 <titulo>Mais informações</titulo>
             </tipoInformacaoUtil>
             <descricao>Extrato da DAP individual</descricao>
-            <url>http://smap14.mda.gov.br/dap/extrato/pf/PesquisaTitular.aspx</url>
+            <url>http://smap14.mda.gov.br/extratopf/PesquisaTitular.aspx</url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
                 <titulo>Outros</titulo>
             </tipoInformacaoUtil>
             <descricao>Extrato da DAP por município</descricao>
-            <url>http://smap14.mda.gov.br/dap/extrato/pf/PesquisaMunicipio.aspx</url>
+            <url>http://smap14.mda.gov.br/extratopf/PesquisaMunicipio.aspx</url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
                 <titulo>Outros</titulo>
             </tipoInformacaoUtil>
             <descricao>Extrato da DAP por CNPJ</descricao>
-            <url>http://smap14.mda.gov.br/dap/extrato/pj/ExtratoDAP/ExtratoDAP.aspx</url>
+            <url>http://smap14.mda.gov.br/extratopj/ExtratoDAP/ExtratoDAP.aspx</url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
@@ -62,7 +62,7 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
             </tipoInformacaoUtil>
             <descricao>Manual da DAP</descricao>
             <url>
-                http://comunidades.mda.gov.br/portal/saf/arquivos/view/institucional/Manual_DAP_1_7_x_colocada_no_site.pdf
+                http://www.mda.gov.br/sitemda/sites/sitemda/files/user_arquivos_64/MANUAL_DO_AGENTE_EMISSOR_CORREÇÕES_16.01.2014_(1).pdf
             </url>
         </informacaoUtil>
         <informacaoUtil>
@@ -70,7 +70,7 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
                 <titulo>Serviços relacionados</titulo>
             </tipoInformacaoUtil>
             <descricao>PRONAF - Programa Nacional de Fortalecimento da Agricultura Familiar</descricao>
-            <url>http://comunidades.mda.gov.br/portal/saf/programas//pronaf</url>
+            <url>http://www.mda.gov.br/sitemda/secretaria/saf-creditorural/sobre-o-programa</url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
@@ -78,7 +78,7 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
             </tipoInformacaoUtil>
             <descricao>Formulário de solicitação de Cadastro de Entidades</descricao>
             <url>
-                http://comunidades.mda.gov.br/portal/saf/arquivos/view/FRM_CADASTRO_EmissorRespLegalOperacional20090703.doc
+                http://www.mda.gov.br/sitemda/sites/sitemda/files/user_img_19/FORM_CED_20151303.xlsx
             </url>
         </informacaoUtil>
     </informacoesUteis>
