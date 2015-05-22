@@ -7,6 +7,10 @@
   vertical-align: baseline;
 }
 
+*:focus {
+    outline: dashed thin;
+}
+
 a {
   &:link, &:visited {
     text-decoration: none;
