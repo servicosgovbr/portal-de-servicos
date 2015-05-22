@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Vistas de Processo</titulo>
-    <descricao>Solicitar vistas de processo administrativo.</descricao>
+    <descricao>
+        <![CDATA[É o serviço por meio do qual o contribuinte sujeito passivo de débito inscrito em Dívida Ativa poderá solicitar vistas ou obter cópias do processo administrativo diretamente na unidade da Procuradoria-Geral da Fazenda Nacional (PGFN) responsável pela inscrição.
+
+Solicitar vistas de processo administrativo.]]>
+    </descricao>
     <requisitos/>
     <etapas></etapas>
     <canaisPrestacaoServico>
