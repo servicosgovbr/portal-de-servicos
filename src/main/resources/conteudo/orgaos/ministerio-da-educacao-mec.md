@@ -11,4 +11,4 @@ Ministério da Educação (MEC)
 
 Provê assistência financeira a famílias carentes para a escolarização de seus filhos ou dependentes e não abrange o ensino militar.
 
-Dentre os serviços ofertados ao público estão os de inscrição no Sistema de Seleção Unificada (SISU); no Sistema de Seleção Unificada da Educação Profissional e Tecnológica (Sisutec); no  Programa Nacional de Acesso ao Ensino Profissional e Emprego (Pronatec) e no Programa de Financiamento Estudantil (Fies).
+Dentre os serviços ofertados ao público estão os de [inscrição no Sistema de Seleção Unificada (SISU)](/servico/sisu-sistema-de-selecao-unificada); no [Sistema de Seleção Unificada da Educação Profissional e Tecnológica (Sisutec)](/servico/sisutec-sistema-de-selecao-unificada-da-educacao-profissional-e-tecnologica); no [Programa Nacional de Acesso ao Ensino Profissional e Emprego (Pronatec)](/servico/pronatec-programa-nacional-de-acesso-ao-ensino-profissional-e-emprego) e no [Programa de Financiamento Estudantil (Fies)](/servico/fies-programa-de-financiamento-estudantil).
