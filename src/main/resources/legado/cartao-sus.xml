@@ -2,9 +2,9 @@
 <servico>
     <titulo>Cartão SUS</titulo>
     <descricao>
-        <![CDATA[É um documento que facilita o acesso à rede de atendimento do Sistema Único de Saúde (SUS), contendo dados sobre quando e onde o paciente foi atendido, quais serviços foram prestados e por qual profissional e quais procedimentos foram realizados.
-
-        Os objetivos do Sistema Cartão Nacional de Saúde são organizar e sistematizar dados sobre o atendimento prestado aos usuários; dotar a rede de atendimento do Sistema Único de Saúde (SUS) de um instrumento que facilite a comunicação entre os diversos serviços de saúde; fornecer informações sobre uma pessoa usuária do SUS em qualquer ponto do País; e gerar dados confiáveis e atualizados que permitam planejamento e intercâmbio de conhecimento para subsidiar a elaboração e execução das políticas públicas de saúde.]]>
+<![CDATA[É um documento que facilita o acesso à rede de atendimento do Sistema Único de Saúde (SUS), contendo dados sobre quando e onde o paciente foi atendido, quais serviços foram prestados e por qual profissional e quais procedimentos foram realizados.
+        
+Os objetivos do Sistema Cartão Nacional de Saúde são organizar e sistematizar dados sobre o atendimento prestado aos usuários; dotar a rede de atendimento do Sistema Único de Saúde (SUS) de um instrumento que facilite a comunicação entre os diversos serviços de saúde; fornecer informações sobre uma pessoa usuária do SUS em qualquer ponto do País; e gerar dados confiáveis e atualizados que permitam planejamento e intercâmbio de conhecimento para subsidiar a elaboração e execução das políticas públicas de saúde.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
