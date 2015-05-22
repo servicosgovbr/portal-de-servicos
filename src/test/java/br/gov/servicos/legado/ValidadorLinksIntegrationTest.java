@@ -29,11 +29,10 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 import static com.google.common.base.Strings.isNullOrEmpty;
+import static java.util.stream.Collectors.toList;
 import static javax.xml.xpath.XPathConstants.NODESET;
 import static lombok.AccessLevel.PRIVATE;
 import static org.junit.Assert.fail;
@@ -42,27 +41,46 @@ import static org.junit.Assert.fail;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class ValidadorLinksIntegrationTest {
 
-    @SneakyThrows
     @Parameterized.Parameters(name = "{0}:{1}")
     public static Collection<Object[]> data() {
-        XPathExpression expression = XPathFactory.newInstance().newXPath().compile("//url");
+        return extraiLinksPorArquivo("file:src/main/resources/legado/*.xml")
+                .entrySet()
+                .stream()
+                .flatMap(keyValue -> keyValue
+                        .getValue()
+                        .stream()
+                        .map(url -> new Object[]{keyValue.getKey(), url}))
+                .collect(toList());
+    }
 
-        List<Object[]> results = new ArrayList<>();
-        for (Resource resource : new PathMatchingResourcePatternResolver().getResources("file:src/main/resources/legado/*.xml")) {
-            NodeList nodes;
-            synchronized (ValidadorLinksIntegrationTest.class) { // bug JDK-8047329
-                nodes = (NodeList) expression.evaluate(new InputSource(resource.getInputStream()), NODESET);
-            }
-            for (int i = 0; i < nodes.getLength(); i++) {
-                Node node = nodes.item(i);
-                if (!isNullOrEmpty(node.getTextContent())) {
-                    results.add(new Object[]{resource.getFilename(), node.getTextContent().trim()});
-                }
+    @SneakyThrows
+    private static Map<String, Set<String>> extraiLinksPorArquivo(String arquivosXmlLegados) {
+        XPathExpression expressao = XPathFactory.newInstance().newXPath().compile("//url");
+        Resource[] arquivosLegados = new PathMatchingResourcePatternResolver().getResources(arquivosXmlLegados);
+
+        Map<String, Set<String>> linksPorAquivo = new HashMap<>();
+
+        for (Resource resource : arquivosLegados) {
+            NodeList nodes = (NodeList) expressao.evaluate(new InputSource(resource.getInputStream()), NODESET);
+            linksPorAquivo.put(resource.getFilename(), extraiLinks(nodes));
+        }
+
+        return linksPorAquivo;
+    }
+
+    private static Set<String> extraiLinks(NodeList nodes) {
+        Set<String> links = new LinkedHashSet<>();
+
+        for (int i = 0; i < nodes.getLength(); i++) {
+            Node url = nodes.item(i);
+            if (!isNullOrEmpty(url.getTextContent())) {
+                links.add(url.getTextContent().trim());
             }
         }
 
-        return results;
+        return links;
     }
+
 
     String url;
     RestTemplate http;
