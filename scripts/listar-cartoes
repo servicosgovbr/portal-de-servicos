@@ -65,6 +65,7 @@ repos.each do |repo|
     {
       numero: issue.number,
       descricao: issue.title,
+      docs: issue.labels.any? {|l| l.name == 'docs' },
       bug: issue.labels.any? {|l| l.name == 'BUG' },
       tech_debt: issue.labels.any? {|l| l.name == 'tech debt' },
       repo: repo,
