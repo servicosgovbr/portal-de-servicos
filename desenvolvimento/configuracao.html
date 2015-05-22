@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="8.6" data-basepath=".." data-revision="Fri May 22 2015 19:42:05 GMT+0000 (UTC)">
+    <div class="book" data-level="8.6" data-basepath=".." data-revision="Fri May 22 2015 19:46:25 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1294,13 +1294,13 @@ JAVA_OPTS=-Xms256M -Xmx1G
 <span class="hljs-comment">## Lista dos IPs e portas dos nodos do ElasticSearch do ambiente, separados por v&#xED;rgula.</span>
 SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=<span class="hljs-string">&quot;10.16.0.11:9300,10.16.0.9:9300&quot;</span>
 
-<span class="hljs-comment">## Habilita ou desabilita o cache do sistema de renderiza&#xE7;&#xE3;o de templates Thymeleaf.</span>
+<span class="hljs-comment">## Habilita o cache do sistema de renderiza&#xE7;&#xE3;o de templates Thymeleaf.</span>
 SPRING_THYMELEAF_CACHE=<span class="hljs-literal">true</span>
 
-<span class="hljs-comment">## Habilita ou desabilita o monitoramento e m&#xE9;tricas do Piwik</span>
+<span class="hljs-comment">## Desabilita o monitoramento e m&#xE9;tricas do Piwik</span>
 GDS_PIWIK_ENABLED=<span class="hljs-literal">false</span>
 
-<span class="hljs-comment">## A URL do servidor Piwik que ser&#xE1; utilizada para monitoramento e m&#xE9;tricas, caso o perfil &quot;monitoring&quot; (descrito acima) esteja presente.</span>
+<span class="hljs-comment">## A URL do servidor Piwik que ser&#xE1; utilizada para monitoramento e m&#xE9;tricas.</span>
 GDS_PIWIK_URL=<span class="hljs-string">&quot;https://estatisticas.presidencia.gov.br/&quot;</span>
 
 <span class="hljs-comment">## O token para acesso &#xE0; API de m&#xE9;tricas do Piwik. Geralmente, 32 caracteres hexadecimais.</span>
@@ -1309,22 +1309,25 @@ GDS_PIWIK_TOKEN=
 <span class="hljs-comment">## O identificador do site dentro do Piwik.</span>
 GDS_PIWIK_SITE=<span class="hljs-number">52</span>
 
-<span class="hljs-comment">## Habilita ou desabilita a navega&#xE7;&#xE3;o de rob&#xF4;s (motores de busca, etc) nesta inst&#xE2;ncia.</span>
+<span class="hljs-comment">## Desabilita a navega&#xE7;&#xE3;o de rob&#xF4;s (motores de busca, etc) nesta inst&#xE2;ncia.</span>
 FLAGS_PERMITIR_ROBOS=<span class="hljs-literal">false</span>
 
-<span class="hljs-comment">## Habilita ou desabilita a importa&#xE7;&#xE3;o autom&#xE1;tica de dados ao iniciar o servidor.</span>
+<span class="hljs-comment">## Habilita a importa&#xE7;&#xE3;o autom&#xE1;tica de dados ao iniciar o servidor.</span>
 FLAGS_IMPORTAR_AUTOMATICAMENTE=<span class="hljs-literal">true</span>
 
-<span class="hljs-comment">## Habilita ou desabilita as URLs de informa&#xE7;&#xE3;o e estado do sistema disponibilizadas pelo Spring-Boot.</span>
+<span class="hljs-comment">## Desabilita as URLs de informa&#xE7;&#xE3;o e estado do sistema disponibilizadas pelo Spring-Boot.</span>
 ENDPOINTS_ENABLED=<span class="hljs-literal">false</span>
 
-<span class="hljs-comment">## Habilita ou desabilita a URL /info, que cont&#xE9;m informa&#xE7;&#xF5;es sobre a vers&#xE3;o da aplica&#xE7;&#xE3;o.</span>
+<span class="hljs-comment"># Desabilita a URL /jolokia</span>
+ENDPOINTS_JOLOKIA_ENABLED=<span class="hljs-literal">false</span>
+
+<span class="hljs-comment">## Habilita a URL /info, que cont&#xE9;m informa&#xE7;&#xF5;es sobre a vers&#xE3;o da aplica&#xE7;&#xE3;o.</span>
 ENDPOINTS_INFO_ENABLED=<span class="hljs-literal">true</span>
 
-<span class="hljs-comment">## Habilita ou desabilita a URL /health, que cont&#xE9;m informa&#xE7;&#xF5;es sobre o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o.</span>
+<span class="hljs-comment">## Habilita a URL /health, que cont&#xE9;m informa&#xE7;&#xF5;es sobre o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o.</span>
 ENDPOINTS_HEALTH_ENABLED=<span class="hljs-literal">true</span>
 
-<span class="hljs-comment">## Habilita ou desabilita a disponibiliza&#xE7;&#xE3;o de dados sens&#xED;veis no estado de sa&#xFA;de, como do cluster ElasticSearch e espa&#xE7;o em disco.</span>
+<span class="hljs-comment">## Desabilita a disponibiliza&#xE7;&#xE3;o de dados sens&#xED;veis no estado de sa&#xFA;de, como do cluster ElasticSearch e espa&#xE7;o em disco.</span>
 ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
 
 <span class="hljs-comment">## Protocolo utilizado para envio de emails.</span>
