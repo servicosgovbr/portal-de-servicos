@@ -13,7 +13,7 @@ Token de acesso ao Github não encontrado!
 * Crie um: https://help.github.com/articles/creating-an-access-token-for-command-line-use
 * Passe-o para este script através da variável de ambiente TOKEN:
 
-  TOKEN=da39a3ee5e6b4b0d3255bfef95601890afd80709 ruby #{__FILE__}
+    
 
 EOM
   end
@@ -68,6 +68,7 @@ repos.each do |repo|
       docs: issue.labels.any? {|l| l.name == 'docs' },
       bug: issue.labels.any? {|l| l.name == 'BUG' },
       tech_debt: issue.labels.any? {|l| l.name == 'tech debt' },
+      pull_request: issue.respond_to?(:pull_request),
       repo: repo,
       ultima_alteracao: issue.updated_at.getlocal.strftime(TF),
 
