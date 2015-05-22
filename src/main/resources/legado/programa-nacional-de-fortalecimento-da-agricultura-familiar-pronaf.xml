@@ -48,9 +48,9 @@ Microcrédito Rural]]>
             <tipoInformacaoUtil>
                 <titulo>Outros</titulo>
             </tipoInformacaoUtil>
-            <descricao>condições das linhas de crédito para a safra 2013/2014</descricao>
+            <descricao>condições das linhas de crédito para a safra 2014/2015</descricao>
             <url>
-                http://portal.mda.gov.br/portal/saf/arquivos/view/pronaf/arquivos-tecnicos-plano-safra-13-14/Condi%C3%A7%C3%B5es_do_Cr%C3%A9dito_2013-2014.pdf
+                <![CDATA[http://www.mda.gov.br/sitemda/sites/sitemda/files/user_img_21/Plano_Safra_da_Agricultura_Familiar_2014_2015_0.pdf]]>
             </url>
         </informacaoUtil>
         <informacaoUtil>
@@ -58,21 +58,21 @@ Microcrédito Rural]]>
                 <titulo>Mais informações</titulo>
             </tipoInformacaoUtil>
             <descricao>Legislação relacionada</descricao>
-            <url>http://comunidades.mda.gov.br/portal/saf/programas/pronaf/2259166</url>
+            <url><![CDATA[http://www.mda.gov.br/sitemda/secretaria/saf-creditorural/legislação]]></url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
                 <titulo>Mais informações</titulo>
             </tipoInformacaoUtil>
-            <descricao>Arquivos Técnicos do Plano Safra 2013-2014</descricao>
-            <url>http://comunidades.mda.gov.br/portal/saf/programas/pronaf/13630300</url>
+            <descricao>Arquivos Técnicos do Plano Safra 2014-2015</descricao>
+            <url><![CDATA[http://www.mda.gov.br/sitemda/secretaria/saf-creditorural/arquivos-técnicos-do-plano-safra]]></url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
                 <titulo>Mais informações</titulo>
             </tipoInformacaoUtil>
             <descricao>Saiba mais sobre o PRONAF</descricao>
-            <url>http://comunidades.mda.gov.br/portal/saf/programas/pronaf</url>
+            <url>http://www.mda.gov.br/sitemda/secretaria/saf-creditorural/sobre-o-programa</url>
         </informacaoUtil>
     </informacoesUteis>
     <compromissosAtendimento></compromissosAtendimento>
