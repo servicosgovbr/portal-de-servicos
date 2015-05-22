@@ -52,6 +52,12 @@ body.contraste {
     color: $preto !important;
   }
 
+  .paginacao-letras {
+    a, .paginacao-busca {
+      color: $preto !important;
+    }
+  }
+
   #acessibilidade span {
     color: $preto !important;
   }
