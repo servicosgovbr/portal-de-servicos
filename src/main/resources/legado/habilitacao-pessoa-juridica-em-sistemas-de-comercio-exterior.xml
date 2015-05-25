@@ -32,7 +32,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>SISCOMEX IMPORTAÇÃO - ACESSO AO SISTEMA WEB</descricao>
-            <url>http://www1.siscomex.receita.fazenda.gov.br/siscomexImpweb-7/login_cert.jsp</url>
+            <url><![CDATA[http://www1.siscomex.receita.fazenda.gov.br/siscomexImpweb-7/login_cert.jsp]]></url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
