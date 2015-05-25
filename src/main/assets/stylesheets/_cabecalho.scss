@@ -59,11 +59,7 @@
     padding-bottom: em(5);
     border-bottom: em(1) dotted $cinza-medio;
 
-    @include mobile {
-      display: none !important;
-    }
-
-    @include tablet {
+    @include mobile-tablet {
       @include span-columns(12);
       @include shift(0);
       @include omega();
