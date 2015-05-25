@@ -23,14 +23,14 @@ Para obtê-lo, baixe o Programa Cadastro (vide "Formulários"), preencha as info
             <tipoInformacaoUtil>
                 <titulo>Formulários</titulo>
             </tipoInformacaoUtil>
-            <descricao>GRU (FUNAD).</descricao>
-            <url>http://www.dpf.gov.br/servicos/gru/gru-funad</url>
+            <descricao>GRU (FUNAD)</descricao>
+            <url>http://www.dpf.gov.br/servicos/gru/produtos-quimicos</url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
                 <titulo>Formulários</titulo>
             </tipoInformacaoUtil>
-            <descricao>Programa Cadastro.</descricao>
+            <descricao>Programa Cadastro</descricao>
             <url>http://www.dpf.gov.br/servicos/produtos-quimicos/programas/programa-cadastro</url>
         </informacaoUtil>
         <informacaoUtil>
