@@ -2,6 +2,7 @@
 
 require 'octokit'
 require 'csv'
+require 'json'
 
 Octokit.configure do |c| 
   unless ENV.has_key?('TOKEN')
@@ -34,8 +35,8 @@ repos = [
 
 TF='%m/%d/%y %H:%M'
 
-def label(l)
-  Proc.new {|e| e.event == 'labeled' and e.label.name = l }
+def label(e, l)
+  e.event == 'labeled' and l == e.label.name
 end
 
 print 'Listando os cartões no Github...'
@@ -49,11 +50,11 @@ repos.each do |repo|
 
     issue.events = Octokit.issue_events repo, issue.number
 
-    para_rodar = issue.events.first &label('ready')
-    em_progresso = issue.events.first &label('in progress')
-    para_homologacao = issue.events.first &label('para homologação')
-    em_homologacao = issue.events.first &label('homologação')
-    em_producao = issue.events.first &label('produção')
+    para_rodar = issue.events.find { |e| label(e, 'ready') }
+    em_progresso = issue.events.find { |e| label(e, 'in progress') }
+    para_homologacao = issue.events.find { |e| label(e, 'para homologação') }
+    em_homologacao = issue.events.find { |e| label(e, 'homologação') }
+    em_producao = issue.events.find { |e| label(e, 'produção')}
 
     cycle_time = (em_producao.created_at - em_progresso.created_at rescue nil) ||
                  (issue.closed_at - em_progresso.created_at rescue nil)
