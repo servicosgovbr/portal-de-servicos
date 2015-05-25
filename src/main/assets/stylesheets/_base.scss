@@ -5,6 +5,7 @@
   padding: 0;
   list-style: none;
   vertical-align: baseline;
+  @include prefixer(font-smoothing, subpixel-antialiased, webkit o moz ms spec);
 }
 
 *:focus {
