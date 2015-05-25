@@ -11,7 +11,7 @@
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
             <url>
-                http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=2
+                http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=1
             </url>
         </canalPrestacaoServico>
         <canalPrestacaoServico>
@@ -29,7 +29,7 @@
                 <titulo>Mais informações</titulo>
             </tipoInformacaoUtil>
             <descricao>Orientações gerais sobre o serviço</descricao>
-            <url>http://www.receita.fazenda.gov.br/GuiaContribuinte/CN_%20PJ.htm</url>
+            <url>https://idg.receita.fazenda.gov.br/orientacao/tributaria/certidoes-e-situacao-fiscal/orientacoes-gerais</url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
