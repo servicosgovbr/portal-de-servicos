@@ -12,7 +12,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
-            <url>https://cav.receita.fazenda.gov.br/eCAC/publico/login.asp</url>
+            <url>https://sicobe.cmb.gov.br/</url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
