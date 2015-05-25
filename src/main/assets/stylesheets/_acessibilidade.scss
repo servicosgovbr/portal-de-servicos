@@ -39,8 +39,8 @@ body.contraste {
     }
   }
 
-  a, p, h4, .paginacao-busca, a.markdown, .titulo-home, li, .portletHeader, h1, h2, h3, #capacho dt, .portletNavigationTree > dd a span, #migalhas-de-pao a,
-  #migalhas-de-pao span, #conteudo a:hover, dl.portlet a:hover, .tile-subtitle, .tile p, .tile a,
+  a, p, h4, .paginacao-busca, a.markdown, .titulo-home, li, .nav-tree dt h1, h2, h3, #capacho dt, .nav-tree > dd a span, #migalhas-de-pao a,
+  #migalhas-de-pao span, #conteudo a:hover, .tile-subtitle, .tile p, .tile a,
   #portal-siteactions a, #portal-siteactions a:hover, #logo #portal-logo,
   #logo #portal-title, #portal-description, .outstanding-header .outstanding-link, #conteudo .outstanding-header .outstanding-link:hover,
   .lista-vertical .tile-header span, .cover-collection-tile .tile-header span {
@@ -62,14 +62,13 @@ body.contraste {
     color: $preto !important;
   }
 
-  dl.portlet {
+  .nav-tree dt {
+    color: $branco;
+    background: $preto;
+
     .fa {
       color: $branco;
     }
-  }
-
-  .portletNavigationTree .portletHeader {
-    background: $preto;
   }
 
   *.acao {
@@ -78,7 +77,6 @@ body.contraste {
   }
 
   #rodape {
-    .portletHeader,
     #capacho .doormatColumn {
       border-color: $branco !important;
       background: $preto !important;

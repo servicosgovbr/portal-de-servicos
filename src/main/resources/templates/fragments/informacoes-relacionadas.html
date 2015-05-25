@@ -3,13 +3,14 @@
       xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<dl class="portlet portletNavigationTree no-mobile no-tablet">
-    <dt class="portletHeader">
-        Mais informações <i class="fa fa-chevron-down"></i>
+<dl class="nav-tree no-mobile no-tablet">
+    <dt>
+        Mais informações
+        <i class="fa fa-chevron-down"></i>
     </dt>
 
     <dd>
-        <ul class="navTree navTreeLevel0">
+        <ul>
             <li th:each="linhaDaVida : ${servico.linhasDaVida}">
                 <a th:href="@{/linha-da-vida/{id}(id=${linhaDaVida.id})}">
                     <span th:text="${linhaDaVida.titulo}">Título da Linha da Vida</span>

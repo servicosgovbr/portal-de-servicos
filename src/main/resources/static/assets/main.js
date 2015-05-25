@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     $(e.target.hash).focus();
   });
 
-  $('.portletNavigationTree .portletHeader').click(function() {
+  $('.nav-tree dt').click(function() {
     $(this).next()
       .slideToggle();
 

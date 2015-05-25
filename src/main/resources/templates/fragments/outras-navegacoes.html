@@ -3,14 +3,14 @@
       xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<dl class="portlet portletNavigationTree no-mobile no-tablet">
-    <dt class="portletHeader">
-        Listas<i class="fa fa-chevron-down"></i>
+<dl class="nav-tree no-mobile no-tablet">
+    <dt>
+        Listas
+        <i class="fa fa-chevron-down"></i>
     </dt>
 
     <dd>
-        <ul class="navTree navTreeLevel0">
-
+        <ul>
             <li>
                 <a th:href="@{/servicos}">
                     <span>Todos os Serviços</span>
@@ -21,7 +21,6 @@
                     <span>Todos os Órgãos</span>
                 </a>
             </li>
-
         </ul>
     </dd>
 </dl>

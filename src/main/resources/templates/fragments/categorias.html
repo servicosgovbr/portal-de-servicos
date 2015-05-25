@@ -3,20 +3,19 @@
       xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<dl class="portlet portletNavigationTree">
-    <dt class="portletHeader">
-        Categorias <i class="fa fa-chevron-down"></i>
+<dl class="nav-tree">
+    <dt>
+        Categorias
+        <i class="fa fa-chevron-down"></i>
     </dt>
 
     <dd>
-        <ul class="navTree navTreeLevel0">
-
+        <ul>
             <li th:each="linhaDaVida : ${@linhaDaVidaRepository.findAll()}">
                 <a th:href="@{/linha-da-vida/{id}(id=${linhaDaVida.id})}">
                     <span th:text="${linhaDaVida.titulo}">Título da Linha da Vida</span>
                 </a>
             </li>
-
         </ul>
     </dd>
 </dl>

@@ -124,7 +124,7 @@
 
 }
 
-dl.portlet {
+dl.nav-tree {
 
   @include mobile-tablet {
     dd {
@@ -525,21 +525,19 @@ ul.servicos-a-z {
     margin-bottom: 0;
   }
 
-  .portletHeader {
-    @include mobile-tablet {
-        margin-left: 0;
-        margin-right: 0;
+  .nav-tree {
+
+    dt {
+      @include mobile-tablet {
+          margin-left: 0;
+          margin-right: 0;
+      }
+    }
+
+    dd {
+      font-size: 13px;
     }
   }
-
-  .navTree span {
-    font-size: 13px;
-  }
-
-  .navTree a {
-    font-size: 13px;
-  }
-
 }
 
 .destaque {

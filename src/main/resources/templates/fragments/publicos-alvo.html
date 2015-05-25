@@ -3,20 +3,19 @@
       xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<dl class="portlet portletNavigationTree no-mobile no-tablet">
-    <dt class="portletHeader">
-        Público-Alvo<i class="fa fa-chevron-down"></i>
+<dl class="nav-tree no-mobile no-tablet">
+    <dt>
+        Público-Alvo
+        <i class="fa fa-chevron-down"></i>
     </dt>
 
     <dd>
-        <ul class="navTree navTreeLevel0">
-
+        <ul>
             <li th:each="publico : ${@publicoAlvoRepository.findAll()}">
                 <a th:href="@{/publico-alvo/{id}(id=${publico.id})}">
                     <span th:text="${publico.titulo}">Título do Público Alvo</span>
                 </a>
             </li>
-
         </ul>
     </dd>
 </dl>
