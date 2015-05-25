@@ -13,7 +13,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
-            <url>http://www010.dataprev.gov.br/CWS/CONTEXTO/PCND1/PCND1.HTML</url>
+            <url><![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=182&idArea=3&idAssunto=39]]></url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
