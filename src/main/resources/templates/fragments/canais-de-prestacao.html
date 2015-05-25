@@ -1,4 +1,8 @@
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
 <th:block th:unless="${servico.canaisDePrestacao.isEmpty()}">
 
     <h3>Canais</h3>
@@ -16,4 +20,6 @@
     </p>
 
 </th:block>
+
+</body>
 </html>

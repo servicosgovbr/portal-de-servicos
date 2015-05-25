@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
 <ul id="acessibilidade">
     <li>
         <span><a accesskey="1" href="#conteudo">Ir para o conteúdo <span>1</span></a></span>
@@ -7,10 +12,16 @@
     </li>
     <li>
         <span>
-            <a accesskey="3" id="ir-para-busca" th:href="${#httpServletRequest.requestURI == '/' ? '#input-busca' : '#buscar'}">Ir para a busca <span>3</span></a>
+            <a accesskey="3" id="ir-para-busca"
+               th:href="${#httpServletRequest.requestURI == '/' ? '#input-busca' : '#buscar'}">
+                Ir para a busca <span>3</span>
+            </a>
         </span>
     </li>
     <li>
         <span><a accesskey="4" href="#rodape">Ir para o rodapé <span>4</span></a></span>
     </li>
 </ul>
+
+</body>
+</html>

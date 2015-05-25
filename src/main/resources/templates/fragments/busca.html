@@ -1,4 +1,7 @@
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
 
 <div id="portal-searchbox" th:class="${#httpServletRequest.requestURI} == '/' ? 'hidden'">
     <form action="/busca">
@@ -9,6 +12,7 @@
             <input type="search" size="18" maxlength="140" title="Buscar no site" placeholder="Buscar"
                    class="searchField" name="q" id="buscar"
                    th:value="${(param.q?:{''})[0]}"/>
+
             <button class="searchButton">
                 <i class="fa fa-search"></i> <span class="hidden">Buscar</span>
             </button>
@@ -29,4 +33,5 @@
     </script>
 </div>
 
+</body>
 </html>
