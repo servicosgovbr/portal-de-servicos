@@ -477,6 +477,10 @@ ul#resultados-busca {
   border-radius: 4px;
   display: inline-block;
   margin-top: 10px;
+  
+  a {
+    padding: 0px 7px;
+  } 
 }
 
 .total-resultados {
