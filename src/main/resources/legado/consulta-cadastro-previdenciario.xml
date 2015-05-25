@@ -10,7 +10,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
-            <url>http://www010.dataprev.gov.br/CWS/CONTEXTO/AGUIA01/AGUIA01.HTML</url>
+            <url><![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=144&idArea=2&idAssunto=37]]></url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
