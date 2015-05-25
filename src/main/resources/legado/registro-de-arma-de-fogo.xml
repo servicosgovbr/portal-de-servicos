@@ -44,8 +44,8 @@ IMPORTANTE:
             <tipoInformacaoUtil>
                 <titulo>Outros</titulo>
             </tipoInformacaoUtil>
-            <descricao>Emissão da Guia de Recolhimento da União - GRU.</descricao>
-            <url>https://www2.dpf.gov.br/gru/gru?nac=0</url>
+            <descricao>Emissão da Guia de Recolhimento da União - GRU</descricao>
+            <url>http://www.dpf.gov.br/servicos/gru/armas</url>
         </informacaoUtil>
         <informacaoUtil>
             <tipoInformacaoUtil>
