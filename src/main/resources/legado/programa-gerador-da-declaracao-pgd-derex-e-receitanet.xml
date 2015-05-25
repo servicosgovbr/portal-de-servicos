@@ -10,7 +10,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
-            <url>https://www.receita.fazenda.gov.br/PessoaJuridica/Derex/PGDJAVA/progDEREX2007multiplataforma.htm</url>
+            <url>http://idg.receita.fazenda.gov.br/orientacao/tributaria/declaracoes-e-demonstrativos/derex-decl-utiliz-rec-moeda-estrangeira-rec-de-exp/derex-download-do-programa</url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
