@@ -44,7 +44,7 @@ Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria 
                 <titulo>Localização das unidades</titulo>
             </tipoInformacaoUtil>
             <descricao>Endereços das unidades da Defensoria Pública da União</descricao>
-            <url>http://www.dpu.gov.br/index.php/inicio/principais/estrutura</url>
+            <url>http://www.dpu.gov.br/dpgu</url>
         </informacaoUtil>
     </informacoesUteis>
     <compromissosAtendimento></compromissosAtendimento>
