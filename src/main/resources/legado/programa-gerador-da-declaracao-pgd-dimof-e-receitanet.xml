@@ -10,7 +10,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
-            <url>https://www.receita.fazenda.gov.br/PessoaJuridica/Dimof/Java/Default.htm</url>
+            <url>http://idg.receita.fazenda.gov.br/orientacao/tributaria/declaracoes-e-demonstrativos/dimof-declaracao-informacoes-sobre-movimentacao-financeira/dimof-2013-declaracao-informacoes-sobre-movimentacao-financeira</url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
