@@ -47,7 +47,7 @@ A natureza do código aberto do projeto nos trouxe alguns contribiudores externo
 * [Bruno Tavares](mailto:btavares@thoughtworks.com)
 * [Bruno Trecenti](mailto:btrecenti@thoughtworks.com)
 * [Douglas Detoni](mailto:ddetoni@thoughtworks.com)
-* [Carolina Martinussi] (mailto:cmartinu@thoughtworks.com)
+* [Carolina Martinussi](mailto:cmartinu@thoughtworks.com)
 * [Edilson Junior](mailto:ejunior@thoughtworks.com)
 * [Gabriel Such](mailto:gabrielsuch@gmail.com)
 * [Leonardo Marquezini](mailto:lmarquezini@thoughtworks.com)

@@ -1,49 +1,11 @@
-# Exportador
+# Marcelo - Exportador
 
-## Pré-jornada
+![](mapa-exportador.png)
 
-* Não achamos info nas redes sociais
-* Consultoria com o mesmo da SECOM
-* Muitos sites governamentais com informações difusas
-* Guia de serviços não tem exportação
-* Sites gov informações dispersas
+## Oportunidades percebidas
 
-## Expectativas
+**Ordenação de conteúdos:** Em serviços mais complexos, que são tratados por um longo período de tempo, seria interessante mostrar as informações organizadas pela linha do tempo, deixando assim mais clara a ordem das atividades a serem realizadas pelo cidadão.
 
-* Saber por onde começo
-* Processo linear
-* Saber quando estará feito/pronto
+**Simulações:** Em cenários que envolvem valores monetários em longo prazo, a possibilidade de auxiliar o cidadão a entender o cenário futuro através de simulações pode ser uma boa situação. Instituições bancárias, por exemplo, realizam essa atividade para deixar seus clientes mais aptos a tomar uma decisão de empréstimo, financiamento, etc.
 
-## Jornada
-
-* Leio orientações ao exportador
-* Elaboro fatura pro-forma
-* Envio da fatura pro-forma ao importador
-* Recebo a confirmação de abertura de carta de crédito do importador
-* Analiso a carta de crédito
-* Elaboro a fatura comercial
-* Preparo mercadoria para embarque
-* Elaboro o packing list
-* Emito nota fiscal
-* Providencio o pre-transporte até o porto
-* Solicito o despacho aduaneiro
-* Pagamento do frete e seguro pelo exportador
-* Recebimento do conhecimento de embarque
-* Desembaraço e averbação junto a SRF
-* Emissao do comprovante de exportação
-* Consolido toda a informação
-* Contrato fechamento de cambio
-* Entrego toda documentação ao banco negociador da carta de credito
-* Liquido cambio e recebo os reais
-* Envio carta de agradecimento ao importador
-
-## Pós-jornada
-
-* Busca de mais info e serviços para ampliar minha exportação (novos produtos e países)
-* Compartilhar experiência em mídias sociais
-* Reclamar na internet
-* Ajudar pessoas que estão começando
-
-##  Satisfação
-
-* Consegui escalar uma montanha
+**Presencial ou virtual:** É interessante deixar claro quando a atividade poderá ou não ser concluída digitalmente, pois quando não é claro, o usuário poderá ficar procurando por algo que não encontrará no site, e acabar se frustrando ou atá desistindo de realizar determinado serviço.

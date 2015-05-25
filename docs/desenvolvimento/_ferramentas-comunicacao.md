@@ -17,7 +17,7 @@ Github é o repositório onde o código fonte do projeto é armazenado.
 
 A utilização do Github reforça nosso compromisso com a transparência com relação ao trabalho desenvolvido pelo time. Qualquer cidadão pode visualizar e revisar o código além de permitir que os interessados contribuam com novas funcionalidades, correções ou melhorias, seguindo o [guia de contribuição](../sobre-o-projeto/como-contribuir.md).
 
-Uma nova organização foi criada no Github para de agrupar qualquer projeto ou subprojeto relacionado ao Guia de Serviços.
+Uma nova organização foi criada no Github para agrupar qualquer projeto ou subprojeto relacionado ao Guia de Serviços.
 
 ### [Github Issues](http://github.com/servicosgovbr/guia-de-servicos/issues)
 
@@ -29,4 +29,4 @@ Por ser uma ferramenta aberta, ela permite a colaboração de quaisquer interess
 
 O Waffle é um quadro virtual e integrado ao Github Issues que gera visualizações em tempo real de cada uma das tarefas e seu estado atual.
 
-Utilizamos esta ferramenta para dar mais visibilidade às tarefas que estão sendo desenvolvidas pelo time e quem são os responsáveis por elas.
+Utilizamos esta ferramenta para dar mais visibilidade às tarefas que estão sendo desenvolvidas pelo time e quem são os responsáveis por cada uma delas.

@@ -1,42 +1,14 @@
-# Estudante
+# Eduardo - Estudante
 
-## Pré-jornada
+![](mapa-estudante.png)
 
-* Propaganda na TV sobre FIES
-* Perguntar aos amigos no Face
-* Ouvi dizer que tem financiamento do governo para estudante em faculdades particulares
-* Em outras relações com o governo não teve experiências positivas
+## Oportunidades percebidas
 
-## Expectativa
+**Informações claras e objetivas:** Como muitos serviços contêm atividades sensíveis aos usuários, (envolvem dinheiro, por exemplo), é importante que a interface e o conteúdo sejam claros para que o cidadão possa ter segurança ao tomar determinadas decisões.
 
-* Encontrar e entender rapidamente quais as etapas para conseguir o financiamento
-* As condições acessíveis e que seja fácil pagar o financiamento
+**Hierarquia das informações:** Para que o consumo dos conteúdos seja facilitado, é possível mostrar casos especiais de conteúdos (como valores, datas previstas) com diferentes aspectos visuais, gerando uma hierarquia de informações.
 
-## Jornada
+**Casos de sucesso:** Cidadãos podem compartilhar seus casos de sucesso com o Guia de Serviço, além de dicas que facilitaram seu processo, para que outros cidadãos tenham maior facilidade de resolver seus problemas pessoais.
 
-* Pesquisa no Google até encontrar informações 
-* Realiza primeiro acesso no SISFIES do MEC
-* Recebe email para confirmar
-* Preenche o cadastro do SISFIES
-* Descobre que precisa estar matriculado
-* Pesquisa no site da universidade se há informações sobre o FIES
-* Ir na universidade coletar informações e dar inicio á matricula
-* Finaliza cadastro no SISFIES
-* Reúne documentos necessários e leva para a universidade
-* Vai ao banco assinar o contrato
-* Recebe benefício e começa a estudar
-* Termina o curso e procura trabalho
-* Após 1.5 ano, começa a pagar
-* Quita o financiamento
+**Interação além do site:** Em cenários onde o processo longo, é possível cadastrar materiais de suporte, como listas de etapas do processo para impressão, que o usuário poderá consultar e utilizar como controle ao longo de sua jornada.
 
-## Pós-jornada
-
-* Aditamento e renovação do contrato (semestral)
-* Verificar condições de manutenção
-* Reclamar das dificuldades nas redes sociais
-* Trocar experiências com os colegas
-
-## Satisfação
-
-* Informações necessárias estão espalhadas e várias etapas presenciais são repetitivas
-* Processo do serviço com muitas etapas intercalando presencial e virtual

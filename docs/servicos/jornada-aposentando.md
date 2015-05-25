@@ -1,37 +1,13 @@
-# Aposentando
+# Joana - Aposentando
 
-## Pré-jornada
+![](mapa-aposentanda.png)
 
-* Campanha da previdência?
-* Notícias sobre alteração nas regras.
-* Fila da previdência
-* Informações confusas
-* Não consegui entender o processo sozinho, ou qual processo seguir
-* Eu não sabia que fiquei sem contribuir
+## Oportunidades percebidas
 
-## Expectativas
+**Empatia e interações mais humanas:** Entender que o cidadão está confuso, ansioso, e precisa do governo para conseguir atingir seu objetivo. Ser mais humano nas interações poderá fazer com que ele se sinta mais seguro e atendido pelo governo.
 
-* Vou ganhar pouco
-* Isso vai dar trabalho
-* Vou precisar de muitos comprovantes
+**Proposta de valor clara:** Cada pessoa é diferente, e precisamos estar atentos para que todos os envolvidos entendam quais níveis de maturidade de serviços serão atingidos através do Guia de Serviços e estejam bem informados sobre o passo a passo para atingir seu objetivo.
 
-## Jornada
+**Oportunidade de valor:** Para que os serviços possam ser evoluídos é importante que a oportunidade de dar seu feedback seja fácil e intencional. É necessário mostrar a importância e o benefício do cidadão ser atuante no processo de melhoria do Guia de Serviços.
 
-* Quanto eu já contribui de fato?
-* Quanto eu vou receber?
-* Vale a pena me aposentar agora?
-* Informações claras sobre requisitos
-* Como comprovar? Onde é a agência mais próxima?
-* Como é o atendimento? Tudo online?
-* Será que eu tenho pendências a regularizar?
-* Quanto tempo demora até eu receber?
-* Como agendar/começar?
-* Como acompanhar?
-
-## Pós-jornada
-
-* Informações sobre mudanças em regras
-* Uma vez ao ano, confirmar cadastro
-* Qual o novo valor do meu benefício?
-* Não peguei nada de filas.
-* Estou satisfeito, apesar do trabalho
+**O cidadão é o melhor distribuidor:** A partir de uma experiência gratificante, o cidadão se torna o maior defensor do Guia de Serviços. Dar os meios para que ele possa se emponderar e compartilhar com amigos e familiares sobre sua experiência é a chave para que ele seja nosso maior distribuidor.
