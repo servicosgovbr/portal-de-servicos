@@ -10,7 +10,7 @@
                 <titulo>Web</titulo>
             </tipoCanalPrestacaoServico>
             <descricao>Endereço eletrônico do serviço</descricao>
-            <url>http://www.receita.fazenda.gov.br/PessoaJuridica/Dacon/Default.htm</url>
+            <url>http://idg.receita.fazenda.gov.br/orientacao/tributaria/declaracoes-e-demonstrativos/dacon-demonstrativo-de-apuracao-de-contribuicoes-sociais/programa-gerador-do-dacon</url>
         </canalPrestacaoServico>
     </canaisPrestacaoServico>
     <taxa></taxa>
