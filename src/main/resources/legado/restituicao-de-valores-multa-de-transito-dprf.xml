@@ -45,7 +45,7 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
                 <titulo>Formulários</titulo>
             </tipoInformacaoUtil>
             <descricao>Requerimento de Restituição de Valores.</descricao>
-            <url>http://www.dprf.gov.br/extranet/DPRFFormRequerimento-PDFEditavel.pdf</url>
+            <url>https://www.prf.gov.br/portal/multas-e-infracoes/arquivos/formulario-de-restituicao-de-valores</url>
         </informacaoUtil>
     </informacoesUteis>
     <compromissosAtendimento></compromissosAtendimento>
