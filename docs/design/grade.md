@@ -1,6 +1,6 @@
 # Grade
 
-A partir da grade existente no [Guia de Estilos da Secretaria de Comunicação do Governo Federal][estilos], reconstruímos a grade que está sendo utilizado no Guia de Estilos. Esta grade consiste em uma largura máxima de 960 pixels e possui 12 colunas, que quando combinadas, formam os blocos de conteúdo do site. Realizamos esta reconstrução da grade, principalmente em função da área de menu lateral, que antes ocupava apenas 150px de largura (ou seja, não comportava a quantidade de conteúdo necessária neste projeto). Esta grade está projetada para funcionar responsivamente. Temos a flexibilidade de criar diversos layouts combinando a configuração de colunas e conteúdo.
+A partir da grade existente no [Manual de Identidade Visual do Governo Federal][estilos], reconstruímos a grade que está sendo utilizado no Guia de Estilos. Esta grade consiste em uma largura máxima de 960 pixels e possui 12 colunas, que quando combinadas, formam os blocos de conteúdo do site. Realizamos esta reconstrução da grade, principalmente em função da área de menu lateral, que antes ocupava apenas 150px de largura (ou seja, não comportava a quantidade de conteúdo necessária neste projeto). Esta grade está projetada para funcionar responsivamente. Temos a flexibilidade de criar diversos layouts combinando a configuração de colunas e conteúdo.
 
 [estilos]:http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf
 

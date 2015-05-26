@@ -6,7 +6,7 @@ As seguintes linhas da vida possuem ícones associados às suas classes:
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-| Linha da Vida                     | Classe                              | Ícone                                      |
+| LINHA DA VIDA                     | CLASSE                              | ÍCONE							|
 |-----------------------------------|-------------------------------------|:------------------------------------------:|
 | Empreendedorismo e negócios       | `empreendedorismo-e-negocios`       | <i class="fa fa-lg fa-pie-chart"></i>      |
 | Aposentadoria                     | `aposentadoria`                     | <i class="fa fa-lg fa-user"></i>           |

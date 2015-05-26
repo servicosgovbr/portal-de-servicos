@@ -12,14 +12,14 @@
 }
 </style>
  
-Definimos as cores a serem utilizadas no site do Guia de Serviços com base no [tema branco] do [Guia de Estilos do Governo Federal][estilos].
+Definimos as cores a serem utilizadas no site do Guia de Serviços com base no [tema branco] do [Manual de Identidade Visual do Governo Federal][estilos].
 
 Foram cinco cores definidas para estilizar o site, e estas são utilizadas com o objetivo de proporcionar uma melhor legibilidade, organização, contraste e acessibilidade das informações. 
 
 [tema branco]:https://github.com/plonegovbr/brasil.gov.temas#id6
 [estilos]:http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf
 
-| Cor         | Código		 | Exemplo
+| COR         | CÓDIGO		| EXEMPLO
 | ----------- | :---------: | ------------------------------------------------------------------ |
 | Azul Claro  | `#2c66ce`   | <div class="swatch" style="background-color: #2c66ce">&nbsp;</div> |
 | Azul Escuro | `#1f4da3`   | <div class="swatch" style="background-color: #1f4da3">&nbsp;</div> |
@@ -28,11 +28,11 @@ Foram cinco cores definidas para estilizar o site, e estas são utilizadas com o
 | Cinza médio | `#d5d5d5`   | <div class="swatch" style="background-color: #d5d5d5">&nbsp;</div> |
 | Cinza escuro| `#606060`   | <div class="swatch" style="background-color: #606060">&nbsp;</div> |
 
-## Contraste
+### Contraste
 
 A escolha de cores está em conformidade com o [padrão AA da W3C](http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) de contraste para acessibilidade de páginas da internet, atingindo notas superiores a 4.5 em todas as combinações utilizadas no Guia de Serviços. Para verificação, foi utilizada a ferramenta [Colour Contrast Check](http://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333), referenciada pela própria W3C. As tabelas abaixo apresentam os resultados da avaliação.
 
-| Combinações que usamos                                                                   | Nota |
+| COMBINAÇÕES UTILIZADAS                                                                   | NOTA |
 | -----------------------------------------------------------------------------------------| :--: |
 |<p style="background-color: #f0f2f1; color: #606060"> Cinza Escuro sobre Cinza Claro </p> | 5.59 |
 |<p style="background-color: #f0f2f1; color: #2c66ce"> Azul Claro sobre Cinza Claro </p>   | 4.79 |
@@ -44,7 +44,7 @@ A escolha de cores está em conformidade com o [padrão AA da W3C](http://www.w3
 
 Para referência, listamos abaixo as combinações que não podemos utilizar, por não estarem em conformidade.
 
-| Combinações que não usamos                                                               | Nota |
+| COMBINAÇÕES NÃO UTILIZADAS                                                               | NOTA |
 | -----------------------------------------------------------------------------------------| :--: |
 |<p style="background-color: #d5d5d5; color: #2c66ce"> Azul Claro sobre Cinza Médio </p>   | 3.67 |
 |<p style="background-color: #d5d5d5; color: #606060"> Cinza Escuro sobre Cinza Médio </p> | 4.28 |
