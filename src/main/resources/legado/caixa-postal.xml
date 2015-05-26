@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
     <titulo>Caixa Postal</titulo>
-    <descricao>Receber mensagens eletrônicas enviadas pela Receita Federal. Existem dois tipos de mensagens: mensagens
-        de interesse geral e mensagens de interesse específico do detentor da Caixa Postal.
+    <descricao>
+        <![CDATA[Receber mensagens eletrônicas enviadas pela Receita Federal. Existem dois tipos de mensagens: mensagens de interesse geral e mensagens de interesse específico do detentor da Caixa Postal.]]>
     </descricao>
     <requisitos/>
     <etapas></etapas>
