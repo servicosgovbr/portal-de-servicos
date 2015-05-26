@@ -110,7 +110,7 @@ public class ValidadorLinksIntegrationTest {
     }
 
     @Test
-    public void deveSerLinksVálido() throws Exception {
+    public void deveSerLinkVálido() throws Exception {
         new URL(url).toURI();
     }
 
