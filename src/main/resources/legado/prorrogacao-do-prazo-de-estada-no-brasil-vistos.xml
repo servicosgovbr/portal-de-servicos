@@ -68,7 +68,7 @@ O acompanhamento dos pedidos de prorrogação do prazo de estada pode ser realiz
                 <titulo>Mais informações</titulo>
             </tipoInformacaoUtil>
             <descricao>Requerimento, documentação necessária e mais informações</descricao>
-            <url>http://www.dpf.gov.br/servicos/estrangeiro/prorrogacao-de-prazo-de-estada-de-turista-e-viajante-a-negocios-temporario-ii-1/prorrogacao-de-prazo-de-estada-de-turista-e-viajante-a-negocios-temporario-ii</url>
+            <url><![CDATA[http://portal.mj.gov.br/main.asp?View={A1BC41DE-C501-4FD4-8651-4891730652C3}&BrowserType=NN&LangID=pt-br&params=itemID%3D{15F2CE30-33B7-40E4-98E6-44F8F3047A9F}%3B&UIPartUID={2868BA3C-1C72-4347-BE11-A26F70F4CB26}]]></url>
         </informacaoUtil>
     </informacoesUteis>
     <compromissosAtendimento></compromissosAtendimento>
