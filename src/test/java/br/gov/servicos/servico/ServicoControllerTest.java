@@ -17,6 +17,8 @@ import static java.util.Arrays.asList;
 import static java.util.Collections.EMPTY_LIST;
 import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doAnswer;
@@ -52,6 +54,11 @@ public class ServicoControllerTest {
     @Test
     public void deveRedirecionarParaListaDeServicos() {
         assertViewName(controller.todos(null), "servicos");
+    }
+
+    @Test
+    public void deveRedirecionarLinksLegadosParaServico() {
+        assertThat(controller.getLegado("abc").getUrl(), is("/servico/abc"));
     }
 
     @Test

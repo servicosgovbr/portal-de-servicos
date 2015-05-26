@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -58,6 +59,11 @@ class ServicoController {
                         .collect(toList()));
 
         return new ModelAndView("servicos", model);
+    }
+
+    @RequestMapping(value = "/repositorioServico/{id}", method = GET)
+    RedirectView getLegado(@PathVariable("id") String id) {
+        return new RedirectView("/servico/" + id);
     }
 
     @RequestMapping(value = "/servico/{id}", method = GET)
