@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Dados Criptografados | Guia de Serviços</title>
+        <title>Dicas para escrever bem | Guia de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.2">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../desenvolvimento/implantacao-e-execucao.html" />
+    <link rel="next" href="../conteudo/acessibilidade-no-conteudo.html" />
     
     
-    <link rel="prev" href="../desenvolvimento/infraestrutura.html" />
+    <link rel="prev" href="../conteudo/index.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="9.4" data-basepath=".." data-revision="Tue May 26 2015 18:55:11 GMT+0000 (UTC)">
+    <div class="book" data-level="8.1" data-basepath=".." data-revision="Tue May 26 2015 18:55:11 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -721,7 +721,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="8.1" data-path="conteudo/dicas.html">
+        <li class="chapter active" data-level="8.1" data-path="conteudo/dicas.html">
             
                 
                     <a href="../conteudo/dicas.html">
@@ -817,7 +817,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="9.4" data-path="desenvolvimento/dados-criptografados.html">
+        <li class="chapter " data-level="9.4" data-path="desenvolvimento/dados-criptografados.html">
             
                 
                     <a href="../desenvolvimento/dados-criptografados.html">
@@ -1354,17 +1354,31 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="dados-criptografados">Dados criptografados</h1>
-<p>Todo o c&#xF3;digo-fonte do projeto &#xE9; aberto e segue a <a href="../sobre-o-projeto/licenca.html">licen&#xE7;a MIT</a>, mas algumas informa&#xE7;&#xF5;es pertinentes a ambientes de execu&#xE7;&#xE3;o em homologa&#xE7;&#xE3;o e produ&#xE7;&#xE3;o s&#xE3;o exclusivos a certas pessoas. Caso voc&#xEA; seja uma delas, e precise ver o conte&#xFA;do destes arquivos (residentes no diret&#xF3;rio <code>secrets</code>), &#xE9; necess&#xE1;rio que sua chave <a href="https://www.gnupg.org/" target="_blank">GPG</a> esteja adicionada no banco <a href="https://www.agwa.name/projects/git-crypt/" target="_blank">git-crypt</a> do reposit&#xF3;rio.</p>
-<p>Para tal, pe&#xE7;a a um dos mantenedores do projeto para adicionar sua chave, e quando isto for feito, basta executar:</p>
-<pre><code>git crypt unlock
-</code></pre><p>O <code>git-crypt</code> pedir&#xE1; para destravar sua chave <a href="https://www.gnupg.org/" target="_blank">GPG</a> e vai imediatamente decriptar todos os arquivos secretos de forma
-transparente ao uso do <a href="http://git-scm.org" target="_blank">Git</a>. A partir da&#xED;, a utiliza&#xE7;&#xE3;o do reposit&#xF3;rio pode continuar normalmente.</p>
-<p>Para travar o reposit&#xF3;rio novamente, de forma que os arquivos criptografados n&#xE3;o sejam mais vis&#xED;veis, execute:</p>
-<pre><code>git crypt lock
-</code></pre><p>&#xC9; recomendado n&#xE3;o manter o reposit&#xF3;rio destravado desnecessariamente.</p>
-<h2 id="aviso-importante">Aviso importante</h2>
-<p>Entre em contato com os mantenedores imediatamente caso haja uma suspeita de que sua chave tenha sido comprometida.</p>
+                        <h1 id="dicas-para-escrever-bem">Dicas para escrever bem</h1>
+<p><em>&quot;Escrever de forma simples e l&#xF3;gica e estruturar a informa&#xE7;&#xE3;o de uma forma que o usu&#xE1;rio nem precise ler completamente, porque &#xE9; muito intuitivo. Esse &#xE9; o ideal.&quot;</em> - Padma Gillen, Designer de conte&#xFA;do do Government Digital Services.</p>
+<p>O conte&#xFA;do &#xE9; a parte mais importante na experi&#xEA;ncia de uso em local como o Guia de Servi&#xE7;os. Os cidad&#xE3;os precisam ser facilmente informados, para entender o que &#xE9; um servi&#xE7;o,  se ele &#xE9; o p&#xFA;blico-alvo daquele servi&#xE7;o, e quais os passos para obter ou cumpri-lo. Baseados em <a href="https://gds.blog.gov.uk/2014/11/14/create-a-better-user-experience-by-changing-the-way-you-write/" target="_blank">conceitos do gov.uk</a> escrevemos algumas dicas para voc&#xEA; escrever melhor e como construir um bom conte&#xFA;do:</p>
+<h3 id="sete-passos-para-construir-um-bom-conte%C3%BAdo">Sete passos para construir um bom conte&#xFA;do:</h3>
+<ol>
+<li>Identificar as necessidades dos usu&#xE1;rios atrav&#xE9;s de dados anal&#xED;ticos (materiais antigos, feedbacks, dados de uso).</li>
+<li>Escrever o rascunho inicial do conte&#xFA;do.</li>
+<li>Uma segunda pessoa deve revisar o conte&#xFA;do escrito inicialmente (&quot;segundo par de olhos&quot;).</li>
+<li>Checar os fatos e verificar se todas as informa&#xE7;&#xF5;es est&#xE3;o corretas.</li>
+<li>Publicar o conte&#xFA;do.</li>
+<li>Revisar os dados de uso do conte&#xFA;do.</li>
+<li>Iterar para melhorar o conte&#xFA;do periodicamente.</li>
+</ol>
+<h3 id="regras-de-ouro-da-escrita">Regras de ouro da escrita:</h3>
+<ul>
+<li>Apostar em senten&#xE7;as curtas e breves.</li>
+<li>Escrever em portugu&#xEA;s claro e sem abrevia&#xE7;&#xF5;es ou termos muito regionais.</li>
+<li>Sempre que poss&#xED;vel utilizar quebras de par&#xE1;grafo, para organizar o conte&#xFA;do.</li>
+</ul>
+<h3 id="fa%C3%A7a-mais-que-o-esperado">Fa&#xE7;a mais que o esperado:</h3>
+<p>Acessibilidade &#xE9; mais do seguir os padr&#xF5;es b&#xE1;sicos. Quando estiver escrevendo, considere informa&#xE7;&#xF5;es que podem ser &#xFA;teis para pessoas com defici&#xEA;ncia, como por exemplo cegos n&#xE3;o poder&#xE3;o &quot;ver&quot; algo, ent&#xE3;o tente outras frases como &quot;leia abaixo&quot; ao inv&#xE9;s de &quot;veja abaixo&quot;. </p>
+<h3 id="conte-com-a-revis%C3%A3o-dos-colegas">Conte com a revis&#xE3;o dos colegas:</h3>
+<p>Pe&#xE7;a sempre para outros colegas revisarem o que voc&#xEA; escreveu, pois algo que pode parecer &#xF3;bvio pra voc&#xEA;, pode ser complexo ou diferente para outras pessoas.</p>
+<h3 id="seja-o-advogado-do-cidad%C3%A3o">Seja o advogado do cidad&#xE3;o:</h3>
+<p>Escreva sempre pensando nas pessoas que ler&#xE3;o o conte&#xFA;do, e sempre pense em como voc&#xEA; pode tornar a experi&#xEA;ncia dela mais feliz e completa.</p>
 
                     
                     </section>
@@ -1375,10 +1389,10 @@ transparente ao uso do <a href="http://git-scm.org" target="_blank">Git</a>. A p
         </div>
 
         
-        <a href="../desenvolvimento/infraestrutura.html" class="navigation navigation-prev " aria-label="Previous page: Infraestrutura"><i class="fa fa-angle-left"></i></a>
+        <a href="../conteudo/index.html" class="navigation navigation-prev " aria-label="Previous page: Conteúdo"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../desenvolvimento/implantacao-e-execucao.html" class="navigation navigation-next " aria-label="Next page: Implantação e execução"><i class="fa fa-angle-right"></i></a>
+        <a href="../conteudo/acessibilidade-no-conteudo.html" class="navigation navigation-next " aria-label="Next page: Acessibilidade no conteúdo"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
