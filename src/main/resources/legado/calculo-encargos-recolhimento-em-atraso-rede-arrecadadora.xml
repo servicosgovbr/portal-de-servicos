@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Calculo Encargos Recolhimento em Atraso-Rede Arrecadadora</titulo>
+    <titulo>Cálculo Encargos Recolhimento em Atraso-Rede Arrecadadora</titulo>
     <descricao>
         <![CDATA[Apurar o valor de encargos devidos pelo recolhimento efetuado fora do prazo. Contempla somente os lançamentos relativos a data de arrecadação posterior a 01/01/2001.]]>
     </descricao>
