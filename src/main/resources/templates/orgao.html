@@ -65,17 +65,17 @@
         </p>
     </div>
 
-    <script type="application/ld+json" th:inline="javascript">
+    <script type="application/ld+json" th:inline="text">
     {
       "@context" : "http://schema.org",
       "@type" : "GovernmentOrganization",
-      "name": /*[[${conteudo.titulo}]]*/ null,
-      "url" : /*[[${@environment.getProperty('gds.piwik.url')}]]*/ null,
+      "name": "[[${conteudo.titulo}]]",
+      "url" : "[[${@environment.getProperty('gds.piwik.url')}]]",
       "contactPoint" : [
         {
           "@type": "ContactPoint",
-          "url": /*[[${@conteudoConfig.ouvidoria(termo).orElse(null)}]]*/ null,
-          "telephone": /*[[${@conteudoConfig.telefone(termo).orElse(null)}]]*/ null,
+          "url": "[[${@conteudoConfig.ouvidoria(termo).orElse(null)}]]",
+          "telephone": "[[${@conteudoConfig.telefone(termo).orElse(null)}]]",
           "contactType" : "customer service"
         }
       ]
