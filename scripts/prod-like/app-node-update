@@ -15,8 +15,13 @@ yum makecache fast -y
 echo "Fazendo backup das configurações..."
 cp /etc/sysconfig/guia-de-servicos-overrides /tmp/guia-de-servicos-overrides.backup
 
-echo 'Instalando Guia de Serviços...'
-yum update guia-de-servicos -y
+if [ -z "$1" ]; then
+  echo 'Instalando a versão mais recente do Guia de Serviços...'
+  yum update guia-de-servicos -y
+else
+  echo "Instalando Guia de Serviços versão $1..."
+  yum update "guia-de-servicos-1.0.${1}-1" -y
+fi
 
 echo "Restaurando backup das configurações..."
 mv /tmp/guia-de-servicos-overrides.backup /etc/sysconfig/guia-de-servicos-overrides
