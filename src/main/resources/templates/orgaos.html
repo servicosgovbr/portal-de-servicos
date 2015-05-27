@@ -22,24 +22,19 @@
 </span>
 
 <section layout:fragment="corpo">
-
     <div class="row">
-        <th:block>
-            <h2>
-                Todos os Órgãos
-            </h2>
+        <h2>Todos os Órgãos</h2>
 
+        <ul class="orgaos-a-z">
+            <li th:each="orgao : ${orgaos}">
+                <a th:href="@{/orgao/{id}(id=${orgao.id})}" th:text="${orgao.nome}">
+                    Nome do Órgão
+                </a>
+            </li>
+        </ul>
 
-            <ul class="orgaos-a-z">
-                <li th:each="orgao : ${orgaos}">
-                    <a th:href="@{/orgao/{id}(id=${orgao.id})}" th:text="${orgao.nome}">
-                        Nome do Órgão
-                    </a>
-                </li>
-            </ul>
-        </th:block>
+        <p>Não encontrou o que estava procurando? <a href="/opiniao">Dê a sua opinião e torne o Guia ainda melhor!</a></p> 
     </div>
 </section>
-
 </body>
 </html>
