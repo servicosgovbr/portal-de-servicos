@@ -491,7 +491,7 @@ ul.servicos-a-z {
 
   @include tablet {
     position: relative;
-    top: em(-66);
+    top: -60px;
     background-color: $branco;
     margin-bottom: 0;
   }

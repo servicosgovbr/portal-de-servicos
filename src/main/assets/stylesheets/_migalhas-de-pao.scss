@@ -1,8 +1,9 @@
 #migalhas-de-pao {
   @include span-columns(12);
   @include omega();
-  margin-top: em(37);
-  margin-bottom: em(37);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 30px;
   font-size: em(11);
 
   @include tablet {
