@@ -16,9 +16,16 @@ Neste documento estão todas as informações necessárias à implantação e op
 
 {%include '../desenvolvimento/deploy-homologacao-producao.md' %}
 
+
 ## Configuração
 
 {% include "../desenvolvimento/_configuracao-systemd.md" %}
+
+----
+
+## Checklist de Implantação
+
+{%include './_checklist-implantacao.md' %}
 
 ----
 
