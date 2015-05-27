@@ -34,7 +34,7 @@
     
 
         
-    <div class="book" data-level="10.1" data-basepath=".." data-revision="Wed May 27 2015 12:05:30 GMT+0000 (UTC)">
+    <div class="book" data-level="10.1" data-basepath=".." data-revision="Wed May 27 2015 12:21:35 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1629,6 +1629,139 @@ ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
 <span class="hljs-comment"># MAIL_PASSWORD=</span>
 </code></pre>
 
+<hr>
+<h2 id="checklist-de-implanta%C3%A7%C3%A3o">Checklist de Implanta&#xE7;&#xE3;o</h2>
+<h3 id="no-servidor-de-aplica%C3%A7%C3%A3o-1-app1">No servidor de aplica&#xE7;&#xE3;o 1 (<code>app1</code>):</h3>
+<ul>
+<li>Verificar que o hostname da m&#xE1;quina est&#xE1; presente no arquivo <code>/etc/hosts</code></li>
+<li>Sobrescrever <code>/etc/sysconfig/guia-de-servicos-overrides</code> com o arquivo em <code>secrets/guia-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</li>
+<li>Limpar os &#xED;ndices do ElasticSearch:</li>
+</ul>
+<pre><code class="lang-bash">app1~$ curl -XDELETE <span class="hljs-string">&apos;http://10.17.0.6:9200/gds-importador&apos;</span>
+app1~$ curl -XDELETE <span class="hljs-string">&apos;http://10.17.0.7:9200/gds-importador&apos;</span>
+</code></pre>
+<ul>
+<li>Rodar o script <code>app-node-update</code> com a vers&#xE3;o a instalar como par&#xE2;metro:</li>
+</ul>
+<pre><code class="lang-bash">app1~$ wget https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/scripts/prod-like/app-node-update
+app1~$ chmod +x app-node-update
+app1~$ sudo ./app-node-update <span class="hljs-number">1234</span>
+</code></pre>
+<ul>
+<li>Aguardar a inicializa&#xE7;&#xE3;o da aplica&#xE7;&#xE3;o</li>
+<li>Verificar que a propriedade <code>build</code> &#xE9; a vers&#xE3;o esperada:</li>
+</ul>
+<pre><code class="lang-bash">app1~$ curl <span class="hljs-string">&quot;localhost:8080/info&quot;</span>
+</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;1234&quot;</span>,
+  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-05-22 09:36&quot;</span>,
+  <span class="hljs-string">&quot;git&quot;</span>: {
+    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
+    <span class="hljs-string">&quot;commit&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;7df4e9d&quot;</span>,
+      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-05-22 09:34&quot;</span>
+    }
+  }
+}
+</code></pre>
+<ul>
+<li>Verificar que a sa&#xFA;de do cluster est&#xE1; <code>UP</code>:</li>
+</ul>
+<pre><code class="lang-bash">app1~$ curl <span class="hljs-string">&quot;localhost:8080/health&quot;</span>
+</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+  <span class="hljs-string">&quot;guiaDeServicosIndex&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;gds-importador&quot;</span>: <span class="hljs-string">&quot;ok (638 docs)&quot;</span>,
+    <span class="hljs-string">&quot;gds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (4 docs)&quot;</span>
+  },
+  <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
+    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;Dromedan&quot;</span>,
+    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;Arides&quot;</span>
+  },
+  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">1781682176</span>,
+    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
+  }
+}
+</code></pre>
+<h3 id="no-servidor-de-aplica%C3%A7%C3%A3o-2-app2">No servidor de aplica&#xE7;&#xE3;o 2 (<code>app2</code>):</h3>
+<ul>
+<li>Verificar que o hostname da m&#xE1;quina est&#xE1; presente no arquivo <code>/etc/hosts</code></li>
+<li>Sobrescrever <code>/etc/sysconfig/guia-de-servicos-overrides</code> com o arquivo em <code>secrets/guia-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</li>
+<li>Rodar o script <code>app-node-update</code> com a vers&#xE3;o a instalar como par&#xE2;metro:</li>
+</ul>
+<pre><code class="lang-bash">app2~$ wget https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/scripts/prod-like/app-node-update
+app2~$ chmod +x app-node-update
+app2~$ sudo ./app-node-update <span class="hljs-number">1234</span>
+</code></pre>
+<ul>
+<li>Aguardar a inicializa&#xE7;&#xE3;o da aplica&#xE7;&#xE3;o</li>
+<li>Verificar que a propriedade <code>build</code> &#xE9; a vers&#xE3;o esperada:</li>
+</ul>
+<pre><code class="lang-bash">app2~$ curl <span class="hljs-string">&quot;localhost:8080/info&quot;</span>
+</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;1234&quot;</span>,
+  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-05-22 09:36&quot;</span>,
+  <span class="hljs-string">&quot;git&quot;</span>: {
+    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
+    <span class="hljs-string">&quot;commit&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;7df4e9d&quot;</span>,
+      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-05-22 09:34&quot;</span>
+    }
+  }
+}
+</code></pre>
+<ul>
+<li>Verificar que a sa&#xFA;de do cluster est&#xE1; <code>UP</code>:</li>
+</ul>
+<pre><code class="lang-bash">app2~$ curl <span class="hljs-string">&quot;localhost:8080/health&quot;</span>
+</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+  <span class="hljs-string">&quot;guiaDeServicosIndex&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;gds-importador&quot;</span>: <span class="hljs-string">&quot;ok (638 docs)&quot;</span>,
+    <span class="hljs-string">&quot;gds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
+  },
+  <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
+    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;Dromedan&quot;</span>,
+    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;Arides&quot;</span>
+  },
+  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">1781682176</span>,
+    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
+  }
+}
+</code></pre>
+<h2 id="no-balanceador-de-carga-lb">No balanceador de carga (<code>lb</code>):</h2>
+<ul>
+<li>Verificar que todos os servidores de aplica&#xE7;&#xE3;o est&#xE3;o vis&#xED;veis (em verde) no <code>/lb-stats</code></li>
+<li>Abrir p&#xE1;gina principal e verificar que lista de categorias (menu lateral) possui 15 elementos</li>
+<li>Verificar que o conte&#xFA;do de <code>/robots.txt</code> aponta para o <code>sitemap.xml</code>:</li>
+</ul>
+<pre><code class="lang-bash">lb~$ curl <span class="hljs-operator">-s</span> <span class="hljs-string">&quot;10.17.0.3/robots.txt&quot;</span>
+</code></pre>
+<pre><code>Sitemap: http://10.17.0.3/sitemap.xml
+
+User-agent: *
+Disallow:
+</code></pre><ul>
+<li>Verificar que o c&#xF3;digo-fonte da p&#xE1;gina possui o site ID do Piwik correto:</li>
+</ul>
+<pre><code class="lang-bash">lb~$ curl <span class="hljs-operator">-s</span> <span class="hljs-string">&quot;10.17.0.3&quot;</span> | grep <span class="hljs-string">&apos;var siteId&apos;</span>
+</code></pre>
+<pre><code class="lang-javascript">    <span class="hljs-keyword">var</span> siteId = <span class="hljs-string">&apos;2&apos;</span>;
+</code></pre>
 <hr>
 <h1 id="backups">Backups</h1>
 <p>Backups devem ser feitos dos seguintes caminhos:</p>
