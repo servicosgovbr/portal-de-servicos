@@ -108,17 +108,17 @@
   }
 
   #portal-title {
-    font-family: 'open_sansextrabold', $helvetica;
-    font-size: em(40);
     color: $azul-claro;
+    font-family: $openSansExtraBold;
+    font-size: em(40);
     margin-bottom: 0;
-    letter-spacing: -0.05em;
     margin-top: 30px;
+    letter-spacing: -0.05em;
+    line-height: $baseLineHeight;
 
     @include tablet {
       margin-top: 45px;
     }
-
   }
 
   #portal-description {

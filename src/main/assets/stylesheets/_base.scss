@@ -1,18 +1,33 @@
 @import 'cores';
 
+$focusHighlight: 0 0 5px 2px #f1ca7f !important;
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   vertical-align: baseline;
   @include prefixer(font-smoothing, subpixel-antialiased, webkit o moz ms spec);
+
+  &:focus {
+    outline: none;
+  }
 }
 
-*:focus {
-    outline: dashed 2px #f60;
+input {
+  &:focus {
+    box-shadow: $focusHighlight;
+  }
 }
 
 a {
+  &:hover, &:active {
+  }
+
+  &:focus {
+    box-shadow: $focusHighlight;
+  }
+
   &:link, &:visited {
     text-decoration: none;
     color: $cinza-escuro;
@@ -53,10 +68,6 @@ h1 {
   color: $cinza-escuro;
   margin: .5em 0 .5em;
   color: $cinza-escuro;
-}
-
-#portal-title {
-  line-height: $baseLineHeight;
 }
 
 h2 {
