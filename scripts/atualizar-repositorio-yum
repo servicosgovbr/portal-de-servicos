@@ -46,4 +46,5 @@ PATH=/bin:/usr/bin ${SNAP_CACHE_DIR}/rpm-s3/bin/rpm-s3 \
     -b servicosgovbr \
     -p "centos/7" \
     --sign \
+    --keep 30 \
     $(find build/rpmbuild/RPMS/noarch/guia-de-servicos*.rpm -type f)
