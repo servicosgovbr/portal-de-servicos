@@ -1,8 +1,8 @@
 Secretaria de Planejamento e Investimentos Estratégicos (SPI)
 ---
 
-Unidade do [Ministério do Planejamento, Orçamento e Gestão] que tem como missão conhecer, zelar e garantir que cada imóvel da União cumpra sua função socioambiental, em harmonia com a função arrecadadora, em apoio aos programas estratégicos para a Nação.
+Unidade do [Ministério do Planejamento, Orçamento e Gestão], responsável pela elaboração do Plano Plurianual (PPA), também atuando na análise dos investimentos e gastos estratégicos de governo, com atenção ao impacto territorial e a articulação dos investimentos privados e de estados e municípios, para promover uma cooperação federativa em prol do desenvolvimento.
 
-Dentre os serviços ofertados ao público estão a emissão de certidão do imóvel e a consulta aos dados do parcelamento do imóvel.
+Dentre os serviços ofertados ao público está o acesso à Biblioteca Digital do Desenvolvimento (BibSPI).
 
 [Ministério do Planejamento, Orçamento e Gestão]:/orgao/ministerio-do-planejamento-orcamento-e-gestao-mpog
