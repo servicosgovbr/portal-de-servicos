@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<body>
+<body th:fragment="resultado">
 
 <h3>
     <a th:href="@{/{tipo}/{id}(id=${conteudo.id},tipo=${conteudo.tipoConteudo})}" th:text="${conteudo.titulo}">
