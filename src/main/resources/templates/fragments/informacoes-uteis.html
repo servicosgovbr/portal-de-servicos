@@ -3,23 +3,26 @@
       xmlns:th="http://www.thymeleaf.org">
 
 <body>
+<div class="informacoes-uteis">
 
-<th:block th:unless="${servico.informacoesUteis.isEmpty()}">
+    <th:block th:unless="${servico.informacoesUteis.isEmpty()}">
 
-    <h3>Informações Úteis</h3>
+        <h3>Informações Úteis</h3>
 
-    <p th:each="informacaoUtil : ${servico.informacoesUteis}">
+        <p th:each="informacaoUtil : ${servico.informacoesUteis}">
         <h4 th:text="${informacaoUtil.tipo}"></h4>
 
         <th:block th:if="${not #strings.isEmpty(informacaoUtil.url)}">
-            <a th:href="${informacaoUtil.url}" th:text="${#strings.isEmpty(informacaoUtil.descricao) ? 'Endereço eletrônico' : informacaoUtil.descricao}"></a>
+            <a th:href="${informacaoUtil.url}"
+               th:text="${#strings.isEmpty(informacaoUtil.descricao) ? 'Endereço eletrônico' : informacaoUtil.descricao}"></a>
         </th:block>
 
         <th:block th:if="${#strings.isEmpty(informacaoUtil.url)}">
             <span th:text="${informacaoUtil.descricao}"></span>
         </th:block>
-    </p>
+        </p>
 
-</th:block>
+    </th:block>
+</div>
 </body>
 </html>

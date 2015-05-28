@@ -3,11 +3,12 @@
       xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<th:block th:unless="${servico.canaisDePrestacao.isEmpty()}">
+<div class="canais-de-prestacao">
+    <th:block th:unless="${servico.canaisDePrestacao.isEmpty()}">
 
-    <h3>Canais</h3>
+        <h3>Canais</h3>
 
-    <p th:each="canalDePrestacao : ${servico.canaisDePrestacao}">
+        <p th:each="canalDePrestacao : ${servico.canaisDePrestacao}">
         <h4 th:text="${canalDePrestacao.tipo}"></h4>
 
         <th:block th:if="${not #strings.isEmpty(canalDePrestacao.url)}">
@@ -17,9 +18,10 @@
         <th:block th:if="${#strings.isEmpty(canalDePrestacao.url)}">
             <span th:text="${canalDePrestacao.descricao}"></span>
         </th:block>
-    </p>
+        </p>
 
-</th:block>
+    </th:block>
+</div>
 
 </body>
 </html>

@@ -19,7 +19,7 @@
     <meta property="og:locale" content="pt_BR"/>
     <meta property="og:image" th:content="${@baseUrl.and('/assets/ogp-logo.jpg')}"/>
 
-    <th:block th:include="fragments/favicons"/>
+    <th:block th:include="fragments/favicons :: icones"/>
 </head>
 
 <body th:class="${@cookies.isOn('contraste')} ? 'contraste'">

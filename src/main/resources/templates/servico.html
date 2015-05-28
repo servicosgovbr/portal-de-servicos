@@ -29,7 +29,7 @@
     </a>
 </span>
 
-<span layout:fragment="menu-contexto" th:replace="fragments/informacoes-relacionadas">
+<span layout:fragment="menu-contexto" th:replace="fragments/informacoes-relacionadas :: .nav-tree">
 </span>
 
 <section layout:fragment="corpo">
@@ -81,8 +81,8 @@
                 </th:block>
             </p>
 
-            <div th:replace="fragments/canais-de-prestacao"></div>
-            <div th:replace="fragments/informacoes-uteis"></div>
+            <div th:replace="fragments/canais-de-prestacao :: .canais-de-prestacao"></div>
+            <div th:replace="fragments/informacoes-uteis :: .informacoes-uteis"></div>
 
             <span class="link-github">
                 <a target="_blank" th:href="${'https://github.com/servicosgovbr/guia-de-servicos/edit/master/src/main/resources/legado/' + servico.id + '.xml'}">
