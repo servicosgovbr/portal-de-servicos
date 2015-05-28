@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Cálculo e Emissão de DARF- Imposto para Bagagem Acompanhada</titulo>
+    <titulo>Cálculo e Emissão de Darf - Imposto para Bagagem Acompanhada</titulo>
     <descricao>Solicitar o cálculo do Imposto de Importação e a emissão de Darf para bagagem acompanhada.</descricao>
     <requisitos/>
     <etapas></etapas>

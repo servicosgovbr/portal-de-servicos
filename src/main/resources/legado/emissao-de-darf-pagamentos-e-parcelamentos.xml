@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Emissão de DARF (Pagamentos e Parcelamentos)</titulo>
+    <titulo>Emissão de Darf (Pagamentos e Parcelamentos)</titulo>
     <descricao>
         <![CDATA[Solicitar Darf (Documento de Arrecadação de Receitas Federais) para efetuar o pagamento, integral ou parcial, de débitos não previdenciários.]]>
     </descricao>

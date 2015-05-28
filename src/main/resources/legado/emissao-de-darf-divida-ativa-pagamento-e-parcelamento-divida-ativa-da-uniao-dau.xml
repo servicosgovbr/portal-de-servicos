@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Emissão de DARF- Dívida Ativa (Pagamento e Parcelamento / Dívida Ativa da União – DAU)</titulo>
+    <titulo>Emissão de Darf - Dívida Ativa (Pagamento e Parcelamento / Dívida Ativa da União – DAU)</titulo>
     <descricao>
         <![CDATA[Solicitar Darf para efetuar o pagamento, integral ou parcial, de débitos não previdenciários inscritos em Dívida Ativa da União, o pagamento de prestação de parcelamento convencional de débitos não previdenciários e/ou o pagamento de parcela de parcelamento efetivado com base na Lei 11.941/2009, de débitos previdenciários inscritos em DAU.]]>
     </descricao>

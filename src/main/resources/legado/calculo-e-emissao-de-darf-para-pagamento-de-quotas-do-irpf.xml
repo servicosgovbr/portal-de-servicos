@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <servico>
-    <titulo>Cálculo e Emissão de DARF para Pagamento de Quotas do IRPF</titulo>
+    <titulo>Cálculo e Emissão de Darf para Pagamento de Quotas do IRPF</titulo>
     <descricao>Calcular os acréscimos legais e emitir Darf para pagamento de quotas do IRPF.</descricao>
     <requisitos/>
     <etapas></etapas>
