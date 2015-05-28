@@ -62,6 +62,13 @@ public class ImportadorConteudoTest {
                 .toHtml(new ClassPathResource("conteudo/acessibilidade.md"));
 
         doReturn(new ConteudoHtml()
+                .withId("documento-de-arrecadacao-de-receitas-federais-darf")
+                .withTitulo("Documento de Arrecadação de Receitas Federais (Darf)")
+                .withHtml("(não usado)"))
+                .when(markdown)
+                .toHtml(new ClassPathResource("conteudo/documento-de-arrecadacao-de-receitas-federais-darf.md"));
+
+        doReturn(new ConteudoHtml()
                 .withId("perguntas-frequentes")
                 .withTitulo("Perguntas Frequentes")
                 .withHtml("(não usado)"))
@@ -74,14 +81,18 @@ public class ImportadorConteudoTest {
         verify(conteudoRepository).save(captor.capture());
 
         List<Conteudo> conteudos = captor.getValue();
-        Conteudo arquivoNacional = conteudos.get(0);
+        Conteudo doc1 = conteudos.get(0);
 
-        Assert.assertThat(arquivoNacional.getTitulo(), equalTo("Acessibilidade"));
-        Assert.assertThat(arquivoNacional.getConteudo(), containsString("Acessibilidade"));
+        Assert.assertThat(doc1.getTitulo(), equalTo("Acessibilidade"));
+        Assert.assertThat(doc1.getConteudo(), containsString("Acessibilidade"));
 
-        Conteudo bancoCentral = conteudos.get(1);
-        Assert.assertThat(bancoCentral.getTitulo(), equalTo("Perguntas Frequentes"));
-        Assert.assertThat(bancoCentral.getConteudo(), containsString("Perguntas Frequentes"));
+        Conteudo doc2 = conteudos.get(1);
+        Assert.assertThat(doc2.getTitulo(), equalTo("Documento de Arrecadação de Receitas Federais (Darf)"));
+        Assert.assertThat(doc2.getConteudo(), containsString("Documento de Arrecadação de Receitas Federais (Darf)"));
+
+        Conteudo doc3 = conteudos.get(2);
+        Assert.assertThat(doc3.getTitulo(), equalTo("Perguntas Frequentes"));
+        Assert.assertThat(doc3.getConteudo(), containsString("Perguntas Frequentes"));
     }
 
     @Test
