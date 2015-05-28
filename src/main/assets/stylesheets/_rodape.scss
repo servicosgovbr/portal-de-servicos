@@ -17,7 +17,7 @@
       padding-bottom: em(16);
     }
 
-    @include tablet {
+    @include todos-dispositivos {
       padding-left: $mobile-margin-left;
 
       &:first-child {
@@ -38,7 +38,7 @@
         padding-left: 20px; 
       }
       
-      @include tablet {
+      @include tablet-desktop-pequeno {
         &:first-child {
           padding-left: 0;
           border-left: none;

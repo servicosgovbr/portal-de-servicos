@@ -22,7 +22,7 @@
     @include outer-container;
     padding-bottom: em(20);
 
-    @include mobile-tablet {
+    @include todos-dispositivos {
       margin-left: $mobile-margin-left;
       margin-right: $mobile-margin-right;
     }

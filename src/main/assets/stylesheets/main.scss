@@ -30,7 +30,6 @@
   @include span-columns(9);
   @include omega();
 
-  clear: right;
   line-height: $baseLineHeight;
 
   @include mobile {
@@ -39,6 +38,13 @@
 
   @include mobile-tablet {
     @include span-columns(12);
+  }
+
+  @include desktop-pequeno {
+    display: table-cell;
+    float: none;
+  }
+  @include todos-dispositivos {
     padding-left: $mobile-margin-left;
     padding-right: $mobile-margin-right;
   }
@@ -142,7 +148,7 @@ dl.nav-tree {
     text-transform: capitalize;
     font-family: 'open_sansbold', $helvetica;
 
-    @include mobile-tablet {
+    @include todos-dispositivos {
       padding: em(7) $mobile-margin-right em(7) $mobile-margin-left;
     }
 
@@ -228,7 +234,7 @@ dl.nav-tree {
   margin-bottom: em(30);
   font-size: em(15);
 
-  @include mobile-tablet {
+  @include todos-dispositivos {
     margin-left: $mobile-margin-left;
     margin-right: $mobile-margin-right;
   }
@@ -487,6 +493,7 @@ ul.servicos-a-z {
     margin-left: 0;
     margin-right: 0;
     border-top: 1px solid $cinza-medio;
+
   }
 
   @include tablet {
@@ -494,6 +501,12 @@ ul.servicos-a-z {
     top: -60px;
     background-color: $branco;
     margin-bottom: 0;
+  }
+
+  @include desktop-pequeno {
+    padding-left: $mobile-margin-left;
+    display: table-cell;
+    float: none;
   }
 
   .nav-tree {

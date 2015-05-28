@@ -1,5 +1,6 @@
 $mobile: new-breakpoint(max-width 460px);
 $tablet: new-breakpoint(min-width 461px max-width 768px);
+$desktop-overflow: new-breakpoint(min-width 769px max-width 1000px);
 
 @mixin mobile {
     @include media($mobile) {
@@ -16,6 +17,21 @@ $tablet: new-breakpoint(min-width 461px max-width 768px);
 @mixin mobile-tablet {
     @include mobile { @content }
     @include tablet { @content }
+}
+
+@mixin desktop-pequeno {
+    @include media($desktop-overflow) { @content }
+}
+
+@mixin tablet-desktop-pequeno {
+    @include tablet{ @content}
+    @include desktop-pequeno { @content }
+}
+
+@mixin todos-dispositivos {
+    @include mobile { @content }
+    @include tablet { @content }
+    @include desktop-pequeno { @content }
 }
 
 $mobile-margin-left: 20px;

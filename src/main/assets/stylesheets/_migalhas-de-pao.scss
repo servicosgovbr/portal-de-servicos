@@ -9,8 +9,11 @@
   @include tablet {
     position: relative;
     top: em(45);
-    margin-left: $mobile-margin-left;
-    margin-right: $mobile-margin-right;
+  }
+
+  @include todos-dispositivos {
+      margin-left: $mobile-margin-left;
+      margin-right: $mobile-margin-right;
   }
 
   .voce-esta-aqui {
