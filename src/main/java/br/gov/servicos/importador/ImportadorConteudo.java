@@ -49,7 +49,7 @@ public class ImportadorConteudo {
         List<Conteudo> conteudos = concat(concat(
                         orgaoRepository.findAll().stream().map(this::paraConteudo),
                         linhaDaVidaRepository.findAll().stream().map(this::paraConteudo)),
-                asList("acessibilidade", "perguntas-frequentes").stream().map(this::paraConteudo)
+                asList("acessibilidade", "documento-de-arrecadacao-de-receitas-federais-darf", "perguntas-frequentes").stream().map(this::paraConteudo)
         ).collect(toList());
 
         return this.conteudoRepository.save(conteudos);
