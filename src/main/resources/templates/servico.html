@@ -33,64 +33,57 @@
 </span>
 
 <section layout:fragment="corpo">
-
     <div class="row">
-        <th:block>
+        <h2 th:text="${servico.titulo}">Nome do Serviço</h2>
 
-            <h2 th:text="${servico.titulo}">Nome do Serviço</h2>
+        <p style="white-space: pre-wrap;" th:text="${servico.descricao}">
+            Descrição do serviço
+        </p>
 
-            <p style="white-space: pre-wrap;" th:text="${servico.descricao}">
-                Descrição do serviço
-            </p>
+        <p th:if="${not #strings.isEmpty(servico.taxa)}">
+            Valor/taxa: <span th:text="${servico.taxa}">R$ 999,99</span>
+        </p>
 
-            <p th:if="${not #strings.isEmpty(servico.taxa)}">
-                Valor/taxa: <span th:text="${servico.taxa}">R$ 999,99</span>
-            </p>
+        <a th:if="${not #strings.isEmpty(servico.url)}" class="acao acao-comecar" th:href="${servico.url}">
+            Começar
+        </a>
 
-            <a th:if="${not #strings.isEmpty(servico.url)}" class="acao acao-comecar" th:href="${servico.url}">
-                Começar
+        <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" class="acao acao-agendar"
+           th:href="${servico.urlAgendamento}">
+            Agendar
+        </a>
+
+        <p th:unless="${#strings.isEmpty(servico.responsavel.nome)}">
+            Este é um serviço
+            <th:block th:text="${@genero.de(servico.responsavel.id)}">do(a) </th:block>
+            <a th:unless="${#strings.isEmpty(servico.responsavel.nome)}"
+                     th:href="@{/orgao/{id}(id=${servico.responsavel.id})}"
+                     th:text="${servico.responsavel.nome}">
+                Órgão responsavel
+            </a><th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">, prestado
+                <th:block th:text="${@genero.per(servico.prestador.id)}">pelo(a)</th:block>
+            <a th:unless="${#strings.isEmpty(servico.prestador.nome)}"
+                     th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
+                     th:text="${servico.prestador.nome}">
+                Órgão prestador
+            </a></th:block>.
+            Em caso de dúvidas, reclamações ou sugestões favor
+            <th:block th:if="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
+                contactá-<th:block th:text="${@genero.lo(servico.responsavel.id)}">lo(a)</th:block>.
+            </th:block>
+            <th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
+                contactá-<th:block th:text="${@genero.los(servico.responsavel.id)}">los(as)</th:block>.
+            </th:block>
+        </p>
+
+        <div th:replace="fragments/canais-de-prestacao :: .canais-de-prestacao"></div>
+        <div th:replace="fragments/informacoes-uteis :: .informacoes-uteis"></div>
+
+        <span class="link-github">
+            <a target="_blank" th:href="${'https://github.com/servicosgovbr/guia-de-servicos/edit/master/src/main/resources/legado/' + servico.id + '.xml'}">
+                <i class="fa fa-github"></i>
             </a>
-
-            <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" class="acao acao-agendar"
-               th:href="${servico.urlAgendamento}">
-                Agendar
-            </a>
-
-            <p th:unless="${#strings.isEmpty(servico.responsavel.nome)}">
-                Este é um serviço
-                <th:block th:text="${@genero.de(servico.responsavel.id)}">do(a) </th:block>
-                <a th:unless="${#strings.isEmpty(servico.responsavel.nome)}"
-                         th:href="@{/orgao/{id}(id=${servico.responsavel.id})}"
-                         th:text="${servico.responsavel.nome}">
-                    Órgão responsavel
-                </a>
-                <th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                    , prestado
-                    <th:block th:text="${@genero.per(servico.prestador.id)}">pelo(a)</th:block>
-                <a th:unless="${#strings.isEmpty(servico.prestador.nome)}"
-                         th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
-                         th:text="${servico.prestador.nome}">
-                    Órgão prestador
-                </a></th:block>.
-                Em caso de dúvidas, reclamações ou sugestões favor
-                <th:block th:if="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                    contactá-<th:block th:text="${@genero.lo(servico.responsavel.id)}">lo(a)</th:block>.
-                </th:block>
-                <th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                    contactá-<th:block th:text="${@genero.los(servico.responsavel.id)}">los(as)</th:block>.
-                </th:block>
-            </p>
-
-            <div th:replace="fragments/canais-de-prestacao :: .canais-de-prestacao"></div>
-            <div th:replace="fragments/informacoes-uteis :: .informacoes-uteis"></div>
-
-            <span class="link-github">
-                <a target="_blank" th:href="${'https://github.com/servicosgovbr/guia-de-servicos/edit/master/src/main/resources/legado/' + servico.id + '.xml'}">
-                    <i class="fa fa-github"></i>
-                </a>
-            </span>
-
-        </th:block>
+        </span>
     </div>
 </section>
 

@@ -10,16 +10,16 @@
         <h3>Informações Úteis</h3>
 
         <p th:each="informacaoUtil : ${servico.informacoesUteis}">
-        <h4 th:text="${informacaoUtil.tipo}"></h4>
+            <h4 th:text="${informacaoUtil.tipo}"></h4>
 
-        <th:block th:if="${not #strings.isEmpty(informacaoUtil.url)}">
-            <a th:href="${informacaoUtil.url}"
-               th:text="${#strings.isEmpty(informacaoUtil.descricao) ? 'Endereço eletrônico' : informacaoUtil.descricao}"></a>
-        </th:block>
+            <th:block th:if="${not #strings.isEmpty(informacaoUtil.url)}">
+                <a th:href="${informacaoUtil.url}"
+                   th:text="${#strings.isEmpty(informacaoUtil.descricao) ? 'Endereço eletrônico' : informacaoUtil.descricao}"></a>
+            </th:block>
 
-        <th:block th:if="${#strings.isEmpty(informacaoUtil.url)}">
-            <span th:text="${informacaoUtil.descricao}"></span>
-        </th:block>
+            <th:block th:if="${#strings.isEmpty(informacaoUtil.url)}">
+                <span th:text="${informacaoUtil.descricao}"></span>
+            </th:block>
         </p>
 
     </th:block>
