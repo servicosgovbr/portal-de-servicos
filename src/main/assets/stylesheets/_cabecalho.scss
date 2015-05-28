@@ -85,6 +85,11 @@
     @include span-columns(9);
     margin-top: -10px;
     margin-bottom: 15px;
+    white-space: nowrap;
+
+    @include tablet {
+        @include span-columns(8);
+    }
 
     @include mobile {
       width: 100%;
@@ -135,15 +140,16 @@
     margin-top: em(50);
     text-align: left;
 
+    @include tablet {
+        @include span-columns(4);
+    }
+
     @include mobile {
       width: 100%;
       display: inline-block !important;
       float: left;
       margin-top: 20px;
       margin-bottom: 10px;
-    }
-    @include mobile-tablet {
-      padding-right: $mobile-margin-right;
     }
 
     form {
