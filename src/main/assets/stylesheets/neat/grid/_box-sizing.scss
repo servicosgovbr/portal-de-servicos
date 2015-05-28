@@ -2,14 +2,14 @@
 
 @if $border-box-sizing == true {
   html { // http://bit.ly/1qk2tVR
-    @include box-sizing(border-box);
+    @include prefixer(box-sizing, border-box, webkit moz spec);
   }
 
   * {
     &,
     &:before,
     &:after {
-      @include box-sizing(inherit);
+      @include prefixer(box-sizing, inherit, webkit moz spec);
     }
   }
 }
