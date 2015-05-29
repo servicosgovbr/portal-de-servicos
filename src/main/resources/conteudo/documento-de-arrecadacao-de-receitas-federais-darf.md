@@ -8,9 +8,9 @@ Você pode pagar o Darf, mesmo sem código de barras, em terminais de autoatendi
 [Ministério da Fazenda (MF)]:/orgao/ministerio-da-fazenda-mf
 [Secretaria da Receita Federal do Brasil (RFB)]:/orgao/secretaria-da-receita-federal-do-brasil-rfb
 
-## Serviços relacionados
+### Serviços relacionados
 
-* [Cadastro de Dispositivos Móveis (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações e Demonstrativos)](/servico/cadastro-de-dispositivos-moveis-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos)
+* [Cadastro de Dispositivos Móveis (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física)](/servico/cadastro-de-dispositivos-moveis-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos)
 * [Cálculo e Emissão de Darf - Imposto para Bagagem Acompanhada](/servico/calculo-e-emissao-de-darf-imposto-para-bagagem-acompanhada)
 * [Cálculo e Emissão de Darf para Pagamento de Quotas do IRPF](/servico/calculo-e-emissao-de-darf-para-pagamento-de-quotas-do-irpf)
 * [Consulta Comprovante de Pagamento - Darf e DJE](/servico/consulta-comprovante-de-pagamento-darf-e-dje)
@@ -19,8 +19,8 @@ Você pode pagar o Darf, mesmo sem código de barras, em terminais de autoatendi
 * [Emissão de Darf à SPU - Taxa de Ocupação / Foro](/servico/emissao-de-darf-a-spu-taxa-de-ocupacao-foro)
 * [Emissão de Darf - Dívida Ativa (Pagamento e Parcelamento / Dívida Ativa da União – DAU)](/servico/emissao-de-darf-divida-ativa-pagamento-e-parcelamento-divida-ativa-da-uniao-dau)
 * [Emissão de Darf (Pagamentos e Parcelamentos)](/servico/emissao-de-darf-pagamentos-e-parcelamentos)
-* [Extrato do Processamento da DIRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações e Demonstrativos)](/servico/extrato-do-processamento-da-dirpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos)
-* [Extrato do Processamento da DIRPF (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e Compensação)](/servico/extrato-do-processamento-da-dirpf-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao)
+* [Extrato do Processamento da DIRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física)](/servico/extrato-do-processamento-da-dirpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos)
+* [Extrato do Processamento da DIRPF (Restituição do Imposto de Renda Pessoa Física - IRPF)](/servico/extrato-do-processamento-da-dirpf-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao)
 * [Intimações Malha DCTF](/servico/intimacoes-malha-dctf)
 * [Opções da Lei nº 11.941/2009](/servico/opcoes-da-lei-n-11-941-2009)
 * [Parcelamento Especial – PAES (REFIS II)](/servico/parcelamento-especial-paes-refis-ii)
