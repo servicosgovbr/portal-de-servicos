@@ -47,4 +47,7 @@ jar.inputs.file writeGitPropertiesFile.outputFile
 jar.dependsOn writeGitPropertiesFile
 
 run.dependsOn writeGitPropertiesFile
+bootRun.dependsOn writeGitPropertiesFile
+
+run.dependsOn writeInfoPropertiesFile
 bootRun.dependsOn writeInfoPropertiesFile
