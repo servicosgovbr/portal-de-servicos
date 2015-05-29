@@ -46,7 +46,7 @@ a {
 body {
   background-color: $branco;
   color: $preto;
-  font-size: em(16);
+  font-size: $baseFontSize;
   font-family: $openSansRegular;
 }
 
@@ -74,19 +74,19 @@ h2 {
   border-bottom: none;
   color: $cinza-escuro;
   font-family: 'open_sansbold', $helvetica;
-  font-size: em(35);
+  font-size: $baseFontSize * 2.1875;
   line-height: $h2LineHeight;
   margin: -10px 0 .5em;
 
   @include mobile {
-    font-size: em(27);
+    font-size: $baseFontSize * 1.6875;
   }
 }
 
 h3 {
   font-family: 'open_sansbold', $helvetica;
   color: $cinza-escuro;
-  font-size: em(18);
+  font-size: $baseFontSize * 1.125;
   line-height: $baseLineHeight;
 }
 

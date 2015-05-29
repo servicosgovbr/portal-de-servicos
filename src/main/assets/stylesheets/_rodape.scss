@@ -50,12 +50,12 @@
     dt {
       color: $azul-claro;
       font-family: 'open_sanssemibold', $helvetica;
-      font-size: em(18);
+      font-size: $baseFontSize * 1.125;
     }
 
     dd {
       padding-top: 0.5em;
-      font-size: em(13);
+      font-size: $baseFontSize * 0.8125;
     }
   }
 

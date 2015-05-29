@@ -5,7 +5,7 @@
   background-color: $cinza-claro;
 
   button.searchButton {
-    font-size: em(20);
+    font-size: $baseFontSize * 1.25;
     left: -32px;
     border: none;
     background: none;
@@ -37,7 +37,7 @@
 
     a {
       margin-right: em(8);
-      font-size: em(11);
+      font-size: $baseFontSize * 0.6875;
     }
 
     li {
@@ -74,7 +74,7 @@
       padding: 0 0 0 6px;
       text-decoration: none;
       text-transform: uppercase;
-      font-size: em(11);
+      font-size: $baseFontSize * 0.6875;
       font-family: 'open_sanssemibold', $helvetica;
     }
 
@@ -114,7 +114,7 @@
   #portal-title {
     color: $azul-claro;
     font-family: $openSansExtraBold;
-    font-size: em(40);
+    font-size: $baseFontSize * 2.5;
     margin-bottom: 0;
     margin-top: 30px;
     letter-spacing: -0.05em;
@@ -128,7 +128,7 @@
   #portal-description {
     @include span-columns(12);
     text-transform: uppercase;
-    font-size: em(14);
+    font-size: $baseFontSize * 0.875;
     font-family: 'open_sanssemibold', $helvetica;
     color: $azul-claro;
   }
@@ -180,7 +180,7 @@
 
     p {
       @include outer-container(73.80em);
-      font-size: em(13);
+      font-size: $baseFontSize * 0.8125;
       padding: 5px 0 5px 0;
       margin-bottom: 0;
       color: $branco;
@@ -191,13 +191,6 @@
         font-family: open_sansbold;
         text-decoration: underline;
       }
-    }
-
-    .fa {
-      color: $cinza-escuro;
-      float: right;
-      padding-top: 2px;
-      font-size: em(17);
     }
   }
 }

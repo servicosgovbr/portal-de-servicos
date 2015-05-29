@@ -54,7 +54,7 @@
   }
 
   h1 {
-    font-size: em(35);
+    font-size: $baseFontSize * 2.1875;
     font-family: 'open_sansbold', $helvetica;
     color: $cinza-escuro;
     line-height: $baseLineHeight;
@@ -64,30 +64,30 @@
   p.titulo-bem-vindo {
     color: $cinza-escuro;
     font-family: open_sansbold, $helvetica;
-    font-size: em(35);
+    font-size: $baseFontSize * 2.1875;
     margin: -10px 0 5px 0;
     line-height: $baseLineHeight;
     font-weight: bold;
 
     @include mobile {
-      font-size: em(27);
+      font-size: $baseFontSize * 1.6875;
     }
   }
 
   h2.titulo-home {
     font-family: "open_sansbold", $helvetica;
-    font-size: em(25);
+    font-size: $baseFontSize * 1.5;
     line-height: $baseLineHeight;
     margin: 10px 0 10px 0;
   }
 
   h4 {
-    font-size: em(13);
+    font-size: $baseFontSize * 0.8125;
     color: $cinza-escuro;
     text-transform: uppercase;
 
     &.titulo-destaque {
-      font-size: em(20);
+      font-size: $baseFontSize * 1.25;
       font-family: 'open_sanssemibold', $helvetica;
       line-height: $baseLineHeight;
       text-transform: none;
@@ -101,12 +101,12 @@
   }
 
   span.paginacao-busca {
-    font-size: em(13);
+    font-size: $baseFontSize * 0.8125;
   }
 
   ul.paginacao-busca {
     li {
-      font-size: em(13);
+      font-size: $baseFontSize * 0.8125;
     }
   }
 
@@ -232,7 +232,7 @@ dl.nav-tree {
 #voltar-topo {
   margin-top: em(30);
   margin-bottom: em(30);
-  font-size: em(15);
+  font-size: $baseFontSize;
 
   @include todos-dispositivos {
     margin-left: $mobile-margin-left;
@@ -302,7 +302,7 @@ dl.nav-tree {
       border-left: 2px solid $cinza-medio;
       border-right: 0;
       box-shadow: inset -2px -2px 5px -1px $cinza-claro;
-      font-size: em(13);
+      font-size: $baseFontSize * 0.8125;
 
       @include placeholder {
         color: $cinza-escuro;
@@ -321,7 +321,7 @@ dl.nav-tree {
       background-color: $azul-claro;
       display: block;
       font-family: 'open_sansbold', $helvetica;
-      font-size: em(16);
+      font-size: $baseFontSize;
       padding: 9px 0 9px 0;
       border: none;
       border-radius: 4px;
@@ -338,7 +338,7 @@ dl.nav-tree {
   border-right: 0;
   box-shadow: inset -5px -5px 5px -1px $cinza-claro;
   background-color: $branco;
-  font-size: em(13);
+  font-size: $baseFontSize * 0.8125;
   font-family: 'open_sansregular', $helvetica;
 }
 
@@ -364,11 +364,11 @@ span.ticket-erro {
     list-style-position: inside;
     line-height: $baseLineHeight;
     margin-bottom: 10px;
-    font-size: em(15);
+    font-size: $baseFontSize;
 
     a {
       color: $azul-claro;
-      font-size: em(15);
+      font-size: $baseFontSize;
     }
 
     a:active, a:link, a:visited {
@@ -399,7 +399,7 @@ a.acao, button.acao, input[type="submit"].acao {
   border: none;
   border-radius: 4px;
   font-family: open_sansbold;
-  font-size: em(16);
+  font-size: $baseFontSize;
 
   &:visited, &:link {
     color: $branco;
@@ -466,7 +466,7 @@ ul.orgaos-a-z {
     list-style-type: disc outside none;
     border-bottom: 1px solid $cinza-medio;
     padding: 8px 0 8px 0;
-    font-size: em(17);
+    font-size: $baseFontSize;
     font-weight: bold;
   }
 }
@@ -519,7 +519,7 @@ ul.servicos-a-z {
     }
 
     dd {
-      font-size: em(13);
+      font-size: $baseFontSize * 0.8125;
     }
   }
 }
@@ -528,19 +528,19 @@ ul.servicos-a-z {
   margin-bottom: em(40);
 
   h3 {
-    font-size: em(20);
+    font-size: $baseFontSize * 1.25;
   }
 
   .linha-da-vida {
     margin-top: 8px;
     display: inline-block;
     padding: 1px 6px 0 6px;
-    font-size: em(10);
+    font-size: $baseFontSize * 0.625;
     text-transform: uppercase;
     background-color: $cinza-claro;
     border-radius: 4px;
     i {
-      font-size: em(12);
+      font-size: $baseFontSize * 0.75;
       margin-right: 3px;
     }
   }
@@ -553,7 +553,7 @@ form {
     padding: 3px 6px 3px 6px;
     margin-left: 7px;
     text-transform: uppercase;
-    font-size: em(12);
+    font-size: $baseFontSize * 0.75;
   }
 }
 

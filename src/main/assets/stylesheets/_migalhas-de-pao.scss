@@ -4,7 +4,7 @@
   margin-top: 20px;
   margin-bottom: 10px;
   height: 30px;
-  font-size: em(11);
+  font-size: $baseFontSize * 0.6875;
 
   @include tablet {
     position: relative;
