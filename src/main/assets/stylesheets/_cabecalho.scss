@@ -5,7 +5,7 @@
   background-color: $cinza-claro;
 
   button.searchButton {
-    font-size: 20px;
+    font-size: em(20);
     left: -32px;
     border: none;
     background: none;
@@ -65,7 +65,6 @@
       @include omega();
       text-align: center;
     }
-
 
     li {
       white-space: nowrap;
@@ -181,7 +180,7 @@
 
     p {
       @include outer-container(73.80em);
-      font-size: em(13px);
+      font-size: em(13);
       padding: 5px 0 5px 0;
       margin-bottom: 0;
       color: $branco;
@@ -198,7 +197,7 @@
       color: $cinza-escuro;
       float: right;
       padding-top: 2px;
-      font-size: 17px;
+      font-size: em(17);
     }
   }
 }
