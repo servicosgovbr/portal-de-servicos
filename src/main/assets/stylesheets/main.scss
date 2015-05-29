@@ -98,6 +98,7 @@
   p, span, a {
     color: $cinza-escuro;
     line-height: $baseLineHeight;
+    font-size: $baseFontSize * 0.9375;
   }
 
   span.paginacao-busca {
