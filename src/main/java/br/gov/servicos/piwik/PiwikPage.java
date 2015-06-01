@@ -26,7 +26,7 @@ import static java.util.stream.Stream.of;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PiwikPage {
 
-    static final Pattern urlServicoPattern = Pattern.compile("((/servico)|(/repositorioServico))/(?<idServico>.*)");
+    static final Pattern URL_SERVICO = Pattern.compile("((/servico)|(/repositorioServico))/(?<idServico>.*)");
 
     @JsonProperty("url")
     String url;
@@ -54,7 +54,7 @@ public class PiwikPage {
 
     public Optional<String> getIdServico() {
         return getPath()
-                .map(urlServicoPattern::matcher)
+                .map(URL_SERVICO::matcher)
                 .filter(Matcher::find)
                 .map(m -> m.group("idServico"));
     }
