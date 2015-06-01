@@ -10,9 +10,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.List;
+import java.util.Optional;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static junit.framework.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
@@ -27,11 +27,14 @@ public class PiwikIntegrationTest {
     public void deveRetonarUrlsParaODia04042015() throws Exception {
         List<PiwikPage> pages = piwikClient.getPageUrls("day", "04-04-2015");
 
-        assertThat(pages.get(0).getPath().get(), is("/"));
-        assertThat(pages
+        assertEquals(pages.get(0).getPath().get(), "/");
+        assertEquals(pages
                 .stream()
-                .filter(p -> p.getPath().get().equals("/repositorioServico/consulta-situacao-do-requerimento-de-beneficio"))
-                .count(), is(1));
+                .map(PiwikPage::getIdServico)
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .filter(s -> s.equals("consulta-situacao-do-requerimento-de-beneficio"))
+                .count(), 1);
     }
 
 }
