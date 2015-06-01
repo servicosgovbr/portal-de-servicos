@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
@@ -18,9 +19,7 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Answers.RETURNS_SMART_NULLS;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 import static org.springframework.http.HttpStatus.OK;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -87,6 +86,6 @@ public class PiwikClientTest {
         );
 
         List<PiwikPage> urls = piwikClient.getPageUrls(PERIOD, DATE);
-        assertThat(urls.get(0).getPath(), is("/page-url"));
+        assertThat(urls.get(0).getPath(), is(Optional.of("/page-url")));
     }
 }
