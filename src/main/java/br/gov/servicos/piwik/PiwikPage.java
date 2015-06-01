@@ -7,6 +7,9 @@ import lombok.Value;
 import lombok.experimental.Wither;
 
 import java.net.URI;
+import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 import static java.util.Arrays.stream;
@@ -22,6 +25,8 @@ import static java.util.stream.Stream.of;
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PiwikPage {
+
+    static final Pattern urlServicoPattern = Pattern.compile("((/servico)|(/repositorioServico))/(?<idServico>.*)");
 
     @JsonProperty("url")
     String url;
@@ -39,8 +44,19 @@ public class PiwikPage {
         this("", 0L, 0L, new PiwikPage[0]);
     }
 
-    public String getPath() {
-        return URI.create(url).getPath();
+    public Optional<String> getPath() {
+        try {
+            return Optional.of(URI.create(url).getPath());
+        } catch (IllegalArgumentException e) {
+            return Optional.empty();
+        }
+    }
+
+    public Optional<String> getIdServico() {
+        return getPath()
+                .map(urlServicoPattern::matcher)
+                .filter(Matcher::find)
+                .map(m -> m.group("idServico"));
     }
 
     public Stream<PiwikPage> flattened() {
@@ -48,9 +64,5 @@ public class PiwikPage {
                 of(this),
                 stream(subPages).flatMap(PiwikPage::flattened)
         );
-    }
-
-    public boolean isServicoUrl() {
-        return getPath().startsWith("/servico/");
     }
 }

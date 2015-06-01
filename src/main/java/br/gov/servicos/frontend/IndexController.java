@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -69,10 +70,13 @@ class IndexController {
 
     private Stream<Servico> servicosMaisAcessados() {
         log.debug("Piwik: listando serviços mais acessados...");
+
         Stream<Servico> servicos = this.piwikClient.getPageUrls("week", "yesterday").stream()
-                .filter(PiwikPage::isServicoUrl)
-                .sorted((a, b) -> a.getUniqueVisitors().compareTo(b.getUniqueVisitors()))
-                .map(p -> p.getUrl().replace("/servico/", ""))
+                .sorted((a, b) -> b.getUniqueVisitors().compareTo(a.getUniqueVisitors()))
+                .map(PiwikPage::getIdServico)
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .distinct()
                 .map(this.servicos::findOne)
                 .filter(Objects::nonNull);
 

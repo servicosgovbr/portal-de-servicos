@@ -29,7 +29,7 @@ public class PiwikIntegrationTest {
         assertEquals(pages.get(0).getPath(), "/");
         assertEquals(pages
                 .stream()
-                .filter(p -> p.getPath().equals("/repositorioServico/consulta-situacao-do-requerimento-de-beneficio"))
+                .filter(p -> p.getPath().get().equals("/repositorioServico/consulta-situacao-do-requerimento-de-beneficio"))
                 .count(), 1);
     }
 
