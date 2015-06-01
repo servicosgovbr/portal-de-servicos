@@ -90,6 +90,25 @@ public class IndexControllerTest {
     }
 
     @Test
+    public void deveRetornarMaisAcessadosECompletarComDestaquesEOutrosServicos() throws Exception {
+        given(piwikClient.getPageUrls(anyString(), anyString()))
+                .willReturn(singletonList(
+                        new PiwikPage()
+                                .withUrl("/servico/servico-mais-acessado")
+                                .withVisitors(3L)
+                                .withUniqueVisitors(1L)));
+        given(destaques.getServicos()).willReturn(singletonList("servico-em-destaque"));
+
+        Servico servicoMaisAcessado = new Servico().withId("servico-mais-acessado");
+        given(servicos.findOne("servico-mais-acessado")).willReturn(servicoMaisAcessado);
+
+        Servico servicoEmDestaque = new Servico().withId("servico-em-destaque");
+        given(servicos.findOne("servico-em-destaque")).willReturn(servicoEmDestaque);
+
+        assertModelAttributeValue(controller.maisAcessados(), "destaques", asList(servicoMaisAcessado, servicoEmDestaque, SERVICO));
+    }
+
+    @Test
     public void deveFiltrarServicosMaisAcessadosNaoEncontrados() throws Exception {
         given(piwikClient.getPageUrls(anyString(), anyString()))
                 .willReturn(singletonList(

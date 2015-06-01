@@ -55,7 +55,9 @@ class IndexController {
     }
 
     private List<Servico> servicosParaExibirMaisAcessados() {
-        return completaSevicosAteOLimite(servicosMaisAcessados());
+        return completaSevicosAteOLimite(
+                concat( servicosMaisAcessados(),
+                        buscaDestaquesSeNecessario()));
     }
 
     private List<Servico> servicosParaExibir() {
