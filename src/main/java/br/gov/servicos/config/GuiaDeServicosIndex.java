@@ -4,6 +4,7 @@ import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.stereotype.Component;
@@ -41,6 +42,7 @@ public class GuiaDeServicosIndex {
         }
     }
 
+    @CacheEvict(value={"buscas", "conteudo", "destaques", "orgaos", "linhasDaVida", "publicosAlvo"}, allEntries=true)
     public void recriar() throws IOException {
         recriarIndiceImportador();
         criarIndicePersistenteSeNaoExistir();
