@@ -61,7 +61,7 @@ public class IndexControllerTest {
     @Test
     public void deveRetornarOsServicosPaginados() {
         controller.index();
-        verify(servicos).findAll(new PageRequest(0, 15, new Sort(DESC, "titulo")));
+        verify(servicos).findAll(new PageRequest(0, 10, new Sort(DESC, "titulo")));
     }
 
     @Test
