@@ -8,6 +8,7 @@ import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -33,24 +34,26 @@ public class ServicosEmDestaque {
     ServicoRepository servicos;
     DestaquesConfig destaques;
     PiwikClient piwikClient;
+    Boolean destaquesAutomaticos;
 
     @Autowired
-    public ServicosEmDestaque(ServicoRepository servicos, DestaquesConfig destaques, PiwikClient piwikClient) {
+    public ServicosEmDestaque(ServicoRepository servicos, DestaquesConfig destaques, PiwikClient piwikClient,
+                              @Value("${flags.destaques.automaticos}") Boolean destaquesAutomaticos) {
         this.servicos = servicos;
         this.destaques = destaques;
         this.piwikClient = piwikClient;
+        this.destaquesAutomaticos = destaquesAutomaticos;
     }
 
     @Cacheable("destaques")
-    public List<Servico> servicosParaExibir(int quantidade) {
+    public List<Servico> servicos(int quantidade) {
+        if (destaquesAutomaticos) {
+            return completaSevicosAteOLimite(
+                    concat(servicosMaisAcessados(),
+                            buscaDestaquesSeNecessario()), quantidade);
+        }
+
         return completaSevicosAteOLimite(buscaDestaquesSeNecessario(), quantidade);
-    }
-
-    @Cacheable("destaques")
-    public List<Servico> servicosParaExibirMaisAcessados(int quantidade) {
-        return completaSevicosAteOLimite(
-                concat(servicosMaisAcessados(),
-                        buscaDestaquesSeNecessario()), quantidade);
     }
 
     private Stream<Servico> buscaDestaquesSeNecessario() {

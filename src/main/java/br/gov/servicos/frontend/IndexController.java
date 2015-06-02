@@ -26,12 +26,7 @@ class IndexController {
 
     @RequestMapping("/")
     ModelAndView index() {
-        return new ModelAndView("index", "destaques", destaques.servicosParaExibir(SERVICOS_DESTACADOS));
-    }
-
-    @RequestMapping("/maisAcessados")
-    ModelAndView maisAcessados() {
-        return new ModelAndView("index", "destaques", destaques.servicosParaExibirMaisAcessados(SERVICOS_DESTACADOS));
+        return new ModelAndView("index", "destaques", destaques.servicos(SERVICOS_DESTACADOS));
     }
 
 }

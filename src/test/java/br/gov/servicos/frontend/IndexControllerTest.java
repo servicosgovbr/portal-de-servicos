@@ -41,9 +41,13 @@ public class IndexControllerTest {
 
     IndexController controller;
 
+    ServicosEmDestaque destaquesManuais;
+    ServicosEmDestaque destaquesAutomaticos;
+
     @Before
     public void setUp() {
-        controller = new IndexController(new ServicosEmDestaque(servicos, destaques, piwikClient));
+        destaquesManuais = new ServicosEmDestaque(servicos, destaques, piwikClient, false);
+        destaquesAutomaticos = new ServicosEmDestaque(servicos, destaques, piwikClient, true);
 
         given(servicos.findAll(any(PageRequest.class)))
                 .willReturn(new PageImpl<>(singletonList(SERVICO)));
@@ -51,22 +55,26 @@ public class IndexControllerTest {
 
     @Test
     public void redirecionaParaAPaginaInicial() {
+        controller = new IndexController(destaquesManuais);
         assertViewName(controller.index(), "index");
     }
 
     @Test
     public void retornaServicosASeremExibidos() {
+        controller = new IndexController(destaquesManuais);
         assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
     }
 
     @Test
     public void deveRetornarOsServicosPaginados() {
+        controller = new IndexController(destaquesManuais);
         controller.index();
         verify(servicos).findAll(new PageRequest(0, 10, new Sort(DESC, "titulo")));
     }
 
     @Test
     public void deveRetornarDestaquesPrimeiro() {
+        controller = new IndexController(destaquesManuais);
         given(destaques.getServicos()).willReturn(singletonList("servico-em-destaque"));
 
         Servico servicoEmDestaque = new Servico().withId("servico-em-destaque");
@@ -77,6 +85,7 @@ public class IndexControllerTest {
 
     @Test
     public void devePedirUrlsMaisAcessadasParaOPiwik() throws Exception {
+        controller = new IndexController(destaquesAutomaticos);
         given(piwikClient.getPageUrls(anyString(), anyString()))
                 .willReturn(singletonList(
                         new PiwikPage()
@@ -87,11 +96,12 @@ public class IndexControllerTest {
         Servico servicoMaisAcessado = new Servico().withId("servico-mais-acessado");
         given(servicos.findOne("servico-mais-acessado")).willReturn(servicoMaisAcessado);
 
-        assertModelAttributeValue(controller.maisAcessados(), "destaques", asList(servicoMaisAcessado, SERVICO));
+        assertModelAttributeValue(controller.index(), "destaques", asList(servicoMaisAcessado, SERVICO));
     }
 
     @Test
     public void deveRetornarMaisAcessadosECompletarComDestaquesEOutrosServicos() throws Exception {
+        controller = new IndexController(destaquesAutomaticos);
         given(piwikClient.getPageUrls(anyString(), anyString()))
                 .willReturn(singletonList(
                         new PiwikPage()
@@ -106,11 +116,12 @@ public class IndexControllerTest {
         Servico servicoEmDestaque = new Servico().withId("servico-em-destaque");
         given(servicos.findOne("servico-em-destaque")).willReturn(servicoEmDestaque);
 
-        assertModelAttributeValue(controller.maisAcessados(), "destaques", asList(servicoMaisAcessado, servicoEmDestaque, SERVICO));
+        assertModelAttributeValue(controller.index(), "destaques", asList(servicoMaisAcessado, servicoEmDestaque, SERVICO));
     }
 
     @Test
     public void deveFiltrarServicosMaisAcessadosNaoEncontrados() throws Exception {
+        controller = new IndexController(destaquesAutomaticos);
         given(piwikClient.getPageUrls(anyString(), anyString()))
                 .willReturn(singletonList(
                         new PiwikPage()
@@ -120,11 +131,12 @@ public class IndexControllerTest {
 
         given(servicos.findOne("servico-nao-existe")).willReturn(null);
 
-        assertModelAttributeValue(controller.maisAcessados(), "destaques", singletonList(SERVICO));
+        assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
     }
 
     @Test
     public void deveFiltrarFiltrarServicosIguais() {
+        controller = new IndexController(destaquesManuais);
         given(destaques.getServicos()).willReturn(singletonList("titulo"));
         given(servicos.findOne("titulo")).willReturn(SERVICO);
 
@@ -133,6 +145,7 @@ public class IndexControllerTest {
 
     @Test
     public void deveFiltrarDestaquesNaoEncontrados() {
+        controller = new IndexController(destaquesManuais);
         given(destaques.getServicos()).willReturn(singletonList("destaque-nao-cadastrado"));
         assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
     }
