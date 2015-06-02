@@ -28,6 +28,7 @@ mail:
 flags:
   importar.automaticamente: false
   permitir.robos: false
+  destaques.automaticos: false
 
 gds:
   piwik:
