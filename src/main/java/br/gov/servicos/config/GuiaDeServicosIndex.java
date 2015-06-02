@@ -1,5 +1,6 @@
 package br.gov.servicos.config;
 
+import br.gov.servicos.IOUtils;
 import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
@@ -9,12 +10,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-import static java.nio.charset.Charset.defaultCharset;
-import static java.util.stream.Collectors.joining;
 import static lombok.AccessLevel.PRIVATE;
 
 @Component
@@ -35,11 +32,8 @@ public class GuiaDeServicosIndex {
 
     private static String settings() throws IOException {
         ClassPathResource resource = new ClassPathResource(SETTINGS);
-        InputStreamReader reader = new InputStreamReader(resource.getInputStream(), defaultCharset());
 
-        try (BufferedReader br = new BufferedReader(reader)) {
-            return br.lines().collect(joining("\n"));
-        }
+        return IOUtils.toString(resource.getInputStream());
     }
 
     @CacheEvict(value={"buscas", "conteudo", "destaques", "orgaos", "linhasDaVida", "publicosAlvo"}, allEntries=true)

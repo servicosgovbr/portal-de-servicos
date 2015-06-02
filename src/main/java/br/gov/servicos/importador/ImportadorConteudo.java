@@ -1,5 +1,6 @@
 package br.gov.servicos.importador;
 
+import br.gov.servicos.IOUtils;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoRepository;
 import br.gov.servicos.cms.Markdown;
@@ -14,15 +15,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.List;
 
 import static java.lang.String.format;
 import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Stream.concat;
 import static lombok.AccessLevel.PRIVATE;
@@ -81,14 +79,10 @@ public class ImportadorConteudo {
     }
 
     private String conteudo(String caminho) {
-        InputStreamReader input = null;
         try {
             URL resource = new ClassPathResource(caminho).getURL();
             log.debug("Conteúdo {} encontrado em: {}", caminho, resource);
-            input = new InputStreamReader(resource.openStream(), "UTF-8");
-            try (BufferedReader br = new BufferedReader(input)) {
-                return br.lines().collect(joining("\n"));
-            }
+            return IOUtils.toString(resource.openStream());
         } catch (IOException e) {
             throw new ConteudoNaoEncontrado(e);
         }

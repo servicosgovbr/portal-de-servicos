@@ -1,12 +1,14 @@
 package br.gov.servicos.config;
 
 import br.gov.servicos.piwik.PiwikClient;
+import br.gov.servicos.piwik.RestTemplateErrorLogger;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.Wither;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.DefaultResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 import javax.net.ssl.SSLContext;
@@ -36,7 +38,11 @@ public class PiwikConfig {
     @Bean
     public PiwikClient piwikClient(PiwikConfig config) {
         trustSelfSignedSSL();
-        return new PiwikClient(new RestTemplate(), config);
+
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.setErrorHandler(new RestTemplateErrorLogger(new DefaultResponseErrorHandler()));
+
+        return new PiwikClient(restTemplate, config);
     }
 
     @SneakyThrows

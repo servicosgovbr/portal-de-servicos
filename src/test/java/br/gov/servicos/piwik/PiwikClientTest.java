@@ -82,8 +82,7 @@ public class PiwikClientTest {
                 .withEnabled(true)
                 .withUrl(PIWIK_URL)
                 .withToken(AUTH_TOKEN)
-                .withSite(SITE)
-        );
+                .withSite(SITE));
 
         List<PiwikPage> urls = piwikClient.getPageUrls(PERIOD, DATE);
         assertThat(urls.get(0).getPath(), is(Optional.of("/page-url")));
