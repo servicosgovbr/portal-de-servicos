@@ -39,7 +39,7 @@
 
         <ul layout:fragment="conteudo" class="servicos-a-z">
             <li th:each="conteudo : ${servicos}">
-                <span th:replace="fragments/resultado-busca-item :: resultado(conteudo=${conteudo})"></span>
+                <span th:replace="fragments/resultado-busca-item :: resultado(conteudo=${conteudo}, campanha=todos-servicos)"></span>
             </li>
         </ul>
     </div>

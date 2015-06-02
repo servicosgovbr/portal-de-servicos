@@ -4,7 +4,7 @@
 <body th:fragment="resultado">
 
 <h3>
-    <a th:href="@{/{tipo}/{id}(id=${conteudo.id},tipo=${conteudo.tipoConteudo})}" th:text="${conteudo.titulo}">
+    <a th:href="@{/{tipo}/{id}?pk_campaign={campanha}(id=${conteudo.id}, tipo=${conteudo.tipoConteudo}, campanha=${campanha})}" th:text="${conteudo.titulo}">
         Título do do conteúdo
     </a>
 </h3>
