@@ -38,6 +38,7 @@ gds:
     site: 52
   destaques:
     servicos:
+      - sisu-sistema-de-selecao-unificada
       - consulta-situacao-do-requerimento-de-beneficio-previdenciario
       - fies-programa-de-financiamento-estudantil
       - restituicao-e-situacao-da-declaracao-do-imposto-de-renda-pessoa-fisica-irpf
