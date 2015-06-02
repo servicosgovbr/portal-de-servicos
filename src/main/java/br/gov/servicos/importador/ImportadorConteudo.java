@@ -1,6 +1,5 @@
 package br.gov.servicos.importador;
 
-import br.gov.servicos.IOUtils;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoRepository;
 import br.gov.servicos.cms.Markdown;
@@ -19,6 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
+import static br.gov.servicos.foundation.IO.read;
 import static java.lang.String.format;
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
@@ -82,7 +82,7 @@ public class ImportadorConteudo {
         try {
             URL resource = new ClassPathResource(caminho).getURL();
             log.debug("Conteúdo {} encontrado em: {}", caminho, resource);
-            return IOUtils.toString(resource.openStream());
+            return read(resource.openStream());
         } catch (IOException e) {
             throw new ConteudoNaoEncontrado(e);
         }

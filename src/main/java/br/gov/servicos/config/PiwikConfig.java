@@ -5,6 +5,7 @@ import br.gov.servicos.piwik.RestTemplateErrorLogger;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.Wither;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,13 +37,16 @@ public class PiwikConfig {
     int site;
 
     @Bean
-    public PiwikClient piwikClient(PiwikConfig config) {
+    public PiwikClient piwikClient(PiwikConfig config, @Qualifier("piwikRestTemplate") RestTemplate restTemplate) {
         trustSelfSignedSSL();
+        return new PiwikClient(restTemplate, config);
+    }
 
+    @Bean
+    private RestTemplate piwikRestTemplate() {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.setErrorHandler(new RestTemplateErrorLogger(new DefaultResponseErrorHandler()));
-
-        return new PiwikClient(restTemplate, config);
+        return restTemplate;
     }
 
     @SneakyThrows

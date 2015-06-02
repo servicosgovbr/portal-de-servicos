@@ -1,6 +1,5 @@
 package br.gov.servicos.config;
 
-import br.gov.servicos.IOUtils;
 import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.servico.Servico;
 import lombok.experimental.FieldDefaults;
@@ -12,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
+import static br.gov.servicos.foundation.IO.read;
 import static lombok.AccessLevel.PRIVATE;
 
 @Component
@@ -33,7 +33,7 @@ public class GuiaDeServicosIndex {
     private static String settings() throws IOException {
         ClassPathResource resource = new ClassPathResource(SETTINGS);
 
-        return IOUtils.toString(resource.getInputStream());
+        return read(resource.getInputStream());
     }
 
     @CacheEvict(value={"buscas", "conteudo", "destaques", "orgaos", "linhasDaVida", "publicosAlvo"}, allEntries=true)

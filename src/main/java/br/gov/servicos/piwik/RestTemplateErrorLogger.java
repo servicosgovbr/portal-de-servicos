@@ -1,6 +1,5 @@
 package br.gov.servicos.piwik;
 
-import br.gov.servicos.IOUtils;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -10,6 +9,8 @@ import org.springframework.web.client.DefaultResponseErrorHandler;
 import org.springframework.web.client.ResponseErrorHandler;
 
 import java.io.IOException;
+
+import static br.gov.servicos.foundation.IO.read;
 
 @Slf4j
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -29,7 +30,7 @@ public class RestTemplateErrorLogger implements ResponseErrorHandler {
     public void handleError(ClientHttpResponse response) throws IOException {
         log.debug("Status code: {}", response.getStatusCode());
         log.debug("header", response.getHeaders());
-        log.debug("Body: {}", IOUtils.toString(response.getBody()));
+        log.debug("Body: {}", read(response.getBody()));
     }
 
 }
