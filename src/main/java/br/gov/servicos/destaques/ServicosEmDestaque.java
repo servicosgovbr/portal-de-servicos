@@ -27,7 +27,6 @@ import static org.springframework.data.domain.Sort.Direction.DESC;
 
 @Slf4j
 @Service
-@Cacheable("servicosEmDestaque")
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class ServicosEmDestaque {
 
@@ -42,10 +41,12 @@ public class ServicosEmDestaque {
         this.piwikClient = piwikClient;
     }
 
+    @Cacheable("destaques")
     public List<Servico> servicosParaExibir(int quantidade) {
         return completaSevicosAteOLimite(buscaDestaquesSeNecessario(), quantidade);
     }
 
+    @Cacheable("destaques")
     public List<Servico> servicosParaExibirMaisAcessados(int quantidade) {
         return completaSevicosAteOLimite(
                 concat(servicosMaisAcessados(),

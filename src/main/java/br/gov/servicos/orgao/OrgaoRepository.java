@@ -5,6 +5,7 @@ import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class OrgaoRepository {
         this.servicos = servicos;
     }
 
+    @Cacheable("orgaos")
     public List<Orgao> findAll() {
         Set<Orgao> orgaos = new TreeSet<>((left, right) -> left.getId().compareTo(right.getId()));
 

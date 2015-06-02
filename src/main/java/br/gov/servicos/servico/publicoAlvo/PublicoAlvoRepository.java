@@ -5,6 +5,7 @@ import lombok.experimental.FieldDefaults;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.ResultsExtractor;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
@@ -33,6 +34,7 @@ public class PublicoAlvoRepository {
         this.slugify = slugify;
     }
 
+    @Cacheable("publicosAlvo")
     public List<PublicoAlvo> findAll() {
         return elasticsearch.query(publicosAlvoAgregadosPorTitulo(), extraiPublicosAlvo());
     }

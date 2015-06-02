@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.search.SearchHitField;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
@@ -31,6 +32,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 @Component
 @Slf4j
 @FieldDefaults(level = PRIVATE, makeFinal = true)
+@Cacheable("buscas")
 public class BuscadorConteudo {
 
     private static final FacetedPageImpl<Conteudo> SEM_RESULTADOS = new FacetedPageImpl<>(emptyList());
@@ -45,7 +47,7 @@ public class BuscadorConteudo {
         this.slugify = slugify;
     }
 
-    Page<Conteudo> busca(Optional<String> termoBuscado, Integer paginaAtual) {
+    public Page<Conteudo> busca(Optional<String> termoBuscado, Integer paginaAtual) {
         log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
         return executaQuery(termoBuscado, paginaAtual, q -> disMaxQuery()
                 .add(multiMatchQuery(q, "titulo^1.0", "conteudo^0.9", "descricao^0.9")

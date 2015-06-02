@@ -1,9 +1,6 @@
 package br.gov.servicos.frontend;
 
-import br.gov.servicos.config.DestaquesConfig;
 import br.gov.servicos.destaques.ServicosEmDestaque;
-import br.gov.servicos.piwik.PiwikClient;
-import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,13 +15,13 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class IndexController {
 
-    ServicosEmDestaque destaques;
-
     private static final int SERVICOS_DESTACADOS = 10;
 
+    ServicosEmDestaque destaques;
+
     @Autowired
-    IndexController(ServicoRepository servicos, DestaquesConfig destaques, PiwikClient piwikClient) {
-        this.destaques = new ServicosEmDestaque(servicos, destaques, piwikClient);
+    IndexController(ServicosEmDestaque servicosEmDestaque) {
+        this.destaques = servicosEmDestaque;
     }
 
     @RequestMapping("/")

@@ -16,7 +16,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch:1.2.3.RELEASE'
     compile 'org.springframework:spring-context-support:4.1.6.RELEASE'
 
-    compile 'com.google.guava:guava:11.0.2'
+    compile 'com.google.guava:guava:18.0'
     compile 'org.apache.httpcomponents:httpclient:4.4.1'
     compile 'org.jolokia:jolokia-osgi:1.2.2'
     compile 'org.pegdown:pegdown:1.4.2'

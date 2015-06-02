@@ -5,6 +5,7 @@ import lombok.experimental.FieldDefaults;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Component;
@@ -28,6 +29,7 @@ public class LinhaDaVidaRepository {
         this.slugify = slugify;
     }
 
+    @Cacheable("linhasDaVida")
     public List<LinhaDaVida> findAll() {
         return et.query(
                 new NativeSearchQueryBuilder()

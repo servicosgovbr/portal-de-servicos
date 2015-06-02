@@ -1,6 +1,7 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.DestaquesConfig;
+import br.gov.servicos.destaques.ServicosEmDestaque;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.Servico;
@@ -42,7 +43,7 @@ public class IndexControllerTest {
 
     @Before
     public void setUp() {
-        controller = new IndexController(servicos, destaques, piwikClient);
+        controller = new IndexController(new ServicosEmDestaque(servicos, destaques, piwikClient));
 
         given(servicos.findAll(any(PageRequest.class)))
                 .willReturn(new PageImpl<>(singletonList(SERVICO)));
