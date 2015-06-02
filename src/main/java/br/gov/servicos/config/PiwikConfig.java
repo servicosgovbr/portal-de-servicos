@@ -43,7 +43,7 @@ public class PiwikConfig {
     }
 
     @Bean
-    private RestTemplate piwikRestTemplate() {
+    public RestTemplate piwikRestTemplate() {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.setErrorHandler(new RestTemplateErrorLogger(new DefaultResponseErrorHandler()));
         return restTemplate;
