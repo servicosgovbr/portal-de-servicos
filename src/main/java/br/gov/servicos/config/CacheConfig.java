@@ -10,7 +10,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
+import static java.util.concurrent.TimeUnit.HOURS;
 
 @Configuration
 @EnableCaching
@@ -24,10 +25,10 @@ public class CacheConfig {
     }
 
     @Bean
-    public Cache piwikCache() {
-        return new GuavaCache("piwik", CacheBuilder
+    public Cache servicosEmDestaqueCache() {
+        return new GuavaCache("servicosEmDestaque", CacheBuilder
                 .newBuilder()
-                .expireAfterWrite(1, TimeUnit.DAYS)
+                .expireAfterWrite(1, HOURS)
                 .build());
     }
 }

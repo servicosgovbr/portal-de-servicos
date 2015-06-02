@@ -7,6 +7,8 @@ import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -25,6 +27,7 @@ import static org.springframework.data.domain.Sort.Direction.DESC;
 
 @Slf4j
 @Service
+@Cacheable("servicosEmDestaque")
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class ServicosEmDestaque {
 
@@ -32,19 +35,21 @@ public class ServicosEmDestaque {
     DestaquesConfig destaques;
     PiwikClient piwikClient;
 
+    @Autowired
     public ServicosEmDestaque(ServicoRepository servicos, DestaquesConfig destaques, PiwikClient piwikClient) {
         this.servicos = servicos;
         this.destaques = destaques;
         this.piwikClient = piwikClient;
     }
 
-    private PageRequest sorted(int quantidade) {
-        return new PageRequest(0, quantidade, new Sort(DESC, "titulo"));
+    public List<Servico> servicosParaExibir(int quantidade) {
+        return completaSevicosAteOLimite(buscaDestaquesSeNecessario(), quantidade);
     }
 
-    private Stream<Servico> outrosServicos(int quantidade) {
-        return stream(servicos.findAll(sorted(quantidade)).spliterator(), false)
-                .filter(s -> !destaques.getServicos().contains(s.getId()));
+    public List<Servico> servicosParaExibirMaisAcessados(int quantidade) {
+        return completaSevicosAteOLimite(
+                concat(servicosMaisAcessados(),
+                        buscaDestaquesSeNecessario()), quantidade);
     }
 
     private Stream<Servico> buscaDestaquesSeNecessario() {
@@ -57,19 +62,13 @@ public class ServicosEmDestaque {
     }
 
     private List<Servico> completaSevicosAteOLimite(Stream<Servico> servicosBase, int quantidade) {
-        return concat(servicosBase, outrosServicos(quantidade))
+        PageRequest pagina = new PageRequest(0, quantidade, new Sort(DESC, "titulo"));
+        Stream<Servico> outros = stream(servicos.findAll(pagina).spliterator(), false)
+                .filter(s -> !destaques.getServicos().contains(s.getId()));
+
+        return concat(servicosBase, outros)
                 .limit(quantidade)
                 .collect(toList());
-    }
-
-    public List<Servico> servicosParaExibir(int quantidade) {
-        return completaSevicosAteOLimite(buscaDestaquesSeNecessario(), quantidade);
-    }
-
-    public List<Servico> servicosParaExibirMaisAcessados(int quantidade) {
-        return completaSevicosAteOLimite(
-                concat(servicosMaisAcessados(),
-                        buscaDestaquesSeNecessario()), quantidade);
     }
 
     private Stream<Servico> servicosMaisAcessados() {
