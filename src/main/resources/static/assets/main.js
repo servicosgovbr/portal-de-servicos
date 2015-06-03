@@ -17,4 +17,7 @@ jQuery(document).ready(function($) {
     $(f).validate();
   });
 
+  $('.paginacao-letras select').on('change', function() {
+    window.location = $(this).val();
+  });
 });

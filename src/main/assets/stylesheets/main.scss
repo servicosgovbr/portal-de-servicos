@@ -449,9 +449,26 @@ ul#resultados-busca {
   border-radius: 4px;
   display: inline-block;
   margin-top: 10px;
+  width: 100%;
 
-  a {
-    padding: 0px 7px;
+  ul {
+    @extend .no-mobile;
+    display: inline-block;
+
+    a {
+      padding: 0px 7px;
+    }
+  }
+
+  select {
+    display: none;
+
+    @include mobile {
+      display: inline-block;
+      float: right;
+      margin-top: 3px;
+      width: 50%;
+    }
   }
 }
 

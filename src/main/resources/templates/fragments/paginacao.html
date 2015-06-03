@@ -10,7 +10,7 @@
         Páginas:
     </span>
 
-    <ul style="display: inline-block">
+    <ul>
         <li th:each="pagina : ${paginas}">
             <a th:href="@{${url}(__${parametros}__)}"
                th:style="${pagina == paginaAtual}? 'text-decoration:underline'"
@@ -18,6 +18,15 @@
             </a>
         </li>
     </ul>
+
+    <select>
+        <option th:each="pagina : ${paginas}"
+                th:value="@{${url}(__${parametros}__)}"
+                th:selected="${pagina == paginaAtual}"
+                th:text="${pagina}">
+            1-N...
+        </option>
+    </select>
 </div>
 
 <div th:fragment="conteudo-paginado(paginaAtual, paginas, paginacaoNoTopo, parametros)">
