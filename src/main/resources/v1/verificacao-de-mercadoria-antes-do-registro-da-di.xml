@@ -14,7 +14,7 @@
         <![CDATA[Solicitar a autorização para verificação de mercadoria antes do registro da Declaração de Importação (DI).]]></descricao>
 
     <url>
-        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=56&amp;idArea=1&amp;idAssunto=22]]></url>
+        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=56&idArea=1&idAssunto=22]]></url>
 
 
     <solicitantes/>

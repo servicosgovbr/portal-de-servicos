@@ -14,7 +14,7 @@
         <![CDATA[Consultar o andamento do pedido de pagamento de restituição de imposto de renda não resgatado na rede bancária no prazo de 01 (um) ano.]]></descricao>
 
     <url>
-        <![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=233&amp;idArea=6&amp;idAssunto=61]]></url>
+        <![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=233&idArea=6&idAssunto=61]]></url>
 
 
     <solicitantes/>

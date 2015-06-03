@@ -13,7 +13,7 @@
     <descricao><![CDATA[Solicitar o pré-cadastro no Renavam para veículos importados.]]></descricao>
 
     <url>
-        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=726&amp;idArea=143&amp;idAssunto=144]]></url>
+        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=726&idArea=143&idAssunto=144]]></url>
 
 
     <solicitantes/>

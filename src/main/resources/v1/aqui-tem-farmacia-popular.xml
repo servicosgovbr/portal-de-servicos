@@ -13,7 +13,7 @@
     <descricao>
         <![CDATA[Na rede credenciada é possível ter acesso aos medicamentos para as doenças mais comuns entre os cidadãos. O Programa possui uma rede própria de Farmácias Populares e a parceria com farmácias e drogarias da rede privada, chamada de "Aqui tem Farmácia Popular".]]></descricao>
 
-    <url><![CDATA[http://sage.saude.gov.br/?link=aqt&amp;flt=true&amp;param=null]]></url>
+    <url><![CDATA[http://sage.saude.gov.br/?link=aqt&flt=true&param=null]]></url>
 
 
     <solicitantes/>

@@ -13,7 +13,7 @@
     <descricao>
         <![CDATA[As UBS, popularmente conhecidas como postos de saúde, são espaços onde os pacientes de todas as idades podem receber os atendimentos médicos e odontológicos essenciais. Entre as ações desenvolvidas nessas unidades está o atendimento pré-natal, o acompanhamento de hipertensos e diabéticos e a redução da incidência de tuberculose e hanseníase. As UBS funcionam normalmente durante o dia.]]></descricao>
 
-    <url><![CDATA[http://sage.saude.gov.br/?link=ubs&amp;flt=true&amp;param=null]]></url>
+    <url><![CDATA[http://sage.saude.gov.br/?link=ubs&flt=true&param=null]]></url>
 
 
     <solicitantes/>

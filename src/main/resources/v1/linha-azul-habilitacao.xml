@@ -13,7 +13,7 @@
     <descricao><![CDATA[Solicitar habilitação no Regime Aduaneiro Expresso (Linha Azul).]]></descricao>
 
     <url>
-        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=661&amp;idArea=9&amp;idAssunto=138]]></url>
+        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=661&idArea=9&idAssunto=138]]></url>
 
 
     <solicitantes/>
