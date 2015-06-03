@@ -28,6 +28,7 @@ public class ValidadorLinksIntegrationTest {
                 .flatMap(r -> parse(read(r))
                         .select("link")
                         .stream()
+                        .distinct()
                         .map(e -> new Object[]{
                                 r.getFilename(),
                                 e.attr("href")}))
