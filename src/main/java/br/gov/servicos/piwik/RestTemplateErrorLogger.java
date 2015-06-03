@@ -23,10 +23,12 @@ public class RestTemplateErrorLogger implements ResponseErrorHandler {
         errorHandler = handler;
     }
 
+    @Override
     public boolean hasError(ClientHttpResponse response) throws IOException {
         return errorHandler.hasError(response);
     }
 
+    @Override
     public void handleError(ClientHttpResponse response) throws IOException {
         log.debug("Status code: {}", response.getStatusCode());
         log.debug("header", response.getHeaders());

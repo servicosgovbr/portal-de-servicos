@@ -1,6 +1,7 @@
 package br.gov.servicos.frontend;
 
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
@@ -13,6 +14,7 @@ import java.util.Properties;
 
 import static lombok.AccessLevel.PRIVATE;
 
+@Slf4j
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class DiffController {
@@ -21,16 +23,17 @@ public class DiffController {
 
     @Autowired
     DiffController(@Value("${spring.git.properties:classpath:git.properties}") Resource info) throws IOException {
-        String commit;
+        String id;
         try {
             Properties props = new Properties();
             props.load(info.getInputStream());
-            commit = props.getProperty("git.commit.id", "master");
+            id = props.getProperty("git.commit.id", "master");
         } catch (Exception e) {
-            commit = "master";
+            id = "master";
+            log.warn("git.properties não encontrado no classpath", e);
         }
 
-        this.commit = commit;
+        this.commit = id;
     }
 
     @RequestMapping(value = "/diff")

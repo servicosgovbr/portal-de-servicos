@@ -23,7 +23,12 @@ public class ImportadorConteudo {
     ImportadorParaConteudoDePaginas paginas;
 
     @Autowired
-    public ImportadorConteudo(ConteudoRepository repository, ImportadorParaConteudoDeOrgaos orgaos, ImportadorParaConteudoDeLinhasDaVida linhasDaVida, ImportadorParaConteudoDePaginas paginas) {
+    public ImportadorConteudo(
+            ConteudoRepository repository,
+            ImportadorParaConteudoDeOrgaos orgaos,
+            ImportadorParaConteudoDeLinhasDaVida linhasDaVida,
+            ImportadorParaConteudoDePaginas paginas
+    ) {
         this.repository = repository;
         this.orgaos = orgaos;
         this.linhasDaVida = linhasDaVida;

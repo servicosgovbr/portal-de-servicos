@@ -27,10 +27,12 @@ class ImportadorParaConteudoDeLinhasDaVida {
     }
 
     Stream<Conteudo> importar() {
-        return linhaDaVidaRepository.findAll().stream().map((linhaDaVida) -> new Conteudo()
-                .withId(linhaDaVida.getId())
-                .withTipoConteudo("linha-da-vida")
-                .withTitulo(linhaDaVida.getTitulo())
-                .withConteudo(parser.conteudo(format("/conteudo/linhas-da-vida/%s.md", linhaDaVida.getId()))));
+        return linhaDaVidaRepository.findAll()
+                .stream()
+                .map(linhaDaVida -> new Conteudo()
+                        .withId(linhaDaVida.getId())
+                        .withTipoConteudo("linha-da-vida")
+                        .withTitulo(linhaDaVida.getTitulo())
+                        .withConteudo(parser.conteudo(format("/conteudo/linhas-da-vida/%s.md", linhaDaVida.getId()))));
     }
 }

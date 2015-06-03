@@ -27,10 +27,12 @@ class ImportadorParaConteudoDeOrgaos {
     }
 
     Stream<Conteudo> importar() {
-        return orgaoRepository.findAll().stream().map((orgao) -> new Conteudo()
-                .withId(orgao.getId())
-                .withTipoConteudo("orgao")
-                .withTitulo(orgao.getNome())
-                .withConteudo(parser.conteudo(format("/conteudo/orgaos/%s.md", orgao.getId()))));
+        return orgaoRepository.findAll()
+                .stream()
+                .map(orgao -> new Conteudo()
+                        .withId(orgao.getId())
+                        .withTipoConteudo("orgao")
+                        .withTitulo(orgao.getNome())
+                        .withConteudo(parser.conteudo(format("/conteudo/orgaos/%s.md", orgao.getId()))));
     }
 }

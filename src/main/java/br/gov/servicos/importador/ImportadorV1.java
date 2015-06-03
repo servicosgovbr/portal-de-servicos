@@ -56,71 +56,76 @@ public class ImportadorV1 {
         return Jsoup.parse(IO.read(resource), resource.getURI().toASCIIString(), Parser.xmlParser());
     }
 
-    private Servico documentToServico(Document $) {
-        $.outputSettings().prettyPrint(false); // respeita formatação de CDATA
+    private Servico documentToServico(Document doc) {
+        doc.outputSettings().prettyPrint(false); // respeita formatação de CDATA
 
         return new Servico()
-                .withId($.select("servico > id").text().trim())
-                .withTitulo($.select("servico > nome").text().trim())
-                .withDescricao($.select("servico > descricao").html().trim())
+                .withId(doc.select("servico > id").text().trim())
+                .withTitulo(doc.select("servico > nome").text().trim())
+                .withDescricao(doc.select("servico > descricao").html().trim())
                 .withResponsavel(
                         new Orgao()
-                                .withId($.select("orgaoResponsavel > id").text().trim())
-                                .withNome($.select("orgaoResponsavel > nome").text().trim()))
+                                .withId(doc.select("orgaoResponsavel > id").text().trim())
+                                .withNome(doc.select("orgaoResponsavel > nome").text().trim()))
                 .withPrestador(
                         new Orgao()
-                                .withId($.select("orgaoPrestador > id").text().trim())
-                                .withNome($.select("orgaoPrestador > nome").text().trim()))
-                .withLinhasDaVida(linhasDaVida($))
-                .withAreasDeInteresse(areasDeInteresse($))
-                .withPublicosAlvo(publicosAlvo($))
-                .withCanaisDePrestacao(canaisDePrestacao($))
-                .withInformacoesUteis(informacoesUteis($))
-                .withTaxa($.select("servico > custoTotalEstimado").text().trim())
-                .withUrl($.select("servico > url").text().trim())
-                .withUrlAgendamento($.select("servico > urlAgendamento").text().trim())
+                                .withId(doc.select("orgaoPrestador > id").text().trim())
+                                .withNome(doc.select("orgaoPrestador > nome").text().trim()))
+                .withLinhasDaVida(linhasDaVida(doc))
+                .withAreasDeInteresse(areasDeInteresse(doc))
+                .withPublicosAlvo(publicosAlvo(doc))
+                .withCanaisDePrestacao(canaisDePrestacao(doc))
+                .withInformacoesUteis(informacoesUteis(doc))
+                .withTaxa(doc.select("servico > custoTotalEstimado").text().trim())
+                .withUrl(doc.select("servico > url").text().trim())
+                .withUrlAgendamento(doc.select("servico > urlAgendamento").text().trim())
                 ;
     }
 
-    private List<InformacaoUtil> informacoesUteis(Document $) {
+    private List<InformacaoUtil> informacoesUteis(Document doc) {
         List<InformacaoUtil> canaisDePrestacao = new ArrayList<>();
-        $.select("servico > informacoesUteis > informacaoUtil").forEach(e -> canaisDePrestacao.add(new InformacaoUtil()
-                .withDescricao(e.select("descricao").text().trim())
-                .withTipo(e.attr("tipo").trim())
-                .withUrl(e.select("link").attr("href").trim())));
+        doc.select("servico > informacoesUteis > informacaoUtil")
+                .forEach(e -> canaisDePrestacao.add(new InformacaoUtil()
+                        .withDescricao(e.select("descricao").text().trim())
+                        .withTipo(e.attr("tipo").trim())
+                        .withUrl(e.select("link").attr("href").trim())));
         return canaisDePrestacao;
     }
 
-    private List<CanalDePrestacao> canaisDePrestacao(Document $) {
+    private List<CanalDePrestacao> canaisDePrestacao(Document doc) {
         List<CanalDePrestacao> canaisDePrestacao = new ArrayList<>();
-        $.select("servico > canaisDePrestacao > canalDePrestacao").forEach(e -> canaisDePrestacao.add(new CanalDePrestacao()
-                .withDescricao(e.select("descricao").text().trim())
-                .withTipo(e.attr("tipo").trim())
-                .withUrl(e.select("link").attr("href").trim())));
+        doc.select("servico > canaisDePrestacao > canalDePrestacao")
+                .forEach(e -> canaisDePrestacao.add(new CanalDePrestacao()
+                        .withDescricao(e.select("descricao").text().trim())
+                        .withTipo(e.attr("tipo").trim())
+                        .withUrl(e.select("link").attr("href").trim())));
         return canaisDePrestacao;
     }
 
-    private List<PublicoAlvo> publicosAlvo(Document $) {
+    private List<PublicoAlvo> publicosAlvo(Document doc) {
         List<PublicoAlvo> publicoAlvo = new ArrayList<>();
-        $.select("servico > segmentosDaSociedade > segmentoDaSociedade").forEach(e -> publicoAlvo.add(new PublicoAlvo()
-                .withId(e.select("id").text().trim())
-                .withTitulo(e.select("nome").text().trim())));
+        doc.select("servico > segmentosDaSociedade > segmentoDaSociedade")
+                .forEach(e -> publicoAlvo.add(new PublicoAlvo()
+                        .withId(e.select("id").text().trim())
+                        .withTitulo(e.select("nome").text().trim())));
         return publicoAlvo;
     }
 
-    private List<LinhaDaVida> linhasDaVida(Document $) {
+    private List<LinhaDaVida> linhasDaVida(Document doc) {
         List<LinhaDaVida> linhasDaVida = new ArrayList<>();
-        $.select("servico > eventosDaLinhaDaVida > eventoDaLinhaDaVida").forEach(e -> linhasDaVida.add(new LinhaDaVida()
-                .withId(e.select("id").text().trim())
-                .withTitulo(e.select("nome").text().trim())));
+        doc.select("servico > eventosDaLinhaDaVida > eventoDaLinhaDaVida")
+                .forEach(e -> linhasDaVida.add(new LinhaDaVida()
+                        .withId(e.select("id").text().trim())
+                        .withTitulo(e.select("nome").text().trim())));
         return linhasDaVida;
     }
 
-    private List<AreaDeInteresse> areasDeInteresse(Document $) {
+    private List<AreaDeInteresse> areasDeInteresse(Document doc) {
         List<AreaDeInteresse> areasDeInteresse = new ArrayList<>();
-        $.select("servico > areasDeInteresse > areaDeInteresse").forEach(e -> areasDeInteresse.add(new AreaDeInteresse()
-                .withId(e.select("id").text().trim())
-                .withTitulo(e.select("nome").text().trim())));
+        doc.select("servico > areasDeInteresse > areaDeInteresse")
+                .forEach(e -> areasDeInteresse.add(new AreaDeInteresse()
+                        .withId(e.select("id").text().trim())
+                        .withTitulo(e.select("nome").text().trim())));
         return areasDeInteresse;
     }
 }

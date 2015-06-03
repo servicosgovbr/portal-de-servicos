@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 import lombok.experimental.Wither;
+import lombok.extern.slf4j.Slf4j;
 
 import java.net.URI;
 import java.util.Optional;
@@ -20,6 +21,7 @@ import static java.util.stream.Stream.of;
  * Retorno do endpoint Actions.getPageUrls:
  * http://developer.piwik.org/api-reference/reporting-api
  */
+@Slf4j
 @Wither
 @Value
 @AllArgsConstructor
@@ -48,6 +50,7 @@ public class PiwikPage {
         try {
             return Optional.of(URI.create(url).getPath());
         } catch (IllegalArgumentException e) {
+            log.warn("Não foi possível criar URI a partir de {}", url, e);
             return Optional.empty();
         }
     }

@@ -1,5 +1,6 @@
 package br.gov.servicos.foundation;
 
+import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.core.io.Resource;
 
@@ -9,7 +10,9 @@ import java.io.InputStreamReader;
 
 import static java.nio.charset.Charset.defaultCharset;
 import static java.util.stream.Collectors.joining;
+import static lombok.AccessLevel.PRIVATE;
 
+@NoArgsConstructor(access = PRIVATE)
 public class IO {
 
     @SneakyThrows
