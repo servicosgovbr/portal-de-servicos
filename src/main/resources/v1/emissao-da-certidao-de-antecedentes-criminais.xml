@@ -64,7 +64,7 @@
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
-            <descricao>Em todas as unidades do Departamento de Polícia Federal (vide &quot;Localização das unidades&quot;).</descricao>
+            <descricao>Em todas as unidades do Departamento de Polícia Federal (vide "Localização das unidades").</descricao>
 
         </canalDePrestacao>
     </canaisDePrestacao>

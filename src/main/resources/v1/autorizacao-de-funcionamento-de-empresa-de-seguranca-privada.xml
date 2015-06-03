@@ -14,9 +14,9 @@
 
 IMPORTANTE:
 
-- O requerimento de Autorização de Funcionamento deve ser encaminhado pela Internet, por meio do sistema GESP, no site da Polícia Federal (vide &quot;Mais informações&quot;).
+- O requerimento de Autorização de Funcionamento deve ser encaminhado pela Internet, por meio do sistema GESP, no site da Polícia Federal (vide "Mais informações").
 - A autorização se dá por meio de Alvará publicado no Diário Oficial da União - D.O.U.
-- A empresa interessada poderá acompanhar o andamento do seu pedido por meio do sistema GESP (vide &quot;Mais informações&quot;).]]></descricao>
+- A empresa interessada poderá acompanhar o andamento do seu pedido por meio do sistema GESP (vide "Mais informações").]]></descricao>
 
 
     <solicitantes/>
@@ -74,7 +74,7 @@ IMPORTANTE:
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
-            <descricao>Em qualquer unidade da Polícia Federal (vide &quot;Localização das unidades&quot;).</descricao>
+            <descricao>Em qualquer unidade da Polícia Federal (vide "Localização das unidades").</descricao>
 
         </canalDePrestacao>
     </canaisDePrestacao>

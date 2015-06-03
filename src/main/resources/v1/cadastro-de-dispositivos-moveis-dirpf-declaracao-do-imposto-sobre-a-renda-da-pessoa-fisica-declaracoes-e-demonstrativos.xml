@@ -14,9 +14,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Cadastrar no Portal e-CAC os dispositivos móveis (celular e tablet) que poderão ser utilizados para acessar o serviço &quot;Pagando Imposto&quot;.
+    <descricao><![CDATA[Cadastrar no Portal e-CAC os dispositivos móveis (celular e tablet) que poderão ser utilizados para acessar o serviço "Pagando Imposto".
 
-O cadastramento estará disponível para o contribuinte que tem &quot;imposto de renda a pagar&quot; no link &quot;Para autorizar o acesso às cotas e à impressão do Darf, através de um dispositivo móvel (tablet ou smartphones) clique aqui”, localizado dentro do “Extrato do Processamento da DIRPF”, “Extrato” item &quot;Demonstrativo de Débitos da Declaração&quot;.]]></descricao>
+O cadastramento estará disponível para o contribuinte que tem "imposto de renda a pagar" no link "Para autorizar o acesso às cotas e à impressão do Darf, através de um dispositivo móvel (tablet ou smartphones) clique aqui”, localizado dentro do “Extrato do Processamento da DIRPF”, “Extrato” item "Demonstrativo de Débitos da Declaração".]]></descricao>
 
     <url><![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/servico.aspx?id=522]]></url>
 

@@ -12,7 +12,7 @@
 
     <descricao><![CDATA[Endereço para solicitar o enquadramento no Sistema de Recolhimento em Valores Fixos Mensais dos Tributos Abrangidos pelo Simples Nacional (SIMEI).
 
-O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor fixo mensal por meio do Documento de Arrecadação do Simples Nacional (DAS). Para informações de enquadramento e no que constitui o valor dos tributos acesse o endereço &quot;Orientações gerais sobre o serviço&quot; listado abaixo.]]></descricao>
+O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor fixo mensal por meio do Documento de Arrecadação do Simples Nacional (DAS). Para informações de enquadramento e no que constitui o valor dos tributos acesse o endereço "Orientações gerais sobre o serviço" listado abaixo.]]></descricao>
 
     <url><![CDATA[http://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Servicos/Grupo.aspx?grp=7]]></url>
 
@@ -81,7 +81,7 @@ O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor 
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
-            <descricao>Ver todos os serviços do assunto &quot;Simples Nacional&quot;</descricao>
+            <descricao>Ver todos os serviços do assunto "Simples Nacional"</descricao>
             <link rel="informacao-util#servicos-relacionados"
                   href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/14"/>
         </informacaoUtil>

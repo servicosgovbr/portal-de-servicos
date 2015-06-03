@@ -75,8 +75,8 @@ Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria 
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
-            <descricao>Em qualquer unidade da Defensoria Pública da União listadas no site do órgão (vide &quot;Localização
-                das unidades&quot;).
+            <descricao>Em qualquer unidade da Defensoria Pública da União listadas no site do órgão (vide "Localização
+                das unidades").
             </descricao>
 
         </canalDePrestacao>

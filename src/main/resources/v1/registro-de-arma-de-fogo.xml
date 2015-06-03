@@ -63,7 +63,7 @@ IMPORTANTE:
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
-            <descricao>Em qualquer unidade da Polícia Federal de sua localidade (vide &quot;Localização das unidades&quot;).</descricao>
+            <descricao>Em qualquer unidade da Polícia Federal de sua localidade (vide "Localização das unidades").</descricao>
 
         </canalDePrestacao>
     </canaisDePrestacao>

@@ -66,7 +66,7 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Na Unidade Sede, nas Unidades Regionais e nas Delegacias da Polícia Rodoviária Federal, cujos
-                endereços estão disponíveis no portal eletrônico do órgão (vide &quot;Localização das unidades&quot;).
+                endereços estão disponíveis no portal eletrônico do órgão (vide "Localização das unidades").
             </descricao>
 
         </canalDePrestacao>
@@ -76,7 +76,7 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
         <canalDePrestacao tipo="Outros">
             <descricao>Por via postal - por meio do encaminhamento de correspondência, contendo o requerimento de
                 restituição, endereçada à Unidade Sede ou às Unidades Regionais do Departamento de Polícia Rodoviária
-                Federal (vide &quot;Localização das unidades&quot;).
+                Federal (vide "Localização das unidades").
             </descricao>
 
         </canalDePrestacao>

@@ -10,7 +10,7 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Disponibiliza a emissão de certidão de &quot;Nada Consta&quot; de multas de trânsito emitidas pelo Departamento de Polícia Rodoviária Federal referentes a placas de veículos, CPFs ou CNPJs.
+    <descricao><![CDATA[Disponibiliza a emissão de certidão de "Nada Consta" de multas de trânsito emitidas pelo Departamento de Polícia Rodoviária Federal referentes a placas de veículos, CPFs ou CNPJs.
 
 Informações sobre o serviço de defesa de autuação, que consiste no recebimento e registro de defesa prévia da notiﬁcação da autuação feita pela Polícia Rodoviária Federal, em decorrência do cometimento de infração de trânsito. Pode ser solicitado por pessoa física ou jurídica proprietária do veículo autuado pela Polícia Rodoviária Federal, o condutor, o embarcador e o transportador responsáveis pela infração.]]></descricao>
 
@@ -65,7 +65,7 @@ Informações sobre o serviço de defesa de autuação, que consiste no recebime
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Web">
-            <descricao>Emissão de &quot;Nada Consta&quot;</descricao>
+            <descricao>Emissão de "Nada Consta"</descricao>
             <link rel="canal-de-prestacao#web" href="https://www.prf.gov.br/nda_internet/"/>
         </canalDePrestacao>
     </canaisDePrestacao>
@@ -74,7 +74,7 @@ Informações sobre o serviço de defesa de autuação, que consiste no recebime
         <canalDePrestacao tipo="Outros">
             <descricao>Para Defesa de Autuação: Por via postal - por meio do encaminhamento de correspondência pelos
                 Correios, contendo a Defesa da Autuação, endereçada à Unidade Sede ou às Unidades Regionais da Polícia
-                Rodoviária Federal (vide &quot;Localização das Unidades&quot;).
+                Rodoviária Federal (vide "Localização das Unidades").
             </descricao>
 
         </canalDePrestacao>

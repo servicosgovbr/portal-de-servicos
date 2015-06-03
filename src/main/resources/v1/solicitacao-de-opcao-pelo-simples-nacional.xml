@@ -79,7 +79,7 @@
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
-            <descricao>Ver todos os serviços do assunto &quot;Simples Nacional&quot;</descricao>
+            <descricao>Ver todos os serviços do assunto "Simples Nacional"</descricao>
             <link rel="informacao-util#servicos-relacionados"
                   href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/14"/>
         </informacaoUtil>
