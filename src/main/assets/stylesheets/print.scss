@@ -3,12 +3,16 @@
 
 @media print {
 
+  .print-only {
+    display: initial !important;
+  }
+
   @page {
     margin: 2cm;
   }
 
   body {
-    font-family: $openSansLight;
+    font-family: $openSansRegular;
     color: $cinza-escuro;
 
     #barra-brasil, #rodape, #voltar-topo,
@@ -22,11 +26,8 @@
     #logo {
       padding-bottom: 1em;
 
-      &:after {
-        content: url("https://chart.googleapis.com/chart?cht=qr&chs=100x100&choe=UTF-8&chl=http://servicos.gov.br");
-        position: absolute;
-        right: 0;
-        top: 0;
+      .qr-code {
+        float: right;
       }
 
       a {
