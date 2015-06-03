@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-
     <id>autorizacao-para-comprar-arma-de-fogo</id>
 
     <nome>Autorização para comprar arma de fogo</nome>
@@ -11,7 +10,6 @@
     <nomesPopulares/>
 
     <descricao><![CDATA[Documento que autoriza a compra de Arma de Fogo no comércio especializado.]]></descricao>
-
 
     <solicitantes/>
 
@@ -31,14 +29,12 @@
         <nome>Departamento de Polícia Federal (DPF)</nome>
     </orgaoPrestador>
 
-
     <segmentosDaSociedade>
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
-
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -56,23 +52,21 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Dirigir-se a uma das unidades da Polícia Federal (vide "Localização das unidades")
-                munido de
-                requerimento preenchido e da documentação necessária.
+                munido de requerimento preenchido e da documentação necessária.
             </descricao>
-
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
-            <descricao>Formulário de Requerimento Sinarm.</descricao>
+            <descricao>Formulário de Requerimento Sinarm</descricao>
             <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/armas/form-sinarm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
-            <descricao>Documentação necessária para cargos públicos específicos.</descricao>
+            <descricao>Documentação necessária para cargos públicos específicos</descricao>
             <link rel="informacao-util#mais-informacoes"
                   href="http://www.dpf.gov.br/servicos/armas/aquisicao-de-arma-de-fogo"/>
         </informacaoUtil>
@@ -80,7 +74,7 @@
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
-            <descricao>Endereços de todas as unidades da Polícia Federal no país.</descricao>
+            <descricao>Endereços de todas as unidades da Polícia Federal no país</descricao>
             <link rel="informacao-util#localizacao-das-unidades"
                   href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
         </informacaoUtil>
@@ -88,7 +82,7 @@
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
-            <descricao>Forma de obtenção das certidões criminais negativas em cada localidade.</descricao>
+            <descricao>Forma de obtenção das certidões criminais negativas em cada localidade</descricao>
             <link rel="informacao-util#outros"
                   href="http://www.dpf.gov.br/servicos/armas/anexos/certidoes-criminais-negativas"/>
         </informacaoUtil>
@@ -97,7 +91,6 @@
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Mais informações: 194</descricao>
-
         </informacaoUtil>
     </informacoesUteis>
 
