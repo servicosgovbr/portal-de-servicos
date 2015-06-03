@@ -3,12 +3,10 @@ package br.gov.servicos.importador;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoRepository;
 import br.gov.servicos.cms.Markdown;
-import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVidaRepository;
-import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -78,7 +76,6 @@ public class ImportadorConteudo {
                 .withConteudo(conteudo(format("/conteudo/orgaos/%s.md", orgao.getId())));
     }
 
-    @SneakyThrows(ConteudoNaoEncontrado.class)
     private String conteudo(String caminho) {
         Resource resource = new ClassPathResource(caminho);
         log.debug("Conteúdo {} encontrado em: {}", caminho, resource);
