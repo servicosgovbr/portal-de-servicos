@@ -36,7 +36,7 @@
     <div class="row">
         <h2 th:text="${servico.titulo}">Nome do Serviço</h2>
 
-        <p style="white-space: pre-wrap;" th:text="${servico.descricao}">
+        <p style="white-space: pre-wrap;" th:utext="${servico.descricao}">
             Descrição do serviço
         </p>
 
