@@ -22,6 +22,13 @@
     #logo {
       padding-bottom: 1em;
 
+      &:after {
+        content: url("https://chart.googleapis.com/chart?cht=qr&chs=100x100&choe=UTF-8&chl=http://servicos.gov.br");
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
       a {
         color: $azul-claro;
 
