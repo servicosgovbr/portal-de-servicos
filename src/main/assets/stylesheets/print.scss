@@ -1,0 +1,64 @@
+@import 'cores';
+@import 'typography';
+
+@media print {
+
+  @page {
+    margin: 2cm;
+  }
+
+  body {
+    font-family: $openSansLight;
+    color: $cinza-escuro;
+
+    #barra-brasil, #rodape, #voltar-topo,
+    #navegacao, #acessibilidade, #portal-siteactions,
+    #portal-searchbox, .voce-esta-aqui,
+    #barra-opiniao, .link-github, .busca-principal,
+    .destaque .linha-da-vida {
+      display: none;
+    }
+
+    #logo {
+      padding-bottom: 1em;
+
+      a {
+        color: $azul-claro;
+
+        h1 {
+          font-family: $openSansExtraBold;
+          font-size: 2.5em;
+          letter-spacing: -0.05em;
+          margin-bottom: -10px;
+        }
+
+        span {
+          text-transform: uppercase;
+          font-family: $openSansSemiBold;
+          font-size: 0.875em;
+        }
+      }
+    }
+
+    h2, h3, h4, h5, h6 {
+      font-family: $openSansBold;
+    }
+
+    li, p {
+      line-height: 15pt;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $cinza-escuro;
+
+      &:not([href^=http]) {
+        text-decoration: none;
+      }
+
+      &[href^=http]:after {
+        content: " (" attr(href) ") ";
+      }
+    }
+  }
+}
