@@ -63,7 +63,7 @@
 
     <palavrasChave/>
 
-    <custoTotalEstimado></custoTotalEstimado>
+    <custoTotalEstimado/>
 
     <legislacaoRelacionada/>
 
@@ -78,7 +78,7 @@
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
-            <descricao></descricao>
+            <descricao/>
             <link rel="informacao-util#localizacao-das-unidades" href="http://portal.mte.gov.br/postos/"/>
         </informacaoUtil>
     </informacoesUteis>
