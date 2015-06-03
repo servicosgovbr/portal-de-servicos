@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/vistas-de-processo"/>
 
     <id>vistas-de-processo</id>
 
@@ -30,13 +29,11 @@ Solicitar vistas de processo administrativo.]]></descricao>
     <orgaoResponsavel>
         <id>secretaria-da-receita-federal-do-brasil-rfb</id>
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>secretaria-da-receita-federal-do-brasil-rfb</id>
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
     </orgaoPrestador>
 
     
@@ -45,7 +42,6 @@ Solicitar vistas de processo administrativo.]]></descricao>
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -53,7 +49,6 @@ Solicitar vistas de processo administrativo.]]></descricao>
         <segmentoDaSociedade>
             <id>servicos-as-empresas</id>
             <nome>Serviços às Empresas</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -61,7 +56,6 @@ Solicitar vistas de processo administrativo.]]></descricao>
         <eventoDaLinhaDaVida>
             <id>empreendedorismo-e-negocios</id>
             <nome>Empreendedorismo e negócios</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -69,7 +63,6 @@ Solicitar vistas de processo administrativo.]]></descricao>
         <eventoDaLinhaDaVida>
             <id>contas-e-impostos</id>
             <nome>Contas e Impostos</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/contas-e-impostos"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -77,7 +70,6 @@ Solicitar vistas de processo administrativo.]]></descricao>
         <areaDeInteresse>
             <id>economia-e-financas</id>
             <nome>Economia e Finanças</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

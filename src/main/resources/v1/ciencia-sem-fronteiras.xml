@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/ciencia-sem-fronteiras"/>
 
     <id>ciencia-sem-fronteiras</id>
 
@@ -32,13 +31,11 @@ Pelo programa, estudantes de graduação e de pós-graduação podem fazer está
     <orgaoResponsavel>
         <id>ministerio-da-educacao-mec</id>
         <nome>Ministério da Educação (MEC)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>ministerio-da-educacao-mec</id>
         <nome>Ministério da Educação (MEC)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
     </orgaoPrestador>
 
     
@@ -47,7 +44,6 @@ Pelo programa, estudantes de graduação e de pós-graduação podem fazer está
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -55,7 +51,6 @@ Pelo programa, estudantes de graduação e de pós-graduação podem fazer está
         <eventoDaLinhaDaVida>
             <id>estudos</id>
             <nome>Estudos</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estudos"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -63,7 +58,6 @@ Pelo programa, estudantes de graduação e de pós-graduação podem fazer está
         <areaDeInteresse>
             <id>comunicacoes</id>
             <nome>Comunicações</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/comunicacoes"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -71,7 +65,6 @@ Pelo programa, estudantes de graduação e de pós-graduação podem fazer está
         <areaDeInteresse>
             <id>educacao</id>
             <nome>Educação</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

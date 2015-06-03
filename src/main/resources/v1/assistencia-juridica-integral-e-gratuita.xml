@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/assistencia-juridica-integral-e-gratuita"/>
 
     <id>assistencia-juridica-integral-e-gratuita</id>
 
@@ -48,13 +47,11 @@ Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria 
     <orgaoResponsavel>
         <id>ministerio-da-justica-mj</id>
         <nome>Ministério da Justiça (MJ)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>defensoria-publica-da-uniao-dpu</id>
         <nome>Defensoria Pública da União (DPU)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/defensoria-publica-da-uniao-dpu"/>
     </orgaoPrestador>
 
     
@@ -63,7 +60,6 @@ Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria 
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -73,7 +69,6 @@ Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria 
         <areaDeInteresse>
             <id>protecao-social</id>
             <nome>Proteção social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/registro-e-expedicao-de-cedula-de-identidade-de-estrangeiro-cie"/>
 
     <id>registro-e-expedicao-de-cedula-de-identidade-de-estrangeiro-cie</id>
 
@@ -39,13 +38,11 @@ Informações importantes:
     <orgaoResponsavel>
         <id>ministerio-da-justica-mj</id>
         <nome>Ministério da Justiça (MJ)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>departamento-de-policia-federal-dpf</id>
         <nome>Departamento de Polícia Federal (DPF)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-federal-dpf"/>
     </orgaoPrestador>
 
     
@@ -54,7 +51,6 @@ Informações importantes:
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -62,7 +58,6 @@ Informações importantes:
         <eventoDaLinhaDaVida>
             <id>documentos-e-certidoes</id>
             <nome>Documentos e certidões</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/documentos-e-certidoes"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -70,7 +65,6 @@ Informações importantes:
         <areaDeInteresse>
             <id>protecao-social</id>
             <nome>Proteção social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

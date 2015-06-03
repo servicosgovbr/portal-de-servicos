@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/programa-cisternas"/>
 
     <id>programa-cisternas</id>
 
@@ -32,7 +31,6 @@ Para ser atendida pelo Programa Cisternas, a família deve estar inscrita no Cad
     <orgaoResponsavel>
         <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
         <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds"/>
     </orgaoResponsavel>
 
     
@@ -40,14 +38,12 @@ Para ser atendida pelo Programa Cisternas, a família deve estar inscrita no Cad
     <orgaoPrestador>
         <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
         <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds"/>
     </orgaoPrestador>
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -57,7 +53,6 @@ Para ser atendida pelo Programa Cisternas, a família deve estar inscrita no Cad
         <areaDeInteresse>
             <id>agropecuaria</id>
             <nome>Agropecuária</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

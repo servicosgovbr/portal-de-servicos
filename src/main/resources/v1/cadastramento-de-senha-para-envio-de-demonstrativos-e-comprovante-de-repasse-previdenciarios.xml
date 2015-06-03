@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/cadastramento-de-senha-para-envio-de-demonstrativos-e-comprovante-de-repasse-previdenciarios"/>
 
     <id>cadastramento-de-senha-para-envio-de-demonstrativos-e-comprovante-de-repasse-previdenciarios</id>
 
@@ -28,7 +27,6 @@
     <orgaoResponsavel>
         <id>ministerio-da-previdencia-social-mps</id>
         <nome>Ministério da Previdência Social (MPS)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
     </orgaoResponsavel>
 
     
@@ -36,14 +34,12 @@
     <orgaoPrestador>
         <id>ministerio-da-previdencia-social-mps</id>
         <nome>Ministério da Previdência Social (MPS)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
     </orgaoPrestador>
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
             <id>servicos-as-empresas</id>
             <nome>Serviços às Empresas</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -53,7 +49,6 @@
         <areaDeInteresse>
             <id>previdencia-social</id>
             <nome>Previdência Social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

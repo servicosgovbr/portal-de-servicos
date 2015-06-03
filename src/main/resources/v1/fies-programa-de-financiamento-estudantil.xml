@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/fies-programa-de-financiamento-estudantil"/>
 
     <id>fies-programa-de-financiamento-estudantil</id>
 
@@ -30,13 +29,11 @@ Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva
     <orgaoResponsavel>
         <id>ministerio-da-educacao-mec</id>
         <nome>Ministério da Educação (MEC)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>ministerio-da-educacao-mec</id>
         <nome>Ministério da Educação (MEC)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
     </orgaoPrestador>
 
     
@@ -47,7 +44,6 @@ Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva
         <eventoDaLinhaDaVida>
             <id>estudos</id>
             <nome>Estudos</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estudos"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -55,7 +51,6 @@ Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva
         <eventoDaLinhaDaVida>
             <id>apoio-financeiro-e-credito</id>
             <nome>Apoio financeiro e crédito</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/apoio-financeiro-e-credito"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -63,7 +58,6 @@ Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva
         <areaDeInteresse>
             <id>educacao</id>
             <nome>Educação</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

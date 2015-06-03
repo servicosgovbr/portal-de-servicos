@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/autorizacoes-para-empresas-especializadas-de-seguranca-privada"/>
 
     <id>autorizacoes-para-empresas-especializadas-de-seguranca-privada</id>
 
@@ -34,13 +33,11 @@
     <orgaoResponsavel>
         <id>ministerio-da-justica-mj</id>
         <nome>Ministério da Justiça (MJ)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>departamento-de-policia-federal-dpf</id>
         <nome>Departamento de Polícia Federal (DPF)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-federal-dpf"/>
     </orgaoPrestador>
 
     
@@ -49,7 +46,6 @@
         <segmentoDaSociedade>
             <id>servicos-as-empresas</id>
             <nome>Serviços às Empresas</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -57,7 +53,6 @@
         <eventoDaLinhaDaVida>
             <id>empreendedorismo-e-negocios</id>
             <nome>Empreendedorismo e negócios</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -65,7 +60,6 @@
         <areaDeInteresse>
             <id>seguranca-e-ordem-publica</id>
             <nome>Segurança e Ordem Pública</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/seguranca-e-ordem-publica"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

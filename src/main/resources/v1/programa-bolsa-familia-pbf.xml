@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/programa-bolsa-familia-pbf"/>
 
     <id>programa-bolsa-familia-pbf</id>
 
@@ -32,13 +31,11 @@ Para receber o Bolsa Família tem que se inscrever no Cadastro Único e quem rec
     <orgaoResponsavel>
         <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
         <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
         <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds"/>
     </orgaoPrestador>
 
     
@@ -47,7 +44,6 @@ Para receber o Bolsa Família tem que se inscrever no Cadastro Único e quem rec
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -55,7 +51,6 @@ Para receber o Bolsa Família tem que se inscrever no Cadastro Único e quem rec
         <eventoDaLinhaDaVida>
             <id>familia</id>
             <nome>Família</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/familia"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -63,7 +58,6 @@ Para receber o Bolsa Família tem que se inscrever no Cadastro Único e quem rec
         <eventoDaLinhaDaVida>
             <id>apoio-financeiro-e-credito</id>
             <nome>Apoio financeiro e crédito</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/apoio-financeiro-e-credito"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -71,7 +65,6 @@ Para receber o Bolsa Família tem que se inscrever no Cadastro Único e quem rec
         <areaDeInteresse>
             <id>previdencia-social</id>
             <nome>Previdência Social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

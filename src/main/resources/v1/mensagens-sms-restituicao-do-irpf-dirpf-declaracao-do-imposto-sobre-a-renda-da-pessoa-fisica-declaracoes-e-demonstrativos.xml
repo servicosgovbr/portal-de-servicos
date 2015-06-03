@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/mensagens-sms-restituicao-do-irpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos"/>
 
     <id>mensagens-sms-restituicao-do-irpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos</id>
 
@@ -28,13 +27,11 @@
     <orgaoResponsavel>
         <id>secretaria-da-receita-federal-do-brasil-rfb</id>
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>secretaria-da-receita-federal-do-brasil-rfb</id>
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
     </orgaoPrestador>
 
     
@@ -43,7 +40,6 @@
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -51,7 +47,6 @@
         <eventoDaLinhaDaVida>
             <id>contas-e-impostos</id>
             <nome>Contas e Impostos</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/contas-e-impostos"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -59,7 +54,6 @@
         <areaDeInteresse>
             <id>economia-e-financas</id>
             <nome>Economia e Finanças</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

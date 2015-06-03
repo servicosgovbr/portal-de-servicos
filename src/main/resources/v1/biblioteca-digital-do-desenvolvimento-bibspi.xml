@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/biblioteca-digital-do-desenvolvimento-bibspi"/>
 
     <id>biblioteca-digital-do-desenvolvimento-bibspi</id>
 
@@ -28,13 +27,11 @@
     <orgaoResponsavel>
         <id>ministerio-do-planejamento-orcamento-e-gestao-mpog</id>
         <nome>Ministério do Planejamento, Orçamento e Gestão (MPOG)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-planejamento-orcamento-e-gestao-mpog"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>secretaria-de-planejamento-e-investimentos-estrategicos-spi</id>
         <nome>Secretaria de Planejamento e Investimentos Estratégicos (SPI)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-de-planejamento-e-investimentos-estrategicos-spi"/>
     </orgaoPrestador>
 
     
@@ -45,7 +42,6 @@
         <eventoDaLinhaDaVida>
             <id>estudos</id>
             <nome>Estudos</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estudos"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -53,7 +49,6 @@
         <areaDeInteresse>
             <id>comercio-e-servicos</id>
             <nome>Comércio e Serviços</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/comercio-e-servicos"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -61,7 +56,6 @@
         <areaDeInteresse>
             <id>urbanismo</id>
             <nome>Urbanismo</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/urbanismo"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -69,7 +63,6 @@
         <areaDeInteresse>
             <id>previdencia-social</id>
             <nome>Previdência Social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -77,7 +70,6 @@
         <areaDeInteresse>
             <id>transportes</id>
             <nome>Transportes</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/transportes"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -85,7 +77,6 @@
         <areaDeInteresse>
             <id>trabalho</id>
             <nome>Trabalho</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/trabalho"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -93,7 +84,6 @@
         <areaDeInteresse>
             <id>esporte-e-lazer</id>
             <nome>Esporte e Lazer</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/esporte-e-lazer"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -101,7 +91,6 @@
         <areaDeInteresse>
             <id>meio-ambiente</id>
             <nome>Meio ambiente</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/meio-ambiente"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -109,7 +98,6 @@
         <areaDeInteresse>
             <id>protecao-social</id>
             <nome>Proteção social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -117,7 +105,6 @@
         <areaDeInteresse>
             <id>relacoes-internacionais</id>
             <nome>Relações Internacionais</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/relacoes-internacionais"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -125,7 +112,6 @@
         <areaDeInteresse>
             <id>saude</id>
             <nome>Saúde</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -133,7 +119,6 @@
         <areaDeInteresse>
             <id>educacao</id>
             <nome>Educação</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -141,7 +126,6 @@
         <areaDeInteresse>
             <id>seguranca-e-ordem-publica</id>
             <nome>Segurança e Ordem Pública</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/seguranca-e-ordem-publica"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -149,7 +133,6 @@
         <areaDeInteresse>
             <id>comunicacoes</id>
             <nome>Comunicações</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/comunicacoes"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -157,7 +140,6 @@
         <areaDeInteresse>
             <id>habitacao</id>
             <nome>Habitação</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/habitacao"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -165,7 +147,6 @@
         <areaDeInteresse>
             <id>industria</id>
             <nome>Indústria</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/industria"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -173,7 +154,6 @@
         <areaDeInteresse>
             <id>economia-e-financas</id>
             <nome>Economia e Finanças</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -181,7 +161,6 @@
         <areaDeInteresse>
             <id>agropecuaria</id>
             <nome>Agropecuária</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

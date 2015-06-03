@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/representacao-administrativa-contra-entidades-sociais-certificadas-no-ministerio-da-justica"/>
 
     <id>representacao-administrativa-contra-entidades-sociais-certificadas-no-ministerio-da-justica</id>
 
@@ -28,13 +27,11 @@
     <orgaoResponsavel>
         <id>ministerio-da-justica-mj</id>
         <nome>Ministério da Justiça (MJ)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>secretaria-nacional-de-justica-snj</id>
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-nacional-de-justica-snj"/>
     </orgaoPrestador>
 
     
@@ -43,7 +40,6 @@
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -51,7 +47,6 @@
         <segmentoDaSociedade>
             <id>servicos-as-empresas</id>
             <nome>Serviços às Empresas</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -61,7 +56,6 @@
         <areaDeInteresse>
             <id>protecao-social</id>
             <nome>Proteção social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

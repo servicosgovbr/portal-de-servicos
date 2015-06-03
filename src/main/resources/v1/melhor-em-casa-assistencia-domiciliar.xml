@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/melhor-em-casa-assistencia-domiciliar"/>
 
     <id>melhor-em-casa-assistencia-domiciliar</id>
 
@@ -30,7 +29,6 @@ O atendimento será feito por equipes multidisciplinares, formadas prioritariame
     <orgaoResponsavel>
         <id>ministerio-da-saude-ms</id>
         <nome>Ministério da Saúde (MS)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
     </orgaoResponsavel>
 
     
@@ -38,7 +36,6 @@ O atendimento será feito por equipes multidisciplinares, formadas prioritariame
     <orgaoPrestador>
         <id>ministerio-da-saude-ms</id>
         <nome>Ministério da Saúde (MS)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
     </orgaoPrestador>
 
     
@@ -47,7 +44,6 @@ O atendimento será feito por equipes multidisciplinares, formadas prioritariame
         <eventoDaLinhaDaVida>
             <id>cuidados-com-a-saude</id>
             <nome>Cuidados com a saúde</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/cuidados-com-a-saude"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -55,7 +51,6 @@ O atendimento será feito por equipes multidisciplinares, formadas prioritariame
         <areaDeInteresse>
             <id>humanizacao-na-saude</id>
             <nome>Humanização na saúde</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/humanizacao-na-saude"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -63,7 +58,6 @@ O atendimento será feito por equipes multidisciplinares, formadas prioritariame
         <areaDeInteresse>
             <id>saude</id>
             <nome>Saúde</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -71,7 +65,6 @@ O atendimento será feito por equipes multidisciplinares, formadas prioritariame
         <areaDeInteresse>
             <id>saude-dos-portadores-de-deficiencias</id>
             <nome>Saúde dos portadores de deficiências</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude-dos-portadores-de-deficiencias"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

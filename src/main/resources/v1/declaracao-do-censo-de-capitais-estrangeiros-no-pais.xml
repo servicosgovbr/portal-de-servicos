@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/declaracao-do-censo-de-capitais-estrangeiros-no-pais"/>
 
     <id>declaracao-do-censo-de-capitais-estrangeiros-no-pais</id>
 
@@ -28,13 +27,11 @@
     <orgaoResponsavel>
         <id>banco-central-do-brasil-bcb</id>
         <nome>Banco Central do Brasil (BCB)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>banco-central-do-brasil-bcb</id>
         <nome>Banco Central do Brasil (BCB)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
     </orgaoPrestador>
 
     
@@ -43,7 +40,6 @@
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -53,7 +49,6 @@
         <areaDeInteresse>
             <id>economia-e-financas</id>
             <nome>Economia e Finanças</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

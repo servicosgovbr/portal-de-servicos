@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/consulta-obras-do-ministerio-do-turismo-em-seu-municipio"/>
 
     <id>consulta-obras-do-ministerio-do-turismo-em-seu-municipio</id>
 
@@ -28,13 +27,11 @@
     <orgaoResponsavel>
         <id>ministerio-do-turismo-mtur</id>
         <nome>Ministério do Turismo (MTur)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-turismo-mtur"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>ministerio-do-turismo-mtur</id>
         <nome>Ministério do Turismo (MTur)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-turismo-mtur"/>
     </orgaoPrestador>
 
     
@@ -43,7 +40,6 @@
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -53,7 +49,6 @@
         <areaDeInteresse>
             <id>comercio-e-servicos</id>
             <nome>Comércio e Serviços</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/comercio-e-servicos"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -61,7 +56,6 @@
         <areaDeInteresse>
             <id>turismo</id>
             <nome>Turismo</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/turismo"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

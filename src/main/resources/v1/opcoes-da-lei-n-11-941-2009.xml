@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/opcoes-da-lei-n-11-941-2009"/>
 
     <id>opcoes-da-lei-n-11-941-2009</id>
 
@@ -28,13 +27,11 @@
     <orgaoResponsavel>
         <id>secretaria-da-receita-federal-do-brasil-rfb</id>
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>secretaria-da-receita-federal-do-brasil-rfb</id>
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
     </orgaoPrestador>
 
     
@@ -47,7 +44,6 @@
         <areaDeInteresse>
             <id>economia-e-financas</id>
             <nome>Economia e Finanças</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

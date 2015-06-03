@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/programa-nacional-de-fortalecimento-da-agricultura-familiar-pronaf"/>
 
     <id>programa-nacional-de-fortalecimento-da-agricultura-familiar-pronaf</id>
 
@@ -43,7 +42,6 @@ Microcrédito Rural]]></descricao>
     <orgaoResponsavel>
         <id>ministerio-do-desenvolvimento-agrario-mda</id>
         <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-agrario-mda"/>
     </orgaoResponsavel>
 
     
@@ -51,7 +49,6 @@ Microcrédito Rural]]></descricao>
     <orgaoPrestador>
         <id>ministerio-do-desenvolvimento-agrario-mda</id>
         <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-agrario-mda"/>
     </orgaoPrestador>
 
     
@@ -60,7 +57,6 @@ Microcrédito Rural]]></descricao>
         <eventoDaLinhaDaVida>
             <id>apoio-financeiro-e-credito</id>
             <nome>Apoio financeiro e crédito</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/apoio-financeiro-e-credito"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 

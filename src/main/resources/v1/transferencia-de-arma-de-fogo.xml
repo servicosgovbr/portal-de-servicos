@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/transferencia-de-arma-de-fogo"/>
 
     <id>transferencia-de-arma-de-fogo</id>
 
@@ -30,13 +29,11 @@ ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve
     <orgaoResponsavel>
         <id>ministerio-da-justica-mj</id>
         <nome>Ministério da Justiça (MJ)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>departamento-de-policia-federal-dpf</id>
         <nome>Departamento de Polícia Federal (DPF)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-federal-dpf"/>
     </orgaoPrestador>
 
     
@@ -45,7 +42,6 @@ ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -55,7 +51,6 @@ ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve
         <areaDeInteresse>
             <id>seguranca-e-ordem-publica</id>
             <nome>Segurança e Ordem Pública</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/seguranca-e-ordem-publica"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

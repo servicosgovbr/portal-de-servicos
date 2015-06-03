@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/restituicao-de-valores-multa-de-transito-dprf"/>
 
     <id>restituicao-de-valores-multa-de-transito-dprf</id>
 
@@ -32,13 +31,11 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
     <orgaoResponsavel>
         <id>ministerio-da-justica-mj</id>
         <nome>Ministério da Justiça (MJ)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>departamento-de-policia-rodoviaria-federal-dprf</id>
         <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-rodoviaria-federal-dprf"/>
     </orgaoPrestador>
 
     
@@ -47,7 +44,6 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -55,7 +51,6 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
         <eventoDaLinhaDaVida>
             <id>veiculos</id>
             <nome>Veículos</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/veiculos"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -63,7 +58,6 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
         <areaDeInteresse>
             <id>protecao-social</id>
             <nome>Proteção social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

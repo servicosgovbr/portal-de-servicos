@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/emissao-da-declaracao-de-aptidao-da-agricultura-familiar-dap"/>
 
     <id>emissao-da-declaracao-de-aptidao-da-agricultura-familiar-dap</id>
 
@@ -44,7 +43,6 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
     <orgaoResponsavel>
         <id>ministerio-do-desenvolvimento-agrario-mda</id>
         <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-agrario-mda"/>
     </orgaoResponsavel>
 
     
@@ -52,14 +50,12 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
     <orgaoPrestador>
         <id>ministerio-do-desenvolvimento-agrario-mda</id>
         <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-agrario-mda"/>
     </orgaoPrestador>
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -67,7 +63,6 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
         <segmentoDaSociedade>
             <id>servicos-as-empresas</id>
             <nome>Serviços às Empresas</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -75,7 +70,6 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
         <eventoDaLinhaDaVida>
             <id>empreendedorismo-e-negocios</id>
             <nome>Empreendedorismo e negócios</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -83,7 +77,6 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
         <areaDeInteresse>
             <id>agropecuaria</id>
             <nome>Agropecuária</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

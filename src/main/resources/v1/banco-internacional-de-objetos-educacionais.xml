@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/banco-internacional-de-objetos-educacionais"/>
 
     <id>banco-internacional-de-objetos-educacionais</id>
 
@@ -28,7 +27,6 @@
     <orgaoResponsavel>
         <id>ministerio-da-educacao-mec</id>
         <nome>Ministério da Educação (MEC)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
     </orgaoResponsavel>
 
     
@@ -36,7 +34,6 @@
     <orgaoPrestador>
         <id>ministerio-da-educacao-mec</id>
         <nome>Ministério da Educação (MEC)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
     </orgaoPrestador>
 
     
@@ -45,7 +42,6 @@
         <eventoDaLinhaDaVida>
             <id>estudos</id>
             <nome>Estudos</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estudos"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -53,7 +49,6 @@
         <areaDeInteresse>
             <id>educacao-superior</id>
             <nome>Educação superior</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao-superior"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -61,7 +56,6 @@
         <areaDeInteresse>
             <id>educacao-a-distancia</id>
             <nome>Educação à distância</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao-a-distancia"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -69,7 +63,6 @@
         <areaDeInteresse>
             <id>educacao-basica</id>
             <nome>Educação básica</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao-basica"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -77,7 +70,6 @@
         <areaDeInteresse>
             <id>profissionais-da-educacao</id>
             <nome>Profissionais da educação</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/profissionais-da-educacao"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
@@ -85,7 +77,6 @@
         <areaDeInteresse>
             <id>educacao</id>
             <nome>Educação</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

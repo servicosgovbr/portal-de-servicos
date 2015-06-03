@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/naturalizacao-concessao-e-transformacao"/>
 
     <id>naturalizacao-concessao-e-transformacao</id>
 
@@ -62,13 +61,11 @@ b) aquisição do gozo dos direitos políticos, comprovando:
     <orgaoResponsavel>
         <id>ministerio-da-justica-mj</id>
         <nome>Ministério da Justiça (MJ)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>secretaria-nacional-de-justica-snj</id>
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-nacional-de-justica-snj"/>
     </orgaoPrestador>
 
     
@@ -77,7 +74,6 @@ b) aquisição do gozo dos direitos políticos, comprovando:
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -85,7 +81,6 @@ b) aquisição do gozo dos direitos políticos, comprovando:
         <eventoDaLinhaDaVida>
             <id>estrangeiros-no-brasil</id>
             <nome>Estrangeiros no Brasil</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estrangeiros-no-brasil"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -93,7 +88,6 @@ b) aquisição do gozo dos direitos políticos, comprovando:
         <areaDeInteresse>
             <id>protecao-social</id>
             <nome>Proteção social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

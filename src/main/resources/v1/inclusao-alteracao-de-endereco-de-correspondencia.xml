@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/inclusao-alteracao-de-endereco-de-correspondencia"/>
 
     <id>inclusao-alteracao-de-endereco-de-correspondencia</id>
 
@@ -28,13 +27,11 @@
     <orgaoResponsavel>
         <id>ministerio-do-planejamento-orcamento-e-gestao-mpog</id>
         <nome>Ministério do Planejamento, Orçamento e Gestão (MPOG)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-planejamento-orcamento-e-gestao-mpog"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>secretaria-do-patrimonio-da-uniao-spu-mp</id>
         <nome>Secretaria do Patrimônio da União (SPU/MP)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-do-patrimonio-da-uniao-spu-mp"/>
     </orgaoPrestador>
 
     
@@ -43,7 +40,6 @@
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -51,7 +47,6 @@
         <segmentoDaSociedade>
             <id>servicos-as-empresas</id>
             <nome>Serviços às Empresas</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -59,7 +54,6 @@
         <eventoDaLinhaDaVida>
             <id>imoveis</id>
             <nome>Imóveis</nome>
-            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/imoveis"/>
         </eventoDaLinhaDaVida>
     </eventosDaLinhaDaVida>
 
@@ -67,7 +61,6 @@
         <areaDeInteresse>
             <id>habitacao</id>
             <nome>Habitação</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/habitacao"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

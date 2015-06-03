@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-    <link rel="self" href="http://localhost:8080/servico/concessao-de-anistia-politica"/>
 
     <id>concessao-de-anistia-politica</id>
 
@@ -36,13 +35,11 @@ A anistia está prevista no art. 8º do Ato das Disposições Transitórias da C
     <orgaoResponsavel>
         <id>ministerio-da-justica-mj</id>
         <nome>Ministério da Justiça (MJ)</nome>
-        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
     </orgaoResponsavel>
 
     <orgaoPrestador>
         <id>comissao-de-anistia-cma</id>
         <nome>Comissão de Anistia (CMA)</nome>
-        <link rel="orgao-prestador" href="http://localhost:8080/orgao/comissao-de-anistia-cma"/>
     </orgaoPrestador>
 
     
@@ -51,7 +48,6 @@ A anistia está prevista no art. 8º do Ato das Disposições Transitórias da C
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
-            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
@@ -61,7 +57,6 @@ A anistia está prevista no art. 8º do Ato das Disposições Transitórias da C
         <areaDeInteresse>
             <id>protecao-social</id>
             <nome>Proteção social</nome>
-            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
         </areaDeInteresse>
     </areasDeInteresse>
 
