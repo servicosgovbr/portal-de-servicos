@@ -25,7 +25,7 @@ public class ConteudoParser {
     public String conteudo(String caminho) {
         Resource resource = new ClassPathResource(caminho);
         log.debug("Conteúdo {} encontrado em: {}", caminho, resource);
-        return parse(markdown.toHtml(resource).getHtml()).select("p").text();
+        return parse(markdown.toHtml(resource).getHtml()).select("p, ul, ol").text();
     }
 
 }

@@ -24,11 +24,16 @@ public class ConteudoParserTest {
                 new ConteudoHtml()
                         .withId("foo")
                         .withTitulo("Foo")
-                        .withHtml("<html><h2>Foo</h2><p>Parágrafo um.</p><p>Parágrafo dois.</p></html>")
+                        .withHtml("<html>" +
+                                "<h2>Foo</h2>" +
+                                "<p>Parágrafo um.</p>" +
+                                "<ul><li>Ponto A.</li><li>Ponto B.</li></ul>" +
+                                "<p>Parágrafo dois.</p>" +
+                                "</html>")
         );
 
         String corpo = new ConteudoParser(markdown).conteudo("/conteudo/foo.md");
 
-        assertThat(corpo, is("Parágrafo um. Parágrafo dois."));
+        assertThat(corpo, is("Parágrafo um. Ponto A. Ponto B. Parágrafo dois."));
     }
 }
