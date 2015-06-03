@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Possuidor de certificado digital cadastrar procuração eletrônica para terceiro, também possuidor de certificado digital, para realização de serviços dentro do Portal e-CAC. Consultar procuração eletrônica por outorgante ou por procurador. Cancelar procuração eletrônica.]]></descricao>
+    <descricao>
+        <![CDATA[Possuidor de certificado digital cadastrar procuração eletrônica para terceiro, também possuidor de certificado digital, para realização de serviços dentro do Portal e-CAC. Consultar procuração eletrônica por outorgante ou por procurador. Cancelar procuração eletrônica.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=05020]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -50,7 +49,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -65,8 +63,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

@@ -16,9 +16,6 @@ A classificação indicativa é a indicação à família sobre a faixa etária 
 
 Pode requerer a classificação indicativa o titular ou representante legal da diversão pública.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -38,7 +35,6 @@ Pode requerer a classificação indicativa o titular ou representante legal da d
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -54,7 +50,6 @@ Pode requerer a classificação indicativa o titular ou representante legal da d
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -72,35 +67,38 @@ Pode requerer a classificação indicativa o titular ou representante legal da d
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Esplanada dos Ministérios – Anexo II Sala 321 – 70064-900 Brasília-DF</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>classificacaoindicativa@mj.gov.br</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para mais informações sobre classificação indicativa</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/data/Pages/MJ6BC270E8ITEMID66914BCA346A4350800CB04EBF2D6BD7PTBRIE.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/data/Pages/MJ6BC270E8ITEMID66914BCA346A4350800CB04EBF2D6BD7PTBRIE.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Consulta à classificação indicativa</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/ClassificacaoIndicativa/EscolhaTipo.jsp"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/ClassificacaoIndicativa/EscolhaTipo.jsp"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Consulta às classificações internacionais de jogos eletrônicos e aplicativos</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/main.asp?View=%7BFDA11DA1-710C-48E5-AA3E-FBB988B921D1%7D&amp;BrowserType=IE&amp;LangID=pt-br&amp;params=itemID%3D%7B9FA2CB77-0792-423F-BD04-3587A932416B%7D%3B&amp;UIPartUID=%7B04411A04-62EC-410D-AC93-9F2FA9240471%7D"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/main.asp?View=%7BFDA11DA1-710C-48E5-AA3E-FBB988B921D1%7D&amp;BrowserType=IE&amp;LangID=pt-br&amp;params=itemID%3D%7B9FA2CB77-0792-423F-BD04-3587A932416B%7D%3B&amp;UIPartUID=%7B04411A04-62EC-410D-AC93-9F2FA9240471%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 

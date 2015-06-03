@@ -4,17 +4,21 @@
     <versao>1.0</versao>
 
 
-    <id>consulta-intimacao-apresentacao-informacoes-complementares-restituicao-ressarcimento-e-declaracao-de-compensacao-per-dcomp</id>
+    <id>
+        consulta-intimacao-apresentacao-informacoes-complementares-restituicao-ressarcimento-e-declaracao-de-compensacao-per-dcomp
+    </id>
 
-    <nome>Consulta Intimação Apresentação Informações Complementares - restituição, ressarcimento e declaração de compensação (PER/DCOMP)</nome>
+    <nome>Consulta Intimação Apresentação Informações Complementares - restituição, ressarcimento e declaração de
+        compensação (PER/DCOMP)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Consultar e imprimir intimação para apresentação de informações complementares, emitida eletronicamente referente ao PER/DCOMP (pedido eletrônico de restituição ou ressarcimento e da declaração de compensação).]]></descricao>
+    <descricao>
+        <![CDATA[Consultar e imprimir intimação para apresentação de informações complementares, emitida eletronicamente referente ao PER/DCOMP (pedido eletrônico de restituição ou ressarcimento e da declaração de compensação).]]></descricao>
 
     <url><![CDATA[https://www32.receita.fazenda.gov.br/Aplicacoes/SSL/ATRCE/SCC/intimacao/index.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -50,7 +53,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -65,8 +67,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

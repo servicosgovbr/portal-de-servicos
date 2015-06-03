@@ -33,9 +33,6 @@ Os atos não podem ser consumados antes de apreciados, sob pena de nulidade, sen
 
 Observação: O Conselho Administrativo de Defesa Econômica - Cade é uma autarquia federal, vinculada ao Ministério da Justiça, com sede e foro no Distrito Federal, que exerce, em todo o Território nacional, as atribuições dadas pela Lei nº 12.529/2011 (vide &quot;Mais informações&quot;). O Cade tem como missão zelar pela livre concorrência no mercado, sendo a entidade responsável, no âmbito do Poder Executivo, não só por investigar e decidir, em última instância, sobre a matéria concorrencial, como também estimular e disseminar a cultura da livre concorrência.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -55,7 +52,6 @@ Observação: O Conselho Administrativo de Defesa Econômica - Cade é uma autar
         <nome>Conselho Administrativo de Defesa Econômica (CADE)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -93,30 +89,33 @@ Observação: O Conselho Administrativo de Defesa Econômica - Cade é uma autar
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
-            <descricao>SEPN 515, Conjunto D, Lote 4 - Ed. Carlos Taurisano. Asa Norte. Brasília/DF. Cep: 70770-504.</descricao>
-            
+            <descricao>SEPN 515, Conjunto D, Lote 4 - Ed. Carlos Taurisano. Asa Norte. Brasília/DF. Cep: 70770-504.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Outros">
             <descricao>Via Correios no endereço: SEPN 515, Conjunto D, Lote 4 - Ed. Carlos Taurisano. Asa Norte.
-                Brasília/DF. Cep: 70770-504.</descricao>
-            
+                Brasília/DF. Cep: 70770-504.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="E-mail">
             <descricao>protocolo@cade.gov.br</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Anexo I da RESOLUÇÃO Nº 2/2012 - CADE</descricao>
-            <link rel="informacao-util#formularios" href="http://www.cade.gov.br/upload/Resolu%C3%A7%C3%A3o%202_2012%20-%20An%C3%A1lise%20Atos%20Concentra%C3%A7%C3%A3o.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://www.cade.gov.br/upload/Resolu%C3%A7%C3%A3o%202_2012%20-%20An%C3%A1lise%20Atos%20Concentra%C3%A7%C3%A3o.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
@@ -130,22 +129,26 @@ Observação: O Conselho Administrativo de Defesa Econômica - Cade é uma autar
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Lei nº 12.529/11</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/Lei/L12529.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/Lei/L12529.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Taxa Processual - GRU</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.cade.gov.br/Default.aspx?380b1bee061bf131c573c590a5"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.cade.gov.br/Default.aspx?380b1bee061bf131c573c590a5"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Consulta de peças processuais e documentos públicos em processos julgados e em andamento no
-                âmbito do CADE</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.cade.gov.br/Default.aspx?a8889b6caa60b241d345d069fc"/>
+                âmbito do CADE
+            </descricao>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.cade.gov.br/Default.aspx?a8889b6caa60b241d345d069fc"/>
         </informacaoUtil>
     </informacoesUteis>
 

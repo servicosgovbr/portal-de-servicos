@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Serviço que permite realizar a inclusão, alteração, encerramento, reinício e exclusão de atividade para os contribuintes individuais, empregados domésticos e segurados especiais, para fins Previdenciários, junto ao INSS.]]></descricao>
+    <descricao>
+        <![CDATA[Serviço que permite realizar a inclusão, alteração, encerramento, reinício e exclusão de atividade para os contribuintes individuais, empregados domésticos e segurados especiais, para fins Previdenciários, junto ao INSS.]]></descricao>
 
     <url><![CDATA[http://www2.dataprev.gov.br/prevagenda/OpcaoInicialTela.view]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Instituto Nacional do Seguro Social (INSS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,12 +62,11 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Ligue 135 para obter mais informações.</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

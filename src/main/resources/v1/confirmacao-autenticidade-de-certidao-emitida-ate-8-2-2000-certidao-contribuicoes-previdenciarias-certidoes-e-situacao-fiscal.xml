@@ -4,17 +4,22 @@
     <versao>1.0</versao>
 
 
-    <id>confirmacao-autenticidade-de-certidao-emitida-ate-8-2-2000-certidao-contribuicoes-previdenciarias-certidoes-e-situacao-fiscal</id>
+    <id>
+        confirmacao-autenticidade-de-certidao-emitida-ate-8-2-2000-certidao-contribuicoes-previdenciarias-certidoes-e-situacao-fiscal
+    </id>
 
-    <nome>Confirmação Autenticidade de Certidão Emitida até 8/2/2000 (Certidão Contribuições Previdenciárias / Certidões e Situação Fiscal)</nome>
+    <nome>Confirmação Autenticidade de Certidão Emitida até 8/2/2000 (Certidão Contribuições Previdenciárias / Certidões
+        e Situação Fiscal)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Consultar a autenticidade de certidão positiva de débitos com efeitos de negativa- CPD-EN, emitida até 08/02/2000.]]></descricao>
+    <descricao>
+        <![CDATA[Consultar a autenticidade de certidão positiva de débitos com efeitos de negativa- CPD-EN, emitida até 08/02/2000.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=609&amp;idArea=3&amp;idAssunto=39]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=609&amp;idArea=3&amp;idAssunto=39]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +39,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +74,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

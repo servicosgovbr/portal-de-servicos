@@ -14,7 +14,6 @@
 
     <url><![CDATA[http://www2.dataprev.gov.br/prevagenda/OpcaoInicialTela.view]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +33,6 @@
         <nome>Instituto Nacional do Seguro Social (INSS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -43,7 +41,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -58,12 +55,11 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Ligue 135 para mais informações</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Preencher PGDAS e gerar o Documento de Arrecadação do Simples Nacional – DAS – até 12/2011.]]></descricao>
+    <descricao>
+        <![CDATA[Preencher PGDAS e gerar o Documento de Arrecadação do Simples Nacional – DAS – até 12/2011.]]></descricao>
 
     <url><![CDATA[http://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Servicos/Grupo.aspx?grp=5]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

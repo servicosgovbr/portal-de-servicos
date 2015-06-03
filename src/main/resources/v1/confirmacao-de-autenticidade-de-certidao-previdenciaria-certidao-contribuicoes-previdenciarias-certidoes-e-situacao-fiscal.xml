@@ -4,9 +4,13 @@
     <versao>1.0</versao>
 
 
-    <id>confirmacao-de-autenticidade-de-certidao-previdenciaria-certidao-contribuicoes-previdenciarias-certidoes-e-situacao-fiscal</id>
+    <id>
+        confirmacao-de-autenticidade-de-certidao-previdenciaria-certidao-contribuicoes-previdenciarias-certidoes-e-situacao-fiscal
+    </id>
 
-    <nome>Confirmação de Autenticidade de Certidão Previdenciária (Certidão Contribuições Previdenciárias / Certidões e Situação Fiscal)</nome>
+    <nome>Confirmação de Autenticidade de Certidão Previdenciária (Certidão Contribuições Previdenciárias / Certidões e
+        Situação Fiscal)
+    </nome>
 
     <nomesPopulares/>
 
@@ -14,7 +18,6 @@
 
     <url><![CDATA[http://www010.dataprev.gov.br/cws/contexto/cnd/cnd.html]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +37,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -50,7 +52,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -65,8 +66,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Consultar o número de inscrição no Cadastro Nacional da Pessoa Jurídica (CNPJ) dos candidatos e comitês financeiros para a eleição ordinária/suplementar.]]></descricao>
+    <descricao>
+        <![CDATA[Consultar o número de inscrição no Cadastro Nacional da Pessoa Jurídica (CNPJ) dos candidatos e comitês financeiros para a eleição ordinária/suplementar.]]></descricao>
 
     <url><![CDATA[http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/Eleicoes/consulta.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

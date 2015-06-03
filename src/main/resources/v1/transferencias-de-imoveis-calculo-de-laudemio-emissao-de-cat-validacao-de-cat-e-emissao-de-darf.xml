@@ -16,7 +16,6 @@ CAT - Certidão de Autorização para Transferência (CAT).]]></descricao>
 
     <url><![CDATA[http://atendimentovirtual.spu.planejamento.gov.br/Transferencia/Transf_Menu.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ CAT - Certidão de Autorização para Transferência (CAT).]]></descricao>
         <nome>Secretaria do Patrimônio da União (SPU/MP)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -72,8 +70,5 @@ CAT - Certidão de Autorização para Transferência (CAT).]]></descricao>
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

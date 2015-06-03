@@ -16,9 +16,9 @@
         unidade de atendimento presencial, conforme orientações gerais. Não há necessidade de o outorgante possuir
         certificado digital para constituir a procuração.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSDR/procuracoesrfb/controlador/controlePrincipal.asp?acao=telaInicial]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSDR/procuracoesrfb/controlador/controlePrincipal.asp?acao=telaInicial]]></url>
 
-    
 
     <solicitantes/>
 
@@ -38,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -54,7 +53,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -69,8 +67,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

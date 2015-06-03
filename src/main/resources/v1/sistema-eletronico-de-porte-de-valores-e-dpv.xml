@@ -14,7 +14,6 @@
 
     <url><![CDATA[http://www.receita.fazenda.gov.br/DPV/default.htm]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +33,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +68,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

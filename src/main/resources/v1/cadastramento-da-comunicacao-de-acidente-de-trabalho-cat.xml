@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Possibilita cadastrar a &quot;Comunicação de Acidente de Trabalho - CAT&quot; junto ao INSS, para facilitar e agilizar o registro dos Acidentes de Trabalho e das Doenças Ocupacionais, pelo Empregador, havendo ou não afastamento do trabalho por parte do acidentado. A aplicação permite também imprimir o formulário da CAT em branco para preenchimento das informações do Empregador, do Acidentado, do Acidente e do Atestado Médico.]]></descricao>
+    <descricao>
+        <![CDATA[Possibilita cadastrar a &quot;Comunicação de Acidente de Trabalho - CAT&quot; junto ao INSS, para facilitar e agilizar o registro dos Acidentes de Trabalho e das Doenças Ocupacionais, pelo Empregador, havendo ou não afastamento do trabalho por parte do acidentado. A aplicação permite também imprimir o formulário da CAT em branco para preenchimento das informações do Empregador, do Acidentado, do Acidente e do Atestado Médico.]]></descricao>
 
     <url><![CDATA[http://www.dataprev.gov.br/servicos/cat/cat.shtm]]></url>
 
-    
 
     <solicitantes/>
 
@@ -29,7 +29,6 @@
         <nome>Ministério da Previdência Social (MPS)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-da-previdencia-social-mps</id>
@@ -70,12 +69,11 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Ligue 135 para obter maiores informações.</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

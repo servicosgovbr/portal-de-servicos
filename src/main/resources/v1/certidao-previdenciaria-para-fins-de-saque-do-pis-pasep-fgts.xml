@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Permite ao beneficiário da Previdência Social a emissão da Certidão para fins de saque do PIS/PASEP/FGTS.]]></descricao>
+    <descricao>
+        <![CDATA[Permite ao beneficiário da Previdência Social a emissão da Certidão para fins de saque do PIS/PASEP/FGTS.]]></descricao>
 
     <url><![CDATA[http://agencia.previdencia.gov.br/e-aps/servico/175]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Ministério da Previdência Social (MPS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,12 +62,11 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Ligue 135 para obter mais informações.</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

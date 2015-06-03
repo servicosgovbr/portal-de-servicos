@@ -18,7 +18,6 @@ Para aqueles que possuem bens de valor total igual ou superior a US$100.000.000,
 
     <url><![CDATA[http://www4.bcb.gov.br/rex/CBE/Port/cbe.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -38,9 +37,6 @@ Para aqueles que possuem bens de valor total igual ou superior a US$100.000.000,
         <nome>Banco Central do Brasil (BCB)</nome>
     </orgaoPrestador>
 
-    
-
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -62,8 +58,5 @@ Para aqueles que possuem bens de valor total igual ou superior a US$100.000.000,
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

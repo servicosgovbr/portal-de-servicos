@@ -12,9 +12,9 @@
 
     <descricao><![CDATA[Emitir segunda via de certidão de pessoa física.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CNDConjuntaSegVia/NICertidaoSegVia.asp?Tipo=]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CNDConjuntaSegVia/NICertidaoSegVia.asp?Tipo=]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

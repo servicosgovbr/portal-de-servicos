@@ -10,11 +10,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[O pescador registrado no Ministério da Pesca e Aquicultura, portador da Carteira de Pescador, deve, anualmente, apresentar ao ministério um relatório da sua produção para manter o seu registro ativo.]]></descricao>
+    <descricao>
+        <![CDATA[O pescador registrado no Ministério da Pesca e Aquicultura, portador da Carteira de Pescador, deve, anualmente, apresentar ao ministério um relatório da sua produção para manter o seu registro ativo.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -34,9 +32,6 @@
         <nome>Ministério da Pesca e Aquicultura (MPA)</nome>
     </orgaoPrestador>
 
-    
-
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -62,15 +57,17 @@
         <canalDePrestacao tipo="Presencial">
             <descricao>Para fazer a manutenção anual do registro o pescador deve procurar a Superintendência Federal de
                 Pesca e Aquicultura no seu estado ou sua entidade representativa de classe (colônia, associação ou
-                sindicato).</descricao>
-            
+                sindicato).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços e contatos das Superintendências Federais de Pesca e Aquicultura</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.mpa.gov.br/index.php/ministeriompa/superintendencias-federais"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.mpa.gov.br/index.php/ministeriompa/superintendencias-federais"/>
         </informacaoUtil>
     </informacoesUteis>
 

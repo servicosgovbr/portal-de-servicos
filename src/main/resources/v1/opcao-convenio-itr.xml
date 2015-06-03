@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Optar pelo convênio com a União para exercer as atribuições de fiscalização, lançamento de ofício e cobrança do Imposto sobre a Propriedade Territorial Rural (ITR), conforme disposto no art. 10 do Decreto nº6.433, de 15 de abril de 2008. Esta opção poderá ser realizada pelos municípios e pelo Distrito Federal.]]></descricao>
+    <descricao>
+        <![CDATA[Optar pelo convênio com a União para exercer as atribuições de fiscalização, lançamento de ofício e cobrança do Imposto sobre a Propriedade Territorial Rural (ITR), conforme disposto no art. 10 do Decreto nº6.433, de 15 de abril de 2008. Esta opção poderá ser realizada pelos municípios e pelo Distrito Federal.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=05082]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

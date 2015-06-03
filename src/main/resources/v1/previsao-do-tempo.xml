@@ -14,7 +14,6 @@
 
     <url><![CDATA[http://www.inmet.gov.br/portal/]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +33,6 @@
         <nome>Instituto Nacional de Meteorologia (Inmet)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -43,7 +41,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -79,8 +76,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

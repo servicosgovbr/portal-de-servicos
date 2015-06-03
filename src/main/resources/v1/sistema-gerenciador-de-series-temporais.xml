@@ -16,7 +16,6 @@ As séries podem ser consultadas individualmente, em grupos ou listas personaliz
 
     <url><![CDATA[http://www4.bcb.gov.br/pec/series/port/aviso.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ As séries podem ser consultadas individualmente, em grupos ou listas personaliz
         <nome>Banco Central do Brasil (BCB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -52,7 +50,6 @@ As séries podem ser consultadas individualmente, em grupos ou listas personaliz
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -67,12 +64,12 @@ As séries podem ser consultadas individualmente, em grupos ou listas personaliz
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Tutorial sobre como utilizar o Sistema Gerenciador de Séries Temporais.</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.youtube.com/watch?v=qHKv6BgFY8s&amp;list=PLB3218F73EBF12DC0&amp;index=1"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.youtube.com/watch?v=qHKv6BgFY8s&amp;list=PLB3218F73EBF12DC0&amp;index=1"/>
         </informacaoUtil>
     </informacoesUteis>
 

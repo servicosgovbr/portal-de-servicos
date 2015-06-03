@@ -10,11 +10,12 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar emissão de certidão da pessoa física, exceto de contribuições previdenciárias.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar emissão de certidão da pessoa física, exceto de contribuições previdenciárias.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=2]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=2]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +70,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

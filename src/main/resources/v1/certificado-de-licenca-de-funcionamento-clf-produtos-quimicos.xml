@@ -16,7 +16,6 @@ Para obtê-lo, baixe o Programa Cadastro (vide &quot;Formulários&quot;), preenc
 
     <url><![CDATA[http://www.dpf.gov.br/institucional/pf-pelo-brasil]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ Para obtê-lo, baixe o Programa Cadastro (vide &quot;Formulários&quot;), preenc
         <nome>Departamento de Polícia Federal (DPF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -79,7 +77,6 @@ Para obtê-lo, baixe o Programa Cadastro (vide &quot;Formulários&quot;), preenc
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
@@ -91,35 +88,40 @@ Para obtê-lo, baixe o Programa Cadastro (vide &quot;Formulários&quot;), preenc
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Programa Cadastro</descricao>
-            <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/produtos-quimicos/programas/programa-cadastro"/>
+            <link rel="informacao-util#formularios"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/programas/programa-cadastro"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
             <descricao>Portaria 1.274/2003</descricao>
-            <link rel="informacao-util#outros" href="http://www.dpf.gov.br/servicos/produtos-quimicos/legislacao/PORTARIA1274.pdf"/>
+            <link rel="informacao-util#outros"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/legislacao/PORTARIA1274.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Renovação de Certificado de Licença de Funcionamento - CLF</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/renovacao-de-certificado-de-licenca-de-funcionamento"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/renovacao-de-certificado-de-licenca-de-funcionamento"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Atualização Cadastral de Produtos Químicos - Inclusão / Exclusão</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/atualizacao-de-produtos-quimicos"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/atualizacao-de-produtos-quimicos"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Acompanhamento de processos</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/consultas/acompanhamento-de-processos"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/consultas/acompanhamento-de-processos"/>
         </informacaoUtil>
     </informacoesUteis>
 

@@ -6,7 +6,9 @@
 
     <id>declaracao-eletronica-de-porte-de-valores-e-dpv-declaracao-de-porte-de-valores-declaracoes-e-demonstrativos</id>
 
-    <nome>Declaração Eletrônica de Porte de Valores (e-DPV - Declaração de Porte de Valores / Declarações e Demonstrativos)</nome>
+    <nome>Declaração Eletrônica de Porte de Valores (e-DPV - Declaração de Porte de Valores / Declarações e
+        Demonstrativos)
+    </nome>
 
     <nomesPopulares/>
 
@@ -14,7 +16,6 @@
 
     <url><![CDATA[http://www.receita.fazenda.gov.br/DPV/default.htm]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +70,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

@@ -18,7 +18,6 @@ Caso o furto/roubo do veículo a ser registrado tenha ocorrido há mais de 72 ho
 
     <url><![CDATA[http://www.dprf.gov.br/PortalInternet/alerta.faces]]></url>
 
-    
 
     <solicitantes/>
 
@@ -38,7 +37,6 @@ Caso o furto/roubo do veículo a ser registrado tenha ocorrido há mais de 72 ho
         <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -47,7 +45,6 @@ Caso o furto/roubo do veículo a ser registrado tenha ocorrido há mais de 72 ho
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -65,22 +62,24 @@ Caso o furto/roubo do veículo a ser registrado tenha ocorrido há mais de 72 ho
     <canaisDePrestacao>
         <canalDePrestacao tipo="Telefone">
             <descricao>191</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Em qualquer unidade da Polícia Rodoviária Federal, cujos endereços encontram-se no site do órgão
-                (vide &quot;Localização das unidades&quot;).</descricao>
-            
+                (vide &quot;Localização das unidades&quot;).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços de todas as Unidades da Polícia Rodoviária Federal.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
         </informacaoUtil>
     </informacoesUteis>
 

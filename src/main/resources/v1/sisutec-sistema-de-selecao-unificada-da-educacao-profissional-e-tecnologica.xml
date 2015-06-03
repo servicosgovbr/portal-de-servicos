@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Criado este ano, o Sistema de Seleção Unificada da Educação Profissional e Tecnológica (Sisutec), informatizado, possibilita o acesso de estudantes egressos do ensino médio a vagas gratuitas em cursos técnicos na forma subsequente. Por meio do Sisutec, instituições públicas e particulares de educação superior e de educação profissional e tecnológica oferecem vagas a candidatos participantes do Exame Nacional do Ensino Médio (Enem).]]></descricao>
+    <descricao>
+        <![CDATA[Criado este ano, o Sistema de Seleção Unificada da Educação Profissional e Tecnológica (Sisutec), informatizado, possibilita o acesso de estudantes egressos do ensino médio a vagas gratuitas em cursos técnicos na forma subsequente. Por meio do Sisutec, instituições públicas e particulares de educação superior e de educação profissional e tecnológica oferecem vagas a candidatos participantes do Exame Nacional do Ensino Médio (Enem).]]></descricao>
 
     <url><![CDATA[http://sisutec.mec.gov.br/]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,9 +34,6 @@
         <nome>Ministério da Educação (MEC)</nome>
     </orgaoPrestador>
 
-    
-
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -58,8 +55,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

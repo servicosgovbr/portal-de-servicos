@@ -10,9 +10,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Benefício devido às seguradas empregadas, trabalhadoras avulsas, empregadas domésticas, contribuintes individuais, facultativas e seguradas especiais, por ocasião do parto, inclusive o natimorto, aborto não criminoso, adoção ou guarda judicial para fins de adoção.]]></descricao>
+    <descricao>
+        <![CDATA[Benefício devido às seguradas empregadas, trabalhadoras avulsas, empregadas domésticas, contribuintes individuais, facultativas e seguradas especiais, por ocasião do parto, inclusive o natimorto, aborto não criminoso, adoção ou guarda judicial para fins de adoção.]]></descricao>
 
-    
 
     <urlAgendamento><![CDATA[http://www2.dataprev.gov.br/prevagenda/OpcaoInicialTela.view]]></urlAgendamento>
 
@@ -34,7 +34,6 @@
         <nome>Instituto Nacional do Seguro Social (INSS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -66,10 +65,9 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Serviço prestado nas Agências da Previdência Social.</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
-    
 
 </servico>

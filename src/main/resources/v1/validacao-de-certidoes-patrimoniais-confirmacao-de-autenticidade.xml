@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Aqui você poderá confirmar a autenticidade de certidão emitida pela Secretaria do Patrimônio da União, preenchendo os campos conforme os dados da certidão.]]></descricao>
+    <descricao>
+        <![CDATA[Aqui você poderá confirmar a autenticidade de certidão emitida pela Secretaria do Patrimônio da União, preenchendo os campos conforme os dados da certidão.]]></descricao>
 
     <url><![CDATA[http://atendimentovirtual.spu.planejamento.gov.br/Emissoes/Certidao/Cert_ValidaPedido.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria do Patrimônio da União (SPU/MP)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +69,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

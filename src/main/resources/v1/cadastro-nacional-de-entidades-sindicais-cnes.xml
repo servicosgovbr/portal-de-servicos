@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Possibilita elaborar pedido de registro ou de alteração estatutária de entidade sindical e consultar entidades sindicais registradas, conforme Portaria/MTE n.º 326/2013.]]></descricao>
+    <descricao>
+        <![CDATA[Possibilita elaborar pedido de registro ou de alteração estatutária de entidade sindical e consultar entidades sindicais registradas, conforme Portaria/MTE n.º 326/2013.]]></descricao>
 
     <url><![CDATA[http://portal.mte.gov.br/cnes/atualizacao-de-dados-perene-sd.htm]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Ministério do Trabalho e Emprego (MTE)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -73,7 +72,8 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Web">
             <descricao>Recadastrar a entidade sindical.</descricao>
-            <link rel="canal-de-prestacao#web" href="http://portal.mte.gov.br/cnes/campanha-de-atualizacao-sindical-sr.htm"/>
+            <link rel="canal-de-prestacao#web"
+                  href="http://portal.mte.gov.br/cnes/campanha-de-atualizacao-sindical-sr.htm"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
@@ -98,6 +98,5 @@
         </canalDePrestacao>
     </canaisDePrestacao>
 
-    
 
 </servico>

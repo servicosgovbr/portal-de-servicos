@@ -16,7 +16,6 @@ Acessar o Sisobranet para realizar a transmissão do relatório. Serviço dispon
 
     <url><![CDATA[http://www.receita.fazenda.gov.br/previdencia/SisCadObraModPref.htm]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ Acessar o Sisobranet para realizar a transmissão do relatório. Serviço dispon
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -45,7 +43,6 @@ Acessar o Sisobranet para realizar a transmissão do relatório. Serviço dispon
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -60,8 +57,5 @@ Acessar o Sisobranet para realizar a transmissão do relatório. Serviço dispon
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

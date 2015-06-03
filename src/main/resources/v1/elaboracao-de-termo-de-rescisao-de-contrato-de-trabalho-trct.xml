@@ -10,11 +10,12 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Para elaboração de rescisão de contrato de trabalho e consulta de rescisões confeccionadas no Sistema HomologNet.]]></descricao>
+    <descricao>
+        <![CDATA[Para elaboração de rescisão de contrato de trabalho e consulta de rescisões confeccionadas no Sistema HomologNet.]]></descricao>
 
-    <url><![CDATA[http://homolognet2.mte.gov.br/homolognet/login.seam;jsessionid=21B23F4F900048CE56953FEF6DAA71A6?cid=898494]]></url>
+    <url>
+        <![CDATA[http://homolognet2.mte.gov.br/homolognet/login.seam;jsessionid=21B23F4F900048CE56953FEF6DAA71A6?cid=898494]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Ministério do Trabalho e Emprego (MTE)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -80,10 +80,10 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Web">
             <descricao>Sistema HomologNet - Consultar Rescisão de Contrato de Trabalho</descricao>
-            <link rel="canal-de-prestacao#web" href="http://homolognet2.mte.gov.br/homolognet/pages/public/consultarRescisoes.seam"/>
+            <link rel="canal-de-prestacao#web"
+                  href="http://homolognet2.mte.gov.br/homolognet/pages/public/consultarRescisoes.seam"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
-    
 
 </servico>

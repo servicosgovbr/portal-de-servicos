@@ -10,11 +10,12 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar habilitação do responsável legal da pessoa jurídica para operar no comércio exterior.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar habilitação do responsável legal da pessoa jurídica para operar no comércio exterior.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=2&amp;idArea=1&amp;idAssunto=16]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=2&amp;idArea=1&amp;idAssunto=16]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -87,14 +87,16 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Web">
             <descricao>SISCOMEX IMPORTAÇÃO - ACESSO AO SISTEMA WEB</descricao>
-            <link rel="canal-de-prestacao#web" href="http://www1.siscomex.receita.fazenda.gov.br/siscomexImpweb-7/login_cert.jsp"/>
+            <link rel="canal-de-prestacao#web"
+                  href="http://www1.siscomex.receita.fazenda.gov.br/siscomexImpweb-7/login_cert.jsp"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Ver todos os serviços do assunto &quot;Aduana e Comércio Exterior&quot;</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/1"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/1"/>
         </informacaoUtil>
     </informacoesUteis>
 

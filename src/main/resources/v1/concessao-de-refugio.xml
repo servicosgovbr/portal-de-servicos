@@ -35,9 +35,6 @@ Tendo feito o pedido de refúgio, o CONARE entrará em contato com o estrangeiro
 
 As solicitações de refúgio têm caráter sigiloso, razão pela qual somente o estrangeiro ou seu representante legal é quem poderá ter acesso às informações referentes ao seu pedido. Não constam na Internet os pedidos de refúgio formulados pelos estrangeiros.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -57,7 +54,6 @@ As solicitações de refúgio têm caráter sigiloso, razão pela qual somente o
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -66,7 +62,6 @@ As solicitações de refúgio têm caráter sigiloso, razão pela qual somente o
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -84,15 +79,17 @@ As solicitações de refúgio têm caráter sigiloso, razão pela qual somente o
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Em todas as unidades da Polícia Federal no Brasil, mediante comparecimento pessoal para prestação
-                das informações e declarações (vide &quot;Localização das unidades&quot;).</descricao>
-            
+                das informações e declarações (vide &quot;Localização das unidades&quot;).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços de todas as unidades da Polícia Federal no Brasil.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
         </informacaoUtil>
     </informacoesUteis>
 
@@ -106,7 +103,7 @@ As solicitações de refúgio têm caráter sigiloso, razão pela qual somente o
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para mais informações: estrangeiros@mj.gov.br</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

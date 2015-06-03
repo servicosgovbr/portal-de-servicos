@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Realizar nas Representações Diplomáticas pedido de inscrição, cancelamento, alteração de dados cadastrais ou regularização de inscrição no CPF.]]></descricao>
+    <descricao>
+        <![CDATA[Realizar nas Representações Diplomáticas pedido de inscrição, cancelamento, alteração de dados cadastrais ou regularização de inscrição no CPF.]]></descricao>
 
     <url><![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/Atcta/cpfEstrangeiro/Fcpf.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

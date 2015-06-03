@@ -6,15 +6,17 @@
 
     <id>termo-de-opcao-recob-recob-regime-especial-de-apuracao-combustiveis-e-bebidas-regimes-e-registros-especiais</id>
 
-    <nome>Termo de Opção – RECOB (RECOB - Regime Especial de Apuração - Combustíveis e Bebidas / Regimes e Registros Especiais)</nome>
+    <nome>Termo de Opção – RECOB (RECOB - Regime Especial de Apuração - Combustíveis e Bebidas / Regimes e Registros
+        Especiais)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Realizar opção pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins incidentes sobre Combustíveis e Bebidas (Recob), de que tratam o art. 52 da Lei nº10.833, de 2003, o art. 23 da Lei nº 10.865, de 2004, e o art. 4º da Lei nº 11.116, de 2005.]]></descricao>
+    <descricao>
+        <![CDATA[Realizar opção pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins incidentes sobre Combustíveis e Bebidas (Recob), de que tratam o art. 52 da Lei nº10.833, de 2003, o art. 23 da Lei nº 10.865, de 2004, e o art. 4º da Lei nº 11.116, de 2005.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00010]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +36,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +64,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

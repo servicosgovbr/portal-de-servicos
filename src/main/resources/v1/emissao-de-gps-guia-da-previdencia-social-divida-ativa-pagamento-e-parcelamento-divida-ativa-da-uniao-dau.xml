@@ -6,15 +6,17 @@
 
     <id>emissao-de-gps-guia-da-previdencia-social-divida-ativa-pagamento-e-parcelamento-divida-ativa-da-uniao-dau</id>
 
-    <nome>Emissão de GPS – Guia da Previdência Social - Dívida Ativa (Pagamento e Parcelamento / Dívida Ativa da União – DAU)</nome>
+    <nome>Emissão de GPS – Guia da Previdência Social - Dívida Ativa (Pagamento e Parcelamento / Dívida Ativa da União –
+        DAU)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar a Guia da Previdência Social – GPS para efetuar o pagamento, parcial ou integral, de débitos previdenciários inscritos em Dívida Ativa da União.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar a Guia da Previdência Social – GPS para efetuar o pagamento, parcial ou integral, de débitos previdenciários inscritos em Dívida Ativa da União.]]></descricao>
 
     <url><![CDATA[http://www010.dataprev.gov.br/CWS/CONTEXTO/RGRCREDPFN/RGRCRED.HTML]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +36,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +71,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

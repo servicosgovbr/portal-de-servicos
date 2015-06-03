@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar emissão de certidão de contribuições previdenciárias da pessoa jurídica visando baixa no cadastro previdenciário.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar emissão de certidão de contribuições previdenciárias da pessoa jurídica visando baixa no cadastro previdenciário.]]></descricao>
 
     <url><![CDATA[http://www020.dataprev.gov.br/pls/pradar/pkg_Arr_inter.pr_Baixa_Empr_ini/t_blank]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

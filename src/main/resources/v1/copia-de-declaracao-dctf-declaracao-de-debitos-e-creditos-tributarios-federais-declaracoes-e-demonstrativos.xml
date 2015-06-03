@@ -6,7 +6,9 @@
 
     <id>copia-de-declaracao-dctf-declaracao-de-debitos-e-creditos-tributarios-federais-declaracoes-e-demonstrativos</id>
 
-    <nome>Cópia de Declaração (DCTF – Declaração de Débitos e Créditos Tributários Federais / Declarações e Demonstrativos)</nome>
+    <nome>Cópia de Declaração (DCTF – Declaração de Débitos e Créditos Tributários Federais / Declarações e
+        Demonstrativos)
+    </nome>
 
     <nomesPopulares/>
 
@@ -14,7 +16,6 @@
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00003]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -43,7 +43,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -58,8 +57,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

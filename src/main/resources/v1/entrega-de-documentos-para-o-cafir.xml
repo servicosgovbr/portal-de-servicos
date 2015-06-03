@@ -10,11 +10,12 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Entregar documentos para posterior conclusão do atendimento de pedido de inscrição/alteração/cancelamento/alienação no Cadastro de Imóvel Rural.]]></descricao>
+    <descricao>
+        <![CDATA[Entregar documentos para posterior conclusão do atendimento de pedido de inscrição/alteração/cancelamento/alienação no Cadastro de Imóvel Rural.]]></descricao>
 
-    <url><![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=168&amp;idArea=2&amp;idAssunto=40]]></url>
+    <url>
+        <![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=168&amp;idArea=2&amp;idAssunto=40]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +70,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

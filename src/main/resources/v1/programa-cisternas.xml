@@ -16,9 +16,6 @@ O Programa Cisternas também leva às famílias de agricultores tecnologias de a
 
 Para ser atendida pelo Programa Cisternas, a família deve estar inscrita no Cadastro Único para Programas Sociais do Governo Federal. Se você obedece aos requisitos do programa, procure uma liderança de sua comunidade para saber como ser atendida.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -33,7 +30,6 @@ Para ser atendida pelo Programa Cisternas, a família deve estar inscrita no Cad
         <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
@@ -47,7 +43,6 @@ Para ser atendida pelo Programa Cisternas, a família deve estar inscrita no Cad
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -65,14 +60,15 @@ Para ser atendida pelo Programa Cisternas, a família deve estar inscrita no Cad
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Procure a Prefeitura de seu Município</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para saber mais sobre o Programa Cisternas.</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.mds.gov.br/segurancaalimentar/programa-cisternas"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.mds.gov.br/segurancaalimentar/programa-cisternas"/>
         </informacaoUtil>
     </informacoesUteis>
 

@@ -24,7 +24,6 @@ Para a entrega de uma arma, o cidadão deverá seguir os seguintes procedimentos
 
     <url><![CDATA[http://www.dpf.gov.br/simba/armas/campanha-do-desarmamento/entrega-de-arma-de-fogo]]></url>
 
-    
 
     <solicitantes/>
 
@@ -44,7 +43,6 @@ Para a entrega de uma arma, o cidadão deverá seguir os seguintes procedimentos
         <nome>Secretaria Nacional de Segurança Pública (Senasp)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -53,7 +51,6 @@ Para a entrega de uma arma, o cidadão deverá seguir os seguintes procedimentos
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -68,33 +65,35 @@ Para a entrega de uma arma, o cidadão deverá seguir os seguintes procedimentos
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
-            <descricao>Qualquer problema no processo deverá ser comunicado por e-mail: desarmamento@mj.gov.br</descricao>
-            
+            <descricao>Qualquer problema no processo deverá ser comunicado por e-mail: desarmamento@mj.gov.br
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>(61) 2025-9125</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Emissão da Guia de Trânsito</descricao>
-            <link rel="informacao-util#formularios" href="http://desarma.mj.gov.br/SisDesarmamento/formulario/portador.do"/>
+            <link rel="informacao-util#formularios"
+                  href="http://desarma.mj.gov.br/SisDesarmamento/formulario/portador.do"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Comunicação de ocorrências envolvendo Arma de Fogo</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/armas/comunicacao-de-ocorrencias"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/armas/comunicacao-de-ocorrencias"/>
         </informacaoUtil>
     </informacoesUteis>
 

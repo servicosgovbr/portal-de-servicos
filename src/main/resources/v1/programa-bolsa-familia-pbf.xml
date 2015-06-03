@@ -16,9 +16,6 @@ Para as famílias pobres que recebem entre R$ 70,01 e R$ 140,00 o Bolsa Família
 
 Para receber o Bolsa Família tem que se inscrever no Cadastro Único e quem recebe tem que atualizar suas informações no Cadastro Único a cada dois anos ou sempre que houver alguma mudança na situação da família. O Bolsa Família é repassado através de cartão magnético preferencialmente para as mães.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -38,7 +35,6 @@ Para receber o Bolsa Família tem que se inscrever no Cadastro Único e quem rec
         <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -77,16 +73,19 @@ Para receber o Bolsa Família tem que se inscrever no Cadastro Único e quem rec
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>É preciso se inscrever no Cadastro Único, para isso procure um Centro de Referência da
-                Assistência Social - CRAS ou a Prefeitura do seu Município.</descricao>
-            
+                Assistência Social - CRAS ou a Prefeitura do seu Município.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Neste site você pode localizar o CRAS mais perto de sua residência. Esses dados podem ser
-                localizados no mapa, basta escolher o seu Estado e o seu Município.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
+                localizados no mapa, basta escolher o seu Estado e o seu Município.
+            </descricao>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
         </informacaoUtil>
     </informacoesUteis>
 

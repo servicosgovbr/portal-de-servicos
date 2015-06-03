@@ -10,11 +10,12 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Consultar as pessoas jurídicas habilitadas para Copa das Confederações FIFA 2013 e Copa do Mundo FIFA 2014.]]></descricao>
+    <descricao>
+        <![CDATA[Consultar as pessoas jurídicas habilitadas para Copa das Confederações FIFA 2013 e Copa do Mundo FIFA 2014.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/Legislacao/RegimePessoasHabilitadasParaAsCopas/RelacaodasPJIN1211.htm]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/Legislacao/RegimePessoasHabilitadasParaAsCopas/RelacaodasPJIN1211.htm]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +63,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

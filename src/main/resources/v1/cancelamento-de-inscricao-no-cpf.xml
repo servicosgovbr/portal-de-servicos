@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Realizar cancelamento a pedido, nos casos de multiplicidade de inscrição ou óbito sem espólio.]]></descricao>
+    <descricao>
+        <![CDATA[Realizar cancelamento a pedido, nos casos de multiplicidade de inscrição ou óbito sem espólio.]]></descricao>
 
     <url><![CDATA[http://www.receita.fazenda.gov.br/PessoaFisica/CPF/CPFCancelamento.htm]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

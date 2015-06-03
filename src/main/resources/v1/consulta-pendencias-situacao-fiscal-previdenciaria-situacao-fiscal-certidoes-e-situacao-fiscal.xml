@@ -10,11 +10,12 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Obter relatório com informações para a emissão de certidão das contribuições previdenciárias na finalidade 4, (outras finalidades da Lei nº 8212/91) ou 5 (registro ou arquivamento de alterações contratuais). As pendências apontadas são as constantes nos sistemas da Receita Federal no momento da solicitação do relatório.]]></descricao>
+    <descricao>
+        <![CDATA[Obter relatório com informações para a emissão de certidão das contribuições previdenciárias na finalidade 4, (outras finalidades da Lei nº 8212/91) ou 5 (registro ou arquivamento de alterações contratuais). As pendências apontadas são as constantes nos sistemas da Receita Federal no momento da solicitação do relatório.]]></descricao>
 
-    <url><![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=187&amp;idArea=3&amp;idAssunto=45]]></url>
+    <url>
+        <![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=187&amp;idArea=3&amp;idAssunto=45]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -43,7 +43,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -58,8 +57,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

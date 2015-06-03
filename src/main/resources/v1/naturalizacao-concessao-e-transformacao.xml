@@ -48,7 +48,6 @@ b) aquisição do gozo dos direitos políticos, comprovando:
 
     <url><![CDATA[http://www.dpf.gov.br/institucional/pf-pelo-brasil]]></url>
 
-    
 
     <solicitantes/>
 
@@ -68,7 +67,6 @@ b) aquisição do gozo dos direitos políticos, comprovando:
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -97,103 +95,115 @@ b) aquisição do gozo dos direitos políticos, comprovando:
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Naturalização comum - formulário e documentação exigida</descricao>
-            <link rel="informacao-util#formularios" href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B48729F39-FB1B-4FDE-832D-0C0E7A624E8C%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#formularios"
+                  href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B48729F39-FB1B-4FDE-832D-0C0E7A624E8C%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Naturalização extraordinária - formulário e documentação exigida</descricao>
-            <link rel="informacao-util#formularios" href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B3BB85797-07D7-457C-ADC2-618FCFD343C9%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#formularios"
+                  href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B3BB85797-07D7-457C-ADC2-618FCFD343C9%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Naturalização especial - formulário e documentação exigida</descricao>
-            <link rel="informacao-util#formularios" href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B9CAFC2D1-CEC8-4DAB-B902-36DF6EFD7CE7%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#formularios"
+                  href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B9CAFC2D1-CEC8-4DAB-B902-36DF6EFD7CE7%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Naturalização provisória - formulário e documentação exigida</descricao>
-            <link rel="informacao-util#formularios" href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B69BF8A8C-33FA-4AB4-8C4F-A96A43BF33E3%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#formularios"
+                  href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B69BF8A8C-33FA-4AB4-8C4F-A96A43BF33E3%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Transformação de naturalização provisória em definitiva</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B29D866CF-ED6D-4EC9-944C-4B623E88893C%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;Team=&amp;params=itemID=%7B29D866CF-ED6D-4EC9-944C-4B623E88893C%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para dúvidas e orientações: estrangeiros@mj.gov.br</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Averbação e retificação nos Certificados e Portarias de Naturalização</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/main.asp?ViewID=%7BFFA75B9E-DC13-4D42-AF38-0849365CAD0F%7D&amp;params=itemID=%7B0C910FB6-4CE7-4822-8C0E-D0F5A83860AC%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/main.asp?ViewID=%7BFFA75B9E-DC13-4D42-AF38-0849365CAD0F%7D&amp;params=itemID=%7B0C910FB6-4CE7-4822-8C0E-D0F5A83860AC%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>2ª via do Certificado de Naturalização</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/main.asp?ViewID=%7BFFA75B9E-DC13-4D42-AF38-0849365CAD0F%7D&amp;params=itemID=%7B05EDBC11-C5C4-4194-9FFD-E564056461D7%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/main.asp?ViewID=%7BFFA75B9E-DC13-4D42-AF38-0849365CAD0F%7D&amp;params=itemID=%7B05EDBC11-C5C4-4194-9FFD-E564056461D7%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Averbação do Certificado de Igualdade de Direitos - Portugueses</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/main.asp?ViewID=%7BFFA75B9E-DC13-4D42-AF38-0849365CAD0F%7D&amp;params=itemID=%7B90639601-9ABD-4B28-AB82-F2E773B7C356%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/main.asp?ViewID=%7BFFA75B9E-DC13-4D42-AF38-0849365CAD0F%7D&amp;params=itemID=%7B90639601-9ABD-4B28-AB82-F2E773B7C356%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>2º via do Certificado de Igualdade de Direitos - Portugueses</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/main.asp?ViewID=%7BFFA75B9E-DC13-4D42-AF38-0849365CAD0F%7D&amp;params=itemID=%7B030AA658-B42B-449E-AC53-BCDC7D6B77C5%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/main.asp?ViewID=%7BFFA75B9E-DC13-4D42-AF38-0849365CAD0F%7D&amp;params=itemID=%7B030AA658-B42B-449E-AC53-BCDC7D6B77C5%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Emissão de Certidões Negativas ou Positivas de Naturalização</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/data/Pages/MJ15F4A0A2ITEMID1943A84F3F9B4EAE99403BF09D77B078PTBRNN.htm"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/data/Pages/MJ15F4A0A2ITEMID1943A84F3F9B4EAE99403BF09D77B078PTBRNN.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Alteração de Assentamentos de Estrangeiros</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;BrowserType=NN&amp;LangID=pt-br&amp;params=itemID%3D%7B23CB29C3-365C-4FE2-93E0-AF1B458704C5%7D%3B&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/main.asp?View=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;BrowserType=NN&amp;LangID=pt-br&amp;params=itemID%3D%7B23CB29C3-365C-4FE2-93E0-AF1B458704C5%7D%3B&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para mais informações sobre Naturalização</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/main.asp?ViewID=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;params=itemID=%7B2944EB5C-96A3-49E2-90E0-A33E3CD6D581%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/main.asp?ViewID=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;params=itemID=%7B2944EB5C-96A3-49E2-90E0-A33E3CD6D581%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para mais informações sobre Igualdade de Direitos - Portugueses</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/main.asp?ViewID=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;params=itemID=%7B9ABDF661-1F5B-44CD-A8B3-3C5D96338A47%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/main.asp?ViewID=%7B7787753D-DE9A-483F-A7AB-CCC1E224EFCA%7D&amp;params=itemID=%7B9ABDF661-1F5B-44CD-A8B3-3C5D96338A47%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
@@ -207,7 +217,8 @@ b) aquisição do gozo dos direitos políticos, comprovando:
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Constituição Federal/88</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 

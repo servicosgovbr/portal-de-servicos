@@ -16,7 +16,6 @@ O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das se
 
     <url><![CDATA[http://www.cadastur.turismo.gov.br]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das se
         <nome>Ministério do Turismo (MTur)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -65,12 +63,12 @@ O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das se
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
-            <descricao>Dúvidas sobre o CADASTUR, entre em contato com a nossa central de atendimento: 0800 606 8484</descricao>
-            
+            <descricao>Dúvidas sobre o CADASTUR, entre em contato com a nossa central de atendimento: 0800 606 8484
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 

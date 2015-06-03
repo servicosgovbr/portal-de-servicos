@@ -18,7 +18,6 @@ Quanto vale hoje, corrigido pela inflação, o dinheiro utilizado no passado.]]>
 
     <url><![CDATA[http://www.bcb.gov.br/?calculadora]]></url>
 
-    
 
     <solicitantes/>
 
@@ -38,7 +37,6 @@ Quanto vale hoje, corrigido pela inflação, o dinheiro utilizado no passado.]]>
         <nome>Banco Central do Brasil (BCB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -74,19 +72,20 @@ Quanto vale hoje, corrigido pela inflação, o dinheiro utilizado no passado.]]>
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
             <descricao>Página da Calculadora do Cidadão na App Store</descricao>
-            <link rel="informacao-util#outros" href="https://itunes.apple.com/us/app/calculadora-do-cidadao/id562324722?l=pt&amp;ls=1&amp;mt=8"/>
+            <link rel="informacao-util#outros"
+                  href="https://itunes.apple.com/us/app/calculadora-do-cidadao/id562324722?l=pt&amp;ls=1&amp;mt=8"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
             <descricao>Página da Calculadora do Cidadão na Google Play</descricao>
-            <link rel="informacao-util#outros" href="http://play.google.com/store/apps/details?id=br.gov.bcb.mobile.android.calculadoracidadao"/>
+            <link rel="informacao-util#outros"
+                  href="http://play.google.com/store/apps/details?id=br.gov.bcb.mobile.android.calculadoracidadao"/>
         </informacaoUtil>
     </informacoesUteis>
 

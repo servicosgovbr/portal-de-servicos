@@ -14,9 +14,6 @@
 
 Quem pode solicitar: somente o condutor de veículo envolvido no acidente.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -36,7 +33,6 @@ Quem pode solicitar: somente o condutor de veículo envolvido no acidente.]]></d
         <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -68,15 +64,17 @@ Quem pode solicitar: somente o condutor de veículo envolvido no acidente.]]></d
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Dirigindo-se a qualquer Unidade do Departamento de Polícia Rodoviária Federal, cujos endereços
-                estão disponíveis no site do órgão (vide &quot;Localização das unidades&quot;).</descricao>
-            
+                estão disponíveis no site do órgão (vide &quot;Localização das unidades&quot;).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços de todas as unidade do Departamento de Polícia Rodoviária Federal.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
         </informacaoUtil>
     </informacoesUteis>
 

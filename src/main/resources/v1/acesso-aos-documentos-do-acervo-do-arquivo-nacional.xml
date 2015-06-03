@@ -16,7 +16,6 @@ Atendimento presencial na Sala de Consultas do Arquivo Nacional. O usuário requ
 
     <url><![CDATA[http://www.arquivonacional.gov.br/cgi/cgilua.exe/sys/start.htm?infoid=519&amp;sid=8]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ Atendimento presencial na Sala de Consultas do Arquivo Nacional. O usuário requ
         <nome>Arquivo Nacional (AN)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -45,7 +43,6 @@ Atendimento presencial na Sala de Consultas do Arquivo Nacional. O usuário requ
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -63,14 +60,14 @@ Atendimento presencial na Sala de Consultas do Arquivo Nacional. O usuário requ
     <canaisDePrestacao>
         <canalDePrestacao tipo="E-mail">
             <descricao>Para atendimento a distância - consultas@arquivonacional.gov.br</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Telefone">
             <descricao>Para atendimento a distância: (21) 2179-1257</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
@@ -80,22 +77,25 @@ Atendimento presencial na Sala de Consultas do Arquivo Nacional. O usuário requ
 
                 - Arquivo Nacional/Sede: Praça da República, 173, Centro, Rio de Janeiro – RJ
                 - Arquivo Nacional/Coordenação Regional no DF: Setor de Indústrias Gráficas, quadra 6, lote 800, Prédio
-                da Imprensa Nacional, Brasília – DF</descricao>
-            
+                da Imprensa Nacional, Brasília – DF
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Formulário de solicitação - Para atendimento a distância.</descricao>
-            <link rel="informacao-util#formularios" href="http://www.arquivonacional.gov.br/templates/htm/arquivonacional/atendimento-a-distancia_FORM.htm"/>
+            <link rel="informacao-util#formularios"
+                  href="http://www.arquivonacional.gov.br/templates/htm/arquivonacional/atendimento-a-distancia_FORM.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Sobre o atendimento presencial</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.arquivonacional.gov.br/cgi/cgilua.exe/sys/start.htm?infoid=49&amp;sid=8"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.arquivonacional.gov.br/cgi/cgilua.exe/sys/start.htm?infoid=49&amp;sid=8"/>
         </informacaoUtil>
     </informacoesUteis>
 
@@ -103,15 +103,17 @@ Atendimento presencial na Sala de Consultas do Arquivo Nacional. O usuário requ
         <informacaoUtil tipo="Telefone">
             <descricao>Para informações sobre atendimento persencial:
                 Arquivo Nacional/Sede/RJ - (21) 2179-1235
-                Arquivo Nacional/Coordenação Regional no DF - (61)3344-5140</descricao>
-            
+                Arquivo Nacional/Coordenação Regional no DF - (61)3344-5140
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
-            <descricao>Informações/dúvidas sobre atendimento presencial: saladeconsultas@arquivonacional.gov.br</descricao>
-            
+            <descricao>Informações/dúvidas sobre atendimento presencial: saladeconsultas@arquivonacional.gov.br
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 

@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Retirar documentos após a conclusão do atendimento de pedido de inscrição/alteração/cancelamento no Cadastro Nacional da Pessoa Jurídica.]]></descricao>
+    <descricao>
+        <![CDATA[Retirar documentos após a conclusão do atendimento de pedido de inscrição/alteração/cancelamento no Cadastro Nacional da Pessoa Jurídica.]]></descricao>
 
     <url><![CDATA[https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

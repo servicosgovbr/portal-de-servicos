@@ -4,17 +4,21 @@
     <versao>1.0</versao>
 
 
-    <id>recuperar-recibo-regime-especial-de-apuracao-e-pagamento-da-contribuicao-para-o-pis-pasep-e-cofins-incidentes-sobre-combustiveis-e-bebidas-recob</id>
+    <id>
+        recuperar-recibo-regime-especial-de-apuracao-e-pagamento-da-contribuicao-para-o-pis-pasep-e-cofins-incidentes-sobre-combustiveis-e-bebidas-recob
+    </id>
 
-    <nome>Recuperar Recibo – Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins incidentes sobre Combustíveis e Bebidas (RECOB)</nome>
+    <nome>Recuperar Recibo – Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins
+        incidentes sobre Combustíveis e Bebidas (RECOB)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Aplicativo de opção pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins incidentes sobre Combustíveis e Bebidas (Recob), de que tratam o art. 52 da Lei nº10.833, de 2003, o art. 23 da Lei nº 10.865, de 2004, e o art. 4º da Lei nº 11.116, de 2005.]]></descricao>
+    <descricao>
+        <![CDATA[Aplicativo de opção pelo Regime Especial de Apuração e Pagamento da Contribuição para o PIS/Pasep e Cofins incidentes sobre Combustíveis e Bebidas (Recob), de que tratam o art. 52 da Lei nº10.833, de 2003, o art. 23 da Lei nº 10.865, de 2004, e o art. 4º da Lei nº 11.116, de 2005.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00010]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +66,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

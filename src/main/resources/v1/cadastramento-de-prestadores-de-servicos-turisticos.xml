@@ -22,7 +22,6 @@ Conforme disposto nos artigos 21 e 22 da Lei n.º 11.771, de 17 de setembro de 2
 
     <url><![CDATA[http://www.cadastur.turismo.gov.br]]></url>
 
-    
 
     <solicitantes/>
 
@@ -42,7 +41,6 @@ Conforme disposto nos artigos 21 e 22 da Lei n.º 11.771, de 17 de setembro de 2
         <nome>Ministério do Turismo (MTur)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -78,21 +76,23 @@ Conforme disposto nos artigos 21 e 22 da Lei n.º 11.771, de 17 de setembro de 2
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Dúvidas sobre o cadastro podem ser esclarecidas com a nossa central de atendimento: 0800 606
-                8484</descricao>
-            
+                8484
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Cartilhas e Manuais">
             <descricao>Manual de Orientações para Cadastramento dos Prestadores de Serviços Turísticos no Ministério do
-                Turismo</descricao>
-            <link rel="informacao-util#cartilhas-e-manuais" href="http://www.cadastur.turismo.gov.br/cadastur/_jsp/jsp/manuais/manual-usuario-cadastur.pdf"/>
+                Turismo
+            </descricao>
+            <link rel="informacao-util#cartilhas-e-manuais"
+                  href="http://www.cadastur.turismo.gov.br/cadastur/_jsp/jsp/manuais/manual-usuario-cadastur.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 

@@ -16,7 +16,6 @@ O sistema permite a atualização de cadastro de estações e dados climáticos 
 
     <url><![CDATA[http://www.agritempo.gov.br]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ O sistema permite a atualização de cadastro de estações e dados climáticos 
         <nome>Ministério da Agricultura, Pecuária e Abastecimento (MAPA)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -45,7 +43,6 @@ O sistema permite a atualização de cadastro de estações e dados climáticos 
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -81,8 +78,5 @@ O sistema permite a atualização de cadastro de estações e dados climáticos 
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

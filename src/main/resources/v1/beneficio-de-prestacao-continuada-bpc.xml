@@ -14,7 +14,6 @@
 
 Há duas formas de solicitar o BPC: a pessoa pode agendar o atendimento diretamente ao Instituto Nacional do Seguro Social (INSS), pelo telefone 135 (ligação gratuita) e pela internet pelo site www.previdenciasocial.gov.br, ou, se preferir, o cidadão pode procurar o Cras mais próximo de sua casa, onde receberá auxílio e orientação para fazer o agendamento em uma Agência da Previdência Social.]]></descricao>
 
-    
 
     <urlAgendamento><![CDATA[http://www2.dataprev.gov.br/prevagenda/OpcaoInicialTela.view]]></urlAgendamento>
 
@@ -36,7 +35,6 @@ Há duas formas de solicitar o BPC: a pessoa pode agendar o atendimento diretame
         <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -45,7 +43,6 @@ Há duas formas de solicitar o BPC: a pessoa pode agendar o atendimento diretame
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -63,16 +60,19 @@ Há duas formas de solicitar o BPC: a pessoa pode agendar o atendimento diretame
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Você deve agendar o atendimento, por isso procure o Centro de Referência da Assistência Social -
-                CRAS mais próximo da sua residência ou agende pela internet.</descricao>
-            
+                CRAS mais próximo da sua residência ou agende pela internet.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Neste site você pode localizar o CRAS mais perto de sua residência. Esses dados podem ser
-                localizados no mapa, basta escolher o seu Estado e o seu Município.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
+                localizados no mapa, basta escolher o seu Estado e o seu Município.
+            </descricao>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
         </informacaoUtil>
     </informacoesUteis>
 

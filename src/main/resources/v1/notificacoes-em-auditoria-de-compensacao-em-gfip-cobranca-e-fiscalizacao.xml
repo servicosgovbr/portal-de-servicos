@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Permite ao contribuinte intimado justificar a origem dos créditos compensados em Gfip. O contribuinte acessará o e-Cac para responder, através do preenchimento das telas com os demonstrativos de compensações efetuadas, qual a origem dos créditos compensados em Gfip.]]></descricao>
+    <descricao>
+        <![CDATA[Permite ao contribuinte intimado justificar a origem dos créditos compensados em Gfip. O contribuinte acessará o e-Cac para responder, através do preenchimento das telas com os demonstrativos de compensações efetuadas, qual a origem dos créditos compensados em Gfip.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00077]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

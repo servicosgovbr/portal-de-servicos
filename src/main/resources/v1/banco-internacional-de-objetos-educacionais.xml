@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Este Repositório possui objetos educacionais de acesso público, em vários formatos e para todos os níveis de ensino. Acesse os objetos isoladamente ou em coleções. Nesse momento o Banco possui 19.676 objetos publicados, 143 sendo avaliados ou aguardando autorização dos autores para a publicação e um total de 4.508.809 visitas de 183 países.]]></descricao>
+    <descricao>
+        <![CDATA[Este Repositório possui objetos educacionais de acesso público, em vários formatos e para todos os níveis de ensino. Acesse os objetos isoladamente ou em coleções. Nesse momento o Banco possui 19.676 objetos publicados, 143 sendo avaliados ou aguardando autorização dos autores para a publicação e um total de 4.508.809 visitas de 183 países.]]></descricao>
 
     <url><![CDATA[http://objetoseducacionais2.mec.gov.br/]]></url>
 
-    
 
     <solicitantes/>
 
@@ -29,14 +29,12 @@
         <nome>Ministério da Educação (MEC)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-da-educacao-mec</id>
         <nome>Ministério da Educação (MEC)</nome>
     </orgaoPrestador>
 
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -86,8 +84,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

@@ -14,7 +14,6 @@
 
     <url><![CDATA[http://www010.dataprev.gov.br/enderecoaps/mps1.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +33,6 @@
         <nome>Ministério da Previdência Social (MPS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -43,7 +41,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -58,12 +55,11 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Ligue 135 para obter mais informações.</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[A função ATUALIZAÇÃO DE ENDEREÇO ESPECIAL permite ao usuário incluir um endereço alternativo (que passa a ser o preferencial) para o recebimento de suas cobranças, notificações e correspondências da SPU.]]></descricao>
+    <descricao>
+        <![CDATA[A função ATUALIZAÇÃO DE ENDEREÇO ESPECIAL permite ao usuário incluir um endereço alternativo (que passa a ser o preferencial) para o recebimento de suas cobranças, notificações e correspondências da SPU.]]></descricao>
 
     <url><![CDATA[http://atendimentovirtual.spu.planejamento.gov.br/EnderecoEspecial/EndEsp_Pedido.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria do Patrimônio da União (SPU/MP)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +69,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

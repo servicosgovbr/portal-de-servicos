@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar Darf (Documento de Arrecadação de Receitas Federais) para efetuar o pagamento, integral ou parcial, de débitos não previdenciários.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar Darf (Documento de Arrecadação de Receitas Federais) para efetuar o pagamento, integral ou parcial, de débitos não previdenciários.]]></descricao>
 
     <url><![CDATA[http://www.receita.fazenda.gov.br/Pagamentos/darf/sicalc.htm]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -77,8 +76,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

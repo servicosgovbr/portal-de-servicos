@@ -20,9 +20,6 @@ Seguro-Desemprego Trabalhador Resgatado: É um auxílio temporário concedido ao
 
 Seguro-Desemprego Bolsa Qualificação: A Bolsa de Qualificação Profissional é um benefício destinado a subvencionar os trabalhadores com contrato de trabalho suspenso, em conformidade com o disposto em convenção ou acordo coletivo de trabalho, devidamente matriculado em curso ou programa de qualificação profissional oferecido pelo empregador.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -42,7 +39,6 @@ Seguro-Desemprego Bolsa Qualificação: A Bolsa de Qualificação Profissional �
         <nome>Ministério do Trabalho e Emprego (MTE)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -82,8 +78,9 @@ Seguro-Desemprego Bolsa Qualificação: A Bolsa de Qualificação Profissional �
         <canalDePrestacao tipo="Presencial">
             <descricao>O cidadão poderá comparecer a um dos postos de atendimento do Ministério do Trabalho e Emprego,
                 como: Superintendência Regional do Trabalho e Emprego - SRTE; Gerência Regional; Agência Regional ou
-                Postos credenciados do SINE.</descricao>
-            
+                Postos credenciados do SINE.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
@@ -97,45 +94,51 @@ Seguro-Desemprego Bolsa Qualificação: A Bolsa de Qualificação Profissional �
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Modalidade de Seguro-Desemprego Empregado Doméstico</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mte.gov.br/seg_desemp/seguro-desemprego-trabalhador-domestico.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mte.gov.br/seg_desemp/seguro-desemprego-trabalhador-domestico.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Modalidade de Seguro-Desemprego Pescador Artesanal</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mte.gov.br/seg_desemp/seguro-desemprego-pescador-artesanal.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mte.gov.br/seg_desemp/seguro-desemprego-pescador-artesanal.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Modalidade Seguro-Desemprego Trabalhador Resgatado</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mte.gov.br/seg_desemp/modalidades-seguro-desemprego-empregado-resgatado.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mte.gov.br/seg_desemp/modalidades-seguro-desemprego-empregado-resgatado.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Modalidade de Seguro-Desemprego Formal</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mte.gov.br/seg_desemp/seguro-desemprego-formal-2.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mte.gov.br/seg_desemp/seguro-desemprego-formal-2.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Bolsa Qualificação</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mte.gov.br/seg_desemp/bolsa-qualificacao.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mte.gov.br/seg_desemp/bolsa-qualificacao.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Coordenação-Geral do Seguro-Desemprego: (61) 2031-6679
-Pescador Artesanal: (61) 2031-6043/6973
-Empregado Doméstico/Trabalhador Resgatado: (61) 2031-6135/6226
-Bolsa Qualificação: (61) 2031-6196/6509</descricao>
-            
+                Pescador Artesanal: (61) 2031-6043/6973
+                Empregado Doméstico/Trabalhador Resgatado: (61) 2031-6135/6226
+                Bolsa Qualificação: (61) 2031-6196/6509
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 

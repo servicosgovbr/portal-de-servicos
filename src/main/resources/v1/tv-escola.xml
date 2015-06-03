@@ -16,7 +16,6 @@
 
     <url><![CDATA[http://tvescola.mec.gov.br/]]></url>
 
-    
 
     <solicitantes/>
 
@@ -31,14 +30,12 @@
         <nome>Ministério da Educação (MEC)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-da-educacao-mec</id>
         <nome>Ministério da Educação (MEC)</nome>
     </orgaoPrestador>
 
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -60,8 +57,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

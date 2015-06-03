@@ -23,7 +23,6 @@ Informações importantes:
 • Estão dispensados da substituição da CIE, mesmo após o vencimento, os estrangeiros portadores de vistos permanentes, que tenham participado de recadastramento anterior e que tenham completado 60 anos até a data de vencimento da cédula ou sejam deficientes físicos.
 • O estrangeiro permanente que se ausentar mais de 2 anos ininterruptos do território nacional, perde a permanência.]]></descricao>
 
-    
 
     <urlAgendamento><![CDATA[https://servicos.dpf.gov.br/sincreWeb/pesquisaAgendamento.jsp]]></urlAgendamento>
 
@@ -45,7 +44,6 @@ Informações importantes:
         <nome>Departamento de Polícia Federal (DPF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -77,21 +75,22 @@ Informações importantes:
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Em qualquer uma das unidades da Polícia Federal no Brasil (vide &quot;Localização das unidades&quot;).</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços das unidades da Polícia Federal no Brasil.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para dúvidas: estrangeiros@dpf.gov.br</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
@@ -112,7 +111,8 @@ Informações importantes:
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Mais serviços aos estrangeiros (renovação/susbstituição da CIE, prorrogação do prazo de estada
-                etc)</descricao>
+                etc)
+            </descricao>
             <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/estrangeiro"/>
         </informacaoUtil>
     </informacoesUteis>
@@ -120,7 +120,8 @@ Informações importantes:
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Mais informações sobre entrada e permanência no Brasil</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/data/Pages/MJA1BC41DEITEMID1F416857A0F2452DA9BE4D921C682671PTBRIE.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/data/Pages/MJA1BC41DEITEMID1F416857A0F2452DA9BE4D921C682671PTBRIE.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 

@@ -4,17 +4,20 @@
     <versao>1.0</versao>
 
 
-    <id>extrato-do-processamento-da-dirpf-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao</id>
+    <id>extrato-do-processamento-da-dirpf-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao
+    </id>
 
-    <nome>Extrato do Processamento da DIRPF (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e Compensação)</nome>
+    <nome>Extrato do Processamento da DIRPF (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e
+        Compensação)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Verificar a situação do processamento da declaração do imposto de renda sobre a pessoa física, inclusive quanto à existência de eventuais pendências, imprimir Darf para pagamento de quotas, débitos em atraso, obter informações sobre a restituição do IRPF, etc.]]></descricao>
+    <descricao>
+        <![CDATA[Verificar a situação do processamento da declaração do imposto de renda sobre a pessoa física, inclusive quanto à existência de eventuais pendências, imprimir Darf para pagamento de quotas, débitos em atraso, obter informações sobre a restituição do IRPF, etc.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00011]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +37,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +65,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

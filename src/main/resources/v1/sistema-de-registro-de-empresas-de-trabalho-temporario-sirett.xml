@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Para solicitação de registro de empresa de trabalho temporário, conforme normatizado na Lei n.º 6.019/1974.]]></descricao>
+    <descricao>
+        <![CDATA[Para solicitação de registro de empresa de trabalho temporário, conforme normatizado na Lei n.º 6.019/1974.]]></descricao>
 
     <url><![CDATA[http://www3.mte.gov.br/sistemas/sirett/default.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Ministério do Trabalho e Emprego (MTE)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +69,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

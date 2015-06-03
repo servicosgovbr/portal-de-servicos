@@ -18,7 +18,6 @@ Para atualizar os dados cadastrais do CRC, preencha o Anexo VI da Portaria 1.274
 
     <url><![CDATA[http://www.dpf.gov.br/institucional/pf-pelo-brasil/]]></url>
 
-    
 
     <solicitantes/>
 
@@ -38,7 +37,6 @@ Para atualizar os dados cadastrais do CRC, preencha o Anexo VI da Portaria 1.274
         <nome>Departamento de Polícia Federal (DPF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -102,40 +100,44 @@ Para atualizar os dados cadastrais do CRC, preencha o Anexo VI da Portaria 1.274
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Programa Cadastro.</descricao>
-            <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/produtos-quimicos/programas/programa-cadastro"/>
+            <link rel="informacao-util#formularios"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/programas/programa-cadastro"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Mais informações: 194</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
-            <descricao>Alteração do Certificado de Registro Cadastral - CRC - Anexo VI da Portaria 1.274/2003</descricao>
-            <link rel="informacao-util#outros" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/alteracao-de-certificado-de-registro-cadastral"/>
+            <descricao>Alteração do Certificado de Registro Cadastral - CRC - Anexo VI da Portaria 1.274/2003
+            </descricao>
+            <link rel="informacao-util#outros"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/alteracao-de-certificado-de-registro-cadastral"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Mais informações sobre o Certificado de Registro Cadastral - CRC</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/certificado-de-registro-cadastral"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/certificado-de-registro-cadastral"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Acompanhamento de processos</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/consultas/acompanhamento-de-processos"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/consultas/acompanhamento-de-processos"/>
         </informacaoUtil>
     </informacoesUteis>
 

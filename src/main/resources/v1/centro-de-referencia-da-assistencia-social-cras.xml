@@ -14,9 +14,6 @@
 
 Em vários municípios, o CRAS é responsável por inserir as famílias no Cadastro Único para Programas Sociais do Governo Federal.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -36,7 +33,6 @@ Em vários municípios, o CRAS é responsável por inserir as famílias no Cadas
         <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -45,7 +41,6 @@ Em vários municípios, o CRAS é responsável por inserir as famílias no Cadas
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -63,15 +58,17 @@ Em vários municípios, o CRAS é responsável por inserir as famílias no Cadas
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Procure o CRAS mais próximo de sua residência</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Neste site você pode localizar o CRAS mais perto de sua residência. Esses dados podem ser
-                localizados no mapa, basta escolher o seu Estado e o seu Município.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
+                localizados no mapa, basta escolher o seu Estado e o seu Município.
+            </descricao>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
         </informacaoUtil>
     </informacoesUteis>
 

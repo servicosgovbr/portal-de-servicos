@@ -36,7 +36,6 @@ Conforme a previsão do art. 102 da Lei nº 6.815/80, é obrigatório que todo e
 
     <url><![CDATA[http://www.dpf.gov.br/institucional/pf-pelo-brasil]]></url>
 
-    
 
     <solicitantes/>
 
@@ -56,7 +55,6 @@ Conforme a previsão do art. 102 da Lei nº 6.815/80, é obrigatório que todo e
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -85,28 +83,30 @@ Conforme a previsão do art. 102 da Lei nº 6.815/80, é obrigatório que todo e
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
             <descricao>Para dúvidas e orientações, utilize a Central de Atendimento ao Estrangeiro, pelo e-mail
                 estrangeiros@mj.gov.br ou presencialmente, no endereço: Esplanada dos Ministérios, Bloco T, Anexo II -
-                Sala T3. CEP 74900-060. Brasília/DF.</descricao>
-            
+                Sala T3. CEP 74900-060. Brasília/DF.
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Requerimento, documentação necessária e mais informações</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/data/Pages/MJA1BC41DEITEMID7002E907843A4D67A7C089A7E34C83A5PTBRIE.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/data/Pages/MJA1BC41DEITEMID7002E907843A4D67A7C089A7E34C83A5PTBRIE.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Acompanhamento dos pedidos de transformação de vistos</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/data/Pages/MJ1C684B92ITEMID857642E424BA450FB23C694F67B340DBPTBRNN.htm"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/data/Pages/MJ1C684B92ITEMID857642E424BA450FB23C694F67B340DBPTBRNN.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 

@@ -6,15 +6,17 @@
 
     <id>emissao-de-certidao-previdenciaria-certidao-contribuicoes-previdenciarias-certidoes-e-situacao-fiscal</id>
 
-    <nome>Emissão de Certidão Previdenciária (Certidão Contribuições Previdenciárias / Certidões e Situação Fiscal)</nome>
+    <nome>Emissão de Certidão Previdenciária (Certidão Contribuições Previdenciárias / Certidões e Situação Fiscal)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar a emissão de certidão de contribuições previdenciárias. A certidão para fins de averbação de imóvel é emitida somente nas unidades de atendimento presencial. A Declaração de Regularidade de Situação do Contribuinte Individual – DRS-CI deve ser solicitada no INSS.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar a emissão de certidão de contribuições previdenciárias. A certidão para fins de averbação de imóvel é emitida somente nas unidades de atendimento presencial. A Declaração de Regularidade de Situação do Contribuinte Individual – DRS-CI deve ser solicitada no INSS.]]></descricao>
 
-    <url><![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=182&amp;idArea=3&amp;idAssunto=39]]></url>
+    <url>
+        <![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=182&amp;idArea=3&amp;idAssunto=39]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +36,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +71,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

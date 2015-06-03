@@ -16,7 +16,6 @@ O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor 
 
     <url><![CDATA[http://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Servicos/Grupo.aspx?grp=3]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor 
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -65,12 +63,12 @@ O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor 
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Orientações gerais sobre o serviço - Seção 19. Desenquadramento do SIMEI</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www8.receita.fazenda.gov.br/SimplesNacional/Perguntas/Perguntas.aspx"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www8.receita.fazenda.gov.br/SimplesNacional/Perguntas/Perguntas.aspx"/>
         </informacaoUtil>
     </informacoesUteis>
 

@@ -14,9 +14,6 @@
 
 ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve ser realizada após a autorização de transferência concedida pela Polícia Federal, tendo em vista a possibilidade de indeferimento do pedido por não atendimento aos requisitos legais ou regulamentares. A transferência antecipada da arma sem autorização pode caracterizar o crime do porte ilegal de arma.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -36,7 +33,6 @@ ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve
         <nome>Departamento de Polícia Federal (DPF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -45,7 +41,6 @@ ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -63,15 +58,17 @@ ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Dirigir-se a uma das unidade da Polícia Federal munido de requerimento preenchido e da
-                documentação necessária (vide &quot;Localização das unidades&quot;).</descricao>
-            
+                documentação necessária (vide &quot;Localização das unidades&quot;).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Documentação necessária para os cargos definidos no artigo 28 da Lei 10.826/03.</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.dpf.gov.br/servicos/armas/tranferencia-de-arma-de-fogo"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.dpf.gov.br/servicos/armas/tranferencia-de-arma-de-fogo"/>
         </informacaoUtil>
     </informacoesUteis>
 
@@ -85,21 +82,23 @@ ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
             <descricao>Forma de obtenção das certidões criminais negativas em cada localidade.</descricao>
-            <link rel="informacao-util#outros" href="http://www.dpf.gov.br/servicos/armas/anexos/certidoes-criminais-negativas"/>
+            <link rel="informacao-util#outros"
+                  href="http://www.dpf.gov.br/servicos/armas/anexos/certidoes-criminais-negativas"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços de todas as unidades da Polícia Federal no país.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Mais informações: 194</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
@@ -113,7 +112,8 @@ ATENÇÃO: A venda/doação e a consequente entrega da arma de fogo somente deve
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Comunicação de ocorrências envolvendo Arma de Fogo</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/armas/comunicacao-de-ocorrencias"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/armas/comunicacao-de-ocorrencias"/>
         </informacaoUtil>
     </informacoesUteis>
 

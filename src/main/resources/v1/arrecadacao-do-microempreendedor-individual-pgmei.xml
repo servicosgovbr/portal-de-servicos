@@ -16,7 +16,6 @@ O acesso ao PGMEI se dá exclusivamente via Portal do Simples Nacional na intern
 
     <url><![CDATA[http://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Default.aspx]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ O acesso ao PGMEI se dá exclusivamente via Portal do Simples Nacional na intern
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -45,7 +43,6 @@ O acesso ao PGMEI se dá exclusivamente via Portal do Simples Nacional na intern
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -60,12 +57,12 @@ O acesso ao PGMEI se dá exclusivamente via Portal do Simples Nacional na intern
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais Informações">
             <descricao>Manual do PGMEI</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/MANUAL_PGMEI_2013.pdf"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/MANUAL_PGMEI_2013.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 

@@ -12,9 +12,9 @@
 
     <descricao><![CDATA[Entregar a Declaração de Importação.]]></descricao>
 
-    <url><![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=42&amp;idArea=1&amp;idAssunto=22]]></url>
+    <url>
+        <![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=42&amp;idArea=1&amp;idAssunto=22]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,9 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
-
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -58,8 +55,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

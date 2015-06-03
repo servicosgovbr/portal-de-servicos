@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Parcelar débitos previdenciários. O limite do valor consolidado é de R$ 500.000,00.]]></descricao>
+    <descricao>
+        <![CDATA[Parcelar débitos previdenciários. O limite do valor consolidado é de R$ 500.000,00.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00078]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +69,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

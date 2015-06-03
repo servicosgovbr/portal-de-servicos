@@ -10,11 +10,12 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar a emissão de certidão da pessoa jurídica, exceto de contribuições previdenciárias.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar a emissão de certidão da pessoa jurídica, exceto de contribuições previdenciárias.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=1]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=1]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -66,28 +66,32 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Unidades de atendimento presencial (apenas na jurisdição do contribuinte)</descricao>
-            <link rel="canal-de-prestacao#presencial" href="https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento"/>
+            <link rel="canal-de-prestacao#presencial"
+                  href="https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Orientações gerais sobre o serviço</descricao>
-            <link rel="informacao-util#mais-informacoes" href="https://idg.receita.fazenda.gov.br/orientacao/tributaria/certidoes-e-situacao-fiscal/orientacoes-gerais"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="https://idg.receita.fazenda.gov.br/orientacao/tributaria/certidoes-e-situacao-fiscal/orientacoes-gerais"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Ver todos os serviços do assunto &quot;Certidões e Situação Fiscal&quot;</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/3"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/3"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Ver todos os serviços do assunto &quot;Dívida Ativa da União – DAU&quot;</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/7"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/7"/>
         </informacaoUtil>
     </informacoesUteis>
 

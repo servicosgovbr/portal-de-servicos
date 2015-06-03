@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[O Documento de Arrecadação de Receitas Federais – Darf, deve ser utilizado para recolhimento, junto aos bancos autorizados, da taxa de ocupação ou foro dos imóveis da União, além de outros débitos de caráter extraordinário.]]></descricao>
+    <descricao>
+        <![CDATA[O Documento de Arrecadação de Receitas Federais – Darf, deve ser utilizado para recolhimento, junto aos bancos autorizados, da taxa de ocupação ou foro dos imóveis da União, além de outros débitos de caráter extraordinário.]]></descricao>
 
     <url><![CDATA[http://atendimentovirtual.spu.planejamento.gov.br/Emissoes/DARF/DARFPedido.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria do Patrimônio da União (SPU/MP)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +69,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

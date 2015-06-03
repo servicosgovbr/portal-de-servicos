@@ -18,7 +18,6 @@ Acesse o menu &quot;Informações Úteis&quot; para achar o link de todos os req
 
     <url><![CDATA[http://patrimoniodetodos.gov.br/servicos]]></url>
 
-    
 
     <solicitantes/>
 
@@ -38,7 +37,6 @@ Acesse o menu &quot;Informações Úteis&quot; para achar o link de todos os req
         <nome>Secretaria do Patrimônio da União (SPU/MP)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -74,89 +72,100 @@ Acesse o menu &quot;Informações Úteis&quot; para achar o link de todos os req
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>1. Requerimento de Aforamento;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Aforamentook.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Aforamentook.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>2. Requerimento de Averbação de Transferência</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Averbacao.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Averbacao.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>3. Requerimentos Diversos;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Diversos_ok.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Diversos_ok.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>4. Requerimento de Inscrição de Ocupação;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Inscricao_ok.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Inscricao_ok.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>5. Requerimento de Isenção de Pagamento de Taxas de Ocupação ou Foro;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Isencao_ok.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Isencao_ok.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>6. Requerimento de Permissão de Uso;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Permissao_OK.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Permissao_OK.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>7. Requerimento de Regularização de Aterro com Compra do Domínio Útil;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Regularizacao_ok.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Regularizacao_ok.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>8. Requerimento para Remição do Aforamento;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Remicao_ok.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Remicao_ok.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>9. Requerimento de Revigoração do Aforamento;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Revigoracao_ok.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Revigoracao_ok.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>10. Requerimento de Revisão;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Revisao.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Revisao.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>11. Requerimento de Unificação ou Desmembramento ou Fracionamento;</descricao>
-            <link rel="informacao-util#formularios" href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Unificacao.pdf"/>
+            <link rel="informacao-util#formularios"
+                  href="http://patrimoniodetodos.gov.br/pasta-de-arquivos/Unificacao.pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Localize aqui a superintendência mais próxima de você</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.planejamento.gov.br/ministerio.asp?index=9&amp;ler=s880"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.planejamento.gov.br/ministerio.asp?index=9&amp;ler=s880"/>
         </informacaoUtil>
     </informacoesUteis>
 

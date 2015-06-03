@@ -41,7 +41,6 @@ Observação:
 
     <url><![CDATA[http://www.dpf.gov.br/servicos/passaporte/requerer-passaporte]]></url>
 
-    
 
     <solicitantes/>
 
@@ -61,7 +60,6 @@ Observação:
         <nome>Departamento de Polícia Federal (DPF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -97,7 +95,6 @@ Observação:
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
@@ -109,21 +106,23 @@ Observação:
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Dúvidas sobre Emissão de Passaportes: ligue 194</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Unidades do Departamento da Polícia Federal de cada região</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Documentação necessária para requerer Passaporte</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.dpf.gov.br/servicos/passaporte/documentacao-necessaria"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.dpf.gov.br/servicos/passaporte/documentacao-necessaria"/>
         </informacaoUtil>
     </informacoesUteis>
 

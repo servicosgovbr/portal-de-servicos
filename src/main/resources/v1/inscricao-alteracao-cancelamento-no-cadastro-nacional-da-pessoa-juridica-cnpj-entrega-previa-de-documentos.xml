@@ -6,15 +6,17 @@
 
     <id>inscricao-alteracao-cancelamento-no-cadastro-nacional-da-pessoa-juridica-cnpj-entrega-previa-de-documentos</id>
 
-    <nome>Inscrição/Alteração/Cancelamento no Cadastro Nacional da Pessoa Jurídica (CNPJ) - Entrega Prévia de Documentos</nome>
+    <nome>Inscrição/Alteração/Cancelamento no Cadastro Nacional da Pessoa Jurídica (CNPJ) - Entrega Prévia de
+        Documentos
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar inscrição e alteração no Cadastro Nacional da Pessoa Jurídica, acompanhado do Documento Básico de Entrada (DBE) e demais documentos necessários. Cancelar um pedido perante o CNPJ (este cancelamento é possível até o instante da recepção da solicitação pela Receita Federal ou convenente). Público alvo: pessoa jurídica.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar inscrição e alteração no Cadastro Nacional da Pessoa Jurídica, acompanhado do Documento Básico de Entrada (DBE) e demais documentos necessários. Cancelar um pedido perante o CNPJ (este cancelamento é possível até o instante da recepção da solicitação pela Receita Federal ou convenente). Público alvo: pessoa jurídica.]]></descricao>
 
     <url><![CDATA[https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +36,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -66,28 +67,32 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Web">
             <descricao>Acesso direto ou com senha específica</descricao>
-            <link rel="canal-de-prestacao#web" href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/ConsulSitCadastralCNPJ.htm"/>
+            <link rel="canal-de-prestacao#web"
+                  href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/ConsulSitCadastralCNPJ.htm"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Web">
             <descricao>Instituições conveniadas</descricao>
-            <link rel="canal-de-prestacao#web" href="http://www.receita.fazenda.gov.br/atendcontrib/InstituicaoConv.htm"/>
+            <link rel="canal-de-prestacao#web"
+                  href="http://www.receita.fazenda.gov.br/atendcontrib/InstituicaoConv.htm"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Orientações gerais sobre o serviço</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/ConsulSitCadastralCNPJ.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/ConsulSitCadastralCNPJ.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Ver todos os serviços do assunto &quot;Cadastros&quot;</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/2"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/2"/>
         </informacaoUtil>
     </informacoesUteis>
 

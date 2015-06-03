@@ -14,7 +14,6 @@
 
     <url><![CDATA[https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +33,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +68,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

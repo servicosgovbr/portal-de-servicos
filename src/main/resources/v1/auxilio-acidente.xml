@@ -10,9 +10,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Benefício pago ao trabalhador que sofre um acidente e fica com sequelas que reduzem sua capacidade de trabalho. É concedido para segurados que recebiam auxílio-doença. Têm direito ao auxílio-acidente o trabalhador empregado, o trabalhador avulso e o segurador especial. O empregado doméstico, o contribuinte individual e o facultativo não recebem o benefício.]]></descricao>
+    <descricao>
+        <![CDATA[Benefício pago ao trabalhador que sofre um acidente e fica com sequelas que reduzem sua capacidade de trabalho. É concedido para segurados que recebiam auxílio-doença. Têm direito ao auxílio-acidente o trabalhador empregado, o trabalhador avulso e o segurador especial. O empregado doméstico, o contribuinte individual e o facultativo não recebem o benefício.]]></descricao>
 
-    
 
     <urlAgendamento><![CDATA[http://www2.dataprev.gov.br/sabiweb/agendamento/inicio.view]]></urlAgendamento>
 
@@ -34,7 +34,6 @@
         <nome>Instituto Nacional do Seguro Social (INSS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -66,10 +65,9 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Serviço prestado nas Agências da Previdência Social.</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
-    
 
 </servico>

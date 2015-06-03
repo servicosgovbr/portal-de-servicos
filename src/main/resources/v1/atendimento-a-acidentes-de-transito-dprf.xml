@@ -16,9 +16,6 @@
 
         No telefone de emergência 191, a ligação é atendida por policiais rodoviários federais plantonistas (o serviço funciona 24 horas) que repassam os dados fornecidos pelo usuário ao Posto ou à equipe de Ronda da Polícia Rodoviária Federal mais próxima do local do acidente para o atendimento o mais breve possível.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -38,7 +35,6 @@
         <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,22 +66,24 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Telefone">
             <descricao>191 (chamada gratuita)</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Por meio da comunicação direta em qualquer Equipe de Ronda ou Posto do DPRF (vide &quot;Localização
-                das unidades&quot;)</descricao>
-            
+                das unidades&quot;)
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços das unidades da Polícia Rodoviária Federal.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
         </informacaoUtil>
     </informacoesUteis>
 

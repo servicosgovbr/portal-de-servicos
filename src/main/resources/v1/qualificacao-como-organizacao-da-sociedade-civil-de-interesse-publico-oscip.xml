@@ -10,11 +10,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Qualificar entidade sem finalidade lucrativa de natureza privada como OSCIP - Organização da Sociedade Civil de Interesse Público -, a fim de que possa celebrar termos de parceria com Órgãos Públicos. Para requerer a qualificação como Oscip, a entidade interessada deverá atender aos requisitos da Lei nº 9.790/99, regulamentada pelo Decreto nº 3.100/99.]]></descricao>
+    <descricao>
+        <![CDATA[Qualificar entidade sem finalidade lucrativa de natureza privada como OSCIP - Organização da Sociedade Civil de Interesse Público -, a fim de que possa celebrar termos de parceria com Órgãos Públicos. Para requerer a qualificação como Oscip, a entidade interessada deverá atender aos requisitos da Lei nº 9.790/99, regulamentada pelo Decreto nº 3.100/99.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -34,7 +32,6 @@
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -67,36 +64,40 @@
         <canalDePrestacao tipo="Outros">
             <descricao>A documentação, com o Requerimento de qualificação de Oscip, deve ser encaminhada ao endereço:
                 Secretaria Nacional de Justiça. Esplanada dos Ministérios, bloco T, Ed. Anexo II – 3º Andar – Sala 326.
-                CEP: 70.064-900. Brasília/DF.</descricao>
-            
+                CEP: 70.064-900. Brasília/DF.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Requerimento de qualificação como Oscip</descricao>
-            <link rel="informacao-util#formularios" href="http://portal.mj.gov.br/main.asp?ViewID=%7B0FA9C8DB-721B-4B8C-998E-0956ED31CC15%7D&amp;params=itemID=%7BB54EE78E-2719-4872-96BC-F45864F4789D%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#formularios"
+                  href="http://portal.mj.gov.br/main.asp?ViewID=%7B0FA9C8DB-721B-4B8C-998E-0956ED31CC15%7D&amp;params=itemID=%7BB54EE78E-2719-4872-96BC-F45864F4789D%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
             <descricao>Informações adicionais podem ser obtidas enviando e-mail para: sac.dejus@mj.gov.br</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Mais informações sobre Oscip</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/main.asp?ViewID=%7B3FAC4E0B-D58A-4F3E-A10D-0E5E8DD20F0B%7D&amp;params=itemID=%7BBDBD4F11-1B03-4D5F-B977-3587EABA3D8C%7D;&amp;UIPartUID=%7BE0EA6E2F-2D28-4749-9852-31405415DD85%7D"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/main.asp?ViewID=%7B3FAC4E0B-D58A-4F3E-A10D-0E5E8DD20F0B%7D&amp;params=itemID=%7BBDBD4F11-1B03-4D5F-B977-3587EABA3D8C%7D;&amp;UIPartUID=%7BE0EA6E2F-2D28-4749-9852-31405415DD85%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Conheça as entidades qualificadas como Oscip em sua cidade</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/main.asp?ViewID=%7B0FA9C8DB-721B-4B8C-998E-0956ED31CC15%7D&amp;params=itemID=%7BE0BCB314-2118-4407-BADA-442DFB11BDDC%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/main.asp?ViewID=%7B0FA9C8DB-721B-4B8C-998E-0956ED31CC15%7D&amp;params=itemID=%7BE0BCB314-2118-4407-BADA-442DFB11BDDC%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 

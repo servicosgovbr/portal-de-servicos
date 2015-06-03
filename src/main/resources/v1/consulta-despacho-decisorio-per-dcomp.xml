@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Consultar PER/DCOMP (Pedido de Restituição, Ressarcimento ou Reembolso e Declarações de Compensação) com despachos decisórios emitidos eletronicamente, para emissão da 2ª via, informações complementares dos despachos decisórios, detalhamento da compensação e impressão de Darf.]]></descricao>
+    <descricao>
+        <![CDATA[Consultar PER/DCOMP (Pedido de Restituição, Ressarcimento ou Reembolso e Declarações de Compensação) com despachos decisórios emitidos eletronicamente, para emissão da 2ª via, informações complementares dos despachos decisórios, detalhamento da compensação e impressão de Darf.]]></descricao>
 
     <url><![CDATA[https://www32.receita.fazenda.gov.br/Aplicacoes/SSL/ATRCE/SCC/index.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -50,7 +49,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -65,8 +63,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

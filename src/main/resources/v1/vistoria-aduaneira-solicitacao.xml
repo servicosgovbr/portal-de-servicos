@@ -16,7 +16,6 @@ Solicitar a vistoria aduaneira de mercadoria.]]></descricao>
 
     <url><![CDATA[https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ Solicitar a vistoria aduaneira de mercadoria.]]></descricao>
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -52,7 +50,6 @@ Solicitar a vistoria aduaneira de mercadoria.]]></descricao>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -67,8 +64,5 @@ Solicitar a vistoria aduaneira de mercadoria.]]></descricao>
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

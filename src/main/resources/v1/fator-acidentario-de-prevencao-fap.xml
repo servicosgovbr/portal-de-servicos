@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Serviços, documentos de apoio, editais de intimação e editais de publicação de resultado de julgamento do Fator Acidentário de Prevenção - FAP. Permite o Empregador, a cada empresa conhecer o detalhamento do processamento anual de seu Fator Acidentário de Prevenção – FAP, mediante acesso restrito (com senha) e demais informações sobre o referido fator; preencher e enviar contestações ao processamento anual, em 1ª e 2ª instância administrativa, conforme prazos definidos pela Previdência Social e Ministério da Fazenda; preencher e enviar pedidos de desbloqueio de bonificação do FAP e homologação destes pedidos pelos sindicatos de trabalhadores, conforme prazos definidos pela Previdência Social e Ministério da Fazenda. O serviço permite, ainda, a consulta a toda a legislação relativa ao tema FAP.]]></descricao>
+    <descricao>
+        <![CDATA[Serviços, documentos de apoio, editais de intimação e editais de publicação de resultado de julgamento do Fator Acidentário de Prevenção - FAP. Permite o Empregador, a cada empresa conhecer o detalhamento do processamento anual de seu Fator Acidentário de Prevenção – FAP, mediante acesso restrito (com senha) e demais informações sobre o referido fator; preencher e enviar contestações ao processamento anual, em 1ª e 2ª instância administrativa, conforme prazos definidos pela Previdência Social e Ministério da Fazenda; preencher e enviar pedidos de desbloqueio de bonificação do FAP e homologação destes pedidos pelos sindicatos de trabalhadores, conforme prazos definidos pela Previdência Social e Ministério da Fazenda. O serviço permite, ainda, a consulta a toda a legislação relativa ao tema FAP.]]></descricao>
 
     <url><![CDATA[http://www.previdencia.gov.br/conteudoDinamico.php?id=1236]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Ministério da Previdência Social (MPS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,12 +62,11 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Ligue 135 para obter maiores informações.</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

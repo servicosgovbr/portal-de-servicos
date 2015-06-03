@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Portal com orientações, funcionalidades e aplicativos para ajudar o empregador, em um primeiro momento essencialmente o empregador doméstico, a cumprir obrigações trabalhistas e tributárias decorrentes das relações de trabalho. O Portal foi desenvolvido em ação conjunta da Caixa Econômica Federal, do Instituto Nacional do Seguro Social – INSS, do Ministério da Previdência – MPS, do Ministério do Trabalho e Emprego – MTE e da Secretaria da Receita Federal do Brasil – RFB.]]></descricao>
+    <descricao>
+        <![CDATA[Portal com orientações, funcionalidades e aplicativos para ajudar o empregador, em um primeiro momento essencialmente o empregador doméstico, a cumprir obrigações trabalhistas e tributárias decorrentes das relações de trabalho. O Portal foi desenvolvido em ação conjunta da Caixa Econômica Federal, do Instituto Nacional do Seguro Social – INSS, do Ministério da Previdência – MPS, do Ministério do Trabalho e Emprego – MTE e da Secretaria da Receita Federal do Brasil – RFB.]]></descricao>
 
     <url><![CDATA[http://www.esocial.gov.br/Default.aspx]]></url>
 
-    
 
     <solicitantes/>
 
@@ -29,14 +29,12 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>secretaria-da-receita-federal-do-brasil-rfb</id>
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -58,8 +56,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

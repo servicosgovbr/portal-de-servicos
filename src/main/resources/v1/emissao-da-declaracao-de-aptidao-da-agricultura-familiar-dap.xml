@@ -30,7 +30,6 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
 
     <url><![CDATA[http://smap12.mda.gov.br/login/default.aspx]]></url>
 
-    
 
     <solicitantes/>
 
@@ -45,7 +44,6 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
         <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-do-desenvolvimento-agrario-mda</id>
@@ -86,12 +84,12 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Extrato da DAP individual</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://smap14.mda.gov.br/extratopf/PesquisaTitular.aspx"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://smap14.mda.gov.br/extratopf/PesquisaTitular.aspx"/>
         </informacaoUtil>
     </informacoesUteis>
 
@@ -112,21 +110,24 @@ Assim, as Unidades Agregadoras cadastram as Unidades Sub-agregadoras, que, por s
     <informacoesUteis>
         <informacaoUtil tipo="Cartilhas e Manuais">
             <descricao>Manual da DAP</descricao>
-            <link rel="informacao-util#cartilhas-e-manuais" href="http://www.mda.gov.br/sitemda/sites/sitemda/files/user_arquivos_64/MANUAL_DO_AGENTE_EMISSOR_CORREÇÕES_16.01.2014_(1).pdf"/>
+            <link rel="informacao-util#cartilhas-e-manuais"
+                  href="http://www.mda.gov.br/sitemda/sites/sitemda/files/user_arquivos_64/MANUAL_DO_AGENTE_EMISSOR_CORREÇÕES_16.01.2014_(1).pdf"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>PRONAF - Programa Nacional de Fortalecimento da Agricultura Familiar</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.mda.gov.br/sitemda/secretaria/saf-creditorural/sobre-o-programa"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.mda.gov.br/sitemda/secretaria/saf-creditorural/sobre-o-programa"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Formulário de solicitação de Cadastro de Entidades</descricao>
-            <link rel="informacao-util#formularios" href="http://www.mda.gov.br/sitemda/sites/sitemda/files/user_img_19/FORM_CED_20151303.xlsx"/>
+            <link rel="informacao-util#formularios"
+                  href="http://www.mda.gov.br/sitemda/sites/sitemda/files/user_img_19/FORM_CED_20151303.xlsx"/>
         </informacaoUtil>
     </informacoesUteis>
 

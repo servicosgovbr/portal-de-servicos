@@ -12,9 +12,9 @@
 
     <descricao><![CDATA[Cadastrar o representante legal da pessoa física ou jurídica no Siscomex.]]></descricao>
 
-    <url><![CDATA[http://idg.receita.fazenda.gov.br/orientacao/aduaneira/manuais/despacho-de-exportacao/topicos/conceitos-e-definicoes/cadastros/cadastro-de-representantes-legais-1/cadastro-de-representantes-legais]]></url>
+    <url>
+        <![CDATA[http://idg.receita.fazenda.gov.br/orientacao/aduaneira/manuais/despacho-de-exportacao/topicos/conceitos-e-definicoes/cadastros/cadastro-de-representantes-legais-1/cadastro-de-representantes-legais]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -84,6 +83,5 @@
         </canalDePrestacao>
     </canaisDePrestacao>
 
-    
 
 </servico>

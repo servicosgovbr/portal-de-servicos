@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Imprimir Darf para pagamentos das prestações, acompanhar a situação dos pedidos, emitir recibos de adesão e consultar deferimento do requerimento de adesão às modalidades de parcelamento e pagamento à vista da Lei nº 11.941, de 27 de maio de 2009.]]></descricao>
+    <descricao>
+        <![CDATA[Imprimir Darf para pagamentos das prestações, acompanhar a situação dos pedidos, emitir recibos de adesão e consultar deferimento do requerimento de adesão às modalidades de parcelamento e pagamento à vista da Lei nº 11.941, de 27 de maio de 2009.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00039]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,11 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
-
-    
-
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -53,8 +48,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

@@ -10,11 +10,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Serviço prestado de forma presencial pela auditoria fiscal do trabalho, para responder às dúvidas da população ou coleta de denúncias.]]></descricao>
+    <descricao>
+        <![CDATA[Serviço prestado de forma presencial pela auditoria fiscal do trabalho, para responder às dúvidas da população ou coleta de denúncias.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -34,7 +32,6 @@
         <nome>Ministério do Trabalho e Emprego (MTE)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -73,8 +70,9 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Serviço prestado apenas no âmbito das Superintendências e Gerências Regionais do Trabalho e
-                Emprego. O horário de prestação desse serviço varia de acordo com o funcionamento de cada regional.</descricao>
-            
+                Emprego. O horário de prestação desse serviço varia de acordo com o funcionamento de cada regional.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 

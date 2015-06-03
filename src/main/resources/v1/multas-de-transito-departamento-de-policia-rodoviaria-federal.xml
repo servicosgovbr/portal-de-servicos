@@ -16,7 +16,6 @@ Informações sobre o serviço de defesa de autuação, que consiste no recebime
 
     <url><![CDATA[http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ Informações sobre o serviço de defesa de autuação, que consiste no recebime
         <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -76,29 +74,33 @@ Informações sobre o serviço de defesa de autuação, que consiste no recebime
         <canalDePrestacao tipo="Outros">
             <descricao>Para Defesa de Autuação: Por via postal - por meio do encaminhamento de correspondência pelos
                 Correios, contendo a Defesa da Autuação, endereçada à Unidade Sede ou às Unidades Regionais da Polícia
-                Rodoviária Federal (vide &quot;Localização das Unidades&quot;).</descricao>
-            
+                Rodoviária Federal (vide &quot;Localização das Unidades&quot;).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços do Departamento de Polícia Rodoviária Federal</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Requerimento de Defesa de Autuação</descricao>
-            <link rel="informacao-util#formularios" href="https://www.prf.gov.br/portal/multas-e-infracoes/arquivos/formulario-de-recurso"/>
+            <link rel="informacao-util#formularios"
+                  href="https://www.prf.gov.br/portal/multas-e-infracoes/arquivos/formulario-de-recurso"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Outros serviços relacionados à multa de trânsito</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dprf.gov.br/PortalInternet/servicosAComunidade.faces"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dprf.gov.br/PortalInternet/servicosAComunidade.faces"/>
         </informacaoUtil>
     </informacoesUteis>
 

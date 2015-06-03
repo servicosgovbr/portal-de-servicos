@@ -4,10 +4,13 @@
     <versao>1.0</versao>
 
 
-    <id>cadastro-de-dispositivos-moveis-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos</id>
+    <id>
+        cadastro-de-dispositivos-moveis-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos
+    </id>
 
     <nome>Cadastro de Dispositivos Móveis (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações
-        e Demonstrativos)</nome>
+        e Demonstrativos)
+    </nome>
 
     <nomesPopulares/>
 
@@ -17,7 +20,6 @@ O cadastramento estará disponível para o contribuinte que tem &quot;imposto de
 
     <url><![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/servico.aspx?id=522]]></url>
 
-    
 
     <solicitantes/>
 
@@ -37,7 +39,6 @@ O cadastramento estará disponível para o contribuinte que tem &quot;imposto de
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -69,10 +70,10 @@ O cadastramento estará disponível para o contribuinte que tem &quot;imposto de
     <canaisDePrestacao>
         <canalDePrestacao tipo="Web">
             <descricao>Endereço eletrônico do serviço</descricao>
-            <link rel="canal-de-prestacao#web" href="https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00011"/>
+            <link rel="canal-de-prestacao#web"
+                  href="https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00011"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
-    
 
 </servico>

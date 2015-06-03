@@ -14,7 +14,6 @@
 
     <url><![CDATA[http://agencia.previdencia.gov.br/e-aps/servico/153]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +33,6 @@
         <nome>Instituto Nacional do Seguro Social (INSS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -43,7 +41,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -58,8 +55,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

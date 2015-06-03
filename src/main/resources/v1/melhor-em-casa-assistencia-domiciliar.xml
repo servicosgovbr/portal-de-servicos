@@ -16,7 +16,6 @@ O atendimento será feito por equipes multidisciplinares, formadas prioritariame
 
     <url><![CDATA[http://sage.saude.gov.br/?link=melhorCasa&amp;flt=true&amp;param=null]]></url>
 
-    
 
     <solicitantes/>
 
@@ -31,14 +30,12 @@ O atendimento será feito por equipes multidisciplinares, formadas prioritariame
         <nome>Ministério da Saúde (MS)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-da-saude-ms</id>
         <nome>Ministério da Saúde (MS)</nome>
     </orgaoPrestador>
 
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -74,8 +71,5 @@ O atendimento será feito por equipes multidisciplinares, formadas prioritariame
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

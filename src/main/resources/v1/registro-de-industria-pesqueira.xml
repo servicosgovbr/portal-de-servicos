@@ -10,11 +10,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Toda pessoa jurídica que exerce a atividade de captura, extração, coleta, conservação, processamento, beneficiamento ou industrialização de pescado precisa estar registrada junto ao Ministério da Pesca e Aquicultura para poder exercer a sua atividade.]]></descricao>
+    <descricao>
+        <![CDATA[Toda pessoa jurídica que exerce a atividade de captura, extração, coleta, conservação, processamento, beneficiamento ou industrialização de pescado precisa estar registrada junto ao Ministério da Pesca e Aquicultura para poder exercer a sua atividade.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -29,7 +27,6 @@
         <nome>Ministério da Pesca e Aquicultura (MPA)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-da-pesca-e-aquicultura-mpa</id>
@@ -73,15 +70,17 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>O empresário deve se dirigir às Superintendências Federais de Pesca e Aquicultura para preencher
-                formulário específico e entregar documentos necessários.</descricao>
-            
+                formulário específico e entregar documentos necessários.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços e contatos das Superintendências Federais de Pesca e Aquicultura</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.mpa.gov.br/index.php/ministeriompa/superintendencias-federais"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.mpa.gov.br/index.php/ministeriompa/superintendencias-federais"/>
         </informacaoUtil>
     </informacoesUteis>
 
@@ -89,8 +88,9 @@
         <informacaoUtil tipo="Mais informações">
             <descricao>As taxas recolhidas são de R$ 125,00 para microempresa e R$ 1000,00 para as demais empresas. Para
                 pessoas físicas não é cobrada a taxa. Empreendimentos ou pessoas registradas como indústria de pesca
-                estão dispensados do Registro de Armador de Pesca.</descricao>
-            
+                estão dispensados do Registro de Armador de Pesca.
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 

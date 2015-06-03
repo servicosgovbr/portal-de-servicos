@@ -4,18 +4,21 @@
     <versao>1.0</versao>
 
 
-    <id>parcelamento-simplificado-nao-previdenciario-dau-parcelamento-divida-ativa-da-uniao-dau-pagamentos-e-parcelamentos</id>
+    <id>
+        parcelamento-simplificado-nao-previdenciario-dau-parcelamento-divida-ativa-da-uniao-dau-pagamentos-e-parcelamentos
+    </id>
 
     <nome>Parcelamento Simplificado Não Previdenciário DAU (Parcelamento Dívida Ativa da União – DAU / Pagamentos e
-        Parcelamentos)</nome>
+        Parcelamentos)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Parcelar débitos inscritos na Dívida Ativa da União. Exceto previdenciários. O parcelamento simplificado é destinado para débitos inscritos em DAU, cujo valor corresponda a até R$ 500.000,00 (quinhentos mil reais) e que não foram parcelados anteriormente em até 60 (sessenta) parcelas mensais.]]></descricao>
+    <descricao>
+        <![CDATA[Parcelar débitos inscritos na Dívida Ativa da União. Exceto previdenciários. O parcelamento simplificado é destinado para débitos inscritos em DAU, cujo valor corresponda a até R$ 500.000,00 (quinhentos mil reais) e que não foram parcelados anteriormente em até 60 (sessenta) parcelas mensais.]]></descricao>
 
     <url><![CDATA[http://161.148.173.28/serpro/parcelamento/default.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -35,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -51,7 +53,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -66,8 +67,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

@@ -24,7 +24,6 @@
 
     <url><![CDATA[http://www.dpf.gov.br/institucional/pf-pelo-brasil]]></url>
 
-    
 
     <solicitantes/>
 
@@ -44,7 +43,6 @@
         <nome>Departamento de Polícia Federal (DPF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -84,92 +82,103 @@
         <canalDePrestacao tipo="Outros">
             <descricao>Para Autorização Prévia - Via Correios endereçado à: DIVISÃO DE CONTROLE DE PRODUTOS QUÍMICOS /
                 DEPARTAMENTO DE POLÍCIA FEDERAL / COCEX. Endereço: EQSW 103/104, QUADRA 01, BLOCO A. SETOR SUDOESTE /
-                CRUZEIRO. Brasília/DF. CEP: 70.670-350.</descricao>
-            
+                CRUZEIRO. Brasília/DF. CEP: 70.670-350.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Mais informações: 194</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Acesso ao Anexo VIII da Portaria 1.274/2003 (Autorização Especial)</descricao>
-            <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/autorizacao-especial"/>
+            <link rel="informacao-util#formularios"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/autorizacao-especial"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Acesso ao Anexo X da Portaria 1.274/2003</descricao>
-            <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/emissao-de-autorizacao-previa"/>
+            <link rel="informacao-util#formularios"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/emissao-de-autorizacao-previa"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Acompanhamento de Requerimento de Comércio Exterior</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/acompanhamento-de-processos"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/acompanhamento-de-processos"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para Autorização prévia: comex.dcpq@dpf.gov.br</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
             <descricao>Autorização Prévia - Substitutiva - APS</descricao>
-            <link rel="informacao-util#outros" href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/substitutiva-de-licenca-de-importacao"/>
+            <link rel="informacao-util#outros"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/substitutiva-de-licenca-de-importacao"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
             <descricao>Autorização Prévia - Alteração - APA</descricao>
-            <link rel="informacao-util#outros" href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/alteracao-de-registro-de-exportacao"/>
+            <link rel="informacao-util#outros"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/alteracao-de-registro-de-exportacao"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Outros">
             <descricao>Autorização Prévia - Prorrogação - APP</descricao>
-            <link rel="informacao-util#outros" href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/prorrogacao-de-registro-licenca"/>
+            <link rel="informacao-util#outros"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/comercio-exterior/prorrogacao-de-registro-licenca"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Certificado de Registro Cadastral - CRC</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/certificado-de-registro-cadastral"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/certificado-de-registro-cadastral"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Certificado de Licença de Funcionamento - CLF</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/certificado-de-licenca-de-funcionamento"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/certificado-de-licenca-de-funcionamento"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Acompanhamento de processos</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/consultas/acompanhamento-de-processos"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/consultas/acompanhamento-de-processos"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Atualização Cadastral de Produtos Químicos - Inclusão / Exclusão</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/atualizacao-de-produtos-quimicos"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/atualizacao-de-produtos-quimicos"/>
         </informacaoUtil>
     </informacoesUteis>
 

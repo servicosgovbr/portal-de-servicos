@@ -4,17 +4,21 @@
     <versao>1.0</versao>
 
 
-    <id>extrato-do-processamento-da-dirpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos</id>
+    <id>
+        extrato-do-processamento-da-dirpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos
+    </id>
 
-    <nome>Extrato do Processamento da DIRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações e Demonstrativos)</nome>
+    <nome>Extrato do Processamento da DIRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações
+        e Demonstrativos)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Verificar a situação do processamento da declaração do imposto de renda sobre a pessoa física, inclusive quanto à existência de eventuais pendências, imprimir Darf para pagamento de quotas, débitos em atraso, obter informações sobre a restituição do IRPF, etc.]]></descricao>
+    <descricao>
+        <![CDATA[Verificar a situação do processamento da declaração do imposto de renda sobre a pessoa física, inclusive quanto à existência de eventuais pendências, imprimir Darf para pagamento de quotas, débitos em atraso, obter informações sobre a restituição do IRPF, etc.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00011]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +66,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

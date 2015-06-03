@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Tem como objetivo liberar senha para os representantes legais dos entes federativos, da Unidade Gestora e de seus servidores para o envio de demonstrativos e comprovante de repasse, visualização de CRP de todos os municípios de um estado e consultas relativas a aplicações e investimentos.]]></descricao>
+    <descricao>
+        <![CDATA[Tem como objetivo liberar senha para os representantes legais dos entes federativos, da Unidade Gestora e de seus servidores para o envio de demonstrativos e comprovante de repasse, visualização de CRP de todos os municípios de um estado e consultas relativas a aplicações e investimentos.]]></descricao>
 
     <url><![CDATA[http://www1.previdencia.gov.br/sps/app/controleAcesso/cAcesso_login.asp?destino=CR]]></url>
 
-    
 
     <solicitantes/>
 
@@ -29,7 +29,6 @@
         <nome>Ministério da Previdência Social (MPS)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-da-previdencia-social-mps</id>
@@ -43,7 +42,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -58,12 +56,11 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Ligue 135 para obter mais informações.</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

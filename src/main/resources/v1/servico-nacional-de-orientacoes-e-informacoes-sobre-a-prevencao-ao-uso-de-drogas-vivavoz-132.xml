@@ -17,9 +17,6 @@
 - O cidadão pode participar de intervenção breve motivacional. Neste caso, fará parte de grupo de estudo dirigido;
 - Profissionais de qualquer área podem solicitar informações técnicas e receber material bibliográfico.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -39,7 +36,6 @@
         <nome>Secretaria Nacional de Políticas Sobre Drogas (Senad)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -71,29 +67,31 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Telefone">
             <descricao>132</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para orientações ou mais informações, envie um e-mail para: vivavoz@ufcspa.edu.br</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Horário de funcionamento: 24 h / 7 dias semana</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Cartilhas e Manuais">
             <descricao>Cartilhas informativas sobre drogas estão acessíveis no link: http://www.obid.senad.gov.br (ícone
-                &quot;Publicações&quot; -&gt; &quot;Cartilhas, livros e folhetos&quot;) ou pelo e-mail: prevencao@mj.gov.br</descricao>
-            
+                &quot;Publicações&quot; -&gt; &quot;Cartilhas, livros e folhetos&quot;) ou pelo e-mail:
+                prevencao@mj.gov.br
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 

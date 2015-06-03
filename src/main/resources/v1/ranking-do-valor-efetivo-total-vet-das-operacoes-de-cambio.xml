@@ -18,7 +18,6 @@ O Valor Efetivo Total - VET - engloba a taxa de câmbio, as tarifas e os tributo
 
     <url><![CDATA[https://www3.bcb.gov.br/rex/vet/index.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -38,7 +37,6 @@ O Valor Efetivo Total - VET - engloba a taxa de câmbio, as tarifas e os tributo
         <nome>Banco Central do Brasil (BCB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -67,8 +65,5 @@ O Valor Efetivo Total - VET - engloba a taxa de câmbio, as tarifas e os tributo
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

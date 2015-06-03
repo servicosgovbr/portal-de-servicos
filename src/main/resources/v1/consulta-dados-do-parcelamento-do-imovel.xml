@@ -16,7 +16,6 @@ Mostrará, também, dados dos débitos, dos créditos e dos imóveis envolvidos 
 
     <url><![CDATA[http://atendimentovirtual.spu.planejamento.gov.br/Consultas/Par_Pedido.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +35,6 @@ Mostrará, também, dados dos débitos, dos créditos e dos imóveis envolvidos 
         <nome>Secretaria do Patrimônio da União (SPU/MP)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -72,8 +70,5 @@ Mostrará, também, dados dos débitos, dos créditos e dos imóveis envolvidos 
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

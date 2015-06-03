@@ -6,15 +6,16 @@
 
     <id>emissao-de-segunda-via-de-certidao-pessoa-juridica-certidao-pessoa-juridica-certidoes-e-situacao-fiscal</id>
 
-    <nome>Emissão de Segunda Via de Certidão Pessoa Jurídica (Certidão Pessoa Jurídica / Certidões e Situação Fiscal)</nome>
+    <nome>Emissão de Segunda Via de Certidão Pessoa Jurídica (Certidão Pessoa Jurídica / Certidões e Situação Fiscal)
+    </nome>
 
     <nomesPopulares/>
 
     <descricao><![CDATA[Emitir segunda via de certidão de pessoa jurídica.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CNDConjuntaSegVia/NICertidaoSegVia.asp?Tipo=1]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CNDConjuntaSegVia/NICertidaoSegVia.asp?Tipo=1]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +35,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +63,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

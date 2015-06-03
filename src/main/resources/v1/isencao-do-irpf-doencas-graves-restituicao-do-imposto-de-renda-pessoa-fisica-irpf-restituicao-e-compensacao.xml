@@ -7,15 +7,17 @@
     <id>isencao-do-irpf-doencas-graves-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao</id>
 
     <nome>Isenção do IRPF - Doenças Graves (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e
-        Compensação)</nome>
+        Compensação)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Obter orientações sobre condições e procedimentos para solicitar isenção do Imposto de Renda da Pessoa Física nos casos de doenças graves e, se for o caso, procedimentos para solicitar restituição.]]></descricao>
+    <descricao>
+        <![CDATA[Obter orientações sobre condições e procedimentos para solicitar isenção do Imposto de Renda da Pessoa Física nos casos de doenças graves e, se for o caso, procedimentos para solicitar restituição.]]></descricao>
 
-    <url><![CDATA[http://idg.receita.fazenda.gov.br/orientacao/tributaria/isencoes/isencao-do-irpf-para-portadores-de-molestia-grave]]></url>
+    <url>
+        <![CDATA[http://idg.receita.fazenda.gov.br/orientacao/tributaria/isencoes/isencao-do-irpf-para-portadores-de-molestia-grave]]></url>
 
-    
 
     <solicitantes/>
 
@@ -35,7 +37,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -64,8 +65,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

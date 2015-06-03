@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Apresentar requerimento de restituição de pagamentos indevidos e outros documentos, visando a restituição de valores pagos para quitar débitos inscritos em Dívida Ativa da União e que, posteriormente, verificou-se tratar de pagamento indevido.]]></descricao>
+    <descricao>
+        <![CDATA[Apresentar requerimento de restituição de pagamentos indevidos e outros documentos, visando a restituição de valores pagos para quitar débitos inscritos em Dívida Ativa da União e que, posteriormente, verificou-se tratar de pagamento indevido.]]></descricao>
 
     <url><![CDATA[https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -50,7 +49,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -65,8 +63,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

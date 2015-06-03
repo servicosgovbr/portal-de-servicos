@@ -32,9 +32,6 @@ São três as formas possíveis de atuação da Defensoria:
 
 Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria Pública da União de seu estado (Vide “Localização das unidades”).]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -54,7 +51,6 @@ Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria 
         <nome>Defensoria Pública da União (DPU)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,7 +59,6 @@ Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria 
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -81,8 +76,9 @@ Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Em qualquer unidade da Defensoria Pública da União listadas no site do órgão (vide &quot;Localização
-                das unidades&quot;).</descricao>
-            
+                das unidades&quot;).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 

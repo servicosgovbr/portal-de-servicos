@@ -16,7 +16,6 @@ Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva
 
     <url><![CDATA[http://sisfiesportal.mec.gov.br/fies.html]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,9 +35,6 @@ Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva
         <nome>Ministério da Educação (MEC)</nome>
     </orgaoPrestador>
 
-    
-
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -67,7 +63,6 @@ Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
@@ -93,7 +88,7 @@ Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva
     <informacoesUteis>
         <informacaoUtil tipo="Dúvidas e informações sobre o FIES">
             <descricao>Central de Atendimento – 0800 616161</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

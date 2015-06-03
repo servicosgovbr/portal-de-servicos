@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Este serviço tem por objetivo agilizar e dar autonomia aos interessados em obter certidões de um imóvel de seu interesse.]]></descricao>
+    <descricao>
+        <![CDATA[Este serviço tem por objetivo agilizar e dar autonomia aos interessados em obter certidões de um imóvel de seu interesse.]]></descricao>
 
     <url><![CDATA[http://atendimentovirtual.spu.planejamento.gov.br/Emissoes/Certidao/Cert_EmissPedido.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria do Patrimônio da União (SPU/MP)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +69,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Autorização de trabalho a estrangeiros é o ato administrativo de competência do Ministério do Trabalho e Emprego que é exigido pelas autoridades consulares brasileiras, em conformidade com a legislação em vigor, para efeito de concessão de vistos permanentes e/ou temporário a estrangeiros que desejem permanecer no Brasil a trabalho. Delibera-se sobre os pedidos de prorrogação de estada e transformação de visto (de temporário para permanente) que digam respeito a trabalho.]]></descricao>
+    <descricao>
+        <![CDATA[Autorização de trabalho a estrangeiros é o ato administrativo de competência do Ministério do Trabalho e Emprego que é exigido pelas autoridades consulares brasileiras, em conformidade com a legislação em vigor, para efeito de concessão de vistos permanentes e/ou temporário a estrangeiros que desejem permanecer no Brasil a trabalho. Delibera-se sobre os pedidos de prorrogação de estada e transformação de visto (de temporário para permanente) que digam respeito a trabalho.]]></descricao>
 
     <url><![CDATA[http://migranteweb.mte.gov.br/migranteweb/login.seam]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Ministério do Trabalho e Emprego (MTE)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -73,8 +72,10 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Web">
             <descricao>Acompanhar o pedido visualizando a carta de exigência caso haja ausência de documentação, bem
-                como verificar se o processo foi deferido ou indeferido.</descricao>
-            <link rel="canal-de-prestacao#web" href="http://migranteweb.mte.gov.br/migranteweb/publico/consultarProcessoInternet/consultarProcesso.seam"/>
+                como verificar se o processo foi deferido ou indeferido.
+            </descricao>
+            <link rel="canal-de-prestacao#web"
+                  href="http://migranteweb.mte.gov.br/migranteweb/publico/consultarProcessoInternet/consultarProcesso.seam"/>
         </canalDePrestacao>
     </canaisDePrestacao>
 
@@ -88,15 +89,18 @@
     <informacoesUteis>
         <informacaoUtil tipo="Cartilhas e Manuais">
             <descricao>Guia de procedimentos para os pedidos de autorização de trabalho</descricao>
-            <link rel="informacao-util#cartilhas-e-manuais" href="http://portal.mte.gov.br/trab_estrang/guia-de-procedimentos.htm"/>
+            <link rel="informacao-util#cartilhas-e-manuais"
+                  href="http://portal.mte.gov.br/trab_estrang/guia-de-procedimentos.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Os documentos a serem apresentados dependerão da Resolução Normativa e variam de acordo com o
-                caso concreto</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mte.gov.br/trab_estrang/resolucoes-normativas.htm"/>
+                caso concreto
+            </descricao>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mte.gov.br/trab_estrang/resolucoes-normativas.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 

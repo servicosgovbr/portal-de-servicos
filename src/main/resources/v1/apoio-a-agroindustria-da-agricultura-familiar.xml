@@ -22,9 +22,6 @@ Linha de Ação III: Capacitação de Multiplicadores, Elaboração de Manuais T
 Linha de Ação IV: Ciência e Tecnologia
 Linha de Ação V: Promoção e Divulgação dos Produtos Agroindustriais, Identificação de Mercados e Articulação com o Mercado Institucional]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -39,7 +36,6 @@ Linha de Ação V: Promoção e Divulgação dos Produtos Agroindustriais, Ident
         <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-do-desenvolvimento-agrario-mda</id>
@@ -83,14 +79,15 @@ Linha de Ação V: Promoção e Divulgação dos Produtos Agroindustriais, Ident
     <canaisDePrestacao>
         <canalDePrestacao tipo="Telefone">
             <descricao>(61) 2020-0946 / 2020-0947</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Cartilhas e Manuais">
             <descricao>Capacitação e manuais</descricao>
-            <link rel="informacao-util#cartilhas-e-manuais" href="http://www.mda.gov.br/sitemda/secretaria/saf-agro/capacitação-e-manuais"/>
+            <link rel="informacao-util#cartilhas-e-manuais"
+                  href="http://www.mda.gov.br/sitemda/secretaria/saf-agro/capacitação-e-manuais"/>
         </informacaoUtil>
     </informacoesUteis>
 

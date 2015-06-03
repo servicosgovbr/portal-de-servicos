@@ -10,11 +10,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Consiste no fornecimento de informações sobre rodovias e estradas sob a circunscrição do Departamento de Polícia Rodoviária Federal, a exemplo de interdições e bloqueios, condições das vias, localizações de Postos da Polícia Rodoviária Federal, dentre outras.]]></descricao>
+    <descricao>
+        <![CDATA[Consiste no fornecimento de informações sobre rodovias e estradas sob a circunscrição do Departamento de Polícia Rodoviária Federal, a exemplo de interdições e bloqueios, condições das vias, localizações de Postos da Polícia Rodoviária Federal, dentre outras.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -34,7 +32,6 @@
         <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -43,7 +40,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -61,30 +57,33 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="Telefone">
             <descricao>191</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="E-mail">
             <descricao>Por meio dos endereços eletrônicos das “Centrais de Informações Operacionais” do Departamento de
-                Polícia Rodoviária Federal: ciop.df@dprf.gov.br e ciop.regional@dprf.gov.br</descricao>
-            
+                Polícia Rodoviária Federal: ciop.df@dprf.gov.br e ciop.regional@dprf.gov.br
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Em qualquer Unidade ou Equipe de Ronda do Departamento de Polícia Rodoviária Federal, cujos
-                endereços estão disponíveis no site do órgão (vide &quot;Localização das unidades&quot;).</descricao>
-            
+                endereços estão disponíveis no site do órgão (vide &quot;Localização das unidades&quot;).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços de todas as unidades do Departamente de Polícia Rodoviária Federal.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
         </informacaoUtil>
     </informacoesUteis>
 

@@ -18,7 +18,6 @@ Consulte, antes de sair de casa, para descobrir se seu voo está no horário. Ac
 
     <url><![CDATA[http://voos.infraero.gov.br/voos/index.aspx]]></url>
 
-    
 
     <solicitantes/>
 
@@ -38,7 +37,6 @@ Consulte, antes de sair de casa, para descobrir se seu voo está no horário. Ac
         <nome>Empresa Brasileira de Infraestrutura Aeroportuária (Infraero)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -69,30 +67,35 @@ Consulte, antes de sair de casa, para descobrir se seu voo está no horário. Ac
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Mobile">
-            <descricao>Instale o aplicativo Infraero Voos Online, disponível nas plataformas Android e Apple.</descricao>
-            
+            <descricao>Instale o aplicativo Infraero Voos Online, disponível nas plataformas Android e Apple.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Aplicativo mobile para a plataforma Android</descricao>
-            <link rel="informacao-util#mais-informacoes" href="https://play.google.com/store/apps/details?id=br.gov.infraero&amp;hl=pt_BR"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="https://play.google.com/store/apps/details?id=br.gov.infraero&amp;hl=pt_BR"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Aplicativo mobile para a plataforma Apple</descricao>
-            <link rel="informacao-util#mais-informacoes" href="https://itunes.apple.com/br/app/infraero-voos-online/id412206183?mt=8"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="https://itunes.apple.com/br/app/infraero-voos-online/id412206183?mt=8"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Consulte, também, a informação atualizada do número de atrasos e cancelamentos nos aeroportos
-                operados pela Infraero.</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.infraero.gov.br/index.php/br/situacao-dos-voos/por-aeroporto.html"/>
+                operados pela Infraero.
+            </descricao>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.infraero.gov.br/index.php/br/situacao-dos-voos/por-aeroporto.html"/>
         </informacaoUtil>
     </informacoesUteis>
 

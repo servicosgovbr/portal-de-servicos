@@ -4,17 +4,21 @@
     <versao>1.0</versao>
 
 
-    <id>notificacao-de-compensacao-de-oficio-da-malha-debito-intimacoes-relacionadas-a-cobranca-cobranca-e-fiscalizacao</id>
+    <id>
+        notificacao-de-compensacao-de-oficio-da-malha-debito-intimacoes-relacionadas-a-cobranca-cobranca-e-fiscalizacao
+    </id>
 
-    <nome>Notificação de Compensação de Ofício da Malha Débito (Intimações Relacionadas a Cobrança / Cobrança e Fiscalização)</nome>
+    <nome>Notificação de Compensação de Ofício da Malha Débito (Intimações Relacionadas a Cobrança / Cobrança e
+        Fiscalização)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[A Notificação de Compensação de Ofício da Malha Débito é um instrumento que visa informar ao contribuinte que a Declaração de Imposto de Renda da Pessoa Física Ajuste Anual/Final de Espólio/Saída Definitiva foi processada e resultou em imposto a restituir. No entanto, quando das verificações para a liberação da restituição, foi constatada a existência de débito(s), no âmbito da Secretaria da Receita Federal do Brasil e/ou inscritos em Dívida Ativa da União.]]></descricao>
+    <descricao>
+        <![CDATA[A Notificação de Compensação de Ofício da Malha Débito é um instrumento que visa informar ao contribuinte que a Declaração de Imposto de Renda da Pessoa Física Ajuste Anual/Final de Espólio/Saída Definitiva foi processada e resultou em imposto a restituir. No entanto, quando das verificações para a liberação da restituição, foi constatada a existência de débito(s), no âmbito da Secretaria da Receita Federal do Brasil e/ou inscritos em Dívida Ativa da União.]]></descricao>
 
     <url><![CDATA[https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +66,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

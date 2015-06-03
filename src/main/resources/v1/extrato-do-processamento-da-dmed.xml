@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Visualizar a relação das últimas declarações Dmed (Declaração de Serviços Médicos e de Saúde) entregues e realizar algumas consultas específicas.]]></descricao>
+    <descricao>
+        <![CDATA[Visualizar a relação das últimas declarações Dmed (Declaração de Serviços Médicos e de Saúde) entregues e realizar algumas consultas específicas.]]></descricao>
 
     <url><![CDATA[https://www.receita.fazenda.gov.br/Aplicacoes/ATCTA/Dmed/default.asp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

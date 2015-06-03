@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Todo o pescador profissional, ou seja, pessoa que trabalha na atividade da pesca e comercializa o produto, precisa estar licenciado pelo Ministério da Pesca e Aquicultura, de acordo com a lei 11959/2009. A partir deste licenciamento ou registro o trabalhador recebe a carteira de pescador profissional e fica livre para exercer a atividade.]]></descricao>
+    <descricao>
+        <![CDATA[Todo o pescador profissional, ou seja, pessoa que trabalha na atividade da pesca e comercializa o produto, precisa estar licenciado pelo Ministério da Pesca e Aquicultura, de acordo com a lei 11959/2009. A partir deste licenciamento ou registro o trabalhador recebe a carteira de pescador profissional e fica livre para exercer a atividade.]]></descricao>
 
     <url><![CDATA[http://www.mpa.gov.br/index.php/monitoramento-e-controlempa/registro-geral-da-pesca-rgp]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Ministério da Pesca e Aquicultura (MPA)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,12 +69,12 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços das Superintendências Federais de Pesca e Aquicultura</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.mpa.gov.br/index.php/ministeriompa/superintendencias-federais"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.mpa.gov.br/index.php/ministeriompa/superintendencias-federais"/>
         </informacaoUtil>
     </informacoesUteis>
 

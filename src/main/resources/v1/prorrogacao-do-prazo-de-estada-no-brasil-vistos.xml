@@ -33,7 +33,6 @@ O acompanhamento dos pedidos de prorrogação do prazo de estada pode ser realiz
 
     <url><![CDATA[http://www.dpf.gov.br/institucional/pf-pelo-brasil]]></url>
 
-    
 
     <solicitantes/>
 
@@ -53,7 +52,6 @@ O acompanhamento dos pedidos de prorrogação do prazo de estada pode ser realiz
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -86,8 +84,9 @@ O acompanhamento dos pedidos de prorrogação do prazo de estada pode ser realiz
         <canalDePrestacao tipo="Presencial">
             <descricao>Protocolo Geral do Ministério da Justiça: Esplanada dos Ministérios, Bloco T, Edifício Sede do
                 Ministério da Justiça, Térreo. Brasília/DF. CEP 74900-060. obs: somente para vistos temporários itens I,
-                IV, V, VI e VII.</descricao>
-            
+                IV, V, VI e VII.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
@@ -95,22 +94,25 @@ O acompanhamento dos pedidos de prorrogação do prazo de estada pode ser realiz
         <informacaoUtil tipo="Outros">
             <descricao>Para dúvidas e orientações, utilize a Central de Atendimento ao Estrangeiro, pelo e-mail
                 estrangeiros@mj.gov.br ou presencialmente, no endereço: Esplanada dos Ministérios, Bloco T, Anexo II -
-                Sala T3. CEP 74900-060. Brasília/DF.</descricao>
-            
+                Sala T3. CEP 74900-060. Brasília/DF.
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Acompanhamento dos pedidos de prorrogação do prazo de estada</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/data/Pages/MJ1C684B92ITEMID857642E424BA450FB23C694F67B340DBPTBRNN.htm"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/data/Pages/MJ1C684B92ITEMID857642E424BA450FB23C694F67B340DBPTBRNN.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Requerimento, documentação necessária e mais informações</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/main.asp?View=%7BA1BC41DE-C501-4FD4-8651-4891730652C3%7D&amp;Team=&amp;params=itemID=%7B15F2CE30-33B7-40E4-98E6-44F8F3047A9F%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/main.asp?View=%7BA1BC41DE-C501-4FD4-8651-4891730652C3%7D&amp;Team=&amp;params=itemID=%7B15F2CE30-33B7-40E4-98E6-44F8F3047A9F%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 

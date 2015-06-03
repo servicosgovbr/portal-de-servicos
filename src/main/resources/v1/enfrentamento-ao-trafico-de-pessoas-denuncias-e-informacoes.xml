@@ -10,11 +10,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Recebimento de denúncias sobre possíveis casos de tráfico de pessoas para encaminhamento aos órgãos competentes. Também é prestado ao cidadão serviço de orientação e fornecimento de material informativo sobre o enfrentamento ao tráfico de pessoas.]]></descricao>
+    <descricao>
+        <![CDATA[Recebimento de denúncias sobre possíveis casos de tráfico de pessoas para encaminhamento aos órgãos competentes. Também é prestado ao cidadão serviço de orientação e fornecimento de material informativo sobre o enfrentamento ao tráfico de pessoas.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -34,7 +32,6 @@
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -43,7 +40,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -61,29 +57,31 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="E-mail">
             <descricao>traficodepessoas@mj.gov.br</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Telefone">
             <descricao>(61) 2025-9584</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Esplanada dos Ministérios, Bloco T, Anexo II, 4º. Andar, sala 429; CEP: 70064-900 – Brasília –
-                DF</descricao>
-            
+                DF
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Rede de enfrentamento ao Tráfico de Pessoas.</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/main.asp?View=%7B395C2E18-4401-4CAA-9961-059B959D1EE3%7D&amp;BrowserType=NN&amp;LangID=pt-br&amp;params=itemID%3D%7B07802C53-100C-4AA3-A3CD-057F1F1964D4%7D%3B&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/main.asp?View=%7B395C2E18-4401-4CAA-9961-059B959D1EE3%7D&amp;BrowserType=NN&amp;LangID=pt-br&amp;params=itemID%3D%7B07802C53-100C-4AA3-A3CD-057F1F1964D4%7D%3B&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
         </informacaoUtil>
     </informacoesUteis>
 

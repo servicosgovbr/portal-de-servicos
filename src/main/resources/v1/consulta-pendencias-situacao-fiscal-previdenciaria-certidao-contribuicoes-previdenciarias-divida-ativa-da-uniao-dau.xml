@@ -4,18 +4,21 @@
     <versao>1.0</versao>
 
 
-    <id>consulta-pendencias-situacao-fiscal-previdenciaria-certidao-contribuicoes-previdenciarias-divida-ativa-da-uniao-dau</id>
+    <id>
+        consulta-pendencias-situacao-fiscal-previdenciaria-certidao-contribuicoes-previdenciarias-divida-ativa-da-uniao-dau
+    </id>
 
     <nome>Consulta Pendências – Situação Fiscal Previdenciária (Certidão Contribuições Previdenciárias / Dívida Ativa
-        da União – DAU)</nome>
+        da União – DAU)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Verificar a situação fiscal do contribuinte com relação às contribuições previdenciárias perante a Receita Federal e a Procuradoria-Geral da Fazenda Nacional.]]></descricao>
+    <descricao>
+        <![CDATA[Verificar a situação fiscal do contribuinte com relação às contribuições previdenciárias perante a Receita Federal e a Procuradoria-Geral da Fazenda Nacional.]]></descricao>
 
     <url><![CDATA[http://www010.dataprev.gov.br/CWS/CONTEXTO/CNDFISCO/CNDFISCO.HTML]]></url>
 
-    
 
     <solicitantes/>
 
@@ -35,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -44,7 +46,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -59,8 +60,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

@@ -14,9 +14,6 @@
 
 Por meio do Portal MTE Mais Emprego, o trabalhador pode verificar a existência de vagas e se candidatar; para concluir a ação, deverá ir ao posto SINE com os documentos necessários. Neste mesmo Portal, o empregador poderá disponibilizar vagas de emprego.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -36,7 +33,6 @@ Por meio do Portal MTE Mais Emprego, o trabalhador pode verificar a existência 
         <nome>Ministério do Trabalho e Emprego (MTE)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -74,8 +70,11 @@ Por meio do Portal MTE Mais Emprego, o trabalhador pode verificar a existência 
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
-            <descricao>A busca por vagas de emprego é oferecida de forma presencial nos postos de atendimento do SINE, instalados por meio de convênios celebrados entre o Ministério do Trabalho e Estados, DF, municípios com mais de 200 mil habitantes.</descricao>
-            
+            <descricao>A busca por vagas de emprego é oferecida de forma presencial nos postos de atendimento do SINE,
+                instalados por meio de convênios celebrados entre o Ministério do Trabalho e Estados, DF, municípios com
+                mais de 200 mil habitantes.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 

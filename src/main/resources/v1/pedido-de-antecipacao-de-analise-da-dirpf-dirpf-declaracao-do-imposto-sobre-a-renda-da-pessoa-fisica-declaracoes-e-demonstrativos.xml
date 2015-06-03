@@ -4,17 +4,21 @@
     <versao>1.0</versao>
 
 
-    <id>pedido-de-antecipacao-de-analise-da-dirpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos</id>
+    <id>
+        pedido-de-antecipacao-de-analise-da-dirpf-dirpf-declaracao-do-imposto-sobre-a-renda-da-pessoa-fisica-declaracoes-e-demonstrativos
+    </id>
 
-    <nome>Pedido de Antecipação de Análise da DIRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física / Declarações e Demonstrativos)</nome>
+    <nome>Pedido de Antecipação de Análise da DIRPF (DIRPF - Declaração do Imposto sobre a Renda da Pessoa Física /
+        Declarações e Demonstrativos)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar a antecipação da análise da documentação que comprova as informações para fins de liberação de declaração retida em malha fiscal.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar a antecipação da análise da documentação que comprova as informações para fins de liberação de declaração retida em malha fiscal.]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00011]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +66,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

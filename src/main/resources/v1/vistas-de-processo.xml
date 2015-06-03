@@ -14,9 +14,9 @@
 
 Solicitar vistas de processo administrativo.]]></descricao>
 
-    <url><![CDATA[http://www.pgfn.fazenda.gov.br/divida-ativa-da-uniao/todos-os-servicos/informacoes-e-servicos-para-pessoa-fisica/vistas-e-copias-de-processo-administrativo/vistas-e-copias-de-processo-administrativo]]></url>
+    <url>
+        <![CDATA[http://www.pgfn.fazenda.gov.br/divida-ativa-da-uniao/todos-os-servicos/informacoes-e-servicos-para-pessoa-fisica/vistas-e-copias-de-processo-administrativo/vistas-e-copias-de-processo-administrativo]]></url>
 
-    
 
     <solicitantes/>
 
@@ -36,7 +36,6 @@ Solicitar vistas de processo administrativo.]]></descricao>
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -79,8 +78,5 @@ Solicitar vistas de processo administrativo.]]></descricao>
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

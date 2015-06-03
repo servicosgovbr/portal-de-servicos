@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[O Portal Domínio Público promove o compartilhamento de conhecimentos ao colocar à disposição do público, pela internet, uma biblioteca virtual que serve de referência a professores, estudantes, pesquisadores e leitores em geral.]]></descricao>
+    <descricao>
+        <![CDATA[O Portal Domínio Público promove o compartilhamento de conhecimentos ao colocar à disposição do público, pela internet, uma biblioteca virtual que serve de referência a professores, estudantes, pesquisadores e leitores em geral.]]></descricao>
 
     <url><![CDATA[http://www.dominiopublico.gov.br/]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,9 +34,6 @@
         <nome>Ministério da Educação (MEC)</nome>
     </orgaoPrestador>
 
-    
-
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -65,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

@@ -4,17 +4,22 @@
     <versao>1.0</versao>
 
 
-    <id>pedido-de-restituicao-irpf-nao-resgatada-na-rede-bancaria-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao</id>
+    <id>
+        pedido-de-restituicao-irpf-nao-resgatada-na-rede-bancaria-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao
+    </id>
 
-    <nome>Pedido de Restituição IRPF não Resgatada na Rede Bancária (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e Compensação)</nome>
+    <nome>Pedido de Restituição IRPF não Resgatada na Rede Bancária (Restituição do Imposto de Renda Pessoa Física -
+        IRPF / Restituição e Compensação)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Solicitar pagamento de restituição de imposto de renda não resgatado na rede bancária no prazo de 1 (um) ano.]]></descricao>
+    <descricao>
+        <![CDATA[Solicitar pagamento de restituição de imposto de renda não resgatado na rede bancária no prazo de 1 (um) ano.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=441&amp;idArea=12&amp;idAssunto=118]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=441&amp;idArea=12&amp;idAssunto=118]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +39,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +67,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

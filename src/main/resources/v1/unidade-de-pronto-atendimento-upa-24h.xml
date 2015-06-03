@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[As Unidades de Pronto Atendimento (UPAs) ficam abertas 24 horas e servem como um intermediário entre os postos de saúde e os hospitais. Estão equipadas para socorrer pessoas com problemas de pressão arterial, febre alta, fraturas, cortes e infartos, evitando que estes pacientes sejam sempre encaminhados aos prontos-socorros dos hospitais. As UPAS contam com equipamentos de raio-X, eletrocardiografia, laboratório de exames e leitos de observação – uma estrutura que as permite resolver, em média 97%, dos casos.]]></descricao>
+    <descricao>
+        <![CDATA[As Unidades de Pronto Atendimento (UPAs) ficam abertas 24 horas e servem como um intermediário entre os postos de saúde e os hospitais. Estão equipadas para socorrer pessoas com problemas de pressão arterial, febre alta, fraturas, cortes e infartos, evitando que estes pacientes sejam sempre encaminhados aos prontos-socorros dos hospitais. As UPAS contam com equipamentos de raio-X, eletrocardiografia, laboratório de exames e leitos de observação – uma estrutura que as permite resolver, em média 97%, dos casos.]]></descricao>
 
     <url><![CDATA[http://sage.saude.gov.br/?link=upaFuncionamento&amp;flt=true&amp;param=null]]></url>
 
-    
 
     <solicitantes/>
 
@@ -29,7 +29,6 @@
         <nome>Ministério da Saúde (MS)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-da-saude-ms</id>
@@ -105,8 +104,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

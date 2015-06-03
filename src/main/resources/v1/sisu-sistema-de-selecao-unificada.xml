@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Criado em 2010, o Sistema de Seleção Unificada (Sisu) possibilita a oferta de vagas em instituições públicas de educação superior a candidatos participantes do Exame Nacional do Ensino Médio (Enem).]]></descricao>
+    <descricao>
+        <![CDATA[Criado em 2010, o Sistema de Seleção Unificada (Sisu) possibilita a oferta de vagas em instituições públicas de educação superior a candidatos participantes do Exame Nacional do Ensino Médio (Enem).]]></descricao>
 
     <url><![CDATA[http://sisu.mec.gov.br/]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,9 +34,6 @@
         <nome>Ministério da Educação (MEC)</nome>
     </orgaoPrestador>
 
-    
-
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -65,8 +62,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

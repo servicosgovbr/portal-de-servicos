@@ -14,9 +14,6 @@
 
 Para sua família ser beneficiada por programas como o Bolsa Família, a Tarifa Social de Energia Elétrica e o Telefone Popular, entre outros, ela deve estar inscrita no Cadastro Único. Mas é importante saber que estar no Cadastro Único não significa a entrada automática nestes programas, pois cada um deles tem suas regras.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -36,7 +33,6 @@ Para sua família ser beneficiada por programas como o Bolsa Família, a Tarifa 
         <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -45,7 +41,6 @@ Para sua família ser beneficiada por programas como o Bolsa Família, a Tarifa 
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -62,22 +57,29 @@ Para sua família ser beneficiada por programas como o Bolsa Família, a Tarifa 
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
-            <descricao>Para se inscrever no Cadastro Único você deve procurar o Centro de Referência da Assistência Social - CRAS ou a Prefeitura do seu município</descricao>
-            
+            <descricao>Para se inscrever no Cadastro Único você deve procurar o Centro de Referência da Assistência
+                Social - CRAS ou a Prefeitura do seu município
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Cartilhas e Manuais">
-            <descricao>Na Cartilha do Cadastro Único você encontra outras informações para a inscrição, como se calcula a renda mensal familiar e alguns dos programas sociais do Governo Federal que utilizam o cadastro para selecionar seus beneficiários (artigo em PDF, 591 Kb)</descricao>
-            <link rel="informacao-util#cartilhas-e-manuais" href="http://www.mds.gov.br/biblioteca/secretaria-nacional-de-renda-de-cidadania-senarc/cartilhas/cartilha-do-cadastro-unico/cadastro-unico"/>
+            <descricao>Na Cartilha do Cadastro Único você encontra outras informações para a inscrição, como se calcula
+                a renda mensal familiar e alguns dos programas sociais do Governo Federal que utilizam o cadastro para
+                selecionar seus beneficiários (artigo em PDF, 591 Kb)
+            </descricao>
+            <link rel="informacao-util#cartilhas-e-manuais"
+                  href="http://www.mds.gov.br/biblioteca/secretaria-nacional-de-renda-de-cidadania-senarc/cartilhas/cartilha-do-cadastro-unico/cadastro-unico"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Localize o CRAS mais perto de sua residência</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
         </informacaoUtil>
     </informacoesUteis>
 

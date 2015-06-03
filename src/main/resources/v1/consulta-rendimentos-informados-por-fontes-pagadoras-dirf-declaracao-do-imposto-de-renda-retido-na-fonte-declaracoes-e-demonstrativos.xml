@@ -4,17 +4,21 @@
     <versao>1.0</versao>
 
 
-    <id>consulta-rendimentos-informados-por-fontes-pagadoras-dirf-declaracao-do-imposto-de-renda-retido-na-fonte-declaracoes-e-demonstrativos</id>
+    <id>
+        consulta-rendimentos-informados-por-fontes-pagadoras-dirf-declaracao-do-imposto-de-renda-retido-na-fonte-declaracoes-e-demonstrativos
+    </id>
 
-    <nome>Consulta Rendimentos Informados por Fontes Pagadoras (DIRF – Declaração do Imposto de Renda Retido na Fonte / Declarações e Demonstrativos)</nome>
+    <nome>Consulta Rendimentos Informados por Fontes Pagadoras (DIRF – Declaração do Imposto de Renda Retido na Fonte /
+        Declarações e Demonstrativos)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Consultar informações de rendimentos apresentadas por fontes pagadoras de pessoas físicas e jurídicas na Dirf (Declaração de Imposto de Renda Retido na Fonte).]]></descricao>
+    <descricao>
+        <![CDATA[Consultar informações de rendimentos apresentadas por fontes pagadoras de pessoas físicas e jurídicas na Dirf (Declaração de Imposto de Renda Retido na Fonte).]]></descricao>
 
     <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00021]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +73,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

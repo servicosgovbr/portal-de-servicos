@@ -20,9 +20,6 @@ A Comissão da Anistia tem vínculo direto ao Gabinete do Ministro da Justiça e
 
 A anistia está prevista no art. 8º do Ato das Disposições Transitórias da Constituição Federal de 1988, o qual é regulamentado pela Lei nº 10.559, de 13 de novembro de 2002. A reparação econômica, segundo a referida Lei, poderá ser concedida em prestação única correspondente a 30 salários mínimos por ano de perseguição política até o limite de 100 mil reais, ou prestação mensal que corresponderá ao posto, cargo, graduação ou emprego que o anistiando ocuparia se na ativa estivesse, observado o limite do teto da remuneração do servidor público federal.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -42,7 +39,6 @@ A anistia está prevista no art. 8º do Ato das Disposições Transitórias da C
         <nome>Comissão de Anistia (CMA)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -51,7 +47,6 @@ A anistia está prevista no art. 8º do Ato das Disposições Transitórias da C
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -69,51 +64,56 @@ A anistia está prevista no art. 8º do Ato das Disposições Transitórias da C
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Ministério da Justiça. Esplanada dos Ministérios, Bloco T, anexo II, térreo T3, Brasília, DF.
-                CEP: 70064-900.</descricao>
-            
+                CEP: 70064-900.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Outros">
             <descricao>O requerimento de Anistia Política também pode ser enviado pelos Correios ao endereço: Ministério
-                da Justiça. Esplanada dos Ministérios, Bloco T, anexo II, térreo T3, Brasília, DF. CEP: 70064-900.</descricao>
-            
+                da Justiça. Esplanada dos Ministérios, Bloco T, anexo II, térreo T3, Brasília, DF. CEP: 70064-900.
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Informações sobre Processos de Anistia Política.</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/data/Pages/MJDC5E093DPTBRNN.htm"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://portal.mj.gov.br/data/Pages/MJDC5E093DPTBRNN.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>anistia@mj.gov.br</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>(61) 2025 3213/ 3150 / 3675</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Normas procedimentais da Comissão para a formulação do requerimento de anistia</descricao>
-            <link rel="informacao-util#formularios" href="http://portal.mj.gov.br/data/Pages/MJABFF735EITEMIDF6425A864D1448ACB9FC7B3A1CDC1022PTBRNN.htm"/>
+            <link rel="informacao-util#formularios"
+                  href="http://portal.mj.gov.br/data/Pages/MJABFF735EITEMIDF6425A864D1448ACB9FC7B3A1CDC1022PTBRNN.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Mais informações - Anistia Política</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/data/Pages/MJ20BF8FDBITEMIDDB66A11972EE4432A7654440E32B2B6CPTBRNN.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://portal.mj.gov.br/data/Pages/MJ20BF8FDBITEMIDDB66A11972EE4432A7654440E32B2B6CPTBRNN.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 

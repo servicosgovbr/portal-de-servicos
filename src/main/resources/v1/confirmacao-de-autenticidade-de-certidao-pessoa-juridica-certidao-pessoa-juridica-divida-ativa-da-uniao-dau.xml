@@ -6,15 +6,17 @@
 
     <id>confirmacao-de-autenticidade-de-certidao-pessoa-juridica-certidao-pessoa-juridica-divida-ativa-da-uniao-dau</id>
 
-    <nome>Confirmação de Autenticidade de Certidão Pessoa Jurídica (Certidão Pessoa Jurídica / Dívida Ativa da União – DAU)</nome>
+    <nome>Confirmação de Autenticidade de Certidão Pessoa Jurídica (Certidão Pessoa Jurídica / Dívida Ativa da União –
+        DAU)
+    </nome>
 
     <nomesPopulares/>
 
     <descricao><![CDATA[Consultar a autenticidade de certidão de pessoa jurídica emitida.]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/certaut/OptaAutenticidade.asp?origem=P]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/certaut/OptaAutenticidade.asp?origem=P]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +36,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,19 +64,20 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Orientações gerais sobre o serviço</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.receita.fazenda.gov.br/GuiaContribuinte/CN_%20PJ.htm"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.receita.fazenda.gov.br/GuiaContribuinte/CN_%20PJ.htm"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Serviços relacionados">
             <descricao>Ver todos os serviços do assunto &quot;Certidões e Situação Fiscal&quot;</descricao>
-            <link rel="informacao-util#servicos-relacionados" href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/3"/>
+            <link rel="informacao-util#servicos-relacionados"
+                  href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/3"/>
         </informacaoUtil>
     </informacoesUteis>
 

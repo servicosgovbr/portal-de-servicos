@@ -16,9 +16,6 @@ Apenas em três situações é cabível: pagamento em duplicidade, cancelamento 
 
 Quem pode solicitar: o proprietário do veículo à época do pagamento da multa ou o seu procurador legalmente constituído]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -38,7 +35,6 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
         <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +66,9 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Na Unidade Sede, nas Unidades Regionais e nas Delegacias da Polícia Rodoviária Federal, cujos
-                endereços estão disponíveis no portal eletrônico do órgão (vide &quot;Localização das unidades&quot;).</descricao>
-            
+                endereços estão disponíveis no portal eletrônico do órgão (vide &quot;Localização das unidades&quot;).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
@@ -79,22 +76,25 @@ Quem pode solicitar: o proprietário do veículo à época do pagamento da multa
         <canalDePrestacao tipo="Outros">
             <descricao>Por via postal - por meio do encaminhamento de correspondência, contendo o requerimento de
                 restituição, endereçada à Unidade Sede ou às Unidades Regionais do Departamento de Polícia Rodoviária
-                Federal (vide &quot;Localização das unidades&quot;).</descricao>
-            
+                Federal (vide &quot;Localização das unidades&quot;).
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
             <descricao>Endereços das Unidades e Delegacias da Polícia Rodoviária Federal.</descricao>
-            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
+            <link rel="informacao-util#localizacao-das-unidades"
+                  href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
         </informacaoUtil>
     </informacoesUteis>
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
             <descricao>Requerimento de Restituição de Valores.</descricao>
-            <link rel="informacao-util#formularios" href="https://www.prf.gov.br/portal/multas-e-infracoes/arquivos/formulario-de-restituicao-de-valores"/>
+            <link rel="informacao-util#formularios"
+                  href="https://www.prf.gov.br/portal/multas-e-infracoes/arquivos/formulario-de-restituicao-de-valores"/>
         </informacaoUtil>
     </informacoesUteis>
 

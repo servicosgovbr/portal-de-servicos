@@ -10,11 +10,9 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Análise de processos de representação administrativa instauradas contra entidades qualificadas como Organização da Sociedade Civil de Interesse Público – OSCIP - e tituladas como Utilidade Pública Federal – UPF -, provenientes de denúncias que têm por objeto o descumprimento dos requisitos de manutenção da qualificação como OSCIP e titulação como UPF.]]></descricao>
+    <descricao>
+        <![CDATA[Análise de processos de representação administrativa instauradas contra entidades qualificadas como Organização da Sociedade Civil de Interesse Público – OSCIP - e tituladas como Utilidade Pública Federal – UPF -, provenientes de denúncias que têm por objeto o descumprimento dos requisitos de manutenção da qualificação como OSCIP e titulação como UPF.]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -34,7 +32,6 @@
         <nome>Secretaria Nacional de Justiça (SNJ)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -50,7 +47,6 @@
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -68,7 +64,7 @@
     <canaisDePrestacao>
         <canalDePrestacao tipo="E-mail">
             <descricao>cnes.dejus@mj.gov.br</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
@@ -76,8 +72,9 @@
         <canalDePrestacao tipo="Presencial">
             <descricao>As entidades podem receber atendimento por meio da Central de Atendimento:
                 Ministério da Justiça - Esplanada dos Ministérios, Bloco T, anexo II, sala 211 – Brasília/DF – CEP:
-                70.064-900</descricao>
-            
+                70.064-900
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
@@ -85,11 +82,11 @@
         <canalDePrestacao tipo="Outros">
             <descricao>Os documentos que porventura forem encaminhados pela entidade podem ser protocolados junto ao
                 Protocolo Central, ou via postal com o seguinte endereçamento:
-                Esplanada dos Ministérios, Bloco T, anexo II, sala 211 – Brasília/DF – CEP: 70.064-900</descricao>
-            
+                Esplanada dos Ministérios, Bloco T, anexo II, sala 211 – Brasília/DF – CEP: 70.064-900
+            </descricao>
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
-    
 
 </servico>

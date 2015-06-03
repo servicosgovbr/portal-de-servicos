@@ -12,9 +12,9 @@
 
     <descricao><![CDATA[Apresentar documentos a serem anexados em processos.]]></descricao>
 
-    <url><![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=111&amp;idArea=1&amp;idAssunto=32]]></url>
+    <url>
+        <![CDATA[http://hom.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=111&amp;idArea=1&amp;idAssunto=32]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,8 +69,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

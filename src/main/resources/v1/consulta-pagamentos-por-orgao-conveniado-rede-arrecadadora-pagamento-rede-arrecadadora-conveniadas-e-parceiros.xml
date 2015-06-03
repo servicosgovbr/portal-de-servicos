@@ -4,17 +4,20 @@
     <versao>1.0</versao>
 
 
-    <id>consulta-pagamentos-por-orgao-conveniado-rede-arrecadadora-pagamento-rede-arrecadadora-conveniadas-e-parceiros</id>
+    <id>consulta-pagamentos-por-orgao-conveniado-rede-arrecadadora-pagamento-rede-arrecadadora-conveniadas-e-parceiros
+    </id>
 
-    <nome>Consulta Pagamentos por Órgão Conveniado – Rede Arrecadadora (Pagamento - Rede Arrecadadora / Conveniadas e Parceiros)</nome>
+    <nome>Consulta Pagamentos por Órgão Conveniado – Rede Arrecadadora (Pagamento - Rede Arrecadadora / Conveniadas e
+        Parceiros)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Consultar as bases de arrecadação por período e receitas específicas da entidade conveniada.]]></descricao>
+    <descricao>
+        <![CDATA[Consultar as bases de arrecadação por período e receitas específicas da entidade conveniada.]]></descricao>
 
     <url><![CDATA[https://www.receita.fazenda.gov.br/Aplicacoes/SSL/ATFLA/Sipac.App/]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +37,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +65,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

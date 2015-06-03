@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[O Portal do Professor, acessível on-line desde 2008, em parceria com o Ministério da Ciência, Tecnologia e Inovação, apoia os processos de formação dos professores brasileiros e ajuda a enriquecer a prática pedagógica. No portal, os profissionais da educação podem produzir e compartilhar sugestões de aulas; buscar informações diversas sobre a prática educacional; baixar coleções de recursos multimídia; obter informações sobre cursos e material de estudos; interagir e colaborar com outros professores.]]></descricao>
+    <descricao>
+        <![CDATA[O Portal do Professor, acessível on-line desde 2008, em parceria com o Ministério da Ciência, Tecnologia e Inovação, apoia os processos de formação dos professores brasileiros e ajuda a enriquecer a prática pedagógica. No portal, os profissionais da educação podem produzir e compartilhar sugestões de aulas; buscar informações diversas sobre a prática educacional; baixar coleções de recursos multimídia; obter informações sobre cursos e material de estudos; interagir e colaborar com outros professores.]]></descricao>
 
     <url><![CDATA[http://portaldoprofessor.mec.gov.br/sobre.html]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,9 +34,6 @@
         <nome>Ministério da Educação (MEC)</nome>
     </orgaoPrestador>
 
-    
-
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -58,8 +55,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

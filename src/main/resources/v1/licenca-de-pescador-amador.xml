@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[A licença de pesca amadora é o que permite a qualquer pessoa realizar uma pescaria, para lazer ou esporte (sem fins comerciais), nos rios, lagos e mar.]]></descricao>
+    <descricao>
+        <![CDATA[A licença de pesca amadora é o que permite a qualquer pessoa realizar uma pescaria, para lazer ou esporte (sem fins comerciais), nos rios, lagos e mar.]]></descricao>
 
     <url><![CDATA[http://sinpesq.mpa.gov.br/pndpa/web/]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Ministério da Pesca e Aquicultura (MPA)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,14 +69,14 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>A licença é valida por um ano é impressa no site depois do pagamento. A taxa é de R$ 20,00 para
                 desembarcado e R$ 60,00 para embarcado. Aposentados ou maiores de 65 anos (H) e 60 (M) são isentos de
-                taxa. A pesca com linha de mão é isenta da licença.</descricao>
-            
+                taxa. A pesca com linha de mão é isenta da licença.
+            </descricao>
+
         </informacaoUtil>
     </informacoesUteis>
 

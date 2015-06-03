@@ -12,9 +12,9 @@
 
     <descricao><![CDATA[Obter orientações gerais sobre o Regime de Tributação Unificada (RTU).]]></descricao>
 
-    <url><![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=92&amp;idArea=1&amp;idAssunto=26]]></url>
+    <url>
+        <![CDATA[http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/Servico.aspx?id=92&amp;idArea=1&amp;idAssunto=26]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,9 +34,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
-
-    
 
     <eventosDaLinhaDaVida>
         <eventoDaLinhaDaVida>
@@ -58,8 +55,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

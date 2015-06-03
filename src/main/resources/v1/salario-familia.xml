@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Fornece informações sobre o Salário-Família e documentos necessários para solicitação do benefício em uma Agência da Previdência Social.]]></descricao>
+    <descricao>
+        <![CDATA[Fornece informações sobre o Salário-Família e documentos necessários para solicitação do benefício em uma Agência da Previdência Social.]]></descricao>
 
     <url><![CDATA[http://agencia.previdencia.gov.br/e-aps/servico/376]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +34,6 @@
         <nome>Instituto Nacional do Seguro Social (INSS)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -70,12 +69,11 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
             <descricao>Ligue 135 para obter maiores informações.</descricao>
-            
+
         </informacaoUtil>
     </informacoesUteis>
 

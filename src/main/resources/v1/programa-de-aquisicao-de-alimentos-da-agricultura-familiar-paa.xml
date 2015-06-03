@@ -14,9 +14,6 @@
 
 Os agricultores familiares podem vender para o PAA de forma individual ou coletiva - por meio de cooperativas da agricultura familiar de que façam parte. As compras são realizadas pelos Governos Estaduais e Prefeituras Municipais que participam do programa, e pela Companhia Nacional de Abastecimento (CONAB), com recursos do Ministério do Desenvolvimento Social e Combate à Fome (MDS) e do Ministério do Desenvolvimento Agrário (MDA).]]></descricao>
 
-    
-
-    
 
     <solicitantes/>
 
@@ -36,7 +33,6 @@ Os agricultores familiares podem vender para o PAA de forma individual ou coleti
         <nome>Companhia Nacional de Abastecimento (Conab)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -45,7 +41,6 @@ Os agricultores familiares podem vender para o PAA de forma individual ou coleti
         </segmentoDaSociedade>
     </segmentosDaSociedade>
 
-    
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -70,14 +65,15 @@ Os agricultores familiares podem vender para o PAA de forma individual ou coleti
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
             <descricao>Na Prefeitura ou na CONAB do município.</descricao>
-            
+
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
             <descricao>Para saber mais sobre o PAA</descricao>
-            <link rel="informacao-util#mais-informacoes" href="http://www.mds.gov.br/segurancaalimentar/aquisicao-e-comercializacao-da-agricultura-familiar"/>
+            <link rel="informacao-util#mais-informacoes"
+                  href="http://www.mds.gov.br/segurancaalimentar/aquisicao-e-comercializacao-da-agricultura-familiar"/>
         </informacaoUtil>
     </informacoesUteis>
 

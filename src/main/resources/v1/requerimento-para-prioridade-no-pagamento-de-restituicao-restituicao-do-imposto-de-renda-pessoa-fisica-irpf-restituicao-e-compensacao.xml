@@ -4,17 +4,21 @@
     <versao>1.0</versao>
 
 
-    <id>requerimento-para-prioridade-no-pagamento-de-restituicao-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao</id>
+    <id>
+        requerimento-para-prioridade-no-pagamento-de-restituicao-restituicao-do-imposto-de-renda-pessoa-fisica-irpf-restituicao-e-compensacao
+    </id>
 
-    <nome>Requerimento para Prioridade no Pagamento de Restituição (Restituição do Imposto de Renda Pessoa Física - IRPF / Restituição e Compensação)</nome>
+    <nome>Requerimento para Prioridade no Pagamento de Restituição (Restituição do Imposto de Renda Pessoa Física - IRPF
+        / Restituição e Compensação)
+    </nome>
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Requerer prioridade no pagamento de restituição do imposto de renda da pessoa física (art. 69-A da Lei nº 9.784/99).]]></descricao>
+    <descricao>
+        <![CDATA[Requerer prioridade no pagamento de restituição do imposto de renda da pessoa física (art. 69-A da Lei nº 9.784/99).]]></descricao>
 
     <url><![CDATA[https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento]]></url>
 
-    
 
     <solicitantes/>
 
@@ -34,7 +38,6 @@
         <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
     </orgaoPrestador>
 
-    
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -63,8 +66,5 @@
 
     <legislacaoRelacionada/>
 
-    
-
-    
 
 </servico>

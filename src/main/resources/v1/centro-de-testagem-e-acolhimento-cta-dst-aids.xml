@@ -10,11 +10,11 @@
 
     <nomesPopulares/>
 
-    <descricao><![CDATA[Os Centros de Testagem e Aconselhamento (CTA) são serviços de saúde que realizam ações de diagnóstico e prevenção de doenças sexualmente transmissíveis. Nesses serviços, é possível realizar testes para HIV, sífilis e hepatites B e C gratuitamente. Todos os testes são realizados de acordo com a norma definida pelo Ministério da Saúde e com produtos registrados na Agência Nacional de Vigilância Sanitária (Anvisa) e por ela controlados.]]></descricao>
+    <descricao>
+        <![CDATA[Os Centros de Testagem e Aconselhamento (CTA) são serviços de saúde que realizam ações de diagnóstico e prevenção de doenças sexualmente transmissíveis. Nesses serviços, é possível realizar testes para HIV, sífilis e hepatites B e C gratuitamente. Todos os testes são realizados de acordo com a norma definida pelo Ministério da Saúde e com produtos registrados na Agência Nacional de Vigilância Sanitária (Anvisa) e por ela controlados.]]></descricao>
 
     <url><![CDATA[http://www.aids.gov.br/pagina/servicos-de-saude]]></url>
 
-    
 
     <solicitantes/>
 
@@ -29,7 +29,6 @@
         <nome>Ministério da Saúde (MS)</nome>
     </orgaoResponsavel>
 
-    
 
     <orgaoPrestador>
         <id>ministerio-da-saude-ms</id>
@@ -63,7 +62,6 @@
 
     <legislacaoRelacionada/>
 
-    
 
     <informacoesUteis>
         <informacaoUtil tipo="Mais informações">
