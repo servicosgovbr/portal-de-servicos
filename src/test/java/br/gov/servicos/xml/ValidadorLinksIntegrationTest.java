@@ -50,59 +50,14 @@ public class ValidadorLinksIntegrationTest {
     }
 
     String url;
-    RestTemplate http;
 
     public ValidadorLinksIntegrationTest(@SuppressFBWarnings(justification = "JUnit") String name, String url) throws Exception {
-        desabilitaVerificaçãoSSL();
-
         this.url = url;
-        this.http = new RestTemplate();
-
-        HttpComponentsClientHttpRequestFactory rf = new HttpComponentsClientHttpRequestFactory();
-        rf.setConnectTimeout(5000);
-        rf.setReadTimeout(10000);
-
-        http.setRequestFactory(rf);
-        http.setErrorHandler(new ResponseErrorHandler() {
-            @Override
-            public boolean hasError(ClientHttpResponse response) throws IOException {
-                return response.getRawStatusCode() <= 199 || response.getRawStatusCode() >= 400;
-            }
-
-            @Override
-            public void handleError(ClientHttpResponse response) throws IOException {
-                fail(response.getRawStatusCode() + " " + response.getStatusText());
-            }
-        });
     }
 
     @Test
     public void deveSerLinkVálido() throws Exception {
         new URL(url).toURI();
-    }
-
-    @Test
-    @Ignore("Muitas URLs ainda estão falhando")
-    public void deveSerLinkComRepostaVálida() throws Exception {
-        System.out.println(url);
-        http.getForObject(url, String.class);
-    }
-
-    private void desabilitaVerificaçãoSSL() throws NoSuchAlgorithmException, KeyManagementException {
-        SSLContext ctx = SSLContext.getInstance("TLS");
-        X509TrustManager tm = new X509TrustManager() {
-            public void checkClientTrusted(X509Certificate[] xcs, String string) throws CertificateException {
-            }
-
-            public void checkServerTrusted(X509Certificate[] xcs, String string) throws CertificateException {
-            }
-
-            public X509Certificate[] getAcceptedIssuers() {
-                return null;
-            }
-        };
-        ctx.init(null, new TrustManager[]{tm}, null);
-        SSLContext.setDefault(ctx);
     }
 
 }
