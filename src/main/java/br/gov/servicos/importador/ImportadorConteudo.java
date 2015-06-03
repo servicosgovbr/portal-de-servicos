@@ -8,14 +8,14 @@ import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVidaRepository;
+import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.List;
 
 import static br.gov.servicos.foundation.IO.read;
@@ -78,14 +78,11 @@ public class ImportadorConteudo {
                 .withConteudo(conteudo(format("/conteudo/orgaos/%s.md", orgao.getId())));
     }
 
+    @SneakyThrows(ConteudoNaoEncontrado.class)
     private String conteudo(String caminho) {
-        try {
-            URL resource = new ClassPathResource(caminho).getURL();
-            log.debug("Conteúdo {} encontrado em: {}", caminho, resource);
-            return read(resource.openStream());
-        } catch (IOException e) {
-            throw new ConteudoNaoEncontrado(e);
-        }
+        Resource resource = new ClassPathResource(caminho);
+        log.debug("Conteúdo {} encontrado em: {}", caminho, resource);
+        return read(resource);
     }
 
 }

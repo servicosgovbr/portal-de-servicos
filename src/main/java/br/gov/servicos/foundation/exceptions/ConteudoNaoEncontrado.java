@@ -2,8 +2,6 @@ package br.gov.servicos.foundation.exceptions;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import java.io.IOException;
-
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @ResponseStatus(value = NOT_FOUND, reason = "Página não encontrada")
@@ -18,7 +16,7 @@ public class ConteudoNaoEncontrado extends RuntimeException {
         super(cause);
     }
 
-    public ConteudoNaoEncontrado(IOException cause) {
+    public ConteudoNaoEncontrado(Exception cause) {
         super(cause);
     }
 }
