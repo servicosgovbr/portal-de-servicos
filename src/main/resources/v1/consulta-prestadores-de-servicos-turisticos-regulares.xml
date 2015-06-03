@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-
     <id>consulta-prestadores-de-servicos-turisticos-regulares</id>
 
     <nome>Consulta - Prestadores de Serviços Turísticos Regulares</nome>
@@ -12,10 +11,10 @@
 
     <descricao><![CDATA[Consulta ao cadastro obrigatório de prestadores de serviços turísticos que operam regularmente no país.
 
-O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das seguintes atividades: Meios de Hospedagem (albergue, hotel, flat, pousada, resort e cama & café); Agências de Turismo; Transportadoras Turísticas; Organizadoras de Eventos; Parques Temáticos; Acampamentos Turísticos (Camping); Guias de Turismo]]></descricao>
+O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das seguintes atividades: Meios de Hospedagem (albergue, hotel, flat, pousada, resort e cama & café); Agências de Turismo; Transportadoras Turísticas; Organizadoras de Eventos; Parques Temáticos; Acampamentos Turísticos (Camping); Guias de Turismo]]>
+    </descricao>
 
     <url><![CDATA[http://www.cadastur.turismo.gov.br]]></url>
-
 
     <solicitantes/>
 
@@ -34,7 +33,6 @@ O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das se
         <id>ministerio-do-turismo-mtur</id>
         <nome>Ministério do Turismo (MTur)</nome>
     </orgaoPrestador>
-
 
     <segmentosDaSociedade>
         <segmentoDaSociedade>
@@ -62,7 +60,6 @@ O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das se
     <custoTotalEstimado/>
 
     <legislacaoRelacionada/>
-
 
     <informacoesUteis>
         <informacaoUtil tipo="Telefone">
