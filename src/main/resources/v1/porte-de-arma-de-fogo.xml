@@ -3,7 +3,6 @@
 
     <versao>1.0</versao>
 
-
     <id>porte-de-arma-de-fogo</id>
 
     <nome>Porte de Arma de Fogo</nome>
@@ -14,20 +13,20 @@
 
 IMPORTANTE
 
-1.O art. 6o. da Lei 10.826/03 dispõe que o porte de arma de fogo é proibido em todo o território nacional, salvo em casos excepcionais. Portanto, excepcionalmente a Polícia Federal poderá conceder porte de arma de fogo desde que o requerente demonstre a sua efetiva necessidade por exercício de atividade profissional de risco ou de ameaça à sua integridade física, além de atender as demais exigências do art. 10 da Lei 10.826/03.
+1. O art. 6o. da Lei 10.826/03 dispõe que o porte de arma de fogo é proibido em todo o território nacional, salvo em casos excepcionais. Portanto, excepcionalmente a Polícia Federal poderá conceder porte de arma de fogo desde que o requerente demonstre a sua efetiva necessidade por exercício de atividade profissional de risco ou de ameaça à sua integridade física, além de atender as demais exigências do art. 10 da Lei 10.826/03.
 
-2.O porte de arma de fogo tem natureza jurídica de autorização, sendo unilateral, precário e discricionário. Assim, não basta a apresentação dos documentos previstos em lei se o requerente não demonstrar sua necessidade por exercício de atividade profissional de risco ou de ameaça à sua integridade física.
+2. O porte de arma de fogo tem natureza jurídica de autorização, sendo unilateral, precário e discricionário. Assim, não basta a apresentação dos documentos previstos em lei se o requerente não demonstrar sua necessidade por exercício de atividade profissional de risco ou de ameaça à sua integridade física.
 
-3.O comprovante de capacidade técnica (Instrutores de Armamento e Tiro) e de aptidão psicológica (Psicólogos) para o manuseio de arma de fogo deve ser fornecido por profissional credenciado pela Policia Federal.
+3. O comprovante de capacidade técnica (Instrutores de Armamento e Tiro) e de aptidão psicológica (Psicólogos) para o manuseio de arma de fogo deve ser fornecido por profissional credenciado pela Policia Federal.
 
-4.A taxa de expedição de Porte Federal de Arma de Fogo somente deverá ser paga após o deferimento da autorização pela Polícia Federal.
+4. A taxa de expedição de Porte Federal de Arma de Fogo somente deverá ser paga após o deferimento da autorização pela Polícia Federal.
 
-5.A autorização de porte de arma de fogo perderá automaticamente sua eficácia caso o portador dela seja detido ou abordado em estado de embriaguez ou sob efeito de substâncias químicas ou alucinógenas.
+5. A autorização de porte de arma de fogo perderá automaticamente sua eficácia caso o portador dela seja detido ou abordado em estado de embriaguez ou sob efeito de substâncias químicas ou alucinógenas.
 
-6.O titular de porte de arma de fogo para defesa pessoal não poderá conduzi-la ostensivamente ou com ela adentrar ou permanecer em locais públicos, tais como igrejas, escolas, estádios desportivos, clubes, agências bancárias ou outros locais onde haja aglomeração de pessoas em virtude de eventos de qualquer natureza.
+6. O titular de porte de arma de fogo para defesa pessoal não poderá conduzi-la ostensivamente ou com ela adentrar ou permanecer em locais públicos, tais como igrejas, escolas, estádios desportivos, clubes, agências bancárias ou outros locais onde haja aglomeração de pessoas em virtude de eventos de qualquer natureza.
 
-7.O Porte de Arma de Fogo é pessoal, intransferível e revogável a qualquer tempo, sendo válido apenas com relação à arma nele especificada e com a apresentação do documento de identificação do portador.]]></descricao>
-
+7. O Porte de Arma de Fogo é pessoal, intransferível e revogável a qualquer tempo, sendo válido apenas com relação à arma nele especificada e com a apresentação do documento de identificação do portador.]]>
+    </descricao>
 
     <solicitantes/>
 
@@ -47,14 +46,12 @@ IMPORTANTE
         <nome>Departamento de Polícia Federal (DPF)</nome>
     </orgaoPrestador>
 
-
     <segmentosDaSociedade>
         <segmentoDaSociedade>
             <id>servicos-aos-cidadaos</id>
             <nome>Serviços aos Cidadãos</nome>
         </segmentoDaSociedade>
     </segmentosDaSociedade>
-
 
     <areasDeInteresse>
         <areaDeInteresse>
@@ -71,15 +68,17 @@ IMPORTANTE
 
     <canaisDePrestacao>
         <canalDePrestacao tipo="Presencial">
-            <descricao>Em qualquer unidade da Polícia Federal no país (vide "Localização das unidades")
+            <descricao>
+                Em qualquer unidade da Polícia Federal no país (vide "Localização das unidades")
             </descricao>
-
         </canalDePrestacao>
     </canaisDePrestacao>
 
     <informacoesUteis>
         <informacaoUtil tipo="Localização das unidades">
-            <descricao>Endereços de todas as unidades da Polícia Federal no Brasil.</descricao>
+            <descricao>
+                Endereços de todas as unidades da Polícia Federal no Brasil
+            </descricao>
             <link rel="informacao-util#localizacao-das-unidades"
                   href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
         </informacaoUtil>
@@ -87,7 +86,7 @@ IMPORTANTE
 
     <informacoesUteis>
         <informacaoUtil tipo="Formulários">
-            <descricao>Formulário de Requerimento SINARM</descricao>
+            <descricao>Formulário de Requerimento Sinarm</descricao>
             <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/armas/form-sinarm"/>
         </informacaoUtil>
     </informacoesUteis>
