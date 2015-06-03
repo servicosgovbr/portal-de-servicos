@@ -4,7 +4,7 @@ import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import lombok.experimental.FieldDefaults;
 import org.pegdown.PegDownProcessor;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -25,9 +25,9 @@ public class Markdown {
     }
 
     @Cacheable("conteudo")
-    public ConteudoHtml toHtml(ClassPathResource resource) {
+    public ConteudoHtml toHtml(Resource resource) {
         if (!resource.exists()) {
-            throw new ConteudoNaoEncontrado(resource.getPath());
+            throw new ConteudoNaoEncontrado(resource.toString());
         }
 
         try {

@@ -33,9 +33,7 @@ class ImportadorAutomatico {
             return;
         }
 
-        log.info("Importando serviços para o ElasticSearch");
         importador.importar();
-        log.info("Serviços importados com sucesso");
     }
 
 }

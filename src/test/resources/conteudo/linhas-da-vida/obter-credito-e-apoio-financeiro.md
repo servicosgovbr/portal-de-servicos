@@ -1,2 +1,0 @@
-Apoio financeiro e crédito
----

@@ -42,6 +42,7 @@ public class Importador {
         retorno.put("servicos", v1.importar());
         retorno.put("conteudos", conteudo.importar());
 
+        log.info("Importação concluída com sucesso");
         return retorno;
     }
 }
