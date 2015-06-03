@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/aplicacao-e-documentos-do-sistema-previdenciario-de-gestao-de-regimes-publicos-de-previdencia-social-siprev-gestao"/>
+
+    <id>aplicacao-e-documentos-do-sistema-previdenciario-de-gestao-de-regimes-publicos-de-previdencia-social-siprev-gestao</id>
+
+    <nome>Aplicação e documentos do Sistema Previdenciário de Gestão de Regimes Públicos de Previdência Social –
+        SIPREV/Gestão</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Informação sobre o SIPREV/Gestão ferramenta do Sistema dos SRPPS disponibilizada gratuitamente para os entes federativos carregarem os dados dos servidores ativos, dos dependentes, dos aposentados e dos pensionistas, para se dispor de dados consistentes e de séries históricas de dados para efetivar avaliação atuarial a fim de se atender ao disposto no caput do artigo 40 da CF; efetuar Censo Previdenciário para melhorar a qualidade dos dados dos servidores ativos, aposentados, dependentes e pensionistas; dispor de dados cadastrais atualizados, de histórico de dados funcionais, previdenciários e financeiros para a emissão de Certidão de Tempo de Contribuição - CTC e para a Simulação e Concessão de Benefícios e ter-se informações gerenciais relativas a tempo de contribuição, a remunerações e contribuições, a óbitos e benefícios no dois regimes previdenciários (RPPS e RGPS) e a quantitativos de servidores, dependentes e pensionistas com informações detalhadas por idade, sexo e outras variáveis. A aplicação e os documentos são disponibilizados em comunidade fechada, denominada Comunidade Siprev, portal de Software Público Brasileiro.]]></descricao>
+
+    <url><![CDATA[http://www.previdencia.gov.br/siprevgestao-rpps-sistema-previdenciario-de-gestao-de-rpps/]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-previdencia-social-mps</id>
+        <nome>Ministério da Previdência Social (MPS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-da-previdencia-social-mps</id>
+        <nome>Ministério da Previdência Social (MPS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/cadastro-de-procuracao-para-o-portal-e-cac-presencial"/>
+
+    <id>cadastro-de-procuracao-para-o-portal-e-cac-presencial</id>
+
+    <nome>Cadastro de Procuração para o Portal e-CAC – Presencial</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Cadastrar, consultar e cancelar procuração, que delega a terceiro, possuidor de certificado digital, a
+        realização de serviços dentro do portal e-CAC. Não há necessidade de o outorgante possuir certificado digital
+        para constituir a procuração. No caso do cadastro e cancelamento, o documento impresso deve ser entregue na
+        unidade de atendimento presencial, conforme orientações gerais. Não há necessidade de o outorgante possuir
+        certificado digital para constituir a procuração.]]></descricao>
+
+    <url><![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSDR/procuracoesrfb/controlador/controlePrincipal.asp?acao=telaInicial]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

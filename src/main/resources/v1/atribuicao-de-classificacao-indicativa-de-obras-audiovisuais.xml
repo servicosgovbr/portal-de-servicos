@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/atribuicao-de-classificacao-indicativa-de-obras-audiovisuais"/>
+
+    <id>atribuicao-de-classificacao-indicativa-de-obras-audiovisuais</id>
+
+    <nome>Atribuição de classificação indicativa de obras audiovisuais</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Atribuição de classificação indicativa de obras audiovisuais para TV, cinema, vídeo e DVD, videoclipes musicais, espetáculos cênicos e musicais, jogos eletrônicos e RPG (jogos de interpretação).
+
+A classificação indicativa é a indicação à família sobre a faixa etária para a qual obras audiovisuais (programação de TV, filmes, DVD, jogos eletrônicos e de interpretação – RPG) não se recomendam. A Classificação vincula a faixa horária à etária na televisão aberta.
+
+Pode requerer a classificação indicativa o titular ou representante legal da diversão pública.]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-nacional-de-justica-snj</id>
+        <nome>Secretaria Nacional de Justiça (SNJ)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-nacional-de-justica-snj"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Esplanada dos Ministérios – Anexo II Sala 321 – 70064-900 Brasília-DF</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>classificacaoindicativa@mj.gov.br</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Para mais informações sobre classificação indicativa</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/data/Pages/MJ6BC270E8ITEMID66914BCA346A4350800CB04EBF2D6BD7PTBRIE.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Consulta à classificação indicativa</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/ClassificacaoIndicativa/EscolhaTipo.jsp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Consulta às classificações internacionais de jogos eletrônicos e aplicativos</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/main.asp?View=%7BFDA11DA1-710C-48E5-AA3E-FBB988B921D1%7D&amp;BrowserType=IE&amp;LangID=pt-br&amp;params=itemID%3D%7B9FA2CB77-0792-423F-BD04-3587A932416B%7D%3B&amp;UIPartUID=%7B04411A04-62EC-410D-AC93-9F2FA9240471%7D"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

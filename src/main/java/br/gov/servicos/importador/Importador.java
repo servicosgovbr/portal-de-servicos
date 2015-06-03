@@ -1,7 +1,6 @@
 package br.gov.servicos.importador;
 
 import br.gov.servicos.config.GuiaDeServicosIndex;
-import br.gov.servicos.legado.ImportadorLegado;
 import lombok.AccessLevel;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
@@ -23,13 +22,13 @@ import java.util.Map;
 )
 public class Importador {
     GuiaDeServicosIndex indices;
-    ImportadorLegado legado;
+    ImportadorV1 v1;
     ImportadorConteudo conteudo;
 
     @Autowired
-    public Importador(GuiaDeServicosIndex indices, ImportadorLegado legado, ImportadorConteudo conteudo) {
+    public Importador(GuiaDeServicosIndex indices, ImportadorV1 v1, ImportadorConteudo conteudo) {
         this.indices = indices;
-        this.legado = legado;
+        this.v1 = v1;
         this.conteudo = conteudo;
     }
 
@@ -40,7 +39,7 @@ public class Importador {
         indices.recriar();
 
         Map<String, Object> retorno = new HashMap<>();
-        retorno.put("servicos", legado.importar());
+        retorno.put("servicos", v1.importar());
         retorno.put("conteudos", conteudo.importar());
 
         return retorno;

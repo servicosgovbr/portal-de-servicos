@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/copia-de-declaracao-dipj-declaracao-de-informacoes-economico-fiscais-da-pj-declaracoes-e-demonstrativos"/>
+
+    <id>copia-de-declaracao-dipj-declaracao-de-informacoes-economico-fiscais-da-pj-declaracoes-e-demonstrativos</id>
+
+    <nome>Cópia de Declaração (DIPJ – Declaração de Informações Econômico-Fiscais da PJ / Declarações e Demonstrativos)</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Solicitar cópias de declarações.]]></descricao>
+
+    <url><![CDATA[https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx?sistema=00003]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

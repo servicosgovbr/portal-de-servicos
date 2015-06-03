@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/sistema-gerenciador-de-series-temporais"/>
+
+    <id>sistema-gerenciador-de-series-temporais</id>
+
+    <nome>Sistema Gerenciador de Séries Temporais</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Mostra informações econômico-financeiras de maneira consolidada.
+
+As séries podem ser consultadas individualmente, em grupos ou listas personalizadas, ou de forma automática, de acordo com as instruções constantes no menu Ajuda, submenu Ajuda do sistema, opção Serviços automatizados (webservices).]]></descricao>
+
+    <url><![CDATA[http://www4.bcb.gov.br/pec/series/port/aviso.asp]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Tutorial sobre como utilizar o Sistema Gerenciador de Séries Temporais.</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.youtube.com/watch?v=qHKv6BgFY8s&amp;list=PLB3218F73EBF12DC0&amp;index=1"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

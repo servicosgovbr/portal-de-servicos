@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/manutencao-da-certificacao-de-entidades-sociais-com-emissao-de-certidao-de-regularidade-oscip-upf-oe"/>
+
+    <id>manutencao-da-certificacao-de-entidades-sociais-com-emissao-de-certidao-de-regularidade-oscip-upf-oe</id>
+
+    <nome>Manutenção da certificação de entidades sociais com emissão de certidão de regularidade (OSCIP, UPF, OE)</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Após serem certificadas pelo Ministério da Justiça, as entidades sociais (Organização da Sociedade Civil de Interesse Público - OSCIP, Utilidade Pública Federal - UPF e Organizações Estrangeiras - OE) deverão apresentar anualmente seus relatórios de atividades, acompanhados das demonstrações financeiras, por meio do Cadastro Nacional de Entidades Sociais do Ministério da Justiça (CNES/MJ), a fim de obterem a certidão de regularidade.]]></descricao>
+
+    <url><![CDATA[http://portal.mj.gov.br/main.asp?View=%7BFC1E6BD5-BD5D-44AB-A646-6BC137CF9C97%7D&amp;BrowserType=IE&amp;LangID=pt-br&amp;params=itemID%253D%257B06BA3852-2781-46B8-95AF-51A7B23AA002%257D%253B%26UIPartUID%3D%257B2868BA3C-1C72-4347-BE11-A26F70F4CB26%257D]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-nacional-de-justica-snj</id>
+        <nome>Secretaria Nacional de Justiça (SNJ)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-nacional-de-justica-snj"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Outros">
+            <descricao>Quando necessário encaminhar o relatório por meio físico ao Ministério da Justiça, encaminhar
+                para o endereço: Esplanada dos Ministérios, bloco T, Térreo, Anexo II. Brasília/DF. CEP 70.064-900.</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>sac.dejus@mj.gov.br</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Saiba mais informações sobre o CNEs/MJ.</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/main.asp?ViewID=%7BFC1E6BD5-BD5D-44AB-A646-6BC137CF9C97%7D&amp;params=itemID=%7B1C837A41-2B2B-430F-8F9C-1FF0CB7341FF%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Consulta de entidades qualificadas no Ministério da Justiça</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/main.asp?View=%7BAFE5E30D-EE44-4EC7-B535-10F6F53FC483%7D"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

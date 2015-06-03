@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/certificado-de-registro-cadastral-crc-produtos-quimicos"/>
+
+    <id>certificado-de-registro-cadastral-crc-produtos-quimicos</id>
+
+    <nome>Certificado de Registro Cadastral (CRC) - Produtos Químicos</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[É o documento que certifica que a pessoa jurídica e, de forma equiparada e em caráter excepcional, o produtor rural, estão devidamente registrados na unidade central de controle de produtos químicos da Polícia Federal.
+
+Para obter, baixe o Programa Cadastro (vide &quot;Formulários&quot;), preencha as informações solicitadas de acordo com a Portaria 1.274/2003 (vide &quot;Outros&quot;), gere o arquivo com extensão XML que deverá ser salvo em um disquete ou CD, imprima o requerimento, e entregue juntamente com toda a documentação necessária em uma unidade da Polícia Federal (vide &quot;Presencial&quot;).
+
+Para atualizar os dados cadastrais do CRC, preencha o Anexo VI da Portaria 1.274/2003 (vide &quot;Outros&quot;), baixe o Programa Cadastro (vide &quot;Formulários&quot;), preencha as informações solicitadas de acordo com a Portaria 1.274/2003, gere o arquivo com extensão XML que deverá ser salvo em um disquete ou CD, imprima o requerimento, e entregue juntamente com toda a documentação necessária numa unidade da Polícia Federal (vide &quot;Presencial&quot;).]]></descricao>
+
+    <url><![CDATA[http://www.dpf.gov.br/institucional/pf-pelo-brasil/]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>departamento-de-policia-federal-dpf</id>
+        <nome>Departamento de Polícia Federal (DPF)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-federal-dpf"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>seguranca-e-ordem-publica</id>
+            <nome>Segurança e Ordem Pública</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/seguranca-e-ordem-publica"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>meio-ambiente</id>
+            <nome>Meio ambiente</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/meio-ambiente"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>industria</id>
+            <nome>Indústria</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/industria"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>agropecuaria</id>
+            <nome>Agropecuária</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Formulários">
+            <descricao>Programa Cadastro.</descricao>
+            <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/produtos-quimicos/programas/programa-cadastro"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Telefone">
+            <descricao>Mais informações: 194</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Outros">
+            <descricao>Alteração do Certificado de Registro Cadastral - CRC - Anexo VI da Portaria 1.274/2003</descricao>
+            <link rel="informacao-util#outros" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/alteracao-de-certificado-de-registro-cadastral"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Mais informações sobre o Certificado de Registro Cadastral - CRC</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/certificado-de-registro-cadastral"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Acompanhamento de processos</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/consultas/acompanhamento-de-processos"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

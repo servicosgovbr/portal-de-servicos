@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/servico-nacional-de-orientacoes-e-informacoes-sobre-a-prevencao-ao-uso-de-drogas-vivavoz-132"/>
+
+    <id>servico-nacional-de-orientacoes-e-informacoes-sobre-a-prevencao-ao-uso-de-drogas-vivavoz-132</id>
+
+    <nome>Serviço Nacional de Orientações e Informações sobre a Prevenção ao Uso de Drogas – VIVAVOZ 132</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O VIVAVOZ 132 é uma central telefônica aberta a toda população. O seu atendimento é realizado por consultores altamente capacitados e supervisionados por profissionais da área da saúde. O VIVAVOZ 132 é um serviço de utilidade pública que presta esclarecimento, apoio e orientação sobre a prevenção do uso indevido de drogas àqueles que precisam de algum tipo de ajuda e não sabem o que fazer.
+
+- O telefonema é gratuito e sigiloso;
+- Os consultores indicam locais para tratamento e outros recursos da comunidade e oferecem aconselhamento personalizado por meio de intervenção breve para pessoas que usam drogas e seus familiares;
+- O cidadão pode participar de intervenção breve motivacional. Neste caso, fará parte de grupo de estudo dirigido;
+- Profissionais de qualquer área podem solicitar informações técnicas e receber material bibliográfico.]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-nacional-de-politicas-sobre-drogas-senad</id>
+        <nome>Secretaria Nacional de Políticas Sobre Drogas (Senad)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-nacional-de-politicas-sobre-drogas-senad"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>cuidados-com-a-saude</id>
+            <nome>Cuidados com a saúde</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/cuidados-com-a-saude"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Telefone">
+            <descricao>132</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Para orientações ou mais informações, envie um e-mail para: vivavoz@ufcspa.edu.br</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Horário de funcionamento: 24 h / 7 dias semana</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Cartilhas e Manuais">
+            <descricao>Cartilhas informativas sobre drogas estão acessíveis no link: http://www.obid.senad.gov.br (ícone
+                &quot;Publicações&quot; -&gt; &quot;Cartilhas, livros e folhetos&quot;) ou pelo e-mail: prevencao@mj.gov.br</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

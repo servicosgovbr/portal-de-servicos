@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/centro-de-referencia-especializado-da-assistencia-social-creas"/>
+
+    <id>centro-de-referencia-especializado-da-assistencia-social-creas</id>
+
+    <nome>Centro de Referência Especializado da Assistência Social - CREAS</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[É no Centro de Referência Especializado de Assistência Social (CREAS) que pessoas e famílias que tiveram direitos ameaçados ou violados por situações como: violência física, psicológica, sexual, trabalho infantil, trabalho escravo, abandono, são atendidas. Alguns CREAS também atendem pessoas em situação de rua e adolescentes que cumprem medidas socioeducativas.
+
+Além de oferecer proteção e atendimento às pessoas e famílias com direitos violados, o CREAS busca reconstruir as relações familiares e comunitárias, incluir as famílias em serviços públicos, conforme a necessidade, prevenindo e diminuindo as situações de violação de direitos.]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
+        <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
+        <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Procure o CREAS mais próximo de sua residência.</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Neste site você pode localizar o CREAS mais perto de sua residência. Esses dados podem ser
+                localizados no mapa, basta escolher o seu Estado e o seu Município.</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

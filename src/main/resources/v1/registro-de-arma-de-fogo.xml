@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/registro-de-arma-de-fogo"/>
+
+    <id>registro-de-arma-de-fogo</id>
+
+    <nome>Registro de arma de fogo</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Documento com validade de 3(três) anos, que da direito ao proprietário da arma a mantê-la exclusivamente no interior de sua residência ou local de trabalho.
+
+IMPORTANTE:
+
+- Caso você já possua um registro federal emitido pela Polícia Federal, acesse o serviço Renovação de Registro de Arma de Fogo.
+
+- O certificado de Registro de Arma de Fogo, com validade em todo o território nacional, autoriza o seu proprietário a manter a arma de fogo exclusivamente no interior de sua residência ou domicílio, ou dependência desses, ou, ainda, no seu local de trabalho, desde que seja ele o titular ou o responsável legal pelo estabelecimento ou empresa.
+
+- A emissão do certificado de registro de arma de fogo está sujeito ao pagamento de taxa no valor de R$ 60,00, conforme estabelecido no art. 11 e Anexo da Lei 10.826/03. As hipóteses de isenção do pagamento desta taxa estão previstas no art. 11, §2o. da Lei 10.826/03.]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>departamento-de-policia-federal-dpf</id>
+        <nome>Departamento de Polícia Federal (DPF)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-federal-dpf"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>seguranca-e-ordem-publica</id>
+            <nome>Segurança e Ordem Pública</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/seguranca-e-ordem-publica"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Em qualquer unidade da Polícia Federal de sua localidade (vide &quot;Localização das unidades&quot;).</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Formulários">
+            <descricao>Formulário de Requerimento SINARM para Registro de Arma de Fogo.</descricao>
+            <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/armas/form-sinarm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Endereços de todas as unidades da Polícia Federal no país.</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Outros">
+            <descricao>Emissão da Guia de Recolhimento da União - GRU</descricao>
+            <link rel="informacao-util#outros" href="http://www.dpf.gov.br/servicos/gru/armas"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Telefone">
+            <descricao>Mais informações: 194</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Lei 10.826/03</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.planalto.gov.br/ccivil_03/leis/2003/l10.826.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Renovação de Registro de Arma de Fogo</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/armas/renovacao-de-registro-de-arma-de-fogo"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

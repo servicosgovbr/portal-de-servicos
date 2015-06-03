@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/fundo-de-garantia-do-tempo-de-servico-fgts"/>
+
+    <id>fundo-de-garantia-do-tempo-de-servico-fgts</id>
+
+    <nome>Fundo de Garantia do Tempo de Serviço - FGTS</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O Fundo de Garantia do Tempo de Serviço - FGTS tem por finalidade assegurar para o trabalhador a constituição de pecúlio, sob a forma de reserva financeira compulsória, proporcional ao tempo de serviço, podendo essa reserva ser utilizada nas situações previstas em lei, especialmente quando da demissão sem justa causa. 
+
+Por competência, é também finalidade do FGTS financiar empreendimentos nas áreas de habitação, saneamento básico e infraestrutura urbana, em consonância com a política nacional de desenvolvimento urbano e as políticas setoriais de habitação popular, saneamento básico e infraestrutura urbana estabelecidas pelo Governo Federal. 
+
+O empregador está obrigado a depositar, até o dia 7 (sete) de cada mês, na conta vinculada no FGTS do empregado, a importância correspondente a 8% (oito por cento) da remuneração paga ou devida no mês anterior, incluídas na remuneração as parcelas relativas ao salário e a gratificação natalina. Nos casos de contratos de aprendizagem a alíquota é reduzida a 2%.]]></descricao>
+
+    <url><![CDATA[http://www.fgts.gov.br/]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>trabalho</id>
+            <nome>Trabalho</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/trabalho"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>FGTS: para o Trabalhador</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.fgts.gov.br/trabalhador/index.asp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>FGTS: para o Empregador</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.fgts.gov.br/empregador/index.asp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Consulte o Saldo do FGTS</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.fgts.gov.br/trabalhador/servicos_online/saldo_fgts.asp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>consulte o Extrato do FGTS</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.fgts.gov.br/trabalhador/servicos_online/extrato_fgts.asp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Atualize seu endereço</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.fgts.gov.br/trabalhador/servicos_online/atualizacao_endereco.asp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Consulte o Saldo do FGTS via celular</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.fgts.gov.br/trabalhador/servicos_online/saldo_fgts_celular.asp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Mensagens Via Celular</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.fgts.gov.br/trabalhador/servicos_online/msg_celular.asp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Créditos Complementares</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.fgts.gov.br/trabalhador/servicos_online/creditos_complementares.asp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

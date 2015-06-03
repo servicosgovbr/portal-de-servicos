@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/ranking-do-valor-efetivo-total-vet-das-operacoes-de-cambio"/>
+
+    <id>ranking-do-valor-efetivo-total-vet-das-operacoes-de-cambio</id>
+
+    <nome>Ranking do Valor Efetivo Total - VET - das operações de câmbio</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Mostra o custo de uma operação de câmbio em reais por moeda estrangeira em cada instituição autorizada a operar câmbio pelo Banco Central, como bancos e corretoras.
+
+Ideal para quem comprar ou vender moeda estrangeira, como dólares ou euros, pois mostra as instituições onde essas transações tendem a ser mais vantajosas para o cidadão. Basta inserir os dados da operação desejada e fazer a simulação.
+
+O Valor Efetivo Total - VET - engloba a taxa de câmbio, as tarifas e os tributos incidentes sobre a operação.]]></descricao>
+
+    <url><![CDATA[https://www3.bcb.gov.br/rex/vet/index.asp]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>viagem-ao-exterior</id>
+            <nome>Viagem ao exterior</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/viagem-ao-exterior"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/programa-nacional-de-fortalecimento-da-agricultura-familiar-pronaf"/>
+
+    <id>programa-nacional-de-fortalecimento-da-agricultura-familiar-pronaf</id>
+
+    <nome>Programa Nacional de Fortalecimento da Agricultura Familiar - PRONAF</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O PRONAF financia o custeio da safra ou atividade agroindustrial, o investimento em máquinas, equipamentos ou infraestrutura de produção e serviços agropecuários ou não agropecuários de projetos individuais ou coletivos que gerem renda aos agricultores familiares e assentados da reforma agrária. As famílias interessadas devem procurar o sindicato rural ou a empresa de Assistência Técnica e Extensão Rural (Ater), como a Emater, para obtenção da Declaração de Aptidão ao Pronaf (DAP), que será emitida segundo a renda anual e as atividades exploradas, direcionando o agricultor para as linhas específicas de crédito a que tem direito. Para os beneficiários da reforma agrária e do crédito fundiário, o agricultor deve procurar o Instituto Nacional de Colonização e Reforma Agrária (Incra) ou a Unidade Técnica Estadual (UTE).
+
+Linhas de Crédito:
+
+Pronaf Custeio
+Pronaf Mais Alimentos - Investimento
+Pronaf Agroindústria
+Pronaf Agroecologia
+Pronaf Eco
+Pronaf Floresta
+Pronaf Semiárido
+Pronaf Mulher
+Pronaf Jovem
+Pronaf Custeio e Comercialização de Agroindústrias Familiares
+Pronaf Cota-Parte
+Microcrédito Rural]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-desenvolvimento-agrario-mda</id>
+        <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-agrario-mda"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>ministerio-do-desenvolvimento-agrario-mda</id>
+        <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-agrario-mda"/>
+    </orgaoPrestador>
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>apoio-financeiro-e-credito</id>
+            <nome>Apoio financeiro e crédito</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/apoio-financeiro-e-credito"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Sindicato Rural da Região ou Empresa de Assistência Técnica e Extensão Rural (ATER)
+                Para beneficiários da Reforma Agrária ou Crédito Fundiário - INCRA (Instituto Nacional de Colonização e
+                Reforma Agrária ou Unidade Técnica Estadual (UTE)</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>O projeto deve ser encaminhado para análise de crédito e aprovação do agente financeiro
+                local(bancos)</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Outros">
+            <descricao>condições das linhas de crédito para a safra 2014/2015</descricao>
+            <link rel="informacao-util#outros" href="http://www.mda.gov.br/sitemda/sites/sitemda/files/user_img_21/Plano_Safra_da_Agricultura_Familiar_2014_2015_0.pdf"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Legislação relacionada</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.mda.gov.br/sitemda/secretaria/saf-creditorural/legislação"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Arquivos Técnicos do Plano Safra 2014-2015</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.mda.gov.br/sitemda/secretaria/saf-creditorural/arquivos-técnicos-do-plano-safra"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Saiba mais sobre o PRONAF</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.mda.gov.br/sitemda/secretaria/saf-creditorural/sobre-o-programa"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

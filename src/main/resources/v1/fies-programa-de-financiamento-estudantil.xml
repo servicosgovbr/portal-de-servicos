@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/fies-programa-de-financiamento-estudantil"/>
+
+    <id>fies-programa-de-financiamento-estudantil</id>
+
+    <nome>Fies — Programa de Financiamento Estudantil</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O Fundo de Financiamento Estudantil (Fies) custeia a graduação de estudantes matriculados em instituições não gratuitas de educação superior.
+
+Podem recorrer ao financiamento alunos de cursos que tenham avaliação positiva nos processos de aferição do Ministério da Educação. São financiados de 50% a 100% dos encargos educacionais, de acordo com a renda familiar mensal bruta do estudante — no máximo, 20 salários mínimos — e do comprometimento dessa renda com os custos da mensalidade.]]></descricao>
+
+    <url><![CDATA[http://sisfiesportal.mec.gov.br/fies.html]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoPrestador>
+
+    
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>estudos</id>
+            <nome>Estudos</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estudos"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>apoio-financeiro-e-credito</id>
+            <nome>Apoio financeiro e crédito</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/apoio-financeiro-e-credito"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>educacao</id>
+            <nome>Educação</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Site do SisFIES</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://sisfiesportal.mec.gov.br/"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Outros">
+            <descricao>Documentação a ser apresentada pelo estudante (Arquivo pdf - 170K)</descricao>
+            <link rel="informacao-util#outros" href="http://sisfiesportal.mec.gov.br/arquivos/documentacao_cpsa2.pdf"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Perguntas frequentes sobre o Fies</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://sisfiesportal.mec.gov.br/faq.html"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Dúvidas e informações sobre o FIES">
+            <descricao>Central de Atendimento – 0800 616161</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

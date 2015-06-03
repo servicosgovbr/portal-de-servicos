@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/tv-escola"/>
+
+    <id>tv-escola</id>
+
+    <nome>TV Escola</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[A TV Escola é um canal de televisão do Ministério da Educação que capacita, aperfeiçoa e atualiza educadores da rede pública desde 1996. Sua programação exibe, nas 24 horas diárias, séries e documentários estrangeiros e produções próprias.
+
+        Os principais objetivos da TV Escola são o aperfeiçoamento e valorização dos professores da rede pública, o enriquecimento do processo de ensino-aprendizagem e a melhoria da qualidade do ensino.]]></descricao>
+
+    <url><![CDATA[http://tvescola.mec.gov.br/]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoPrestador>
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>estudos</id>
+            <nome>Estudos</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estudos"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>educacao</id>
+            <nome>Educação</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

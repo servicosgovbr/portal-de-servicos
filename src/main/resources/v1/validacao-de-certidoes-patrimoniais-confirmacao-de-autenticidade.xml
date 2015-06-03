@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/validacao-de-certidoes-patrimoniais-confirmacao-de-autenticidade"/>
+
+    <id>validacao-de-certidoes-patrimoniais-confirmacao-de-autenticidade</id>
+
+    <nome>Validação de Certidões Patrimoniais - (Confirmação de Autenticidade)</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Aqui você poderá confirmar a autenticidade de certidão emitida pela Secretaria do Patrimônio da União, preenchendo os campos conforme os dados da certidão.]]></descricao>
+
+    <url><![CDATA[http://atendimentovirtual.spu.planejamento.gov.br/Emissoes/Certidao/Cert_ValidaPedido.asp]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-planejamento-orcamento-e-gestao-mpog</id>
+        <nome>Ministério do Planejamento, Orçamento e Gestão (MPOG)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-planejamento-orcamento-e-gestao-mpog"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-do-patrimonio-da-uniao-spu-mp</id>
+        <nome>Secretaria do Patrimônio da União (SPU/MP)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-do-patrimonio-da-uniao-spu-mp"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>imoveis</id>
+            <nome>Imóveis</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/imoveis"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>habitacao</id>
+            <nome>Habitação</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/habitacao"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

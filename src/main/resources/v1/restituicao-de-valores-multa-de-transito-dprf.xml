@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/restituicao-de-valores-multa-de-transito-dprf"/>
+
+    <id>restituicao-de-valores-multa-de-transito-dprf</id>
+
+    <nome>Restituição de Valores - Multa de Trânsito/DPRF</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Consiste na solicitação de restituição de valores referentes a autuações de trânsito arrecadados indevidamente aos cofres da União.
+
+Apenas em três situações é cabível: pagamento em duplicidade, cancelamento do auto de infração e pagamento de valor maior que o devido.
+
+Quem pode solicitar: o proprietário do veículo à época do pagamento da multa ou o seu procurador legalmente constituído]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>departamento-de-policia-rodoviaria-federal-dprf</id>
+        <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-rodoviaria-federal-dprf"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>veiculos</id>
+            <nome>Veículos</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/veiculos"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Na Unidade Sede, nas Unidades Regionais e nas Delegacias da Polícia Rodoviária Federal, cujos
+                endereços estão disponíveis no portal eletrônico do órgão (vide &quot;Localização das unidades&quot;).</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Outros">
+            <descricao>Por via postal - por meio do encaminhamento de correspondência, contendo o requerimento de
+                restituição, endereçada à Unidade Sede ou às Unidades Regionais do Departamento de Polícia Rodoviária
+                Federal (vide &quot;Localização das unidades&quot;).</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Endereços das Unidades e Delegacias da Polícia Rodoviária Federal.</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Formulários">
+            <descricao>Requerimento de Restituição de Valores.</descricao>
+            <link rel="informacao-util#formularios" href="https://www.prf.gov.br/portal/multas-e-infracoes/arquivos/formulario-de-restituicao-de-valores"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

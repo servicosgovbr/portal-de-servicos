@@ -1,6 +1,4 @@
 def ignoredSources = [
-        "br/gov/servicos/legado/**/*Type*",
-        "br/gov/servicos/legado/**/ObjectFactory.class"
 ]
 
 test {

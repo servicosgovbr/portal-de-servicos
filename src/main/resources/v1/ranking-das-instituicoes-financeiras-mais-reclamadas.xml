@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/ranking-das-instituicoes-financeiras-mais-reclamadas"/>
+
+    <id>ranking-das-instituicoes-financeiras-mais-reclamadas</id>
+
+    <nome>Ranking das Instituições Financeiras mais reclamadas</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Mostra o ranking, atualizado todo mês, dos bancos e administradoras de consórcio que tiveram mais reclamações no Banco Central.
+
+Os bancos estão organizados em duas categorias: com mais de um milhão de clientes e com menos de um milhão.
+
+Também há uma lista das reclamações mais frequentes.]]></descricao>
+
+    <url><![CDATA[http://www.bcb.gov.br/?RANKING]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

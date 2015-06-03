@@ -1,9 +1,6 @@
 package br.gov.servicos.importador;
 
 import br.gov.servicos.config.GuiaDeServicosIndex;
-import br.gov.servicos.importador.Importador;
-import br.gov.servicos.importador.ImportadorConteudo;
-import br.gov.servicos.legado.ImportadorLegado;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -22,7 +19,7 @@ public class ImportadorTest {
     GuiaDeServicosIndex guiaDeServicosIndex;
 
     @Mock
-    ImportadorLegado importadorLegado;
+    ImportadorV1 importadorV1;
 
     @Mock
     ImportadorConteudo importadorConteudo;
@@ -31,7 +28,7 @@ public class ImportadorTest {
 
     @Before
     public void setUp() throws Exception {
-        importador = new Importador(guiaDeServicosIndex, importadorLegado, importadorConteudo);
+        importador = new Importador(guiaDeServicosIndex, importadorV1, importadorConteudo);
     }
 
     @Test
@@ -43,7 +40,7 @@ public class ImportadorTest {
     @Test
     public void deveRodarImportadorLegado() throws Exception {
         importador.importar();
-        verify(importadorLegado).importar();
+        verify(importadorV1).importar();
     }
 
     @Test

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/cadastro-de-representante-legal-sist-de-comercio-exterior"/>
+
+    <id>cadastro-de-representante-legal-sist-de-comercio-exterior</id>
+
+    <nome>Cadastro de Representante Legal – Sist. de Comércio Exterior</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Cadastrar o representante legal da pessoa física ou jurídica no Siscomex.]]></descricao>
+
+    <url><![CDATA[http://idg.receita.fazenda.gov.br/orientacao/aduaneira/manuais/despacho-de-exportacao/topicos/conceitos-e-definicoes/cadastros/cadastro-de-representantes-legais-1/cadastro-de-representantes-legais]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>exportacao-de-produtos-e-servicos</id>
+            <nome>Exportação de produtos e serviços</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/exportacao-de-produtos-e-servicos"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>importacao-de-produtos-e-servicos</id>
+            <nome>Importação de produtos e serviços</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/importacao-de-produtos-e-servicos"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Web">
+            <descricao>Endereço eletrônico do serviço</descricao>
+            <link rel="canal-de-prestacao#web" href="https://www4.receita.fazenda.gov.br/g33159/jsp/logon.jsp?ind=07"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    
+
+</servico>

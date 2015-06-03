@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/desenquadramento-do-simei"/>
+
+    <id>desenquadramento-do-simei</id>
+
+    <nome>Desenquadramento do SIMEI</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Endereço para solicitar o desenquadramento no Sistema de Recolhimento em Valores Fixos Mensais dos Tributos Abrangidos pelo Simples Nacional (SIMEI).
+
+O SIMEI é a forma pela qual o microempreendedor individual (MEI) paga um valor fixo mensal por meio do Documento de Arrecadação do Simples Nacional (DAS).]]></descricao>
+
+    <url><![CDATA[http://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Servicos/Grupo.aspx?grp=3]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>contas-e-impostos</id>
+            <nome>Contas e Impostos</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/contas-e-impostos"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Orientações gerais sobre o serviço - Seção 19. Desenquadramento do SIMEI</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www8.receita.fazenda.gov.br/SimplesNacional/Perguntas/Perguntas.aspx"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

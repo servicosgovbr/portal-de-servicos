@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/e-social-empregador-domestico"/>
+
+    <id>e-social-empregador-domestico</id>
+
+    <nome>e-Social - Empregador Doméstico</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Portal com orientações, funcionalidades e aplicativos para ajudar o empregador, em um primeiro momento essencialmente o empregador doméstico, a cumprir obrigações trabalhistas e tributárias decorrentes das relações de trabalho. O Portal foi desenvolvido em ação conjunta da Caixa Econômica Federal, do Instituto Nacional do Seguro Social – INSS, do Ministério da Previdência – MPS, do Ministério do Trabalho e Emprego – MTE e da Secretaria da Receita Federal do Brasil – RFB.]]></descricao>
+
+    <url><![CDATA[http://www.esocial.gov.br/Default.aspx]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoPrestador>
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>trabalho</id>
+            <nome>Trabalho</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/trabalho"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

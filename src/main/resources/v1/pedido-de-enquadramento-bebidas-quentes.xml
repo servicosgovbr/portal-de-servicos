@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/pedido-de-enquadramento-bebidas-quentes"/>
+
+    <id>pedido-de-enquadramento-bebidas-quentes</id>
+
+    <nome>Pedido de Enquadramento – Bebidas Quentes</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Realizar pedido de enquadramento de bebidas classificadas nas posições 22.04, 22.05, 22.06 e 22.08 da Tabela de Incidência do Imposto sobre Produtos Industrializados (Tipi) em classes de valores do imposto, de conformidade com o disposto na Lei nº 7.798, de 10 de julho de 1989, e no Decreto nº 4.544, de 26 de dezembro de 2002 - Regulamento do Imposto sobre Produtos Industrializados (Ripi).]]></descricao>
+
+    <url><![CDATA[https://www.receita.fazenda.gov.br/Aplicacoes/SSL/ATPAE/IPIEnquad/Solicitacao/PreSolicitacaoM.asp]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/concessao-de-titulo-de-utilidade-publica-federal"/>
+
+    <id>concessao-de-titulo-de-utilidade-publica-federal</id>
+
+    <nome>Concessão de Título de Utilidade Pública Federal</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Receber, protocolar, analisar e emitir parecer opinativo acerca dos pedidos de titulação como Utilidade Pública Federal, instituída pela Lei n° 91/35 e regulamentada pelo Decreto nº 50.517/61.]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-nacional-de-justica-snj</id>
+        <nome>Secretaria Nacional de Justiça (SNJ)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-nacional-de-justica-snj"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Ministério da Justiça – Anexo II , Térreo Endereço: Esplanada dos Ministérios, bloco T.
+                Brasília/DF. CEP: 70.064-900. Brasília/DF.</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Outros">
+            <descricao>Os interessados podem enviar a documentação via postal no endereço: Ministério da Justiça – Anexo
+                II , Térreo Endereço: Esplanada dos Ministérios, bloco T. Brasília/DF. CEP: 70.064-900. Brasília/DF.</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Dúvidas e orientações podem ser obtidas no e-mail: sac.dejus@mj.gov.br</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Conheça as entidades que possuem o título de Utilidade Pública Federal no Brasil</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/data/Pages/MJ4268993FPTBRNN.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Mais informações sobre Utilidade Pública Federal</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/main.asp?ViewID=%7B8B2ED119-A874-471A-9C72-B8CCBD80B3E3%7D&amp;params=itemID=%7BC1C7F7D3-9AB2-4462-94E0-EBE35306D163%7D;&amp;UIPartUID=%7BE0EA6E2F-2D28-4749-9852-31405415DD85%7D"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Lei nº 91/35</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.planalto.gov.br/ccivil_03/Leis/1930-1949/L0091.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Decreto nº 50.517/61.</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.planalto.gov.br/ccivil_03/decreto/1950-1969/D50517.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

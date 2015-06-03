@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/instituto-nacional-de-meteorologia-inmet"/>
+
+    <id>instituto-nacional-de-meteorologia-inmet</id>
+
+    <nome>Instituto Nacional de Meteorologia (INMET)</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O Instituto Nacional de Meteorologia (INMET) foi criado em 1909 e é órgão federal da administração direta do Ministério da Agricultura, Pecuária e Abastecimento (MAPA) com a missão de prover informações meteorológicas confiáveis à Sociedade Brasileira e influir construtivamente no processo de tomada de decisão, contribuindo para o desenvolvimento sustentável do País. Esta missão é atingida através do Monitoramento, Análise e Previsão do Tempo e Clima, fundamentados em pesquisa aplicada, no trabalho em parceria e no compartilhamento do conhecimento, com ênfase em resultados práticos e confiáveis. A máxima do Instituto é a satisfação da sociedade, vendo atendidas suas necessidades de informações em situações diversas, como no caso de desastres naturais relacionados com inundações e secas extremas que afetam as atividades rotineiras e limitam a sobrevivência.]]></descricao>
+
+    <url><![CDATA[http://www.inmet.gov.br/]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-agricultura-pecuaria-e-abastecimento-mapa</id>
+        <nome>Ministério da Agricultura, Pecuária e Abastecimento (MAPA)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-agricultura-pecuaria-e-abastecimento-mapa"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>instituto-nacional-de-meteorologia-inmet</id>
+        <nome>Instituto Nacional de Meteorologia (Inmet)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/instituto-nacional-de-meteorologia-inmet"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>meio-ambiente</id>
+            <nome>Meio ambiente</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/meio-ambiente"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>agropecuaria</id>
+            <nome>Agropecuária</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

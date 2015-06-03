@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/unidade-de-pronto-atendimento-upa-24h"/>
+
+    <id>unidade-de-pronto-atendimento-upa-24h</id>
+
+    <nome>Unidade de Pronto Atendimento (UPA 24h)</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[As Unidades de Pronto Atendimento (UPAs) ficam abertas 24 horas e servem como um intermediário entre os postos de saúde e os hospitais. Estão equipadas para socorrer pessoas com problemas de pressão arterial, febre alta, fraturas, cortes e infartos, evitando que estes pacientes sejam sempre encaminhados aos prontos-socorros dos hospitais. As UPAS contam com equipamentos de raio-X, eletrocardiografia, laboratório de exames e leitos de observação – uma estrutura que as permite resolver, em média 97%, dos casos.]]></descricao>
+
+    <url><![CDATA[http://sage.saude.gov.br/?link=upaFuncionamento&amp;flt=true&amp;param=null]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-saude-ms</id>
+        <nome>Ministério da Saúde (MS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>ministerio-da-saude-ms</id>
+        <nome>Ministério da Saúde (MS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
+    </orgaoPrestador>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>cuidados-com-a-saude</id>
+            <nome>Cuidados com a saúde</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/cuidados-com-a-saude"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude-da-crianca</id>
+            <nome>Saúde da criança</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude-da-crianca"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>emergencias-e-urgencias</id>
+            <nome>Emergências e Urgências</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/emergencias-e-urgencias"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude-do-idoso</id>
+            <nome>Saúde do idoso</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude-do-idoso"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude-da-mulher</id>
+            <nome>Saúde da mulher</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude-da-mulher"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude-do-homem</id>
+            <nome>Saúde do homem</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude-do-homem"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude</id>
+            <nome>Saúde</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude-da-familia</id>
+            <nome>Saúde da família</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude-da-familia"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

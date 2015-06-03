@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/simulacao-da-contagem-de-tempo-de-contribuicao-previdenciaria"/>
+
+    <id>simulacao-da-contagem-de-tempo-de-contribuicao-previdenciaria</id>
+
+    <nome>Simulação da contagem de tempo de contribuição previdenciária</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Permite efetuar a simulação da contagem de tempo de contribuição previdenciária, onde deverão ser inseridos os períodos de vínculos e/ou contribuições junto à Previdência Social.]]></descricao>
+
+    <url><![CDATA[https://www5.dataprev.gov.br/PortalSibeInternet/pages/compdir/principalsimuladormanual.xhtml]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-previdencia-social-mps</id>
+        <nome>Ministério da Previdência Social (MPS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>instituto-nacional-do-seguro-social-inss</id>
+        <nome>Instituto Nacional do Seguro Social (INSS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/instituto-nacional-do-seguro-social-inss"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>aposentadoria</id>
+            <nome>Aposentadoria</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/aposentadoria"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Telefone">
+            <descricao>Ligue 135 para mais informações</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

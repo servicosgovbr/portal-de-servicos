@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/sistema-de-monitoramento-agrometeorologico"/>
+
+    <id>sistema-de-monitoramento-agrometeorologico</id>
+
+    <nome>Sistema de Monitoramento Agrometeorológico</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Permite aos usuários o acesso, via Internet, às informações meteorológicas e agrometeorológicas de diversos municípios e estados brasileiros. Além de informar a situação climática atual, o sistema alimenta a Rede Nacional de Agrometeorologia (RNA) do Ministério da Agricultura, Pecuária e Abastecimento (MAPA)com informações básicas que orientam o zoneamento agrícola brasileiro.
+
+O sistema permite a atualização de cadastro de estações e dados climáticos diários (temperaturas máxima e mínima, e precipitação), criação de boletins agrometeorológicos e visualização de mapas que são gerados dinamicamente no momento da execução dos boletins.]]></descricao>
+
+    <url><![CDATA[http://www.agritempo.gov.br]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-agricultura-pecuaria-e-abastecimento-mapa</id>
+        <nome>Ministério da Agricultura, Pecuária e Abastecimento (MAPA)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-agricultura-pecuaria-e-abastecimento-mapa"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-da-agricultura-pecuaria-e-abastecimento-mapa</id>
+        <nome>Ministério da Agricultura, Pecuária e Abastecimento (MAPA)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-agricultura-pecuaria-e-abastecimento-mapa"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>agricultura-organica</id>
+            <nome>Agricultura orgânica</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agricultura-organica"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>qualidade-ambiental</id>
+            <nome>Qualidade ambiental</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/qualidade-ambiental"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>meio-ambiente</id>
+            <nome>Meio ambiente</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/meio-ambiente"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>agropecuaria</id>
+            <nome>Agropecuária</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

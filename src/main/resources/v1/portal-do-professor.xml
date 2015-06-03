@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/portal-do-professor"/>
+
+    <id>portal-do-professor</id>
+
+    <nome>Portal do Professor</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O Portal do Professor, acessível on-line desde 2008, em parceria com o Ministério da Ciência, Tecnologia e Inovação, apoia os processos de formação dos professores brasileiros e ajuda a enriquecer a prática pedagógica. No portal, os profissionais da educação podem produzir e compartilhar sugestões de aulas; buscar informações diversas sobre a prática educacional; baixar coleções de recursos multimídia; obter informações sobre cursos e material de estudos; interagir e colaborar com outros professores.]]></descricao>
+
+    <url><![CDATA[http://portaldoprofessor.mec.gov.br/sobre.html]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoPrestador>
+
+    
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>educacao</id>
+            <nome>Educação</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

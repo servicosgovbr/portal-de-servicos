@@ -33,7 +33,7 @@ public class GuiaDeServicosIndex {
     private static String settings() throws IOException {
         ClassPathResource resource = new ClassPathResource(SETTINGS);
 
-        return read(resource.getInputStream());
+        return read(resource);
     }
 
     @CacheEvict(value={"buscas", "conteudo", "destaques", "orgaos", "linhasDaVida", "publicosAlvo"}, allEntries=true)

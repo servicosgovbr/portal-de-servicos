@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/comunicacao-de-saida-definitiva-do-pais"/>
+
+    <id>comunicacao-de-saida-definitiva-do-pais</id>
+
+    <nome>Comunicação de Saída Definitiva do País</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Apresentar a Comunicação de Saída Definitiva do País, o contribuinte que se retirar do Brasil em caráter definitivo ou passar à condição de não residente no Brasil, quando houver saído do território nacional em caráter temporário.]]></descricao>
+
+    <url><![CDATA[http://www.receita.fazenda.gov.br/PessoaFisica/IRPF/2012/declaracao/declaracao-saida-definitiva.htm]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>viagem-ao-exterior</id>
+            <nome>Viagem ao exterior</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/viagem-ao-exterior"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Web">
+            <descricao>Endereço eletrônico do serviço</descricao>
+            <link rel="canal-de-prestacao#web" href="http://www.receita.fazenda.gov.br/Principal/Informacoes/InfoDeclara/declaraSaida.htm"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    
+
+</servico>

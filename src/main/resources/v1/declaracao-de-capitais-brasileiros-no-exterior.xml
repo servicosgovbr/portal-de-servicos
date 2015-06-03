@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/declaracao-de-capitais-brasileiros-no-exterior"/>
+
+    <id>declaracao-de-capitais-brasileiros-no-exterior</id>
+
+    <nome>Declaração de Capitais Brasileiros no Exterior</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Página em que o cidadão pode declarar os bens e valores que possuir no exterior.
+
+Devem declarar, todo ano, todos os residentes no País detentores de bens e valores fora do território nacional, que totalizem montante igual ou superior ao equivalente US$100.000,00 (cem mil dólares dos Estados Unidos).
+
+Para aqueles que possuem bens de valor total igual ou superior a US$100.000.000,00 (cem milhões de dólares dos Estados Unidos), a declaração deve ser feita trimestralmente.]]></descricao>
+
+    <url><![CDATA[http://www4.bcb.gov.br/rex/CBE/Port/cbe.asp]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoPrestador>
+
+    
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>viagem-ao-exterior</id>
+            <nome>Viagem ao exterior</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/viagem-ao-exterior"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

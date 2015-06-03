@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/centro-de-referencia-da-assistencia-social-cras"/>
+
+    <id>centro-de-referencia-da-assistencia-social-cras</id>
+
+    <nome>Centro de Referência da Assistência Social - CRAS</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O Centro de Referência de Assistência Social (CRAS) é a porta de entrada do cidadão para o Sistema Único de Assistência Social (SUAS). É pelo CRAS que ele pode ser encaminhado para serviços e programas sociais, de acordo com a sua situação. As equipes do CRAS, formadas por profissionais especializados, como psicólogos e assistentes sociais, oferecem acompanhamento integral para famílias e pessoas de baixa renda. O principal objetivo é prevenir violações de direitos e ajudar as pessoas encontrarem melhores perspectivas de vida.
+
+Em vários municípios, o CRAS é responsável por inserir as famílias no Cadastro Único para Programas Sociais do Governo Federal.]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
+        <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
+        <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Procure o CRAS mais próximo de sua residência</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Neste site você pode localizar o CRAS mais perto de sua residência. Esses dados podem ser
+                localizados no mapa, basta escolher o seu Estado e o seu Município.</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://aplicacoes.mds.gov.br/sagi/FerramentasSAGI/Mops/"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

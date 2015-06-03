@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/elaboracao-de-termo-de-rescisao-de-contrato-de-trabalho-trct"/>
+
+    <id>elaboracao-de-termo-de-rescisao-de-contrato-de-trabalho-trct</id>
+
+    <nome>Elaboração de Termo de Rescisão de Contrato de Trabalho - TRCT</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Para elaboração de rescisão de contrato de trabalho e consulta de rescisões confeccionadas no Sistema HomologNet.]]></descricao>
+
+    <url><![CDATA[http://homolognet2.mte.gov.br/homolognet/login.seam;jsessionid=21B23F4F900048CE56953FEF6DAA71A6?cid=898494]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>documentos-e-certidoes</id>
+            <nome>Documentos e certidões</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/documentos-e-certidoes"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>trabalho</id>
+            <nome>Trabalho</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/trabalho"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Web">
+            <descricao>Sistema HomologNet - Consultar Rescisão de Contrato de Trabalho</descricao>
+            <link rel="canal-de-prestacao#web" href="http://homolognet2.mte.gov.br/homolognet/pages/public/consultarRescisoes.seam"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    
+
+</servico>

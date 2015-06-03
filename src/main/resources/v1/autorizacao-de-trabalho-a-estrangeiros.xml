@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/autorizacao-de-trabalho-a-estrangeiros"/>
+
+    <id>autorizacao-de-trabalho-a-estrangeiros</id>
+
+    <nome>Autorização de Trabalho a Estrangeiros</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Autorização de trabalho a estrangeiros é o ato administrativo de competência do Ministério do Trabalho e Emprego que é exigido pelas autoridades consulares brasileiras, em conformidade com a legislação em vigor, para efeito de concessão de vistos permanentes e/ou temporário a estrangeiros que desejem permanecer no Brasil a trabalho. Delibera-se sobre os pedidos de prorrogação de estada e transformação de visto (de temporário para permanente) que digam respeito a trabalho.]]></descricao>
+
+    <url><![CDATA[http://migranteweb.mte.gov.br/migranteweb/login.seam]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>estrangeiros-no-brasil</id>
+            <nome>Estrangeiros no Brasil</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estrangeiros-no-brasil"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>trabalho</id>
+            <nome>Trabalho</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/trabalho"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado>R$ 16,95</custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Web">
+            <descricao>Acompanhar o pedido visualizando a carta de exigência caso haja ausência de documentação, bem
+                como verificar se o processo foi deferido ou indeferido.</descricao>
+            <link rel="canal-de-prestacao#web" href="http://migranteweb.mte.gov.br/migranteweb/publico/consultarProcessoInternet/consultarProcesso.seam"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Receber os documentos que instruirá o pedido de autorização de trabalho</descricao>
+            <link rel="canal-de-prestacao#presencial" href="http://portal.mte.gov.br/postos/"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Cartilhas e Manuais">
+            <descricao>Guia de procedimentos para os pedidos de autorização de trabalho</descricao>
+            <link rel="informacao-util#cartilhas-e-manuais" href="http://portal.mte.gov.br/trab_estrang/guia-de-procedimentos.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Os documentos a serem apresentados dependerão da Resolução Normativa e variam de acordo com o
+                caso concreto</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://portal.mte.gov.br/trab_estrang/resolucoes-normativas.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

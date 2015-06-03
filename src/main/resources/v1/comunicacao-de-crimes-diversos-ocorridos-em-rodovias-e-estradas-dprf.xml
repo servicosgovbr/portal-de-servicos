@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/comunicacao-de-crimes-diversos-ocorridos-em-rodovias-e-estradas-dprf"/>
+
+    <id>comunicacao-de-crimes-diversos-ocorridos-em-rodovias-e-estradas-dprf</id>
+
+    <nome>Comunicação de Crimes Diversos ocorridos em rodovias e estradas - DPRF</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Consiste no registro de comunicação relativa a crimes e delitos diversos ocorridos nas rodovias e estradas sob a responsabilidade da Polícia Rodoviária Federal- PRF.
+
+Observação: A comunicação à Polícia Rodoviária Federal não dispensa o registro na Polícia Civil. O cidadão pode comunicar roubo/furto de veículo via web, pelo &quot;Sistema Alerta&quot; (Vide &quot;Web: Comunicação de Roubo/Furto de Veículos&quot;). O Sistema Alerta tem por objetivo divulgar, imediatamente após o registro, informações de ocorrências de furto/roubo de veículos nas últimas 72 horas. A probabilidade de recuperação de um veículo é maior nas primeiras horas após a ocorrência do fato, assim, o Sistema Alerta supre uma importante necessidade como uma eficiente ferramenta no combate ao roubo e furto de veículos.
+
+Caso o furto/roubo do veículo a ser registrado tenha ocorrido há mais de 72 horas, verifique junto à Delegacia onde registrou a ocorrência se os dados já estão no sistema RENAVAM, que é a base nacional de cadastro de informações de veículos automotores. O Alerta permite o registro de ocorrências com mais de 72 horas, entretanto, a ocorrência permanecerá na base somente para consultas. O registro de um Alerta também pode ser feito por telefone (Vide &quot;Telefone&quot;).]]></descricao>
+
+    <url><![CDATA[http://www.dprf.gov.br/PortalInternet/alerta.faces]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>departamento-de-policia-rodoviaria-federal-dprf</id>
+        <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-rodoviaria-federal-dprf"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Telefone">
+            <descricao>191</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Em qualquer unidade da Polícia Rodoviária Federal, cujos endereços encontram-se no site do órgão
+                (vide &quot;Localização das unidades&quot;).</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Endereços de todas as Unidades da Polícia Rodoviária Federal.</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

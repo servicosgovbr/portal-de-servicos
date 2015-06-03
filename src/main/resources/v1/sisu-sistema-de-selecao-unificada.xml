@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/sisu-sistema-de-selecao-unificada"/>
+
+    <id>sisu-sistema-de-selecao-unificada</id>
+
+    <nome>Sisu — Sistema de Seleção Unificada</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Criado em 2010, o Sistema de Seleção Unificada (Sisu) possibilita a oferta de vagas em instituições públicas de educação superior a candidatos participantes do Exame Nacional do Ensino Médio (Enem).]]></descricao>
+
+    <url><![CDATA[http://sisu.mec.gov.br/]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoPrestador>
+
+    
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>estudos</id>
+            <nome>Estudos</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estudos"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>educacao-superior</id>
+            <nome>Educação superior</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao-superior"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>educacao</id>
+            <nome>Educação</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

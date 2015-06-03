@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/previsao-do-tempo"/>
+
+    <id>previsao-do-tempo</id>
+
+    <nome>Previsão do tempo</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Previsão do Tempo para seu Município.]]></descricao>
+
+    <url><![CDATA[http://www.inmet.gov.br/portal/]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-agricultura-pecuaria-e-abastecimento-mapa</id>
+        <nome>Ministério da Agricultura, Pecuária e Abastecimento (MAPA)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-agricultura-pecuaria-e-abastecimento-mapa"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>instituto-nacional-de-meteorologia-inmet</id>
+        <nome>Instituto Nacional de Meteorologia (Inmet)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/instituto-nacional-de-meteorologia-inmet"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>abastecimento</id>
+            <nome>Abastecimento</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/abastecimento"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>meio-ambiente</id>
+            <nome>Meio ambiente</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/meio-ambiente"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>agropecuaria</id>
+            <nome>Agropecuária</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>aguas</id>
+            <nome>Águas</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/aguas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

@@ -21,19 +21,6 @@ public class ConteudoConfigIntegrationTest {
     ConteudoConfig config;
 
     @Test
-    public void mapeiaLinhasDaVida() throws Exception {
-        assertThat(config.linhaDaVida("Abrir um negócio").getTitulo(), is("Empreendedorismo e negócios"));
-        assertThat(config.linhaDaVida("Trabalhando").getTitulo(), is("Profissão e trabalho"));
-    }
-
-    @Test
-    public void mapeiaOrgaos() throws Exception {
-        assertThat(config.orgao("Ministério do Turismo").getNome(), is("Ministério do Turismo (MTur)"));
-        assertThat(config.orgao("Ministério do Turismo - MTur").getNome(), is("Ministério do Turismo (MTur)"));
-        assertThat(config.orgao("Ministério do Turismo- MTur").getNome(), is("Ministério do Turismo (MTur)"));
-    }
-
-    @Test
     public void mapeiaLinksParaOuvidoriasDeOrgaos() throws Exception {
         assertThat(config.ouvidoria(ORGAOS.get(0).getId()).get(),
                 is("http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an"));

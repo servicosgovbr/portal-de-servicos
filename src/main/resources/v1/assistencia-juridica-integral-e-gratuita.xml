@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/assistencia-juridica-integral-e-gratuita"/>
+
+    <id>assistencia-juridica-integral-e-gratuita</id>
+
+    <nome>Assistência jurídica integral e gratuita</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Assistência jurídica em direito civil, criminal, previdenciário, trabalhista, eleitoral, administrativo, criminal militar e constitucional.
+
+Os serviços de assistência jurídica, judicial ou extrajudicial, são oferecidos gratuitamente a todo cidadão hipossuficiente (isento de prestar declaração do imposto de renda), que comprove falta de recursos financeiros. Ao prestar assistência jurídica gratuita, a Defensoria Pública da União – DPU – garante o acesso desses cidadãos à justiça, fornecendo informações sobre seus direitos e deveres.
+
+A assistência jurídica da DPU é de três tipos: assistência judicial; assistência extrajudicial, para a resolução de conflitos; e assistência preventiva e consultiva.
+
+A DPU pode, por exemplo, defender o cidadão em processos cíveis ou criminais no Poder Judiciário, apresentar recursos aos tribunais e ajuizar ações, prestar orientações e aconselhamento jurídico, além de representar o cidadão em casos que envolvam órgãos da administração pública federal.
+
+Os serviços são prestados por Defensores Públicos Federais, profissionais aprovados em concurso público, com pelo menos dois anos de experiência jurídica. Eles são independentes para agirem na defesa dos interesses do cidadão.
+
+As áreas atendidas pela assistência jurídica gratuita são: Direito Civil, Penal, Previdenciário, Trabalhista, Eleitoral, Administrativo, Criminal Militar e Constitucional.
+
+São três as formas possíveis de atuação da Defensoria:
+
+1 – Para casos que já estão na justiça formal (apenas Federal), seja ela do Trabalho, Eleitoral, Militar, nos Tribunais Superiores e no Supremo Tribunal Federal, em diversas áreas de atuação, inclusive, Direitos Humanos e tutela coletiva, Previdenciário, e Penal;
+
+2 – Para casos que não estão na justiça formal, (extrajudicial) de pessoas físicas e jurídicas. Neste caso, o Defensor Público Federal atuará como mediador de conflitos, realizando acordos entre as partes e diminuindo, assim, o número de processos que chegam ao Poder Judiciário;
+
+3 – A prestação de assistência jurídica preventiva e consultiva, que oferece orientações gerais sobre temas de interesse do cidadão em temas relacionados a Direito do Trabalho, Previdenciário, Penal, Eleitoral, Militar, Direitos Humanos e tutela coletiva;
+
+Para acessar o serviço, o cidadão deve comparecer a uma unidade da Defensoria Pública da União de seu estado (Vide “Localização das unidades”).]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>defensoria-publica-da-uniao-dpu</id>
+        <nome>Defensoria Pública da União (DPU)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/defensoria-publica-da-uniao-dpu"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Em qualquer unidade da Defensoria Pública da União listadas no site do órgão (vide &quot;Localização
+                das unidades&quot;).</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Endereços das unidades da Defensoria Pública da União</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dpu.gov.br/dpgu"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

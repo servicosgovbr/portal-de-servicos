@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/emissao-de-certidao-negativa-do-banco-central"/>
+
+    <id>emissao-de-certidao-negativa-do-banco-central</id>
+
+    <nome>Emissão de Certidão Negativa do Banco Central</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Certifica o cidadão que não tiver trabalhado como administrador, diretor ou representante de uma instituição financeira (como banco, corretora, cooperativa) que esteja ou tenha estado em liquidação extrajudicial. A certidão refere-se aos doze meses anteriores à decretação desse regime.]]></descricao>
+
+    <url><![CDATA[http://www.bcb.gov.br/pre/portalCidadao/cadsis/certidao.asp?idpai=PORTALBCB]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>banco-central-do-brasil-bcb</id>
+        <nome>Banco Central do Brasil (BCB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/banco-central-do-brasil-bcb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>documentos-e-certidoes</id>
+            <nome>Documentos e certidões</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/documentos-e-certidoes"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Em uma das Centrais de Atendimento ao Público do Banco Central;</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Outros">
+            <descricao>Por correspondência para:
+                Banco Central do Brasil
+                Divisão de Atendimento ao Cidadão
+                SBS Q. 3 Bloco B – Ed. Sede – 2º SS
+                CEP 70074-900 Brasília (DF)</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Centrais de Atendimento ao Público do Banco Central</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://www.bcb.gov.br/pre/bc_atende/port/centaten.asp"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

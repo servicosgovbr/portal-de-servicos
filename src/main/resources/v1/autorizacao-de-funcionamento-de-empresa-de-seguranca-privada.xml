@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/autorizacao-de-funcionamento-de-empresa-de-seguranca-privada"/>
+
+    <id>autorizacao-de-funcionamento-de-empresa-de-seguranca-privada</id>
+
+    <nome>Autorização de funcionamento de empresa de segurança privada</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[É o documento válido por 1 (um) ano que autoriza a empresa a desenvolver atividades de segurança privada.
+
+IMPORTANTE:
+
+- O requerimento de Autorização de Funcionamento deve ser encaminhado pela Internet, por meio do sistema GESP, no site da Polícia Federal (vide &quot;Mais informações&quot;).
+- A autorização se dá por meio de Alvará publicado no Diário Oficial da União - D.O.U.
+- A empresa interessada poderá acompanhar o andamento do seu pedido por meio do sistema GESP (vide &quot;Mais informações&quot;).]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>departamento-de-policia-federal-dpf</id>
+        <nome>Departamento de Polícia Federal (DPF)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-federal-dpf"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>seguranca-e-ordem-publica</id>
+            <nome>Segurança e Ordem Pública</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/seguranca-e-ordem-publica"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Em qualquer unidade da Polícia Federal (vide &quot;Localização das unidades&quot;).</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Endereços de todas as unidades da Polícia Federal no país.</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Informações sobre o sistema GESP.</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.dpf.gov.br/servicos/seguranca-privada/sistemas"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Telefone">
+            <descricao>Mais informações: 194</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>PORTARIA Nº 3.233/2012-DG/DPF</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.dpf.gov.br/servicos/seguranca-privada/legislacao-normas-e-orientacoes/portarias/Portaria%20n3233.12.DG-DPF.pdf/view"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Revisão de Autorização de Funcionamento da Empresa</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/seguranca-privada/servicos/revisao-de-autorizacao-de-funcionamento-da-empresa"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Cancelamento de Atividade a Pedido</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/seguranca-privada/servicos/cancelamento-de-atividade-a-pedido"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Cancelamento de Autorização de Funcionamento a Pedido</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/seguranca-privada/servicos/cancelamento-de-autorizacao-de-funcionamento-a-pedido"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

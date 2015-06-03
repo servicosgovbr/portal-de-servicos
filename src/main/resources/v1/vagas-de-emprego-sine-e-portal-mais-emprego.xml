@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/vagas-de-emprego-sine-e-portal-mais-emprego"/>
+
+    <id>vagas-de-emprego-sine-e-portal-mais-emprego</id>
+
+    <nome>Vagas de Emprego – SINE e Portal Mais Emprego</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Essa atividade objetiva (re)colocar o trabalhador no mercado de trabalho, ou seja, auxiliar o trabalhador na busca por uma oportunidade (vaga) de emprego e, por outro lado, auxiliar os empregadores a encontrarem um trabalhador com perfil adequado para a vaga de emprego disponível. Essa atividade é realizada pelo Ministério do Trabalho e Emprego por meio do Sistema Nacional de Emprego – SINE, o qual disponibiliza o serviço de intermediação de mão de obra.
+
+Por meio do Portal MTE Mais Emprego, o trabalhador pode verificar a existência de vagas e se candidatar; para concluir a ação, deverá ir ao posto SINE com os documentos necessários. Neste mesmo Portal, o empregador poderá disponibilizar vagas de emprego.]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>trabalho</id>
+            <nome>Trabalho</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/trabalho"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>A busca por vagas de emprego é oferecida de forma presencial nos postos de atendimento do SINE, instalados por meio de convênios celebrados entre o Ministério do Trabalho e Estados, DF, municípios com mais de 200 mil habitantes.</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Portal MTE Mais Emprego - Consulta Vagas</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://maisemprego.mte.gov.br/portal/pages/home.xhtml"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

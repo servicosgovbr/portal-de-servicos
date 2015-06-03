@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/cadastro-nacional-de-entidades-sindicais-cnes"/>
+
+    <id>cadastro-nacional-de-entidades-sindicais-cnes</id>
+
+    <nome>Cadastro Nacional de Entidades Sindicais – CNES</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Possibilita elaborar pedido de registro ou de alteração estatutária de entidade sindical e consultar entidades sindicais registradas, conforme Portaria/MTE n.º 326/2013.]]></descricao>
+
+    <url><![CDATA[http://portal.mte.gov.br/cnes/atualizacao-de-dados-perene-sd.htm]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-do-trabalho-e-emprego-mte</id>
+        <nome>Ministério do Trabalho e Emprego (MTE)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-trabalho-e-emprego-mte"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>trabalho</id>
+            <nome>Trabalho</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/trabalho"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Web">
+            <descricao>Recadastrar a entidade sindical.</descricao>
+            <link rel="canal-de-prestacao#web" href="http://portal.mte.gov.br/cnes/campanha-de-atualizacao-sindical-sr.htm"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Web">
+            <descricao>Consultar a fila de distribuição de processos de registro sindical para análise.</descricao>
+            <link rel="canal-de-prestacao#web" href="http://www3.mte.gov.br/sistemas/sdp/consultadistribuicao.aspx"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Web">
+            <descricao>Solicitar Registro de Entidade Sindical - CNES.</descricao>
+            <link rel="canal-de-prestacao#web" href="http://portal.mte.gov.br/cnes/registro-sindical-sc.htm"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Web">
+            <descricao>Solicitar Registro de Alteração Estatutária de Entidade Sindical - CNES.</descricao>
+            <link rel="canal-de-prestacao#web" href="http://portal.mte.gov.br/cnes/alteracao-estatutaria.htm"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    
+
+</servico>

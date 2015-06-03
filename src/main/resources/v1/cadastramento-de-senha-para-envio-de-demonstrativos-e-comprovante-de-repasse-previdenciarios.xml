@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/cadastramento-de-senha-para-envio-de-demonstrativos-e-comprovante-de-repasse-previdenciarios"/>
+
+    <id>cadastramento-de-senha-para-envio-de-demonstrativos-e-comprovante-de-repasse-previdenciarios</id>
+
+    <nome>Cadastramento de Senha para envio de Demonstrativos e Comprovante de Repasse Previdenciários</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Tem como objetivo liberar senha para os representantes legais dos entes federativos, da Unidade Gestora e de seus servidores para o envio de demonstrativos e comprovante de repasse, visualização de CRP de todos os municípios de um estado e consultas relativas a aplicações e investimentos.]]></descricao>
+
+    <url><![CDATA[http://www1.previdencia.gov.br/sps/app/controleAcesso/cAcesso_login.asp?destino=CR]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-previdencia-social-mps</id>
+        <nome>Ministério da Previdência Social (MPS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>ministerio-da-previdencia-social-mps</id>
+        <nome>Ministério da Previdência Social (MPS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
+    </orgaoPrestador>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Telefone">
+            <descricao>Ligue 135 para obter mais informações.</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

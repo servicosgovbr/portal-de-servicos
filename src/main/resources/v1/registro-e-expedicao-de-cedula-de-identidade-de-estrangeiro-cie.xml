@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/registro-e-expedicao-de-cedula-de-identidade-de-estrangeiro-cie"/>
+
+    <id>registro-e-expedicao-de-cedula-de-identidade-de-estrangeiro-cie</id>
+
+    <nome>Registro e Expedição de Cédula de Identidade de Estrangeiro - CIE</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Registro e Expedição do documento necessário para o estrangeiro fixar residência, exercer atividade profissional ou estudar no País. O documento tem validade variável de acordo com a situação.
+
+Informações importantes:
+
+• O processo para registro, emissão/renovação da cédula de Identidade de Estrangeiro só é feito pessoalmente, na Polícia Federal mais próxima da residência do interessado.
+• O estrangeiro registrado é obrigado a comunicar ao Ministério da Justiça a mudança do seu domicílio ou residência, devendo fazê-lo nos 30 (trinta) dias imediatamente seguintes à sua efetivação, conforme art. 102 da Lei 6815/80, sob pena de multa.
+• Ao dirigir-se a uma unidade da Polícia Federal, leve consigo todos os seus documentos pessoais e procure sempre apresentar um comprovante de endereço. O preenchimento equivocado do formulário, notadamente do CEP, pode atrasar o seu atendimento.
+• O prazo para registro é 30 dias contados a partir da data de ingresso no território nacional (Artigo 30 da Lei nº 6.815/1980);
+• O estrangeiro menor de idade deverá apresentar-se acompanhado dos pais ou responsável legal;
+• Os pedidos de renovação das cédulas devem ser feitos antes do vencimento do documento, sob pena de pagamento de multa.
+• Estão dispensados da substituição da CIE, mesmo após o vencimento, os estrangeiros portadores de vistos permanentes, que tenham participado de recadastramento anterior e que tenham completado 60 anos até a data de vencimento da cédula ou sejam deficientes físicos.
+• O estrangeiro permanente que se ausentar mais de 2 anos ininterruptos do território nacional, perde a permanência.]]></descricao>
+
+    
+
+    <urlAgendamento><![CDATA[https://servicos.dpf.gov.br/sincreWeb/pesquisaAgendamento.jsp]]></urlAgendamento>
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>departamento-de-policia-federal-dpf</id>
+        <nome>Departamento de Polícia Federal (DPF)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-federal-dpf"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>documentos-e-certidoes</id>
+            <nome>Documentos e certidões</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/documentos-e-certidoes"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Em qualquer uma das unidades da Polícia Federal no Brasil (vide &quot;Localização das unidades&quot;).</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Endereços das unidades da Polícia Federal no Brasil.</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dpf.gov.br/institucional/pf-pelo-brasil/"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Para dúvidas: estrangeiros@dpf.gov.br</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Formulários">
+            <descricao>Formulário de requerimento de registro/emissão e renovação de CIE.</descricao>
+            <link rel="informacao-util#formularios" href="https://servicos.dpf.gov.br/sincreWeb/"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Outros">
+            <descricao>Lei 6815/80</descricao>
+            <link rel="informacao-util#outros" href="http://www.planalto.gov.br/ccivil_03/leis/l6815.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Mais serviços aos estrangeiros (renovação/susbstituição da CIE, prorrogação do prazo de estada
+                etc)</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/estrangeiro"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Mais informações sobre entrada e permanência no Brasil</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/data/Pages/MJA1BC41DEITEMID1F416857A0F2452DA9BE4D921C682671PTBRIE.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

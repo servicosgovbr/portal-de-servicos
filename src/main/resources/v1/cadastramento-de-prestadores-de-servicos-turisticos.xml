@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/cadastramento-de-prestadores-de-servicos-turisticos"/>
+
+    <id>cadastramento-de-prestadores-de-servicos-turisticos</id>
+
+    <nome>Cadastramento de Prestadores de Serviços Turísticos</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Sistema de cadastro de pessoas físicas e jurídicas que atuam na cadeia produtiva do turismo (CADASTUR), executado pelo Ministério do Turismo, em parceria com os Órgãos Oficiais de Turismo das Unidades da Federação.
+
+O Sistema recebe cadastros obrigatórios dos prestadores de serviços turísticos das seguintes atividades: Meios de Hospedagem (albergue, condo-hotel, flat, hotel urbano, hotel de selva, hotel fazenda, hotel histórico, pousada, resort e cama &amp;amp; café); Agências de Turismo; Transportadoras Turísticas; Organizadoras de Eventos; Parques Temáticos; Acampamentos Turísticos (Camping); e Guias de Turismo.
+
+Em caráter opcional, também poderão se cadastrar: Restaurantes, Cafeterias e Bares; Centros de Convenções; Parques Aquáticos; Estruturas de Apoio ao Turismo Náutico; Casas de Espetáculo; Prestadoras de Serviços de Infraestrutura para Eventos; Locadoras de Veículos para Turistas; Prestadoras Especializadas em Segmentos Turísticos.
+
+O cadastro permite a participação em eventos, feiras e ações realizados pelo Ministério do Turismo e pela Embratur e acesso a linhas de financiamento específicas para o turismo, por meio de bancos oficiais, além da participação em programas de qualificação promovidos e apoiados pelo Ministério do Turismo.
+
+Conforme disposto nos artigos 21 e 22 da Lei n.º 11.771, de 17 de setembro de 2008, o cadastro tornou-se obrigatório e contempla os prestadores de serviços turísticos constituídos na forma de empresário individual, as sociedades empresárias, sociedades simples e os serviços sociais autônomos que prestem serviços turísticos remunerados e que exerçam atividades econômicas relacionadas à cadeia produtiva do turismo.]]></descricao>
+
+    <url><![CDATA[http://www.cadastur.turismo.gov.br]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-turismo-mtur</id>
+        <nome>Ministério do Turismo (MTur)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-turismo-mtur"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-do-turismo-mtur</id>
+        <nome>Ministério do Turismo (MTur)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-turismo-mtur"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>comercio-e-servicos</id>
+            <nome>Comércio e Serviços</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/comercio-e-servicos"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>turismo</id>
+            <nome>Turismo</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/turismo"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Telefone">
+            <descricao>Dúvidas sobre o cadastro podem ser esclarecidas com a nossa central de atendimento: 0800 606
+                8484</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Cartilhas e Manuais">
+            <descricao>Manual de Orientações para Cadastramento dos Prestadores de Serviços Turísticos no Ministério do
+                Turismo</descricao>
+            <link rel="informacao-util#cartilhas-e-manuais" href="http://www.cadastur.turismo.gov.br/cadastur/_jsp/jsp/manuais/manual-usuario-cadastur.pdf"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/extratos-de-pagamentos-de-beneficios-previdenciarios"/>
+
+    <id>extratos-de-pagamentos-de-beneficios-previdenciarios</id>
+
+    <nome>Extratos de pagamentos de benefícios Previdenciários</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Emite o extrato dos pagamentos recebidos pelo beneficiário previdenciários, junto ao INSS.]]></descricao>
+
+    <url><![CDATA[http://agencia.previdencia.gov.br/e-aps/servico/144]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-previdencia-social-mps</id>
+        <nome>Ministério da Previdência Social (MPS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>instituto-nacional-do-seguro-social-inss</id>
+        <nome>Instituto Nacional do Seguro Social (INSS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/instituto-nacional-do-seguro-social-inss"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Telefone">
+            <descricao>Ligue 135 para obter mais informações.</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

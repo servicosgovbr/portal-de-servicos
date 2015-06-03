@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/dominio-publico-biblioteca-digital"/>
+
+    <id>dominio-publico-biblioteca-digital</id>
+
+    <nome>Domínio Público - Biblioteca digital</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O Portal Domínio Público promove o compartilhamento de conhecimentos ao colocar à disposição do público, pela internet, uma biblioteca virtual que serve de referência a professores, estudantes, pesquisadores e leitores em geral.]]></descricao>
+
+    <url><![CDATA[http://www.dominiopublico.gov.br/]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-da-educacao-mec</id>
+        <nome>Ministério da Educação (MEC)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-educacao-mec"/>
+    </orgaoPrestador>
+
+    
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>estudos</id>
+            <nome>Estudos</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estudos"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>comunicacoes</id>
+            <nome>Comunicações</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/comunicacoes"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>educacao</id>
+            <nome>Educação</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/educacao"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

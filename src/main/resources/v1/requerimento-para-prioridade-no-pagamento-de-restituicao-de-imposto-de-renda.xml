@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/requerimento-para-prioridade-no-pagamento-de-restituicao-de-imposto-de-renda"/>
+
+    <id>requerimento-para-prioridade-no-pagamento-de-restituicao-de-imposto-de-renda</id>
+
+    <nome>Requerimento para Prioridade no Pagamento de Restituição de Imposto de Renda</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Requerer prioridade no pagamento de restituição do imposto de renda da pessoa física (art. 69-A da Lei nº 9.784/99).]]></descricao>
+
+    <url><![CDATA[https://www.google.com.br/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CB4QFjAA&amp;url=http%3A%2F%2Fwww.receita.fazenda.gov.br%2Fpublico%2Fformularios%2FRequerimento_Prioridade_Pgto_Restituicao_PF.doc&amp;ei=S_VQVajiLcHAggSJhIDACQ&amp;usg=AFQjCNEbEB7b5AHTaZzFKZAVT4Yi-SM_Lg&amp;sig2=YaZqZY9-8ctC34eMF709_Q]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>contas-e-impostos</id>
+            <nome>Contas e Impostos</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/contas-e-impostos"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

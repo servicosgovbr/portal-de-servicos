@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/analise-de-atos-de-concentracao-economica-defesa-da-concorrencia"/>
+
+    <id>analise-de-atos-de-concentracao-economica-defesa-da-concorrencia</id>
+
+    <nome>Análise de Atos de Concentração Econômica - Defesa da Concorrência</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Após a submissão pelos interessados, inclusive mediante o recolhimento de taxa processual (vide &quot;Mais informações&quot;), o Conselho Administrativo de Defesa Econômica (CADE) analisa e decide sobre as fusões, aquisições de controle ou partes de uma ou mais empresas, incorporações, contratos associativos, consórcios ou joint ventures (empreendimento conjunto) e outros atos de concentração econômica entre grandes empresas que possam colocar em risco a livre concorrência, à luz da Lei de nº 12.529/2011 (vide &quot;Mais informações&quot;).
+
+O pedido de aprovação de atos de concentração econômica seguirá o procedimento previsto na Lei nº 12.529/2011, bem como no Regimento Interno do CADE (vide &quot;Mais informações) e a documentação deve ser encaminhada presencialmente ou via Correios; podendo, ainda, ser encaminhada via e-mail, o que não exclui a obrigatoriedade de juntada da via original, no prazo de 5 (cinco) dias.
+
+Realiza-se um ato de concentração quando:
+
+I - 2 (duas) ou mais empresas anteriormente independentes se fundem;
+II - 1 (uma) ou mais empresas adquirem, direta ou indiretamente, por compra ou permuta de ações, quotas, títulos ou valores mobiliários conversíveis em ações, ou ativos, tangíveis ou intangíveis, por via contratual ou por qualquer outro meio ou forma, o controle ou partes de uma ou outras empresas;
+III - 1 (uma) ou mais empresas incorporam outra ou outras empresas; ou
+IV - 2 (duas) ou mais empresas celebram contrato associativo, consórcio ou joint venture (não serão considerados atos de concentração quando destinados às licitações promovidas pela administração pública direta e indireta e aos contratos delas decorrentes)
+
+Serão submetidos ao Cade pelas partes envolvidas na operação os atos de concentração econômica em que, cumulativamente:
+
+I - pelo menos um dos grupos envolvidos na operação tenha registrado, no último balanço, faturamento bruto anual ou volume de negócios total no País, no ano anterior à operação, equivalente ou superior a R$ 400.000.000,00 (quatrocentos milhões de reais); e
+
+II - pelo menos um outro grupo envolvido na operação tenha registrado, no último balanço, faturamento bruto anual ou volume de negócios total no País, no ano anterior à operação, equivalente ou superior a R$ 30.000.000,00 (trinta milhões de reais).
+
+Os valores poderão ser adequados, simultânea ou independentemente, por indicação do Plenário do Cade, por portaria interministerial dos Ministros de Estado da Fazenda e da Justiça.
+
+Os atos não podem ser consumados antes de apreciados, sob pena de nulidade, sendo ainda imposta multa pecuniária, de valor não inferior a R$ 60.000,00 (sessenta mil reais) nem superior a R$ 60.000.000,00 (sessenta milhões de reais), a ser aplicada nos termos da regulamentação, sem prejuízo da abertura de processo administrativo.
+
+Observação: O Conselho Administrativo de Defesa Econômica - Cade é uma autarquia federal, vinculada ao Ministério da Justiça, com sede e foro no Distrito Federal, que exerce, em todo o Território nacional, as atribuições dadas pela Lei nº 12.529/2011 (vide &quot;Mais informações&quot;). O Cade tem como missão zelar pela livre concorrência no mercado, sendo a entidade responsável, no âmbito do Poder Executivo, não só por investigar e decidir, em última instância, sobre a matéria concorrencial, como também estimular e disseminar a cultura da livre concorrência.]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>conselho-administrativo-de-defesa-economica-cade</id>
+        <nome>Conselho Administrativo de Defesa Econômica (CADE)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/conselho-administrativo-de-defesa-economica-cade"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>SEPN 515, Conjunto D, Lote 4 - Ed. Carlos Taurisano. Asa Norte. Brasília/DF. Cep: 70770-504.</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Outros">
+            <descricao>Via Correios no endereço: SEPN 515, Conjunto D, Lote 4 - Ed. Carlos Taurisano. Asa Norte.
+                Brasília/DF. Cep: 70770-504.</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="E-mail">
+            <descricao>protocolo@cade.gov.br</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Formulários">
+            <descricao>Anexo I da RESOLUÇÃO Nº 2/2012 - CADE</descricao>
+            <link rel="informacao-util#formularios" href="http://www.cade.gov.br/upload/Resolu%C3%A7%C3%A3o%202_2012%20-%20An%C3%A1lise%20Atos%20Concentra%C3%A7%C3%A3o.pdf"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Regimento Interno - CADE</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.cade.gov.br/upload/RICADE%20atual..pdf"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Lei nº 12.529/11</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/Lei/L12529.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Taxa Processual - GRU</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.cade.gov.br/Default.aspx?380b1bee061bf131c573c590a5"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Consulta de peças processuais e documentos públicos em processos julgados e em andamento no
+                âmbito do CADE</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.cade.gov.br/Default.aspx?a8889b6caa60b241d345d069fc"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

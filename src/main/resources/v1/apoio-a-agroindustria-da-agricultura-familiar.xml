@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/apoio-a-agroindustria-da-agricultura-familiar"/>
+
+    <id>apoio-a-agroindustria-da-agricultura-familiar</id>
+
+    <nome>Apoio à Agroindústria da Agricultura Familiar</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O Programa de Agroindústria apoia a inclusão dos agricultores familiares no processo de agroindustrialização e comercialização da sua produção, de modo a agregar valor, gerar renda e oportunidades de trabalho no meio rural.
+
+Podem participar agricultores familiares, pessoas físicas e jurídicas formada por no mínimo 90% destes agricultores e com no mínimo 70% da matéria-prima própria.
+
+O Programa está estruturado em 5(cinco) linhas de ação:
+
+Linha de Ação I: Crédito Rural
+Linha de Ação II: Adequação e Orientações nas Legislações Específicas
+Linha de Ação III: Capacitação de Multiplicadores, Elaboração de Manuais Técnicos e Documentos Orientadores
+Linha de Ação IV: Ciência e Tecnologia
+Linha de Ação V: Promoção e Divulgação dos Produtos Agroindustriais, Identificação de Mercados e Articulação com o Mercado Institucional]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-desenvolvimento-agrario-mda</id>
+        <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-agrario-mda"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>ministerio-do-desenvolvimento-agrario-mda</id>
+        <nome>Ministério do Desenvolvimento Agrário (MDA)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-agrario-mda"/>
+    </orgaoPrestador>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>agropecuaria</id>
+            <nome>Agropecuária</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Telefone">
+            <descricao>(61) 2020-0946 / 2020-0947</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Cartilhas e Manuais">
+            <descricao>Capacitação e manuais</descricao>
+            <link rel="informacao-util#cartilhas-e-manuais" href="http://www.mda.gov.br/sitemda/secretaria/saf-agro/capacitação-e-manuais"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

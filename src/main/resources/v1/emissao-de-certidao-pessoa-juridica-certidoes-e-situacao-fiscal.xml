@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/emissao-de-certidao-pessoa-juridica-certidoes-e-situacao-fiscal"/>
+
+    <id>emissao-de-certidao-pessoa-juridica-certidoes-e-situacao-fiscal</id>
+
+    <nome>Emissão de Certidão Pessoa Jurídica (Certidões e Situação Fiscal)</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Solicitar a emissão de certidão da pessoa jurídica, exceto de contribuições previdenciárias.]]></descricao>
+
+    <url><![CDATA[http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=1]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-da-receita-federal-do-brasil-rfb</id>
+        <nome>Secretaria da Receita Federal do Brasil (RFB)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-da-receita-federal-do-brasil-rfb"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>economia-e-financas</id>
+            <nome>Economia e Finanças</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/economia-e-financas"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Unidades de atendimento presencial (apenas na jurisdição do contribuinte)</descricao>
+            <link rel="canal-de-prestacao#presencial" href="https://idg.receita.fazenda.gov.br/contato/unidades-de-atendimento/unidades-de-atendimento"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Orientações gerais sobre o serviço</descricao>
+            <link rel="informacao-util#mais-informacoes" href="https://idg.receita.fazenda.gov.br/orientacao/tributaria/certidoes-e-situacao-fiscal/orientacoes-gerais"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Ver todos os serviços do assunto &quot;Certidões e Situação Fiscal&quot;</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/3"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Ver todos os serviços do assunto &quot;Dívida Ativa da União – DAU&quot;</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.receita.fazenda.gov.br/aplicacoes/atbhe/tus/default.aspx?/a/7"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

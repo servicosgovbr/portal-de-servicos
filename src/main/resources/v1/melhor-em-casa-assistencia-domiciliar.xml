@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/melhor-em-casa-assistencia-domiciliar"/>
+
+    <id>melhor-em-casa-assistencia-domiciliar</id>
+
+    <nome>Melhor em Casa - Assistência Domiciliar</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Pessoas com necessidade de reabilitação motora, idosos, pacientes crônicos sem agravamento ou em situação pós-cirúrgica, por exemplo, terão assistência multiprofissional gratuita em seus lares, com cuidados mais próximos da família.
+
+O atendimento será feito por equipes multidisciplinares, formadas prioritariamente por médicos, enfermeiros, técnicos em enfermagem e fisioterapeuta. Outros profissionais (fonoaudiólogo, nutricionista, odontólogo, psicólogo e farmacêutico) poderão compor as equipes de apoio. Cada equipe poderá atender, em média, 60 pacientes, simultaneamente.]]></descricao>
+
+    <url><![CDATA[http://sage.saude.gov.br/?link=melhorCasa&amp;flt=true&amp;param=null]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-saude-ms</id>
+        <nome>Ministério da Saúde (MS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>ministerio-da-saude-ms</id>
+        <nome>Ministério da Saúde (MS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
+    </orgaoPrestador>
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>cuidados-com-a-saude</id>
+            <nome>Cuidados com a saúde</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/cuidados-com-a-saude"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>humanizacao-na-saude</id>
+            <nome>Humanização na saúde</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/humanizacao-na-saude"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude</id>
+            <nome>Saúde</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude-dos-portadores-de-deficiencias</id>
+            <nome>Saúde dos portadores de deficiências</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude-dos-portadores-de-deficiencias"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

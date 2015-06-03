@@ -1,7 +1,9 @@
 package br.gov.servicos.foundation;
 
+import lombok.SneakyThrows;
+import org.springframework.core.io.Resource;
+
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -10,7 +12,13 @@ import static java.util.stream.Collectors.joining;
 
 public class IO {
 
-    public static String read(InputStream stream) throws IOException {
+    @SneakyThrows
+    public static String read(Resource resource) {
+        return read(resource.getInputStream());
+    }
+
+    @SneakyThrows
+    public static String read(InputStream stream) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream, defaultCharset()))) {
             return reader.lines().collect(joining("\n"));
         }

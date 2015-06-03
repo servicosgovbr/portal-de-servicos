@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/acesso-aos-documentos-do-acervo-do-arquivo-nacional"/>
+
+    <id>acesso-aos-documentos-do-acervo-do-arquivo-nacional</id>
+
+    <nome>Acesso aos documentos do Acervo do Arquivo Nacional</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Atendimento, a distância, das demandas de acesso aos documentos do acervo do Arquivo Nacional, como por exemplo a reprodução de documentos, transcrições e/ou certidões probatórias e informações sobre o acervo, por meio do sítio do órgão ou e-mail.
+
+Atendimento presencial na Sala de Consultas do Arquivo Nacional. O usuário requisita e examina os documentos de seu interesse, sejam os manuscritos, os filmes, as fitas audiomagnéticas, as fotografias, os mapas e plantas ou os livros, periódicos, folhetos e teses pertencentes ao acervo da Biblioteca.]]></descricao>
+
+    <url><![CDATA[http://www.arquivonacional.gov.br/cgi/cgilua.exe/sys/start.htm?infoid=519&amp;sid=8]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>arquivo-nacional-an</id>
+        <nome>Arquivo Nacional (AN)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/arquivo-nacional-an"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="E-mail">
+            <descricao>Para atendimento a distância - consultas@arquivonacional.gov.br</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Telefone">
+            <descricao>Para atendimento a distância: (21) 2179-1257</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Para atendimento presencial:
+
+                - Arquivo Nacional/Sede: Praça da República, 173, Centro, Rio de Janeiro – RJ
+                - Arquivo Nacional/Coordenação Regional no DF: Setor de Indústrias Gráficas, quadra 6, lote 800, Prédio
+                da Imprensa Nacional, Brasília – DF</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Formulários">
+            <descricao>Formulário de solicitação - Para atendimento a distância.</descricao>
+            <link rel="informacao-util#formularios" href="http://www.arquivonacional.gov.br/templates/htm/arquivonacional/atendimento-a-distancia_FORM.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Sobre o atendimento presencial</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.arquivonacional.gov.br/cgi/cgilua.exe/sys/start.htm?infoid=49&amp;sid=8"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Telefone">
+            <descricao>Para informações sobre atendimento persencial:
+                Arquivo Nacional/Sede/RJ - (21) 2179-1235
+                Arquivo Nacional/Coordenação Regional no DF - (61)3344-5140</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Outros">
+            <descricao>Informações/dúvidas sobre atendimento presencial: saladeconsultas@arquivonacional.gov.br</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

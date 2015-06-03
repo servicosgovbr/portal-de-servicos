@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/samu-servico-de-atendimento-movel-de-urgencia"/>
+
+    <id>samu-servico-de-atendimento-movel-de-urgencia</id>
+
+    <nome>SAMU - Serviço de Atendimento Móvel de Urgência</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O Serviço de Atendimento Móvel de Urgência (SAMU) realiza o atendimento de urgência e emergência em qualquer lugar: residências, locais de trabalho e vias públicas. O socorro começa com a chamada gratuita, feita para o telefone 192. A ligação é atendida por técnicos que identificam a emergência e transferem o telefonema para um médico, que faz o diagnóstico da situação e inicia o atendimento no mesmo instante, orientando o paciente, ou a pessoa que fez a chamada, sobre as primeiras ações.]]></descricao>
+
+    <url><![CDATA[http://sage.saude.gov.br/?link=samu&amp;flt=true&amp;param=null]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-saude-ms</id>
+        <nome>Ministério da Saúde (MS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>ministerio-da-saude-ms</id>
+        <nome>Ministério da Saúde (MS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
+    </orgaoPrestador>
+
+    
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>cuidados-com-a-saude</id>
+            <nome>Cuidados com a saúde</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/cuidados-com-a-saude"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>emergencias-e-urgencias</id>
+            <nome>Emergências e Urgências</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/emergencias-e-urgencias"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude</id>
+            <nome>Saúde</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Telefone">
+            <descricao>Disque 192 (chamada gratuita)</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    
+
+</servico>

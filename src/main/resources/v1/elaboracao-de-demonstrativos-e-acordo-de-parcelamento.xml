@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/elaboracao-de-demonstrativos-e-acordo-de-parcelamento"/>
+
+    <id>elaboracao-de-demonstrativos-e-acordo-de-parcelamento</id>
+
+    <nome>Elaboração de Demonstrativos e Acordo de Parcelamento</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Elaboração de Demonstrativos Previdenciário de Política de Investimentos, das Aplicações e Investimentos dos Recursos e o de Resultados da Avaliação Atuarial - DRAA e o Comprovante de Repasse, são preenchidos pelo ente federativo, via internet, e enviados para o CADPREV e constituem critério para a emissão de CRP.]]></descricao>
+
+    <url><![CDATA[http://www.previdencia.gov.br/conteudoDinamico.php?id=1072]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-previdencia-social-mps</id>
+        <nome>Ministério da Previdência Social (MPS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-da-previdencia-social-mps</id>
+        <nome>Ministério da Previdência Social (MPS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-previdencia-social-mps"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/consulta-prestadores-de-servicos-turisticos-regulares"/>
+
+    <id>consulta-prestadores-de-servicos-turisticos-regulares</id>
+
+    <nome>Consulta - Prestadores de Serviços Turísticos Regulares</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Consulta ao cadastro obrigatório de prestadores de serviços turísticos que operam regularmente no país.
+
+O Sistema recebe cadastros obrigatórios de pessoas físicas e jurídicas das seguintes atividades: Meios de Hospedagem (albergue, hotel, flat, pousada, resort e cama &amp;amp; café); Agências de Turismo; Transportadoras Turísticas; Organizadoras de Eventos; Parques Temáticos; Acampamentos Turísticos (Camping); Guias de Turismo]]></descricao>
+
+    <url><![CDATA[http://www.cadastur.turismo.gov.br]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-turismo-mtur</id>
+        <nome>Ministério do Turismo (MTur)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-turismo-mtur"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>ministerio-do-turismo-mtur</id>
+        <nome>Ministério do Turismo (MTur)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-do-turismo-mtur"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>comercio-e-servicos</id>
+            <nome>Comércio e Serviços</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/comercio-e-servicos"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Telefone">
+            <descricao>Dúvidas sobre o CADASTUR, entre em contato com a nossa central de atendimento: 0800 606 8484</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

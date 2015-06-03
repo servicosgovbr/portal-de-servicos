@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/informacoes-sobre-condicoes-das-rodovias-e-estradas-federais"/>
+
+    <id>informacoes-sobre-condicoes-das-rodovias-e-estradas-federais</id>
+
+    <nome>Informações sobre Condições das Rodovias e Estradas Federais</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Consiste no fornecimento de informações sobre rodovias e estradas sob a circunscrição do Departamento de Polícia Rodoviária Federal, a exemplo de interdições e bloqueios, condições das vias, localizações de Postos da Polícia Rodoviária Federal, dentre outras.]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>departamento-de-policia-rodoviaria-federal-dprf</id>
+        <nome>Departamento de Polícia Rodoviária Federal (DPRF)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-rodoviaria-federal-dprf"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Telefone">
+            <descricao>191</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="E-mail">
+            <descricao>Por meio dos endereços eletrônicos das “Centrais de Informações Operacionais” do Departamento de
+                Polícia Rodoviária Federal: ciop.df@dprf.gov.br e ciop.regional@dprf.gov.br</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Em qualquer Unidade ou Equipe de Ronda do Departamento de Polícia Rodoviária Federal, cujos
+                endereços estão disponíveis no site do órgão (vide &quot;Localização das unidades&quot;).</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Localização das unidades">
+            <descricao>Endereços de todas as unidades do Departamente de Polícia Rodoviária Federal.</descricao>
+            <link rel="informacao-util#localizacao-das-unidades" href="http://www.dprf.gov.br/PortalInternet/enderecosETelefones.faces"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/emissao-de-licenca-de-aquicultor"/>
+
+    <id>emissao-de-licenca-de-aquicultor</id>
+
+    <nome>Emissão de Licença de Aquicultor</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Toda a pessoa ou empresa interessada no cultivo de organismos aquáticos (peixes, mariscos, crustáceos, algas, rãs) deve estar inscrita no Ministério da Pesca e Aquicultura para poder exercer a atividade com fins comerciais.]]></descricao>
+
+    <url><![CDATA[http://www.mpa.gov.br/index.php/aquiculturampa/registro-e-licenca-de-aquicultor/inscricao-e-renovacao-do-rgp]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-pesca-e-aquicultura-mpa</id>
+        <nome>Ministério da Pesca e Aquicultura (MPA)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-pesca-e-aquicultura-mpa"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>ministerio-da-pesca-e-aquicultura-mpa</id>
+        <nome>Ministério da Pesca e Aquicultura (MPA)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-pesca-e-aquicultura-mpa"/>
+    </orgaoPrestador>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>alimento</id>
+            <nome>Alimento</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/alimento"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>pecuaria</id>
+            <nome>Pecuária</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/pecuaria"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>agropecuaria</id>
+            <nome>Agropecuária</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>A licença tem renovação anual. Empreendimentos até 2 ha de lâmina d´água são isentos de taxa.
+                Para os demais a taxa varia de R$ 137,00 até R$ 450,00 conforme o porte do empreendimento. A renovação
+                da licença também está disponível no site do ministério.</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/certificado-de-licenca-de-funcionamento-clf-produtos-quimicos"/>
+
+    <id>certificado-de-licenca-de-funcionamento-clf-produtos-quimicos</id>
+
+    <nome>Certificado de Licença de Funcionamento (CLF) - Produtos Químicos</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[É o documento que certifica que a pessoa jurídica em situação regular, ou pessoa física no caso de produtor rural, está devidamente registrada na Divisão de Controle de Produtos Químicos do Departamento de Polícia Federal.
+
+Para obtê-lo, baixe o Programa Cadastro (vide &quot;Formulários&quot;), preencha as informações solicitadas de acordo com a Portaria 1.274/2003 (vide &quot;Outros&quot;), gere o arquivo com extensão XML que deverá ser salvo em um disquete ou CD, imprima o requerimento, e entregue-o juntamente com toda a documentação necessária em uma unidade da Polícia Federal (vide &quot;Presencial&quot;).]]></descricao>
+
+    <url><![CDATA[http://www.dpf.gov.br/institucional/pf-pelo-brasil]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>departamento-de-policia-federal-dpf</id>
+        <nome>Departamento de Polícia Federal (DPF)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/departamento-de-policia-federal-dpf"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-as-empresas</id>
+            <nome>Serviços às Empresas</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-as-empresas"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>empreendedorismo-e-negocios</id>
+            <nome>Empreendedorismo e negócios</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/empreendedorismo-e-negocios"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>profissao-e-trabalho</id>
+            <nome>Profissão e trabalho</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/profissao-e-trabalho"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>seguranca-e-ordem-publica</id>
+            <nome>Segurança e Ordem Pública</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/seguranca-e-ordem-publica"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Formulários">
+            <descricao>GRU (FUNAD)</descricao>
+            <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/gru/produtos-quimicos"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Formulários">
+            <descricao>Programa Cadastro</descricao>
+            <link rel="informacao-util#formularios" href="http://www.dpf.gov.br/servicos/produtos-quimicos/programas/programa-cadastro"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Outros">
+            <descricao>Portaria 1.274/2003</descricao>
+            <link rel="informacao-util#outros" href="http://www.dpf.gov.br/servicos/produtos-quimicos/legislacao/PORTARIA1274.pdf"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Renovação de Certificado de Licença de Funcionamento - CLF</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/renovacao-de-certificado-de-licenca-de-funcionamento"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Atualização Cadastral de Produtos Químicos - Inclusão / Exclusão</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/cadastro-e-licenca/atualizacao-de-produtos-quimicos"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Acompanhamento de processos</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://www.dpf.gov.br/servicos/produtos-quimicos/consultas/acompanhamento-de-processos"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/aqui-tem-farmacia-popular"/>
+
+    <id>aqui-tem-farmacia-popular</id>
+
+    <nome>Aqui tem Farmácia Popular</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Na rede credenciada é possível ter acesso aos medicamentos para as doenças mais comuns entre os cidadãos. O Programa possui uma rede própria de Farmácias Populares e a parceria com farmácias e drogarias da rede privada, chamada de &quot;Aqui tem Farmácia Popular&quot;.]]></descricao>
+
+    <url><![CDATA[http://sage.saude.gov.br/?link=aqt&amp;flt=true&amp;param=null]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-saude-ms</id>
+        <nome>Ministério da Saúde (MS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
+    </orgaoResponsavel>
+
+    
+
+    <orgaoPrestador>
+        <id>ministerio-da-saude-ms</id>
+        <nome>Ministério da Saúde (MS)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/ministerio-da-saude-ms"/>
+    </orgaoPrestador>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>cuidados-com-a-saude</id>
+            <nome>Cuidados com a saúde</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/cuidados-com-a-saude"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>saude</id>
+            <nome>Saúde</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/saude"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    
+
+    
+
+</servico>

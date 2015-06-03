@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/prorrogacao-do-prazo-de-estada-no-brasil-vistos"/>
+
+    <id>prorrogacao-do-prazo-de-estada-no-brasil-vistos</id>
+
+    <nome>Prorrogação do Prazo de Estada no Brasil (vistos)</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[A prorrogação do prazo de estada no Brasil deve ser solicitada até 30 (trinta) dias antes do término do prazo de estada concedido, conforme disposto no art. 67, parágrafo 3º, do Decreto nº 86.715/81.
+
+Tipos de Prorrogação analisados pelo Ministério da Justiça:
+
+- Prorrogação da estada do Asilado;
+- Prorrogação do visto temporário I (em viagem cultural ou missão de estudos);
+- Prorrogação do visto temporário IV (estudante);
+- Prorrogação do visto temporário V (chamada de mão de obra estrangeira - contrato de trabalho);
+- Prorrogação do visto Temporário VI (correspondente de jornal, revista, rádio, televisão ou agência);
+- Prorrogação do visto temporário VII (religioso)
+
+A prorrogação de prazo do visto de turista, do visto temporário item II (negócios) e temporário item III (artistas e desportistas) deve ser requerida junto à Unidade do Departamento Polícia Federal mais próxima do local de residência do interessado (Vide &quot;Unidades do Departamento de Polícia Federal&quot;), conforme disposto no art. 65 c/c art. 66, ambos do Decreto nº 86.715/81. Esses pedidos de prorrogação serão decididos pelo Departamento de Polícia Federal, conforme disciplina o art. 66, inciso I, do Decreto nº 86.715/81.
+
+Os pedidos de prorrogação do prazo de estada dos vistos temporários item I (viagem cultural ou missão de estudos), IV (estudante), V (trabalho), VI (correspondente de jornal, revista, rádio, televisão ou agência noticiosa estrangeira), e VII (ministro de confissão religiosa ou membro de instituto de vida consagrada e de congregação ou ordem religiosa), deverão ser protocolizados junto à unidade do Departamento de Polícia Federal mais próxima da residência do interessado (Vide &quot;Unidades do Departamento de Polícia Federal&quot;) ou no Protocolo Geral do Ministério da Justiça, cujo endereço está abaixo descrito (Vide &quot;Presencial&quot;). Esses pedidos de prorrogação serão analisados e decididos pelo Departamento de Estrangeiros da Secretaria Nacional de Justiça, ouvido o Ministério do Trabalho e Emprego, quando for o caso, conforme estabelecido pelo art. 66, inciso II, do Decreto nº 86.715/81.
+
+O formulário de requerimento da prorrogação do prazo de estada no Brasil está disponível no site do Ministério da Justiça e nas unidades do Departamento de Polícia Federal, bem como a documentação necessária (vide &quot;Requerimento, documentação necessária e mais informações&quot;).
+
+No momento da entrega dos documentos referentes à solicitação da prorrogação do prazo de estada no Brasil, seja nas unidades do Departamento de Polícia Federal ou no Protocolo Geral do Ministério da Justiça, os interessados receberão um protocolo constando sua fotografia e o número do processo, o qual servirá de comprovante de regularidade da estada no País, até decisão final do pedido.
+
+O acompanhamento dos pedidos de prorrogação do prazo de estada pode ser realizado por meio da Central de Atendimento da Secretaria Nacional de Justiça do Ministério da Justiça (Vide &quot;Outros&quot;) ou pela Internet ( Vide &quot;Acompanhamento dos pedidos de prorrogação do prazo de estada&quot;).]]></descricao>
+
+    <url><![CDATA[http://www.dpf.gov.br/institucional/pf-pelo-brasil]]></url>
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-da-justica-mj</id>
+        <nome>Ministério da Justiça (MJ)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-da-justica-mj"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>secretaria-nacional-de-justica-snj</id>
+        <nome>Secretaria Nacional de Justiça (SNJ)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/secretaria-nacional-de-justica-snj"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>estrangeiros-no-brasil</id>
+            <nome>Estrangeiros no Brasil</nome>
+            <link rel="linha-da-vida" href="http://localhost:8080/linha-da-vida/estrangeiros-no-brasil"/>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>protecao-social</id>
+            <nome>Proteção social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/protecao-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Protocolo Geral do Ministério da Justiça: Esplanada dos Ministérios, Bloco T, Edifício Sede do
+                Ministério da Justiça, Térreo. Brasília/DF. CEP 74900-060. obs: somente para vistos temporários itens I,
+                IV, V, VI e VII.</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Outros">
+            <descricao>Para dúvidas e orientações, utilize a Central de Atendimento ao Estrangeiro, pelo e-mail
+                estrangeiros@mj.gov.br ou presencialmente, no endereço: Esplanada dos Ministérios, Bloco T, Anexo II -
+                Sala T3. CEP 74900-060. Brasília/DF.</descricao>
+            
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Serviços relacionados">
+            <descricao>Acompanhamento dos pedidos de prorrogação do prazo de estada</descricao>
+            <link rel="informacao-util#servicos-relacionados" href="http://portal.mj.gov.br/data/Pages/MJ1C684B92ITEMID857642E424BA450FB23C694F67B340DBPTBRNN.htm"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Requerimento, documentação necessária e mais informações</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://portal.mj.gov.br/main.asp?View=%7BA1BC41DE-C501-4FD4-8651-4891730652C3%7D&amp;Team=&amp;params=itemID=%7B15F2CE30-33B7-40E4-98E6-44F8F3047A9F%7D;&amp;UIPartUID=%7B2868BA3C-1C72-4347-BE11-A26F70F4CB26%7D"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>

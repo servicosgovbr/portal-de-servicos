@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <link rel="self" href="http://localhost:8080/servico/programa-de-aquisicao-de-alimentos-da-agricultura-familiar-paa"/>
+
+    <id>programa-de-aquisicao-de-alimentos-da-agricultura-familiar-paa</id>
+
+    <nome>Programa de Aquisição de Alimentos da agricultura familiar - PAA</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[O Programa de Aquisição de Alimentos (PAA) é uma ação do Governo Federal que compra alimentos da agricultura familiar e distribui a pessoas que precisam - aquelas que se encontram em situação de insegurança alimentar e nutricional e são atendidas pela rede socioassistencial. Os alimentos também servem para abastecer os restaurantes populares, cozinhas de creches e escolas públicas, de hospitais públicos e presídios - os chamados equipamentos públicos de alimentação e nutrição. Os produtos também podem formar estoques públicos ou estoques das organizações da agricultura familiar.
+
+Os agricultores familiares podem vender para o PAA de forma individual ou coletiva - por meio de cooperativas da agricultura familiar de que façam parte. As compras são realizadas pelos Governos Estaduais e Prefeituras Municipais que participam do programa, e pela Companhia Nacional de Abastecimento (CONAB), com recursos do Ministério do Desenvolvimento Social e Combate à Fome (MDS) e do Ministério do Desenvolvimento Agrário (MDA).]]></descricao>
+
+    
+
+    
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>ministerio-do-desenvolvimento-social-e-combate-a-fome-mds</id>
+        <nome>Ministério do Desenvolvimento Social e Combate à Fome (MDS)</nome>
+        <link rel="orgao-responsavel" href="http://localhost:8080/orgao/ministerio-do-desenvolvimento-social-e-combate-a-fome-mds"/>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>companhia-nacional-de-abastecimento-conab</id>
+        <nome>Companhia Nacional de Abastecimento (Conab)</nome>
+        <link rel="orgao-prestador" href="http://localhost:8080/orgao/companhia-nacional-de-abastecimento-conab"/>
+    </orgaoPrestador>
+
+    
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+            <link rel="segmento-da-sociedade" href="http://localhost:8080/publico-alvo/servicos-aos-cidadaos"/>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>previdencia-social</id>
+            <nome>Previdência Social</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/previdencia-social"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>agropecuaria</id>
+            <nome>Agropecuária</nome>
+            <link rel="area-de-interesse" href="http://localhost:8080/area-de-interesse/agropecuaria"/>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado></custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="Presencial">
+            <descricao>Na Prefeitura ou na CONAB do município.</descricao>
+            
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="Mais informações">
+            <descricao>Para saber mais sobre o PAA</descricao>
+            <link rel="informacao-util#mais-informacoes" href="http://www.mds.gov.br/segurancaalimentar/aquisicao-e-comercializacao-da-agricultura-familiar"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>
