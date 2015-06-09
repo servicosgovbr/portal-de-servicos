@@ -3,12 +3,12 @@ As tarefas a serem realizadas pelos usuários participantes do teste de usabilid
 
 Para verificarmos o quanto o site está fácil de ser utilizado por usuários com pouca experiência de uso da internet poderemos ter tarefas simples ou complexas. 
 
-Neste teste de usabilidade iremos testar o novo site do Guia de Serviços, e cada teste levará entre 30 e 60 minutos. A estrutura do teste será:
+Neste teste de usabilidade iremos testar o novo site do Portal de Serviços, e cada teste levará entre 30 e 60 minutos. A estrutura do teste será:
 
 
 ## Anotações gerais
 
-Produto: *Guia de Serviços*
+Produto: *Portal de Serviços*
 
 Teste nº:
 
@@ -84,7 +84,7 @@ Será entregue uma sequencia de tarefas que deverão ser realizadas uma após a 
 
 
 #### Tarefa A
-Página: Página Inicial do Guia de Serviços
+Página: Página Inicial do Portal de Serviços
 
 Objetivo: Entender se o objetivo deste site é claro para o cidadão.
 
@@ -104,7 +104,7 @@ Perguntar impressões gerais.
 
 
 #### Tarefa B
-Página: Página Inicial do Guia de Serviços
+Página: Página Inicial do Portal de Serviços
 
 Objetivo: Entender se está acessível encontrar informações sobre serviços.
 

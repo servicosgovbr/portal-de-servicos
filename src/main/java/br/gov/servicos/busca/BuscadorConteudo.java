@@ -21,7 +21,7 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_IMPORTADOR;
+import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.toList;
@@ -75,7 +75,7 @@ public class BuscadorConteudo {
         return termo.map(criaQuery)
                 .map(q -> et.query(
                         new NativeSearchQueryBuilder()
-                                .withIndices(GDS_IMPORTADOR)
+                                .withIndices(IMPORTADOR)
                                 .withTypes("conteudo", "servico")
                                 .withFields("tipoConteudo", "titulo", "conteudo", "descricao")
                                 .withPageable(pageable)

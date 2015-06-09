@@ -1,18 +1,18 @@
 ### No servidor de aplicação 1 (`app1`):
 
 - Verificar que o hostname da máquina está presente no arquivo `/etc/hosts`
-- Sobrescrever `/etc/sysconfig/guia-de-servicos-overrides` com o arquivo em `secrets/guia-de-servicos.producao.config` (ou o equivalente, enviado por email)
+- Sobrescrever `/etc/sysconfig/portal-de-servicos-overrides` com o arquivo em `secrets/portal-de-servicos.producao.config` (ou o equivalente, enviado por email)
 - Limpar os índices do ElasticSearch:
 
 ```bash
-app1~$ curl -XDELETE 'http://10.17.0.6:9200/gds-importador'
-app1~$ curl -XDELETE 'http://10.17.0.7:9200/gds-importador'
+app1~$ curl -XDELETE 'http://10.17.0.6:9200/pds-importador'
+app1~$ curl -XDELETE 'http://10.17.0.7:9200/pds-importador'
 ```
 
 - Rodar o script `app-node-update` com a versão a instalar como parâmetro:
 
 ```bash
-app1~$ wget https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/scripts/prod-like/app-node-update
+app1~$ wget https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/scripts/prod-like/app-node-update
 app1~$ chmod +x app-node-update
 app1~$ sudo ./app-node-update 1234
 ```
@@ -46,10 +46,10 @@ app1~$ curl "localhost:8080/health"
 ```json
 {
   "status": "UP",
-  "guiaDeServicosIndex": {
+  "portalDeServicosIndex": {
     "status": "UP",
-    "gds-importador": "ok (638 docs)",
-    "gds-persistente": "ok (4 docs)"
+    "pds-importador": "ok (638 docs)",
+    "pds-persistente": "ok (4 docs)"
   },
   "elasticSearch": {
     "status": "GREEN",
@@ -68,11 +68,11 @@ app1~$ curl "localhost:8080/health"
 ### No servidor de aplicação 2 (`app2`):
 
 - Verificar que o hostname da máquina está presente no arquivo `/etc/hosts`
-- Sobrescrever `/etc/sysconfig/guia-de-servicos-overrides` com o arquivo em `secrets/guia-de-servicos.producao.config` (ou o equivalente, enviado por email)
+- Sobrescrever `/etc/sysconfig/portal-de-servicos-overrides` com o arquivo em `secrets/portal-de-servicos.producao.config` (ou o equivalente, enviado por email)
 - Rodar o script `app-node-update` com a versão a instalar como parâmetro:
 
 ```bash
-app2~$ wget https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/scripts/prod-like/app-node-update
+app2~$ wget https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/scripts/prod-like/app-node-update
 app2~$ chmod +x app-node-update
 app2~$ sudo ./app-node-update 1234
 ```
@@ -107,10 +107,10 @@ app2~$ curl "localhost:8080/health"
 ```json
 {
   "status": "UP",
-  "guiaDeServicosIndex": {
+  "portalDeServicosIndex": {
     "status": "UP",
-    "gds-importador": "ok (638 docs)",
-    "gds-persistente": "ok (0 docs)"
+    "pds-importador": "ok (638 docs)",
+    "pds-persistente": "ok (0 docs)"
   },
   "elasticSearch": {
     "status": "GREEN",

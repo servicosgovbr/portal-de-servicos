@@ -1,7 +1,7 @@
 package br.gov.servicos.servico.linhaDaVida;
 
 import br.gov.servicos.Main;
-import br.gov.servicos.config.GuiaDeServicosIndex;
+import br.gov.servicos.config.PortalDeServicosIndex;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -35,7 +35,7 @@ public class LinhaDaVidaRepositoryIntegrationTest {
     LinhaDaVidaRepository linhasDaVida;
 
     @Autowired
-    GuiaDeServicosIndex esConfig;
+    PortalDeServicosIndex esConfig;
 
     @Before
     public void setup() throws IOException {

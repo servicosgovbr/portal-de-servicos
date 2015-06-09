@@ -1,7 +1,7 @@
 Perguntas Frequentes
 ---
 
-Aqui você encontra algumas respostas para dúvidas comuns sobre o uso do Guia de Serviços.
+Aqui você encontra algumas respostas para dúvidas comuns sobre o uso do Portal de Serviços.
 
 
 ### Não consigo encontrar um serviço. O que faço?
@@ -23,4 +23,4 @@ Recomendamos contactar o órgão responsável a partir das informações de cont
 As informações são inseridas e atualizadas pelos próprios órgãos responsáveis.
 
 ### Como acessar minha antiga conta?
-O Ministério do Planejamento está aprimorando o Guia de Serviços Públicos do Governo Federal, com o objetivo de permitir uma experiência mais agradável de navegação aos serviços. Enquanto desenvolvemos o novo portal, não será possível a realização de cadastro e o acesso à sua página personalizada. Os gestores responsáveis pelas informações dos serviços continuarão com acesso. As informações dos serviços continuam disponíveis para pesquisa no portal.
+O Ministério do Planejamento está aprimorando o Portal de Serviços Públicos do Governo Federal, com o objetivo de permitir uma experiência mais agradável de navegação aos serviços. Enquanto desenvolvemos o novo portal, não será possível a realização de cadastro e o acesso à sua página personalizada. Os gestores responsáveis pelas informações dos serviços continuarão com acesso. As informações dos serviços continuam disponíveis para pesquisa no portal.

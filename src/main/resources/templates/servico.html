@@ -7,7 +7,7 @@
 <head>
     <title th:text="${servico.titulo}">Nome do Serviço</title>
     <meta property="og:title" th:content="${servico.titulo}"/>
-    <meta property="og:description" th:content="${servico.titulo + ' no Guia de Serviços do Governo Federal'}"/>
+    <meta property="og:description" th:content="${servico.titulo + ' no Portal de Serviços do Governo Federal'}"/>
 </head>
 <body>
 
@@ -80,7 +80,7 @@
         <div th:replace="fragments/informacoes-uteis :: .informacoes-uteis"></div>
 
         <span class="link-github">
-            <a target="_blank" th:href="${'https://github.com/servicosgovbr/guia-de-servicos/edit/master/src/main/resources/v1/' + servico.id + '.xml'}">
+            <a target="_blank" th:href="${'https://github.com/servicosgovbr/portal-de-servicos/edit/master/src/main/resources/v1/' + servico.id + '.xml'}">
                 <i class="fa fa-github"></i>
             </a>
         </span>

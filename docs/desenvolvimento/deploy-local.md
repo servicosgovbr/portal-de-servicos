@@ -14,7 +14,7 @@ Para começar, clone o repositório:
 
 ```
 cd ~/projetos # ou o diretório de sua preferência
-git clone "https://github.com/servicosgovbr/guia-de-servicos.git"
+git clone "https://github.com/servicosgovbr/portal-de-servicos.git"
 ```
 
 A seguir, gere o arquivo de projeto do [IntelliJ IDEA][IDEA14CE]:
@@ -23,7 +23,7 @@ A seguir, gere o arquivo de projeto do [IntelliJ IDEA][IDEA14CE]:
 ./gradlew clean idea
 ```
 
-Abra o arquivo `guia-de-servicos.ipr` no IntelliJ IDEA e você está pronto para navegar pelo código. 
+Abra o arquivo `portal-de-servicos.ipr` no IntelliJ IDEA e você está pronto para navegar pelo código. 
 
 Caso você não tenha desenvolvido utilizando o [Lombok] antes, a IDE marcará diversos arquivos com problemas de compilação. Será necessário instalar o plugin para que as coisas funcionem normalmente. Este plugin precisa ser manualmente instalado.
 

@@ -37,7 +37,7 @@ public class FilterConfig {
     }
 
     @Bean
-    public FilterRegistrationBean securityHeadersFilter(@Value("${gds.piwik.url}") String urlPiwik) {
+    public FilterRegistrationBean securityHeadersFilter(@Value("${pds.piwik.url}") String urlPiwik) {
         return filter(2, new OncePerRequestFilter() {
             @Override
             protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {

@@ -1,6 +1,6 @@
 # Escalabilidade
 
-É possível aumentar a capacidade de carga do Guia de Serviços de duas maneiras:
+É possível aumentar a capacidade de carga do Portal de Serviços de duas maneiras:
 
 ## Aumentando a capacidade do servidor (vertical)
 

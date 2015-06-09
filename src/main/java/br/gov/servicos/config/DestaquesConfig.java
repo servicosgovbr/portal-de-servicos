@@ -11,7 +11,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Data
 @Configuration
-@ConfigurationProperties("gds.destaques")
+@ConfigurationProperties("pds.destaques")
 @FieldDefaults(level = PRIVATE)
 public class DestaquesConfig {
 

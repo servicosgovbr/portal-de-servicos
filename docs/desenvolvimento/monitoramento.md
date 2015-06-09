@@ -4,7 +4,7 @@ A monitoração da saúde dos hosts e instâncias da aplicação e [ElasticSearc
 
 ## Aplicação
 
-A URL `/health` do Guia de Serviços indica o estado de saúde da aplicação em si e de suas conexões ao cluster do [ElasticSearch]. Caso o valor da variável de ambiente `ENDPOINTS_HEALTH_SENSITIVE` seja `false`, mais informação é exibida:
+A URL `/health` do Portal de Serviços indica o estado de saúde da aplicação em si e de suas conexões ao cluster do [ElasticSearch]. Caso o valor da variável de ambiente `ENDPOINTS_HEALTH_SENSITIVE` seja `false`, mais informação é exibida:
 
 ```json
 {
@@ -76,7 +76,7 @@ O estado também pode ficar marcado como "red" caso o número de partições (_s
 
 ## Java Management Extensions (JMX)
 
-Diversas informações estão disponíveis através do serviço de gerenciamento da JVM. Existem diversos [clientes para o protocolo JMX disponíveis](http://java-source.net/open-source/jmx), e a JDK já vem com o [JConsole](http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html) embutido. Ao abrir o processo do Guia de Serviços no JConsole, temos:
+Diversas informações estão disponíveis através do serviço de gerenciamento da JVM. Existem diversos [clientes para o protocolo JMX disponíveis](http://java-source.net/open-source/jmx), e a JDK já vem com o [JConsole](http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html) embutido. Ao abrir o processo do Portal de Serviços no JConsole, temos:
 
 ![JConsole: Overview](/desenvolvimento/jconsole-overview.png)
 

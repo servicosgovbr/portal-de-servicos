@@ -1,7 +1,7 @@
 Acessibilidade
 ---
 
-O Guia de Serviços segue o novo modelo de identidade digital padrão do governo federal, que atende às principais 
+O Portal de Serviços segue o novo modelo de identidade digital padrão do governo federal, que atende às principais 
 recomendações de acessibilidade indicadas para web.
 
 O termo acessibilidade significa incluir a pessoa com deficiência na participação de atividades como o uso de produtos, 
@@ -12,7 +12,7 @@ Na internet, acessibilidade refere-se principalmente às recomendações do WCAG
 e no caso do Governo Brasileiro ao e-MAG (Modelo de Acessibilidade em Governo Eletrônico). O e-MAG está alinhado as 
 recomendações internacionais, mas estabelece padrões de comportamento acessível para sites governamentais.
 
-Na parte superior do Guia de Serviços existe uma barra de acessibilidade onde se encontra atalhos de navegação 
+Na parte superior do Portal de Serviços existe uma barra de acessibilidade onde se encontra atalhos de navegação 
 padronizados e a opção para alterar o contraste. Essas ferramentas estão disponíveis em todas as páginas do Guia.
 
 ### Os padrões de atalhos do governo federal são:

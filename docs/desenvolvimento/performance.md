@@ -28,4 +28,4 @@ Tempo total de carga, parsing e exibição da página, incluindo todos os assets
 
 ## Métricas utilizadas
 
-Para o Guia de Serviços, decidimos medir apenas **TTFB** na requisição principal (a URL diretamente acessada pelo usuário), que deve estar abaixo de 1 segundo, e **TLPT**, inferior a 5 segundos (+/- 1 segundo).
+Para o Portal de Serviços, decidimos medir apenas **TTFB** na requisição principal (a URL diretamente acessada pelo usuário), que deve estar abaixo de 1 segundo, e **TLPT**, inferior a 5 segundos (+/- 1 segundo).

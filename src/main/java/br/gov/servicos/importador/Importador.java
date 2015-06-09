@@ -1,6 +1,6 @@
 package br.gov.servicos.importador;
 
-import br.gov.servicos.config.GuiaDeServicosIndex;
+import br.gov.servicos.config.PortalDeServicosIndex;
 import lombok.AccessLevel;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
@@ -24,13 +24,13 @@ import java.util.Map;
 )
 public class Importador {
 
-    GuiaDeServicosIndex indices;
+    PortalDeServicosIndex indices;
     ImportadorCartasDeServico cartasDeServico;
     ImportadorV1 v1;
     ImportadorConteudo conteudo;
 
     @Autowired
-    public Importador(GuiaDeServicosIndex indices,
+    public Importador(PortalDeServicosIndex indices,
                       ImportadorV1 v1,
                       ImportadorConteudo conteudo,
                       ImportadorCartasDeServico cartasDeServico) {

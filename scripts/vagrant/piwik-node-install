@@ -133,17 +133,17 @@ PluginsInstalled[] = "Overlay"
 PluginsInstalled[] = "SegmentEditor"
 EOF
 
-echo 'Criando database para o Piwik...'
+echo 'Criando banco de dados para o Piwik...'
 cat <<EOF | mysql -u root
 CREATE DATABASE piwik;
 CREATE USER 'piwik'@'localhost' IDENTIFIED BY 'piwik';
 GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES ON piwik.* TO 'piwik'@'localhost';
 EOF
 
-echo 'Criando tabelas do piwik...'
+echo 'Criando tabelas do Piwik...'
 mysql -u root piwik < /vagrant/scripts/vagrant/piwik-db.sql
 
-echo 'Cadastrando site do guia de serviços no piwik...'
+echo 'Cadastrando site do Portal de Serviços no Piwik...'
 cat <<EOF | mysql -u root piwik
 INSERT INTO piwik_site (
   idsite,
@@ -159,7 +159,7 @@ INSERT INTO piwik_site (
   \`group\`
 ) VALUES (
   1,
-  'Guia de Servicos',
+  'Portal de servicos',
   'http://localhost:8081',
   'America/Sao_Paulo',
   'USD',

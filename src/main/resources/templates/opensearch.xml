@@ -2,8 +2,8 @@
 <OpenSearchDescription
         xmlns="http://a9.com/-/spec/opensearch/1.1/"
         xmlns:th="http://www.thymeleaf.org">
-    <ShortName>Guia de Serviços</ShortName>
-    <LongName>Guia de Serviços do Governo do Brasil</LongName>
+    <ShortName>Portal de Serviços</ShortName>
+    <LongName>Portal de Serviços do Governo do Brasil</LongName>
     <Description>Procure serviços do Governo do Brasil</Description>
     <Tags>serviços governo</Tags>
     <Contact>servicos@planejamento.gov.br</Contact>

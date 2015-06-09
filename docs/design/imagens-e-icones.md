@@ -1,6 +1,6 @@
 # Imagens e ícones
 
-Utilizamos o [Font Awesome](http://fortawesome.github.io/Font-Awesome/), que estende a tipografia do navegador com ícones. Seu uso não interfere em outros frameworks de estilos, e possui [licenças compatíveis](http://fortawesome.github.io/Font-Awesome/license/) com [a do Guia de Serviços](/sobre-o-projeto/licenca.md).
+Utilizamos o [Font Awesome](http://fortawesome.github.io/Font-Awesome/), que estende a tipografia do navegador com ícones. Seu uso não interfere em outros frameworks de estilos, e possui [licenças compatíveis](http://fortawesome.github.io/Font-Awesome/license/) com [a do Portal de Serviços](/sobre-o-projeto/licenca.md).
 
 As seguintes linhas da vida possuem ícones associados às suas classes:
 

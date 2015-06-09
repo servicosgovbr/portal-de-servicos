@@ -13,7 +13,7 @@ Para começar o planejamento de um teste de usabilidade é necessário definir q
 
 Os objetivos deste teste de usabilidade são:
 
-- Entender se o site do Guia de Serviços é acessível através do computador e smartphones.
+- Entender se o site do Portal de Serviços é acessível através do computador e smartphones.
 - Entender se as informações estão dispostas de forma simples e de fácil acesso.
 - Descobrir se os cidadãos se identificam quanto ao estilo visual do site. 
 
@@ -22,11 +22,11 @@ Os objetivos deste teste de usabilidade são:
 
 Uma das partes cruciais na realização de um teste de usabilidade é a definição da amostra de usuários que irão testar o produto. Como não é possível testar com todos os usuários possíveis, precisamos definir uma quantidade máxima de pessoas que irão testar o produto, e priorizar quem serão estes usuários.
 
-No caso do Guia de Serviços, nosso público é extenso e abrange todos os cidadãos brasileiros que utilizam (ou poderiam utilizar) serviços públicos através da internet (atualmente 90 MI de brasileiros são considerados usuários ativos da internet no Brasil - Dados: Comscore 2014). 
+No caso do Portal de Serviços, nosso público é extenso e abrange todos os cidadãos brasileiros que utilizam (ou poderiam utilizar) serviços públicos através da internet (atualmente 90 MI de brasileiros são considerados usuários ativos da internet no Brasil - Dados: Comscore 2014). 
 
-É importante lembrar que o Guia de Serviços é parte do Governo Federal e trata de serviços públicos, portanto precisamos que a sua interface seja o mais inclusiva e acessível quanto possível, pois parte de seus usuários são pessoas com pouca experiência no uso de sites, assim como pessoas com deficiências físicas.
+É importante lembrar que o Portal de Serviços é parte do Governo Federal e trata de serviços públicos, portanto precisamos que a sua interface seja o mais inclusiva e acessível quanto possível, pois parte de seus usuários são pessoas com pouca experiência no uso de sites, assim como pessoas com deficiências físicas.
 
-Os testes de usabilidade no Guia de Serviços terão sua amostra de usuários formada por:
+Os testes de usabilidade no Portal de Serviços terão sua amostra de usuários formada por:
 
 ##### Sexo:
 

@@ -1,6 +1,6 @@
 # Equipe
 
-O projeto do Guia de Serviços conta com duas equipes multi-disciplinares e com formação bastante diversa. A composição de equipes desta forma nos dá uma gama maior de ideias a testar, e em conjunto vivências de praticamente todo o tipo de cidadão a quem queremos atender.
+O projeto do Portal de Serviços conta com duas equipes multi-disciplinares e com formação bastante diversa. A composição de equipes desta forma nos dá uma gama maior de ideias a testar, e em conjunto vivências de praticamente todo o tipo de cidadão a quem queremos atender.
 
 ## Governo Federal
 
@@ -59,4 +59,4 @@ A natureza do código aberto do projeto nos trouxe alguns contribiudores externo
 * [Valessio Brito](mailto:valessio@debianart.org)
 * [Vinicius Gama](mailto:vgama@thoughtworks.com)
 
-Em seções seguintes, detalharemos como contribuir com o código aberto do Guia de Serviços.
+Em seções seguintes, detalharemos como contribuir com o código aberto do Portal de Serviços.

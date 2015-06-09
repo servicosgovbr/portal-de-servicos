@@ -4,16 +4,16 @@
 %define __os_install_post %{nil}
 %define _binary_payload w9.gzdio
 
-%define _user guiaservicos
+%define _user portalservicos
 
-Name:               guia-de-servicos
+Name:               portal-de-servicos
 Version:            %{version}
 Release:            1
-Summary:            Guia de Serviços
+Summary:            Portal de Serviços
 Group:              Applications
 License:            MIT
 Vendor:             ThoughtWorks, Inc
-URL:                http://github.com/servicosgovbr/guia-de-servicos
+URL:                http://github.com/servicosgovbr/portal-de-servicos
 BuildRoot:          %{builddir}
 Prefix:             /opt/%{name}
 BuildArchitectures: noarch
@@ -22,10 +22,10 @@ Requires:           jdk1.8.0_40
 Source0:            %{_sourcedir}/%{name}-%{version}.jar
 Source1:            %{_sourcedir}/exportar-opinioes
 Source2:            %{_sourcedir}/importar-opinioes
-Source3:            %{_sourcedir}/guia-de-servicos.default.config
+Source3:            %{_sourcedir}/portal-de-servicos.default.config
 
 %description
-Guia de Serviços do Governo Federal do Brasil
+Portal de Serviços do Governo Federal do Brasil
 
 %prep
 
@@ -41,10 +41,10 @@ mkdir -p %{buildroot}/etc/sysconfig
 cp %{SOURCE3} %{buildroot}/etc/sysconfig/%{name}
 
 cat <<-EOF > %{buildroot}/etc/sysconfig/%{name}-overrides
-# Este arquivo sobrescreve variáveis de configuração do Guia de Serviços.
+# Este arquivo sobrescreve variáveis de configuração do Portal de Serviços.
 # Para mais informações, veja a documentação em:
 #
-# http://servicosgovbr.github.io/guia-de-servicos/desenvolvimento/configuracao.html
+# http://servicosgovbr.github.io/portal-de-servicos/desenvolvimento/configuracao.html
 EOF
 
 mkdir -p %{buildroot}/etc/systemd/system
@@ -58,7 +58,7 @@ User=%{_user}
 TimeoutSec=300
 EnvironmentFile=/etc/sysconfig/%{name}
 EnvironmentFile=/etc/sysconfig/%{name}-overrides
-SyslogIdentifier=guia-de-servicos
+SyslogIdentifier=portal-de-servicos
 SyslogLevelPrefix=false
 StandardOutput=syslog
 StandardError=syslog
@@ -98,5 +98,5 @@ rm -rf %{buildroot}
 getent group %{_user} >/dev/null || groupadd -r %{_user}
 getent passwd %{_user} >/dev/null || \
     useradd -r -g %{_user} -d /home/%{_user} -s /sbin/nologin \
-    -c "Usuário para o serviço do Guia de Serviços" %{_user}
+    -c "Usuário para o serviço do Portal de Serviços" %{_user}
 exit 0

@@ -24,4 +24,4 @@ As hipóteses serão priorizadas de acordo com o valor entregue ao cidadão vers
 
 Uma hipótese pode ser escrita no escopo de um nível de [oferta de serviço](../servicos/etapas-da-oferta.md) e pode afetar um serviço em específico ou diversos serviços ao mesmo tempo.
 
-Hipóteses podem surgir organicamente a partir da discussão de possíveis abordagens e otimizações ao atual Guia de Serviços e suas ofertas. São coisas que acreditamos que possuem um valor para alguém e somente através da criação de mecanismos que nos aproximem deste "alguém" é que teremos condições de verificar se efetivamente há um acréscimo de valor ao construir ou modificar algo.
+Hipóteses podem surgir organicamente a partir da discussão de possíveis abordagens e otimizações ao atual Portal de Serviços e suas ofertas. São coisas que acreditamos que possuem um valor para alguém e somente através da criação de mecanismos que nos aproximem deste "alguém" é que teremos condições de verificar se efetivamente há um acréscimo de valor ao construir ou modificar algo.

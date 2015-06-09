@@ -21,7 +21,7 @@ def extrai_opinioes(retorno_str):
 
 
 def executa_primeiro_request():
-    importacao_cmd = 'curl -s -XGET "localhost:9200/gds-persistente/_search?scroll=1m&q=opiniao:*"'
+    importacao_cmd = 'curl -s -XGET "localhost:9200/pds-persistente/_search?scroll=1m&q=opiniao:*"'
     return os.popen(importacao_cmd).read()
 
 

@@ -28,8 +28,8 @@ def to_days(seconds)
 end
 
 repos = [
-  'servicosgovbr/guia-de-servicos',
-  'servicosgovbr/editor-guia-de-servicos',
+  'servicosgovbr/portal-de-servicos',
+  'servicosgovbr/editor-portal-de-servicos',
   'servicosgovbr/cartas-de-servico'
 ]
 

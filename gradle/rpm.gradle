@@ -16,7 +16,7 @@ task prepareRpm(type:Copy) {
     into "$rpmBaseDir/SOURCES"
 
     from "$projectDir/scripts"
-    include "guia-de-servicos.default.config"
+    include "portal-de-servicos.default.config"
     into "$rpmBaseDir/SOURCES"
 
     from "$projectDir/scripts/backups"

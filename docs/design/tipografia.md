@@ -1,6 +1,6 @@
 # Tipografia
 
-A fonte [Open Sans](http://en.wikipedia.org/wiki/Open_Sans), recomendada pelo [Manual de Identidade Visual do Governo Federal][estilos], é utilizada em todos os estilos do Guia de Serviços, conforme exemplos abaixo.
+A fonte [Open Sans](http://en.wikipedia.org/wiki/Open_Sans), recomendada pelo [Manual de Identidade Visual do Governo Federal][estilos], é utilizada em todos os estilos do Portal de Serviços, conforme exemplos abaixo.
 
 [estilos]:http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf
 

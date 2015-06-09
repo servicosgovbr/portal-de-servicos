@@ -4,7 +4,7 @@ ssh -F .sshconfig alpha <<-EOF
   set -e
   set -x
   set -o pipefail
-  pushd tmp/guia-de-servicos
+  pushd tmp/portal-de-servicos
     git checkout master
     git pull --rebase
     git checkout trunk

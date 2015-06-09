@@ -9,7 +9,7 @@ set -x
 set -e
 set -o pipefail
 
-# Endereços dos servidores de aplicação do Guia de Serviços
+# Endereços dos servidores de aplicação do Portal de Serviços
 APP_1_IP_ADDR="${1:-10.16.0.13}"
 APP_2_IP_ADDR="${2:-10.16.0.12}"
 
@@ -51,7 +51,7 @@ frontend main *:80
     stats hide-version
     stats refresh 5s
     stats show-node
-    stats auth guia-de-servicos:7621892f9a37e0e08812c07f8b70533f2c286297
+    stats auth portal-de-servicos:7621892f9a37e0e08812c07f8b70533f2c286297
     stats uri /lb-stats
 
 backend app

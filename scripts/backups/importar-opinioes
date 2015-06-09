@@ -24,7 +24,7 @@ def import_from_file(file):
             print >> sys.stderr, "Entrada vazia, não há nenhuma opinião listada"
             exit(1)
 
-        bulk_request_item_template = """{{ "update" : {{ "_index" : "gds-persistente", "_type" : "opiniao", "_id": "{0}" }} }}
+        bulk_request_item_template = """{{ "update" : {{ "_index" : "pds-persistente", "_type" : "opiniao", "_id": "{0}" }} }}
         {{ "doc" : {1} }}"""
 
         full_request = [bulk_request_item_template.format(
@@ -32,7 +32,7 @@ def import_from_file(file):
         full_request = '\n'.join(full_request)
 
         try:
-            request_cmd = """curl -s -XPUT "localhost:9200/gds-persistente/_bulk" -d '{0}'""".format(
+            request_cmd = """curl -s -XPUT "localhost:9200/pds-persistente/_bulk" -d '{0}'""".format(
                 full_request)
             print os.popen(request_cmd).read()
 

@@ -19,7 +19,7 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
 @Configuration
-@ConfigurationProperties("gds.piwik")
+@ConfigurationProperties("pds.piwik")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Getter
 @Wither

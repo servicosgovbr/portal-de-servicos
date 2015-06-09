@@ -1,3 +1,3 @@
 # Introdução
 
-Esta é a documentação oficial do Guia de Serviços Públicos do Governo Federal.
+Esta é a documentação oficial do Portal de Serviços Públicos do Governo Federal.

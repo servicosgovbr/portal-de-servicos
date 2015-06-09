@@ -1,7 +1,7 @@
 package br.gov.servicos.orgao;
 
 import br.gov.servicos.Main;
-import br.gov.servicos.config.GuiaDeServicosIndex;
+import br.gov.servicos.config.PortalDeServicosIndex;
 import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.ServicoRepository;
 import org.junit.Before;
@@ -31,7 +31,7 @@ public class OrgaoRepositoryIntegrationTest {
     OrgaoRepository orgaos;
 
     @Autowired
-    GuiaDeServicosIndex esConfig;
+    PortalDeServicosIndex esConfig;
 
     @Before
     public void setup() throws IOException {

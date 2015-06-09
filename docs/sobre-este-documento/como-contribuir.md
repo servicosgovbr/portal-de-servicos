@@ -15,4 +15,4 @@ A pré-visualização deve estar disponível no endereço [http://localhost:4000
 
 [gitbook-cli]:https://github.com/GitbookIO/gitbook
 [Markdown]:http://daringfireball.net/projects/markdown/
-[github]:https://github.com/servicosgovbr/guia-de-servicos/tree/master/docs
+[github]:https://github.com/servicosgovbr/portal-de-servicos/tree/master/docs

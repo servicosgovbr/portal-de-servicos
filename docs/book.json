@@ -1,7 +1,7 @@
 {
   "language": "pt",
   "gitbook": ">=2.0.0",
-  "title": "Guia de Serviços",
+  "title": "Portal de Serviços",
   "structure": {
     "readme": "index.md",
     "summary": "_sumario.md"

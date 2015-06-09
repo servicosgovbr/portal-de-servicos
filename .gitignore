@@ -2,9 +2,9 @@
 .jruby-container
 .sass-cache
 build
-guia-de-servicos.iml
-guia-de-servicos.ipr
-guia-de-servicos.iws
+portal-de-servicos.iml
+portal-de-servicos.ipr
+portal-de-servicos.iws
 data
 .vagrant
 *.swp

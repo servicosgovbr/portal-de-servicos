@@ -13,7 +13,7 @@ O serviço deve ser reiniciado após a instalação, utilizando o `systemctl`:
  
 ```
 sudo systemctl daemon-reload
-sudo systemctl restart guia-de-servicos 
+sudo systemctl restart portal-de-servicos 
 ```
 
 ## Entrega Contínua

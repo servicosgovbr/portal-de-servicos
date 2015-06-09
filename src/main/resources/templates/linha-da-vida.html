@@ -7,7 +7,7 @@
 <head>
     <title th:text="${conteudo.titulo}">Nome da Linha da Vida</title>
     <meta property="og:title" th:content="${conteudo.titulo}"/>
-    <meta property="og:description" th:content="${conteudo.titulo + ' no Guia de Serviços do Governo Federal'}"/>
+    <meta property="og:description" th:content="${conteudo.titulo + ' no Portal de Serviços do Governo Federal'}"/>
 </head>
 
 <body>
@@ -43,7 +43,7 @@
     </ul>
 
     <span class="link-github">
-        <a target="_blank" th:href="${'https://github.com/servicosgovbr/guia-de-servicos/edit/master/src/main/resources/conteudo/linhas-da-vida/' + conteudo.id + '.md'}">
+        <a target="_blank" th:href="${'https://github.com/servicosgovbr/portal-de-servicos/edit/master/src/main/resources/conteudo/linhas-da-vida/' + conteudo.id + '.md'}">
             <i class="fa fa-github"></i>
         </a>
     </span>

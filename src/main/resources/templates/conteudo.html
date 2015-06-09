@@ -7,7 +7,7 @@
 <head>
     <title th:text="${conteudo.titulo}">Nome do Órgão</title>
     <meta property="og:title" th:content="${conteudo.titulo}"/>
-    <meta property="og:description" th:content="${'Informações sobre ' + conteudo.titulo + ' no Guia de Serviços do Governo Federal'}"/>
+    <meta property="og:description" th:content="${'Informações sobre ' + conteudo.titulo + ' no Portal de Serviços do Governo Federal'}"/>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
     <div class="tile markdown" th:utext="${conteudo.html}"></div>
 
     <span class="link-github">
-        <a target="_blank" th:href="${'https://github.com/servicosgovbr/guia-de-servicos/edit/master/src/main/resources/conteudo/' + conteudo.id + '.md'}">
+        <a target="_blank" th:href="${'https://github.com/servicosgovbr/portal-de-servicos/edit/master/src/main/resources/conteudo/' + conteudo.id + '.md'}">
             <i class="fa fa-github"></i>
         </a>
     </span>

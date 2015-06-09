@@ -19,7 +19,7 @@ import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
 
 @Configuration
-@ConfigurationProperties("gds.conteudo")
+@ConfigurationProperties("pds.conteudo")
 @EnableConfigurationProperties
 @FieldDefaults(level = PRIVATE)
 public class ConteudoConfig {

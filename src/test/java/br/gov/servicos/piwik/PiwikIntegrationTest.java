@@ -24,7 +24,7 @@ public class PiwikIntegrationTest {
     PiwikClient piwikClient;
 
     @Test
-    @Ignore("Configure o token em GDS_PIWIK_TOKEN")
+    @Ignore("Configure o token em PDS_PIWIK_TOKEN")
     public void deveRetonarUrlsParaODia04042015() throws Exception {
         List<PiwikPage> pages = piwikClient.getPageUrls("day", "04-04-2015");
 

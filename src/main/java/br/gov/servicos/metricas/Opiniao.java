@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 
-import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_PERSISTENTE;
+import static br.gov.servicos.config.PortalDeServicosIndex.PERSISTENTE;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Boolean;
@@ -16,7 +16,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 
 @Value
 @AllArgsConstructor(access = PRIVATE)
-@Document(indexName = GDS_PERSISTENTE, type = "opiniao")
+@Document(indexName = PERSISTENTE, type = "opiniao")
 @Wither
 public class Opiniao {
 

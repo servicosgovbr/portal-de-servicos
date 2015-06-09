@@ -23,20 +23,20 @@ public class DiffControllerTest {
     public void deveRedirecionarParaOGithubComCommitCorreto() throws Exception {
         given(resource.getInputStream()).willReturn(new ByteArrayInputStream("git.commit.id=abcdef".getBytes(defaultCharset())));
 
-        assertThat(new DiffController(resource).diff().getUrl(), is("https://github.com/servicosgovbr/guia-de-servicos/compare/abcdef...master"));
+        assertThat(new DiffController(resource).diff().getUrl(), is("https://github.com/servicosgovbr/portal-de-servicos/compare/abcdef...master"));
     }
 
     @Test
     public void deveRedirecionarParaOGithubMesmoSemCommit() throws Exception {
         given(resource.getInputStream()).willReturn(new ByteArrayInputStream(new byte[0]));
 
-        assertThat(new DiffController(resource).diff().getUrl(), is("https://github.com/servicosgovbr/guia-de-servicos/compare/master...master"));
+        assertThat(new DiffController(resource).diff().getUrl(), is("https://github.com/servicosgovbr/portal-de-servicos/compare/master...master"));
     }
 
     @Test
     public void deveRedirecionarParaOGithubMesmoArquivoDeProperties() throws Exception {
         given(resource.getInputStream()).willThrow(new RuntimeException("boom"));
 
-        assertThat(new DiffController(resource).diff().getUrl(), is("https://github.com/servicosgovbr/guia-de-servicos/compare/master...master"));
+        assertThat(new DiffController(resource).diff().getUrl(), is("https://github.com/servicosgovbr/portal-de-servicos/compare/master...master"));
     }
 }

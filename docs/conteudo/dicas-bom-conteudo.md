@@ -1,5 +1,5 @@
 # Dicas para um bom conteúdo
-O conteúdo é a parte mais importante na experiência de uso em um local como o Guia de Serviços. Os cidadãos precisam ser facilmente informados, para entender o que é um serviço,  se ele é o público-alvo daquele serviço, e quais os passos para obter ou cumpri-lo. 
+O conteúdo é a parte mais importante na experiência de uso em um local como o Portal de Serviços. Os cidadãos precisam ser facilmente informados, para entender o que é um serviço,  se ele é o público-alvo daquele serviço, e quais os passos para obter ou cumpri-lo. 
 
 Veja abaixo alguns conceitos baseados nos [conceitos do gov.uk](https://gds.blog.gov.uk/2014/11/14/create-a-better-user-experience-by-changing-the-way-you-write/) para você criar melhores conteúdos para os serviços que está escrevendo:
 

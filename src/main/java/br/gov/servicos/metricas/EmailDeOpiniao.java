@@ -57,7 +57,7 @@ class EmailDeOpiniao {
         message.setRecipients(TO, to);
         message.setText(format("<html><body>" +
                         "<h1>Nova opinião enviada</h1>" +
-                        "<p>Uma nova opinião foi enviada no Guia de Serviços através do formulário embutido na aplicação:</p>" +
+                        "<p>Uma nova opinião foi enviada no Portal de Serviços através do formulário embutido na aplicação:</p>" +
                         "<h2>Contexto</h2><dl>" +
                         "<dt>Horário:</dt><dd>%s</dd>" +
                         "<dt>Ticket:</dt><dd><code>%s</code></dd>" +

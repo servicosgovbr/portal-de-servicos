@@ -10,8 +10,8 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 
-import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_IMPORTADOR;
-import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_PERSISTENTE;
+import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static br.gov.servicos.config.PortalDeServicosIndex.PERSISTENTE;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
@@ -19,36 +19,36 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
-public class GuiaDeServicosIndexTest {
+public class PortalDeServicosIndexTest {
 
-    GuiaDeServicosIndex esConfig;
+    PortalDeServicosIndex esConfig;
 
     @Mock
     ElasticsearchTemplate es;
 
     @Before
     public void setUp() {
-        esConfig = new GuiaDeServicosIndex(es);
+        esConfig = new PortalDeServicosIndex(es);
     }
 
     @Test
-    public void deveCriarIndiceGDSImportadorQuandoNaoExiste() throws Exception {
+    public void deveCriarIndicePDSImportadorQuandoNaoExiste() throws Exception {
         esConfig.recriar();
 
-        verify(es, never()).deleteIndex(eq(GDS_IMPORTADOR));
-        verify(es).createIndex(eq(GDS_IMPORTADOR), anyString());
+        verify(es, never()).deleteIndex(eq(IMPORTADOR));
+        verify(es).createIndex(eq(IMPORTADOR), anyString());
     }
 
     @Test
-    public void deveDeletarECriarIndiceGDSImportadorQuandoExistir() throws Exception {
+    public void deveDeletarECriarIndicePDSImportadorQuandoExistir() throws Exception {
         doReturn(true)
                 .when(es)
-                .indexExists(GDS_IMPORTADOR);
+                .indexExists(IMPORTADOR);
 
         esConfig.recriar();
 
-        verify(es).deleteIndex(eq(GDS_IMPORTADOR));
-        verify(es).createIndex(eq(GDS_IMPORTADOR), anyString());
+        verify(es).deleteIndex(eq(IMPORTADOR));
+        verify(es).createIndex(eq(IMPORTADOR), anyString());
     }
 
     @Test
@@ -59,19 +59,19 @@ public class GuiaDeServicosIndexTest {
     }
 
     @Test
-    public void deveCriarIndiceGDSPersistenteQuandoNaoExiste() throws Exception {
+    public void deveCriarIndicePDSPersistenteQuandoNaoExiste() throws Exception {
         esConfig.recriar();
-        verify(es).createIndex(eq(GDS_PERSISTENTE), anyString());
+        verify(es).createIndex(eq(PERSISTENTE), anyString());
     }
 
     @Test
-    public void naoDeveCriarIndiceGDSPersistenteSeExistir() throws Exception {
+    public void naoDeveCriarIndicePDSPersistenteSeExistir() throws Exception {
         doReturn(true)
                 .when(es)
-                .indexExists(GDS_PERSISTENTE);
+                .indexExists(PERSISTENTE);
 
         esConfig.recriar();
 
-        verify(es, never()).createIndex(eq(GDS_PERSISTENTE), anyString());
+        verify(es, never()).createIndex(eq(PERSISTENTE), anyString());
     }
 }

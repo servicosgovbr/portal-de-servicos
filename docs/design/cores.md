@@ -12,7 +12,7 @@
 }
 </style>
  
-Definimos as cores a serem utilizadas no site do Guia de Serviços com base no [tema branco] do [Manual de Identidade Visual do Governo Federal][estilos].
+Definimos as cores a serem utilizadas no site do Portal de Serviços com base no [tema branco] do [Manual de Identidade Visual do Governo Federal][estilos].
 
 Foram cinco cores definidas para estilizar o site, e estas são utilizadas com o objetivo de proporcionar uma melhor legibilidade, organização, contraste e acessibilidade das informações. 
 
@@ -30,7 +30,7 @@ Foram cinco cores definidas para estilizar o site, e estas são utilizadas com o
 
 ### Contraste
 
-A escolha de cores está em conformidade com o [padrão AA da W3C](http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) de contraste para acessibilidade de páginas da internet, atingindo notas superiores a 4.5 em todas as combinações utilizadas no Guia de Serviços. Para verificação, foi utilizada a ferramenta [Colour Contrast Check](http://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333), referenciada pela própria W3C. As tabelas abaixo apresentam os resultados da avaliação.
+A escolha de cores está em conformidade com o [padrão AA da W3C](http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) de contraste para acessibilidade de páginas da internet, atingindo notas superiores a 4.5 em todas as combinações utilizadas no Portal de Serviços. Para verificação, foi utilizada a ferramenta [Colour Contrast Check](http://snook.ca/technical/colour_contrast/colour.html#fg=33FF33,bg=333333), referenciada pela própria W3C. As tabelas abaixo apresentam os resultados da avaliação.
 
 | COMBINAÇÕES UTILIZADAS                                                                   | NOTA |
 | -----------------------------------------------------------------------------------------| :--: |

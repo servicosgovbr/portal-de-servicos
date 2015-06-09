@@ -38,6 +38,6 @@ public class DiffController {
 
     @RequestMapping(value = "/diff")
     RedirectView diff() {
-        return new RedirectView("https://github.com/servicosgovbr/guia-de-servicos/compare/" + commit + "...master");
+        return new RedirectView("https://github.com/servicosgovbr/portal-de-servicos/compare/" + commit + "...master");
     }
 }

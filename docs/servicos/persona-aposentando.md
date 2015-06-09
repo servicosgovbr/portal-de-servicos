@@ -32,5 +32,5 @@ _“Eu estou muito feliz! Me dediquei por tantos anos e agora que vou me aposent
 * Tranquila, pois não tem problemas de saúde.
 * Sente que pode continuar trabalhando.
 * Preocupada com a burocracia que vem pela frente. 
-* Confusa com informações do Guia de Serviços.
+* Confusa com informações do Portal de Serviços.
 * Arrependida por não ter organizado seus comprovantes com antecedência.

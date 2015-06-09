@@ -3,7 +3,7 @@
 
 _“Esse é meu negócio, eu gostaria que fosse mais simples conseguir as informações corretas para sentir segurança e correr menos riscos desnecessários.”_
 
-**Pontos de dor:** não se sente confiante usando o Guia de Serviços. Sente que precisa falar com uma pessoa para ter certeza que determinadas regras são verdadeiras e que ele pode confiar nas etapas para não ter perdas nos negócios.
+**Pontos de dor:** não se sente confiante usando o Portal de Serviços. Sente que precisa falar com uma pessoa para ter certeza que determinadas regras são verdadeiras e que ele pode confiar nas etapas para não ter perdas nos negócios.
 
 **Pontos positivos:** viaja muito e está constantemente em reuniões, e por isso, acha mais prático tirar dúvidas e pagar contas através da internet. Tem segurança em resolver assuntos de forma digital, mas ainda não teve oportunidade de usar serviços públicos por lá.
 

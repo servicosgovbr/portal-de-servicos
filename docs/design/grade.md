@@ -4,11 +4,11 @@ A partir da grade existente no [Manual de Identidade Visual do Governo Federal][
 
 [estilos]:http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf
 
-A imagem abaixo representa a grade do Guia de Serviços, e a variedade de combinações possíveis de colunas:
+A imagem abaixo representa a grade do Portal de Serviços, e a variedade de combinações possíveis de colunas:
 
 ![](grid.png)
 
-Exemplo de como o grid se comporta organizando as informações no protótipo do Guia de Serviços. Por exemplo, o menu esquerdo ocupa 3 colunas, enquanto a busca (campo e botão) na direita ocupa 9 colunas.
+Exemplo de como o grid se comporta organizando as informações no protótipo do Portal de Serviços. Por exemplo, o menu esquerdo ocupa 3 colunas, enquanto a busca (campo e botão) na direita ocupa 9 colunas.
 
 ![](grid_areas.png)
 

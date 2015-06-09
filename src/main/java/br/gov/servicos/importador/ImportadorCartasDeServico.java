@@ -22,7 +22,7 @@ class ImportadorCartasDeServico {
 
     @Autowired
     ImportadorCartasDeServico(ComandosGit git,
-                              @Value("${gds.cartas.repositorio}") String urlRepositorio,
+                              @Value("${pds.cartas.repositorio}") String urlRepositorio,
                               @Value("${flags.importar.cartas}") Boolean deveImportar) {
 
         this.git = git;

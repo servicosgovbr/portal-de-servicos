@@ -13,17 +13,17 @@ set -o pipefail
 ES_1_IP_ADDR="${1:-10.16.0.11}"
 ES_2_IP_ADDR="${2:-10.16.0.9}"
 
-echo 'Adicionando chave GPG do repositório do Guia de Serviços...'
-rpm --import https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/src/main/resources/static/GPG-KEY
+echo 'Adicionando chave GPG do repositório do Portal de Serviços...'
+rpm --import https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/src/main/resources/static/GPG-KEY
 
-echo "Adicionando repositório Yum do Guia de Serviços..."
-cat <<-EOF > /etc/yum.repos.d/guia-de-servicos.repo
-[guia-de-servicos]
-name = Guia de Serviços
+echo "Adicionando repositório Yum do Portal de Serviços..."
+cat <<-EOF > /etc/yum.repos.d/portal-de-servicos.repo
+[portal-de-servicos]
+name = Portal de Serviços
 baseurl = https://s3-sa-east-1.amazonaws.com/servicosgovbr/centos/7/
 enabled = 1
 gpgcheck = 1
-gpgkey = https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/src/main/resources/static/GPG-KEY
+gpgkey = https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/src/main/resources/static/GPG-KEY
 EOF
 
 echo 'Atualizando repositório Yum'
@@ -51,15 +51,15 @@ if [ "$(rpm -q jdk1.8.0_40)" != "jdk1.8.0_40-1.8.0_40-fcs.x86_64" ]; then
   yum install -y '/var/cache/wget/jdk-8u40-linux-x64.rpm'
 fi
 
-echo 'Instalando Guia de Serviços...'
-yum install -y guia-de-servicos
+echo 'Instalando Portal de Serviços...'
+yum install -y portal-de-servicos
 
-echo 'Configurando Guia de Serviços...'
-cat <<-EOF > /etc/sysconfig/guia-de-servicos-overrides
-# Este arquivo sobrescreve variáveis de configuração do Guia de Serviços.
+echo 'Configurando Portal de Serviços...'
+cat <<-EOF > /etc/sysconfig/portal-de-servicos-overrides
+# Este arquivo sobrescreve variáveis de configuração do Portal de Serviços.
 # Para mais informações, veja a documentação em:
 #
-# http://servicosgovbr.github.io/guia-de-servicos/desenvolvimento/configuracao.html
+# http://servicosgovbr.github.io/portal-de-servicos/desenvolvimento/configuracao.html
 #
 SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:9300"
 EOF
@@ -67,8 +67,8 @@ EOF
 echo 'Recarregando daemons...'
 systemctl daemon-reload
 
-echo 'Habilitando Guia de Serviços para iniciar no boot...'
-systemctl enable guia-de-servicos
+echo 'Habilitando Portal de Serviços para iniciar no boot...'
+systemctl enable portal-de-servicos
 
-echo 'Iniciando Guia de Serviços...'
-systemctl start guia-de-servicos
+echo 'Iniciando Portal de Serviços...'
+systemctl start portal-de-servicos

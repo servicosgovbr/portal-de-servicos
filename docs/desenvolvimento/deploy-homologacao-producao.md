@@ -22,16 +22,16 @@ sudo /bin/bash scripts/prod-like/lb-node-install '10.16.0.13' '10.16.0.12'
 
 ### `app-node-install`
 
-Este script deve ser executado, como `root`, em uma máquina destinada a servir a aplicação do Guia de Serviços. 
+Este script deve ser executado, como `root`, em uma máquina destinada a servir a aplicação do Portal de Serviços. 
 
 São aceitos dois parâmetros em linha de comando, um para cada IP dos servidores de busca (caso não informados, são utilizados `10.16.0.11` e `10.16.0.9` por padrão).
 
 Este script:
 
-- Configura o [repositório Yum] do Guia de Serviços
+- Configura o [repositório Yum] do Portal de Serviços
 - Instala as ferramentas `wget` e `deltarpm`, caso não existentes no sistema
 - Instala a JDK 1.8.0_40, caso não existente
-- Instala, configura e inicia o _daemon_ do Guia de Serviços (`guia-de-servicos`).
+- Instala, configura e inicia o _daemon_ do Portal de Serviços (`portal-de-servicos`).
 
 Exemplo:
 
@@ -41,7 +41,7 @@ sudo /bin/bash scripts/prod-like/app-node-install '10.16.0.11' '10.16.0.9'
 
 ### `es-node-install`
 
-Este script deve ser executado, como `root`, em uma máquina destinada a servir o motor de busca do Guia de Serviços, [ElasticSearch].
+Este script deve ser executado, como `root`, em uma máquina destinada a servir o motor de busca do Portal de Serviços, [ElasticSearch].
 
 São aceitos dois parâmetros em linha de comando, um para cada IP dos servidores de busca (caso não informados, são utilizados `10.16.0.11` e `10.16.0.9` por padrão).
  
@@ -57,6 +57,6 @@ sudo /bin/bash scripts/prod-like/es-node-install '10.16.0.11' '10.16.0.9'
 ```
 
 [yum]:(./repositorio-yum.md)
-[gh]:https://github.com/servicosgovbr/guia-de-servicos/tree/master/scripts/prod-like
+[gh]:https://github.com/servicosgovbr/portal-de-servicos/tree/master/scripts/prod-like
 [haproxy]:http://www.haproxy.org
 [ElasticSearch]:./elasticsearch.md

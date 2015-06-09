@@ -3,10 +3,10 @@
 Backups devem ser feitos dos seguintes caminhos:
 
 ```
-/etc/sysconfig/guia-de-servicos
-/etc/systemd/system/guia-de-servicos.service
-/opt/guia-de-servicos/**/*
-/var/run/guia-de-servicos/**/*
+/etc/sysconfig/portal-de-servicos
+/etc/systemd/system/portal-de-servicos.service
+/opt/portal-de-servicos/**/*
+/var/run/portal-de-servicos/**/*
 /var/log/**/*
 ```
 

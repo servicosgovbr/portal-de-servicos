@@ -20,7 +20,7 @@ Escreva sempre pensando nas pessoas que lerão o conteúdo, e sempre pense em co
 Se algo já existe em outro lugar, ao invés de copiar a informação, faça um link para ela. Dessa forma o conteúdo estará sempre atualizado sem várias cópias em diferentes em versões.
 
 ### Utilize palavras populares para melhorar o SEO
-É importante que os serviços do Guia de Serviço sejam facilmente encontrados através de buscadores (Google Search, Bing, etc) e isso siginifica que os termos procurados pelos cidadãos devem estar de acordo com os utilizados nos conteúdos. Para verificar termos mais utilizados uma boa ferramenta é o [Google Trends](http://www.google.com/trends/). Utilize as palavras mais populares em locais como o título do serviço, texto de introdução, descrições de metadados.
+É importante que os serviços do Portal de Serviços sejam facilmente encontrados através de buscadores (Google Search, Bing, etc) e isso siginifica que os termos procurados pelos cidadãos devem estar de acordo com os utilizados nos conteúdos. Para verificar termos mais utilizados uma boa ferramenta é o [Google Trends](http://www.google.com/trends/). Utilize as palavras mais populares em locais como o título do serviço, texto de introdução, descrições de metadados.
 
 ### Acompanhe as buscas e analise o que está sendo procurado
 Analisar as buscas e descobrir o que está sendo procurado é uma forma de validar se os serviços mais prioritários estão suficientemente bem escritos, e como poderiam ser melhorados caso o usuário não os encontre através do termos que procura.

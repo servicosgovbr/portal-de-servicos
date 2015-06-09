@@ -32,7 +32,7 @@ flags:
   permitir.robos: false
   destaques.automaticos: false
 
-gds:
+pds:
   piwik:
     enabled: false
     url: "https://estatisticas.presidencia.gov.br/"

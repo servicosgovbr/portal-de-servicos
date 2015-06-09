@@ -13,21 +13,21 @@ echo 'Atualizando repositórios Yum...'
 yum makecache fast -y
 
 echo "Fazendo backup das configurações..."
-cp /etc/sysconfig/guia-de-servicos-overrides /tmp/guia-de-servicos-overrides.backup
+cp /etc/sysconfig/portal-de-servicos-overrides /tmp/portal-de-servicos-overrides.backup
 
 if [ -z "$1" ]; then
-  echo 'Instalando a versão mais recente do Guia de Serviços...'
-  yum update guia-de-servicos -y
+  echo 'Instalando a versão mais recente do Portal de Serviços...'
+  yum update portal-de-servicos -y
 else
-  echo "Instalando Guia de Serviços versão $1..."
-  yum update "guia-de-servicos-1.0.${1}-1" -y
+  echo "Instalando Portal de Serviços versão $1..."
+  yum update "portal-de-servicos-1.0.${1}-1" -y
 fi
 
 echo "Restaurando backup das configurações..."
-mv /tmp/guia-de-servicos-overrides.backup /etc/sysconfig/guia-de-servicos-overrides
+mv /tmp/portal-de-servicos-overrides.backup /etc/sysconfig/portal-de-servicos-overrides
 
 echo 'Recarregando daemons...'
 systemctl daemon-reload
 
-echo 'Reiniciando Guia de Serviços...'
-systemctl restart guia-de-servicos
+echo 'Reiniciando Portal de Serviços...'
+systemctl restart portal-de-servicos

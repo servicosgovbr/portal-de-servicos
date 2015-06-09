@@ -8,14 +8,14 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 
-import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_IMPORTADOR;
+import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Value
 @Wither
 @AllArgsConstructor(access = PRIVATE)
-@Document(indexName = GDS_IMPORTADOR, type = "conteudo")
+@Document(indexName = IMPORTADOR, type = "conteudo")
 public class Conteudo {
 
     @Id

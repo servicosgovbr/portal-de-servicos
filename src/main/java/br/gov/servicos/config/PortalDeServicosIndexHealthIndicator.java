@@ -8,19 +8,19 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Component;
 
-import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_IMPORTADOR;
-import static br.gov.servicos.config.GuiaDeServicosIndex.GDS_PERSISTENTE;
+import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static br.gov.servicos.config.PortalDeServicosIndex.PERSISTENTE;
 import static java.lang.String.format;
 import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-public class GuiaDeServicosIndexHealthIndicator implements HealthIndicator {
+public class PortalDeServicosIndexHealthIndicator implements HealthIndicator {
 
     ElasticsearchTemplate es;
 
     @Autowired
-    public GuiaDeServicosIndexHealthIndicator(ElasticsearchTemplate es) {
+    public PortalDeServicosIndexHealthIndicator(ElasticsearchTemplate es) {
         this.es = es;
     }
 
@@ -28,8 +28,8 @@ public class GuiaDeServicosIndexHealthIndicator implements HealthIndicator {
     public Health health() {
         Health.Builder health = Health.unknown();
 
-        health = indice(health, GDS_IMPORTADOR);
-        health = indice(health, GDS_PERSISTENTE);
+        health = indice(health, IMPORTADOR);
+        health = indice(health, PERSISTENTE);
 
         return health.build();
     }

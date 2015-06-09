@@ -34,7 +34,7 @@ Seu acesso é por meio de APIs [REST][REST], ou programaticamente, em Java.
 
 ### Em desenvolvimento
 
-Para realizar a importação dos dados iniciais (em `src/main/resources/guiadeservicos.xml`) é necessária a execução de um importador embutido na aplicação. Em desenvolvimento, esta operação está disponível segunindo o link [ServicosGovBr:type=Importador/importar](http://localhost:8080/jolokia/exec/ServicosGovBr:type=Importador/importar).
+Para realizar a importação dos dados iniciais (em `src/main/resources/portaldeservicos.xml`) é necessária a execução de um importador embutido na aplicação. Em desenvolvimento, esta operação está disponível segunindo o link [ServicosGovBr:type=Importador/importar](http://localhost:8080/jolokia/exec/ServicosGovBr:type=Importador/importar).
 
 Esta operação é destrutiva, e reconstrói o índice do [ElasticSearch] a partir dos dados armazenados no XML.
 

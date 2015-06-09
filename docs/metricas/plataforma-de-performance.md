@@ -2,7 +2,7 @@
 
 ![](metricas.jpg)
 
-## Possíveis itens para o dashboard do Guia de Serviços
+## Possíveis itens para o dashboard do Portal de Serviços
 
 #### Tendências em busca
 - Como funciona: Entender quais são os assuntos em alta.
@@ -37,7 +37,7 @@
 #### Visitantes únicos
 - Como funciona: Saber a quantidade de visitantes únicos que navegam no site.
 - Como iremos medir: Através da coleta de visitantes únicos.
-- Consequência: Saberemos que mais pessoas estão acessando e conhecendo o Guia de Serviços. Hoje temos uma média de 900 mil visitantes únicos por mês.
+- Consequência: Saberemos que mais pessoas estão acessando e conhecendo o Portal de Serviços. Hoje temos uma média de 900 mil visitantes únicos por mês.
 
 #### Visitas
 - Como funciona: Saber a quantidade de visitas ao site.

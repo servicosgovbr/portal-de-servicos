@@ -8,7 +8,7 @@
     <title th:text="${conteudo.titulo}">Nome do Órgão</title>
     <meta property="og:title" th:content="${conteudo.titulo}"/>
     <meta property="og:description"
-          th:content="${'Informações sobre ' + @genero.o(conteudo.titulo) + ' ' + conteudo.titulo + ' no Guia de Serviços do Governo Federal'}"/>
+          th:content="${'Informações sobre ' + @genero.o(conteudo.titulo) + ' ' + conteudo.titulo + ' no Portal de Serviços do Governo Federal'}"/>
 </head>
 <body>
 
@@ -70,7 +70,7 @@
       "@context" : "http://schema.org",
       "@type" : "GovernmentOrganization",
       "name": "[[${conteudo.titulo}]]",
-      "url" : "[[${@environment.getProperty('gds.piwik.url')}]]",
+      "url" : "[[${@environment.getProperty('pds.piwik.url')}]]",
       "contactPoint" : [
         {
           "@type": "ContactPoint",
@@ -93,7 +93,7 @@
     </ul>
 
     <span class="link-github">
-        <a target="_blank" th:href="${'https://github.com/servicosgovbr/guia-de-servicos/edit/master/src/main/resources/conteudo/orgaos/' + conteudo.id + '.md'}">
+        <a target="_blank" th:href="${'https://github.com/servicosgovbr/portal-de-servicos/edit/master/src/main/resources/conteudo/orgaos/' + conteudo.id + '.md'}">
             <i class="fa fa-github"></i>
         </a>
     </span>

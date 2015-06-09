@@ -23,26 +23,26 @@ augtool set '/files/etc/sudoers/Defaults[*]/requiretty/negate' ''
 echo "Modificando hostname para '${1}'..."
 hostname $1
 
-echo 'Configurando Guia de Serviços...'
-cat <<-EOF > /etc/sysconfig/guia-de-servicos-overrides
-# Este arquivo sobrescreve variáveis de configuração do Guia de Serviços.
+echo 'Configurando Portal de Serviços...'
+cat <<-EOF > /etc/sysconfig/portal-de-servicos-overrides
+# Este arquivo sobrescreve variáveis de configuração do Portal de Serviços.
 # Para mais informações, veja a documentação em:
 #
-# http://servicosgovbr.github.io/guia-de-servicos/desenvolvimento/configuracao.html
+# http://servicosgovbr.github.io/portal-de-servicos/desenvolvimento/configuracao.html
 #
 SPRING_DATA_ELASTICSEARCH_CLUSTERNODES="${ES_1_IP_ADDR}:9300,${ES_2_IP_ADDR}:9300"
 
 ENDPOINTS_ENABLED=true
 ENDPOINTS_HEALTH_SENSITIVE=false
 
-GDS_PIWIK_ENABLED=true
-GDS_PIWIK_URL="${PIWIK_ADDR}"
-GDS_PIWIK_TOKEN=c0e024d9200b5705bc4804722636378a
-GDS_PIWIK_SITE=1
+PDS_PIWIK_ENABLED=true
+PDS_PIWIK_URL="${PIWIK_ADDR}"
+PDS_PIWIK_TOKEN=c0e024d9200b5705bc4804722636378a
+PDS_PIWIK_SITE=1
 EOF
 
 echo 'Recarregando serviços...'
 systemctl daemon-reload
 
 echo 'Reiniciando aplicação...'
-systemctl restart guia-de-servicos
+systemctl restart portal-de-servicos

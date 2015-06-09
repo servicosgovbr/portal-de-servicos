@@ -16,17 +16,17 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Component
 @FieldDefaults(makeFinal = true, level = PRIVATE)
-public class GuiaDeServicosIndex {
+public class PortalDeServicosIndex {
 
-    public static final String GDS_IMPORTADOR = "gds-importador";
-    public static final String GDS_PERSISTENTE = "gds-persistente";
+    public static final String IMPORTADOR = "pds-importador";
+    public static final String PERSISTENTE = "pds-persistente";
 
     private static final String SETTINGS = "/elasticsearch/settings.json";
 
     ElasticsearchTemplate es;
 
     @Autowired
-    public GuiaDeServicosIndex(ElasticsearchTemplate es) {
+    public PortalDeServicosIndex(ElasticsearchTemplate es) {
         this.es = es;
     }
 
@@ -46,15 +46,15 @@ public class GuiaDeServicosIndex {
     }
 
     private void criarIndicePersistenteSeNaoExistir() throws IOException {
-        if (!es.indexExists(GDS_PERSISTENTE))
-            es.createIndex(GDS_PERSISTENTE, settings());
+        if (!es.indexExists(PERSISTENTE))
+            es.createIndex(PERSISTENTE, settings());
     }
 
     private void recriarIndiceImportador() throws IOException {
-        if (es.indexExists(GDS_IMPORTADOR)) {
-            es.deleteIndex(GDS_IMPORTADOR);
+        if (es.indexExists(IMPORTADOR)) {
+            es.deleteIndex(IMPORTADOR);
         }
-        es.createIndex(GDS_IMPORTADOR, settings());
+        es.createIndex(IMPORTADOR, settings());
     }
 
 }

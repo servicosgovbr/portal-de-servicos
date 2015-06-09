@@ -2,7 +2,7 @@
 
 ## Padrões técnicos
 
-A implementação do Guia de Serviços é guiada por três padrões de desenho e construção de aplicações para a Web:
+A implementação do Portal de Serviços é guiada por três padrões de desenho e construção de aplicações para a Web:
 
 * [ePING]
 * [ePWG]

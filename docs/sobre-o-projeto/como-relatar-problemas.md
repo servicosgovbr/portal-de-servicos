@@ -2,7 +2,7 @@
 
 Durante o desenvolvimento do projeto, muitas coisas estarão em transição e procuramos aprender o máximo possível com todos os erros e acertos ao longo do caminho. Caso algum problema tenha persistido em aparecer, a melhor maneira de vê-lo solucionado é relatando-o.
 
-A equipe do Guia de Serviços usa o [GitHub Issues][GHISSUES] para acompanhar questões, bugs e contribuições de novo código pela comunidade. Se você encontrou um problema no Guia de Serviços, ou tem uma sugestão a fazer, comece adicionando uma nova issue.
+A equipe do Portal de Serviços usa o [GitHub Issues][GHISSUES] para acompanhar questões, bugs e contribuições de novo código pela comunidade. Se você encontrou um problema no Portal de Serviços, ou tem uma sugestão a fazer, comece adicionando uma nova issue.
 
 ## Criando um relatório de erro
 
@@ -22,5 +22,5 @@ Caso contrário, seu próximo passo será [abrir umo novo relatório][GHINEW]. O
 
 Inclua o máximo possível de informações relevantes. Se possível, anexe uma captura de tela que demonstra o erro.
 
-[GHISSUES]:https://github.com/servicosgovbr/guia-de-servicos/issues
-[GHINEW]:https://github.com/servicosgovbr/guia-de-servicos/issues/new
+[GHISSUES]:https://github.com/servicosgovbr/portal-de-servicos/issues
+[GHINEW]:https://github.com/servicosgovbr/portal-de-servicos/issues/new
