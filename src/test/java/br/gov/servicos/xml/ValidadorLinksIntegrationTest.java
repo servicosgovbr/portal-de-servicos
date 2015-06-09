@@ -28,10 +28,9 @@ public class ValidadorLinksIntegrationTest {
                 .flatMap(r -> parse(read(r))
                         .select("link")
                         .stream()
+                        .map(e -> e.attr("href"))
                         .distinct()
-                        .map(e -> new Object[]{
-                                r.getFilename(),
-                                e.attr("href")}))
+                        .map(href -> new Object[]{r.getFilename(), href}))
                 .collect(toSet());
     }
 
