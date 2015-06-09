@@ -40,7 +40,7 @@ gds:
     site: 52
   cartas:
     repositorio: ""
-    local: ""
+    local: "/dev/null"
   destaques:
     servicos:
       - sisu-sistema-de-selecao-unificada
