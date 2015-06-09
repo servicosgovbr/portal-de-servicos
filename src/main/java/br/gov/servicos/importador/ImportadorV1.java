@@ -1,15 +1,12 @@
 package br.gov.servicos.importador;
 
-import br.gov.servicos.foundation.IO;
 import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.parser.Parser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -22,8 +19,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static br.gov.servicos.foundation.IO.read;
 import static java.util.stream.Collectors.toSet;
 import static lombok.AccessLevel.PRIVATE;
+import static org.jsoup.Jsoup.parse;
+import static org.jsoup.parser.Parser.xmlParser;
 
 @Slf4j
 @Service
@@ -45,18 +45,18 @@ public class ImportadorV1 {
         return servicos.save(
                 Stream.of(resolver.getResources("classpath:v1/**/*.xml"))
                         .parallel()
-                        .map(this::parse)
-                        .map(this::documentToServico)
+                        .map(this::toDocument)
+                        .map(this::toServico)
                         .collect(toSet()));
     }
 
     @SneakyThrows
-    private Document parse(Resource resource) {
+    private Document toDocument(Resource resource) {
         log.debug("Importando XML v1: {}", resource);
-        return Jsoup.parse(IO.read(resource), resource.getURI().toASCIIString(), Parser.xmlParser());
+        return parse(read(resource), resource.getURI().toASCIIString(), xmlParser());
     }
 
-    private Servico documentToServico(Document doc) {
+    private Servico toServico(Document doc) {
         doc.outputSettings().prettyPrint(false); // respeita formatação de CDATA
 
         return new Servico()
