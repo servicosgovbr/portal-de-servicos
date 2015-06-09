@@ -32,14 +32,14 @@ class ImportadorCartasDeServico {
         this.caminhoLocal = caminhoLocal;
     }
 
-    void importar() {
+    String importar() {
         if (!deveImportar) {
             log.info("Importação de cartas de servico desligada (FLAGS_IMPORTAR_CARTAS_DE_SERVICO=false)");
-            return;
+            return null;
         }
 
         log.info("Importando cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
-        git.clonaOuAtualizaRepositorio(urlRepositorio, caminhoLocal);
+        return git.clonaOuAtualizaRepositorio(urlRepositorio, caminhoLocal);
     }
 
 }
