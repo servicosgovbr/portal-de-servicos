@@ -26,7 +26,9 @@ mail:
   password:
 
 flags:
-  importar.automaticamente: false
+  importar:
+    automaticamente: false
+    cartas-de-servico: false
   permitir.robos: false
   destaques.automaticos: false
 
@@ -36,6 +38,9 @@ gds:
     url: "https://estatisticas.presidencia.gov.br/"
     token: ""
     site: 52
+  cartas-de-servico:
+    repositorio: ""
+    caminho-local: "./"
   destaques:
     servicos:
       - sisu-sistema-de-selecao-unificada
