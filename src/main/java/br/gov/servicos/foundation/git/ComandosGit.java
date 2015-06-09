@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.eclipse.jgit.api.CloneCommand;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,6 +13,7 @@ import static java.lang.String.format;
 import static org.eclipse.jgit.merge.MergeStrategy.THEIRS;
 
 @Slf4j
+@Component
 public class ComandosGit {
 
     public void clonaOuAtualizaRepositorio(String url, String caminhoLocal) {
