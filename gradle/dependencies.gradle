@@ -24,6 +24,7 @@ dependencies {
     compile 'com.google.code.findbugs:annotations:3.0.0'
     compile 'org.apache.commons:commons-csv:1.1'
     compile 'org.jsoup:jsoup:1.8.2'
+    compile 'org.eclipse.jgit:org.eclipse.jgit:4.0.0.201506090130-r'
 
     testCompile 'junit:junit:4.11'
     testCompile 'org.mockito:mockito-core:1.9.5'
