@@ -40,7 +40,7 @@ gds:
     site: 2
   cartas:
     repositorio: ""
-    local: ""
+    local: "/dev/null"
   destaques:
     servicos:
       - retificadora-on-line-extrato-da-dirpf
