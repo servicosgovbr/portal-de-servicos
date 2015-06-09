@@ -8,6 +8,7 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.jmx.export.annotation.ManagedOperation;
@@ -17,9 +18,11 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static br.gov.servicos.foundation.IO.read;
+import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 import static lombok.AccessLevel.PRIVATE;
 import static org.jsoup.Jsoup.parse;
@@ -33,21 +36,36 @@ public class ImportadorV1 {
 
     ResourcePatternResolver resolver;
     ServicoRepository servicos;
+    String cartasDeServico;
 
     @Autowired
-    public ImportadorV1(ResourcePatternResolver resolver, ServicoRepository servicos) {
+    public ImportadorV1(ResourcePatternResolver resolver,
+                        ServicoRepository servicos,
+                        @Value("${gds.cartas.local}") String cartasDeServico) {
+
         this.resolver = resolver;
         this.servicos = servicos;
+        this.cartasDeServico = cartasDeServico;
     }
 
     @ManagedOperation
     public Iterable<Servico> importar() throws IOException {
-        return servicos.save(
-                Stream.of(resolver.getResources("classpath:v1/**/*.xml"))
+        return this.servicos.save(
+                todosOsServicos()
                         .parallel()
                         .map(this::toDocument)
                         .map(this::toServico)
                         .collect(toSet()));
+    }
+
+    private Stream<Resource> todosOsServicos() throws IOException {
+        Stream<Resource> servicosRepositorio = Stream.of(resolver.getResources("file://" + cartasDeServico + "/**/v1/servicos/**/*.xml"));
+        Stream<Resource> servicosEmbarcados = Stream.of(resolver.getResources("classpath:v1/**/*.xml"));
+
+        return Stream.concat(servicosRepositorio, servicosEmbarcados)
+                .collect(toMap(Resource::getFilename, Function.identity(), (r1, r2) -> r1))
+                .values()
+                .stream();
     }
 
     @SneakyThrows
