@@ -20,10 +20,10 @@ import static org.mockito.Mockito.verify;
 @FieldDefaults(level = PRIVATE)
 public class ImportadorConteudoTest {
 
+    ImportadorConteudo importadorConteudo;
+
     @Mock
     ConteudoRepository conteudoRepository;
-
-    ImportadorConteudo importadorConteudo;
 
     @Mock
     ImportadorParaConteudoDeOrgaos orgaos;

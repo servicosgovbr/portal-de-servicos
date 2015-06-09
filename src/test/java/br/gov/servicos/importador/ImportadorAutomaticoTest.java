@@ -1,7 +1,6 @@
 package br.gov.servicos.importador;
 
 import lombok.experimental.FieldDefaults;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -17,10 +16,6 @@ public class ImportadorAutomaticoTest {
 
     @Mock
     Importador importador;
-
-    @Before
-    public void setUp() throws Exception {
-    }
 
     @Test
     public void deveImportarOsServicosLegadosAoCarregarAAplicacao() throws Exception {
