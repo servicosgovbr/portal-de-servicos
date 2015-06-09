@@ -21,15 +21,22 @@ import java.util.Map;
         description = "Importa dados para o ElasticSearch"
 )
 public class Importador {
+
     GuiaDeServicosIndex indices;
+    ImportadorCartasDeServico cartasDeServico;
     ImportadorV1 v1;
     ImportadorConteudo conteudo;
 
     @Autowired
-    public Importador(GuiaDeServicosIndex indices, ImportadorV1 v1, ImportadorConteudo conteudo) {
+    public Importador(GuiaDeServicosIndex indices,
+                      ImportadorV1 v1,
+                      ImportadorConteudo conteudo,
+                      ImportadorCartasDeServico cartasDeServico) {
+
         this.indices = indices;
         this.v1 = v1;
         this.conteudo = conteudo;
+        this.cartasDeServico = cartasDeServico;
     }
 
     @ManagedOperation
@@ -39,6 +46,7 @@ public class Importador {
         indices.recriar();
 
         Map<String, Object> retorno = new HashMap<>();
+        retorno.put("versao-cartas-de-servico", cartasDeServico.importar());
         retorno.put("servicos", v1.importar());
         retorno.put("conteudos", conteudo.importar());
 

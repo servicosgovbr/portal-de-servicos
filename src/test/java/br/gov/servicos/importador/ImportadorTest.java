@@ -19,6 +19,9 @@ public class ImportadorTest {
     GuiaDeServicosIndex guiaDeServicosIndex;
 
     @Mock
+    ImportadorCartasDeServico importadorCartasDeServico;
+
+    @Mock
     ImportadorV1 importadorV1;
 
     @Mock
@@ -28,13 +31,19 @@ public class ImportadorTest {
 
     @Before
     public void setUp() throws Exception {
-        importador = new Importador(guiaDeServicosIndex, importadorV1, importadorConteudo);
+        importador = new Importador(guiaDeServicosIndex, importadorV1, importadorConteudo, importadorCartasDeServico);
     }
 
     @Test
     public void deveRecriarIndices() throws Exception {
         importador.importar();
         verify(guiaDeServicosIndex).recriar();
+    }
+
+    @Test
+    public void deveRodarImportadorDeCartasDeServico() {
+        importador.importar();
+        verify(importadorCartasDeServico).importar();
     }
 
     @Test
