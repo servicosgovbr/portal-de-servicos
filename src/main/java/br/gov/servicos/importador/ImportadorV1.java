@@ -25,6 +25,7 @@ import static br.gov.servicos.foundation.IO.read;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 import static lombok.AccessLevel.PRIVATE;
+import static org.apache.commons.lang.StringUtils.isBlank;
 import static org.jsoup.Jsoup.parse;
 import static org.jsoup.parser.Parser.xmlParser;
 
@@ -36,15 +37,18 @@ public class ImportadorV1 {
 
     ResourcePatternResolver resolver;
     ServicoRepository servicos;
+    Boolean importarDoRepositorioDeCartas;
     String cartasDeServico;
 
     @Autowired
     public ImportadorV1(ResourcePatternResolver resolver,
                         ServicoRepository servicos,
+                        @Value("${flags.importar.cartas}") Boolean importarDoRepositorioDeCartas,
                         @Value("${gds.cartas.local}") String cartasDeServico) {
 
         this.resolver = resolver;
         this.servicos = servicos;
+        this.importarDoRepositorioDeCartas = importarDoRepositorioDeCartas;
         this.cartasDeServico = cartasDeServico;
     }
 
@@ -59,13 +63,21 @@ public class ImportadorV1 {
     }
 
     private Stream<Resource> todosOsServicos() throws IOException {
-        Stream<Resource> servicosRepositorio = Stream.of(resolver.getResources("file://" + cartasDeServico + "/**/v1/servicos/**/*.xml"));
-        Stream<Resource> servicosEmbarcados = Stream.of(resolver.getResources("classpath:v1/**/*.xml"));
-
-        return Stream.concat(servicosRepositorio, servicosEmbarcados)
+        return Stream.concat(servicosDoRepositorioDeCartas(), servicosEmbarcados())
                 .collect(toMap(Resource::getFilename, Function.identity(), (r1, r2) -> r1))
                 .values()
                 .stream();
+    }
+
+    private Stream<Resource> servicosEmbarcados() throws IOException {
+        return Stream.of(resolver.getResources("classpath:v1/**/*.xml"));
+    }
+
+    private Stream<Resource> servicosDoRepositorioDeCartas() throws IOException {
+        if (!importarDoRepositorioDeCartas) return Stream.empty();
+        if (isBlank(cartasDeServico)) throw new IllegalArgumentException("GDS_CARTAS_LOCAL não pode ser vazia");
+
+        return Stream.of(resolver.getResources("file://" + cartasDeServico + "/**/v1/servicos/**/*.xml"));
     }
 
     @SneakyThrows
