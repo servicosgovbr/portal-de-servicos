@@ -20,7 +20,7 @@ import static org.mockito.Mockito.verifyZeroInteractions;
 public class ImportadorCartasDeServicoTest {
 
     private static final String URL_REPOSITORIO = "https://repositorio-de-cartas";
-    private static final String CAMINHO_LOCAL = "/opt/cartas";
+    private static final String CAMINHO_LOCAL = "repo-local/cartas";
     private static final String ULTIMO_COMMIT = "sha1243546546";
 
     @Mock
