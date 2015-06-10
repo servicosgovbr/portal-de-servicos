@@ -85,6 +85,10 @@
     margin: 10px 0 10px 0;
   }
 
+  h3.subtitulo-servico {
+    font-size: 25px;
+  }
+
   h4 {
     font-size: $baseFontSize * 0.8125;
     color: $cinza-escuro;
@@ -409,6 +413,73 @@ a.acao, button.acao, input[type="submit"].acao {
   &:visited, &:link {
     color: $branco;
   }
+}
+
+
+a.acao-servico, button.acao-servico, input[type="submit"].acao-servico, input[type="submit"].acao-servico  {
+  text-transform: uppercase;
+
+  &:hover {
+    color: $azul-claro;
+    background-color: $cinza-medio;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .fa {
+    color: $azul-claro;
+    font-size: 15px;
+    float: left;
+    padding-right: 10px;
+  }
+}
+
+a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
+  padding: 8px 13px 8px 13px;
+  background: $cinza-claro;
+  text-decoration: none;
+  margin: 10px 10px 30px 0;
+  display: inline-block;
+  color: $azul-claro !important;
+  border: none;
+  border-radius: 4px;
+  font-family: open_sansbold;
+  font-size: 12px !important;
+
+  &:visited, &:link {
+    color: $branco;
+  }
+}
+
+.etapas { 
+  margin-top: 15px;
+
+    .etapa {
+      padding-left: 40px;
+      float: center;
+
+    }
+
+    p.etapa {
+      margin-left: 0px;
+      display: inline-block;
+
+    }
+
+    .circle {
+
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      font-size: 30px;
+      color: $branco !important;
+      text-align: center;
+      padding-top: 4px;
+      background: $azul-claro;
+      float: left;
+    }
+
 }
 
 ul#resultados-linhadavida {

@@ -74,6 +74,15 @@ class ServicoController {
         return new ModelAndView("servico", "servico", servico);
     }
 
+
+    @RequestMapping(value = "/servico-novo/{id}", method = GET)
+    ModelAndView getPaginaNova(@PathVariable("id") String id) {
+        Servico servico = ofNullable(servicos.findOne(id))
+                .orElseThrow(ConteudoNaoEncontrado::new);
+
+        return new ModelAndView("servico-novo", "servico", servico);
+    }
+
     @RequestMapping(value = "/servico/{id}.xml", method = GET, produces = APPLICATION_XML_VALUE)
     ModelAndView xml(@PathVariable("id") String id) {
         Servico servico = ofNullable(servicos.findOne(id))
