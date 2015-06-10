@@ -15,6 +15,8 @@ import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.springframework.util.FileSystemUtils.deleteRecursively;
+
 @Slf4j
 @Component
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
@@ -55,8 +57,7 @@ public class Importador {
         retorno.put("servicos", v1.importar(repositorioCartas));
         retorno.put("conteudos", conteudo.importar());
 
-
-        if (!repositorioCartas.delete())
+        if (!deleteRecursively(repositorioCartas))
             log.warn("Não foi possível excluir clone local do repositório de cartas de servico em {}",
                     repositorioCartas.getAbsolutePath());
 
