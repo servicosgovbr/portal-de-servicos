@@ -40,7 +40,6 @@ gds:
     site: 52
   cartas:
     repositorio: ""
-    local: ""
   destaques:
     servicos:
       - sisu-sistema-de-selecao-unificada

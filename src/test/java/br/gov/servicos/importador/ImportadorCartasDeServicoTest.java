@@ -8,6 +8,8 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import java.io.File;
+
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -20,32 +22,32 @@ import static org.mockito.Mockito.verifyZeroInteractions;
 public class ImportadorCartasDeServicoTest {
 
     private static final String URL_REPOSITORIO = "https://repositorio-de-cartas";
-    private static final String CAMINHO_LOCAL = "repo-local/cartas";
     private static final String ULTIMO_COMMIT = "sha1243546546";
+    private static final File DIRETORIO_TEMPORARIO = new File("diretorio-temporario");
 
     @Mock
     ComandosGit git;
 
     @Before
     public void setUp() throws Exception {
-        given(git.clonaOuAtualizaRepositorio(URL_REPOSITORIO, CAMINHO_LOCAL)).willReturn(ULTIMO_COMMIT);
+        given(git.clonaRepositorio(URL_REPOSITORIO, DIRETORIO_TEMPORARIO)).willReturn(ULTIMO_COMMIT);
     }
 
     @Test
     public void deveClonarRepositorioDeCartasDeServico() {
-        new ImportadorCartasDeServico(git, URL_REPOSITORIO, CAMINHO_LOCAL, true).importar();
-        verify(git).clonaOuAtualizaRepositorio(URL_REPOSITORIO, CAMINHO_LOCAL);
+        new ImportadorCartasDeServico(git, URL_REPOSITORIO, true).importar(DIRETORIO_TEMPORARIO);
+        verify(git).clonaRepositorio(URL_REPOSITORIO, DIRETORIO_TEMPORARIO);
     }
 
     @Test
     public void deveRetornarOHashDoUltimoCommitNoRepositorioDeCartas() {
-        String ultimoCommit = new ImportadorCartasDeServico(git, URL_REPOSITORIO, CAMINHO_LOCAL, true).importar();
+        String ultimoCommit = new ImportadorCartasDeServico(git, URL_REPOSITORIO, true).importar(DIRETORIO_TEMPORARIO);
         assertThat(ultimoCommit, is(ULTIMO_COMMIT));
     }
 
     @Test
     public void naoDeveImportarCartasSeFlagEstiverDesligada() {
-        new ImportadorCartasDeServico(git, URL_REPOSITORIO, CAMINHO_LOCAL, false).importar();
+        new ImportadorCartasDeServico(git, URL_REPOSITORIO, false).importar(DIRETORIO_TEMPORARIO);
         verifyZeroInteractions(git);
     }
 

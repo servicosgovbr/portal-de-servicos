@@ -9,6 +9,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import java.io.File;
+
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -43,13 +46,13 @@ public class ImportadorTest {
     @Test
     public void deveRodarImportadorDeCartasDeServico() {
         importador.importar();
-        verify(importadorCartasDeServico).importar();
+        verify(importadorCartasDeServico).importar(any(File.class));
     }
 
     @Test
     public void deveRodarImportadorLegado() throws Exception {
         importador.importar();
-        verify(importadorV1).importar();
+        verify(importadorV1).importar(any(File.class));
     }
 
     @Test

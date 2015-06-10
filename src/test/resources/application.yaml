@@ -40,7 +40,6 @@ gds:
     site: 2
   cartas:
     repositorio: ""
-    local: ""
   destaques:
     servicos:
       - retificadora-on-line-extrato-da-dirpf

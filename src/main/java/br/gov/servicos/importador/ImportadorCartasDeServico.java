@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
+
 import static lombok.AccessLevel.PRIVATE;
 
 @Slf4j
@@ -16,29 +18,29 @@ class ImportadorCartasDeServico {
 
     ComandosGit git;
     String urlRepositorio;
-    String caminhoLocal;
     boolean deveImportar;
 
     @Autowired
     ImportadorCartasDeServico(ComandosGit git,
                               @Value("${gds.cartas.repositorio}") String urlRepositorio,
-                              @Value("${gds.cartas.local}") String caminhoLocal,
                               @Value("${flags.importar.cartas}") Boolean deveImportar) {
 
         this.git = git;
         this.deveImportar = deveImportar;
         this.urlRepositorio = urlRepositorio;
-        this.caminhoLocal = caminhoLocal;
     }
 
-    String importar() {
+    String importar(File caminhoLocal) {
         if (!deveImportar) {
             log.info("Importação de cartas de servico desligada (FLAGS_IMPORTAR_CARTAS_DE_SERVICO=false)");
             return null;
         }
 
         log.info("Importando cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
-        return git.clonaOuAtualizaRepositorio(urlRepositorio, caminhoLocal);
+        String versaoRepositorio = git.clonaRepositorio(urlRepositorio, caminhoLocal);
+
+        log.info("Repositório de cartas de serviço clonado na versão {}", versaoRepositorio);
+        return versaoRepositorio;
     }
 
 }

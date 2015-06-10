@@ -8,13 +8,13 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,6 @@ import static br.gov.servicos.foundation.IO.read;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 import static lombok.AccessLevel.PRIVATE;
-import static org.apache.commons.lang.StringUtils.isBlank;
 import static org.jsoup.Jsoup.parse;
 import static org.jsoup.parser.Parser.xmlParser;
 
@@ -37,33 +36,27 @@ public class ImportadorV1 {
 
     ResourcePatternResolver resolver;
     ServicoRepository servicos;
-    Boolean importarDoRepositorioDeCartas;
-    String cartasDeServico;
 
     @Autowired
     public ImportadorV1(ResourcePatternResolver resolver,
-                        ServicoRepository servicos,
-                        @Value("${flags.importar.cartas}") Boolean importarDoRepositorioDeCartas,
-                        @Value("${gds.cartas.local}") String cartasDeServico) {
+                        ServicoRepository servicos) {
 
         this.resolver = resolver;
         this.servicos = servicos;
-        this.importarDoRepositorioDeCartas = importarDoRepositorioDeCartas;
-        this.cartasDeServico = cartasDeServico;
     }
 
     @ManagedOperation
-    public Iterable<Servico> importar() throws IOException {
+    public Iterable<Servico> importar(File repositorioCartas) throws IOException {
         return this.servicos.save(
-                todosOsServicos()
+                todosOsServicos(repositorioCartas)
                         .parallel()
                         .map(this::toDocument)
                         .map(this::toServico)
                         .collect(toSet()));
     }
 
-    private Stream<Resource> todosOsServicos() throws IOException {
-        return Stream.concat(servicosDoRepositorioDeCartas(), servicosEmbarcados())
+    private Stream<Resource> todosOsServicos(File repositorioCartas) throws IOException {
+        return Stream.concat(servicosDoRepositorioDeCartas(repositorioCartas), servicosEmbarcados())
                 .collect(toMap(Resource::getFilename, Function.identity(), (r1, r2) -> r1))
                 .values()
                 .stream();
@@ -73,11 +66,12 @@ public class ImportadorV1 {
         return Stream.of(resolver.getResources("classpath:v1/**/*.xml"));
     }
 
-    private Stream<Resource> servicosDoRepositorioDeCartas() throws IOException {
-        if (!importarDoRepositorioDeCartas) return Stream.empty();
-        if (isBlank(cartasDeServico)) throw new IllegalArgumentException("Propriedade GDS_CARTAS_LOCAL não pode ser vazia");
+    private Stream<Resource> servicosDoRepositorioDeCartas(File repositorioCartas) throws IOException {
+        if (!repositorioCartas.exists())
+            return Stream.empty();
 
-        return Stream.of(resolver.getResources("file://" + cartasDeServico + "/**/v1/servicos/**/*.xml"));
+        return Stream.of(
+                resolver.getResources("file://" + repositorioCartas.getAbsolutePath() + "/**/v1/servicos/**/*.xml"));
     }
 
     @SneakyThrows

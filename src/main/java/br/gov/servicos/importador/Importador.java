@@ -10,6 +10,8 @@ import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,10 +47,18 @@ public class Importador {
         log.info("Iniciando importação");
         indices.recriar();
 
+        File repositorioCartas = Files.createTempDirectory("guia-de-servicos").toFile();
+        repositorioCartas.deleteOnExit();
+
         Map<String, Object> retorno = new HashMap<>();
-        retorno.put("versao-cartas-de-servico", cartasDeServico.importar());
-        retorno.put("servicos", v1.importar());
+        retorno.put("versao-cartas-de-servico", cartasDeServico.importar(repositorioCartas));
+        retorno.put("servicos", v1.importar(repositorioCartas));
         retorno.put("conteudos", conteudo.importar());
+
+
+        if (!repositorioCartas.delete())
+            log.warn("Não foi possível excluir clone local do repositório de cartas de servico em {}",
+                    repositorioCartas.getAbsolutePath());
 
         log.info("Importação concluída com sucesso");
         return retorno;
