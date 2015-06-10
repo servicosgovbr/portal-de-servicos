@@ -23,7 +23,6 @@ import java.util.stream.Stream;
 import static br.gov.servicos.foundation.IO.read;
 import static java.util.function.Function.identity;
 import static java.util.stream.Collectors.*;
-import static java.util.stream.Stream.empty;
 import static lombok.AccessLevel.PRIVATE;
 import static org.jsoup.Jsoup.parse;
 import static org.jsoup.parser.Parser.xmlParser;
@@ -57,7 +56,7 @@ public class ImportadorV1 {
 
     private Stream<Resource> todosOsServicos(File repositorioCartas) throws IOException {
         return Stream.concat(servicosDoRepositorioDeCartas(repositorioCartas), servicosEmbarcados())
-                .collect(toMap(Resource::getFilename, Function.identity(), (r1, r2) -> r1))
+                .collect(toMap(Resource::getFilename, identity(), (r1, r2) -> r1))
                 .values()
                 .stream();
     }
