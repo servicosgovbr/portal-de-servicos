@@ -75,7 +75,7 @@ public class ImportadorV1 {
 
     private Stream<Resource> servicosDoRepositorioDeCartas() throws IOException {
         if (!importarDoRepositorioDeCartas) return Stream.empty();
-        if (isBlank(cartasDeServico)) throw new IllegalArgumentException("GDS_CARTAS_LOCAL não pode ser vazia");
+        if (isBlank(cartasDeServico)) throw new IllegalArgumentException("Propriedade GDS_CARTAS_LOCAL não pode ser vazia");
 
         return Stream.of(resolver.getResources("file://" + cartasDeServico + "/**/v1/servicos/**/*.xml"));
     }
@@ -108,8 +108,7 @@ public class ImportadorV1 {
                 .withInformacoesUteis(informacoesUteis(doc))
                 .withTaxa(doc.select("servico > custoTotalEstimado").text().trim())
                 .withUrl(doc.select("servico > url").text().trim())
-                .withUrlAgendamento(doc.select("servico > urlAgendamento").text().trim())
-                ;
+                .withUrlAgendamento(doc.select("servico > urlAgendamento").text().trim());
     }
 
     private List<InformacaoUtil> informacoesUteis(Document doc) {
