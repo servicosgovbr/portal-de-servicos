@@ -1,7 +1,7 @@
 Documento de Arrecadação de Receitas Federais (Darf)
 ---
 
-Darf é um documento do [Ministério da Fazenda (MF)], utilizado para pagamento de tributos administrados pela [Secretaria da Receita Federal do Brasil (RFB)].
+Darf é um documento do [Ministério da Fazenda (MF)], utilizado para pagamento de receitas federais, contribuições e tributos administrados pela [Secretaria da Receita Federal do Brasil (RFB)].
 
 Você pode pagar o Darf, mesmo sem código de barras, em terminais de autoatendimento e páginas dos bancos na internet.
 
