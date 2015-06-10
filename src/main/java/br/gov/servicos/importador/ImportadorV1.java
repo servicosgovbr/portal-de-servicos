@@ -24,6 +24,7 @@ import java.util.stream.Stream;
 import static br.gov.servicos.foundation.IO.read;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
+import static java.util.stream.Stream.empty;
 import static lombok.AccessLevel.PRIVATE;
 import static org.jsoup.Jsoup.parse;
 import static org.jsoup.parser.Parser.xmlParser;
