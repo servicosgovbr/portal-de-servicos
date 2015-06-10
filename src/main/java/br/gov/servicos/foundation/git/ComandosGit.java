@@ -3,6 +3,7 @@ package br.gov.servicos.foundation.git;
 import lombok.SneakyThrows;
 import org.eclipse.jgit.api.CloneCommand;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.revwalk.RevCommit;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -17,7 +18,8 @@ public class ComandosGit {
                 .setDirectory(caminhoLocal);
 
         try (Git repositorio = clone.call()) {
-            return repositorio.notesShow().call().getName();
+            RevCommit head = repositorio.log().call().iterator().next();
+            return head.getName();
         }
     }
 
