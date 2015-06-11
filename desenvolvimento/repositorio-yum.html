@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Repositório Yum | Guia de Serviços</title>
+        <title>Repositório Yum | Portal de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="9.8.1" data-basepath=".." data-revision="Wed Jun 10 2015 20:02:12 GMT+0000 (UTC)">
+    <div class="book" data-level="9.8.1" data-basepath=".." data-revision="Thu Jun 11 2015 02:00:28 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1376,7 +1376,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Guia de Serviços</a>
+        <a href="../" >Portal de Serviços</a>
     </h1>
 </div>
 
@@ -1387,18 +1387,18 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="reposit%C3%B3rio-yum">Reposit&#xF3;rio Yum</h1>
-<p>Os pacotes <a href="http://www.rpm.org" target="_blank">RPM</a> do Guia de Servi&#xE7;os est&#xE3;o dispon&#xED;veis em um reposit&#xF3;rio Yum, com as seguintes configura&#xE7;&#xF5;es:</p>
-<pre><code>[guia-de-servicos]
-name = Guia de Servi&#xE7;os
+<p>Os pacotes <a href="http://www.rpm.org" target="_blank">RPM</a> do Portal de Servi&#xE7;os est&#xE3;o dispon&#xED;veis em um reposit&#xF3;rio Yum, com as seguintes configura&#xE7;&#xF5;es:</p>
+<pre><code>[portal-de-servicos]
+name = Portal de Servi&#xE7;os
 baseurl = https://s3-sa-east-1.amazonaws.com/servicosgovbr/centos/7/
 enabled=1
 gpgcheck=1
-gpgkey=https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/src/main/resources/static/GPG-KEY
+gpgkey=https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/src/main/resources/static/GPG-KEY
 </code></pre><p>Um arquivo com estes conte&#xFA;dos pode ser adicionado ao diret&#xF3;rio <code>/etc/yum.repos.d</code>, seguido do comando <code>sudo yum makecache fast -y</code>, para que o Yum atualize as defini&#xE7;&#xF5;es internas de listas de pacotes dispon&#xED;veis.</p>
 <p>A chave <a href="https://www.gnupg.org/" target="_blank">GPG</a> utilizada para assinar os pacotes e o reposit&#xF3;rio &#xE9;:</p>
 <pre><code>pub   2048R/2E1F2BA2 2015-04-07
       Key fingerprint = 1F90 DD30 DAF2 DCDF 4F27  DC78 F68F 9EB4 2E1F 2BA2
-uid                  Guia de Servi&#xE7;os &lt;gpg@servicos.gov.br&gt;
+uid                  Portal de Servi&#xE7;os &lt;gpg@servicos.gov.br&gt;
 sub   2048R/BA141101 2015-04-07
 </code></pre><p>E seu conte&#xFA;do (tamb&#xE9;m dispon&#xED;vel atraves da URL na se&#xE7;&#xE3;o <code>gpgkey</code> da configura&#xE7;&#xE3;o acima) &#xE9;:</p>
 <pre><code>-----BEGIN PGP PUBLIC KEY BLOCK-----

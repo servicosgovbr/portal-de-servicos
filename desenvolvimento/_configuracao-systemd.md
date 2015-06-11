@@ -1,10 +1,10 @@
 A distribuição Linux CentOS 7 utiliza a ferramenta [systemd] para controle das operações do sistema operacional. Em uma diretiva de configuração, [`EnvironmentFile`][systemd-envfile], dizemos ao [systemd] de onde devem ser carregadas as variáveis de ambiente para um determinado sistema em execução.
 
-No caso do Guia de Serviços, tanto em ambientes [Vagrant] quanto em [homologação e produção][prod], este arquivo está instalado em `/etc/sysconfig/guia-de-servicos`, e deve ser revisado de acordo com o ambiente de cada instalação.
+No caso do Portal de Serviços, tanto em ambientes [Vagrant] quanto em [homologação e produção][prod], este arquivo está instalado em `/etc/sysconfig/portal-de-servicos`, e deve ser revisado de acordo com o ambiente de cada instalação.
 
 Este é o arquivo de configuração padrão adicionado ao pacote [RPM] da aplicação, que lista as configurações utilizadas:
 
-<pre><code class="lang-bash">{% include '../../scripts/guia-de-servicos.default.config' %}</code></pre>
+<pre><code class="lang-bash">{% include '../../scripts/portal-de-servicos.default.config' %}</code></pre>
 
 [spring-boot-config]:http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config
 [spring-boot]:http://projects.spring.io/spring-boot/

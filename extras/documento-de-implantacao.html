@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Documento de Implantação | Guia de Serviços</title>
+        <title>Documento de Implantação | Portal de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -34,7 +34,7 @@
     <body>
         
         
-    <div class="book" data-level="10.1" data-basepath=".." data-revision="Wed Jun 10 2015 20:02:12 GMT+0000 (UTC)">
+    <div class="book" data-level="10.1" data-basepath=".." data-revision="Thu Jun 11 2015 02:00:28 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1374,7 +1374,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Guia de Serviços</a>
+        <a href="../" >Portal de Serviços</a>
     </h1>
 </div>
 
@@ -1385,7 +1385,7 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="documento-de-implanta%C3%A7%C3%A3o">Documento de Implanta&#xE7;&#xE3;o</h1>
-<p>Neste documento est&#xE3;o todas as informa&#xE7;&#xF5;es necess&#xE1;rias &#xE0; implanta&#xE7;&#xE3;o e opera&#xE7;&#xE3;o do Guia de Servi&#xE7;os em ambientes similares a produ&#xE7;&#xE3;o.</p>
+<p>Neste documento est&#xE3;o todas as informa&#xE7;&#xF5;es necess&#xE1;rias &#xE0; implanta&#xE7;&#xE3;o e opera&#xE7;&#xE3;o do Portal de Servi&#xE7;os em ambientes similares a produ&#xE7;&#xE3;o.</p>
 <h2 id="vis%C3%A3o-da-infraestrutura">Vis&#xE3;o da infraestrutura</h2>
 <p><a href="desenvolvimento/ambiente-producao.graphml"><img src="../desenvolvimento/ambiente-producao.svg" alt="Diagrama da rede em ambiente similar a produ&#xE7;&#xE3;o"></a></p>
 <h2 id="ambiente-de-produ%C3%A7%C3%A3o">Ambiente de produ&#xE7;&#xE3;o</h2>
@@ -1471,18 +1471,18 @@
 <p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda o <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, nas portas 9200 e 9300, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
 <hr>
 <h1 id="reposit%C3%B3rio-yum">Reposit&#xF3;rio Yum</h1>
-<p>Os pacotes <a href="http://www.rpm.org" target="_blank">RPM</a> do Guia de Servi&#xE7;os est&#xE3;o dispon&#xED;veis em um reposit&#xF3;rio Yum, com as seguintes configura&#xE7;&#xF5;es:</p>
-<pre><code>[guia-de-servicos]
-name = Guia de Servi&#xE7;os
+<p>Os pacotes <a href="http://www.rpm.org" target="_blank">RPM</a> do Portal de Servi&#xE7;os est&#xE3;o dispon&#xED;veis em um reposit&#xF3;rio Yum, com as seguintes configura&#xE7;&#xF5;es:</p>
+<pre><code>[portal-de-servicos]
+name = Portal de Servi&#xE7;os
 baseurl = https://s3-sa-east-1.amazonaws.com/servicosgovbr/centos/7/
 enabled=1
 gpgcheck=1
-gpgkey=https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/src/main/resources/static/GPG-KEY
+gpgkey=https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/src/main/resources/static/GPG-KEY
 </code></pre><p>Um arquivo com estes conte&#xFA;dos pode ser adicionado ao diret&#xF3;rio <code>/etc/yum.repos.d</code>, seguido do comando <code>sudo yum makecache fast -y</code>, para que o Yum atualize as defini&#xE7;&#xF5;es internas de listas de pacotes dispon&#xED;veis.</p>
 <p>A chave <a href="https://www.gnupg.org/" target="_blank">GPG</a> utilizada para assinar os pacotes e o reposit&#xF3;rio &#xE9;:</p>
 <pre><code>pub   2048R/2E1F2BA2 2015-04-07
       Key fingerprint = 1F90 DD30 DAF2 DCDF 4F27  DC78 F68F 9EB4 2E1F 2BA2
-uid                  Guia de Servi&#xE7;os &lt;gpg@servicos.gov.br&gt;
+uid                  Portal de Servi&#xE7;os &lt;gpg@servicos.gov.br&gt;
 sub   2048R/BA141101 2015-04-07
 </code></pre><p>E seu conte&#xFA;do (tamb&#xE9;m dispon&#xED;vel atraves da URL na se&#xE7;&#xE3;o <code>gpgkey</code> da configura&#xE7;&#xE3;o acima) &#xE9;:</p>
 <pre><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -1520,7 +1520,7 @@ FWNjBIi/4Zz3o/QwwjUGKeAYRpllp8knOk+6foxRzuYIkov92Lg=
 <p>Ambientes gerenciados pelo Governo Federal (de acordo com a <a href="infraestrutura.md">infraestrutura</a>) t&#xEA;m a aplica&#xE7;&#xE3;o e o cluster de <a href="elasticsearch.md">ElasticSearch</a> implantados internamente ao Minist&#xE9;rio do Planejamento.</p>
 <p>Os ambientes possuem configura&#xE7;&#xE3;o similar ao <a href="deploy-vagrant.md">ambiente Vagrant</a>, com a adi&#xE7;&#xE3;o de funcionalidades relacionadas a seguran&#xE7;a, preven&#xE7;&#xE3;o a ataques, backup e monitoramento.</p>
 <h2 id="instala%C3%A7%C3%A3o">Instala&#xE7;&#xE3;o</h2>
-<p>A instala&#xE7;&#xE3;o dos ambientes &#xE9; simplificada atrav&#xE9;s dos scripts existentes no diret&#xF3;rio <code>scripts/prod-like</code>, residente no <a href="https://github.com/servicosgovbr/guia-de-servicos/tree/master/scripts/prod-like" target="_blank">reposit&#xF3;rio no Github</a>:</p>
+<p>A instala&#xE7;&#xE3;o dos ambientes &#xE9; simplificada atrav&#xE9;s dos scripts existentes no diret&#xF3;rio <code>scripts/prod-like</code>, residente no <a href="https://github.com/servicosgovbr/portal-de-servicos/tree/master/scripts/prod-like" target="_blank">reposit&#xF3;rio no Github</a>:</p>
 <h3 id="-lb-node-install"><code>lb-node-install</code></h3>
 <p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a ser o balanceador de carga. Ele instala, configura e inicia o <a href="http://www.haproxy.org" target="_blank">haproxy</a> de forma a distribuir a carga das requisi&#xE7;&#xF5;es externas entre os servidores de aplica&#xE7;&#xE3;o.</p>
 <p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de aplica&#xE7;&#xE3;o (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.13</code> e <code>10.16.0.12</code> por padr&#xE3;o).</p>
@@ -1528,20 +1528,20 @@ FWNjBIi/4Zz3o/QwwjUGKeAYRpllp8knOk+6foxRzuYIkov92Lg=
 <pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/lb-node-install <span class="hljs-string">&apos;10.16.0.13&apos;</span> <span class="hljs-string">&apos;10.16.0.12&apos;</span>
 </code></pre>
 <h3 id="-app-node-install"><code>app-node-install</code></h3>
-<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir a aplica&#xE7;&#xE3;o do Guia de Servi&#xE7;os. </p>
+<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir a aplica&#xE7;&#xE3;o do Portal de Servi&#xE7;os. </p>
 <p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de busca (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.11</code> e <code>10.16.0.9</code> por padr&#xE3;o).</p>
 <p>Este script:</p>
 <ul>
-<li>Configura o [reposit&#xF3;rio Yum] do Guia de Servi&#xE7;os</li>
+<li>Configura o [reposit&#xF3;rio Yum] do Portal de Servi&#xE7;os</li>
 <li>Instala as ferramentas <code>wget</code> e <code>deltarpm</code>, caso n&#xE3;o existentes no sistema</li>
 <li>Instala a JDK 1.8.0_40, caso n&#xE3;o existente</li>
-<li>Instala, configura e inicia o <em>daemon</em> do Guia de Servi&#xE7;os (<code>guia-de-servicos</code>).</li>
+<li>Instala, configura e inicia o <em>daemon</em> do Portal de Servi&#xE7;os (<code>portal-de-servicos</code>).</li>
 </ul>
 <p>Exemplo:</p>
 <pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/app-node-install <span class="hljs-string">&apos;10.16.0.11&apos;</span> <span class="hljs-string">&apos;10.16.0.9&apos;</span>
 </code></pre>
 <h3 id="-es-node-install"><code>es-node-install</code></h3>
-<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir o motor de busca do Guia de Servi&#xE7;os, <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>.</p>
+<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir o motor de busca do Portal de Servi&#xE7;os, <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>.</p>
 <p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de busca (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.11</code> e <code>10.16.0.9</code> por padr&#xE3;o).</p>
 <p>Este script:</p>
 <ul>
@@ -1554,9 +1554,9 @@ FWNjBIi/4Zz3o/QwwjUGKeAYRpllp8knOk+6foxRzuYIkov92Lg=
 </code></pre>
 <h2 id="configura%C3%A7%C3%A3o">Configura&#xE7;&#xE3;o</h2>
 <p>A distribui&#xE7;&#xE3;o Linux CentOS 7 utiliza a ferramenta <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> para controle das opera&#xE7;&#xF5;es do sistema operacional. Em uma diretiva de configura&#xE7;&#xE3;o, <a href="http://www.freedesktop.org/software/systemd/man/systemd.exec.html" target="_blank"><code>EnvironmentFile</code></a>, dizemos ao <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> de onde devem ser carregadas as vari&#xE1;veis de ambiente para um determinado sistema em execu&#xE7;&#xE3;o.</p>
-<p>No caso do Guia de Servi&#xE7;os, tanto em ambientes <a href="deploy-vagrant.md">Vagrant</a> quanto em <a href="deploy-homologacao-producao.md">homologa&#xE7;&#xE3;o e produ&#xE7;&#xE3;o</a>, este arquivo est&#xE1; instalado em <code>/etc/sysconfig/guia-de-servicos</code>, e deve ser revisado de acordo com o ambiente de cada instala&#xE7;&#xE3;o.</p>
+<p>No caso do Portal de Servi&#xE7;os, tanto em ambientes <a href="deploy-vagrant.md">Vagrant</a> quanto em <a href="deploy-homologacao-producao.md">homologa&#xE7;&#xE3;o e produ&#xE7;&#xE3;o</a>, este arquivo est&#xE1; instalado em <code>/etc/sysconfig/portal-de-servicos</code>, e deve ser revisado de acordo com o ambiente de cada instala&#xE7;&#xE3;o.</p>
 <p>Este &#xE9; o arquivo de configura&#xE7;&#xE3;o padr&#xE3;o adicionado ao pacote <a href="http://www.rpm.org" target="_blank">RPM</a> da aplica&#xE7;&#xE3;o, que lista as configura&#xE7;&#xF5;es utilizadas:</p>
-<pre><code class="lang-bash"><span class="hljs-comment">## Vari&#xE1;veis de ambiente para configura&#xE7;&#xE3;o do Guia de Servi&#xE7;os</span>
+<pre><code class="lang-bash"><span class="hljs-comment">## Vari&#xE1;veis de ambiente para configura&#xE7;&#xE3;o do Portal de Servi&#xE7;os</span>
 
 <span class="hljs-comment">## Op&#xE7;&#xF5;es passadas &#xE0; JVM (par&#xE2;metros de mem&#xF3;ria, GC etc)</span>
 JAVA_OPTS=-Xms256M -Xmx1G
@@ -1568,16 +1568,16 @@ SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=<span class="hljs-string">&quot;10.16.0.1
 SPRING_THYMELEAF_CACHE=<span class="hljs-literal">true</span>
 
 <span class="hljs-comment">## Desabilita o monitoramento e m&#xE9;tricas do Piwik</span>
-GDS_PIWIK_ENABLED=<span class="hljs-literal">false</span>
+PDS_PIWIK_ENABLED=<span class="hljs-literal">false</span>
 
 <span class="hljs-comment">## A URL do servidor Piwik que ser&#xE1; utilizada para monitoramento e m&#xE9;tricas.</span>
-GDS_PIWIK_URL=<span class="hljs-string">&quot;https://estatisticas.presidencia.gov.br/&quot;</span>
+PDS_PIWIK_URL=<span class="hljs-string">&quot;https://estatisticas.presidencia.gov.br/&quot;</span>
 
 <span class="hljs-comment">## O token para acesso &#xE0; API de m&#xE9;tricas do Piwik. Geralmente, 32 caracteres hexadecimais.</span>
-GDS_PIWIK_TOKEN=
+PDS_PIWIK_TOKEN=
 
 <span class="hljs-comment">## O identificador do site dentro do Piwik.</span>
-GDS_PIWIK_SITE=<span class="hljs-number">52</span>
+PDS_PIWIK_SITE=<span class="hljs-number">52</span>
 
 <span class="hljs-comment">## Desabilita a navega&#xE7;&#xE3;o de rob&#xF4;s (motores de busca, etc) nesta inst&#xE2;ncia.</span>
 FLAGS_PERMITIR_ROBOS=<span class="hljs-literal">false</span>
@@ -1609,7 +1609,7 @@ ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
 <span class="hljs-comment">## Servidor de emails utilizado para envio (mesmo IP do balanceador de carga, geralmente).</span>
 <span class="hljs-comment"># MAIL_HOST=10.16.0.10</span>
 
-<span class="hljs-comment">## Porta em que o Guia de Servi&#xE7;os deve se conectar ao servidor de emails.</span>
+<span class="hljs-comment">## Porta em que o Portal de Servi&#xE7;os deve se conectar ao servidor de emails.</span>
 <span class="hljs-comment"># MAIL_PORT=25</span>
 
 <span class="hljs-comment">## Timeout para estabelecimento de conex&#xF5;es e espera por atividade em uma conex&#xE3;o estabelecida, em milisegundos</span>
@@ -1621,10 +1621,10 @@ ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
 <span class="hljs-comment">## Caso o servidor de envio de emails suporte, ou mesmo exija, a extens&#xE3;o de criptografia STARTTLS, este valor deve ser true.</span>
 <span class="hljs-comment"># MAIL_SMTP_STARTTLS=false</span>
 
-<span class="hljs-comment">## O endere&#xE7;o de email que originar&#xE1; as mensagens vindas do Guia de Servi&#xE7;os.</span>
+<span class="hljs-comment">## O endere&#xE7;o de email que originar&#xE1; as mensagens vindas do Portal de Servi&#xE7;os.</span>
 <span class="hljs-comment"># MAIL_FROM=&quot;nao-responda@servicos.gov.br&quot;</span>
 
-<span class="hljs-comment">## O endere&#xE7;o de email para qual as mensagens de notifica&#xE7;&#xE3;o da opera&#xE7;&#xE3;o do Guia de Servi&#xE7;os ser&#xE3;o enviados.</span>
+<span class="hljs-comment">## O endere&#xE7;o de email para qual as mensagens de notifica&#xE7;&#xE3;o da opera&#xE7;&#xE3;o do Portal de Servi&#xE7;os ser&#xE3;o enviados.</span>
 <span class="hljs-comment"># MAIL_TO=&quot;servicos@planejamento.gov.br&quot;</span>
 
 <span class="hljs-comment">## Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, o nome do usu&#xE1;rio da conta a ser utilizada.</span>
@@ -1639,16 +1639,16 @@ ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
 <h3 id="no-servidor-de-aplica%C3%A7%C3%A3o-1-app1">No servidor de aplica&#xE7;&#xE3;o 1 (<code>app1</code>):</h3>
 <ul>
 <li>Verificar que o hostname da m&#xE1;quina est&#xE1; presente no arquivo <code>/etc/hosts</code></li>
-<li>Sobrescrever <code>/etc/sysconfig/guia-de-servicos-overrides</code> com o arquivo em <code>secrets/guia-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</li>
+<li>Sobrescrever <code>/etc/sysconfig/portal-de-servicos-overrides</code> com o arquivo em <code>secrets/portal-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</li>
 <li>Limpar os &#xED;ndices do ElasticSearch:</li>
 </ul>
-<pre><code class="lang-bash">app1~$ curl -XDELETE <span class="hljs-string">&apos;http://10.17.0.6:9200/gds-importador&apos;</span>
-app1~$ curl -XDELETE <span class="hljs-string">&apos;http://10.17.0.7:9200/gds-importador&apos;</span>
+<pre><code class="lang-bash">app1~$ curl -XDELETE <span class="hljs-string">&apos;http://10.17.0.6:9200/pds-importador&apos;</span>
+app1~$ curl -XDELETE <span class="hljs-string">&apos;http://10.17.0.7:9200/pds-importador&apos;</span>
 </code></pre>
 <ul>
 <li>Rodar o script <code>app-node-update</code> com a vers&#xE3;o a instalar como par&#xE2;metro:</li>
 </ul>
-<pre><code class="lang-bash">app1~$ wget https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/scripts/prod-like/app-node-update
+<pre><code class="lang-bash">app1~$ wget https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/scripts/prod-like/app-node-update
 app1~$ chmod +x app-node-update
 app1~$ sudo ./app-node-update <span class="hljs-number">1234</span>
 </code></pre>
@@ -1677,10 +1677,10 @@ app1~$ sudo ./app-node-update <span class="hljs-number">1234</span>
 </code></pre>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-  <span class="hljs-string">&quot;guiaDeServicosIndex&quot;</span>: {
+  <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;gds-importador&quot;</span>: <span class="hljs-string">&quot;ok (638 docs)&quot;</span>,
-    <span class="hljs-string">&quot;gds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (4 docs)&quot;</span>
+    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (638 docs)&quot;</span>,
+    <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (4 docs)&quot;</span>
   },
   <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
@@ -1698,10 +1698,10 @@ app1~$ sudo ./app-node-update <span class="hljs-number">1234</span>
 <h3 id="no-servidor-de-aplica%C3%A7%C3%A3o-2-app2">No servidor de aplica&#xE7;&#xE3;o 2 (<code>app2</code>):</h3>
 <ul>
 <li>Verificar que o hostname da m&#xE1;quina est&#xE1; presente no arquivo <code>/etc/hosts</code></li>
-<li>Sobrescrever <code>/etc/sysconfig/guia-de-servicos-overrides</code> com o arquivo em <code>secrets/guia-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</li>
+<li>Sobrescrever <code>/etc/sysconfig/portal-de-servicos-overrides</code> com o arquivo em <code>secrets/portal-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</li>
 <li>Rodar o script <code>app-node-update</code> com a vers&#xE3;o a instalar como par&#xE2;metro:</li>
 </ul>
-<pre><code class="lang-bash">app2~$ wget https://raw.githubusercontent.com/servicosgovbr/guia-de-servicos/master/scripts/prod-like/app-node-update
+<pre><code class="lang-bash">app2~$ wget https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/scripts/prod-like/app-node-update
 app2~$ chmod +x app-node-update
 app2~$ sudo ./app-node-update <span class="hljs-number">1234</span>
 </code></pre>
@@ -1730,10 +1730,10 @@ app2~$ sudo ./app-node-update <span class="hljs-number">1234</span>
 </code></pre>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-  <span class="hljs-string">&quot;guiaDeServicosIndex&quot;</span>: {
+  <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;gds-importador&quot;</span>: <span class="hljs-string">&quot;ok (638 docs)&quot;</span>,
-    <span class="hljs-string">&quot;gds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
+    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (638 docs)&quot;</span>,
+    <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
   },
   <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
@@ -1770,17 +1770,17 @@ Disallow:
 <hr>
 <h1 id="backups">Backups</h1>
 <p>Backups devem ser feitos dos seguintes caminhos:</p>
-<pre><code>/etc/sysconfig/guia-de-servicos
-/etc/systemd/system/guia-de-servicos.service
-/opt/guia-de-servicos/**/*
-/var/run/guia-de-servicos/**/*
+<pre><code>/etc/sysconfig/portal-de-servicos
+/etc/systemd/system/portal-de-servicos.service
+/opt/portal-de-servicos/**/*
+/var/run/portal-de-servicos/**/*
 /var/log/**/*
 </code></pre><p>A reten&#xE7;&#xE3;o dos mesmos pode variar dependendo do ambiente. Recomenda-se ao menos 30 dias.</p>
 <hr>
 <h1 id="monitoramento">Monitoramento</h1>
 <p>A monitora&#xE7;&#xE3;o da sa&#xFA;de dos hosts e inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> pode ser feita atrav&#xE9;s das seguintes URLs:</p>
 <h2 id="aplica%C3%A7%C3%A3o">Aplica&#xE7;&#xE3;o</h2>
-<p>A URL <code>/health</code> do Guia de Servi&#xE7;os indica o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o em si e de suas conex&#xF5;es ao cluster do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>. Caso o valor da vari&#xE1;vel de ambiente <code>ENDPOINTS_HEALTH_SENSITIVE</code> seja <code>false</code>, mais informa&#xE7;&#xE3;o &#xE9; exibida:</p>
+<p>A URL <code>/health</code> do Portal de Servi&#xE7;os indica o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o em si e de suas conex&#xF5;es ao cluster do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>. Caso o valor da vari&#xE1;vel de ambiente <code>ENDPOINTS_HEALTH_SENSITIVE</code> seja <code>false</code>, mais informa&#xE7;&#xE3;o &#xE9; exibida:</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
   <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
@@ -1836,7 +1836,7 @@ Disallow:
 </code></pre>
 <p>O estado tamb&#xE9;m pode ficar marcado como &quot;red&quot; caso o n&#xFA;mero de parti&#xE7;&#xF5;es (<em>shards</em>) n&#xE3;o seja suficiente para distribuir todos os dados. Neste caso, reiniciar a aplica&#xE7;&#xE3;o deve trazer todas as parti&#xE7;&#xF5;es necess&#xE1;rias para o cluster.</p>
 <h2 id="java-management-extensions-jmx">Java Management Extensions (JMX)</h2>
-<p>Diversas informa&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis atrav&#xE9;s do servi&#xE7;o de gerenciamento da JVM. Existem diversos <a href="http://java-source.net/open-source/jmx" target="_blank">clientes para o protocolo JMX dispon&#xED;veis</a>, e a JDK j&#xE1; vem com o <a href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html" target="_blank">JConsole</a> embutido. Ao abrir o processo do Guia de Servi&#xE7;os no JConsole, temos:</p>
+<p>Diversas informa&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis atrav&#xE9;s do servi&#xE7;o de gerenciamento da JVM. Existem diversos <a href="http://java-source.net/open-source/jmx" target="_blank">clientes para o protocolo JMX dispon&#xED;veis</a>, e a JDK j&#xE1; vem com o <a href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html" target="_blank">JConsole</a> embutido. Ao abrir o processo do Portal de Servi&#xE7;os no JConsole, temos:</p>
 <p><img src="../desenvolvimento/jconsole-overview.png" alt="JConsole: Overview"></p>
 <p>E ao listar os MBeans dispon&#xED;veis em <code>org.springframework.boot/Endpoint/environmentEndpoint/Attributes</code>:</p>
 <p><img src="../desenvolvimento/jconsole-environment.png" alt="JConsole: Environments"></p>

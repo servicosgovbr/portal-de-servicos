@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Entrega Contínua | Guia de Serviços</title>
+        <title>Entrega Contínua | Portal de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="9.8" data-basepath=".." data-revision="Wed Jun 10 2015 20:02:12 GMT+0000 (UTC)">
+    <div class="book" data-level="9.8" data-basepath=".." data-revision="Thu Jun 11 2015 02:00:28 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1376,7 +1376,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Guia de Serviços</a>
+        <a href="../" >Portal de Serviços</a>
     </h1>
 </div>
 
@@ -1387,20 +1387,20 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="entrega-cont%C3%ADnua">Entrega Cont&#xED;nua</h1>
-<p>Diversos princ&#xED;pios de Entrega Cont&#xED;nua s&#xE3;o utilizados no projeto do Guia de Servi&#xE7;os. Nesta se&#xE7;&#xE3;o, descreveremos brevemente como eles est&#xE3;o implementados.</p>
+<p>Diversos princ&#xED;pios de Entrega Cont&#xED;nua s&#xE3;o utilizados no projeto do Portal de Servi&#xE7;os. Nesta se&#xE7;&#xE3;o, descreveremos brevemente como eles est&#xE3;o implementados.</p>
 <h2 id="integra%C3%A7%C3%A3o-cont%C3%ADnua">Integra&#xE7;&#xE3;o Cont&#xED;nua</h2>
-<p>Utilizamos o <a href="http://snap-ci.com" target="_blank">Snap CI</a> para realizar a execu&#xE7;&#xE3;o de todos os testes e implanta&#xE7;&#xF5;es necess&#xE1;rios a cada <em>push</em> no <a href="http://github.com/servicosgovbr/guia-de-servicos" target="_blank">reposit&#xF3;rio Git do projeto</a>.</p>
+<p>Utilizamos o <a href="http://snap-ci.com" target="_blank">Snap CI</a> para realizar a execu&#xE7;&#xE3;o de todos os testes e implanta&#xE7;&#xF5;es necess&#xE1;rios a cada <em>push</em> no <a href="http://github.com/servicosgovbr/portal-de-servicos" target="_blank">reposit&#xF3;rio Git do projeto</a>.</p>
 <p>Os seguintes passos est&#xE3;o configurados no <em>pipeline</em>:</p>
 <h3 id="testes">TESTES</h3>
-<p>Roda todos os testes unit&#xE1;rios, de integra&#xE7;&#xE3;o, e as checagens est&#xE1;ticas (<a href="ferramentas-utilizadas.html">FindBugs, Checkstyle, etc.</a>). Finalmente, publica os resultados do relat&#xF3;rio de cobertura de testes no <a href="https://coveralls.io/r/servicosgovbr/guia-de-servicos?branch=master" target="_blank">Coveralls</a>. Todos os relat&#xF3;rios de execu&#xE7;&#xE3;o tamb&#xE9;m s&#xE3;o publicados como artefatos, que podem ser baixados em formato HTML e XML.</p>
+<p>Roda todos os testes unit&#xE1;rios, de integra&#xE7;&#xE3;o, e as checagens est&#xE1;ticas (<a href="ferramentas-utilizadas.html">FindBugs, Checkstyle, etc.</a>). Finalmente, publica os resultados do relat&#xF3;rio de cobertura de testes no <a href="https://coveralls.io/r/servicosgovbr/portal-de-servicos?branch=master" target="_blank">Coveralls</a>. Todos os relat&#xF3;rios de execu&#xE7;&#xE3;o tamb&#xE9;m s&#xE3;o publicados como artefatos, que podem ser baixados em formato HTML e XML.</p>
 <h3 id="pacotes">PACOTES</h3>
 <p>Cria um arquivo JAR contendo todas as depend&#xEA;ncias do projeto (uberjar) necess&#xE1;rias para a execu&#xE7;&#xE3;o da aplia&#xE7;&#xE3;o, e embute este JAR em um arquivo RPM espec&#xED;fico para nossa plataforma-alvo (CentOS 7 x64). Este RPM &#xE9; ent&#xE3;o publicado em um <a href="repositorio-yum.html">reposit&#xF3;rio Yum</a>, e fica dispon&#xED;vel para instala&#xE7;&#xE3;o e atualiza&#xE7;&#xE3;o.</p>
 <h3 id="alpha">ALPHA</h3>
 <p>(Re)instala o pacote RPM gerado no passo anterior em <a href="http://ec2-54-94-244-36.sa-east-1.compute.amazonaws.com" target="_blank">uma inst&#xE2;ncia do CentOS 7 x64 rodando na Amazon Web Services EC2</a>, e reinicia os servi&#xE7;os necess&#xE1;rios. Ap&#xF3;s alguns segundos, a nova vers&#xE3;o da aplica&#xE7;&#xE3;o est&#xE1; reiniciada e pronta para receber requisi&#xE7;&#xF5;es.</p>
 <h3 id="docs">DOCS</h3>
-<p>Atualiza a <em>branch</em> <code>gh-pages</code>, utilizada pelo <a href="https://pages.github.com/" target="_blank">Github Pages</a> com o resultado da compila&#xE7;&#xE3;o da documenta&#xE7;&#xE3;o (localizada no diret&#xF3;rio <code>docs</code>) pelo <a href="http://gitbook.com" target="_blank">Gitbook</a>. Esta fica dispon&#xED;vel em <a href="http://servicosgovbr.github.io/guia-de-servicos" target="_blank">servicosgovbr.github.io/guia-de-servicos</a>.</p>
+<p>Atualiza a <em>branch</em> <code>gh-pages</code>, utilizada pelo <a href="https://pages.github.com/" target="_blank">Github Pages</a> com o resultado da compila&#xE7;&#xE3;o da documenta&#xE7;&#xE3;o (localizada no diret&#xF3;rio <code>docs</code>) pelo <a href="http://gitbook.com" target="_blank">Gitbook</a>. Esta fica dispon&#xED;vel em <a href="http://servicosgovbr.github.io/portal-de-servicos" target="_blank">servicosgovbr.github.io/portal-de-servicos</a>.</p>
 <h3 id="aviso">AVISO</h3>
-<p>Anuncia o fim do processo <a href="https://gitter.im/servicosgovbr/guia-de-servicos" target="_blank">na sala de bate-papo do Gitter</a>.</p>
+<p>Anuncia o fim do processo <a href="https://gitter.im/servicosgovbr/portal-de-servicos" target="_blank">na sala de bate-papo do Gitter</a>.</p>
 
                     
                     </section>

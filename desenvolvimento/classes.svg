@@ -1253,7 +1253,7 @@
       <rect x="0" width="20" height="20" y="0" clip-path="url(#clipPath29)" stroke="none"/>
       <image x="2" y="2" clip-path="url(#clipPath29)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAEklEQVR42mNgGAWj&#10;YBSMAggAAAQQAAGvRYgsAAAAAElFTkSuQmCC" height="16" preserveAspectRatio="none"/>
       <rect x="20" width="503" height="20" y="0" clip-path="url(#clipPath29)" stroke="none"/>
-      <text x="21" y="15" clip-path="url(#clipPath29)" fill="black" text-rendering="geometricPrecision" stroke="none" xml:space="preserve">Importador(GuiaDeServicosIndex, ServicoRepository, ServicoLegadoParaServico)</text>
+      <text x="21" y="15" clip-path="url(#clipPath29)" fill="black" text-rendering="geometricPrecision" stroke="none" xml:space="preserve">Importador(PortalDeServicosIndex, ServicoRepository, ServicoLegadoParaServico)</text>
     </g>
     <g fill="gray" font-size="13" font-family="'Lucida Grande'" transform="matrix(1,0,0,1,20,20) translate(2261.25,1180)" stroke="gray">
       <rect x="0" width="573" height="1" y="0" clip-path="url(#clipPath31)" stroke="none"/>
