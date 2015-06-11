@@ -29,7 +29,6 @@ public class ImportadorIntegrationTest {
     @Test
     public void deveRodarImportador() throws Exception {
         importador.importar();
-
         assertThat(servicos.findOne("passaporte").getDescricao().split("\n").length, is(28));
     }
 }
