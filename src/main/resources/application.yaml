@@ -44,7 +44,7 @@ pds:
     servicos:
       - sisu-sistema-de-selecao-unificada
       - consulta-situacao-do-requerimento-de-beneficio-previdenciario
-      - fies-programa-de-financiamento-estudantil
+      - programa-de-financiamento-estudantil-fies
       - restituicao-e-situacao-da-declaracao-do-imposto-de-renda-pessoa-fisica-irpf
       - vagas-de-emprego-sine-e-portal-mais-emprego
       - cadastro-unico-para-programas-sociais-do-governo-federal
