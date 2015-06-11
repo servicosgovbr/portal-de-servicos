@@ -29,8 +29,12 @@ public class ImportadorParaConteudoDePaginas {
     }
 
     public Stream<Conteudo> importar() {
-        return asList("acessibilidade", "documento-de-arrecadacao-de-receitas-federais-darf", "perguntas-frequentes")
-                .stream()
+        return asList(
+                "acessibilidade",
+                "cadastro-de-pessoas-fisicas-cpf",
+                "documento-de-arrecadacao-de-receitas-federais-darf",
+                "perguntas-frequentes"
+        ).stream()
                 .map(id -> {
                     String caminho = format("/conteudo/%s.md", id);
                     return new Conteudo()
