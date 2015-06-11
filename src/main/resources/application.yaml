@@ -26,9 +26,7 @@ mail:
   password:
 
 flags:
-  importar:
-    automaticamente: false
-    cartas: false
+  importar.automaticamente: false
   permitir.robos: false
   destaques.automaticos: false
 
