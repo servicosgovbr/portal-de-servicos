@@ -18,9 +18,11 @@ import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 
 import static br.gov.servicos.foundation.IO.read;
+import static java.util.Collections.emptyList;
 import static java.util.function.Function.identity;
 import static java.util.stream.Collectors.*;
 import static lombok.AccessLevel.PRIVATE;
@@ -46,12 +48,16 @@ public class ImportadorV1 {
 
     @ManagedOperation
     public Iterable<Servico> importar(File repositorioCartas) throws IOException {
-        return this.servicos.save(
-                todosOsServicos(repositorioCartas)
-                        .parallel()
-                        .map(this::toDocument)
-                        .map(this::toServico)
-                        .collect(toSet()));
+        Set<Servico> servicosImportados = todosOsServicos(repositorioCartas)
+                .parallel()
+                .map(this::toDocument)
+                .map(this::toServico)
+                .collect(toSet());
+
+        if (servicosImportados.isEmpty())
+            return emptyList();
+
+        return servicos.save(servicosImportados);
     }
 
     private Stream<Resource> todosOsServicos(File repositorioCartas) throws IOException {
