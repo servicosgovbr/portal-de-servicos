@@ -15,6 +15,14 @@
     </url>
 
     <url>
+        <loc th:text="${@baseUrl.and('/conteudo/cadastro-de-pessoas-fisicas-cpf')}">/conteudo/cadastro-de-pessoas-fisicas-cpf</loc>
+    </url>
+
+    <url>
+        <loc th:text="${@baseUrl.and('/conteudo/documento-de-arrecadacao-de-receitas-federais-darf')}">/conteudo/documento-de-arrecadacao-de-receitas-federais-darf</loc>
+    </url>
+
+    <url>
         <loc th:text="${@baseUrl.and('/conteudo/perguntas-frequentes')}">/conteudo/perguntas-frequentes</loc>
     </url>
 
