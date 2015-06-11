@@ -39,7 +39,7 @@ pds:
     token: ""
     site: 2
   cartas:
-    repositorio: "https://github.com/servicosgovbr/cartas-de-servico.git"
+    repositorio: ""
   destaques:
     servicos:
       - retificadora-on-line-extrato-da-dirpf
