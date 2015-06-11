@@ -53,7 +53,7 @@ class EmailDeOpiniao {
         MimeMessage message = mail.createMimeMessage();
 
         message.setFrom(from);
-        message.setSubject("Nova opinião em " + url(opiniao));
+        message.setSubject(subject(opiniao));
         message.setRecipients(TO, to);
         message.setText(format("<html><body>" +
                         "<h1>Nova opinião enviada</h1>" +
@@ -76,6 +76,11 @@ class EmailDeOpiniao {
         ), "utf8", "html");
 
         return message;
+    }
+
+    private String subject(Opiniao opiniao) {
+        String encontrado = opiniao.getConteudoEncontrado() != null && opiniao.getConteudoEncontrado() ? "sim" : "não";
+        return format("Nova opinião em %s [%s]", url(opiniao), encontrado);
     }
 
     private String mensagem(Opiniao opiniao) {

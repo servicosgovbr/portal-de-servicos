@@ -34,7 +34,7 @@ public class EmailDeOpiniaoTest {
         EmailDeOpiniao email = new EmailDeOpiniao(mail, "from@servicos.gov.br", "to@servicos.gov.br");
         email.enviar(OPINIAO);
 
-        verify(message).setSubject("Nova opinião em /servico/foo");
+        verify(message).setSubject("Nova opinião em /servico/foo [sim]");
         verify(message).setFrom("from@servicos.gov.br");
         verify(message).setRecipients(TO, "to@servicos.gov.br");
         verify(message).setText(anyString(), eq("utf8"), eq("html"));
