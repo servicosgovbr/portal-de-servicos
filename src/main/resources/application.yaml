@@ -39,7 +39,7 @@ pds:
     token: ""
     site: 52
   cartas:
-    repositorio: ""
+    repositorio: "https://github.com/servicosgovbr/cartas-de-servico.git"
   destaques:
     servicos:
       - sisu-sistema-de-selecao-unificada
