@@ -23,8 +23,8 @@ import java.util.stream.Stream;
 
 import static br.gov.servicos.foundation.IO.read;
 import static java.util.Collections.emptyList;
-import static java.util.function.Function.identity;
-import static java.util.stream.Collectors.*;
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toSet;
 import static lombok.AccessLevel.PRIVATE;
 import static org.jsoup.Jsoup.parse;
 import static org.jsoup.parser.Parser.xmlParser;
@@ -48,7 +48,7 @@ public class ImportadorV1 {
 
     @ManagedOperation
     public Iterable<Servico> importar(File repositorioCartas) throws IOException {
-        Set<Servico> servicosImportados = todosOsServicos(repositorioCartas)
+        Set<Servico> servicosImportados = cartasDeServicoEm(repositorioCartas)
                 .parallel()
                 .map(this::toDocument)
                 .map(this::toServico)
@@ -60,18 +60,7 @@ public class ImportadorV1 {
         return servicos.save(servicosImportados);
     }
 
-    private Stream<Resource> todosOsServicos(File repositorioCartas) throws IOException {
-        return Stream.concat(servicosDoRepositorioDeCartas(repositorioCartas), servicosEmbarcados())
-                .collect(toMap(Resource::getFilename, identity(), (r1, r2) -> r1))
-                .values()
-                .stream();
-    }
-
-    private Stream<Resource> servicosEmbarcados() throws IOException {
-        return Stream.of(resolver.getResources("classpath:v1/**/*.xml"));
-    }
-
-    private Stream<Resource> servicosDoRepositorioDeCartas(File repositorioCartas) throws IOException {
+    private Stream<Resource> cartasDeServicoEm(File repositorioCartas) throws IOException {
         if (!repositorioCartas.exists())
             return Stream.empty();
 
