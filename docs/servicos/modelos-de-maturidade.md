@@ -6,11 +6,11 @@ Do que o usuário precisa? O que ele precisa saber? Em que contexto ele se encon
 
 ## As necessidades básicas do usuário são atendidas
 
-O usuário consegue se informar ou agir, ainda que de forma mínima, na prestação do serviço através do Guia.
+O usuário consegue se informar ou agir, ainda que de forma mínima, na prestação do serviço através do Portal.
 
 ## O serviço é melhorado e as necessidades do usuário são atendidas plenamente
 
-As opiniões dadas pelos usuários mostra melhoras significativas e suas necessidades são completamente atendidas pelo Guia. Outras [KPIs](../metricas/kpis.md) melhoram.
+As opiniões dadas pelos usuários mostra melhoras significativas e suas necessidades são completamente atendidas pelo Portal. Outras [KPIs](../metricas/kpis.md) melhoram.
 
 ## As expectativas do usuário são superadas através da melhoria contínua do serviço
 

@@ -1,6 +1,6 @@
 # Etapas da oferta de serviços
 
-A oferta de um serviço no Guia pode ser dividida em três etapas:
+A oferta de um serviço no Portal pode ser dividida em três etapas:
 
 ## Busca
 

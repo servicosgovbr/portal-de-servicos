@@ -19,7 +19,7 @@ plataforma é o caminho mais adequado para entender o que o cidadão precisa e e
 
 #### 4. Os serviços estão em constante evolução
 
-Os diversos serviços estarão em diferentes graus de maturidade. Ou seja, não é preciso que um serviço esteja "pronto" para estar no Portal de Serviços. Sua presença no Guia agregará o valor possível em seu atual nível de maturidade.
+Os diversos serviços estarão em diferentes graus de maturidade. Ou seja, não é preciso que um serviço esteja "pronto" para estar no Portal de Serviços. Sua presença no Portal agregará o valor possível em seu atual nível de maturidade.
 
 #### 5. Adoção a partir de exemplos
 

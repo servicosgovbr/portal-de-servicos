@@ -13,7 +13,7 @@ e no caso do Governo Brasileiro ao e-MAG (Modelo de Acessibilidade em Governo El
 recomendações internacionais, mas estabelece padrões de comportamento acessível para sites governamentais.
 
 Na parte superior do Portal de Serviços existe uma barra de acessibilidade onde se encontra atalhos de navegação 
-padronizados e a opção para alterar o contraste. Essas ferramentas estão disponíveis em todas as páginas do Guia.
+padronizados e a opção para alterar o contraste. Essas ferramentas estão disponíveis em todas as páginas do Portal.
 
 ### Os padrões de atalhos do governo federal são:
 
