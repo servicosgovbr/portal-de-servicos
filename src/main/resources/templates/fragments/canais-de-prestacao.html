@@ -9,7 +9,7 @@
         <h3>Canais</h3>
 
         <p th:each="canalDePrestacao : ${servico.canaisDePrestacao}">
-            <h4 th:text="${canalDePrestacao.tipo}"></h4>
+            <h4 class="extra" th:text="${canalDePrestacao.tipo}"></h4>
 
             <th:block th:if="${not #strings.isEmpty(canalDePrestacao.url)}">
                 <a th:href="${canalDePrestacao.url}" th:text="${canalDePrestacao.descricao}"></a>

@@ -10,7 +10,7 @@
         <h3>Informações Úteis</h3>
 
         <p th:each="informacaoUtil : ${servico.informacoesUteis}">
-            <h4 th:text="${informacaoUtil.tipo}"></h4>
+            <h4 class="extra" th:text="${informacaoUtil.tipo}"></h4>
 
             <th:block th:if="${not #strings.isEmpty(informacaoUtil.url)}">
                 <a th:href="${informacaoUtil.url}"

@@ -87,9 +87,23 @@
 
   h3.subtitulo-servico {
     font-size: 25px;
+    margin-bottom: 5px;
+    margin-top: 20px;
   }
 
+.subtitulo-etapa {
+  font-family: open_sanssemibold;
+  padding-top: 15px;
+}
+
+
   h4 {
+    font-size: 18px;
+    font-family: open_sanssemibold;
+    color: $cinza-escuro;
+  }
+
+  h4.extra {
     font-size: $baseFontSize * 0.8125;
     color: $cinza-escuro;
     text-transform: uppercase;
@@ -217,7 +231,6 @@ dl.nav-tree {
     text-transform: uppercase;
     font-weight: normal;
   }
-
 }
 
 .left {
@@ -439,7 +452,7 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
   padding: 8px 13px 8px 13px;
   background: $cinza-claro;
   text-decoration: none;
-  margin: 10px 10px 30px 0;
+  margin: 0px 10px 20px 0;
   display: inline-block;
   color: $azul-claro !important;
   border: none;
@@ -454,21 +467,23 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
 
 .etapas { 
   margin-top: 15px;
+  margin-bottom: 15px;
 
     .etapa {
       padding-left: 40px;
-      float: center;
-
     }
 
     p.etapa {
       margin-left: 0px;
       display: inline-block;
-
+    }
+  
+    h4.etapa {
+      padding-top: 2px;
+      padding-bottom: 15px;
     }
 
     .circle {
-
       width: 30px;
       height: 30px;
       border-radius: 15px;
@@ -479,8 +494,19 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
       background: $azul-claro;
       float: left;
     }
-
 }
+
+.separacao-orgao {
+  padding-top: 20px;
+}
+
+.separacao-botoes {
+  border-bottom: 1px solid $cinza-medio;
+  padding-bottom: 20px; 
+  margin-bottom: 20px;
+}
+
+
 
 ul#resultados-linhadavida {
   margin-top: 18px;
