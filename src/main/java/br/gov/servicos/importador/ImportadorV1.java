@@ -7,6 +7,7 @@ import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -14,8 +15,8 @@ import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -38,7 +39,9 @@ public class ImportadorV1 {
     ServicoRepository servicos;
 
     @Autowired
-    public ImportadorV1(ResourcePatternResolver resolver, ServicoRepository servicos) {
+    public ImportadorV1(ResourcePatternResolver resolver,
+                        ServicoRepository servicos) {
+
         this.resolver = resolver;
         this.servicos = servicos;
     }
@@ -78,69 +81,68 @@ public class ImportadorV1 {
                 .withId(doc.select("servico > id").text().trim())
                 .withTitulo(doc.select("servico > nome").text().trim())
                 .withDescricao(doc.select("servico > descricao").html().trim())
-                .withResponsavel(
-                        new Orgao()
-                                .withId(doc.select("orgaoResponsavel > id").text().trim())
-                                .withNome(doc.select("orgaoResponsavel > nome").text().trim()))
-                .withPrestador(
-                        new Orgao()
-                                .withId(doc.select("orgaoPrestador > id").text().trim())
-                                .withNome(doc.select("orgaoPrestador > nome").text().trim()))
-                .withLinhasDaVida(linhasDaVida(doc))
-                .withAreasDeInteresse(areasDeInteresse(doc))
-                .withPublicosAlvo(publicosAlvo(doc))
-                .withCanaisDePrestacao(canaisDePrestacao(doc))
-                .withInformacoesUteis(informacoesUteis(doc))
+                .withResponsavel(orgao(doc.select("servico > orgaoResponsavel")))
+                .withPrestador(orgao(doc.select("servico > orgaoPrestador")))
+                .withLinhasDaVida(linhasDaVida(doc.select("servico > eventosDaLinhaDaVida")))
+                .withAreasDeInteresse(areasDeInteresse(doc.select("servico > areasDeInteresse")))
+                .withPublicosAlvo(publicosAlvo(doc.select("servico > segmentosDaSociedade")))
+                .withCanaisDePrestacao(canaisDePrestacao(doc.select("servico > canaisDePrestacao")))
+                .withInformacoesUteis(informacoesUteis(doc.select("servico > informacoesUteis")))
                 .withTaxa(doc.select("servico > custoTotalEstimado").text().trim())
                 .withUrl(doc.select("servico > url").text().trim())
-                .withUrlAgendamento(doc.select("servico > urlAgendamento").text().trim())
-                ;
+                .withUrlAgendamento(doc.select("servico > urlAgendamento").text().trim());
     }
 
-    private List<InformacaoUtil> informacoesUteis(Document doc) {
-        List<InformacaoUtil> canaisDePrestacao = new ArrayList<>();
-        doc.select("servico > informacoesUteis > informacaoUtil")
-                .forEach(e -> canaisDePrestacao.add(new InformacaoUtil()
+    private Orgao orgao(Elements doc) {
+        return new Orgao()
+                .withId(doc.select("id").text().trim())
+                .withNome(doc.select("nome").text().trim());
+    }
+
+    private List<InformacaoUtil> informacoesUteis(Elements doc) {
+        return doc.select("informacaoUtil")
+                .stream()
+                .map(e -> new InformacaoUtil()
                         .withDescricao(e.select("descricao").text().trim())
                         .withTipo(e.attr("tipo").trim())
-                        .withUrl(e.select("link").attr("href").trim())));
-        return canaisDePrestacao;
+                        .withUrl(e.select("link").attr("href").trim()))
+                .collect(toList());
     }
 
-    private List<CanalDePrestacao> canaisDePrestacao(Document doc) {
-        List<CanalDePrestacao> canaisDePrestacao = new ArrayList<>();
-        doc.select("servico > canaisDePrestacao > canalDePrestacao")
-                .forEach(e -> canaisDePrestacao.add(new CanalDePrestacao()
+    private List<CanalDePrestacao> canaisDePrestacao(Elements doc) {
+        return doc.select("canalDePrestacao")
+                .stream()
+                .map(e -> new CanalDePrestacao()
                         .withDescricao(e.select("descricao").text().trim())
                         .withTipo(e.attr("tipo").trim())
-                        .withUrl(e.select("link").attr("href").trim())));
-        return canaisDePrestacao;
+                        .withUrl(e.select("link").attr("href").trim()))
+                .collect(toList());
     }
 
-    private List<PublicoAlvo> publicosAlvo(Document doc) {
-        List<PublicoAlvo> publicoAlvo = new ArrayList<>();
-        doc.select("servico > segmentosDaSociedade > segmentoDaSociedade")
-                .forEach(e -> publicoAlvo.add(new PublicoAlvo()
+    private List<PublicoAlvo> publicosAlvo(Elements doc) {
+        return doc.select("segmentoDaSociedade")
+                .stream()
+                .map(e -> new PublicoAlvo()
                         .withId(e.select("id").text().trim())
-                        .withTitulo(e.select("nome").text().trim())));
-        return publicoAlvo;
+                        .withTitulo(e.select("nome").text().trim()))
+                .collect(toList());
     }
 
-    private List<LinhaDaVida> linhasDaVida(Document doc) {
-        List<LinhaDaVida> linhasDaVida = new ArrayList<>();
-        doc.select("servico > eventosDaLinhaDaVida > eventoDaLinhaDaVida")
-                .forEach(e -> linhasDaVida.add(new LinhaDaVida()
+    private List<LinhaDaVida> linhasDaVida(Elements doc) {
+        return doc.select("eventoDaLinhaDaVida")
+                .stream()
+                .map(e -> new LinhaDaVida()
                         .withId(e.select("id").text().trim())
-                        .withTitulo(e.select("nome").text().trim())));
-        return linhasDaVida;
+                        .withTitulo(e.select("nome").text().trim()))
+                .collect(toList());
     }
 
-    private List<AreaDeInteresse> areasDeInteresse(Document doc) {
-        List<AreaDeInteresse> areasDeInteresse = new ArrayList<>();
-        doc.select("servico > areasDeInteresse > areaDeInteresse")
-                .forEach(e -> areasDeInteresse.add(new AreaDeInteresse()
+    private List<AreaDeInteresse> areasDeInteresse(Elements doc) {
+        return doc.select("areaDeInteresse")
+                .stream()
+                .map(e -> new AreaDeInteresse()
                         .withId(e.select("id").text().trim())
-                        .withTitulo(e.select("nome").text().trim())));
-        return areasDeInteresse;
+                        .withTitulo(e.select("nome").text().trim()))
+                .collect(toList());
     }
 }
