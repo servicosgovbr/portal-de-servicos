@@ -137,8 +137,8 @@ public class IndexControllerTest {
     @Test
     public void deveFiltrarFiltrarServicosIguais() {
         controller = new IndexController(destaquesManuais);
-        given(destaques.getServicos()).willReturn(singletonList("titulo"));
-        given(servicos.findOne("titulo")).willReturn(SERVICO);
+        given(destaques.getServicos()).willReturn(singletonList("exemplo-de-servico"));
+        given(servicos.findOne("exemplo-de-servico")).willReturn(SERVICO);
 
         assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
     }

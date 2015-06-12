@@ -3,9 +3,7 @@ package br.gov.servicos.fixtures;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoHtml;
 import br.gov.servicos.metricas.Opiniao;
-import br.gov.servicos.servico.AreaDeInteresse;
-import br.gov.servicos.servico.Orgao;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 
@@ -18,18 +16,20 @@ import static java.util.Collections.unmodifiableList;
 public class TestData {
 
     public static final Servico SERVICO = new Servico()
-            .withId("titulo")
-            .withTitulo("Título")
+            .withId("exemplo-de-servico")
+            .withTitulo("Exemplo de serviço")
             .withDescricao("Descrição serviço")
             .withUrl("url://site")
             .withUrlAgendamento("url://agendamento")
-            .withTaxa("Gratuita")
-            .withPrestador(new Orgao().withId("1").withNome("Nome").withTelefone("123"))
-            .withResponsavel(new Orgao().withId("2").withNome("Nome").withTelefone(null))
+            .withTaxa("R$ 10,50")
+            .withPrestador(new Orgao().withId("orgao-prestador").withNome("Órgão prestador"))
+            .withResponsavel(new Orgao().withId("orgao-responsavel").withNome("Órgão responsável"))
             .withPublicosAlvo(singletonList(new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos")))
-            .withAreasDeInteresse(singletonList(new AreaDeInteresse().withId("3").withTitulo("Área de Interesse")))
-            .withLinhasDaVida(singletonList(new LinhaDaVida().withId("4").withTitulo("Linha da Vida")))
-            .withEventosDasLinhasDaVida(singletonList("Eventos das Linhas da Vida"));
+            .withAreasDeInteresse(singletonList(new AreaDeInteresse().withId("area-de-interesse").withTitulo("Área de Interesse")))
+            .withLinhasDaVida(singletonList(new LinhaDaVida().withId("linha-da-vida").withTitulo("Linha da Vida")))
+            .withEventosDasLinhasDaVida(singletonList("Eventos das Linhas da Vida"))
+            .withCanaisDePrestacao(singletonList(new CanalDePrestacao().withTipo("web").withDescricao("Web").withUrl("http://canal-prestacao")))
+            .withInformacoesUteis(singletonList(new InformacaoUtil().withTipo("App").withDescricao("Aplicativo móvel").withUrl("http://app-movel")));
 
     public static final Conteudo CONTEUDO_DE_SERVICO = Conteudo.fromServico(SERVICO);
 
