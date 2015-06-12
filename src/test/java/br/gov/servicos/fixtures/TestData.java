@@ -27,9 +27,8 @@ public class TestData {
             .withPublicosAlvo(singletonList(new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos")))
             .withAreasDeInteresse(singletonList(new AreaDeInteresse().withId("area-de-interesse").withTitulo("Área de Interesse")))
             .withLinhasDaVida(singletonList(new LinhaDaVida().withId("linha-da-vida").withTitulo("Linha da Vida")))
-            .withEventosDasLinhasDaVida(singletonList("Eventos das Linhas da Vida"))
             .withCanaisDePrestacao(singletonList(new CanalDePrestacao().withTipo("web").withDescricao("Web").withUrl("http://canal-prestacao")))
-            .withInformacoesUteis(singletonList(new InformacaoUtil().withTipo("App").withDescricao("Aplicativo móvel").withUrl("http://app-movel")));
+            .withInformacoesUteis(singletonList(new InformacaoUtil().withTipo("app").withDescricao("Aplicativo móvel").withUrl("http://app-movel")));
 
     public static final Conteudo CONTEUDO_DE_SERVICO = Conteudo.fromServico(SERVICO);
 

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<servico xmlns="http://servicos.gov.br/carta/v1/servico">
+
+    <versao>1.0</versao>
+
+    <id>exemplo-de-servico</id>
+
+    <nome>Exemplo de serviço</nome>
+
+    <nomesPopulares/>
+
+    <descricao><![CDATA[Descrição serviço]]></descricao>
+
+    <url><![CDATA[url://site]]></url>
+
+    <urlAgendamento><![CDATA[url://agendamento]]></urlAgendamento>
+
+    <solicitantes/>
+
+    <tempoTotalEstimado/>
+
+    <digitalizacao/>
+
+    <etapas/>
+
+    <orgaoResponsavel>
+        <id>orgao-responsavel</id>
+        <nome>Órgão responsável</nome>
+    </orgaoResponsavel>
+
+    <orgaoPrestador>
+        <id>orgao-prestador</id>
+        <nome>Órgão prestador</nome>
+    </orgaoPrestador>
+
+    <segmentosDaSociedade>
+        <segmentoDaSociedade>
+            <id>servicos-aos-cidadaos</id>
+            <nome>Serviços aos Cidadãos</nome>
+        </segmentoDaSociedade>
+    </segmentosDaSociedade>
+
+    <eventosDaLinhaDaVida>
+        <eventoDaLinhaDaVida>
+            <id>linha-da-vida</id>
+            <nome>Linha da Vida</nome>
+        </eventoDaLinhaDaVida>
+    </eventosDaLinhaDaVida>
+
+    <areasDeInteresse>
+        <areaDeInteresse>
+            <id>area-de-interesse</id>
+            <nome>Área de Interesse</nome>
+        </areaDeInteresse>
+    </areasDeInteresse>
+
+    <palavrasChave/>
+
+    <custoTotalEstimado>R$ 10,50</custoTotalEstimado>
+
+    <legislacaoRelacionada/>
+
+    <canaisDePrestacao>
+        <canalDePrestacao tipo="web">
+            <descricao>Web</descricao>
+            <link rel="canal-de-prestacao#web" href="http://canal-prestacao"/>
+        </canalDePrestacao>
+    </canaisDePrestacao>
+
+    <informacoesUteis>
+        <informacaoUtil tipo="app">
+            <descricao>Aplicativo móvel</descricao>
+            <link rel="informacao-util#app" href="http://app-movel"/>
+        </informacaoUtil>
+    </informacoesUteis>
+
+</servico>
