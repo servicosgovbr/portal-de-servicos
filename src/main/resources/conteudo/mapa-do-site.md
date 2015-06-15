@@ -2,10 +2,9 @@ Mapa do Site
 ---
 Uma visão geral do conteúdo disponível no site. 
 
-- [Página Inicial](/)
-
 ### Informações
 
+- [Página Inicial](/)
 - [Perguntas Frequentes](/conteudo/perguntas-frequentes)
 - [Para Desenvolvedores](http://servicosgovbr.github.io)
 
