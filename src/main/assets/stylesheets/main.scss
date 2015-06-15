@@ -92,8 +92,11 @@
   }
 
 .subtitulo-etapa {
-  font-family: open_sanssemibold;
-  padding-top: 15px;
+  margin-left: 40px; 
+  margin-top: 20px;
+  padding: 20px 20px 20px 20px;
+  background-color: $cinza-claro;
+  font-size: 14px;
 }
 
 
@@ -465,6 +468,10 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
   }
 }
 
+.info-etapa {
+  font-family: open_sansbold;
+}
+
 .etapas { 
   margin-top: 15px;
   margin-bottom: 15px;
@@ -493,6 +500,13 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
       padding-top: 4px;
       background: $azul-claro;
       float: left;
+    }
+
+    .fa {
+      color: $cinza-escuro;
+      background-color: $cinza-claro;
+      padding: 5px 5px 5px 5px;
+      border-radius: 4px;
     }
 }
 
