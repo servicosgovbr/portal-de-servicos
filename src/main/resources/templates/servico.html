@@ -34,6 +34,10 @@
 
 <section layout:fragment="corpo">
     <div class="row">
+        <a th:href="${'http://ec2-54-207-59-83.sa-east-1.compute.amazonaws.com/servico/' + servico.id }"
+            class="acao-servico right"
+            th:if="${@cookies.isOn('modo-edicao')}">Editar</a>
+
         <h2 th:text="${servico.titulo}">Nome do Serviço</h2>
 
         <p style="white-space: pre-wrap;" th:utext="${servico.descricao}">
