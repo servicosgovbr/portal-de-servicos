@@ -34,7 +34,7 @@
     <body>
         
         
-    <div class="book" data-level="10.1" data-basepath=".." data-revision="Mon Jun 15 2015 21:27:01 GMT+0000 (UTC)">
+    <div class="book" data-level="10.1" data-basepath=".." data-revision="Mon Jun 15 2015 21:36:42 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1841,6 +1841,19 @@ Disallow:
 <p>E ao listar os MBeans dispon&#xED;veis em <code>org.springframework.boot/Endpoint/environmentEndpoint/Attributes</code>:</p>
 <p><img src="../desenvolvimento/jconsole-environment.png" alt="JConsole: Environments"></p>
 <p>As informa&#xE7;&#xF5;es e opera&#xE7;&#xF5;es oferecidas atrav&#xE9;s do JMX s&#xE3;o maneiras poderosas de manter e diagnosticar a sa&#xFA;de da aplica&#xE7;&#xE3;o e do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>, e devem ser manuseadas com o cuidado necess&#xE1;rio. Para mais informa&#xE7;&#xF5;es sobre seguran&#xE7;a do JMX, por favor utilize a <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html" target="_blank">documenta&#xE7;&#xE3;o de refer&#xEA;ncia oficial</a>.</p>
+<hr>
+<h1 id="escalabilidade">Escalabilidade</h1>
+<p>&#xC9; poss&#xED;vel aumentar a capacidade de carga do Portal de Servi&#xE7;os de duas maneiras:</p>
+<h2 id="aumentando-a-capacidade-do-servidor-vertical">Aumentando a capacidade do servidor (vertical)</h2>
+<p>Servidores est&#xE3;o atualmente provisionados de acordo com a se&#xE7;&#xE3;o &quot;<a href="../desenvolvimento/implantacao-e-execucao.html">Implanta&#xE7;&#xE3;o e execu&#xE7;&#xE3;o</a>&quot;. Para adicionar mais capacidade, &#xE9; necess&#xE1;rio revisar as configura&#xE7;&#xF5;es pertinentes e analisar a performance total novamente (ver: &quot;<a href="performance.md">Performance</a>&quot;).</p>
+<h2 id="aumentando-a-quantidade-de-servidores-horizontal">Aumentando a quantidade de servidores (horizontal)</h2>
+<p>Para adicionar um servidor de aplica&#xE7;&#xE3;o, &#xE9; necess&#xE1;rio adicion&#xE1;-lo ao <a href="infraestrutura.md#balanceador-de-carga">balanceador de carga</a>. Para um nodo no <a href="elasticsearch.md">ElasticSearch</a>, &#xE9; necess&#xE1;rio atualizar a configura&#xE7;&#xE3;o do ambiente a modificar para que o IP do novo nodo seja utilizado.</p>
+<p>Por exemplo, para adicionar uma nova m&#xE1;quina com ElasticSearch ao <a href="deploy-vagrant.md">cluster no Vagrant</a>, com o IP <code>10.16.0.14</code>, basta modificar o arquivo <code>src/main/resources/application-vagrant.yaml</code> para:</p>
+<pre><code>spring:
+  data:
+    elasticsearch:
+      clusterNodes: 10.16.0.11:9300,10.16.0.9:9300,10.16.0.14:9300
+</code></pre><p>&#x2026;e <a href="deploy-vagrant.md">executar a implanta&#xE7;&#xE3;o</a> para o ambiente Vagrant novamente.</p>
 
                     
                     </section>
