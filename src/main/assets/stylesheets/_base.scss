@@ -76,7 +76,7 @@ h2 {
   font-family: 'open_sansbold', $helvetica;
   font-size: $baseFontSize * 2.1875;
   line-height: $h2LineHeight;
-  margin: -10px 0 .5em;
+  margin: -7px 0 .5em;
 
   @include mobile {
     font-size: $baseFontSize * 1.6875;
