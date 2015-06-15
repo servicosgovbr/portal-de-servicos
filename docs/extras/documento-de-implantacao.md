@@ -34,3 +34,7 @@ Neste documento estão todas as informações necessárias à implantação e op
 ----
 
 {%include '../desenvolvimento/monitoramento.md' %}
+
+---
+
+{%include '../desenvolvimento/escalabilidade.md' %}
