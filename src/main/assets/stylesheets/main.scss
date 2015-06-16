@@ -419,7 +419,7 @@ a.acao, button.acao, input[type="submit"].acao {
   padding: 8px 13px 8px 13px;
   background: $azul-claro;
   text-decoration: none;
-  margin: 10px 0 30px 0;
+  margin: 10px 0 20px 0;
   display: inline-block;
   color: $branco !important;
   border: none;
@@ -715,4 +715,9 @@ p.formulario-opiniao {
       }
     }
   }
+}
+
+.feedback-servico {
+  border: 1px solid $cinza-medio;
+  padding: 1px 20px 1px 20px;
 }
