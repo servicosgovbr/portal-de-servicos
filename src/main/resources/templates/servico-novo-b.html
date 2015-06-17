@@ -37,7 +37,7 @@
                     Inscreva-se no programa <i class="fa fa-calendar-o"></i></a>
                 <a th:if="${not #strings.isEmpty(servico.url)}" class="acao-servico" th:href="${servico.url}">
                     Simule o financiamento <i class="fa fa-calculator"></i></a>
-                <a href="javascript:window.print()" class="acao-servico">
+                <a href="javascript:window.print()" class="acao-servico no-mobile">
                     Imprima esta página <i class="fa fa-print"></i></a>
                 <p style="white-space: pre-wrap;" th:utext="${servico.descricao}">
                     Descrição do serviço</p>
@@ -73,8 +73,8 @@
                 <br></br>
                 <p class="info-etapa">Canais de comunicação com este serviço:</p>
                     <ul>
-                        <li><p>• Site: www.ministerio.gov.br </p></li>
-                        <li><p>• E-mail: email@ministerio.gov.br</p></li>
+                        <li><p>• Site: <a>www.ministerio.gov.br</a></p></li>
+                        <li><p>• E-mail: <a>email@ministerio.gov.br</a></p></li>
                         <li><p>• Endereço: Rua São Joa s/n - Porto Alegre/RS - CEP 9077-540 </p>
                         </li>
                     </ul>
@@ -101,8 +101,8 @@
                 <br></br>
                 <p class="info-etapa">Canais de comunicação com este serviço:</p>
                     <ul>
-                        <li><p>• Site: www.ministerio.gov.br </p></li>
-                        <li><p>• E-mail: email@ministerio.gov.br</p></li>
+                        <li><p>• Site: <a>www.ministerio.gov.br</a></p></li>
+                        <li><p>• E-mail: <a>email@ministerio.gov.br</a></p></li>
                         <li><p>• Endereço: Rua São Joa s/n - Porto Alegre/RS - CEP 9077-540 </p>
                         </li>
                     </ul>
@@ -131,8 +131,8 @@
                     <br></br>
                 <p class="info-etapa">Canais de comunicação com este serviço:</p>
                     <ul>
-                        <li><p>• Site: www.ministerio.gov.br </p></li>
-                        <li><p>• E-mail: email@ministerio.gov.br</p></li>
+                        <li><p>• Site: <a>www.ministerio.gov.br</a></p></li>
+                        <li><p>• E-mail: <a>email@ministerio.gov.br</a></p></li>
                         <li><p>• Endereço: Rua São Joa s/n - Porto Alegre/RS - CEP 9077-540 </p>
                         </li>
                     </ul>
@@ -145,15 +145,6 @@
                 </div>
                 </p>
         </div>
-
-        <h3 class="subtitulo-servico">Canais de comunicação com este serviço</h3>
-            <ul>
-                <li><p>Site: <a>http://sisfiesportal.mec.gov.br/</a></p></li>
-                <li><p> E-mail: <a>email@ministerio.gov.br</a></p></li>
-                <li><p> Endereço: Rua São João s/n - Porto Alegre/RS - CEP 9077-540</p></li>
-                <li><p> Telefone: 0800 61 61 61</p></li>
-                <li><p> Perguntas frequentes: <a>http://sisfiesportal.mec.gov.br/faq.html</a></p></li>
-            </ul>
 
         <p class="separacao-orgao" th:unless="${#strings.isEmpty(servico.responsavel.nome)}">
             Este é um serviço
@@ -173,14 +164,12 @@
 
         <a th:if="${not #strings.isEmpty(servico.url)}" class="acao-servico" th:href="${servico.url}">
             Inscreva-se no programa <i class="fa fa-calendar-o"></i></a>
-
         <a th:if="${not #strings.isEmpty(servico.url)}" class="acao-servico" th:href="${servico.url}">
             Simule o financiamento <i class="fa fa-calculator"></i></a>
-
-        <a href="javascript:window.print()" class="acao-servico">
+        <a href="javascript:window.print()" class="acao-servico no-mobile">
             Imprima esta página <i class="fa fa-print"></i></a>
 
- <form class="feedback-servico" accept-charset="UTF-8" action="/opiniao" method="post">
+        <form class="feedback-servico" accept-charset="UTF-8" action="/opiniao" method="post">
 
             <h3 class="opiniao">Você achou as informações acima úteis?</h3>
 
@@ -194,7 +183,7 @@
                 <input name="conteudoEncontrado" id="nao" class="left" type="radio" value="false"/>
             </p>
 
-            <input name="enviar" type="submit" class="acao" value="ENVIAR"/>
+            <input name="enviar" type="submit" class="acao enviar-servico" value="ENVIAR"/>
 
             <input name="utf8" type="hidden" value="✓"/><!-- força utf8 -->
             <input name="url" type="hidden" th:value="${url}"/>
