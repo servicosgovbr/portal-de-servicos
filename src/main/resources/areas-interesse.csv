@@ -1,0 +1,1435 @@
+from,to1,to2
+"Agricultura, extrativismo e pesca",Agropecuária,Agropecuária
+Abastecimento,Agropecuária/Abastecimento,Abastecimento
+Armazenamento de alimento,Agropecuária/Abastecimento,Abastecimento
+Comercialização agrícola,Agropecuária/Abastecimento,Abastecimento
+Estocagem,Agropecuária/Abastecimento,Abastecimento
+Estoque regulador,Agropecuária/Abastecimento,Abastecimento
+Segurança alimentar,Agropecuária/Abastecimento,Abastecimento
+Suprimento de alimento,Agropecuária/Abastecimento,Abastecimento
+Transporte,Agropecuária/Abastecimento,Abastecimento
+Agricultura de subsistência,Agropecuária,Agropecuária
+Agricultura familiar,Agropecuária,Agropecuária
+Agricultura orgânica,Agropecuária,Agropecuária
+Alimento,Agropecuária,Agropecuária
+Composição de alimentos,Agropecuária,Agropecuária
+Contaminação de alimentos,Agropecuária,Agropecuária
+Tecnologia de alimentos,Agropecuária,Agropecuária
+Aditivos de alimentos,Agropecuária,Agropecuária
+Embalagem de alimentos,Agropecuária,Agropecuária
+Preservação de alimentos,Agropecuária,Agropecuária
+Assistência técnica,Agropecuária/Produção agropecuária,Produção agropecuária
+Defesa Vegetal,Agropecuária,Agropecuária
+Análise de risco - área vegetal,Agropecuária,Agropecuária
+Distúrbio vegetal,Agropecuária,Agropecuária
+Doença de planta,Agropecuária,Agropecuária
+Erva daninha,Agropecuária,Agropecuária
+Fiscalização vegetal,Agropecuária,Agropecuária
+Praga de planta,Agropecuária,Agropecuária
+Quarentena vegetal,Agropecuária,Agropecuária
+Engenharia agrícola,Agropecuária/Produção agropecuária,Produção agropecuária
+Agricultura de precisão,Agropecuária/Produção agropecuária,Produção agropecuária
+Aviação agrícola,Agropecuária/Produção agropecuária,Produção agropecuária
+Construção rural,Agropecuária/Produção agropecuária,Produção agropecuária
+Eletrificação rural,Agropecuária/Produção agropecuária,Produção agropecuária
+Equipamento agrícola,Agropecuária/Produção agropecuária,Produção agropecuária
+Irrigação e drenagem,Agropecuária/Produção agropecuária,Produção agropecuária
+Mecanização agrícola,Agropecuária/Produção agropecuária,Produção agropecuária
+Extensão rural,Agropecuária,Agropecuária
+Extrativismo,Agropecuária/Produção agropecuária,Produção agropecuária
+Extrativismo animal,Agropecuária/Produção agropecuária,Produção agropecuária
+Pele,Agropecuária/Produção agropecuária,Produção agropecuária
+Extrativismo vegetal,Agropecuária/Produção agropecuária,Produção agropecuária
+Cera vegetal,Agropecuária/Produção agropecuária,Produção agropecuária
+Combustível,Agropecuária/Produção agropecuária,Produção agropecuária
+Fibra vegetal,Agropecuária/Produção agropecuária,Produção agropecuária
+Goma,Agropecuária/Produção agropecuária,Produção agropecuária
+Látex,Agropecuária/Produção agropecuária,Produção agropecuária
+Madeira,Agropecuária/Produção agropecuária,Produção agropecuária
+Óleo vegetal,Agropecuária/Produção agropecuária,Produção agropecuária
+Organização agrária,Agropecuária,Agropecuária
+Assentamentos rurais,Agropecuária,Agropecuária
+Associação agrícola,Agropecuária,Agropecuária
+Colonização,Agropecuária,Agropecuária
+Cooperativa agrícola,Agropecuária,Agropecuária
+Estrutura agrária,Agropecuária,Agropecuária
+Gestão da produção agrária,Agropecuária,Agropecuária
+Reforma agrária,Agropecuária,Agropecuária
+Pecuária,Agropecuária,Agropecuária
+Defesa animal,Agropecuária,Agropecuária
+Análise de risco - área animal,Agropecuária,Agropecuária
+Distúrbios de animais,Agropecuária,Agropecuária
+Doença animal,Agropecuária,Agropecuária
+Fiscalização animal,Agropecuária,Agropecuária
+Praga de animal,Agropecuária,Agropecuária
+Quarentena animal,Agropecuária,Agropecuária
+Produção animal,Agropecuária,Agropecuária
+Animais exóticos,Agropecuária,Agropecuária
+Apicultura,Agropecuária,Agropecuária
+Avicultura,Agropecuária,Agropecuária
+Bovinocultura,Agropecuária,Agropecuária
+Bubalinocultura,Agropecuária,Agropecuária
+Caprinocultura,Agropecuária,Agropecuária
+Equideocultura,Agropecuária,Agropecuária
+Estrutiocultura,Agropecuária,Agropecuária
+Estrutura animal,Agropecuária,Agropecuária
+Fisiologia animal,Agropecuária,Agropecuária
+Melhoramento genético animal,Agropecuária,Agropecuária
+Nutrição animal,Agropecuária,Agropecuária
+Forragem,Agropecuária,Agropecuária
+Pastagem,Agropecuária,Agropecuária
+Ração,Agropecuária,Agropecuária
+Ovinocultura,Agropecuária,Agropecuária
+Sericicultura,Agropecuária,Agropecuária
+Suinocultura,Agropecuária,Agropecuária
+Zootecnia,Agropecuária,Agropecuária
+Produto animal,Agropecuária,Agropecuária
+Veterinária,Agropecuária,Agropecuária
+Clínica animal,Agropecuária,Agropecuária
+Higiene veterinária,Agropecuária,Agropecuária
+Inseminação artificial,Agropecuária,Agropecuária
+Sanidade animal,Agropecuária,Agropecuária
+Vacinas,Agropecuária,Agropecuária
+Pesca,Agropecuária,Agropecuária
+Biologia pesqueira,Agropecuária,Agropecuária
+Comunidade pesqueira,Agropecuária,Agropecuária
+Economia pesqueira,Agropecuária,Agropecuária
+Equipamentos de pesca,Agropecuária,Agropecuária
+Indústria pesqueira,Agropecuária,Agropecuária
+Peixe de água doce,Agropecuária,Agropecuária
+Peixe marinho,Agropecuária,Agropecuária
+Pesca artesanal,Agropecuária,Agropecuária
+Pesca continental,Agropecuária,Agropecuária
+Pesca extensiva,Agropecuária,Agropecuária
+Pesca fluvial,Agropecuária,Agropecuária
+Pesca industrial,Agropecuária,Agropecuária
+Pesca intensiva,Agropecuária,Agropecuária
+Produção pesqueira,Agropecuária,Agropecuária
+Aqüicultura,Agropecuária,Agropecuária
+Carcinicultura,Agropecuária,Agropecuária
+Ostreicultura,Agropecuária,Agropecuária
+Piscicultura,Agropecuária,Agropecuária
+Política agrícola,Agropecuária,Agropecuária
+Agronegócio,Agropecuária,Agropecuária
+Crédito agrícola,Agropecuária,Agropecuária
+Desenvolvimento agrícola,Agropecuária,Agropecuária
+Economia agrícola,Agropecuária,Agropecuária
+Plano agrícola e pecuário,Agropecuária,Agropecuária
+Política de preço,Agropecuária,Agropecuária
+Preço mínimo,Agropecuária,Agropecuária
+Programas de governo - agricultura,Agropecuária,Agropecuária
+Safra,Agropecuária,Agropecuária
+Previsão de safra,Agropecuária,Agropecuária
+Produção vegetal,Agropecuária,Agropecuária
+Biologia vegetal,Agropecuária,Agropecuária
+Estrutura vegetal,Agropecuária,Agropecuária
+Fisiologia vegetal,Agropecuária,Agropecuária
+Floricultura,Agropecuária,Agropecuária
+Fruticultura,Agropecuária,Agropecuária
+Horticultura,Agropecuária,Agropecuária
+Insumos agrícolas,Agropecuária,Agropecuária
+Fertilizantes e agrotóxicos,Agropecuária,Agropecuária
+Melhoramento genético vegetal,Agropecuária,Agropecuária
+Produção de sementes e mudas,Agropecuária,Agropecuária
+Certificação de sementes,Agropecuária,Agropecuária
+Variedades de sementes e mudas,Agropecuária,Agropecuária
+Sistema de produção,Agropecuária,Agropecuária
+Tratos culturais,Agropecuária,Agropecuária
+Capina,Agropecuária,Agropecuária
+Colheita,Agropecuária,Agropecuária
+Cultivo,Agropecuária,Agropecuária
+Plantio,Agropecuária,Agropecuária
+Poda,Agropecuária,Agropecuária
+Produto vegetal,Agropecuária,Agropecuária
+Solos,Agropecuária,Agropecuária
+Preparo de solo,Agropecuária,Agropecuária
+Adubação e correção,Agropecuária,Agropecuária
+Manejo e conservação,Agropecuária,Agropecuária
+Plantio convencional,Agropecuária,Agropecuária
+Plantio direto,Agropecuária,Agropecuária
+Transgenia e sequenciamento,Agropecuária,Agropecuária
+"Ciência, Informação e Comunicação","Comunicações, Pesquisa e Desenvolvimento",
+Ciência e Tecnologia,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Biotecnologia,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Ciência espacial,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Exploração espacial,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Tecnologia espacial,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Desenvolvimento tecnológico,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Inovação tecnológica,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Engenharia,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Nanotecnologia,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Nanociência,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Nanomaterial,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Nanomedicina,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Pesquisa científica e tecnologia,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Tecnologia da informação e comunicação,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Banco de dados,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Hardware,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Inteligência artificial,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Internet,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Meios de acesso,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Multimídia,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Redes de comunicação,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Robótica,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Sistemas de informação,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Software,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Qualidade de software,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Software livre,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Software proprietário,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Tecnologia de segurança de dados e informação,Pesquisa e Desenvolvimento,Pesquisa e Desenvolvimento
+Comunicação,Comunicações,Comunicações
+Serviços postais,Comunicações,Comunicações
+Telecomunicações,Comunicações,Comunicações
+Certificação de produto de telecomunicações,Comunicações,Comunicações
+Comunicação móvel,Comunicações,Comunicações
+Móvel aeronáutico,Comunicações,Comunicações
+Móvel celular,Comunicações,Comunicações
+Móvel especial de radiochamada,Comunicações,Comunicações
+Móvel especializado,Comunicações,Comunicações
+Móvel marítimo,Comunicações,Comunicações
+Serviço móvel por satélite,Comunicações,Comunicações
+Comunicação multimídia,Comunicações,Comunicações
+Teleconferência,Comunicações,Comunicações
+Exploração de satélite,Comunicações,Comunicações
+Radioamador,Comunicações,Comunicações
+Radiodifusão,Comunicações,Comunicações
+Telefonia fixa,Comunicações,Comunicações
+Televisão,Comunicações,Comunicações
+Televisão digital,Comunicações,Comunicações
+Televisão terrestre,Comunicações,Comunicações
+TV a Cabo,Comunicações,Comunicações
+TV via satélite,Comunicações,Comunicações
+Web TV,Comunicações,Comunicações
+Veículos de comunicação,Comunicações,Comunicações
+Imprensa,Comunicações,Comunicações
+Rádio,Comunicações,Comunicações
+Televisão,Comunicações,Comunicações
+Televisão digital,Comunicações,Comunicações
+Televisão terrestre,Comunicações,Comunicações
+TV a Cabo,Comunicações,Comunicações
+TV via satélite,Comunicações,Comunicações
+Web TV,Comunicações,Comunicações
+"Informação - Gestão, preservação e acesso",Comunicações,Comunicações
+Arquivos,Comunicações,Comunicações
+Bibliotecas,Comunicações,Comunicações
+Centrais de atendimento,Comunicações,Comunicações
+Centro de documentação,Comunicações,Comunicações
+Informações estatísticas,Comunicações,Comunicações
+Museus,Comunicações,Comunicações
+Preservação de dados e informações,Comunicações,Comunicações
+Publicações oficiais,Comunicações,Comunicações
+Segurança de dados e informações,Comunicações,Comunicações
+Classificação da informação,Comunicações,Comunicações
+Privacidade da informação,Comunicações,Comunicações
+"Comércio, Serviços e Turismo",Comércio e Serviços,Comércio e Serviços
+Comércio e Serviços,Comércio e Serviços,Comércio e Serviços
+Comércio eletrônico,Comércio e Serviços,Comércio e Serviços
+Comércio exterior,Comércio e Serviços,Comércio e Serviços
+Barreiras externas,Comércio e Serviços,Comércio e Serviços
+Exportação,Comércio e Serviços,Comércio e Serviços
+Crédito e financiamento de exportação,Comércio e Serviços,Comércio e Serviços
+Exportação de serviços,Comércio e Serviços,Comércio e Serviços
+Logística e transporte de exportação,Comércio e Serviços,Comércio e Serviços
+Importação,Comércio e Serviços,Comércio e Serviços
+Importação de serviços,Comércio e Serviços,Comércio e Serviços
+Negociação internacional,Comércio e Serviços,Comércio e Serviços
+Empresas,Comércio e Serviços,Comércio e Serviços
+Comércio,Comércio e Serviços,Comércio e Serviços
+Serviços,Comércio e Serviços,Comércio e Serviços
+Entidades representativas do comércio e serviços,Comércio e Serviços,Comércio e Serviços
+Indicadores e estatísticas em comércio e serviços,Comércio e Serviços,Comércio e Serviços
+Política de incentivo de comércio e serviços,Comércio e Serviços,Comércio e Serviços
+Promoção comercial,Comércio e Serviços,Comércio e Serviços
+Exposição,Comércio e Serviços,Comércio e Serviços
+Feira,Comércio e Serviços,Comércio e Serviços
+Registro comercial,Comércio e Serviços,Comércio e Serviços
+Regulamentação comercial,Comércio e Serviços,Comércio e Serviços
+Turismo,Comércio e Serviços/Turismo,Turismo
+Conselhos e câmaras temáticas de turismo,Comércio e Serviços/Turismo,Turismo
+Incentivos e promoções do turismo,Comércio e Serviços/Turismo,Turismo
+Informações sobre o país,Comércio e Serviços/Turismo,Turismo
+Clima,Comércio e Serviços/Turismo,Turismo
+Feriados,Comércio e Serviços/Turismo,Turismo
+Moeda,Comércio e Serviços/Turismo,Turismo
+Regiões e estados,Comércio e Serviços/Turismo,Turismo
+Infraestrutura de turismo,Comércio e Serviços/Turismo,Turismo
+Aeroportos,Comércio e Serviços/Turismo,Turismo
+Agências de viagens,Comércio e Serviços/Turismo,Turismo
+Estradas,Comércio e Serviços/Turismo,Turismo
+Hospedagem,Comércio e Serviços/Turismo,Turismo
+Portos,Comércio e Serviços/Turismo,Turismo
+Restaurantes,Comércio e Serviços/Turismo,Turismo
+Rodoviárias,Comércio e Serviços/Turismo,Turismo
+Roteiros e atrações turísticas,Comércio e Serviços/Turismo,Turismo
+Turismo internacional,Comércio e Serviços/Turismo,Turismo
+Câmbio,Comércio e Serviços/Turismo,Turismo
+Consulados e embaixadas,Comércio e Serviços/Turismo,Turismo
+Documentos e vistos,Comércio e Serviços/Turismo,Turismo
+Saúde e seguro,Comércio e Serviços/Turismo,Turismo
+Turismo temático,Comércio e Serviços/Turismo,Turismo
+Ecoturismo,Comércio e Serviços/Turismo,Turismo
+Eventos e negócios,Comércio e Serviços/Turismo,Turismo
+Turismo cultural,Comércio e Serviços/Turismo,Turismo
+Turismo de aventura,Comércio e Serviços/Turismo,Turismo
+Turismo gastronômico,Comércio e Serviços/Turismo,Turismo
+Turismo religioso,Comércio e Serviços/Turismo,Turismo
+Turismo rural,Comércio e Serviços/Turismo,Turismo
+Vacinação do viajante,Comércio e Serviços/Turismo,Turismo
+Certificado Internacional de Vacinação e Profilaxia (CIVP),Comércio e Serviços/Turismo,Turismo
+"Cultura, Lazer e Esporte","Cultura, Esporte e Lazer",
+Cultura,Cultura,Cultura
+Artes cênicas,Cultura,Cultura
+Circo,Cultura,Cultura
+Dança,Cultura,Cultura
+Ópera,Cultura,Cultura
+Teatro,Cultura,Cultura
+Artes visuais,Cultura,Cultura
+Artes gráficas,Cultura,Cultura
+Desenho,Cultura,Cultura
+Escultura,Cultura,Cultura
+Fotografia,Cultura,Cultura
+Gravura,Cultura,Cultura
+Pintura,Cultura,Cultura
+Audiovisual,Cultura,Cultura
+Fiscalização (audiovisual),Cultura,Cultura
+Fomento (audiovisual),Cultura,Cultura
+Obra audiovisual,Cultura,Cultura
+Animação,Cultura,Cultura
+Curta metragem,Cultura,Cultura
+Documentário,Cultura,Cultura
+Longa metragem,Cultura,Cultura
+Média metragem,Cultura,Cultura
+Minissérie,Cultura,Cultura
+Novela,Cultura,Cultura
+Obra audiovisual publicitária,Cultura,Cultura
+Produtor de obra audiovisual,Cultura,Cultura
+Produtora de obra audiovisual,Cultura,Cultura
+Programadora (audiovisual),Cultura,Cultura
+Sala de exibição,Cultura,Cultura
+Culturas étnicas,Cultura,Cultura
+Afro-brasileiro,Cultura,Cultura
+Imigrantes,Cultura,Cultura
+Indígena,Cultura,Cultura
+Folclore e cultura popular,Cultura,Cultura
+Legislação (cultura),Cultura,Cultura
+Certificado de Produto Brasileiro (CPB),Cultura,Cultura
+Combate à pirataria,Cultura,Cultura
+Direito autoral,Cultura,Cultura
+Registro de obra audiovisual,Cultura,Cultura
+Literatura,Cultura,Cultura
+Música,Cultura,Cultura
+"Patrimônio histórico, artístico e arqueológico",Cultura,Cultura
+Política cultural,Cultura,Cultura
+Esporte,Esporte e Lazer,Esporte e Lazer
+Esporte comunitário,Esporte e Lazer,Esporte e Lazer
+Esporte de rendimento,Esporte e Lazer,Esporte e Lazer
+Lazer,Esporte e Lazer/Lazer,Lazer
+Jogos e loterias,Esporte e Lazer/Lazer,Lazer
+Parques e jardins,Esporte e Lazer/Lazer,Lazer
+Recreação,Esporte e Lazer/Lazer,Lazer
+Defesa e Segurança,"Segurança e Ordem Pública, Defesa Nacional",
+Defesa Nacional,Defesa Nacional,Defesa Nacional
+Aeronáutica,Defesa Nacional,Defesa Nacional
+Exército,Defesa Nacional,Defesa Nacional
+Marinha,Defesa Nacional,Defesa Nacional
+Serviço militar,Defesa Nacional,Defesa Nacional
+Segurança Nacional,Defesa Nacional,Defesa Nacional
+Segurança pública,Segurança e Ordem Pública,Segurança e Ordem Pública
+Ações e política de prevenção e repressão ao crime,Segurança e Ordem Pública,Segurança e Ordem Pública
+Corpo de bombeiros,Segurança e Ordem Pública,Segurança e Ordem Pública
+Defesa civil,Segurança e Ordem Pública,Segurança e Ordem Pública
+Formação de recursos humanos em segurança publica,Segurança e Ordem Pública,Segurança e Ordem Pública
+Identificação criminal,Segurança e Ordem Pública,Segurança e Ordem Pública
+Medicina legal,Segurança e Ordem Pública,Segurança e Ordem Pública
+Modernização e aparelhamento dos órgãos de segurança pública,Segurança e Ordem Pública,Segurança e Ordem Pública
+Perícia técnica,Segurança e Ordem Pública,Segurança e Ordem Pública
+Polícia,Segurança e Ordem Pública,Segurança e Ordem Pública
+Polícia civil,Segurança e Ordem Pública,Segurança e Ordem Pública
+Polícia federal,Segurança e Ordem Pública,Segurança e Ordem Pública
+Polícia militar,Segurança e Ordem Pública,Segurança e Ordem Pública
+Polícia municipal,Segurança e Ordem Pública,Segurança e Ordem Pública
+Polícia rodoviária,Segurança e Ordem Pública,Segurança e Ordem Pública
+Porte de arma,Segurança e Ordem Pública,Segurança e Ordem Pública
+Serviço de Inteligência,Segurança e Ordem Pública/Policiamento,Policiamento
+Economia e Finanças,Economia e Finanças,Economia e Finanças
+Administração financeira,Economia e Finanças,Economia e Finanças
+Administração de concessões,Economia e Finanças,Economia e Finanças
+Administração de despesas,Economia e Finanças,Economia e Finanças
+Administração de receitas,Economia e Finanças,Economia e Finanças
+Economia,Economia e Finanças,Economia e Finanças
+Defesa econômica e da concorrência,Economia e Finanças,Economia e Finanças
+Política econômica,Economia e Finanças,Economia e Finanças
+Desenvolvimento econômico,Economia e Finanças,Economia e Finanças
+Monopólios e fusões,Economia e Finanças,Economia e Finanças
+Nacionalização/privatização,Economia e Finanças,Economia e Finanças
+Encargos financeiros,Economia e Finanças,Economia e Finanças
+Divida externa,Economia e Finanças,Economia e Finanças
+Refinanciamento da divida externa,Economia e Finanças,Economia e Finanças
+Serviço da dívida externa,Economia e Finanças,Economia e Finanças
+Divida interna,Economia e Finanças,Economia e Finanças
+Precatórios,Economia e Finanças,Economia e Finanças
+Refinanciamento da divida interna,Economia e Finanças,Economia e Finanças
+Serviço da divida interna,Economia e Finanças,Economia e Finanças
+Encargos financeiros especiais,Economia e Finanças,Economia e Finanças
+Transferências financeiras,Economia e Finanças,Economia e Finanças
+Finanças,Economia e Finanças,Economia e Finanças
+Finanças pessoais,Economia e Finanças,Economia e Finanças
+Finanças públicas,Economia e Finanças,Economia e Finanças
+Tributo,Economia e Finanças,Economia e Finanças
+Contribuição,Economia e Finanças,Economia e Finanças
+Imposto,Economia e Finanças,Economia e Finanças
+Taxa,Economia e Finanças,Economia e Finanças
+Financiamento publico e privado,Economia e Finanças,Economia e Finanças
+Investimento,Economia e Finanças,Economia e Finanças
+Sistema financeiro,Economia e Finanças,Economia e Finanças
+Bancos,Economia e Finanças,Economia e Finanças
+Mercado de capitais,Economia e Finanças,Economia e Finanças
+Moedas e cambio,Economia e Finanças,Economia e Finanças
+Seguros,Economia e Finanças,Economia e Finanças
+Sistema de pagamentos brasileiro,Economia e Finanças,Economia e Finanças
+Educação,Educação,Educação
+Assistência ao estudante,Educação,Educação
+Financiamento estudantil,Educação,Educação
+Material didático,Educação,Educação
+Merenda escolar,Educação,Educação
+Transporte escolar,Educação,Educação
+Educação à distância,Educação,Educação
+Educação ambiental,Educação,Educação
+Educação básica,Educação /Educação básica,Educação básica
+Educação infantil,Educação /Educação básica,Educação básica
+Creche,Educação /Educação básica,Educação básica
+Pré-escola,Educação /Educação básica,Educação básica
+Ensino fundamental,Educação /Educação básica,Educação básica
+Ensino fundamental de 8 anos,Educação /Educação básica,Educação básica
+Ensino fundamental de 9 anos,Educação /Educação básica,Educação básica
+Primeiro ciclo,Educação /Educação básica,Educação básica
+Segundo ciclo,Educação /Educação básica,Educação básica
+Ensino médio,Educação /Educação básica,Educação básica
+Educação de jovens e adultos,Educação,Educação
+Alfabetização de jovens e adultos,Educação,Educação
+Educação continuada,Educação,Educação
+Supletivo,Educação,Educação
+Educação do campo,Educação,Educação
+Educação indígena,Educação,Educação
+Educação para quilombolas,Educação,Educação
+Educação profissional e tecnológica,Educação /Educação profissionalizante,Educação profissionalizante
+Educação profissional técnica de nível médio,Educação /Educação profissionalizante,Educação profissionalizante
+Educação profissional tecnológica de graduação e pós-graduação,Educação /Educação profissionalizante,Educação profissionalizante
+Formação inicial e continuada de trabalhadores,Educação /Educação profissionalizante,Educação profissionalizante
+Educação superior,Educação /Educação superior,Educação superior
+Curso seqüencial,Educação /Educação superior,Educação superior
+Complementação de estudos,Educação /Educação superior,Educação superior
+Formação cientifica,Educação /Educação superior,Educação superior
+Diploma educação superior,Educação /Educação superior,Educação superior
+Revalidação diploma curso superior,Educação /Educação superior,Educação superior
+Validade diploma educação superior,Educação /Educação superior,Educação superior
+Fomento a pós-graduação,Educação /Educação superior,Educação superior
+Acesso e divulgação da produção cientifica,Educação /Educação superior,Educação superior
+Agência de fomento a pós-graduação,Educação /Educação superior,Educação superior
+Apoio técnico a pesquisa e iniciação cientifica,Educação /Educação superior,Educação superior
+Auxilio a pesquisa,Educação /Educação superior,Educação superior
+Bolsa de estudos pós-graduação,Educação /Educação superior,Educação superior
+Cooperação acadêmica,Educação /Educação superior,Educação superior
+Cooperação cientifica internacional,Educação /Educação superior,Educação superior
+Fundação de apoio - pós-graduação,Educação /Educação superior,Educação superior
+Graduação,Educação /Educação superior,Educação superior
+Bacharelado,Educação /Educação superior,Educação superior
+Licenciatura,Educação /Educação superior,Educação superior
+Curso normal superior,Educação /Educação superior,Educação superior
+Licenciatura plena,Educação /Educação superior,Educação superior
+Ingresso no ensino superior,Educação /Educação superior,Educação superior
+Certificado de proficiência em língua portuguesa para estrangeiro,Educação /Educação superior,Educação superior
+Transferência,Educação /Educação superior,Educação superior
+Facultativa,Educação /Educação superior,Educação superior
+Por amparo legal,Educação /Educação superior,Educação superior
+Vestibular,Educação /Educação superior,Educação superior
+Sistema de reserva de vagas,Educação /Educação superior,Educação superior
+Instituições federais de ensino superior,Educação /Educação superior,Educação superior
+Autorização de cursos,Educação /Educação superior,Educação superior
+Credenciamento de cursos,Educação /Educação superior,Educação superior
+Reconhecimento de cursos,Educação /Educação superior,Educação superior
+Pós-graduação,Educação /Educação superior,Educação superior
+Latu sensu,Educação /Educação superior,Educação superior
+Especialização,Educação /Educação superior,Educação superior
+Master business administration,Educação /Educação superior,Educação superior
+Residência medica,Educação /Educação superior,Educação superior
+Hospitais universitários,Educação /Educação superior,Educação superior
+Stricto sensu,Educação /Educação superior,Educação superior
+Doutorado,Educação /Educação superior,Educação superior
+Mestrado,Educação /Educação superior,Educação superior
+Mestrado acadêmico,Educação /Educação superior,Educação superior
+Mestrado profissional,Educação /Educação superior,Educação superior
+Tecnólogo,Educação /Educação superior,Educação superior
+Financiamento da educação,Educação,Educação
+Gestão escolar,Educação,Educação
+Projeto curricular,Educação,Educação
+Projeto pedagógico,Educação,Educação
+Legislação educacional,Educação,Educação
+Conselho nacional de educação,Educação,Educação
+Pareceres,Educação,Educação
+Resoluções,Educação,Educação
+Leis de diretrizes e bases da educação nacional,Educação,Educação
+Plano nacional de educação,Educação,Educação
+Métodos e meios de ensino e aprendizagem,Educação,Educação
+Meios de ensino-aprendizagem,Educação,Educação
+Livro didático,Educação,Educação
+Tecnologia educacional,Educação,Educação
+Métodos de aprendizagem,Educação,Educação
+Métodos de ensino,Educação,Educação
+Parâmetros e diretrizes curriculares nacionais,Educação,Educação
+Profissionais da educação,Educação,Educação
+Apoio escolar,Educação,Educação
+Alimentação escolar,Educação,Educação
+Infraestrutura material e ambiental,Educação,Educação
+Multimeios didáticos,Educação,Educação
+Secretaria escolar,Educação,Educação
+Magistério,Educação,Educação
+Especialista em educação,Educação,Educação
+Professor,Educação,Educação
+Sistema educacional - Avaliação,Educação,Educação
+Estatísticas educacionais,Educação,Educação
+Indicadores educacionais,Educação,Educação
+Governo e Política,Administração,Administração
+Administração pública,Administração,Administração
+Atendimento ao cidadão,Administração/Serviços Públicos,Serviços Públicos
+Protocolo,Administração/Serviços Públicos,Serviços Públicos
+Compras governamentais,Administração/Compras governamentais,Compras governamentais
+Licitação,Administração/Compras governamentais,Compras governamentais
+Pregão,Administração/Compras governamentais,Compras governamentais
+Controle social e prestação de contas,Administração/Fiscalização do Estado,Fiscalização do Estado
+Consulta publica,Administração/Fiscalização do Estado,Fiscalização do Estado
+Indicadores,Administração/Fiscalização do Estado,Fiscalização do Estado
+Orçamento participativo,Administração/Fiscalização do Estado,Fiscalização do Estado
+Prestação de contas,Administração/Fiscalização do Estado,Fiscalização do Estado
+Ética publica,Administração,Administração
+Código de conduta,Administração,Administração
+Procedimento administrativo disciplinar,Administração,Administração
+Regime de quarentena,Administração,Administração
+Legislação e normas,Administração,Administração
+Patrimônio da união,Administração/Patrimônio,Patrimônio
+Planejamento e orçamento,Administração/Planejamento,Planejamento
+Orçamento do estado,Administração/Planejamento,Planejamento
+Execução orçamentária e financeira,Administração/Planejamento,Planejamento
+Realização orçamentária e financeira,Administração/Planejamento,Planejamento
+Planejamento estratégico,Administração/Planejamento,Planejamento
+Plano plurianual,Administração/Planejamento,Planejamento
+Recursos humanos,Administração/Recursos humanos,Recursos humanos
+Capacitação,Administração/Recursos humanos,Recursos humanos
+Concursos,Administração/Recursos humanos,Recursos humanos
+Estagio,Administração/Recursos humanos,Recursos humanos
+Remuneração,Administração/Recursos humanos,Recursos humanos
+Contracheque,Administração/Recursos humanos,Recursos humanos
+Recursos logísticos,Administração,Administração
+Alienação de bens,Administração,Administração
+Obras,Administração,Administração
+Fiscalização do estado,Administração/Fiscalização do Estado,Fiscalização do Estado
+Governo eletrônico,Administração/Serviços Públicos,Serviços Públicos
+Governo móvel,Administração/Serviços Públicos,Serviços Públicos
+Organização do estado,Administração,Administração
+Governo estadual,Administração,Administração
+Governo federal,Administração,Administração
+Governo municipal,Administração,Administração
+Ministério público,Administração,Administração
+Organização territorial,Administração,Administração
+Poderes do estado,Administração,Administração
+Poder executivo,Administração,Administração
+Poder judiciário,Administração,Administração
+Poder legislativo,Administração,Administração
+Política,Administração,Administração
+Ética política,Administração,Administração
+Organização política,Administração,Administração
+Partidos políticos,Administração,Administração
+Regime político,Administração,Administração
+Sistema eleitoral,Administração,Administração
+Sistema político,Administração,Administração
+"Habitação, Saneamento e Urbanismo","Habitação, Saneamento",
+Habitação,Habitação,Habitação
+Casa própria,Habitação,Habitação
+Financiamento habitacional,Habitação,Habitação
+Seguro habitacional,Habitação,Habitação
+Transferência de imóvel,Habitação,Habitação
+Planejamento urbano,Urbanismo,Urbanismo
+Ocupação e uso do solo,Urbanismo,Urbanismo
+Saneamento urbano,Saneamento/Saneamento Básico Urbano,Saneamento Básico Urbano
+Gestão da água,Saneamento/Saneamento Básico Urbano,Saneamento Básico Urbano
+Drenagem pluvial,Saneamento/Saneamento Básico Urbano,Saneamento Básico Urbano
+Tratamento de água,Saneamento/Saneamento Básico Urbano,Saneamento Básico Urbano
+Tratamento de esgoto,Saneamento/Saneamento Básico Urbano,Saneamento Básico Urbano
+Gestão de resíduos sólidos,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Coleta seletiva,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Aterro sanitário,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+"Coleta domiciliar (rotas, datas e horários)",Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Compra de lixo,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Lixo tóxico,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Limpeza urbana,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Tratamento de resíduos sólidos,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Serviços Urbanos,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Água,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Iluminação pública,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Troca de lâmpadas,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Luz,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Telefonia,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Transportes coletivos,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Cartão transporte,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Horário ônibus,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Isenção tarifária,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Itinerários transportes coletivos,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Metrô,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Passe escolar,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Pesquisa comportamental no transporte coletivo,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Rodoviário,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Concessão aos taxistas,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Moto frete,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Transporte escolar,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Trem metropolitano,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Urbanismo,Urbanismo,Urbanismo
+Concessões,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Concessões de equipamentos urbanos,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Comércio em parques,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Feiras iivres,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Mercado municipal,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Consulta comercial,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Alvará de funcionamento,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Consulta protocolo,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Recurso ao conselho municipal de urbanismo,Urbanismo/Serviços Urbanos,Serviços Urbanos
+Imóveis,Urbanismo,Urbanismo
+Ampliação,Urbanismo,Urbanismo
+Conclusão de obra,Urbanismo,Urbanismo
+Construção,Urbanismo,Urbanismo
+Declaração de localização de imóveis,Urbanismo,Urbanismo
+Demolição,Urbanismo,Urbanismo
+Parcelamento de solo,Urbanismo,Urbanismo
+Plantas de imóveis,Urbanismo,Urbanismo
+Potencial construtivo,Urbanismo,Urbanismo
+Preservação de bosques e imóveis,Urbanismo,Urbanismo
+Reforma de imóveis,Urbanismo,Urbanismo
+Tombamento histórico,Urbanismo,Urbanismo
+Publicidade ao ar livre,Urbanismo,Urbanismo
+Documentos de publicidade ao ar livre,Urbanismo,Urbanismo
+Especificação do projeto de publicidade,Urbanismo,Urbanismo
+Legislação de publicidade ao ar livre,Urbanismo,Urbanismo
+Procedimentos para publicidade ao ar livre,Urbanismo,Urbanismo
+Requerimento de publicidade ao ar livre,Urbanismo,Urbanismo
+Indústria,Indústria,Indústria
+Política e gestão industrial,Indústria,Indústria
+Conservação da energia,Energia,Energia
+Normalização e qualidade,Administração/Normalização e Qualidade,Normalização e Qualidade
+Promoção industrial,Indústria,Indústria
+Propriedade industrial,Indústria/Produção Industrial,Produção Industrial
+Regulamentação industrial,Indústria,Indústria
+Tecnologia industrial,Indústria,Indústria
+Produção Industrial,Indústria/Propriedade Industrial,Propriedade Industrial
+Agroindústria,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria sucroalcooleira,Indústria/Propriedade Industrial,Propriedade Industrial
+Construção civil,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria alimentar,Indústria/Propriedade Industrial,Propriedade Industrial
+Tecnologia de alimentos,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria cerâmica,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria couro-calçadista,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria cultural,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria de arma e munição,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria de celulose e papel,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria de equipamentos médico-hospitalares,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria eletro-eletrônica,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria extrativa,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria farmacêutica,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria madeireira e movelaria,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria mecânica e metalúrgica,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria automobilística,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria naval,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria química e petroquímica,Indústria/Propriedade Industrial,Propriedade Industrial
+Indústria têxteis,Indústria/Propriedade Industrial,Propriedade Industrial
+Recursos energéticos,Energia,Energia
+Álcool,Energia/Combustíveis,Combustíveis
+Bioenergia,Energia/Combustíveis,Combustíveis
+Biocombustível,Energia/Combustíveis,Combustíveis
+Energia elétrica,Energia/Energia elétrica,Energia elétrica
+Energio nuclear,Energia/Combustíveis,Combustíveis
+Gás,Energia/Combustíveis,Combustíveis
+Petróleo,Energia/Combustíveis,Combustíveis
+Meio ambiente,Meio ambiente,Meio ambiente
+Águas,Meio ambiente/Água,Água
+Águas de chuva,Meio ambiente/Água,Água
+Águas subterrâneas,Meio ambiente/Água,Água
+Águas superficiais,Meio ambiente/Água,Água
+Águas transfronteriças,Meio ambiente/Água,Água
+Bacias hidrográficas,Meio ambiente/Água,Água
+Revitalização de bacias hidrográficas,Meio ambiente/Água,Água
+Alto Paraguai,Meio ambiente/Água,Água
+Paraíba do Sul,Meio ambiente/Água,Água
+São Francisco,Meio ambiente/Água,Água
+Tocantins-Araguaia,Meio ambiente/Água,Água
+Disponibilidade de água,Meio ambiente/Água,Água
+Demanda de água,Meio ambiente/Água,Água
+Oferta de água,Meio ambiente/Água,Água
+Qualidade de água,Meio ambiente/Água,Água
+Quantidade de água,Meio ambiente/Água,Água
+Estudos hidrometeorológicos,Meio ambiente/Água,Água
+Eventos críticos (secas e enchentes),Meio ambiente/Água,Água
+Gestão dos recursos hídricos,Meio ambiente/Água,Água
+Instrumentos para gestão de recursos hídricos,Meio ambiente/Água,Água
+Cobrança pelo uso da água,Meio ambiente/Água,Água
+Enquadramento dos corpos de água em classes de uso,Meio ambiente/Água,Água
+Outorga dos direitos de uso de recursos hídricos,Meio ambiente/Água,Água
+Planos de recursos hídricos,Meio ambiente/Água,Água
+Sistema de informações sobre recursos hídricos,Meio ambiente/Água,Água
+Recursos hídricos transfronteiriços,Meio ambiente/Água,Água
+Acordos e tratados de cooperação internacionais,Meio ambiente/Água,Água
+Águas transfronteiriças,Meio ambiente/Água,Água
+Sistema nacional de gerenciamento de recursos hídricos,Meio ambiente/Água,Água
+Agência de água,Meio ambiente/Água,Água
+Comitês de bacias hidrográficas,Meio ambiente/Água,Água
+Conselho nacional de recursos hídricos,Meio ambiente/Água,Água
+Conselhos estaduais de recursos hídricos,Meio ambiente/Água,Água
+Órgãos públicos gestores de recursos hídricos,Meio ambiente/Água,Água
+Usos múltiplos de recursos hídricos,Meio ambiente/Água,Água
+Abastecimento de água,Meio ambiente/Água,Água
+Aquicultura e pesca,Meio ambiente/Água,Água
+Geração de energia hidrelétrica,Meio ambiente/Água,Água
+Recursos hídricos na agropecuária,Meio ambiente/Água,Água
+Recursos hídricos na indústria,Meio ambiente/Água,Água
+Transporte aquaviário,Meio ambiente/Água,Água
+Proteção e conservação de água,Meio ambiente/Água,Água
+Regiões hidrográficas,Meio ambiente/Água,Água
+Amazônica,Meio ambiente/Água,Água
+Atlântico leste,Meio ambiente/Água,Água
+Atlântico nordeste ocidental,Meio ambiente/Água,Água
+Atlântico nordeste oriental,Meio ambiente/Água,Água
+Atlântico sudeste,Meio ambiente/Água,Água
+Atlântico sul,Meio ambiente/Água,Água
+Paraguai,Meio ambiente/Água,Água
+Paraná,Meio ambiente/Água,Água
+Parnaíba,Meio ambiente/Água,Água
+São Francisco,Meio ambiente/Água,Água
+Tocantins-Araguaia,Meio ambiente/Água,Água
+Uruguai,Meio ambiente/Água,Água
+Reuso e reaproveitamento de água,Meio ambiente/Água,Água
+Segurança hídrica,Meio ambiente/Água,Água
+Doenças de veiculação hídrica,Meio ambiente/Água,Água
+Regiões com balanço deficitário de recursos hídricos,Meio ambiente/Água,Água
+Ambientes ocupados pelo homem,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Áreas protegidas,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Área de preservação permanente (APP),Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Mananciais,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Restauração e preservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Áreas ambientalmente sensíveis,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Áreas prioritárias para a biodiversidade,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Áreas protegidas com reconhecimento internacional,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Corredores ecológicos,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Corredor central da amazônia (CCA),Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Corredor central da mata atlântica (CCMA),Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Gestão das unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Consolidação territorial,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Regularização fundiária,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Criação de unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Entorno das unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Geração de renda nas unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Ecoturismo,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Produtos e subprodutos da flora e da fauna,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Uso público das unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Manejo nas unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Gestão de áreas protegidas,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Reserva legal,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Recuperação e manejo sustentável,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Sistema de mosaicos de áreas protegidas,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Unidades de conservação (UCS),Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Proteção integral,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Estações ecológicas,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Monumentos naturais,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Parques Nacionais,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Refúgio da vida silvestre,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Reservas biológicas,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Roteiros metodológicos de proteção integral de UCS,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Uso público das unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Programas recreacionais em unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Visitação de unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Uso sustentável das unidades de conservação,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Área de relevante interesse ecológico,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Áreas de proteção ambiental,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Florestas nacionais,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Rede de unidades de conservação particulares,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Reserva particular do patrimônio natural,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Reserva da fauna,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Reservas de desenvolvimento sustentável,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Reservas extrativistas,Meio ambiente/Preservação e Conservação Ambiental,Preservação e Conservação Ambiental
+Biodiversidade,Meio ambiente/Biodiversidade,Biodiversidade
+Ameaças à biodiversidade,Meio ambiente/Biodiversidade,Biodiversidade
+Desertificação,Meio ambiente/Biodiversidade,Biodiversidade
+Desmatamento,Meio ambiente/Biodiversidade,Biodiversidade
+Áreas desmatadas,Meio ambiente/Biodiversidade,Biodiversidade
+Fragmentação de florestas,Meio ambiente/Biodiversidade,Biodiversidade
+Espécies exóticas invasoras,Meio ambiente/Biodiversidade,Biodiversidade
+Água de lastro,Meio ambiente/Biodiversidade,Biodiversidade
+Análise de risco das espécies exóticas invasoras,Meio ambiente/Biodiversidade,Biodiversidade
+Controle das espécies exóticas invasoras,Meio ambiente/Biodiversidade,Biodiversidade
+Dispersão,Meio ambiente/Biodiversidade,Biodiversidade
+Invasões biológicas,Meio ambiente/Biodiversidade,Biodiversidade
+Não nativas,Meio ambiente/Biodiversidade,Biodiversidade
+Vetores,Meio ambiente/Biodiversidade,Biodiversidade
+Habitats naturais,Meio ambiente/Biodiversidade,Biodiversidade
+Degradação de habitats,Meio ambiente/Biodiversidade,Biodiversidade
+Perda de habitats,Meio ambiente/Biodiversidade,Biodiversidade
+Mudanças climáticas,Meio ambiente/Biodiversidade,Biodiversidade
+Queimadas e incêndios,Meio ambiente/Biodiversidade,Biodiversidade
+Uso do solo,Meio ambiente/Biodiversidade,Biodiversidade
+Antártida,Meio ambiente/Biodiversidade,Biodiversidade
+Áreas prioritárias para a biodiversidade,Meio ambiente/Biodiversidade,Biodiversidade
+Biomas brasileiros,Meio ambiente/Biodiversidade,Biodiversidade
+Amazônia,Meio ambiente/Biodiversidade,Biodiversidade
+Caatinga,Meio ambiente/Biodiversidade,Biodiversidade
+Cerrado,Meio ambiente/Biodiversidade,Biodiversidade
+Conservação e preservação de biomas,Meio ambiente/Biodiversidade,Biodiversidade
+Infraestrutura para conservação e preservação de biomas,Meio ambiente/Biodiversidade,Biodiversidade
+"Medidas preventivas, mitigadoras e compensatórias",Meio ambiente/Biodiversidade,Biodiversidade
+Floresta amazônica,Meio ambiente/Biodiversidade,Biodiversidade
+Mata atlântica,Meio ambiente/Biodiversidade,Biodiversidade
+Pampa,Meio ambiente/Biodiversidade,Biodiversidade
+Pantanal,Meio ambiente/Biodiversidade,Biodiversidade
+Zona costeira e marinha,Meio ambiente/Biodiversidade,Biodiversidade
+Ecossistemas costeiros,Meio ambiente/Biodiversidade,Biodiversidade
+Espaços litorâneos,Meio ambiente/Biodiversidade,Biodiversidade
+"Ilhas, parceis e atóis",Meio ambiente/Biodiversidade,Biodiversidade
+Mangue,Meio ambiente/Biodiversidade,Biodiversidade
+Recifes de coral,Meio ambiente/Biodiversidade,Biodiversidade
+Zona econômica exclusiva,Meio ambiente/Biodiversidade,Biodiversidade
+Biossegurança,Meio ambiente/Biodiversidade,Biodiversidade
+Agrotóxicos,Meio ambiente/Biodiversidade,Biodiversidade
+Biopirataria,Meio ambiente/Biodiversidade,Biodiversidade
+Biotecnologia,Meio ambiente/Biodiversidade,Biodiversidade
+Espécies ameaçadas,Meio ambiente/Biodiversidade,Biodiversidade
+Espécies ameaçadas de extinção,Meio ambiente/Biodiversidade,Biodiversidade
+Conservação de espécies ameçadas de extinção,Meio ambiente/Biodiversidade,Biodiversidade
+Fauna ameçada de extinção,Meio ambiente/Biodiversidade,Biodiversidade
+Flora ameçada de extinção,Meio ambiente/Biodiversidade,Biodiversidade
+Manejo de espécies ameçadas de extinção,Meio ambiente/Biodiversidade,Biodiversidade
+Proteção e recuperação de espécies ameçadas de extinção,Meio ambiente/Biodiversidade,Biodiversidade
+Espécies dependentes de conservação,Meio ambiente/Biodiversidade,Biodiversidade
+Espécies vulneráveis,Meio ambiente/Biodiversidade,Biodiversidade
+Espécies endêmicas,Meio ambiente/Biodiversidade,Biodiversidade
+Espécies exóticas invasoras,Meio ambiente/Biodiversidade,Biodiversidade
+Controle das espécies exóticas invasoras,Meio ambiente/Biodiversidade,Biodiversidade
+Nanotecnologia,Meio ambiente/Biodiversidade,Biodiversidade
+Organismos geneticamente modificados (OGM),Meio ambiente/Biodiversidade,Biodiversidade
+Transgênicos,Meio ambiente/Biodiversidade,Biodiversidade
+Pesquisas para conservação de espécies,Meio ambiente/Biodiversidade,Biodiversidade
+Riscos associados a novas tecnologias,Meio ambiente/Biodiversidade,Biodiversidade
+Convenção sobre diversidade biológica (CDB),Meio ambiente/Biodiversidade,Biodiversidade
+"Desenvolvimento, produção e uso sustentável",Meio ambiente/Biodiversidade,Biodiversidade
+Agricultura familiar,Meio ambiente/Biodiversidade,Biodiversidade
+Agrobiodiversidade,Meio ambiente/Biodiversidade,Biodiversidade
+Manejo da agrobiodiversidade,Meio ambiente/Biodiversidade,Biodiversidade
+Agroextrativismo,Meio ambiente/Biodiversidade,Biodiversidade
+Extrativismo,Meio ambiente/Biodiversidade,Biodiversidade
+Florestas plantadas,Meio ambiente/Biodiversidade,Biodiversidade
+Manejo alternativo de animais crioulos e silvestres,Meio ambiente/Biodiversidade,Biodiversidade
+Plantas medicinais,Meio ambiente/Biodiversidade,Biodiversidade
+Silvicultura com espécies nativas,Meio ambiente/Biodiversidade,Biodiversidade
+Sistemas agroflorestais (SAFS),Meio ambiente/Biodiversidade,Biodiversidade
+Variedades crioulas,Meio ambiente/Biodiversidade,Biodiversidade
+Rastreamento e certificação da produção agrícola,Meio ambiente/Biodiversidade,Biodiversidade
+Agronegócio,Meio ambiente/Biodiversidade,Biodiversidade
+Agroindústria,Meio ambiente/Biodiversidade,Biodiversidade
+Atividade sucroalcooleira,Meio ambiente/Biodiversidade,Biodiversidade
+Biocombustível,Meio ambiente/Biodiversidade,Biodiversidade
+Arranjos produtivos locais (APL),Meio ambiente/Biodiversidade,Biodiversidade
+Cadeias produtivas sustentáveis,Meio ambiente/Biodiversidade,Biodiversidade
+Cadeias produtivas da sociobiodiversidade,Meio ambiente/Biodiversidade,Biodiversidade
+Caracterização técnico-econômica de cadeias produtivas sustentáveis,Meio ambiente/Biodiversidade,Biodiversidade
+Consumo sustentável,Meio ambiente/Biodiversidade,Biodiversidade
+Segurança alimentar,Meio ambiente/Biodiversidade,Biodiversidade
+Ecoturismo,Meio ambiente/Biodiversidade,Biodiversidade
+Ecoturismo,Meio ambiente/Biodiversidade,Biodiversidade
+Sustentabilidade ambiental da atividade turística,Meio ambiente/Biodiversidade,Biodiversidade
+Campanha conduta consciente,Meio ambiente/Biodiversidade,Biodiversidade
+Campanha férias sustentáveis,Meio ambiente/Biodiversidade,Biodiversidade
+Turismo sustentável na amazônia legal,Meio ambiente/Biodiversidade,Biodiversidade
+Espécies de valor econômico atual ou potencial,Meio ambiente/Biodiversidade,Biodiversidade
+Integração do meio ambiente e produção,Meio ambiente/Biodiversidade,Biodiversidade
+Adoção de tecnologias sustentáveis,Meio ambiente/Biodiversidade,Biodiversidade
+Incentivos à produção sustentável,Meio ambiente/Biodiversidade,Biodiversidade
+Manejo da biodiversidade,Meio ambiente/Biodiversidade,Biodiversidade
+Manejo sustentável de animais silvestres,Meio ambiente/Biodiversidade,Biodiversidade
+Manejo sustentável de espécies da flora,Meio ambiente/Biodiversidade,Biodiversidade
+Planejamento ambiental,Meio ambiente/Biodiversidade,Biodiversidade
+Produção mais limpa (P+L),Meio ambiente/Biodiversidade,Biodiversidade
+Recuperação de áreas degradadas,Meio ambiente/Biodiversidade,Biodiversidade
+Reposição florestal,Meio ambiente/Biodiversidade,Biodiversidade
+Recursos pesqueiros,Meio ambiente/Biodiversidade,Biodiversidade
+Aqüicultura,Meio ambiente/Biodiversidade,Biodiversidade
+Carcinocultura,Meio ambiente/Biodiversidade,Biodiversidade
+Avaliação de estoque pesqueiro,Meio ambiente/Biodiversidade,Biodiversidade
+Ecossistemas aquáticos degradados,Meio ambiente/Biodiversidade,Biodiversidade
+Gestão dos recursos pesqueiros,Meio ambiente/Biodiversidade,Biodiversidade
+Ordenamento do uso dos recurso pesqueiros,Meio ambiente/Biodiversidade,Biodiversidade
+Pesca amadora,Meio ambiente/Biodiversidade,Biodiversidade
+Pesca predatória,Meio ambiente/Biodiversidade,Biodiversidade
+Sustentabilidade dos recursos pesqueiros,Meio ambiente/Biodiversidade,Biodiversidade
+Uso sustentável de recursos pesqueiros,Meio ambiente/Biodiversidade,Biodiversidade
+Recuperação de recursos pesqueiros sobreexplotados,Meio ambiente/Biodiversidade,Biodiversidade
+Sobreexplotação,Meio ambiente/Biodiversidade,Biodiversidade
+Sobrepesca,Meio ambiente/Biodiversidade,Biodiversidade
+Sistemas de certificação e rastreabilidade socioambiental,Meio ambiente/Biodiversidade,Biodiversidade
+Sistemas de certificação e rastreabilidade socioambiental,Meio ambiente/Biodiversidade,Biodiversidade
+Sustentabilidade ambiental,Meio ambiente/Biodiversidade,Biodiversidade
+Ecossistemas aquáticos e terrestres,Meio ambiente/Biodiversidade,Biodiversidade
+Ecossistemas aquáticos,Meio ambiente/Biodiversidade,Biodiversidade
+Zonas úmidas,Meio ambiente/Biodiversidade,Biodiversidade
+Ecossistemas terrestres,Meio ambiente/Biodiversidade,Biodiversidade
+Patrimônio espeleológico,Meio ambiente/Biodiversidade,Biodiversidade
+Cavernas,Meio ambiente/Biodiversidade,Biodiversidade
+Cavidades,Meio ambiente/Biodiversidade,Biodiversidade
+Patrimônio genético ou recursos genéticos,Meio ambiente/Biodiversidade,Biodiversidade
+Coleções,Meio ambiente/Biodiversidade,Biodiversidade
+Banco de germoplasma,Meio ambiente/Biodiversidade,Biodiversidade
+Cadastro de coleções de espécies,Meio ambiente/Biodiversidade,Biodiversidade
+Coleções nacionais de referência,Meio ambiente/Biodiversidade,Biodiversidade
+Carpotecas,Meio ambiente/Biodiversidade,Biodiversidade
+Coleções de plantas vivas,Meio ambiente/Biodiversidade,Biodiversidade
+Herbários,Meio ambiente/Biodiversidade,Biodiversidade
+Xilotecas,Meio ambiente/Biodiversidade,Biodiversidade
+Instituições fiéis depositárias,Meio ambiente/Biodiversidade,Biodiversidade
+Jardins botânicos,Meio ambiente/Biodiversidade,Biodiversidade
+Conhecimento tradicional associado ao patrimônio genético (CTA),Meio ambiente/Biodiversidade,Biodiversidade
+Direitos das comunidades tradicionais associado ao patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Espécies de intercâmbio facilitado,Meio ambiente/Biodiversidade,Biodiversidade
+Recursos genéticos naturais sujeitos a restrições legais,Meio ambiente/Biodiversidade,Biodiversidade
+Acesso a recursos genéticos naturais,Meio ambiente/Biodiversidade,Biodiversidade
+Coleta e transporte de recursos genéticos naturais,Meio ambiente/Biodiversidade,Biodiversidade
+Utilização do patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Autorizações para uso de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Acesso ao patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Coleta de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Remessa de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Termo de anuência prévia (TAP),Meio ambiente/Biodiversidade,Biodiversidade
+Termo de transferência de material (TTM),Meio ambiente/Biodiversidade,Biodiversidade
+Transporte de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Bioprospecção,Meio ambiente/Biodiversidade,Biodiversidade
+Desenvolvimento de bioprodutos,Meio ambiente/Biodiversidade,Biodiversidade
+Desenvolvimento tecnológico de produtos,Meio ambiente/Biodiversidade,Biodiversidade
+Pesquisa científica de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Atividades científicas e de pesquisa de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Coleções científicas de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Conservação de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Cultivo de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Rede laboratorial de sementes,Meio ambiente/Biodiversidade,Biodiversidade
+Identificação taxonômica de patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Pesquisa e coleta de material biológico,Meio ambiente/Biodiversidade,Biodiversidade
+Cavidades naturais subterrâneas,Meio ambiente/Biodiversidade,Biodiversidade
+Unidades de conservação,Meio ambiente/Biodiversidade,Biodiversidade
+Sistemas de informação científica do patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Repartição de benefícios do patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Valoração do patrimônio genético,Meio ambiente/Biodiversidade,Biodiversidade
+Cidadania ambiental,Meio ambiente,Meio ambiente
+Agenda 21,Meio ambiente,Meio ambiente
+Implementação da agenda 21,Meio ambiente,Meio ambiente
+Agenda ambiental na administração pública (A3P),Meio ambiente,Meio ambiente
+Códigos voluntários,Meio ambiente,Meio ambiente
+Condutas ambientalmente adequadas,Meio ambiente,Meio ambiente
+Tecnologia ambientalmente adequadas,Meio ambiente,Meio ambiente
+Colegiados,Meio ambiente,Meio ambiente
+Compras públicas sustentáveis,Meio ambiente,Meio ambiente
+Licitações públicas sustentáveis,Meio ambiente,Meio ambiente
+Conferência nacional de meio ambiente,Meio ambiente,Meio ambiente
+Consumo sustentável,Meio ambiente,Meio ambiente
+Educação ambiental,Meio ambiente,Meio ambiente
+Capacitação para a implementação de atividades florestais,Meio ambiente,Meio ambiente
+Capacitação social nas regiões hidrográficas,Meio ambiente,Meio ambiente
+Coletivos educadores,Meio ambiente,Meio ambiente
+Educação em reciclagem,Meio ambiente,Meio ambiente
+Estruturas educadoras integradas,Meio ambiente,Meio ambiente
+Salas verdes,Meio ambiente,Meio ambiente
+Salas verdes x pontos de cultura,Meio ambiente,Meio ambiente
+Entidades ambientalistas,Meio ambiente,Meio ambiente
+Museu do meio ambiente,Meio ambiente,Meio ambiente
+Economia e meio ambiente,Meio ambiente,Meio ambiente
+Comércio internacional e meio ambiente,Meio ambiente,Meio ambiente
+Ecomercados e negócios sustentáveis,Meio ambiente,Meio ambiente
+Biocomércio,Meio ambiente,Meio ambiente
+Feiras de negócios,Meio ambiente,Meio ambiente
+Investidores interessados na área ambiental,Meio ambiente,Meio ambiente
+Exploração econômica de recursos naturais,Meio ambiente,Meio ambiente
+Agroestrativismo,Meio ambiente,Meio ambiente
+Cadeias produtivas da sociobiodiversidade,Meio ambiente,Meio ambiente
+Extrativismo,Meio ambiente,Meio ambiente
+Produtos do extrativismo,Meio ambiente,Meio ambiente
+Geração de renda nas unidades de conservação,Meio ambiente,Meio ambiente
+Ecoturismo,Meio ambiente,Meio ambiente
+Produtos e subprodutos da flora e da fauna,Meio ambiente,Meio ambiente
+Uso público das unidades de conservação,Meio ambiente,Meio ambiente
+Instrumentos econômicos,Meio ambiente,Meio ambiente
+Compensação ambiental,Meio ambiente,Meio ambiente
+Aplicação dos recursos,Meio ambiente,Meio ambiente
+Cálculo da compensação ambiental,Meio ambiente,Meio ambiente
+Câmara de compensação ambiental,Meio ambiente,Meio ambiente
+Compensação de reserva legal,Meio ambiente,Meio ambiente
+Condicionantes dos licenciamentos,Meio ambiente,Meio ambiente
+Sanções da compensação ambiental,Meio ambiente,Meio ambiente
+Compras públicas sustentáveis,Meio ambiente,Meio ambiente
+Licitações públicas sustentáveis,Meio ambiente,Meio ambiente
+Fomento,Meio ambiente,Meio ambiente
+Fomento à geração do conhecimento,Meio ambiente,Meio ambiente
+Fomento à produção sustentável,Meio ambiente,Meio ambiente
+Fomento ao desenvolvimento sustentável,Meio ambiente,Meio ambiente
+"Incentivos fiscais, tributários e creditícios",Meio ambiente,Meio ambiente
+Serviços ambientais,Meio ambiente,Meio ambiente
+Execução das ações de caráter permanente,Meio ambiente,Meio ambiente
+Remuneração dos serviços ambientais,Meio ambiente,Meio ambiente
+Valoração dos serviços ambientais prestados pelas florestas e demais formas de vegetação nativa,Meio ambiente,Meio ambiente
+Valoração econômica dos recursos naturais,Meio ambiente,Meio ambiente
+Mecanismo de desenvolvimento limpo (MDL),Meio ambiente,Meio ambiente
+Mercado de carbono,Meio ambiente,Meio ambiente
+Florestas,Meio ambiente,Meio ambiente
+Exploração de florestas e formações sucessoras,Meio ambiente,Meio ambiente
+Florestas públicas,Meio ambiente,Meio ambiente
+Concessão florestal,Meio ambiente,Meio ambiente
+Concessão de uso florestas públicas,Meio ambiente,Meio ambiente
+Processo licitatório de concessão de uso florestas públicas,Meio ambiente,Meio ambiente
+Projetos agroextrativistas de florestas públicas,Meio ambiente,Meio ambiente
+Projetos de assentamento florestal,Meio ambiente,Meio ambiente
+Projetos de desenvolvimento sustentável,Meio ambiente,Meio ambiente
+Florestas naturais,Meio ambiente,Meio ambiente
+Florestas plantadas,Meio ambiente,Meio ambiente
+Reservas de desenvolvimento sustentável,Meio ambiente,Meio ambiente
+Reservas extrativistas,Meio ambiente,Meio ambiente
+"Criação de florestas nacionais, estaduais e municipais",Meio ambiente,Meio ambiente
+Destinação de florestas públicas às comunidades locais,Meio ambiente,Meio ambiente
+Gestão de florestas públicas,Meio ambiente,Meio ambiente
+Direitos de acesso às florestas públicas e aos benefícios decorrentes,Meio ambiente,Meio ambiente
+Comunidades locais de florestas públicas,Meio ambiente,Meio ambiente
+Estímulo à investimentos de longo prazo em florestas públicas,Meio ambiente,Meio ambiente
+Promoção do processamento local em florestas públicas,Meio ambiente,Meio ambiente
+Proteção dos ecossistemas,Meio ambiente,Meio ambiente
+Uso eficiente e racional das florestas,Meio ambiente,Meio ambiente
+Inventário floresta nacional,Meio ambiente,Meio ambiente
+Pesquisa florestal,Meio ambiente,Meio ambiente
+Unidades de manejo em florestas públicas,Meio ambiente,Meio ambiente
+Gestão florestal compartilhada,Meio ambiente,Meio ambiente
+Maciços florestais urbanos,Meio ambiente,Meio ambiente
+Monitoramento e proteção das florestas,Meio ambiente,Meio ambiente
+Detecção da exploração florestal (DETEX),Meio ambiente,Meio ambiente
+Detecção do desmatamento em tempo real (DETER),Meio ambiente,Meio ambiente
+Empreendimentos potencialmente causadores de impacto ambiental,Meio ambiente,Meio ambiente
+Planejamento florestal,Meio ambiente,Meio ambiente
+Plantio e recomposição florestal,Meio ambiente,Meio ambiente
+Recuperação e restauração de ecossistemas,Meio ambiente,Meio ambiente
+Áreas degradadas,Meio ambiente,Meio ambiente
+Florestas nativas,Meio ambiente,Meio ambiente
+Reposição florestal,Meio ambiente,Meio ambiente
+Servidão ambiental,Meio ambiente,Meio ambiente
+Silvicultura em espécies nativas,Meio ambiente,Meio ambiente
+Sistemas agroflorestais em bases sustentáveis,Meio ambiente,Meio ambiente
+Uso e ocupação das florestas,Meio ambiente,Meio ambiente
+Cadeias produtivas de base florestal,Meio ambiente,Meio ambiente
+Exploração de serviços florestais,Meio ambiente,Meio ambiente
+Manejo florestal sustentável,Meio ambiente,Meio ambiente
+Manejo de florestas comunitárias,Meio ambiente,Meio ambiente
+Produtos e serviços gerados pelas florestas,Meio ambiente,Meio ambiente
+Processamento de produtos florestais,Meio ambiente,Meio ambiente
+Produção florestal sustentável,Meio ambiente,Meio ambiente
+Produtos florestais madeireiros,Meio ambiente,Meio ambiente
+Produtos florestais não-madeireiros,Meio ambiente,Meio ambiente
+Racionalização do uso dos recursos e sua destinação,Meio ambiente,Meio ambiente
+Valoração dos serviços ambientais prestados pelas florestas e demais forma de vegetação nativa,Meio ambiente,Meio ambiente
+Valorização de resíduos florestais,Meio ambiente,Meio ambiente
+Gestão de meio ambiente,Meio ambiente,Meio ambiente
+Emergências ambientais,Meio ambiente,Meio ambiente
+Emergências ambientais urbanas,Meio ambiente,Meio ambiente
+Minimização dos efeitos de secas e inundações,Meio ambiente,Meio ambiente
+Prevenção e atendimento a situação de emergência ambiental,Meio ambiente,Meio ambiente
+Acidentes com produtos químicos perigosos,Meio ambiente,Meio ambiente
+Queimadas e incêndios,Meio ambiente,Meio ambiente
+Gerenciamento costeiro e marinho,Meio ambiente,Meio ambiente
+Gestão ambiental compartilhada,Meio ambiente,Meio ambiente
+Rede brasileira de fundos socioambientais,Meio ambiente,Meio ambiente
+Repartição de competências,Meio ambiente,Meio ambiente
+Sistema nacional de meio ambiente - SISNAMA,Meio ambiente,Meio ambiente
+Sistema nacional de informação sobre o meio ambiente - SINIMA,Meio ambiente,Meio ambiente
+Acordo de nível de serviço de gestão ambiental,Meio ambiente,Meio ambiente
+Indicadores ambientais,Meio ambiente,Meio ambiente
+Gestão de conflitos da atividade minerária,Meio ambiente,Meio ambiente
+Instrumentos de planejamento e gestão ambiental,Meio ambiente,Meio ambiente
+Avaliação ambiental,Meio ambiente,Meio ambiente
+Avaliação ambiental estratégica,Meio ambiente,Meio ambiente
+Avaliação ambiental integrada de bacia hidrográfica,Meio ambiente,Meio ambiente
+Avaliação de impactos ambientais,Meio ambiente,Meio ambiente
+Licenciamento ambiental,Meio ambiente,Meio ambiente
+Compensação ambiental,Meio ambiente,Meio ambiente
+Estudo de impacto ambiental - EIA,Meio ambiente,Meio ambiente
+Licenças ambientais,Meio ambiente,Meio ambiente
+Licença de instalação,Meio ambiente,Meio ambiente
+Licença de operação,Meio ambiente,Meio ambiente
+Licença prévia,Meio ambiente,Meio ambiente
+Licenciamentos especiais,Meio ambiente,Meio ambiente
+Atividades de turismo,Meio ambiente,Meio ambiente
+Empreendimentos hidrelétricos,Meio ambiente,Meio ambiente
+Participação e controle,Meio ambiente,Meio ambiente
+Audiências públicas,Meio ambiente,Meio ambiente
+Procedimentos técnicos e administrativos,Meio ambiente,Meio ambiente
+Projeto básico ambiental,Meio ambiente,Meio ambiente
+Relatório de impacto ambiental - RIMA,Meio ambiente,Meio ambiente
+Ordenamento territorial,Meio ambiente,Meio ambiente
+Informações geográficas,Meio ambiente,Meio ambiente
+Sistemas georreferenciados,Meio ambiente,Meio ambiente
+Organização da produção,Meio ambiente,Meio ambiente
+Transição agroecológica de sistemas de produção,Meio ambiente,Meio ambiente
+Zoneamento agro-ecológico,Meio ambiente,Meio ambiente
+Zoneamento ecológico e econômico - ZEE,Meio ambiente,Meio ambiente
+Planejamento ambiental da aquicultura,Meio ambiente,Meio ambiente
+Infrações ambientais,Meio ambiente,Meio ambiente
+Áreas embargadas pelo IBAMA,Meio ambiente,Meio ambiente
+Mapas georreferenciados,Meio ambiente,Meio ambiente
+Biopirataria,Meio ambiente,Meio ambiente
+Crimes ambientais,Meio ambiente,Meio ambiente
+Ilícitos associados,Meio ambiente,Meio ambiente
+Relacionados à unidades de conservação e zonas de amortecimento,Meio ambiente,Meio ambiente
+Monitoramento da cobertura vegetal,Meio ambiente,Meio ambiente
+Polícia ambiental,Meio ambiente,Meio ambiente
+Sanções,Meio ambiente,Meio ambiente
+Sanções administrativas,Meio ambiente,Meio ambiente
+Conversão de multas de sanções administrativas,Meio ambiente,Meio ambiente
+Sanções administrativas compensatórias,Meio ambiente,Meio ambiente
+Sanções cíveis,Meio ambiente,Meio ambiente
+Sanções criminais,Meio ambiente,Meio ambiente
+Qualidade ambiental,Meio ambiente,Meio ambiente
+Atmosfera,Meio ambiente,Meio ambiente
+Camada de ozônio,Meio ambiente,Meio ambiente
+Convenção de Viena e protocolo de Montreal,Meio ambiente,Meio ambiente
+Conversão tecnológica,Meio ambiente,Meio ambiente
+Gerenciamento do passivo das substâncias destruidoras da camada de ozônio,Meio ambiente,Meio ambiente
+Substâncias que destroem a camada de ozônio,Meio ambiente,Meio ambiente
+Qualidade do ar,Meio ambiente,Meio ambiente
+Poluentes atmosféricos,Meio ambiente,Meio ambiente
+Poluição sonora,Meio ambiente,Meio ambiente
+Combate à desertificação,Meio ambiente,Meio ambiente
+Áreas susceptíveis à desertificação,Meio ambiente,Meio ambiente
+Convenção das nações unidas de combate à desertificação,Meio ambiente,Meio ambiente
+Degradação da terra nas áreas semi-áridas e subúmidas secas,Meio ambiente,Meio ambiente
+Erosão do solo,Meio ambiente,Meio ambiente
+Mitigação dos efeitos das secas,Meio ambiente,Meio ambiente
+Combate ao desmatamento,Meio ambiente,Meio ambiente
+Áreas desmatadas,Meio ambiente,Meio ambiente
+Desmatamento ilegal,Meio ambiente,Meio ambiente
+Desmatamento na Amazônia,Meio ambiente,Meio ambiente
+Exploração ilegal de madeira,Meio ambiente,Meio ambiente
+Prevenção e controle do meio ambiente,Meio ambiente,Meio ambiente
+Fragmentação,Meio ambiente,Meio ambiente
+Monitoramento,Meio ambiente,Meio ambiente
+Detecção do desmatamento em tempo real - DETER,Meio ambiente,Meio ambiente
+Energia e meio ambiente,Meio ambiente,Meio ambiente
+Conservação de energia,Meio ambiente,Meio ambiente
+Eficiência energética,Meio ambiente,Meio ambiente
+Energia não renováveis,Meio ambiente,Meio ambiente
+Carvão mineral,Meio ambiente,Meio ambiente
+Energia nuclear,Meio ambiente,Meio ambiente
+Gás natural,Meio ambiente,Meio ambiente
+Petróleo,Meio ambiente,Meio ambiente
+Energias renováveis,Meio ambiente,Meio ambiente
+Biomassa,Meio ambiente,Meio ambiente
+Biocombustível,Meio ambiente,Meio ambiente
+Biogás,Meio ambiente,Meio ambiente
+Esgoto sanitário,Meio ambiente,Meio ambiente
+Resíduos agropecuários,Meio ambiente,Meio ambiente
+Resíduos florestais,Meio ambiente,Meio ambiente
+Resíduos sólidos urbanos,Meio ambiente,Meio ambiente
+Eólica,Meio ambiente,Meio ambiente
+Geotérmica,Meio ambiente,Meio ambiente
+Hídrica,Meio ambiente,Meio ambiente
+Maremotriz,Meio ambiente,Meio ambiente
+Solar,Meio ambiente,Meio ambiente
+Matriz energética ambientalmente adequada,Meio ambiente,Meio ambiente
+Monitoramento do meio ambiente,Meio ambiente,Meio ambiente
+Avaliação da qualidade ambiental,Meio ambiente,Meio ambiente
+Indicadores ambientais,Meio ambiente,Meio ambiente
+Mudanças climáticas,Meio ambiente,Meio ambiente
+Adaptação à mudança do clima,Meio ambiente,Meio ambiente
+Aquecimento global,Meio ambiente,Meio ambiente
+Convenção sobre mudança do clima,Meio ambiente,Meio ambiente
+Efeito estufa,Meio ambiente,Meio ambiente
+Mecanismo de desenvolvimento limpo - MDL,Meio ambiente,Meio ambiente
+Mitigação da mudança do clima,Meio ambiente,Meio ambiente
+Protocolo de Quioto,Meio ambiente,Meio ambiente
+Resíduos e rejeitos,Meio ambiente,Meio ambiente
+Aterros sanitários,Meio ambiente,Meio ambiente
+Cemitérios,Meio ambiente,Meio ambiente
+Drenagem pluvial,Meio ambiente,Meio ambiente
+Gestão integrada de resíduos sólidos urbanos,Meio ambiente,Meio ambiente
+Consórcios públicos,Meio ambiente,Meio ambiente
+Valorização dos resíduos sólidos,Meio ambiente,Meio ambiente
+Minimização de rejeitos,Meio ambiente,Meio ambiente
+Materiais perigosos,Meio ambiente,Meio ambiente
+Minimização dos impactos gerados por resíduos perigosos,Meio ambiente,Meio ambiente
+Resíduos hospitalares,Meio ambiente,Meio ambiente
+Resíduos químicos,Meio ambiente,Meio ambiente
+Resíduos radiotivos,Meio ambiente,Meio ambiente
+Resíduos tóxicos,Meio ambiente,Meio ambiente
+Reciclagem,Meio ambiente,Meio ambiente
+Resíduos comerciais,Meio ambiente,Meio ambiente
+Resíduos da construção civil e demolição,Meio ambiente,Meio ambiente
+Resíduos domiciliares,Meio ambiente,Meio ambiente
+Resíduos rurais,Meio ambiente,Meio ambiente
+Agrotóxicos,Meio ambiente,Meio ambiente
+Saneamento ambiental urbano,Meio ambiente,Meio ambiente
+Tratamento e disposição de esgoto,Meio ambiente,Meio ambiente
+Segurança química,Meio ambiente,Meio ambiente
+Substâncias químicas,Meio ambiente,Meio ambiente
+Emergências ambientais,Meio ambiente,Meio ambiente
+Gerenciamento de áreas contaminadas,Meio ambiente,Meio ambiente
+Gerenciamento de substancias e resíduos,Meio ambiente,Meio ambiente
+Agrotóxicos,Meio ambiente,Meio ambiente
+Comissão nacional de segurança química - CONASQ,Meio ambiente,Meio ambiente
+Fórum intergovernamental,Meio ambiente,Meio ambiente
+Gestão internacional das substâncias químicas - SAICM,Meio ambiente,Meio ambiente
+Movimento transfronteiriços,Meio ambiente,Meio ambiente
+Pneus,Meio ambiente,Meio ambiente
+Poluentes orgânicos persistentes,Meio ambiente,Meio ambiente
+Registro de emissão e transferências de poluentes,Meio ambiente,Meio ambiente
+Resíduos perigosos,Meio ambiente,Meio ambiente
+Prevenção e combate à poluição,Meio ambiente,Meio ambiente
+Assistência e desenvolvimento social,Proteção Social,Proteção Social
+Auxilio sociais,Proteção Social,Proteção Social
+Entidades de assistência,Proteção Social,Proteção Social
+Programas de transferência de renda,Proteção Social,Proteção Social
+Proteção social básica,Proteção Social,Proteção Social
+Proteção social especial à pessoa em situação de risco,Proteção Social,Proteção Social
+Trabalho social voluntário,Proteção Social,Proteção Social
+Comunidade e sociedade,Proteção Social,Proteção Social
+Minorias,Proteção Social,Proteção Social
+Povos indígenas,Proteção Social,Proteção Social
+Previdência social,Previdência Social,Previdência Social
+Beneficio assistencial ao idoso e ao deficiente,Previdência Social,Previdência Social
+Beneficio previdenciários,Previdência Social,Previdência Social
+Aposentadoria especial,Previdência Social,Previdência Social
+Aposentadoria por idade,Previdência Social,Previdência Social
+Aposentadoria por invalidez,Previdência Social,Previdência Social
+Aposentadoria por tempo de contribuição,Previdência Social,Previdência Social
+Auxilio doença,Previdência Social,Previdência Social
+Auxilio reclusão,Previdência Social,Previdência Social
+Pensão por morte,Previdência Social,Previdência Social
+Salário família,Previdência Social,Previdência Social
+Salário maternidade,Previdência Social,Previdência Social
+Pensões,Previdência Social,Previdência Social
+Previdência básica,Previdência Social/Previdência Básica,Previdência Básica
+Previdência complementar,Previdência Social/Previdência Complementar,Previdência Complementar
+Previdência do regime estatutário,Previdência Social,Previdência Social
+Previdência do servidor,Previdência Social,Previdência Social
+Reabilitação profissional,Previdência Social,Previdência Social
+Proteção e defesa do cidadão,Proteção Social/Combate a desigualdade,Combate a desigualdade
+Assistência jurídica gratuita,Proteção Social/Combate a desigualdade,Combate a desigualdade
+"Classificação indicativa de vídeos, jogos, cinemas e outros",Proteção Social/Combate a desigualdade,Combate a desigualdade
+Defesa do consumidor,Proteção Social/Combate a desigualdade,Combate a desigualdade
+Denúncia,Proteção Social/Combate a desigualdade,Combate a desigualdade
+Ouvidoria,Proteção Social/Combate a desigualdade,Combate a desigualdade
+Relações internacionais,Relações Internacionais,Relações Internacionais
+Estrangeiro,Relações Internacionais,Relações Internacionais
+Carteira de identificação do estrangeiro,Relações Internacionais,Relações Internacionais
+Extradição,Relações Internacionais,Relações Internacionais
+Igualdade de direitos do estrangeiro,Relações Internacionais,Relações Internacionais
+Naturalização,Relações Internacionais,Relações Internacionais
+Permanência do estrangeiro,Relações Internacionais,Relações Internacionais
+Trabalho estrangeiro,Relações Internacionais,Relações Internacionais
+Organizações internacionais,Relações Internacionais,Relações Internacionais
+Grupos e organismos políticos internacionais,Relações Internacionais,Relações Internacionais
+Política externa,Relações Internacionais,Relações Internacionais
+Acordos internacionais,Relações Internacionais,Relações Internacionais
+Asilo político,Relações Internacionais,Relações Internacionais
+Convenção internacional,Relações Internacionais,Relações Internacionais
+Tratado internacional,Relações Internacionais,Relações Internacionais
+Cooperação jurídica internacional,Relações Internacionais,Relações Internacionais
+Mercosul e integração regional,Relações Internacionais,Relações Internacionais
+Relações bilaterais,Relações Internacionais,Relações Internacionais
+Promoção comercial internacional,Comércio e Serviços/Comercio externo,Comercio externo
+Relações diplomáticas,Relações Internacionais/Relações Diplomáticas,Relações Diplomáticas
+Serviços consulares,Relações Internacionais,Relações Internacionais
+Representações brasileira no exterior,Relações Internacionais,Relações Internacionais
+Representações estrangeira no Brasil,Relações Internacionais,Relações Internacionais
+Saúde,Saúde,Saúde
+Alimentação e nutrição,Saúde,Saúde
+Alimentação saudável,Saúde,Saúde
+Segurança alimentar e nutricional,Saúde,Saúde
+Transtornos alimentares,Saúde,Saúde
+Desnutrição,Saúde,Saúde
+Obesidade,Saúde,Saúde
+Ambiente e saúde,Saúde,Saúde
+Resíduos de serviços de saúde,Saúde,Saúde
+Resíduos industriais,Saúde,Saúde
+Resíduos perigosos,Saúde,Saúde
+Saneamento,Saúde,Saúde
+Arquitetura e engenharia em saúde,Saúde,Saúde
+Equipamentos médico-hospitalares,Saúde,Saúde
+Auditoria em saúde,Saúde,Saúde
+Ciência e tecnologia em saúde,Saúde,Saúde
+Bioética,Saúde,Saúde
+Pesquisa em saúde,Saúde,Saúde
+Tecnologia em saúde,Saúde,Saúde
+Educação para a saúde,Saúde,Saúde
+Campanhas de saúde,Saúde,Saúde
+AIDS,Saúde,Saúde
+Dengue,Saúde,Saúde
+DST,Saúde,Saúde
+Gripe,Saúde,Saúde
+Paralisia infantil,Saúde,Saúde
+Emergências e Urgências,Saúde,Saúde
+Primeiros socorros,Saúde,Saúde
+Bombeiro 193,Saúde,Saúde
+SAMU 192,Saúde,Saúde
+UPA 24 horas,Saúde,Saúde
+Pronto socorro,Saúde,Saúde
+Ética de profissionais de saúde,Saúde,Saúde
+Farmácia,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Farmácia básica,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Farmácia hospitalar,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Farmácia popular,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Humanização na saúde,Saúde,Saúde
+Infecção hospitalar,Saúde/Assistência Hospitalar e Ambulatorial,Assistência Hospitalar e Ambulatorial
+Legislação de saúde,Saúde,Saúde
+Medicamentos,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Custos de medicamentos,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Medicamentos essenciais,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Medicamentos fitoterápicos,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Medicamentos fracionados,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Medicamentos genéricos,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Medicamentos proibidos,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Medicamentos similares,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Qualidade dos medicamento,Saúde/Medicamentos e aparelhos,Medicamentos e aparelhos
+Medicina natural,Saúde,Saúde
+Acupuntura,Saúde,Saúde
+Fitoterapia,Saúde,Saúde
+Homeopatia,Saúde,Saúde
+Orçamento de saúde,Saúde,Saúde
+Participação e controle social em saúde,Saúde,Saúde
+Conselhos de saúde,Saúde,Saúde
+Direito dos usuários dos serviços de saúde,Saúde,Saúde
+Ouvidoria,Saúde,Saúde
+Recursos humanos em saúde,Saúde,Saúde
+Gestão da educação em saúde,Saúde,Saúde
+Gestão do trabalho em saúde,Saúde,Saúde
+Sangue e hemoderivados,Saúde,Saúde
+Banco de sangue,Saúde,Saúde
+Saúde bucal,Saúde,Saúde
+Brasil Sorridente,Saúde,Saúde
+Saúde da criança,Saúde,Saúde
+Aleitamento materno,Saúde,Saúde
+Banco de leite humano,Saúde,Saúde
+Mortalidade infantil,Saúde,Saúde
+Saúde da família,Saúde,Saúde
+Saúde da mulher,Saúde,Saúde
+Mortalidade materna,Saúde,Saúde
+Saúde da população negra,Saúde,Saúde
+Saúde do adolescente e do jovem,Saúde,Saúde
+Saúde do homem,Saúde,Saúde
+Saúde do idoso,Saúde,Saúde
+Saúde do indígena,Saúde,Saúde
+Saúde do trabalhador,Saúde,Saúde
+Saúde do viajante,Saúde,Saúde
+Vacinação do viajante,Saúde,Saúde
+Certificado Internacional de Vacinação e Profilaxia (CIVP),Saúde,Saúde
+Saúde dos portadores de deficiências,Saúde,Saúde
+Saúde mental,Saúde,Saúde
+Saúde no sistema penitenciário,Saúde,Saúde
+Saúde ocular,Saúde,Saúde
+Saúde reprodutiva,Saúde,Saúde
+Sistema de informação em saúde,Saúde,Saúde
+Cadastro nacional de estabelecimento de saúde,Saúde,Saúde
+Cartão nacional de saúde,Saúde,Saúde
+Estatísticas em saúde,Saúde,Saúde
+Sistema de saúde,Saúde,Saúde
+Sistema de saúde suplementar,Saúde,Saúde
+Planos de saúde,Saúde,Saúde
+Sistema Único de Saúde (SUS),Saúde,Saúde
+Planejamento e administração em saúde pública,Saúde,Saúde
+Políticas e diretrizes para o SUS,Saúde,Saúde
+Transplantes de órgãos e tecidos,Saúde,Saúde
+Unidades de saúde,Saúde/Assistência Hospitalar e Ambulatorial,Assistência Hospitalar e Ambulatorial
+Ambulatório,Saúde/Assistência Hospitalar e Ambulatorial,Assistência Hospitalar e Ambulatorial
+Hospital,Saúde/Assistência Hospitalar e Ambulatorial,Assistência Hospitalar e Ambulatorial
+Policlínica,Saúde/Assistência Hospitalar e Ambulatorial,Assistência Hospitalar e Ambulatorial
+Posto de saúde,Saúde/Assistência Hospitalar e Ambulatorial,Assistência Hospitalar e Ambulatorial
+Pronto socorro,Saúde/Assistência Hospitalar e Ambulatorial,Assistência Hospitalar e Ambulatorial
+Unidade básica de saúde,Saúde/Assistência Hospitalar e Ambulatorial,Assistência Hospitalar e Ambulatorial
+Vacinação,Saúde/Combate a epidemias,Combate a epidemias
+Calendário de vacinação da criança,Saúde/Combate a epidemias,Combate a epidemias
+Calendário de vacinação do adulto,Saúde/Combate a epidemias,Combate a epidemias
+Calendário de vacinação do idoso,Saúde/Combate a epidemias,Combate a epidemias
+Vigilância sanitária,Saúde/Vigilância Sanitária,Vigilância Sanitária
+Qualidade de produtos para o consumidor,Saúde/Vigilância Sanitária,Vigilância Sanitária
+Qualidade de agrotóxicos,Saúde/Vigilância Sanitária,Vigilância Sanitária
+Qualidade de alimentos,Saúde/Vigilância Sanitária,Vigilância Sanitária
+Qualidade de cosméticos,Saúde/Vigilância Sanitária,Vigilância Sanitária
+Qualidade de derivados do tabaco,Saúde/Vigilância Sanitária,Vigilância Sanitária
+Qualidade de medicamentos,Saúde/Vigilância Sanitária,Vigilância Sanitária
+Qualidade de saneantes,Saúde/Vigilância Sanitária,Vigilância Sanitária
+Vacinas,Saúde/Vigilância Sanitária,Vigilância Sanitária
+Violência,Saúde,Saúde
+Violência contra o idoso,Saúde,Saúde
+Violência contra o menor,Saúde,Saúde
+Violência de gênero,Saúde,Saúde
+Violência doméstica,Saúde,Saúde
+Violência urbana,Saúde,Saúde
+Trabalho,Trabalho,Trabalho
+Fiscalização do trabalho,Trabalho,Trabalho
+Legislação trabalhista,Trabalho,Trabalho
+Contrato de trabalho,Trabalho,Trabalho
+Relações de trabalho,Trabalho,Trabalho
+Segurança no trabalho,Trabalho,Trabalho
+Mercado de trabalho,Trabalho,Trabalho
+Desemprego,Trabalho,Trabalho
+Emprego,Trabalho,Trabalho
+Demanda de emprego,Trabalho,Trabalho
+Oportunidades de emprego,Trabalho,Trabalho
+Informações sociais,Trabalho,Trabalho
+Política trabalhista,Trabalho,Trabalho
+Alimentação do trabalhador,Trabalho,Trabalho
+Contribuição previdenciária,Trabalho,Trabalho
+Proteção ao trabalhador,Trabalho,Trabalho
+Seguro desemprego,Trabalho,Trabalho
+Transporte do trabalhador,Trabalho,Trabalho
+Profissões e ocupações,Trabalho,Trabalho
+Classificação brasileira de ocupações,Trabalho,Trabalho
+Entidade representativa de classe,Trabalho,Trabalho
+Regulamentação profissional,Trabalho,Trabalho
+Qualificação e aprendizagem profissional,Trabalho,Trabalho
+Trabalho estrangeiro,Trabalho,Trabalho
+Transportes e trânsito,"Transportes, Urbanismo",
+Trânsito,Transportes,Transportes
+Acidentes de trânsito,Transportes,Transportes
+Educação no trânsito,Transportes,Transportes
+Prevenção de acidentes de trânsito,Transportes,Transportes
+Estatísticas de trânsito,Transportes,Transportes
+Mapas,Transportes,Transportes
+Multas / infrações,Transportes,Transportes
+Parcelamento de multas,Transportes,Transportes
+Radares,Transportes,Transportes
+Transporte aéreo,Transportes/Transporte Aéreo,Transporte Aéreo
+Transporte aquaviário,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Autorização de transporte aquaviário,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Fiscalização de transporte aquaviário,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Infraestrutura de transporte aquaviário,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Hidrovias interiores,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Portos,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Terminais privativos,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Marinha mercante,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Transporte aquaviário de cargas,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Transporte aquaviário de passageiros,Transportes/Transporte Hidroviário,Transporte Hidroviário
+Transporte dutoviário,Transportes,Transportes
+Gasodutos,Transportes,Transportes
+Minerodutos,Transportes,Transportes
+Oleodutos,Transportes,Transportes
+Transporte especial,Transportes,Transportes
+Transporte ferroviário,Transportes/Transporte Ferroviário,Transporte Ferroviário
+Concessão de transporte ferroviário,Transportes/Transporte Ferroviário,Transporte Ferroviário
+Fiscalização de transporte ferroviário,Transportes/Transporte Ferroviário,Transporte Ferroviário
+Infraestrutura de transporte ferroviário,Transportes/Transporte Ferroviário,Transporte Ferroviário
+Transporte ferroviário de cargas,Transportes/Transporte Ferroviário,Transporte Ferroviário
+Transporte ferroviário de passageiros,Transportes/Transporte Ferroviário,Transporte Ferroviário
+Transporte internacional,Transportes,Transportes
+Transporte internacional de cargas,Transportes,Transportes
+Transporte internacional de passageiros,Transportes,Transportes
+Transporte multimodal,Transportes,Transportes
+Operador de transporte multimodal,Transportes,Transportes
+"Serviços de coleta, unitização, desunitização, movimentação, armazenagem e entrega de cargas ao dest",Transportes,Transportes
+Transporte rodoviário,Transportes/Transporte Rodoviário,Transporte Rodoviário
+Concessão de transporte rodoviário,Transportes/Transporte Rodoviário,Transporte Rodoviário
+Fiscalização de transporte rodoviário,Transportes/Transporte Rodoviário,Transporte Rodoviário
+Infraestrutura de transporte rodoviário,Transportes/Transporte Rodoviário,Transporte Rodoviário
+Transporte rodoviário de cargas,Transportes/Transporte Rodoviário,Transporte Rodoviário
+Transporte rodoviário de passageiros,Transportes/Transporte Rodoviário,Transporte Rodoviário
