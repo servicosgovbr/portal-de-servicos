@@ -3,6 +3,7 @@
 require 'octokit'
 require 'csv'
 require 'json'
+require 'date'
 
 Octokit.configure do |c| 
   unless ENV.has_key?('TOKEN')
@@ -20,50 +21,48 @@ EOM
   end
   c.access_token = ENV['TOKEN'] 
 end
+Octokit.auto_paginate = true
 
-def to_days(seconds)
-  return nil if seconds.nil?
-  days = seconds / 60.0 / 60.0 / 24.0
-  [1, days.round].max
-end
-
-repos = [
-  'servicosgovbr/portal-de-servicos',
-  'servicosgovbr/editor-portal-de-servicos',
-  'servicosgovbr/cartas-de-servico'
-]
-
+repos = ['servicosgovbr/portal-de-servicos','servicosgovbr/editor-de-servicos','servicosgovbr/cartas-de-servico']
 TF='%m/%d/%y %H:%M'
 
-def label(l)
-  Proc.new{ |e| e.event == 'labeled' and l == e.label.name }
-end
+class GitReport
+  @@fields = [:numero, :descricao, :docs, :bug, :tech_debt, :pull_request, :colaborador, :repo, :ultima_alteracao, :ideia, :para_rodar, :em_progresso, :para_homologacao, :em_homologacao, :em_producao, :aprendemos]
+  
+  def initialize
+    @mapping = {para_rodar:'ready', em_progresso:'in progress', para_homologacao:'para homologação', em_homologacao:'homologação', em_producao: 'produção'}
+    @backward_order = [:aprendemos, :em_producao, :em_homologacao, :para_homologacao, :em_progresso, :para_rodar, :ideia]
+  end
+  
+  def read_repo(repo, max=10000)
+    puts 'Listando os cartões no Github...'
+    
+    @repo = repo
+    @max = max
+    @issues = read_issues.first(max)
 
-print 'Listando os cartões no Github...'
-Octokit.auto_paginate = true
-repos.each do |repo|
-  issues = Octokit.issues repo, :per_page => 1000, :state => 'all', :filter => 'all'
-  puts 'OK'
-
-  tabela = issues.map do |issue|
+    @table = create_table
+    remove_docs_and_pull_requests
+    normalize_data
+    calculate_lead_times
+  end
+  
+  def read_issues()
+    Octokit.issues @repo, :per_page => 1000, :state => 'all', :filter => 'all'
+  end
+  
+  def create_table()
+    @issues.map do |issue|
+      populate_item issue
+    end
+  end
+  
+  def populate_item(issue)
     print "Processando #{issue.number} - '#{issue.title}'..."
-
-    issue.events = Octokit.issue_events repo, issue.number
-
-    para_rodar = issue.events.find &label('ready')
-    em_progresso = issue.events.find &label('in progress')
-    para_homologacao = issue.events.find &label('para homologação')
-    em_homologacao = issue.events.find &label('homologação')
-    em_producao = issue.events.find &label('produção')
-
-    cycle_time = (em_producao.created_at - em_progresso.created_at rescue nil) ||
-                 (issue.closed_at - em_progresso.created_at rescue nil)
-
-    lead_time = (issue.closed_at - para_rodar.created_at rescue nil) ||
-                (issue.closed_at - issue.created_at rescue nil)
+    issue.events = Octokit.issue_events @repo, issue.number
 
     puts 'OK'
-    {
+    item = {
       numero: issue.number,
       descricao: issue.title,
       docs: issue.labels.any? {|l| l.name == 'docs' },
@@ -71,27 +70,197 @@ repos.each do |repo|
       tech_debt: issue.labels.any? {|l| l.name == 'tech debt' },
       pull_request: issue.respond_to?(:pull_request),
       colaborador: issue.user.login,
-      repo: repo,
-      ultima_alteracao: issue.updated_at.getlocal.strftime(TF),
-
-      ideia: issue.created_at.getlocal.strftime(TF),
-      para_rodar: (para_rodar.created_at.getlocal.strftime(TF) rescue nil),
-      em_progresso: (em_progresso.created_at.getlocal.strftime(TF) rescue nil),
-      para_homologacao: (para_homologacao.created_at.getlocal.strftime(TF) rescue nil),
-      em_homologacao: (em_homologacao.created_at.getlocal.strftime(TF) rescue nil),
-      em_producao: (em_producao.created_at.getlocal.strftime(TF) rescue nil),
-      aprendemos: (issue.closed_at.getlocal.strftime(TF) rescue nil),
-
-      cycle_time: to_days(cycle_time),
-      lead_time: to_days(lead_time),
+      repo: @repo,
+      stage: retrieve_actual_stage(issue)
     }
+    
+    populate_dates(item, issue)
+    
+    item
   end
+  
+  def retrieve_actual_stage(issue)
+    return :aprendemos if(issue.state == 'closed')
+    
+    @backward_order.each do |key|
+      return key if issue.labels.any? {|l| l.name == @mapping[key] }
+    end
 
-  CSV.open("#{File.basename repo}.csv", 'w') do |csv|
-    csv << tabela.first.keys
-    tabela.each do |hash|
-      csv << hash.values
+    return :ideia if issue.assignee.nil?
+  end
+  
+  def populate_dates(item, issue)
+    issue.events.reverse! #so it gets the last ocurrence of the event if duplicate
+    
+    item[:ultima_alteracao] = issue.updated_at.getlocal.strftime(TF)
+    item[:ideia] = issue.created_at.getlocal.strftime(TF)
+    
+    @mapping.each do |internal_name, name|
+        value = issue.events.find(&label(name))
+        item[internal_name] = (value.created_at.getlocal.strftime(TF) rescue nil)
+    end
+    
+    item[:aprendemos] = (issue.closed_at.getlocal.strftime(TF) rescue nil)
+  end
+  
+  def calculate_date_diff(item, start_stage, end_stage)
+    end_date = DateTime.strptime(item[end_stage], TF)
+    start_date = DateTime.strptime(item[start_stage], TF)
+    
+    to_days(end_date - start_date)
+  end
+  
+  def to_days(seconds)
+    return nil if seconds.nil?
+    days = seconds / 60.0 / 60.0 / 24.0
+    [1, days.round].max
+  end
+  
+  def is_before_after_actual(tested_stage, actual_stage)
+    @backward_order.index(tested_stage) < @backward_order.index(actual_stage)
+  end
+  
+  def label(l)
+    Proc.new{ |e| e.event == 'labeled' and l == e.label.name }
+  end
+  
+  def remove_docs_and_pull_requests()
+    @table.select! do |item|
+      !(item[:docs] || item[:pull_request])
     end
   end
+  
+  def normalize_data()
+    @table.each do |item|
+      date = nil
+      block = Proc.new do |stage|
+        item[stage] = date if(item[stage].nil?)
+        
+        date = item[stage]
+      end
+      
+      until_para_homologacao = 4
+      until_em_progresso = 3
+      @backward_order.first(until_para_homologacao).each &block
+      @backward_order.reverse.first(until_em_progresso).each &block
+      
+      clean_posterior_dates item
+    end
+  end
+  
+  def calculate_lead_times()
+    @table.each do |item|
+      item[:from_idea_to_aprendemos] = item[:stage] == :aprendemos ? calculate_date_diff(item, :ideia, :aprendemos): nil
+      item[:from_idea_to_em_producao] = [:aprendemos, :em_producao].any? {|stage_name|item[:stage] == stage_name} ? calculate_date_diff(item, :ideia, :em_producao): nil
+      item[:from_em_progresso_to_em_producao] = [:aprendemos, :em_producao].any? {|stage_name|item[:stage] == stage_name} ? calculate_date_diff(item, :em_progresso, :em_producao): nil
+      item[:from_em_progresso_to_aprendemos] = item[:stage] == :aprendemos ? calculate_date_diff(item, :em_progresso, :aprendemos): nil
+    end
+  end
+  
+  def clean_posterior_dates(item)
+    #@backward_order.reverse = [:ideia, :para_rodar, :em_progresso, :para_homologacao, :em_homologacao, :em_producao, :aprendemos]
+    actual_stage = item[:stage]
+    index = @backward_order.reverse.index(actual_stage)
+    @backward_order.reverse.last(6-index).each do |stage_name|
+      item[stage_name] = nil
+    end
+  end
+  
+  def generate_cfd(from='02/1/15 00:00')
+    actual_date = Date.strptime(from, TF)
+    table = []
+    
+    while((actual_date = add_day(actual_date)) < add_day(Date.today))
+      item = {:date => actual_date}
+      
+      item[:aprendemos] = @table.count do |card|
+        stage_date = card[:aprendemos]
+        
+        !stage_date.nil? && DateTime.strptime(stage_date, TF) <= actual_date
+      end
+      
+      @backward_order.last(6).each { |stage| set_count_items_in_stage item, actual_date, stage }
+      
+      table << item
+    end
+    
+    _write_report "#{File.basename @repo}-cfd.csv", table
+  end
+  
+  def set_count_items_in_stage(item, actual_date, actual_stage)
+    item[actual_stage] = @table.count do |card|
+      stage_date = card[actual_stage]
+      former_stage = find_former_stage actual_stage
+      former_stage_date = card[former_stage]
+    
+      has_passed_stage = !stage_date.nil? && DateTime.strptime(stage_date, TF) <= actual_date
+      not_beyond_this_stage = (former_stage_date.nil? || former_stage_date.strip.empty? || DateTime.strptime(former_stage_date, TF) > actual_date)
+      should_count = has_passed_stage && not_beyond_this_stage
+      
+      should_count
+    end
+  end
+  
+  def find_former_stage(actual_stage)
+    actual_stage_index = @backward_order.index(actual_stage)
+    former_stage_index = actual_stage_index - 1
 
+    @backward_order[former_stage_index]
+  end
+  
+  def add_day(date)
+    date + 1
+  end
+  
+  def _write_report(file_name, table)
+    puts "Escrevendo o arquivo"
+    CSV.open(file_name, 'w') do |csv|
+      csv << table.first.keys
+      table.each do |hash|
+        csv << hash.values
+      end
+    end
+  end
+  
+  def read_repo_from_file(repo)
+    _read_repo_from_file("#{File.basename repo}-data.csv", repo)
+  end
+  
+  def _read_repo_from_file(file_name, repo)
+    @repo = repo
+    @table = []
+    is_first_row = true
+    CSV.foreach(file_name) do |row|
+      unless is_first_row
+        item = {}
+        @@fields.each_with_index do |field, i|
+          item[field] = row[i]
+        end
+        
+        @table << item
+      end
+      
+      is_first_row = false
+    end
+  end
+  
+  def write_report()
+    _write_report "#{File.basename @repo}-data.csv", @table
+  end
+  
+  def concatenate_all
+      `cat portal-de-servicos-data.csv > all-data.csv;tail -n +2 editor-de-servicos-data.csv >> all-data.csv; tail -n +2 cartas-de-servico-data.csv >> all-data.csv`
+      _read_repo_from_file("all-data.csv", 'all')
+      generate_cfd
+  end
 end
+
+gitReport = GitReport.new
+repos.each do |repo|
+  gitReport.read_repo repo
+  #gitReport.read_repo_from_file 'servicosgovbr/portal-de-servicos'
+  gitReport.write_report
+  gitReport.generate_cfd
+end
+
+gitReport.concatenate_all
