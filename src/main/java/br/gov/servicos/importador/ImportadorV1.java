@@ -75,7 +75,7 @@ public class ImportadorV1 {
     }
 
     private Servico toServico(Document doc) {
-        doc.outputSettings().prettyPrint(false); // respeita formatação de CDATA
+        keepCDATAContentFormatting(doc);
 
         return new Servico()
                 .withId(doc.select("servico > id").text().trim())
@@ -91,6 +91,10 @@ public class ImportadorV1 {
                 .withTaxa(doc.select("servico > custoTotalEstimado").text().trim())
                 .withUrl(doc.select("servico > url").text().trim())
                 .withUrlAgendamento(doc.select("servico > urlAgendamento").text().trim());
+    }
+
+    private Document.OutputSettings keepCDATAContentFormatting(Document doc) {
+        return doc.outputSettings().prettyPrint(false);
     }
 
     private Orgao orgao(Elements doc) {
