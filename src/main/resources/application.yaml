@@ -40,6 +40,7 @@ pds:
     repositorio: "https://github.com/servicosgovbr/cartas-de-servico.git"
   destaques:
     servicos:
+      - prouni-programa-universidade-para-todos
       - sisu-sistema-de-selecao-unificada
       - consulta-situacao-do-requerimento-de-beneficio-previdenciario
       - programa-de-financiamento-estudantil-fies
