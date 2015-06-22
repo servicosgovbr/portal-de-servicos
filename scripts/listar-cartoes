@@ -107,13 +107,7 @@ class GitReport
     end_date = DateTime.strptime(item[end_stage], TF)
     start_date = DateTime.strptime(item[start_stage], TF)
     
-    to_days(end_date - start_date)
-  end
-  
-  def to_days(seconds)
-    return nil if seconds.nil?
-    days = seconds / 60.0 / 60.0 / 24.0
-    [1, days.round].max
+    (end_date - start_date).ceil
   end
   
   def is_before_after_actual(tested_stage, actual_stage)
@@ -154,6 +148,7 @@ class GitReport
       item[:from_idea_to_em_producao] = [:aprendemos, :em_producao].any? {|stage_name|item[:stage] == stage_name} ? calculate_date_diff(item, :ideia, :em_producao): nil
       item[:from_em_progresso_to_em_producao] = [:aprendemos, :em_producao].any? {|stage_name|item[:stage] == stage_name} ? calculate_date_diff(item, :em_progresso, :em_producao): nil
       item[:from_em_progresso_to_aprendemos] = item[:stage] == :aprendemos ? calculate_date_diff(item, :em_progresso, :aprendemos): nil
+      item[:from_para_rodar_to_para_homologacao] = [:aprendemos, :em_producao, :em_homologacao, :para_homologacao].any? {|stage_name|item[:stage] == stage_name} ? calculate_date_diff(item, :para_rodar, :para_homologacao): nil
     end
   end
   
