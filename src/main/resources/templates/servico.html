@@ -34,10 +34,6 @@
 
 <section layout:fragment="corpo">
     <div class="row">
-        <a th:href="${'http://ec2-54-207-59-83.sa-east-1.compute.amazonaws.com/servico/' + servico.id }"
-            class="acao-servico right"
-            th:if="${@cookies.isOn('modo-edicao')}">Editar</a>
-
         <h2 th:text="${servico.titulo}">Nome do Serviço</h2>
 
         <p style="white-space: pre-wrap;" th:utext="${servico.descricao}">
@@ -84,8 +80,10 @@
         <div th:replace="fragments/informacoes-uteis :: .informacoes-uteis"></div>
 
         <span class="link-github">
-            <a target="_blank" th:href="${'https://github.com/servicosgovbr/cartas-de-servico/edit/master/cartas-servico/v1/servicos/' + servico.id + '.xml'}">
-                <i class="fa fa-github"></i>
+            <a class="acao-servico right"
+               th:if="${@cookies.isOn('modo-edicao')}"
+               th:href="${'/editar/servico/' + servico.id }">
+                Editar
             </a>
         </span>
     </div>
