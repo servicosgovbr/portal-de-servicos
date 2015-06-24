@@ -53,11 +53,18 @@ frontend main *:80
     stats show-node
     stats auth portal-de-servicos:7621892f9a37e0e08812c07f8b70533f2c286297
     stats uri /lb-stats
+    acl is_editor path_beg /editar
+    use_backend editor if is_editor
 
 backend app
     balance roundrobin
     server app1 ${APP_1_IP_ADDR}:8080 check
     server app2 ${APP_2_IP_ADDR}:8080 check
+
+backend editor
+    balance roundrobin
+    server app1 ${APP_1_IP_ADDR}:8090 check
+    server app2 ${APP_2_IP_ADDR}:8090 check
 EOF
 
 systemctl daemon-reload
