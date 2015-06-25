@@ -18,7 +18,9 @@ BuildRoot:          %{builddir}
 Prefix:             /opt/%{name}
 BuildArchitectures: noarch
 Requires:           jdk1.8.0_40
-Obsoletes:          guia-de-servicos # nome antigo do pacote
+
+# nome antigo do pacote
+Obsoletes:          guia-de-servicos
 
 Source0:            %{_sourcedir}/%{name}-%{version}.jar
 Source1:            %{_sourcedir}/exportar-opinioes
