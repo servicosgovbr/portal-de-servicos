@@ -1,4 +1,4 @@
-package br.gov.servicos.servico;
+package br.gov.servicos.servico.areaDeInteresse;
 
 import lombok.AllArgsConstructor;
 import lombok.Value;
@@ -19,8 +19,8 @@ public class AreaDeInteresse {
     @Field(type = String, index = not_analyzed)
     String id;
 
-    @Field(type = String)
-    String titulo;
+    @Field(type = String, index = not_analyzed)
+    String area;
 
     public AreaDeInteresse() {
         this(null, null);

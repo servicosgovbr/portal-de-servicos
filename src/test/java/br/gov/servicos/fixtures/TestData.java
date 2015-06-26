@@ -4,6 +4,7 @@ import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoHtml;
 import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.servico.*;
+import br.gov.servicos.servico.areaDeInteresse.AreaDeInteresse;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 
@@ -25,7 +26,7 @@ public class TestData {
             .withPrestador(new Orgao().withId("orgao-prestador").withNome("Órgão prestador"))
             .withResponsavel(new Orgao().withId("orgao-responsavel").withNome("Órgão responsável"))
             .withPublicosAlvo(singletonList(new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos")))
-            .withAreasDeInteresse(singletonList(new AreaDeInteresse().withId("area-de-interesse").withTitulo("Área de Interesse")))
+            .withAreasDeInteresse(singletonList(new AreaDeInteresse().withId("area-de-interesse").withArea("Área de Interesse")))
             .withLinhasDaVida(singletonList(new LinhaDaVida().withId("linha-da-vida").withTitulo("Linha da Vida")))
             .withCanaisDePrestacao(singletonList(new CanalDePrestacao().withTipo("web").withDescricao("Web").withUrl("http://canal-prestacao")))
             .withInformacoesUteis(singletonList(new InformacaoUtil().withTipo("app").withDescricao("Aplicativo móvel").withUrl("http://app-movel")));

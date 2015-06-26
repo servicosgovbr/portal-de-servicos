@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<dl class="nav-tree" style="display:none">
+    <dt>
+        Áreas de Interesse
+        <i class="fa fa-chevron-down"></i>
+    </dt>
+
+    <dd>
+        <ul>
+            <li th:each="area : ${@linhaDaVidaRepository.findAllAreasDeInteresse()}">
+                <a th:href="@{/area-de-interesse/{id}(id=${area.id})}">
+                    <span th:text="${area.area}">Nome da área de interesse</span>
+                </a>
+            </li>
+        </ul>
+    </dd>
+</dl>
+
+</body>
+</html>

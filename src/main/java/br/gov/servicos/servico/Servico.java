@@ -1,5 +1,6 @@
 package br.gov.servicos.servico;
 
+import br.gov.servicos.servico.areaDeInteresse.AreaDeInteresse;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 import lombok.AllArgsConstructor;

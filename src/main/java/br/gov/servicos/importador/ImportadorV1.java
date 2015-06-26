@@ -1,6 +1,7 @@
 package br.gov.servicos.importador;
 
 import br.gov.servicos.servico.*;
+import br.gov.servicos.servico.areaDeInteresse.AreaDeInteresse;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 import lombok.SneakyThrows;
@@ -146,7 +147,7 @@ public class ImportadorV1 {
                 .stream()
                 .map(e -> new AreaDeInteresse()
                         .withId(e.select("id").text().trim())
-                        .withTitulo(e.select("nome").text().trim()))
+                        .withArea(e.select("nome").text().trim()))
                 .collect(toList());
     }
 }

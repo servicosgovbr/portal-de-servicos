@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout-branco">
+
+<head>
+    <title th:text="${areaDeInteresse.area}">Nome da Area de Interesse</title>
+    <meta property="og:title" th:content="${areaDeInteresse.area}"/>
+    <meta property="og:description" th:content="${areaDeInteresse.area + ' no Portal de Serviços do Governo Federal'}"/>
+</head>
+
+<body>
+
+<span layout:fragment="migalhas-de-pao">
+    <span class="separador">&gt;</span>
+
+    <a href="/servicos" itemprop="url">
+        <span itemprop="title">
+            Todos os Serviços
+        </span>
+    </a>
+
+    <span class="separador">&gt;</span>
+
+    <a href="" itemprop="url">
+        <span itemprop="title" th:text="${areaDeInteresse.area}">
+            Nome da Area de Interesse
+        </span>
+    </a>
+</span>
+
+<section layout:fragment="corpo">
+    <div th:utext="${areaDeInteresse.area}" class="markdown"></div>
+    <hr/>
+
+    <ul id="resultados-areadeinteresse">
+        <li th:each="resultado : ${resultados}">
+            <span th:replace="fragments/resultado-busca-item :: resultado(conteudo=${resultado}, campanha=area-de-interesse)">
+                (bloco de resultado de busca)
+            </span>
+        </li>
+    </ul>
+
+</section>
+</body>
+
+</html>
