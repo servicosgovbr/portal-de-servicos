@@ -2,12 +2,6 @@
 
 - Verificar que o hostname da máquina está presente no arquivo `/etc/hosts`
 - Sobrescrever `/etc/sysconfig/portal-de-servicos-overrides` com o arquivo em `secrets/portal-de-servicos.producao.config` (ou o equivalente, enviado por email)
-- Limpar os índices do ElasticSearch:
-
-```bash
-app1~$ curl -XDELETE 'http://10.17.0.6:9200/pds-importador'
-app1~$ curl -XDELETE 'http://10.17.0.7:9200/pds-importador'
-```
 
 - Rodar o script `app-node-update` com a versão a instalar como parâmetro:
 
