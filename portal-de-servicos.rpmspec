@@ -17,7 +17,6 @@ URL:                http://github.com/servicosgovbr/portal-de-servicos
 BuildRoot:          %{builddir}
 Prefix:             /opt/%{name}
 BuildArchitectures: noarch
-Requires:           jdk1.8.0_40
 
 # nome antigo do pacote
 Obsoletes:          guia-de-servicos
