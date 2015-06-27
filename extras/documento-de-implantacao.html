@@ -34,7 +34,7 @@
     <body>
         
         
-    <div class="book" data-level="10.1" data-basepath=".." data-revision="Fri Jun 26 2015 21:25:16 GMT+0000 (UTC)">
+    <div class="book" data-level="10.1" data-basepath=".." data-revision="Sat Jun 27 2015 05:33:27 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1639,14 +1639,10 @@ ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
 <h3 id="no-servidor-de-aplica%C3%A7%C3%A3o-1-app1">No servidor de aplica&#xE7;&#xE3;o 1 (<code>app1</code>):</h3>
 <ul>
 <li>Verificar que o hostname da m&#xE1;quina est&#xE1; presente no arquivo <code>/etc/hosts</code></li>
-<li>Sobrescrever <code>/etc/sysconfig/portal-de-servicos-overrides</code> com o arquivo em <code>secrets/portal-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</li>
-<li>Limpar os &#xED;ndices do ElasticSearch:</li>
-</ul>
-<pre><code class="lang-bash">app1~$ curl -XDELETE <span class="hljs-string">&apos;http://10.17.0.6:9200/pds-importador&apos;</span>
-app1~$ curl -XDELETE <span class="hljs-string">&apos;http://10.17.0.7:9200/pds-importador&apos;</span>
-</code></pre>
-<ul>
-<li>Rodar o script <code>app-node-update</code> com a vers&#xE3;o a instalar como par&#xE2;metro:</li>
+<li><p>Sobrescrever <code>/etc/sysconfig/portal-de-servicos-overrides</code> com o arquivo em <code>secrets/portal-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</p>
+</li>
+<li><p>Rodar o script <code>app-node-update</code> com a vers&#xE3;o a instalar como par&#xE2;metro:</p>
+</li>
 </ul>
 <pre><code class="lang-bash">app1~$ wget https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/scripts/prod-like/app-node-update
 app1~$ chmod +x app-node-update
