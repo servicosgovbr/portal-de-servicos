@@ -13,6 +13,9 @@ echo 'Atualizando repositórios Yum...'
 yum makecache fast -y
 
 echo "Fazendo backup das configurações..."
+if [ -f /etc/sysconfig/guia-de-servicos-overrides ]; then
+  mv /etc/sysconfig/guia-de-servicos-overrides /etc/sysconfig/portal-de-servicos-overrides
+fi
 cp /etc/sysconfig/portal-de-servicos-overrides /tmp/portal-de-servicos-overrides.backup
 
 if [ -z "$1" ]; then
