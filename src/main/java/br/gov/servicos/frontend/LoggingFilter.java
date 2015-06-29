@@ -19,15 +19,23 @@ public class LoggingFilter extends OncePerRequestFilter {
 
         long start = System.currentTimeMillis();
         try {
-            log.info("Request: {} {}", request.getMethod(), request.getQueryString() == null ? request.getRequestURI() : request.getRequestURI() + "?" + request.getQueryString());
-            log.info("Remote host: {} {}", request.getRemoteAddr(), request.getHeader("X-Forwarded-For"));
-            log.info("User-Agent: {}", request.getHeader("User-Agent"));
+            log.info("Request: {} {} - {} {} {}",
+                    request.getMethod(),
+                    request.getQueryString() == null ? request.getRequestURI() : request.getRequestURI() + "?" + request.getQueryString(),
+                    request.getRemoteAddr(),
+                    request.getHeader("X-Forwarded-For"),
+                    request.getHeader("User-Agent")
+            );
 
             chain.doFilter(request, response);
 
         } finally {
             HttpStatus status = HttpStatus.valueOf(response.getStatus());
-            log.info("{} {}, in {}ms", status.value(), status.getReasonPhrase(), System.currentTimeMillis() - start);
+            log.info("Response: HTTP {} {} - {}ms",
+                    status.value(),
+                    status.getReasonPhrase(),
+                    System.currentTimeMillis() - start
+            );
         }
     }
 }

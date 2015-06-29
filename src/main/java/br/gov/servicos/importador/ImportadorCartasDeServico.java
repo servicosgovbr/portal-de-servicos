@@ -5,6 +5,7 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.jgit.api.CloneCommand;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.lib.TextProgressMonitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -30,6 +31,7 @@ class ImportadorCartasDeServico {
         log.info("Importando cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
         CloneCommand clone = Git.cloneRepository()
                 .setURI(urlRepositorio)
+                .setProgressMonitor(new TextProgressMonitor())
                 .setDirectory(caminhoLocal);
 
         try (Git repositorio = clone.call()) {

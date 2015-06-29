@@ -49,7 +49,7 @@ public class Importador {
         log.info("Iniciando importação");
         indices.recriar();
 
-        File repositorioCartas = Files.createTempDirectory("guia-de-servicos").toFile();
+        File repositorioCartas = Files.createTempDirectory("portal-de-servicos").toFile();
         repositorioCartas.deleteOnExit();
 
         Map<String, Object> retorno = new HashMap<>();
