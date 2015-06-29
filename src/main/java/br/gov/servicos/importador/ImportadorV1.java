@@ -4,6 +4,8 @@ import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.areaDeInteresse.AreaDeInteresse;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
+import br.gov.servicos.temp.MapaVcge20;
+import com.github.slugify.Slugify;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +20,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -38,11 +41,14 @@ public class ImportadorV1 {
 
     ResourcePatternResolver resolver;
     ServicoRepository servicos;
+    private MapaVcge20 mapaVcge20;
+    private Slugify slugify;
 
     @Autowired
     public ImportadorV1(ResourcePatternResolver resolver,
-                        ServicoRepository servicos) {
-
+                        ServicoRepository servicos, MapaVcge20 mapaVcge20, Slugify slugify) {
+        this.mapaVcge20 = mapaVcge20;
+        this.slugify = slugify;
         this.resolver = resolver;
         this.servicos = servicos;
     }
@@ -145,9 +151,13 @@ public class ImportadorV1 {
     private List<AreaDeInteresse> areasDeInteresse(Elements doc) {
         return doc.select("areaDeInteresse")
                 .stream()
-                .map(e -> new AreaDeInteresse()
-                        .withId(e.select("id").text().trim())
-                        .withArea(e.select("nome").text().trim()))
+                .map(e -> e.select("nome").text().trim())
+                .map(mapaVcge20::areaDeInteresse)
+                .flatMap(Collection::stream)
+                .map(area -> new AreaDeInteresse()
+                        .withId(slugify.slugify(area))
+                        .withArea(area))
+                .distinct()
                 .collect(toList());
     }
 }

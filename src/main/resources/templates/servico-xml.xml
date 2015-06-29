@@ -56,7 +56,7 @@
     <areasDeInteresse th:each="areaDeInteresse : ${servico.areasDeInteresse}">
         <areaDeInteresse>
             <id th:text="${areaDeInteresse.id}"/>
-            <nome th:text="${areaDeInteresse.titulo}"/>
+            <nome th:text="${areaDeInteresse.area}"/>
         </areaDeInteresse>
     </areasDeInteresse>
 

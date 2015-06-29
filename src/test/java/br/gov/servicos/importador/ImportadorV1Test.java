@@ -1,7 +1,9 @@
 package br.gov.servicos.importador;
 
+import br.gov.servicos.config.Vcge20Config;
 import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
+import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -39,7 +41,7 @@ public class ImportadorV1Test {
         diretorioCartasDeServico = new ClassPathResource("repositorio-cartas-servico").getFile();
 
         ResourcePatternResolver resourceResolver = new PathMatchingResourcePatternResolver(getClass().getClassLoader());
-        importadorV1 = new ImportadorV1(resourceResolver, servicos);
+        importadorV1 = new ImportadorV1(resourceResolver, servicos, new Vcge20Config().getMapaVcge20(), new Slugify());
 
         when(servicos.save(anySetOf(Servico.class))).thenAnswer(returnsFirstArg());
     }
