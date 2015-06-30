@@ -9,7 +9,7 @@
 Name:               portal-de-servicos
 Version:            %{version}
 Release:            1
-Summary:            Portal de Serviços
+Summary:            Portal de Servicos
 Group:              Applications
 License:            MIT
 Vendor:             ThoughtWorks, Inc
@@ -27,7 +27,7 @@ Source2:            %{_sourcedir}/importar-opinioes
 Source3:            %{_sourcedir}/portal-de-servicos.default.config
 
 %description
-Portal de Serviços do Governo Federal do Brasil
+Portal de Servicos do Governo Federal do Brasil
 
 %prep
 
@@ -96,5 +96,5 @@ rm -rf %{buildroot}
 getent group %{_user} >/dev/null || groupadd -r %{_user}
 getent passwd %{_user} >/dev/null || \
     useradd -r -g %{_user} -d /home/%{_user} -s /sbin/nologin \
-    -c "Usuário para o serviço do Portal de Serviços" %{_user}
+    -c "Usuario para o servico do Portal de Servicos" %{_user}
 exit 0
