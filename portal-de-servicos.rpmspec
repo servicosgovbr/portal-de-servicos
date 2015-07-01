@@ -64,11 +64,14 @@ SyslogIdentifier=portal-de-servicos
 SyslogLevelPrefix=false
 StandardOutput=syslog
 StandardError=syslog
+WorkingDirectory=/var/lib/%{name}
 OOMScoreAdjust=-1000
 
 [Install]
 WantedBy=multi-user.target
 EOF
+
+mkdir -p %{buildroot}/var/lib/%{name}
 
 # Script para iniciar o processo
 mkdir -p %{buildroot}/%{prefix}/bin
@@ -85,6 +88,7 @@ EOF
 %attr(0755, %{_user}, %{_user}) %{prefix}/bin/importar-opinioes
 %attr(0644, %{_user}, %{_user}) %{prefix}/lib/%{name}.jar
 %attr(0644, %{_user}, %{_user}) /etc/systemd/system/%{name}.service
+%dir %attr(0755, %{_user}, %{_user}) /var/lib/%{name}
 
 %config %attr(0644, %{_user}, %{_user}) /etc/sysconfig/%{name}
 %config(noreplace) %attr(0644, %{_user}, %{_user}) /etc/sysconfig/%{name}-overrides
