@@ -4,7 +4,6 @@ import br.gov.servicos.servico.*;
 import br.gov.servicos.servico.areaDeInteresse.AreaDeInteresse;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
-import br.gov.servicos.temp.MapaVcge20;
 import com.github.slugify.Slugify;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;

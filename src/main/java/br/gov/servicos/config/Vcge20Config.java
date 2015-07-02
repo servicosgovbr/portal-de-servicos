@@ -1,6 +1,6 @@
 package br.gov.servicos.config;
 
-import br.gov.servicos.temp.MapaVcge20;
+import br.gov.servicos.importador.MapaVcge20;
 import com.github.slugify.Slugify;
 import lombok.AccessLevel;
 import lombok.SneakyThrows;

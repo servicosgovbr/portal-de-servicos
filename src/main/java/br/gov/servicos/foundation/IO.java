@@ -22,9 +22,19 @@ public class IO {
 
     @SneakyThrows
     public static String read(InputStream stream) {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream, defaultCharset()))) {
+        try (BufferedReader reader = bufferedReader(stream)) {
             return reader.lines().collect(joining("\n"));
         }
+    }
+
+    @SneakyThrows
+    public static BufferedReader bufferedReader(Resource resource) {
+        return bufferedReader(resource.getInputStream());
+    }
+
+    @SneakyThrows
+    public static BufferedReader bufferedReader(InputStream stream) {
+        return new BufferedReader(new InputStreamReader(stream, defaultCharset()));
     }
 
 }
