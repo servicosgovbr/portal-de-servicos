@@ -99,6 +99,6 @@ rm -rf %{buildroot}
 %pre
 getent group %{_user} >/dev/null || groupadd -r %{_user}
 getent passwd %{_user} >/dev/null || \
-    useradd -r -g %{_user} -d /home/%{_user} -s /sbin/nologin \
+    useradd -r -g %{_user} -d /var/lib/%{name} -s /sbin/nologin \
     -c "Usuario para o servico do Portal de Servicos" %{_user}
 exit 0
