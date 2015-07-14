@@ -108,7 +108,7 @@ class ImportadorV2 {
                         .withTitulo(e.texto("nome")), x -> !x.isEmpty()))
 
                 .withLegislacoes(xml.coleta("legislacao-relacionada > link", l -> l.atributo("href")))
-                .withSolicitantes(xml.coleta("solicitantes > solicitante"))
+                .withSolicitantes(xml.coleta("solicitantes > solicitante", ArquivoXml::texto, x -> !x.isEmpty()))
                 .withGratuito(xml.textoAtivo("gratuito"))
                 .withSituacao(xml.texto("situacao"))
 

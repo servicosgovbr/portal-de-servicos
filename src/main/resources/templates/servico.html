@@ -60,6 +60,9 @@
             <h3 class="subtitulo-servico">Tempo estimado</h3>
 
             <p th:text="${servico.tempoEstimado + '.'}"></p>
+
+            <p th:unless="${#strings.isEmpty(servico.tempoEstimado.excecoes)}" th:text="${servico.tempoEstimado.excecoes}"></p>
+
         </th:block>
 
         <th:block th:unless="${servico.etapas.isEmpty()}">
