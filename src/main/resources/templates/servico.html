@@ -156,9 +156,9 @@
             <input name="enviar" type="submit" class="acao" value="ENVIAR"/>
 
             <input name="utf8" type="hidden" value="✓"/><!-- força utf8 -->
-            <input name="url" type="hidden" th:value="${url}"/>
-            <input name="busca" type="hidden" th:value="${busca}"/>
-            <input name="ticket" type="hidden" th:value="${ticket}"/>
+            <input name="url" type="hidden" th:value="${#httpServletRequest.requestURI}"/>
+            <input name="busca" type="hidden" th:value="${#httpServletRequest.queryString}"/>
+            <input name="ticket" type="hidden" th:value="${#httpServletRequest.getAttribute('req.ticket').substring(24)}"/>
         </form>
 
         <span class="link-github">
