@@ -3,6 +3,7 @@ package br.gov.servicos.frontend;
 import br.gov.servicos.Main;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
@@ -46,6 +47,7 @@ public class UITest {
     }
 
     @Test
+    @Ignore
     public void caminhoFeliz() throws Exception {
         driver.get(baseUrl);
         assertThat(driver.getTitle(), is("Portal de Serviços - Página Inicial"));
