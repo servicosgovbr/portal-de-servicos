@@ -92,16 +92,41 @@
     line-height: 1.2em;
   }
 
-.subtitulo-etapa {
-  margin-left: 40px; 
-  margin-top: 10px;
-  padding: 20px 20px 20px 20px;
-  background-color: $branco;
-  border: 1px solid $cinza-medio;
-  border-top: 1px solid $cinza-medio;
-  font-size: 15px;
-}
+  ul.solicitantes {
+    display: block;
 
+    li {
+      display: list-item;
+      list-style-type: disc;
+      color: $cinza-escuro;
+      list-style-position: inside;
+    }
+  }
+
+  .subtitulo-etapa {
+    margin-left: 40px;
+    margin-top: 10px;
+    padding: 0 20px 20px 20px;
+    background-color: $branco;
+    border: 1px solid $cinza-medio;
+    border-top: 1px solid $cinza-medio;
+    font-size: 15px;
+
+    .info-etapa {
+      padding-top: 20px;
+    }
+
+    ul {
+      display: block;
+
+      li {
+        display: list-item;
+        list-style-type: disc;
+        color: $cinza-escuro;
+        list-style-position: inside;
+      }
+    }
+  }
 
   h4 {
     font-size: 18px;

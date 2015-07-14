@@ -42,13 +42,16 @@ public class OrgaoRepositoryIntegrationTest {
     public void listaOrgaosEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
                 .withId("servico-1")
-                .withPrestador(new Orgao().withId("orgao-1").withNome("Ministério da Educação"))
-                .withResponsavel(new Orgao().withId("orgao-2").withNome("Instituto Nacional de Estudos e Pesquisas")));
+                .withOrgao(new Orgao().withId("orgao-1").withNome("Ministério da Educação")));
 
         servicos.save(SERVICO
                 .withId("servico-2")
-                .withPrestador(new Orgao().withId("orgao-3").withNome("Ministério dos Transportes"))
-                .withResponsavel(new Orgao().withId("orgao-3").withNome("Ministério dos Transportes")));
+                .withOrgao(new Orgao().withId("orgao-3").withNome("Ministério dos Transportes")));
+
+
+        servicos.save(SERVICO
+                .withId("servico-3")
+                .withOrgao(new Orgao().withId("orgao-2").withNome("Ministério dos Transportes")));
 
         List<Orgao> resultados = orgaos.findAll();
 

@@ -25,7 +25,7 @@ public class ImportadorTest {
     ImportadorCartasDeServico importadorCartasDeServico;
 
     @Mock
-    ImportadorV1 importadorV1;
+    ImportadorV2 importadorV2;
 
     @Mock
     ImportadorConteudo importadorConteudo;
@@ -34,7 +34,7 @@ public class ImportadorTest {
 
     @Before
     public void setUp() throws Exception {
-        importador = new Importador(portalDeServicosIndex, importadorV1, importadorConteudo, importadorCartasDeServico);
+        importador = new Importador(portalDeServicosIndex, importadorV2, importadorConteudo, importadorCartasDeServico);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class ImportadorTest {
     @Test
     public void deveRodarImportadorLegado() throws Exception {
         importador.importar();
-        verify(importadorV1).importar(any(File.class));
+        verify(importadorV2).importar(any(File.class));
     }
 
     @Test

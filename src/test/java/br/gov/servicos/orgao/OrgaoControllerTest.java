@@ -51,7 +51,7 @@ public class OrgaoControllerTest {
 
         doReturn(umServico)
                 .when(buscador)
-                .buscaSemelhante(of("receita-federal"), "prestador.id", "responsavel.id");
+                .buscaSemelhante(of("receita-federal"), "orgao.id");
 
         assertCompareListModelAttribute(controller.orgao("receita-federal"), "resultados", umServico);
     }

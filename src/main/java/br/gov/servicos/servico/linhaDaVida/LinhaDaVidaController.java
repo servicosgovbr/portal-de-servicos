@@ -37,7 +37,7 @@ class LinhaDaVidaController {
 
         model.put("termo", id);
         model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/linhas-da-vida/%s.md", id))).withId(id));
-        model.put("resultados", buscador.buscaConteudosPor("linhasDaVida.id", ofNullable(id))
+        model.put("resultados", buscador.buscaConteudosPor("eventosDaLinhaDaVida.id", ofNullable(id))
                 .stream()
                 .sorted((x, y) -> x.getId().compareTo(y.getId()))
                 .collect(toList()));

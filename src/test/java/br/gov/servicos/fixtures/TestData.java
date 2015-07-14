@@ -3,15 +3,13 @@ package br.gov.servicos.fixtures;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoHtml;
 import br.gov.servicos.metricas.Opiniao;
-import br.gov.servicos.servico.*;
-import br.gov.servicos.servico.areaDeInteresse.AreaDeInteresse;
+import br.gov.servicos.servico.Orgao;
+import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
-import br.gov.servicos.servico.publicoAlvo.PublicoAlvo;
 
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static java.util.Collections.singletonList;
 import static java.util.Collections.unmodifiableList;
 
 public class TestData {
@@ -19,17 +17,7 @@ public class TestData {
     public static final Servico SERVICO = new Servico()
             .withId("exemplo-de-servico")
             .withTitulo("Exemplo de serviço")
-            .withDescricao("Descrição serviço")
-            .withUrl("url://site")
-            .withUrlAgendamento("url://agendamento")
-            .withTaxa("R$ 10,50")
-            .withPrestador(new Orgao().withId("orgao-prestador").withNome("Órgão prestador"))
-            .withResponsavel(new Orgao().withId("orgao-responsavel").withNome("Órgão responsável"))
-            .withPublicosAlvo(singletonList(new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos")))
-            .withAreasDeInteresse(singletonList(new AreaDeInteresse().withId("area-de-interesse").withArea("Área de Interesse")))
-            .withLinhasDaVida(singletonList(new LinhaDaVida().withId("linha-da-vida").withTitulo("Linha da Vida")))
-            .withCanaisDePrestacao(singletonList(new CanalDePrestacao().withTipo("web").withDescricao("Web").withUrl("http://canal-prestacao")))
-            .withInformacoesUteis(singletonList(new InformacaoUtil().withTipo("app").withDescricao("Aplicativo móvel").withUrl("http://app-movel")));
+            .withDescricao("Descrição serviço");
 
     public static final Conteudo CONTEUDO_DE_SERVICO = Conteudo.fromServico(SERVICO);
 

@@ -36,48 +36,130 @@
     <div class="row">
         <h2 th:text="${servico.titulo}">Nome do Serviço</h2>
 
-        <p style="white-space: pre-wrap;" th:utext="${servico.descricao}">
+        <th:block th:each="canal : ${servico.canaisPreferenciais}">
+            <a class="acao-servico" th:href="${canal.referencia}">
+                <th:block th:text="${canal.titulo ?: 'Acessar' }">Título do link</th:block> <i class="fa fa-globe"></i>
+            </a>
+        </th:block>
+
+        <a href="javascript:window.print()" class="acao-servico">
+            Imprimir esta página <i class="fa fa-print"></i></a>
+
+        <div class="markdown" th:utext="${@markdown.render(servico.descricao)}">
             Descrição do serviço
-        </p>
+        </div>
 
-        <p th:if="${not #strings.isEmpty(servico.taxa)}">
-            Valor/taxa: <span th:text="${servico.taxa}">R$ 999,99</span>
-        </p>
+        <th:block th:unless="${servico.solicitantes.isEmpty()}">
+            <h3 class="subtitulo-servico">Quem pode utilizar este serviço?</h3>
+            <ul class="solicitantes" th:each="solicitante : ${servico.solicitantes}">
+                <li><p th:text="${solicitante}"></p></li>
+            </ul>
+        </th:block>
 
-        <a th:if="${not #strings.isEmpty(servico.url)}" class="acao acao-comecar" th:href="${servico.url}">
-            Começar
-        </a>
+        <th:block th:unless="${servico.tempoEstimado == null or servico.tempoEstimado.isEmpty()}">
+            <h3 class="subtitulo-servico">Tempo estimado</h3>
 
-        <a th:if="${not #strings.isEmpty(servico.urlAgendamento)}" class="acao acao-agendar"
-           th:href="${servico.urlAgendamento}">
-            Agendar
-        </a>
+            <p th:text="${servico.tempoEstimado + '.'}"></p>
+        </th:block>
 
-        <p th:unless="${#strings.isEmpty(servico.responsavel.nome)}">
+        <th:block th:unless="${servico.etapas.isEmpty()}">
+
+            <h3 class="subtitulo-servico">Etapas para a realização deste serviço</h3>
+
+            <div class="etapas" th:each="etapa, row : ${servico.etapas}">
+                <p class="circle" th:text="${row.index + 1}"></p>
+                <h4 class="etapa" th:text="${etapa.titulo ?: 'Acesse o serviço'}">Título da etapa</h4>
+
+                <div class="etapa markdown" th:utext="${@markdown.render(etapa.descricao)}">Descrição da etapa</div>
+
+                <th:block th:if="${!etapa.documentos.isEmpty() or
+                                !etapa.canaisDePrestacao.isEmpty() or
+                                !etapa.custos.isEmpty() }">
+
+                    <div class="subtitulo-etapa">
+
+                        <th:block th:if="${!etapa.documentos.isEmpty()}">
+                            <p class="info-etapa">Documentos necessários para esta etapa:</p>
+                            <ul>
+                                <li th:each="documento : ${etapa.documentos}" th:text="${documento}">Documento</li>
+                            </ul>
+                        </th:block>
+
+                        <th:block th:if="${!etapa.canaisDePrestacao.isEmpty()}">
+                            <p class="info-etapa">Canais de comunicação com este serviço:</p>
+                            <ul>
+                                <li th:each="canal : ${etapa.canaisDePrestacao}">
+                                    <span th:text="${canal.tipo}">Tipo</span>:
+                                    <th:block th:if="${canal.tipo == 'Web'}">
+                                        <a th:href="${canal.referencia}" th:text="${canal.titulo ?: canal.referencia}">
+                                            Titulo
+                                        </a>
+                                    </th:block>
+                                    <th:block th:if="${canal.tipo != 'Web'}">
+                                        <span th:text="${canal.titulo ?: canal.referencia}">Titulo</span>
+                                    </th:block>
+                                </li>
+                            </ul>
+                        </th:block>
+
+                        <th:block th:if="${!etapa.custos.isEmpty()}">
+                            <p class="info-etapa">Custos para a realização desta etapa:</p>
+                            <ul>
+                                <li th:each="custo : ${etapa.custos}">
+                                    <span th:text="${custo.descricao}">Descrição</span>:
+                                    <span th:text="${custo.valor}">10,00</span>
+                                </li>
+                            </ul>
+                        </th:block>
+                    </div>
+
+                </th:block>
+            </div>
+        </th:block>
+
+        <p class="separacao-orgao" th:unless="${#strings.isEmpty(servico.orgao.nome)}">
             Este é um serviço
-            <th:block th:text="${@genero.de(servico.responsavel.id)}">do(a) </th:block>
-            <a th:unless="${#strings.isEmpty(servico.responsavel.nome)}"
-                     th:href="@{/orgao/{id}(id=${servico.responsavel.id})}"
-                     th:text="${servico.responsavel.nome}">
+            <th:block th:text="${@genero.de(servico.orgao.id)}">do(a)</th:block>
+            <a th:unless="${#strings.isEmpty(servico.orgao.nome)}"
+               th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
+               th:text="${servico.orgao.nome}">
                 Órgão responsavel
-            </a><th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">, prestado
-                <th:block th:text="${@genero.per(servico.prestador.id)}">pelo(a)</th:block>
-            <a th:unless="${#strings.isEmpty(servico.prestador.nome)}"
-                     th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
-                     th:text="${servico.prestador.nome}">
-                Órgão prestador
-            </a></th:block>.
+            </a>.
             Em caso de dúvidas, reclamações ou sugestões favor
-            <th:block th:if="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                contactá-<th:block th:text="${@genero.lo(servico.responsavel.id)}">lo(a)</th:block>.
-            </th:block>
-            <th:block th:unless="${servico.prestador == null || servico.responsavel.id == servico.prestador.id}">
-                contactá-<th:block th:text="${@genero.los(servico.responsavel.id)}">los(as)</th:block>.
-            </th:block>
+            contactá-
+            <th:block th:text="${@genero.lo(servico.orgao.id)}">lo(a)</th:block>
+            .
         </p>
 
-        <div th:replace="fragments/canais-de-prestacao :: .canais-de-prestacao"></div>
-        <div th:replace="fragments/informacoes-uteis :: .informacoes-uteis"></div>
+        <hr style="margin-top: 20px; border: none"/>
+
+        <form class="feedback-servico" accept-charset="UTF-8" action="/opiniao" method="post">
+
+            <h3 class="opiniao">Você achou as informações acima úteis?</h3>
+
+            <p class="formulario-opiniao">
+                <label for="sim">Sim</label>
+                <input name="conteudoEncontrado" id="sim" class="left" type="radio" value="true" required="required"/>
+
+                <br class="clear"/>
+
+                <label for="nao">Não</label>
+                <input name="conteudoEncontrado" id="nao" class="left" type="radio" value="false"/>
+            </p>
+
+            <label for="opiniao">
+                <h3 class="opiniao">Quais informações você sentiu falta neste serviço?</h3>
+
+                <textarea id="opiniao" name="mensagem" rows="5" class="row"></textarea>
+            </label>
+
+            <input name="enviar" type="submit" class="acao" value="ENVIAR"/>
+
+            <input name="utf8" type="hidden" value="✓"/><!-- força utf8 -->
+            <input name="url" type="hidden" th:value="${url}"/>
+            <input name="busca" type="hidden" th:value="${busca}"/>
+            <input name="ticket" type="hidden" th:value="${ticket}"/>
+        </form>
 
         <span class="link-github">
             <a class="acao-servico right"

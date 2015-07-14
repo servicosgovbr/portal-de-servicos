@@ -48,7 +48,7 @@ public class LinhaDaVidaControllerTest {
 
         doReturn(umConteudo)
                 .when(buscador)
-                .buscaConteudosPor("linhasDaVida.id", of("Aposentadoria"));
+                .buscaConteudosPor("eventosDaLinhaDaVida.id", of("Aposentadoria"));
 
         assertCompareListModelAttribute(controller.linhaDaVida("Aposentadoria"), "resultados", umConteudo);
     }

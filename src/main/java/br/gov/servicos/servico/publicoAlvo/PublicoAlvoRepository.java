@@ -22,8 +22,8 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class PublicoAlvoRepository {
 
-    private static final String PUBLICOS_ALVO = "publicosAlvo";
-    private static final String TITULO = "publicosAlvo.titulo";
+    private static final String PUBLICOS_ALVO = "segmentosDaSociedade";
+    private static final String TITULO = "segmentosDaSociedade.titulo";
 
     Slugify slugify;
     ElasticsearchTemplate elasticsearch;

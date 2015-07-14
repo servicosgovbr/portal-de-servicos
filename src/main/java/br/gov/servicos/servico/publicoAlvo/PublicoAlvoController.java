@@ -3,6 +3,7 @@ package br.gov.servicos.servico.publicoAlvo;
 import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.servico.Servico;
+import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.*;
 
+import static java.util.Collections.emptyList;
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
@@ -25,10 +28,18 @@ import static lombok.AccessLevel.PRIVATE;
 class PublicoAlvoController {
 
     Buscador buscador;
+    Slugify slugify;
 
     @Autowired
-    PublicoAlvoController(Buscador buscador) {
+    PublicoAlvoController(Buscador buscador, Slugify slugify) {
         this.buscador = buscador;
+        this.slugify = slugify;
+    }
+
+    @RequestMapping({"/publico-alvo/servicos-aos-{id}", "/publico-alvo/servicos-as-{id}"})
+    RedirectView legado(@PathVariable String id,
+                        @RequestParam(required = false) Character letra) {
+        return new RedirectView("/publico-alvo/" + id + ofNullable(letra).map(l -> "?letra=" + l).orElse(""));
     }
 
     @RequestMapping("/publico-alvo/{id}")
@@ -54,7 +65,7 @@ class PublicoAlvoController {
     }
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial(String publicoAlvo) {
-        return buscador.buscaServicosPor("publicosAlvo.id", ofNullable(publicoAlvo))
+        return buscador.buscaServicosPor("segmentosDaSociedade.id", ofNullable(publicoAlvo))
                 .stream()
                 .collect(groupingBy(s -> s.getTitulo().trim().toUpperCase().charAt(0)));
     }
@@ -69,7 +80,7 @@ class PublicoAlvoController {
     private PublicoAlvo extraiPublicoAlvo(String id, List<Servico> servicos) {
         return servicos
                 .stream()
-                .flatMap(s -> s.getPublicosAlvo().stream())
+                .flatMap(s -> ofNullable(s.getSegmentosDaSociedade()).orElse(emptyList()).stream())
                 .filter(p -> p.getId().equals(id))
                 .findFirst()
                 .get();

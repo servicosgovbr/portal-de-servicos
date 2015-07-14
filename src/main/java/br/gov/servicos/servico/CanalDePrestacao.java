@@ -5,8 +5,10 @@ import lombok.Value;
 import lombok.experimental.Wither;
 import org.springframework.data.elasticsearch.annotations.Field;
 
+import static com.google.common.base.Strings.isNullOrEmpty;
 import static lombok.AccessLevel.PUBLIC;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
+import static org.springframework.data.elasticsearch.annotations.FieldType.Boolean;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Value
@@ -14,16 +16,23 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @Wither
 public class CanalDePrestacao {
 
-    @Field(type = String)
-    String descricao;
-
     @Field(type = String, index = not_analyzed)
     String tipo;
 
+    @Field(type = String)
+    String titulo;
+
     @Field(type = String, index = not_analyzed)
-    String url;
+    String referencia;
+
+    @Field(type = Boolean, index = not_analyzed)
+    Boolean preferencial;
 
     public CanalDePrestacao() {
-        this(null, null, null);
+        this(null, null, null, null);
+    }
+
+    public boolean isEmpty() {
+        return isNullOrEmpty(referencia);
     }
 }

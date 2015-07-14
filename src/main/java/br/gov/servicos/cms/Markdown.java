@@ -24,6 +24,10 @@ public class Markdown {
         pegdown = new PegDownProcessor();
     }
 
+    public String render(String markdown) {
+        return pegdown.markdownToHtml(markdown);
+    }
+
     @Cacheable("conteudo")
     public ConteudoHtml toHtml(Resource resource) {
         if (!resource.exists()) {

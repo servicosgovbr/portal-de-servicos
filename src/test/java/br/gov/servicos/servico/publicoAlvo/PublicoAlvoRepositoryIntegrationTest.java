@@ -32,24 +32,25 @@ public class PublicoAlvoRepositoryIntegrationTest {
         servicos.deleteAll();
 
         servicos.save(SERVICO
-                .withId("servico-1").withPublicosAlvo(asList(
-                        new PublicoAlvo().withId("servicos-as-empresas").withTitulo("Serviços às Empresas"),
-                        new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos"))));
+                .withId("servico-1").withSegmentosDaSociedade(asList(
+                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos"),
+                        new PublicoAlvo().withId("empresas").withTitulo("Empresas"))));
 
         servicos.save(SERVICO
-                .withId("servico-2").withPublicosAlvo(singletonList(
-                        new PublicoAlvo().withId("servicos-as-empresas").withTitulo("Serviços às Empresas"))));
+                .withId("servico-2").withSegmentosDaSociedade(singletonList(
+                        new PublicoAlvo().withId("empresas").withTitulo("Empresas"))));
 
         servicos.save(SERVICO
-                .withId("servico-3").withPublicosAlvo(singletonList(
-                        new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos"))));
+                .withId("servico-3").withSegmentosDaSociedade(singletonList(
+                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos")
+                )));
     }
 
     @Test
     public void deveAgruparPublicosAlvoPorTitulo() {
         assertThat(publicosAlvo.findAll(),
                 equalTo(asList(
-                        new PublicoAlvo().withId("servicos-aos-cidadaos").withTitulo("Serviços aos Cidadãos"),
-                        new PublicoAlvo().withId("servicos-as-empresas").withTitulo("Serviços às Empresas"))));
+                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos"),
+                        new PublicoAlvo().withId("empresas").withTitulo("Empresas"))));
     }
 }

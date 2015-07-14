@@ -32,13 +32,8 @@ public class OrgaoRepository {
 
         Iterable<Servico> svcs = servicos.findAll();
         svcs.forEach(s -> {
-            if (s.getPrestador() != null) {
-                orgaos.add(s.getPrestador());
-            }
-        });
-        svcs.forEach(s -> {
-            if (s.getResponsavel() != null) {
-                orgaos.add(s.getResponsavel());
+            if (s.getOrgao() != null) {
+                orgaos.add(s.getOrgao());
             }
         });
 

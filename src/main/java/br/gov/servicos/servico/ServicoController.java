@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -23,7 +24,6 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.StreamSupport.stream;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.domain.Sort.Direction.ASC;
-import static org.springframework.http.MediaType.APPLICATION_XML_VALUE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
@@ -74,30 +74,11 @@ class ServicoController {
         return new ModelAndView("servico", "servico", servico);
     }
 
-
-    @RequestMapping(value = "/servico-novo/{id}", method = GET)
-    ModelAndView getPaginaNova(@PathVariable("id") String id) {
-        Servico servico = ofNullable(servicos.findOne(id))
+    @RequestMapping(value = "/servico/{id}.json", method = GET, produces = "application/json")
+    @ResponseBody
+    Servico debug(@PathVariable("id") String id) {
+        return ofNullable(servicos.findOne(id))
                 .orElseThrow(ConteudoNaoEncontrado::new);
-
-        return new ModelAndView("servico-novo", "servico", servico);
-    }
-
-
-    @RequestMapping(value = "/servico-novo-b/{id}", method = GET)
-    ModelAndView getPaginaNovaB(@PathVariable("id") String id) {
-        Servico servico = ofNullable(servicos.findOne(id))
-                .orElseThrow(ConteudoNaoEncontrado::new);
-
-        return new ModelAndView("servico-novo-b", "servico", servico);
-    }
-
-    @RequestMapping(value = "/servico/{id}.xml", method = GET, produces = APPLICATION_XML_VALUE)
-    ModelAndView xml(@PathVariable("id") String id) {
-        Servico servico = ofNullable(servicos.findOne(id))
-                .orElseThrow(ConteudoNaoEncontrado::new);
-
-        return new ModelAndView("servico-xml", "servico", servico);
     }
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial() {

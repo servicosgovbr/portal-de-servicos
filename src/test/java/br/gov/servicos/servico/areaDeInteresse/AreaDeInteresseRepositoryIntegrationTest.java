@@ -47,15 +47,18 @@ public class AreaDeInteresseRepositoryIntegrationTest extends TestCase {
         servicos.save(SERVICO
                 .withId("servico-1").withAreasDeInteresse(asList(
                         new AreaDeInteresse().withId("habitacao").withArea("Habitação"),
-                        new AreaDeInteresse().withId("educacao-a-distancia").withArea("Educação à distância"))));
+                        new AreaDeInteresse().withId("educacao-a-distancia").withArea("Educação à distância")
+                )));
 
         servicos.save(SERVICO
                 .withId("servico-2").withAreasDeInteresse(asList(
-                        new AreaDeInteresse().withId("abastecimento").withArea("Abastecimento"))));
+                        new AreaDeInteresse().withId("abastecimento").withArea("Abastecimento")
+                )));
 
         servicos.save(SERVICO
                 .withId("servico-3").withAreasDeInteresse(asList(
-                        new AreaDeInteresse().withId("agropecuaria").withArea("Agropecuária"))));
+                        new AreaDeInteresse().withId("agropecuaria").withArea("Agropecuária")
+                )));
 
         List<AreaDeInteresse> linhas = areasDaVida.findAll();
 

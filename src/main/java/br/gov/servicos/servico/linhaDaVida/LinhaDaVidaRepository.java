@@ -35,12 +35,12 @@ public class LinhaDaVidaRepository {
         return et.query(
                 new NativeSearchQueryBuilder()
                         .addAggregation(
-                                new TermsBuilder("linhasDaVida")
-                                        .field("linhasDaVida.titulo")
+                                new TermsBuilder("eventosDaLinhaDaVida")
+                                        .field("eventosDaLinhaDaVida.titulo")
                                         .size(MAX_VALUE)
                         ).build()
                 , response -> ((Terms) response.getAggregations()
-                        .get("linhasDaVida"))
+                        .get("eventosDaLinhaDaVida"))
                         .getBuckets()
                         .stream()
                         .map(bucket -> new LinhaDaVida()

@@ -44,7 +44,7 @@ class OrgaoController {
 
         model.put("termo", id);
         model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/orgaos/%s.md", id))).withId(id));
-        model.put("resultados", buscador.buscaSemelhante(ofNullable(id), "prestador.id", "responsavel.id")
+        model.put("resultados", buscador.buscaSemelhante(ofNullable(id), "orgao.id")
                 .stream()
                 .sorted((left, right) -> left.getId().compareTo(right.getId()))
                 .collect(toList()));

@@ -45,16 +45,16 @@ public class LinhaDaVidaRepositoryIntegrationTest {
     @Test
     public void listaLinhasDaVidaEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
-                .withId("servico-1").withLinhasDaVida(asList(
+                .withId("servico-1").withEventosDaLinhaDaVida(asList(
                         new LinhaDaVida().withId("meu-negocio").withTitulo("Meu negócio"),
                         new LinhaDaVida().withId("indo-para-outro-pais").withTitulo("Indo para outro país"))));
 
         servicos.save(SERVICO
-                .withId("servico-2").withLinhasDaVida(singletonList(
+                .withId("servico-2").withEventosDaLinhaDaVida(singletonList(
                         new LinhaDaVida().withId("meu-negocio").withTitulo("Meu negócio"))));
 
         servicos.save(SERVICO
-                .withId("servico-3").withLinhasDaVida(singletonList(
+                .withId("servico-3").withEventosDaLinhaDaVida(singletonList(
                         new LinhaDaVida().withId("aposentadoria").withTitulo("Aposentadoria"))));
 
         List<LinhaDaVida> linhas = linhasDaVida.findAll();

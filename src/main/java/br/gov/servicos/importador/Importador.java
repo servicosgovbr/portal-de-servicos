@@ -28,17 +28,17 @@ public class Importador {
 
     PortalDeServicosIndex indices;
     ImportadorCartasDeServico cartasDeServico;
-    ImportadorV1 v1;
+    ImportadorV2 v2;
     ImportadorConteudo conteudo;
 
     @Autowired
     public Importador(PortalDeServicosIndex indices,
-                      ImportadorV1 v1,
+                      ImportadorV2 v2,
                       ImportadorConteudo conteudo,
                       ImportadorCartasDeServico cartasDeServico) {
 
         this.indices = indices;
-        this.v1 = v1;
+        this.v2 = v2;
         this.conteudo = conteudo;
         this.cartasDeServico = cartasDeServico;
     }
@@ -54,7 +54,7 @@ public class Importador {
 
         Map<String, Object> retorno = new HashMap<>();
         retorno.put("versao-cartas-de-servico", cartasDeServico.importar(repositorioCartas));
-        retorno.put("servicos", v1.importar(repositorioCartas));
+        retorno.put("servicos-v2", v2.importar(repositorioCartas));
         retorno.put("conteudos", conteudo.importar());
 
         if (!deleteRecursively(repositorioCartas))

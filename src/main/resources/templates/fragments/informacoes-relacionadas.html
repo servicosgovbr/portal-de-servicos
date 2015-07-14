@@ -11,21 +11,15 @@
 
     <dd>
         <ul>
-            <li th:each="linhaDaVida : ${servico.linhasDaVida}">
+            <li th:each="linhaDaVida : ${servico.eventosDaLinhaDaVida}">
                 <a th:href="@{/linha-da-vida/{id}(id=${linhaDaVida.id})}">
                     <span th:text="${linhaDaVida.titulo}">Título da Linha da Vida</span>
                 </a>
             </li>
-            <li th:if="${servico.responsavel}">
-                <a th:href="@{/orgao/{id}(id=${servico.responsavel.id})}"
-                   th:text="${servico.responsavel.nome}">
-                    Órgão Responsavel
-                </a>
-            </li>
-            <li th:if="${servico.prestador} and ${servico.prestador.id != servico.responsavel.id}">
-                <a th:href="@{/orgao/{id}(id=${servico.prestador.id})}"
-                   th:text="${servico.prestador.nome}">
-                    Órgão Responsavel
+            <li th:if="${servico.orgao}">
+                <a th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
+                   th:text="${servico.orgao.nome}">
+                    Órgão
                 </a>
             </li>
         </ul>
