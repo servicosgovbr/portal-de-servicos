@@ -140,7 +140,7 @@ class ImportadorV2 {
                         new Etapa()
                                 .withTitulo(e.texto("titulo"))
                                 .withDescricao(e.texto("descricao"))
-                                .withDocumentos(e.coleta("documentos documento"))
+                                .withDocumentos(e.coleta("documentos documento", ArquivoXml::texto, x -> !x.isEmpty()))
                                 .withCustos(e.coleta("custos custo",
                                         c -> new Custo()
                                                 .withDescricao(c.texto("descricao"))
