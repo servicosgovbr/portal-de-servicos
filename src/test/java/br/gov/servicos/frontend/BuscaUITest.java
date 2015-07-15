@@ -25,7 +25,7 @@ import static org.junit.Assert.assertThat;
 @SpringApplicationConfiguration(classes = Main.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
-public class UITest {
+public class BuscaUITest {
 
     @Autowired
     Importador importador;
@@ -53,7 +53,7 @@ public class UITest {
     }
 
     @Test
-    public void caminhoFeliz() throws Exception {
+    public void buscaSimplesPorDarf() throws Exception {
         driver.get(baseUrl);
         assertThat(driver.getTitle(), is("Portal de Serviços - Página Inicial"));
 
