@@ -1,14 +1,15 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.Main;
+import br.gov.servicos.importador.Importador;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
@@ -26,6 +27,9 @@ import static org.junit.Assert.assertThat;
 @IntegrationTest("server.port:0")
 public class UITest {
 
+    @Autowired
+    Importador importador;
+
     WebDriver driver;
 
     @Value("${local.server.port}")
@@ -35,6 +39,8 @@ public class UITest {
 
     @Before
     public void setUp() throws Exception {
+        importador.importar();
+
         baseUrl = "http://localhost:" + port + "/";
 
         driver = new HtmlUnitDriver(false);
@@ -47,7 +53,6 @@ public class UITest {
     }
 
     @Test
-    @Ignore
     public void caminhoFeliz() throws Exception {
         driver.get(baseUrl);
         assertThat(driver.getTitle(), is("Portal de Serviços - Página Inicial"));
