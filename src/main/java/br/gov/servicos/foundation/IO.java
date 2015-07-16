@@ -28,11 +28,6 @@ public class IO {
     }
 
     @SneakyThrows
-    public static BufferedReader bufferedReader(Resource resource) {
-        return bufferedReader(resource.getInputStream());
-    }
-
-    @SneakyThrows
     public static BufferedReader bufferedReader(InputStream stream) {
         return new BufferedReader(new InputStreamReader(stream, defaultCharset()));
     }
