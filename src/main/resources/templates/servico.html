@@ -110,7 +110,7 @@
                             <ul>
                                 <li th:each="custo : ${etapa.custos}">
                                     <span th:text="${custo.descricao}">Descrição</span>:
-                                    <span th:text="${custo.valor}">10,00</span>
+                                    R$ <span th:text="${custo.valor}">10,00</span>
                                 </li>
                             </ul>
                         </th:block>
