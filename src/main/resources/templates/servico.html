@@ -119,7 +119,9 @@
                 </th:block>
             </div>
         </th:block>
+    </div>
 
+    <div class="row">
         <p class="separacao-orgao" th:unless="${#strings.isEmpty(servico.orgao.nome)}">
             Este é um serviço
             <th:block th:text="${@genero.de(servico.orgao.id)}">do(a)</th:block>
@@ -135,7 +137,9 @@
         </p>
 
         <hr style="margin-top: 20px; border: none"/>
+    </div>
 
+    <div class="row">
         <form class="feedback-servico" accept-charset="UTF-8" action="/opiniao" method="post">
 
             <h3 class="opiniao">Você achou as informações acima úteis?</h3>
