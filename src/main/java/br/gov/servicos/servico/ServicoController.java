@@ -74,6 +74,14 @@ class ServicoController {
         return new ModelAndView("servico", "servico", servico);
     }
 
+    @RequestMapping(value = "/miolo/{id}", method = GET)
+    ModelAndView getHtml(@PathVariable("id") String id) {
+        Servico servico = ofNullable(servicos.findOne(id))
+                .orElseThrow(ConteudoNaoEncontrado::new);
+
+        return new ModelAndView("servico-miolo", "servico", servico);
+    }
+
     @RequestMapping(value = "/servico/{id}.json", method = GET, produces = "application/json")
     @ResponseBody
     Servico debug(@PathVariable("id") String id) {
