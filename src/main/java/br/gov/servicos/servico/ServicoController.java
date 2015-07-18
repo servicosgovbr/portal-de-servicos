@@ -79,7 +79,7 @@ class ServicoController {
         Servico servico = ofNullable(servicos.findOne(id))
                 .orElseThrow(ConteudoNaoEncontrado::new);
 
-        return new ModelAndView("servico-miolo", "servico", servico);
+        return new ModelAndView("servico :: //section/div[@class=\"row\"][0]", "servico", servico);
     }
 
     @RequestMapping(value = "/servico/{id}.json", method = GET, produces = "application/json")
