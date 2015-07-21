@@ -47,9 +47,22 @@ body.contraste {
     color: $branco !important;
   }
 
-  #conteudo a.acao {
+  #conteudo a.acao, #conteudo a.acao-servico {
     background-color: $branco;
     color: $preto !important;
+
+    .fa {
+      color: #555;
+    }
+  }
+
+  .feedback-servico, .etapas .circle {
+    background-color: #555;
+
+    input.acao {
+      background-color: $branco !important;
+      color: $preto !important;
+    }
   }
 
   .paginacao-letras {
@@ -60,6 +73,11 @@ body.contraste {
 
   #acessibilidade span {
     color: $preto !important;
+  }
+
+  #conteudo .subtitulo-etapa {
+    background-color: $preto !important;
+    color: $branco !important;
   }
 
   .nav-tree dt {
