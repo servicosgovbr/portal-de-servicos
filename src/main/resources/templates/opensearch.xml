@@ -8,7 +8,7 @@
     <Tags>serviços governo</Tags>
     <Contact>servicos@planejamento.gov.br</Contact>
     <Url type="text/html" th:attr="template=${@baseUrl.and('/busca?q={searchTerms}')}"/>
-    <Url type="application/x-suggestions+json" th:attr="template=${@baseUrl.and('/sugestao?q={searchTerms}')}"/>
+    <Url type="application/json" rel="suggestions" th:attr="template=${@baseUrl.and('/sugestao?q={searchTerms}')}"/>
     <Image height="72" width="72" type="image/png" th:text="${@baseUrl.and('/assets/apple-touch-icon-72x72.png')}"/>
     <Developer>Ministério do Planejamento, Orçamento e Gestão - MPOG</Developer>
 </OpenSearchDescription>
