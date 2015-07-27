@@ -1,0 +1,42 @@
+/* TEAM */
+
+    Alexandre Klaser
+    github: alklaser
+    From: Porto Alegre, RS, Brazil
+
+    Barbara Wolff Dick
+    github: barbarawolffdick
+    From: Porto Alegre, RS, Brazil
+
+    Carlos Villela
+    github: cv
+    From: Porto Alegre, RS, Brazil
+
+    Clarissa Martins
+    From: São Paulo, SP, Brazil
+
+    Claudia Melo
+    github: claudiamelo
+    From: Brasilia, DF, Brazil
+
+    Erick Pintor
+    github: erickpintor
+    From: Porto Alegre, RS, Brazil
+
+    Jean Kirchner
+    github: jeankirchner
+    From: Porto Alegre, RS, Brazil
+
+    Olivia Janequine
+    github: oliviagj
+    From: Porto Alegre, RS, Brazil
+
+    Samantha Rosa
+    github: sahrosa
+    From: Porto Alegre, RS, Brazil
+
+/* SITE */
+    Language: Brazilian Portuguese
+    DOCTYPE: HTML5
+    IDE: IntelliJ IDEA
+    Technology: Java, JavaScript, SASS, Spring, Thymeleaf, ElasticSearch, github
