@@ -4,28 +4,60 @@
     github: alklaser
     From: Porto Alegre, RS, Brazil
 
+    Augusto Herrmann
+    github: augusto-herrmann
+    From: Brasília, DF, Brazil
+
     Barbara Wolff Dick
     github: barbarawolffdick
     From: Porto Alegre, RS, Brazil
+
+    Carlos Vieira
+    github: caduvieira
+    From: Brasília, DF, Brazil
 
     Carlos Villela
     github: cv
     From: Porto Alegre, RS, Brazil
 
-    Clarissa Martins
-    From: São Paulo, SP, Brazil
+    Christian Miranda
+    github: chris-redfield
 
     Claudia Melo
     github: claudiamelo
-    From: Brasilia, DF, Brazil
+    From: Brasília, DF, Brazil
+
+    Daniel Bandarrinha
+    github: bandarrinha
+    From: Brasília, DF, Brazil
 
     Erick Pintor
     github: erickpintor
     From: Porto Alegre, RS, Brazil
 
+    Everson Aguiar
+    github: eversonaguiar1
+    From: Brasília, DF, Brazil
+
+    Fabricio Almeida
+    github: almeidafab
+    From: Brasília, DF, Brazil
+
     Jean Kirchner
     github: jeankirchner
     From: Porto Alegre, RS, Brazil
+
+    Leonardo Campos
+    github: leocampos
+    From: São Paulo, SP, Brazil
+
+    Mauricio Formiga
+    github: mformiga
+    From: Brasilia, DF, Brazil
+
+    Nitai Bezerra da Silva
+    github: nitaibezerra
+    From: Brasilia, DF, Brazil
 
     Olivia Janequine
     github: oliviagj
@@ -39,4 +71,4 @@
     Language: Brazilian Portuguese
     DOCTYPE: HTML5
     IDE: IntelliJ IDEA
-    Technology: Java, JavaScript, SASS, Spring, Thymeleaf, ElasticSearch, github
+    Technology: Java, JavaScript, SASS, Spring, Thymeleaf, ElasticSearch, GitHub
