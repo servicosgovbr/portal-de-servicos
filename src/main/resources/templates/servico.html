@@ -89,7 +89,7 @@
                         </th:block>
 
                         <th:block th:if="${!etapa.canaisDePrestacao.isEmpty()}">
-                            <p class="info-etapa">Canais de comunicação com este serviço:</p>
+                            <p class="info-etapa">Canais de prestação desta etapa:</p>
                             <ul>
                                 <li th:each="canal : ${etapa.canaisDePrestacao}">
                                     <span th:text="${canal.tipo}">Tipo</span>:
