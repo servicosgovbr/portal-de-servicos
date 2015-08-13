@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="5.1.2" data-basepath=".." data-revision="Thu Aug 13 2015 20:28:48 GMT+0000 (UTC)">
+    <div class="book" data-level="5.1.2" data-basepath=".." data-revision="Thu Aug 13 2015 21:22:34 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1490,30 +1490,21 @@
                     
                         <h1 id="estatura-de-diret%C3%B3rios">Estatura de diret&#xF3;rios</h1>
 <p>A seguinte estrutura de diret&#xF3;rios para organizar o reposit&#xF3;rio de catas de servi&#xE7;o &#xE9; utilizada:</p>
-<h2 id="vis%C3%A3o-geral">Vis&#xE3;o geral:</h2>
+<h2 id="vis%C3%A3o-geral">Vis&#xE3;o geral</h2>
 <pre><code>cartas-servico
-&#x251C;&#x2500;&#x2500; schema
-&#x2502;   &#x2514;&#x2500;&#x2500; tipos-genericos.xsd
 &#x2514;&#x2500;&#x2500; vN
-    &#x2514;&#x2500;&#x2500; schema
-    |   &#x251C;&#x2500;&#x2500; servico.xsd
-    |   &#x2514;&#x2500;&#x2500; exemplos
-    |       &#x2514;&#x2500;&#x2500; servico.xml
+    &#x251C;&#x2500;&#x2500; servico.xsd
     &#x2514;&#x2500;&#x2500; servicos
-        &#x2514;&#x2500;&#x2500; segunda-via-cpf.xml
-</code></pre><h2 id="diret%C3%B3rios">Diret&#xF3;rios:</h2>
-<h3 id="cartas-servico-schema">cartas-servico/schema/</h3>
-<p>Arquivos no formato XSD contendo defini&#xE7;&#xF5;es gen&#xE9;ricas e independentes de qualquer vers&#xE3;o de carta de servi&#xE7;o.</p>
-<h3 id="cartas-servico-vn-schema">cartas-servico/vN/schema/</h3>
-<p>Onde &quot;N&quot; &#xE9; o n&#xFA;mero da vers&#xE3;o, cont&#xE9;m arquivos no formato XSD que definem os dados presentes nos servi&#xE7;os que est&#xE3;o
-naquela vers&#xE3;o. Estes XSDs procuram estabelecer o que &#xE9; necess&#xE1;rio para aquela vers&#xE3;o, utilizando-se de tipos mais 
-gen&#xE9;ricos definidos no diret&#xF3;rio <code>cartas-servico/schema</code>.</p>
-<h3 id="cartas-servico-vn-schema-exemplos">cartas-servico/vN/schema/exemplos/</h3>
-<p>Exemplos no formato XML, automaticamente validados conforme a defini&#xE7;&#xE3;o no formato XSD com mesmo nome.</p>
-<p>Estes arquivos servem tanto como ferramenta de teste para validar as defini&#xE7;&#xF5;es do esquema XSD quanto como arquivo base 
-para cria&#xE7;&#xE3;o de novos servi&#xE7;os no formato XML.</p>
-<h3 id="cartas-servico-vn-servicos">cartas-servico/vN/servicos/</h3>
-<p>Reposit&#xF3;rio de servi&#xE7;os, no formato XML, contendo todos os servi&#xE7;os de uma vers&#xE3;o espec&#xED;fica.</p>
+        &#x251C;&#x2500;&#x2500; segunda-via-cpf.xml
+        &#x251C;&#x2500;&#x2500; emissao-de-passaporte.xml
+        &#x2514;&#x2500;&#x2500; ...
+</code></pre><h3 id="cartas-servico-vn-servico-xsd">cartas-servico/vN/servico.xsd</h3>
+<p>Onde &quot;N&quot; &#xE9; o n&#xFA;mero da vers&#xE3;o, as defini&#xE7;&#xF5;es em formato XML Schema (XSD) dos dados presentes nos servi&#xE7;os que est&#xE3;o
+naquela vers&#xE3;o. </p>
+<h3 id="cartas-servico-vn-servicos-xml">cartas-servico/vN/servicos/*.xml</h3>
+<p>Reposit&#xF3;rio de servi&#xE7;os, no formato XML, contendo todos os servi&#xE7;os daquela uma vers&#xE3;o do formato.</p>
+<h2 id="vers%C3%A3o-atual">Vers&#xE3;o atual</h2>
+<p>A vers&#xE3;o atual do modelo das cartas de servi&#xE7;os &#xE9; a 3, e pode ser visualizada no <a href="https://github.com/servicosgovbr/cartas-de-servico/tree/master/cartas-servico/v3" target="_blank">reposit&#xF3;rio oficial do projeto</a>.</p>
 
                     
                     </section>
