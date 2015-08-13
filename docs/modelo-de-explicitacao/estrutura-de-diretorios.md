@@ -2,40 +2,29 @@
 
 A seguinte estrutura de diretórios para organizar o repositório de catas de serviço é utilizada:
 
-## Visão geral:
+## Visão geral
 
 ```
 cartas-servico
-├── schema
-│   └── tipos-genericos.xsd
 └── vN
-    └── schema
-    |   ├── servico.xsd
-    |   └── exemplos
-    |       └── servico.xml
+    ├── servico.xsd
     └── servicos
-        └── segunda-via-cpf.xml
+        ├── segunda-via-cpf.xml
+        ├── emissao-de-passaporte.xml
+        └── ...
 ```
 
-## Diretórios:
+### cartas-servico/vN/servico.xsd
 
-### cartas-servico/schema/
+Onde "N" é o número da versão, as definições em formato XML Schema (XSD) dos dados presentes nos serviços que estão
+naquela versão. 
 
-Arquivos no formato XSD contendo definições genéricas e independentes de qualquer versão de carta de serviço.
+### cartas-servico/vN/servicos/*.xml
 
-### cartas-servico/vN/schema/
+Repositório de serviços, no formato XML, contendo todos os serviços daquela uma versão do formato.
 
-Onde "N" é o número da versão, contém arquivos no formato XSD que definem os dados presentes nos serviços que estão
-naquela versão. Estes XSDs procuram estabelecer o que é necessário para aquela versão, utilizando-se de tipos mais 
-genéricos definidos no diretório `cartas-servico/schema`.
+## Versão atual
 
-### cartas-servico/vN/schema/exemplos/
+A versão atual do modelo das cartas de serviços é a 3, e pode ser visualizada no [repositório oficial do projeto][GH].
 
-Exemplos no formato XML, automaticamente validados conforme a definição no formato XSD com mesmo nome.
-
-Estes arquivos servem tanto como ferramenta de teste para validar as definições do esquema XSD quanto como arquivo base 
-para criação de novos serviços no formato XML.
-
-### cartas-servico/vN/servicos/
-
-Repositório de serviços, no formato XML, contendo todos os serviços de uma versão específica.
+[GH]:https://github.com/servicosgovbr/cartas-de-servico/tree/master/cartas-servico/v3

@@ -1,10 +1,14 @@
 # Versões de especificação de serviços
 
-A fim de criar um modelo evolutivo, baseado nos diferentes tipos de maturidade e complexidade de serviços públicos, as definições dos serviços em formato XSD serão categorizadas de acordo com as informações disponíveis para cada nível de maturidade de serviço.
+A fim de criar um modelo evolutivo, baseado nos diferentes tipos de maturidade e complexidade de serviços públicos, 
+as definições dos serviços em formato XSD serão categorizadas de acordo com as informações disponíveis para cada nível 
+de maturidade de serviço.
 
-Além de categorizar os serviços públicos, este modelo também pode servir como guia para que os serviços evoluam em termos de maturidade e melhor qualidade da informação disponibilizada.
+Além de categorizar os serviços públicos, este modelo também pode servir como guia para que os serviços evoluam em 
+termos de maturidade e melhor qualidade da informação disponibilizada.
 
-A versão da especificação do serviço deve estar presente nos atributos `targetNamespace` e `xmlns` do XSD e XML, respectivamente. Por exemplo:
+A versão da especificação do serviço deve estar presente nos atributos `targetNamespace` e `xmlns` do XSD e XML, 
+respectivamente. Por exemplo:
 
 Arquivo XSD:
 ```xml
@@ -25,10 +29,13 @@ Arquivo XML:
 </servico>
 ```
 
-O `targetNamespace`, no arquivo XSD, exibe a subcategoria `v1` que compreende as definições necessárias para que um serviço esteja categorizado neste nível de maturidade.
+O `targetNamespace`, no arquivo XSD, exibe a subcategoria `v1` que compreende as definições necessárias para que um 
+serviço esteja categorizado neste nível de maturidade.
 
 Consequentemente, o arquivo XML referencia a versão correspondende ao nível de maturidade que se deseja alcançar.
 
-Sendo assim, para evoluir um serviço, basta referenciar o nível desejado, submeter sua definição de serviço em formato XML para validação contra o XSD correspondente e adequar suas informações para que este alcance o próximo nível.
+Sendo assim, para evoluir um serviço, basta referenciar o nível desejado, submeter sua definição de serviço em formato 
+XML para validação contra o XSD correspondente e adequar suas informações para que este alcance o próximo nível.
 
-Esperamos assim, dar suporte a uma evolução gradual e constante dos serviços públicos, visando sempre alcançar o nível de maturidade necessário para atender a população de forma efetiva.
+Esperamos assim, dar suporte a uma evolução gradual e constante dos serviços públicos, visando sempre alcançar o nível 
+de maturidade necessário para atender a população de forma efetiva.
