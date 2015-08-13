@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Exemplo XSD | Portal de Serviços</title>
+        <title>Migrações de dados | Portal de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../modelo-de-explicitacao/der.html" />
+    <link rel="next" href="../metricas/index.html" />
     
     
-    <link rel="prev" href="../modelo-de-explicitacao/estrutura-de-diretorios.html" />
+    <link rel="prev" href="../modelo-de-explicitacao/der.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="5.1.3" data-basepath=".." data-revision="Thu Aug 13 2015 21:22:34 GMT+0000 (UTC)">
+    <div class="book" data-level="5.5" data-basepath=".." data-revision="Thu Aug 13 2015 22:41:53 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -470,17 +470,16 @@
                     </a>
             
             
-            <ul class="articles">
-                
+        </li>
     
-        <li class="chapter " data-level="5.1.1" data-path="modelo-de-explicitacao/versoes.html">
+        <li class="chapter " data-level="5.2" data-path="modelo-de-explicitacao/versoes.html">
             
                 
                     <a href="../modelo-de-explicitacao/versoes.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.1.1.</b>
+                            <b>5.2.</b>
                         
                         Versões
                     </a>
@@ -488,14 +487,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5.1.2" data-path="modelo-de-explicitacao/estrutura-de-diretorios.html">
+        <li class="chapter " data-level="5.3" data-path="modelo-de-explicitacao/estrutura-de-diretorios.html">
             
                 
                     <a href="../modelo-de-explicitacao/estrutura-de-diretorios.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.1.2.</b>
+                            <b>5.3.</b>
                         
                         Estrutura de diretórios
                     </a>
@@ -503,36 +502,31 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.1.3" data-path="modelo-de-explicitacao/exemplo-xsd.html">
-            
-                
-                    <a href="../modelo-de-explicitacao/exemplo-xsd.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.1.3.</b>
-                        
-                        Exemplo XSD
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="modelo-de-explicitacao/der.html">
+        <li class="chapter " data-level="5.4" data-path="modelo-de-explicitacao/der.html">
             
                 
                     <a href="../modelo-de-explicitacao/der.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.2.</b>
+                            <b>5.4.</b>
                         
                         Diagrama de entidade relacionamento
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.5" data-path="modelo-de-explicitacao/migracoes-de-dados.html">
+            
+                
+                    <a href="../modelo-de-explicitacao/migracoes-de-dados.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Migrações de dados
                     </a>
             
             
@@ -1488,58 +1482,292 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="exemplo-de-xsd-e-xml">Exemplo de XSD e XML</h1>
-<p>Este &#xE9; um exemplo simples, contendo apenas dois campos, afim de ilustrar como modelar
-especifica&#xE7;&#xF5;es de servi&#xE7;os utilizando o formato <code>XSD</code>.</p>
-<p>Campos:</p>
-<ul>
-<li><code>titulo</code>: campo obrigat&#xF3;rio contento no m&#xED;nimo 5 e no m&#xE1;ximo 255 caracteres</li>
-<li><code>descricao</code>: campo obrigat&#xF3;rio contento no m&#xED;nimo 50 e no m&#xE1;ximo 500 caracteres</li>
-</ul>
+                        <h1 id="migra%C3%A7%C3%B5es-de-dados">Migra&#xE7;&#xF5;es de dados</h1>
+<p>A antiga plataforma do servicos.gov.br exportava um arquivo XML no seguinte formato:</p>
 <pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">xs:schema</span> <span class="hljs-attribute">xmlns:xs</span>=<span class="hljs-value">&quot;http://www.w3.org/2001/XMLSchema&quot;</span>
-           <span class="hljs-attribute">targetNamespace</span>=<span class="hljs-value">&quot;http://servicos.gov.br/carta/v1/servico&quot;</span>
-           <span class="hljs-attribute">elementFormDefault</span>=<span class="hljs-value">&quot;qualified&quot;</span>
-           <span class="hljs-attribute">attributeFormDefault</span>=<span class="hljs-value">&quot;unqualified&quot;</span>
-           <span class="hljs-attribute">version</span>=<span class="hljs-value">&quot;1.0&quot;</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">xs:element</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;servico&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">xs:complexType</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">xs:sequence</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">xs:element</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;titulo&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;textoCurto&quot;</span>/&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-title">xs:element</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;descricao&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;textoLongo&quot;</span>/&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-title">xs:sequence</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">xs:complexType</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">xs:element</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">xs:simpleType</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;textoCurto&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">xs:restriction</span> <span class="hljs-attribute">base</span>=<span class="hljs-value">&quot;xs:string&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">xs:minLength</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;5&quot;</span>/&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">xs:maxLength</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;255&quot;</span>/&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">xs:restriction</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">xs:simpleType</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-title">xs:simpleType</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;textoLongo&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">xs:restriction</span> <span class="hljs-attribute">base</span>=<span class="hljs-value">&quot;xs:string&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">xs:minLength</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;50&quot;</span>/&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-title">xs:maxLength</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;500&quot;</span>/&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-title">xs:restriction</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">xs:simpleType</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-title">xs:schema</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">dados</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">servicos</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">servico</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Aux&#xED;lio-Doen&#xE7;a<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>
+                Benef&#xED;cio concedido ao segurado impedido de trabalhar...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">requisitos</span>&gt;</span>
+                ...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">requisitos</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">etapas</span>&gt;</span>
+                ...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">etapas</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">canaisPrestacaoServico</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">canalPrestacaoServico</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">tipoCanalPrestacaoServico</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Presencial<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">tipoCanalPrestacaoServico</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>Servi&#xE7;o prestado nas Ag&#xEA;ncia da Previd&#xEA;ncia Social.<span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">canalPrestacaoServico</span>&gt;</span>
+                ...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">canaisPrestacaoServico</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">taxa</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">taxa</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">informacoesUteis</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">informacaoUtil</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">tipoInformacaoUtil</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Agendamento<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">tipoInformacaoUtil</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>Agende aqui seu atendimento.<span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://www2.dataprev.gov.br/sabiweb/agendamento/inicio.view<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">informacaoUtil</span>&gt;</span>
+                ...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">informacoesUteis</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">compromissosAtendimento</span>&gt;</span>
+                ...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">compromissosAtendimento</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">legislacoes</span>&gt;</span>
+                ...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">legislacoes</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">palavrasChave</span>&gt;</span>
+                ...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">palavrasChave</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">orgaoResponsavel</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Ministerio da Previdencia Social - MPS<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">orgaoResponsavel</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">orgaoPrestador</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Instituto Nacional do Seguro Social - INSS.<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">endereco</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">endereco</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">telefone</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">telefone</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">orgaoPrestador</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">publicosAlvo</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">publicoAlvo</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Servi&#xE7;os aos cidad&#xE3;os<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">linhasDaViva</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">linhaDaVida</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Cuidando da sa&#xFA;de<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">eventoslinhaDaVida</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-title">eventolinhaDaVida</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Seguro de vida e patrimonial<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-title">eventolinhaDaVida</span>&gt;</span>
+                                ...
+                            <span class="hljs-tag">&lt;/<span class="hljs-title">eventoslinhaDaVida</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">linhaDaVida</span>&gt;</span>
+                        ...
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">linhasDaViva</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">publicoAlvo</span>&gt;</span>
+                ...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">publicosAlvo</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">areasInteresse</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">area</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Previd&#xEA;ncia Social<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">area</span>&gt;</span>
+                ...
+            <span class="hljs-tag">&lt;/<span class="hljs-title">areasInteresse</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">servico</span>&gt;</span>
+        ...
+    <span class="hljs-tag">&lt;/<span class="hljs-title">servicos</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">dados</span>&gt;</span>
 </code></pre>
-<p>Arquivo XML validado pelo XSD acima definido:</p>
-<pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">servico</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">&quot;http://servicos.gov.br/carta/v1/servico&quot;</span>
-         <span class="hljs-attribute">version</span>=<span class="hljs-value">&quot;1.0&quot;</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Retificadora On Line (Extrato da DIRPF)<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>
-      Alterar alguns dados da declara&#xE7;&#xE3;o, diretamente pela internet, sem a utiliza&#xE7;&#xE3;o do
-      programa IRPF e nem do Receitanet. N&#xE3;o h&#xE1; necessidade de preencher novamente os dados que n&#xE3;o ser&#xE3;o alterados.
-  <span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
-
+<h2 id="campos-convertidos">Campos convertidos</h2>
+<p>Para as migra&#xE7;&#xF5;es de dados para a vers&#xE3;o mais recente, os seguintes campos foram mapeados:</p>
+<table>
+<thead>
+<tr>
+<th>Legado</th>
+<th>v3</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>titulo</td>
+<td>nome</td>
+<td>Obrigat&#xF3;rio, presente em todos os servi&#xE7;os legados</td>
+</tr>
+<tr>
+<td>-</td>
+<td>sigla</td>
+<td>Sempre vazio</td>
+</tr>
+<tr>
+<td>-</td>
+<td>nomes-populares</td>
+<td>Sempre vazio</td>
+</tr>
+<tr>
+<td>descricao</td>
+<td>descricao</td>
+<td>Obrigat&#xF3;rio, presente em todos os servi&#xE7;os legados, cont&#xE9;m formata&#xE7;&#xE3;o</td>
+</tr>
+<tr>
+<td>-</td>
+<td>solicitantes</td>
+<td>Sempre vazio</td>
+</tr>
+<tr>
+<td>-</td>
+<td>tempo-total-estimado</td>
+<td>Sempre vazio</td>
+</tr>
+<tr>
+<td>requisitos</td>
+<td>-</td>
+<td>Sempre vazio, n&#xE3;o importado</td>
+</tr>
+<tr>
+<td>etapas</td>
+<td>-</td>
+<td>Sempre vazio, n&#xE3;o importado</td>
+</tr>
+<tr>
+<td>canaisPrestacaoServico</td>
+<td>etapa[0]/canais-de-prestacao</td>
+<td>Adicionados &#xE0; etapa 0, j&#xE1; que na v3 os canais pertencem &#xE0;s etapas</td>
+</tr>
+<tr>
+<td>taxa</td>
+<td>etapa[0]/custos</td>
+<td>Adicionados &#xE0; etapa 0, j&#xE1; que na v3 os custos pertencem &#xE0;s etapas</td>
+</tr>
+<tr>
+<td>informacoesUteis</td>
+<td>descricao</td>
+<td>Adicionados ao final da descri&#xE7;&#xE3;o, como links Markdown</td>
+</tr>
+<tr>
+<td>orgaoPrestador</td>
+<td>-</td>
+<td>Descartado</td>
+</tr>
+<tr>
+<td>orgaoResponsavel</td>
+<td>orgao</td>
+<td>Importamos apenas o slug, no atributo &quot;id&quot;</td>
+</tr>
+<tr>
+<td>publicosAlvo</td>
+<td>segmentos-da-sociedade</td>
+<td>Algumas convers&#xF5;es de conte&#xFA;do realizadas</td>
+</tr>
+<tr>
+<td>eventoslinhaDaVida</td>
+<td>eventos-da-linha-da-vida</td>
+<td>Algumas convers&#xF5;es de conte&#xFA;do e deduplica&#xE7;&#xE3;o realizadas</td>
+</tr>
+<tr>
+<td>areasInteresse</td>
+<td>areas-de-interesse</td>
+<td>Convertido do VCGE 1.0 para VCGE 2.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="campos-com-tratamento-especial">Campos com tratamento especial</h2>
+<h3 id="descricao">descricao</h3>
+<p>No XML legado, o campo <code>descricao</code> possu&#xED;a formata&#xE7;&#xE3;o especial em muitos dos servi&#xE7;os descritos. Ela foi mantida, mas n&#xE3;o &#xE9;
+necessariamente compat&#xED;vel com [Markdown]. Na maioria dos casos, requer aten&#xE7;&#xE3;o manual.</p>
+<h3 id="tipocanalprestacaoservico">tipoCanalPrestacaoServico</h3>
+<p>Alguns campos do tipo <code>informacaoUtil</code> foram convertidos em canais de presta&#xE7;&#xE3;o por possuir um link direto para a presta&#xE7;&#xE3;o
+ou agendamento do servi&#xE7;o.</p>
+<p>A seguinte tabela de convers&#xE3;o foi aplicada:</p>
+<table>
+<thead>
+<tr>
+<th>Legado</th>
+<th>v3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agendamento</td>
+<td>Web - Agendamento</td>
+</tr>
+<tr>
+<td>Aplicativo m&#xF3;vel</td>
+<td>Aplicativo m&#xF3;vel</td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td>E-mail</td>
+</tr>
+<tr>
+<td>Fax</td>
+<td>Fax</td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>Aplicativo m&#xF3;vel</td>
+</tr>
+<tr>
+<td>Outros</td>
+<td>Postal</td>
+</tr>
+<tr>
+<td>Postal</td>
+<td>Postal</td>
+</tr>
+<tr>
+<td>Presencial</td>
+<td>Presencial</td>
+</tr>
+<tr>
+<td>SMS</td>
+<td>SMS</td>
+</tr>
+<tr>
+<td>Telefone</td>
+<td>Telefone</td>
+</tr>
+<tr>
+<td>Web</td>
+<td>Web</td>
+</tr>
+</tbody>
+</table>
+<h3 id="informacaoutil">informacaoUtil</h3>
+<p>Foi decidido n&#xE3;o mapear um campo espec&#xED;fico para <code>informacaoUtil</code>, e aqueles no formato legado que n&#xE3;o possu&#xED;am os tipos
+<code>Web</code> ou <code>Agendamento</code> foram convertidos em links Markdown ao final da descri&#xE7;&#xE3;o principal do servi&#xE7;o (<code>descricao</code>).</p>
+<h2 id="resultados">Resultados</h2>
+<p>Ao final da convers&#xE3;o, a carta exemplificada acima fica assim:</p>
+<pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">servico</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">&quot;http://servicos.gov.br/v3/schema&quot;</span> <span class="hljs-attribute">xmlns:xsi</span>=<span class="hljs-value">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="hljs-attribute">xsi:schemaLocation</span>=<span class="hljs-value">&quot;http://servicos.gov.br/v3/schema ../servico.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">nome</span>&gt;</span>Aux&#xED;lio-Doen&#xE7;a<span class="hljs-tag">&lt;/<span class="hljs-title">nome</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sigla</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">nomes-populares</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>
+        Benef&#xED;cio concedido ao segurado impedido de trabalhar...
+    <span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">gratuito</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">solicitantes</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tempo-total-estimado</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tempo-total-estimado</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">etapas</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">etapa</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">documentos</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">custos</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">canais-de-prestacao</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">default</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">canal-de-prestacao</span> <span class="hljs-attribute">tipo</span>=<span class="hljs-value">&quot;web-agendar&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>http://www2.dataprev.gov.br/sabiweb/agendamento/inicio.view<span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">canal-de-prestacao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">canal-de-prestacao</span> <span class="hljs-attribute">tipo</span>=<span class="hljs-value">&quot;presencial&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>Servi&#xE7;o prestado nas Ag&#xEA;ncia da Previd&#xEA;ncia Social.<span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">canal-de-prestacao</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">default</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">canais-de-prestacao</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">etapa</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">etapas</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">orgao</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;ministerio-da-previdencia-social-mps&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">segmentos-da-sociedade</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">item</span>&gt;</span>Cidad&#xE3;os<span class="hljs-tag">&lt;/<span class="hljs-title">item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">segmentos-da-sociedade</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">eventos-da-linha-da-vida</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">item</span>&gt;</span>Cuidados com a sa&#xFA;de<span class="hljs-tag">&lt;/<span class="hljs-title">item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">eventos-da-linha-da-vida</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">areas-de-interesse</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">item</span>&gt;</span>Previd&#xEA;ncia Social<span class="hljs-tag">&lt;/<span class="hljs-title">item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">areas-de-interesse</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">palavras-chave</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legislacoes</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">servico</span>&gt;</span>
 </code></pre>
 
@@ -1552,10 +1780,10 @@ especifica&#xE7;&#xF5;es de servi&#xE7;os utilizando o formato <code>XSD</code>.
         </div>
 
         
-        <a href="../modelo-de-explicitacao/estrutura-de-diretorios.html" class="navigation navigation-prev " aria-label="Previous page: Estrutura de diretórios"><i class="fa fa-angle-left"></i></a>
+        <a href="../modelo-de-explicitacao/der.html" class="navigation navigation-prev " aria-label="Previous page: Diagrama de entidade relacionamento"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../modelo-de-explicitacao/der.html" class="navigation navigation-next " aria-label="Next page: Diagrama de entidade relacionamento"><i class="fa fa-angle-right"></i></a>
+        <a href="../metricas/index.html" class="navigation navigation-next " aria-label="Next page: Métricas"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
