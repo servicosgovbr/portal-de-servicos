@@ -2,7 +2,7 @@
 
 [![Diagrama da rede no Vagrant](ambiente-vagrant.svg)](ambiente-vagrant.graphml)
 
-Criamos também um conjunto de _boxes_ para o [Vagrant]. Para utilizá-lo, confira que você está usando uma versão recente do [Vagrant] (ao menos 1.7.0) e rode:
+Criamos também um conjunto de _boxes_ para o [Vagrant], disponível no repositório [vagrant-boxes]. Para utilizá-lo, confira que você está usando uma versão recente do [Vagrant] (ao menos 1.7.0) e rode:
 
 ```
 vagrant up
@@ -29,14 +29,11 @@ Para atualizar a versão implantada, utilize a tarefa `vagrantDeploy`:
 
 Para acessar qualquer uma das máquinas através de `ssh`, utilize o comando `vagrant ssh <nome>`, onde `nome` pode ser:
 
-- `ie11`: máquina Windows com IE11, para testes exploratórios.
-- `bastion`: máquina vazia para experimentos e desenvolvimento local, com o IP `10.16.0.180`.
 - `lb`: balanceador de carga, com o IP `10.16.0.10`.
 - `app1`: primeiro nodo servidor de aplicação, com o IP `10.16.0.13`.
 - `app2`: segundo nodo servidor de aplicação, com o IP `10.16.0.12`.
 - `es1`: primeiro nodo do ElasticSearch, com o IP `10.16.0.11`.
 - `es2`: segundo nodo do ElasticSearch, com o IP `10.16.0.9`.
-- `piwik`: nodo contendo uma instância do Piwik, com IP `10.16.0.181`.
 
 Uma alternativa mais rápida ao `vagrant ssh` é utilizar o arquivo `.sshconfig` (localizado na raiz do projeto) para carregar as configurações de acesso. Acesse as máquinas com os seguintes comandos:
 
@@ -51,3 +48,4 @@ ssh -F .sshconfig piwik
 ```
 
 [Vagrant]:http://vagrantup.com
+[vagrant-boxes]:https://github.com/servicosgovbr/vagrant-boxes
