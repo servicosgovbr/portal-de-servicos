@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.5.2" data-basepath=".." data-revision="Thu Aug 13 2015 22:41:53 GMT+0000 (UTC)">
+    <div class="book" data-level="10.5.2" data-basepath=".." data-revision="Fri Aug 14 2015 00:08:22 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1484,7 +1484,7 @@
                     
                         <h1 id="vagrant">Vagrant</h1>
 <p><a href="ambiente-vagrant.graphml"><img src="ambiente-vagrant.svg" alt="Diagrama da rede no Vagrant"></a></p>
-<p>Criamos tamb&#xE9;m um conjunto de <em>boxes</em> para o <a href="http://vagrantup.com" target="_blank">Vagrant</a>. Para utiliz&#xE1;-lo, confira que voc&#xEA; est&#xE1; usando uma vers&#xE3;o recente do <a href="http://vagrantup.com" target="_blank">Vagrant</a> (ao menos 1.7.0) e rode:</p>
+<p>Criamos tamb&#xE9;m um conjunto de <em>boxes</em> para o <a href="http://vagrantup.com" target="_blank">Vagrant</a>, dispon&#xED;vel no reposit&#xF3;rio <a href="https://github.com/servicosgovbr/vagrant-boxes" target="_blank">vagrant-boxes</a>. Para utiliz&#xE1;-lo, confira que voc&#xEA; est&#xE1; usando uma vers&#xE3;o recente do <a href="http://vagrantup.com" target="_blank">Vagrant</a> (ao menos 1.7.0) e rode:</p>
 <pre><code>vagrant up
 </code></pre><p>&#xC9; poss&#xED;vel que as m&#xE1;quinas virtuais fiquem em um estado inconsistente, ou alguma das atualiza&#xE7;&#xF5;es no c&#xF3;digo de provisionamento e instala&#xE7;&#xE3;o seja incompat&#xED;vel com vers&#xF5;es anteriores das mesmas. Nestes casos, para recri&#xE1;-las, basta:</p>
 <pre><code>vagrant destroy -f
@@ -1496,14 +1496,11 @@ vagrant up
 </code></pre><h2 id="rede-interna">Rede interna</h2>
 <p>Para acessar qualquer uma das m&#xE1;quinas atrav&#xE9;s de <code>ssh</code>, utilize o comando <code>vagrant ssh &lt;nome&gt;</code>, onde <code>nome</code> pode ser:</p>
 <ul>
-<li><code>ie11</code>: m&#xE1;quina Windows com IE11, para testes explorat&#xF3;rios.</li>
-<li><code>bastion</code>: m&#xE1;quina vazia para experimentos e desenvolvimento local, com o IP <code>10.16.0.180</code>.</li>
 <li><code>lb</code>: balanceador de carga, com o IP <code>10.16.0.10</code>.</li>
 <li><code>app1</code>: primeiro nodo servidor de aplica&#xE7;&#xE3;o, com o IP <code>10.16.0.13</code>.</li>
 <li><code>app2</code>: segundo nodo servidor de aplica&#xE7;&#xE3;o, com o IP <code>10.16.0.12</code>.</li>
 <li><code>es1</code>: primeiro nodo do ElasticSearch, com o IP <code>10.16.0.11</code>.</li>
 <li><code>es2</code>: segundo nodo do ElasticSearch, com o IP <code>10.16.0.9</code>.</li>
-<li><code>piwik</code>: nodo contendo uma inst&#xE2;ncia do Piwik, com IP <code>10.16.0.181</code>.</li>
 </ul>
 <p>Uma alternativa mais r&#xE1;pida ao <code>vagrant ssh</code> &#xE9; utilizar o arquivo <code>.sshconfig</code> (localizado na raiz do projeto) para carregar as configura&#xE7;&#xF5;es de acesso. Acesse as m&#xE1;quinas com os seguintes comandos:</p>
 <pre><code>ssh -F .sshconfig bastion
