@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.7" data-basepath=".." data-revision="Wed Aug 19 2015 18:43:04 GMT+0000 (UTC)">
+    <div class="book" data-level="10.7" data-basepath=".." data-revision="Wed Aug 19 2015 19:33:09 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1483,7 +1483,16 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="estrat%C3%A9gia-e-execu%C3%A7%C3%A3o-de-testes">Estrat&#xE9;gia e Execu&#xE7;&#xE3;o de Testes</h1>
-<h2 id="unit%C3%A1rios-e-integra%C3%A7%C3%A3o">Unit&#xE1;rios e Integra&#xE7;&#xE3;o</h2>
+<h2 id="ferramentas-utilizadas">Ferramentas utilizadas</h2>
+<h3 id="-junit-http-junit-org"><a href="http://junit.org" target="_blank">JUnit</a></h3>
+<p>Biblioteca para testes unit&#xE1;rios e de integra&#xE7;&#xE3;o amplamente utilizada em aplica&#xE7;&#xF5;es Java.</p>
+<h3 id="-mockito-http-mockito-org"><a href="http://mockito.org" target="_blank">Mockito</a></h3>
+<p>Biblioteca para a cria&#xE7;&#xE3;o de objetos falsos (mocks) para facilitar a escrita e aumentar a qualidade de testes.</p>
+<h3 id="-jacoco-http-www-eclemma-org-jacoco-java-code-coverage"><a href="http://www.eclemma.org/jacoco/" target="_blank">JaCoCo</a> (Java Code Coverage)</h3>
+<p>Permite acompanhar e gerar relat&#xF3;rios para encontrar c&#xF3;digo n&#xE3;o executado durante os testes automatizados (<em>cobertos</em>). </p>
+<h3 id="-coveralls-https-coveralls-io-github-servicosgovbr"><a href="https://coveralls.io/github/servicosgovbr" target="_blank">Coveralls</a></h3>
+<p>Permite visualizar a porcentagem de cobertura de testes da aplica&#xE7;&#xE3;o, visando garantir o acompanhamento p&#xFA;blico da qualidade de nossos testes automatizados.</p>
+<h2 id="testes-unit%C3%A1rios-e-de-integra%C3%A7%C3%A3o">Testes unit&#xE1;rios e de integra&#xE7;&#xE3;o</h2>
 <p>Testes unit&#xE1;rios e de integra&#xE7;&#xE3;o s&#xE3;o utilizados para garantir que a implementa&#xE7;&#xE3;o de m&#xE9;todos e classes agem de acordo com o comportamento esperado, e tamb&#xE9;m como forma de documenta&#xE7;&#xE3;o t&#xE9;cnica mais detalhada do comportamento das partes relevantes do sistema.</p>
 <p>Para executar apenas os testes unit&#xE1;rios e de integra&#xE7;&#xE3;o isoladamente, utilize a tarefa <code>test</code> do <a href="http://www.gradle.org" target="_blank">Gradle</a>:</p>
 <pre><code>./gradlew test
@@ -1521,16 +1530,16 @@ Finished Precompiling Assets
 BUILD SUCCESSFUL
 
 Total time: 1 mins 30.468 secs
-</code></pre><h2 id="cobertura">Cobertura</h2>
+</code></pre><h2 id="cobertura-de-testes">Cobertura de testes</h2>
 <p>Ap&#xF3;s executar a tarefa <code>test</code>, descrita acima, um relat&#xF3;rio de cobertura de c&#xF3;digo pode ser gerado atrav&#xE9;s da tarefa <code>jacocoTestReport</code>:</p>
 <pre><code>./gradlew jacocoTestReport
 </code></pre><p>Os relat&#xF3;rios ficam dispon&#xED;veis no diret&#xF3;rio <code>build/reports/jacoco/</code>, em formatos XML e HTML, ap&#xF3;s a execu&#xE7;&#xE3;o.</p>
 <h3 id="coveralls">Coveralls</h3>
 <p>Resultados dos relat&#xF3;rios de cobertura de testes s&#xE3;o automaticamente disponibilizados atrav&#xE9;s da integra&#xE7;&#xE3;o cont&#xED;nua, utilizando o <a href="https://coveralls.io/github/servicosgovbr" target="_blank">Coveralls</a>, para todas as revis&#xF5;es do projeto.</p>
-<h2 id="checagens-est%C3%A1ticas">Checagens est&#xE1;ticas</h2>
+<h2 id="verifica%C3%A7%C3%B5es-est%C3%A1ticas">Verifica&#xE7;&#xF5;es est&#xE1;ticas</h2>
 <p>Antes de publicar altera&#xE7;&#xF5;es a uma funcionalidade, com <code>git push</code>, &#xE9; necess&#xE1;rio rodar todas as tarefas de testes e verifica&#xE7;&#xE3;o do <a href="http://www.gradle.org" target="_blank">Gradle</a>:</p>
 <pre><code>./gradlew check
-</code></pre><p>Esta tarefa compila e executa os testes, gera relat&#xF3;rios de execu&#xE7;&#xE3;o e cobertura, bem como busca por poss&#xED;veis bugs no c&#xF3;digo atrav&#xE9;s da ferramenta <a href="http://findbugs.sourceforge.net" target="_blank">FindBugs</a>.</p>
+</code></pre><p>Esta tarefa compila e executa os testes, gera relat&#xF3;rios de execu&#xE7;&#xE3;o e cobertura, bem como busca por poss&#xED;veis bugs no c&#xF3;digo atrav&#xE9;s da ferramenta <a href="http://findbugs.sourceforge.net" target="_blank">FindBugs</a>. Quando s&#xE3;o encontradas viola&#xE7;&#xF5;es ou poss&#xED;veis bugs cobertos pelo FindBugs, estes s&#xE3;o descritos na sa&#xED;da da execu&#xE7;&#xE3;o, e descritos em um arquivo HTML gerado pela ferramenta. </p>
 
                     
                     </section>
