@@ -1,6 +1,10 @@
 # Estratégia e Execução de Testes
 
-## Unitários e Integração
+## Ferramentas utilizadas
+
+{% include './_ferramentas-testes.md' %}
+
+## Testes unitários e de integração
 
 Testes unitários e de integração são utilizados para garantir que a implementação de métodos e classes agem de acordo com o comportamento esperado, e também como forma de documentação técnica mais detalhada do comportamento das partes relevantes do sistema.
 
@@ -48,8 +52,7 @@ BUILD SUCCESSFUL
 Total time: 1 mins 30.468 secs
 ```
 
-
-## Cobertura
+## Cobertura de testes
 
 Após executar a tarefa `test`, descrita acima, um relatório de cobertura de código pode ser gerado através da tarefa `jacocoTestReport`:
 
@@ -63,7 +66,7 @@ Os relatórios ficam disponíveis no diretório `build/reports/jacoco/`, em form
 
 Resultados dos relatórios de cobertura de testes são automaticamente disponibilizados através da integração contínua, utilizando o [Coveralls], para todas as revisões do projeto.
 
-## Checagens estáticas
+## Verificações estáticas
 
 Antes de publicar alterações a uma funcionalidade, com `git push`, é necessário rodar todas as tarefas de testes e verificação do [Gradle]:
 
@@ -71,7 +74,7 @@ Antes de publicar alterações a uma funcionalidade, com `git push`, é necessá
 ./gradlew check
 ```
 
-Esta tarefa compila e executa os testes, gera relatórios de execução e cobertura, bem como busca por possíveis bugs no código através da ferramenta [FindBugs].
+Esta tarefa compila e executa os testes, gera relatórios de execução e cobertura, bem como busca por possíveis bugs no código através da ferramenta [FindBugs]. Quando são encontradas violações ou possíveis bugs cobertos pelo FindBugs, estes são descritos na saída da execução, e descritos em um arquivo HTML gerado pela ferramenta. 
 
 [Gradle]:http://www.gradle.org
 [JUnit]:http://junit.org

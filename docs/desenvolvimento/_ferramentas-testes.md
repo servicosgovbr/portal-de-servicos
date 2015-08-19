@@ -10,6 +10,6 @@ Biblioteca para a criação de objetos falsos (mocks) para facilitar a escrita e
 
 Permite acompanhar e gerar relatórios para encontrar código não executado durante os testes automatizados (_cobertos_). 
 
-### [Coveralls](https://coveralls.io/r/servicosgovbr/portal-de-servicos?branch=master)
+### [Coveralls](https://coveralls.io/github/servicosgovbr)
 
 Permite visualizar a porcentagem de cobertura de testes da aplicação, visando garantir o acompanhamento público da qualidade de nossos testes automatizados.
