@@ -10,7 +10,44 @@ Para executar apenas os testes unitários e de integração isoladamente, utiliz
 ./gradlew test
 ```
 
-Esta tarefa executa os testes unitários e de integração Java utilizando [JUnit].
+Esta tarefa executa os testes unitários e de integração Java utilizando [JUnit]. Exemplo de saída:
+
+```
+mpog:portal-de-servicos $ ./gradlew test
+Starting a new Gradle Daemon for this build (subsequent builds will be faster).
+:compileJava UP-TO-DATE
+:assetCompile
+Compiling assets in directory /Users/cvillela/Sync/src/servicos.gov.br/portal-de-servicos/src/main/assets
+Processing File 1 of 2 - main.scss
+Working Path: 
+Compiling file main.scss
+    write /main.css
+Found Output File /main.css
+Minifying File 1 of 2 - main
+Compressing File 1 of 2 - main
+Processing File 2 of 2 - print.scss
+Working Path: 
+Compiling file print.scss
+    write /print.css
+Found Output File /print.css
+Minifying File 2 of 2 - print
+Compressing File 2 of 2 - print
+Finished Precompiling Assets
+:processResources
+:classes
+:compileTestJava
+:processTestResources
+:testClasses
+:test
+00000000-0000-0000-0000-000000000000 INFO  [Thread-5] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@60388907: startup date [Wed Aug 19 15:26:53 BRT 2015]; root of context hierarchy
+
+... (mais linhas de diagnóstico) ...
+
+BUILD SUCCESSFUL
+
+Total time: 1 mins 30.468 secs
+```
+
 
 ## Cobertura
 
