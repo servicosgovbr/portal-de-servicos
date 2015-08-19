@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.7" data-basepath=".." data-revision="Wed Aug 19 2015 14:10:59 GMT+0000 (UTC)">
+    <div class="book" data-level="10.7" data-basepath=".." data-revision="Wed Aug 19 2015 18:43:04 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1482,18 +1482,56 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="testes">Testes</h1>
+                        <h1 id="estrat%C3%A9gia-e-execu%C3%A7%C3%A3o-de-testes">Estrat&#xE9;gia e Execu&#xE7;&#xE3;o de Testes</h1>
 <h2 id="unit%C3%A1rios-e-integra%C3%A7%C3%A3o">Unit&#xE1;rios e Integra&#xE7;&#xE3;o</h2>
+<p>Testes unit&#xE1;rios e de integra&#xE7;&#xE3;o s&#xE3;o utilizados para garantir que a implementa&#xE7;&#xE3;o de m&#xE9;todos e classes agem de acordo com o comportamento esperado, e tamb&#xE9;m como forma de documenta&#xE7;&#xE3;o t&#xE9;cnica mais detalhada do comportamento das partes relevantes do sistema.</p>
 <p>Para executar apenas os testes unit&#xE1;rios e de integra&#xE7;&#xE3;o isoladamente, utilize a tarefa <code>test</code> do <a href="http://www.gradle.org" target="_blank">Gradle</a>:</p>
 <pre><code>./gradlew test
+</code></pre><p>Esta tarefa executa os testes unit&#xE1;rios e de integra&#xE7;&#xE3;o Java utilizando <a href="http://junit.org" target="_blank">JUnit</a>. Exemplo de sa&#xED;da:</p>
+<pre><code>mpog:portal-de-servicos $ ./gradlew test
+Starting a new Gradle Daemon for this build (subsequent builds will be faster).
+:compileJava UP-TO-DATE
+:assetCompile
+Compiling assets in directory /Users/cvillela/Sync/src/servicos.gov.br/portal-de-servicos/src/main/assets
+Processing File 1 of 2 - main.scss
+Working Path: 
+Compiling file main.scss
+    write /main.css
+Found Output File /main.css
+Minifying File 1 of 2 - main
+Compressing File 1 of 2 - main
+Processing File 2 of 2 - print.scss
+Working Path: 
+Compiling file print.scss
+    write /print.css
+Found Output File /print.css
+Minifying File 2 of 2 - print
+Compressing File 2 of 2 - print
+Finished Precompiling Assets
+:processResources
+:classes
+:compileTestJava
+:processTestResources
+:testClasses
+:test
+00000000-0000-0000-0000-000000000000 INFO  [Thread-5] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@60388907: startup date [Wed Aug 19 15:26:53 BRT 2015]; root of context hierarchy
+
+... (mais linhas de diagn&#xF3;stico) ...
+
+BUILD SUCCESSFUL
+
+Total time: 1 mins 30.468 secs
 </code></pre><h2 id="cobertura">Cobertura</h2>
 <p>Ap&#xF3;s executar a tarefa <code>test</code>, descrita acima, um relat&#xF3;rio de cobertura de c&#xF3;digo pode ser gerado atrav&#xE9;s da tarefa <code>jacocoTestReport</code>:</p>
 <pre><code>./gradlew jacocoTestReport
 </code></pre><p>Os relat&#xF3;rios ficam dispon&#xED;veis no diret&#xF3;rio <code>build/reports/jacoco/</code>, em formatos XML e HTML, ap&#xF3;s a execu&#xE7;&#xE3;o.</p>
+<h3 id="coveralls">Coveralls</h3>
+<p>Resultados dos relat&#xF3;rios de cobertura de testes s&#xE3;o automaticamente disponibilizados atrav&#xE9;s da integra&#xE7;&#xE3;o cont&#xED;nua, utilizando o <a href="https://coveralls.io/github/servicosgovbr" target="_blank">Coveralls</a>, para todas as revis&#xF5;es do projeto.</p>
 <h2 id="checagens-est%C3%A1ticas">Checagens est&#xE1;ticas</h2>
-<p>Antes de publicar uma funcionalidade, com <code>git push</code>, &#xE9; necess&#xE1;rio rodar todas as tarefas de testes e verifica&#xE7;&#xE3;o do <a href="http://www.gradle.org" target="_blank">Gradle</a>:</p>
+<p>Antes de publicar altera&#xE7;&#xF5;es a uma funcionalidade, com <code>git push</code>, &#xE9; necess&#xE1;rio rodar todas as tarefas de testes e verifica&#xE7;&#xE3;o do <a href="http://www.gradle.org" target="_blank">Gradle</a>:</p>
 <pre><code>./gradlew check
-</code></pre>
+</code></pre><p>Esta tarefa compila e executa os testes, gera relat&#xF3;rios de execu&#xE7;&#xE3;o e cobertura, bem como busca por poss&#xED;veis bugs no c&#xF3;digo atrav&#xE9;s da ferramenta <a href="http://findbugs.sourceforge.net" target="_blank">FindBugs</a>.</p>
+
                     
                     </section>
                 
