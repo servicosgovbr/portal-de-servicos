@@ -4,3 +4,4 @@
   - [Estrutura de diretórios](/modelo-de-explicitacao/estrutura-de-diretorios.md)
   - [Diagrama de entidade relacionamento](/modelo-de-explicitacao/mer.md)
   - [Migrações de dados](/modelo-de-explicitacao/migracoes-de-dados.md)
+  - [Mapeamento VCGE 1.0 para VCGE 2.0.3](/modelo-de-explicitacao/mapeamento-vcge.md)
