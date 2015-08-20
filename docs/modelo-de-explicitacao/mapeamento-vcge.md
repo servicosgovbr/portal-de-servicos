@@ -1,17 +1,8 @@
 # Mapeamento de categorização de serviço para VCGE 2.0
 
-A antiga plataforma de serviços utilizava uma categorização de serviços definidos no [VCGE 1.0][VCGE1]. A versão mais recente dos serviços, está utilizando a categorização de serviços definidos no [VCGE 2.0.3][VCGE2] está sendo utilizada, mas para isso foi necessária uma conversão entre essas categorizações. As regras utilizadas, bem como a tabela de conversão entre categorias do [VCGE 1.0][VCGE1] para o [VCGE 2.0.3][VCGE2] são disponibilizados no próprio site do Vocabulário Controlado do Governo Eletrônico, são eles:
-- [Descrição e legendas da tabela de conversão][DEPARA-DESC]
-- [Tabela de conversão de categorias de VCGE 1.0 para VCGE 2.0.3][DEPARA]
+A antiga plataforma de serviços utilizava uma categorização de serviços definidos pelo [VCGE 1.0][VCGE1]. Para utilizar a versão mais recente do VCGE, [2.0.3][VCGE2], o [seguinte mapeamento][DEPARA], disponibilizado pela equipe do VCGE, foi utilizado:
 
-Esses documentos disponibilizados pelo vcge para essa conversão, foram organizados em uma tabela para que pudesse ser automatizada, e pode ser observada abaixo.
-
-Legenda para a tabela:
-- Os termos da coluna "Categorias VCGE 1.0" serão os termos substituidos
-- Os termos da coluna "Categorias VCGE 2.0.3" contém os termos que irão substituir "Categorias VCGE 1.0" 
-- Na coluna "Categorias VCGE 2.0.3", alguns termos estarão vazios, isso significa que não há um mapeamento, e portanto os termos da coluna "Categorias VCGE 1.0"
-
-|VCGE-1|VCGE-2|
+|Categorias VCGE 1.0 | Categorias VCGE 2.0.3|
 |:-----|:-----|
 |AIDS|Saúde|
 |Abastecimento de água|Meio ambiente, Água|
@@ -1481,5 +1472,4 @@ Legenda para a tabela:
 
 [VCGE1]: http://www.governoeletronico.gov.br/biblioteca/arquivos/vocabulario-controlado-do-governo-eletronico-vcge/download
 [VCGE2]: http://www.governoeletronico.gov.br/biblioteca/arquivos/vcge-2-0-2/download
-[DEPARA-DESC]: http://www.governoeletronico.gov.br/biblioteca/arquivos/vcge-depara-01-descricao/download
 [DEPARA]: http://www.governoeletronico.gov.br/biblioteca/arquivos/vcge-depara-01/download
