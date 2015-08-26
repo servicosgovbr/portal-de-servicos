@@ -2,6 +2,7 @@ package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.DestaquesConfig;
 import br.gov.servicos.destaques.ServicosEmDestaque;
+import br.gov.servicos.orgao.Siorg;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.Servico;
@@ -15,11 +16,19 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
+
+import java.io.IOException;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
+import static java.util.Optional.empty;
+import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.*;
 import static org.springframework.data.domain.Sort.Direction.DESC;
@@ -39,6 +48,9 @@ public class IndexControllerTest {
     @Mock
     PiwikClient piwikClient;
 
+    @Mock
+    Siorg siorg;
+
     IndexController controller;
 
     ServicosEmDestaque destaquesManuais;
@@ -55,26 +67,26 @@ public class IndexControllerTest {
 
     @Test
     public void redirecionaParaAPaginaInicial() {
-        controller = new IndexController(destaquesManuais);
+        controller = comDestaquesManuais();
         assertViewName(controller.index(), "index");
     }
 
     @Test
     public void retornaServicosASeremExibidos() {
-        controller = new IndexController(destaquesManuais);
+        controller = comDestaquesManuais();
         assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
     }
 
     @Test
     public void deveRetornarOsServicosPaginados() {
-        controller = new IndexController(destaquesManuais);
+        controller = comDestaquesManuais();
         controller.index();
         verify(servicos).findAll(new PageRequest(0, 10, new Sort(DESC, "titulo")));
     }
 
     @Test
     public void deveRetornarDestaquesPrimeiro() {
-        controller = new IndexController(destaquesManuais);
+        controller = comDestaquesManuais();
         given(destaques.getServicos()).willReturn(singletonList("servico-em-destaque"));
 
         Servico servicoEmDestaque = new Servico().withId("servico-em-destaque");
@@ -85,7 +97,7 @@ public class IndexControllerTest {
 
     @Test
     public void devePedirUrlsMaisAcessadasParaOPiwik() throws Exception {
-        controller = new IndexController(destaquesAutomaticos);
+        controller = comDestaquesAutomaticos();
         given(piwikClient.getPageUrls(anyString(), anyString()))
                 .willReturn(singletonList(
                         new PiwikPage()
@@ -101,7 +113,7 @@ public class IndexControllerTest {
 
     @Test
     public void deveRetornarMaisAcessadosECompletarComDestaquesEOutrosServicos() throws Exception {
-        controller = new IndexController(destaquesAutomaticos);
+        controller = comDestaquesAutomaticos();
         given(piwikClient.getPageUrls(anyString(), anyString()))
                 .willReturn(singletonList(
                         new PiwikPage()
@@ -121,7 +133,7 @@ public class IndexControllerTest {
 
     @Test
     public void deveFiltrarServicosMaisAcessadosNaoEncontrados() throws Exception {
-        controller = new IndexController(destaquesAutomaticos);
+        controller = comDestaquesAutomaticos();
         given(piwikClient.getPageUrls(anyString(), anyString()))
                 .willReturn(singletonList(
                         new PiwikPage()
@@ -136,7 +148,7 @@ public class IndexControllerTest {
 
     @Test
     public void deveFiltrarFiltrarServicosIguais() {
-        controller = new IndexController(destaquesManuais);
+        controller = comDestaquesManuais();
         given(destaques.getServicos()).willReturn(singletonList("exemplo-de-servico"));
         given(servicos.findOne("exemplo-de-servico")).willReturn(SERVICO);
 
@@ -145,8 +157,38 @@ public class IndexControllerTest {
 
     @Test
     public void deveFiltrarDestaquesNaoEncontrados() {
-        controller = new IndexController(destaquesManuais);
+        controller = comDestaquesManuais();
         given(destaques.getServicos()).willReturn(singletonList("destaque-nao-cadastrado"));
         assertModelAttributeValue(controller.index(), "destaques", singletonList(SERVICO));
+    }
+
+    @Test
+    public void deveRedirecionarParaOrgao() throws IOException {
+        controller = comDestaquesManuais();
+        String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
+        given(siorg.slugDoOrgao(urlOrgao)).willReturn(of("secretaria-secretarial-do-secretariado-sss"));
+
+        ModelAndView view = controller.redirectParaOrgao(urlOrgao);
+
+        assertThat(((RedirectView)view.getView()).getUrl(), is("/orgaos/secretaria-secretarial-do-secretariado-sss"));
+    }
+
+    @Test
+    public void deveRedirecionarParaIndexQuandoHaProblemasComParametroOrgao() throws IOException {
+        controller = comDestaquesManuais();
+        String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
+        given(siorg.slugDoOrgao(urlOrgao)).willReturn(empty());
+
+        ModelAndView view = controller.redirectParaOrgao(urlOrgao);
+
+        assertThat(view.getViewName(), is("index"));
+    }
+
+    private IndexController comDestaquesAutomaticos() {
+        return new IndexController(destaquesAutomaticos, siorg);
+    }
+
+    private IndexController comDestaquesManuais() {
+        return new IndexController(destaquesManuais, siorg);
     }
 }
