@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.3" data-basepath=".." data-revision="Sat Aug 22 2015 06:08:11 GMT+0000 (UTC)">
+    <div class="book" data-level="10.3" data-basepath=".." data-revision="Wed Aug 26 2015 16:51:12 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1500,87 +1500,18 @@
                         <h1 id="infraestrutura">Infraestrutura</h1>
 <p><a href="desenvolvimento/ambiente-producao.graphml"><img src="ambiente-producao.svg" alt="Diagrama da rede em ambiente similar a produ&#xE7;&#xE3;o"></a></p>
 <h2 id="ambientes-de-desenvolvimento-e-homologa%C3%A7%C3%A3o">Ambientes de desenvolvimento e homologa&#xE7;&#xE3;o</h2>
-<p>Estes ambientes cont&#xE9;m 5 m&#xE1;quinas virtuais:</p>
+<p>Estes ambientes cont&#xE9;m uma m&#xE1;quina virtual com as seguintes aplica&#xE7;&#xF5;es Docker:</p>
 <ul>
-<li>Balanceador de carga</li>
-<li>Servidor de Aplica&#xE7;&#xE3;o 1 (Azul)</li>
-<li>Servidor de Aplica&#xE7;&#xE3;o 2 (Verde)</li>
-<li>Servidor de Busca 1</li>
-<li>Servidor de Busca 2</li>
+<li>Balanceador de carga (haproxy)</li>
+<li>Portal de Servi&#xE7;os 1</li>
+<li>Portal de Servi&#xE7;os 2</li>
+<li>Editor de Servi&#xE7;os 1</li>
+<li>Editor de Servi&#xE7;os 2</li>
+<li>ElasticSearch 1</li>
+<li>ElasticSearch 2</li>
+<li>Google cAdvisor</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>VM</th>
-<th>OS</th>
-<th>Vers&#xE3;o</th>
-<th>Arquitetura</th>
-<th>Cores</th>
-<th>Mem&#xF3;ria</th>
-<th>Disco</th>
-<th>Portas</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Balanceador</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 80</td>
-</tr>
-<tr>
-<td>Aplica&#xE7;&#xE3;o 1</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 8080</td>
-</tr>
-<tr>
-<td>Aplica&#xE7;&#xE3;o 2</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 8080</td>
-</tr>
-<tr>
-<td>Busca 1</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 9200, 9300</td>
-</tr>
-<tr>
-<td>Busca 2</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>2</td>
-<td>2 GB</td>
-<td>50+ GB</td>
-<td>22, 9200, 9300</td>
-</tr>
-</tbody>
-</table>
-<p>No ambiente de desenvolvimento, tamb&#xE9;m h&#xE1; um servidor de Integra&#xE7;&#xE3;o Cont&#xED;nua (Jenkins), j&#xE1; provisionado e configurado, que deve ter acesso <a href="http://www.openssh.com/" target="_blank">ssh</a> &#xE0;s m&#xE1;quinas acima, atrav&#xE9;s de chaves compartilhadas com a equipe de desenvolvimento do sistema.</p>
-<h4 id="balanceador-de-carga">Balanceador de Carga</h4>
-<p>CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda um servidor <a href="http://www.haproxy.org/" target="_blank">HAProxy</a> na porta 80, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
-<h4 id="servidores-de-aplica%C3%A7%C3%A3o">Servidores de Aplica&#xE7;&#xE3;o</h4>
-<p>CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda a aplica&#xE7;&#xE3;o sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, na porta 8080, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
-<h4 id="servidores-de-busca">Servidores de Busca</h4>
-<p>CentOS 7, 64 bits, com 2gb de RAM e 50+ GB de disco. Roda o <a href="https://www.elastic.co/products/elasticsearch" target="_blank">ElasticSearch</a> sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, nas portas 9200 e 9300, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
+<p>Estas est&#xE3;o definidas na configura&#xE7;&#xE3;o, em formato <a href="http://docker.com/compose" target="_blank">Docker-Compose</a>, do <a href="https://github.com/servicosgovbr/docker" target="_blank">reposit&#xF3;rio relacionado</a>.</p>
 <h2 id="ambiente-de-produ%C3%A7%C3%A3o">Ambiente de produ&#xE7;&#xE3;o</h2>
 <p>Este ambiente cont&#xE9;m 5 m&#xE1;quinas virtuais:</p>
 <ul>
@@ -1661,7 +1592,7 @@
 <h4 id="servidores-de-aplica%C3%A7%C3%A3o">Servidores de Aplica&#xE7;&#xE3;o</h4>
 <p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda a aplica&#xE7;&#xE3;o sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, na porta 8080, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
 <h4 id="servidores-de-busca">Servidores de Busca</h4>
-<p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda o <a href="https://www.elastic.co/products/elasticsearch" target="_blank">ElasticSearch</a> sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, nas portas 9200 e 9300, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
+<p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda o [ElasticSearch] sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, nas portas 9200 e 9300, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
 
                     
                     </section>
