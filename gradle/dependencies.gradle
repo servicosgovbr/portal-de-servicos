@@ -12,6 +12,7 @@ dependencies {
     compile 'org.elasticsearch:elasticsearch:1.7.1'
     compile 'org.projectlombok:lombok:1.16.2'
     compile 'org.slf4j:slf4j-api:1.7.7'
+    compile 'net.logstash.logback:logstash-logback-encoder:4.5.1'
     compile 'org.springframework.boot:spring-boot-starter-web:1.2.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf:1.2.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-actuator:1.2.3.RELEASE'

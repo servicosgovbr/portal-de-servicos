@@ -1,8 +1,6 @@
 <configuration>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%X{req.ticket:-00000000-0000-0000-0000-000000000000} %-5level [%thread] %logger{30} - %msg%n</pattern>
-        </encoder>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
     </appender>
 
     <logger name="org.springframework.integration.file.FileReadingMessageSource" level="WARN"/>
