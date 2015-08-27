@@ -2,12 +2,9 @@
 
 ## Introdução
 
-Para o desenvolvimento da aplicação, optamos pela plataforma [Java][JAVA], dada a sua ubiquidade e facilidade de manutenção,
-ferramental existente e bibliotecas maduras. Além disso, Java é amplamente utilizada em aplicações existentes na atual
-infraestrutura do Governo Brasileiro, o que faz com que seu suporte e desenvolvimento continuado sejam garantidos.
+Para o desenvolvimento da aplicação, optamos pela plataforma [Java], dada a sua ubiquidade e facilidade de manutenção, ferramental existente e bibliotecas maduras. Além disso, Java é amplamente utilizada em aplicações existentes na atual infraestrutura do Governo Brasileiro, o que faz com que seu suporte e desenvolvimento continuado sejam garantidos.
 
-Pretendemos utilizar e acompanhar [as ferramentas e bibliotecas](./ferramentas-utilizadas.md) mais adequadas às necessidades do desenvolvimento,
-testando com as versões mais recentes das mesmas sempre que possível.
+Pretendemos utilizar e acompanhar [as ferramentas e bibliotecas](./ferramentas-utilizadas.md) mais adequadas às necessidades do desenvolvimento, testando com as versões mais recentes das mesmas sempre que possível.
 
 ### Objetivos técnicos
 
@@ -17,6 +14,6 @@ testando com as versões mais recentes das mesmas sempre que possível.
 * Gerenciamento de dependências centralizado
 * Testes automatizados de alta qualidade
 * Pacotes gerados automaticamente para as plataformas-alvo
-* Implantação e execução em um único passo
+* Implantação e execução no menor número de passos possível
 
-[JAVA]:http://www.java.com
+[Java]:http://www.java.com

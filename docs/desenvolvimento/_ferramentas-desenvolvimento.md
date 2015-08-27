@@ -28,6 +28,6 @@ Permite gerenciar arquivos com informações sigilosas, mesmo em repositórios G
 
 Ferramenta de formatação e geração de documentação em formatos HTML, PDF, ePub, Mobi, etc.
 
-### [Vagrant](http://vagrantup.com)
+### [Docker](http://docker.com)
 
 Automação de máquinas virtuais.

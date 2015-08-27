@@ -24,7 +24,7 @@ Os templates HTML 5 estão em `src/main/resources/templates`. Configuramos o [Th
 
 ### Controladores
 
-Controla a interação entre usuário e aplicação. Contém componentes responsáveis pela lógica de apresentação da aplicação e tem as responsabilidades de capturar dados, apresentar os resultados e controlar a navegação.
+Controlam a interação entre usuário e aplicação. Contém componentes responsáveis pela lógica de apresentação da aplicação e tem as responsabilidades de capturar dados, apresentar os resultados e controlar a navegação.
 
 No mesmo nível estão os serviços expostos pela aplicação para interagir com outras aplicações.
 
