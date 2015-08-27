@@ -9,6 +9,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import static net.logstash.logback.marker.Markers.appendEntries;
 
 @Slf4j
 public class LoggingFilter extends OncePerRequestFilter {
@@ -19,23 +23,27 @@ public class LoggingFilter extends OncePerRequestFilter {
 
         long start = System.currentTimeMillis();
         try {
-            log.info("Request: {} {} - {} {} {}",
-                    request.getMethod(),
-                    request.getQueryString() == null ? request.getRequestURI() : request.getRequestURI() + "?" + request.getQueryString(),
-                    request.getRemoteAddr(),
-                    request.getHeader("X-Forwarded-For"),
-                    request.getHeader("User-Agent")
-            );
-
             chain.doFilter(request, response);
 
         } finally {
             HttpStatus status = HttpStatus.valueOf(response.getStatus());
-            log.info("Response: HTTP {} {} - {}ms",
-                    status.value(),
-                    status.getReasonPhrase(),
-                    System.currentTimeMillis() - start
-            );
+
+            Map<String, Object> data = new HashMap<>();
+            data.put("req.remoteAddress", request.getRemoteAddr());
+            data.put("req.remotePort", request.getRemotePort());
+            data.put("req.headers.user-agent", request.getHeader("User-Agent"));
+            data.put("req.headers.x-forwarded-for", request.getHeader("X-Forwarded-For"));
+            data.put("res.contentLength", response.getHeader("Content-Length"));
+            data.put("req.method", request.getMethod());
+            data.put("req.url", request.getQueryString() == null ? request.getRequestURI() : request.getRequestURI() + "?" + request.getQueryString());
+            data.put("res.statusCode", status.value());
+            data.put("res.responseTime", System.currentTimeMillis() - start);
+
+            log.info(appendEntries(data), "{} {} {} - {}ms",
+                    data.get("req.method"),
+                    data.get("req.url"),
+                    data.get("res.statusCode"),
+                    data.get("res.responseTime"));
         }
     }
 }
