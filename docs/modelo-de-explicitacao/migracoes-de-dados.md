@@ -105,7 +105,6 @@ Para as migrações de dados para a versão mais recente, os seguintes campos fo
 | orgaoPrestador         | -                            | Descartado                                                            |
 | orgaoResponsavel       | orgao                        | Importamos apenas o slug, no atributo "id"                            |
 | publicosAlvo           | segmentos-da-sociedade       | Algumas conversões de conteúdo realizadas                             |
-| eventoslinhaDaVida     | eventos-da-linha-da-vida     | Algumas conversões de conteúdo e deduplicação realizadas              |
 | areasInteresse         | areas-de-interesse           | Convertido do VCGE 1.0 para VCGE 2.0                                  |
 
 ## Campos com tratamento especial
