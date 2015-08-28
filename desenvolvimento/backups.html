@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.10.3" data-basepath=".." data-revision="Fri Aug 28 2015 03:15:47 GMT+0000 (UTC)">
+    <div class="book" data-level="10.10.3" data-basepath=".." data-revision="Fri Aug 28 2015 23:03:52 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1499,12 +1499,33 @@
                     
                         <h1 id="backups">Backups</h1>
 <p>Backups devem ser feitos dos seguintes caminhos:</p>
-<pre><code>/etc/sysconfig/portal-de-servicos
-/etc/systemd/system/portal-de-servicos.service
-/opt/portal-de-servicos/**/*
-/var/run/portal-de-servicos/**/*
-/var/log/**/*
-</code></pre><p>A reten&#xE7;&#xE3;o dos mesmos pode variar dependendo do ambiente. Recomenda-se ao menos 30 dias.</p>
+<table>
+<thead>
+<tr>
+<th>Caminho</th>
+<th>Incremental?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/root/.ssh</td>
+<td>N&#xE3;o</td>
+</tr>
+<tr>
+<td>/usr/share/elasticsearch/es1/data</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>/usr/share/elasticsearch/es2/data</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>/var/log/<em>*/</em></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table>
+<p>A reten&#xE7;&#xE3;o dos mesmos pode variar dependendo do ambiente. Recomenda-se ao menos 30 dias.</p>
 
                     
                     </section>

@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.6" data-basepath=".." data-revision="Fri Aug 28 2015 03:15:47 GMT+0000 (UTC)">
+    <div class="book" data-level="10.6" data-basepath=".." data-revision="Fri Aug 28 2015 23:03:52 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1501,88 +1501,13 @@
 <p>O Portal de Servi&#xE7;os utiliza o <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config" target="_blank">sistema de configura&#xE7;&#xF5;es padr&#xE3;o</a> do <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a>, de 
 forma simplificada. Utilizamos apenas dois dos mecanismos disponibilizados pela plataforma: vari&#xE1;veis de ambiente 
 externas ao pacote JAR, e um arquivo <a href="http://yaml.org/" target="_blank">YAML</a> com todos os defaults necess&#xE1;rios para utiliza&#xE7;&#xE3;o, j&#xE1; embutidos no JAR.</p>
-<h2 id="arquivo-de-vari%C3%A1veis-de-ambiente-do-systemd">Arquivo de vari&#xE1;veis de ambiente do <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a></h2>
-<p>A distribui&#xE7;&#xE3;o Linux CentOS 7 utiliza a ferramenta <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> para controle das opera&#xE7;&#xF5;es do sistema operacional. Em uma diretiva de configura&#xE7;&#xE3;o, <a href="http://www.freedesktop.org/software/systemd/man/systemd.exec.html" target="_blank"><code>EnvironmentFile</code></a>, dizemos ao <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> de onde devem ser carregadas as vari&#xE1;veis de ambiente para um determinado sistema em execu&#xE7;&#xE3;o.</p>
-<p>No caso do Portal de Servi&#xE7;os, tanto em ambientes <a href="deploy-vagrant.html">Vagrant</a> quanto em <a href="deploy-homologacao-producao.html">homologa&#xE7;&#xE3;o e produ&#xE7;&#xE3;o</a>, este arquivo est&#xE1; instalado em <code>/etc/sysconfig/portal-de-servicos</code>, e deve ser revisado de acordo com o ambiente de cada instala&#xE7;&#xE3;o.</p>
-<p>Este &#xE9; o arquivo de configura&#xE7;&#xE3;o padr&#xE3;o adicionado ao pacote [RPM] da aplica&#xE7;&#xE3;o, que lista as configura&#xE7;&#xF5;es utilizadas:</p>
-<pre><code class="lang-bash"><span class="hljs-comment">## Vari&#xE1;veis de ambiente para configura&#xE7;&#xE3;o do Portal de Servi&#xE7;os</span>
-
-<span class="hljs-comment">## Op&#xE7;&#xF5;es passadas &#xE0; JVM (par&#xE2;metros de mem&#xF3;ria, GC etc)</span>
-JAVA_OPTS=-Xms256M -Xmx1G
-
-<span class="hljs-comment">## Lista dos IPs e portas dos nodos do ElasticSearch do ambiente, separados por v&#xED;rgula.</span>
-SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=<span class="hljs-string">&quot;10.16.0.11:9300,10.16.0.9:9300&quot;</span>
-
-<span class="hljs-comment">## Habilita o cache do sistema de renderiza&#xE7;&#xE3;o de templates Thymeleaf.</span>
-SPRING_THYMELEAF_CACHE=<span class="hljs-literal">true</span>
-
-<span class="hljs-comment">## Desabilita o monitoramento e m&#xE9;tricas do Piwik</span>
-PDS_PIWIK_ENABLED=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## A URL do servidor Piwik que ser&#xE1; utilizada para monitoramento e m&#xE9;tricas.</span>
-PDS_PIWIK_URL=<span class="hljs-string">&quot;https://estatisticas.presidencia.gov.br/&quot;</span>
-
-<span class="hljs-comment">## O token para acesso &#xE0; API de m&#xE9;tricas do Piwik. Geralmente, 32 caracteres hexadecimais.</span>
-PDS_PIWIK_TOKEN=
-
-<span class="hljs-comment">## O identificador do site dentro do Piwik.</span>
-PDS_PIWIK_SITE=<span class="hljs-number">52</span>
-
-<span class="hljs-comment">## Desabilita a navega&#xE7;&#xE3;o de rob&#xF4;s (motores de busca, etc) nesta inst&#xE2;ncia.</span>
-FLAGS_PERMITIR_ROBOS=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## Habilita a importa&#xE7;&#xE3;o autom&#xE1;tica de dados ao iniciar o servidor.</span>
-FLAGS_IMPORTAR_AUTOMATICAMENTE=<span class="hljs-literal">true</span>
-
-<span class="hljs-comment">## Habilita a atualiza&#xE7;&#xE3;o autom&#xE1;tica de destaques a partir de estat&#xED;sticas do Piwik.</span>
-FLAGS_DESTAQUES_AUTOMATICOS=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## Desabilita as URLs de informa&#xE7;&#xE3;o e estado do sistema disponibilizadas pelo Spring-Boot.</span>
-ENDPOINTS_ENABLED=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment"># Desabilita a URL /jolokia</span>
-ENDPOINTS_JOLOKIA_ENABLED=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## Habilita a URL /info, que cont&#xE9;m informa&#xE7;&#xF5;es sobre a vers&#xE3;o da aplica&#xE7;&#xE3;o.</span>
-ENDPOINTS_INFO_ENABLED=<span class="hljs-literal">true</span>
-
-<span class="hljs-comment">## Habilita a URL /health, que cont&#xE9;m informa&#xE7;&#xF5;es sobre o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o.</span>
-ENDPOINTS_HEALTH_ENABLED=<span class="hljs-literal">true</span>
-
-<span class="hljs-comment">## Desabilita a disponibiliza&#xE7;&#xE3;o de dados sens&#xED;veis no estado de sa&#xFA;de, como do cluster ElasticSearch e espa&#xE7;o em disco.</span>
-ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## Protocolo utilizado para envio de emails.</span>
-<span class="hljs-comment"># MAIL_PROTOCOL=smtp</span>
-
-<span class="hljs-comment">## Servidor de emails utilizado para envio (mesmo IP do balanceador de carga, geralmente).</span>
-<span class="hljs-comment"># MAIL_HOST=10.16.0.10</span>
-
-<span class="hljs-comment">## Porta em que o Portal de Servi&#xE7;os deve se conectar ao servidor de emails.</span>
-<span class="hljs-comment"># MAIL_PORT=25</span>
-
-<span class="hljs-comment">## Timeout para estabelecimento de conex&#xF5;es e espera por atividade em uma conex&#xE3;o estabelecida, em milisegundos</span>
-<span class="hljs-comment"># MAIL_TIMEOUT=5000</span>
-
-<span class="hljs-comment">## Caso o servidor de envio de emails exija autentica&#xE7;&#xE3;o, este valor deve ser true.</span>
-<span class="hljs-comment"># MAIL_SMTP_AUTH=false</span>
-
-<span class="hljs-comment">## Caso o servidor de envio de emails suporte, ou mesmo exija, a extens&#xE3;o de criptografia STARTTLS, este valor deve ser true.</span>
-<span class="hljs-comment"># MAIL_SMTP_STARTTLS=false</span>
-
-<span class="hljs-comment">## O endere&#xE7;o de email que originar&#xE1; as mensagens vindas do Portal de Servi&#xE7;os.</span>
-<span class="hljs-comment"># MAIL_FROM=&quot;nao-responda@servicos.gov.br&quot;</span>
-
-<span class="hljs-comment">## O endere&#xE7;o de email para qual as mensagens de notifica&#xE7;&#xE3;o da opera&#xE7;&#xE3;o do Portal de Servi&#xE7;os ser&#xE3;o enviados.</span>
-<span class="hljs-comment"># MAIL_TO=&quot;servicos@planejamento.gov.br&quot;</span>
-
-<span class="hljs-comment">## Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, o nome do usu&#xE1;rio da conta a ser utilizada.</span>
-<span class="hljs-comment"># MAIL_USERNAME=</span>
-
-<span class="hljs-comment">## Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, a senha da conta a ser utilizada.</span>
-<span class="hljs-comment"># MAIL_PASSWORD=</span>
-</code></pre>
-
+<h2 id="vari%C3%A1veis-de-ambiente">Vari&#xE1;veis de ambiente</h2>
+<p>Tanto o Portal quanto o Editor de Servi&#xE7;os utilizam vari&#xE1;veis de ambiente para configura&#xE7;&#xE3;o. Todas elas t&#xEA;m valores padr&#xE3;o, e algumas s&#xE3;o redefinidas na configura&#xE7;&#xE3;o dos cont&#xEA;iners usando o <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a> (mais especificamente, atrav&#xE9;s da diretiva <code>environment</code> dos arquivos <code>docker-compose.yml</code> do <a href="https://github.com/servicosgovbr/docker/blob/master/portal-de-servicos/docker-compose.yml" target="_blank">Portal</a> e do <a href="https://github.com/servicosgovbr/docker/blob/master/editor-de-servicos/docker-compose.yml" target="_blank">Editor</a>).</p>
+<p>Os arquivos que listam as configura&#xE7;&#xF5;es padr&#xE3;o s&#xE3;o:</p>
+<ul>
+<li>Portal de Servi&#xE7;os: <a href="https://github.com/servicosgovbr/portal-de-servicos/blob/master/scripts/portal-de-servicos.default.config" target="_blank"><code>scripts/portal-de-servicos.default.config</code></a></li>
+<li>Editor de Servi&#xE7;os: <a href="https://github.com/servicosgovbr/editor-de-servicos/blob/master/scripts/editor-de-servicos.default.config" target="_blank"><code>scripts/editor-de-servicos.default.config</code></a></li>
+</ul>
 
                     
                     </section>

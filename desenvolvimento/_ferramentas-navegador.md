@@ -4,7 +4,7 @@
 
 ### [SASS](http://sass-lang.com/)
 
-Extensão da sintaxe do CSS com variáveis, templates, blocos e muitas outras funcionalidades.
+Extensão da sintaxe do CSS com variáveis, templates, blocos e outras funcionalidades.
 
 ### [jQuery](http://jquery.org/)
 
@@ -13,3 +13,7 @@ Biblioteca JavaScript comumente utilizada para adicionar comportamentos à pági
 ### [Modernizr](http://modernizr.com/)
 
 Biblioteca que simplifica a criação de páginas compatíveis com múltiplos navegadores.
+
+### [Mithril.js](http://mithril.js.org/)
+
+Framework que simplifica a criação de *Single-Page Applications*, como o Editor de Serviços.

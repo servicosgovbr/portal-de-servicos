@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.8.1" data-basepath=".." data-revision="Fri Aug 28 2015 03:15:47 GMT+0000 (UTC)">
+    <div class="book" data-level="10.8.1" data-basepath=".." data-revision="Fri Aug 28 2015 23:03:52 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1506,7 +1506,14 @@ enabled=1
 gpgcheck=1
 gpgkey=https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/src/main/resources/static/GPG-KEY
 </code></pre><p>Um arquivo com estes conte&#xFA;dos pode ser adicionado ao diret&#xF3;rio <code>/etc/yum.repos.d</code>, seguido do comando <code>sudo yum makecache fast -y</code>, para que o Yum atualize as defini&#xE7;&#xF5;es internas de listas de pacotes dispon&#xED;veis.</p>
-<p>A chave <a href="https://www.gnupg.org/" target="_blank">GPG</a> utilizada para assinar os pacotes e o reposit&#xF3;rio &#xE9;:</p>
+<p>De maneira similar, os pacotes do Editor de Servi&#xE7;os est&#xE3;o dispon&#xED;veis no reposit&#xF3;rio com as seguintes configura&#xE7;&#xF5;es:</p>
+<pre><code>[editor-de-servicos]
+name = Editor de Servi&#xE7;os
+baseurl = https://s3-sa-east-1.amazonaws.com/servicosgovbr/centos/7/
+enabled=1
+gpgcheck=1
+gpgkey=https://raw.githubusercontent.com/servicosgovbr/editor-de-servicos/master/src/main/resources/static/GPG-KEY
+</code></pre><p>A chave <a href="https://www.gnupg.org/" target="_blank">GPG</a> utilizada para assinar os pacotes de ambos os reposit&#xF3;rios &#xE9;:</p>
 <pre><code>pub   2048R/2E1F2BA2 2015-04-07
       Key fingerprint = 1F90 DD30 DAF2 DCDF 4F27  DC78 F68F 9EB4 2E1F 2BA2
 uid                  Portal de Servi&#xE7;os &lt;gpg@servicos.gov.br&gt;

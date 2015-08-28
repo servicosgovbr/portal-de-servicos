@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.5.4" data-basepath=".." data-revision="Fri Aug 28 2015 03:15:47 GMT+0000 (UTC)">
+    <div class="book" data-level="10.5.4" data-basepath=".." data-revision="Fri Aug 28 2015 23:03:52 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1497,43 +1497,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="homologa%C3%A7%C3%A3o-e-produ%C3%A7%C3%A3o">Homologa&#xE7;&#xE3;o e Produ&#xE7;&#xE3;o</h1>
-<p>Ambientes gerenciados pelo Governo Federal (de acordo com a <a href="infraestrutura.html">infraestrutura</a>) t&#xEA;m a aplica&#xE7;&#xE3;o e o cluster de <a href="elasticsearch.html">ElasticSearch</a> implantados internamente ao Minist&#xE9;rio do Planejamento.</p>
-<p>Os ambientes possuem configura&#xE7;&#xE3;o similar ao <a href="deploy-vagrant.html">ambiente Vagrant</a>, com a adi&#xE7;&#xE3;o de funcionalidades relacionadas a seguran&#xE7;a, preven&#xE7;&#xE3;o a ataques, backup e monitoramento.</p>
-<h2 id="instala%C3%A7%C3%A3o">Instala&#xE7;&#xE3;o</h2>
-<p>A instala&#xE7;&#xE3;o dos ambientes &#xE9; simplificada atrav&#xE9;s dos scripts existentes no diret&#xF3;rio <code>scripts/prod-like</code>, residente no <a href="https://github.com/servicosgovbr/portal-de-servicos/tree/master/scripts/prod-like" target="_blank">reposit&#xF3;rio no Github</a>:</p>
-<h3 id="-lb-node-install"><code>lb-node-install</code></h3>
-<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a ser o balanceador de carga. Ele instala, configura e inicia o <a href="http://www.haproxy.org" target="_blank">haproxy</a> de forma a distribuir a carga das requisi&#xE7;&#xF5;es externas entre os servidores de aplica&#xE7;&#xE3;o.</p>
-<p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de aplica&#xE7;&#xE3;o (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.13</code> e <code>10.16.0.12</code> por padr&#xE3;o).</p>
-<p>Exemplo:</p>
-<pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/lb-node-install <span class="hljs-string">&apos;10.16.0.13&apos;</span> <span class="hljs-string">&apos;10.16.0.12&apos;</span>
-</code></pre>
-<h3 id="-app-node-install"><code>app-node-install</code></h3>
-<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir a aplica&#xE7;&#xE3;o do Portal de Servi&#xE7;os. </p>
-<p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de busca (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.11</code> e <code>10.16.0.9</code> por padr&#xE3;o).</p>
-<p>Este script:</p>
-<ul>
-<li>Configura o [reposit&#xF3;rio Yum] do Portal de Servi&#xE7;os</li>
-<li>Instala as ferramentas <code>wget</code> e <code>deltarpm</code>, caso n&#xE3;o existentes no sistema</li>
-<li>Instala a JDK 1.8.0_40, caso n&#xE3;o existente</li>
-<li>Instala, configura e inicia o <em>daemon</em> do Portal de Servi&#xE7;os (<code>portal-de-servicos</code>).</li>
-</ul>
-<p>Exemplo:</p>
-<pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/app-node-install <span class="hljs-string">&apos;10.16.0.11&apos;</span> <span class="hljs-string">&apos;10.16.0.9&apos;</span>
-</code></pre>
-<h3 id="-es-node-install"><code>es-node-install</code></h3>
-<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir o motor de busca do Portal de Servi&#xE7;os, <a href="elasticsearch.html">ElasticSearch</a>.</p>
-<p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de busca (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.11</code> e <code>10.16.0.9</code> por padr&#xE3;o).</p>
-<p>Este script:</p>
-<ul>
-<li>Configura o <a href="(./repositorio-yum.md)">reposit&#xF3;rio Yum</a> do ElasticSearch</li>
-<li>Instala as ferramentas <code>wget</code> e <code>deltarpm</code>, caso n&#xE3;o existentes no sistema</li>
-<li>Instala a JDK 1.8.0_40, caso n&#xE3;o existente</li>
-<li>Instala, configura e inicia o <em>daemon</em> do <a href="elasticsearch.html">ElasticSearch</a> (<code>elasticsearch</code>).</li>
-</ul>
-<pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/es-node-install <span class="hljs-string">&apos;10.16.0.11&apos;</span> <span class="hljs-string">&apos;10.16.0.9&apos;</span>
-</code></pre>
-
+                        
                     
                     </section>
                 

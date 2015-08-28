@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.10.9" data-basepath=".." data-revision="Fri Aug 28 2015 03:15:47 GMT+0000 (UTC)">
+    <div class="book" data-level="10.10.9" data-basepath=".." data-revision="Fri Aug 28 2015 23:03:52 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1498,69 +1498,51 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="monitoramento">Monitoramento</h1>
-<p>A monitora&#xE7;&#xE3;o da sa&#xFA;de dos hosts e inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> pode ser feita atrav&#xE9;s das seguintes URLs:</p>
-<h2 id="aplica%C3%A7%C3%A3o">Aplica&#xE7;&#xE3;o</h2>
-<p>A URL <code>/health</code> do Portal de Servi&#xE7;os indica o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o em si e de suas conex&#xF5;es ao cluster do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>. Caso o valor da vari&#xE1;vel de ambiente <code>ENDPOINTS_HEALTH_SENSITIVE</code> seja <code>false</code>, mais informa&#xE7;&#xE3;o &#xE9; exibida:</p>
+<p>A monitora&#xE7;&#xE3;o da sa&#xFA;de do host &#xE9; feita de maneira externa, utilizando Nagios. Para o monitoramento das inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>, com informa&#xE7;&#xF5;es mais detalhadas, as seguintes op&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis:</p>
+<h2 id="balanceador-de-carga">Balanceador de Carga</h2>
+<p>As estat&#xED;sticas do HAProxy ficam dispon&#xED;veis atrav&#xE9;s da porta de administra&#xE7;&#xE3;o (8080/tcp), no endere&#xE7;o <code>/lb-stats</code>. Por exemplo, em produ&#xE7;&#xE3;o, estas est&#xE3;o dispon&#xED;veis em <code>http://servicos.gov.br:8080/lb-stats</code>.</p>
+<p>Nesta p&#xE1;gina est&#xE3;o contidas algumas estat&#xED;sticas de acesso, em n&#xFA;meros de I/O brutos, bem como de disponibilidade dos servi&#xE7;os gerenciados.</p>
+<h2 id="portal-de-servi%C3%A7os">Portal de Servi&#xE7;os</h2>
+<p>O Portal de Servi&#xE7;os disponibiliza informa&#xE7;&#xF5;es de sa&#xFA;de atrav&#xE9;s do endere&#xE7;o <code>/health</code>, que retorna JSON similar ao seguinte:</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+  <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (622 docs)&quot;</span>,
+    <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
+  },
   <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
     <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">3</span>,
-    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;Freakmaster&quot;</span>,
-    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;Seth&quot;</span>,
-    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;Right-Winger&quot;</span>
+    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;es1&quot;</span>,
+    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;logstash-d9ccaa4d20c4-1-11624&quot;</span>,
+    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;es2&quot;</span>
+  },
+  <span class="hljs-string">&quot;cache&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UNKNOWN&quot;</span>
   },
   <span class="hljs-string">&quot;diskSpace&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">96787795968</span>,
+    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378258944</span>,
     <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
   }
 }
 </code></pre>
-<p>Caso contr&#xE1;rio, apenas o estado geral da aplica&#xE7;&#xE3;o &#xE9; retornado:</p>
+<p>Nele, &#xE9; poss&#xED;vel ver o estado geral da aplica&#xE7;&#xE3;o (<code>status</code>), do &#xED;ndice no ElasticSearch (<code>portalDeServicosIndex</code>), informa&#xE7;&#xF5;es de conex&#xE3;o ao ElasticSearch (<code>elasticsearch</code>), do estado do cache interno de p&#xE1;ginas (<code>cache</code>) e espa&#xE7;o em disco (<code>diskSpace</code>).</p>
+<h2 id="editor-de-servi%C3%A7os">Editor de Servi&#xE7;os</h2>
+<p>O Editor de Servi&#xE7;os disponibiliza informa&#xE7;&#xF5;es de sa&#xFA;de atrav&#xE9;s do endere&#xE7;o <code>/editar/health</code>, que retorna JSON similar ao seguinte:</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378254848</span>,
+    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
+  }
 }
 </code></pre>
-<h2 id="-elasticsearch"><a href="desenvolvimento/elasticsearch.md">ElasticSearch</a></h2>
-<p>A URL <code>/_cluster/health</code> do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> disponibiliza diversas informa&#xE7;&#xF5;es sobre o estado de sa&#xFA;de e configura&#xE7;&#xE3;o do cluster. Por exemplo:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;cluster_name&quot;</span>: <span class="hljs-string">&quot;elasticsearch&quot;</span>,
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;red&quot;</span>,
-  <span class="hljs-string">&quot;timed_out&quot;</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-string">&quot;number_of_nodes&quot;</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-string">&quot;number_of_data_nodes&quot;</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-string">&quot;active_primary_shards&quot;</span>: <span class="hljs-number">13</span>,
-  <span class="hljs-string">&quot;active_shards&quot;</span>: <span class="hljs-number">13</span>,
-  <span class="hljs-string">&quot;relocating_shards&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;initializing_shards&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;unassigned_shards&quot;</span>: <span class="hljs-number">29</span>,
-  <span class="hljs-string">&quot;number_of_pending_tasks&quot;</span>: <span class="hljs-number">0</span>
-}
-</code></pre>
-<p>No exemplo acima, pode-se ver que o n&#xFA;mero de nodos insuficiente (apenas 1) &#xE9; motivo de preocupa&#xE7;&#xE3;o e torna o status <em>red</em>.</p>
-<p>Quando a conex&#xE3;o entre o nodo e seus pares no cluster se estabelece com sucesso, o estado muda em alguns instantes:</p>
-<pre><code class="lang-json">{
-   <span class="hljs-string">&quot;cluster_name&quot;</span>: <span class="hljs-string">&quot;elasticsearch&quot;</span>,
-   <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;green&quot;</span>,
-   <span class="hljs-string">&quot;timed_out&quot;</span>: <span class="hljs-literal">false</span>,
-   <span class="hljs-string">&quot;number_of_nodes&quot;</span>: <span class="hljs-number">2</span>,
-   <span class="hljs-string">&quot;number_of_data_nodes&quot;</span>: <span class="hljs-number">2</span>,
-   <span class="hljs-string">&quot;active_primary_shards&quot;</span>: <span class="hljs-number">7</span>,
-   <span class="hljs-string">&quot;active_shards&quot;</span>: <span class="hljs-number">14</span>,
-   <span class="hljs-string">&quot;relocating_shards&quot;</span>: <span class="hljs-number">0</span>,
-   <span class="hljs-string">&quot;initializing_shards&quot;</span>: <span class="hljs-number">0</span>,
-   <span class="hljs-string">&quot;unassigned_shards&quot;</span>: <span class="hljs-number">0</span>,
-   <span class="hljs-string">&quot;number_of_pending_tasks&quot;</span>: <span class="hljs-number">0</span>
-}
-</code></pre>
-<p>O estado tamb&#xE9;m pode ficar marcado como &quot;red&quot; caso o n&#xFA;mero de parti&#xE7;&#xF5;es (<em>shards</em>) n&#xE3;o seja suficiente para distribuir todos os dados. Neste caso, reiniciar a aplica&#xE7;&#xE3;o deve trazer todas as parti&#xE7;&#xF5;es necess&#xE1;rias para o cluster.</p>
-<h2 id="java-management-extensions-jmx">Java Management Extensions (JMX)</h2>
-<p>Diversas informa&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis atrav&#xE9;s do servi&#xE7;o de gerenciamento da JVM. Existem diversos <a href="http://java-source.net/open-source/jmx" target="_blank">clientes para o protocolo JMX dispon&#xED;veis</a>, e a JDK j&#xE1; vem com o <a href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html" target="_blank">JConsole</a> embutido. Ao abrir o processo do Portal de Servi&#xE7;os no JConsole, temos:</p>
-<p><img src="jconsole-overview.png" alt="JConsole: Overview"></p>
-<p>E ao listar os MBeans dispon&#xED;veis em <code>org.springframework.boot/Endpoint/environmentEndpoint/Attributes</code>:</p>
-<p><img src="jconsole-environment.png" alt="JConsole: Environments"></p>
-<p>As informa&#xE7;&#xF5;es e opera&#xE7;&#xF5;es oferecidas atrav&#xE9;s do JMX s&#xE3;o maneiras poderosas de manter e diagnosticar a sa&#xFA;de da aplica&#xE7;&#xE3;o e do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>, e devem ser manuseadas com o cuidado necess&#xE1;rio. Para mais informa&#xE7;&#xF5;es sobre seguran&#xE7;a do JMX, por favor utilize a <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html" target="_blank">documenta&#xE7;&#xE3;o de refer&#xEA;ncia oficial</a>.</p>
+<p>Nele, &#xE9; poss&#xED;vel ver o estado geral da aplica&#xE7;&#xE3;o (<code>status</code>) e do espa&#xE7;o em disco (<code>diskSpace</code>).</p>
+<h2 id="kibana">Kibana</h2>
+<p>Todos os logs gerados pelas aplica&#xE7;&#xF5;es s&#xE3;o redirecionados para o <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> atrav&#xE9;s do <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash</a>. Eles s&#xE3;o indexados e podem ser auditados, buscados e visualizados atrav&#xE9;s do <a href="https://www.elastic.co/products/kibana" target="_blank">Kibana</a>, que fica dispon&#xED;vel na porta 5601/tcp. Por exemplo, em produ&#xE7;&#xE3;o, a ferramenta est&#xE1; dispon&#xED;vel em <code>http://servicos.gov.br:5601/</code>.</p>
 
                     
                     </section>

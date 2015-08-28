@@ -32,12 +32,6 @@ Possibilita a escrita de serviços web de alta performance com código intuitivo
 
 Aumenta a sintaxe de arquivos HTML e XML para permitir construções poderosas de exibição de dados.
 
-### [ElasticSearch]
-
-Mecanismo de busca de dados e documentos, descrito em mais detalhes na seção "[ElasticSearch](./elasticsearch.md)".
-
-[ElasticSearch]:http://elasticsearch.org
-
 ### [Markdown]
 
 Linguagem de marcação de texto simples e orientada à produção de textos eficiente e compatível com HTML.
@@ -52,22 +46,8 @@ Processador de [Markdown] em Java.
 
 Gerador de _slugs_, strings de texto simples e que podem ser utilizadas seguramente em trechos de URLs ou identificadores internos de objetos.
 
-### [HAProxy](http://www.haproxy.org)
+### [ElasticSearch]
 
-Balanceador de carga entre servidores HTTP de alta disponibilidade e fácil configuração.
+Mecanismo de busca de dados e documentos, descrito em mais detalhes na seção "[ElasticSearch](./elasticsearch.md)".
 
-### [CentOS]
-
-Distribuição Linux de derivada do Red Hat Enterprise Linux e mantida pelo CentOS Project.
-
-[CentOS]:http://centos.org
-
-### [RPM]
-
-Sistema e formato de pacotes usado pelo [CentOS] e diversas outras distribuições Linux.
-
-[RPM]:http://www.rpm.org
-
-### [Yum](http://en.wikipedia.org/wiki/Yellowdog_Updater,_Modified)
-
-Gerencia a instalação e remoção de pacotes [RPM].
+[ElasticSearch]:http://elasticsearch.org

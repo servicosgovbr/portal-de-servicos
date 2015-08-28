@@ -34,7 +34,7 @@
     <body>
         
         
-    <div class="book" data-level="11.1" data-basepath=".." data-revision="Fri Aug 28 2015 03:15:47 GMT+0000 (UTC)">
+    <div class="book" data-level="11.1" data-basepath=".." data-revision="Fri Aug 28 2015 23:03:52 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1496,283 +1496,345 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="documento-de-implanta%C3%A7%C3%A3o">Documento de Implanta&#xE7;&#xE3;o</h1>
-<p>Neste documento est&#xE3;o todas as informa&#xE7;&#xF5;es necess&#xE1;rias &#xE0; implanta&#xE7;&#xE3;o e opera&#xE7;&#xE3;o do Portal de Servi&#xE7;os em ambientes similares a produ&#xE7;&#xE3;o.</p>
-<h2 id="vis%C3%A3o-da-infraestrutura">Vis&#xE3;o da infraestrutura</h2>
-<p><a href="desenvolvimento/ambiente-producao.graphml"><img src="../desenvolvimento/ambiente-producao.svg" alt="Diagrama da rede em ambiente similar a produ&#xE7;&#xE3;o"></a></p>
-<h2 id="ambiente-de-produ%C3%A7%C3%A3o">Ambiente de produ&#xE7;&#xE3;o</h2>
-<p>Este ambiente cont&#xE9;m 5 m&#xE1;quinas virtuais:</p>
+<p>Neste documento est&#xE3;o todas as informa&#xE7;&#xF5;es necess&#xE1;rias &#xE0; implanta&#xE7;&#xE3;o e opera&#xE7;&#xE3;o do Portal de Servi&#xE7;os e Editor de Servi&#xE7;os em ambientes de, ou similares a, produ&#xE7;&#xE3;o.</p>
+<h1 id="infraestrutura">Infraestrutura</h1>
+<p><img src="../desenvolvimento/ambiente-docker.png" alt="Diagrama da rede em ambiente similar a produ&#xE7;&#xE3;o"></p>
+<h2 id="ambientes-docker">Ambientes Docker</h2>
+<p>Estes ambientes cont&#xE9;m uma m&#xE1;quina virtual com as seguintes aplica&#xE7;&#xF5;es Docker:</p>
 <ul>
-<li>Balanceador de carga</li>
-<li>Servidor de Aplica&#xE7;&#xE3;o 1 (Azul)</li>
-<li>Servidor de Aplica&#xE7;&#xE3;o 2 (Verde)</li>
-<li>Servidor de Busca 1</li>
-<li>Servidor de Busca 2</li>
+<li>Balanceador de carga (haproxy)</li>
+<li>Portal de Servi&#xE7;os 1</li>
+<li>Portal de Servi&#xE7;os 2</li>
+<li>Editor de Servi&#xE7;os 1</li>
+<li>Editor de Servi&#xE7;os 2</li>
+<li>ElasticSearch 1</li>
+<li>ElasticSearch 2</li>
+<li>cAdvisor</li>
+<li>Logspout</li>
+<li>Logstash</li>
 </ul>
+<p>Estas est&#xE3;o definidas na configura&#xE7;&#xE3;o, em formato <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a>, do <a href="https://github.com/servicosgovbr/docker" target="_blank">reposit&#xF3;rio relacionado</a>.</p>
+<h2 id="portas-e-firewalls">Portas e firewalls</h2>
+<p>Por padr&#xE3;o, o balanceador &#xE9; o &#xFA;nico cont&#xEA;iner que exp&#xF5;e portas abertas para o host. Todo o tr&#xE1;fego deve ser direcionado a estas portas, e o balanceador lida com a distribui&#xE7;&#xE3;o interna. S&#xE3;o elas:</p>
+<ul>
+<li>80/tcp (HTTP): Tr&#xE1;fego para o Portal de Servi&#xE7;os (<code>/*</code>) e Editor de Servi&#xE7;os (<code>/editar/*</code>)</li>
+<li>8080/tcp (HTTP): Tr&#xE1;fego para o cAdvisor (<code>/*</code>) e estat&#xED;sticas do HAProxy (<code>/lb-stats</code>)</li>
+<li>5601/tcp (HTTP): Tr&#xE1;fego para o Kibana (<code>/*</code>)</li>
+</ul>
+<h3 id="portas-internas">Portas internas</h3>
+<p>Estas s&#xE3;o as portas utilizadas internamente para comunica&#xE7;&#xE3;o entre cont&#xEA;ineres:</p>
 <table>
 <thead>
 <tr>
-<th>VM</th>
-<th>OS</th>
-<th>Vers&#xE3;o</th>
-<th>Arquitetura</th>
-<th>Cores</th>
-<th>Mem&#xF3;ria</th>
-<th>Disco</th>
+<th>Origem</th>
+<th>Destino</th>
 <th>Portas</th>
+<th>Notas</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Balanceador</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>4</td>
-<td>4 GB</td>
-<td>100+ GB</td>
-<td>22, 80</td>
+<td>Portal de Servi&#xE7;os</td>
+<td>8080/tcp</td>
+<td></td>
 </tr>
 <tr>
-<td>Aplica&#xE7;&#xE3;o 1</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>4</td>
-<td>4 GB</td>
-<td>100+ GB</td>
-<td>22, 8080</td>
+<td>Balanceador</td>
+<td>Editor de Servi&#xE7;os</td>
+<td>8090/tcp</td>
+<td></td>
 </tr>
 <tr>
-<td>Aplica&#xE7;&#xE3;o 2</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>4</td>
-<td>4 GB</td>
-<td>100+ GB</td>
-<td>22, 8080</td>
+<td>Balanceador</td>
+<td>cAdvisor</td>
+<td>8080/tcp</td>
+<td></td>
 </tr>
 <tr>
-<td>Busca 1</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>4</td>
-<td>4 GB</td>
-<td>100+ GB</td>
-<td>22, 9200, 9300</td>
+<td>Balanceador</td>
+<td>Kibana</td>
+<td>5601/tcp</td>
+<td></td>
 </tr>
 <tr>
-<td>Busca 2</td>
-<td>CentOS</td>
-<td>7</td>
-<td>64bit</td>
-<td>4</td>
-<td>4 GB</td>
-<td>100+ GB</td>
-<td>22, 9200, 9300</td>
+<td>Balanceador</td>
+<td>ElasticSearch</td>
+<td>9200/tcp e 9300/tcp</td>
+<td>Usadas apenas para monitoria</td>
+</tr>
+<tr>
+<td>Balanceador</td>
+<td>Logstash</td>
+<td>5000/tcp</td>
+<td>Usada apenas para monitoria</td>
+</tr>
+<tr>
+<td>Portal de Servi&#xE7;os</td>
+<td>ElasticSearch</td>
+<td>9300/tcp</td>
+<td></td>
+</tr>
+<tr>
+<td>Logspout</td>
+<td>Logstash</td>
+<td>5000/udp</td>
+<td></td>
+</tr>
+<tr>
+<td>Logstash</td>
+<td>ElasticSearch</td>
+<td>9300/tcp</td>
+<td></td>
+</tr>
+<tr>
+<td>Kibana</td>
+<td>ElasticSearch</td>
+<td>9200/tcp</td>
+<td>Usa apenas o ElasticSearch 1</td>
 </tr>
 </tbody>
 </table>
-<h4 id="balanceador-de-carga">Balanceador de Carga</h4>
-<p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda um servidor <a href="http://www.haproxy.org" target="_blank">HAProxy</a> na porta 80, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
-<h4 id="servidores-de-aplica%C3%A7%C3%A3o">Servidores de Aplica&#xE7;&#xE3;o</h4>
-<p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda a aplica&#xE7;&#xE3;o sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, na porta 8080, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
-<h4 id="servidores-de-busca">Servidores de Busca</h4>
-<p>CentOS 7, 64 bits, com 4 cores, 4gb de RAM e 100+ GB de disco. Roda o <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> sob a <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Java Virtual Machine</a> vers&#xE3;o <code>1.8.0_40</code> ou superior, nas portas 9200 e 9300, e um servidor <a href="http://www.openssh.com/" target="_blank">ssh</a> na porta 22.</p>
-<hr>
-<h1 id="reposit%C3%B3rio-yum">Reposit&#xF3;rio Yum</h1>
-<p>Os pacotes <a href="http://www.rpm.org" target="_blank">RPM</a> do Portal de Servi&#xE7;os est&#xE3;o dispon&#xED;veis em um reposit&#xF3;rio Yum, com as seguintes configura&#xE7;&#xF5;es:</p>
-<pre><code>[portal-de-servicos]
-name = Portal de Servi&#xE7;os
-baseurl = https://s3-sa-east-1.amazonaws.com/servicosgovbr/centos/7/
-enabled=1
-gpgcheck=1
-gpgkey=https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/src/main/resources/static/GPG-KEY
-</code></pre><p>Um arquivo com estes conte&#xFA;dos pode ser adicionado ao diret&#xF3;rio <code>/etc/yum.repos.d</code>, seguido do comando <code>sudo yum makecache fast -y</code>, para que o Yum atualize as defini&#xE7;&#xF5;es internas de listas de pacotes dispon&#xED;veis.</p>
-<p>A chave <a href="https://www.gnupg.org/" target="_blank">GPG</a> utilizada para assinar os pacotes e o reposit&#xF3;rio &#xE9;:</p>
-<pre><code>pub   2048R/2E1F2BA2 2015-04-07
-      Key fingerprint = 1F90 DD30 DAF2 DCDF 4F27  DC78 F68F 9EB4 2E1F 2BA2
-uid                  Portal de Servi&#xE7;os &lt;gpg@servicos.gov.br&gt;
-sub   2048R/BA141101 2015-04-07
-</code></pre><p>E seu conte&#xFA;do (tamb&#xE9;m dispon&#xED;vel atraves da URL na se&#xE7;&#xE3;o <code>gpgkey</code> da configura&#xE7;&#xE3;o acima) &#xE9;:</p>
-<pre><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
-
-mQENBFUj7DsBCAC8sotytVL/ZTAqCI4gZGIVcogVXo1AsjySXTR9mVAEet3EElDM
-dIs2WaD/oLUFqG2TtSDLd3RhrufIHpe4t4pISKoHE8jaHecQR8q9y9Fbyjd5swba
-DIrulD8/b/qNIXr21PRjoJ1II5KxkKvA3Ax8RUui8f7fGg3SY3slfPqKfp81K6gM
-+LoISVOhvxgiPDj5AtZUtarFdsGs1ssCcYD8axOgU9lEj2JZxO5ntUff+L9l8Ftg
-Fi7i4pwdsz6RwZTr551qtrZc2gXesnCgJBl5y45AaIlIeRfZ5xpIz/7mQFqf5Vl8
-FYdxF2WNslyTkpZBgSdPIA9mFEEK77YWtKP5ABEBAAG0J0d1aWEgZGUgU2VydmnD
-p29zIDxncGdAc2Vydmljb3MuZ292LmJyPokBOAQTAQIAIgUCVSPsOwIbAwYLCQgH
-AwIGFQgCCQoLBBYCAwECHgECF4AACgkQ9o+etC4fK6IJEAf9GvYWYq8XbjQEcThO
-5Yf4gm1OaISd2mt6TD0BABz6fLi23454RmM9hoGThb/IPfabHH0ZKq0YFEqA3cwI
-UlzoT4VycYoZSr1EMxiJsAWyf6n/y5Gt9fwnuRKBOeLnPd5gdK5+ukWlc89U08F4
-oCTrpqif/9eOw0tDeHD15rbNR4DZk8CYquT05RpMdJ0EMpYg6GYwffH8NEFg/bRZ
-R9w7TdyHVB6BFqNuVmxn/Scg2W/Vwb5rk1P0GMOIawUBrLE82pZGuEyD9I8g5L6u
-CbPmJ97HimGYBlgptkzImc2viCi/KfFSmlrNvWOnDkviHmyME5TzhAZd4Wunnwo6
-wN5mvLkBDQRVI+w7AQgA1U/T1BhDlinoc1Vsm5RyqaoPwnl7U/V1ieJ9IPC76Q6Q
-pOLca2LN9IQldWRfB3mN7lG+ioxbXIx110A4AHugPLO9eUtj5LqoHk6pgia5YcM/
-qsE24NwKjEmLHokOrVUqawVgEEFJR+udWBeBY7xL0wD/ZQIKbDKL/avf39z2vHfd
-egqm46l8DkFjeRZueceLD/N2XFOuw8DHulb+7Rs7mako4kdXmyE3T/bxo7zBuybr
-W0gpKwI0e+kBL6q4m1I472jUQY6hvmjsj8J0D9g5PIMXwtpMSQVFlMWSxP8+KrgV
-2w8ug03BpDk/d5G+sWUiVPpVDVfSaA2nxTWL9i5NWQARAQABiQEfBBgBAgAJBQJV
-I+w7AhsMAAoJEPaPnrQuHyui81UH/1iww/lx6UhB2rioLu5S9hIdZk+B3uuLFI/+
-lIBh+tp9SgYmVbbD9re649wiCUzvyup9zWbwwq1/yC403ooDOFhQ1685ZKtMHDHV
-37GQktbJcADd8feor60/lmJVfll8zarOQRn4EGY9laZK46lGB6GdFrpkvzifyNDF
-U+m7ZteaJOBqv0l+iwnoSS/wIcQI8ISX1KRCDmR2dxFO1Gnx53S1+yIryL2fINZn
-zAQfjQCD/hjXQHUk5o2rMKlMUF2iPJwlx139wJ/o5BtvKXg/1oGBruMa8dVGGy4+
-FWNjBIi/4Zz3o/QwwjUGKeAYRpllp8knOk+6foxRzuYIkov92Lg=
-=vCrJ
------END PGP PUBLIC KEY BLOCK-----
-</code></pre><hr>
-<h1 id="homologa%C3%A7%C3%A3o-e-produ%C3%A7%C3%A3o">Homologa&#xE7;&#xE3;o e Produ&#xE7;&#xE3;o</h1>
-<p>Ambientes gerenciados pelo Governo Federal (de acordo com a <a href="infraestrutura.md">infraestrutura</a>) t&#xEA;m a aplica&#xE7;&#xE3;o e o cluster de <a href="elasticsearch.md">ElasticSearch</a> implantados internamente ao Minist&#xE9;rio do Planejamento.</p>
-<p>Os ambientes possuem configura&#xE7;&#xE3;o similar ao <a href="deploy-vagrant.md">ambiente Vagrant</a>, com a adi&#xE7;&#xE3;o de funcionalidades relacionadas a seguran&#xE7;a, preven&#xE7;&#xE3;o a ataques, backup e monitoramento.</p>
-<h2 id="instala%C3%A7%C3%A3o">Instala&#xE7;&#xE3;o</h2>
-<p>A instala&#xE7;&#xE3;o dos ambientes &#xE9; simplificada atrav&#xE9;s dos scripts existentes no diret&#xF3;rio <code>scripts/prod-like</code>, residente no <a href="https://github.com/servicosgovbr/portal-de-servicos/tree/master/scripts/prod-like" target="_blank">reposit&#xF3;rio no Github</a>:</p>
-<h3 id="-lb-node-install"><code>lb-node-install</code></h3>
-<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a ser o balanceador de carga. Ele instala, configura e inicia o <a href="http://www.haproxy.org" target="_blank">haproxy</a> de forma a distribuir a carga das requisi&#xE7;&#xF5;es externas entre os servidores de aplica&#xE7;&#xE3;o.</p>
-<p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de aplica&#xE7;&#xE3;o (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.13</code> e <code>10.16.0.12</code> por padr&#xE3;o).</p>
-<p>Exemplo:</p>
-<pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/lb-node-install <span class="hljs-string">&apos;10.16.0.13&apos;</span> <span class="hljs-string">&apos;10.16.0.12&apos;</span>
-</code></pre>
-<h3 id="-app-node-install"><code>app-node-install</code></h3>
-<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir a aplica&#xE7;&#xE3;o do Portal de Servi&#xE7;os. </p>
-<p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de busca (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.11</code> e <code>10.16.0.9</code> por padr&#xE3;o).</p>
-<p>Este script:</p>
-<ul>
-<li>Configura o [reposit&#xF3;rio Yum] do Portal de Servi&#xE7;os</li>
-<li>Instala as ferramentas <code>wget</code> e <code>deltarpm</code>, caso n&#xE3;o existentes no sistema</li>
-<li>Instala a JDK 1.8.0_40, caso n&#xE3;o existente</li>
-<li>Instala, configura e inicia o <em>daemon</em> do Portal de Servi&#xE7;os (<code>portal-de-servicos</code>).</li>
-</ul>
-<p>Exemplo:</p>
-<pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/app-node-install <span class="hljs-string">&apos;10.16.0.11&apos;</span> <span class="hljs-string">&apos;10.16.0.9&apos;</span>
-</code></pre>
-<h3 id="-es-node-install"><code>es-node-install</code></h3>
-<p>Este script deve ser executado, como <code>root</code>, em uma m&#xE1;quina destinada a servir o motor de busca do Portal de Servi&#xE7;os, <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>.</p>
-<p>S&#xE3;o aceitos dois par&#xE2;metros em linha de comando, um para cada IP dos servidores de busca (caso n&#xE3;o informados, s&#xE3;o utilizados <code>10.16.0.11</code> e <code>10.16.0.9</code> por padr&#xE3;o).</p>
-<p>Este script:</p>
-<ul>
-<li>Configura o <a href="(./repositorio-yum.md)">reposit&#xF3;rio Yum</a> do ElasticSearch</li>
-<li>Instala as ferramentas <code>wget</code> e <code>deltarpm</code>, caso n&#xE3;o existentes no sistema</li>
-<li>Instala a JDK 1.8.0_40, caso n&#xE3;o existente</li>
-<li>Instala, configura e inicia o <em>daemon</em> do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> (<code>elasticsearch</code>).</li>
-</ul>
-<pre><code class="lang-sh">sudo /bin/bash scripts/prod-like/es-node-install <span class="hljs-string">&apos;10.16.0.11&apos;</span> <span class="hljs-string">&apos;10.16.0.9&apos;</span>
-</code></pre>
+<h3 id="volumes-externos">Volumes externos</h3>
+<p>Os seguintes arquivos e diret&#xF3;rios s&#xE3;o disponibilizados da m&#xE1;quina host para os cont&#xEA;ineres:</p>
+<table>
+<thead>
+<tr>
+<th>Cont&#xEA;iner</th>
+<th>Volume</th>
+<th>Backup?</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Editor de Servi&#xE7;os 1</td>
+<td>/root/.ssh</td>
+<td>Sim</td>
+<td>Chave SSH para publica&#xE7;&#xE3;o no Github, somente leitura</td>
+</tr>
+<tr>
+<td>Editor de Servi&#xE7;os 2</td>
+<td>/root/.ssh</td>
+<td>Sim</td>
+<td>Chave SSH para publica&#xE7;&#xE3;o no Github, somente leitura</td>
+</tr>
+<tr>
+<td>cAdvisor</td>
+<td>/var/run</td>
+<td>N&#xE3;o</td>
+<td></td>
+</tr>
+<tr>
+<td>cAdvisor</td>
+<td>/</td>
+<td>N&#xE3;o</td>
+<td>Somente leitura</td>
+</tr>
+<tr>
+<td>cAdvisor</td>
+<td>/sys</td>
+<td>N&#xE3;o</td>
+<td>Somente leitura</td>
+</tr>
+<tr>
+<td>cAdvisor</td>
+<td>/var/lib/docker/</td>
+<td>N&#xE3;o</td>
+<td>Somente leitura</td>
+</tr>
+<tr>
+<td>Logspout</td>
+<td>/var/run/docker.sock</td>
+<td>N&#xE3;o</td>
+<td></td>
+</tr>
+<tr>
+<td>ElasticSearch 1</td>
+<td>/usr/share/elasticsearch/es1/data</td>
+<td>Sim</td>
+<td></td>
+</tr>
+<tr>
+<td>ElasticSearch 2</td>
+<td>/usr/share/elasticsearch/es2/data</td>
+<td>Sim</td>
+<td></td>
+</tr>
+<tr>
+<td>Logstash</td>
+<td>/root/docker/logstash</td>
+<td>N&#xE3;o</td>
+<td>Somente leitura</td>
+</tr>
+</tbody>
+</table>
 <h2 id="configura%C3%A7%C3%A3o">Configura&#xE7;&#xE3;o</h2>
-<p>A distribui&#xE7;&#xE3;o Linux CentOS 7 utiliza a ferramenta <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> para controle das opera&#xE7;&#xF5;es do sistema operacional. Em uma diretiva de configura&#xE7;&#xE3;o, <a href="http://www.freedesktop.org/software/systemd/man/systemd.exec.html" target="_blank"><code>EnvironmentFile</code></a>, dizemos ao <a href="http://www.freedesktop.org/wiki/Software/systemd/" target="_blank">systemd</a> de onde devem ser carregadas as vari&#xE1;veis de ambiente para um determinado sistema em execu&#xE7;&#xE3;o.</p>
-<p>No caso do Portal de Servi&#xE7;os, tanto em ambientes <a href="deploy-vagrant.md">Vagrant</a> quanto em <a href="deploy-homologacao-producao.md">homologa&#xE7;&#xE3;o e produ&#xE7;&#xE3;o</a>, este arquivo est&#xE1; instalado em <code>/etc/sysconfig/portal-de-servicos</code>, e deve ser revisado de acordo com o ambiente de cada instala&#xE7;&#xE3;o.</p>
-<p>Este &#xE9; o arquivo de configura&#xE7;&#xE3;o padr&#xE3;o adicionado ao pacote <a href="http://www.rpm.org" target="_blank">RPM</a> da aplica&#xE7;&#xE3;o, que lista as configura&#xE7;&#xF5;es utilizadas:</p>
-<pre><code class="lang-bash"><span class="hljs-comment">## Vari&#xE1;veis de ambiente para configura&#xE7;&#xE3;o do Portal de Servi&#xE7;os</span>
-
-<span class="hljs-comment">## Op&#xE7;&#xF5;es passadas &#xE0; JVM (par&#xE2;metros de mem&#xF3;ria, GC etc)</span>
-JAVA_OPTS=-Xms256M -Xmx1G
-
-<span class="hljs-comment">## Lista dos IPs e portas dos nodos do ElasticSearch do ambiente, separados por v&#xED;rgula.</span>
-SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=<span class="hljs-string">&quot;10.16.0.11:9300,10.16.0.9:9300&quot;</span>
-
-<span class="hljs-comment">## Habilita o cache do sistema de renderiza&#xE7;&#xE3;o de templates Thymeleaf.</span>
-SPRING_THYMELEAF_CACHE=<span class="hljs-literal">true</span>
-
-<span class="hljs-comment">## Desabilita o monitoramento e m&#xE9;tricas do Piwik</span>
-PDS_PIWIK_ENABLED=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## A URL do servidor Piwik que ser&#xE1; utilizada para monitoramento e m&#xE9;tricas.</span>
-PDS_PIWIK_URL=<span class="hljs-string">&quot;https://estatisticas.presidencia.gov.br/&quot;</span>
-
-<span class="hljs-comment">## O token para acesso &#xE0; API de m&#xE9;tricas do Piwik. Geralmente, 32 caracteres hexadecimais.</span>
-PDS_PIWIK_TOKEN=
-
-<span class="hljs-comment">## O identificador do site dentro do Piwik.</span>
-PDS_PIWIK_SITE=<span class="hljs-number">52</span>
-
-<span class="hljs-comment">## Desabilita a navega&#xE7;&#xE3;o de rob&#xF4;s (motores de busca, etc) nesta inst&#xE2;ncia.</span>
-FLAGS_PERMITIR_ROBOS=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## Habilita a importa&#xE7;&#xE3;o autom&#xE1;tica de dados ao iniciar o servidor.</span>
-FLAGS_IMPORTAR_AUTOMATICAMENTE=<span class="hljs-literal">true</span>
-
-<span class="hljs-comment">## Habilita a atualiza&#xE7;&#xE3;o autom&#xE1;tica de destaques a partir de estat&#xED;sticas do Piwik.</span>
-FLAGS_DESTAQUES_AUTOMATICOS=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## Desabilita as URLs de informa&#xE7;&#xE3;o e estado do sistema disponibilizadas pelo Spring-Boot.</span>
-ENDPOINTS_ENABLED=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment"># Desabilita a URL /jolokia</span>
-ENDPOINTS_JOLOKIA_ENABLED=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## Habilita a URL /info, que cont&#xE9;m informa&#xE7;&#xF5;es sobre a vers&#xE3;o da aplica&#xE7;&#xE3;o.</span>
-ENDPOINTS_INFO_ENABLED=<span class="hljs-literal">true</span>
-
-<span class="hljs-comment">## Habilita a URL /health, que cont&#xE9;m informa&#xE7;&#xF5;es sobre o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o.</span>
-ENDPOINTS_HEALTH_ENABLED=<span class="hljs-literal">true</span>
-
-<span class="hljs-comment">## Desabilita a disponibiliza&#xE7;&#xE3;o de dados sens&#xED;veis no estado de sa&#xFA;de, como do cluster ElasticSearch e espa&#xE7;o em disco.</span>
-ENDPOINTS_HEALTH_SENSITIVE=<span class="hljs-literal">false</span>
-
-<span class="hljs-comment">## Protocolo utilizado para envio de emails.</span>
-<span class="hljs-comment"># MAIL_PROTOCOL=smtp</span>
-
-<span class="hljs-comment">## Servidor de emails utilizado para envio (mesmo IP do balanceador de carga, geralmente).</span>
-<span class="hljs-comment"># MAIL_HOST=10.16.0.10</span>
-
-<span class="hljs-comment">## Porta em que o Portal de Servi&#xE7;os deve se conectar ao servidor de emails.</span>
-<span class="hljs-comment"># MAIL_PORT=25</span>
-
-<span class="hljs-comment">## Timeout para estabelecimento de conex&#xF5;es e espera por atividade em uma conex&#xE3;o estabelecida, em milisegundos</span>
-<span class="hljs-comment"># MAIL_TIMEOUT=5000</span>
-
-<span class="hljs-comment">## Caso o servidor de envio de emails exija autentica&#xE7;&#xE3;o, este valor deve ser true.</span>
-<span class="hljs-comment"># MAIL_SMTP_AUTH=false</span>
-
-<span class="hljs-comment">## Caso o servidor de envio de emails suporte, ou mesmo exija, a extens&#xE3;o de criptografia STARTTLS, este valor deve ser true.</span>
-<span class="hljs-comment"># MAIL_SMTP_STARTTLS=false</span>
-
-<span class="hljs-comment">## O endere&#xE7;o de email que originar&#xE1; as mensagens vindas do Portal de Servi&#xE7;os.</span>
-<span class="hljs-comment"># MAIL_FROM=&quot;nao-responda@servicos.gov.br&quot;</span>
-
-<span class="hljs-comment">## O endere&#xE7;o de email para qual as mensagens de notifica&#xE7;&#xE3;o da opera&#xE7;&#xE3;o do Portal de Servi&#xE7;os ser&#xE3;o enviados.</span>
-<span class="hljs-comment"># MAIL_TO=&quot;servicos@planejamento.gov.br&quot;</span>
-
-<span class="hljs-comment">## Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, o nome do usu&#xE1;rio da conta a ser utilizada.</span>
-<span class="hljs-comment"># MAIL_USERNAME=</span>
-
-<span class="hljs-comment">## Caso o servidor de envio de email exija autentica&#xE7;&#xE3;o, a senha da conta a ser utilizada.</span>
-<span class="hljs-comment"># MAIL_PASSWORD=</span>
-</code></pre>
-
-<hr>
+<p>Tanto o Portal quanto o Editor de Servi&#xE7;os utilizam vari&#xE1;veis de ambiente para configura&#xE7;&#xE3;o. Todas elas t&#xEA;m valores padr&#xE3;o, e algumas s&#xE3;o redefinidas na configura&#xE7;&#xE3;o dos cont&#xEA;iners usando o <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a> (mais especificamente, atrav&#xE9;s da diretiva <code>environment</code> dos arquivos <code>docker-compose.yml</code> do <a href="https://github.com/servicosgovbr/docker/blob/master/portal-de-servicos/docker-compose.yml" target="_blank">Portal</a> e do <a href="https://github.com/servicosgovbr/docker/blob/master/editor-de-servicos/docker-compose.yml" target="_blank">Editor</a>).</p>
+<p>Os arquivos que listam as configura&#xE7;&#xF5;es padr&#xE3;o s&#xE3;o:</p>
+<ul>
+<li>Portal de Servi&#xE7;os: <a href="https://github.com/servicosgovbr/portal-de-servicos/blob/master/scripts/portal-de-servicos.default.config" target="_blank"><code>scripts/portal-de-servicos.default.config</code></a></li>
+<li>Editor de Servi&#xE7;os: <a href="https://github.com/servicosgovbr/editor-de-servicos/blob/master/scripts/editor-de-servicos.default.config" target="_blank"><code>scripts/editor-de-servicos.default.config</code></a></li>
+</ul>
 <h2 id="checklist-de-implanta%C3%A7%C3%A3o">Checklist de Implanta&#xE7;&#xE3;o</h2>
-<h3 id="no-servidor-de-aplica%C3%A7%C3%A3o-1-app1">No servidor de aplica&#xE7;&#xE3;o 1 (<code>app1</code>):</h3>
+<h3 id="primeira-instala%C3%A7%C3%A3o">Primeira instala&#xE7;&#xE3;o</h3>
+<p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, sem nenhuma configura&#xE7;&#xE3;o adicional efetuada.</p>
 <ul>
-<li>Verificar que o hostname da m&#xE1;quina est&#xE1; presente no arquivo <code>/etc/hosts</code></li>
-<li><p>Sobrescrever <code>/etc/sysconfig/portal-de-servicos-overrides</code> com o arquivo em <code>secrets/portal-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</p>
-</li>
-<li><p>Rodar o script <code>app-node-update</code> com a vers&#xE3;o a instalar como par&#xE2;metro:</p>
-</li>
+<li>Verifique que o kernel instalado &#xE9;, no m&#xED;nimo, 3.10, rodando em modo x64:</li>
 </ul>
-<pre><code class="lang-bash">app1~$ wget https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/scripts/prod-like/app-node-update
-app1~$ chmod +x app-node-update
-app1~$ sudo ./app-node-update <span class="hljs-number">1234</span>
+<pre><code class="lang-bash">uname -r 
+<span class="hljs-number">3.10</span>.<span class="hljs-number">0</span>-<span class="hljs-number">229</span>.el7.x86_64
+</code></pre>
+<p>Caso contr&#xE1;rio, &#xE9; preciso realizar as atualiza&#xE7;&#xF5;es necess&#xE1;rias antes de continuar.</p>
+<ul>
+<li>Desabilite o <a href="https://wiki.centos.org/HowTos/SELinux" target="_blank">SELinux</a> temporariamente:</li>
+</ul>
+<pre><code class="lang-bash">setenforce <span class="hljs-number">0</span>
 </code></pre>
 <ul>
-<li>Aguardar a inicializa&#xE7;&#xE3;o da aplica&#xE7;&#xE3;o</li>
-<li>Verificar que a propriedade <code>build</code> &#xE9; a vers&#xE3;o esperada:</li>
+<li>Instale o <a href="http://www.docker.com" target="_blank">Docker</a>:</li>
 </ul>
-<pre><code class="lang-bash">app1~$ curl <span class="hljs-string">&quot;localhost:8080/info&quot;</span>
+<pre><code class="lang-bash">curl <span class="hljs-operator">-s</span>SL https://get.docker.com | sh
 </code></pre>
+<ul>
+<li>Inicie o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a>:</li>
+</ul>
+<pre><code class="lang-bash">systemctl start docker
+</code></pre>
+<ul>
+<li>Verifique que o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> inicializou corretamente:</li>
+</ul>
+<pre><code class="lang-bash">docker ps
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+</code></pre><ul>
+<li>Verifique que o <a href="http://www.docker.com" target="_blank">Docker</a> consegue baixar e instanciar cont&#xEA;ineres:</li>
+</ul>
+<pre><code class="lang-bash">docker run alpine <span class="hljs-string">&apos;echo &quot;ol&#xE1;&quot;&apos;</span>
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>Unable to find image &apos;alpine:latest&apos; locally
+latest: Pulling from library/alpine
+31f630c65071: Already exists 
+library/alpine:latest: The image you are pulling has been verified. Important: image verification is a tech preview feature and should not be relied on to provide security.
+Digest: sha256:c471fce1d08618adf4c6c0d72c047b9f3d5ef82cae0ca9a157ce1c800d42722f
+Status: Downloaded newer image for alpine:latest
+ol&#xE1;
+</code></pre><ul>
+<li>Configure o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> para inicializar durante o boot:</li>
+</ul>
+<pre><code class="lang-bash">chkconfig docker on
+</code></pre>
+<ul>
+<li>Instale o <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a>:</li>
+</ul>
+<pre><code class="lang-bash">curl -L https://github.com/docker/compose/releases/download/<span class="hljs-number">1.4</span>.<span class="hljs-number">0</span>/docker-compose-`uname <span class="hljs-operator">-s</span>`-`uname -m` &gt; /usr/bin/docker-compose
+chmod +x /usr/bin/docker-compose
+</code></pre>
+<ul>
+<li>Verifique a instala&#xE7;&#xE3;o do <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a></li>
+</ul>
+<pre><code class="lang-bash">docker-compose version
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>docker-compose version: 1.4.0
+docker-py version: 1.3.1
+CPython version: 2.7.9
+OpenSSL version: OpenSSL 1.0.1e 11 Feb 2013
+</code></pre><ul>
+<li>Instale o <a href="http://git-scm.org" target="_blank">Git</a>:</li>
+</ul>
+<pre><code class="lang-bash">yum install -y git
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>...
+
+Installed:
+  git.x86_64 0:1.8.3.1-4.el7                                                                                                                                                                                       
+
+...
+</code></pre><ul>
+<li>Clone o reposit&#xF3;rio <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a> no diret&#xF3;rio <code>/root</code>:</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root
+git <span class="hljs-built_in">clone</span> https://github.com/servicosgovbr/docker
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>Cloning into &apos;docker&apos;...
+remote: Counting objects: 152, done.
+remote: Compressing objects: 100% (61/61), done.
+remote: Total 152 (delta 34), reused 0 (delta 0), pack-reused 85
+Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (77/77), done.
+</code></pre><ul>
+<li>Rode os cont&#xEA;ineres:</li>
+</ul>
+<pre><code class="lang-bash">docker-compose up <span class="hljs-operator">-d</span>
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>Creating cadvisor...
+Creating editor2...
+Creating editor1...
+Creating es2...
+Creating es1...
+Creating logstash...
+Creating logspout...
+Creating portal2...
+Creating kibana...
+Creating portal1...
+Creating balanceador...
+</code></pre><ul>
+<li>Verifique que os cont&#xEA;ineres est&#xE3;o executando corretamente:</li>
+</ul>
+<pre><code class="lang-bash">docker-compose ps
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>   Name                  Command               State                                 Ports                                
+-------------------------------------------------------------------------------------------------------------------------
+balanceador   haproxy -f /usr/local/etc/ ...   Up      0.0.0.0:5601-&gt;5601/tcp, 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:8080-&gt;8080/tcp 
+cadvisor      /usr/bin/cadvisor                Up      8080/tcp                                                           
+editor1       /bin/sh -c sh /run.sh            Up      8090/tcp                                                           
+editor2       /bin/sh -c sh /run.sh            Up      8090/tcp                                                           
+es1           /docker-entrypoint.sh elas ...   Up      9200/tcp, 9300/tcp                                                 
+es2           /docker-entrypoint.sh elas ...   Up      9200/tcp, 9300/tcp                                                 
+kibana        /docker-entrypoint.sh kibana     Up      5601/tcp                                                           
+logspout      /bin/logspout                    Up      80/tcp, 8000/tcp                                                   
+logstash      /docker-entrypoint.sh logs ...   Up      5000/tcp                                                           
+portal1       /bin/sh -c sh /run.sh            Up      8080/tcp                                                           
+portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
+</code></pre><ul>
+<li>Verifique que a vers&#xE3;o do Portal de Servi&#xE7;os &#xE9; a desejada:</li>
+</ul>
+<pre><code class="lang-bash">curl localhost/info
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;1234&quot;</span>,
-  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-05-22 09:36&quot;</span>,
+  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;1529&quot;</span>,
+  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:43&quot;</span>,
   <span class="hljs-string">&quot;git&quot;</span>: {
     <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
     <span class="hljs-string">&quot;commit&quot;</span>: {
-      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;7df4e9d&quot;</span>,
-      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-05-22 09:34&quot;</span>
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;e5e9f74&quot;</span>,
+      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:37&quot;</span>
+    }
+  }
+}
+</code></pre>
+<ul>
+<li>Verifique que a vers&#xE3;o do Editor de Servi&#xE7;os &#xE9; a desejada:</li>
+</ul>
+<pre><code class="lang-bash">curl localhost/editar/info
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;627&quot;</span>,
+  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:42&quot;</span>,
+  <span class="hljs-string">&quot;git&quot;</span>: {
+    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
+    <span class="hljs-string">&quot;commit&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;4b85c92&quot;</span>,
+      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:39&quot;</span>
     }
   }
 }
@@ -1780,174 +1842,231 @@ app1~$ sudo ./app-node-update <span class="hljs-number">1234</span>
 <ul>
 <li>Verificar que a sa&#xFA;de do cluster est&#xE1; <code>UP</code>:</li>
 </ul>
-<pre><code class="lang-bash">app1~$ curl <span class="hljs-string">&quot;localhost:8080/health&quot;</span>
+<pre><code class="lang-bash">curl localhost/health
 </code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
   <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (638 docs)&quot;</span>,
-    <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (4 docs)&quot;</span>
-  },
-  <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
-    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;Dromedan&quot;</span>,
-    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;Arides&quot;</span>
-  },
-  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">1781682176</span>,
-    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
-  }
-}
-</code></pre>
-<h3 id="no-servidor-de-aplica%C3%A7%C3%A3o-2-app2">No servidor de aplica&#xE7;&#xE3;o 2 (<code>app2</code>):</h3>
-<ul>
-<li>Verificar que o hostname da m&#xE1;quina est&#xE1; presente no arquivo <code>/etc/hosts</code></li>
-<li>Sobrescrever <code>/etc/sysconfig/portal-de-servicos-overrides</code> com o arquivo em <code>secrets/portal-de-servicos.producao.config</code> (ou o equivalente, enviado por email)</li>
-<li>Rodar o script <code>app-node-update</code> com a vers&#xE3;o a instalar como par&#xE2;metro:</li>
-</ul>
-<pre><code class="lang-bash">app2~$ wget https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master/scripts/prod-like/app-node-update
-app2~$ chmod +x app-node-update
-app2~$ sudo ./app-node-update <span class="hljs-number">1234</span>
-</code></pre>
-<ul>
-<li>Aguardar a inicializa&#xE7;&#xE3;o da aplica&#xE7;&#xE3;o</li>
-<li>Verificar que a propriedade <code>build</code> &#xE9; a vers&#xE3;o esperada:</li>
-</ul>
-<pre><code class="lang-bash">app2~$ curl <span class="hljs-string">&quot;localhost:8080/info&quot;</span>
-</code></pre>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;1234&quot;</span>,
-  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-05-22 09:36&quot;</span>,
-  <span class="hljs-string">&quot;git&quot;</span>: {
-    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
-    <span class="hljs-string">&quot;commit&quot;</span>: {
-      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;7df4e9d&quot;</span>,
-      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-05-22 09:34&quot;</span>
-    }
-  }
-}
-</code></pre>
-<ul>
-<li>Verificar que a sa&#xFA;de do cluster est&#xE1; <code>UP</code>:</li>
-</ul>
-<pre><code class="lang-bash">app2~$ curl <span class="hljs-string">&quot;localhost:8080/health&quot;</span>
-</code></pre>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-  <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (638 docs)&quot;</span>,
+    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (622 docs)&quot;</span>,
     <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
   },
   <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
-    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">2</span>,
-    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;Dromedan&quot;</span>,
-    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;Arides&quot;</span>
+    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;es1&quot;</span>,
+    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;logstash-d9ccaa4d20c4-1-11624&quot;</span>,
+    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;es2&quot;</span>
+  },
+  <span class="hljs-string">&quot;cache&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UNKNOWN&quot;</span>
   },
   <span class="hljs-string">&quot;diskSpace&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">1781682176</span>,
+    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378258944</span>,
     <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
   }
 }
 </code></pre>
-<h2 id="no-balanceador-de-carga-lb">No balanceador de carga (<code>lb</code>):</h2>
+<p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
+<h3 id="instala%C3%A7%C3%B5es-subsequentes">Instala&#xE7;&#xF5;es subsequentes</h3>
+<p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, que j&#xE1; tem os cont&#xEA;ineres <a href="http://www.docker.com" target="_blank">Docker</a> rodando.</p>
 <ul>
-<li>Verificar que todos os servidores de aplica&#xE7;&#xE3;o est&#xE3;o vis&#xED;veis (em verde) no <code>/lb-stats</code></li>
-<li>Abrir p&#xE1;gina principal e verificar que lista de categorias (menu lateral) possui 15 elementos</li>
-<li>Verificar que o conte&#xFA;do de <code>/robots.txt</code> aponta para o <code>sitemap.xml</code>:</li>
+<li>Atualize o reposit&#xF3;rio <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a> no diret&#xF3;rio <code>/root</code>:</li>
 </ul>
-<pre><code class="lang-bash">lb~$ curl <span class="hljs-operator">-s</span> <span class="hljs-string">&quot;10.17.0.3/robots.txt&quot;</span>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root
+git pull
 </code></pre>
-<pre><code>Sitemap: http://10.17.0.3/sitemap.xml
-
-User-agent: *
-Disallow:
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>remote: Counting objects: 27, done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 27 (delta 15), reused 22 (delta 10), pack-reused 0
+Unpacking objects: 100% (27/27), done.
+From github.com:servicosgovbr/docker
+   1f736fb..f069a55  master     -&gt; origin/master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to f069a5552fec4c8bc9226c7941bb89fe0420ed75.
 </code></pre><ul>
-<li>Verificar que o c&#xF3;digo-fonte da p&#xE1;gina possui o site ID do Piwik correto:</li>
+<li>Rode os cont&#xEA;ineres:</li>
 </ul>
-<pre><code class="lang-bash">lb~$ curl <span class="hljs-operator">-s</span> <span class="hljs-string">&quot;10.17.0.3&quot;</span> | grep <span class="hljs-string">&apos;var siteId&apos;</span>
+<pre><code class="lang-bash">docker-compose up <span class="hljs-operator">-d</span>
 </code></pre>
-<pre><code class="lang-javascript">    <span class="hljs-keyword">var</span> siteId = <span class="hljs-string">&apos;2&apos;</span>;
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>Creating cadvisor...
+Creating editor2...
+Creating editor1...
+Creating es2...
+Creating es1...
+Creating logstash...
+Creating logspout...
+Creating portal2...
+Creating kibana...
+Creating portal1...
+Creating balanceador...
+</code></pre><ul>
+<li>Verifique que os cont&#xEA;ineres est&#xE3;o executando corretamente:</li>
+</ul>
+<pre><code class="lang-bash">docker-compose ps
 </code></pre>
-<hr>
-<h1 id="backups">Backups</h1>
-<p>Backups devem ser feitos dos seguintes caminhos:</p>
-<pre><code>/etc/sysconfig/portal-de-servicos
-/etc/systemd/system/portal-de-servicos.service
-/opt/portal-de-servicos/**/*
-/var/run/portal-de-servicos/**/*
-/var/log/**/*
-</code></pre><p>A reten&#xE7;&#xE3;o dos mesmos pode variar dependendo do ambiente. Recomenda-se ao menos 30 dias.</p>
-<hr>
-<h1 id="monitoramento">Monitoramento</h1>
-<p>A monitora&#xE7;&#xE3;o da sa&#xFA;de dos hosts e inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> pode ser feita atrav&#xE9;s das seguintes URLs:</p>
-<h2 id="aplica%C3%A7%C3%A3o">Aplica&#xE7;&#xE3;o</h2>
-<p>A URL <code>/health</code> do Portal de Servi&#xE7;os indica o estado de sa&#xFA;de da aplica&#xE7;&#xE3;o em si e de suas conex&#xF5;es ao cluster do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>. Caso o valor da vari&#xE1;vel de ambiente <code>ENDPOINTS_HEALTH_SENSITIVE</code> seja <code>false</code>, mais informa&#xE7;&#xE3;o &#xE9; exibida:</p>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>   Name                  Command               State                                 Ports                                
+-------------------------------------------------------------------------------------------------------------------------
+balanceador   haproxy -f /usr/local/etc/ ...   Up      0.0.0.0:5601-&gt;5601/tcp, 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:8080-&gt;8080/tcp 
+cadvisor      /usr/bin/cadvisor                Up      8080/tcp                                                           
+editor1       /bin/sh -c sh /run.sh            Up      8090/tcp                                                           
+editor2       /bin/sh -c sh /run.sh            Up      8090/tcp                                                           
+es1           /docker-entrypoint.sh elas ...   Up      9200/tcp, 9300/tcp                                                 
+es2           /docker-entrypoint.sh elas ...   Up      9200/tcp, 9300/tcp                                                 
+kibana        /docker-entrypoint.sh kibana     Up      5601/tcp                                                           
+logspout      /bin/logspout                    Up      80/tcp, 8000/tcp                                                   
+logstash      /docker-entrypoint.sh logs ...   Up      5000/tcp                                                           
+portal1       /bin/sh -c sh /run.sh            Up      8080/tcp                                                           
+portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
+</code></pre><ul>
+<li>Verifique que a vers&#xE3;o do Portal de Servi&#xE7;os &#xE9; a desejada:</li>
+</ul>
+<pre><code class="lang-bash">curl localhost/info
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;1529&quot;</span>,
+  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:43&quot;</span>,
+  <span class="hljs-string">&quot;git&quot;</span>: {
+    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
+    <span class="hljs-string">&quot;commit&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;e5e9f74&quot;</span>,
+      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:37&quot;</span>
+    }
+  }
+}
+</code></pre>
+<ul>
+<li>Verifique que a vers&#xE3;o do Editor de Servi&#xE7;os &#xE9; a desejada:</li>
+</ul>
+<pre><code class="lang-bash">curl localhost/editar/info
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;627&quot;</span>,
+  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:42&quot;</span>,
+  <span class="hljs-string">&quot;git&quot;</span>: {
+    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
+    <span class="hljs-string">&quot;commit&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;4b85c92&quot;</span>,
+      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:39&quot;</span>
+    }
+  }
+}
+</code></pre>
+<ul>
+<li>Verificar que a sa&#xFA;de do cluster est&#xE1; <code>UP</code>:</li>
+</ul>
+<pre><code class="lang-bash">curl localhost/health
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+  <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (622 docs)&quot;</span>,
+    <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
+  },
   <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
     <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">3</span>,
-    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;Freakmaster&quot;</span>,
-    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;Seth&quot;</span>,
-    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;Right-Winger&quot;</span>
+    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;es1&quot;</span>,
+    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;logstash-d9ccaa4d20c4-1-11624&quot;</span>,
+    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;es2&quot;</span>
+  },
+  <span class="hljs-string">&quot;cache&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UNKNOWN&quot;</span>
   },
   <span class="hljs-string">&quot;diskSpace&quot;</span>: {
     <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">96787795968</span>,
+    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378258944</span>,
     <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
   }
 }
 </code></pre>
-<p>Caso contr&#xE1;rio, apenas o estado geral da aplica&#xE7;&#xE3;o &#xE9; retornado:</p>
+<p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
+<hr>
+<h1 id="backups">Backups</h1>
+<p>Backups devem ser feitos dos seguintes caminhos:</p>
+<table>
+<thead>
+<tr>
+<th>Caminho</th>
+<th>Incremental?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/root/.ssh</td>
+<td>N&#xE3;o</td>
+</tr>
+<tr>
+<td>/usr/share/elasticsearch/es1/data</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>/usr/share/elasticsearch/es2/data</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td>/var/log/<em>*/</em></td>
+<td>Sim</td>
+</tr>
+</tbody>
+</table>
+<p>A reten&#xE7;&#xE3;o dos mesmos pode variar dependendo do ambiente. Recomenda-se ao menos 30 dias.</p>
+<hr>
+<h1 id="monitoramento">Monitoramento</h1>
+<p>A monitora&#xE7;&#xE3;o da sa&#xFA;de do host &#xE9; feita de maneira externa, utilizando Nagios. Para o monitoramento das inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>, com informa&#xE7;&#xF5;es mais detalhadas, as seguintes op&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis:</p>
+<h2 id="balanceador-de-carga">Balanceador de Carga</h2>
+<p>As estat&#xED;sticas do HAProxy ficam dispon&#xED;veis atrav&#xE9;s da porta de administra&#xE7;&#xE3;o (8080/tcp), no endere&#xE7;o <code>/lb-stats</code>. Por exemplo, em produ&#xE7;&#xE3;o, estas est&#xE3;o dispon&#xED;veis em <code>http://servicos.gov.br:8080/lb-stats</code>.</p>
+<p>Nesta p&#xE1;gina est&#xE3;o contidas algumas estat&#xED;sticas de acesso, em n&#xFA;meros de I/O brutos, bem como de disponibilidade dos servi&#xE7;os gerenciados.</p>
+<h2 id="portal-de-servi%C3%A7os">Portal de Servi&#xE7;os</h2>
+<p>O Portal de Servi&#xE7;os disponibiliza informa&#xE7;&#xF5;es de sa&#xFA;de atrav&#xE9;s do endere&#xE7;o <code>/health</code>, que retorna JSON similar ao seguinte:</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+  <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (622 docs)&quot;</span>,
+    <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
+  },
+  <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
+    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;es1&quot;</span>,
+    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;logstash-d9ccaa4d20c4-1-11624&quot;</span>,
+    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;es2&quot;</span>
+  },
+  <span class="hljs-string">&quot;cache&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UNKNOWN&quot;</span>
+  },
+  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378258944</span>,
+    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
+  }
 }
 </code></pre>
-<h2 id="-elasticsearch"><a href="desenvolvimento/elasticsearch.md">ElasticSearch</a></h2>
-<p>A URL <code>/_cluster/health</code> do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> disponibiliza diversas informa&#xE7;&#xF5;es sobre o estado de sa&#xFA;de e configura&#xE7;&#xE3;o do cluster. Por exemplo:</p>
+<p>Nele, &#xE9; poss&#xED;vel ver o estado geral da aplica&#xE7;&#xE3;o (<code>status</code>), do &#xED;ndice no ElasticSearch (<code>portalDeServicosIndex</code>), informa&#xE7;&#xF5;es de conex&#xE3;o ao ElasticSearch (<code>elasticsearch</code>), do estado do cache interno de p&#xE1;ginas (<code>cache</code>) e espa&#xE7;o em disco (<code>diskSpace</code>).</p>
+<h2 id="editor-de-servi%C3%A7os">Editor de Servi&#xE7;os</h2>
+<p>O Editor de Servi&#xE7;os disponibiliza informa&#xE7;&#xF5;es de sa&#xFA;de atrav&#xE9;s do endere&#xE7;o <code>/editar/health</code>, que retorna JSON similar ao seguinte:</p>
 <pre><code class="lang-json">{
-  <span class="hljs-string">&quot;cluster_name&quot;</span>: <span class="hljs-string">&quot;elasticsearch&quot;</span>,
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;red&quot;</span>,
-  <span class="hljs-string">&quot;timed_out&quot;</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-string">&quot;number_of_nodes&quot;</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-string">&quot;number_of_data_nodes&quot;</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-string">&quot;active_primary_shards&quot;</span>: <span class="hljs-number">13</span>,
-  <span class="hljs-string">&quot;active_shards&quot;</span>: <span class="hljs-number">13</span>,
-  <span class="hljs-string">&quot;relocating_shards&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;initializing_shards&quot;</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-string">&quot;unassigned_shards&quot;</span>: <span class="hljs-number">29</span>,
-  <span class="hljs-string">&quot;number_of_pending_tasks&quot;</span>: <span class="hljs-number">0</span>
+  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
+    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
+    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378254848</span>,
+    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
+  }
 }
 </code></pre>
-<p>No exemplo acima, pode-se ver que o n&#xFA;mero de nodos insuficiente (apenas 1) &#xE9; motivo de preocupa&#xE7;&#xE3;o e torna o status <em>red</em>.</p>
-<p>Quando a conex&#xE3;o entre o nodo e seus pares no cluster se estabelece com sucesso, o estado muda em alguns instantes:</p>
-<pre><code class="lang-json">{
-   <span class="hljs-string">&quot;cluster_name&quot;</span>: <span class="hljs-string">&quot;elasticsearch&quot;</span>,
-   <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;green&quot;</span>,
-   <span class="hljs-string">&quot;timed_out&quot;</span>: <span class="hljs-literal">false</span>,
-   <span class="hljs-string">&quot;number_of_nodes&quot;</span>: <span class="hljs-number">2</span>,
-   <span class="hljs-string">&quot;number_of_data_nodes&quot;</span>: <span class="hljs-number">2</span>,
-   <span class="hljs-string">&quot;active_primary_shards&quot;</span>: <span class="hljs-number">7</span>,
-   <span class="hljs-string">&quot;active_shards&quot;</span>: <span class="hljs-number">14</span>,
-   <span class="hljs-string">&quot;relocating_shards&quot;</span>: <span class="hljs-number">0</span>,
-   <span class="hljs-string">&quot;initializing_shards&quot;</span>: <span class="hljs-number">0</span>,
-   <span class="hljs-string">&quot;unassigned_shards&quot;</span>: <span class="hljs-number">0</span>,
-   <span class="hljs-string">&quot;number_of_pending_tasks&quot;</span>: <span class="hljs-number">0</span>
-}
-</code></pre>
-<p>O estado tamb&#xE9;m pode ficar marcado como &quot;red&quot; caso o n&#xFA;mero de parti&#xE7;&#xF5;es (<em>shards</em>) n&#xE3;o seja suficiente para distribuir todos os dados. Neste caso, reiniciar a aplica&#xE7;&#xE3;o deve trazer todas as parti&#xE7;&#xF5;es necess&#xE1;rias para o cluster.</p>
-<h2 id="java-management-extensions-jmx">Java Management Extensions (JMX)</h2>
-<p>Diversas informa&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis atrav&#xE9;s do servi&#xE7;o de gerenciamento da JVM. Existem diversos <a href="http://java-source.net/open-source/jmx" target="_blank">clientes para o protocolo JMX dispon&#xED;veis</a>, e a JDK j&#xE1; vem com o <a href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/jconsole.html" target="_blank">JConsole</a> embutido. Ao abrir o processo do Portal de Servi&#xE7;os no JConsole, temos:</p>
-<p><img src="../desenvolvimento/jconsole-overview.png" alt="JConsole: Overview"></p>
-<p>E ao listar os MBeans dispon&#xED;veis em <code>org.springframework.boot/Endpoint/environmentEndpoint/Attributes</code>:</p>
-<p><img src="../desenvolvimento/jconsole-environment.png" alt="JConsole: Environments"></p>
-<p>As informa&#xE7;&#xF5;es e opera&#xE7;&#xF5;es oferecidas atrav&#xE9;s do JMX s&#xE3;o maneiras poderosas de manter e diagnosticar a sa&#xFA;de da aplica&#xE7;&#xE3;o e do <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>, e devem ser manuseadas com o cuidado necess&#xE1;rio. Para mais informa&#xE7;&#xF5;es sobre seguran&#xE7;a do JMX, por favor utilize a <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html" target="_blank">documenta&#xE7;&#xE3;o de refer&#xEA;ncia oficial</a>.</p>
+<p>Nele, &#xE9; poss&#xED;vel ver o estado geral da aplica&#xE7;&#xE3;o (<code>status</code>) e do espa&#xE7;o em disco (<code>diskSpace</code>).</p>
+<h2 id="kibana">Kibana</h2>
+<p>Todos os logs gerados pelas aplica&#xE7;&#xF5;es s&#xE3;o redirecionados para o <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> atrav&#xE9;s do <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash</a>. Eles s&#xE3;o indexados e podem ser auditados, buscados e visualizados atrav&#xE9;s do <a href="https://www.elastic.co/products/kibana" target="_blank">Kibana</a>, que fica dispon&#xED;vel na porta 5601/tcp. Por exemplo, em produ&#xE7;&#xE3;o, a ferramenta est&#xE1; dispon&#xED;vel em <code>http://servicos.gov.br:5601/</code>.</p>
 <hr>
 <h1 id="escalabilidade">Escalabilidade</h1>
 <p>&#xC9; poss&#xED;vel aumentar a capacidade de carga do Portal de Servi&#xE7;os de duas maneiras:</p>
