@@ -31,11 +31,17 @@ public class LoggingFilter extends OncePerRequestFilter {
             Map<String, Object> data = new HashMap<>();
             data.put("req.remoteAddress", request.getRemoteAddr());
             data.put("req.remotePort", request.getRemotePort());
+            data.put("req.remoteUser", request.getRemoteUser());
             data.put("req.headers.user-agent", request.getHeader("User-Agent"));
             data.put("req.headers.x-forwarded-for", request.getHeader("X-Forwarded-For"));
-            data.put("res.contentLength", response.getHeader("Content-Length"));
             data.put("req.method", request.getMethod());
-            data.put("req.url", request.getQueryString() == null ? request.getRequestURI() : request.getRequestURI() + "?" + request.getQueryString());
+            data.put("req.path", request.getRequestURI());
+            if (request.getQueryString() == null) {
+                data.put("req.url", request.getRequestURI());
+            } else {
+                data.put("req.url", request.getRequestURI() + "?" + request.getQueryString());
+                data.put("req.queryString", request.getQueryString());
+            }
             data.put("res.statusCode", status.value());
             data.put("res.responseTime", System.currentTimeMillis() - start);
 

@@ -1,6 +1,10 @@
 <configuration>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <fieldNames>
+                <message>msg</message>
+            </fieldNames>
+        </encoder>
     </appender>
 
     <logger name="org.springframework.integration.file.FileReadingMessageSource" level="WARN"/>
