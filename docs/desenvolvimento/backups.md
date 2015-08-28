@@ -2,12 +2,11 @@
 
 Backups devem ser feitos dos seguintes caminhos:
 
-```
-/etc/sysconfig/portal-de-servicos
-/etc/systemd/system/portal-de-servicos.service
-/opt/portal-de-servicos/**/*
-/var/run/portal-de-servicos/**/*
-/var/log/**/*
-```
+| Caminho                           | Incremental? |
+|-----------------------------------|--------------|
+| /root/.ssh                        | Não          |
+| /usr/share/elasticsearch/es1/data | Sim          |  
+| /usr/share/elasticsearch/es2/data | Sim          |  
+| /var/log/**/*                     | Sim          |
 
 A retenção dos mesmos pode variar dependendo do ambiente. Recomenda-se ao menos 30 dias.

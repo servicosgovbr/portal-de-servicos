@@ -8,6 +8,10 @@
 
 {% include "./_ferramentas-servidor.md" %}
 
+## Para operações
+
+{% include "./_ferramentas-operacoes.md" %}
+
 ## Em desenvolvimento
 
 {% include "./_ferramentas-desenvolvimento.md" %}

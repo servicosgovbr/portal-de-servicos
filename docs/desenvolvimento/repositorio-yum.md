@@ -13,7 +13,18 @@ gpgkey=https://raw.githubusercontent.com/servicosgovbr/portal-de-servicos/master
 
 Um arquivo com estes conteúdos pode ser adicionado ao diretório `/etc/yum.repos.d`, seguido do comando `sudo yum makecache fast -y`, para que o Yum atualize as definições internas de listas de pacotes disponíveis.
 
-A chave [GPG] utilizada para assinar os pacotes e o repositório é:
+De maneira similar, os pacotes do Editor de Serviços estão disponíveis no repositório com as seguintes configurações:
+
+```
+[editor-de-servicos]
+name = Editor de Serviços
+baseurl = https://s3-sa-east-1.amazonaws.com/servicosgovbr/centos/7/
+enabled=1
+gpgcheck=1
+gpgkey=https://raw.githubusercontent.com/servicosgovbr/editor-de-servicos/master/src/main/resources/static/GPG-KEY
+```
+
+A chave [GPG] utilizada para assinar os pacotes de ambos os repositórios é:
 
 ```
 pub   2048R/2E1F2BA2 2015-04-07

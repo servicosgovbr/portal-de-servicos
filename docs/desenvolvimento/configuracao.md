@@ -4,14 +4,12 @@ O Portal de Serviços utiliza o [sistema de configurações padrão][spring-boot
 forma simplificada. Utilizamos apenas dois dos mecanismos disponibilizados pela plataforma: variáveis de ambiente 
 externas ao pacote JAR, e um arquivo [YAML] com todos os defaults necessários para utilização, já embutidos no JAR.
 
-## Arquivo de variáveis de ambiente do [systemd]
+## Variáveis de ambiente
 
-{% include "./_configuracao-systemd.md" %}
+{% include "./_configuracao-variaveis-ambiente.md" %}
 
 [spring-boot-config]:http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config
 [spring-boot]:http://projects.spring.io/spring-boot/
-[systemd]:http://www.freedesktop.org/wiki/Software/systemd/
-[systemd-envfile]:http://www.freedesktop.org/software/systemd/man/systemd.exec.html
 [YAML]:http://yaml.org/
 [ElasticSearch]:./elasticsearch.md
 [Thymeleaf]:http://www.thymeleaf.org
