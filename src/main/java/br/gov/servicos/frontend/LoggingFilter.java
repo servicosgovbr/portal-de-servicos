@@ -41,6 +41,7 @@ public class LoggingFilter extends OncePerRequestFilter {
             } else {
                 data.put("req.url", request.getRequestURI() + "?" + request.getQueryString());
                 data.put("req.queryString", request.getQueryString());
+                request.getParameterMap().forEach((k,v) -> data.put("req.params." + k, v));
             }
             data.put("res.statusCode", status.value());
             data.put("res.responseTime", System.currentTimeMillis() - start);
