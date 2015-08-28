@@ -1,6 +1,6 @@
 # Escalabilidade
 
-É possível aumentar a capacidade de carga do Portal de Serviços de duas maneiras:
+É possível aumentar a capacidade de carga do sistema de duas maneiras:
 
 ## Aumentando a capacidade do servidor (vertical)
 
@@ -8,15 +8,14 @@ Servidores estão atualmente provisionados de acordo com a seção "[Implantaç�
 
 ## Aumentando a quantidade de servidores (horizontal)
 
-Para adicionar um servidor de aplicação, é necessário adicioná-lo ao [balanceador de carga](./infraestrutura.md#balanceador-de-carga). Para um nodo no [ElasticSearch](./elasticsearch.md), é necessário atualizar a configuração do ambiente a modificar para que o IP do novo nodo seja utilizado.
+Para adicionar um servidor de aplicação, será necessário:
 
-Por exemplo, para adicionar uma nova máquina com ElasticSearch ao [cluster no Vagrant](./deploy-vagrant.md), com o IP `10.16.0.14`, basta modificar o arquivo `src/main/resources/application-vagrant.yaml` para:
+* Dar um novo IP externo ao host [Docker]
+* Criar um balanceador de carga com o IP externo anterior (ao qual o servicos.gov.br aponta)
+* Configurar o balanceador de carga criado para redirecionar tráfego ao host [Docker]
+* Criar novas instâncias do host [Docker], idênticas, conforme necessário
+* Adicioná-las ao balanceador de carga criado no passos anteriores
+ 
+Ao fim destes passos, a arquitetura deverá seguir o diagrama abaixo:
 
-```
-spring:
-  data:
-    elasticsearch:
-      clusterNodes: 10.16.0.11:9300,10.16.0.9:9300,10.16.0.14:9300
-```
-
-…e [executar a implantação](./deploy-vagrant.md) para o ambiente Vagrant novamente.
+![Diagrama de ambiente com dois hosts](/desenvolvimento/ambiente-docker-escalado.png)
