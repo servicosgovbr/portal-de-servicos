@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="10.10.8" data-basepath=".." data-revision="Fri Aug 28 2015 23:08:13 GMT+0000 (UTC)">
+    <div class="book" data-level="10.10.8" data-basepath=".." data-revision="Fri Aug 28 2015 23:24:12 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1498,17 +1498,20 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="escalabilidade">Escalabilidade</h1>
-<p>&#xC9; poss&#xED;vel aumentar a capacidade de carga do Portal de Servi&#xE7;os de duas maneiras:</p>
+<p>&#xC9; poss&#xED;vel aumentar a capacidade de carga do sistema de duas maneiras:</p>
 <h2 id="aumentando-a-capacidade-do-servidor-vertical">Aumentando a capacidade do servidor (vertical)</h2>
 <p>Servidores est&#xE3;o atualmente provisionados de acordo com a se&#xE7;&#xE3;o &quot;<a href="implantacao-e-execucao.html">Implanta&#xE7;&#xE3;o e execu&#xE7;&#xE3;o</a>&quot;. Para adicionar mais capacidade, &#xE9; necess&#xE1;rio revisar as configura&#xE7;&#xF5;es pertinentes e analisar a performance total novamente (ver: &quot;<a href="performance.html">Performance</a>&quot;).</p>
 <h2 id="aumentando-a-quantidade-de-servidores-horizontal">Aumentando a quantidade de servidores (horizontal)</h2>
-<p>Para adicionar um servidor de aplica&#xE7;&#xE3;o, &#xE9; necess&#xE1;rio adicion&#xE1;-lo ao <a href="infraestrutura.html#balanceador-de-carga">balanceador de carga</a>. Para um nodo no <a href="elasticsearch.html">ElasticSearch</a>, &#xE9; necess&#xE1;rio atualizar a configura&#xE7;&#xE3;o do ambiente a modificar para que o IP do novo nodo seja utilizado.</p>
-<p>Por exemplo, para adicionar uma nova m&#xE1;quina com ElasticSearch ao <a href="deploy-vagrant.html">cluster no Vagrant</a>, com o IP <code>10.16.0.14</code>, basta modificar o arquivo <code>src/main/resources/application-vagrant.yaml</code> para:</p>
-<pre><code>spring:
-  data:
-    elasticsearch:
-      clusterNodes: 10.16.0.11:9300,10.16.0.9:9300,10.16.0.14:9300
-</code></pre><p>&#x2026;e <a href="deploy-vagrant.html">executar a implanta&#xE7;&#xE3;o</a> para o ambiente Vagrant novamente.</p>
+<p>Para adicionar um servidor de aplica&#xE7;&#xE3;o, ser&#xE1; necess&#xE1;rio:</p>
+<ul>
+<li>Dar um novo IP externo ao host [Docker]</li>
+<li>Criar um balanceador de carga com o IP externo anterior (ao qual o servicos.gov.br aponta)</li>
+<li>Configurar o balanceador de carga criado para redirecionar tr&#xE1;fego ao host [Docker]</li>
+<li>Criar novas inst&#xE2;ncias do host [Docker], id&#xEA;nticas, conforme necess&#xE1;rio</li>
+<li>Adicion&#xE1;-las ao balanceador de carga criado no passos anteriores</li>
+</ul>
+<p>Ao fim destes passos, a arquitetura dever&#xE1; seguir o diagrama abaixo:</p>
+<p><img src="ambiente-docker-escalado.png" alt="Diagrama de ambiente com dois hosts"></p>
 
                     
                     </section>
