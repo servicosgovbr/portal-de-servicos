@@ -13,7 +13,6 @@ externas ao pacote JAR, e um arquivo [YAML] com todos os defaults necessários p
 [YAML]:http://yaml.org/
 [ElasticSearch]:./elasticsearch.md
 [Thymeleaf]:http://www.thymeleaf.org
-[Vagrant]:./deploy-vagrant.md
 [JavaMail]:http://www.oracle.com/technetwork/java/javamail/index.html
 [prod]:./deploy-homologacao-producao.md
 [Piwik]:http://www.piwik.org

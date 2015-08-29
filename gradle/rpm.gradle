@@ -36,11 +36,6 @@ task buildRpm(type: Exec) {
                         "--define 'version ${version}' " +
                         "${project.name}.rpmspec"
     } else {
-        commandLine 'vagrant', 'ssh', 'bastion', '-c',
-                "cd /vagrant && " +
-                        "rpmbuild -v -bb " +
-                        "--define '_topdir /vagrant/build/rpmbuild' " +
-                        "--define 'version ${version}' " +
-                        "${project.name}.rpmspec"
+        commandLine 'echo', 'Este comando não é suportado fora do Snap CI'
     }
 }

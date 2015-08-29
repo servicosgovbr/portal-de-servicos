@@ -35,7 +35,6 @@ Para o IntelliJ IDEA, procure nos repositórios de plugins pelo [Lombok IntelliJ
 [GPG]:https://www.gnupg.org/
 [JDK8]:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 [IDEA14CE]:https://www.jetbrains.com/idea/download/
-[VAGRANT]:http://vagrantup.com
 [PLUGIN]:https://github.com/mplushnikov/lombok-intellij-plugin
 [TOMCAT]:http://tomcat.apache.org/
 [SPRINGBOOT]:http://projects.spring.io/spring-boot/
