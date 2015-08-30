@@ -3,18 +3,20 @@ set -x
 set -e
 set -o pipefail
 
-ssh -F .sshconfig alpha 'sudo /bin/bash -s' <<-EOF
+ssh -F .sshconfig alpha 'sudo /bin/bash -s' << "EOF"
 set -x
 set -e
 set -o pipefail
 
-yum makecache fast -y
-yum install -y "portal-de-servicos-1.0.${SNAP_PIPELINE_COUNTER:-0}-1"
+cd '/root/docker'
+git pull --rebase
 
-cat <<-EOS > /etc/sysconfig/portal-de-servicos-overrides
-SPRING_DATA_ELASTICSEARCH_CLUSTERNODES=""
-EOS
+docker-compose stop portal1 portal2
+docker-compose kill portal1 portal2
+docker-compose rm -f portal1 portal2
 
-systemctl daemon-reload
-systemctl restart portal-de-servicos
+./build portal-de-servicos
+
+docker-compose up -d
+
 EOF

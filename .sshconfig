@@ -12,11 +12,11 @@ RhostsRSAAuthentication no
 StrictHostKeyChecking no
 
 Host alpha
-  Hostname 54.94.244.36
-  User centos
+  Hostname 104.236.231.239
+  User root
   Port 22
-  IdentityFile ./secrets/portaldeservicos-kp.pem
-  IdentityFile /var/snap-ci/repo/portaldeservicos-kp.pem
+  IdentityFile ./secrets/id_rsa_alpha
+  IdentityFile /var/snap-ci/repo/id_rsa_alpha
   LogLevel=quiet
   UserKnownHostsFile=/dev/null
   StrictHostKeyChecking=no
