@@ -7,7 +7,7 @@
 Portal de Serviços
 ====
 
-Este é o repositório oficial do Portal de Serviços. Uma versão [alpha](http://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha), constantemente atualizada, está disponível em uma [máquina virtual na Amazon](http://ec2-54-94-244-36.sa-east-1.compute.amazonaws.com).
+Este é o repositório oficial do Portal de Serviços. Uma versão [alpha](http://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha), constantemente atualizada, está disponível em uma [máquina virtual na DigitalOcean](http://104.236.231.239/).
 
 Documentação
 ----
