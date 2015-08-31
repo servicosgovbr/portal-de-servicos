@@ -13,12 +13,17 @@ dependencies {
     compile 'org.projectlombok:lombok:1.16.2'
     compile 'org.slf4j:slf4j-api:1.7.7'
     compile 'net.logstash.logback:logstash-logback-encoder:4.5.1'
+
     compile 'org.springframework.boot:spring-boot-starter-web:1.2.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf:1.2.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-actuator:1.2.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-mail:1.2.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch:1.2.3.RELEASE'
     compile 'org.springframework:spring-context-support:4.1.6.RELEASE'
+
+    jaxb 'com.sun.xml.bind:jaxb-xjc:2.2.7-b41'
+    jaxb 'com.sun.xml.bind:jaxb-impl:2.2.7-b41'
+    jaxb 'javax.xml.bind:jaxb-api:2.2.7'
 
     compile 'com.google.guava:guava:18.0'
     compile 'org.apache.httpcomponents:httpclient:4.4.1'
