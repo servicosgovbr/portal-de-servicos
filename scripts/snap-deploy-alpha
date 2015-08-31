@@ -11,9 +11,13 @@ set -o pipefail
 cd '/root/docker'
 git pull --rebase
 
+docker-compose stop portal1 portal2
+docker-compose kill portal1 portal2
+docker-compose rm -f portal1 portal2
+
 ./build portal-de-servicos
 
 docker-compose up -d
-docker-compose restart balanceador portal1 portal2
+docker-compose restart balanceador
 
 EOF
