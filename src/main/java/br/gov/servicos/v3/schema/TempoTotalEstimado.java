@@ -13,19 +13,19 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TempoTotalEstimado">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;choice minOccurs="0">
- *           &lt;element name="entre" type="{http://servicos.gov.br/v3/schema}Entre"/>
- *           &lt;element name="ate" type="{http://servicos.gov.br/v3/schema}Ate"/>
- *         &lt;/choice>
- *         &lt;element name="descricao" type="{http://servicos.gov.br/v3/schema}DescricaoDoTempoTotalEstimado"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="TempoTotalEstimado"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;choice minOccurs="0"&gt;
+ *           &lt;element name="entre" type="{http://servicos.gov.br/v3/schema}Entre"/&gt;
+ *           &lt;element name="ate" type="{http://servicos.gov.br/v3/schema}Ate"/&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="descricao" type="{http://servicos.gov.br/v3/schema}DescricaoDoTempoTotalEstimado"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
