@@ -3,16 +3,15 @@ package br.gov.servicos.v3.schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import lombok.experimental.Wither;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static lombok.AccessLevel.PRIVATE;
 
 
 /**
@@ -44,7 +43,7 @@ import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
  * &lt;/complexType&gt;
  * </pre>
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Servico", propOrder = {
         "nome",
         "sigla",
@@ -59,48 +58,56 @@ import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
         "areasDeInteresse",
         "palavrasChave",
         "legislacoes",
-        "id"
 })
 @Document(indexName = IMPORTADOR, type = "servico")
 @Data
 @Wither
 @NoArgsConstructor
 @AllArgsConstructor
+@FieldDefaults(level = PRIVATE)
 public class Servico {
 
     @Id
-    protected String id;
+    @XmlTransient
+    String id;
 
     @XmlElement(required = true)
-    protected String nome;
+    String nome;
 
-    protected String sigla;
+    @XmlElement
+    String sigla;
 
     @XmlElement(name = "nomes-populares")
-    protected NomesPopulares nomesPopulares;
+    NomesPopulares nomesPopulares;
 
-    protected String descricao;
+    @XmlElement
+    String descricao;
 
-    protected String gratuito;
+    @XmlElement
+    String gratuito;
 
-    protected Solicitantes solicitantes;
+    @XmlElement
+    Solicitantes solicitantes;
 
     @XmlElement(name = "tempo-total-estimado")
-    protected TempoTotalEstimado tempoTotalEstimado;
+    TempoTotalEstimado tempoTotalEstimado;
 
-    protected Etapas etapas;
+    @XmlElement
+    Etapas etapas;
 
-    protected Orgao orgao;
+    @XmlElement
+    Orgao orgao;
 
     @XmlElement(name = "segmentos-da-sociedade")
-    protected SegmentosDaSociedade segmentosDaSociedade;
+    SegmentosDaSociedade segmentosDaSociedade;
 
     @XmlElement(name = "areas-de-interesse")
-    protected AreasDeInteresse areasDeInteresse;
+    AreasDeInteresse areasDeInteresse;
 
     @XmlElement(name = "palavras-chave")
-    protected PalavrasChave palavrasChave;
+    PalavrasChave palavrasChave;
 
-    protected Legislacoes legislacoes;
+    @XmlElement
+    Legislacoes legislacoes;
 
 }
