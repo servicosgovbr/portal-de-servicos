@@ -90,7 +90,7 @@ class GitReport
   end
   
   def populate_dates(item, issue)
-    issue.events.reverse! #so it gets the last ocurrence of the event if duplicate
+    issue.events.reverse! # pega o ultimo evento do cartao
     
     item[:ultima_alteracao] = issue.updated_at.getlocal.strftime(TF)
     item[:ideia] = issue.created_at.getlocal.strftime(TF)
@@ -153,7 +153,6 @@ class GitReport
   end
   
   def clean_posterior_dates(item)
-    #@backward_order.reverse = [:ideia, :para_rodar, :em_progresso, :para_homologacao, :em_homologacao, :em_producao, :aprendemos]
     actual_stage = item[:stage]
     index = @backward_order.reverse.index(actual_stage)
     @backward_order.reverse.last(6-index).each do |stage_name|
@@ -253,7 +252,6 @@ end
 report = GitReport.new
 repos.each do |repo|
   report.read_repo repo
-  #report.read_repo_from_file 'servicosgovbr/portal-de-servicos'
   report.write_report
   report.generate_cfd
 end
