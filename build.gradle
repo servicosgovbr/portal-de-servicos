@@ -47,5 +47,8 @@ apply from: "${rootProject.rootDir}/gradle/assets.gradle"
 apply from: "${rootProject.rootDir}/gradle/tests.gradle"
 
 jaxb {
-  xsdDir = "../cartas-de-servico/cartas-servico/v3/"
+    xsdDir = "../cartas-de-servico/cartas-servico/v3/"
+    xjc {
+        header = false
+    }
 }
