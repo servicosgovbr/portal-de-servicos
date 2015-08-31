@@ -250,12 +250,12 @@ class GitReport
   end
 end
 
-gitReport = GitReport.new
+report = GitReport.new
 repos.each do |repo|
-  gitReport.read_repo repo
-  #gitReport.read_repo_from_file 'servicosgovbr/portal-de-servicos'
-  gitReport.write_report
-  gitReport.generate_cfd
+  report.read_repo repo
+  #report.read_repo_from_file 'servicosgovbr/portal-de-servicos'
+  report.write_report
+  report.generate_cfd
 end
 
-gitReport.concatenate_all
+report.concatenate_all
