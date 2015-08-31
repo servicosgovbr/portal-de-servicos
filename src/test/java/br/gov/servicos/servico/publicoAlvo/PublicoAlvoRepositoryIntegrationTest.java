@@ -2,6 +2,8 @@ package br.gov.servicos.servico.publicoAlvo;
 
 import br.gov.servicos.Main;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.SegmentoDaSociedade;
+import br.gov.servicos.v3.schema.SegmentosDaSociedade;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,25 +34,27 @@ public class PublicoAlvoRepositoryIntegrationTest {
         servicos.deleteAll();
 
         servicos.save(SERVICO
-                .withId("servico-1").withSegmentosDaSociedade(asList(
-                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos"),
-                        new PublicoAlvo().withId("empresas").withTitulo("Empresas"))));
+                .withNome("Servico 1")
+                .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
+                        SegmentoDaSociedade.fromValue("Cidadãos"),
+                        SegmentoDaSociedade.fromValue("Empresas")))));
 
         servicos.save(SERVICO
-                .withId("servico-2").withSegmentosDaSociedade(singletonList(
-                        new PublicoAlvo().withId("empresas").withTitulo("Empresas"))));
+                .withNome("Servico 2")
+                .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(singletonList(
+                        SegmentoDaSociedade.fromValue("Empresas")))));
 
         servicos.save(SERVICO
-                .withId("servico-3").withSegmentosDaSociedade(singletonList(
-                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos")
-                )));
+                .withNome("Servico 3")
+                .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(singletonList(
+                        SegmentoDaSociedade.fromValue("Cidadãos")))));
     }
 
     @Test
     public void deveAgruparPublicosAlvoPorTitulo() {
         assertThat(publicosAlvo.findAll(),
                 equalTo(asList(
-                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos"),
-                        new PublicoAlvo().withId("empresas").withTitulo("Empresas"))));
+                        SegmentoDaSociedade.fromValue("Cidadãos"),
+                        SegmentoDaSociedade.fromValue("Empresas"))));
     }
 }

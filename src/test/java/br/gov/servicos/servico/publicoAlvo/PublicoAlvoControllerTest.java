@@ -2,6 +2,8 @@ package br.gov.servicos.servico.publicoAlvo;
 
 import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Conteudo;
+import br.gov.servicos.v3.schema.SegmentoDaSociedade;
+import br.gov.servicos.v3.schema.SegmentosDaSociedade;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -33,22 +35,26 @@ public class PublicoAlvoControllerTest {
     @Before
     public void setUp() throws IOException {
         doReturn(asList(
-                SERVICO.withTitulo("XXXX").withSegmentosDaSociedade(asList(
-                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos"),
-                        new PublicoAlvo().withId("empresas").withTitulo("Empresas"))),
-                SERVICO.withTitulo("AAAA").withSegmentosDaSociedade(asList(
-                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos"),
-                        new PublicoAlvo().withId("empresas").withTitulo("Empresas")))
+                SERVICO.withNome("XXXX")
+                        .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
+                                SegmentoDaSociedade.fromValue("Cidadãos"),
+                                SegmentoDaSociedade.fromValue("Empresas")))),
+                SERVICO.withNome("AAAA")
+                        .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
+                                SegmentoDaSociedade.fromValue("Cidadãos"),
+                                SegmentoDaSociedade.fromValue("Empresas"))))
         )).when(buscador)
                 .buscaServicosPor("segmentosDaSociedade.id", of("cidadaos"));
 
         doReturn(asList(
-                SERVICO.withTitulo("FFFF").withSegmentosDaSociedade(asList(
-                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos"),
-                        new PublicoAlvo().withId("empresas").withTitulo("Empresas"))),
-                SERVICO.withTitulo("AAAA").withSegmentosDaSociedade(asList(
-                        new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos"),
-                        new PublicoAlvo().withId("empresas").withTitulo("Empresas")))
+                SERVICO.withNome("FFFF")
+                        .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
+                                SegmentoDaSociedade.fromValue("Cidadãos"),
+                                SegmentoDaSociedade.fromValue("Empresas")))),
+                SERVICO.withNome("AAAA")
+                        .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
+                                SegmentoDaSociedade.fromValue("Cidadãos"),
+                                SegmentoDaSociedade.fromValue("Empresas"))))
         )).when(buscador)
                 .buscaServicosPor("segmentosDaSociedade.id", of("empresas"));
 
@@ -63,7 +69,7 @@ public class PublicoAlvoControllerTest {
     @Test
     public void deveRetornarOsServicosRelacionadosAoPublicoAlvo() {
         assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", null), "servicos",
-                singletonList(Conteudo.fromServico(SERVICO.withTitulo("AAAA"))));
+                singletonList(Conteudo.fromServico(SERVICO.withNome("AAAA"))));
     }
 
     @Test
@@ -87,7 +93,7 @@ public class PublicoAlvoControllerTest {
     @Test
     public void deveFiltrarPelaLetraInformada() {
         assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", 'X'), "servicos",
-                singletonList(Conteudo.fromServico(SERVICO.withTitulo("XXXX"))));
+                singletonList(Conteudo.fromServico(SERVICO.withNome("XXXX"))));
     }
 
 }

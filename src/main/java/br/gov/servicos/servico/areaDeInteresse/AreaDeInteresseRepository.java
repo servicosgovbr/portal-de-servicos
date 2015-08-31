@@ -1,5 +1,6 @@
 package br.gov.servicos.servico.areaDeInteresse;
 
+import br.gov.servicos.v3.schema.AreaDeInteresse;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
@@ -43,17 +44,15 @@ public class AreaDeInteresseRepository {
                         .get("areasDeInteresse"))
                         .getBuckets()
                         .stream()
-                        .map(bucket -> new AreaDeInteresse()
-                                .withId(slugify.slugify(bucket.getKey()))
-                                .withArea(bucket.getKey()))
-                        .sorted((left, right) -> left.getArea().compareTo(right.getArea()))
+                        .map(b -> AreaDeInteresse.fromValue(b.getKey()))
+                        .sorted()
                         .collect(toList()));
     }
 
     public Optional<AreaDeInteresse> get(String id) {
         return findAll()
                 .stream()
-                .filter(a -> a.getId().equals(id))
+                .filter(a -> a.value().equals(id))
                 .findFirst();
     }
 }

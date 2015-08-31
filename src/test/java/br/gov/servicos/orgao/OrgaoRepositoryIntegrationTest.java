@@ -2,8 +2,8 @@ package br.gov.servicos.orgao;
 
 import br.gov.servicos.Main;
 import br.gov.servicos.config.PortalDeServicosIndex;
-import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Orgao;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,17 +41,17 @@ public class OrgaoRepositoryIntegrationTest {
     @Test
     public void listaOrgaosEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
-                .withId("servico-1")
-                .withOrgao(new Orgao().withId("orgao-1").withNome("Ministério da Educação")));
+                .withNome("Servico 1")
+                .withOrgao(new Orgao().withId("orgao-1")));
 
         servicos.save(SERVICO
-                .withId("servico-2")
-                .withOrgao(new Orgao().withId("orgao-3").withNome("Ministério dos Transportes")));
+                .withNome("Servico 2")
+                .withOrgao(new Orgao().withId("orgao-3")));
 
 
         servicos.save(SERVICO
-                .withId("servico-3")
-                .withOrgao(new Orgao().withId("orgao-2").withNome("Ministério dos Transportes")));
+                .withNome("Servico 3")
+                .withOrgao(new Orgao().withId("orgao-2")));
 
         List<Orgao> resultados = orgaos.findAll();
 

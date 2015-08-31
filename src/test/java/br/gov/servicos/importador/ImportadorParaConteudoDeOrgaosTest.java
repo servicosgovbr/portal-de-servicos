@@ -2,7 +2,7 @@ package br.gov.servicos.importador;
 
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.orgao.OrgaoRepository;
-import br.gov.servicos.servico.Orgao;
+import br.gov.servicos.v3.schema.Orgao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -24,7 +24,7 @@ public class ImportadorParaConteudoDeOrgaosTest {
 
     @Test
     public void deveConverterOrgaosEmConteudos() throws Exception {
-        given(repository.findAll()).willReturn(singletonList(new Orgao().withId("ministerio-da-verdade-mv").withNome("Ministério da Verdade").withTelefone("166")));
+        given(repository.findAll()).willReturn(singletonList(new Orgao().withId("ministerio-da-verdade-mv")));
         given(parser.conteudo("/conteudo/orgaos/ministerio-da-verdade-mv.md")).willReturn("Parágrafo um. Parágrafo dois.");
 
         Conteudo c = new ImportadorParaConteudoDeOrgaos(repository, parser).importar().findFirst().get();

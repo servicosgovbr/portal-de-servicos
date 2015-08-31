@@ -5,7 +5,7 @@ import br.gov.servicos.destaques.ServicosEmDestaque;
 import br.gov.servicos.orgao.Siorg;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.v3.schema.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -89,8 +89,8 @@ public class IndexControllerTest {
         controller = comDestaquesManuais();
         given(destaques.getServicos()).willReturn(singletonList("servico-em-destaque"));
 
-        Servico servicoEmDestaque = new Servico().withId("servico-em-destaque");
-        given(servicos.findOne("servico-em-destaque")).willReturn(servicoEmDestaque);
+        Servico servicoEmDestaque = new Servico().withNome("Serviço em Destaque");
+        given(servicos.findOne("Serviço em Destaque")).willReturn(servicoEmDestaque);
 
         assertModelAttributeValue(controller.index(), "destaques", asList(servicoEmDestaque, SERVICO));
     }
@@ -105,8 +105,8 @@ public class IndexControllerTest {
                                 .withVisitors(3L)
                                 .withUniqueVisitors(1L)));
 
-        Servico servicoMaisAcessado = new Servico().withId("servico-mais-acessado");
-        given(servicos.findOne("servico-mais-acessado")).willReturn(servicoMaisAcessado);
+        Servico servicoMaisAcessado = new Servico().withNome("Servico Mais Acessado");
+        given(servicos.findOne("Servico Mais Acessado")).willReturn(servicoMaisAcessado);
 
         assertModelAttributeValue(controller.index(), "destaques", asList(servicoMaisAcessado, SERVICO));
     }
@@ -122,10 +122,10 @@ public class IndexControllerTest {
                                 .withUniqueVisitors(1L)));
         given(destaques.getServicos()).willReturn(singletonList("servico-em-destaque"));
 
-        Servico servicoMaisAcessado = new Servico().withId("servico-mais-acessado");
+        Servico servicoMaisAcessado = new Servico().withNome("servico-mais-acessado");
         given(servicos.findOne("servico-mais-acessado")).willReturn(servicoMaisAcessado);
 
-        Servico servicoEmDestaque = new Servico().withId("servico-em-destaque");
+        Servico servicoEmDestaque = new Servico().withNome("servico-em-destaque");
         given(servicos.findOne("servico-em-destaque")).willReturn(servicoEmDestaque);
 
         assertModelAttributeValue(controller.index(), "destaques", asList(servicoMaisAcessado, servicoEmDestaque, SERVICO));

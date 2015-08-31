@@ -15,7 +15,7 @@ import static org.mockito.Mockito.verify;
 public class ImportadorAutomaticoTest {
 
     @Mock
-    Importador importador;
+    ImportadorV3 importador;
 
     @Test
     public void deveImportarOsServicosLegadosAoCarregarAAplicacao() throws Exception {

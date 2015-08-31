@@ -1,6 +1,9 @@
 
 package br.gov.servicos.v3.schema;
 
+import com.github.slugify.Slugify;
+import lombok.SneakyThrows;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
@@ -163,6 +166,11 @@ public enum AreaDeInteresse {
             }
         }
         throw new IllegalArgumentException(v);
+    }
+
+    @SneakyThrows
+    public String getId() {
+        return new Slugify().slugify(value);
     }
 
 }

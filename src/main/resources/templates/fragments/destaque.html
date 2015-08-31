@@ -5,7 +5,7 @@
 
 <div class="tile tile-default destaque">
     <h4 class="titulo-destaque">
-        <a th:href="@{/servico/{id}?pk_campaign=destaque(id=${servico.id})}" th:text="${servico.titulo}">
+        <a th:href="@{/servico/{id}?pk_campaign=destaque(id=${servico.id})}" th:text="${servico.nome}">
             Título do serviço
         </a>
     </h4>
@@ -14,10 +14,10 @@
         Descrição do serviço
     </p>
 
-    <div class="linha-da-vida" th:each="linha : ${servico.eventosDaLinhaDaVida}">
+    <div class="linha-da-vida" th:each="linha : ${servico.areasDeInteresse.item}">
         <a th:href="@{/linha-da-vida/{id}?pk_campaign=destaque(id=${linha.id})}">
             <i class="icone" th:classappend="true ? ${linha.id}"></i>
-            <span th:text="${linha.titulo}"></span>
+            <span th:text="${linha.value()}"></span>
         </a>
     </div>
 </div>

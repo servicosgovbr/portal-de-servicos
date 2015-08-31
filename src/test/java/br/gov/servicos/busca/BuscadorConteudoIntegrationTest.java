@@ -4,8 +4,8 @@ import br.gov.servicos.Main;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoRepository;
 import br.gov.servicos.config.PortalDeServicosIndex;
-import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Servico;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -64,7 +64,7 @@ public class BuscadorConteudoIntegrationTest {
     @Test
     public void deveRetornarApenasConteudosQueTenhamAPalavraDescricao() throws Exception {
         servicos.save(SERVICO);
-        servicos.save(new Servico().withTitulo("Um titulo").withDescricao("Texto"));
+        servicos.save(new Servico().withNome("Um titulo").withDescricao("Texto"));
         conteudos.save(new Conteudo().withTitulo("Titulo de conteudo").withConteudo("Conteudo"));
 
         List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
@@ -75,7 +75,7 @@ public class BuscadorConteudoIntegrationTest {
 
     @Test
     public void deveAcharSemAcentuacao() throws Exception {
-        servicos.save(new Servico().withTitulo("Um titulo").withDescricao("Descricao"));
+        servicos.save(new Servico().withNome("Um titulo").withDescricao("Descricao"));
 
         List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
         assertThat(conteudos, hasSize(1));
@@ -85,7 +85,7 @@ public class BuscadorConteudoIntegrationTest {
     @Test
     public void buscaSemelhante() throws Exception {
         servicos.save(SERVICO);
-        servicos.save(new Servico().withTitulo("Titulo de servico").withDescricao("Texto"));
+        servicos.save(new Servico().withNome("Titulo de servico").withDescricao("Texto"));
 
         List<Conteudo> conteudos = buscador.buscaSemelhante(of("ervic"));
 
@@ -126,8 +126,7 @@ public class BuscadorConteudoIntegrationTest {
     @Test
     public void buscaPorTermosComErrosDeDigitacao() {
         servicos.save(SERVICO
-                .withId("passaporte")
-                .withTitulo("Passaporte")
+                .withNome("Passaporte")
                 .withDescricao("Emissão de passaportes"));
 
         Iterable<Conteudo> busca = buscador.busca(of("passaprote"), 0);

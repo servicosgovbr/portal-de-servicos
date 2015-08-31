@@ -5,9 +5,9 @@
       layout:decorator="layout-branco">
 
 <head>
-    <title th:text="${servico.titulo}">Nome do Serviço</title>
-    <meta property="og:title" th:content="${servico.titulo}"/>
-    <meta property="og:description" th:content="${servico.titulo + ' no Portal de Serviços do Governo Federal'}"/>
+    <title th:text="${servico.nome}">Nome do Serviço</title>
+    <meta property="og:title" th:content="${servico.nome}"/>
+    <meta property="og:description" th:content="${servico.nome + ' no Portal de Serviços do Governo Federal'}"/>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
     <span class="separador">&gt;</span>
 
     <a href="" itemprop="url">
-        <span itemprop="title" th:text="${servico.titulo}">
+        <span itemprop="title" th:text="${servico.nome}">
             Nome do Serviço
         </span>
     </a>
@@ -34,7 +34,7 @@
 
 <section layout:fragment="corpo">
     <div class="row">
-        <h2 th:text="${servico.titulo}">Nome do Serviço</h2>
+        <h2 th:text="${servico.nome}">Nome do Serviço</h2>
 
         <th:block th:each="canal : ${servico.canaisPreferenciais}">
             <a class="acao-servico" th:href="${canal.referencia}">

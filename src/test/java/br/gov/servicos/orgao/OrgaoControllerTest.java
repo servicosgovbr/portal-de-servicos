@@ -2,7 +2,7 @@ package br.gov.servicos.orgao;
 
 import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Markdown;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;

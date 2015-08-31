@@ -1,7 +1,7 @@
 package br.gov.servicos.orgao;
 
 import br.gov.servicos.Main;
-import br.gov.servicos.servico.Orgao;
+import br.gov.servicos.v3.schema.Orgao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,6 +3,8 @@ package br.gov.servicos.servico.areaDeInteresse;
 import br.gov.servicos.Main;
 import br.gov.servicos.config.PortalDeServicosIndex;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.AreaDeInteresse;
+import br.gov.servicos.v3.schema.AreasDeInteresse;
 import junit.framework.TestCase;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -18,6 +20,7 @@ import java.util.List;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
@@ -32,7 +35,7 @@ public class AreaDeInteresseRepositoryIntegrationTest extends TestCase {
     ServicoRepository servicos;
 
     @Autowired
-    AreaDeInteresseRepository areasDaVida;
+    AreaDeInteresseRepository repositorio;
 
     @Autowired
     PortalDeServicosIndex esConfig;
@@ -45,27 +48,30 @@ public class AreaDeInteresseRepositoryIntegrationTest extends TestCase {
     @Test
     public void listaAreasDeInteresseEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
-                .withId("servico-1").withAreasDeInteresse(asList(
-                        new AreaDeInteresse().withId("habitacao").withArea("Habitação"),
-                        new AreaDeInteresse().withId("educacao-a-distancia").withArea("Educação à distância")
-                )));
+                .withNome("Servico 1")
+                .withAreasDeInteresse(new AreasDeInteresse().withItem(asList(
+                        AreaDeInteresse.fromValue("Habitação"),
+                        AreaDeInteresse.fromValue("Educação à distância")
+                ))));
 
         servicos.save(SERVICO
-                .withId("servico-2").withAreasDeInteresse(asList(
-                        new AreaDeInteresse().withId("abastecimento").withArea("Abastecimento")
-                )));
+                .withNome("Servico 2")
+                .withAreasDeInteresse(new AreasDeInteresse().withItem(singletonList(
+                        AreaDeInteresse.fromValue("Abastecimento")
+                ))));
 
         servicos.save(SERVICO
-                .withId("servico-3").withAreasDeInteresse(asList(
-                        new AreaDeInteresse().withId("agropecuaria").withArea("Agropecuária")
-                )));
+                .withNome("Servico 3")
+                .withAreasDeInteresse(new AreasDeInteresse().withItem(singletonList(
+                        AreaDeInteresse.fromValue("Agropecuária")
+                ))));
 
-        List<AreaDeInteresse> linhas = areasDaVida.findAll();
+        List<AreaDeInteresse> areas = repositorio.findAll();
 
-        assertThat(linhas, is(not(empty())));
-        assertThat(linhas.get(0).getId(), is("abastecimento"));
+        assertThat(areas, is(not(empty())));
+        assertThat(areas.get(0).value(), is("Abastecimento"));
 
-        assertThat(linhas.get(2).getId(), is("educacao-a-distancia"));
+        assertThat(areas.get(2).value(), is("Educacao à Distância"));
     }
 
 }

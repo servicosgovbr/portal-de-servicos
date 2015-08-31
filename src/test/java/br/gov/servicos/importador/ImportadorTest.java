@@ -1,6 +1,5 @@
 package br.gov.servicos.importador;
 
-import br.gov.servicos.config.PortalDeServicosIndex;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -19,13 +18,10 @@ import static org.mockito.Mockito.verify;
 public class ImportadorTest {
 
     @Mock
-    PortalDeServicosIndex portalDeServicosIndex;
-
-    @Mock
     ImportadorCartasDeServico importadorCartasDeServico;
 
     @Mock
-    ImportadorV2 importadorV2;
+    ImportadorV3 importadorV3;
 
     @Mock
     ImportadorConteudo importadorConteudo;
@@ -34,13 +30,7 @@ public class ImportadorTest {
 
     @Before
     public void setUp() throws Exception {
-        importador = new Importador(portalDeServicosIndex, importadorV2, importadorConteudo, importadorCartasDeServico);
-    }
-
-    @Test
-    public void deveRecriarIndices() throws Exception {
-        importador.importar();
-        verify(portalDeServicosIndex).recriar();
+        importador = new Importador(importadorV3, importadorConteudo);
     }
 
     @Test
@@ -50,13 +40,13 @@ public class ImportadorTest {
     }
 
     @Test
-    public void deveRodarImportadorLegado() throws Exception {
+    public void deveRodarImportadorDeCartas() throws Exception {
         importador.importar();
-        verify(importadorV2).importar(any(File.class));
+        verify(importadorV3).importar();
     }
 
     @Test
-    public void deveRodarImportadorConteudo() throws Exception {
+    public void deveRodarImportadorDeConteudo() throws Exception {
         importador.importar();
         verify(importadorConteudo).importar();
     }

@@ -1,5 +1,6 @@
 package br.gov.servicos.servico.publicoAlvo;
 
+import br.gov.servicos.v3.schema.SegmentoDaSociedade;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
@@ -35,7 +36,7 @@ public class PublicoAlvoRepository {
     }
 
     @Cacheable("publicosAlvo")
-    public List<PublicoAlvo> findAll() {
+    public List<SegmentoDaSociedade> findAll() {
         return elasticsearch.query(publicosAlvoAgregadosPorTitulo(), extraiPublicosAlvo());
     }
 
@@ -47,19 +48,13 @@ public class PublicoAlvoRepository {
                 .build();
     }
 
-    private ResultsExtractor<List<PublicoAlvo>> extraiPublicosAlvo() {
+    private ResultsExtractor<List<SegmentoDaSociedade>> extraiPublicosAlvo() {
         return response -> ((Terms) response.getAggregations().get(PUBLICOS_ALVO))
                 .getBuckets()
                 .stream()
-                .map(this::bucketToPublicoAlvo)
-                .sorted((left, right) -> left.getTitulo().compareTo(right.getTitulo()))
+                .map((bucket) -> SegmentoDaSociedade.fromValue(bucket.getKey()))
+                .sorted()
                 .collect(toList());
-    }
-
-    private PublicoAlvo bucketToPublicoAlvo(Terms.Bucket bucket) {
-        return new PublicoAlvo()
-                .withId(slugify.slugify(bucket.getKey()))
-                .withTitulo(bucket.getKey());
     }
 
 }

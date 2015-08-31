@@ -1,12 +1,17 @@
 
 package br.gov.servicos.v3.schema;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Wither;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -32,6 +37,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AreasDeInteresse", propOrder = {
     "item"
 })
+@Data
+@Wither
+@AllArgsConstructor
+@NoArgsConstructor
 public class AreasDeInteresse {
 
     @XmlSchemaType(name = "string")
@@ -39,25 +48,25 @@ public class AreasDeInteresse {
 
     /**
      * Gets the value of the item property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the item property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getItem().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AreaDeInteresse }
-     * 
-     * 
+     *
+     *
      */
     public List<AreaDeInteresse> getItem() {
         if (item == null) {

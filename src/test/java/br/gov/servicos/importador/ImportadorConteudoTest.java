@@ -29,14 +29,11 @@ public class ImportadorConteudoTest {
     ImportadorParaConteudoDeOrgaos orgaos;
 
     @Mock
-    ImportadorParaConteudoDeLinhasDaVida linhasDaVida;
-
-    @Mock
     ImportadorParaConteudoDePaginas paginas;
 
     @Before
     public void setUp() throws Exception {
-        importadorConteudo = new ImportadorConteudo(conteudoRepository, orgaos, linhasDaVida, paginas);
+        importadorConteudo = new ImportadorConteudo(conteudoRepository, orgaos, paginas);
     }
 
     @Test

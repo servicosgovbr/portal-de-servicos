@@ -2,7 +2,6 @@ package br.gov.servicos.frontend;
 
 import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.servico.ServicoRepository;
-import br.gov.servicos.servico.linhaDaVida.LinhaDaVidaRepository;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvoRepository;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,14 +21,12 @@ public class SitemapController {
 
     ServicoRepository servicos;
     OrgaoRepository orgaos;
-    LinhaDaVidaRepository linhasDaVida;
     PublicoAlvoRepository publicosAlvo;
 
     @Autowired
-    SitemapController(ServicoRepository servicos, OrgaoRepository orgaos, LinhaDaVidaRepository linhasDaVida, PublicoAlvoRepository publicosAlvo) {
+    SitemapController(ServicoRepository servicos, OrgaoRepository orgaos, PublicoAlvoRepository publicosAlvo) {
         this.servicos = servicos;
         this.orgaos = orgaos;
-        this.linhasDaVida = linhasDaVida;
         this.publicosAlvo = publicosAlvo;
     }
 
@@ -39,7 +36,6 @@ public class SitemapController {
 
         model.put("servicos", servicos.findAll());
         model.put("orgaos", orgaos.findAll());
-        model.put("linhasDaVida", linhasDaVida.findAll());
         model.put("publicosAlvo", publicosAlvo.findAll());
 
         return new ModelAndView("sitemap", model);

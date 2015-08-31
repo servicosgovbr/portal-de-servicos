@@ -4,8 +4,7 @@ import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoHtml;
 import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.servico.Orgao;
-import br.gov.servicos.servico.Servico;
-import br.gov.servicos.servico.linhaDaVida.LinhaDaVida;
+import br.gov.servicos.v3.schema.Servico;
 
 import java.util.List;
 
@@ -15,8 +14,7 @@ import static java.util.Collections.unmodifiableList;
 public class TestData {
 
     public static final Servico SERVICO = new Servico()
-            .withId("exemplo-de-servico")
-            .withTitulo("Exemplo de serviço")
+            .withNome("Exemplo de serviço")
             .withDescricao("Descrição serviço");
 
     public static final Conteudo CONTEUDO_DE_SERVICO = Conteudo.fromServico(SERVICO);
@@ -44,8 +42,4 @@ public class TestData {
             new Orgao().withId("banco-central-do-brasil-bcb").withNome("Banco Central do Brasil").withTelefone("(61) 2222 2222")
     ));
 
-    public static final List<LinhaDaVida> LINHAS_DA_VIDA = unmodifiableList(asList(
-            new LinhaDaVida().withId("imoveis").withTitulo("Imóveis"),
-            new LinhaDaVida().withId("apoio-financeiro-e-credito").withTitulo("Apoio financeiro e crédito")
-    ));
 }

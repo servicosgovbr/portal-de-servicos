@@ -1,12 +1,17 @@
 
 package br.gov.servicos.v3.schema;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Wither;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -32,6 +37,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "SegmentosDaSociedade", propOrder = {
     "item"
 })
+@Data
+@Wither
+@NoArgsConstructor
+@AllArgsConstructor
 public class SegmentosDaSociedade {
 
     @XmlSchemaType(name = "string")

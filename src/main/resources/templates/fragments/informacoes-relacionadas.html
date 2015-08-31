@@ -11,7 +11,7 @@
 
     <dd>
         <ul>
-            <li th:each="linhaDaVida : ${servico.eventosDaLinhaDaVida}">
+            <li th:each="linhaDaVida : ${servico.areasDeInteresse.item}">
                 <a th:href="@{/linha-da-vida/{id}(id=${linhaDaVida.id})}">
                     <span th:text="${linhaDaVida.titulo}">Título da Linha da Vida</span>
                 </a>

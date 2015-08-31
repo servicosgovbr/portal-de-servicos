@@ -1,8 +1,8 @@
 package br.gov.servicos.orgao;
 
-import br.gov.servicos.servico.Orgao;
-import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Orgao;
+import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;

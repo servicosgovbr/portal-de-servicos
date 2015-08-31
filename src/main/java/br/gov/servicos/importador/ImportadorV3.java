@@ -1,7 +1,7 @@
 package br.gov.servicos.importador;
 
 import br.gov.servicos.config.PortalDeServicosIndex;
-import br.gov.servicos.servico.ServicoV3Repository;
+import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.Servico;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
@@ -35,10 +35,10 @@ public class ImportadorV3 {
 
     String urlRepositorio;
     PortalDeServicosIndex indices;
-    private ServicoV3Repository indice;
+    ServicoRepository indice;
 
     @Autowired
-    ImportadorV3(@Value("${pds.cartas.repositorio}") String urlRepositorio, PortalDeServicosIndex indices, ServicoV3Repository indice) {
+    ImportadorV3(@Value("${pds.cartas.repositorio}") String urlRepositorio, PortalDeServicosIndex indices, ServicoRepository indice) {
         this.urlRepositorio = urlRepositorio;
         this.indices = indices;
         this.indice = indice;

@@ -2,7 +2,6 @@ package br.gov.servicos.frontend;
 
 import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.servico.ServicoRepository;
-import br.gov.servicos.servico.linhaDaVida.LinhaDaVidaRepository;
 import br.gov.servicos.servico.publicoAlvo.PublicoAlvoRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,16 +26,13 @@ public class SitemapControllerTest {
     OrgaoRepository orgaos;
 
     @Mock
-    LinhaDaVidaRepository linhasDaVida;
-
-    @Mock
     PublicoAlvoRepository publicosAlvo;
 
     SitemapController controller;
 
     @Before
     public void setUp() throws Exception {
-        controller = new SitemapController(servicos, orgaos, linhasDaVida, publicosAlvo);
+        controller = new SitemapController(servicos, orgaos, publicosAlvo);
     }
 
     @Test
@@ -56,13 +52,6 @@ public class SitemapControllerTest {
         Map<String, Object> model = controller.sitemap().getModel();
         assertThat(model, hasKey("orgaos"));
         verify(orgaos).findAll();
-    }
-
-    @Test
-    public void adicionaTodasAsLinhasDaVidaAoModelo() throws Exception {
-        Map<String, Object> model = controller.sitemap().getModel();
-        assertThat(model, hasKey("linhasDaVida"));
-        verify(linhasDaVida).findAll();
     }
 
     @Test
