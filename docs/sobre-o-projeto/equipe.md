@@ -32,6 +32,7 @@ O projeto do Portal de Serviços conta com duas equipes multi-disciplinares e co
 
 * [Alexandre Klaser](mailto:aklaser@thoughtworks.com)
 * [Barbara Wolff Dick](mailto:bdick@thoughtworks.com)
+* [Bruno Leite Alves](mailto:bleite@thoughtworks.com)
 * [Carlos Villela](mailto:cvillela@thoughtworks.com)
 * [Clarissa Martins](mailto:cmartins@thoughtworks.com)
 * [Claudia Melo](mailto:cmelo@thoughtworks.com)
