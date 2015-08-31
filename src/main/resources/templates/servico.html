@@ -36,9 +36,9 @@
     <div class="row">
         <h2 th:text="${servico.nome}">Nome do Serviço</h2>
 
-        <th:block th:each="canal : ${servico.canaisPreferenciais}">
-            <a class="acao-servico" th:href="${canal.referencia}">
-                <th:block th:text="${canal.titulo ?: 'Acessar' }">Título do link</th:block> <i class="fa fa-globe"></i>
+        <th:block> <!-- TODO pegar as ações de todos os canais de prestação web-->
+            <a class="acao-servico" href="">
+                <th:block>Título do link</th:block> <i class="fa fa-globe"></i>
             </a>
         </th:block>
 
@@ -49,85 +49,44 @@
             Descrição do serviço
         </div>
 
-        <th:block th:unless="${servico.solicitantes.isEmpty()}">
+        <th:block th:unless="${servico.solicitantes.solicitante.isEmpty()}">
             <h3 class="subtitulo-servico">Quem pode utilizar este serviço?</h3>
-            <ul class="solicitantes" th:each="solicitante : ${servico.solicitantes}">
-                <li><p th:text="${solicitante}"></p></li>
+            <ul class="solicitantes" th:each="solicitante : ${servico.solicitantes.solicitante}">
+                <li>
+                    <p th:text="${solicitante.tipo}"></p>
+                    <p th:text="${solicitante.requisitos}"></p>
+                </li>
             </ul>
         </th:block>
 
-        <th:block th:unless="${servico.tempoEstimado == null or servico.tempoEstimado.isEmpty()}">
-            <h3 class="subtitulo-servico">Tempo estimado</h3>
-
-            <p th:text="${servico.tempoEstimado + '.'}"></p>
-
-            <p th:unless="${#strings.isEmpty(servico.tempoEstimado.excecoes)}" th:text="${servico.tempoEstimado.excecoes}"></p>
-
+        <th:block th:unless="${servico.tempoTotalEstimado == null}">
+            <!-- TODO tempo total estimado -->
         </th:block>
 
-        <th:block th:unless="${servico.etapas.isEmpty()}">
+        <th:block th:unless="${servico.etapas.etapa.isEmpty()}">
 
             <h3 class="subtitulo-servico">Etapas para a realização deste serviço</h3>
 
-            <div class="etapas" th:each="etapa, row : ${servico.etapas}">
+            <div class="etapas" th:each="etapa, row : ${servico.etapas.etapa}">
                 <p class="circle" th:text="${row.index + 1}"></p>
                 <h4 class="etapa" th:text="${etapa.titulo ?: 'Acesse o serviço'}">Título da etapa</h4>
 
                 <div class="etapa markdown" th:utext="${@markdown.render(etapa.descricao)}">Descrição da etapa</div>
 
-                <th:block th:if="${!etapa.documentos.isEmpty() or
-                                !etapa.canaisDePrestacao.isEmpty() or
-                                !etapa.custos.isEmpty() }">
-
-                    <div class="subtitulo-etapa">
-
-                        <th:block th:if="${!etapa.documentos.isEmpty()}">
-                            <p class="info-etapa">Documentos necessários para esta etapa:</p>
-                            <ul>
-                                <li th:each="documento : ${etapa.documentos}" th:text="${documento}">Documento</li>
-                            </ul>
-                        </th:block>
-
-                        <th:block th:if="${!etapa.canaisDePrestacao.isEmpty()}">
-                            <p class="info-etapa">Canais de prestação desta etapa:</p>
-                            <ul>
-                                <li th:each="canal : ${etapa.canaisDePrestacao}">
-                                    <span th:text="${canal.tipo}">Tipo</span>:
-                                    <th:block th:if="${canal.tipo == 'Web'}">
-                                        <a th:href="${canal.referencia}" th:text="${canal.titulo ?: canal.referencia}">
-                                            Titulo
-                                        </a>
-                                    </th:block>
-                                    <th:block th:if="${canal.tipo != 'Web'}">
-                                        <span th:text="${canal.titulo ?: canal.referencia}">Titulo</span>
-                                    </th:block>
-                                </li>
-                            </ul>
-                        </th:block>
-
-                        <th:block th:if="${!etapa.custos.isEmpty()}">
-                            <p class="info-etapa">Custos para a realização desta etapa:</p>
-                            <ul>
-                                <li th:each="custo : ${etapa.custos}">
-                                    <span th:text="${custo.descricao}">Descrição</span>:
-                                    R$ <span th:text="${custo.valor}">10,00</span>
-                                </li>
-                            </ul>
-                        </th:block>
-                    </div>
-
-                </th:block>
+                <!-- TODO documentos da etapa -->
+                <!-- TODO custos da etapa -->
+                <!-- TODO canais de prestação da etapa -->
             </div>
         </th:block>
     </div>
 
     <div class="row">
-        <p class="separacao-orgao" th:unless="${#strings.isEmpty(servico.orgao.nome)}">
+        <p class="separacao-orgao" th:unless="${#strings.isEmpty(servico.orgao.id)}"><!-- TODO nome do orgao -->
             Este é um serviço
             <th:block th:text="${@genero.de(servico.orgao.id)}">do(a)</th:block>
-            <a th:unless="${#strings.isEmpty(servico.orgao.nome)}"
+            <a th:unless="${#strings.isEmpty(servico.orgao.id)}"
                th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
-               th:text="${servico.orgao.nome}">
+               th:text="${servico.orgao.id}">
                 Órgão responsavel
             </a>.
             Em caso de dúvidas, reclamações ou sugestões favor

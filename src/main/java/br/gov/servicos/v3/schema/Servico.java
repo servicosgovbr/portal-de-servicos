@@ -1,10 +1,8 @@
 package br.gov.servicos.v3.schema;
 
-import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.SneakyThrows;
 import lombok.experimental.Wither;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -60,7 +58,8 @@ import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
         "segmentosDaSociedade",
         "areasDeInteresse",
         "palavrasChave",
-        "legislacoes"
+        "legislacoes",
+        "id"
 })
 @Document(indexName = IMPORTADOR, type = "servico")
 @Data
@@ -70,6 +69,8 @@ import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 public class Servico {
 
     @Id
+    protected String id;
+
     @XmlElement(required = true)
     protected String nome;
 
@@ -101,10 +102,5 @@ public class Servico {
     protected PalavrasChave palavrasChave;
 
     protected Legislacoes legislacoes;
-
-    @SneakyThrows
-    public String getId() {
-        return new Slugify().slugify(getNome() + " - " + getSigla());
-    }
 
 }

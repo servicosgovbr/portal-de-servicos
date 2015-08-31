@@ -13,12 +13,12 @@
         <ul>
             <li th:each="linhaDaVida : ${servico.areasDeInteresse.item}">
                 <a th:href="@{/linha-da-vida/{id}(id=${linhaDaVida.id})}">
-                    <span th:text="${linhaDaVida.titulo}">Título da Linha da Vida</span>
+                    <span th:text="${linhaDaVida.value()}">Título da Linha da Vida</span>
                 </a>
             </li>
             <li th:if="${servico.orgao}">
                 <a th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
-                   th:text="${servico.orgao.nome}">
+                   th:text="${servico.orgao.id}"><!-- TODO usar nome -->
                     Órgão
                 </a>
             </li>

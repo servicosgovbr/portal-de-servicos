@@ -3,6 +3,7 @@ package br.gov.servicos.importador;
 import br.gov.servicos.config.PortalDeServicosIndex;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.Servico;
+import com.github.slugify.Slugify;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -36,12 +37,18 @@ public class ImportadorV3 {
     String urlRepositorio;
     PortalDeServicosIndex indices;
     ServicoRepository indice;
+    Slugify slugify;
 
     @Autowired
-    ImportadorV3(@Value("${pds.cartas.repositorio}") String urlRepositorio, PortalDeServicosIndex indices, ServicoRepository indice) {
+    ImportadorV3(
+            @Value("${pds.cartas.repositorio}") String urlRepositorio,
+            PortalDeServicosIndex indices,
+            ServicoRepository indice,
+            Slugify slugify) {
         this.urlRepositorio = urlRepositorio;
         this.indices = indices;
         this.indice = indice;
+        this.slugify = slugify;
     }
 
     @SneakyThrows
@@ -59,6 +66,7 @@ public class ImportadorV3 {
                 Stream.of(dir.toPath().resolve("cartas-servico/v3/servicos").toFile()
                         .listFiles((d, n) -> n.endsWith(".xml")))
                         .map(f -> unmarshal(f, Servico.class))
+                        .map(s -> s.withId(slugify.slugify(s.getNome() + " " + s.getSigla())))
                         .collect(toList())
         );
     }
