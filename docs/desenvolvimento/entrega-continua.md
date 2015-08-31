@@ -4,9 +4,9 @@ Diversos princípios de Entrega Contínua são utilizados no projeto do Portal d
 
 ## Integração Contínua
 
-Utilizamos o [Snap CI](http://snap-ci.com) para realizar a execução de todos os testes e implantações necessários a cada _push_ no [repositório Git do projeto](http://github.com/servicosgovbr/portal-de-servicos).
+Utilizamos o [Snap CI](http://snap-ci.com) para realizar a execução de todos os testes e implantações necessários a cada _push_ nos [repositórios Git do projeto](http://github.com/servicosgovbr/).
 
-Os seguintes passos estão configurados no _pipeline_:
+Os seguintes passos estão configurados no _pipelines_, com alguma variação dependendo do projeto:
 
 ### TESTES
 
@@ -20,11 +20,11 @@ Cria um arquivo JAR contendo todas as dependências do projeto (uberjar) necess�
 
 ### ALPHA
 
-(Re)instala o pacote RPM gerado no passo anterior em [uma instância do CentOS 7 x64 rodando na Amazon Web Services EC2](http://ec2-54-94-244-36.sa-east-1.compute.amazonaws.com), e reinicia os serviços necessários. Após alguns segundos, a nova versão da aplicação está reiniciada e pronta para receber requisições.
+(Re)instala o pacote RPM gerado no passo anterior em uma imagem Docker baseada no CentOS 7 x64, e reinicia a aplicação rodando na [DigitalOcean](http://104.236.231.239), bem como outros serviços necessários. Após alguns segundos, a nova versão da aplicação está pronta para receber requisições.
 
 ### DOCS
 
-Atualiza a _branch_ `gh-pages`, utilizada pelo [Github Pages](https://pages.github.com/) com o resultado da compilação da documentação (localizada no diretório `docs`) pelo [Gitbook](http://gitbook.com). Esta fica disponível em [servicosgovbr.github.io/portal-de-servicos](http://servicosgovbr.github.io/portal-de-servicos).
+Atualiza a _branch_ `gh-pages`, utilizada pelo [Github Pages](https://pages.github.com/) com o resultado da compilação da documentação (localizada no diretório `docs`) pelo [Gitbook](http://gitbook.com). Esta fica disponível em [servicosgovbr.github.io](http://servicosgovbr.github.io).
 
 ### AVISO
 
