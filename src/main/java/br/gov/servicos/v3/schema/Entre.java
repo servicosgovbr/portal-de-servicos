@@ -12,7 +12,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
-import java.math.BigInteger;
 
 
 /**
@@ -39,57 +38,41 @@ import java.math.BigInteger;
 public class Entre {
 
     @XmlAttribute(name = "min", required = true)
-    protected BigInteger min;
+    protected int min;
     @XmlAttribute(name = "max", required = true)
-    protected BigInteger max;
+    protected int max;
     @XmlAttribute(name = "unidade", required = true)
     protected TipoDeTempoTotalEstimado unidade;
 
     /**
      * Gets the value of the min property.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
      */
-    public BigInteger getMin() {
+    public int getMin() {
         return min;
     }
 
     /**
      * Sets the value of the min property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
      */
-    public void setMin(BigInteger value) {
+    public void setMin(int value) {
         this.min = value;
     }
 
     /**
      * Gets the value of the max property.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
      */
-    public BigInteger getMax() {
+    public int getMax() {
         return max;
     }
 
     /**
      * Sets the value of the max property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
      */
-    public void setMax(BigInteger value) {
+    public void setMax(int value) {
         this.max = value;
     }
 
