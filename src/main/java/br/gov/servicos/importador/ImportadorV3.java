@@ -65,6 +65,7 @@ public class ImportadorV3 {
         return indice.save(
                 Stream.of(dir.toPath().resolve("cartas-servico/v3/servicos").toFile()
                         .listFiles((d, n) -> n.endsWith(".xml")))
+                        .parallel()
                         .map(f -> unmarshal(f, Servico.class))
                         .map(s -> s.withId(slugify.slugify(s.getNome() + " " + s.getSigla())))
                         .collect(toList())
