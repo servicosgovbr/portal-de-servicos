@@ -75,7 +75,16 @@
 
                 <!-- TODO documentos da etapa -->
                 <!-- TODO custos da etapa -->
-                <!-- TODO canais de prestação da etapa -->
+                <div class="subtitulo-etapa">
+                    <p class="info-etapa">Canais de prestação desta etapa:</p>
+                    <ul>
+                        <li th:each="canal : ${etapa.canaisDePrestacao.padrao.canalDePrestacao}">
+                            <span th:text="${canal.tipo.value}">Web</span>:
+
+                            <a th:href="${@conteudoParser.link(canal.descricao)}" th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </th:block>
     </div>
