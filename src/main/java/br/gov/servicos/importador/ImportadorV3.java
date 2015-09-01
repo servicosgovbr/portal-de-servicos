@@ -28,10 +28,6 @@ import static lombok.AccessLevel.PRIVATE;
 @Slf4j
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 @Component
-@ManagedResource(
-        objectName = "ServicosGovBr:type=ImportadorV3",
-        description = "Importa cartas para o ElasticSearch"
-)
 public class ImportadorV3 {
 
     String urlRepositorio;
@@ -52,7 +48,6 @@ public class ImportadorV3 {
     }
 
     @SneakyThrows
-    @ManagedOperation
     public Iterable<Servico> importar() {
         log.info("Iniciando importação");
         indices.recriar();
