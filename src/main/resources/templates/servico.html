@@ -53,8 +53,8 @@
             <h3 class="subtitulo-servico">Quem pode utilizar este serviço?</h3>
             <ul class="solicitantes" th:each="solicitante : ${servico.solicitantes}">
                 <li>
-                    <p th:text="${solicitante.tipo}"></p>
-                    <p th:text="${solicitante.requisitos}"></p>
+                    <p th:utext="${@markdown.render(solicitante.tipo)}"></p>
+                    <p th:utext="${@markdown.render(solicitante.requisitos)}"></p>
                 </li>
             </ul>
         </th:block>
