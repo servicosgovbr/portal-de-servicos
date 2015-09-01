@@ -41,16 +41,16 @@ public class OrgaoRepositoryIntegrationTest {
     @Test
     public void listaOrgaosEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
-                .withNome("Servico 1")
+                .withId("servico-1")
                 .withOrgao(new Orgao().withId("orgao-1")));
 
         servicos.save(SERVICO
-                .withNome("Servico 2")
+                .withId("servico-2")
                 .withOrgao(new Orgao().withId("orgao-3")));
 
 
         servicos.save(SERVICO
-                .withNome("Servico 3")
+                .withId("servico-3")
                 .withOrgao(new Orgao().withId("orgao-2")));
 
         List<Orgao> resultados = orgaos.findAll();
