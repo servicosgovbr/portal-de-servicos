@@ -25,15 +25,18 @@ public enum SegmentoDaSociedade {
     @XmlEnumValue("Demais segmentos (ONGs, organiza\u00e7\u00f5es sociais, etc)")
     DEMAIS_SEGMENTOS_ONGS_ORGANIZAÇÕES_SOCIAIS_ETC("Demais segmentos (ONGs, organiza\u00e7\u00f5es sociais, etc)");
 
+    private final String id;
     private final String value;
 
+    @SneakyThrows
     SegmentoDaSociedade(String v) {
+        id = new Slugify().slugify(v);
         value = v;
     }
 
-    public static SegmentoDaSociedade from(String v) {
+    public static SegmentoDaSociedade findById(String v) {
         return Stream.of(values())
-                .filter(c -> c.value.equals(v))
+                .filter(c -> c.getId().equals(v))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException(v));
     }
@@ -44,6 +47,6 @@ public enum SegmentoDaSociedade {
 
     @SneakyThrows
     public String getId() {
-        return new Slugify().slugify(getValue());
+        return id;
     }
 }

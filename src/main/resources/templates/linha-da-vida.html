@@ -5,9 +5,9 @@
       layout:decorator="layout-branco">
 
 <head>
-    <title th:text="${conteudo.titulo}">Nome da Linha da Vida</title>
-    <meta property="og:title" th:content="${conteudo.titulo}"/>
-    <meta property="og:description" th:content="${conteudo.titulo + ' no Portal de Serviços do Governo Federal'}"/>
+    <title th:text="${conteudo.nome}">Nome da Linha da Vida</title>
+    <meta property="og:title" th:content="${conteudo.nome}"/>
+    <meta property="og:description" th:content="${conteudo.nome + ' no Portal de Serviços do Governo Federal'}"/>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <span class="separador">&gt;</span>
 
     <a href="" itemprop="url">
-        <span itemprop="title" th:text="${conteudo.titulo}">
+        <span itemprop="title" th:text="${conteudo.nome}">
             Nome da Linha da Vida
         </span>
     </a>

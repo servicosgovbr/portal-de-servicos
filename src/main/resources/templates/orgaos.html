@@ -27,7 +27,7 @@
 
         <ul class="orgaos-a-z">
             <li th:each="orgao : ${orgaos}">
-                <a th:href="@{/orgao/{id}(id=${orgao.id})}" th:text="${orgao.nome}">
+                <a th:href="@{/orgao/{id}(id=${orgao.id})}" th:text="${orgao}"><!-- TODO nome do órgão -->
                     Nome do Órgão
                 </a>
             </li>

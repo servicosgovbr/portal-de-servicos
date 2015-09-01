@@ -66,7 +66,7 @@ class PublicoAlvoController {
     }
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial(String publicoAlvo) {
-        return buscador.buscaServicosPor("segmentosDaSociedade.id", ofNullable(publicoAlvo))
+        return buscador.buscaServicosPor("segmentosDaSociedade", ofNullable(SegmentoDaSociedade.findById(publicoAlvo).name()))
                 .stream()
                 .collect(groupingBy(s -> s.getNome().trim().toUpperCase().charAt(0)));
     }

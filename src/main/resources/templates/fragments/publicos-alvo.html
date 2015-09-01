@@ -13,7 +13,7 @@
         <ul>
             <li th:each="publico : ${@publicoAlvoRepository.findAll()}">
                 <a th:href="@{/publico-alvo/{id}(id=${publico.id})}">
-                    <span th:text="${publico.titulo}">Título do Público Alvo</span>
+                    <span th:text="${publico.value}">Título do Público Alvo</span>
                 </a>
             </li>
         </ul>

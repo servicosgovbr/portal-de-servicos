@@ -5,9 +5,9 @@
       layout:decorator="layout-branco">
 
 <head>
-    <title th:text="${publicoAlvo.titulo}">Nome do Público-Alvo</title>
-    <meta property="og:title" th:content="${publicoAlvo.titulo}"/>
-    <meta property="og:description" th:content="${publicoAlvo.titulo + ' no Portal de Serviços do Governo Federal'}"/>
+    <title th:text="${publicoAlvo.value}">Nome do Público-Alvo</title>
+    <meta property="og:title" th:content="${publicoAlvo.value}"/>
+    <meta property="og:description" th:content="${publicoAlvo.value + ' no Portal de Serviços do Governo Federal'}"/>
 
 </head>
 <body>
@@ -16,7 +16,7 @@
     <span class="separador">&gt;</span>
 
     <a href="" itemprop="url">
-        <span itemprop="title" th:text="${publicoAlvo.titulo}">
+        <span itemprop="title" th:text="${publicoAlvo.value}">
             Nome do Publico Alvo
         </span>
     </a>
@@ -31,7 +31,7 @@
 </span>
 
 <section layout:fragment="corpo">
-    <h2 th:utext="${publicoAlvo.titulo}"></h2>
+    <h2 th:utext="${publicoAlvo.value}"></h2>
 
     <div th:replace="fragments/paginacao :: conteudo-paginado(${letraAtiva}, ${letras}, true, 'letra=${pagina}')">
         <span layout:fragment="titulo">

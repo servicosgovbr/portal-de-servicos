@@ -5,10 +5,10 @@
       layout:decorator="layout-branco">
 
 <head>
-    <title th:text="${conteudo.titulo}">Nome do Órgão</title>
-    <meta property="og:title" th:content="${conteudo.titulo}"/>
+    <title th:text="${conteudo.nome}">Nome do Órgão</title>
+    <meta property="og:title" th:content="${conteudo.nome}"/>
     <meta property="og:description"
-          th:content="${'Informações sobre ' + @genero.o(conteudo.titulo) + ' ' + conteudo.titulo + ' no Portal de Serviços do Governo Federal'}"/>
+          th:content="${'Informações sobre ' + @genero.o(conteudo.nome) + ' ' + conteudo.nome + ' no Portal de Serviços do Governo Federal'}"/>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
     <span class="separador">&gt;</span>
 
     <a href="" itemprop="url">
-        <span itemprop="title" th:text="${conteudo.titulo}">
+        <span itemprop="title" th:text="${conteudo.nome}">
             Nome do Órgão
         </span>
     </a>
@@ -69,7 +69,7 @@
     {
       "@context" : "http://schema.org",
       "@type" : "GovernmentOrganization",
-      "name": "[[${conteudo.titulo}]]",
+      "name": "[[${conteudo.nome}]]",
       "url" : "[[${@environment.getProperty('pds.piwik.url')}]]",
       "contactPoint" : [
         {

@@ -2,6 +2,7 @@ package br.gov.servicos.servico.areaDeInteresse;
 
 import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Markdown;
+import br.gov.servicos.v3.schema.AreaDeInteresse;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,7 +37,7 @@ class AreaDeInteresseController {
         Map<String, Object> model = new HashMap<>();
 
         model.put("areaDeInteresse", areasDeInteresse.get(id).get());
-        model.put("resultados", buscador.buscaConteudosPor("areasDeInteresse.id", ofNullable(id))
+        model.put("resultados", buscador.buscaConteudosPor("areasDeInteresse", ofNullable(AreaDeInteresse.findById(id).name()))
                 .stream()
                 .sorted((x, y) -> x.getId().compareTo(y.getId()))
                 .collect(toList()));

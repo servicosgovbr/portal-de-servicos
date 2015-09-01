@@ -136,15 +136,18 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Urbanismo")
     URBANISMO("Urbanismo");
 
+    private final String id;
     private final String value;
 
+    @SneakyThrows
     AreaDeInteresse(String v) {
+        id = new Slugify().slugify(v);
         value = v;
     }
 
-    public static AreaDeInteresse from(String v) {
+    public static AreaDeInteresse findById(String v) {
         return Stream.of(values())
-                .filter(c -> c.value.equals(v))
+                .filter(c -> c.getId().equals(v))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException(v));
     }
@@ -153,9 +156,8 @@ public enum AreaDeInteresse {
         return value;
     }
 
-    @SneakyThrows
     public String getId() {
-        return new Slugify().slugify(value);
+        return id;
     }
 
 }

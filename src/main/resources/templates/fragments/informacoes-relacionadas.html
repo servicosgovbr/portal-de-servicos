@@ -12,8 +12,8 @@
     <dd>
         <ul>
             <li th:each="area : ${servico.areasDeInteresse}">
-                <a th:href="@{/areas-de-interesse/{id}(id=${area.id})}">
-                    <span th:text="${area.value()}">Título da Linha da Vida</span>
+                <a th:href="@{/area-de-interesse/{id}(id=${area.id})}">
+                    <span th:text="${area.value}">Título da Linha da Vida</span>
                 </a>
             </li>
             <li th:if="${servico.orgao}">
