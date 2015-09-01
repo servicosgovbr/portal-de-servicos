@@ -13,15 +13,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Entre"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;attribute name="min" use="required" type="{http://servicos.gov.br/v3/schema}UnidadeDeTempo" /&gt;
- *       &lt;attribute name="max" use="required" type="{http://servicos.gov.br/v3/schema}UnidadeDeTempo" /&gt;
- *       &lt;attribute name="unidade" use="required" type="{http://servicos.gov.br/v3/schema}TipoDeTempoTotalEstimado" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="Entre">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;attribute name="min" use="required" type="{http://servicos.gov.br/v3/schema}UnidadeDeTempo" />
+ *       &lt;attribute name="max" use="required" type="{http://servicos.gov.br/v3/schema}UnidadeDeTempo" />
+ *       &lt;attribute name="unidade" use="required" type="{http://servicos.gov.br/v3/schema}TipoDeTempoTotalEstimado" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

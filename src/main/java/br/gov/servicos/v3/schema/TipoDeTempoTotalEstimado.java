@@ -12,16 +12,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="TipoDeTempoTotalEstimado"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="minutos"/&gt;
- *     &lt;enumeration value="horas"/&gt;
- *     &lt;enumeration value="dias"/&gt;
- *     &lt;enumeration value="dias-corridos"/&gt;
- *     &lt;enumeration value="dias-uteis"/&gt;
- *     &lt;enumeration value="meses"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="TipoDeTempoTotalEstimado">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="minutos"/>
+ *     &lt;enumeration value="horas"/>
+ *     &lt;enumeration value="dias"/>
+ *     &lt;enumeration value="dias-corridos"/>
+ *     &lt;enumeration value="dias-uteis"/>
+ *     &lt;enumeration value="meses"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

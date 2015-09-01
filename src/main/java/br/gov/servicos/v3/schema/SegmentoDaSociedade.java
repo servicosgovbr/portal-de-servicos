@@ -12,14 +12,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="SegmentoDaSociedade"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Cidadãos"/&gt;
- *     &lt;enumeration value="Empresas"/&gt;
- *     &lt;enumeration value="Órgãos e entidades públicas"/&gt;
- *     &lt;enumeration value="Demais segmentos (ONGs, organizações sociais, etc)"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="SegmentoDaSociedade">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="Cidadãos"/>
+ *     &lt;enumeration value="Empresas"/>
+ *     &lt;enumeration value="Órgãos e entidades públicas"/>
+ *     &lt;enumeration value="Demais segmentos (ONGs, organizações sociais, etc)"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

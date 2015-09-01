@@ -42,11 +42,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link CanalDePrestacao }
+     * 
+     */
+    public CanalDePrestacao createCanalDePrestacao() {
+        return new CanalDePrestacao();
+    }
+
+    /**
+     * Create an instance of {@link AreasDeInteresse }
+     * 
+     */
+    public AreasDeInteresse createAreasDeInteresse() {
+        return new AreasDeInteresse();
+    }
+
+    /**
      * Create an instance of {@link NomesPopulares }
      * 
      */
     public NomesPopulares createNomesPopulares() {
         return new NomesPopulares();
+    }
+
+    /**
+     * Create an instance of {@link PalavrasChave }
+     * 
+     */
+    public PalavrasChave createPalavrasChave() {
+        return new PalavrasChave();
     }
 
     /**
@@ -58,43 +82,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Solicitante }
-     * 
-     */
-    public Solicitante createSolicitante() {
-        return new Solicitante();
-    }
-
-    /**
      * Create an instance of {@link TempoTotalEstimado }
      * 
      */
     public TempoTotalEstimado createTempoTotalEstimado() {
         return new TempoTotalEstimado();
-    }
-
-    /**
-     * Create an instance of {@link Entre }
-     * 
-     */
-    public Entre createEntre() {
-        return new Entre();
-    }
-
-    /**
-     * Create an instance of {@link Ate }
-     * 
-     */
-    public Ate createAte() {
-        return new Ate();
-    }
-
-    /**
-     * Create an instance of {@link Etapas }
-     * 
-     */
-    public Etapas createEtapas() {
-        return new Etapas();
     }
 
     /**
@@ -114,35 +106,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CasoDeDocumentos }
-     * 
-     */
-    public CasoDeDocumentos createCasoDeDocumentos() {
-        return new CasoDeDocumentos();
-    }
-
-    /**
-     * Create an instance of {@link Custos }
-     * 
-     */
-    public Custos createCustos() {
-        return new Custos();
-    }
-
-    /**
      * Create an instance of {@link CasoDeCustos }
      * 
      */
     public CasoDeCustos createCasoDeCustos() {
         return new CasoDeCustos();
-    }
-
-    /**
-     * Create an instance of {@link Custo }
-     * 
-     */
-    public Custo createCusto() {
-        return new Custo();
     }
 
     /**
@@ -154,6 +122,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Legislacoes }
+     * 
+     */
+    public Legislacoes createLegislacoes() {
+        return new Legislacoes();
+    }
+
+    /**
      * Create an instance of {@link CasoDeCanaisDePrestacao }
      * 
      */
@@ -162,19 +138,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CanalDePrestacao }
+     * Create an instance of {@link Custos }
      * 
      */
-    public CanalDePrestacao createCanalDePrestacao() {
-        return new CanalDePrestacao();
+    public Custos createCustos() {
+        return new Custos();
     }
 
     /**
-     * Create an instance of {@link Orgao }
+     * Create an instance of {@link Solicitante }
      * 
      */
-    public Orgao createOrgao() {
-        return new Orgao();
+    public Solicitante createSolicitante() {
+        return new Solicitante();
     }
 
     /**
@@ -186,27 +162,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AreasDeInteresse }
+     * Create an instance of {@link CasoDeDocumentos }
      * 
      */
-    public AreasDeInteresse createAreasDeInteresse() {
-        return new AreasDeInteresse();
+    public CasoDeDocumentos createCasoDeDocumentos() {
+        return new CasoDeDocumentos();
     }
 
     /**
-     * Create an instance of {@link PalavrasChave }
+     * Create an instance of {@link Ate }
      * 
      */
-    public PalavrasChave createPalavrasChave() {
-        return new PalavrasChave();
+    public Ate createAte() {
+        return new Ate();
     }
 
     /**
-     * Create an instance of {@link Legislacoes }
+     * Create an instance of {@link Custo }
      * 
      */
-    public Legislacoes createLegislacoes() {
-        return new Legislacoes();
+    public Custo createCusto() {
+        return new Custo();
+    }
+
+    /**
+     * Create an instance of {@link Orgao }
+     * 
+     */
+    public Orgao createOrgao() {
+        return new Orgao();
+    }
+
+    /**
+     * Create an instance of {@link Entre }
+     * 
+     */
+    public Entre createEntre() {
+        return new Entre();
+    }
+
+    /**
+     * Create an instance of {@link Etapas }
+     * 
+     */
+    public Etapas createEtapas() {
+        return new Etapas();
     }
 
     /**

@@ -12,28 +12,28 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="TipoDeCanalDePrestacao"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="aplicativo-movel"/&gt;
- *     &lt;enumeration value="e-mail"/&gt;
- *     &lt;enumeration value="fax"/&gt;
- *     &lt;enumeration value="postal"/&gt;
- *     &lt;enumeration value="presencial"/&gt;
- *     &lt;enumeration value="sms"/&gt;
- *     &lt;enumeration value="telefone"/&gt;
- *     &lt;enumeration value="web"/&gt;
- *     &lt;enumeration value="web-acompanhar"/&gt;
- *     &lt;enumeration value="web-agendar"/&gt;
- *     &lt;enumeration value="web-calcular-taxas"/&gt;
- *     &lt;enumeration value="web-consultar"/&gt;
- *     &lt;enumeration value="web-declarar"/&gt;
- *     &lt;enumeration value="web-emitir"/&gt;
- *     &lt;enumeration value="web-inscrever-se"/&gt;
- *     &lt;enumeration value="web-postos-de-atendimento"/&gt;
- *     &lt;enumeration value="web-preencher"/&gt;
- *     &lt;enumeration value="web-simular"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="TipoDeCanalDePrestacao">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="aplicativo-movel"/>
+ *     &lt;enumeration value="e-mail"/>
+ *     &lt;enumeration value="fax"/>
+ *     &lt;enumeration value="postal"/>
+ *     &lt;enumeration value="presencial"/>
+ *     &lt;enumeration value="sms"/>
+ *     &lt;enumeration value="telefone"/>
+ *     &lt;enumeration value="web"/>
+ *     &lt;enumeration value="web-acompanhar"/>
+ *     &lt;enumeration value="web-agendar"/>
+ *     &lt;enumeration value="web-calcular-taxas"/>
+ *     &lt;enumeration value="web-consultar"/>
+ *     &lt;enumeration value="web-declarar"/>
+ *     &lt;enumeration value="web-emitir"/>
+ *     &lt;enumeration value="web-inscrever-se"/>
+ *     &lt;enumeration value="web-postos-de-atendimento"/>
+ *     &lt;enumeration value="web-preencher"/>
+ *     &lt;enumeration value="web-simular"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

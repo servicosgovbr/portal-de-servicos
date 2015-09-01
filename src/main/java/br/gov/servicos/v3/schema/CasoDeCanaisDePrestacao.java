@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="CasoDeCanaisDePrestacao"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence maxOccurs="unbounded"&gt;
- *         &lt;element name="canal-de-prestacao" type="{http://servicos.gov.br/v3/schema}CanalDePrestacao"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="descricao" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="CasoDeCanaisDePrestacao">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence maxOccurs="unbounded">
+ *         &lt;element name="canal-de-prestacao" type="{http://servicos.gov.br/v3/schema}CanalDePrestacao"/>
+ *       &lt;/sequence>
+ *       &lt;attribute name="descricao" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

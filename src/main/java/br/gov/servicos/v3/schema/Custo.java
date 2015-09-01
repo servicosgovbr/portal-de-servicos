@@ -13,17 +13,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Custo"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="descricao" type="{http://servicos.gov.br/v3/schema}DescricaoDoCusto"/&gt;
- *         &lt;element name="moeda" type="{http://servicos.gov.br/v3/schema}Moeda"/&gt;
- *         &lt;element name="valor" type="{http://servicos.gov.br/v3/schema}Valor"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="Custo">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="descricao" type="{http://servicos.gov.br/v3/schema}DescricaoDoCusto"/>
+ *         &lt;element name="moeda" type="{http://servicos.gov.br/v3/schema}Moeda"/>
+ *         &lt;element name="valor" type="{http://servicos.gov.br/v3/schema}Valor"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
