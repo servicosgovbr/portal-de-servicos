@@ -42,35 +42,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CanalDePrestacao }
-     * 
-     */
-    public CanalDePrestacao createCanalDePrestacao() {
-        return new CanalDePrestacao();
-    }
-
-    /**
-     * Create an instance of {@link AreasDeInteresse }
-     * 
-     */
-    public AreasDeInteresse createAreasDeInteresse() {
-        return new AreasDeInteresse();
-    }
-
-    /**
      * Create an instance of {@link NomesPopulares }
      * 
      */
     public NomesPopulares createNomesPopulares() {
         return new NomesPopulares();
-    }
-
-    /**
-     * Create an instance of {@link PalavrasChave }
-     * 
-     */
-    public PalavrasChave createPalavrasChave() {
-        return new PalavrasChave();
     }
 
     /**
@@ -82,11 +58,43 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Solicitante }
+     * 
+     */
+    public Solicitante createSolicitante() {
+        return new Solicitante();
+    }
+
+    /**
      * Create an instance of {@link TempoTotalEstimado }
      * 
      */
     public TempoTotalEstimado createTempoTotalEstimado() {
         return new TempoTotalEstimado();
+    }
+
+    /**
+     * Create an instance of {@link Entre }
+     * 
+     */
+    public Entre createEntre() {
+        return new Entre();
+    }
+
+    /**
+     * Create an instance of {@link Ate }
+     * 
+     */
+    public Ate createAte() {
+        return new Ate();
+    }
+
+    /**
+     * Create an instance of {@link Etapas }
+     * 
+     */
+    public Etapas createEtapas() {
+        return new Etapas();
     }
 
     /**
@@ -106,35 +114,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CasoDeCustos }
+     * Create an instance of {@link CasoDeDocumentos }
      * 
      */
-    public CasoDeCustos createCasoDeCustos() {
-        return new CasoDeCustos();
-    }
-
-    /**
-     * Create an instance of {@link CanaisDePrestacao }
-     * 
-     */
-    public CanaisDePrestacao createCanaisDePrestacao() {
-        return new CanaisDePrestacao();
-    }
-
-    /**
-     * Create an instance of {@link Legislacoes }
-     * 
-     */
-    public Legislacoes createLegislacoes() {
-        return new Legislacoes();
-    }
-
-    /**
-     * Create an instance of {@link CasoDeCanaisDePrestacao }
-     * 
-     */
-    public CasoDeCanaisDePrestacao createCasoDeCanaisDePrestacao() {
-        return new CasoDeCanaisDePrestacao();
+    public CasoDeDocumentos createCasoDeDocumentos() {
+        return new CasoDeDocumentos();
     }
 
     /**
@@ -146,35 +130,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Solicitante }
+     * Create an instance of {@link CasoDeCustos }
      * 
      */
-    public Solicitante createSolicitante() {
-        return new Solicitante();
-    }
-
-    /**
-     * Create an instance of {@link SegmentosDaSociedade }
-     * 
-     */
-    public SegmentosDaSociedade createSegmentosDaSociedade() {
-        return new SegmentosDaSociedade();
-    }
-
-    /**
-     * Create an instance of {@link CasoDeDocumentos }
-     * 
-     */
-    public CasoDeDocumentos createCasoDeDocumentos() {
-        return new CasoDeDocumentos();
-    }
-
-    /**
-     * Create an instance of {@link Ate }
-     * 
-     */
-    public Ate createAte() {
-        return new Ate();
+    public CasoDeCustos createCasoDeCustos() {
+        return new CasoDeCustos();
     }
 
     /**
@@ -186,6 +146,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link CanaisDePrestacao }
+     * 
+     */
+    public CanaisDePrestacao createCanaisDePrestacao() {
+        return new CanaisDePrestacao();
+    }
+
+    /**
+     * Create an instance of {@link CasoDeCanaisDePrestacao }
+     * 
+     */
+    public CasoDeCanaisDePrestacao createCasoDeCanaisDePrestacao() {
+        return new CasoDeCanaisDePrestacao();
+    }
+
+    /**
+     * Create an instance of {@link CanalDePrestacao }
+     * 
+     */
+    public CanalDePrestacao createCanalDePrestacao() {
+        return new CanalDePrestacao();
+    }
+
+    /**
      * Create an instance of {@link Orgao }
      * 
      */
@@ -194,19 +178,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Entre }
+     * Create an instance of {@link SegmentosDaSociedade }
      * 
      */
-    public Entre createEntre() {
-        return new Entre();
+    public SegmentosDaSociedade createSegmentosDaSociedade() {
+        return new SegmentosDaSociedade();
     }
 
     /**
-     * Create an instance of {@link Etapas }
+     * Create an instance of {@link AreasDeInteresse }
      * 
      */
-    public Etapas createEtapas() {
-        return new Etapas();
+    public AreasDeInteresse createAreasDeInteresse() {
+        return new AreasDeInteresse();
+    }
+
+    /**
+     * Create an instance of {@link PalavrasChave }
+     * 
+     */
+    public PalavrasChave createPalavrasChave() {
+        return new PalavrasChave();
+    }
+
+    /**
+     * Create an instance of {@link Legislacoes }
+     * 
+     */
+    public Legislacoes createLegislacoes() {
+        return new Legislacoes();
     }
 
     /**

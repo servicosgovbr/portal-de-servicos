@@ -12,51 +12,51 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="AreaDeInteresse">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Abastecimento"/>
- *     &lt;enumeration value="Administração financeira"/>
- *     &lt;enumeration value="Agricultura orgânica"/>
- *     &lt;enumeration value="Agropecuária"/>
- *     &lt;enumeration value="Águas"/>
- *     &lt;enumeration value="Alimento"/>
- *     &lt;enumeration value="Ambiente e saúde"/>
- *     &lt;enumeration value="Comunicações"/>
- *     &lt;enumeration value="Comércio e Serviços"/>
- *     &lt;enumeration value="Economia e Finanças"/>
- *     &lt;enumeration value="Educação"/>
- *     &lt;enumeration value="Educação básica"/>
- *     &lt;enumeration value="Educação superior"/>
- *     &lt;enumeration value="Educação à distância"/>
- *     &lt;enumeration value="Emergências e Urgências"/>
- *     &lt;enumeration value="Encargos financeiros"/>
- *     &lt;enumeration value="Esporte e Lazer"/>
- *     &lt;enumeration value="Finanças"/>
- *     &lt;enumeration value="Habitação"/>
- *     &lt;enumeration value="Humanização na saúde"/>
- *     &lt;enumeration value="Indústria"/>
- *     &lt;enumeration value="Meio ambiente"/>
- *     &lt;enumeration value="Pecuária"/>
- *     &lt;enumeration value="Pessoa"/>
- *     &lt;enumeration value="Previdência Social"/>
- *     &lt;enumeration value="Profissionais da educação"/>
- *     &lt;enumeration value="Proteção social"/>
- *     &lt;enumeration value="Qualidade ambiental"/>
- *     &lt;enumeration value="Relações Internacionais"/>
- *     &lt;enumeration value="Saúde"/>
- *     &lt;enumeration value="Saúde da criança"/>
- *     &lt;enumeration value="Saúde da família"/>
- *     &lt;enumeration value="Saúde da mulher"/>
- *     &lt;enumeration value="Saúde do homem"/>
- *     &lt;enumeration value="Saúde do idoso"/>
- *     &lt;enumeration value="Saúde dos portadores de deficiências"/>
- *     &lt;enumeration value="Segurança e Ordem Pública"/>
- *     &lt;enumeration value="Trabalho"/>
- *     &lt;enumeration value="Transportes"/>
- *     &lt;enumeration value="Turismo"/>
- *     &lt;enumeration value="Urbanismo"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="AreaDeInteresse"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="Abastecimento"/&gt;
+ *     &lt;enumeration value="Administração financeira"/&gt;
+ *     &lt;enumeration value="Agricultura orgânica"/&gt;
+ *     &lt;enumeration value="Agropecuária"/&gt;
+ *     &lt;enumeration value="Águas"/&gt;
+ *     &lt;enumeration value="Alimento"/&gt;
+ *     &lt;enumeration value="Ambiente e saúde"/&gt;
+ *     &lt;enumeration value="Comunicações"/&gt;
+ *     &lt;enumeration value="Comércio e Serviços"/&gt;
+ *     &lt;enumeration value="Economia e Finanças"/&gt;
+ *     &lt;enumeration value="Educação"/&gt;
+ *     &lt;enumeration value="Educação básica"/&gt;
+ *     &lt;enumeration value="Educação superior"/&gt;
+ *     &lt;enumeration value="Educação à distância"/&gt;
+ *     &lt;enumeration value="Emergências e Urgências"/&gt;
+ *     &lt;enumeration value="Encargos financeiros"/&gt;
+ *     &lt;enumeration value="Esporte e Lazer"/&gt;
+ *     &lt;enumeration value="Finanças"/&gt;
+ *     &lt;enumeration value="Habitação"/&gt;
+ *     &lt;enumeration value="Humanização na saúde"/&gt;
+ *     &lt;enumeration value="Indústria"/&gt;
+ *     &lt;enumeration value="Meio ambiente"/&gt;
+ *     &lt;enumeration value="Pecuária"/&gt;
+ *     &lt;enumeration value="Pessoa"/&gt;
+ *     &lt;enumeration value="Previdência Social"/&gt;
+ *     &lt;enumeration value="Profissionais da educação"/&gt;
+ *     &lt;enumeration value="Proteção social"/&gt;
+ *     &lt;enumeration value="Qualidade ambiental"/&gt;
+ *     &lt;enumeration value="Relações Internacionais"/&gt;
+ *     &lt;enumeration value="Saúde"/&gt;
+ *     &lt;enumeration value="Saúde da criança"/&gt;
+ *     &lt;enumeration value="Saúde da família"/&gt;
+ *     &lt;enumeration value="Saúde da mulher"/&gt;
+ *     &lt;enumeration value="Saúde do homem"/&gt;
+ *     &lt;enumeration value="Saúde do idoso"/&gt;
+ *     &lt;enumeration value="Saúde dos portadores de deficiências"/&gt;
+ *     &lt;enumeration value="Segurança e Ordem Pública"/&gt;
+ *     &lt;enumeration value="Trabalho"/&gt;
+ *     &lt;enumeration value="Transportes"/&gt;
+ *     &lt;enumeration value="Turismo"/&gt;
+ *     &lt;enumeration value="Urbanismo"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

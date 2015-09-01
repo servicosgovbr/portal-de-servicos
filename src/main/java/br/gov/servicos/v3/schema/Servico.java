@@ -18,27 +18,27 @@ import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Servico">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="nome" type="{http://servicos.gov.br/v3/schema}NomeDoServico"/>
- *         &lt;element name="sigla" type="{http://servicos.gov.br/v3/schema}Sigla" minOccurs="0"/>
- *         &lt;element name="nomes-populares" type="{http://servicos.gov.br/v3/schema}NomesPopulares" minOccurs="0"/>
- *         &lt;element name="descricao" type="{http://servicos.gov.br/v3/schema}DescricaoDoServico" minOccurs="0"/>
- *         &lt;element name="gratuito" type="{http://servicos.gov.br/v3/schema}Gratuito" minOccurs="0"/>
- *         &lt;element name="solicitantes" type="{http://servicos.gov.br/v3/schema}Solicitantes" minOccurs="0"/>
- *         &lt;element name="tempo-total-estimado" type="{http://servicos.gov.br/v3/schema}TempoTotalEstimado" minOccurs="0"/>
- *         &lt;element name="etapas" type="{http://servicos.gov.br/v3/schema}Etapas" minOccurs="0"/>
- *         &lt;element name="orgao" type="{http://servicos.gov.br/v3/schema}Orgao" minOccurs="0"/>
- *         &lt;element name="segmentos-da-sociedade" type="{http://servicos.gov.br/v3/schema}SegmentosDaSociedade" minOccurs="0"/>
- *         &lt;element name="areas-de-interesse" type="{http://servicos.gov.br/v3/schema}AreasDeInteresse" minOccurs="0"/>
- *         &lt;element name="palavras-chave" type="{http://servicos.gov.br/v3/schema}PalavrasChave" minOccurs="0"/>
- *         &lt;element name="legislacoes" type="{http://servicos.gov.br/v3/schema}Legislacoes" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="Servico"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="nome" type="{http://servicos.gov.br/v3/schema}NomeDoServico"/&gt;
+ *         &lt;element name="sigla" type="{http://servicos.gov.br/v3/schema}Sigla" minOccurs="0"/&gt;
+ *         &lt;element name="nomes-populares" type="{http://servicos.gov.br/v3/schema}NomesPopulares" minOccurs="0"/&gt;
+ *         &lt;element name="descricao" type="{http://servicos.gov.br/v3/schema}DescricaoDoServico" minOccurs="0"/&gt;
+ *         &lt;element name="gratuito" type="{http://servicos.gov.br/v3/schema}Gratuito" minOccurs="0"/&gt;
+ *         &lt;element name="solicitantes" type="{http://servicos.gov.br/v3/schema}Solicitantes" minOccurs="0"/&gt;
+ *         &lt;element name="tempo-total-estimado" type="{http://servicos.gov.br/v3/schema}TempoTotalEstimado" minOccurs="0"/&gt;
+ *         &lt;element name="etapas" type="{http://servicos.gov.br/v3/schema}Etapas" minOccurs="0"/&gt;
+ *         &lt;element name="orgao" type="{http://servicos.gov.br/v3/schema}Orgao" minOccurs="0"/&gt;
+ *         &lt;element name="segmentos-da-sociedade" type="{http://servicos.gov.br/v3/schema}SegmentosDaSociedade" minOccurs="0"/&gt;
+ *         &lt;element name="areas-de-interesse" type="{http://servicos.gov.br/v3/schema}AreasDeInteresse" minOccurs="0"/&gt;
+ *         &lt;element name="palavras-chave" type="{http://servicos.gov.br/v3/schema}PalavrasChave" minOccurs="0"/&gt;
+ *         &lt;element name="legislacoes" type="{http://servicos.gov.br/v3/schema}Legislacoes" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
