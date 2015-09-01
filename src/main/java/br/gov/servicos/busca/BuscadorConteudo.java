@@ -50,7 +50,7 @@ public class BuscadorConteudo {
     public Page<Conteudo> busca(Optional<String> termoBuscado, Integer paginaAtual) {
         log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
         return executaQuery(termoBuscado, paginaAtual, q -> disMaxQuery()
-                .add(multiMatchQuery(q, "titulo^1.0", "conteudo^0.9", "descricao^0.9")
+                .add(multiMatchQuery(q, "nome^1.0", "conteudo^0.9", "descricao^0.9")
                         .fuzziness(TWO)
                         .prefixLength(0)));
     }
@@ -82,19 +82,16 @@ public class BuscadorConteudo {
                                 .withQuery(q)
                                 .build(),
                         r -> new FacetedPageImpl<>(Stream.of(r.getHits().getHits())
-                                .map(h -> {
-                                    String nome = (h.field("titulo") == null ? h.field("nome") : h.field("titulo")).value();
-                                    return new Conteudo()
-                                            .withId(slugify.slugify(nome))
-                                            .withTipoConteudo((String) Optional.ofNullable(h.field("tipoConteudo"))
-                                                    .filter(Objects::nonNull)
-                                                    .map(SearchHitField::value)
-                                                    .orElse("servico"))
-                                            .withNome(nome)
-                                            .withConteudo(Optional.ofNullable(h.field("descricao"))
-                                                    .orElse(h.field("conteudo"))
-                                                    .value());
-                                })
+                                .map(h -> new Conteudo()
+                                        .withId(slugify.slugify(h.field("nome").value()))
+                                        .withTipoConteudo((String) Optional.ofNullable(h.field("tipoConteudo"))
+                                                .filter(Objects::nonNull)
+                                                .map(SearchHitField::value)
+                                                .orElse("servico"))
+                                        .withNome(h.field("nome").value())
+                                        .withConteudo(Optional.ofNullable(h.field("descricao"))
+                                                .orElse(h.field("conteudo"))
+                                                .value()))
                                 .collect(toList()), pageable, r.getHits().totalHits())))
                 .orElse(SEM_RESULTADOS);
     }
