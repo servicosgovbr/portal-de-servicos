@@ -32,7 +32,7 @@ class ImportadorParaConteudoDeOrgaos {
                 .map(orgao -> new Conteudo()
                         .withId(orgao.getId())
                         .withTipoConteudo("orgao")
-                        .withTitulo("TODO - nomes dos órgãos (buscar no siorg?)")
+                        .withNome("TODO - nomes dos órgãos (buscar no siorg?)")
                         .withConteudo(parser.conteudo(format("/conteudo/orgaos/%s.md", orgao.getId()))));
     }
 }

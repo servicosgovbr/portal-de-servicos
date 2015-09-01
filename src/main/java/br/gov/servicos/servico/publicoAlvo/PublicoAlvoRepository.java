@@ -23,9 +23,6 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class PublicoAlvoRepository {
 
-    private static final String PUBLICOS_ALVO = "segmentosDaSociedade";
-    private static final String TITULO = "segmentosDaSociedade.titulo";
-
     Slugify slugify;
     ElasticsearchTemplate elasticsearch;
 
@@ -42,14 +39,14 @@ public class PublicoAlvoRepository {
 
     private NativeSearchQuery publicosAlvoAgregadosPorTitulo() {
         return new NativeSearchQueryBuilder().addAggregation(
-                new TermsBuilder(PUBLICOS_ALVO)
-                        .field(TITULO)
+                new TermsBuilder("segmentosDaSociedade")
+                        .field("segmentosDaSociedade")
                         .size(MAX_VALUE))
                 .build();
     }
 
     private ResultsExtractor<List<SegmentoDaSociedade>> extraiPublicosAlvo() {
-        return response -> ((Terms) response.getAggregations().get(PUBLICOS_ALVO))
+        return response -> ((Terms) response.getAggregations().get("segmentosDaSociedade"))
                 .getBuckets()
                 .stream()
                 .map((bucket) -> SegmentoDaSociedade.from(bucket.getKey()))

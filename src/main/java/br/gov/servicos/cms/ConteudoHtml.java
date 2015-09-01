@@ -12,7 +12,7 @@ import static lombok.AccessLevel.PRIVATE;
 public class ConteudoHtml {
 
     String id;
-    String titulo;
+    String nome;
     String html;
 
     public ConteudoHtml() {

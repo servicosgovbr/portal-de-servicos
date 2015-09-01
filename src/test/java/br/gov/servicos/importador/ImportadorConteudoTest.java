@@ -41,7 +41,7 @@ public class ImportadorConteudoTest {
         Conteudo conteudo = new Conteudo()
                 .withId("ministerio-da-verdade")
                 .withTipoConteudo("orgao")
-                .withTitulo("Ministério da Verdade")
+                .withNome("Ministério da Verdade")
                 .withConteudo("Parágrafo um. Parágrafo dois.");
 
         given(orgaos.importar()).willReturn(Stream.of(conteudo));

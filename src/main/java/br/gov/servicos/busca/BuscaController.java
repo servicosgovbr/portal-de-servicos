@@ -59,7 +59,7 @@ class BuscaController {
         return format("[\"%s\", %s]",
                 q,
                 listaServico.stream()
-                        .map(Conteudo::getTitulo)
+                        .map(Conteudo::getNome)
                         .limit(7)
                         .collect(joining("\",\"", "[\"", "\"]")));
     }

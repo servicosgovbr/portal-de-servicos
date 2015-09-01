@@ -23,7 +23,7 @@ public class ConteudoParserTest {
         given(markdown.toHtml(anyObject())).willReturn(
                 new ConteudoHtml()
                         .withId("foo")
-                        .withTitulo("Foo")
+                        .withNome("Foo")
                         .withHtml("<html>" +
                                 "<h2>Foo</h2>" +
                                 "<p>Parágrafo um.</p>" +

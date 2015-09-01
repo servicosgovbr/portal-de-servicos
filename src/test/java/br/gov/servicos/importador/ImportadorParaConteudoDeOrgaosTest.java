@@ -31,7 +31,7 @@ public class ImportadorParaConteudoDeOrgaosTest {
 
         assertThat(c.getId(), is("ministerio-da-verdade-mv"));
         assertThat(c.getTipoConteudo(), is("orgao"));
-        assertThat(c.getTitulo(), is("Ministério da Verdade"));
+        assertThat(c.getNome(), is("Ministério da Verdade"));
         assertThat(c.getConteudo(), is("Parágrafo um. Parágrafo dois."));
     }
 }

@@ -39,7 +39,7 @@ public class BuscadorConteudo {
     private static final int PAGE_SIZE = 20;
 
     ElasticsearchTemplate et;
-    private Slugify slugify;
+    Slugify slugify;
 
     @Autowired
     BuscadorConteudo(ElasticsearchTemplate et, Slugify slugify) {
@@ -56,7 +56,7 @@ public class BuscadorConteudo {
     }
 
     public List<Conteudo> buscaSemelhante(Optional<String> termoBuscado) {
-        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery("titulo", "conteudo", "descricao").likeText(termo));
+        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery("nome", "conteudo", "descricao").likeText(termo));
     }
 
     private List<Conteudo> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
@@ -77,21 +77,24 @@ public class BuscadorConteudo {
                         new NativeSearchQueryBuilder()
                                 .withIndices(IMPORTADOR)
                                 .withTypes("conteudo", "servico")
-                                .withFields("tipoConteudo", "titulo", "conteudo", "descricao")
+                                .withFields("tipoConteudo", "nome", "conteudo", "descricao")
                                 .withPageable(pageable)
                                 .withQuery(q)
                                 .build(),
                         r -> new FacetedPageImpl<>(Stream.of(r.getHits().getHits())
-                                .map(h -> new Conteudo()
-                                        .withId(slugify.slugify(h.field("titulo").value()))
-                                        .withTipoConteudo((String) Optional.ofNullable(h.field("tipoConteudo"))
-                                                .filter(Objects::nonNull)
-                                                .map(SearchHitField::value)
-                                                .orElse("servico"))
-                                        .withTitulo(h.field("titulo").value())
-                                        .withConteudo(Optional.ofNullable(h.field("descricao"))
-                                                .orElse(h.field("conteudo"))
-                                                .value()))
+                                .map(h -> {
+                                    String nome = (h.field("titulo") == null ? h.field("nome") : h.field("titulo")).value();
+                                    return new Conteudo()
+                                            .withId(slugify.slugify(nome))
+                                            .withTipoConteudo((String) Optional.ofNullable(h.field("tipoConteudo"))
+                                                    .filter(Objects::nonNull)
+                                                    .map(SearchHitField::value)
+                                                    .orElse("servico"))
+                                            .withNome(nome)
+                                            .withConteudo(Optional.ofNullable(h.field("descricao"))
+                                                    .orElse(h.field("conteudo"))
+                                                    .value());
+                                })
                                 .collect(toList()), pageable, r.getHits().totalHits())))
                 .orElse(SEM_RESULTADOS);
     }

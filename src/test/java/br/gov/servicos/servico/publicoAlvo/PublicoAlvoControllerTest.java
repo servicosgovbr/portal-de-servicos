@@ -74,7 +74,7 @@ public class PublicoAlvoControllerTest {
     @Test
     public void deveRetornarOPublicoAlvoPesquisado() {
         assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", null), "publicoAlvo",
-                new PublicoAlvo().withId("cidadaos").withTitulo("Cidadãos"));
+                SegmentoDaSociedade.from("Cidadãos"));
     }
 
     @Test

@@ -65,7 +65,7 @@ public class BuscadorConteudoIntegrationTest {
     public void deveRetornarApenasConteudosQueTenhamAPalavraDescricao() throws Exception {
         servicos.save(SERVICO);
         servicos.save(new Servico().withNome("Um titulo").withDescricao("Texto"));
-        conteudos.save(new Conteudo().withTitulo("Titulo de conteudo").withConteudo("Conteudo"));
+        conteudos.save(new Conteudo().withNome("Titulo de conteudo").withConteudo("Conteudo"));
 
         List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
@@ -93,7 +93,7 @@ public class BuscadorConteudoIntegrationTest {
         assertThat(conteudos, hasItem(CONTEUDO_DE_SERVICO));
         assertThat(conteudos, hasItem(new Conteudo()
                 .withId("titulo-de-servico")
-                .withTitulo("Titulo de servico")
+                .withNome("Titulo de servico")
                 .withTipoConteudo("servico")
                 .withConteudo("Texto")));
     }

@@ -14,6 +14,7 @@ import static java.util.Collections.unmodifiableList;
 public class TestData {
 
     public static final Servico SERVICO = new Servico()
+            .withId("exemplo-de-servico")
             .withNome("Exemplo de serviço")
             .withDescricao("Descrição serviço");
 
@@ -21,13 +22,13 @@ public class TestData {
 
     public static final ConteudoHtml CONTEUDO_HTML = new ConteudoHtml()
             .withId("pagina")
-            .withTitulo("Título")
+            .withNome("Título")
             .withHtml("<h1>Título</h1>\n\nConteúdo");
 
     public static final Conteudo CONTEUDO = new Conteudo()
             .withId("pagina-orgao")
             .withTipoConteudo("orgao")
-            .withTitulo("Página órgão")
+            .withNome("Página órgão")
             .withConteudo("Descrição conteúdo");
 
     public static final Opiniao OPINIAO = new Opiniao()

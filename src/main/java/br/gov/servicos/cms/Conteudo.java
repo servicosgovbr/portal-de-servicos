@@ -1,5 +1,6 @@
 package br.gov.servicos.cms;
 
+import br.gov.servicos.v3.schema.Servico;
 import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
@@ -23,7 +24,7 @@ public class Conteudo {
     String id;
 
     @Field(store = true, type = String)
-    String titulo;
+    String nome;
 
     @Field(store = true, type = String)
     String conteudo;
@@ -36,11 +37,11 @@ public class Conteudo {
     }
 
     @SneakyThrows
-    public static Conteudo fromServico(br.gov.servicos.v3.schema.Servico servico) {
+    public static Conteudo fromServico(Servico servico) {
         return new Conteudo()
-                .withId(new Slugify().slugify(servico.getNome() + " - " + servico.getSigla()))
+                .withId(new Slugify().slugify(servico.getNome() + " " + (servico.getSigla() == null ? "" : servico.getSigla())))
                 .withTipoConteudo("servico")
-                .withTitulo(servico.getNome())
+                .withNome(servico.getNome())
                 .withConteudo(servico.getDescricao());
     }
 }
