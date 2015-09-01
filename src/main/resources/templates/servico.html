@@ -49,9 +49,9 @@
             Descrição do serviço
         </div>
 
-        <th:block th:unless="${servico.solicitantes.solicitante.isEmpty()}">
+        <th:block th:unless="${servico.solicitantes.isEmpty()}">
             <h3 class="subtitulo-servico">Quem pode utilizar este serviço?</h3>
-            <ul class="solicitantes" th:each="solicitante : ${servico.solicitantes.solicitante}">
+            <ul class="solicitantes" th:each="solicitante : ${servico.solicitantes}">
                 <li>
                     <p th:text="${solicitante.tipo}"></p>
                     <p th:text="${solicitante.requisitos}"></p>
@@ -63,11 +63,11 @@
             <!-- TODO tempo total estimado -->
         </th:block>
 
-        <th:block th:unless="${servico.etapas.etapa.isEmpty()}">
+        <th:block th:unless="${servico.etapas.isEmpty()}">
 
             <h3 class="subtitulo-servico">Etapas para a realização deste serviço</h3>
 
-            <div class="etapas" th:each="etapa, row : ${servico.etapas.etapa}">
+            <div class="etapas" th:each="etapa, row : ${servico.etapas}">
                 <p class="circle" th:text="${row.index + 1}"></p>
                 <h4 class="etapa" th:text="${etapa.titulo ?: 'Acesse o serviço'}">Título da etapa</h4>
 

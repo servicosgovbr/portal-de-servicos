@@ -3,7 +3,6 @@ package br.gov.servicos.servico.publicoAlvo;
 import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.v3.schema.SegmentoDaSociedade;
-import br.gov.servicos.v3.schema.SegmentosDaSociedade;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -36,25 +35,25 @@ public class PublicoAlvoControllerTest {
     public void setUp() throws IOException {
         doReturn(asList(
                 SERVICO.withNome("XXXX")
-                        .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
-                                SegmentoDaSociedade.fromValue("Cidadãos"),
-                                SegmentoDaSociedade.fromValue("Empresas")))),
+                        .withSegmentosDaSociedade(asList(
+                                SegmentoDaSociedade.from("Cidadãos"),
+                                SegmentoDaSociedade.from("Empresas"))),
                 SERVICO.withNome("AAAA")
-                        .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
-                                SegmentoDaSociedade.fromValue("Cidadãos"),
-                                SegmentoDaSociedade.fromValue("Empresas"))))
+                        .withSegmentosDaSociedade(asList(
+                                SegmentoDaSociedade.from("Cidadãos"),
+                                SegmentoDaSociedade.from("Empresas")))
         )).when(buscador)
                 .buscaServicosPor("segmentosDaSociedade.id", of("cidadaos"));
 
         doReturn(asList(
                 SERVICO.withNome("FFFF")
-                        .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
-                                SegmentoDaSociedade.fromValue("Cidadãos"),
-                                SegmentoDaSociedade.fromValue("Empresas")))),
+                        .withSegmentosDaSociedade(asList(
+                                SegmentoDaSociedade.from("Cidadãos"),
+                                SegmentoDaSociedade.from("Empresas"))),
                 SERVICO.withNome("AAAA")
-                        .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
-                                SegmentoDaSociedade.fromValue("Cidadãos"),
-                                SegmentoDaSociedade.fromValue("Empresas"))))
+                        .withSegmentosDaSociedade(asList(
+                                SegmentoDaSociedade.from("Cidadãos"),
+                                SegmentoDaSociedade.from("Empresas")))
         )).when(buscador)
                 .buscaServicosPor("segmentosDaSociedade.id", of("empresas"));
 

@@ -9,41 +9,19 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import javax.xml.bind.annotation.*;
+import java.util.List;
 
 import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static javax.xml.bind.annotation.XmlAccessType.NONE;
 import static lombok.AccessLevel.PRIVATE;
 
-
-/**
- * <p>Java class for Servico complex type.
- * <p>
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;complexType name="Servico"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="nome" type="{http://servicos.gov.br/v3/schema}NomeDoServico"/&gt;
- *         &lt;element name="sigla" type="{http://servicos.gov.br/v3/schema}Sigla" minOccurs="0"/&gt;
- *         &lt;element name="nomes-populares" type="{http://servicos.gov.br/v3/schema}NomesPopulares" minOccurs="0"/&gt;
- *         &lt;element name="descricao" type="{http://servicos.gov.br/v3/schema}DescricaoDoServico" minOccurs="0"/&gt;
- *         &lt;element name="gratuito" type="{http://servicos.gov.br/v3/schema}Gratuito" minOccurs="0"/&gt;
- *         &lt;element name="solicitantes" type="{http://servicos.gov.br/v3/schema}Solicitantes" minOccurs="0"/&gt;
- *         &lt;element name="tempo-total-estimado" type="{http://servicos.gov.br/v3/schema}TempoTotalEstimado" minOccurs="0"/&gt;
- *         &lt;element name="etapas" type="{http://servicos.gov.br/v3/schema}Etapas" minOccurs="0"/&gt;
- *         &lt;element name="orgao" type="{http://servicos.gov.br/v3/schema}Orgao" minOccurs="0"/&gt;
- *         &lt;element name="segmentos-da-sociedade" type="{http://servicos.gov.br/v3/schema}SegmentosDaSociedade" minOccurs="0"/&gt;
- *         &lt;element name="areas-de-interesse" type="{http://servicos.gov.br/v3/schema}AreasDeInteresse" minOccurs="0"/&gt;
- *         &lt;element name="palavras-chave" type="{http://servicos.gov.br/v3/schema}PalavrasChave" minOccurs="0"/&gt;
- *         &lt;element name="legislacoes" type="{http://servicos.gov.br/v3/schema}Legislacoes" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
- */
-@XmlAccessorType(XmlAccessType.NONE)
+@Document(indexName = IMPORTADOR, type = "servico")
+@Data
+@Wither
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = PRIVATE)
+@XmlAccessorType(NONE)
 @XmlType(name = "Servico", propOrder = {
         "nome",
         "sigla",
@@ -59,12 +37,6 @@ import static lombok.AccessLevel.PRIVATE;
         "palavrasChave",
         "legislacoes",
 })
-@Document(indexName = IMPORTADOR, type = "servico")
-@Data
-@Wither
-@NoArgsConstructor
-@AllArgsConstructor
-@FieldDefaults(level = PRIVATE)
 public class Servico {
 
     @Id
@@ -77,8 +49,9 @@ public class Servico {
     @XmlElement
     String sigla;
 
-    @XmlElement(name = "nomes-populares")
-    NomesPopulares nomesPopulares;
+    @XmlElementWrapper(name = "nomes-populares")
+    @XmlElement(name = "item")
+    List<String> nomesPopulares;
 
     @XmlElement
     String descricao;
@@ -86,28 +59,34 @@ public class Servico {
     @XmlElement
     String gratuito;
 
-    @XmlElement
-    Solicitantes solicitantes;
+    @XmlElementWrapper(name = "solicitantes")
+    @XmlElement(name = "solicitante")
+    List<Solicitante> solicitantes;
 
     @XmlElement(name = "tempo-total-estimado")
     TempoTotalEstimado tempoTotalEstimado;
 
-    @XmlElement
-    Etapas etapas;
+    @XmlElementWrapper(name = "etapas")
+    @XmlElement(name = "etapa")
+    List<Etapa> etapas;
 
     @XmlElement
     Orgao orgao;
 
-    @XmlElement(name = "segmentos-da-sociedade")
-    SegmentosDaSociedade segmentosDaSociedade;
+    @XmlElementWrapper(name = "segmentos-da-sociedade")
+    @XmlElement(name = "item")
+    List<SegmentoDaSociedade> segmentosDaSociedade;
 
-    @XmlElement(name = "areas-de-interesse")
-    AreasDeInteresse areasDeInteresse;
+    @XmlElementWrapper(name = "areas-de-interesse")
+    @XmlElement(name = "item")
+    List<AreaDeInteresse> areasDeInteresse;
 
-    @XmlElement(name = "palavras-chave")
-    PalavrasChave palavrasChave;
+    @XmlElementWrapper(name = "palavras-chave")
+    @XmlElement(name = "item")
+    List<String> palavrasChave;
 
-    @XmlElement
-    Legislacoes legislacoes;
+    @XmlElementWrapper(name = "legislacoes")
+    @XmlElement(name = "item")
+    List<String> legislacoes;
 
 }

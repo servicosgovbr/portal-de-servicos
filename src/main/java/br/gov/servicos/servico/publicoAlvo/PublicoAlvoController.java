@@ -81,7 +81,7 @@ class PublicoAlvoController {
     private SegmentoDaSociedade extraiPublicoAlvo(String id, List<Servico> servicos) {
         return servicos
                 .stream()
-                .flatMap(s -> ofNullable(s.getSegmentosDaSociedade().getItem()).orElse(emptyList()).stream())
+                .flatMap(s -> ofNullable(s.getSegmentosDaSociedade()).orElse(emptyList()).stream())
                 .filter(p -> p.value().equals(id))
                 .findFirst()
                 .get();

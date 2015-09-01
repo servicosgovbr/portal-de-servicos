@@ -44,7 +44,7 @@ public class AreaDeInteresseRepository {
                         .get("areasDeInteresse"))
                         .getBuckets()
                         .stream()
-                        .map(b -> AreaDeInteresse.fromValue(b.getKey()))
+                        .map(b -> AreaDeInteresse.from(b.getKey()))
                         .sorted()
                         .collect(toList()));
     }

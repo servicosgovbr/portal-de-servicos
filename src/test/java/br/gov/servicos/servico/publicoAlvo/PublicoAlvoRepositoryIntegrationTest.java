@@ -3,7 +3,6 @@ package br.gov.servicos.servico.publicoAlvo;
 import br.gov.servicos.Main;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.SegmentoDaSociedade;
-import br.gov.servicos.v3.schema.SegmentosDaSociedade;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,26 +34,26 @@ public class PublicoAlvoRepositoryIntegrationTest {
 
         servicos.save(SERVICO
                 .withNome("Servico 1")
-                .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(asList(
-                        SegmentoDaSociedade.fromValue("Cidadãos"),
-                        SegmentoDaSociedade.fromValue("Empresas")))));
+                .withSegmentosDaSociedade(asList(
+                        SegmentoDaSociedade.from("Cidadãos"),
+                        SegmentoDaSociedade.from("Empresas"))));
 
         servicos.save(SERVICO
                 .withNome("Servico 2")
-                .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(singletonList(
-                        SegmentoDaSociedade.fromValue("Empresas")))));
+                .withSegmentosDaSociedade(singletonList(
+                        SegmentoDaSociedade.from("Empresas"))));
 
         servicos.save(SERVICO
                 .withNome("Servico 3")
-                .withSegmentosDaSociedade(new SegmentosDaSociedade().withItem(singletonList(
-                        SegmentoDaSociedade.fromValue("Cidadãos")))));
+                .withSegmentosDaSociedade(singletonList(
+                        SegmentoDaSociedade.from("Cidadãos"))));
     }
 
     @Test
     public void deveAgruparPublicosAlvoPorTitulo() {
         assertThat(publicosAlvo.findAll(),
                 equalTo(asList(
-                        SegmentoDaSociedade.fromValue("Cidadãos"),
-                        SegmentoDaSociedade.fromValue("Empresas"))));
+                        SegmentoDaSociedade.from("Cidadãos"),
+                        SegmentoDaSociedade.from("Empresas"))));
     }
 }

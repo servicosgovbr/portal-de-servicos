@@ -1,77 +1,32 @@
-
 package br.gov.servicos.v3.schema;
 
-import javax.xml.bind.annotation.XmlAccessType;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
+import lombok.experimental.Wither;
+
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
+import static javax.xml.bind.annotation.XmlAccessType.NONE;
+import static lombok.AccessLevel.PRIVATE;
 
-/**
- * <p>Java class for Ate complex type.
- * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * 
- * <pre>
- * &lt;complexType name="Ate"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;attribute name="max" use="required" type="{http://servicos.gov.br/v3/schema}UnidadeDeTempo" /&gt;
- *       &lt;attribute name="unidade" use="required" type="{http://servicos.gov.br/v3/schema}TipoDeTempoTotalEstimado" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
- * 
- * 
- */
-@XmlAccessorType(XmlAccessType.FIELD)
+
+@Data
+@Wither
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = PRIVATE)
+@XmlAccessorType(NONE)
 @XmlType(name = "Ate")
 public class Ate {
 
     @XmlAttribute(name = "max", required = true)
-    protected int max;
+    int max;
+
     @XmlAttribute(name = "unidade", required = true)
-    protected TipoDeTempoTotalEstimado unidade;
-
-    /**
-     * Gets the value of the max property.
-     * 
-     */
-    public int getMax() {
-        return max;
-    }
-
-    /**
-     * Sets the value of the max property.
-     * 
-     */
-    public void setMax(int value) {
-        this.max = value;
-    }
-
-    /**
-     * Gets the value of the unidade property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TipoDeTempoTotalEstimado }
-     *     
-     */
-    public TipoDeTempoTotalEstimado getUnidade() {
-        return unidade;
-    }
-
-    /**
-     * Sets the value of the unidade property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TipoDeTempoTotalEstimado }
-     *     
-     */
-    public void setUnidade(TipoDeTempoTotalEstimado value) {
-        this.unidade = value;
-    }
+    TipoDeTempoTotalEstimado unidade;
 
 }

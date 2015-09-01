@@ -52,7 +52,7 @@ public class PublicoAlvoRepository {
         return response -> ((Terms) response.getAggregations().get(PUBLICOS_ALVO))
                 .getBuckets()
                 .stream()
-                .map((bucket) -> SegmentoDaSociedade.fromValue(bucket.getKey()))
+                .map((bucket) -> SegmentoDaSociedade.from(bucket.getKey()))
                 .sorted()
                 .collect(toList());
     }

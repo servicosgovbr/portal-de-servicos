@@ -4,7 +4,6 @@ import br.gov.servicos.Main;
 import br.gov.servicos.config.PortalDeServicosIndex;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.AreaDeInteresse;
-import br.gov.servicos.v3.schema.AreasDeInteresse;
 import junit.framework.TestCase;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -49,22 +48,22 @@ public class AreaDeInteresseRepositoryIntegrationTest extends TestCase {
     public void listaAreasDeInteresseEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
                 .withNome("Servico 1")
-                .withAreasDeInteresse(new AreasDeInteresse().withItem(asList(
-                        AreaDeInteresse.fromValue("Habitação"),
-                        AreaDeInteresse.fromValue("Educação à distância")
-                ))));
+                .withAreasDeInteresse(asList(
+                        AreaDeInteresse.from("Habitação"),
+                        AreaDeInteresse.from("Educação à distância")
+                )));
 
         servicos.save(SERVICO
                 .withNome("Servico 2")
-                .withAreasDeInteresse(new AreasDeInteresse().withItem(singletonList(
-                        AreaDeInteresse.fromValue("Abastecimento")
-                ))));
+                .withAreasDeInteresse(singletonList(
+                        AreaDeInteresse.from("Abastecimento")
+                )));
 
         servicos.save(SERVICO
                 .withNome("Servico 3")
-                .withAreasDeInteresse(new AreasDeInteresse().withItem(singletonList(
-                        AreaDeInteresse.fromValue("Agropecuária")
-                ))));
+                .withAreasDeInteresse(singletonList(
+                        AreaDeInteresse.from("Agropecuária")
+                )));
 
         List<AreaDeInteresse> areas = repositorio.findAll();
 
