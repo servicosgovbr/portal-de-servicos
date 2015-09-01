@@ -18,7 +18,7 @@
             </li>
             <li th:if="${servico.orgao}">
                 <a th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
-                   th:text="${servico.orgao.id}"><!-- TODO usar nome -->
+                   th:text="${servico.orgao.nome}">
                     Órgão
                 </a>
             </li>

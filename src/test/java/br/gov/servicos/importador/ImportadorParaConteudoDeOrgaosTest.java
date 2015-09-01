@@ -24,7 +24,7 @@ public class ImportadorParaConteudoDeOrgaosTest {
 
     @Test
     public void deveConverterOrgaosEmConteudos() throws Exception {
-        given(repository.findAll()).willReturn(singletonList(new Orgao().withId("ministerio-da-verdade-mv")));
+        given(repository.findAll()).willReturn(singletonList(new Orgao().withId("ministerio-da-verdade-mv").withNome("Ministério da Verdade")));
         given(parser.conteudo("/conteudo/orgaos/ministerio-da-verdade-mv.md")).willReturn("Parágrafo um. Parágrafo dois.");
 
         Conteudo c = new ImportadorParaConteudoDeOrgaos(repository, parser).importar().findFirst().get();

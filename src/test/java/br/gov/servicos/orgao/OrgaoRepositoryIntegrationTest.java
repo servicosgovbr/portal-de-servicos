@@ -59,5 +59,9 @@ public class OrgaoRepositoryIntegrationTest {
         assertThat(resultados.get(0).getId(), is("orgao-1"));
         assertThat(resultados.get(1).getId(), is("orgao-2"));
         assertThat(resultados.get(2).getId(), is("orgao-3"));
+
+        assertThat(resultados.get(0).getNome(), is("Órgão 1"));
+        assertThat(resultados.get(1).getNome(), is("Órgão 2"));
+        assertThat(resultados.get(2).getNome(), is("Órgão 3"));
     }
 }

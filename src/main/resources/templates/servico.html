@@ -81,7 +81,7 @@
     </div>
 
     <div class="row">
-        <p class="separacao-orgao" th:unless="${#strings.isEmpty(servico.orgao.id)}"><!-- TODO nome do orgao -->
+        <p class="separacao-orgao" th:unless="${#strings.isEmpty(servico.orgao.nome)}">
             Este é um serviço
             <th:block th:text="${@genero.de(servico.orgao.id)}">do(a)</th:block>
             <a th:unless="${#strings.isEmpty(servico.orgao.id)}"
