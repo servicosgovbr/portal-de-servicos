@@ -38,12 +38,12 @@ public enum SegmentoDaSociedade {
                 .orElseThrow(() -> new IllegalArgumentException(v));
     }
 
-    public String value() {
+    public String getValue() {
         return value;
     }
 
     @SneakyThrows
     public String getId() {
-        return new Slugify().slugify(value());
+        return new Slugify().slugify(getValue());
     }
 }

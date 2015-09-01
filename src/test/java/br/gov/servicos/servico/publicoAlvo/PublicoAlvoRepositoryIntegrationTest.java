@@ -33,27 +33,27 @@ public class PublicoAlvoRepositoryIntegrationTest {
         servicos.deleteAll();
 
         servicos.save(SERVICO
-                .withNome("Servico 1")
+                .withId("servico-1")
                 .withSegmentosDaSociedade(asList(
-                        SegmentoDaSociedade.from("Cidadãos"),
-                        SegmentoDaSociedade.from("Empresas"))));
+                        SegmentoDaSociedade.CIDADÃOS,
+                        SegmentoDaSociedade.EMPRESAS)));
 
         servicos.save(SERVICO
-                .withNome("Servico 2")
+                .withId("servico-2")
                 .withSegmentosDaSociedade(singletonList(
-                        SegmentoDaSociedade.from("Empresas"))));
+                        SegmentoDaSociedade.EMPRESAS)));
 
         servicos.save(SERVICO
-                .withNome("Servico 3")
+                .withId("servico-3")
                 .withSegmentosDaSociedade(singletonList(
-                        SegmentoDaSociedade.from("Cidadãos"))));
+                        SegmentoDaSociedade.CIDADÃOS)));
     }
 
     @Test
     public void deveAgruparPublicosAlvoPorTitulo() {
         assertThat(publicosAlvo.findAll(),
                 equalTo(asList(
-                        SegmentoDaSociedade.from("Cidadãos"),
-                        SegmentoDaSociedade.from("Empresas"))));
+                        SegmentoDaSociedade.CIDADÃOS,
+                        SegmentoDaSociedade.EMPRESAS)));
     }
 }

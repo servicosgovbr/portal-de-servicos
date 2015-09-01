@@ -149,7 +149,7 @@ public enum AreaDeInteresse {
                 .orElseThrow(() -> new IllegalArgumentException(v));
     }
 
-    public String value() {
+    public String getValue() {
         return value;
     }
 

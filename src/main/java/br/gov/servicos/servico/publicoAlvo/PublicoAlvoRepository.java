@@ -49,7 +49,7 @@ public class PublicoAlvoRepository {
         return response -> ((Terms) response.getAggregations().get("segmentosDaSociedade"))
                 .getBuckets()
                 .stream()
-                .map((bucket) -> SegmentoDaSociedade.from(bucket.getKey()))
+                .map((bucket) -> SegmentoDaSociedade.valueOf(bucket.getKey()))
                 .sorted()
                 .collect(toList());
     }

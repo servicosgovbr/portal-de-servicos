@@ -52,7 +52,7 @@ public class AreaDeInteresseRepository {
     public Optional<AreaDeInteresse> get(String id) {
         return findAll()
                 .stream()
-                .filter(a -> a.value().equals(id))
+                .filter(a -> a.getValue().equals(id))
                 .findFirst();
     }
 }

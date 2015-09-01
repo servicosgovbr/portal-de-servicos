@@ -69,8 +69,8 @@ public class AreaDeInteresseRepositoryIntegrationTest extends TestCase {
 
         assertThat(areas, is(not(empty())));
 
-        assertThat(areas.get(0).value(), is("Abastecimento"));
-        assertThat(areas.get(2).value(), is("Educacao à Distância"));
+        assertThat(areas.get(0).getValue(), is("Abastecimento"));
+        assertThat(areas.get(2).getValue(), is("Educacao à Distância"));
     }
 
 }
