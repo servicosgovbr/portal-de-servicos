@@ -49,27 +49,27 @@ public class AreaDeInteresseRepositoryIntegrationTest extends TestCase {
         servicos.save(SERVICO
                 .withNome("Servico 1")
                 .withAreasDeInteresse(asList(
-                        AreaDeInteresse.from("Habitação"),
-                        AreaDeInteresse.from("Educação à distância")
+                        AreaDeInteresse.HABITAÇÃO,
+                        AreaDeInteresse.EDUCAÇÃO_À_DISTÂNCIA
                 )));
 
         servicos.save(SERVICO
                 .withNome("Servico 2")
                 .withAreasDeInteresse(singletonList(
-                        AreaDeInteresse.from("Abastecimento")
+                        AreaDeInteresse.ABASTECIMENTO
                 )));
 
         servicos.save(SERVICO
                 .withNome("Servico 3")
                 .withAreasDeInteresse(singletonList(
-                        AreaDeInteresse.from("Agropecuária")
+                        AreaDeInteresse.AGROPECUÁRIA
                 )));
 
         List<AreaDeInteresse> areas = repositorio.findAll();
 
         assertThat(areas, is(not(empty())));
-        assertThat(areas.get(0).value(), is("Abastecimento"));
 
+        assertThat(areas.get(0).value(), is("Abastecimento"));
         assertThat(areas.get(2).value(), is("Educacao à Distância"));
     }
 

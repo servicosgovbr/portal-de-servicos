@@ -7,6 +7,7 @@ import lombok.experimental.FieldDefaults;
 import lombok.experimental.Wither;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
 
 import javax.xml.bind.annotation.*;
 import java.util.List;
@@ -14,6 +15,8 @@ import java.util.List;
 import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 import static javax.xml.bind.annotation.XmlAccessType.NONE;
 import static lombok.AccessLevel.PRIVATE;
+import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
+import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Document(indexName = IMPORTADOR, type = "servico")
 @Data
@@ -75,10 +78,12 @@ public class Servico {
 
     @XmlElementWrapper(name = "segmentos-da-sociedade")
     @XmlElement(name = "item")
+    @Field(type = String, index = not_analyzed)
     List<SegmentoDaSociedade> segmentosDaSociedade;
 
     @XmlElementWrapper(name = "areas-de-interesse")
     @XmlElement(name = "item")
+    @Field(type = String, index = not_analyzed)
     List<AreaDeInteresse> areasDeInteresse;
 
     @XmlElementWrapper(name = "palavras-chave")
@@ -87,6 +92,7 @@ public class Servico {
 
     @XmlElementWrapper(name = "legislacoes")
     @XmlElement(name = "item")
+    @Field(type = String, index = not_analyzed)
     List<String> legislacoes;
 
 }

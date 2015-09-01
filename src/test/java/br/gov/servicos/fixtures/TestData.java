@@ -3,7 +3,7 @@ package br.gov.servicos.fixtures;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoHtml;
 import br.gov.servicos.metricas.Opiniao;
-import br.gov.servicos.servico.Orgao;
+import br.gov.servicos.v3.schema.Orgao;
 import br.gov.servicos.v3.schema.Servico;
 
 import java.util.List;
@@ -39,8 +39,8 @@ public class TestData {
             .withMensagem("Otimo site");
 
     public static final List<Orgao> ORGAOS = unmodifiableList(asList(
-            new Orgao().withId("arquivo-nacional-an").withNome("Arquivo Nacional").withTelefone("(61) 1111 1111"),
-            new Orgao().withId("banco-central-do-brasil-bcb").withNome("Banco Central do Brasil").withTelefone("(61) 2222 2222")
+            new Orgao().withId("arquivo-nacional-an"),
+            new Orgao().withId("banco-central-do-brasil-bcb")
     ));
 
 }
