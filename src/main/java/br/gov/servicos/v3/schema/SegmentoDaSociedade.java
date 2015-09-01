@@ -1,5 +1,8 @@
 package br.gov.servicos.v3.schema;
 
+import com.github.slugify.Slugify;
+import lombok.SneakyThrows;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
@@ -39,4 +42,8 @@ public enum SegmentoDaSociedade {
         return value;
     }
 
+    @SneakyThrows
+    public String getId() {
+        return new Slugify().slugify(value());
+    }
 }

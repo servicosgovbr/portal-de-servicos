@@ -2,7 +2,6 @@ package br.gov.servicos.servico.publicoAlvo;
 
 import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.v3.schema.SegmentoDaSociedade;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -14,6 +13,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 import java.io.IOException;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
+import static br.gov.servicos.v3.schema.SegmentoDaSociedade.CIDADÃOS;
+import static br.gov.servicos.v3.schema.SegmentoDaSociedade.EMPRESAS;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
@@ -35,25 +36,17 @@ public class PublicoAlvoControllerTest {
     public void setUp() throws IOException {
         doReturn(asList(
                 SERVICO.withNome("XXXX")
-                        .withSegmentosDaSociedade(asList(
-                                SegmentoDaSociedade.from("Cidadãos"),
-                                SegmentoDaSociedade.from("Empresas"))),
+                        .withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
                 SERVICO.withNome("AAAA")
-                        .withSegmentosDaSociedade(asList(
-                                SegmentoDaSociedade.from("Cidadãos"),
-                                SegmentoDaSociedade.from("Empresas")))
+                        .withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))
         )).when(buscador)
                 .buscaServicosPor("segmentosDaSociedade.id", of("cidadaos"));
 
         doReturn(asList(
                 SERVICO.withNome("FFFF")
-                        .withSegmentosDaSociedade(asList(
-                                SegmentoDaSociedade.from("Cidadãos"),
-                                SegmentoDaSociedade.from("Empresas"))),
+                        .withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
                 SERVICO.withNome("AAAA")
-                        .withSegmentosDaSociedade(asList(
-                                SegmentoDaSociedade.from("Cidadãos"),
-                                SegmentoDaSociedade.from("Empresas")))
+                        .withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))
         )).when(buscador)
                 .buscaServicosPor("segmentosDaSociedade.id", of("empresas"));
 
@@ -73,8 +66,7 @@ public class PublicoAlvoControllerTest {
 
     @Test
     public void deveRetornarOPublicoAlvoPesquisado() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", null), "publicoAlvo",
-                SegmentoDaSociedade.from("Cidadãos"));
+        assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", null), "publicoAlvo", CIDADÃOS);
     }
 
     @Test

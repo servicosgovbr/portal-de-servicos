@@ -82,7 +82,7 @@ class PublicoAlvoController {
         return servicos
                 .stream()
                 .flatMap(s -> ofNullable(s.getSegmentosDaSociedade()).orElse(emptyList()).stream())
-                .filter(p -> p.value().equals(id))
+                .filter(p -> p.getId().equals(id))
                 .findFirst()
                 .get();
     }
