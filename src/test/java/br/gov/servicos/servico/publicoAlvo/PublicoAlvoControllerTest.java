@@ -7,6 +7,7 @@ import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Answers;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
@@ -27,7 +28,7 @@ import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 @FieldDefaults(level = PRIVATE)
 public class PublicoAlvoControllerTest {
 
-    @Mock
+    @Mock(answer = Answers.RETURNS_SMART_NULLS)
     Buscador buscador;
 
     PublicoAlvoController publicosAlvo;
@@ -35,20 +36,16 @@ public class PublicoAlvoControllerTest {
     @Before
     public void setUp() throws IOException {
         doReturn(asList(
-                SERVICO.withNome("XXXX")
-                        .withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
-                SERVICO.withNome("AAAA")
-                        .withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))
+                SERVICO.withNome("XXXX").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
+                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))
         )).when(buscador)
-                .buscaServicosPor("segmentosDaSociedade.id", of("cidadaos"));
+                .buscaServicosPor("segmentosDaSociedade", of("CIDADÃOS"));
 
         doReturn(asList(
-                SERVICO.withNome("FFFF")
-                        .withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
-                SERVICO.withNome("AAAA")
-                        .withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))
+                SERVICO.withNome("FFFF").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
+                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))
         )).when(buscador)
-                .buscaServicosPor("segmentosDaSociedade.id", of("empresas"));
+                .buscaServicosPor("segmentosDaSociedade", of("EMPRESAS"));
 
         publicosAlvo = new PublicoAlvoController(buscador, new Slugify());
     }
