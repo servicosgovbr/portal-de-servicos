@@ -8,7 +8,6 @@ apply plugin: 'pmd'
 apply plugin: 'findbugs'
 apply plugin: 'asset-pipeline'
 apply plugin: "sonar-runner"
-apply plugin: 'com.github.jacobono.jaxb'
 
 if (System.getenv("SNAP_CI").equals("true") && System.getenv("SNAP_PIPELINE_COUNTER") != null) {
     version = "1.0.${System.getenv("SNAP_PIPELINE_COUNTER")}"
@@ -22,7 +21,6 @@ targetCompatibility = 1.8
 buildscript {
     repositories {
         mavenLocal()
-        jcenter()
         mavenCentral()
 
         maven { url "http://repo.spring.io/snapshot" }
@@ -34,7 +32,6 @@ buildscript {
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.3.1'
         classpath 'com.bertramlabs.plugins:asset-pipeline-gradle:2.0.19'
         classpath 'com.bertramlabs.plugins:sass-asset-pipeline:2.0.4'
-        classpath 'com.github.jacobono:gradle-jaxb-plugin:1.3.6'
     }
 }
 
@@ -45,10 +42,3 @@ apply from: "${rootProject.rootDir}/gradle/rpm.gradle"
 apply from: "${rootProject.rootDir}/gradle/idea.gradle"
 apply from: "${rootProject.rootDir}/gradle/assets.gradle"
 apply from: "${rootProject.rootDir}/gradle/tests.gradle"
-
-jaxb {
-    xsdDir = "../cartas-de-servico/cartas-servico/v3/"
-    xjc {
-        header = false
-    }
-}
