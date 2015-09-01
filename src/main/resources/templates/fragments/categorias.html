@@ -11,9 +11,9 @@
 
     <dd>
         <ul>
-            <li>
-                <a href="#">
-                    <span>Categoria</span>
+            <li th:each="area : ${@areaDeInteresseRepository.findAll()}">
+                <a th:href="@{/area-de-interesse/{id}(id=${area.id})}">
+                    <span th:text="${area.value}">Título do Público Alvo</span>
                 </a>
             </li>
         </ul>
