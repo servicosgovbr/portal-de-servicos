@@ -36,7 +36,7 @@
     <div class="row">
         <h2 th:text="${servico.nome}">Nome do Serviço</h2>
 
-        <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canalDePrestacao].get(0)}">
+        <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canalDePrestacao.?[tipo.destacado]].get(0)}">
             <a class="acao-servico" th:href="${@conteudoParser.link(acao.descricao)}">
                 <th:block th:text="${acao.tipo.value}">Título do link</th:block> <i class="fa fa-globe"></i>
             </a>
@@ -80,8 +80,13 @@
                     <ul>
                         <li th:each="canal : ${etapa.canaisDePrestacao.padrao.canalDePrestacao}">
                             <span th:text="${canal.tipo.value}">Web</span>:
-
-                            <a th:href="${@conteudoParser.link(canal.descricao)}" th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
+                            <th:block th:if="${canal.tipo.destacado}">
+                                <a th:href="${@conteudoParser.link(canal.descricao)}"
+                                   th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
+                            </th:block>
+                            <th:block th:unless="${canal.tipo.destacado}">
+                                <p th:utext="${@markdown.render(canal.descricao)}">Texto</p>
+                            </th:block>
                         </li>
                     </ul>
                 </div>
