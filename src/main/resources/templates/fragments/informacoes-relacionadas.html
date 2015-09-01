@@ -16,9 +16,9 @@
                     <span th:text="${area.value}">Título da Linha da Vida</span>
                 </a>
             </li>
-            <li th:if="${servico.orgao}">
-                <a th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
-                   th:text="${servico.orgao.nome}">
+            <li th:with="orgao = ${@orgaoRepository.findAll().?[id == '__${servico.orgao.id}__'][0]}">
+                <a th:href="@{/orgao/{id}(id=${orgao.id})}"
+                   th:text="${orgao.nome}">
                     Órgão
                 </a>
             </li>
