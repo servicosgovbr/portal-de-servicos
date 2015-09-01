@@ -21,13 +21,13 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE)
 @XmlAccessorType(NONE)
 @XmlType(name = "Documentos", propOrder = {
-        "_default",
+        "padrao",
         "caso"
 })
 public class Documentos {
 
     @XmlElement(name = "default", required = true)
-    CasoDeDocumentos _default;
+    CasoDeDocumentos padrao;
 
     @XmlElement
     List<CasoDeDocumentos> caso;

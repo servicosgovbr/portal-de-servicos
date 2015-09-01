@@ -1,84 +1,76 @@
 package br.gov.servicos.v3.schema;
 
+import lombok.Getter;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
-import java.util.stream.Stream;
 
-
+@Getter
 @XmlType(name = "TipoDeCanalDePrestacao")
 @XmlEnum
 public enum TipoDeCanalDePrestacao {
 
     @XmlEnumValue("aplicativo-movel")
-    APLICATIVO_MOVEL("aplicativo-movel"),
+    APLICATIVO_MOVEL("Aplicativo móvel", false),
 
     @XmlEnumValue("e-mail")
-    E_MAIL("e-mail"),
+    E_MAIL("E-mail", false),
 
     @XmlEnumValue("fax")
-    FAX("fax"),
+    FAX("Fax", false),
 
     @XmlEnumValue("postal")
-    POSTAL("postal"),
+    POSTAL("Postal", false),
 
     @XmlEnumValue("presencial")
-    PRESENCIAL("presencial"),
+    PRESENCIAL("Presencial", false),
 
     @XmlEnumValue("sms")
-    SMS("sms"),
+    SMS("SMS", false),
 
     @XmlEnumValue("telefone")
-    TELEFONE("telefone"),
+    TELEFONE("Telefone", false),
 
     @XmlEnumValue("web")
-    WEB("web"),
+    WEB("Acessar", true),
 
     @XmlEnumValue("web-acompanhar")
-    WEB_ACOMPANHAR("web-acompanhar"),
+    WEB_ACOMPANHAR("Acompanhar", true),
 
     @XmlEnumValue("web-agendar")
-    WEB_AGENDAR("web-agendar"),
+    WEB_AGENDAR("Agendar", true),
 
     @XmlEnumValue("web-calcular-taxas")
-    WEB_CALCULAR_TAXAS("web-calcular-taxas"),
+    WEB_CALCULAR_TAXAS("Calcular taxas", true),
 
     @XmlEnumValue("web-consultar")
-    WEB_CONSULTAR("web-consultar"),
+    WEB_CONSULTAR("Consultar", true),
 
     @XmlEnumValue("web-declarar")
-    WEB_DECLARAR("web-declarar"),
+    WEB_DECLARAR("Declarar", true),
 
     @XmlEnumValue("web-emitir")
-    WEB_EMITIR("web-emitir"),
+    WEB_EMITIR("Emitir", true),
 
     @XmlEnumValue("web-inscrever-se")
-    WEB_INSCREVER_SE("web-inscrever-se"),
+    WEB_INSCREVER_SE("Inscrever-se", true),
 
     @XmlEnumValue("web-postos-de-atendimento")
-    WEB_POSTOS_DE_ATENDIMENTO("web-postos-de-atendimento"),
+    WEB_POSTOS_DE_ATENDIMENTO("Postos de atendimento", true),
 
     @XmlEnumValue("web-preencher")
-    WEB_PREENCHER("web-preencher"),
+    WEB_PREENCHER("Preencher", true),
 
     @XmlEnumValue("web-simular")
-    WEB_SIMULAR("web-simular");
+    WEB_SIMULAR("Simular", true);
 
     private final String value;
+    private final boolean destacado;
 
-    TipoDeCanalDePrestacao(String v) {
-        value = v;
-    }
-
-    public static TipoDeCanalDePrestacao from(String v) {
-        return Stream.of(values())
-                .filter(c -> c.value.equals(v))
-                .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException(v));
-    }
-
-    public String value() {
-        return value;
+    TipoDeCanalDePrestacao(String value, boolean destacado) {
+        this.value = value;
+        this.destacado = destacado;
     }
 
 }

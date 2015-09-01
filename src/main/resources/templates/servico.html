@@ -36,9 +36,9 @@
     <div class="row">
         <h2 th:text="${servico.nome}">Nome do Serviço</h2>
 
-        <th:block> <!-- TODO pegar as ações de todos os canais de prestação web-->
-            <a class="acao-servico" href="">
-                <th:block>Título do link</th:block> <i class="fa fa-globe"></i>
+        <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canalDePrestacao].get(0)}">
+            <a class="acao-servico" th:href="${@conteudoParser.link(acao.descricao)}">
+                <th:block th:text="${acao.tipo.value}">Título do link</th:block> <i class="fa fa-globe"></i>
             </a>
         </th:block>
 

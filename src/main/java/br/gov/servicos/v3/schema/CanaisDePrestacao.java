@@ -22,13 +22,13 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE)
 @XmlAccessorType(NONE)
 @XmlType(name = "CanaisDePrestacao", propOrder = {
-        "_default",
+        "padrao",
         "caso"
 })
 public class CanaisDePrestacao {
 
     @XmlElement(name = "default", required = true)
-    CasoDeCanaisDePrestacao _default;
+    CasoDeCanaisDePrestacao padrao;
 
     @XmlElement
     List<CasoDeCanaisDePrestacao> caso;
