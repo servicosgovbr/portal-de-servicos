@@ -46,7 +46,7 @@ public class OrgaoControllerTest {
     }
 
     @Test
-    public void exibicaoDeLinhaDaVidaRetornaServicos() {
+    public void exibicaoDeAreaDeInteresseRetornaServicos() {
         given(markdown.toHtml(anyObject())).willReturn(CONTEUDO_HTML);
 
         doReturn(umServico)
@@ -57,7 +57,7 @@ public class OrgaoControllerTest {
     }
 
     @Test
-    public void exibicaoDeLinhaDaVidaRetornaConteudoDescritivo() {
+    public void exibicaoDeAreaDeInteresseRetornaConteudoDescritivo() {
         doReturn(CONTEUDO_HTML)
                 .when(markdown)
                 .toHtml(new ClassPathResource("conteudo/orgaos/secretaria-da-receita-federal-do-brasil-rfb.md"));

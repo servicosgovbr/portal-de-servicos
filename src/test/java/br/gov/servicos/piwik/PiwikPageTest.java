@@ -26,7 +26,7 @@ public class PiwikPageTest {
     @Test
     public void naoDeveRetornarIdDeServico() throws Exception {
         PiwikPage page = new PiwikPage()
-                .withUrl("http://servicos.gov.br/linha-da-vida/linha-teste");
+                .withUrl("http://servicos.gov.br/area-de-interesse/area-teste");
 
         assertFalse(page.getIdServico().isPresent());
     }
