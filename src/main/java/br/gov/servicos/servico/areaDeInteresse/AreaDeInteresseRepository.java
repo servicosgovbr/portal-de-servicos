@@ -37,14 +37,14 @@ public class AreaDeInteresseRepository {
                 new NativeSearchQueryBuilder()
                         .addAggregation(
                                 new TermsBuilder("areasDeInteresse")
-                                        .field("areasDeInteresse.area")
+                                        .field("areasDeInteresse")
                                         .size(MAX_VALUE)
                         ).build()
                 , response -> ((Terms) response.getAggregations()
                         .get("areasDeInteresse"))
                         .getBuckets()
                         .stream()
-                        .map(b -> AreaDeInteresse.from(b.getKey()))
+                        .map(b -> AreaDeInteresse.valueOf(b.getKey()))
                         .sorted()
                         .collect(toList()));
     }

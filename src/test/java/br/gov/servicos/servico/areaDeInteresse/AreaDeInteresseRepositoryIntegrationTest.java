@@ -47,20 +47,20 @@ public class AreaDeInteresseRepositoryIntegrationTest extends TestCase {
     @Test
     public void listaAreasDeInteresseEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
-                .withNome("Servico 1")
+                .withId("servico-1")
                 .withAreasDeInteresse(asList(
                         AreaDeInteresse.HABITAÇÃO,
                         AreaDeInteresse.EDUCAÇÃO_À_DISTÂNCIA
                 )));
 
         servicos.save(SERVICO
-                .withNome("Servico 2")
+                .withId("servico-2")
                 .withAreasDeInteresse(singletonList(
                         AreaDeInteresse.ABASTECIMENTO
                 )));
 
         servicos.save(SERVICO
-                .withNome("Servico 3")
+                .withId("servico-3")
                 .withAreasDeInteresse(singletonList(
                         AreaDeInteresse.AGROPECUÁRIA
                 )));
@@ -70,7 +70,7 @@ public class AreaDeInteresseRepositoryIntegrationTest extends TestCase {
         assertThat(areas, is(not(empty())));
 
         assertThat(areas.get(0).getValue(), is("Abastecimento"));
-        assertThat(areas.get(2).getValue(), is("Educacao à Distância"));
+        assertThat(areas.get(2).getValue(), is("Educação à distância"));
     }
 
 }
