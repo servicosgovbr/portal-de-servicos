@@ -38,11 +38,11 @@ public class Markdown {
             InputStreamReader input = new InputStreamReader(resource.getInputStream(), "UTF-8");
 
             try (BufferedReader br = new BufferedReader(input)) {
-                String titulo = br.readLine();
-                String conteudo = titulo + "\n" + br.lines().collect(joining("\n"));
+                String nome = br.readLine();
+                String conteudo = nome + "\n" + br.lines().collect(joining("\n"));
 
                 return new ConteudoHtml()
-                        .withTitulo(titulo)
+                        .withNome(nome)
                         .withHtml(pegdown.markdownToHtml(conteudo));
             }
         } catch (IOException e) {

@@ -26,7 +26,7 @@ public class ImportadorParaConteudoDePaginasTest {
     public void deveConverterPaginasEmConteudos() throws Exception {
         given(markdown.toHtml(anyObject())).willReturn(new ConteudoHtml()
                         .withId("acessibilidade")
-                        .withTitulo("Acessibilidade")
+                        .withNome("Acessibilidade")
                         .withHtml("<html><h2>Acessibilidade</h2><p>Parágrafo um.</p><p>Parágrafo dois.</p></html>")
         );
         given(parser.conteudo("/conteudo/acessibilidade.md")).willReturn("Parágrafo um. Parágrafo dois.");
@@ -35,7 +35,7 @@ public class ImportadorParaConteudoDePaginasTest {
 
         assertThat(c.getId(), is("acessibilidade"));
         assertThat(c.getTipoConteudo(), is("conteudo"));
-        assertThat(c.getTitulo(), is("Acessibilidade"));
+        assertThat(c.getNome(), is("Acessibilidade"));
         assertThat(c.getConteudo(), is("Parágrafo um. Parágrafo dois."));
     }
 

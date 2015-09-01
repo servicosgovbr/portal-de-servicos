@@ -1,5 +1,6 @@
 package br.gov.servicos.servico.publicoAlvo;
 
+import br.gov.servicos.v3.schema.SegmentoDaSociedade;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
@@ -22,9 +23,6 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class PublicoAlvoRepository {
 
-    private static final String PUBLICOS_ALVO = "segmentosDaSociedade";
-    private static final String TITULO = "segmentosDaSociedade.titulo";
-
     Slugify slugify;
     ElasticsearchTemplate elasticsearch;
 
@@ -35,31 +33,25 @@ public class PublicoAlvoRepository {
     }
 
     @Cacheable("publicosAlvo")
-    public List<PublicoAlvo> findAll() {
+    public List<SegmentoDaSociedade> findAll() {
         return elasticsearch.query(publicosAlvoAgregadosPorTitulo(), extraiPublicosAlvo());
     }
 
     private NativeSearchQuery publicosAlvoAgregadosPorTitulo() {
         return new NativeSearchQueryBuilder().addAggregation(
-                new TermsBuilder(PUBLICOS_ALVO)
-                        .field(TITULO)
+                new TermsBuilder("segmentosDaSociedade")
+                        .field("segmentosDaSociedade")
                         .size(MAX_VALUE))
                 .build();
     }
 
-    private ResultsExtractor<List<PublicoAlvo>> extraiPublicosAlvo() {
-        return response -> ((Terms) response.getAggregations().get(PUBLICOS_ALVO))
+    private ResultsExtractor<List<SegmentoDaSociedade>> extraiPublicosAlvo() {
+        return response -> ((Terms) response.getAggregations().get("segmentosDaSociedade"))
                 .getBuckets()
                 .stream()
-                .map(this::bucketToPublicoAlvo)
-                .sorted((left, right) -> left.getTitulo().compareTo(right.getTitulo()))
+                .map((bucket) -> SegmentoDaSociedade.valueOf(bucket.getKey()))
+                .sorted()
                 .collect(toList());
-    }
-
-    private PublicoAlvo bucketToPublicoAlvo(Terms.Bucket bucket) {
-        return new PublicoAlvo()
-                .withId(slugify.slugify(bucket.getKey()))
-                .withTitulo(bucket.getKey());
     }
 
 }

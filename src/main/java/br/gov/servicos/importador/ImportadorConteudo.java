@@ -19,24 +19,21 @@ public class ImportadorConteudo {
 
     ConteudoRepository repository;
     ImportadorParaConteudoDeOrgaos orgaos;
-    ImportadorParaConteudoDeLinhasDaVida linhasDaVida;
     ImportadorParaConteudoDePaginas paginas;
 
     @Autowired
     public ImportadorConteudo(
             ConteudoRepository repository,
             ImportadorParaConteudoDeOrgaos orgaos,
-            ImportadorParaConteudoDeLinhasDaVida linhasDaVida,
             ImportadorParaConteudoDePaginas paginas
     ) {
         this.repository = repository;
         this.orgaos = orgaos;
-        this.linhasDaVida = linhasDaVida;
         this.paginas = paginas;
     }
 
     public Iterable<Conteudo> importar() {
-        return repository.save(Stream.of(orgaos.importar(), linhasDaVida.importar(), paginas.importar())
+        return repository.save(Stream.of(orgaos.importar(), paginas.importar())
                 .flatMap(x -> x)
                 .collect(toList()));
     }

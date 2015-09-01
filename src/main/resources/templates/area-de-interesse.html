@@ -5,9 +5,9 @@
       layout:decorator="layout-branco">
 
 <head>
-    <title th:text="${areaDeInteresse.area}">Nome da Area de Interesse</title>
-    <meta property="og:title" th:content="${areaDeInteresse.area}"/>
-    <meta property="og:description" th:content="${areaDeInteresse.area + ' no Portal de Serviços do Governo Federal'}"/>
+    <title th:text="${areaDeInteresse.value}">Nome da Area de Interesse</title>
+    <meta property="og:title" th:content="${areaDeInteresse.value}"/>
+    <meta property="og:description" th:content="${areaDeInteresse.value + ' no Portal de Serviços do Governo Federal'}"/>
 </head>
 
 <body>
@@ -24,14 +24,14 @@
     <span class="separador">&gt;</span>
 
     <a href="" itemprop="url">
-        <span itemprop="title" th:text="${areaDeInteresse.area}">
+        <span itemprop="title" th:text="${areaDeInteresse.value}">
             Nome da Area de Interesse
         </span>
     </a>
 </span>
 
 <section layout:fragment="corpo">
-    <h2 th:utext="${areaDeInteresse.area}" class="markdown"></h2>
+    <h2 th:utext="${areaDeInteresse.value}" class="markdown"></h2>
     <hr/>
 
     <ul id="resultados-areadeinteresse">

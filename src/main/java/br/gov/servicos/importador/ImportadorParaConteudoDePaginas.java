@@ -39,7 +39,7 @@ public class ImportadorParaConteudoDePaginas {
                     String caminho = format("/conteudo/%s.md", id);
                     return new Conteudo()
                             .withId(id)
-                            .withTitulo(markdown.toHtml(new ClassPathResource(caminho)).getTitulo())
+                            .withNome(markdown.toHtml(new ClassPathResource(caminho)).getNome())
                             .withTipoConteudo("conteudo")
                             .withConteudo(parser.conteudo(caminho));
                 });

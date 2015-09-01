@@ -29,14 +29,11 @@ public class ImportadorConteudoTest {
     ImportadorParaConteudoDeOrgaos orgaos;
 
     @Mock
-    ImportadorParaConteudoDeLinhasDaVida linhasDaVida;
-
-    @Mock
     ImportadorParaConteudoDePaginas paginas;
 
     @Before
     public void setUp() throws Exception {
-        importadorConteudo = new ImportadorConteudo(conteudoRepository, orgaos, linhasDaVida, paginas);
+        importadorConteudo = new ImportadorConteudo(conteudoRepository, orgaos, paginas);
     }
 
     @Test
@@ -44,7 +41,7 @@ public class ImportadorConteudoTest {
         Conteudo conteudo = new Conteudo()
                 .withId("ministerio-da-verdade")
                 .withTipoConteudo("orgao")
-                .withTitulo("Ministério da Verdade")
+                .withNome("Ministério da Verdade")
                 .withConteudo("Parágrafo um. Parágrafo dois.");
 
         given(orgaos.importar()).willReturn(Stream.of(conteudo));

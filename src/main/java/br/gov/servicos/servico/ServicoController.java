@@ -2,6 +2,7 @@ package br.gov.servicos.servico;
 
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
+import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -47,7 +48,7 @@ class ServicoController {
 
         model.put("servicos", servicosPorLetra.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
                 .stream()
-                .sorted((x, y) -> x.getId().compareTo(y.getId()))
+                .sorted((x, y) -> x.getNome().compareTo(y.getNome()))
                 .map(Conteudo::fromServico)
                 .collect(toList()));
 
@@ -91,7 +92,7 @@ class ServicoController {
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial() {
         return stream(servicos.findAll(new Sort(ASC, "titulo")).spliterator(), false)
-                .collect(groupingBy(s -> s.getTitulo().trim().toUpperCase().charAt(0)));
+                .collect(groupingBy(s -> s.getNome().trim().toUpperCase().charAt(0)));
     }
 
 }

@@ -1,8 +1,8 @@
 package br.gov.servicos.busca;
 
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.servico.Servico;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.index.query.QueryBuilder;
@@ -29,6 +29,7 @@ import static org.elasticsearch.index.query.QueryBuilders.termQuery;
 public class Buscador {
 
     private static final FacetedPageImpl<Servico> SEM_RESULTADOS = new FacetedPageImpl<>(emptyList());
+
     ServicoRepository servicos;
 
     @Autowired

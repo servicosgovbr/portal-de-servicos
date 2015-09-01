@@ -2,6 +2,7 @@ package br.gov.servicos.servico;
 
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
+import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -63,8 +64,8 @@ public class ServicoControllerTest {
 
     @Test
     public void deveRetornarTodosOsServicosEmOrdemAlfabetica() {
-        Servico servicoA = new Servico().withTitulo("A");
-        Servico servicoB = new Servico().withTitulo("B");
+        Servico servicoA = new Servico().withNome("A");
+        Servico servicoB = new Servico().withNome("B");
 
         doReturn(asList(servicoA, servicoB))
                 .when(servicos)
@@ -77,9 +78,9 @@ public class ServicoControllerTest {
     @Test
     public void deveRetornarLetrasDisponiveisParaFiltro() {
         List<Servico> servicosNaoOrdenados = asList(
-                new Servico().withTitulo("x"),
-                new Servico().withTitulo("B2"),
-                new Servico().withTitulo("B1"));
+                new Servico().withNome("x"),
+                new Servico().withNome("B2"),
+                new Servico().withNome("B1"));
 
         doReturn(servicosNaoOrdenados)
                 .when(servicos)

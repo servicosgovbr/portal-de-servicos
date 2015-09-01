@@ -1,7 +1,7 @@
 package br.gov.servicos.config;
 
 import br.gov.servicos.metricas.Opiniao;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;

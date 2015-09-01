@@ -1,5 +1,6 @@
 package br.gov.servicos.servico.areaDeInteresse;
 
+import br.gov.servicos.v3.schema.AreaDeInteresse;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
@@ -36,17 +37,15 @@ public class AreaDeInteresseRepository {
                 new NativeSearchQueryBuilder()
                         .addAggregation(
                                 new TermsBuilder("areasDeInteresse")
-                                        .field("areasDeInteresse.area")
+                                        .field("areasDeInteresse")
                                         .size(MAX_VALUE)
                         ).build()
                 , response -> ((Terms) response.getAggregations()
                         .get("areasDeInteresse"))
                         .getBuckets()
                         .stream()
-                        .map(bucket -> new AreaDeInteresse()
-                                .withId(slugify.slugify(bucket.getKey()))
-                                .withArea(bucket.getKey()))
-                        .sorted((left, right) -> left.getArea().compareTo(right.getArea()))
+                        .map(b -> AreaDeInteresse.valueOf(b.getKey()))
+                        .sorted()
                         .collect(toList()));
     }
 

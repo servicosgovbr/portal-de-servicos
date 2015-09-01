@@ -1,7 +1,9 @@
 package br.gov.servicos.cms;
 
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.v3.schema.Servico;
+import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
+import lombok.SneakyThrows;
 import lombok.Value;
 import lombok.experimental.Wither;
 import org.springframework.data.annotation.Id;
@@ -22,7 +24,7 @@ public class Conteudo {
     String id;
 
     @Field(store = true, type = String)
-    String titulo;
+    String nome;
 
     @Field(store = true, type = String)
     String conteudo;
@@ -34,11 +36,12 @@ public class Conteudo {
         this(null, null, null, null);
     }
 
+    @SneakyThrows
     public static Conteudo fromServico(Servico servico) {
         return new Conteudo()
-                .withId(servico.getId())
+                .withId(new Slugify().slugify(servico.getNome() + " " + (servico.getSigla() == null ? "" : servico.getSigla())))
                 .withTipoConteudo("servico")
-                .withTitulo(servico.getTitulo())
+                .withNome(servico.getNome())
                 .withConteudo(servico.getDescricao());
     }
 }

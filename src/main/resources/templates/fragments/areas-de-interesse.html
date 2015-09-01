@@ -11,9 +11,9 @@
 
     <dd>
         <ul>
-            <li th:each="area : ${@linhaDaVidaRepository.findAllAreasDeInteresse()}">
+            <li th:each="area : ${@areaDeInteresseRepository.findAll()}">
                 <a th:href="@{/area-de-interesse/{id}(id=${area.id})}">
-                    <span th:text="${area.area}">Nome da área de interesse</span>
+                    <span th:text="${area.value}">Nome da área de interesse</span>
                 </a>
             </li>
         </ul>

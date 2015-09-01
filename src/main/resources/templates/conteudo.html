@@ -5,15 +5,15 @@
       layout:decorator="layout-branco">
 
 <head>
-    <title th:text="${conteudo.titulo}">Nome do Órgão</title>
-    <meta property="og:title" th:content="${conteudo.titulo}"/>
-    <meta property="og:description" th:content="${'Informações sobre ' + conteudo.titulo + ' no Portal de Serviços do Governo Federal'}"/>
+    <title th:text="${conteudo.nome}">Nome do Órgão</title>
+    <meta property="og:title" th:content="${conteudo.nome}"/>
+    <meta property="og:description" th:content="${'Informações sobre ' + conteudo.nome + ' no Portal de Serviços do Governo Federal'}"/>
 </head>
 <body>
 
 <span layout:fragment="migalhas-de-pao">
     <span class="separador">&gt;</span>
-    <span itemprop="title" th:text="${conteudo.titulo}">Título do conteúdo</span>
+    <span itemprop="title" th:text="${conteudo.nome}">Título do conteúdo</span>
 </span>
 
 <section layout:fragment="corpo">

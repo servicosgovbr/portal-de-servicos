@@ -1,6 +1,5 @@
 package br.gov.servicos.importador;
 
-import br.gov.servicos.config.PortalDeServicosIndex;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -9,9 +8,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import java.io.File;
-
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -19,13 +15,7 @@ import static org.mockito.Mockito.verify;
 public class ImportadorTest {
 
     @Mock
-    PortalDeServicosIndex portalDeServicosIndex;
-
-    @Mock
-    ImportadorCartasDeServico importadorCartasDeServico;
-
-    @Mock
-    ImportadorV2 importadorV2;
+    ImportadorV3 importadorV3;
 
     @Mock
     ImportadorConteudo importadorConteudo;
@@ -34,29 +24,17 @@ public class ImportadorTest {
 
     @Before
     public void setUp() throws Exception {
-        importador = new Importador(portalDeServicosIndex, importadorV2, importadorConteudo, importadorCartasDeServico);
+        importador = new Importador(importadorV3, importadorConteudo);
     }
 
     @Test
-    public void deveRecriarIndices() throws Exception {
+    public void deveRodarImportadorDeCartas() throws Exception {
         importador.importar();
-        verify(portalDeServicosIndex).recriar();
+        verify(importadorV3).importar();
     }
 
     @Test
-    public void deveRodarImportadorDeCartasDeServico() {
-        importador.importar();
-        verify(importadorCartasDeServico).importar(any(File.class));
-    }
-
-    @Test
-    public void deveRodarImportadorLegado() throws Exception {
-        importador.importar();
-        verify(importadorV2).importar(any(File.class));
-    }
-
-    @Test
-    public void deveRodarImportadorConteudo() throws Exception {
+    public void deveRodarImportadorDeConteudo() throws Exception {
         importador.importar();
         verify(importadorConteudo).importar();
     }

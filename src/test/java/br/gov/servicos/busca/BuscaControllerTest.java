@@ -64,7 +64,7 @@ public class BuscaControllerTest {
 
     @Test
     public void retornaSugestoesDeBusca() throws Exception {
-        doReturn(singletonList(CONTEUDO.withTitulo("Seguro-desemprego")))
+        doReturn(singletonList(CONTEUDO.withNome("Seguro-desemprego")))
                 .when(buscador)
                 .buscaSemelhante(ofNullable("empreg"));
 

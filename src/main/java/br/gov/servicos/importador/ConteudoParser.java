@@ -28,4 +28,20 @@ public class ConteudoParser {
         return parse(markdown.toHtml(resource).getHtml()).select("p, ul, ol").text();
     }
 
+    public String titulo(String caminho) {
+        Resource resource = new ClassPathResource(caminho);
+        log.debug("Conteúdo {} encontrado em: {}", caminho, resource);
+        return parse(markdown.toHtml(resource).getHtml()).select("h2").text();
+    }
+
+    public String link(String source) {
+        if (source == null) {
+            return null;
+        }
+        if (source.startsWith("http://") || source.startsWith("https://")) {
+            return source;
+        }
+        return parse(markdown.render(source)).select("a").attr("href");
+    }
+
 }

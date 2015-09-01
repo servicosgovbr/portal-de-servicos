@@ -2,7 +2,8 @@ package br.gov.servicos.servico.publicoAlvo;
 
 import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.v3.schema.SegmentoDaSociedade;
+import br.gov.servicos.v3.schema.Servico;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -51,7 +52,7 @@ class PublicoAlvoController {
 
         List<Conteudo> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
                 .stream()
-                .sorted((x, y) -> x.getId().compareTo(y.getId()))
+                .sorted((x, y) -> x.getNome().compareTo(y.getNome()))
                 .map(Conteudo::fromServico)
                 .collect(toList());
 
@@ -65,9 +66,9 @@ class PublicoAlvoController {
     }
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial(String publicoAlvo) {
-        return buscador.buscaServicosPor("segmentosDaSociedade.id", ofNullable(publicoAlvo))
+        return buscador.buscaServicosPor("segmentosDaSociedade", ofNullable(SegmentoDaSociedade.findById(publicoAlvo).name()))
                 .stream()
-                .collect(groupingBy(s -> s.getTitulo().trim().toUpperCase().charAt(0)));
+                .collect(groupingBy(s -> s.getNome().trim().toUpperCase().charAt(0)));
     }
 
     private List<Character> letrasDisponiveis(Set<Character> letras) {
@@ -77,7 +78,7 @@ class PublicoAlvoController {
                 .collect(toList());
     }
 
-    private PublicoAlvo extraiPublicoAlvo(String id, List<Servico> servicos) {
+    private SegmentoDaSociedade extraiPublicoAlvo(String id, List<Servico> servicos) {
         return servicos
                 .stream()
                 .flatMap(s -> ofNullable(s.getSegmentosDaSociedade()).orElse(emptyList()).stream())

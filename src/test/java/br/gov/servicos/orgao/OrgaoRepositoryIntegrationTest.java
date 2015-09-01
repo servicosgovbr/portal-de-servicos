@@ -2,8 +2,8 @@ package br.gov.servicos.orgao;
 
 import br.gov.servicos.Main;
 import br.gov.servicos.config.PortalDeServicosIndex;
-import br.gov.servicos.servico.Orgao;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Orgao;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -42,16 +42,16 @@ public class OrgaoRepositoryIntegrationTest {
     public void listaOrgaosEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
                 .withId("servico-1")
-                .withOrgao(new Orgao().withId("orgao-1").withNome("Ministério da Educação")));
+                .withOrgao(new Orgao().withId("orgao-1")));
 
         servicos.save(SERVICO
                 .withId("servico-2")
-                .withOrgao(new Orgao().withId("orgao-3").withNome("Ministério dos Transportes")));
+                .withOrgao(new Orgao().withId("orgao-3")));
 
 
         servicos.save(SERVICO
                 .withId("servico-3")
-                .withOrgao(new Orgao().withId("orgao-2").withNome("Ministério dos Transportes")));
+                .withOrgao(new Orgao().withId("orgao-2")));
 
         List<Orgao> resultados = orgaos.findAll();
 
@@ -59,5 +59,9 @@ public class OrgaoRepositoryIntegrationTest {
         assertThat(resultados.get(0).getId(), is("orgao-1"));
         assertThat(resultados.get(1).getId(), is("orgao-2"));
         assertThat(resultados.get(2).getId(), is("orgao-3"));
+
+        assertThat(resultados.get(0).getNome(), is("Órgão 1"));
+        assertThat(resultados.get(1).getNome(), is("Órgão 2"));
+        assertThat(resultados.get(2).getNome(), is("Órgão 3"));
     }
 }

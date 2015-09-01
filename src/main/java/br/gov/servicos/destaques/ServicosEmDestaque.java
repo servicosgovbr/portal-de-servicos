@@ -3,7 +3,7 @@ package br.gov.servicos.destaques;
 import br.gov.servicos.config.DestaquesConfig;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.v3.schema.Servico;
 import br.gov.servicos.servico.ServicoRepository;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -66,7 +66,7 @@ public class ServicosEmDestaque {
     }
 
     private List<Servico> completaSevicosAteOLimite(Stream<Servico> servicosBase, int quantidade) {
-        PageRequest pagina = new PageRequest(0, quantidade, new Sort(DESC, "titulo"));
+        PageRequest pagina = new PageRequest(0, quantidade, new Sort(DESC, "nome"));
         Stream<Servico> outros = stream(servicos.findAll(pagina).spliterator(), false)
                 .filter(s -> !destaques.getServicos().contains(s.getId()));
 

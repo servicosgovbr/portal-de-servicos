@@ -38,7 +38,7 @@ public class MarkdownTest {
 
     @Test
     public void deveExtrairTituloDaPaginaEmMarkdown() {
-        assertThat(markdown.toHtml(new ClassPathResource("/conteudo/pagina.md")).getTitulo(),
+        assertThat(markdown.toHtml(new ClassPathResource("/conteudo/pagina.md")).getNome(),
                 containsString("Uma Página Qualquer"));
     }
 

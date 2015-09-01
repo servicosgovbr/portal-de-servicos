@@ -1,8 +1,9 @@
 package br.gov.servicos.orgao;
 
-import br.gov.servicos.servico.Orgao;
-import br.gov.servicos.servico.Servico;
+import br.gov.servicos.importador.ConteudoParser;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Orgao;
+import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+import static java.lang.String.format;
 import static lombok.AccessLevel.PRIVATE;
 
 @Component
@@ -20,10 +22,12 @@ import static lombok.AccessLevel.PRIVATE;
 public class OrgaoRepository {
 
     ServicoRepository servicos;
+    ConteudoParser parser;
 
     @Autowired
-    OrgaoRepository(ServicoRepository servicos) {
+    OrgaoRepository(ServicoRepository servicos, ConteudoParser parser) {
         this.servicos = servicos;
+        this.parser = parser;
     }
 
     @Cacheable("orgaos")
@@ -33,7 +37,7 @@ public class OrgaoRepository {
         Iterable<Servico> svcs = servicos.findAll();
         svcs.forEach(s -> {
             if (s.getOrgao() != null) {
-                orgaos.add(s.getOrgao());
+                orgaos.add(s.getOrgao().withNome(parser.titulo(format("/conteudo/orgaos/%s.md", s.getOrgao().getId()))));
             }
         });
 

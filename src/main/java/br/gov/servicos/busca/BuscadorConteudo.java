@@ -39,7 +39,7 @@ public class BuscadorConteudo {
     private static final int PAGE_SIZE = 20;
 
     ElasticsearchTemplate et;
-    private Slugify slugify;
+    Slugify slugify;
 
     @Autowired
     BuscadorConteudo(ElasticsearchTemplate et, Slugify slugify) {
@@ -50,13 +50,13 @@ public class BuscadorConteudo {
     public Page<Conteudo> busca(Optional<String> termoBuscado, Integer paginaAtual) {
         log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
         return executaQuery(termoBuscado, paginaAtual, q -> disMaxQuery()
-                .add(multiMatchQuery(q, "titulo^1.0", "conteudo^0.9", "descricao^0.9")
+                .add(multiMatchQuery(q, "nome^1.0", "conteudo^0.9", "descricao^0.9")
                         .fuzziness(TWO)
                         .prefixLength(0)));
     }
 
     public List<Conteudo> buscaSemelhante(Optional<String> termoBuscado) {
-        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery("titulo", "conteudo", "descricao").likeText(termo));
+        return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery("nome", "conteudo", "descricao").likeText(termo));
     }
 
     private List<Conteudo> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
@@ -77,18 +77,18 @@ public class BuscadorConteudo {
                         new NativeSearchQueryBuilder()
                                 .withIndices(IMPORTADOR)
                                 .withTypes("conteudo", "servico")
-                                .withFields("tipoConteudo", "titulo", "conteudo", "descricao")
+                                .withFields("tipoConteudo", "nome", "conteudo", "descricao")
                                 .withPageable(pageable)
                                 .withQuery(q)
                                 .build(),
                         r -> new FacetedPageImpl<>(Stream.of(r.getHits().getHits())
                                 .map(h -> new Conteudo()
-                                        .withId(slugify.slugify(h.field("titulo").value()))
+                                        .withId(slugify.slugify(h.field("nome").value()))
                                         .withTipoConteudo((String) Optional.ofNullable(h.field("tipoConteudo"))
                                                 .filter(Objects::nonNull)
                                                 .map(SearchHitField::value)
                                                 .orElse("servico"))
-                                        .withTitulo(h.field("titulo").value())
+                                        .withNome(h.field("nome").value())
                                         .withConteudo(Optional.ofNullable(h.field("descricao"))
                                                 .orElse(h.field("conteudo"))
                                                 .value()))
