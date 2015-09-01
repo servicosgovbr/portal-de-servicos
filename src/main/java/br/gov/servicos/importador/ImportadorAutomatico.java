@@ -16,11 +16,11 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class ImportadorAutomatico {
 
-    ImportadorV3 importador;
+    Importador importador;
     boolean flag;
 
     @Autowired
-    ImportadorAutomatico(ImportadorV3 importador, @Value("${flags.importar.automaticamente}") Boolean flag) {
+    ImportadorAutomatico(Importador importador, @Value("${flags.importar.automaticamente}") Boolean flag) {
         this.importador = importador;
         this.flag = flag;
     }
