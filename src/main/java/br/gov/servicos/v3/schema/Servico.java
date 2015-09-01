@@ -47,9 +47,11 @@ public class Servico {
     String id;
 
     @XmlElement(required = true)
+    @Field(type = String, store = true)
     String nome;
 
     @XmlElement
+    @Field(type = String, store = true)
     String sigla;
 
     @XmlElementWrapper(name = "nomes-populares")
@@ -57,6 +59,7 @@ public class Servico {
     List<String> nomesPopulares;
 
     @XmlElement
+    @Field(type = String, store = true)
     String descricao;
 
     @XmlElement
@@ -78,7 +81,7 @@ public class Servico {
 
     @XmlElementWrapper(name = "segmentos-da-sociedade")
     @XmlElement(name = "item")
-    @Field(type = String, index = not_analyzed)
+    @Field(type = String, index = not_analyzed, store = true)
     List<SegmentoDaSociedade> segmentosDaSociedade;
 
     @XmlElementWrapper(name = "areas-de-interesse")
