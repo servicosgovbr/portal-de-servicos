@@ -66,9 +66,9 @@ public class ServicosEmDestaque {
     }
 
     private List<Servico> completaSevicosAteOLimite(Stream<Servico> servicosBase, int quantidade) {
-        PageRequest pagina = new PageRequest(0, quantidade, new Sort(DESC, "titulo"));
+        PageRequest pagina = new PageRequest(0, quantidade, new Sort(DESC, "nome"));
         Stream<Servico> outros = stream(servicos.findAll(pagina).spliterator(), false)
-                .filter(s -> !destaques.getServicos().contains(s.getNome()));
+                .filter(s -> !destaques.getServicos().contains(s.getId()));
 
         return concat(servicosBase, outros)
                 .limit(quantidade)
