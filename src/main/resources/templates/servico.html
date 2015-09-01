@@ -95,7 +95,7 @@
             <th:block th:text="${@genero.de(servico.orgao.id)}">do(a)</th:block>
             <a th:unless="${#strings.isEmpty(servico.orgao.id)}"
                th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
-               th:text="${servico.orgao.id}">
+               th:text="${servico.orgao.nome}">
                 Órgão responsavel
             </a>.
             Em caso de dúvidas, reclamações ou sugestões favor
