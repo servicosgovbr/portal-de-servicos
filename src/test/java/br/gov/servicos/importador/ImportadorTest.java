@@ -8,7 +8,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -37,13 +36,13 @@ public class ImportadorTest {
     @Test
     public void deveRodarImportadorDeCartas() throws Exception {
         importador.importar();
-        verify(importadorV3).importar();
+        verify(importadorV3).importar(cartasServico);
     }
 
     @Test
     public void deveRodarImportadorDeConteudo() throws Exception {
         importador.importar();
-        verify(importadorConteudo).importar(anyObject());
+        verify(importadorConteudo).importar(cartasServico);
     }
 
 }

@@ -7,16 +7,9 @@ import com.github.slugify.Slugify;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.eclipse.jgit.api.CloneCommand;
-import org.eclipse.jgit.api.Git;
-import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.lib.TextProgressMonitor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
-import java.nio.file.Files;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -28,35 +21,26 @@ import static lombok.AccessLevel.PRIVATE;
 @Component
 public class ImportadorV3 {
 
-    String urlRepositorio;
     PortalDeServicosIndex indices;
     ServicoRepository indice;
     Slugify slugify;
 
     @Autowired
-    ImportadorV3(
-            @Value("${pds.cartas.repositorio}") String urlRepositorio,
-            PortalDeServicosIndex indices,
+    ImportadorV3(PortalDeServicosIndex indices,
             ServicoRepository indice,
             Slugify slugify) {
-        this.urlRepositorio = urlRepositorio;
         this.indices = indices;
         this.indice = indice;
         this.slugify = slugify;
     }
 
     @SneakyThrows
-    public Iterable<Servico> importar() {
+    public Iterable<Servico> importar(RepositorioCartasServico repositorioCartasServico) {
         log.info("Iniciando importação");
         indices.recriar();
 
-        File repositorioCartas = Files.createTempDirectory("portal-de-servicos").toFile();
-        repositorioCartas.deleteOnExit();
-
-        File dir = clonarRepositorio(repositorioCartas);
-
         return indice.save(
-                Stream.of(dir.toPath().resolve("cartas-servico/v3/servicos").toFile()
+                Stream.of(repositorioCartasServico.acessarDocumento("cartas-servico/v3/servicos").getFile()
                         .listFiles((d, n) -> n.endsWith(".xml")))
                         .parallel()
                         .map(f -> unmarshal(f, Servico.class))
@@ -64,19 +48,4 @@ public class ImportadorV3 {
                         .collect(toList())
         );
     }
-
-    private File clonarRepositorio(File caminhoLocal) throws GitAPIException {
-        log.info("Clonando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
-        CloneCommand clone = Git.cloneRepository()
-                .setURI(urlRepositorio)
-                .setProgressMonitor(new TextProgressMonitor())
-                .setDirectory(caminhoLocal);
-
-        try (Git repositorio = clone.call()) {
-            String head = repositorio.log().call().iterator().next().getName();
-            log.info("Repositório de cartas de serviço clonado na versão {}", head);
-            return repositorio.getRepository().getWorkTree();
-        }
-    }
-
 }

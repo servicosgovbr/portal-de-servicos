@@ -40,7 +40,7 @@ public class Importador {
         repositorioCartasServico.prepararRepositorio();
 
         Map<String, Object> retorno = new HashMap<>();
-        retorno.put("servicos-v3", v3.importar());
+        retorno.put("servicos-v3", v3.importar(repositorioCartasServico));
         retorno.put("conteudos", conteudo.importar(repositorioCartasServico));
 
         log.info("Importação concluída com sucesso");
