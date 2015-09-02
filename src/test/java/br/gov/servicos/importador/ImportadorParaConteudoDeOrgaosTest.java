@@ -12,6 +12,7 @@ import static java.util.Collections.singletonList;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Matchers.anyObject;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ImportadorParaConteudoDeOrgaosTest {
@@ -22,12 +23,15 @@ public class ImportadorParaConteudoDeOrgaosTest {
     @Mock
     ConteudoParser parser;
 
+    @Mock
+    RepositorioCartasServico cartasServico;
+
     @Test
     public void deveConverterOrgaosEmConteudos() throws Exception {
         given(repository.findAll()).willReturn(singletonList(new Orgao().withId("ministerio-da-verdade-mv").withNome("Ministério da Verdade")));
-        given(parser.conteudo("/conteudo/orgaos/ministerio-da-verdade-mv.md")).willReturn("Parágrafo um. Parágrafo dois.");
+        given(parser.conteudo(anyObject())).willReturn("Parágrafo um. Parágrafo dois.");
 
-        Conteudo c = new ImportadorParaConteudoDeOrgaos(repository, parser).importar().findFirst().get();
+        Conteudo c = new ImportadorParaConteudoDeOrgaos(repository, parser).importar(cartasServico).findFirst().get();
 
         assertThat(c.getId(), is("ministerio-da-verdade-mv"));
         assertThat(c.getTipoConteudo(), is("orgao"));

@@ -22,6 +22,9 @@ public class ImportadorParaConteudoDePaginasTest {
     @Mock
     ConteudoParser parser;
 
+    @Mock
+    RepositorioCartasServico cartasServico;
+
     @Test
     public void deveConverterPaginasEmConteudos() throws Exception {
         given(markdown.toHtml(anyObject())).willReturn(new ConteudoHtml()
@@ -29,9 +32,11 @@ public class ImportadorParaConteudoDePaginasTest {
                         .withNome("Acessibilidade")
                         .withHtml("<html><h2>Acessibilidade</h2><p>Parágrafo um.</p><p>Parágrafo dois.</p></html>")
         );
-        given(parser.conteudo("/conteudo/acessibilidade.md")).willReturn("Parágrafo um. Parágrafo dois.");
 
-        Conteudo c = new ImportadorParaConteudoDePaginas(markdown, parser).importar().findFirst().get();
+
+        given(parser.conteudo(anyObject())).willReturn("Parágrafo um. Parágrafo dois.");
+
+        Conteudo c = new ImportadorParaConteudoDePaginas(markdown, parser).importar(cartasServico).findFirst().get();
 
         assertThat(c.getId(), is("acessibilidade"));
         assertThat(c.getTipoConteudo(), is("conteudo"));

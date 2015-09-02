@@ -37,7 +37,7 @@ public class OrgaoRepository {
         Iterable<Servico> svcs = servicos.findAll();
         svcs.forEach(s -> {
             if (s.getOrgao() != null) {
-                orgaos.add(s.getOrgao().withNome(parser.titulo(format("/conteudo/orgaos/%s.md", s.getOrgao().getId()))));
+                orgaos.add(s.getOrgao());
             }
         });
 

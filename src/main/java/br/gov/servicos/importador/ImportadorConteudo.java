@@ -32,9 +32,11 @@ public class ImportadorConteudo {
         this.paginas = paginas;
     }
 
-    public Iterable<Conteudo> importar() {
-        return repository.save(Stream.of(orgaos.importar(), paginas.importar())
-                .flatMap(x -> x)
+    public Iterable<Conteudo> importar(RepositorioCartasServico repositorioCartasServico) {
+        return repository.save(Stream.of(
+                    orgaos.importar(repositorioCartasServico),
+                    paginas.importar(repositorioCartasServico)
+                ).flatMap(x -> x)
                 .collect(toList()));
     }
 

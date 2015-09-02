@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -44,9 +45,9 @@ public class ImportadorConteudoTest {
                 .withNome("Ministério da Verdade")
                 .withConteudo("Parágrafo um. Parágrafo dois.");
 
-        given(orgaos.importar()).willReturn(Stream.of(conteudo));
+        given(orgaos.importar(anyObject())).willReturn(Stream.of(conteudo));
 
-        importadorConteudo.importar();
+        importadorConteudo.importar(anyObject());
 
         verify(conteudoRepository).save(singletonList(conteudo));
     }

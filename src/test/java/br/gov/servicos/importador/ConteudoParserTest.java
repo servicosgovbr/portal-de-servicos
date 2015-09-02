@@ -36,7 +36,7 @@ public class ConteudoParserTest {
                                 "</html>")
         );
 
-        String corpo = new ConteudoParser(markdown).conteudo("/conteudo/foo.md");
+        String corpo = new ConteudoParser(markdown).conteudo(anyObject());
 
         assertThat(corpo, is("Parágrafo um. Ponto A. Ponto B. Parágrafo dois."));
     }

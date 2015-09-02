@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -22,9 +23,15 @@ public class ImportadorTest {
 
     Importador importador;
 
+    @Mock
+    RepositorioCartasServico cartasServico;
+
     @Before
     public void setUp() throws Exception {
-        importador = new Importador(importadorV3, importadorConteudo);
+        importador = new Importador(
+                cartasServico,
+                importadorV3,
+                importadorConteudo);
     }
 
     @Test
@@ -36,7 +43,7 @@ public class ImportadorTest {
     @Test
     public void deveRodarImportadorDeConteudo() throws Exception {
         importador.importar();
-        verify(importadorConteudo).importar();
+        verify(importadorConteudo).importar(anyObject());
     }
 
 }

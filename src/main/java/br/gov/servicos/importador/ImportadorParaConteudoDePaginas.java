@@ -5,12 +5,11 @@ import br.gov.servicos.cms.Markdown;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import java.util.stream.Stream;
 
-import static java.lang.String.format;
 import static java.util.Arrays.asList;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -23,12 +22,14 @@ public class ImportadorParaConteudoDePaginas {
     ConteudoParser parser;
 
     @Autowired
-    public ImportadorParaConteudoDePaginas(Markdown markdown, ConteudoParser parser) {
+    public ImportadorParaConteudoDePaginas(
+            Markdown markdown,
+            ConteudoParser parser) {
         this.markdown = markdown;
         this.parser = parser;
     }
 
-    public Stream<Conteudo> importar() {
+    public Stream<Conteudo> importar(RepositorioCartasServico repositorioCartasServico) {
         return asList(
                 "acessibilidade",
                 "cadastro-de-pessoas-fisicas-cpf",
@@ -36,13 +37,17 @@ public class ImportadorParaConteudoDePaginas {
                 "perguntas-frequentes"
         ).stream()
                 .map(id -> {
-                    String caminho = format("/conteudo/%s.md", id);
+                    Resource documento = acessarDocumento(repositorioCartasServico, id);
                     return new Conteudo()
                             .withId(id)
-                            .withNome(markdown.toHtml(new ClassPathResource(caminho)).getNome())
+                            .withNome(markdown.toHtml(documento).getNome())
                             .withTipoConteudo("conteudo")
-                            .withConteudo(parser.conteudo(caminho));
+                            .withConteudo(parser.conteudo(documento));
                 });
     }
 
+    private Resource acessarDocumento(RepositorioCartasServico repositorioCartasServico, String id) {
+        String caminhoDocumento = String.format("conteudo/%s.md", id);
+        return repositorioCartasServico.acessarDocumento(caminhoDocumento);
+    }
 }

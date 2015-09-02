@@ -4,7 +4,6 @@ import br.gov.servicos.cms.Markdown;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
@@ -22,16 +21,9 @@ public class ConteudoParser {
         this.markdown = markdown;
     }
 
-    public String conteudo(String caminho) {
-        Resource resource = new ClassPathResource(caminho);
-        log.debug("Conteúdo {} encontrado em: {}", caminho, resource);
+    public String conteudo(Resource resource) {
+        log.debug("Conteúdo encontrado: {}", resource);
         return parse(markdown.toHtml(resource).getHtml()).select("p, ul, ol").text();
-    }
-
-    public String titulo(String caminho) {
-        Resource resource = new ClassPathResource(caminho);
-        log.debug("Conteúdo {} encontrado em: {}", caminho, resource);
-        return parse(markdown.toHtml(resource).getHtml()).select("h2").text();
     }
 
     public String link(String source) {
