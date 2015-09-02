@@ -3,8 +3,8 @@ package br.gov.servicos.destaques;
 import br.gov.servicos.config.DestaquesConfig;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
-import br.gov.servicos.v3.schema.Servico;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,6 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Stream.concat;
 import static java.util.stream.Stream.empty;
-import static java.util.stream.StreamSupport.stream;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.domain.Sort.Direction.DESC;
 
@@ -37,8 +36,12 @@ public class ServicosEmDestaque {
     Boolean destaquesAutomaticos;
 
     @Autowired
-    public ServicosEmDestaque(ServicoRepository servicos, DestaquesConfig destaques, PiwikClient piwikClient,
-                              @Value("${flags.destaques.automaticos}") Boolean destaquesAutomaticos) {
+    public ServicosEmDestaque(
+            ServicoRepository servicos,
+            DestaquesConfig destaques,
+            PiwikClient piwikClient,
+            @Value("${flags.destaques.automaticos}") Boolean destaquesAutomaticos
+    ) {
         this.servicos = servicos;
         this.destaques = destaques;
         this.piwikClient = piwikClient;
@@ -67,10 +70,12 @@ public class ServicosEmDestaque {
 
     private List<Servico> completaSevicosAteOLimite(Stream<Servico> servicosBase, int quantidade) {
         PageRequest pagina = new PageRequest(0, quantidade, new Sort(DESC, "nome"));
-        Stream<Servico> outros = stream(servicos.findAll(pagina).spliterator(), false)
+
+        Stream<Servico> outrosServicos = servicos.findAll(pagina).getContent()
+                .stream()
                 .filter(s -> !destaques.getServicos().contains(s.getId()));
 
-        return concat(servicosBase, outros)
+        return concat(servicosBase, outrosServicos)
                 .limit(quantidade)
                 .collect(toList());
     }
