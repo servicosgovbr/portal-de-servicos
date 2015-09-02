@@ -1,13 +1,12 @@
-package br.gov.servicos.servico.areaDeInteresse;
+package br.gov.servicos.servico;
 
-import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.busca.BuscadorFacetado;
 import br.gov.servicos.v3.schema.AreaDeInteresse;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
@@ -16,17 +15,17 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class AreaDeInteresseRepository {
 
-    ServicoRepository servicos;
+    BuscadorFacetado buscador;
 
     @Autowired
-    AreaDeInteresseRepository(ServicoRepository servicos) {
-        this.servicos = servicos;
+    AreaDeInteresseRepository(BuscadorFacetado buscador) {
+        this.buscador = buscador;
     }
 
     public List<AreaDeInteresse> findAll() {
-        return Stream.of(AreaDeInteresse.values())
-                .parallel()
-                .filter(area -> !servicos.findByAreaDeInteresse(area).isEmpty())
+        return buscador.servicosPor("areasDeInteresse")
+                .map(AreaDeInteresse::valueOf)
+                .sorted((l, r) -> l.getId().compareTo(r.getId()))
                 .collect(toList());
     }
 

@@ -1,7 +1,6 @@
-package br.gov.servicos.servico.publicoAlvo;
+package br.gov.servicos.servico;
 
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.SegmentoDaSociedade;
 import br.gov.servicos.v3.schema.Servico;
 import com.github.slugify.Slugify;

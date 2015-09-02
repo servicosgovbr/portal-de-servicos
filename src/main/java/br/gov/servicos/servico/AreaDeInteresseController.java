@@ -1,8 +1,7 @@
-package br.gov.servicos.servico.areaDeInteresse;
+package br.gov.servicos.servico;
 
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.Markdown;
-import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.AreaDeInteresse;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;

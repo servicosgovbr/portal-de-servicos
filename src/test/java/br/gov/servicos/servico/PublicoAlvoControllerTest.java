@@ -1,7 +1,6 @@
-package br.gov.servicos.servico.publicoAlvo;
+package br.gov.servicos.servico;
 
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.servico.ServicoRepository;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;

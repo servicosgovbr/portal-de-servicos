@@ -7,7 +7,6 @@ import br.gov.servicos.v3.schema.Servico;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
