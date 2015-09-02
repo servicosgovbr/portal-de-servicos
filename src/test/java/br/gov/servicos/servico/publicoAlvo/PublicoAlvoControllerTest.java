@@ -1,7 +1,7 @@
 package br.gov.servicos.servico.publicoAlvo;
 
-import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Conteudo;
+import br.gov.servicos.servico.ServicoRepository;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -18,9 +18,8 @@ import static br.gov.servicos.v3.schema.SegmentoDaSociedade.CIDADÃOS;
 import static br.gov.servicos.v3.schema.SegmentoDaSociedade.EMPRESAS;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
-import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
-import static org.mockito.Mockito.doReturn;
+import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
@@ -29,25 +28,21 @@ import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 public class PublicoAlvoControllerTest {
 
     @Mock(answer = Answers.RETURNS_SMART_NULLS)
-    Buscador buscador;
+    ServicoRepository servicos;
 
     PublicoAlvoController publicosAlvo;
 
     @Before
     public void setUp() throws IOException {
-        doReturn(asList(
+        given(servicos.findBySegmentoDaSociedade(CIDADÃOS)).willReturn(asList(
                 SERVICO.withNome("XXXX").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
-                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))
-        )).when(buscador)
-                .buscaServicosPor("segmentosDaSociedade", of("CIDADÃOS"));
+                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))));
 
-        doReturn(asList(
+        given(servicos.findBySegmentoDaSociedade(EMPRESAS)).willReturn(asList(
                 SERVICO.withNome("FFFF").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
-                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))
-        )).when(buscador)
-                .buscaServicosPor("segmentosDaSociedade", of("EMPRESAS"));
+                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))));
 
-        publicosAlvo = new PublicoAlvoController(buscador, new Slugify());
+        publicosAlvo = new PublicoAlvoController(servicos, new Slugify());
     }
 
     @Test

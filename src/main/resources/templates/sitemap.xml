@@ -38,15 +38,15 @@
         <loc th:text="${@baseUrl.and('/servico/' + servico.id)}">/servico/id-do-servico</loc>
     </url>
 
-    <url th:each="orgao: ${orgaos}">
+    <url th:each="orgao : ${orgaos}">
         <loc th:text="${@baseUrl.and('/orgao/' + orgao.id)}">/orgao/id-do-orgao</loc>
     </url>
 
-    <url th:each="area: ${areasDeInteresse}">
-        <loc th:text="${@baseUrl.and('/area-de-interesse/' + area.id)}">/area-de-interesse/id-da-area-de-interesse</loc>
+    <url th:each="areaDeInteresse : ${areasDeInteresse}">
+        <loc th:text="${@baseUrl.and('/area-de-interesse/' + areaDeInteresse.id)}">/area-de-interesse/id-da-area-de-interesse</loc>
     </url>
 
-    <url th:each="publicoAlvo: ${publicosAlvo}">
+    <url th:each="publicoAlvo : ${publicosAlvo}">
         <loc th:text="${@baseUrl.and('/publico-alvo/' + publicoAlvo.id)}">/publico-alvo/id-do-publico-alvo</loc>
     </url>
 

@@ -1,7 +1,7 @@
 package br.gov.servicos.servico.publicoAlvo;
 
-import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Conteudo;
+import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.SegmentoDaSociedade;
 import br.gov.servicos.v3.schema.Servico;
 import com.github.slugify.Slugify;
@@ -17,7 +17,6 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.*;
 
-import static java.util.Collections.emptyList;
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
@@ -28,12 +27,12 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class PublicoAlvoController {
 
-    Buscador buscador;
+    ServicoRepository servicos;
     Slugify slugify;
 
     @Autowired
-    PublicoAlvoController(Buscador buscador, Slugify slugify) {
-        this.buscador = buscador;
+    PublicoAlvoController(ServicoRepository servicos, Slugify slugify) {
+        this.servicos = servicos;
         this.slugify = slugify;
     }
 
@@ -58,15 +57,15 @@ class PublicoAlvoController {
 
         Map<String, Object> model = new HashMap<>();
         model.put("letraAtiva", primeiraLetra);
-        model.put("publicoAlvo", extraiPublicoAlvo(id, servicosPorLetraInicial.get(primeiraLetra)));
+        model.put("publicoAlvo", SegmentoDaSociedade.findById(id));
         model.put("servicos", servicos);
         model.put("letras", letrasDisponiveis(servicosPorLetraInicial.keySet()));
 
         return new ModelAndView("publico-alvo", model);
     }
 
-    private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial(String publicoAlvo) {
-        return buscador.buscaServicosPor("segmentosDaSociedade", ofNullable(SegmentoDaSociedade.findById(publicoAlvo).name()))
+    private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial(String segmentoDaSociedade) {
+        return servicos.findBySegmentoDaSociedade(SegmentoDaSociedade.findById(segmentoDaSociedade))
                 .stream()
                 .collect(groupingBy(s -> s.getNome().trim().toUpperCase().charAt(0)));
     }
@@ -76,15 +75,6 @@ class PublicoAlvoController {
                 .stream()
                 .sorted()
                 .collect(toList());
-    }
-
-    private SegmentoDaSociedade extraiPublicoAlvo(String id, List<Servico> servicos) {
-        return servicos
-                .stream()
-                .flatMap(s -> ofNullable(s.getSegmentosDaSociedade()).orElse(emptyList()).stream())
-                .filter(p -> p.getId().equals(id))
-                .findFirst()
-                .get();
     }
 
 }

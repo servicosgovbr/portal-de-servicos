@@ -18,7 +18,7 @@
     <dl>
         <dt>Seções</dt>
 
-        <dd th:each="publico : ${@publicoAlvoRepository.findAll()}">
+        <dd th:each="publico : ${T(br.gov.servicos.v3.schema.SegmentoDaSociedade).values()}">
             <a th:href="@{/publico-alvo/{id}(id=${publico.id})}">
                 <span th:text="${publico.value}">Título do Público Alvo</span>
             </a>
