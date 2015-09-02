@@ -1,6 +1,5 @@
 package br.gov.servicos.orgao;
 
-import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.Markdown;
 import br.gov.servicos.servico.ServicoRepository;
@@ -24,14 +23,12 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class OrgaoController {
 
-    Buscador buscador;
     Markdown markdown;
     OrgaoRepository orgaos;
     ServicoRepository servicos;
 
     @Autowired
-    OrgaoController(Buscador buscador, Markdown markdown, OrgaoRepository orgaos, ServicoRepository servicos) {
-        this.buscador = buscador;
+    OrgaoController(Markdown markdown, OrgaoRepository orgaos, ServicoRepository servicos) {
         this.markdown = markdown;
         this.orgaos = orgaos;
         this.servicos = servicos;
