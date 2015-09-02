@@ -20,7 +20,7 @@ public interface ServicoRepository extends ElasticsearchRepository<Servico, Stri
     default List<Servico> findByOrgao(Orgao orgao) {
         return findAll(new PageRequest(0, MAX_VALUE)).getContent()
                 .stream()
-                .filter(s -> s.getOrgao().getId().equals(orgao.getId()))
+                .filter(s -> s.getOrgao() != null && s.getOrgao().getId().equals(orgao.getId()))
                 .collect(toList());
     }
 

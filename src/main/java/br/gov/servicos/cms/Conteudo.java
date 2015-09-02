@@ -9,6 +9,7 @@ import lombok.experimental.Wither;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldIndex;
 
 import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 import static lombok.AccessLevel.PRIVATE;
@@ -29,11 +30,14 @@ public class Conteudo {
     @Field(store = true, type = String)
     String conteudo;
 
+    @Field(type = String, store = true, index = FieldIndex.not_analyzed)
+    String conteudoHtml;
+
     @Field(store = true, type = String)
     String tipoConteudo;
 
     public Conteudo() {
-        this(null, null, null, null);
+        this(null, null, null, null, null);
     }
 
     @SneakyThrows

@@ -3,7 +3,9 @@ package br.gov.servicos.importador;
 import br.gov.servicos.cms.Markdown;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
@@ -23,11 +25,15 @@ public class ConteudoParser {
 
     public String conteudo(Resource resource) {
         log.debug("Conteúdo encontrado: {}", resource);
-        return parse(markdown.toHtml(resource).getHtml()).select("p, ul, ol").text();
+        return parseResource(resource).select("p, ul, ol").text();
+    }
+
+    public String conteudoHtml(Resource resource) {
+        return parseResource(resource).toString();
     }
 
     public String titulo(Resource resource) {
-        return parse(markdown.toHtml(resource).getHtml()).select("h2").text();
+        return parseResource(resource).select("h2").text();
     }
 
     public String link(String source) {
@@ -40,4 +46,7 @@ public class ConteudoParser {
         return parse(markdown.render(source)).select("a").attr("href");
     }
 
+    private Document parseResource(Resource resource) {
+        return parse(markdown.toHtml(resource).getHtml());
+    }
 }

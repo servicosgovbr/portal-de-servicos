@@ -6,8 +6,10 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.util.stream.Stream;
 
 import static lombok.AccessLevel.PRIVATE;
@@ -26,16 +28,21 @@ class ImportadorParaConteudoDeOrgaos {
 
     @SneakyThrows
     Stream<Conteudo> importar(RepositorioCartasServico repositorioCartasServico) {
-        log.info("Importando Orgãos em {}", repositorioCartasServico.acessarDocumento("conteudo/orgaos").getFile());
+        File diretorioOrgaos = repositorioCartasServico.acessarDocumento("conteudo/orgaos").getFile();
 
-        return Stream.of(repositorioCartasServico.acessarDocumento("conteudo/orgaos").getFile()
-                .listFiles((d, n) -> n.endsWith(".md")))
+        log.info("Importando Orgãos em {}", diretorioOrgaos);
+        return Stream.of(diretorioOrgaos.listFiles((d, n) -> n.endsWith(".md")))
                 .parallel()
                 .map(f -> new FileSystemResource(f))
-                .map(r -> new Conteudo()
-                        .withId(r.getFilename().replace(".md", ""))
-                        .withNome(parser.titulo(r))
-                        .withConteudo(parser.conteudo(r))
-                        .withTipoConteudo("orgao"));
+                .map(this::fromResource);
+    }
+
+    private Conteudo fromResource(Resource r) {
+        return new Conteudo()
+                .withId(r.getFilename().replace(".md", ""))
+                .withNome(parser.titulo(r))
+                .withConteudo(parser.conteudo(r))
+                .withConteudoHtml(parser.conteudoHtml(r))
+                .withTipoConteudo("orgao");
     }
 }
