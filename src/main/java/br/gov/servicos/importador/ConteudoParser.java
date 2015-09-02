@@ -26,6 +26,10 @@ public class ConteudoParser {
         return parse(markdown.toHtml(resource).getHtml()).select("p, ul, ol").text();
     }
 
+    public String titulo(Resource resource) {
+        return parse(markdown.toHtml(resource).getHtml()).select("h2").text();
+    }
+
     public String link(String source) {
         if (source == null) {
             return null;

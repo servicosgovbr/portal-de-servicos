@@ -1,46 +1,36 @@
 package br.gov.servicos.orgao;
 
-import br.gov.servicos.importador.ConteudoParser;
-import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.cms.ConteudoRepository;
 import br.gov.servicos.v3.schema.Orgao;
-import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.stream.StreamSupport;
 
-import static java.lang.String.format;
+import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
 @Repository
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class OrgaoRepository {
 
-    ServicoRepository servicos;
-    ConteudoParser parser;
+    ConteudoRepository conteudos;
 
     @Autowired
-    OrgaoRepository(ServicoRepository servicos, ConteudoParser parser) {
-        this.servicos = servicos;
-        this.parser = parser;
+    OrgaoRepository(ConteudoRepository conteudos) {
+        this.conteudos = conteudos;
     }
 
     @Cacheable("orgaos")
     public List<Orgao> findAll() {
-        Set<Orgao> orgaos = new TreeSet<>((left, right) -> left.getId().compareTo(right.getId()));
-
-        Iterable<Servico> svcs = servicos.findAll();
-        svcs.forEach(s -> {
-            if (s.getOrgao() != null) {
-                orgaos.add(s.getOrgao());
-            }
-        });
-
-        return new ArrayList<>(orgaos);
+        return StreamSupport.stream(conteudos.findByTipoConteudo("orgao").spliterator(), false)
+                .map(c -> new Orgao()
+                        .withId(c.getId())
+                        .withNome(c.getNome()))
+                .sorted((a, b) -> a.getNome().compareTo(b.getNome()))
+                .collect(toList());
     }
 }
