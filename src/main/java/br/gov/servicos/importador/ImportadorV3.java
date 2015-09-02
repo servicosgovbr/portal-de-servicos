@@ -13,8 +13,6 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.TextProgressMonitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.jmx.export.annotation.ManagedOperation;
-import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -62,7 +60,7 @@ public class ImportadorV3 {
                         .listFiles((d, n) -> n.endsWith(".xml")))
                         .parallel()
                         .map(f -> unmarshal(f, Servico.class))
-                        .map(s -> s.withId(slugify.slugify(s.getNome() + " " + s.getSigla())))
+                        .map(s -> s.withId(slugify.slugify(s.getNome())))
                         .collect(toList())
         );
     }
