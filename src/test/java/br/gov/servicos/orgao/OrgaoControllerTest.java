@@ -38,7 +38,6 @@ public class OrgaoControllerTest {
     @Mock
     ConteudoRepository conteudos;
 
-    List<Servico> umServico = singletonList(SERVICO);
     OrgaoController controller;
 
     @Before
