@@ -1,6 +1,5 @@
 package br.gov.servicos.servico.areaDeInteresse;
 
-import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.Markdown;
 import br.gov.servicos.servico.ServicoRepository;
@@ -22,13 +21,11 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class AreaDeInteresseController {
 
-    Buscador buscador;
     ServicoRepository servicos;
     Markdown markdown;
 
     @Autowired
-    AreaDeInteresseController(Buscador buscador, ServicoRepository servicos, Markdown markdown) {
-        this.buscador = buscador;
+    AreaDeInteresseController(ServicoRepository servicos, Markdown markdown) {
         this.servicos = servicos;
         this.markdown = markdown;
     }
