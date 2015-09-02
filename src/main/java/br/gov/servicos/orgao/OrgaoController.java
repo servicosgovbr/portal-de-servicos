@@ -1,7 +1,10 @@
 package br.gov.servicos.orgao;
 
 import br.gov.servicos.busca.Buscador;
+import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.Markdown;
+import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Orgao;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -14,7 +17,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.lang.String.format;
-import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -25,12 +27,14 @@ class OrgaoController {
     Buscador buscador;
     Markdown markdown;
     OrgaoRepository orgaos;
+    ServicoRepository servicos;
 
     @Autowired
-    OrgaoController(Buscador buscador, Markdown markdown, OrgaoRepository orgaos) {
+    OrgaoController(Buscador buscador, Markdown markdown, OrgaoRepository orgaos, ServicoRepository servicos) {
         this.buscador = buscador;
         this.markdown = markdown;
         this.orgaos = orgaos;
+        this.servicos = servicos;
     }
 
     @RequestMapping("/orgaos")
@@ -44,8 +48,9 @@ class OrgaoController {
 
         model.put("termo", id);
         model.put("conteudo", markdown.toHtml(new ClassPathResource(format("conteudo/orgaos/%s.md", id))).withId(id));
-        model.put("resultados", buscador.buscaSemelhante(ofNullable(id), "orgao.id")
+        model.put("resultados", servicos.findByOrgao(new Orgao().withId(id))
                 .stream()
+                .map(Conteudo::fromServico)
                 .sorted((left, right) -> left.getId().compareTo(right.getId()))
                 .collect(toList()));
 

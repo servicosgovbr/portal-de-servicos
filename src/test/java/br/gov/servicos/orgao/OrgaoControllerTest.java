@@ -2,6 +2,8 @@ package br.gov.servicos.orgao;
 
 import br.gov.servicos.busca.Buscador;
 import br.gov.servicos.cms.Markdown;
+import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Orgao;
 import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -16,7 +18,6 @@ import java.util.List;
 import static br.gov.servicos.fixtures.TestData.CONTEUDO_HTML;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Collections.singletonList;
-import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Matchers.anyObject;
@@ -37,12 +38,15 @@ public class OrgaoControllerTest {
     @Mock
     OrgaoRepository orgaos;
 
+    @Mock
+    ServicoRepository servicos;
+
     List<Servico> umServico = singletonList(SERVICO);
     OrgaoController controller;
 
     @Before
     public void setUp() {
-        controller = new OrgaoController(buscador, markdown, orgaos);
+        controller = new OrgaoController(buscador, markdown, orgaos, servicos);
     }
 
     @Test
@@ -50,8 +54,8 @@ public class OrgaoControllerTest {
         given(markdown.toHtml(anyObject())).willReturn(CONTEUDO_HTML);
 
         doReturn(umServico)
-                .when(buscador)
-                .buscaSemelhante(of("receita-federal"), "orgao.id");
+                .when(servicos)
+                .findByOrgao(new Orgao().withId("receita-federal"));
 
         assertCompareListModelAttribute(controller.orgao("receita-federal"), "resultados", umServico);
     }

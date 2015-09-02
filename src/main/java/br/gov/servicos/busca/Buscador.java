@@ -20,7 +20,6 @@ import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
-import static org.elasticsearch.index.query.QueryBuilders.fuzzyLikeThisQuery;
 import static org.elasticsearch.index.query.QueryBuilders.termQuery;
 
 @Component
@@ -43,10 +42,6 @@ public class Buscador {
 
     public List<Servico> buscaServicosPor(String campo, Optional<String> termoBuscado) {
         return executaQuery(termoBuscado, termo -> termQuery(campo, termo));
-    }
-
-    public List<Conteudo> buscaSemelhante(Optional<String> termoBuscado, String... campos) {
-        return paraConteudo(executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery(campos).likeText(termo)));
     }
 
     private List<Servico> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
