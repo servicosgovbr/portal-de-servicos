@@ -11,7 +11,7 @@
 
     <dd>
         <ul>
-            <li th:each="area : ${T(br.gov.servicos.v3.schema.AreaDeInteresse).values()}">
+            <li th:each="area : ${@areaDeInteresseRepository.findAll()}">
                 <a th:href="@{/area-de-interesse/{id}(id=${area.id})}">
                     <span th:text="${area.value}">Título do Público Alvo</span>
                 </a>

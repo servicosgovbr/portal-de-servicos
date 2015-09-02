@@ -7,7 +7,7 @@ import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.TreeSet;
 import static java.lang.String.format;
 import static lombok.AccessLevel.PRIVATE;
 
-@Component
+@Repository
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class OrgaoRepository {
 
