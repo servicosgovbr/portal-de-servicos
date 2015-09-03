@@ -39,6 +39,7 @@ O projeto do Portal de Serviços conta com duas equipes multi-disciplinares e co
 * [Erick Pintor](mailto:epintor@thoughtworks.com)
 * [Jean Kirchner](mailto:jkirchne@thoughtworks.com)
 * [Olivia Janequine](mailto:oliviaj@thoughtworks.com)
+* [Ricardo Wendell](mailto:rwendel@thoughtworks.com)
 * [Samantha Rosa](mailto:srosa@thoughtworks.com)
 
 ## Contribuidores
