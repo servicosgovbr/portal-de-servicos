@@ -13,7 +13,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import java.io.IOException;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
-import static br.gov.servicos.v3.schema.SegmentoDaSociedade.CIDADÃOS;
+import static br.gov.servicos.v3.schema.SegmentoDaSociedade.CIDADAOS;
 import static br.gov.servicos.v3.schema.SegmentoDaSociedade.EMPRESAS;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
@@ -33,48 +33,48 @@ public class PublicoAlvoControllerTest {
 
     @Before
     public void setUp() throws IOException {
-        given(servicos.findBySegmentoDaSociedade(CIDADÃOS)).willReturn(asList(
-                SERVICO.withNome("XXXX").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
-                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))));
+        given(servicos.findBySegmentoDaSociedade(CIDADAOS)).willReturn(asList(
+                SERVICO.withNome("XXXX").withSegmentosDaSociedade(asList(CIDADAOS, EMPRESAS)),
+                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADAOS, EMPRESAS))));
 
         given(servicos.findBySegmentoDaSociedade(EMPRESAS)).willReturn(asList(
-                SERVICO.withNome("FFFF").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS)),
-                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADÃOS, EMPRESAS))));
+                SERVICO.withNome("FFFF").withSegmentosDaSociedade(asList(CIDADAOS, EMPRESAS)),
+                SERVICO.withNome("AAAA").withSegmentosDaSociedade(asList(CIDADAOS, EMPRESAS))));
 
         publicosAlvo = new PublicoAlvoController(servicos, new Slugify());
     }
 
     @Test
     public void deveRedirecionarParaPaginaDePublicosAlvo() {
-        assertViewName(publicosAlvo.publicoAlvo(CIDADÃOS, null), "publico-alvo");
+        assertViewName(publicosAlvo.publicoAlvo(CIDADAOS, null), "publico-alvo");
     }
 
     @Test
     public void deveRetornarOsServicosRelacionadosAoPublicoAlvo() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, null), "servicos",
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, null), "servicos",
                 singletonList(Conteudo.fromServico(SERVICO.withNome("AAAA"))));
     }
 
     @Test
     public void deveRetornarOPublicoAlvoPesquisado() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, null), "publicoAlvo", CIDADÃOS);
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, null), "publicoAlvo", CIDADAOS);
     }
 
     @Test
     public void deveRetornarAsLetrasDisponiveis() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, null), "letras", asList('A', 'X'));
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, null), "letras", asList('A', 'X'));
         assertModelAttributeValue(publicosAlvo.publicoAlvo(EMPRESAS, null), "letras", asList('A', 'F'));
     }
 
     @Test
     public void deveRetornarALetraAtiva() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, null), "letraAtiva", 'A');
-        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, 'x'), "letraAtiva", 'X');
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, null), "letraAtiva", 'A');
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, 'x'), "letraAtiva", 'X');
     }
 
     @Test
     public void deveFiltrarPelaLetraInformada() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, 'X'), "servicos",
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, 'X'), "servicos",
                 singletonList(Conteudo.fromServico(SERVICO.withNome("XXXX"))));
     }
 

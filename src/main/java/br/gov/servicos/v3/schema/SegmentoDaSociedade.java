@@ -18,16 +18,16 @@ import java.util.stream.Stream;
 public enum SegmentoDaSociedade {
 
     @XmlEnumValue("Cidad\u00e3os")
-    CIDADÃOS("Cidad\u00e3os"),
+    CIDADAOS("Cidadãos"),
 
     @XmlEnumValue("Empresas")
     EMPRESAS("Empresas"),
 
-    @XmlEnumValue("\u00d3rg\u00e3os e entidades p\u00fablicas")
-    ÓRGÃOS_E_ENTIDADES_PÚBLICAS("\u00d3rg\u00e3os e entidades p\u00fablicas"),
+    @XmlEnumValue("Órgãos e entidades públicas")
+    ORGAOS_E_ENTIDADES_PUBLICAS("Órgãos e entidades públicas"),
 
-    @XmlEnumValue("Demais segmentos (ONGs, organiza\u00e7\u00f5es sociais, etc)")
-    DEMAIS_SEGMENTOS_ONGS_ORGANIZAÇÕES_SOCIAIS_ETC("Demais segmentos (ONGs, organiza\u00e7\u00f5es sociais, etc)");
+    @XmlEnumValue("Demais segmentos (ONGs, organizações sociais, etc)")
+    DEMAIS_SEGMENTOS("Demais segmentos (ONGs, organizações sociais, etc)");
 
     private final String id;
     private final String value;

@@ -19,9 +19,9 @@ public class SegmentoDaSociedadeFormatterTest {
 
     @Test
     public void testParseComIdValido() throws Exception {
-        assertThat(formatter.parse("cidadaos", getDefault()), is(SegmentoDaSociedade.CIDADÃOS));
+        assertThat(formatter.parse("cidadaos", getDefault()), is(SegmentoDaSociedade.CIDADAOS));
         assertThat(formatter.parse("empresas", getDefault()), is(SegmentoDaSociedade.EMPRESAS));
-        assertThat(formatter.parse("demais-segmentos-ongs-organizacoes-sociais-etc", getDefault()), is(SegmentoDaSociedade.DEMAIS_SEGMENTOS_ONGS_ORGANIZAÇÕES_SOCIAIS_ETC));
+        assertThat(formatter.parse("demais-segmentos-ongs-organizacoes-sociais-etc", getDefault()), is(SegmentoDaSociedade.DEMAIS_SEGMENTOS));
     }
 
     @Test(expected = ConteudoNaoEncontrado.class)

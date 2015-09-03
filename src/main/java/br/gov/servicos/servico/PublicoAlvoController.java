@@ -42,7 +42,7 @@ class PublicoAlvoController {
     }
 
     @RequestMapping("/publico-alvo/{id}")
-    ModelAndView publicoAlvo(@PathVariable SegmentoDaSociedade segmento,
+    ModelAndView publicoAlvo(@PathVariable("id") SegmentoDaSociedade segmento,
                              @RequestParam(required = false) Character letra) {
 
         Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse('A');
