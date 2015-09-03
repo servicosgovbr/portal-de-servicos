@@ -1,6 +1,5 @@
 package br.gov.servicos.servico;
 
-import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -82,17 +81,12 @@ public class ServicoControllerTest {
 
     @Test
     public void redirecionaParaAPaginaDeServicos() {
-        assertViewName(controller.get("1"), "servico");
+        assertViewName(controller.get(new Servico().withId("1")), "servico");
     }
 
     @Test
     public void retornaOServicoBuscado() {
-        assertModelAttributeValue(controller.get("1"), "servico", SERVICO);
-    }
-
-    @Test(expected = ConteudoNaoEncontrado.class)
-    public void retorna404QuandoServicoNaoExiste() {
-        controller.get("servico-nao-existente");
+        assertModelAttributeValue(controller.get(SERVICO), "servico", SERVICO);
     }
 
 }

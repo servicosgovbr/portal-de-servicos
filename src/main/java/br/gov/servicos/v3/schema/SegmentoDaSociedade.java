@@ -1,11 +1,15 @@
 package br.gov.servicos.v3.schema;
 
+import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import com.github.slugify.Slugify;
 import lombok.SneakyThrows;
+import org.springframework.stereotype.Component;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
+import java.text.ParseException;
+import java.util.Locale;
 import java.util.stream.Stream;
 
 
@@ -49,4 +53,23 @@ public enum SegmentoDaSociedade {
     public String getId() {
         return id;
     }
+
+    @Component
+    public static class Formatter implements org.springframework.format.Formatter<SegmentoDaSociedade> {
+
+        @Override
+        public SegmentoDaSociedade parse(String id, Locale locale) throws ParseException {
+            try {
+                return SegmentoDaSociedade.findById(id);
+            } catch (IllegalArgumentException e) {
+                throw new ConteudoNaoEncontrado(id);
+            }
+        }
+
+        @Override
+        public String print(SegmentoDaSociedade segmento, Locale locale) {
+            return segmento.getId();
+        }
+    }
+
 }

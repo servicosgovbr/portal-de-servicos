@@ -30,9 +30,8 @@ class AreaDeInteresseController {
     }
 
     @RequestMapping("/area-de-interesse/{id}")
-    ModelAndView areaDeInteresse(@PathVariable String id) {
+    ModelAndView areaDeInteresse(@PathVariable("id") AreaDeInteresse areaDeInteresse) {
         Map<String, Object> model = new HashMap<>();
-        AreaDeInteresse areaDeInteresse = AreaDeInteresse.findById(id);
 
         model.put("areaDeInteresse", areaDeInteresse);
         model.put("resultados", servicos.findByAreaDeInteresse(areaDeInteresse)

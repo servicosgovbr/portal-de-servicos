@@ -42,11 +42,11 @@ class PublicoAlvoController {
     }
 
     @RequestMapping("/publico-alvo/{id}")
-    ModelAndView publicoAlvo(@PathVariable String id,
+    ModelAndView publicoAlvo(@PathVariable SegmentoDaSociedade segmento,
                              @RequestParam(required = false) Character letra) {
 
         Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse('A');
-        Map<Character, List<Servico>> servicosPorLetraInicial = servicosAgrupadosPorLetraInicial(id);
+        Map<Character, List<Servico>> servicosPorLetraInicial = servicosAgrupadosPorLetraInicial(segmento);
 
         List<Conteudo> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
                 .stream()
@@ -56,15 +56,15 @@ class PublicoAlvoController {
 
         Map<String, Object> model = new HashMap<>();
         model.put("letraAtiva", primeiraLetra);
-        model.put("publicoAlvo", SegmentoDaSociedade.findById(id));
+        model.put("publicoAlvo", segmento);
         model.put("servicos", servicos);
         model.put("letras", letrasDisponiveis(servicosPorLetraInicial.keySet()));
 
         return new ModelAndView("publico-alvo", model);
     }
 
-    private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial(String segmentoDaSociedade) {
-        return servicos.findBySegmentoDaSociedade(SegmentoDaSociedade.findById(segmentoDaSociedade))
+    private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial(SegmentoDaSociedade segmento) {
+        return servicos.findBySegmentoDaSociedade(segmento)
                 .stream()
                 .collect(groupingBy(s -> s.getNome().trim().toUpperCase().charAt(0)));
     }

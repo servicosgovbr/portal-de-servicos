@@ -46,35 +46,35 @@ public class PublicoAlvoControllerTest {
 
     @Test
     public void deveRedirecionarParaPaginaDePublicosAlvo() {
-        assertViewName(publicosAlvo.publicoAlvo("cidadaos", null), "publico-alvo");
+        assertViewName(publicosAlvo.publicoAlvo(CIDADÃOS, null), "publico-alvo");
     }
 
     @Test
     public void deveRetornarOsServicosRelacionadosAoPublicoAlvo() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", null), "servicos",
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, null), "servicos",
                 singletonList(Conteudo.fromServico(SERVICO.withNome("AAAA"))));
     }
 
     @Test
     public void deveRetornarOPublicoAlvoPesquisado() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", null), "publicoAlvo", CIDADÃOS);
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, null), "publicoAlvo", CIDADÃOS);
     }
 
     @Test
     public void deveRetornarAsLetrasDisponiveis() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", null), "letras", asList('A', 'X'));
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("empresas", null), "letras", asList('A', 'F'));
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, null), "letras", asList('A', 'X'));
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(EMPRESAS, null), "letras", asList('A', 'F'));
     }
 
     @Test
     public void deveRetornarALetraAtiva() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", null), "letraAtiva", 'A');
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", 'x'), "letraAtiva", 'X');
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, null), "letraAtiva", 'A');
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, 'x'), "letraAtiva", 'X');
     }
 
     @Test
     public void deveFiltrarPelaLetraInformada() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo("cidadaos", 'X'), "servicos",
+        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADÃOS, 'X'), "servicos",
                 singletonList(Conteudo.fromServico(SERVICO.withNome("XXXX"))));
     }
 

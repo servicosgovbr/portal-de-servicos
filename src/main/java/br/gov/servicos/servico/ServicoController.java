@@ -1,7 +1,6 @@
 package br.gov.servicos.servico;
 
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,26 +68,19 @@ class ServicoController {
     }
 
     @RequestMapping(value = "/servico/{id}", method = GET)
-    ModelAndView get(@PathVariable("id") String id) {
-        Servico servico = ofNullable(servicos.findOne(id))
-                .orElseThrow(ConteudoNaoEncontrado::new);
-
+    ModelAndView get(@PathVariable("id") Servico servico) {
         return new ModelAndView("servico", "servico", servico);
     }
 
     @RequestMapping(value = "/miolo/{id}", method = GET)
-    ModelAndView getHtml(@PathVariable("id") String id) {
-        Servico servico = ofNullable(servicos.findOne(id))
-                .orElseThrow(ConteudoNaoEncontrado::new);
-
+    ModelAndView getHtml(@PathVariable("id") Servico servico) {
         return new ModelAndView("servico :: //section/div[@class=\"row\"][0]", "servico", servico);
     }
 
     @RequestMapping(value = "/servico/{id}.json", method = GET, produces = "application/json")
     @ResponseBody
-    Servico debug(@PathVariable("id") String id) {
-        return ofNullable(servicos.findOne(id))
-                .orElseThrow(ConteudoNaoEncontrado::new);
+    Servico debug(@PathVariable("id") Servico servico) {
+        return servico;
     }
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial() {
