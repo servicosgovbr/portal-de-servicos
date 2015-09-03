@@ -43,7 +43,7 @@ public class Conteudo {
     @SneakyThrows
     public static Conteudo fromServico(Servico servico) {
         return new Conteudo()
-                .withId(new Slugify().slugify(servico.getNome() + " " + (servico.getSigla() == null ? "" : servico.getSigla())))
+                .withId(new Slugify().slugify(servico.getNome()))
                 .withTipoConteudo("servico")
                 .withNome(servico.getNome())
                 .withConteudo(servico.getDescricao());
