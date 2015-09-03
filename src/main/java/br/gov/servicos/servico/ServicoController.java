@@ -5,6 +5,7 @@ import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
 import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,10 +20,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static java.lang.Integer.MAX_VALUE;
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
-import static java.util.stream.StreamSupport.stream;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.domain.Sort.Direction.ASC;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -91,7 +92,10 @@ class ServicoController {
     }
 
     private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial() {
-        return stream(servicos.findAll(new Sort(ASC, "titulo")).spliterator(), false)
+        PageRequest page = new PageRequest(0, MAX_VALUE, new Sort(ASC, "nome"));
+        return servicos.findAll(page)
+                .getContent()
+                .stream()
                 .collect(groupingBy(s -> s.getNome().trim().toUpperCase().charAt(0)));
     }
 

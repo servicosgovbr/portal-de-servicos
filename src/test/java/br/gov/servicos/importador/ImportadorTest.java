@@ -15,7 +15,7 @@ import static org.mockito.Mockito.verify;
 public class ImportadorTest {
 
     @Mock
-    ImportadorV3 importadorV3;
+    ImportadorServicos importadorServicos;
 
     @Mock
     ImportadorConteudo importadorConteudo;
@@ -29,14 +29,14 @@ public class ImportadorTest {
     public void setUp() throws Exception {
         importador = new Importador(
                 cartasServico,
-                importadorV3,
+                importadorServicos,
                 importadorConteudo);
     }
 
     @Test
     public void deveRodarImportadorDeCartas() throws Exception {
         importador.importar();
-        verify(importadorV3).importar(cartasServico);
+        verify(importadorServicos).importar(cartasServico);
     }
 
     @Test

@@ -21,26 +21,26 @@ import java.util.Map;
 public class Importador {
 
     RepositorioCartasServico repositorioCartasServico;
-    ImportadorV3 v3;
+    ImportadorServicos servicos;
     ImportadorConteudo conteudo;
 
     @Autowired
     public Importador(RepositorioCartasServico repositorioCartasServico,
-                      ImportadorV3 v3,
+                      ImportadorServicos servicos,
                       ImportadorConteudo conteudo) {
         this.repositorioCartasServico = repositorioCartasServico;
-        this.v3 = v3;
+        this.servicos = servicos;
         this.conteudo = conteudo;
     }
 
     @ManagedOperation
     public Map<String, Object> importar() {
-        log.info("Iniciando importação");
+        log.info("Iniciando a importação");
 
         repositorioCartasServico.prepararRepositorio();
 
         Map<String, Object> retorno = new HashMap<>();
-        retorno.put("servicos-v3", v3.importar(repositorioCartasServico));
+        retorno.put("servicos", servicos.importar(repositorioCartasServico));
         retorno.put("conteudos", conteudo.importar(repositorioCartasServico));
 
         log.info("Importação concluída com sucesso");

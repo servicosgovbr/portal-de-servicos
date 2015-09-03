@@ -39,8 +39,7 @@ public class RepositorioCartasServico {
 
     public Resource acessarDocumento(String caminhoDocumento) {
         log.info("Acessando documento {} em {}", caminhoDocumento, caminhoLocal);
-        File arquivoDocumento = caminhoLocal.toPath().resolve(caminhoDocumento).toFile();
-        return new FileSystemResource(arquivoDocumento);
+        return new FileSystemResource(caminhoLocal.toPath().resolve(caminhoDocumento).toFile());
     }
 
     private File criarDiretorioTemporario() throws IOException {

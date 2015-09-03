@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.stream.Stream;
 
+import static java.lang.String.format;
 import static java.util.Arrays.asList;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -47,7 +48,6 @@ public class ImportadorParaConteudoDePaginas {
     }
 
     private Resource acessarDocumento(RepositorioCartasServico repositorioCartasServico, String id) {
-        String caminhoDocumento = String.format("conteudo/%s.md", id);
-        return repositorioCartasServico.acessarDocumento(caminhoDocumento);
+        return repositorioCartasServico.acessarDocumento(format("conteudo/%s.md", id));
     }
 }

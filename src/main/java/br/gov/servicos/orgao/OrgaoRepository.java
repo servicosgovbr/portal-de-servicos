@@ -8,7 +8,6 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.stream.StreamSupport;
 
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
@@ -26,7 +25,8 @@ public class OrgaoRepository {
 
     @Cacheable("orgaos")
     public List<Orgao> findAll() {
-        return StreamSupport.stream(conteudos.findByTipoConteudo("orgao").spliterator(), false)
+        return conteudos.findByTipoConteudo("orgao")
+                .stream()
                 .map(c -> new Orgao()
                         .withId(c.getId())
                         .withNome(c.getNome()))

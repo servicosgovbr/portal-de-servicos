@@ -32,12 +32,13 @@ public class ImportadorConteudo {
         this.paginas = paginas;
     }
 
-    public Iterable<Conteudo> importar(RepositorioCartasServico repositorioCartasServico) {
-        return repository.save(Stream.of(
-                    orgaos.importar(repositorioCartasServico),
-                    paginas.importar(repositorioCartasServico)
-                ).flatMap(x -> x)
-                .collect(toList()));
+    public Iterable<Conteudo> importar(RepositorioCartasServico repo) {
+        log.info("Iniciando a importação de conteúdos...");
+
+        return repository.save(
+                Stream.of(orgaos.importar(repo), paginas.importar(repo))
+                        .flatMap(x -> x)
+                        .collect(toList()));
     }
 
 }

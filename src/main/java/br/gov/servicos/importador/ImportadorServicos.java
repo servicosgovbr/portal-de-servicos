@@ -19,28 +19,28 @@ import static lombok.AccessLevel.PRIVATE;
 @Slf4j
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 @Component
-public class ImportadorV3 {
+public class ImportadorServicos {
 
     PortalDeServicosIndex indices;
     ServicoRepository indice;
     Slugify slugify;
 
     @Autowired
-    ImportadorV3(PortalDeServicosIndex indices,
-            ServicoRepository indice,
-            Slugify slugify) {
+    ImportadorServicos(PortalDeServicosIndex indices,
+                       ServicoRepository indice,
+                       Slugify slugify) {
         this.indices = indices;
         this.indice = indice;
         this.slugify = slugify;
     }
 
     @SneakyThrows
-    public Iterable<Servico> importar(RepositorioCartasServico repositorioCartasServico) {
-        log.info("Iniciando importação");
+    public Iterable<Servico> importar(RepositorioCartasServico repo) {
+        log.info("Iniciando importação de serviços...");
         indices.recriar();
 
         return indice.save(
-                Stream.of(repositorioCartasServico.acessarDocumento("cartas-servico/v3/servicos").getFile()
+                Stream.of(repo.acessarDocumento("cartas-servico/servicos/servicos").getFile()
                         .listFiles((d, n) -> n.endsWith(".xml")))
                         .parallel()
                         .map(f -> unmarshal(f, Servico.class))

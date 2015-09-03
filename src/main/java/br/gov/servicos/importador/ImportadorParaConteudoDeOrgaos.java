@@ -33,7 +33,7 @@ class ImportadorParaConteudoDeOrgaos {
         log.info("Importando Orgãos em {}", diretorioOrgaos);
         return Stream.of(diretorioOrgaos.listFiles((d, n) -> n.endsWith(".md")))
                 .parallel()
-                .map(f -> new FileSystemResource(f))
+                .map(FileSystemResource::new)
                 .map(this::fromResource);
     }
 
