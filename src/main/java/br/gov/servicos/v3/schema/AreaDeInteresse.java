@@ -14,129 +14,6 @@ import java.util.stream.Stream;
 public enum AreaDeInteresse {
 
     @XmlEnumValue("Abastecimento")
-    VCGE1_ABASTECIMENTO("Abastecimento"),
-
-    @XmlEnumValue("Administração financeira")
-    VCGE1_ADMINISTRACAO_FINANCEIRA("Administração financeira"),
-
-    @XmlEnumValue("Agricultura orgânica")
-    VCGE1_AGRICULTURA_ORGANICA("Agricultura orgânica"),
-
-    @XmlEnumValue("Agropecuária")
-    VCGE1_AGROPECUARIA("Agropecuária"),
-
-    @XmlEnumValue("Alimento")
-    VCGE1_ALIMENTO("Alimento"),
-
-    @XmlEnumValue("Ambiente e saúde")
-    VCGE1_AMBIENTE_E_SAUDE("Ambiente e saúde"),
-
-    @XmlEnumValue("Comunicações")
-    VCGE1_COMUNICACOES("Comunicações"),
-
-    @XmlEnumValue("Comércio e Serviços")
-    VCGE1_COMERCIO_E_SERVICOS("Comércio e Serviços"),
-
-    @XmlEnumValue("Economia e Finanças")
-    VCGE1_ECONOMIA_E_FINANCAS("Economia e Finanças"),
-
-    @XmlEnumValue("Educação")
-    VCGE1_EDUCACAO("Educação"),
-
-    @XmlEnumValue("Educação básica")
-    VCGE1_EDUCACAO_BASICA("Educação básica"),
-
-    @XmlEnumValue("Educação superior")
-    VCGE1_EDUCACAO_SUPERIOR("Educação superior"),
-
-    @XmlEnumValue("Educação à distância")
-    VCGE1_EDUCACAO_A_DISTANCIA("Educação à distância"),
-
-    @XmlEnumValue("Emergências e Urgências")
-    VCGE1_EMERGENCIAS_E_URGENCIAS("Emergências e Urgências"),
-
-    @XmlEnumValue("Encargos financeiros")
-    VCGE1_ENCARGOS_FINANCEIROS("Encargos financeiros"),
-
-    @XmlEnumValue("Esporte e Lazer")
-    VCGE1_ESPORTE_E_LAZER("Esporte e Lazer"),
-
-    @XmlEnumValue("Finanças")
-    VCGE1_FINANCAS("Finanças"),
-
-    @XmlEnumValue("Habitação")
-    VCGE1_HABITACAO("Habitação"),
-
-    @XmlEnumValue("Humanização na saúde")
-    VCGE1_HUMANIZACAO_NA_SAUDE("Humanização na saúde"),
-
-    @XmlEnumValue("Indústria")
-    VCGE1_INDUSTRIA("Indústria"),
-
-    @XmlEnumValue("Meio ambiente")
-    VCGE1_MEIO_AMBIENTE("Meio ambiente"),
-
-    @XmlEnumValue("Pecuária")
-    VCGE1_PECUARIA("Pecuária"),
-
-    @XmlEnumValue("Pessoa")
-    VCGE1_PESSOA("Pessoa"),
-
-    @XmlEnumValue("Previdência Social")
-    VCGE1_PREVIDENCIA_SOCIAL("Previdência Social"),
-
-    @XmlEnumValue("Profissionais da educação")
-    VCGE1_PROFISSIONAIS_DA_EDUCACAO("Profissionais da educação"),
-
-    @XmlEnumValue("Proteção social")
-    VCGE1_PROTECAO_SOCIAL("Proteção social"),
-
-    @XmlEnumValue("Qualidade ambiental")
-    VCGE1_QUALIDADE_AMBIENTAL("Qualidade ambiental"),
-
-    @XmlEnumValue("Relações Internacionais")
-    VCGE1_RELACOES_INTERNACIONAIS("Relações Internacionais"),
-
-    @XmlEnumValue("Saúde")
-    VCGE1_SAUDE("Saúde"),
-
-    @XmlEnumValue("Saúde da criança")
-    VCGE1_SAUDE_DA_CRIANCA("Saúde da criança"),
-
-    @XmlEnumValue("Saúde da família")
-    VCGE1_SAUDE_DA_FAMILIA("Saúde da família"),
-
-    @XmlEnumValue("Saúde da mulher")
-    VCGE1_SAUDE_DA_MULHER("Saúde da mulher"),
-
-    @XmlEnumValue("Saúde do homem")
-    VCGE1_SAUDE_DO_HOMEM("Saúde do homem"),
-
-    @XmlEnumValue("Saúde do idoso")
-    VCGE1_SAUDE_DO_IDOSO("Saúde do idoso"),
-
-    @XmlEnumValue("Saúde dos portadores de deficiências")
-    VCGE1_SAUDE_DOS_PORTADORES_DE_DEFICIENCIAS("Saúde dos portadores de deficiências"),
-
-    @XmlEnumValue("Segurança e Ordem Pública")
-    VCGE1_SEGURANCA_E_ORDEM_PUBLICA("Segurança e Ordem Pública"),
-
-    @XmlEnumValue("Trabalho")
-    VCGE1_TRABALHO("Trabalho"),
-
-    @XmlEnumValue("Transportes")
-    VCGE1_TRANSPORTES("Transportes"),
-
-    @XmlEnumValue("Turismo")
-    VCGE1_TURISMO("Turismo"),
-
-    @XmlEnumValue("Urbanismo")
-    VCGE1_URBANISMO("Urbanismo"),
-
-    @XmlEnumValue("Águas")
-    VCGE1_AGUAS("Águas"),
-
-    @XmlEnumValue("Abastecimento")
     VCGE2_ABASTECIMENTO("Abastecimento"),
 
     @XmlEnumValue("Administração")
@@ -407,7 +284,130 @@ public enum AreaDeInteresse {
     VCGE2_VIGILANCIA_SANITARIA("Vigilância Sanitária"),
 
     @XmlEnumValue("Água")
-    VCGE2_AGUA("Água");
+    VCGE2_AGUA("Água"),
+
+    @XmlEnumValue("Abastecimento")
+    VCGE1_ABASTECIMENTO("Abastecimento"),
+
+    @XmlEnumValue("Administração financeira")
+    VCGE1_ADMINISTRACAO_FINANCEIRA("Administração financeira"),
+
+    @XmlEnumValue("Agricultura orgânica")
+    VCGE1_AGRICULTURA_ORGANICA("Agricultura orgânica"),
+
+    @XmlEnumValue("Agropecuária")
+    VCGE1_AGROPECUARIA("Agropecuária"),
+
+    @XmlEnumValue("Alimento")
+    VCGE1_ALIMENTO("Alimento"),
+
+    @XmlEnumValue("Ambiente e saúde")
+    VCGE1_AMBIENTE_E_SAUDE("Ambiente e saúde"),
+
+    @XmlEnumValue("Comunicações")
+    VCGE1_COMUNICACOES("Comunicações"),
+
+    @XmlEnumValue("Comércio e Serviços")
+    VCGE1_COMERCIO_E_SERVICOS("Comércio e Serviços"),
+
+    @XmlEnumValue("Economia e Finanças")
+    VCGE1_ECONOMIA_E_FINANCAS("Economia e Finanças"),
+
+    @XmlEnumValue("Educação")
+    VCGE1_EDUCACAO("Educação"),
+
+    @XmlEnumValue("Educação básica")
+    VCGE1_EDUCACAO_BASICA("Educação básica"),
+
+    @XmlEnumValue("Educação superior")
+    VCGE1_EDUCACAO_SUPERIOR("Educação superior"),
+
+    @XmlEnumValue("Educação à distância")
+    VCGE1_EDUCACAO_A_DISTANCIA("Educação à distância"),
+
+    @XmlEnumValue("Emergências e Urgências")
+    VCGE1_EMERGENCIAS_E_URGENCIAS("Emergências e Urgências"),
+
+    @XmlEnumValue("Encargos financeiros")
+    VCGE1_ENCARGOS_FINANCEIROS("Encargos financeiros"),
+
+    @XmlEnumValue("Esporte e Lazer")
+    VCGE1_ESPORTE_E_LAZER("Esporte e Lazer"),
+
+    @XmlEnumValue("Finanças")
+    VCGE1_FINANCAS("Finanças"),
+
+    @XmlEnumValue("Habitação")
+    VCGE1_HABITACAO("Habitação"),
+
+    @XmlEnumValue("Humanização na saúde")
+    VCGE1_HUMANIZACAO_NA_SAUDE("Humanização na saúde"),
+
+    @XmlEnumValue("Indústria")
+    VCGE1_INDUSTRIA("Indústria"),
+
+    @XmlEnumValue("Meio ambiente")
+    VCGE1_MEIO_AMBIENTE("Meio ambiente"),
+
+    @XmlEnumValue("Pecuária")
+    VCGE1_PECUARIA("Pecuária"),
+
+    @XmlEnumValue("Pessoa")
+    VCGE1_PESSOA("Pessoa"),
+
+    @XmlEnumValue("Previdência Social")
+    VCGE1_PREVIDENCIA_SOCIAL("Previdência Social"),
+
+    @XmlEnumValue("Profissionais da educação")
+    VCGE1_PROFISSIONAIS_DA_EDUCACAO("Profissionais da educação"),
+
+    @XmlEnumValue("Proteção social")
+    VCGE1_PROTECAO_SOCIAL("Proteção social"),
+
+    @XmlEnumValue("Qualidade ambiental")
+    VCGE1_QUALIDADE_AMBIENTAL("Qualidade ambiental"),
+
+    @XmlEnumValue("Relações Internacionais")
+    VCGE1_RELACOES_INTERNACIONAIS("Relações Internacionais"),
+
+    @XmlEnumValue("Saúde")
+    VCGE1_SAUDE("Saúde"),
+
+    @XmlEnumValue("Saúde da criança")
+    VCGE1_SAUDE_DA_CRIANCA("Saúde da criança"),
+
+    @XmlEnumValue("Saúde da família")
+    VCGE1_SAUDE_DA_FAMILIA("Saúde da família"),
+
+    @XmlEnumValue("Saúde da mulher")
+    VCGE1_SAUDE_DA_MULHER("Saúde da mulher"),
+
+    @XmlEnumValue("Saúde do homem")
+    VCGE1_SAUDE_DO_HOMEM("Saúde do homem"),
+
+    @XmlEnumValue("Saúde do idoso")
+    VCGE1_SAUDE_DO_IDOSO("Saúde do idoso"),
+
+    @XmlEnumValue("Saúde dos portadores de deficiências")
+    VCGE1_SAUDE_DOS_PORTADORES_DE_DEFICIENCIAS("Saúde dos portadores de deficiências"),
+
+    @XmlEnumValue("Segurança e Ordem Pública")
+    VCGE1_SEGURANCA_E_ORDEM_PUBLICA("Segurança e Ordem Pública"),
+
+    @XmlEnumValue("Trabalho")
+    VCGE1_TRABALHO("Trabalho"),
+
+    @XmlEnumValue("Transportes")
+    VCGE1_TRANSPORTES("Transportes"),
+
+    @XmlEnumValue("Turismo")
+    VCGE1_TURISMO("Turismo"),
+
+    @XmlEnumValue("Urbanismo")
+    VCGE1_URBANISMO("Urbanismo"),
+
+    @XmlEnumValue("Águas")
+    VCGE1_AGUAS("Águas");
 
     private final String id;
     private final String value;
