@@ -38,7 +38,7 @@
             <th:block th:text="${servico.nome}"/> <th:block th:text="|(${servico.sigla})|" th:unless="${#strings.isEmpty(servico.sigla)}"/>
         </h2>
 
-        <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canalDePrestacao.?[tipo.destacado]].get(0)}">
+        <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canaisDePrestacao.?[tipo.destacado]].get(0)}">
             <a class="acao-servico" th:href="${@conteudoParser.link(acao.descricao)}">
                 <th:block th:text="${acao.tipo.value}">Título do link</th:block> <i class="fa fa-globe"></i>
             </a>
@@ -94,10 +94,25 @@
 
                 <!-- TODO documentos da etapa -->
                 <!-- TODO custos da etapa -->
+
                 <div class="subtitulo-etapa">
                     <p class="info-etapa">Canais de prestação desta etapa:</p>
                     <ul>
-                        <li th:each="canal : ${etapa.canaisDePrestacao.padrao.canalDePrestacao}">
+                        <li th:each="canal : ${etapa.canaisDePrestacao.padrao.canaisDePrestacao}">
+                            <span th:text="${canal.tipo.value}">Web</span>:
+                            <th:block th:if="${canal.tipo.destacado}">
+                                <a th:href="${@conteudoParser.link(canal.descricao)}"
+                                   th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
+                            </th:block>
+                            <th:block th:unless="${canal.tipo.destacado}">
+                                <p th:utext="${@markdown.render(canal.descricao)}">Texto</p>
+                            </th:block>
+                        </li>
+                    </ul>
+
+                    <ul th:each="caso : ${etapa.canaisDePrestacao.casos}">
+                        <div th:text="${caso.descricao}"/>
+                        <li th:each="canal : ${caso.canaisDePrestacao}">
                             <span th:text="${canal.tipo.value}">Web</span>:
                             <th:block th:if="${canal.tipo.destacado}">
                                 <a th:href="${@conteudoParser.link(canal.descricao)}"

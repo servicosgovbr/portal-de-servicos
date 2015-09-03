@@ -23,12 +23,12 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE)
 @XmlAccessorType(NONE)
 @XmlType(name = "CasoDeCanaisDePrestacao", propOrder = {
-        "canalDePrestacao"
+        "canaisDePrestacao"
 })
 public class CasoDeCanaisDePrestacao {
 
     @XmlElement(name = "canal-de-prestacao", required = true)
-    List<CanalDePrestacao> canalDePrestacao;
+    List<CanalDePrestacao> canaisDePrestacao;
 
     @XmlAttribute(name = "descricao")
     String descricao;
