@@ -1,9 +1,10 @@
 package br.gov.servicos.v3.schema;
 
+import lombok.Getter;
+
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
-import java.util.stream.Stream;
 
 
 @XmlType(name = "TipoDeTempoTotalEstimado")
@@ -20,29 +21,27 @@ public enum TipoDeTempoTotalEstimado {
     DIAS("dias"),
 
     @XmlEnumValue("dias-corridos")
-    DIAS_CORRIDOS("dias-corridos"),
+    DIAS_CORRIDOS("dias-corridos", "dias corridos"),
 
     @XmlEnumValue("dias-uteis")
-    DIAS_UTEIS("dias-uteis"),
+    DIAS_UTEIS("dias-uteis", "dias úteis"),
 
     @XmlEnumValue("meses")
     MESES("meses");
 
-    private final String value;
+    @Getter
+    String id;
 
-    TipoDeTempoTotalEstimado(String v) {
-        value = v;
+    @Getter
+    String nome;
+
+    TipoDeTempoTotalEstimado(String idOuNome) {
+        this.id = idOuNome;
+        this.nome = idOuNome;
     }
 
-    public static TipoDeTempoTotalEstimado from(String v) {
-        return Stream.of(values())
-                .filter(c -> c.value.equals(v))
-                .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException(v));
+    TipoDeTempoTotalEstimado(String id, String nome) {
+        this.id = id;
+        this.nome = nome;
     }
-
-    public String value() {
-        return value;
-    }
-
 }

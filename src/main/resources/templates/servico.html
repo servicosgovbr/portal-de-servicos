@@ -23,8 +23,8 @@
     <span class="separador">&gt;</span>
 
     <a href="" itemprop="url">
-        <span itemprop="title" th:text="${servico.nome}">
-            Nome do Serviço
+        <span itemprop="title">
+            <th:block th:text="${servico.nome}"/> <th:block th:text="|(${servico.sigla})|" th:unless="${#strings.isEmpty(servico.sigla)}"/>
         </span>
     </a>
 </span>
@@ -34,7 +34,9 @@
 
 <section layout:fragment="corpo">
     <div class="row">
-        <h2 th:text="${servico.nome}">Nome do Serviço</h2>
+        <h2>
+            <th:block th:text="${servico.nome}"/> <th:block th:text="|(${servico.sigla})|" th:unless="${#strings.isEmpty(servico.sigla)}"/>
+        </h2>
 
         <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canalDePrestacao.?[tipo.destacado]].get(0)}">
             <a class="acao-servico" th:href="${@conteudoParser.link(acao.descricao)}">
@@ -60,7 +62,24 @@
         </th:block>
 
         <th:block th:unless="${servico.tempoTotalEstimado == null}">
-            <!-- TODO tempo total estimado -->
+            <h3 class="subtitulo-servico">Tempo estimado</h3>
+            <th:block th:unless="${servico.tempoTotalEstimado.entre == null}">
+                <p>
+                    Entre
+                    <span th:text="${servico.tempoTotalEstimado.entre.min}"></span>
+                    e
+                    <span th:text="${servico.tempoTotalEstimado.entre.max}"></span>
+                    <span th:text="${servico.tempoTotalEstimado.entre.unidade.nome}"></span>.
+                </p>
+            </th:block>
+            <th:block th:unless="${servico.tempoTotalEstimado.ate == null}">
+                <p>
+                    Até
+                    <span th:text="${servico.tempoTotalEstimado.ate.max}"></span>
+                    <span th:text="${servico.tempoTotalEstimado.ate.unidade.nome}"></span>.
+                </p>
+            </th:block>
+            <p th:utext="${@markdown.render(servico.tempoTotalEstimado.descricao)}"></p>
         </th:block>
 
         <th:block th:unless="${servico.etapas.isEmpty()}">
