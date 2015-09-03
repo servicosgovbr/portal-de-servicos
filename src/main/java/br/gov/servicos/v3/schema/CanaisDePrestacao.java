@@ -21,10 +21,7 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor
 @FieldDefaults(level = PRIVATE)
 @XmlAccessorType(NONE)
-@XmlType(name = "CanaisDePrestacao", propOrder = {
-        "padrao",
-        "casos"
-})
+@XmlType(name = "CanaisDePrestacao", propOrder = {"padrao", "casos"})
 public class CanaisDePrestacao {
 
     @XmlElement(name = "default", required = true)

@@ -20,11 +20,7 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor
 @FieldDefaults(level = PRIVATE)
 @XmlAccessorType(NONE)
-@XmlType(name = "Custo", propOrder = {
-        "descricao",
-        "moeda",
-        "valor"
-})
+@XmlType(name = "Custo", propOrder = {"descricao", "moeda", "valor"})
 public class Custo {
 
     @XmlElement(required = true)

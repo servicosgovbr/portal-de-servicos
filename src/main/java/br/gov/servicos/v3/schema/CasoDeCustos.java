@@ -22,13 +22,11 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor
 @FieldDefaults(level = PRIVATE)
 @XmlAccessorType(NONE)
-@XmlType(name = "CasoDeCustos", propOrder = {
-        "custo"
-})
+@XmlType(name = "CasoDeCustos", propOrder = {"custos"})
 public class CasoDeCustos {
 
-    @XmlElement
-    List<Custo> custo;
+    @XmlElement(name = "custo")
+    List<Custo> custos;
 
     @XmlAttribute(name = "descricao")
     String descricao;

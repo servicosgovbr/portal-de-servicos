@@ -92,7 +92,42 @@
 
                 <div class="etapa markdown" th:utext="${@markdown.render(etapa.descricao)}">Descrição da etapa</div>
 
-                <!-- TODO documentos da etapa -->
+                <div class="subtitulo-etapa">
+                    <p class="info-etapa">Documentos necessários</p>
+                    <ul>
+                        <li th:each="doc : ${etapa.documentos.padrao.itens}">
+                            <span th:text="${doc}">Documento necessário</span>
+                        </li>
+                    </ul>
+
+                    <ul th:each="caso : ${etapa.documentos.casos}">
+                        <div th:text="${caso.descricao}"></div>
+                        <li th:each="doc : ${caso.itens}">
+                            <span th:text="${doc}">Documento necessário</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="subtitulo-etapa">
+                    <p class="info-etapa">Custos desta etapa</p>
+                    <ul>
+                        <li th:each="custo : ${etapa.custos.padrao.custos}">
+                            <span th:text="${custo.descricao}">Descrição</span>
+                            <span th:text="${custo.moeda ?: 'R$'}">R$</span>
+                            <span th:text="${custo.valor}">0,00</span>
+                        </li>
+                    </ul>
+
+                    <ul th:each="caso : ${etapa.custos.casos}">
+                        <div th:text="${caso.descricao}"></div>
+                        <li th:each="custo : ${caso.custos}">
+                            <span th:text="${custo.descricao}">Descrição</span>
+                            <span th:text="${custo.moeda ?: 'R$'}">R$</span>
+                            <span th:text="${custo.valor}">0,00</span>
+                        </li>
+                    </ul>
+                </div>
+
                 <!-- TODO custos da etapa -->
 
                 <div class="subtitulo-etapa">
@@ -111,7 +146,7 @@
                     </ul>
 
                     <ul th:each="caso : ${etapa.canaisDePrestacao.casos}">
-                        <div th:text="${caso.descricao}"/>
+                        <div th:text="${caso.descricao}"></div>
                         <li th:each="canal : ${caso.canaisDePrestacao}">
                             <span th:text="${canal.tipo.value}">Web</span>:
                             <th:block th:if="${canal.tipo.destacado}">
