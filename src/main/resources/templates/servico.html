@@ -128,8 +128,6 @@
                     </ul>
                 </div>
 
-                <!-- TODO custos da etapa -->
-
                 <div class="subtitulo-etapa">
                     <p class="info-etapa">Canais de prestação desta etapa:</p>
                     <ul>
@@ -162,6 +160,15 @@
             </div>
         </th:block>
     </div>
+
+    <th:block th:unless="${servico.legislacoes.isEmpty()}">
+        <h3 class="subtitulo-servico">Legislação relacionada</h3>
+        <ul>
+            <li th:each="legislacao : ${servico.legislacoes}">
+                <span th:utext="${@markdown.render(legislacao)}">Lei XXX de NNNN, ZZZZ</span>
+            </li>
+        </ul>
+    </th:block>
 
     <div class="row" th:with="orgao = ${@orgaoRepository.findAll().?[id == '__${servico.orgao.id}__'][0]}">
         <p class="separacao-orgao" th:unless="${#strings.isEmpty(orgao.nome)}">
