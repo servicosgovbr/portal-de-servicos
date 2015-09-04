@@ -10,7 +10,7 @@
         </a>
     </h4>
 
-    <p th:text="${#strings.abbreviate(servico.descricao, 140)}">
+    <p th:text="${#strings.abbreviate(@conteudoParser.textoPuro(servico.descricao), 140)}">
         Descrição do serviço
     </p>
 
