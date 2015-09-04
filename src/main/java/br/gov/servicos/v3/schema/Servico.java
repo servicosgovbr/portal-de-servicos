@@ -52,15 +52,15 @@ public class Servico {
 
     @Id
     @XmlTransient
+    @Field(type = String, index = not_analyzed, store = true)
     String id;
 
     @XmlElement(required = true)
     @Field(type = String, store = true)
-
     String nome;
 
     @XmlElement
-    @Field(type = String, store = true)
+    @Field(type = String, store = true, index = not_analyzed)
     String sigla;
 
     @XmlElementWrapper(name = "nomes-populares")
