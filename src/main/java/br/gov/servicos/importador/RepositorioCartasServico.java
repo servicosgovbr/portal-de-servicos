@@ -21,7 +21,6 @@ import java.nio.file.Files;
 
 import static lombok.AccessLevel.PRIVATE;
 import static org.eclipse.jgit.api.ResetCommand.ResetType.HARD;
-import static org.eclipse.jgit.lib.Constants.*;
 import static org.eclipse.jgit.merge.MergeStrategy.THEIRS;
 
 @Slf4j
@@ -84,7 +83,7 @@ public class RepositorioCartasServico {
             if (result.isSuccessful()) {
                 String head = repositorio.reset()
                         .setMode(HARD)
-                        .setRef(R_REMOTES + DEFAULT_REMOTE_NAME + MASTER)
+                        .setRef("refs/remotes/origin/master")
                         .call()
                         .getName();
 
