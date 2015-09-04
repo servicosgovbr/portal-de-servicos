@@ -20,6 +20,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 import static lombok.AccessLevel.PRIVATE;
+import static org.eclipse.jgit.api.ResetCommand.ResetType.HARD;
+import static org.eclipse.jgit.lib.Constants.*;
 import static org.eclipse.jgit.merge.MergeStrategy.THEIRS;
 
 @Slf4j
@@ -80,7 +82,12 @@ public class RepositorioCartasServico {
                     .call();
 
             if (result.isSuccessful()) {
-                String head = repositorio.log().call().iterator().next().getName();
+                String head = repositorio.reset()
+                        .setMode(HARD)
+                        .setRef(R_REMOTES + DEFAULT_REMOTE_NAME + MASTER)
+                        .call()
+                        .getName();
+
                 log.info("Repositório de cartas de serviço em {} atualizado para a versão {}", caminhoLocal, head);
             } else {
                 log.error("Erro ao atualizar repositório: {}", result);
