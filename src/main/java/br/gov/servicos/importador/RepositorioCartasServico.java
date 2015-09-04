@@ -2,9 +2,11 @@ package br.gov.servicos.importador;
 
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
+import lombok.experimental.NonFinal;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.jgit.api.CloneCommand;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.PullResult;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.TextProgressMonitor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,13 +20,16 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 import static lombok.AccessLevel.PRIVATE;
+import static org.eclipse.jgit.merge.MergeStrategy.THEIRS;
 
 @Slf4j
 @Component
-@FieldDefaults(level = PRIVATE)
+@FieldDefaults(level = PRIVATE, makeFinal = true)
 public class RepositorioCartasServico {
 
-    final String urlRepositorio;
+    String urlRepositorio;
+
+    @NonFinal
     File caminhoLocal;
 
     @Autowired
@@ -34,7 +39,11 @@ public class RepositorioCartasServico {
 
     @SneakyThrows
     public void prepararRepositorio() {
-        caminhoLocal = clonarRepositorio(criarDiretorioTemporario());
+        if (caminhoLocal == null) {
+            caminhoLocal = clonarRepositorio(criarDiretorioTemporario());
+        } else {
+            atualizarRepositorio();
+        }
     }
 
     public Resource acessarDocumento(String caminhoDocumento) {
@@ -59,6 +68,23 @@ public class RepositorioCartasServico {
             String head = repositorio.log().call().iterator().next().getName();
             log.info("Repositório de cartas de serviço clonado na versão {}", head);
             return repositorio.getRepository().getWorkTree();
+        }
+    }
+
+    private void atualizarRepositorio() throws IOException, GitAPIException {
+        log.info("Atualizando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
+        try (Git repositorio = Git.open(caminhoLocal)) {
+            PullResult result = repositorio.pull()
+                    .setProgressMonitor(new TextProgressMonitor())
+                    .setStrategy(THEIRS)
+                    .call();
+
+            if (result.isSuccessful()) {
+                String head = repositorio.log().call().iterator().next().getName();
+                log.info("Repositório de cartas de serviço em {} atualizado para a versão {}", caminhoLocal, head);
+            } else {
+                log.error("Erro ao atualizar repositório: {}", result);
+            }
         }
     }
 }
