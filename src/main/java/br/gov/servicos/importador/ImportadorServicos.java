@@ -45,6 +45,7 @@ public class ImportadorServicos {
                         .parallel()
                         .map(f -> unmarshal(f, Servico.class))
                         .map(s -> s.withId(slugify.slugify(s.getNome())))
+                        .peek(s -> log.debug("{} importado com sucesso", s.getId()))
                         .collect(toList())
         );
     }

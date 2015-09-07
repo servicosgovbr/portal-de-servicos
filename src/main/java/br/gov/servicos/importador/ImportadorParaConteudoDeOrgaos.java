@@ -30,7 +30,7 @@ class ImportadorParaConteudoDeOrgaos {
     Stream<Conteudo> importar(RepositorioCartasServico repositorioCartasServico) {
         File diretorioOrgaos = repositorioCartasServico.acessarDocumento("conteudo/orgaos").getFile();
 
-        log.info("Importando Orgãos em {}", diretorioOrgaos);
+        log.info("Importando órgãos em {}", diretorioOrgaos);
         return Stream.of(diretorioOrgaos.listFiles((d, n) -> n.endsWith(".md")))
                 .parallel()
                 .map(FileSystemResource::new)

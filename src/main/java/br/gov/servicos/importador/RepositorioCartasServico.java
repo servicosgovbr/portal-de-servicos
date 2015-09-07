@@ -48,7 +48,6 @@ public class RepositorioCartasServico {
     }
 
     public Resource acessarDocumento(String caminhoDocumento) {
-        log.info("Acessando documento {} em {}", caminhoDocumento, caminhoLocal);
         return new FileSystemResource(caminhoLocal.toPath().resolve(caminhoDocumento).toFile());
     }
 
@@ -59,7 +58,7 @@ public class RepositorioCartasServico {
     }
 
     private File clonarRepositorio(File caminhoLocal) throws GitAPIException {
-        log.info("Clonando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
+        log.debug("Clonando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
         CloneCommand clone = Git.cloneRepository()
                 .setURI(urlRepositorio)
                 .setProgressMonitor(new LogstashProgressMonitor(log))
@@ -73,7 +72,7 @@ public class RepositorioCartasServico {
     }
 
     private void atualizarRepositorio() throws IOException, GitAPIException {
-        log.info("Atualizando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
+        log.debug("Atualizando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
         try (Git repositorio = Git.open(caminhoLocal)) {
             PullResult result = repositorio.pull()
                     .setProgressMonitor(new LogstashProgressMonitor(log))

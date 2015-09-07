@@ -38,6 +38,7 @@ public class ImportadorConteudo {
         return repository.save(
                 Stream.of(orgaos.importar(repo), paginas.importar(repo))
                         .flatMap(x -> x)
+                        .peek(c -> log.debug("{} importado com sucesso", c.getId()))
                         .collect(toList()));
     }
 
