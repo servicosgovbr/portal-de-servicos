@@ -30,4 +30,9 @@ public class CanaisDePrestacao {
     @XmlElement(name = "caso")
     List<CasoDeCanaisDePrestacao> casos;
 
+    public boolean isEmpty() {
+        return (casos == null || casos.isEmpty()) &&
+                (padrao == null || padrao.getCanaisDePrestacao() == null || padrao.getCanaisDePrestacao().isEmpty());
+    }
+
 }

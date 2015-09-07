@@ -92,7 +92,7 @@
 
                 <div class="etapa markdown" th:utext="${@markdown.render(etapa.descricao)}">Descrição da etapa</div>
 
-                <div class="subtitulo-etapa">
+                <div class="subtitulo-etapa" th:unless="${etapa.documentos.isEmpty()}">
                     <p class="info-etapa">Documentos necessários</p>
                     <ul>
                         <li th:each="doc : ${etapa.documentos.padrao.itens}">
@@ -108,7 +108,7 @@
                     </ul>
                 </div>
 
-                <div class="subtitulo-etapa">
+                <div class="subtitulo-etapa" th:unless="${etapa.custos.isEmpty()}">
                     <p class="info-etapa">Custos desta etapa</p>
                     <ul>
                         <li th:each="custo : ${etapa.custos.padrao.custos}">
@@ -128,7 +128,7 @@
                     </ul>
                 </div>
 
-                <div class="subtitulo-etapa">
+                <div class="subtitulo-etapa" th:unless="${etapa.canaisDePrestacao.isEmpty()}">
                     <p class="info-etapa">Canais de prestação desta etapa:</p>
                     <ul>
                         <li th:each="canal : ${etapa.canaisDePrestacao.padrao.canaisDePrestacao}">

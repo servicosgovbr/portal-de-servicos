@@ -30,4 +30,9 @@ public class Custos {
     @XmlElement(name = "caso")
     List<CasoDeCustos> casos;
 
+    public boolean isEmpty() {
+        return (casos == null || casos.isEmpty()) &&
+                (padrao == null || padrao.getCustos() == null || padrao.getCustos().isEmpty());
+    }
+
 }

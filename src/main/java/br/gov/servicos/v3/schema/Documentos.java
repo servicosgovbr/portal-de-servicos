@@ -29,4 +29,9 @@ public class Documentos {
     @XmlElement(name = "caso")
     List<CasoDeDocumentos> casos;
 
+    public boolean isEmpty() {
+        return (casos == null || casos.isEmpty()) &&
+                (padrao == null || padrao.getItens() == null || padrao.getItens().isEmpty());
+    }
+
 }
