@@ -23,7 +23,6 @@ public class ConteudoParser {
     }
 
     public String conteudo(Resource resource) {
-        log.debug("Conteúdo encontrado: {}", resource);
         return parseResource(resource).select("p, ul, ol").text();
     }
 
