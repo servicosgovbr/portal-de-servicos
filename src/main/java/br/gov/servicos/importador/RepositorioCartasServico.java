@@ -1,5 +1,6 @@
 package br.gov.servicos.importador;
 
+import br.gov.servicos.utils.LogstashProgressMonitor;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.NonFinal;
@@ -8,7 +9,6 @@ import org.eclipse.jgit.api.CloneCommand;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.PullResult;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.eclipse.jgit.lib.TextProgressMonitor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
@@ -62,7 +62,7 @@ public class RepositorioCartasServico {
         log.info("Clonando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
         CloneCommand clone = Git.cloneRepository()
                 .setURI(urlRepositorio)
-                .setProgressMonitor(new TextProgressMonitor())
+                .setProgressMonitor(new LogstashProgressMonitor(log))
                 .setDirectory(caminhoLocal);
 
         try (Git repositorio = clone.call()) {
@@ -76,7 +76,7 @@ public class RepositorioCartasServico {
         log.info("Atualizando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
         try (Git repositorio = Git.open(caminhoLocal)) {
             PullResult result = repositorio.pull()
-                    .setProgressMonitor(new TextProgressMonitor())
+                    .setProgressMonitor(new LogstashProgressMonitor(log))
                     .setStrategy(THEIRS)
                     .call();
 
