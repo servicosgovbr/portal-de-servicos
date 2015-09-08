@@ -92,17 +92,6 @@
     line-height: 1.2em;
   }
 
-  ul.solicitantes {
-    display: block;
-
-    li {
-      display: list-item;
-      list-style-type: disc;
-      color: $cinza-escuro;
-      list-style-position: inside;
-    }
-  }
-
   .subtitulo-etapa {
     margin-left: 40px;
     margin-top: 10px;
@@ -408,6 +397,15 @@ span.ticket-erro {
   font-family: Courier, monospaced;
 }
 
+
+.tiposolicitante {
+
+  ul li {
+    list-style-type: none;    
+  }
+
+}
+
 .markdown {
 
   ul li {
@@ -415,9 +413,11 @@ span.ticket-erro {
     list-style-type: disc;
     color: $cinza-escuro;
     list-style-position: inside;
-    line-height: $baseLineHeight;
+    line-height: 100%;
+    margin-top: 10px;
     margin-bottom: 10px;
-    font-size: $baseFontSize;
+    font-size: $baseFontSize * 0.9375;
+    margin-left: 20px;
 
     a {
       color: $azul-claro;
@@ -428,6 +428,10 @@ span.ticket-erro {
       color: $azul-claro;
     }
   }
+}
+
+.margem-solicitantes {
+  margin-bottom: 20px;
 }
 
 a.acao, button.acao, input[type="submit"].acao, input[type="submit"].acao-busca {

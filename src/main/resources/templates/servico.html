@@ -38,11 +38,11 @@
             <th:block th:text="${servico.nome}"/> <th:block th:text="|(${servico.sigla})|" th:unless="${#strings.isEmpty(servico.sigla)}"/>
         </h2>
 
-        <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canaisDePrestacao.?[tipo.destacado]].get(0)}">
+<!--         <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canaisDePrestacao.?[tipo.destacado]].get(0)}">
             <a class="acao-servico" th:href="${@conteudoParser.link(acao.descricao)}">
                 <th:block th:text="${acao.tipo.value}">Título do link</th:block> <i class="fa fa-globe"></i>
             </a>
-        </th:block>
+        </th:block> -->
 
         <a href="javascript:window.print()" class="acao-servico">
             Imprimir esta página <i class="fa fa-print"></i></a>
@@ -53,12 +53,10 @@
 
         <th:block th:unless="${servico.solicitantes.isEmpty()}">
             <h3 class="subtitulo-servico">Quem pode utilizar este serviço?</h3>
-            <ul class="solicitantes" th:each="solicitante : ${servico.solicitantes}">
-                <li>
-                    <p th:utext="${@markdown.render(solicitante.tipo)}"></p>
-                    <p th:utext="${@markdown.render(solicitante.requisitos)}"></p>
-                </li>
-            </ul>
+            <div class="solicitantes markdown margem-solicitantes" th:each="solicitante : ${servico.solicitantes}">
+                <h4 th:utext="${@markdown.render(solicitante.tipo)}"> Tipo do Solicitante </h4>
+                <p th:utext="${@markdown.render(solicitante.requisitos)}"> Requisitos do solicitante (em markdown) </p>
+            </div>
         </th:block>
 
         <th:block th:unless="${servico.tempoTotalEstimado == null}">
@@ -79,6 +77,8 @@
                     <span th:text="${servico.tempoTotalEstimado.ate.unidade.nome}"></span>.
                 </p>
             </th:block>
+            <br></br>
+            <h4 class="subtitulo-servico">Informações adicionais ao tempo estimado:</h4>
             <p th:utext="${@markdown.render(servico.tempoTotalEstimado.descricao)}"></p>
         </th:block>
 
@@ -89,7 +89,7 @@
             <div class="etapas" th:each="etapa, row : ${servico.etapas}">
                 <p class="circle" th:text="${row.index + 1}"></p>
                 <h4 class="etapa" th:text="${etapa.titulo ?: 'Acesse o serviço'}">Título da etapa</h4>
-
+    
                 <div class="etapa markdown" th:utext="${@markdown.render(etapa.descricao)}">Descrição da etapa</div>
 
                 <div class="subtitulo-etapa" th:unless="${etapa.documentos.isEmpty()}">
@@ -142,6 +142,13 @@
                             </th:block>
                         </li>
                     </ul>
+
+                    <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canaisDePrestacao.?[tipo.destacado]].get(0)}">
+                        <a class="acao-servico" th:href="${@conteudoParser.link(acao.descricao)}">
+                            <th:block th:text="${acao.tipo.value}">Título do link</th:block> <i class="fa fa-globe"></i>
+                        </a>
+                    </th:block>
+
 
                     <ul th:each="caso : ${etapa.canaisDePrestacao.casos}">
                         <div th:text="${caso.descricao}"></div>
