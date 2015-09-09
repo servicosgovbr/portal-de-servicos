@@ -59,7 +59,7 @@
             </div>
         </th:block>
 
-        <th:block th:unless="${servico.tempoTotalEstimado == null}">
+        <th:block th:unless="${servico.tempoTotalEstimado == null or (servico.tempoTotalEstimado.ate == null and servico.tempoTotalEstimado.entre == null)}">
             <h3 class="subtitulo-servico">Tempo estimado</h3>
             <th:block th:unless="${servico.tempoTotalEstimado.entre == null}">
                 <p>
