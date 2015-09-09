@@ -38,12 +38,6 @@
             <th:block th:text="${servico.nome}"/> <th:block th:text="|(${servico.sigla})|" th:unless="${#strings.isEmpty(servico.sigla)}"/>
         </h2>
 
-<!--         <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canaisDePrestacao.?[tipo.destacado]].get(0)}">
-            <a class="acao-servico" th:href="${@conteudoParser.link(acao.descricao)}">
-                <th:block th:text="${acao.tipo.value}">Título do link</th:block> <i class="fa fa-globe"></i>
-            </a>
-        </th:block> -->
-
         <a href="javascript:window.print()" class="acao-servico">
             Imprimir esta página <i class="fa fa-print"></i></a>
 
