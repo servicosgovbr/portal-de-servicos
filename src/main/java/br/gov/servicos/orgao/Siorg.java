@@ -23,7 +23,7 @@ import static java.util.Optional.ofNullable;
 @Component
 public class Siorg {
 
-    public static final Predicate<String> URL_PREDICATE = Pattern.compile("http://estruturaorganizacional\\.dados\\.gov\\.br/doc/unidade-organizacional/\\d+").asPredicate();
+    public static final Predicate<String> URL_PREDICATE = Pattern.compile("http://estruturaorganizacional\\.dados\\.gov\\.br/(doc|id)/unidade-organizacional/\\d+").asPredicate();
 
     private RestTemplate restTemplate;
     private Slugify slugify;

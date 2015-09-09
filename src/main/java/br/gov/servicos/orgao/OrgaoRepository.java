@@ -17,20 +17,32 @@ import static lombok.AccessLevel.PRIVATE;
 public class OrgaoRepository {
 
     ConteudoRepository conteudos;
+    Siorg siorg;
 
     @Autowired
-    OrgaoRepository(ConteudoRepository conteudos) {
+    OrgaoRepository(ConteudoRepository conteudos, Siorg siorg) {
         this.conteudos = conteudos;
+        this.siorg = siorg;
     }
 
     @Cacheable("orgaos")
     public List<Orgao> findAll() {
-        return conteudos.findByTipoConteudo("orgao")
+        return conteudos.findByTipo("orgao")
                 .stream()
                 .map(c -> new Orgao()
                         .withId(c.getId())
                         .withNome(c.getNome()))
                 .sorted((a, b) -> a.getNome().compareTo(b.getNome()))
                 .collect(toList());
+    }
+
+    @Cacheable("orgaosByUrl")
+    public Orgao findBySiorg(String url) {
+        return siorg.slugDoOrgao(url)
+                .flatMap(id -> findAll()
+                        .stream()
+                        .filter(o -> o.getId().equals(id))
+                        .findFirst())
+                .orElse(null);
     }
 }

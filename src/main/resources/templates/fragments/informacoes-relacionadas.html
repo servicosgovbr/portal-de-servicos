@@ -16,14 +16,14 @@
                     <span th:text="${area.value}">Título da Linha da Vida</span>
                 </a>
             </li>
-            <th:block th:with="it = ${@orgaoRepository.findAll().?[id == '__${servico.orgao.id}__'].iterator()}">
-                <li th:if="${it.hasNext()}" th:with="orgao = it.next()}">
-                    <a th:href="@{/orgao/{id}(id=${orgao.id})}"
-                       th:text="${orgao.nome}">
-                        Órgão
-                    </a>
-                </li>
-            </th:block>
+
+            <li th:with="orgao = ${@orgaoRepository.findBySiorg(servico.orgao.id)}">
+                <a th:href="@{/orgao/{id}(id=${orgao.id})}"
+                   th:text="${orgao.nome}">
+                    Órgão
+                </a>
+            </li>
+
         </ul>
     </dd>
 </dl>
