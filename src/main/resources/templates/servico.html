@@ -77,7 +77,7 @@
                     <span th:text="${servico.tempoTotalEstimado.ate.unidade.nome}"></span>.
                 </p>
             </th:block>
-            <br></br>
+            <br/>
             <h4 class="subtitulo-servico">Informações adicionais ao tempo estimado:</h4>
             <p th:utext="${@markdown.render(servico.tempoTotalEstimado.descricao)}"></p>
         </th:block>
