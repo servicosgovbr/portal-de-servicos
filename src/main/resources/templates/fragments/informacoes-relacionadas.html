@@ -17,7 +17,7 @@
                 </a>
             </li>
 
-            <li th:with="orgao = ${@orgaoRepository.findBySiorg(servico.orgao.id)}">
+            <li th:with="orgao = ${@orgaoRepository.findBySiorg(servico.orgao.id)}" th:unless="${orgao == null}">
                 <a th:href="@{/orgao/{id}(id=${orgao.id})}"
                    th:text="${orgao.nome}">
                     Órgão

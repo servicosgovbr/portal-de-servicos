@@ -177,7 +177,7 @@
         </ul>
     </th:block>
 
-    <div class="row" th:with="orgao = ${@orgaoRepository.findBySiorg(servico.orgao.id)}">
+    <div class="row" th:with="orgao = ${@orgaoRepository.findBySiorg(servico.orgao.id)}" th:unless="${orgao == null}">
         <p class="separacao-orgao" th:unless="${#strings.isEmpty(orgao.nome)}">
             Este é um serviço
             <th:block th:text="${@genero.de(orgao.id)}">do(a)</th:block>
