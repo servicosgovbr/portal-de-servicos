@@ -84,7 +84,7 @@
 
     <hr/>
 
-    <ul id="resultados-linhadavida">
+    <ul id="resultados-orgao">
         <li th:each="resultado : ${resultados}">
             <span th:replace="fragments/resultado-busca-item :: resultado(conteudo=${resultado}, campanha=orgao)">
                 (bloco de resultado de busca)
