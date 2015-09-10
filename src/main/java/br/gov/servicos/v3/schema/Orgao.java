@@ -26,6 +26,10 @@ public class Orgao {
     String id;
 
     @XmlTransient
+    @Field(type = String, index = not_analyzed, store = true)
+    String url;
+
+    @XmlTransient
     @Field(type = String, index = analyzed, store = true)
     String nome;
 

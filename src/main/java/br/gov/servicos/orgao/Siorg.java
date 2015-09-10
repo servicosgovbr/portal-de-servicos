@@ -1,13 +1,16 @@
 package br.gov.servicos.orgao;
 
-import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import lombok.experimental.Wither;
 import lombok.extern.slf4j.Slf4j;
+import net.logstash.logback.marker.LogstashMarker;
+import org.slf4j.Marker;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -17,40 +20,58 @@ import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
 import static java.util.Optional.empty;
+import static java.util.Optional.of;
 import static java.util.Optional.ofNullable;
+import static lombok.AccessLevel.PRIVATE;
+import static net.logstash.logback.marker.Markers.append;
 
 @Slf4j
 @Component
+@FieldDefaults(level = PRIVATE, makeFinal = true)
 public class Siorg {
 
     public static final Predicate<String> URL_PREDICATE = Pattern.compile("http://estruturaorganizacional\\.dados\\.gov\\.br/(doc|id)/unidade-organizacional/\\d+").asPredicate();
 
-    private RestTemplate restTemplate;
-    private Slugify slugify;
+    RestTemplate restTemplate;
+    CacheManager cacheManager;
 
     @Autowired
-    public Siorg(RestTemplate restTemplate, Slugify slugify) {
+    public Siorg(RestTemplate restTemplate, CacheManager cacheManager) {
         this.restTemplate = restTemplate;
-        this.slugify = slugify;
+        this.cacheManager = cacheManager;
     }
 
-    @Cacheable(value = "slugsSiorg", unless = "#result.isPresent()")
-    public Optional<String> slugDoOrgao(String urlOrgao) {
-        if (URL_PREDICATE.negate().test(urlOrgao)) {
-            log.warn("URL {} não é uma URL para órgão no Siorg", urlOrgao);
+    public Optional<Unidade> findUnidade(String url) {
+        LogstashMarker marker = append("siorg.url", url);
+
+        Cache cache = cacheManager.getCache("unidadesSiorg");
+        Unidade cached = cache.get(url, Unidade.class);
+        if (cached != null) {
+            log.trace(marker, "Encontrado no cache do Siorg: {}", cached.getNome());
+            return of(cached);
+        }
+
+        if (URL_PREDICATE.negate().test(url)) {
+            log.warn(marker, "URL {} não é válida para o Siorg", url);
             return empty();
         }
 
         try {
-            ResponseEntity<Orgao> entity = restTemplate.getForEntity(urlOrgao, Orgao.class);
+            ResponseEntity<Orgao> entity = restTemplate.getForEntity(url, Orgao.class);
             Orgao body = entity.getBody();
 
+            marker = marker.and(append("siorg.status", entity.getStatusCode()));
+
             if (body.getServico().getCodigoErro() > 0) {
-                log.warn("Erro ao acessar Siorg: {}", body.getServico().getMensagem());
+                log.warn((Marker) marker.and(append("siorg.erro", body.getServico().getCodigoErro())),
+                        "Erro ao acessar Siorg: {}", body.getServico().getMensagem());
+
                 return empty();
             }
 
-            return ofNullable(slugify.slugify(body.getUnidade().getNome() + " - " + body.getUnidade().getSigla()));
+            log.debug(marker, "Consultado no Siorg com sucesso: {}", body.getUnidade().getNome());
+            cache.put(url, body.getUnidade());
+            return ofNullable(body.getUnidade());
 
         } catch (Exception e) {
             log.warn("Erro ao acessar Siorg", e);

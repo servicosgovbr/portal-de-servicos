@@ -2,10 +2,11 @@ package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.DestaquesConfig;
 import br.gov.servicos.destaques.ServicosEmDestaque;
-import br.gov.servicos.orgao.Siorg;
+import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.v3.schema.Orgao;
 import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -49,7 +50,7 @@ public class IndexControllerTest {
     PiwikClient piwikClient;
 
     @Mock
-    Siorg siorg;
+    OrgaoRepository orgaos;
 
     IndexController controller;
 
@@ -166,7 +167,7 @@ public class IndexControllerTest {
     public void deveRedirecionarParaOrgao() throws IOException {
         controller = comDestaquesManuais();
         String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
-        given(siorg.slugDoOrgao(urlOrgao)).willReturn(of("secretaria-secretarial-do-secretariado-sss"));
+        given(orgaos.findByUrl(urlOrgao)).willReturn(of(new Orgao().withId("secretaria-secretarial-do-secretariado-sss")));
 
         ModelAndView view = controller.redirectParaOrgao(urlOrgao);
 
@@ -177,7 +178,7 @@ public class IndexControllerTest {
     public void deveRedirecionarParaIndexQuandoHaProblemasComParametroOrgao() throws IOException {
         controller = comDestaquesManuais();
         String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
-        given(siorg.slugDoOrgao(urlOrgao)).willReturn(empty());
+        given(orgaos.findByUrl(urlOrgao)).willReturn(empty());
 
         ModelAndView view = controller.redirectParaOrgao(urlOrgao);
 
@@ -185,10 +186,10 @@ public class IndexControllerTest {
     }
 
     private IndexController comDestaquesAutomaticos() {
-        return new IndexController(destaquesAutomaticos, siorg);
+        return new IndexController(destaquesAutomaticos, orgaos);
     }
 
     private IndexController comDestaquesManuais() {
-        return new IndexController(destaquesManuais, siorg);
+        return new IndexController(destaquesManuais, orgaos);
     }
 }

@@ -171,17 +171,16 @@
         </ul>
     </th:block>
 
-    <div class="row" th:with="orgao = ${@orgaoRepository.findBySiorg(servico.orgao.id)}" th:unless="${orgao == null}">
-        <p class="separacao-orgao" th:unless="${#strings.isEmpty(orgao.nome)}">
+    <div class="row">
+        <p class="separacao-orgao">
             Este é um serviço
-            <th:block th:text="${@genero.de(orgao.id)}">do(a)</th:block>
-            <a th:unless="${#strings.isEmpty(orgao.id)}"
-               th:href="@{/orgao/{id}(id=${orgao.id})}"
-               th:text="${orgao.nome}">
+            <th:block th:text="${@genero.de(servico.orgao.id)}">do(a)</th:block>
+            <a th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
+               th:text="${servico.orgao.nome}">
                 Órgão responsavel
             </a>.
             Em caso de dúvidas, reclamações ou sugestões favor
-            contactá-<th:block th:text="${@genero.lo(orgao.id)}">lo(a)</th:block>.
+            contactá-<th:block th:text="${@genero.lo(servico.orgao.id)}">lo(a)</th:block>.
         </p>
 
         <hr style="margin-top: 20px; border: none"/>

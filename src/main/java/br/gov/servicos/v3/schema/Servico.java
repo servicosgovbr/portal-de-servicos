@@ -24,6 +24,7 @@ import static java.util.Optional.ofNullable;
 import static javax.xml.bind.annotation.XmlAccessType.NONE;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
+import static org.springframework.data.elasticsearch.annotations.FieldType.Object;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
 @Document(indexName = IMPORTADOR, type = "servico")
@@ -86,6 +87,7 @@ public class Servico {
     List<Etapa> etapas;
 
     @XmlElement
+    @Field(type = Object)
     Orgao orgao;
 
     @XmlElementWrapper(name = "segmentos-da-sociedade")
