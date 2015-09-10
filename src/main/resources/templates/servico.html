@@ -217,7 +217,7 @@
 
         <span class="link-github">
             <a class="acao-servico right"
-               th:if="${@cookies.isOn('modo-edicao')}"
+               th:if="${@cookies.contem('JSESSIONID')}"
                th:href="${'/editar/servico/' + servico.id }">
                 Editar
             </a>

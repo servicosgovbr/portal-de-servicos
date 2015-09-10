@@ -56,6 +56,34 @@ public class CookiesTest {
         assertThat(cookies.isOn("ativado"), is(false));
     }
 
+    @Test
+    public void deveConterCookie() {
+        given(httpServletRequest.getCookies()).willReturn(cookies(new Cookie("ativado", "on")));
+
+        assertThat(cookies.contem("ativado"), is(true));
+    }
+
+    @Test
+    public void deveConterCookieMesmoQueNaoTenhaValor() {
+        given(httpServletRequest.getCookies()).willReturn(cookies(new Cookie("ativado", null)));
+
+        assertThat(cookies.contem("ativado"), is(true));
+    }
+
+    @Test
+    public void naoDeveConterQuandoOCookieNaoEstaPresente() {
+        given(httpServletRequest.getCookies()).willReturn(cookies());
+
+        assertThat(cookies.contem("ativado"), is(false));
+    }
+
+    @Test
+    public void naoDeveConterComCookiesNulos() {
+        given(httpServletRequest.getCookies()).willReturn(null);
+
+        assertThat(cookies.isOn("ativado"), is(false));
+    }
+
     private Cookie[] cookies(Cookie... cookies) {
         return cookies;
     }

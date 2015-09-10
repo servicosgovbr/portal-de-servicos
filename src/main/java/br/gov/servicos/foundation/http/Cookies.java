@@ -29,4 +29,10 @@ class Cookies {
                 .findAny().isPresent();
     }
 
+    public boolean contem(String nome) {
+        return stream(ofNullable(httpServletRequest.getCookies()).orElse(new Cookie[0]))
+                .filter(c -> nome.equals(c.getName()))
+                .findAny().isPresent();
+    }
+
 }
