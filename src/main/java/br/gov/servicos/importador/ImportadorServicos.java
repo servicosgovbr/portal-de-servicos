@@ -10,7 +10,6 @@ import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import java.util.stream.Stream;
@@ -46,7 +45,7 @@ public class ImportadorServicos {
         indices.recriar();
 
         return indice.save(
-                Stream.of(repo.acessarDocumento("cartas-servico/v3/servicos").getFile()
+                Stream.of(repo.get("cartas-servico/v3/servicos").getFile()
                         .listFiles((d, n) -> n.endsWith(".xml")))
                         .parallel()
                         .map(f -> unmarshal(f, Servico.class))

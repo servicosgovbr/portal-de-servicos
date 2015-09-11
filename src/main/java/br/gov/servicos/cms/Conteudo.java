@@ -28,6 +28,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 public class Conteudo {
 
     @Id
+    @Field(store = true, type = String, index = not_analyzed)
     String id;
 
     @Field(store = true, type = String)
@@ -37,7 +38,7 @@ public class Conteudo {
     String conteudo;
 
     @Field(type = String, store = true, index = not_analyzed)
-    String conteudoHtml;
+    String html;
 
     @Field(store = true, type = String, index = not_analyzed)
     String tipoConteudo;

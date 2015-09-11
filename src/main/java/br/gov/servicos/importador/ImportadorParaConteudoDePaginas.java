@@ -1,7 +1,6 @@
 package br.gov.servicos.importador;
 
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.cms.Markdown;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +18,11 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class ImportadorParaConteudoDePaginas {
 
-    Markdown markdown;
     ConteudoParser parser;
 
     @Autowired
     public ImportadorParaConteudoDePaginas(
-            Markdown markdown,
             ConteudoParser parser) {
-        this.markdown = markdown;
         this.parser = parser;
     }
 
@@ -41,13 +37,14 @@ public class ImportadorParaConteudoDePaginas {
                     Resource documento = acessarDocumento(repositorioCartasServico, id);
                     return new Conteudo()
                             .withId(id)
-                            .withNome(markdown.toHtml(documento).getNome())
                             .withTipoConteudo("conteudo")
-                            .withConteudo(parser.conteudo(documento));
+                            .withNome(parser.titulo(documento))
+                            .withConteudo(parser.conteudo(documento))
+                            .withHtml(parser.conteudoHtml(documento));
                 });
     }
 
     private Resource acessarDocumento(RepositorioCartasServico repositorioCartasServico, String id) {
-        return repositorioCartasServico.acessarDocumento(format("conteudo/%s.md", id));
+        return repositorioCartasServico.get(format("conteudo/%s.md", id));
     }
 }

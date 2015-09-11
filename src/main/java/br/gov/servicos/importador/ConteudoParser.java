@@ -49,6 +49,6 @@ public class ConteudoParser {
     }
 
     private Document parseResource(Resource resource) {
-        return parse(markdown.toHtml(resource).getHtml());
+        return parse(markdown.toHtml(resource));
     }
 }

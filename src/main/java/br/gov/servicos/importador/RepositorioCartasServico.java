@@ -47,7 +47,7 @@ public class RepositorioCartasServico {
         }
     }
 
-    public Resource acessarDocumento(String caminhoDocumento) {
+    public Resource get(String caminhoDocumento) {
         return new FileSystemResource(caminhoLocal.toPath().resolve(caminhoDocumento).toFile());
     }
 

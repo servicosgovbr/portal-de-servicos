@@ -28,7 +28,7 @@ class ImportadorParaConteudoDeOrgaos {
 
     @SneakyThrows
     Stream<Conteudo> importar(RepositorioCartasServico repositorioCartasServico) {
-        File diretorioOrgaos = repositorioCartasServico.acessarDocumento("conteudo/orgaos").getFile();
+        File diretorioOrgaos = repositorioCartasServico.get("conteudo/orgaos").getFile();
 
         log.info("Importando órgãos em {}", diretorioOrgaos);
         return Stream.of(diretorioOrgaos.listFiles((d, n) -> n.endsWith(".md")))
@@ -40,9 +40,9 @@ class ImportadorParaConteudoDeOrgaos {
     private Conteudo fromResource(Resource r) {
         return new Conteudo()
                 .withId(r.getFilename().replace(".md", ""))
+                .withTipoConteudo("orgao")
                 .withNome(parser.titulo(r))
                 .withConteudo(parser.conteudo(r))
-                .withConteudoHtml(parser.conteudoHtml(r))
-                .withTipoConteudo("orgao");
+                .withHtml(parser.conteudoHtml(r));
     }
 }

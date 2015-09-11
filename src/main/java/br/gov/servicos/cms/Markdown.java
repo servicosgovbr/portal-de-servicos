@@ -29,7 +29,7 @@ public class Markdown {
     }
 
     @Cacheable("conteudo")
-    public ConteudoHtml toHtml(Resource resource) {
+    public String toHtml(Resource resource) {
         if (!resource.exists()) {
             throw new ConteudoNaoEncontrado(resource.toString());
         }
@@ -41,9 +41,7 @@ public class Markdown {
                 String nome = br.readLine();
                 String conteudo = nome + "\n" + br.lines().collect(joining("\n"));
 
-                return new ConteudoHtml()
-                        .withNome(nome)
-                        .withHtml(pegdown.markdownToHtml(conteudo));
+                return pegdown.markdownToHtml(conteudo);
             }
         } catch (IOException e) {
             throw new ConteudoNaoEncontrado(e);

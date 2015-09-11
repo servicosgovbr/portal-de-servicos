@@ -1,8 +1,6 @@
 package br.gov.servicos.importador;
 
 import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.cms.ConteudoHtml;
-import br.gov.servicos.cms.Markdown;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -17,9 +15,6 @@ import static org.mockito.Matchers.anyObject;
 public class ImportadorParaConteudoDePaginasTest {
 
     @Mock
-    Markdown markdown;
-
-    @Mock
     ConteudoParser parser;
 
     @Mock
@@ -27,21 +22,17 @@ public class ImportadorParaConteudoDePaginasTest {
 
     @Test
     public void deveConverterPaginasEmConteudos() throws Exception {
-        given(markdown.toHtml(anyObject())).willReturn(new ConteudoHtml()
-                        .withId("acessibilidade")
-                        .withNome("Acessibilidade")
-                        .withHtml("<html><h2>Acessibilidade</h2><p>Parágrafo um.</p><p>Parágrafo dois.</p></html>")
-        );
-
-
+        given(parser.conteudoHtml(anyObject())).willReturn("<html><h2>Acessibilidade</h2><p>Parágrafo um.</p><p>Parágrafo dois.</p></html>");
+        given(parser.titulo(anyObject())).willReturn("Acessibilidade");
         given(parser.conteudo(anyObject())).willReturn("Parágrafo um. Parágrafo dois.");
 
-        Conteudo c = new ImportadorParaConteudoDePaginas(markdown, parser).importar(cartasServico).findFirst().get();
+        Conteudo c = new ImportadorParaConteudoDePaginas(parser).importar(cartasServico).findFirst().get();
 
         assertThat(c.getId(), is("acessibilidade"));
         assertThat(c.getTipoConteudo(), is("conteudo"));
         assertThat(c.getNome(), is("Acessibilidade"));
         assertThat(c.getConteudo(), is("Parágrafo um. Parágrafo dois."));
+        assertThat(c.getHtml(), is("<html><h2>Acessibilidade</h2><p>Parágrafo um.</p><p>Parágrafo dois.</p></html>"));
     }
 
 }
