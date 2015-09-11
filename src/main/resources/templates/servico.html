@@ -40,7 +40,7 @@
 
 
 <div class="ancoras">
-    <ul>
+    <ol>
         <li>
             <a href="#oque">1. O que é?</a>
         </li>
@@ -56,7 +56,7 @@
         <li>
             <a href="#legislacao">5. Legislação</a>
         </li>
-    </ul>
+    </ol>
 </div>
         <a name="oque"></a>
         <h3 class="subtitulo-servico">1. O que é?</h3>
@@ -85,16 +85,17 @@
                 <div class="etapa markdown" th:utext="${@markdown.render(etapa.descricao)}">Descrição da etapa</div>
 
                 <div class="subtitulo-etapa" th:unless="${etapa.documentos.isEmpty()}">
-                    <p class="info-etapa">Documentos necessários para esta etapa:</p>
+
+                    <p class="titulo-documento"><i class="fa fa-chevron-up"></i>&nbsp; &nbsp;Documentação</p>
+                    <p class="info-etapa">Documentos padrão</p>
                     <ul>
                         <li th:each="doc : ${etapa.documentos.padrao.itens}">
                             <span th:text="${doc}">Documento necessário</span>
                         </li>
                     </ul>
 
-                    <p class="info-etapa">Casos em que outros documentos podem ser necessários:</p>
                     <ul class="caso-descricao" th:each="caso : ${etapa.documentos.casos}">
-                        <div th:text="${caso.descricao}"></div>
+                        <div  class="info-etapa" th:text="${caso.descricao}"></div>
                         <li th:each="doc : ${caso.itens}">
                             <span th:text="${doc}">Documento necessário</span>
                         </li>
@@ -102,7 +103,10 @@
                 </div>
 
                 <div class="subtitulo-etapa" th:unless="${etapa.custos.isEmpty()}">
-                    <p class="info-etapa">Custos desta etapa:</p>
+
+                    <p class="titulo-documento"><i class="fa fa-chevron-up"></i>&nbsp; &nbsp;Custos</p>
+
+                    <p class="info-etapa">Custos padrão</p>
                     <ul>
                         <li th:each="custo : ${etapa.custos.padrao.custos}">
                             <span th:text="${custo.descricao}">Descrição</span>
@@ -111,9 +115,8 @@
                         </li>
                     </ul>
 
-                    <p class="info-etapa">Casos em que podem existir outros custos:</p>
                     <ul class="caso-descricao" th:each="caso : ${etapa.custos.casos}">
-                        <div th:text="${caso.descricao}"></div>
+                        <div  class="info-etapa" th:text="${caso.descricao}"></div>
                         <li th:each="custo : ${caso.custos}">
                             <span th:text="${custo.descricao}">Descrição</span>
                             <span th:text="${custo.moeda ?: 'R$'}">R$</span>
@@ -123,7 +126,9 @@
                 </div>
 
                 <div class="subtitulo-etapa" th:unless="${etapa.canaisDePrestacao.isEmpty()}">
-                    <p class="info-etapa">Canais de prestação desta etapa:</p>
+
+                    <p class="titulo-documento"><i class="fa fa-chevron-up"></i>&nbsp; &nbsp;Canais de prestação</p>
+                    <p class="info-etapa">Canais de prestação padrão</p>
                     <ul>
                         <li th:each="canal : ${etapa.canaisDePrestacao.padrao.canaisDePrestacao}">
                             <span th:text="${canal.tipo.value}">Web</span>:
@@ -132,19 +137,13 @@
                                    th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
                             </th:block>
                             <th:block th:unless="${canal.tipo.destacado}">
-                                <p th:utext="${@markdown.render(canal.descricao)}">Texto</p>
+                                <pre th:utext="${@markdown.render(canal.descricao)}">Texto</pre>
                             </th:block>
                         </li>
-                    </ul>
-
-                    <th:block th:each="acao : ${servico.etapas.![canaisDePrestacao.padrao.canaisDePrestacao.?[tipo.destacado]].get(0)}">
-                        <a class="acao-servico" th:href="${@conteudoParser.link(acao.descricao)}">
-                            <th:block th:text="${acao.tipo.value}">Título do link</th:block> <i class="fa fa-globe"></i>
-                        </a>
-                    </th:block>
+                    </ul>       
 
                     <ul th:each="caso : ${etapa.canaisDePrestacao.casos}">
-                        <div th:text="${caso.descricao}"></div>
+                        <div class="info-etapa" th:text="${caso.descricao}"></div>
                         <li th:each="canal : ${caso.canaisDePrestacao}">
                             <span th:text="${canal.tipo.value}">Web</span>:
                             <th:block th:if="${canal.tipo.destacado}">
@@ -163,14 +162,14 @@
 
         <th:block th:unless="${servico.tempoTotalEstimado == null or (servico.tempoTotalEstimado.ate == null and servico.tempoTotalEstimado.entre == null)}">
             <a name="tempo"></a>
-            <h3 class="subtitulo-servico">4. Tempo estimado</h3>
+            <h3 class="subtitulo-servico">4. Quanto tempo leva?</h3>
             <th:block th:unless="${servico.tempoTotalEstimado.entre == null}">
                 <p>
                     Entre
                     <span th:text="${servico.tempoTotalEstimado.entre.min}"></span>
                     e
                     <span th:text="${servico.tempoTotalEstimado.entre.max}"></span>
-                    <span th:text="${servico.tempoTotalEstimado.entre.unidade.nome}"></span>.
+                    <span th:text="${servico.tempoTotalEstimado.entre.unidade.nome}"></span> é o tempo estimado para a reaiização deste serviço.
                 </p>
             </th:block>
             <th:block th:unless="${servico.tempoTotalEstimado.ate == null}">
@@ -181,13 +180,13 @@
                 </p>
             </th:block>
             <br/>
-            <h4 class="subtitulo-servico">Informações adicionais ao tempo estimado:</h4>
+            <h4 class="subtitulo-servico">Informações adicionais ao tempo estimado</h4>
             <p th:utext="${@markdown.render(servico.tempoTotalEstimado.descricao)}"></p>
         </th:block>
 
     <th:block th:unless="${servico.legislacoes.isEmpty()}">
         <a name="legislacao"></a>
-        <h3 class="subtitulo-servico">5. Legislação relacionada</h3>
+        <h3 class="subtitulo-servico">5. Legislação</h3>
         <ul>
             <li th:each="legislacao : ${servico.legislacoes}">
                 <span th:utext="${@markdown.render(legislacao)}">Lei XXX de NNNN, ZZZZ</span>

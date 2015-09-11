@@ -93,16 +93,32 @@
   }
 
   .subtitulo-etapa {
-    margin-left: 40px;
-    margin-top: 10px;
-    padding: 0 20px 20px 20px;
+    margin: 15px 10px 15px 40px;
     background-color: $branco;
     border: 1px solid $cinza-medio;
     border-top: 1px solid $cinza-medio;
     font-size: 15px;
+    padding-bottom: 15px; 
+
+
+    .titulo-documento { 
+      color: $azul-claro;
+      height: 40px;
+      background-color: $cinza-claro;
+      text-transform: uppercase;
+      font-family: $openSansBold;
+      font-size: 13px;
+      border-bottom: 1px solid $cinza-medio;
+      padding: 9px 20px 0 12px;
+
+      .fa {
+        padding: -2px 0 2px 2px;
+        color: $azul-claro;
+      }
+    }
 
     .info-etapa {
-      padding-top: 20px;
+      padding: 20px 20px 0 20px;
     }
 
     .caso-descricao {
@@ -118,6 +134,7 @@
         list-style-type: disc;
         color: $cinza-escuro;
         list-style-position: inside;
+        padding: 0 20px 0 20px;
       }
     }
   }
@@ -512,6 +529,8 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
 
 .info-etapa {
   font-family: open_sansbold;
+  color: $cinza-escuro;
+  font-size: $baseFontSize * 0.9375;
 }
 
 .etapas { 
@@ -773,8 +792,9 @@ p.formulario-opiniao {
 }
 
 .ancoras {
-  ul li {
+  ol li {
     display: block;
-
   }
 }
+
+
