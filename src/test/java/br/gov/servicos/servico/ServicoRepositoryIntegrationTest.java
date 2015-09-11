@@ -1,7 +1,7 @@
-package br.gov.servicos;
+package br.gov.servicos.servico;
 
+import br.gov.servicos.Main;
 import br.gov.servicos.config.PortalDeServicosIndex;
-import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.Orgao;
 import br.gov.servicos.v3.schema.Servico;
 import org.junit.Before;
