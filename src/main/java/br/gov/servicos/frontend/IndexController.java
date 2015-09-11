@@ -14,6 +14,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.io.IOException;
 
 import static lombok.AccessLevel.PRIVATE;
+import static net.logstash.logback.marker.Markers.append;
 
 @Slf4j
 @Controller
@@ -32,10 +33,13 @@ class IndexController {
     }
 
     @RequestMapping(value = "/", params = "orgao")
-    ModelAndView redirectParaOrgao(@RequestParam("orgao") String urlOrgao) throws IOException {
-        return orgaos.findByUrl(urlOrgao)
+    ModelAndView redirectParaOrgao(@RequestParam("orgao") String url) throws IOException {
+        return orgaos.findByUrl(url)
                 .map(orgao -> new ModelAndView(new RedirectView("/orgaos/" + orgao.getId())))
-                .orElseGet(this::index);
+                .orElseGet(() -> {
+                    log.info(append("orgao.url", url), "Órgão com URL {} não cadastrado", url);
+                    return index();
+                });
     }
 
     @RequestMapping("/")
