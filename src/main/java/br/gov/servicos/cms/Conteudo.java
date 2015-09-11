@@ -56,7 +56,7 @@ public class Conteudo {
     }
 
     @Component
-    @FieldDefaults(level = PRIVATE, makeFinal = false)
+    @FieldDefaults(level = PRIVATE, makeFinal = true)
     public static class ConteudoFormatter implements org.springframework.format.Formatter<Conteudo> {
 
         ConteudoRepository conteudos;
