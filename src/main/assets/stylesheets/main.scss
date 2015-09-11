@@ -105,6 +105,11 @@
       padding-top: 20px;
     }
 
+    .caso-descricao {
+      color: $cinza-escuro;
+      margin-bottom: 10px;
+    }
+
     ul {
       display: block;
 
@@ -408,16 +413,20 @@ span.ticket-erro {
 
 .markdown {
 
+  ul {
+    color: $azul-claro;
+    list-style-type: disc;
+  }
+
   ul li {
     display: list-item;
-    list-style-type: disc;
     color: $cinza-escuro;
     list-style-position: inside;
+    list-style-type: disc;
     line-height: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: $baseFontSize * 0.9375;
-    margin-left: 20px;
 
     a {
       color: $azul-claro;
@@ -761,4 +770,11 @@ p.formulario-opiniao {
 
 .acao-etapa {
   margin-left: 40px; 
+}
+
+.ancoras {
+  ul li {
+    display: block;
+
+  }
 }
