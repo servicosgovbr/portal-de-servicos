@@ -23,7 +23,7 @@ public class ConteudoControllerTest {
 
     @Test
     public void redirecionaParaAPaginaDeConteudo() throws ConteudoNaoEncontrado {
-        assertViewName(controller.conteudo(new ConteudoHtml().withId("pagina")), "conteudo");
+        assertViewName(controller.conteudo(new Conteudo().withId("pagina")), "conteudo");
     }
 
 }
