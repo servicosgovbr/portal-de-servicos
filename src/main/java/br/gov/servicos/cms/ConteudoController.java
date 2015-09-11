@@ -14,12 +14,12 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 class ConteudoController {
 
     @RequestMapping("/conteudo/{id}")
-    ModelAndView conteudo(@PathVariable("id") ConteudoHtml conteudo) {
+    ModelAndView conteudo(@PathVariable("id") Conteudo conteudo) {
         return new ModelAndView("conteudo", "conteudo", conteudo);
     }
 
     @RequestMapping(value = "/miolo/conteudo/{id}", method = GET)
-    ModelAndView getHtml(@PathVariable("id") ConteudoHtml conteudo) {
+    ModelAndView getHtml(@PathVariable("id") Conteudo conteudo) {
         return new ModelAndView("conteudo :: //section", conteudo(conteudo).getModel());
     }
 

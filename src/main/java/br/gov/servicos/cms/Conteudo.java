@@ -5,10 +5,16 @@ import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.Value;
+import lombok.experimental.FieldDefaults;
 import lombok.experimental.Wither;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.stereotype.Component;
+
+import java.text.ParseException;
+import java.util.Locale;
 
 import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 import static lombok.AccessLevel.PRIVATE;
@@ -48,4 +54,29 @@ public class Conteudo {
                 .withNome(servico.getNome())
                 .withConteudo(servico.getDescricao());
     }
+
+    @Component
+    @FieldDefaults(level = PRIVATE, makeFinal = false)
+    public static class ConteudoFormatter implements org.springframework.format.Formatter<Conteudo> {
+
+        ConteudoRepository conteudos;
+        Slugify slugify;
+
+        @Autowired
+        public ConteudoFormatter(ConteudoRepository conteudos, Slugify slugify) {
+            this.conteudos = conteudos;
+            this.slugify = slugify;
+        }
+
+        @Override
+        public Conteudo parse(String id, Locale locale) throws ParseException {
+            return conteudos.findOne(slugify.slugify(id));
+        }
+
+        @Override
+        public String print(Conteudo conteudo, Locale locale) {
+            return conteudo.getId();
+        }
+    }
+
 }
