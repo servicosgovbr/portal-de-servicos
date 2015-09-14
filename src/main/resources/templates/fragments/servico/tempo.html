@@ -14,8 +14,7 @@
             <span th:text="${servico.tempoTotalEstimado.entre.min}"></span>
             e
             <span th:text="${servico.tempoTotalEstimado.entre.max}"></span>
-            <span th:text="${servico.tempoTotalEstimado.entre.unidade.nome}"></span> é o tempo estimado para a
-            reaiização deste serviço.
+            <span th:text="${servico.tempoTotalEstimado.entre.unidade.nome}"></span> é o tempo estimado para a prestação imediata deste serviço.
         </p>
     </th:block>
     <th:block th:unless="${servico.tempoTotalEstimado.ate == null}">

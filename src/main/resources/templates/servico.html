@@ -40,6 +40,12 @@
             <th:block th:text="|(${servico.sigla})|" th:unless="${#strings.isEmpty(servico.sigla)}"/>
         </h2>
     </div>
+    <div class="nomes-populares">
+        <h4>
+            Este serviço também é conhecido como: <th:block th:text="${servico.nomesPopulares}"/>
+        </h4>
+    </div>
+
 
     <div class="row" th:include="fragments/servico/ancoras"></div>
     <div class="row" th:include="fragments/servico/descricao"></div>
