@@ -72,11 +72,6 @@ class ServicoController {
         return new ModelAndView("servico", "servico", servico);
     }
 
-    @RequestMapping(value = "/miolo/servico/{id}", method = GET)
-    ModelAndView getHtml(@PathVariable("id") Servico servico) {
-        return new ModelAndView("servico :: //section/div[@class=\"row\"][0]", "servico", servico);
-    }
-
     @RequestMapping(value = "/servico/{id}.json", method = GET, produces = "application/json")
     @ResponseBody
     Servico debug(@PathVariable("id") Servico servico) {

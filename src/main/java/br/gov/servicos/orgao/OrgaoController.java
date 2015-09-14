@@ -16,11 +16,10 @@ import java.util.Map;
 
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class OrgaoController {
+public class OrgaoController {
 
     OrgaoRepository orgaos;
     ServicoRepository servicos;
@@ -38,13 +37,8 @@ class OrgaoController {
         return new ModelAndView("orgaos", "orgaos", orgaos.findAll());
     }
 
-    @RequestMapping(value = "/miolo/orgao/{id}", method = GET)
-    ModelAndView getHtml(@PathVariable("id") String id) {
-        return new ModelAndView("orgao :: //section", orgao(id).getModel());
-    }
-
     @RequestMapping("/orgao/{id}")
-    ModelAndView orgao(@PathVariable String id) {
+    public ModelAndView orgao(@PathVariable String id) {
         Map<String, Object> model = new HashMap<>();
 
         model.put("termo", id);
