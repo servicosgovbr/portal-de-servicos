@@ -140,8 +140,8 @@
   }
 
   h4 {
-    font-size: 18px;
-    font-family: open_sanssemibold;
+    font-size: 16px;
+    font-family: $openSansBold;
     color: $cinza-escuro;
   }
 
@@ -535,7 +535,7 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
 
 .etapas { 
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 
     .etapa {
       padding-left: 40px;
@@ -792,7 +792,7 @@ p.formulario-opiniao {
 }
 
 .ancoras {
-  ol li {
+  ul li {
     display: block;
   }
 }

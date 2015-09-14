@@ -137,7 +137,7 @@
                                    th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
                             </th:block>
                             <th:block th:unless="${canal.tipo.destacado}">
-                                <pre th:utext="${@markdown.render(canal.descricao)}">Texto</pre>
+                                <th:block th:utext="${@markdown.render(canal.descricao)}">Texto</th:block>
                             </th:block>
                         </li>
                     </ul>       
@@ -180,7 +180,7 @@
                 </p>
             </th:block>
             <br/>
-            <h4 class="subtitulo-servico">Informações adicionais ao tempo estimado</h4>
+            <h4>Informações adicionais ao tempo estimado</h4>
             <p th:utext="${@markdown.render(servico.tempoTotalEstimado.descricao)}"></p>
         </th:block>
 
