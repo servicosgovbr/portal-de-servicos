@@ -509,7 +509,7 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
   padding: 8px 13px 8px 13px;
   background: $cinza-claro;
   text-decoration: none;
-  margin: 0px 10px 20px 0;
+  margin: 0px 0px 20px 0;
   display: inline-block;
   color: $azul-claro !important;
   border: none;
@@ -768,6 +768,10 @@ p.formulario-opiniao {
       }
     }
   }
+}
+
+.botoes-rodape {
+  margin-top: 20px;
 }
 
 .feedback-servico {

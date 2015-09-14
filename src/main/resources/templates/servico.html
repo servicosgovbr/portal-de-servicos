@@ -51,18 +51,16 @@
     <div class="row" th:include="fragments/servico/feedback"></div>
 
     
-    <div class="row">
-        <span class="link-github">
+    <div class="row botoes-rodape">
             <a class="acao-servico right"
                th:if="${@cookies.contem('JSESSIONID')}"
                th:href="${'/editar/servico/' + servico.id }">
-                Editar  <i class="fa fa-edit"></i>
+                Editar esta página  <i class="fa fa-edit"></i>
             </a>
 
             <a href="javascript:window.print()" class="acao-servico">
                 Imprimir esta página <i class="fa fa-print"></i>
             </a>
-        </span>
     </div>
 </section>
 
