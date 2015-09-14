@@ -42,7 +42,7 @@
     </div>
     <div class="nomes-populares">
         <h4>
-            Este serviço também é conhecido como: <th:block th:text="${servico.nomesPopulares}"/>
+             <th:block th:text="|${'Este serviço também é conhecido como:&nbsp;' + servico.nomesPopulares}|" th:unless="${#strings.isEmpty(servico.nomesPopulares)}"/>
         </h4>
     </div>
 
