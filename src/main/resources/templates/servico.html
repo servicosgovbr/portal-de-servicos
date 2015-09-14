@@ -40,33 +40,33 @@
 
 
 <div class="ancoras">
-    <ol>
+    <ul>
         <li>
-            <a href="#oque">1. O que é?</a>
+            <a href="#oque">O que é?</a>
         </li>
         <li>
-            <a href="#quempode">2. Quem pode utilizar este serviço?</a>
+            <a href="#quempode">Quem pode utilizar este serviço?</a>
         </li>
         <li>
-            <a href="#etapas">3. Etapas para a realização desde serviço</a>
+            <a href="#etapas">Etapas para a realização desde serviço</a>
         </li>
         <li>
-            <a href="#tempo">4. Quanto tempo leva?</a>
+            <a href="#tempo">Quanto tempo leva?</a>
         </li>
         <li>
-            <a href="#legislacao">5. Legislação</a>
+            <a href="#legislacao">Legislação</a>
         </li>
-    </ol>
+    </ul>
 </div>
         <a name="oque"></a>
-        <h3 class="subtitulo-servico">1. O que é?</h3>
+        <h3 class="subtitulo-servico">O que é?</h3>
         <div class="markdown" th:utext="${@markdown.render(servico.descricao)}">
             Descrição do serviço
         </div>
 
         <th:block th:unless="${servico.solicitantes.isEmpty()}">
             <a name="quempode"></a>
-            <h3 class="subtitulo-servico">2. Quem pode utilizar este serviço?</h3>
+            <h3 class="subtitulo-servico">Quem pode utilizar este serviço?</h3>
             <div class="solicitantes markdown margem-solicitantes" th:each="solicitante : ${servico.solicitantes}">
                 <h4 th:utext="${@markdown.render(solicitante.tipo)}"> Tipo do Solicitante </h4>
                 <p th:utext="${@markdown.render(solicitante.requisitos)}"> Requisitos do solicitante (em markdown) </p>
@@ -76,7 +76,7 @@
         <th:block th:unless="${servico.etapas.isEmpty()}">
 
             <a name="etapas"></a>
-            <h3 class="subtitulo-servico">3. Etapas para a realização deste serviço</h3>
+            <h3 class="subtitulo-servico">Etapas para a realização deste serviço</h3>
 
             <div class="etapas" th:each="etapa, row : ${servico.etapas}">
                 <p class="circle" th:text="${row.index + 1}"></p>
@@ -162,7 +162,7 @@
 
         <th:block th:unless="${servico.tempoTotalEstimado == null or (servico.tempoTotalEstimado.ate == null and servico.tempoTotalEstimado.entre == null)}">
             <a name="tempo"></a>
-            <h3 class="subtitulo-servico">4. Quanto tempo leva?</h3>
+            <h3 class="subtitulo-servico">Quanto tempo leva?</h3>
             <th:block th:unless="${servico.tempoTotalEstimado.entre == null}">
                 <p>
                     Entre
@@ -186,7 +186,7 @@
 
     <th:block th:unless="${servico.legislacoes.isEmpty()}">
         <a name="legislacao"></a>
-        <h3 class="subtitulo-servico">5. Legislação</h3>
+        <h3 class="subtitulo-servico">Legislação</h3>
         <ul>
             <li th:each="legislacao : ${servico.legislacoes}">
                 <span th:utext="${@markdown.render(legislacao)}">Lei XXX de NNNN, ZZZZ</span>
