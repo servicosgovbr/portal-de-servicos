@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div id="servico-solicitantes" th:unless="${servico.solicitantes.isEmpty()}">
+
+    <h3 class="subtitulo-servico">Quem pode utilizar este serviço?</h3>
+
+    <div class="solicitantes markdown margem-solicitantes" th:each="solicitante : ${servico.solicitantes}">
+        <h4 th:utext="${@markdown.render(solicitante.tipo)}"> Tipo do Solicitante </h4>
+
+        <p th:utext="${@markdown.render(solicitante.requisitos)}"> Requisitos do solicitante (em markdown) </p>
+    </div>
+
+</div>
+
+</body>
+</html>

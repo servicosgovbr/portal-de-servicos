@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div id="servico-descricao">
+    <h3 class="subtitulo-servico">O que é?</h3>
+    <div class="markdown" th:utext="${@markdown.render(servico.descricao)}">
+        Descrição do serviço
+    </div>
+</div>
+
+</body>
+</html>

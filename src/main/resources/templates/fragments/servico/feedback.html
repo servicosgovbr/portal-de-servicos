@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<form class="feedback-servico" accept-charset="UTF-8" action="/opiniao" method="post">
+
+    <h3 class="opiniao">Você achou as informações acima úteis?</h3>
+
+    <p class="formulario-opiniao">
+        <label for="sim">Sim</label>
+        <input name="conteudoEncontrado" id="sim" class="left" type="radio" value="true" required="required"/>
+
+        <br class="clear"/>
+
+        <label for="nao">Não</label>
+        <input name="conteudoEncontrado" id="nao" class="left" type="radio" value="false"/>
+    </p>
+
+    <label for="opiniao">
+        <h3 class="opiniao">Quais informações você sentiu falta neste serviço?</h3>
+
+        <textarea id="opiniao" name="mensagem" rows="5" class="row"></textarea>
+    </label>
+
+    <input name="enviar" type="submit" class="acao" value="ENVIAR"/>
+
+    <input name="utf8" type="hidden" value="✓"/><!-- força utf8 -->
+    <input name="url" type="hidden" th:value="${#httpServletRequest.requestURI}"/>
+    <input name="busca" type="hidden" th:value="${#httpServletRequest.queryString}"/>
+    <input name="ticket" type="hidden" th:value="${#httpServletRequest.getAttribute('req.ticket').substring(24)}"/>
+</form>
+
+</body>
+</html>

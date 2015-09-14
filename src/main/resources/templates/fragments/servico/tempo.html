@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div id="servico-tempo"
+     th:unless="${servico.tempoTotalEstimado == null or (servico.tempoTotalEstimado.ate == null and servico.tempoTotalEstimado.entre == null)}">
+
+    <h3 class="subtitulo-servico">Quanto tempo leva?</h3>
+
+    <th:block th:unless="${servico.tempoTotalEstimado.entre == null}">
+        <p>
+            Entre
+            <span th:text="${servico.tempoTotalEstimado.entre.min}"></span>
+            e
+            <span th:text="${servico.tempoTotalEstimado.entre.max}"></span>
+            <span th:text="${servico.tempoTotalEstimado.entre.unidade.nome}"></span> é o tempo estimado para a
+            reaiização deste serviço.
+        </p>
+    </th:block>
+    <th:block th:unless="${servico.tempoTotalEstimado.ate == null}">
+        <p>
+            Até
+            <span th:text="${servico.tempoTotalEstimado.ate.max}"></span>
+            <span th:text="${servico.tempoTotalEstimado.ate.unidade.nome}"></span>.
+        </p>
+    </th:block>
+
+    <br/>
+
+    <h4>Informações adicionais ao tempo estimado</h4>
+
+    <p th:utext="${@markdown.render(servico.tempoTotalEstimado.descricao)}"></p>
+</div>
+
+</body>
+</html>

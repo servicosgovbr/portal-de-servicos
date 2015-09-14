@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div id="servico-legislacao" th:unless="${servico.legislacoes.isEmpty()}">
+    <h3 class="subtitulo-servico">Legislação</h3>
+    <ul>
+        <li th:each="legislacao : ${servico.legislacoes}">
+            <span th:utext="${@markdown.render(legislacao)}">Lei XXX de NNNN, ZZZZ</span>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>

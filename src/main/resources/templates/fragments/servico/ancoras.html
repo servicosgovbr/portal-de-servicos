@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div class="ancoras">
+    <ul>
+        <li>
+            <a href="#servico-descricao">O que é?</a>
+        </li>
+
+        <li th:unless="${servico.solicitantes.isEmpty()}">
+            <a href="#servico-solicitantes">Quem pode utilizar este serviço?</a>
+        </li>
+
+        <li th:unless="${servico.etapas.isEmpty()}">
+            <a href="#servico-etapas">Etapas para a realização desde serviço</a>
+        </li>
+
+        <li th:unless="${servico.tempoTotalEstimado == null or (servico.tempoTotalEstimado.ate == null and servico.tempoTotalEstimado.entre == null)}">
+            <a href="#servico-tempo">Quanto tempo leva?</a>
+        </li>
+
+        <li th:unless="${servico.legislacoes.isEmpty()}">
+            <a href="#servico-legislacao">Legislação</a>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

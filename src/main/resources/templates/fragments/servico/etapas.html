@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div id="servico-etapas" th:unless="${servico.etapas.isEmpty()}">
+
+    <h3 class="subtitulo-servico">Etapas para a realização deste serviço</h3>
+
+    <div class="etapas" th:each="etapa, row : ${servico.etapas}">
+        <p class="circle" th:text="${row.index + 1}"></p>
+        <h4 class="etapa" th:text="${etapa.titulo ?: 'Acesse o serviço'}">Título da etapa</h4>
+
+        <div class="etapa markdown" th:utext="${@markdown.render(etapa.descricao)}">Descrição da etapa</div>
+
+        <div class="subtitulo-etapa" th:unless="${etapa.documentos.isEmpty()}">
+
+            <p class="titulo-documento"><i class="fa fa-chevron-up"></i>&nbsp; &nbsp;Documentação</p>
+            <p class="info-etapa">Documentos padrão</p>
+            <ul>
+                <li th:each="doc : ${etapa.documentos.padrao.itens}">
+                    <span th:text="${doc}">Documento necessário</span>
+                </li>
+            </ul>
+
+            <ul class="caso-descricao" th:each="caso : ${etapa.documentos.casos}">
+                <div  class="info-etapa" th:text="${caso.descricao}"></div>
+                <li th:each="doc : ${caso.itens}">
+                    <span th:text="${doc}">Documento necessário</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="subtitulo-etapa" th:unless="${etapa.custos.isEmpty()}">
+
+            <p class="titulo-documento"><i class="fa fa-chevron-up"></i>&nbsp; &nbsp;Custos</p>
+
+            <p class="info-etapa">Custos padrão</p>
+            <ul>
+                <li th:each="custo : ${etapa.custos.padrao.custos}">
+                    <span th:text="${custo.descricao}">Descrição</span>
+                    <span th:text="${custo.moeda ?: 'R$'}">R$</span>
+                    <span th:text="${custo.valor}">0,00</span>
+                </li>
+            </ul>
+
+            <ul class="caso-descricao" th:each="caso : ${etapa.custos.casos}">
+                <div  class="info-etapa" th:text="${caso.descricao}"></div>
+                <li th:each="custo : ${caso.custos}">
+                    <span th:text="${custo.descricao}">Descrição</span>
+                    <span th:text="${custo.moeda ?: 'R$'}">R$</span>
+                    <span th:text="${custo.valor}">0,00</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="subtitulo-etapa" th:unless="${etapa.canaisDePrestacao.isEmpty()}">
+
+            <p class="titulo-documento"><i class="fa fa-chevron-up"></i>&nbsp; &nbsp;Canais de prestação</p>
+            <p class="info-etapa">Canais de prestação padrão</p>
+            <ul>
+                <li th:each="canal : ${etapa.canaisDePrestacao.padrao.canaisDePrestacao}">
+                    <span th:text="${canal.tipo.value}">Web</span>:
+                    <th:block th:if="${canal.tipo.destacado}">
+                        <a th:href="${@conteudoParser.link(canal.descricao)}"
+                           th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
+                    </th:block>
+                    <th:block th:unless="${canal.tipo.destacado}">
+                        <th:block th:utext="${@markdown.render(canal.descricao)}">Texto</th:block>
+                    </th:block>
+                </li>
+            </ul>
+
+            <ul th:each="caso : ${etapa.canaisDePrestacao.casos}">
+                <div class="info-etapa" th:text="${caso.descricao}"></div>
+                <li th:each="canal : ${caso.canaisDePrestacao}">
+                    <span th:text="${canal.tipo.value}">Web</span>:
+                    <th:block th:if="${canal.tipo.destacado}">
+                        <a th:href="${@conteudoParser.link(canal.descricao)}"
+                           th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
+                    </th:block>
+                    <th:block th:unless="${canal.tipo.destacado}">
+                        <p th:utext="${@markdown.render(canal.descricao)}">Texto</p>
+                    </th:block>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

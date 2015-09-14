@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div class="row">
+    <p class="separacao-orgao">
+        Este é um serviço
+        <th:block th:text="${@genero.de(servico.orgao.id)}">do(a)</th:block>
+        <a th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
+           th:text="${servico.orgao.nome}">
+            Órgão responsavel
+        </a>.
+        Em caso de dúvidas, reclamações ou sugestões favor
+        contactá-<th:block th:text="${@genero.lo(servico.orgao.id)}">lo(a)</th:block>.
+    </p>
+
+    <hr style="margin-top: 20px; border: none"/>
+</div>
+
+</body>
+</html>
+
+
