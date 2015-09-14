@@ -109,12 +109,7 @@
       font-family: $openSansBold;
       font-size: 13px;
       border-bottom: 1px solid $cinza-medio;
-      padding: 9px 20px 0 12px;
-
-      .fa {
-        padding: -2px 0 2px 2px;
-        color: $azul-claro;
-      }
+      padding: 11px 20px 0 20px;
     }
 
     .info-etapa {
@@ -535,7 +530,7 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
 
 .etapas { 
   margin-top: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
     .etapa {
       padding-left: 40px;
