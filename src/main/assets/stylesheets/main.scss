@@ -136,6 +136,10 @@
         color: $cinza-escuro;
         list-style-position: inside;
         padding: 0 20px 0 20px;
+
+        p {
+          display: inline;
+        }
       }
     }
   }
