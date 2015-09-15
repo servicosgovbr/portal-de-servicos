@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -37,7 +38,7 @@ class AreaDeInteresseController {
         model.put("resultados", servicos.findByAreaDeInteresse(areaDeInteresse)
                 .stream()
                 .map(Conteudo::fromServico)
-                .sorted((x, y) -> x.getId().compareTo(y.getId()))
+                .sorted(comparing(Conteudo::getId))
                 .collect(toList()));
 
         return new ModelAndView("area-de-interesse", model);

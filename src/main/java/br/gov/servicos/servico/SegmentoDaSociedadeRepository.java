@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -25,7 +26,7 @@ class SegmentoDaSociedadeRepository {
     public List<SegmentoDaSociedade> findAll() {
         return buscador.servicosPor("segmentosDaSociedade")
                 .map(SegmentoDaSociedade::valueOf)
-                .sorted((l, r) -> l.getId().compareTo(r.getId()))
+                .sorted(comparing(SegmentoDaSociedade::getId))
                 .collect(toList());
     }
 

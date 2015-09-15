@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -46,7 +47,7 @@ public class OrgaoController {
         model.put("resultados", servicos.findByOrgao(new Orgao().withId(id))
                 .stream()
                 .map(Conteudo::fromServico)
-                .sorted((left, right) -> left.getId().compareTo(right.getId()))
+                .sorted(comparing(Conteudo::getId))
                 .collect(toList()));
 
         return new ModelAndView("orgao", model);

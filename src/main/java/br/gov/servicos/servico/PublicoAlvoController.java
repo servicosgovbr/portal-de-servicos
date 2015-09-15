@@ -16,6 +16,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.*;
 
+import static java.util.Comparator.comparing;
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
@@ -50,7 +51,7 @@ class PublicoAlvoController {
 
         List<Conteudo> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
                 .stream()
-                .sorted((x, y) -> x.getNome().compareTo(y.getNome()))
+                .sorted(comparing(Servico::getNome))
                 .map(Conteudo::fromServico)
                 .collect(toList());
 

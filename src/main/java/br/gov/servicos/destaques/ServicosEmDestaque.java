@@ -19,6 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Stream.concat;
 import static java.util.stream.Stream.empty;
@@ -84,7 +85,7 @@ public class ServicosEmDestaque {
         log.debug("Piwik: listando serviços mais acessados...");
 
         Stream<Servico> servicos = piwikClient.getPageUrls("week", "yesterday").stream()
-                .sorted((a, b) -> b.getUniqueVisitors().compareTo(a.getUniqueVisitors()))
+                .sorted(comparing(PiwikPage::getUniqueVisitors))
                 .map(PiwikPage::getIdServico)
                 .filter(Optional::isPresent)
                 .map(Optional::get)

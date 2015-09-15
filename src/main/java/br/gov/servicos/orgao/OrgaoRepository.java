@@ -16,6 +16,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 import static java.lang.Integer.MAX_VALUE;
+import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toCollection;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -41,7 +42,7 @@ public class OrgaoRepository {
         return servicos.findAll(new PageRequest(0, MAX_VALUE)).getContent()
                 .stream()
                 .map(Servico::getOrgao)
-                .collect(toCollection(() -> new TreeSet<>((a, b) -> a.getNome().compareTo(b.getNome()))));
+                .collect(toCollection(() -> new TreeSet<>(comparing(Orgao::getNome))));
     }
 
     public Optional<Orgao> findByUrl(String urlOrgao) {
