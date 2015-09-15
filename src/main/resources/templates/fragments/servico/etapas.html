@@ -38,7 +38,7 @@
             <p class="info-etapa">Custos padrão</p>
             <ul>
                 <li th:each="custo : ${etapa.custos.padrao.custos}">
-                    <span th:text="${custo.descricao}">Descrição</span>
+                    <span th:text="${custo.descricao}">Descrição</span>:
                     <span th:text="${custo.moeda ?: 'R$'}">R$</span>
                     <span th:text="${custo.valor}">0,00</span>
                 </li>
@@ -47,7 +47,7 @@
             <ul class="caso-descricao" th:each="caso : ${etapa.custos.casos}">
                 <div  class="info-etapa" th:text="${caso.descricao}"></div>
                 <li th:each="custo : ${caso.custos}">
-                    <span th:text="${custo.descricao}">Descrição</span>
+                    <span th:text="${custo.descricao}">Descrição</span>:
                     <span th:text="${custo.moeda ?: 'R$'}">R$</span>
                     <span th:text="${custo.valor}">0,00</span>
                 </li>
