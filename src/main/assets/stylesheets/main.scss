@@ -92,6 +92,12 @@
     line-height: 1.2em;
   }
 
+  h4.nomes-populares {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-family: $openSansSemiBold;
+  }
+
   .subtitulo-etapa {
     margin: 15px 10px 15px 40px;
     background-color: $branco;
@@ -522,9 +528,7 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
   }
 }
 
-.nomes-populares {
-  margin-bottom: 20px; 
-}
+
 
 .info-etapa {
   font-family: open_sansbold;
