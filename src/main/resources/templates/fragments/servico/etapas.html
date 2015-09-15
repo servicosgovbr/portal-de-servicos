@@ -63,7 +63,7 @@
                     <span th:text="${canal.tipo.value}">Web</span>:
                     <th:block th:if="${canal.tipo.destacado}">
                         <a th:href="${@conteudoParser.link(canal.descricao)}"
-                           th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
+                           th:text="${canal.tipo.descricaoLink}">Link</a>
                     </th:block>
                     <th:block th:unless="${canal.tipo.destacado}">
                         <th:block th:utext="${@markdown.render(canal.descricao)}">Texto</th:block>
@@ -77,7 +77,7 @@
                     <span th:text="${canal.tipo.value}">Web</span>:
                     <th:block th:if="${canal.tipo.destacado}">
                         <a th:href="${@conteudoParser.link(canal.descricao)}"
-                           th:text="${@conteudoParser.link(canal.descricao)}">Link</a>
+                           th:text="${canal.tipo.descricaoLink}">Link</a>
                     </th:block>
                     <th:block th:unless="${canal.tipo.destacado}">
                         <p th:utext="${@markdown.render(canal.descricao)}">Texto</p>
