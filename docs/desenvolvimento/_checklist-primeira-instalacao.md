@@ -42,7 +42,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 - Verifique que o [Docker] consegue baixar e instanciar contêineres:
 
 ```bash
-docker run alpine 'echo "olá"'
+docker run alpine echo "olá"
 ```
 
 O comando acima deve produzir saída similar à seguinte:
@@ -120,15 +120,23 @@ Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
 ```
 
-- Rode os contêineres:
+- Construa e rode os contêineres:
 
 ```bash
+cd docker
+./build-all # caso prefira baixar as imagens do docker hub, omita este passo
 docker-compose up -d
 ```
 
 O comando acima deve produzir saída similar à seguinte:
 
 ```
+Pulling cadvisor (google/cadvisor:latest)...
+latest: Pulling from google/cadvisor
+511136ea3c5a: Pull complete
+46e263e5de56: Pull complete
+cf677a5f718c: Pull complete
+...
 Creating cadvisor...
 Creating editor2...
 Creating editor1...
