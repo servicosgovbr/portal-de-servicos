@@ -150,6 +150,14 @@ Creating portal1...
 Creating balanceador...
 ```
 
+Caso a seguinte mensagem seja exibida:
+
+```
+Cannot start container faf8df3b73d4ddbfad550942020413e98ae8dd3bf84dc19b2b880273e261e5f2: Cannot link to a non running container: /logspout AS /balanceador/logspou
+```
+
+Ocorreu um problema na inicialização do Logspout (que precisa do Logstash rodando para concluir com sucesso), devido à ordem com que os serviços iniciam no Docker-Compose. Este problema pode ser resolvido aguardando por volta de 1 minuto (ou tempo suficiente para o Logstash inicializar completamente) e rodando `docker-compose up -d` novamente.
+
 {% include '../desenvolvimento/_checklist-verificacoes.md' %}
 
 A instalação está concluída.
