@@ -16,7 +16,7 @@
         <div class="subtitulo-etapa" th:unless="${etapa.documentos.isEmpty()}">
 
             <p class="titulo-documento">Documentação</p>
-            <p class="info-etapa">Documentos padrão</p>
+            <p class="info-etapa">Documentação necessária</p>
             <ul>
                 <li th:each="doc : ${etapa.documentos.padrao.itens}">
                     <span th:text="${doc}">Documento necessário</span>
