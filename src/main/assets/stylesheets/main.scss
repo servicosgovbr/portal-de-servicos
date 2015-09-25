@@ -92,10 +92,13 @@
     line-height: 1.2em;
   }
 
-  h4.nomes-populares {
-    margin-bottom: 15px;
-    font-size: 14px;
-    font-family: $openSansSemiBold;
+  .info-extra {
+    font-family: $openSansRegular;
+    // margin-top: 10px;
+    // border: 1px solid $cinza-medio;
+    // border-radius: 4px;
+    // padding: 15px 20px 15px 15px;
+    display: inline-block;
   }
 
   .subtitulo-etapa {
@@ -446,9 +449,9 @@ span.ticket-erro {
     list-style-position: inside;
     list-style-type: disc;
     line-height: 100%;
-    margin-top: 10px;
     margin-bottom: 10px;
     font-size: $baseFontSize * 0.9375;
+    line-height: 1.4em;
 
     a {
       color: $azul-claro;

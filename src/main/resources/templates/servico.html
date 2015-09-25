@@ -41,14 +41,6 @@
         </h2>
     </div>
 
-    <div class="row" th:unless="${servico.nomesPopulares == null or servico.nomesPopulares.isEmpty()}">
-        <h4 class="nomes-populares">
-            Este serviço também é conhecido como:
-            <th:block th:text="${#strings.listJoin(servico.nomesPopulares, ', ')}"/>
-        </h4>
-    </div>
-
-
     <div class="row" th:include="fragments/servico/ancoras"></div>
     <div class="row" th:include="fragments/servico/descricao"></div>
     <div class="row" th:include="fragments/servico/solicitantes"></div>

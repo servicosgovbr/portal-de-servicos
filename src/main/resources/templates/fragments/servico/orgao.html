@@ -3,6 +3,23 @@
       xmlns:th="http://www.thymeleaf.org">
 <body>
 
+
+
+    <h3 class="subtitulo-servico">Outras informações</h3>
+    <div class="info-extra">
+        <div class="row" th:unless="${servico.nomesPopulares == null or servico.nomesPopulares.isEmpty()}">
+            <p>
+                Você também pode conhecer este serviço como:
+                <th:block th:text="${#strings.listJoin(servico.nomesPopulares, ', ')}"/>.
+            </p>
+        </div>
+        <div>
+            <p>
+                Todas as etapas deste serviço são gratuitas para o cidadão.
+            </p>
+        </div>
+    </div>
+
 <div class="row">
     <p class="separacao-orgao">
         Este é um serviço
