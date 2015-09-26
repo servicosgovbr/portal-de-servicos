@@ -1,1 +1,1 @@
-<pre><code>{% include "../../LICENSE" %}</code></pre>
+<pre><code>{% include "./LICENSE" %}</code></pre>
