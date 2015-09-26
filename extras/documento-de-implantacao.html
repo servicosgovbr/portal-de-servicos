@@ -8,7 +8,7 @@
         <title>Documento de Implantação | Portal de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.3.3">
+        <meta name="generator" content="GitBook 2.4.2">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -19,6 +19,10 @@
         <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
     
     
 
@@ -34,22 +38,23 @@
     <body>
         
         
-    <div class="book" data-level="11.1" data-basepath=".." data-revision="Tue Sep 15 2015 19:15:20 GMT+0000 (UTC)">
+    <div class="book" data-level="11.1" data-basepath=".." data-revision="Sat Sep 26 2015 04:31:06 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
-    <div class="book-search">
+    <div class="book-search" role="search">
         <input type="text" placeholder="Escreva para pesquisar" class="form-control" />
     </div>
-    <ul class="summary">
-        
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
 
-        
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -1347,20 +1352,21 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Publicado com GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Publicado com GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Tabela de conteúdos"><i class="fa fa-align-justify"></i></a>
     <a href="#" class="btn pull-left toggle-search" aria-label="Pesquise"><i class="fa fa-search"></i></a>
@@ -1444,7 +1450,7 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
@@ -1666,7 +1672,7 @@
 </code></pre><ul>
 <li>Verifique que o <a href="http://www.docker.com" target="_blank">Docker</a> consegue baixar e instanciar cont&#xEA;ineres:</li>
 </ul>
-<pre><code class="lang-bash">docker run alpine <span class="hljs-string">&apos;echo &quot;ol&#xE1;&quot;&apos;</span>
+<pre><code class="lang-bash">docker run alpine <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;ol&#xE1;&quot;</span>
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code>Unable to find image &apos;alpine:latest&apos; locally
@@ -1723,12 +1729,20 @@ remote: Total 152 (delta 34), reused 0 (delta 0), pack-reused 85
 Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
 </code></pre><ul>
-<li>Rode os cont&#xEA;ineres:</li>
+<li>Construa e rode os cont&#xEA;ineres:</li>
 </ul>
-<pre><code class="lang-bash">docker-compose up <span class="hljs-operator">-d</span>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> docker
+./build-all <span class="hljs-comment"># caso prefira baixar as imagens do docker hub, omita este passo</span>
+docker-compose up <span class="hljs-operator">-d</span>
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>Creating cadvisor...
+<pre><code>Pulling cadvisor (google/cadvisor:latest)...
+latest: Pulling from google/cadvisor
+511136ea3c5a: Pull complete
+46e263e5de56: Pull complete
+cf677a5f718c: Pull complete
+...
+Creating cadvisor...
 Creating editor2...
 Creating editor1...
 Creating es2...
@@ -1739,7 +1753,10 @@ Creating portal2...
 Creating kibana...
 Creating portal1...
 Creating balanceador...
-</code></pre><ul>
+</code></pre><p>Caso a seguinte mensagem seja exibida:</p>
+<pre><code>Cannot start container faf8df3b73d4ddbfad550942020413e98ae8dd3bf84dc19b2b880273e261e5f2: Cannot link to a non running container: /logspout AS /balanceador/logspou
+</code></pre><p>Ocorreu um problema na inicializa&#xE7;&#xE3;o do Logspout (que precisa do Logstash rodando para concluir com sucesso), devido &#xE0; ordem com que os servi&#xE7;os iniciam no Docker-Compose. Este problema pode ser resolvido aguardando por volta de 1 minuto (ou tempo suficiente para o Logstash inicializar completamente) e rodando <code>docker-compose up -d</code> novamente.</p>
+<ul>
 <li>Verifique que os cont&#xEA;ineres est&#xE3;o executando corretamente:</li>
 </ul>
 <pre><code class="lang-bash">docker-compose ps

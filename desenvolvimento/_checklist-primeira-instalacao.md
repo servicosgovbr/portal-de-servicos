@@ -42,7 +42,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 - Verifique que o [Docker] consegue baixar e instanciar contêineres:
 
 ```bash
-docker run alpine 'echo "olá"'
+docker run alpine echo "olá"
 ```
 
 O comando acima deve produzir saída similar à seguinte:
@@ -120,15 +120,23 @@ Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
 ```
 
-- Rode os contêineres:
+- Construa e rode os contêineres:
 
 ```bash
+cd docker
+./build-all # caso prefira baixar as imagens do docker hub, omita este passo
 docker-compose up -d
 ```
 
 O comando acima deve produzir saída similar à seguinte:
 
 ```
+Pulling cadvisor (google/cadvisor:latest)...
+latest: Pulling from google/cadvisor
+511136ea3c5a: Pull complete
+46e263e5de56: Pull complete
+cf677a5f718c: Pull complete
+...
 Creating cadvisor...
 Creating editor2...
 Creating editor1...
@@ -141,6 +149,14 @@ Creating kibana...
 Creating portal1...
 Creating balanceador...
 ```
+
+Caso a seguinte mensagem seja exibida:
+
+```
+Cannot start container faf8df3b73d4ddbfad550942020413e98ae8dd3bf84dc19b2b880273e261e5f2: Cannot link to a non running container: /logspout AS /balanceador/logspou
+```
+
+Ocorreu um problema na inicialização do Logspout (que precisa do Logstash rodando para concluir com sucesso), devido à ordem com que os serviços iniciam no Docker-Compose. Este problema pode ser resolvido aguardando por volta de 1 minuto (ou tempo suficiente para o Logstash inicializar completamente) e rodando `docker-compose up -d` novamente.
 
 {% include '../desenvolvimento/_checklist-verificacoes.md' %}
 
