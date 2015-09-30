@@ -26,8 +26,6 @@ public class LoggingFilter extends OncePerRequestFilter {
             chain.doFilter(request, response);
 
         } finally {
-            HttpStatus status = HttpStatus.valueOf(response.getStatus());
-
             Map<String, Object> data = new HashMap<>();
             data.put("req.remoteAddress", request.getRemoteAddr());
             data.put("req.remotePort", request.getRemotePort());
@@ -43,7 +41,7 @@ public class LoggingFilter extends OncePerRequestFilter {
                 data.put("req.queryString", request.getQueryString());
                 request.getParameterMap().forEach((k,v) -> data.put("req.params." + k, v));
             }
-            data.put("res.statusCode", status.value());
+            data.put("res.statusCode", HttpStatus.valueOf(response.getStatus()).value());
             data.put("res.responseTime", System.currentTimeMillis() - start);
 
             log.info(appendEntries(data), "{} {} {} - {}ms",
