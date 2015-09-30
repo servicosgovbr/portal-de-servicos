@@ -1,4 +1,4 @@
-# Estatura de diretórios
+# Estrutura de diretórios
 
 A seguinte estrutura de diretórios para organizar o repositório de catas de serviço é utilizada:
 
