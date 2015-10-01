@@ -26,7 +26,7 @@ mail:
   password:
 
 flags:
-  importar.automaticamente: false
+  importar.automaticamente: true
   permitir.robos: false
   destaques.automaticos: false
 
