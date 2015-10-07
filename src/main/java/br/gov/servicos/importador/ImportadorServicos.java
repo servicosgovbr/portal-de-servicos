@@ -45,7 +45,7 @@ public class ImportadorServicos {
         indices.recriar();
 
         return indice.save(
-                Stream.of(repo.get("cartas-servico/v3/servicos").getFile()
+                Stream.of(repo.get("conteudo/servicos").getFile()
                         .listFiles((d, n) -> n.endsWith(".xml")))
                         .parallel()
                         .map(f -> unmarshal(f, Servico.class))

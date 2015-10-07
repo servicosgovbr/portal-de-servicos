@@ -6,6 +6,6 @@ Todas elas seguem o seguinte modelo de entidades e relacionamentos:
 
 [![Diagrama de entidade relacionamento](images/mer/servico.png)](images/mer/servico.png)
 
-[CARTAS]: https://github.com/servicosgovbr/cartas-de-servico/tree/master/cartas-servico/v3
+[CARTAS]: https://github.com/servicosgovbr/cartas-de-servico/tree/master/conteudo/servicos
 [REPO]: https://github.com/servicosgovbr/cartas-de-servico
 [DOCS]: http://servicosgovbr.github.io/
