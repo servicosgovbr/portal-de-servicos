@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="5.3" data-basepath=".." data-revision="Thu Oct 01 2015 20:22:01 GMT+0000 (UTC)">
+    <div class="book" data-level="5.3" data-basepath=".." data-revision="Thu Oct 08 2015 01:46:20 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
@@ -1461,20 +1461,16 @@
                         <h1 id="estrutura-de-diret%C3%B3rios">Estrutura de diret&#xF3;rios</h1>
 <p>A seguinte estrutura de diret&#xF3;rios para organizar o reposit&#xF3;rio de catas de servi&#xE7;o &#xE9; utilizada:</p>
 <h2 id="vis%C3%A3o-geral">Vis&#xE3;o geral</h2>
-<pre><code>cartas-servico
-&#x2514;&#x2500;&#x2500; vN
-    &#x251C;&#x2500;&#x2500; servico.xsd
-    &#x2514;&#x2500;&#x2500; servicos
-        &#x251C;&#x2500;&#x2500; segunda-via-cpf.xml
-        &#x251C;&#x2500;&#x2500; emissao-de-passaporte.xml
-        &#x2514;&#x2500;&#x2500; ...
-</code></pre><h3 id="cartas-servico-vn-servico-xsd">cartas-servico/vN/servico.xsd</h3>
-<p>Onde &quot;N&quot; &#xE9; o n&#xFA;mero da vers&#xE3;o, as defini&#xE7;&#xF5;es em formato XML Schema (XSD) dos dados presentes nos servi&#xE7;os que est&#xE3;o
-naquela vers&#xE3;o. </p>
-<h3 id="cartas-servico-vn-servicos-xml">cartas-servico/vN/servicos/*.xml</h3>
-<p>Reposit&#xF3;rio de servi&#xE7;os, no formato XML, contendo todos os servi&#xE7;os daquela uma vers&#xE3;o do formato.</p>
-<h2 id="vers%C3%A3o-atual">Vers&#xE3;o atual</h2>
-<p>A vers&#xE3;o atual do modelo das cartas de servi&#xE7;os &#xE9; a 3, e pode ser visualizada no <a href="https://github.com/servicosgovbr/cartas-de-servico/tree/master/cartas-servico/v3" target="_blank">reposit&#xF3;rio oficial do projeto</a>.</p>
+<pre><code>conteudo
+&#x251C;&#x2500;&#x2500; servico.xsd
+&#x2514;&#x2500;&#x2500; servicos
+    &#x251C;&#x2500;&#x2500; segunda-via-cpf.xml
+    &#x251C;&#x2500;&#x2500; emissao-de-passaporte.xml
+    &#x2514;&#x2500;&#x2500; ...
+</code></pre><h3 id="conteudo-servico-xsd">conteudo/servico.xsd</h3>
+<p>S&#xE3;o as defini&#xE7;&#xF5;es em formato XML Schema (XSD) dos dados presentes nos servi&#xE7;os.</p>
+<h3 id="conteudo-servicos-xml">conteudo/servicos/*.xml</h3>
+<p>Reposit&#xF3;rio de servi&#xE7;os, no formato XML, contendo todos os servi&#xE7;os.</p>
 
                     
                     </section>
