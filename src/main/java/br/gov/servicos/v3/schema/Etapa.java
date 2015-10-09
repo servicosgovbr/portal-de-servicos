@@ -41,6 +41,6 @@ public class Etapa {
     Custos custos;
 
     @XmlElement(name = "canais-de-prestacao")
-    CanaisDePrestacao canaisDePrestacao;
+    CanaisDePrestacao canaisDePrestacao = new CanaisDePrestacao();
 
 }
