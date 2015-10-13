@@ -16,6 +16,7 @@ public class Genero {
             "receita",
             "receital",
             "secretaria"
+            "administracao"
     );
 
     public String o(String id) {
