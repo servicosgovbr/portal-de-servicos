@@ -38,7 +38,7 @@ pds:
     token: ""
     site: 52
   cartas:
-    repositorio: "https://github.com/servicosgovbr/cartas-de-teste.git"
+    repositorio: "https://github.com/servicosgovbr/cartas-de-servico.git"
   destaques:
     servicos:
       - prouni-programa-universidade-para-todos
