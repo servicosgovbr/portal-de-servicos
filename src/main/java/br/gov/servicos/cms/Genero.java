@@ -15,7 +15,7 @@ public class Genero {
             "fundacao",
             "receita",
             "receital",
-            "secretaria"
+            "secretaria",
             "administracao"
     );
 
