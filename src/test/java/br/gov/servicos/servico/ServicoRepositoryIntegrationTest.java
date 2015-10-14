@@ -1,7 +1,7 @@
 package br.gov.servicos.servico;
 
 import br.gov.servicos.Main;
-import br.gov.servicos.config.PortalDeServicosIndex;
+import br.gov.servicos.setup.SetupTestesIntegracao;
 import br.gov.servicos.v3.schema.Orgao;
 import br.gov.servicos.v3.schema.Servico;
 import org.junit.Before;
@@ -32,11 +32,11 @@ public class ServicoRepositoryIntegrationTest {
     ServicoRepository servicos;
 
     @Autowired
-    PortalDeServicosIndex esConfig;
+    SetupTestesIntegracao setupTestesIntegracao;
 
     @Before
     public void setup() throws IOException {
-        esConfig.recriar();
+        setupTestesIntegracao.setupBaseLimpa();
     }
 
     @Test

@@ -1,13 +1,14 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.Main;
-import br.gov.servicos.importador.Importador;
+import br.gov.servicos.setup.SetupTestesIntegracao;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,11 +25,14 @@ import static org.junit.Assert.assertThat;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
 @WebAppConfiguration
-@IntegrationTest("server.port:0")
+@IntegrationTest({
+        "server.port:0",
+        "flags.importar.automaticamente=false"
+})
 public class BuscaUITest {
 
     @Autowired
-    Importador importador;
+    SetupTestesIntegracao setupTestesIntegracao;
 
     WebDriver driver;
 
@@ -39,11 +43,11 @@ public class BuscaUITest {
 
     @Before
     public void setUp() throws Exception {
-        importador.importar();
+        setupTestesIntegracao.setupComDados();
 
         baseUrl = "http://localhost:" + port + "/";
 
-        driver = new HtmlUnitDriver(false);
+        driver = new HtmlUnitDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
@@ -74,10 +78,10 @@ public class BuscaUITest {
         assertThat(driver.getTitle(), is("Portal de Serviços - Busca por prouni"));
 
         assertThat(driver.findElements(By.cssSelector("#resultados-busca li")).size(), is(10));
-        assertThat(driver.findElements(By.cssSelector("#resultados-busca li h3")).get(0).getText(), is("Unidade de Pronto Atendimento (UPA 24h) "));
+        assertThat(driver.findElements(By.cssSelector("#resultados-busca li h3")).get(0).getText(), is("Unidade de Pronto Atendimento (UPA 24h)"));
         driver.findElement(By.cssSelector("#resultados-busca li a")).click();
 
-        assertThat(driver.getTitle(), is("Portal de Serviços - Unidade de Pronto Atendimento (UPA 24h)  "));
+        assertThat(driver.getTitle(), is("Portal de Serviços - Unidade de Pronto Atendimento (UPA 24h)"));
     }
 
 }

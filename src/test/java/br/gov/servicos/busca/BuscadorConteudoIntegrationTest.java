@@ -3,8 +3,8 @@ package br.gov.servicos.busca;
 import br.gov.servicos.Main;
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoRepository;
-import br.gov.servicos.config.PortalDeServicosIndex;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.setup.SetupTestesIntegracao;
 import br.gov.servicos.v3.schema.Servico;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,7 +33,7 @@ import static org.junit.Assert.assertThat;
 public class BuscadorConteudoIntegrationTest {
 
     @Autowired
-    PortalDeServicosIndex portalDeServicosIndex;
+    SetupTestesIntegracao setupTestesIntegracao;
 
     @Autowired
     ServicoRepository servicos;
@@ -46,7 +46,7 @@ public class BuscadorConteudoIntegrationTest {
 
     @Before
     public void setUp() throws Exception {
-        portalDeServicosIndex.recriar();
+        setupTestesIntegracao.setupBaseLimpa();
     }
 
     @Test

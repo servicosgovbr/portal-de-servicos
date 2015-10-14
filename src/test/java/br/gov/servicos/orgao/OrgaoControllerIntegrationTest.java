@@ -1,7 +1,7 @@
 package br.gov.servicos.orgao;
 
 import br.gov.servicos.Main;
-import br.gov.servicos.config.PortalDeServicosIndex;
+import br.gov.servicos.setup.SetupTestesIntegracao;
 import br.gov.servicos.v3.schema.Orgao;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,11 +25,11 @@ public class OrgaoControllerIntegrationTest {
     OrgaoController orgaoController;
 
     @Autowired
-    PortalDeServicosIndex index;
+    SetupTestesIntegracao setupTestesIntegracao;
 
     @Before
     public void setup() throws IOException {
-        index.recriar();
+        setupTestesIntegracao.setupComDados();
     }
 
     @Test

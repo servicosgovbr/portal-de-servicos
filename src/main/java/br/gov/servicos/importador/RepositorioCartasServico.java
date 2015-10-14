@@ -42,6 +42,7 @@ public class RepositorioCartasServico {
     public void prepararRepositorio() {
         if (caminhoLocal == null) {
             caminhoLocal = clonarRepositorio(criarDiretorioTemporario());
+            caminhoLocal.deleteOnExit();
         } else {
             atualizarRepositorio();
         }
