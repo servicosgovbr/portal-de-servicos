@@ -147,6 +147,17 @@
     }
   }
 
+
+  h3.titulo-destaque  {
+    font-size: $baseFontSize * 1;
+    color: $cinza-escuro;
+    text-transform: uppercase;
+    font-family: 'open_sansbold', $helvetica;
+    line-height: $baseLineHeight;
+    text-transform: none;
+    margin-top: 0;
+  }
+
   h4 {
     font-size: 16px;
     font-family: $openSansBold;

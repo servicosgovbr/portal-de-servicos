@@ -4,12 +4,11 @@
 <body>
 
 <div class="tile tile-default destaque">
-	 <h3>Serviço</h3>
-    <h4 class="titulo-destaque">
+    <h3 class="titulo-destaque">
         <a th:href="@{/servico/{id}?pk_campaign=destaque(id=${servico.id})}" th:text="${servico.nome}">
            Título do serviço
         </a>
-    </h4>
+    </h3>
 
     <p th:text="${#strings.abbreviate(@conteudoParser.textoPuro(servico.descricao), 140)}">
         Descrição do serviço
@@ -18,6 +17,7 @@
     <div class="area-de-interesse" th:each="area : ${servico.areasDeInteresse}">
         <a th:href="@{/area-de-interesse/{id}?pk_campaign=destaque(id=${area.id})}">
             <i class="icone" th:classappend="true ? ${area.id}"></i>
+            <span class="hidden">Filtrar pela categoria </span>
             <span th:text="${area.value}"></span>
         </a>
     </div>
