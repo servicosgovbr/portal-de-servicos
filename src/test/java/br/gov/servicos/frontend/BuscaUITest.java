@@ -63,7 +63,7 @@ public class BuscaUITest {
         assertThat(driver.getTitle(), is("Portal de Serviços - Busca por darf"));
 
         assertThat(driver.findElements(By.cssSelector("#resultados-busca li")).size(), is(20));
-        assertThat(driver.findElements(By.cssSelector("#resultados-busca li h3")).get(0).getText(), is("Documento de Arrecadação de Receitas Federais (Darf)"));
+        assertThat(driver.findElements(By.cssSelector("#resultados-busca li h3")).get(0).getText(), is("Departamento de Polícia Rodoviária Federal (DPRF)"));
 
         assertThat(driver.findElement(By.id("buscar")).getAttribute("value"), is("darf"));
 
@@ -73,11 +73,11 @@ public class BuscaUITest {
 
         assertThat(driver.getTitle(), is("Portal de Serviços - Busca por prouni"));
 
-        assertThat(driver.findElements(By.cssSelector("#resultados-busca li")).size(), is(20));
-        assertThat(driver.findElements(By.cssSelector("#resultados-busca li h3")).get(0).getText(), is("ProUni — Programa Universidade para Todos"));
+        assertThat(driver.findElements(By.cssSelector("#resultados-busca li")).size(), is(10));
+        assertThat(driver.findElements(By.cssSelector("#resultados-busca li h3")).get(0).getText(), is("Unidade de Pronto Atendimento (UPA 24h) "));
         driver.findElement(By.cssSelector("#resultados-busca li a")).click();
 
-        assertThat(driver.getTitle(), is("Portal de Serviços - ProUni — Programa Universidade para Todos"));
+        assertThat(driver.getTitle(), is("Portal de Serviços - Unidade de Pronto Atendimento (UPA 24h)  "));
     }
 
 }
