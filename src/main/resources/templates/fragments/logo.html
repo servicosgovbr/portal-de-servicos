@@ -5,7 +5,7 @@
 
 <div id="logo">
     <img class="qr-code print-only" width="200" height="200"
-         th:src="@{https://chart.googleapis.com/chart?cht=qr&amp;chs=200x200&amp;choe=UTF-8&amp;chl={link}(link=${#httpServletRequest.requestURL + '?pk_campaign=qr'})}"/>
+         th:src="@{https://chart.googleapis.com/chart?cht=qr&amp;chs=200x200&amp;choe=UTF-8&amp;chl={link}(link=${#httpServletRequest.requestURL + '?pk_campaign=qr'})}" alt="qr-code para impressão da página"/>
 
     <a id="portal-logo" href="/?pk_campaign=logo">
         <h1 id="portal-title">Portal de Serviços</h1>
