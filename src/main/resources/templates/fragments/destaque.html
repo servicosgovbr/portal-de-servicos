@@ -15,7 +15,7 @@
     </p>
 
     <div class="area-de-interesse" th:each="area : ${servico.areasDeInteresse}">
-        <a th:href="@{/area-de-interesse/{id}?pk_campaign=destaque(id=${area.id})}">
+        <a th:if="${area != null}" th:href="@{/area-de-interesse/{id}?pk_campaign=destaque(id=${area.id})}">
             <i class="icone" th:classappend="true ? ${area.id}"></i>
             <span class="hidden">Filtrar pela categoria </span>
             <span th:text="${area.value}"></span>
