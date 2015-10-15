@@ -27,7 +27,9 @@
 
     <br/>
 
+<div th:unless="${servico.tempoTotalEstimado.descricao == null or servico.tempoTotalEstimado.descricao.isEmpty()}">
     <h4>Informações adicionais ao tempo estimado</h4>
+</div>
 
     <p th:utext="${@markdown.render(servico.tempoTotalEstimado.descricao)}"></p>
 </div>
