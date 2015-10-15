@@ -13,7 +13,7 @@
             <th:block th:text="${#strings.listJoin(servico.nomesPopulares, ', ')}"/>.
         </p>
     </div>
-    <div>
+    <div th:unless="${servico.gratuito == 'false'}">
         <p>
             Este serviço é gratuito para o cidadão.
         </p>
