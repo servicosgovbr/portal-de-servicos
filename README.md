@@ -10,7 +10,7 @@ Portal de Serviços
 Este é o repositório oficial do Portal de Serviços. Uma versão [alpha](http://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha), constantemente atualizada, está disponível em uma [máquina virtual na DigitalOcean](http://104.236.231.239/).
 
 Documentação
-----
+-----
 
 Para saber mais sobre o projeto, [consulte a documentação](http://servicosgovbr.github.io/portal-de-servicos/) e,
 para saber como colaborar e contribuir com o projeto, confira as [tarefas a fazer][ISSUES] ou o
