@@ -30,7 +30,7 @@ echo "Compilando e gerando RPM..."
 ./gradlew assemble buildRpm
 
 echo "Verificando assinatura no RPM..."
-rpm --checksig $(find build/rpmbuild/RPMS/noarch/portal-de-servicos*.rpm -type f)
+rpm --checksig "$(find build/rpmbuild/RPMS/noarch/portal-de-servicos*.rpm -type f)"
 
 rm -rf "${SNAP_CACHE_DIR}/rpm-s3"
 if [ ! -d "${SNAP_CACHE_DIR}/rpm-s3" ]; then
@@ -42,10 +42,10 @@ fi
 
 echo "Sincronizando pacotes com a S3..."
 # Precisamos usar o Python 2.7 embutido no CentOS
-PATH=/bin:/usr/bin ${SNAP_CACHE_DIR}/rpm-s3/bin/rpm-s3 \
+PATH=/bin:/usr/bin "${SNAP_CACHE_DIR}/rpm-s3/bin/rpm-s3" \
     -r 'sa-east-1' \
     -b 'servicosgovbr' \
     -p "centos/7" \
     --sign \
     --keep 30 \
-    $(find build/rpmbuild/RPMS/noarch/portal-de-servicos*.rpm -type f)
+    "$(find build/rpmbuild/RPMS/noarch/portal-de-servicos*.rpm -type f)"
