@@ -37,13 +37,15 @@ if [ ! -d "${SNAP_CACHE_DIR}/rpm-s3" ]; then
   echo "Instalando rpm-s3..."
   pushd "${SNAP_CACHE_DIR}"
     git clone https://github.com/crohr/rpm-s3 --recurse-submodules
+    pushd rpm-s3
+      git checkout d0c7c19286314b20a399a1bdbaf2354f5bb9d130
+    popd
   popd
 fi
 
 echo "Sincronizando pacotes com a S3..."
 # Precisamos usar o Python 2.7 embutido no CentOS
 PATH=/bin:/usr/bin "${SNAP_CACHE_DIR}/rpm-s3/bin/rpm-s3" \
-    -r 'sa-east-1' \
     -b 'servicosgovbr' \
     -p "centos/7" \
     --sign \
