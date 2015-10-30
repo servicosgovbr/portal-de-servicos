@@ -8,7 +8,7 @@
         <title>Segurança | Portal de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.4.3">
+        <meta name="generator" content="GitBook 2.5.1">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -22,6 +22,14 @@
     
         
         <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
         
     
     
@@ -40,13 +48,10 @@
     <body>
         
         
-    <div class="book" data-level="10.10.12" data-basepath=".." data-revision="Mon Oct 19 2015 18:35:38 GMT+0000 (UTC)">
+    <div class="book" data-level="10.10.12" data-chapter-title="Segurança" data-filepath="desenvolvimento/seguranca.md" data-basepath=".." data-revision="Fri Oct 30 2015 21:32:21 GMT+0000 (UTC)">
     
 
 <div class="book-summary">
-    <div class="book-search" role="search">
-        <input type="text" placeholder="Escreva para pesquisar" class="form-control" />
-    </div>
     <nav role="navigation">
         <ul class="summary">
             
@@ -1370,80 +1375,7 @@
         <div class="body-inner">
             <div class="book-header" role="navigation">
     <!-- Actions Left -->
-    <a href="#" class="btn pull-left toggle-summary" aria-label="Tabela de conteúdos"><i class="fa fa-align-justify"></i></a>
-    <a href="#" class="btn pull-left toggle-search" aria-label="Pesquise"><i class="fa fa-search"></i></a>
     
-    <div id="font-settings-wrapper" class="dropdown pull-left">
-        <a href="#" class="btn toggle-dropdown" aria-label="Configurações de fonte"><i class="fa fa-font"></i>
-        </a>
-        <div class="dropdown-menu font-settings">
-    <div class="dropdown-caret">
-        <span class="caret-outer"></span>
-        <span class="caret-inner"></span>
-    </div>
-
-    <div class="buttons">
-        <button type="button" id="reduce-font-size" class="button size-2">A</button>
-        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
-    </div>
-
-    <div class="buttons font-family-list">
-        <button type="button" data-font="0" class="button">Serif</button>
-        <button type="button" data-font="1" class="button">Sans</button>
-    </div>
-
-    <div class="buttons color-theme-list">
-        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">Claro</button>
-        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sépia</button>
-        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Noite</button>
-    </div>
-</div>
-
-    </div>
-
-    <!-- Actions Right -->
-    
-    <div class="dropdown pull-right">
-        <a href="#" class="btn toggle-dropdown" aria-label="Compartilhar"><i class="fa fa-share-alt"></i>
-        </a>
-        <div class="dropdown-menu font-settings dropdown-left">
-            <div class="dropdown-caret">
-                <span class="caret-outer"></span>
-                <span class="caret-inner"></span>
-            </div>
-            <div class="buttons">
-                <button type="button" data-sharing="twitter" class="button">
-                    Compartilhar no Twitter
-                </button>
-                <button type="button" data-sharing="google-plus" class="button">
-                    Compartilhar no Google
-                </button>
-                <button type="button" data-sharing="facebook" class="button">
-                    Compartilhar no Facebook
-                </button>
-                <button type="button" data-sharing="weibo" class="button">
-                    Compartilhar no Weibo
-                </button>
-                <button type="button" data-sharing="instapaper" class="button">
-                    Compartilhar no Instapaper
-                </button>
-            </div>
-        </div>
-    </div>
-    
-
-    
-    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
-    
-    
-    
-
 
     <!-- Title -->
     <h1>
@@ -1458,7 +1390,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="seguran%C3%A7a">Seguran&#xE7;a</h1>
+                        <h1 id="seguran&#xE7;a">Seguran&#xE7;a</h1>
 <h2 id="registro-de-eventos">Registro de eventos</h2>
 <p>O sistema dever&#xE1; possuir um mecanismo de registro de eventos durante a sua execu&#xE7;&#xE3;o (<em>log</em>) que armazene estes eventos primariamente em um banco de dados criado para tal finalidade. O sistema deve guardar o log das opera&#xE7;&#xF5;es com o SGBD e log do servidor web.</p>
 <p>Senhas ou outros dados secretos jamais devem ser registrados em quaisquer dos n&#xED;veis de log e sob nenhuma condi&#xE7;&#xE3;o.</p>
@@ -1502,7 +1434,7 @@
 <pre><code>A aplica&#xE7;&#xE3;o detectou uma falha inesperada. Por favor, tente a opera&#xE7;&#xE3;o novamente. Caso a falha persista, entre em contato com o suporte utilizando o identificador *7831c1d2da14*.
 </code></pre><p>O <em>ticket</em> deve utilizar o &#xFA;ltimo bloco de d&#xED;gitos do identificador da transa&#xE7;&#xE3;o, com 12 caracteres hexadecimais. Todas as mensagens de log relacionadas &#xE0; a&#xE7;&#xE3;o do usu&#xE1;rio na mesma requisi&#xE7;&#xE3;o HTTP devem estar atreladas ao mesmo UUID, o que facilita a busca e depura&#xE7;&#xE3;o.</p>
 <p>J&#xE1; as falhas de neg&#xF3;cio (erros de valida&#xE7;&#xE3;o, por exemplo) devem retornar mensagens amig&#xE1;veis, informando ao usu&#xE1;rio o contexto da falha e a a&#xE7;&#xE3;o a ser tomada. Estas falhas n&#xE3;o devem produzir erros de n&#xED;vel <code>WARN</code>, <code>ERROR</code> ou <code>FATAL</code>, j&#xE1; que n&#xE3;o h&#xE1; o que o administrador do sistema possa fazer para remedi&#xE1;-las.</p>
-<h2 id="auditoria-m%C3%ADnima">Auditoria m&#xED;nima</h2>
+<h2 id="auditoria-m&#xED;nima">Auditoria m&#xED;nima</h2>
 <p>Quaisquer transa&#xE7;&#xF5;es de escrita (modifica&#xE7;&#xE3;o ou remo&#xE7;&#xE3;o) iniciadas por um usu&#xE1;rio devem conter os seguintes detalhes no log:</p>
 <ul>
 <li>IP de acesso do qual partiu a requisi&#xE7;&#xE3;o</li>
@@ -1510,7 +1442,7 @@
 <li>A&#xE7;&#xE3;o</li>
 <li>Refer&#xEA;ncia textual ao conte&#xFA;do alterado</li>
 </ul>
-<h2 id="seguran%C3%A7a-de-acesso-ao-log">Seguran&#xE7;a de acesso ao log</h2>
+<h2 id="seguran&#xE7;a-de-acesso-ao-log">Seguran&#xE7;a de acesso ao log</h2>
 <p>Logs dever&#xE3;o ser armazenados de forma que um usu&#xE1;rio mal-intencionado que consiga acesso a eles n&#xE3;o possa corromp&#xEA;-los. Recomenda-se fortemente n&#xE3;o permitir que logs sejam alterados por nenhum usu&#xE1;rio do sistema, exceto por um processo de rota&#xE7;&#xE3;o que move registros de logs antigos para outro local, afim de liberar espa&#xE7;o em disco.</p>
 
                     
@@ -1533,9 +1465,25 @@
         
 <script src="../gitbook/app.js"></script>
 
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>

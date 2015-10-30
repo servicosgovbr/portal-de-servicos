@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
-  <!--Created by yEd 3.14.2-->
+  <!--Created by yEd 3.14.3-->
   <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
   <key for="port" id="d1" yfiles.type="portgraphics"/>
   <key for="port" id="d2" yfiles.type="portgeometry"/>
@@ -59,7 +59,7 @@ outrosCasos, como pode ser observado no diagrama.
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
             <y:GroupNode>
-              <y:Geometry height="520.0254139654944" width="768.2914399469145" x="293.5240875912408" y="453.04166666666674"/>
+              <y:Geometry height="520.0254139654944" width="768.2914399469145" x="293.5240875912408" y="480.40775347533736"/>
               <y:Fill color="#F5F5F5" transparent="false"/>
               <y:BorderStyle color="#000000" type="dashed" width="1.0"/>
               <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#EBEBEB" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="768.2914399469145" x="0.0" y="0.0"/>
@@ -85,7 +85,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n0">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.small_entity">
-              <y:Geometry height="40.0" width="166.0" x="597.0" y="483.04166666666686"/>
+              <y:Geometry height="40.0" width="166.0" x="597.0" y="510.4077534753375"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="41.916015625" x="62.0419921875" y="10.93359375">Etapas<y:LabelModel>
@@ -104,7 +104,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n1">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="53.66666666666663" width="166.0" x="351.0881220968812" y="776.2083333333336"/>
+              <y:Geometry height="53.66666666666663" width="166.0" x="351.0881220968812" y="803.5744201420042"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="105.68359375" x="30.158203125" y="4.0">CasoDocumentos</y:NodeLabel>
@@ -124,7 +124,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n2">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="51.333333333333314" width="166.0" x="842.9118779031187" y="777.3750000000002"/>
+              <y:Geometry height="51.333333333333314" width="166.0" x="842.9118779031187" y="804.7410868086708"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="142.287109375" x="11.8564453125" y="4.0">CasoCanaisDePrestacao</y:NodeLabel>
@@ -144,7 +144,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n3">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="53.66666666666663" width="166.0" x="597.0" y="776.2083333333336"/>
+              <y:Geometry height="53.66666666666663" width="166.0" x="597.0" y="803.5744201420042"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="72.26171875" x="46.869140625" y="4.0">CasoCustos</y:NodeLabel>
@@ -164,7 +164,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n4">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="79.99999999999994" width="166.0" x="597.0" y="543.0416666666669"/>
+              <y:Geometry height="79.99999999999994" width="166.0" x="597.0" y="570.4077534753375"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="35.798828125" x="65.1005859375" y="4.0">Etapa</y:NodeLabel>
@@ -185,7 +185,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n5">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="79.99999999999994" width="166.0" x="351.0881220968812" y="853.0416666666669"/>
+              <y:Geometry height="79.99999999999994" width="166.0" x="351.0881220968812" y="880.4077534753375"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="71.1484375" x="47.42578125" y="4.0">Documento</y:NodeLabel>
@@ -205,7 +205,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n6">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="79.99999999999994" width="166.0" x="597.0" y="853.0416666666669"/>
+              <y:Geometry height="79.99999999999994" width="166.0" x="597.0" y="880.4077534753375"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="37.7265625" x="64.13671875" y="4.0">Custo</y:NodeLabel>
@@ -227,7 +227,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n7">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="79.99999999999983" width="166.0" x="842.9118779031187" y="853.041666666667"/>
+              <y:Geometry height="79.99999999999983" width="166.0" x="842.9118779031187" y="880.4077534753376"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="107.751953125" x="29.1240234375" y="4.0">CanalDePrestacao</y:NodeLabel>
@@ -248,7 +248,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n8">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="67.83333333333331" width="166.0" x="842.9118779031187" y="659.1250000000002"/>
+              <y:Geometry height="67.83333333333331" width="166.0" x="842.9118779031187" y="686.4910868086708"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="113.869140625" x="26.0654296875" y="4.0">CanaisDePrestacao</y:NodeLabel>
@@ -269,7 +269,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n9">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="67.83333333333331" width="166.0" x="597.0" y="659.1250000000002"/>
+              <y:Geometry height="67.83333333333331" width="166.0" x="597.0" y="686.4910868086708"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="43.84375" x="61.078125" y="4.0">Custos</y:NodeLabel>
@@ -290,7 +290,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n1::n10">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.big_entity">
-              <y:Geometry height="67.83333333333331" width="166.0" x="351.0881220968812" y="659.1250000000002"/>
+              <y:Geometry height="67.83333333333331" width="166.0" x="351.0881220968812" y="686.4910868086708"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="tl" textColor="#000000" visible="true" width="77.265625" x="4.0" y="4.0">Documentos</y:NodeLabel>
@@ -323,7 +323,7 @@ outrosCasos, como pode ser observado no diagrama.
               <y:Shape type="roundrectangle"/>
               <y:State closed="false" closedHeight="50.0" closedWidth="50.0" innerGraphDisplayEnabled="false"/>
               <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
-              <y:BorderInsets bottom="5" bottomF="5.0" left="12" leftF="11.5" right="12" rightF="11.5" top="1" topF="1.0"/>
+              <y:BorderInsets bottom="5" bottomF="5.0" left="12" leftF="11.5" right="12" rightF="11.5" top="8" topF="8.366086808670616"/>
             </y:GroupNode>
             <y:GroupNode>
               <y:Geometry height="50.0" width="50.0" x="0.0" y="60.0"/>
@@ -342,7 +342,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n2::n0">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.small_entity">
-              <y:Geometry height="40.0" width="227.0" x="1536.5" y="473.04166666666674"/>
+              <y:Geometry height="40.0" width="227.0" x="1536.5" y="480.40775347533736"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="139.404296875" x="43.7978515625" y="10.93359375">DadosComplementares<y:LabelModel>
@@ -380,26 +380,7 @@ outrosCasos, como pode ser observado no diagrama.
         <node id="n2::n2">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.small_entity">
-              <y:Geometry height="40.0" width="227.0" x="1706.5" y="563.0416666666667"/>
-              <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
-              <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="136.9375" x="45.03125" y="10.93359375">EventosDaLinhaDaVida<y:LabelModel>
-                  <y:SmartNodeLabelModel distance="4.0"/>
-                </y:LabelModel>
-                <y:ModelParameter>
-                  <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-                </y:ModelParameter>
-              </y:NodeLabel>
-              <y:StyleProperties>
-                <y:Property class="java.lang.Boolean" name="y.view.ShadowNodePainter.SHADOW_PAINTING" value="false"/>
-              </y:StyleProperties>
-            </y:GenericNode>
-          </data>
-        </node>
-        <node id="n2::n3">
-          <data key="d6">
-            <y:GenericNode configuration="com.yworks.entityRelationship.small_entity">
-              <y:Geometry height="40.0" width="227.0" x="1436.5" y="563.0416666666667"/>
+              <y:Geometry height="40.0" width="227.0" x="1536.5" y="563.0416666666667"/>
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="80.376953125" x="73.3115234375" y="10.93359375">PalavraChave<y:LabelModel>
@@ -415,7 +396,7 @@ outrosCasos, como pode ser observado no diagrama.
             </y:GenericNode>
           </data>
         </node>
-        <node id="n2::n4">
+        <node id="n2::n3">
           <data key="d6">
             <y:GenericNode configuration="com.yworks.entityRelationship.small_entity">
               <y:Geometry height="40.0" width="227.0" x="1166.5" y="563.0416666666667"/>
@@ -472,11 +453,12 @@ outrosCasos, como pode ser observado no diagrama.
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="45.255859375" x="80.3720703125" y="4.0">Servico</y:NodeLabel>
-              <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="74.6640625" modelName="custom" textColor="#000000" visible="true" width="110.376953125" x="2.0" y="30.1328125">- nome
+              <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="88.796875" modelName="custom" textColor="#000000" visible="true" width="110.376953125" x="2.0" y="30.1328125">- nome
 - sigla
 - descricao
 - gratuidade
-- nomesPopulares<y:LabelModel>
+- nomesPopulares
+- contato<y:LabelModel>
                   <y:ErdAttributesNodeLabelModel/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -538,7 +520,7 @@ outrosCasos, como pode ser observado no diagrama.
               <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" backgroundColor="#B7C9E3" configuration="com.yworks.entityRelationship.label.name" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.1328125" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="64.392578125" x="36.03065187976938" y="4.0">Legislação</y:NodeLabel>
-              <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="30.56640625" x="2.0" y="30.1328125">- url<y:LabelModel>
+              <y:NodeLabel alignment="left" autoSizePolicy="content" configuration="com.yworks.entityRelationship.label.attributes" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="45.1328125" x="2.0" y="30.1328125">- texto<y:LabelModel>
                   <y:ErdAttributesNodeLabelModel/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -583,7 +565,7 @@ outrosCasos, como pode ser observado no diagrama.
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="1.0" textColor="#000000" visible="true" width="11.587890625" x="-458.0" y="322.78385416666686">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="1.0" textColor="#000000" visible="true" width="11.587890625" x="-458.0" y="350.1499409753375">1<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -662,16 +644,16 @@ outrosCasos, como pode ser observado no diagrama.
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="n2::e0" source="n2::n0" target="n2::n2">
+    <edge id="n2::e0" source="n2::n0" target="n2::n1">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="20.0" tx="0.0" ty="-20.0">
             <y:Point x="1650.0" y="543.0416666666667"/>
-            <y:Point x="1820.0" y="543.0416666666667"/>
+            <y:Point x="2090.0" y="543.0416666666667"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.9460966542750929" textColor="#000000" visible="true" width="26.62890625" x="172.0" y="26.341776529947992">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.9765818761350602" textColor="#000000" visible="true" width="26.62890625" x="442.0" y="18.960795084635492">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -682,41 +664,11 @@ outrosCasos, como pode ser observado no diagrama.
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="20.0" tx="0.0" ty="-20.0">
             <y:Point x="1650.0" y="543.0416666666667"/>
-            <y:Point x="1550.0" y="543.0416666666667"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.9174573055028463" textColor="#000000" visible="true" width="26.62890625" x="-98.0" y="26.341776529947992">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n2::e2" source="n2::n0" target="n2::n1">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="20.0" tx="0.0" ty="-20.0">
-            <y:Point x="1650.0" y="543.0416666666667"/>
-            <y:Point x="2090.0" y="543.0416666666667"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.9769475357710652" textColor="#000000" visible="true" width="26.62890625" x="442.0" y="26.341776529947992">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n2::e3" source="n2::n0" target="n2::n4">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="20.0" tx="0.0" ty="-20.0">
-            <y:Point x="1650.0" y="543.0416666666667"/>
             <y:Point x="1280.0" y="543.0416666666667"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.9729309271935284" textColor="#000000" visible="true" width="26.62890625" x="-368.0" y="26.341776529947992">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.9724253458717416" textColor="#000000" visible="true" width="26.62890625" x="-368.0" y="18.960795084635492">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -728,7 +680,7 @@ outrosCasos, como pode ser observado no diagrama.
           <y:Path sx="0.0" sy="20.0" tx="0.0" ty="-39.99999999999997"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.0" textColor="#000000" visible="true" width="26.62890625" x="2.0" y="0.8945109049481061">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.0" textColor="#000000" visible="true" width="26.62890625" x="2.0" y="0.8945088464312221">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -740,7 +692,7 @@ outrosCasos, como pode ser observado no diagrama.
           <y:Path sx="0.0" sy="26.833333333333258" tx="0.0" ty="-40.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.0" textColor="#000000" visible="true" width="26.62890625" x="1.999987331256193" y="2.516927083333485">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.0" textColor="#000000" visible="true" width="26.62890625" x="1.999987331256193" y="2.516925024816601">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -752,7 +704,7 @@ outrosCasos, como pode ser observado no diagrama.
           <y:Path sx="0.0" sy="25.66666666666663" tx="0.0" ty="-39.999999999999886"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.0" textColor="#000000" visible="true" width="26.62890625" x="2.000012668743693" y="3.1002807617189774">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.0" textColor="#000000" visible="true" width="26.62890625" x="2.000012668743693" y="3.1002787032020933">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -764,7 +716,7 @@ outrosCasos, como pode ser observado no diagrama.
           <y:Path sx="0.0" sy="26.833333333333258" tx="0.0" ty="-40.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.0" textColor="#000000" visible="true" width="26.62890625" x="2.0" y="2.516927083333485">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="side_slider" preferredPlacement="right" ratio="0.0" textColor="#000000" visible="true" width="26.62890625" x="2.0" y="2.516925024816601">1..n<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -774,8 +726,8 @@ outrosCasos, como pode ser observado no diagrama.
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="39.99999999999997" tx="0.0" ty="-33.91666666666666">
-            <y:Point x="680.0" y="643.0416666666669"/>
-            <y:Point x="925.9118779031187" y="643.0416666666669"/>
+            <y:Point x="680.0" y="670.4077534753375"/>
+            <y:Point x="925.9118779031187" y="670.4077534753375"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -797,8 +749,8 @@ outrosCasos, como pode ser observado no diagrama.
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="39.99999999999997" tx="0.0" ty="-33.91666666666666">
-            <y:Point x="680.0" y="643.0416666666669"/>
-            <y:Point x="434.0881220968812" y="643.0416666666669"/>
+            <y:Point x="680.0" y="670.4077534753375"/>
+            <y:Point x="434.0881220968812" y="670.4077534753375"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -810,12 +762,12 @@ outrosCasos, como pode ser observado no diagrama.
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="33.91666666666666" tx="41.5" ty="-25.666666666666657">
-            <y:Point x="925.9118779031187" y="753.0416666666669"/>
-            <y:Point x="967.4118779031187" y="753.0416666666669"/>
+            <y:Point x="925.9118779031187" y="780.4077534753375"/>
+            <y:Point x="967.4118779031187" y="780.4077534753375"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.7935520361990948" textColor="#000000" visible="true" width="69.982421875" x="43.50001266874369" y="17.554707845052235">1
+          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.7935520361990948" textColor="#000000" visible="true" width="69.982421875" x="43.50001266874369" y="17.55470578653535">1
 casoPadrao<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
@@ -826,12 +778,12 @@ casoPadrao<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0"
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="33.91666666666666" tx="-41.5" ty="-25.666666666666657">
-            <y:Point x="925.9118779031187" y="753.0416666666669"/>
-            <y:Point x="884.4118779031187" y="753.0416666666669"/>
+            <y:Point x="925.9118779031187" y="780.4077534753375"/>
+            <y:Point x="884.4118779031187" y="780.4077534753375"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.7935520361990948" textColor="#000000" visible="true" width="76.240234375" x="-119.7402217062563" y="17.554707845052235">0..n
+          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.7935520361990948" textColor="#000000" visible="true" width="76.240234375" x="-119.7402217062563" y="17.55470578653535">0..n
 outrosCasos<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
@@ -842,12 +794,12 @@ outrosCasos<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="33.91666666666666" tx="41.5" ty="-26.833333333333314">
-            <y:Point x="680.0" y="753.0416666666669"/>
-            <y:Point x="721.5" y="753.0416666666669"/>
+            <y:Point x="680.0" y="780.4077534753375"/>
+            <y:Point x="721.5" y="780.4077534753375"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.8063218390804591" textColor="#000000" visible="true" width="69.982421875" x="43.5" y="16.971374511718977">1
+          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.8063218390804591" textColor="#000000" visible="true" width="69.982421875" x="43.5" y="16.971372453202093">1
 casoPadrao<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
@@ -858,12 +810,12 @@ casoPadrao<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0"
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="33.91666666666666" tx="-41.5" ty="-26.833333333333314">
-            <y:Point x="680.0" y="753.0416666666669"/>
-            <y:Point x="638.5" y="753.0416666666669"/>
+            <y:Point x="680.0" y="780.4077534753375"/>
+            <y:Point x="638.5" y="780.4077534753375"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.8063218390804591" textColor="#000000" visible="true" width="76.240234375" x="-119.740234375" y="16.971374511718977">0..n
+          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.8063218390804591" textColor="#000000" visible="true" width="76.240234375" x="-119.740234375" y="16.971372453202093">0..n
 outrosCasos<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
@@ -874,12 +826,12 @@ outrosCasos<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="33.91666666666666" tx="41.5" ty="-26.833333333333314">
-            <y:Point x="434.0881220968812" y="753.0416666666669"/>
-            <y:Point x="475.5881220968812" y="753.0416666666669"/>
+            <y:Point x="434.0881220968812" y="780.4077534753375"/>
+            <y:Point x="475.5881220968812" y="780.4077534753375"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.8063218390804591" textColor="#000000" visible="true" width="69.982421875" x="43.49998733125619" y="16.971374511718977">1
+          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.8063218390804591" textColor="#000000" visible="true" width="69.982421875" x="43.49998733125619" y="16.971372453202093">1
 casoPadrao<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
@@ -890,12 +842,12 @@ casoPadrao<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0"
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="33.91666666666666" tx="-41.5" ty="-26.833333333333314">
-            <y:Point x="434.0881220968812" y="753.0416666666669"/>
-            <y:Point x="392.5881220968812" y="753.0416666666669"/>
+            <y:Point x="434.0881220968812" y="780.4077534753375"/>
+            <y:Point x="392.5881220968812" y="780.4077534753375"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="diamond"/>
-          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.8063218390804591" textColor="#000000" visible="true" width="76.240234375" x="-119.7402470437438" y="16.971374511718977">0..n
+          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="side_slider" preferredPlacement="right" ratio="0.8063218390804591" textColor="#000000" visible="true" width="76.240234375" x="-119.7402470437438" y="16.971372453202093">0..n
 outrosCasos<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
@@ -905,9 +857,27 @@ outrosCasos<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0
     <edge id="e2" source="n0" target="n1">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="-287.996337890625" sy="0.0" tx="384.15562833774493" ty="135.20387673766868"/>
-          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Path sx="-287.996337890625" sy="0.0" tx="384.13074365883926" ty="107.83778992899806"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="n2::e2" source="n2::n0" target="n2::n2">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="diamond"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" preferredPlacement="right" ratio="0.5" textColor="#000000" visible="true" width="26.62890625" x="2.0" y="19.528544108072992">1..n<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="2.000000000000007" distanceToCenter="false" position="left" ratio="1.0" segment="-1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="anywhere" side="right" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
