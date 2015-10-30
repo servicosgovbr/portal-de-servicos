@@ -43,7 +43,8 @@ fi
 echo "Sincronizando pacotes com a S3..."
 # Precisamos usar o Python 2.7 embutido no CentOS
 PATH=/bin:/usr/bin ${SNAP_CACHE_DIR}/rpm-s3/bin/rpm-s3 \
-    -b servicosgovbr \
+    -r 'sa-east-1' \
+    -b 'servicosgovbr' \
     -p "centos/7" \
     --sign \
     --keep 30 \
