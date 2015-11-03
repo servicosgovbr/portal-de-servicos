@@ -13,21 +13,8 @@
 
 <section layout:fragment="corpo">
 
-    <div>
-        <p class="titulo-bem-vindo">Bem-vindo ao Portal de Serviços!</p>
-        <p>O objetivo deste ambiente é facilitar o acesso aos serviços prestados pelos diversos órgãos do Governo Federal. Aqui você poderá encontrar informações úteis, agendar um atendimento, entrar em contato com os órgãos e até começar um serviço.</p>
-    </div>
-
-    <div class="busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
-        <h2 class="titulo-home">O que você está procurando?</h2>
-        <form method="get" action="/busca">
-            <input id="input-busca" type="search" maxlength="140" name="q" value="" title="Buscar por assuntos, serviços ou órgãos" placeholder="Você pode pesquisar por assuntos, serviços, órgãos"/>
-            <input type="submit" value="Buscar" class="acao-busca"/>
-        </form>
-    </div>
-
     <div class="auto-grid">
-        <h2 class="titulo-home">Serviços em destaque</h2>
+        <h2 class="titulo-home-azul">Serviços mais acessados</h2>
         <ul id="destaques" th:if="${!destaques.isEmpty()}">
             <th:block th:each="item : ${destaques}">
                 <li class="auto-cell">
@@ -36,6 +23,62 @@
             </th:block>
         </ul>
     </div>
+
+ <div class="auto-grid">
+        <h2 class="titulo-home-azul">Categorias em destaque</h2>
+        <ul> 
+            <div class="teste"> 
+                <i class="fa fa-file-text-o"></i>
+                <h3> Administração </h3>  
+                <p>Permite acompanhar o andamento dos processos de concessão inicial.</p>
+            </div>
+
+            <div class="teste"> 
+                <i class="fa fa-tree"></i>
+                <h3> Agropecuária </h3>
+                <p>Permite acompanhar o andamento dos processos de concessão inicial.</p>
+            </div>
+
+            <div class="teste"> 
+                <i class="fa fa-credit-card"></i>
+                <h3> Comércio e Serviços </h3> 
+                <p>Permite acompanhar o andamento dos processos de concessão inicial.</p>
+            </div>
+
+            <div class="teste"> 
+                <i class="fa fa-comments-o "></i>
+                <h3> Comunicações</h3> 
+                <p>Permite acompanhar o andamento dos processos de concessão inicial.</p>
+            </div>
+
+            <div class="teste"> 
+                <i class="fa fa-book"></i>
+                <h3> Cultura     </h3>  
+                <p>Permite acompanhar o andamento dos processos de concessão inicial.</p>
+            </div>
+
+            <div class="teste"> 
+                <i class="fa fa-institution"></i>
+                <h3> Defesa Nacional </h3>
+                <p>Permite acompanhar o andamento dos processos de concessão inicial.</p>
+            </div>
+
+            <div class="teste"> 
+                <i class="fa fa-child"></i>
+                <h3> Educação </h3> 
+                <p>Permite acompanhar o andamento dos processos de concessão inicial.</p>
+            </div>
+
+            <div class="teste"> 
+                <i class="fa fa-calculator"></i>
+                <h3> Economia e Finanças</h3> 
+                <p>Permite acompanhar o andamento dos processos de concessão inicial.</p>
+            </div>
+
+        </ul>
+    </div>
+
+
 
 </section>
 

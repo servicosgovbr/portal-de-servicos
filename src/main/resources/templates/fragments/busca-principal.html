@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+
+    <div id="busca-principal" class="busca-principal" th:classappend="${#httpServletRequest.requestURI} != '/' ? 'hidden'">
+        
+        <form method="get" action="/busca">
+            <h2 class="titulo-home">O que você está procurando?</h2>
+            <input id="input-busca" type="search" maxlength="140" name="q" value="" title="Buscar por assuntos, serviços ou órgãos" placeholder="Você pode pesquisar por assuntos, serviços, órgãos"/>
+            <input type="submit" value="Buscar" class="acao-busca"/>
+        </form>
+    </div>
+
+
+
+</body>
+</html>

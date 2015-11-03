@@ -31,7 +31,7 @@
 }
 
 #conteudo, .conteudo {
-  @include span-columns(9);
+  @include span-columns(12);
   @include omega();
 
   line-height: $baseLineHeight;
@@ -78,11 +78,16 @@
     }
   }
 
-  h2.titulo-home {
+
+
+  h2.titulo-home-azul {
     font-family: "open_sansbold", $helvetica;
-    font-size: $baseFontSize * 1.5;
+    font-size: $baseFontSize * 2;
     line-height: $baseLineHeight;
-    margin: 30px 0 10px 0;
+    margin: 20px 0 30px -10px;
+    color: $cinza-escuro;
+    border-bottom: 2px solid $cinza-claro;
+    padding: 10px;
   }
 
   h3.subtitulo-servico {
@@ -149,8 +154,8 @@
 
 
   h3.titulo-destaque  {
-    font-size: $baseFontSize * 1;
-    color: $cinza-escuro;
+    font-size: $baseFontSize * 1.2;
+    color: $azul-claro;
     text-transform: uppercase;
     font-family: 'open_sansbold', $helvetica;
     line-height: $baseLineHeight;
@@ -217,6 +222,7 @@
   }
 
 }
+
 
 dl.nav-tree {
 
@@ -347,15 +353,6 @@ dl.nav-tree {
   }
 }
 
-.busca-principal > form {
-  background-color: $cinza-claro;
-  padding: 15px 15px 55px 15px;
-
-  input[type='search'] {
-    background-color: $branco;
-  }
-}
-
 .busca-erro > form {
   background-color: $branco;
   padding: 10px 0 70px 0;
@@ -366,6 +363,8 @@ dl.nav-tree {
 }
 
 .busca-principal, .busca-erro {
+  background-color: $azul-claro;
+  border-bottom: 10px solid $cinza-claro;
 
   @include span-columns(12);
   @include omega();
@@ -374,14 +373,17 @@ dl.nav-tree {
     display: none !important;
   }
 
+
   > form {
-    margin-bottom: em(30);
+    @include outer-container;
+    padding: 15px 15px 35px 37px;
+    margin-bottom: em(0);
     border-radius: 4px;
 
     input[type='search'] {
-      @include span-columns(9 of 11);
+      @include span-columns(5 of 11);
       display: block;
-
+      background-color: $branco;
       padding: 10px;
       border-radius: 4px;
       border-top: 2px solid $cinza-medio;
@@ -414,6 +416,16 @@ dl.nav-tree {
       border-radius: 4px;
     }
   }
+
+  h2.titulo-home {
+      @include span-columns(3 of 11);
+    font-family: "open_sansbold", $helvetica;
+    font-size: $baseFontSize * 1.5;
+    line-height: $baseLineHeight;
+    margin: 30px 0 10px 20px;
+    color: $branco;
+  }
+
 }
 
 #opiniao {
@@ -479,13 +491,14 @@ span.ticket-erro {
   margin-bottom: 20px;
 }
 
+
 a.acao, button.acao, input[type="submit"].acao, input[type="submit"].acao-busca {
   text-transform: uppercase;
+  background-color: $azul-escuro !important;
 
   &:hover {
     color: $branco;
-    background-color: $azul-escuro;
-    border: none;
+    background-color: #244683;
     border-radius: 4px;
     cursor: pointer;
   }
@@ -824,6 +837,34 @@ p.formulario-opiniao {
   ul li {
     display: block;
   }
+}
+
+.teste {
+  color: $azul-claro;
+  background-color: $cinza-claro;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  border: 1px solid $cinza-medio;
+  border-radius: 4px;
+  border-bottom: 4px solid $cinza-medio;
+  width: 220px;
+  height: 240px;
+  margin-bottom: 30px;
+  margin-right: 16px;
+  display: inline-block;
+  line-height: 120%;
+  vertical-align: top;
+
+  h3 {
+    font-size: 20px;    
+    color: $azul-claro;
+
+  }
+
+  i {
+    font-size: 30px;
+  }
+
 }
 
 
