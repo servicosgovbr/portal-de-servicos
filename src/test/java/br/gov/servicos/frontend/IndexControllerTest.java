@@ -82,7 +82,7 @@ public class IndexControllerTest {
     public void deveRetornarOsServicosPaginados() {
         controller = comDestaquesManuais();
         controller.index();
-        verify(servicos).findAll(new PageRequest(0, 10, new Sort(DESC, "nome")));
+        verify(servicos).findAll(new PageRequest(0, 8, new Sort(DESC, "nome")));
     }
 
     @Test
