@@ -25,7 +25,7 @@
 
 <body th:class="${@cookies.isOn('contraste')} ? 'contraste'">
 
-<div id="wrapper">
+<div id="wrapper" th:class="${destaques} != null ? 'pagina-inicial'">
     <div th:replace="fragments/header :: #header"></div>
     <div th:replace="fragments/barra-brasil :: #barra-brasil"></div>
 

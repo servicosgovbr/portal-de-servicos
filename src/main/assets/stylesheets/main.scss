@@ -14,6 +14,17 @@
   @include outer-container;
 }
 
+.pagina-inicial {
+  #conteudo {
+    @include span-columns(12);
+    @include omega();
+  }
+
+  #navegacao, #migalhas-de-pao, #header #portal-searchbox { 
+    display: none;
+  }
+}
+
 .no-mobile {
   @include mobile {
     display: none !important;
@@ -31,7 +42,7 @@
 }
 
 #conteudo, .conteudo {
-  @include span-columns(12);
+  @include span-columns(9);
   @include omega();
 
   line-height: $baseLineHeight;
@@ -78,8 +89,6 @@
     }
   }
 
-
-
   h2.titulo-home-azul {
     font-family: "open_sansbold", $helvetica;
     font-size: $baseFontSize * 2;
@@ -99,10 +108,6 @@
 
   .info-extra {
     font-family: $openSansRegular;
-    // margin-top: 10px;
-    // border: 1px solid $cinza-medio;
-    // border-radius: 4px;
-    // padding: 15px 20px 15px 15px;
     display: inline-block;
   }
 
@@ -152,7 +157,6 @@
     }
   }
 
-
   h3.titulo-destaque  {
     font-size: $baseFontSize * 1.2;
     color: $azul-claro;
@@ -199,7 +203,6 @@
     }
   }
 
-
   hr {
     margin-top: em(20);
   }
@@ -220,9 +223,7 @@
   a {
     color: $azul-claro;
   }
-
 }
-
 
 dl.nav-tree {
 
@@ -275,7 +276,6 @@ dl.nav-tree {
     padding-top: 3px;
     padding-right: 6px;
   }
-
 }
 
 .tile {
@@ -343,16 +343,6 @@ dl.nav-tree {
   }
 }
 
-#destaques {
-  a {
-    color: $cinza-escuro;
-  }
-
-  a:hover {
-    color: $azul-claro;
-  }
-}
-
 .busca-erro > form {
   background-color: $branco;
   padding: 10px 0 70px 0;
@@ -373,15 +363,14 @@ dl.nav-tree {
     display: none !important;
   }
 
-
   > form {
     @include outer-container;
-    padding: 15px 15px 35px 37px;
+    padding: 30px 0 30px 0;
     margin-bottom: em(0);
     border-radius: 4px;
 
     input[type='search'] {
-      @include span-columns(5 of 11);
+      @include span-columns(5.5 of 12);
       display: block;
       background-color: $branco;
       padding: 10px;
@@ -403,29 +392,36 @@ dl.nav-tree {
     }
 
     input[type='submit'] {
-      @include span-columns(2 of 11);
+      @include span-columns(2 of 12);
       @include omega();
 
       color: $branco;
-      background-color: $azul-claro;
+      background-color: $azul-escuro;
       display: block;
       font-family: 'open_sansbold', $helvetica;
       font-size: $baseFontSize;
-      padding: 9px 0 9px 0;
-      border: none;
+      padding: 8px 0 8px 0;
       border-radius: 4px;
+      border-bottom: 2px solid #244683;
+      border-right: 2px solid #244683;
+      border-top: 3px solid $azul-escuro; 
+      margin: 0;
+
+      &:hover {
+        background-color: #244683;
+        border-top: 3px solid #244683; 
+      }
     }
   }
 
   h2.titulo-home {
-      @include span-columns(3 of 11);
+    @include span-columns(5 of 12);
     font-family: "open_sansbold", $helvetica;
     font-size: $baseFontSize * 1.5;
     line-height: $baseLineHeight;
-    margin: 30px 0 10px 20px;
+    margin: 0;
     color: $branco;
   }
-
 }
 
 #opiniao {
@@ -450,13 +446,11 @@ span.ticket-erro {
   font-family: Courier, monospaced;
 }
 
-
 .tiposolicitante {
 
   ul li {
     list-style-type: none;    
   }
-
 }
 
 .markdown {
@@ -491,37 +485,32 @@ span.ticket-erro {
   margin-bottom: 20px;
 }
 
-
 a.acao, button.acao, input[type="submit"].acao, input[type="submit"].acao-busca {
+  padding: 8px 13px 8px 13px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: $branco;
+  border: none;
+  border-radius: 4px;
+  font-family: open_sansbold;
+  font-size: $baseFontSize;
   text-transform: uppercase;
-  background-color: $azul-escuro !important;
+  background-color: $azul-claro;
 
   &:hover {
     color: $branco;
     background-color: #244683;
     border-radius: 4px;
     cursor: pointer;
+    background-color: $azul-escuro;
   }
-}
-
-a.acao, button.acao, input[type="submit"].acao {
-  padding: 8px 13px 8px 13px;
-  background: $azul-claro;
-  text-decoration: none;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  display: inline-block;
-  color: $branco !important;
-  border: none;
-  border-radius: 4px;
-  font-family: open_sansbold;
-  font-size: $baseFontSize;
 
   &:visited, &:link {
     color: $branco;
   }
 }
-
 
 a.acao-servico, button.acao-servico, input[type="submit"].acao-servico, input[type="submit"].acao-servico  {
   text-transform: uppercase;
@@ -559,8 +548,6 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
   }
 }
 
-
-
 .info-etapa {
   font-family: open_sansbold;
   color: $cinza-escuro;
@@ -571,38 +558,38 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
   margin-top: 15px;
   margin-bottom: 15px;
 
-    .etapa {
-      padding-left: 40px;
-    }
+  .etapa {
+    padding-left: 40px;
+  }
 
-    p.etapa {
-      margin-left: 0px;
-      display: inline-block;
-    }
-  
-    h4.etapa {
-      padding-top: 2px;
-      padding-bottom: 15px;
-    }
+  p.etapa {
+    margin-left: 0px;
+    display: inline-block;
+  }
 
-    .circle {
-      width: 30px;
-      height: 30px;
-      border-radius: 15px;
-      font-size: 30px;
-      color: $branco !important;
-      text-align: center;
-      padding-top: 4px;
-      background: $azul-claro;
-      float: left;
-    }
+  h4.etapa {
+    padding-top: 2px;
+    padding-bottom: 15px;
+  }
 
-    .fa {
-      color: $cinza-escuro;
-      background-color: $cinza-claro;
-      padding: 5px 5px 5px 5px;
-      border-radius: 4px;
-    }
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 30px;
+    color: $branco !important;
+    text-align: center;
+    padding-top: 4px;
+    background: $azul-claro;
+    float: left;
+  }
+
+  .fa {
+    color: $cinza-escuro;
+    background-color: $cinza-claro;
+    padding: 5px 5px 5px 5px;
+    border-radius: 4px;
+  }
 }
 
 .separacao-orgao {
@@ -634,7 +621,6 @@ ul#resultados-linhadavida, ul#resultados-orgao{
     margin-bottom: 0;
   }
 }
-
 
 ul#resultados-busca {
 
@@ -730,7 +716,6 @@ ul.servicos-a-z {
     margin-left: 0;
     margin-right: 0;
     border-top: 1px solid $cinza-medio;
-
   }
 
   @include tablet {
@@ -818,15 +803,13 @@ p.formulario-opiniao {
 }
 
 .feedback-servico {
-  // border: 1px solid $cinza-medio;
   background-color: $cinza-claro;
   padding: 1px 20px 1px 20px;
 
-    .enviar-servico {
-      margin-left: -21px !important;
-      margin-top: 20px !important; 
-    }
-
+  .enviar-servico {
+    margin-left: -21px !important;
+    margin-top: 20px !important; 
+  }
 }
 
 .acao-etapa {
@@ -858,13 +841,9 @@ p.formulario-opiniao {
   h3 {
     font-size: 20px;    
     color: $azul-claro;
-
   }
 
   i {
     font-size: 30px;
   }
-
 }
-
-

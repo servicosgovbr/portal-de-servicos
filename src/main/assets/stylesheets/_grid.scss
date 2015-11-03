@@ -58,8 +58,8 @@ div.position-10 {
 }
 
 li.auto-cell {
-  @include span-columns(6);
-  @include omega(2n);
+  @include span-columns(3);
+  @include omega(4n);
 
   @include mobile {
     @include span-columns(12);
@@ -69,5 +69,10 @@ li.auto-cell {
   @include tablet {
     @include span-columns(12);
     @include omega(1n);
+  }
+
+  @include desktop-pequeno {
+    @include span-columns(6);
+    @include omega(2n); 
   }
 }

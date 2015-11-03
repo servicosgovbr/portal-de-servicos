@@ -21,7 +21,7 @@ import static net.logstash.logback.marker.Markers.append;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class IndexController {
 
-    private static final int SERVICOS_DESTACADOS = 10;
+    private static final int SERVICOS_DESTACADOS = 8;
 
     ServicosEmDestaque destaques;
     OrgaoRepository orgaos;
