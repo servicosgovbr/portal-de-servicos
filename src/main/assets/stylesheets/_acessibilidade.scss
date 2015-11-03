@@ -28,6 +28,8 @@ body.contraste {
   }
 
   .busca-principal {
+  background-color: #444;
+  border-color: $preto;
 
     > form {
       background-color: #444;
@@ -36,6 +38,18 @@ body.contraste {
         background-color: $preto;
         border: 1px solid $branco;
       }
+    }
+  }
+
+  .destaque-categoria {
+    color: $preto;
+
+    h3 {
+      color: $preto !important;
+    }
+
+    p {
+      color: $preto !important;
     }
   }
 
