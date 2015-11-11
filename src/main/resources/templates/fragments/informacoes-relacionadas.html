@@ -16,7 +16,7 @@
                     <span th:text="${area.value}">Título da Linha da Vida</span>
                 </a>
             </li>
-            <li>
+            <li th:if="${servico.orgao != null}">
                 <a th:href="@{/orgao/{id}(id=${servico.orgao.id})}"
                    th:text="${servico.orgao.nome}">
                     Órgão

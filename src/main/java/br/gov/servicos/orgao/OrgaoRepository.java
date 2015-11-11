@@ -11,6 +11,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Repository;
 
+import java.util.Objects;
 import java.util.Optional;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -42,11 +43,7 @@ public class OrgaoRepository {
     public SortedSet<Orgao> findAll() {
         return servicos.findAll(new PageRequest(0, MAX_VALUE)).getContent()
                 .stream()
-                .peek(s -> {
-                    if (s.getOrgao() == null) {
-                        throw new IllegalStateException(format("Órgão do serviço '%s' não encontrado", s.getId()));
-                    }
-                })
+                .filter(s -> Objects.nonNull(s.getOrgao()))
                 .map(Servico::getOrgao)
                 .collect(toCollection(() -> new TreeSet<>(comparing(Orgao::getNome))));
     }

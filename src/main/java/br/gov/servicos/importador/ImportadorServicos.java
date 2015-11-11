@@ -62,7 +62,6 @@ public class ImportadorServicos {
                         .withId(slugify.slugify(u.getNome() + " - " + u.getSigla()))
                         .withNome(u.getNome())
                         .withUrl(orgao.getId()))
-                .orElseThrow(
-                        () -> new IllegalArgumentException("Não foi possível encontrar informações sobre o órgão '" + orgao.getId() + "'"));
+                .orElse(null);
     }
 }
