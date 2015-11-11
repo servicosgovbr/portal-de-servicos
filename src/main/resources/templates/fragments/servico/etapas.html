@@ -16,7 +16,6 @@
         <div class="subtitulo-etapa" th:unless="${etapa.documentos.isEmpty()}">
 
             <p class="titulo-documento">Documentação</p>
-            <p class="info-etapa">Documentação comum para todos</p>
             <ul>
                 <li th:each="doc : ${etapa.documentos.padrao.itens}">
                     <span th:text="${doc}">Documento necessário</span>
@@ -35,7 +34,6 @@
 
             <p class="titulo-documento">Custos</p>
 
-            <p class="info-etapa">Custos padrão</p>
             <ul>
                 <li th:each="custo : ${etapa.custos.padrao.custos}">
                     <span th:text="${custo.descricao}">Descrição</span>:
@@ -57,7 +55,6 @@
         <div class="subtitulo-etapa" th:unless="${etapa.canaisDePrestacao.isEmpty()}">
 
             <p class="titulo-documento">Canais de prestação</p>
-            <p class="info-etapa">Canais de prestação padrão</p>
             <ul>
                 <li th:each="canal : ${etapa.canaisDePrestacao.padrao.canaisDePrestacao}">
                     <span th:text="${canal.tipo.value}">Web</span>:
