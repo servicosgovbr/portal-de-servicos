@@ -573,8 +573,12 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
 }
 
 .etapas { 
-  margin-top: 15px;
+  margin-top: 35px;
   margin-bottom: 15px;
+
+  &:nth-of-type(1) {
+    margin-top: 15px;
+  }
 
   .etapa {
     padding-left: 40px;
