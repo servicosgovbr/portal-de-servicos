@@ -12,7 +12,7 @@ _"Meu sonho é fazer faculdade de administração. Quero trabalhar num lugar leg
 ## Pensando
 * Ouvi dizer que o governo ajuda, mas como?
 * O que fazer? Não tenho como pagar a faculdade. 
-* Se conseguir um financiamento, há situações em que em posso perde-lo?
+* Se conseguir um financiamento, há situações em que em posso perdê-lo?
 * O financiamento é do valor total da mensalidade? 
 * Vou conseguir pagar por isso no futuro?
 * Quais são as regras do FIES?

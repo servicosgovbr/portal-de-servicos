@@ -1,6 +1,6 @@
 # Como contribuir
 
-Durante o desenvolvimento do projeto, estamos sempre gratos por contribiuções da comunidade de código livre.
+Durante o desenvolvimento do projeto, estamos sempre gratos por contribuições da comunidade de código livre.
 
 A equipe do Portal de Serviços usa o [GitHub Issues][GHISSUES] para acompanhar questões, bugs e contribuições de novo código. Se você encontrou um problema no Portal de Serviços, ou tem uma sugestão a fazer, este é o lugar ideal para começar.
 
