@@ -37,7 +37,7 @@
     </div>
     <div class="orgao-contato" th:unless="${servico.orgao.contato == null or servico.orgao.contato.isEmpty()}">
         <p>
-            Para mais informações ou dúvidas sobre este serviço, entre em contato: <th:block th:text="${servico.orgao.contato}">
+            Para mais informações ou dúvidas sobre este serviço, entre em contato: <th:block th:utext="${@markdown.render(servico.orgao.contato)}">
             Descrição do serviço</th:block>
         </p>
     </div>
