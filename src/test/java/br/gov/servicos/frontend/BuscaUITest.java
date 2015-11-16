@@ -44,7 +44,6 @@ public class BuscaUITest {
     @Before
     public void setUp() throws Exception {
         setupTestesIntegracao.setupComDados();
-
         baseUrl = "http://localhost:" + port + "/";
 
         driver = new HtmlUnitDriver();
@@ -53,6 +52,7 @@ public class BuscaUITest {
 
     @After
     public void tearDown() throws Exception {
+        setupTestesIntegracao.setupBaseLimpa();
         driver.close();
     }
 
