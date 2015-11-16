@@ -11,7 +11,7 @@ modelado, utilizando ferramentas como [JAXB], [xml4js], etc.
 
 [XSD]:http://www.w3.org/TR/xmlschema11-1/
 [XML]:http://www.w3.org/XML/
-[DER]:./der.md
+[MER]:http://servicosgovbr.github.io/portal-de-servicos/modelo-de-explicitacao/mer.html
 [SERVICOSXSD]:https://github.com/servicosgovbr/cartas-de-servico/blob/master/cartas-servico/v3/servico.xsd
 [JAXB]:https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding
 [xml4js]:https://www.npmjs.com/package/xml4js
