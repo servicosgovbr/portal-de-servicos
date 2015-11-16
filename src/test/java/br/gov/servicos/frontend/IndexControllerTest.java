@@ -1,6 +1,6 @@
 package br.gov.servicos.frontend;
 
-import br.gov.servicos.config.DestaquesConfig;
+import br.gov.servicos.config.ServicosDestaqueConfig;
 import br.gov.servicos.destaques.ServicosEmDestaque;
 import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.piwik.PiwikClient;
@@ -39,12 +39,11 @@ import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
 public class IndexControllerTest {
-
     @Mock
     ServicoRepository servicos;
 
     @Mock
-    DestaquesConfig destaques;
+    ServicosDestaqueConfig destaques;
 
     @Mock
     PiwikClient piwikClient;

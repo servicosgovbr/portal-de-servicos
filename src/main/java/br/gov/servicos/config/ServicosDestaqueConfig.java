@@ -13,8 +13,6 @@ import static lombok.AccessLevel.PRIVATE;
 @Configuration
 @ConfigurationProperties("pds.destaques")
 @FieldDefaults(level = PRIVATE)
-public class DestaquesConfig {
-
+public class ServicosDestaqueConfig {
     List<String> servicos;
-
 }

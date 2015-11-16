@@ -1,6 +1,6 @@
 package br.gov.servicos.destaques;
 
-import br.gov.servicos.config.DestaquesConfig;
+import br.gov.servicos.config.ServicosDestaqueConfig;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.ServicoRepository;
@@ -32,14 +32,14 @@ import static org.springframework.data.domain.Sort.Direction.DESC;
 public class ServicosEmDestaque {
 
     ServicoRepository servicos;
-    DestaquesConfig destaques;
+    ServicosDestaqueConfig destaques;
     PiwikClient piwikClient;
     Boolean destaquesAutomaticos;
 
     @Autowired
     public ServicosEmDestaque(
             ServicoRepository servicos,
-            DestaquesConfig destaques,
+            ServicosDestaqueConfig destaques,
             PiwikClient piwikClient,
             @Value("${flags.destaques.automaticos}") Boolean destaquesAutomaticos
     ) {

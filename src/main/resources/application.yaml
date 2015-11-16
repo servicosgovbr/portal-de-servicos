@@ -58,6 +58,15 @@ pds:
       - aqui-tem-farmacia-popular
       - emissao-da-declaracao-de-aptidao-da-agricultura-familiar-dap
       - extrato-de-beneficios-previdenciarios-para-declaracao-de-imposto-de-renda
+    areasDeInteresse:
+      - pesquisa-e-desenvolvimento
+      - agropecuaria
+      - comercio-e-servicos
+      - comunicacoes
+      - cultura
+      - defesa-nacional
+      - educacao
+      - economia-e-financas
   conteudo:
     ouvidorias:
       arquivo-nacional-an: http://www.ouvidorias.gov.br/cidadao/lista-de-ouvidorias/adm_direta/arquivo-nacional-an

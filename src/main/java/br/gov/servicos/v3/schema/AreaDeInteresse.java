@@ -17,14 +17,79 @@ import java.util.stream.Stream;
 @XmlEnum
 public enum AreaDeInteresse {
 
-    @XmlEnumValue("Abastecimento")
-    VCGE2_ABASTECIMENTO("Abastecimento"),
-
     @XmlEnumValue("Administração")
-    VCGE2_ADMINISTRACAO("Administração"),
+    VCGE2_ADMINISTRACAO("Administração", "file-text-o"),
 
     @XmlEnumValue("Agropecuária")
-    VCGE2_AGROPECUARIA("Agropecuária"),
+    VCGE2_AGROPECUARIA("Agropecuária", "tree"),
+
+    @XmlEnumValue("Comércio e Serviços")
+    VCGE2_COMERCIO_E_SERVICOS("Comércio e Serviços", "credit-card"),
+
+    @XmlEnumValue("Comunicações")
+    VCGE2_COMUNICACOES("Comunicações", "comments-o"),
+
+    @XmlEnumValue("Cultura")
+    VCGE2_CULTURA("Cultura", "book"),
+
+    @XmlEnumValue("Defesa Nacional")
+    VCGE2_DEFESA_NACIONAL("Defesa Nacional", "fighter-jet"),
+
+    @XmlEnumValue("Economia e Finanças")
+    VCGE2_ECONOMIA_E_FINANCAS("Economia e Finanças", "calculator"),
+
+    @XmlEnumValue("Educação")
+    VCGE2_EDUCACAO("Educação", "graduation-cap"),
+
+    @XmlEnumValue("Energia")
+    VCGE2_ENERGIA("Energia", "lightbuld-o"),
+
+    @XmlEnumValue("Esporte e Lazer")
+    VCGE2_ESPORTE_E_LAZER("Esporte e Lazer", "futbol-o"),
+
+    @XmlEnumValue("Habitação")
+    VCGE2_HABITACAO("Habitação", "home"),
+
+    @XmlEnumValue("Indústria")
+    VCGE2_INDUSTRIA("Indústria", "industry"),
+
+    @XmlEnumValue("Meio ambiente")
+    VCGE2_MEIO_AMBIENTE("Meio ambiente", "pagelines"),
+
+    @XmlEnumValue("Pesquisa e Desenvolvimento")
+    VCGE2_PESQUISA_E_DESENVOLVIMENTO("Pesquisa e Desenvolvimento", "flask"),
+
+    @XmlEnumValue("Previdência Social")
+    VCGE2_PREVIDENCIA_SOCIAL("Previdência Social", "user"),
+
+    @XmlEnumValue("Proteção Social")
+    VCGE2_PROTECAO_SOCIAL("Proteção Social", "users"),
+
+    @XmlEnumValue("Relações Internacionais")
+    VCGE2_RELACOES_INTERNACIONAIS("Relações Internacionais", "globe"),
+
+    @XmlEnumValue("Saneamento")
+    VCGE2_SANEAMENTO("Saneamento", "wrench"),
+
+    @XmlEnumValue("Saúde")
+    VCGE2_SAUDE("Saúde", "hospital-o"),
+
+    @XmlEnumValue("Segurança e Ordem Pública")
+    VCGE2_SEGURANCA_E_ORDEM_PUBLICA("Segurança e Ordem Pública", "shield"),
+
+    @XmlEnumValue("Trabalho")
+    VCGE2_TRABALHO("Trabalho", "briefcase"),
+
+    @XmlEnumValue("Transportes")
+    VCGE2_TRANSPORTES("Transportes", "bus"),
+
+    @XmlEnumValue("Urbanismo")
+    VCGE2_URBANISMO("Urbanismo", "building-o"),
+
+    //--------------
+
+    @XmlEnumValue("Abastecimento")
+    VCGE2_ABASTECIMENTO("Abastecimento"),
 
     @XmlEnumValue("Assistência Hospitalar e Ambulatorial")
     VCGE2_ASSISTENCIA_HOSPITALAR_E_AMBULATORIAL("Assistência Hospitalar e Ambulatorial"),
@@ -65,26 +130,18 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Compras governamentais")
     VCGE2_COMPRAS_GOVERNAMENTAIS("Compras governamentais"),
 
-    @XmlEnumValue("Comunicações")
-    VCGE2_COMUNICACOES("Comunicações"),
 
     @XmlEnumValue("Comunicações Postais")
     VCGE2_COMUNICACOES_POSTAIS("Comunicações Postais"),
 
-    @XmlEnumValue("Comércio e Serviços")
-    VCGE2_COMERCIO_E_SERVICOS("Comércio e Serviços"),
 
     @XmlEnumValue("Cooperação Internacional")
     VCGE2_COOPERACAO_INTERNACIONAL("Cooperação Internacional"),
 
-    @XmlEnumValue("Cultura")
-    VCGE2_CULTURA("Cultura"),
 
     @XmlEnumValue("Defesa Civil")
     VCGE2_DEFESA_CIVIL("Defesa Civil"),
 
-    @XmlEnumValue("Defesa Nacional")
-    VCGE2_DEFESA_NACIONAL("Defesa Nacional"),
 
     @XmlEnumValue("Defesa agropecuária")
     VCGE2_DEFESA_AGROPECUARIA("Defesa agropecuária"),
@@ -101,11 +158,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Difusão Cultural")
     VCGE2_DIFUSAO_CULTURAL("Difusão Cultural"),
 
-    @XmlEnumValue("Economia e Finanças")
-    VCGE2_ECONOMIA_E_FINANCAS("Economia e Finanças"),
-
-    @XmlEnumValue("Educação")
-    VCGE2_EDUCACAO("Educação"),
 
     @XmlEnumValue("Educação básica")
     VCGE2_EDUCACAO_BASICA("Educação básica"),
@@ -119,8 +171,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Empregabilidade")
     VCGE2_EMPREGABILIDADE("Empregabilidade"),
 
-    @XmlEnumValue("Energia")
-    VCGE2_ENERGIA("Energia"),
 
     @XmlEnumValue("Energia elétrica")
     VCGE2_ENERGIA_ELETRICA("Energia elétrica"),
@@ -128,8 +178,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Esporte comunitário")
     VCGE2_ESPORTE_COMUNITARIO("Esporte comunitário"),
 
-    @XmlEnumValue("Esporte e Lazer")
-    VCGE2_ESPORTE_E_LAZER("Esporte e Lazer"),
 
     @XmlEnumValue("Esporte profissional")
     VCGE2_ESPORTE_PROFISSIONAL("Esporte profissional"),
@@ -140,8 +188,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Fomento ao Trabalho")
     VCGE2_FOMENTO_AO_TRABALHO("Fomento ao Trabalho"),
 
-    @XmlEnumValue("Habitação")
-    VCGE2_HABITACAO("Habitação"),
 
     @XmlEnumValue("Habitação Rural")
     VCGE2_HABITACAO_RURAL("Habitação Rural"),
@@ -149,8 +195,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Habitação Urbana")
     VCGE2_HABITACAO_URBANA("Habitação Urbana"),
 
-    @XmlEnumValue("Indústria")
-    VCGE2_INDUSTRIA("Indústria"),
 
     @XmlEnumValue("Infraestrutura Urbana")
     VCGE2_INFRAESTRUTURA_URBANA("Infraestrutura Urbana"),
@@ -161,8 +205,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Medicamentos e aparelhos")
     VCGE2_MEDICAMENTOS_E_APARELHOS("Medicamentos e aparelhos"),
 
-    @XmlEnumValue("Meio ambiente")
-    VCGE2_MEIO_AMBIENTE("Meio ambiente"),
 
     @XmlEnumValue("Mineração")
     VCGE2_MINERACAO("Mineração"),
@@ -182,8 +224,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Patrimônio Cultural")
     VCGE2_PATRIMONIO_CULTURAL("Patrimônio Cultural"),
 
-    @XmlEnumValue("Pesquisa e Desenvolvimento")
-    VCGE2_PESQUISA_E_DESENVOLVIMENTO("Pesquisa e Desenvolvimento"),
 
     @XmlEnumValue("Planejamento")
     VCGE2_PLANEJAMENTO("Planejamento"),
@@ -203,8 +243,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Previdência Complementar")
     VCGE2_PREVIDENCIA_COMPLEMENTAR("Previdência Complementar"),
 
-    @XmlEnumValue("Previdência Social")
-    VCGE2_PREVIDENCIA_SOCIAL("Previdência Social"),
 
     @XmlEnumValue("Produção Industrial")
     VCGE2_PRODUCAO_INDUSTRIAL("Produção Industrial"),
@@ -215,8 +253,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Propriedade Industrial")
     VCGE2_PROPRIEDADE_INDUSTRIAL("Propriedade Industrial"),
 
-    @XmlEnumValue("Proteção Social")
-    VCGE2_PROTECAO_SOCIAL("Proteção Social"),
 
     @XmlEnumValue("Proteção e Benefícios ao Trabalhador")
     VCGE2_PROTECAO_E_BENEFICIOS_AO_TRABALHADOR("Proteção e Benefícios ao Trabalhador"),
@@ -227,14 +263,10 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Relações Diplomáticas")
     VCGE2_RELACOES_DIPLOMATICAS("Relações Diplomáticas"),
 
-    @XmlEnumValue("Relações Internacionais")
-    VCGE2_RELACOES_INTERNACIONAIS("Relações Internacionais"),
 
     @XmlEnumValue("Relações de Trabalho")
     VCGE2_RELACOES_DE_TRABALHO("Relações de Trabalho"),
 
-    @XmlEnumValue("Saneamento")
-    VCGE2_SANEAMENTO("Saneamento"),
 
     @XmlEnumValue("Saneamento Básico Rural")
     VCGE2_SANEAMENTO_BASICO_RURAL("Saneamento Básico Rural"),
@@ -242,11 +274,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Saneamento Básico Urbano")
     VCGE2_SANEAMENTO_BASICO_URBANO("Saneamento Básico Urbano"),
 
-    @XmlEnumValue("Saúde")
-    VCGE2_SAUDE("Saúde"),
-
-    @XmlEnumValue("Segurança e Ordem Pública")
-    VCGE2_SEGURANCA_E_ORDEM_PUBLICA("Segurança e Ordem Pública"),
 
     @XmlEnumValue("Serviços Públicos")
     VCGE2_SERVICOS_PUBLICOS("Serviços Públicos"),
@@ -260,8 +287,6 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Telecomunicações")
     VCGE2_TELECOMUNICACOES("Telecomunicações"),
 
-    @XmlEnumValue("Trabalho")
-    VCGE2_TRABALHO("Trabalho"),
 
     @XmlEnumValue("Transporte Aéreo")
     VCGE2_TRANSPORTE_AEREO("Transporte Aéreo"),
@@ -275,14 +300,10 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Transporte Rodoviário")
     VCGE2_TRANSPORTE_RODOVIARIO("Transporte Rodoviário"),
 
-    @XmlEnumValue("Transportes")
-    VCGE2_TRANSPORTES("Transportes"),
 
     @XmlEnumValue("Turismo")
     VCGE2_TURISMO("Turismo"),
 
-    @XmlEnumValue("Urbanismo")
-    VCGE2_URBANISMO("Urbanismo"),
 
     @XmlEnumValue("Vigilância Sanitária")
     VCGE2_VIGILANCIA_SANITARIA("Vigilância Sanitária"),
@@ -415,11 +436,17 @@ public enum AreaDeInteresse {
 
     private final String id;
     private final String value;
+    private final String fontAwesomeIcon;
+
+    AreaDeInteresse(String v) {
+        this(v, "tag");
+    }
 
     @SneakyThrows
-    AreaDeInteresse(String v) {
+    AreaDeInteresse(String v, String icon) {
         id = new Slugify().slugify(v);
         value = v;
+        fontAwesomeIcon = icon;
     }
 
     public static AreaDeInteresse findById(String v) {
@@ -435,6 +462,10 @@ public enum AreaDeInteresse {
 
     public String getId() {
         return id;
+    }
+
+    public String getFontAwesomeIcon() {
+        return fontAwesomeIcon;
     }
 
     @Component

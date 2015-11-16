@@ -1,5 +1,6 @@
 package br.gov.servicos.frontend;
 
+import br.gov.servicos.destaques.AreasDeInteresseEmDestaque;
 import br.gov.servicos.destaques.ServicosEmDestaque;
 import br.gov.servicos.orgao.OrgaoRepository;
 import lombok.experimental.FieldDefaults;
@@ -24,11 +25,13 @@ class IndexController {
     private static final int SERVICOS_DESTACADOS = 8;
 
     ServicosEmDestaque destaques;
+    private AreasDeInteresseEmDestaque areasDestaque;
     OrgaoRepository orgaos;
 
     @Autowired
-    IndexController(ServicosEmDestaque servicosEmDestaque, OrgaoRepository orgaos) {
+    IndexController(ServicosEmDestaque servicosEmDestaque, AreasDeInteresseEmDestaque areasDestaque, OrgaoRepository orgaos) {
         this.destaques = servicosEmDestaque;
+        this.areasDestaque = areasDestaque;
         this.orgaos = orgaos;
     }
 
@@ -44,7 +47,9 @@ class IndexController {
 
     @RequestMapping("/")
     ModelAndView index() {
-        return new ModelAndView("index", "destaques", destaques.servicos(SERVICOS_DESTACADOS));
+        ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("destaques", destaques.servicos(SERVICOS_DESTACADOS));
+        modelAndView.addObject("areasDestaque", areasDestaque.areasDeInteresse());
+        return modelAndView;
     }
-
 }
