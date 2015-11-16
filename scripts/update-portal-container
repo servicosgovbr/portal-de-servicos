@@ -2,10 +2,6 @@ set -x
 set -e
 set -o pipefail
 
-set -x
-set -e
-set -o pipefail
-
 cd '/root/docker'
 git pull --rebase
 
