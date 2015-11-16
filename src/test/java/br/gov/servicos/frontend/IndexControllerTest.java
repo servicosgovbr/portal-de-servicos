@@ -1,6 +1,7 @@
 package br.gov.servicos.frontend;
 
 import br.gov.servicos.config.ServicosDestaqueConfig;
+import br.gov.servicos.destaques.AreasDeInteresseEmDestaque;
 import br.gov.servicos.destaques.ServicosEmDestaque;
 import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.piwik.PiwikClient;
@@ -50,6 +51,9 @@ public class IndexControllerTest {
 
     @Mock
     OrgaoRepository orgaos;
+
+    @Mock
+    AreasDeInteresseEmDestaque areasDeInteresseEmDestaque;
 
     IndexController controller;
 
@@ -185,10 +189,10 @@ public class IndexControllerTest {
     }
 
     private IndexController comDestaquesAutomaticos() {
-        return new IndexController(destaquesAutomaticos, orgaos);
+        return new IndexController(destaquesAutomaticos, areasDeInteresseEmDestaque, orgaos);
     }
 
     private IndexController comDestaquesManuais() {
-        return new IndexController(destaquesManuais, orgaos);
+        return new IndexController(destaquesManuais, areasDeInteresseEmDestaque, orgaos);
     }
 }
