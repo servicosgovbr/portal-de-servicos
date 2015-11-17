@@ -2,9 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <body>
-
 <div id="capacho">
-
     <dl>
         <dt>Informações</dt>
         <dd>
@@ -14,16 +12,13 @@
             <a href="http://servicosgovbr.github.io">Para Desenvolvedores</a>
         </dd>
     </dl>
-
     <dl>
         <dt>Seções</dt>
-
         <dd th:each="segmento : ${@segmentoDaSociedadeRepository.findAll()}">
             <a th:href="@{/publico-alvo/{id}(id=${segmento.id})}">
                 <span th:text="${segmento.value}">Título do Público Alvo</span>
             </a>
         </dd>
-
         <dd>
             <a href="/servicos">Todos os Serviços</a>
         </dd>
@@ -31,7 +26,6 @@
             <a href="/orgaos">Todos os Órgãos</a>
         </dd>
     </dl>
-
     <dl>
         <dt>Navegação</dt>
         <dd>
@@ -41,8 +35,15 @@
             <a href="/conteudo/mapa-do-site">Mapa do Site</a>
         </dd>
     </dl>
-
+    <dl>
+        <dt>Editor de Serviços</dt>
+        <dd>
+            <a href="">Para Servidores</a>
+        </dd>
+        <dd>
+            <a href="">Para Cidadãos</a>
+        </dd>
+    </dl>
 </div>
-
 </body>
 </html>
