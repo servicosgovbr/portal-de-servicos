@@ -101,7 +101,7 @@
       }
 
       h1 {
-        font-size: 2.1em;
+        font-size: 1.7em;
       }
     }
 
@@ -122,10 +122,6 @@
 
     @include tablet {
       margin-top: 45px;
-    }
-
-    @include mobile {
-      font-size: $baseFontSize * 2;
     }
   }
 
