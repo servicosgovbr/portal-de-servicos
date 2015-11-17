@@ -123,6 +123,10 @@
     @include tablet {
       margin-top: 45px;
     }
+
+    @include small-mobile {
+      font-size: $baseFontSize * 2;
+    }
   }
 
   #portal-description {
