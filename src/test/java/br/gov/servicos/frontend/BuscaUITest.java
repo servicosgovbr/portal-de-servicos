@@ -4,6 +4,7 @@ import br.gov.servicos.Main;
 import br.gov.servicos.setup.SetupTestesIntegracao;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
@@ -57,6 +58,7 @@ public class BuscaUITest {
     }
 
     @Test
+    @Ignore("Não está claro porque as vezes funciona, as vezes não, tem cara de ser relacionado ao WebDriver")
     public void buscaSimplesPorDarf() throws Exception {
         driver.get(baseUrl);
         assertThat(driver.getTitle(), is("Portal de Serviços - Página Inicial"));
