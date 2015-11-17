@@ -3,7 +3,7 @@
 Os serviços são descritos em um arquivo no formato [XML], de forma a facilitar sua importação tanto pelo Portal de 
 Serviços quanto por quaisquer outros aplicativos que desejem utilizar seus dados.
 
-Para garantir que os documentos XML estão corretamente formatados e contém [a estrutura desejada][DER], também foi criado
+Para garantir que os documentos XML estão corretamente formatados e contém [a estrutura desejada][MER], também foi criado
 um modelo (_schema_) em formato [XSD] para os serviços, [também disponível no repositório do projeto][SERVICOSXSD].
 
 Este schema pode ser utilizado para geração automática de código de leitura e escrita de arquivos XML que aderem ao formato
