@@ -138,6 +138,7 @@ class GitReport
       @backward_order.first(until_para_homologacao).each &block
       @backward_order.reverse.first(until_em_progresso).each &block
       
+      next if item[:stage].nil?
       clean_posterior_dates item
     end
   end
