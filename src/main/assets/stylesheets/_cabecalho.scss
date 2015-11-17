@@ -124,7 +124,7 @@
       margin-top: 45px;
     }
 
-    @include small-mobile {
+    @include mobile {
       font-size: $baseFontSize * 2;
     }
   }

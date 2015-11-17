@@ -1,13 +1,6 @@
-$small-mobile: new-breakpoint(max-width 320px);
 $mobile: new-breakpoint(max-width 460px);
 $tablet: new-breakpoint(min-width 461px max-width 768px);
 $desktop-overflow: new-breakpoint(min-width 769px max-width 1000px);
-
-@mixin small-mobile {
-    @include media($small-mobile) {
-        @content
-    }
-}
 
 @mixin mobile {
     @include media($mobile) {
