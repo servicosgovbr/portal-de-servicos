@@ -911,7 +911,7 @@ p.formulario-opiniao {
   border: 1px solid $cinza-medio;
   border-radius: 4px;
   border-bottom: 4px solid $cinza-medio;
-  height: 240px;
+  height: 150px;
   margin-bottom: 30px;
   display: inline-block;
   line-height: 120%;
@@ -936,7 +936,7 @@ p.formulario-opiniao {
     @include span-columns(6 of 12);
     @include omega(2n);
     height: auto;
-    min-height: 235px;
+    min-height: 130px;
   }
 
   @include mobile {
