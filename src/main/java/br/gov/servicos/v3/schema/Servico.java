@@ -40,6 +40,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
         "nomesPopulares",
         "descricao",
         "gratuito",
+        "contato",
         "solicitantes",
         "tempoTotalEstimado",
         "etapas",
@@ -74,6 +75,10 @@ public class Servico {
 
     @XmlElement
     String gratuito;
+
+    @XmlElement
+    @Field(type = String, store = true)
+    String contato;
 
     @XmlElementWrapper(name = "solicitantes")
     @XmlElement(name = "solicitante")

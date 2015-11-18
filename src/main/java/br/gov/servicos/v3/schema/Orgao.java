@@ -33,8 +33,4 @@ public class Orgao {
     @Field(type = String, index = analyzed, store = true)
     String nome;
 
-    @XmlElement(name = "contato")
-    @Field(type = String, index = analyzed, store = true)
-    String contato;
-
 }
