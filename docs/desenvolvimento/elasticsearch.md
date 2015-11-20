@@ -13,7 +13,7 @@ Seu acesso é por meio de APIs [REST][REST], ou programaticamente, em Java.
 ## Prós
 
 * Também age como um banco de dados sem esquema (_schema-less_), onde não é necessário definir os tipos de documentos em configurações ou metadados.
-* Documentos e tipos de dados dos campos são inferidos (e ajustados posteriormente caso hajam alterações).
+* Documentos e tipos de dados dos campos são inferidos (e ajustados posteriormente caso haja alterações).
 * Vários tipos diferentes de documentos podem ser indexados em um único índice.
 * Sub-documentos e sub-tipos são suportados, para pesquisas mais específicas.
 * Consultas podem ser feitas de forma flexível (tanto na _query string_ quanto no corpo da requisição, em formato JSON).
