@@ -1,7 +1,6 @@
 package br.gov.servicos.importador;
 
-import br.gov.servicos.TipoPagina;
-import br.gov.servicos.cms.Conteudo;
+import br.gov.servicos.cms.PaginaEstatica;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -13,36 +12,37 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.util.stream.Stream;
 
-import static br.gov.servicos.TipoPagina.*;
+import static br.gov.servicos.TipoPagina.PAGINA_ESTATICA;
 import static lombok.AccessLevel.PRIVATE;
 
 @Slf4j
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-class ImportadorParaConteudoDeOrgaos {
+public class ImportadorParaPaginasEstaticas {
 
     ConteudoParser parser;
 
     @Autowired
-    public ImportadorParaConteudoDeOrgaos(ConteudoParser parser) {
+    public ImportadorParaPaginasEstaticas(
+            ConteudoParser parser) {
         this.parser = parser;
     }
 
     @SneakyThrows
-    Stream<Conteudo> importar(RepositorioCartasServico repositorioCartasServico) {
-        File diretorioOrgaos = repositorioCartasServico.get(ORGAO.getCaminhoPasta().toString()).getFile();
+    public Stream<PaginaEstatica> importar(RepositorioCartasServico repositorio) {
+        File dir = repositorio.get(PAGINA_ESTATICA.getCaminhoPasta().toString()).getFile();
 
-        log.info("Importando órgãos em {}", diretorioOrgaos);
-        return Stream.of(diretorioOrgaos.listFiles((d, n) -> n.endsWith(ORGAO.getExtensao())))
+        log.info("Importando páginas temáticas em {}", dir);
+        return Stream.of(dir.listFiles((d, n) -> n.endsWith(PAGINA_ESTATICA.getExtensao())))
                 .parallel()
                 .map(FileSystemResource::new)
                 .map(this::fromResource);
     }
 
-    private Conteudo fromResource(Resource r) {
-        return new Conteudo()
-                .withId(r.getFilename().replace(ORGAO.getExtensao(), ""))
-                .withTipoConteudo(ORGAO.getNome())
+    private PaginaEstatica fromResource(Resource r) {
+        return new PaginaEstatica()
+                .withId(r.getFilename().replace(PAGINA_ESTATICA.getExtensao(), ""))
+                .withTipoConteudo(PAGINA_ESTATICA.getNome())
                 .withNome(parser.titulo(r))
                 .withConteudo(parser.conteudo(r))
                 .withHtml(parser.conteudoHtml(r));

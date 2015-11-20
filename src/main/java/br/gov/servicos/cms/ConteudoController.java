@@ -17,4 +17,9 @@ public class ConteudoController {
         return new ModelAndView("conteudo", "conteudo", conteudo);
     }
 
+    @RequestMapping("/pagina-estatica/{id}")
+    public ModelAndView paginaEstatica(@PathVariable("id") PaginaEstatica paginaEstatica) {
+        return new ModelAndView("conteudo", "conteudo", paginaEstatica);
+    }
+
 }

@@ -1,5 +1,6 @@
 package br.gov.servicos.config;
 
+import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.v3.schema.Servico;
 import lombok.experimental.FieldDefaults;
@@ -43,6 +44,7 @@ public class PortalDeServicosIndex {
 
         es.putMapping(Servico.class);
         es.putMapping(Opiniao.class);
+        es.putMapping(PaginaEstatica.class);
     }
 
     private void criarIndicePersistenteSeNaoExistir() throws IOException {

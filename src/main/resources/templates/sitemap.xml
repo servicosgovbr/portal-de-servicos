@@ -23,7 +23,7 @@
     </url>
 
     <url>
-        <loc th:text="${@baseUrl.and('/conteudo/perguntas-frequentes')}">/conteudo/perguntas-frequentes</loc>
+        <loc th:text="${@baseUrl.and('/pagina-estatica/perguntas-frequentes')}">/conteudo/perguntas-frequentes</loc>
     </url>
 
     <url>

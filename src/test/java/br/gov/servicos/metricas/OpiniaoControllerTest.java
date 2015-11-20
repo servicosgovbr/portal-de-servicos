@@ -58,7 +58,7 @@ public class OpiniaoControllerTest {
     @Test
     public void retornaAgradecimentoParaOUsuario() {
         RedirectView response = controller.opiniao("/", "query", TICKET, "opiniao", ACHEI_O_QUE_PROCURAVA);
-        assertThat(response.getUrl(), is("/conteudo/obrigado-pela-contribuicao"));
+        assertThat(response.getUrl(), is("/pagina-estatica/obrigado-pela-contribuicao"));
     }
 
     @Test

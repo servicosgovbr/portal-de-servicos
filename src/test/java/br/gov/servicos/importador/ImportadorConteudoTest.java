@@ -2,6 +2,7 @@ package br.gov.servicos.importador;
 
 import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoRepository;
+import br.gov.servicos.cms.PaginaEstaticaRepository;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -29,14 +30,20 @@ public class ImportadorConteudoTest {
     ImportadorParaConteudoDeOrgaos orgaos;
 
     @Mock
-    ImportadorParaConteudoDePaginas paginas;
+    ImportadorParaPaginasTematicas paginas;
+
+    @Mock
+    ImportadorParaPaginasEstaticas estatica;
 
     @Mock
     RepositorioCartasServico cartasServico;
 
+    @Mock
+    PaginaEstaticaRepository paginaEstaticaRepository;
+
     @Before
     public void setUp() throws Exception {
-        importadorConteudo = new ImportadorConteudo(conteudoRepository, orgaos, paginas);
+        importadorConteudo = new ImportadorConteudo(conteudoRepository, paginaEstaticaRepository, orgaos, paginas, estatica);
     }
 
     @Test

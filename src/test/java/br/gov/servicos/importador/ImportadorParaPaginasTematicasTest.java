@@ -18,7 +18,7 @@ import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.mock;
 
 @RunWith(MockitoJUnitRunner.class)
-public class ImportadorParaConteudoDePaginasTest {
+public class ImportadorParaPaginasTematicasTest {
 
     @Mock
     ConteudoParser parser;
@@ -38,7 +38,7 @@ public class ImportadorParaConteudoDePaginasTest {
         given(parser.titulo(anyObject())).willReturn("Acessibilidade");
         given(parser.conteudo(anyObject())).willReturn("Parágrafo um. Parágrafo dois.");
 
-        Conteudo c = new ImportadorParaConteudoDePaginas(parser).importar(cartasServico).findFirst().get();
+        Conteudo c = new ImportadorParaPaginasTematicas(parser).importar(cartasServico).findFirst().get();
 
         assertThat(c.getId(), is("acessibilidade"));
         assertThat(c.getTipoConteudo(), is("conteudo"));

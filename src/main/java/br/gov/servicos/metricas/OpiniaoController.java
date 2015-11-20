@@ -61,7 +61,7 @@ class OpiniaoController {
 
         mail.enviar(opinioes.save(f));
 
-        return new RedirectView("/conteudo/obrigado-pela-contribuicao");
+        return new RedirectView("/pagina-estatica/obrigado-pela-contribuicao");
     }
 
 }
