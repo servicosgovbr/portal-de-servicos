@@ -129,7 +129,7 @@ public class BuscadorConteudoIntegrationTest {
                 .withNome("Passaporte")
                 .withDescricao("Emissão de passaportes"));
 
-        Iterable<Conteudo> busca = buscador.busca(of("passaprote"), 0);
+        Iterable<Conteudo> busca = buscador.busca(of("passapote"), 0);
         Conteudo resultado = busca.iterator().next();
         assertThat(resultado.getId(), is("passaporte"));
     }

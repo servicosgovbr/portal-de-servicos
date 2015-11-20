@@ -26,7 +26,7 @@ import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
-import static org.elasticsearch.common.unit.Fuzziness.TWO;
+import static org.elasticsearch.common.unit.Fuzziness.ONE;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 @Component
@@ -50,8 +50,8 @@ public class BuscadorConteudo {
     public Page<Conteudo> busca(Optional<String> termoBuscado, Integer paginaAtual) {
         log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
         return executaQuery(termoBuscado, paginaAtual, q -> disMaxQuery()
-                .add(multiMatchQuery(q, "nome^1.0", "conteudo^0.9", "descricao^0.9")
-                        .fuzziness(TWO)
+                .add(multiMatchQuery(q, "nome^1.0", "conteudo^0.7", "descricao^0.5")
+                        .fuzziness(ONE)
                         .prefixLength(0)));
     }
 
