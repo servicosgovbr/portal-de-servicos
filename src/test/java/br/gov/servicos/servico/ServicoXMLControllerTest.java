@@ -1,6 +1,6 @@
 package br.gov.servicos.servico;
 
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.ServicoXML;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
-import static br.gov.servicos.cms.Conteudo.fromServico;
+import static br.gov.servicos.cms.PaginaEstatica.fromServico;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
@@ -26,7 +26,7 @@ import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
-public class ServicoControllerTest {
+public class ServicoXMLControllerTest {
 
     @Mock
     ServicoRepository servicos;
@@ -37,7 +37,7 @@ public class ServicoControllerTest {
     public void setUp() {
         given(servicos.findOne("1")).willReturn(SERVICO);
         given(servicos.findAll(any(PageRequest.class))).willReturn(new PageImpl<>(emptyList()));
-        given(servicos.save(any(Servico.class))).will(returnsFirstArg());
+        given(servicos.save(any(ServicoXML.class))).will(returnsFirstArg());
 
         controller = new ServicoController(servicos);
     }
@@ -54,8 +54,8 @@ public class ServicoControllerTest {
 
     @Test
     public void deveRetornarTodosOsServicosEmOrdemAlfabetica() {
-        Servico servicoA = new Servico().withNome("A");
-        Servico servicoB = new Servico().withNome("B");
+        ServicoXML servicoA = new ServicoXML().withNome("A");
+        ServicoXML servicoB = new ServicoXML().withNome("B");
 
         given(servicos.findAll(any(PageRequest.class))).willReturn(new PageImpl<>(asList(servicoA, servicoB)));
 
@@ -66,9 +66,9 @@ public class ServicoControllerTest {
     @Test
     public void deveRetornarLetrasDisponiveisParaFiltro() {
         given(servicos.findAll(any(PageRequest.class))).willReturn(new PageImpl<>(asList(
-                new Servico().withNome("x"),
-                new Servico().withNome("B2"),
-                new Servico().withNome("B1"))));
+                new ServicoXML().withNome("x"),
+                new ServicoXML().withNome("B2"),
+                new ServicoXML().withNome("B1"))));
 
         assertModelAttributeValue(controller.todos(null), "letras", asList('B', 'X'));
     }
@@ -81,7 +81,7 @@ public class ServicoControllerTest {
 
     @Test
     public void redirecionaParaAPaginaDeServicos() {
-        assertViewName(controller.get(new Servico().withId("1")), "servico");
+        assertViewName(controller.get(new ServicoXML().withId("1")), "servico");
     }
 
     @Test

@@ -3,8 +3,8 @@ package br.gov.servicos.importador;
 import br.gov.servicos.config.PortalDeServicosIndex;
 import br.gov.servicos.orgao.Siorg;
 import br.gov.servicos.servico.ServicoRepository;
-import br.gov.servicos.v3.schema.Orgao;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.OrgaoXML;
+import br.gov.servicos.v3.schema.ServicoXML;
 import com.github.slugify.Slugify;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
@@ -40,7 +40,7 @@ public class ImportadorServicos {
     }
 
     @SneakyThrows
-    public Iterable<Servico> importar(RepositorioCartasServico repo) {
+    public Iterable<ServicoXML> importar(RepositorioCartasServico repo) {
         log.info("Iniciando importação de serviços...");
         indices.recriar();
 
@@ -48,7 +48,7 @@ public class ImportadorServicos {
                 Stream.of(repo.get("cartas-servico/v3/servicos").getFile()
                         .listFiles((d, n) -> n.endsWith(".xml")))
                         .parallel()
-                        .map(f -> unmarshal(f, Servico.class))
+                        .map(f -> unmarshal(f, ServicoXML.class))
                         .map(s -> s.withId(slugify.slugify(s.getNome())))
                         .map(s -> s.withOrgao(remapeiaOrgao(s.getOrgao())))
                         .peek(s -> log.debug("{} importado com sucesso", s.getId()))
@@ -56,7 +56,7 @@ public class ImportadorServicos {
         );
     }
 
-    private Orgao remapeiaOrgao(Orgao orgao) {
+    private OrgaoXML remapeiaOrgao(OrgaoXML orgao) {
         return siorg.findUnidade(orgao.getId())
                 .map(u -> orgao
                         .withId(slugify.slugify(u.getNome() + " - " + u.getSigla()))

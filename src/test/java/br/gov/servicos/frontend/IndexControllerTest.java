@@ -7,8 +7,8 @@ import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.ServicoRepository;
-import br.gov.servicos.v3.schema.Orgao;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.OrgaoXML;
+import br.gov.servicos.v3.schema.ServicoXML;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -93,7 +93,7 @@ public class IndexControllerTest {
         controller = comDestaquesManuais();
         given(destaques.getServicos()).willReturn(singletonList("servico-em-destaque"));
 
-        Servico servicoEmDestaque = new Servico().withNome("servico-em-destaque");
+        ServicoXML servicoEmDestaque = new ServicoXML().withNome("servico-em-destaque");
         given(servicos.findOne("servico-em-destaque")).willReturn(servicoEmDestaque);
 
         assertModelAttributeValue(controller.index(), "destaques", asList(servicoEmDestaque, SERVICO));
@@ -109,7 +109,7 @@ public class IndexControllerTest {
                                 .withVisitors(3L)
                                 .withUniqueVisitors(1L)));
 
-        Servico servicoMaisAcessado = new Servico().withNome("Servico Mais Acessado");
+        ServicoXML servicoMaisAcessado = new ServicoXML().withNome("Servico Mais Acessado");
         given(servicos.findOne("servico-mais-acessado")).willReturn(servicoMaisAcessado);
 
         assertModelAttributeValue(controller.index(), "destaques", asList(servicoMaisAcessado, SERVICO));
@@ -126,10 +126,10 @@ public class IndexControllerTest {
                                 .withUniqueVisitors(1L)));
         given(destaques.getServicos()).willReturn(singletonList("servico-em-destaque"));
 
-        Servico servicoMaisAcessado = new Servico().withNome("servico-mais-acessado");
+        ServicoXML servicoMaisAcessado = new ServicoXML().withNome("servico-mais-acessado");
         given(servicos.findOne("servico-mais-acessado")).willReturn(servicoMaisAcessado);
 
-        Servico servicoEmDestaque = new Servico().withNome("servico-em-destaque");
+        ServicoXML servicoEmDestaque = new ServicoXML().withNome("servico-em-destaque");
         given(servicos.findOne("servico-em-destaque")).willReturn(servicoEmDestaque);
 
         assertModelAttributeValue(controller.index(), "destaques", asList(servicoMaisAcessado, servicoEmDestaque, SERVICO));
@@ -170,7 +170,7 @@ public class IndexControllerTest {
     public void deveRedirecionarParaOrgao() throws IOException {
         controller = comDestaquesManuais();
         String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
-        given(orgaos.findByUrl(urlOrgao)).willReturn(of(new Orgao().withId("secretaria-secretarial-do-secretariado-sss")));
+        given(orgaos.findByUrl(urlOrgao)).willReturn(of(new OrgaoXML().withId("secretaria-secretarial-do-secretariado-sss")));
 
         ModelAndView view = controller.redirectParaOrgao(urlOrgao);
 

@@ -2,7 +2,7 @@ package br.gov.servicos.orgao;
 
 import br.gov.servicos.Main;
 import br.gov.servicos.setup.SetupTestesIntegracao;
-import br.gov.servicos.v3.schema.Orgao;
+import br.gov.servicos.v3.schema.OrgaoXML;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,9 +35,7 @@ public class OrgaoControllerIntegrationTest {
     @Test
     public void deveEncontrarConteudoParaTodosOrgaosNoRepositorio() throws Exception {
         orgaoRepository.findAll()
-                .stream()
-                .map(Orgao::getId)
-                .map(orgaoController::orgao);
+                .forEach(o -> orgaoController.orgao(o.getId()));
     }
 
 }

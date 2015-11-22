@@ -1,7 +1,7 @@
 package br.gov.servicos.servico;
 
-import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.Markdown;
+import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.v3.schema.AreaDeInteresse;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,8 +37,8 @@ class AreaDeInteresseController {
         model.put("areaDeInteresse", areaDeInteresse);
         model.put("resultados", servicos.findByAreaDeInteresse(areaDeInteresse)
                 .stream()
-                .map(Conteudo::fromServico)
-                .sorted(comparing(Conteudo::getId))
+                .map(PaginaEstatica::fromServico)
+                .sorted(comparing(PaginaEstatica::getId))
                 .collect(toList()));
 
         return new ModelAndView("area-de-interesse", model);

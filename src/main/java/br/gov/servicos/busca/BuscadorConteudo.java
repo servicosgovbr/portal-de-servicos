@@ -1,6 +1,6 @@
 package br.gov.servicos.busca;
 
-import br.gov.servicos.cms.Conteudo;
+import br.gov.servicos.cms.PaginaEstatica;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -21,6 +21,7 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
+import static br.gov.servicos.TipoPagina.*;
 import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;
@@ -35,7 +36,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 @Cacheable("buscas")
 public class BuscadorConteudo {
 
-    private static final FacetedPageImpl<Conteudo> SEM_RESULTADOS = new FacetedPageImpl<>(emptyList());
+    private static final FacetedPageImpl<PaginaEstatica> SEM_RESULTADOS = new FacetedPageImpl<>(emptyList());
     private static final int PAGE_SIZE = 20;
 
     ElasticsearchTemplate et;
@@ -47,7 +48,7 @@ public class BuscadorConteudo {
         this.slugify = slugify;
     }
 
-    public Page<Conteudo> busca(Optional<String> termoBuscado, Integer paginaAtual) {
+    public Page<PaginaEstatica> busca(Optional<String> termoBuscado, Integer paginaAtual) {
         log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
         return executaQuery(termoBuscado, paginaAtual, q -> disMaxQuery()
                 .add(multiMatchQuery(q, "nome^1.0", "conteudo^0.7", "descricao^0.5")
@@ -55,20 +56,20 @@ public class BuscadorConteudo {
                         .prefixLength(0)));
     }
 
-    public List<Conteudo> buscaSemelhante(Optional<String> termoBuscado) {
+    public List<PaginaEstatica> buscaSemelhante(Optional<String> termoBuscado) {
         return executaQuery(termoBuscado, termo -> fuzzyLikeThisQuery("nome", "conteudo", "descricao").likeText(termo));
     }
 
-    private List<Conteudo> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
+    private List<PaginaEstatica> executaQuery(Optional<String> termoBuscado, Function<String, QueryBuilder> criaQuery) {
         return executaQuery(termoBuscado, 0, MAX_VALUE, criaQuery).getContent();
     }
 
-    private Page<Conteudo> executaQuery(Optional<String> termoBuscado, Integer paginaAtual, Function<String, QueryBuilder> criaQuery) {
+    private Page<PaginaEstatica> executaQuery(Optional<String> termoBuscado, Integer paginaAtual, Function<String, QueryBuilder> criaQuery) {
         return executaQuery(termoBuscado, paginaAtual, PAGE_SIZE, criaQuery);
     }
 
-    private Page<Conteudo> executaQuery(Optional<String> termoBuscado, Integer paginaAtual,
-                                        Integer quantidadeDeResultados, Function<String, QueryBuilder> criaQuery) {
+    private Page<PaginaEstatica> executaQuery(Optional<String> termoBuscado, Integer paginaAtual,
+                                              Integer quantidadeDeResultados, Function<String, QueryBuilder> criaQuery) {
         Optional<String> termo = termoBuscado.filter(t -> !t.isEmpty());
         PageRequest pageable = new PageRequest(paginaAtual, quantidadeDeResultados);
 
@@ -76,13 +77,13 @@ public class BuscadorConteudo {
                 .map(q -> et.query(
                         new NativeSearchQueryBuilder()
                                 .withIndices(IMPORTADOR)
-                                .withTypes("conteudo", "servico")
+                                .withTypes(PAGINA_ORGAO.getNome(), PAGINA_TEMATICA.getNome(), SERVICO.getNome())
                                 .withFields("tipoConteudo", "nome", "conteudo", "descricao")
-                                .withPageable(pageable)
                                 .withQuery(q)
+                                .withPageable(pageable)
                                 .build(),
                         r -> new FacetedPageImpl<>(Stream.of(r.getHits().getHits())
-                                .map(h -> new Conteudo()
+                                .map(h -> new PaginaEstatica()
                                         .withId(slugify.slugify(h.field("nome").value()))
                                         .withTipoConteudo((String) Optional.ofNullable(h.field("tipoConteudo"))
                                                 .filter(Objects::nonNull)

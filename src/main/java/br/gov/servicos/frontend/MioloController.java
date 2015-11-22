@@ -1,9 +1,9 @@
 package br.gov.servicos.frontend;
 
-import br.gov.servicos.cms.Conteudo;
 import br.gov.servicos.cms.ConteudoController;
+import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.orgao.OrgaoController;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.ServicoXML;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,7 +28,7 @@ public class MioloController {
     }
 
     @RequestMapping(value = "/miolo/servico/{id}", method = GET)
-    ModelAndView getHtml(@PathVariable("id") Servico servico) {
+    ModelAndView getHtml(@PathVariable("id") ServicoXML servico) {
         return new ModelAndView("servico :: //section", "servico", servico);
     }
 
@@ -37,9 +37,9 @@ public class MioloController {
         return new ModelAndView("orgao :: //section", orgaos.orgao(id).getModel());
     }
 
-    @RequestMapping(value = "/miolo/conteudo/{id}", method = GET)
-    ModelAndView getHtml(@PathVariable("id") Conteudo conteudo) {
-        return new ModelAndView("conteudo :: //section", conteudos.conteudo(conteudo).getModel());
-    }
+//    @RequestMapping(value = "/miolo/conteudo/{id}", method = GET)
+//    ModelAndView getHtml(@PathVariable("id") PaginaEstatica paginaEstatica) {
+//        return new ModelAndView("conteudo :: //section", conteudos.conteudo(paginaEstatica).getModel());
+//    }
 
 }

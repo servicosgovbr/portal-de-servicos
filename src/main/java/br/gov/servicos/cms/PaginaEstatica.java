@@ -1,7 +1,7 @@
 package br.gov.servicos.cms;
 
-import br.gov.servicos.TipoPagina;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.OrgaoXML;
+import br.gov.servicos.v3.schema.ServicoXML;
 import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 import java.text.ParseException;
 import java.util.Locale;
 
-import static br.gov.servicos.TipoPagina.*;
+import static br.gov.servicos.TipoPagina.SERVICO;
 import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
@@ -50,7 +50,7 @@ public class PaginaEstatica {
     }
 
     @SneakyThrows
-    public static PaginaEstatica fromServico(Servico servico) {
+    public static PaginaEstatica fromServico(ServicoXML servico) {
         return new PaginaEstatica()
                 .withId(new Slugify().slugify(servico.getNome()))
                 .withTipoConteudo(SERVICO.getNome())

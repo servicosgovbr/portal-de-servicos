@@ -1,6 +1,6 @@
 package br.gov.servicos.busca;
 
-import br.gov.servicos.cms.Conteudo;
+import br.gov.servicos.cms.PaginaEstatica;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.domain.Page;
 import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 
-import static br.gov.servicos.fixtures.TestData.CONTEUDO;
+import static br.gov.servicos.fixtures.TestData.PAGINA_ESTATICA;
 import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
 import static java.util.Optional.ofNullable;
@@ -29,7 +29,7 @@ public class BuscaControllerTest {
     @Mock
     BuscadorConteudo buscador;
 
-    Page<Conteudo> umConteudo = new FacetedPageImpl<>(singletonList(CONTEUDO));
+    Page<PaginaEstatica> umConteudo = new FacetedPageImpl<>(singletonList(PAGINA_ESTATICA));
     BuscaController controller;
 
     @Before
@@ -64,7 +64,7 @@ public class BuscaControllerTest {
 
     @Test
     public void retornaSugestoesDeBusca() throws Exception {
-        doReturn(singletonList(CONTEUDO.withNome("Seguro-desemprego")))
+        doReturn(singletonList(PAGINA_ESTATICA.withNome("Seguro-desemprego")))
                 .when(buscador)
                 .buscaSemelhante(ofNullable("empreg"));
 

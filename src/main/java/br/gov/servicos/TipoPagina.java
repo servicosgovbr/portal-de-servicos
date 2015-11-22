@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 public enum TipoPagina {
-    ORGAO("conteudo/orgaos", "xml"),
+    PAGINA_ORGAO("conteudo/orgaos", "xml"),
     PAGINA_TEMATICA("conteudo/paginas-tematicas", "xml"),
     PAGINA_ESTATICA("conteudo/paginas-estaticas", "md"),
     SERVICO("cartas-servico/v3/servicos", "xml");

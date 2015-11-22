@@ -2,8 +2,8 @@ package br.gov.servicos.servico;
 
 import br.gov.servicos.Main;
 import br.gov.servicos.setup.SetupTestesIntegracao;
-import br.gov.servicos.v3.schema.Orgao;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.OrgaoXML;
+import br.gov.servicos.v3.schema.ServicoXML;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,7 +26,7 @@ import static org.junit.Assert.assertThat;
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
-public class ServicoRepositoryIntegrationTest {
+public class ServicoXMLRepositoryIntegrationTest {
 
     @Autowired
     ServicoRepository servicos;
@@ -41,16 +41,16 @@ public class ServicoRepositoryIntegrationTest {
 
     @Test
     public void listaServicosPorOrgao() throws Exception {
-        Orgao orgao = new Orgao()
+        OrgaoXML orgao = new OrgaoXML()
                 .withId("orgao-1")
                 .withUrl("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1")
                 .withNome("Órgão 1");
 
         servicos.save(SERVICO.withId("servico-1").withOrgao(orgao));
-        servicos.save(SERVICO.withId("servico-2").withOrgao(new Orgao().withId("orgao-2")));
+        servicos.save(SERVICO.withId("servico-2").withOrgao(new OrgaoXML().withId("orgao-2")));
         servicos.save(SERVICO.withId("servico-3").withOrgao(orgao));
 
-        List<Servico> resultados = servicos.findByOrgao(orgao);
+        List<ServicoXML> resultados = servicos.findByOrgao(orgao);
 
         assertThat(resultados, is(not(empty())));
         assertThat(resultados.size(), is(2));

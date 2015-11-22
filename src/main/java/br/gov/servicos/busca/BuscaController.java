@@ -1,6 +1,6 @@
 package br.gov.servicos.busca;
 
-import br.gov.servicos.cms.Conteudo;
+import br.gov.servicos.cms.PaginaEstatica;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -54,12 +54,12 @@ class BuscaController {
     @ResponseStatus(OK)
     @ResponseBody
     String sugestao(@RequestParam(required = true) String q) {
-        List<Conteudo> listaServico = buscador.buscaSemelhante(ofNullable(q));
+        List<PaginaEstatica> listaServico = buscador.buscaSemelhante(ofNullable(q));
 
         return format("[\"%s\", %s]",
                 q,
                 listaServico.stream()
-                        .map(Conteudo::getNome)
+                        .map(PaginaEstatica::getNome)
                         .limit(7)
                         .collect(joining("\",\"", "[\"", "\"]")));
     }

@@ -19,9 +19,7 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
-import static java.util.Optional.empty;
-import static java.util.Optional.of;
-import static java.util.Optional.ofNullable;
+import static java.util.Optional.*;
 import static lombok.AccessLevel.PRIVATE;
 import static net.logstash.logback.marker.Markers.append;
 
@@ -42,6 +40,8 @@ public class Siorg {
     }
 
     public Optional<Unidade> findUnidade(String url) {
+        if (true)
+            return Optional.empty();
         LogstashMarker marker = append("siorg.url", url);
 
         Cache cache = cacheManager.getCache("unidadesSiorg");

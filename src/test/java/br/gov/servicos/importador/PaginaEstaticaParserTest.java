@@ -5,25 +5,25 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.core.io.Resource;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Matchers.anyObject;
-import static org.mockito.Matchers.anyString;
+import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
-public class ConteudoParserTest {
+public class PaginaEstaticaParserTest {
 
     @Mock
     Markdown markdown;
 
     @Test
     public void deveExtrairTextoPuroDeHtml() throws Exception {
-        given(markdown.toHtml(anyObject())).willReturn("<html>" +
+        given(markdown.toHtml(any(Resource.class))).willReturn("<html>" +
                         "<h2>Foo</h2>" +
                         "<p>Parágrafo um.</p>" +
                         "<ul><li>Ponto A.</li><li>Ponto B.</li></ul>" +
@@ -31,7 +31,7 @@ public class ConteudoParserTest {
                         "</html>"
         );
 
-        String corpo = new ConteudoParser(markdown).conteudo(anyObject());
+        String corpo = new ConteudoParser(markdown).conteudo(any(Resource.class));
 
         assertThat(corpo, is("Parágrafo um. Ponto A. Ponto B. Parágrafo dois."));
     }

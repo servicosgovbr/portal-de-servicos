@@ -12,7 +12,7 @@ import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
 @RunWith(MockitoJUnitRunner.class)
 @FieldDefaults(level = PRIVATE)
-public class ConteudoControllerTest {
+public class PaginaEstaticaControllerTest {
 
     ConteudoController controller;
 
@@ -23,7 +23,7 @@ public class ConteudoControllerTest {
 
     @Test
     public void redirecionaParaAPaginaDeConteudo() throws ConteudoNaoEncontrado {
-        assertViewName(controller.conteudo(new Conteudo().withId("pagina")), "conteudo");
+        assertViewName(controller.paginaEstatica(new PaginaEstatica().withId("pagina")), "conteudo");
     }
 
 }

@@ -1,7 +1,7 @@
 package br.gov.servicos.config;
 
 import br.gov.servicos.metricas.Opiniao;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.ServicoXML;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -54,7 +54,7 @@ public class PortalDeServicosIndexTest {
     @Test
     public void deveAdicionarMapeamentos() throws Exception {
         esConfig.recriar();
-        verify(es).putMapping(Servico.class);
+        verify(es).putMapping(ServicoXML.class);
         verify(es).putMapping(Opiniao.class);
     }
 

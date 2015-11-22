@@ -1,6 +1,6 @@
 package br.gov.servicos.servico;
 
-import br.gov.servicos.cms.Conteudo;
+import br.gov.servicos.cms.PaginaEstatica;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
@@ -52,7 +52,7 @@ public class PublicoAlvoControllerTest {
     @Test
     public void deveRetornarOsServicosRelacionadosAoPublicoAlvo() {
         assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, null), "servicos",
-                singletonList(Conteudo.fromServico(SERVICO.withNome("AAAA"))));
+                singletonList(PaginaEstatica.fromServico(SERVICO.withNome("AAAA"))));
     }
 
     @Test
@@ -75,7 +75,7 @@ public class PublicoAlvoControllerTest {
     @Test
     public void deveFiltrarPelaLetraInformada() {
         assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, 'X'), "servicos",
-                singletonList(Conteudo.fromServico(SERVICO.withNome("XXXX"))));
+                singletonList(PaginaEstatica.fromServico(SERVICO.withNome("XXXX"))));
     }
 
 }

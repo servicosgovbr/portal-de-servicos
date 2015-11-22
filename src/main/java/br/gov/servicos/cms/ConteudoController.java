@@ -1,5 +1,6 @@
 package br.gov.servicos.cms;
 
+import br.gov.servicos.v3.schema.OrgaoXML;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,14 +13,19 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class ConteudoController {
 
-    @RequestMapping("/conteudo/{id}")
-    public ModelAndView conteudo(@PathVariable("id") Conteudo conteudo) {
-        return new ModelAndView("conteudo", "conteudo", conteudo);
-    }
-
     @RequestMapping("/pagina-estatica/{id}")
     public ModelAndView paginaEstatica(@PathVariable("id") PaginaEstatica paginaEstatica) {
         return new ModelAndView("conteudo", "conteudo", paginaEstatica);
+    }
+
+    @RequestMapping("/pagina-tematica/{id}")
+    public ModelAndView paginaTematica(@PathVariable("id") PaginaTematica paginaTematica) {
+        return new ModelAndView("conteudo", "conteudo", paginaTematica);
+    }
+
+    @RequestMapping("/pagina-orgao/{id}")
+    public ModelAndView paginaOrgao(@PathVariable("id") OrgaoXML paginaOrgao) {
+        return new ModelAndView("conteudo", "conteudo", paginaOrgao);
     }
 
 }

@@ -1,9 +1,9 @@
 package br.gov.servicos.servico;
 
 import br.gov.servicos.v3.schema.AreaDeInteresse;
-import br.gov.servicos.v3.schema.Orgao;
+import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.SegmentoDaSociedade;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.ServicoXML;
 import org.elasticsearch.index.query.TermFilterBuilder;
 import org.elasticsearch.search.sort.FieldSortBuilder;
 import org.springframework.cache.annotation.Cacheable;
@@ -18,10 +18,10 @@ import static java.util.Collections.singletonList;
 import static java.util.stream.Collectors.toList;
 import static org.elasticsearch.search.sort.SortOrder.ASC;
 
-public interface ServicoRepository extends ElasticsearchRepository<Servico, String> {
+public interface ServicoRepository extends ElasticsearchRepository<ServicoXML, String> {
 
     @Cacheable("servicos-por-orgao")
-    default List<Servico> findByOrgao(Orgao orgao) {
+    default List<ServicoXML> findByOrgao(OrgaoXML orgao) {
         return findAll(new PageRequest(0, MAX_VALUE)).getContent()
                 .stream()
                 .filter(s -> s.getOrgao() != null && s.getOrgao().getId().equals(orgao.getId()))
@@ -29,7 +29,7 @@ public interface ServicoRepository extends ElasticsearchRepository<Servico, Stri
     }
 
     @Cacheable("servicos-por-area-de-interesse")
-    default List<Servico> findByAreaDeInteresse(AreaDeInteresse areaDeInteresse) {
+    default List<ServicoXML> findByAreaDeInteresse(AreaDeInteresse areaDeInteresse) {
         return search(new NativeSearchQueryBuilder()
                 .withFilter(new TermFilterBuilder("areasDeInteresse", singletonList(areaDeInteresse)))
                 .withSort(new FieldSortBuilder("nome").order(ASC))
@@ -38,7 +38,7 @@ public interface ServicoRepository extends ElasticsearchRepository<Servico, Stri
     }
 
     @Cacheable("servicos-por-segmento-da-sociedade")
-    default List<Servico> findBySegmentoDaSociedade(SegmentoDaSociedade segmentoDaSociedade) {
+    default List<ServicoXML> findBySegmentoDaSociedade(SegmentoDaSociedade segmentoDaSociedade) {
         return search(new NativeSearchQueryBuilder()
                 .withFilter(new TermFilterBuilder("segmentosDaSociedade", singletonList(segmentoDaSociedade)))
                 .withSort(new FieldSortBuilder("nome").order(ASC))

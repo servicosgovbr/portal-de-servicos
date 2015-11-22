@@ -3,7 +3,7 @@ package br.gov.servicos.orgao;
 import br.gov.servicos.Main;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.setup.SetupTestesIntegracao;
-import br.gov.servicos.v3.schema.Orgao;
+import br.gov.servicos.v3.schema.OrgaoXML;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,6 +14,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.SortedSet;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
@@ -43,31 +44,31 @@ public class OrgaoRepositoryIntegrationTest {
     public void listaOrgaosEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
                 .withId("servico-1")
-                .withOrgao(new Orgao()
+                .withOrgao(new OrgaoXML()
                         .withId("orgao-1")
                         .withUrl("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1")
                         .withNome("Órgão 1")));
 
         servicos.save(SERVICO
                 .withId("servico-3")
-                .withOrgao(new Orgao()
+                .withOrgao(new OrgaoXML()
                         .withId("orgao-3")
                         .withUrl("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/3")
                         .withNome("Órgão 3")));
 
         servicos.save(SERVICO
                 .withId("servico-2")
-                .withOrgao(new Orgao()
+                .withOrgao(new OrgaoXML()
                         .withId("orgao-2")
                         .withUrl("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/2")
                         .withNome("Órgão 2")));
 
-        SortedSet<Orgao> resultados = orgaos.findAll();
+        List<OrgaoXML> resultados = (List<OrgaoXML>) orgaos.findAll();
 
         assertThat(resultados, is(not(empty())));
         assertThat(resultados.size(), is(3));
 
-        Iterator<Orgao> it = resultados.iterator();
+        Iterator<OrgaoXML> it = resultados.iterator();
         assertThat(it.next().getId(), is("orgao-1"));
         assertThat(it.next().getId(), is("orgao-2"));
         assertThat(it.next().getId(), is("orgao-3"));

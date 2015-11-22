@@ -1,12 +1,11 @@
 package br.gov.servicos.servico;
 
-import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.cms.PaginaEstatica;
+import br.gov.servicos.v3.schema.ServicoXML;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,15 +42,15 @@ class ServicoController {
     @RequestMapping(value = "/servicos", method = GET)
     ModelAndView todos(@RequestParam(required = false) Character letra) {
         Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse('A');
-        Map<Character, List<Servico>> servicosPorLetra = servicosAgrupadosPorLetraInicial();
+        Map<Character, List<ServicoXML>> servicosPorLetra = servicosAgrupadosPorLetraInicial();
 
         Map<String, Object> model = new HashMap<>();
         model.put("letraAtiva", primeiraLetra);
 
-        model.put("servicos", servicosPorLetra.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
+        model.put("servicos", servicosPorLetra.getOrDefault(primeiraLetra, Collections.<ServicoXML>emptyList())
                 .stream()
-                .sorted(comparing(Servico::getNome))
-                .map(Conteudo::fromServico)
+                .sorted(comparing(ServicoXML::getNome))
+                .map(PaginaEstatica::fromServico)
                 .collect(toList()));
 
         model.put("letras",
@@ -70,17 +69,17 @@ class ServicoController {
     }
 
     @RequestMapping(value = "/servico/{id}", method = GET)
-    ModelAndView get(@PathVariable("id") Servico servico) {
+    ModelAndView get(@PathVariable("id") ServicoXML servico) {
         return new ModelAndView("servico", "servico", servico);
     }
 
     @RequestMapping(value = "/servico/{id}.json", method = GET, produces = "application/json")
     @ResponseBody
-    Servico debug(@PathVariable("id") Servico servico) {
+    ServicoXML debug(@PathVariable("id") ServicoXML servico) {
         return servico;
     }
 
-    private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial() {
+    private Map<Character, List<ServicoXML>> servicosAgrupadosPorLetraInicial() {
         PageRequest page = new PageRequest(0, MAX_VALUE, new Sort(ASC, "nome"));
         return servicos.findAll(page)
                 .getContent()

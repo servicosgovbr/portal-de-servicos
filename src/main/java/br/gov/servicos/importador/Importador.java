@@ -22,15 +22,22 @@ public class Importador {
 
     RepositorioCartasServico repositorioCartasServico;
     ImportadorServicos servicos;
-    ImportadorConteudo conteudo;
+    ImportadorParaPaginasEstaticas estaticas;
+    ImportadorParaPaginasTematicas tematicas;
+    ImportadorParaPaginasDeOrgao orgaos;
+
 
     @Autowired
     public Importador(RepositorioCartasServico repositorioCartasServico,
                       ImportadorServicos servicos,
-                      ImportadorConteudo conteudo) {
+                      ImportadorParaPaginasEstaticas estaticas,
+                      ImportadorParaPaginasTematicas tematicas,
+                      ImportadorParaPaginasDeOrgao orgaos) {
         this.repositorioCartasServico = repositorioCartasServico;
         this.servicos = servicos;
-        this.conteudo = conteudo;
+        this.estaticas = estaticas;
+        this.tematicas = tematicas;
+        this.orgaos = orgaos;
     }
 
     @ManagedOperation
@@ -41,9 +48,12 @@ public class Importador {
 
         Map<String, Object> retorno = new HashMap<>();
         retorno.put("servicos", servicos.importar(repositorioCartasServico));
-        retorno.put("conteudos", conteudo.importar(repositorioCartasServico));
+        retorno.put("paginas-estaticas", estaticas.importar(repositorioCartasServico));
+        retorno.put("paginas-tematicas", tematicas.importar(repositorioCartasServico));
+        retorno.put("orgaos", orgaos.importar(repositorioCartasServico));
 
         log.info("Importação concluída com sucesso");
         return retorno;
     }
+
 }

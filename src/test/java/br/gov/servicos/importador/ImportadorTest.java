@@ -18,7 +18,13 @@ public class ImportadorTest {
     ImportadorServicos importadorServicos;
 
     @Mock
-    ImportadorConteudo importadorConteudo;
+    ImportadorParaPaginasEstaticas importadorParaPaginasEstaticas;
+
+    @Mock
+    ImportadorParaPaginasTematicas importadorParaPaginasTematicas;
+
+    @Mock
+    ImportadorParaPaginasDeOrgao importadorParaPaginasDeOrgao;
 
     Importador importador;
 
@@ -30,7 +36,9 @@ public class ImportadorTest {
         importador = new Importador(
                 cartasServico,
                 importadorServicos,
-                importadorConteudo);
+                importadorParaPaginasEstaticas,
+                importadorParaPaginasTematicas,
+                importadorParaPaginasDeOrgao);
     }
 
     @Test
@@ -42,7 +50,7 @@ public class ImportadorTest {
     @Test
     public void deveRodarImportadorDeConteudo() throws Exception {
         importador.importar();
-        verify(importadorConteudo).importar(cartasServico);
+        verify(importadorParaPaginasEstaticas).importar(cartasServico);
     }
 
 }

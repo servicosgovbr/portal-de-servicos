@@ -40,12 +40,15 @@ public class Markdown {
             try (BufferedReader br = new BufferedReader(input)) {
                 String nome = br.readLine();
                 String conteudo = nome + "\n" + br.lines().collect(joining("\n"));
-
-                return pegdown.markdownToHtml(conteudo);
+                return toHtml(conteudo);
             }
         } catch (IOException e) {
             throw new ConteudoNaoEncontrado(e);
         }
+    }
+
+    public String toHtml(String raw) {
+        return pegdown.markdownToHtml(raw);
     }
 
 }

@@ -1,6 +1,7 @@
 package br.gov.servicos.importador;
 
 import br.gov.servicos.cms.PaginaEstatica;
+import br.gov.servicos.cms.PaginaEstaticaRepository;
 import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -13,6 +14,7 @@ import java.io.File;
 import java.util.stream.Stream;
 
 import static br.gov.servicos.TipoPagina.PAGINA_ESTATICA;
+import static java.util.stream.Collectors.*;
 import static lombok.AccessLevel.PRIVATE;
 
 @Slf4j
@@ -20,23 +22,27 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class ImportadorParaPaginasEstaticas {
 
+    private PaginaEstaticaRepository repository;
     ConteudoParser parser;
 
     @Autowired
     public ImportadorParaPaginasEstaticas(
+            PaginaEstaticaRepository repository,
             ConteudoParser parser) {
+        this.repository = repository;
         this.parser = parser;
     }
 
     @SneakyThrows
-    public Stream<PaginaEstatica> importar(RepositorioCartasServico repositorio) {
+    public Iterable<PaginaEstatica> importar(RepositorioCartasServico repositorio) {
         File dir = repositorio.get(PAGINA_ESTATICA.getCaminhoPasta().toString()).getFile();
 
         log.info("Importando páginas temáticas em {}", dir);
-        return Stream.of(dir.listFiles((d, n) -> n.endsWith(PAGINA_ESTATICA.getExtensao())))
-                .parallel()
+        return repository.save(Stream.of(dir.listFiles((d, n) -> n.endsWith(PAGINA_ESTATICA.getExtensao())))
                 .map(FileSystemResource::new)
-                .map(this::fromResource);
+                .map(this::fromResource)
+                .peek(s -> log.debug("{} importado com sucesso", s.getId()))
+                .collect(toList()));
     }
 
     private PaginaEstatica fromResource(Resource r) {

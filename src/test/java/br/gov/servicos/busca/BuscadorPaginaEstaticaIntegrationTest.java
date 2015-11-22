@@ -1,11 +1,11 @@
 package br.gov.servicos.busca;
 
 import br.gov.servicos.Main;
-import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.cms.ConteudoRepository;
+import br.gov.servicos.cms.PaginaEstatica;
+import br.gov.servicos.cms.PaginaEstaticaRepository;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.setup.SetupTestesIntegracao;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.ServicoXML;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,7 +30,7 @@ import static org.junit.Assert.assertThat;
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Main.class)
-public class BuscadorConteudoIntegrationTest {
+public class BuscadorPaginaEstaticaIntegrationTest {
 
     @Autowired
     SetupTestesIntegracao setupTestesIntegracao;
@@ -39,7 +39,7 @@ public class BuscadorConteudoIntegrationTest {
     ServicoRepository servicos;
 
     @Autowired
-    ConteudoRepository conteudos;
+    PaginaEstaticaRepository paginas;
 
     @Autowired
     BuscadorConteudo buscador;
@@ -52,46 +52,46 @@ public class BuscadorConteudoIntegrationTest {
     @Test
     public void deveInserirUmServicoEUmConteudoERetornarDoisConteudos() throws Exception {
         servicos.save(SERVICO);
-        conteudos.save(CONTEUDO);
+        paginas.save(PAGINA_ESTATICA);
 
-        List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
+        List<PaginaEstatica> paginaEstaticas = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
-        assertThat(conteudos, hasSize(2));
-        assertThat(conteudos, hasItem(CONTEUDO));
-        assertThat(conteudos, hasItem(CONTEUDO_DE_SERVICO));
+        assertThat(paginaEstaticas, hasSize(2));
+        assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA));
+        assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA_DE_SERVICO));
     }
 
     @Test
     public void deveRetornarApenasConteudosQueTenhamAPalavraDescricao() throws Exception {
         servicos.save(SERVICO);
-        servicos.save(new Servico().withNome("Um titulo").withDescricao("Texto"));
-        conteudos.save(new Conteudo().withNome("Titulo de conteudo").withConteudo("Conteudo"));
+        servicos.save(new ServicoXML().withNome("Um titulo").withDescricao("Texto"));
+        paginas.save(new PaginaEstatica().withNome("Titulo de conteudo").withConteudo("Conteudo"));
 
-        List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
+        List<PaginaEstatica> paginaEstaticas = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
-        assertThat(conteudos, hasSize(1));
-        assertThat(conteudos.get(0).getConteudo(), is("Descrição serviço"));
+        assertThat(paginaEstaticas, hasSize(1));
+        assertThat(paginaEstaticas.get(0).getConteudo(), is("Descrição serviço"));
     }
 
     @Test
     public void deveAcharSemAcentuacao() throws Exception {
-        servicos.save(new Servico().withNome("Um titulo").withDescricao("Descricao"));
+        servicos.save(new ServicoXML().withNome("Um titulo").withDescricao("Descricao"));
 
-        List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
-        assertThat(conteudos, hasSize(1));
-        assertThat(conteudos.get(0).getConteudo(), is("Descricao"));
+        List<PaginaEstatica> paginaEstaticas = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
+        assertThat(paginaEstaticas, hasSize(1));
+        assertThat(paginaEstaticas.get(0).getConteudo(), is("Descricao"));
     }
 
     @Test
     public void buscaSemelhante() throws Exception {
         servicos.save(SERVICO);
-        servicos.save(new Servico().withNome("Titulo de servico").withDescricao("Texto"));
+        servicos.save(new ServicoXML().withNome("Titulo de servico").withDescricao("Texto"));
 
-        List<Conteudo> conteudos = buscador.buscaSemelhante(of("ervic"));
+        List<PaginaEstatica> paginaEstaticas = buscador.buscaSemelhante(of("ervic"));
 
-        assertThat(conteudos, hasSize(2));
-        assertThat(conteudos, hasItem(CONTEUDO_DE_SERVICO));
-        assertThat(conteudos, hasItem(new Conteudo()
+        assertThat(paginaEstaticas, hasSize(2));
+        assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA_DE_SERVICO));
+        assertThat(paginaEstaticas, hasItem(new PaginaEstatica()
                 .withId("titulo-de-servico")
                 .withNome("Titulo de servico")
                 .withTipoConteudo("servico")
@@ -101,26 +101,26 @@ public class BuscadorConteudoIntegrationTest {
 
     @Test
     public void deveConsiderarTermoDeBuscaVazioComoEmpty() throws Exception {
-        Page<Conteudo> resultados = buscador.busca(of(""), 0);
+        Page<PaginaEstatica> resultados = buscador.busca(of(""), 0);
         assertThat(resultados.getContent(), is(emptyList()));
     }
 
     @Test
     public void retornaUmaListaVaziaQuandoNaoHouverTermoDeBusca() throws Exception {
-        Page<Conteudo> resultados = buscador.busca(empty(), 0);
+        Page<PaginaEstatica> resultados = buscador.busca(empty(), 0);
         assertThat(resultados.getContent(), is(emptyList()));
     }
 
     @Test
     public void deveConterTipoConteudo() throws Exception {
         servicos.save(SERVICO);
-        conteudos.save(CONTEUDO);
+        paginas.save(PAGINA_ESTATICA);
 
-        List<Conteudo> conteudos = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
+        List<PaginaEstatica> paginaEstaticas = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
-        assertThat(conteudos, hasSize(2));
-        assertThat(conteudos, hasItem(CONTEUDO_DE_SERVICO));
-        assertThat(conteudos, hasItem(CONTEUDO));
+        assertThat(paginaEstaticas, hasSize(2));
+        assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA_DE_SERVICO));
+        assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA));
     }
 
     @Test
@@ -129,8 +129,9 @@ public class BuscadorConteudoIntegrationTest {
                 .withNome("Passaporte")
                 .withDescricao("Emissão de passaportes"));
 
-        Iterable<Conteudo> busca = buscador.busca(of("passapote"), 0);
-        Conteudo resultado = busca.iterator().next();
+        Iterable<PaginaEstatica> busca = buscador.busca(of("passaprote"), 0);
+        PaginaEstatica resultado = busca.iterator().next();
+
         assertThat(resultado.getId(), is("passaporte"));
     }
 }

@@ -1,8 +1,8 @@
 package br.gov.servicos.servico;
 
-import br.gov.servicos.cms.Conteudo;
+import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.v3.schema.SegmentoDaSociedade;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.ServicoXML;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
@@ -47,12 +47,12 @@ class PublicoAlvoController {
                              @RequestParam(required = false) Character letra) {
 
         Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse('A');
-        Map<Character, List<Servico>> servicosPorLetraInicial = servicosAgrupadosPorLetraInicial(segmento);
+        Map<Character, List<ServicoXML>> servicosPorLetraInicial = servicosAgrupadosPorLetraInicial(segmento);
 
-        List<Conteudo> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<Servico>emptyList())
+        List<PaginaEstatica> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<ServicoXML>emptyList())
                 .stream()
-                .sorted(comparing(Servico::getNome))
-                .map(Conteudo::fromServico)
+                .sorted(comparing(ServicoXML::getNome))
+                .map(PaginaEstatica::fromServico)
                 .collect(toList());
 
         Map<String, Object> model = new HashMap<>();
@@ -64,7 +64,7 @@ class PublicoAlvoController {
         return new ModelAndView("publico-alvo", model);
     }
 
-    private Map<Character, List<Servico>> servicosAgrupadosPorLetraInicial(SegmentoDaSociedade segmento) {
+    private Map<Character, List<ServicoXML>> servicosAgrupadosPorLetraInicial(SegmentoDaSociedade segmento) {
         return servicos.findBySegmentoDaSociedade(segmento)
                 .stream()
                 .collect(groupingBy(s -> s.getNome().trim().toUpperCase().charAt(0)));

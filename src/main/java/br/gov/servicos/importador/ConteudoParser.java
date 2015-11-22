@@ -26,6 +26,10 @@ public class ConteudoParser {
         return parseResource(resource).select("p, ul, ol").text();
     }
 
+    public String conteudo(String raw) {
+        return parse(markdown.render(raw)).select("p, ul, ol").text();
+    }
+
     public String textoPuro(String textoComMarkdown) {
         return parse(markdown.render(textoComMarkdown)).select("p, ul, ol").text();
     }
@@ -34,8 +38,16 @@ public class ConteudoParser {
         return parseResource(resource).toString();
     }
 
+    public String conteudoHtml(String raw) {
+        return parse(markdown.render(raw)).toString();
+    }
+
     public String titulo(Resource resource) {
         return parseResource(resource).select("h2").text();
+    }
+
+    public String titulo(String raw) {
+        return parse(markdown.toHtml(raw)).select("h2").text();
     }
 
     public String link(String source) {

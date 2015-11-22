@@ -1,9 +1,8 @@
 package br.gov.servicos.orgao;
 
-import br.gov.servicos.cms.Conteudo;
-import br.gov.servicos.cms.ConteudoRepository;
+import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.servico.ServicoRepository;
-import br.gov.servicos.v3.schema.Orgao;
+import br.gov.servicos.v3.schema.OrgaoXML;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,13 +23,11 @@ public class OrgaoController {
 
     OrgaoRepository orgaos;
     ServicoRepository servicos;
-    ConteudoRepository conteudos;
 
     @Autowired
-    OrgaoController(OrgaoRepository orgaos, ServicoRepository servicos, ConteudoRepository conteudos) {
+    OrgaoController(OrgaoRepository orgaos, ServicoRepository servicos) {
         this.orgaos = orgaos;
         this.servicos = servicos;
-        this.conteudos = conteudos;
     }
 
     @RequestMapping("/orgaos")
@@ -43,11 +40,11 @@ public class OrgaoController {
         Map<String, Object> model = new HashMap<>();
 
         model.put("termo", id);
-        model.put("conteudo", conteudos.findOne(id));
-        model.put("resultados", servicos.findByOrgao(new Orgao().withId(id))
+        model.put("conteudo", orgaos.findOne(id));
+        model.put("resultados", servicos.findByOrgao(new OrgaoXML().withId(id))
                 .stream()
-                .map(Conteudo::fromServico)
-                .sorted(comparing(Conteudo::getId))
+                .map(PaginaEstatica::fromServico)
+                .sorted(comparing(PaginaEstatica::getId))
                 .collect(toList()));
 
         return new ModelAndView("orgao", model);

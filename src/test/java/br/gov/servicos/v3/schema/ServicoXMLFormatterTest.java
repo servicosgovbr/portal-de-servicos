@@ -17,29 +17,29 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
 
 @RunWith(MockitoJUnitRunner.class)
-public class ServicoFormatterTest {
+public class ServicoXMLFormatterTest {
 
     @Mock
     ServicoRepository servicos;
 
-    Servico.Formatter formatter;
+    ServicoXML.Formatter formatter;
 
     @Before
     public void setUp() throws Exception {
-        formatter = new Servico.Formatter(new Slugify(), servicos);
+        formatter = new ServicoXML.Formatter(new Slugify(), servicos);
     }
 
     @Test
     public void testParseComIdValido() throws Exception {
         given(servicos.findOne("foo")).willReturn(SERVICO.withId("foo"));
-        Servico servico = formatter.parse("foo", getDefault());
+        ServicoXML servico = formatter.parse("foo", getDefault());
         assertThat(servico, is(SERVICO.withId("foo")));
     }
 
     @Test
     public void testParseComIdMaligno() throws Exception {
         given(servicos.findOne("foo-drop-table")).willReturn(SERVICO.withId("foo"));
-        Servico servico = formatter.parse("foo'; -- DROP TABLE *", getDefault());
+        ServicoXML servico = formatter.parse("foo'; -- DROP TABLE *", getDefault());
         assertThat(servico, is(SERVICO.withId("foo")));
     }
 

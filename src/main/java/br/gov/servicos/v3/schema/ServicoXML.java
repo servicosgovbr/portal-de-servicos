@@ -50,7 +50,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
         "palavrasChave",
         "legislacoes",
 })
-public class Servico {
+public class ServicoXML {
 
     @Id
     @XmlTransient
@@ -93,7 +93,7 @@ public class Servico {
 
     @XmlElement
     @Field(type = Object)
-    Orgao orgao;
+    OrgaoXML orgao;
 
     @XmlElementWrapper(name = "segmentos-da-sociedade")
     @XmlElement(name = "item")
@@ -116,7 +116,7 @@ public class Servico {
 
     @Component
     @FieldDefaults(level = PRIVATE, makeFinal = true)
-    public static class Formatter implements org.springframework.format.Formatter<Servico> {
+    public static class Formatter implements org.springframework.format.Formatter<ServicoXML> {
 
         Slugify slugify;
         ServicoRepository servicos;
@@ -128,13 +128,13 @@ public class Servico {
         }
 
         @Override
-        public Servico parse(String id, Locale locale) throws ParseException {
+        public ServicoXML parse(String id, Locale locale) throws ParseException {
             return ofNullable(servicos.findOne(slugify.slugify(id)))
                     .orElseThrow(() -> new ConteudoNaoEncontrado(id));
         }
 
         @Override
-        public String print(Servico servico, Locale locale) {
+        public String print(ServicoXML servico, Locale locale) {
             return servico.getId();
         }
     }

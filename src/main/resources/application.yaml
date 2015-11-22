@@ -38,7 +38,7 @@ pds:
     token: ""
     site: 52
   cartas:
-    repositorio: "/Users/kchnr/projects/tw/pds/c-teste"
+    repositorio: "/Users/kchnr/projects/tw/pds/c-servico"
   destaques:
     servicos:
       - prouni-programa-universidade-para-todos

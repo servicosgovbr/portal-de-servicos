@@ -4,7 +4,7 @@ import br.gov.servicos.config.ServicosDestaqueConfig;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.ServicoRepository;
-import br.gov.servicos.v3.schema.Servico;
+import br.gov.servicos.v3.schema.ServicoXML;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +50,7 @@ public class ServicosEmDestaque {
     }
 
     @Cacheable("destaques")
-    public List<Servico> servicos(int quantidade) {
+    public List<ServicoXML> servicos(int quantidade) {
         if (destaquesAutomaticos) {
             return completaSevicosAteOLimite(
                     concat(servicosMaisAcessados(),
@@ -60,7 +60,7 @@ public class ServicosEmDestaque {
         return completaSevicosAteOLimite(buscaDestaquesSeNecessario(), quantidade);
     }
 
-    private Stream<Servico> buscaDestaquesSeNecessario() {
+    private Stream<ServicoXML> buscaDestaquesSeNecessario() {
         if (destaques.getServicos().isEmpty())
             return empty();
 
@@ -69,10 +69,10 @@ public class ServicosEmDestaque {
                 .filter(Objects::nonNull);
     }
 
-    private List<Servico> completaSevicosAteOLimite(Stream<Servico> servicosBase, int quantidade) {
+    private List<ServicoXML> completaSevicosAteOLimite(Stream<ServicoXML> servicosBase, int quantidade) {
         PageRequest pagina = new PageRequest(0, quantidade, new Sort(DESC, "nome"));
 
-        Stream<Servico> outrosServicos = servicos.findAll(pagina).getContent()
+        Stream<ServicoXML> outrosServicos = servicos.findAll(pagina).getContent()
                 .stream()
                 .filter(s -> !destaques.getServicos().contains(s.getId()));
 
@@ -81,10 +81,10 @@ public class ServicosEmDestaque {
                 .collect(toList());
     }
 
-    private Stream<Servico> servicosMaisAcessados() {
+    private Stream<ServicoXML> servicosMaisAcessados() {
         log.debug("Piwik: listando serviços mais acessados...");
 
-        Stream<Servico> servicos = piwikClient.getPageUrls("week", "yesterday").stream()
+        Stream<ServicoXML> servicos = piwikClient.getPageUrls("week", "yesterday").stream()
                 .sorted(comparing(PiwikPage::getUniqueVisitors))
                 .map(PiwikPage::getIdServico)
                 .filter(Optional::isPresent)
