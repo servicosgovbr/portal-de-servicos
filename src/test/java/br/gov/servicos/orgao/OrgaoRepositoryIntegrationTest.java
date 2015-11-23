@@ -47,24 +47,24 @@ public class OrgaoRepositoryIntegrationTest {
     public void listaOrgaosEmOrdemAlfabetica() throws Exception {
         servicos.save(SERVICO
                 .withId("servico-1")
-                .withOrgao(new OrgaoXML()
+                .withOrgao(orgaos.save(new OrgaoXML()
                         .withId("orgao-1")
                         .withUrl("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1")
-                        .withNome("Órgão 1")));
+                        .withNome("Órgão 1"))));
 
         servicos.save(SERVICO
                 .withId("servico-3")
-                .withOrgao(new OrgaoXML()
+                .withOrgao(orgaos.save(new OrgaoXML()
                         .withId("orgao-3")
                         .withUrl("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/3")
-                        .withNome("Órgão 3")));
+                        .withNome("Órgão 3"))));
 
         servicos.save(SERVICO
                 .withId("servico-2")
-                .withOrgao(new OrgaoXML()
+                .withOrgao(orgaos.save(new OrgaoXML()
                         .withId("orgao-2")
                         .withUrl("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/2")
-                        .withNome("Órgão 2")));
+                        .withNome("Órgão 2"))));
 
         List<OrgaoXML> resultados = Lists.newArrayList(orgaosRepositoryUtil.findAll());
 

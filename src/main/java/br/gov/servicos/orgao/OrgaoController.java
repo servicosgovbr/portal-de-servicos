@@ -21,7 +21,7 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class OrgaoController {
 
-    private OrgaoRepository orgaoRepository;
+    OrgaoRepository orgaoRepository;
     OrgaoRepositoryUtil orgaosRepositoryUtil;
     ServicoRepository servicos;
 

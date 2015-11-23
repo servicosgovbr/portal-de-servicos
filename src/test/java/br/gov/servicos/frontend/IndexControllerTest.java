@@ -179,7 +179,7 @@ public class IndexControllerTest {
 
         ModelAndView view = controller.redirectParaOrgao(urlOrgao);
 
-        assertThat(((RedirectView) view.getView()).getUrl(), is("/orgaos/" + id));
+        assertThat(((RedirectView) view.getView()).getUrl(), is("/orgao/" + id));
     }
 
     @Test
