@@ -131,9 +131,10 @@ public class BuscadorPaginaEstaticaIntegrationTest {
                 .withNome("Passaporte")
                 .withDescricao("Emissão de passaportes"));
 
-        Iterable<PaginaEstatica> busca = buscador.busca(of("passaprote"), 0);
+        Iterable<PaginaEstatica> busca = buscador.busca(of("passapote"), 0);
         PaginaEstatica resultado = busca.iterator().next();
 
         assertThat(resultado.getId(), is("passaporte"));
     }
+
 }
