@@ -33,8 +33,11 @@ public class OrgaoRepositoryUtil {
     public SortedSet<OrgaoXML> findAll() {
         return servicos.findAll(new PageRequest(0, Integer.MAX_VALUE)).getContent()
                 .stream()
-                .filter(s -> Objects.nonNull(s.getOrgao()))
                 .map(ServicoXML::getOrgao)
+                .filter(Objects::nonNull)
+                .map(OrgaoXML::getId)
+                .map(orgaoRepository::findOne)
+                .filter(Objects::nonNull)
                 .collect(toCollection(() -> new TreeSet<>(comparing(OrgaoXML::getNome))));
     }
 

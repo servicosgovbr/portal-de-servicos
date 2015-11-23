@@ -43,7 +43,7 @@ class IndexController {
         OrgaoXML orgao = orgaos.findOne(slugify.slugify(url));
         if (orgao == null)
             return index();
-        return new ModelAndView(new RedirectView("/orgaos/" + orgao.getId()));
+        return new ModelAndView(new RedirectView("/orgao/" + orgao.getId()));
     }
 
     @RequestMapping("/")

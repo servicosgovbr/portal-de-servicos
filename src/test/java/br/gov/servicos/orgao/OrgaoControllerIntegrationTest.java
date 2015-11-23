@@ -19,7 +19,7 @@ import java.io.IOException;
 public class OrgaoControllerIntegrationTest {
 
     @Autowired
-    OrgaoRepository orgaoRepository;
+    OrgaoRepositoryUtil orgaoRepository;
 
     @Autowired
     OrgaoController orgaoController;
