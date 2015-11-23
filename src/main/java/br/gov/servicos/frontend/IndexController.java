@@ -3,6 +3,8 @@ package br.gov.servicos.frontend;
 import br.gov.servicos.destaques.AreasDeInteresseEmDestaque;
 import br.gov.servicos.destaques.ServicosEmDestaque;
 import br.gov.servicos.orgao.OrgaoRepository;
+import br.gov.servicos.v3.schema.OrgaoXML;
+import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +17,6 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.io.IOException;
 
 import static lombok.AccessLevel.PRIVATE;
-import static net.logstash.logback.marker.Markers.append;
 
 @Slf4j
 @Controller
@@ -27,22 +28,22 @@ class IndexController {
     ServicosEmDestaque destaques;
     private AreasDeInteresseEmDestaque areasDestaque;
     OrgaoRepository orgaos;
+    private Slugify slugify;
 
     @Autowired
-    IndexController(ServicosEmDestaque servicosEmDestaque, AreasDeInteresseEmDestaque areasDestaque, OrgaoRepository orgaos) {
+    IndexController(ServicosEmDestaque servicosEmDestaque, AreasDeInteresseEmDestaque areasDestaque, OrgaoRepository orgaos, Slugify slugify) {
         this.destaques = servicosEmDestaque;
         this.areasDestaque = areasDestaque;
         this.orgaos = orgaos;
+        this.slugify = slugify;
     }
 
     @RequestMapping(value = "/", params = "orgao")
     ModelAndView redirectParaOrgao(@RequestParam("orgao") String url) throws IOException {
-        return orgaos.findByUrl(url)
-                .map(orgao -> new ModelAndView(new RedirectView("/orgaos/" + orgao.getId())))
-                .orElseGet(() -> {
-                    log.info(append("orgao.url", url), "Órgão com URL {} não cadastrado", url);
-                    return index();
-                });
+        OrgaoXML orgao = orgaos.findOne(slugify.slugify(url));
+        if (orgao == null)
+            return index();
+        return new ModelAndView(new RedirectView("/orgaos/" + orgao.getId()));
     }
 
     @RequestMapping("/")

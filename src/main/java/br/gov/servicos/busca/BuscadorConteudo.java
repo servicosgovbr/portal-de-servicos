@@ -1,7 +1,6 @@
 package br.gov.servicos.busca;
 
 import br.gov.servicos.cms.PaginaEstatica;
-import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.index.query.QueryBuilder;
@@ -40,12 +39,10 @@ public class BuscadorConteudo {
     private static final int PAGE_SIZE = 20;
 
     ElasticsearchTemplate et;
-    Slugify slugify;
 
     @Autowired
-    BuscadorConteudo(ElasticsearchTemplate et, Slugify slugify) {
+    BuscadorConteudo(ElasticsearchTemplate et) {
         this.et = et;
-        this.slugify = slugify;
     }
 
     public Page<PaginaEstatica> busca(Optional<String> termoBuscado, Integer paginaAtual) {
@@ -78,13 +75,13 @@ public class BuscadorConteudo {
                         new NativeSearchQueryBuilder()
                                 .withIndices(IMPORTADOR)
                                 .withTypes(PAGINA_ORGAO.getNome(), PAGINA_TEMATICA.getNome(), SERVICO.getNome())
-                                .withFields("tipoConteudo", "nome", "conteudo", "descricao")
+                                .withFields("id", "tipoConteudo", "nome", "conteudo", "descricao")
                                 .withQuery(q)
                                 .withPageable(pageable)
                                 .build(),
                         r -> new FacetedPageImpl<>(Stream.of(r.getHits().getHits())
                                 .map(h -> new PaginaEstatica()
-                                        .withId(slugify.slugify(h.field("nome").value()))
+                                        .withId(h.field("id").value())
                                         .withTipoConteudo((String) Optional.ofNullable(h.field("tipoConteudo"))
                                                 .filter(Objects::nonNull)
                                                 .map(SearchHitField::value)

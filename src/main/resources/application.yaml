@@ -31,14 +31,14 @@ flags:
   destaques.automaticos: false
 
 pds:
-  importador.cron: '0 */10 * * * MON-FRI'
+  importador.intervalo: '60000'
   piwik:
     enabled: false
     url: "https://estatisticas.presidencia.gov.br/"
     token: ""
     site: 52
   cartas:
-    repositorio: "/Users/kchnr/projects/tw/pds/c-servico"
+    repositorio: "https://github.com/servicosgovbr/cartas-de-teste.git"
   destaques:
     servicos:
       - prouni-programa-universidade-para-todos

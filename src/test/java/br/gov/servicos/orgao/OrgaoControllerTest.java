@@ -29,13 +29,16 @@ public class OrgaoControllerTest {
     OrgaoRepository orgaos;
 
     @Mock
+    OrgaoRepositoryUtil orgaosUtil;
+
+    @Mock
     ServicoRepository servicos;
 
     OrgaoController controller;
 
     @Before
     public void setUp() {
-        controller = new OrgaoController(orgaos, servicos);
+        controller = new OrgaoController(orgaos, orgaosUtil, servicos);
     }
 
     @Test
@@ -53,7 +56,7 @@ public class OrgaoControllerTest {
 
         assertModelAttributeValue(controller.orgao("secretaria-da-receita-federal-do-brasil-rfb"),
                 "conteudo",
-                TestData.PAGINA_ESTATICA);
+                TestData.PAGINA_ORGAO);
     }
 
 }

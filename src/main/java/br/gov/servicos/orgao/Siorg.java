@@ -40,8 +40,6 @@ public class Siorg {
     }
 
     public Optional<Unidade> findUnidade(String url) {
-        if (true)
-            return Optional.empty();
         LogstashMarker marker = append("siorg.url", url);
 
         Cache cache = cacheManager.getCache("unidadesSiorg");

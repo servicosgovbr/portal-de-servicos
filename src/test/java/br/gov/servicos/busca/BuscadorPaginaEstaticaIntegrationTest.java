@@ -2,7 +2,8 @@ package br.gov.servicos.busca;
 
 import br.gov.servicos.Main;
 import br.gov.servicos.cms.PaginaEstatica;
-import br.gov.servicos.cms.PaginaEstaticaRepository;
+import br.gov.servicos.cms.PaginaTematica;
+import br.gov.servicos.cms.PaginaTematicaRepository;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.setup.SetupTestesIntegracao;
 import br.gov.servicos.v3.schema.ServicoXML;
@@ -39,7 +40,7 @@ public class BuscadorPaginaEstaticaIntegrationTest {
     ServicoRepository servicos;
 
     @Autowired
-    PaginaEstaticaRepository paginas;
+    PaginaTematicaRepository paginas;
 
     @Autowired
     BuscadorConteudo buscador;
@@ -52,12 +53,12 @@ public class BuscadorPaginaEstaticaIntegrationTest {
     @Test
     public void deveInserirUmServicoEUmConteudoERetornarDoisConteudos() throws Exception {
         servicos.save(SERVICO);
-        paginas.save(PAGINA_ESTATICA);
+        paginas.save(PAGINA_TEMATICA);
 
         List<PaginaEstatica> paginaEstaticas = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
         assertThat(paginaEstaticas, hasSize(2));
-        assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA));
+        assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA_DE_TEMATICA));
         assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA_DE_SERVICO));
     }
 
@@ -65,7 +66,7 @@ public class BuscadorPaginaEstaticaIntegrationTest {
     public void deveRetornarApenasConteudosQueTenhamAPalavraDescricao() throws Exception {
         servicos.save(SERVICO);
         servicos.save(new ServicoXML().withNome("Um titulo").withDescricao("Texto"));
-        paginas.save(new PaginaEstatica().withNome("Titulo de conteudo").withConteudo("Conteudo"));
+        paginas.save(new PaginaTematica().withId("titulo-de-conteudo").withNome("Titulo de conteudo").withConteudo("Conteudo"));
 
         List<PaginaEstatica> paginaEstaticas = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
@@ -75,7 +76,7 @@ public class BuscadorPaginaEstaticaIntegrationTest {
 
     @Test
     public void deveAcharSemAcentuacao() throws Exception {
-        servicos.save(new ServicoXML().withNome("Um titulo").withDescricao("Descricao"));
+        servicos.save(new ServicoXML().withId("um-titulo").withNome("Um titulo").withDescricao("Descricao"));
 
         List<PaginaEstatica> paginaEstaticas = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
         assertThat(paginaEstaticas, hasSize(1));
@@ -85,7 +86,7 @@ public class BuscadorPaginaEstaticaIntegrationTest {
     @Test
     public void buscaSemelhante() throws Exception {
         servicos.save(SERVICO);
-        servicos.save(new ServicoXML().withNome("Titulo de servico").withDescricao("Texto"));
+        servicos.save(new ServicoXML().withId("titulo-de-servico").withNome("Titulo de servico").withDescricao("Texto"));
 
         List<PaginaEstatica> paginaEstaticas = buscador.buscaSemelhante(of("ervic"));
 
@@ -114,18 +115,19 @@ public class BuscadorPaginaEstaticaIntegrationTest {
     @Test
     public void deveConterTipoConteudo() throws Exception {
         servicos.save(SERVICO);
-        paginas.save(PAGINA_ESTATICA);
+        paginas.save(PAGINA_TEMATICA);
 
         List<PaginaEstatica> paginaEstaticas = ((FacetedPageImpl) buscador.busca(of("Descrição"), 0)).getContent();
 
-        assertThat(paginaEstaticas, hasSize(2));
         assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA_DE_SERVICO));
-        assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA));
+        assertThat(paginaEstaticas, hasItem(PAGINA_ESTATICA_DE_TEMATICA));
+        assertThat(paginaEstaticas, hasSize(2));
     }
 
     @Test
     public void buscaPorTermosComErrosDeDigitacao() {
         servicos.save(SERVICO
+                .withId("passaporte")
                 .withNome("Passaporte")
                 .withDescricao("Emissão de passaportes"));
 

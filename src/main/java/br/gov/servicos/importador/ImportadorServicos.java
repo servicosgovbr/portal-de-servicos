@@ -24,17 +24,17 @@ import static lombok.AccessLevel.PRIVATE;
 public class ImportadorServicos {
 
     PortalDeServicosIndex indices;
-    ServicoRepository indice;
+    ServicoRepository servicoRepository;
     Siorg siorg;
     Slugify slugify;
 
     @Autowired
     ImportadorServicos(PortalDeServicosIndex indices,
-                       ServicoRepository indice,
+                       ServicoRepository servicoRepository,
                        Siorg siorg,
                        Slugify slugify) {
         this.indices = indices;
-        this.indice = indice;
+        this.servicoRepository = servicoRepository;
         this.siorg = siorg;
         this.slugify = slugify;
     }
@@ -44,24 +44,19 @@ public class ImportadorServicos {
         log.info("Iniciando importação de serviços...");
         indices.recriar();
 
-        return indice.save(
+        return servicoRepository.save(
                 Stream.of(repo.get("cartas-servico/v3/servicos").getFile()
                         .listFiles((d, n) -> n.endsWith(".xml")))
                         .parallel()
                         .map(f -> unmarshal(f, ServicoXML.class))
                         .map(s -> s.withId(slugify.slugify(s.getNome())))
-                        .map(s -> s.withOrgao(remapeiaOrgao(s.getOrgao())))
+                        .map(s -> s.withOrgao(remapeiaESalvaOrgao(s.getOrgao())))
                         .peek(s -> log.debug("{} importado com sucesso", s.getId()))
                         .collect(toList())
         );
     }
 
-    private OrgaoXML remapeiaOrgao(OrgaoXML orgao) {
-        return siorg.findUnidade(orgao.getId())
-                .map(u -> orgao
-                        .withId(slugify.slugify(u.getNome() + " - " + u.getSigla()))
-                        .withNome(u.getNome())
-                        .withUrl(orgao.getId()))
-                .orElse(null);
+    private OrgaoXML remapeiaESalvaOrgao(OrgaoXML orgao) {
+        return orgao.withId(slugify.slugify(orgao.getId()));
     }
 }

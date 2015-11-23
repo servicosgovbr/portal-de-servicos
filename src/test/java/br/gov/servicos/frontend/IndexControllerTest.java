@@ -9,6 +9,8 @@ import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.ServicoXML;
+import com.github.slugify.Slugify;
+import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,8 +28,6 @@ import java.io.IOException;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
-import static java.util.Optional.empty;
-import static java.util.Optional.of;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -60,8 +60,12 @@ public class IndexControllerTest {
     ServicosEmDestaque destaquesManuais;
     ServicosEmDestaque destaquesAutomaticos;
 
+    Slugify slugify;
+
     @Before
+    @SneakyThrows
     public void setUp() {
+        slugify = new Slugify();
         destaquesManuais = new ServicosEmDestaque(servicos, destaques, piwikClient, false);
         destaquesAutomaticos = new ServicosEmDestaque(servicos, destaques, piwikClient, true);
 
@@ -170,29 +174,32 @@ public class IndexControllerTest {
     public void deveRedirecionarParaOrgao() throws IOException {
         controller = comDestaquesManuais();
         String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
-        given(orgaos.findByUrl(urlOrgao)).willReturn(of(new OrgaoXML().withId("secretaria-secretarial-do-secretariado-sss")));
+        String id = this.slugify.slugify("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934");
+        given(orgaos.findOne(id)).willReturn(new OrgaoXML().withId(id));
 
         ModelAndView view = controller.redirectParaOrgao(urlOrgao);
 
-        assertThat(((RedirectView) view.getView()).getUrl(), is("/orgaos/secretaria-secretarial-do-secretariado-sss"));
+        assertThat(((RedirectView) view.getView()).getUrl(), is("/orgaos/" + id));
     }
 
     @Test
     public void deveRedirecionarParaIndexQuandoHaProblemasComParametroOrgao() throws IOException {
         controller = comDestaquesManuais();
         String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
-        given(orgaos.findByUrl(urlOrgao)).willReturn(empty());
+        given(orgaos.findOne(urlOrgao)).willReturn(null);
 
         ModelAndView view = controller.redirectParaOrgao(urlOrgao);
 
         assertThat(view.getViewName(), is("index"));
     }
 
+    @SneakyThrows
     private IndexController comDestaquesAutomaticos() {
-        return new IndexController(destaquesAutomaticos, areasDeInteresseEmDestaque, orgaos);
+        return new IndexController(destaquesAutomaticos, areasDeInteresseEmDestaque, orgaos, slugify);
     }
 
+    @SneakyThrows
     private IndexController comDestaquesManuais() {
-        return new IndexController(destaquesManuais, areasDeInteresseEmDestaque, orgaos);
+        return new IndexController(destaquesManuais, areasDeInteresseEmDestaque, orgaos, slugify);
     }
 }

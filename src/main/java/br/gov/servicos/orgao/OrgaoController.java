@@ -21,18 +21,20 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class OrgaoController {
 
-    OrgaoRepository orgaos;
+    private OrgaoRepository orgaoRepository;
+    OrgaoRepositoryUtil orgaosRepositoryUtil;
     ServicoRepository servicos;
 
     @Autowired
-    OrgaoController(OrgaoRepository orgaos, ServicoRepository servicos) {
-        this.orgaos = orgaos;
+    OrgaoController(OrgaoRepository orgaoRepository, OrgaoRepositoryUtil orgaosRepositoryUtil, ServicoRepository servicos) {
+        this.orgaoRepository = orgaoRepository;
+        this.orgaosRepositoryUtil = orgaosRepositoryUtil;
         this.servicos = servicos;
     }
 
     @RequestMapping("/orgaos")
     ModelAndView orgaos() {
-        return new ModelAndView("orgaos", "orgaos", orgaos.findAll());
+        return new ModelAndView("orgaos", "orgaos", orgaosRepositoryUtil.findAll());
     }
 
     @RequestMapping("/orgao/{id}")
@@ -40,7 +42,7 @@ public class OrgaoController {
         Map<String, Object> model = new HashMap<>();
 
         model.put("termo", id);
-        model.put("conteudo", orgaos.findOne(id));
+        model.put("conteudo", orgaoRepository.findOne(id));
         model.put("resultados", servicos.findByOrgao(new OrgaoXML().withId(id))
                 .stream()
                 .map(PaginaEstatica::fromServico)

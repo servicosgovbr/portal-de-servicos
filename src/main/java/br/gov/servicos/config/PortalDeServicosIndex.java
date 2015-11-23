@@ -3,6 +3,7 @@ package br.gov.servicos.config;
 import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.cms.PaginaTematica;
 import br.gov.servicos.metricas.Opiniao;
+import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.ServicoXML;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,10 +44,11 @@ public class PortalDeServicosIndex {
         recriarIndiceImportador();
         criarIndicePersistenteSeNaoExistir();
 
+        es.putMapping(OrgaoXML.class);
         es.putMapping(ServicoXML.class);
-        es.putMapping(Opiniao.class);
         es.putMapping(PaginaEstatica.class);
         es.putMapping(PaginaTematica.class);
+        es.putMapping(Opiniao.class);
     }
 
     private void criarIndicePersistenteSeNaoExistir() throws IOException {

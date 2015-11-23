@@ -22,7 +22,7 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class ImportadorParaPaginasEstaticas {
 
-    private PaginaEstaticaRepository repository;
+    PaginaEstaticaRepository repository;
     ConteudoParser parser;
 
     @Autowired

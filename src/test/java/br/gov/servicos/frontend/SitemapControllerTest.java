@@ -1,5 +1,7 @@
 package br.gov.servicos.frontend;
 
+import br.gov.servicos.cms.PaginaEstaticaRepository;
+import br.gov.servicos.cms.PaginaTematicaRepository;
 import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.servico.ServicoRepository;
 import org.junit.Before;
@@ -24,11 +26,17 @@ public class SitemapControllerTest {
     @Mock
     OrgaoRepository orgaos;
 
+    @Mock
+    PaginaEstaticaRepository estaticas;
+
+    @Mock
+    PaginaTematicaRepository tematicas;
+
     SitemapController controller;
 
     @Before
     public void setUp() throws Exception {
-        controller = new SitemapController(servicos, orgaos);
+        controller = new SitemapController(servicos, orgaos, tematicas, estaticas);
     }
 
     @Test

@@ -2,6 +2,7 @@ package br.gov.servicos.fixtures;
 
 import br.gov.servicos.cms.ConteudoHtml;
 import br.gov.servicos.cms.PaginaEstatica;
+import br.gov.servicos.cms.PaginaTematica;
 import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.ServicoXML;
@@ -20,14 +21,9 @@ public class TestData {
 
     public static final PaginaEstatica PAGINA_ESTATICA_DE_SERVICO = PaginaEstatica.fromServico(SERVICO);
 
-    public static final ConteudoHtml CONTEUDO_HTML = new ConteudoHtml()
-            .withId("pagina")
-            .withNome("Título")
-            .withHtml("<h1>Título</h1>\n\nConteúdo");
-
-    public static final PaginaEstatica PAGINA_ESTATICA = new PaginaEstatica()
+    public static final PaginaTematica PAGINA_TEMATICA = new PaginaTematica()
             .withId("pagina-orgao")
-            .withTipoConteudo("orgao")
+            .withTipoConteudo("pagina-tematica")
             .withNome("Página órgão")
             .withConteudo("Descrição conteúdo");
 
@@ -36,6 +32,13 @@ public class TestData {
             .withTipoConteudo("orgao")
             .withNome("Página órgão")
             .withConteudo("Descrição conteúdo");
+
+    public static final PaginaEstatica PAGINA_ESTATICA_DE_TEMATICA = new PaginaEstatica()
+            .withId("pagina-orgao")
+            .withTipoConteudo("pagina-tematica")
+            .withNome("Página órgão")
+            .withConteudo("Descrição conteúdo");
+
 
     public static final Opiniao OPINIAO = new Opiniao()
             .withUrl("/servico/foo")

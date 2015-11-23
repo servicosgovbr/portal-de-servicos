@@ -4,6 +4,7 @@ import br.gov.servicos.Main;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.setup.SetupTestesIntegracao;
 import br.gov.servicos.v3.schema.OrgaoXML;
+import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +16,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
-import java.util.SortedSet;
 
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static org.hamcrest.Matchers.*;
@@ -31,6 +31,9 @@ public class OrgaoRepositoryIntegrationTest {
 
     @Autowired
     OrgaoRepository orgaos;
+
+    @Autowired
+    OrgaoRepositoryUtil orgaosRepositoryUtil;
 
     @Autowired
     SetupTestesIntegracao setupTestesIntegracao;
@@ -63,7 +66,7 @@ public class OrgaoRepositoryIntegrationTest {
                         .withUrl("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/2")
                         .withNome("Órgão 2")));
 
-        List<OrgaoXML> resultados = (List<OrgaoXML>) orgaos.findAll();
+        List<OrgaoXML> resultados = Lists.newArrayList(orgaosRepositoryUtil.findAll());
 
         assertThat(resultados, is(not(empty())));
         assertThat(resultados.size(), is(3));

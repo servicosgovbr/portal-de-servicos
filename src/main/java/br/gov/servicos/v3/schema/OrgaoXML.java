@@ -8,16 +8,16 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.Wither;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.stereotype.Component;
 
 import javax.xml.bind.annotation.*;
-
 import java.util.Locale;
 
-import static br.gov.servicos.config.PortalDeServicosIndex.*;
-import static lombok.AccessLevel.*;
+import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
@@ -29,11 +29,12 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @NoArgsConstructor
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Orgao")
-@Document(indexName = IMPORTADOR, type = "orgao")
+@Document(indexName = IMPORTADOR, type = "pagina-orgao")
 public class OrgaoXML {
 
     @XmlAttribute(name = "id", required = true)
     @Field(type = String, index = not_analyzed, store = true)
+    @Id
     String id;
 
     @XmlElement

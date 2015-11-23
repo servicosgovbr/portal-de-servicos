@@ -31,7 +31,7 @@ flags:
   destaques.automaticos: false
 
 pds:
-  importador.cron: '0 */10 * * * MON-FRI'
+  importador.intervalo: '600000'
   piwik:
     enabled: false
     url: "https://estatisticas.presidencia.gov.br/"

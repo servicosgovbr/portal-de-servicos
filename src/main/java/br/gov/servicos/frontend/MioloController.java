@@ -2,6 +2,7 @@ package br.gov.servicos.frontend;
 
 import br.gov.servicos.cms.ConteudoController;
 import br.gov.servicos.cms.PaginaEstatica;
+import br.gov.servicos.cms.PaginaTematica;
 import br.gov.servicos.orgao.OrgaoController;
 import br.gov.servicos.v3.schema.ServicoXML;
 import lombok.experimental.FieldDefaults;
@@ -37,9 +38,14 @@ public class MioloController {
         return new ModelAndView("orgao :: //section", orgaos.orgao(id).getModel());
     }
 
-//    @RequestMapping(value = "/miolo/conteudo/{id}", method = GET)
-//    ModelAndView getHtml(@PathVariable("id") PaginaEstatica paginaEstatica) {
-//        return new ModelAndView("conteudo :: //section", conteudos.conteudo(paginaEstatica).getModel());
-//    }
+    @RequestMapping(value = "/miolo/pagina-estatica/{id}", method = GET)
+    ModelAndView getHtml(@PathVariable("id") PaginaEstatica paginaEstatica) {
+        return new ModelAndView("conteudo :: //section", conteudos.paginaEstatica(paginaEstatica).getModel());
+    }
+
+    @RequestMapping(value = "/miolo/pagina-tematica/{id}", method = GET)
+    ModelAndView getHtml(@PathVariable("id") PaginaTematica paginaTematica) {
+        return new ModelAndView("conteudo :: //section", conteudos.paginaTematica(paginaTematica).getModel());
+    }
 
 }

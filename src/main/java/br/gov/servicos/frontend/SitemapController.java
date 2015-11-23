@@ -1,5 +1,7 @@
 package br.gov.servicos.frontend;
 
+import br.gov.servicos.cms.PaginaEstaticaRepository;
+import br.gov.servicos.cms.PaginaTematicaRepository;
 import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.AreaDeInteresse;
@@ -22,11 +24,18 @@ public class SitemapController {
 
     ServicoRepository servicos;
     OrgaoRepository orgaos;
+    private PaginaTematicaRepository paginasTematicas;
+    private PaginaEstaticaRepository paginasEstaticas;
 
     @Autowired
-    SitemapController(ServicoRepository servicos, OrgaoRepository orgaos) {
+    SitemapController(ServicoRepository servicos,
+                      OrgaoRepository orgaos,
+                      PaginaTematicaRepository paginasTematicas,
+                      PaginaEstaticaRepository paginasEstaticas) {
         this.servicos = servicos;
         this.orgaos = orgaos;
+        this.paginasTematicas = paginasTematicas;
+        this.paginasEstaticas = paginasEstaticas;
     }
 
     @RequestMapping(value = "/sitemap.xml", produces = MediaType.APPLICATION_XML_VALUE)
@@ -35,6 +44,8 @@ public class SitemapController {
 
         model.put("servicos", servicos.findAll());
         model.put("orgaos", orgaos.findAll());
+        model.put("paginasTematicas", paginasTematicas.findAll());
+        model.put("paginasEstaticas", paginasEstaticas.findAll());
         model.put("publicosAlvo", SegmentoDaSociedade.values());
         model.put("areasDeInteresse", AreaDeInteresse.values());
 

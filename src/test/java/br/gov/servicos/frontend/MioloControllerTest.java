@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.HashMap;
 import java.util.Map;
 
-import static br.gov.servicos.fixtures.TestData.PAGINA_ESTATICA;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -41,13 +40,13 @@ public class MioloControllerTest {
         assertAndReturnModelAttributeOfType(miolo.getHtml(TestData.SERVICO), "servico", ServicoXML.class);
     }
 
-//    @Test
-//    public void mioloParaConteudos() throws Exception {
-//        Map<String, Object> model = new HashMap<>();
-//        given(conteudos.conteudo(PAGINA_ESTATICA)).willReturn(new ModelAndView("conteudo", model));
-//
-//        assertThat(miolo.getHtml(PAGINA_ESTATICA).getModel(), is(model));
-//    }
+    @Test
+    public void mioloParaConteudos() throws Exception {
+        Map<String, Object> model = new HashMap<>();
+        given(conteudos.paginaTematica(TestData.PAGINA_TEMATICA)).willReturn(new ModelAndView("conteudo", model));
+
+        assertThat(miolo.getHtml(TestData.PAGINA_TEMATICA).getModel(), is(model));
+    }
 
     @Test
     public void mioloParaOrgaos() throws Exception {

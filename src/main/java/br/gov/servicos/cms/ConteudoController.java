@@ -23,9 +23,4 @@ public class ConteudoController {
         return new ModelAndView("conteudo", "conteudo", paginaTematica);
     }
 
-    @RequestMapping("/pagina-orgao/{id}")
-    public ModelAndView paginaOrgao(@PathVariable("id") OrgaoXML paginaOrgao) {
-        return new ModelAndView("conteudo", "conteudo", paginaOrgao);
-    }
-
 }

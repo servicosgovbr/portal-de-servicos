@@ -26,7 +26,7 @@ class ImportadorAutomatico {
     }
 
     @PostConstruct
-    @Scheduled(cron = "${pds.importador.cron}")
+    @Scheduled( fixedDelayString = "${pds.importador.intervalo}")
     void appCarregada() {
         if (!flag) {
             log.info("Importação automática desligada (FLAGS_IMPORTAR_AUTOMATICAMENTE=false)");
