@@ -1,6 +1,5 @@
 package br.gov.servicos.cms;
 
-import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.ServicoXML;
 import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,5 @@
 package br.gov.servicos.cms;
 
-import br.gov.servicos.v3.schema.OrgaoXML;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -39,7 +39,19 @@ public class PortalDeServicosIndex {
         return read(resource);
     }
 
-    @CacheEvict(value={"buscas", "conteudo", "destaques", "orgaos", "linhasDaVida", "publicosAlvo"}, allEntries=true)
+    @CacheEvict(value = {
+            "buscas",
+            "html",
+            "servicos-destaques",
+            "pagina-estatica",
+            "pagina-tematica",
+            "areas-de-interesse",
+            "servicos-destaque",
+            "orgaos",
+            "servicos-por-area-de-interesse",
+            "servicos-por-orgao",
+            "servicos-por-segmento-da-sociedade"
+    }, allEntries = true)
     public void recriar() throws IOException {
         recriarIndiceImportador();
         criarIndicePersistenteSeNaoExistir();

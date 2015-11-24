@@ -28,7 +28,7 @@ public class Markdown {
         return pegdown.markdownToHtml(markdown);
     }
 
-    @Cacheable("conteudo")
+    @Cacheable("html")
     public String toHtml(Resource resource) {
         if (!resource.exists()) {
             throw new ConteudoNaoEncontrado(resource.toString());

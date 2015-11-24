@@ -24,7 +24,7 @@ public class AreasDeInteresseEmDestaque {
         this.destaques = destaques;
     }
 
-    @Cacheable("destaques")
+    @Cacheable("areas-de-interesse")
     public List<AreaDeInteresse> areasDeInteresse() {
         return destaques.getAreasDeInteresse()
                 .stream()
