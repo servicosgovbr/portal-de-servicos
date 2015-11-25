@@ -49,6 +49,10 @@ public class OrgaoXML {
     @Field(type = String, index = analyzed, store = true)
     String conteudo;
 
+    @XmlElement
+    @Field(type = String, index = analyzed, store = true)
+    String contato;
+
     @Field(store = true, type = String, index = not_analyzed)
     String tipoConteudo;
 

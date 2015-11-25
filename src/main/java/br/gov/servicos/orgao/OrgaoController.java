@@ -37,6 +37,11 @@ public class OrgaoController {
         return new ModelAndView("orgaos", "orgaos", orgaosRepositoryUtil.findAll());
     }
 
+    @RequestMapping("/orgao/{id}.xml")
+    public ModelAndView orgaoXML(@PathVariable("id") OrgaoXML orgao) {
+        return new ModelAndView("orgao-xml", "orgao", orgao);
+    }
+
     @RequestMapping("/orgao/{id}")
     public ModelAndView orgao(@PathVariable String id) {
         Map<String, Object> model = new HashMap<>();
