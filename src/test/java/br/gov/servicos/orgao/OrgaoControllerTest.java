@@ -46,17 +46,6 @@ public class OrgaoControllerTest {
         given(servicos.findByOrgao(new OrgaoXML().withId("receita-federal"))).willReturn(singletonList(SERVICO));
         given(orgaos.findOne("receita-federal")).willReturn(TestData.PAGINA_ORGAO);
 
-        assertModelAttributeValue(controller.orgao("receita-federal"), "resultados", singletonList(PaginaEstatica.fromServico(SERVICO)));
+        assertModelAttributeValue(controller.orgao(new OrgaoXML().withId("receita-federal")), "resultados", singletonList(PaginaEstatica.fromServico(SERVICO)));
     }
-
-    @Test
-    public void exibicaoDeAreaDeInteresseRetornaConteudoDescritivo() {
-        given(servicos.findByOrgao(new OrgaoXML().withId("secretaria-da-receita-federal-do-brasil-rfb"))).willReturn(singletonList(SERVICO));
-        given(orgaos.findOne("secretaria-da-receita-federal-do-brasil-rfb")).willReturn(TestData.PAGINA_ORGAO);
-
-        assertModelAttributeValue(controller.orgao("secretaria-da-receita-federal-do-brasil-rfb"),
-                "conteudo",
-                TestData.PAGINA_ORGAO);
-    }
-
 }

@@ -1,5 +1,6 @@
 package br.gov.servicos.orgao;
 
+import com.github.slugify.Slugify;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +32,7 @@ public class SiorgTest {
 
     @Before
     public void setUp() throws Exception {
-        siorg = new Siorg(restTemplate, cacheManager);
+        siorg = new Siorg(restTemplate, cacheManager, new Slugify());
         given(cacheManager.getCache("unidadesSiorg")).willReturn(mock(Cache.class));
     }
 

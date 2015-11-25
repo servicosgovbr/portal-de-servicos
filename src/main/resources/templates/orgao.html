@@ -31,8 +31,14 @@
 </span>
 
 <section layout:fragment="corpo">
-
-    <div th:utext="${conteudo.html}" class="markdown"></div>
+    <th:block th:if="${conteudo.html != null}">
+        <div th:utext="${conteudo.html}" class="markdown"></div>
+    </th:block>
+    <th:block th:if="${conteudo.html == null}">
+        <div>
+            <h2 th:text="${conteudo.nome}">Título do órgão se não existir conteúdo</h2>
+        </div>
+    </th:block>
 
     <div class="markdown">
         <h3>Contato</h3>
@@ -69,7 +75,7 @@
         <h3>Carta de serviço</h3>
 
         <p>Mais informações sobre todos os serviços oferecidos por esse órgão podem ser encontrados
-        <a href="">aqui</a>.
+            <a href="">aqui</a>.
         </p>
     </div>
 
@@ -88,6 +94,8 @@
         }
       ]
     }
+
+
     </script>
 
     <hr/>
@@ -101,7 +109,8 @@
     </ul>
 
     <span class="link-github">
-        <a target="_blank" th:href="${'https://github.com/servicosgovbr/portal-de-servicos/edit/master/src/main/resources/conteudo/orgaos/' + conteudo.id + '.md'}">
+        <a target="_blank"
+           th:href="${'https://github.com/servicosgovbr/portal-de-servicos/edit/master/src/main/resources/conteudo/orgaos/' + conteudo.id + '.md'}">
             <i class="fa fa-github"></i>
         </a>
     </span>

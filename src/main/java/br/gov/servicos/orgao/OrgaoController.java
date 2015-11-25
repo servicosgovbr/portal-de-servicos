@@ -43,12 +43,12 @@ public class OrgaoController {
     }
 
     @RequestMapping("/orgao/{id}")
-    public ModelAndView orgao(@PathVariable String id) {
+    public ModelAndView orgao(@PathVariable("id") OrgaoXML orgaoXML) {
         Map<String, Object> model = new HashMap<>();
 
-        model.put("termo", id);
-        model.put("conteudo", orgaoRepository.findOne(id));
-        model.put("resultados", servicos.findByOrgao(new OrgaoXML().withId(id))
+        model.put("termo", orgaoXML.getId());
+        model.put("conteudo", orgaoXML);
+        model.put("resultados", servicos.findByOrgao(orgaoXML)
                 .stream()
                 .map(PaginaEstatica::fromServico)
                 .sorted(comparing(PaginaEstatica::getId))
@@ -56,5 +56,4 @@ public class OrgaoController {
 
         return new ModelAndView("orgao", model);
     }
-
 }

@@ -35,7 +35,7 @@ public class OrgaoControllerIntegrationTest {
     @Test
     public void deveEncontrarConteudoParaTodosOrgaosNoRepositorio() throws Exception {
         orgaoRepository.findAll()
-                .forEach(o -> orgaoController.orgao(o.getId()));
+                .forEach(o -> orgaoController.orgao(new OrgaoXML().withId(o.getId())));
     }
 
 }

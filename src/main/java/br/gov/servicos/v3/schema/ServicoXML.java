@@ -1,6 +1,8 @@
 package br.gov.servicos.v3.schema;
 
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
+import br.gov.servicos.orgao.OrgaoRepository;
+import br.gov.servicos.orgao.Siorg;
 import br.gov.servicos.servico.ServicoRepository;
 import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
@@ -18,6 +20,7 @@ import javax.xml.bind.annotation.*;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Locale;
+import java.util.Optional;
 
 import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 import static java.util.Optional.ofNullable;
@@ -119,18 +122,30 @@ public class ServicoXML {
     public static class Formatter implements org.springframework.format.Formatter<ServicoXML> {
 
         Slugify slugify;
+        Siorg siorg;
         ServicoRepository servicos;
+        private OrgaoRepository orgaoRepository;
 
         @Autowired
-        public Formatter(Slugify slugify, ServicoRepository servicos) {
+        public Formatter(Slugify slugify, Siorg siorg, ServicoRepository servicos, OrgaoRepository orgaoRepository) {
             this.slugify = slugify;
+            this.siorg = siorg;
             this.servicos = servicos;
+            this.orgaoRepository = orgaoRepository;
         }
 
         @Override
         public ServicoXML parse(String id, Locale locale) throws ParseException {
             return ofNullable(servicos.findOne(slugify.slugify(id)))
+                    .map(s -> s.withOrgao(obterOrgao(s.getOrgao())))
                     .orElseThrow(() -> new ConteudoNaoEncontrado(id));
+        }
+
+        private OrgaoXML obterOrgao(OrgaoXML orgao) {
+            return Optional.ofNullable(orgao)
+                    .map(OrgaoXML::getId)
+                    .map(id -> orgaoRepository.findOne(id))
+                    .orElseGet(() -> siorg.obterOrgao(orgao.getUrl()).orElse(null));
         }
 
         @Override

@@ -1,6 +1,8 @@
 package br.gov.servicos.v3.schema;
 
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
+import br.gov.servicos.orgao.OrgaoRepository;
+import br.gov.servicos.orgao.Siorg;
 import br.gov.servicos.servico.ServicoRepository;
 import com.github.slugify.Slugify;
 import org.junit.Before;
@@ -9,12 +11,14 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import static br.gov.servicos.fixtures.TestData.PAGINA_ORGAO;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Locale.getDefault;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Matchers.any;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ServicoXMLFormatterTest {
@@ -22,11 +26,19 @@ public class ServicoXMLFormatterTest {
     @Mock
     ServicoRepository servicos;
 
+    @Mock
+    OrgaoRepository orgaoRepository;
+
+    @Mock
+    Siorg siorg;
+
     ServicoXML.Formatter formatter;
 
     @Before
     public void setUp() throws Exception {
-        formatter = new ServicoXML.Formatter(new Slugify(), servicos);
+        given(orgaoRepository.findOne(any()))
+                .willReturn(PAGINA_ORGAO);
+        formatter = new ServicoXML.Formatter(new Slugify(), siorg, servicos, orgaoRepository);
     }
 
     @Test

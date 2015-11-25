@@ -1,6 +1,8 @@
 package br.gov.servicos.v3.schema;
 
 import br.gov.servicos.orgao.OrgaoRepository;
+import br.gov.servicos.orgao.Siorg;
+import br.gov.servicos.orgao.UrlsSiorg;
 import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Component;
 
 import javax.xml.bind.annotation.*;
 import java.util.Locale;
+import java.util.Optional;
 
 import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
 import static lombok.AccessLevel.PRIVATE;
@@ -62,19 +65,23 @@ public class OrgaoXML {
     @Component
     @FieldDefaults(level = PRIVATE, makeFinal = true)
     public static class PaginaOrgaoFormatter implements org.springframework.format.Formatter<OrgaoXML> {
-
         OrgaoRepository orgaoRepository;
+        Siorg siorg;
         Slugify slugify;
 
         @Autowired
-        public PaginaOrgaoFormatter(OrgaoRepository orgaoRepository, Slugify slugify) {
+        public PaginaOrgaoFormatter(OrgaoRepository orgaoRepository, Siorg siorg, Slugify slugify) {
             this.orgaoRepository = orgaoRepository;
+            this.siorg = siorg;
             this.slugify = slugify;
         }
 
         @Override
         public OrgaoXML parse(String id, Locale locale) {
-            return orgaoRepository.findOne(slugify.slugify(id));
+            String url = UrlsSiorg.obterUrl(id);
+            return Optional.ofNullable(orgaoRepository.findOne(slugify.slugify(id)))
+                    .orElse(siorg.obterOrgao(url)
+                            .orElse(null));
         }
 
         @Override

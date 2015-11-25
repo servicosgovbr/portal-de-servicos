@@ -4,6 +4,7 @@ import br.gov.servicos.cms.ConteudoController;
 import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.cms.PaginaTematica;
 import br.gov.servicos.orgao.OrgaoController;
+import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.ServicoXML;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,8 +35,8 @@ public class MioloController {
     }
 
     @RequestMapping(value = "/miolo/orgao/{id}", method = GET)
-    ModelAndView getHtml(@PathVariable("id") String id) {
-        return new ModelAndView("orgao :: //section", orgaos.orgao(id).getModel());
+    ModelAndView getHtml(@PathVariable("id") OrgaoXML orgaoXML) {
+        return new ModelAndView("orgao :: //section", orgaos.orgao(orgaoXML).getModel());
     }
 
     @RequestMapping(value = "/miolo/pagina-estatica/{id}", method = GET)

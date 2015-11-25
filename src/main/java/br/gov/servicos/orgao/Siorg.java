@@ -1,5 +1,7 @@
 package br.gov.servicos.orgao;
 
+import br.gov.servicos.v3.schema.OrgaoXML;
+import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +21,7 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
+import static java.lang.String.format;
 import static java.util.Optional.*;
 import static lombok.AccessLevel.PRIVATE;
 import static net.logstash.logback.marker.Markers.append;
@@ -32,11 +35,21 @@ public class Siorg {
 
     RestTemplate restTemplate;
     CacheManager cacheManager;
+    Slugify slugify;
 
     @Autowired
-    public Siorg(RestTemplate restTemplate, CacheManager cacheManager) {
+    public Siorg(RestTemplate restTemplate, CacheManager cacheManager, Slugify slugify) {
         this.restTemplate = restTemplate;
         this.cacheManager = cacheManager;
+        this.slugify = slugify;
+    }
+
+    public Optional<OrgaoXML> obterOrgao(String url) {
+        return findUnidade(url)
+                .map(u -> new OrgaoXML()
+                        .withId(slugify.slugify(url))
+                        .withUrl(url)
+                        .withNome(format("%s (%s)", u.getNome(), u.getSigla())));
     }
 
     public Optional<Unidade> findUnidade(String url) {

@@ -1,6 +1,5 @@
 package br.gov.servicos.fixtures;
 
-import br.gov.servicos.cms.ConteudoHtml;
 import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.cms.PaginaTematica;
 import br.gov.servicos.metricas.Opiniao;
@@ -14,13 +13,6 @@ import static java.util.Collections.unmodifiableList;
 
 public class TestData {
 
-    public static final ServicoXML SERVICO = new ServicoXML()
-            .withId("exemplo-de-servico")
-            .withNome("Exemplo de serviço")
-            .withDescricao("Descrição serviço");
-
-    public static final PaginaEstatica PAGINA_ESTATICA_DE_SERVICO = PaginaEstatica.fromServico(SERVICO);
-
     public static final PaginaTematica PAGINA_TEMATICA = new PaginaTematica()
             .withId("pagina-orgao")
             .withTipoConteudo("pagina-tematica")
@@ -32,6 +24,12 @@ public class TestData {
             .withTipoConteudo("orgao")
             .withNome("Página órgão")
             .withConteudo("Descrição conteúdo");
+
+    public static final ServicoXML SERVICO = new ServicoXML()
+            .withId("exemplo-de-servico")
+            .withNome("Exemplo de serviço")
+            .withDescricao("Descrição serviço")
+            .withOrgao(PAGINA_ORGAO);
 
     public static final PaginaEstatica PAGINA_ESTATICA_DE_TEMATICA = new PaginaEstatica()
             .withId("pagina-orgao")
@@ -52,4 +50,5 @@ public class TestData {
             new OrgaoXML().withId("banco-central-do-brasil-bcb")
     ));
 
+    public static final PaginaEstatica PAGINA_ESTATICA_DE_SERVICO = PaginaEstatica.fromServico(SERVICO);
 }

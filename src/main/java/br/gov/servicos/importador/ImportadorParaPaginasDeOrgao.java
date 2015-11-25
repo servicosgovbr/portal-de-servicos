@@ -1,6 +1,7 @@
 package br.gov.servicos.importador;
 
 import br.gov.servicos.orgao.OrgaoRepository;
+import br.gov.servicos.orgao.UrlsSiorg;
 import br.gov.servicos.v3.schema.OrgaoXML;
 import com.github.slugify.Slugify;
 import lombok.SneakyThrows;
@@ -50,6 +51,7 @@ class ImportadorParaPaginasDeOrgao {
                 "---" + System.lineSeparator() + System.lineSeparator() +
                 orgaoXML.getConteudo().trim();
 
+        UrlsSiorg.salvarUrl(orgaoXML.getUrl());
         return orgaoXML
                 .withId(slugify.slugify(orgaoXML.getUrl()))
                 .withTipoConteudo(PAGINA_ORGAO.getNome())
