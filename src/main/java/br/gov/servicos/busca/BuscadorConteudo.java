@@ -47,10 +47,12 @@ public class BuscadorConteudo {
 
     public Page<PaginaEstatica> busca(Optional<String> termoBuscado, Integer paginaAtual) {
         log.debug("Executando busca simples por '{}'", termoBuscado.orElse(""));
-        return executaQuery(termoBuscado, paginaAtual, q -> disMaxQuery()
-                .add(multiMatchQuery(q, "nome^1.0", "conteudo^0.7", "descricao^0.5")
+        return executaQuery(termoBuscado, paginaAtual, q -> boolQuery()
+                .must(multiMatchQuery(q, "nome", "conteudo", "descricao")
                         .fuzziness(ONE)
-                        .prefixLength(0)));
+                        .prefixLength(0))
+                .should(matchQuery("nome", q)
+                        .boost(10)));
     }
 
     public List<PaginaEstatica> buscaSemelhante(Optional<String> termoBuscado) {
