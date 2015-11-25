@@ -32,7 +32,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @NoArgsConstructor
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Orgao")
-@Document(indexName = IMPORTADOR, type = "pagina-orgao")
+@Document(indexName = IMPORTADOR, type = "orgao")
 public class OrgaoXML {
 
     @XmlAttribute(name = "id", required = true)

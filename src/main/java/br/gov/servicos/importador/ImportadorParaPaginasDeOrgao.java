@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.util.stream.Stream;
 
-import static br.gov.servicos.TipoPagina.PAGINA_ORGAO;
+import static br.gov.servicos.TipoPagina.ORGAO;
 import static java.util.stream.Collectors.toList;
 import static javax.xml.bind.JAXB.unmarshal;
 import static lombok.AccessLevel.PRIVATE;
@@ -36,10 +36,10 @@ class ImportadorParaPaginasDeOrgao {
 
     @SneakyThrows
     Iterable<OrgaoXML> importar(RepositorioCartasServico repositorioCartasServico) {
-        File diretorioOrgaos = repositorioCartasServico.get(PAGINA_ORGAO.getCaminhoPasta().toString()).getFile();
+        File diretorioOrgaos = repositorioCartasServico.get(ORGAO.getCaminhoPasta().toString()).getFile();
 
         log.info("Importando órgãos em {}", diretorioOrgaos);
-        return orgaoRepository.save(Stream.of(diretorioOrgaos.listFiles((d, n) -> n.endsWith(PAGINA_ORGAO.getExtensao())))
+        return orgaoRepository.save(Stream.of(diretorioOrgaos.listFiles((d, n) -> n.endsWith(ORGAO.getExtensao())))
                 .map(f -> unmarshal(f, OrgaoXML.class))
                 .map(this::processaCampos)
                 .peek(s -> log.debug("{} importado com sucesso", s.getId()))
@@ -54,7 +54,7 @@ class ImportadorParaPaginasDeOrgao {
         UrlsSiorg.salvarUrl(orgaoXML.getUrl());
         return orgaoXML
                 .withId(slugify.slugify(orgaoXML.getUrl()))
-                .withTipoConteudo(PAGINA_ORGAO.getNome())
+                .withTipoConteudo(ORGAO.getNome())
                 .withConteudo(parser.conteudo(orgaoXML.getConteudo()))
                 .withHtml(parser.conteudoHtml(markdown));
     }

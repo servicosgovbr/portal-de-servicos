@@ -5,10 +5,9 @@ import lombok.Getter;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 
 public enum TipoPagina {
-    PAGINA_ORGAO("conteudo/orgaos", "xml"),
+    ORGAO("conteudo/orgaos", "xml"),
     PAGINA_TEMATICA("conteudo/paginas-tematicas", "xml"),
     PAGINA_ESTATICA("conteudo/paginas-estaticas", "md"),
     SERVICO("cartas-servico/v3/servicos", "xml");
@@ -31,17 +30,5 @@ public enum TipoPagina {
     @Override
     public String toString() {
         return this.nome;
-    }
-
-    public static TipoPagina fromNome(String nome) {
-        return Arrays.asList(values())
-                .stream()
-                .filter(t -> t.getNome().equals(nome))
-                .findFirst()
-                .get();
-    }
-
-    public String prefixo() {
-        return getNome() + "-";
     }
 }

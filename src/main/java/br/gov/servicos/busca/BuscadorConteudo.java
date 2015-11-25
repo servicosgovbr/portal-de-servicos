@@ -74,7 +74,7 @@ public class BuscadorConteudo {
                 .map(q -> et.query(
                         new NativeSearchQueryBuilder()
                                 .withIndices(IMPORTADOR)
-                                .withTypes(PAGINA_ORGAO.getNome(), PAGINA_TEMATICA.getNome(), SERVICO.getNome())
+                                .withTypes(ORGAO.getNome(), PAGINA_TEMATICA.getNome(), SERVICO.getNome())
                                 .withFields("id", "tipoConteudo", "nome", "conteudo", "descricao")
                                 .withQuery(q)
                                 .withPageable(pageable)
