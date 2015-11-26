@@ -52,26 +52,6 @@
         </p>
     </div>
 
-    <script type="application/ld+json" th:inline="text">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "GovernmentOrganization",
-      "name": "[[${conteudo.nome}]]",
-      "url" : "[[${@environment.getProperty('pds.piwik.url')}]]",
-      "contactPoint" : [
-        {
-          "@type": "ContactPoint",
-          "url": "[[${@conteudoConfig.ouvidoria(termo).orElse(null)}]]",
-          "telephone": "[[${@conteudoConfig.telefone(termo).orElse(null)}]]",
-          "contactType" : "customer service"
-        }
-      ]
-    }
-
-
-
-    </script>
-
     <hr/>
 
     <ul id="resultados-orgao">
