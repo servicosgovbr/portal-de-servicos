@@ -11,6 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
+import java.util.Optional;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -22,11 +23,13 @@ import static java.util.stream.Collectors.toCollection;
 public class OrgaoRepositoryUtil {
     ServicoRepository servicos;
     OrgaoRepository orgaoRepository;
+    private Siorg siorg;
 
     @Autowired
-    OrgaoRepositoryUtil(ServicoRepository servicos, OrgaoRepository orgaoRepository) {
+    OrgaoRepositoryUtil(ServicoRepository servicos, OrgaoRepository orgaoRepository, Siorg siorg) {
         this.servicos = servicos;
         this.orgaoRepository = orgaoRepository;
+        this.siorg = siorg;
     }
 
     @Cacheable("orgaos")
@@ -35,10 +38,13 @@ public class OrgaoRepositoryUtil {
                 .stream()
                 .map(ServicoXML::getOrgao)
                 .filter(Objects::nonNull)
-                .map(OrgaoXML::getId)
-                .map(orgaoRepository::findOne)
+                .map(this::obterOrgao)
                 .filter(Objects::nonNull)
                 .collect(toCollection(() -> new TreeSet<>(comparing(OrgaoXML::getNome))));
     }
 
+    public OrgaoXML obterOrgao(OrgaoXML orgao) {
+        return Optional.ofNullable(orgaoRepository.findOne(orgao.getId()))
+                .orElse(siorg.obterOrgao(orgao.getUrl()).orElse(null));
+    }
 }

@@ -13,6 +13,7 @@ import org.slf4j.Marker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -44,6 +45,7 @@ public class Siorg {
         this.slugify = slugify;
     }
 
+    @Cacheable("orgaos-siorg")
     public Optional<OrgaoXML> obterOrgao(String url) {
         return findUnidade(url)
                 .map(u -> new OrgaoXML()
@@ -52,6 +54,7 @@ public class Siorg {
                         .withNome(format("%s (%s)", u.getNome(), u.getSigla())));
     }
 
+    @Cacheable("unidades-siorg")
     public Optional<Unidade> findUnidade(String url) {
         LogstashMarker marker = append("siorg.url", url);
 

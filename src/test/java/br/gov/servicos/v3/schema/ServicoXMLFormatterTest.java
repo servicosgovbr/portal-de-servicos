@@ -1,7 +1,7 @@
 package br.gov.servicos.v3.schema;
 
 import br.gov.servicos.foundation.exceptions.ConteudoNaoEncontrado;
-import br.gov.servicos.orgao.OrgaoRepository;
+import br.gov.servicos.orgao.OrgaoRepositoryUtil;
 import br.gov.servicos.orgao.Siorg;
 import br.gov.servicos.servico.ServicoRepository;
 import com.github.slugify.Slugify;
@@ -27,7 +27,7 @@ public class ServicoXMLFormatterTest {
     ServicoRepository servicos;
 
     @Mock
-    OrgaoRepository orgaoRepository;
+    OrgaoRepositoryUtil orgaoRepository;
 
     @Mock
     Siorg siorg;
@@ -36,9 +36,9 @@ public class ServicoXMLFormatterTest {
 
     @Before
     public void setUp() throws Exception {
-        given(orgaoRepository.findOne(any()))
+        given(orgaoRepository.obterOrgao(any()))
                 .willReturn(PAGINA_ORGAO);
-        formatter = new ServicoXML.Formatter(new Slugify(), siorg, servicos, orgaoRepository);
+        formatter = new ServicoXML.Formatter(new Slugify(), servicos, orgaoRepository);
     }
 
     @Test
