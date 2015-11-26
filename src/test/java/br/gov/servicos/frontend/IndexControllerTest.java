@@ -4,6 +4,7 @@ import br.gov.servicos.config.ServicosDestaqueConfig;
 import br.gov.servicos.destaques.AreasDeInteresseEmDestaque;
 import br.gov.servicos.destaques.ServicosEmDestaque;
 import br.gov.servicos.orgao.OrgaoRepository;
+import br.gov.servicos.orgao.OrgaoRepositoryUtil;
 import br.gov.servicos.piwik.PiwikClient;
 import br.gov.servicos.piwik.PiwikPage;
 import br.gov.servicos.servico.ServicoRepository;
@@ -50,7 +51,7 @@ public class IndexControllerTest {
     PiwikClient piwikClient;
 
     @Mock
-    OrgaoRepository orgaos;
+    OrgaoRepositoryUtil orgaos;
 
     @Mock
     AreasDeInteresseEmDestaque areasDeInteresseEmDestaque;
@@ -175,7 +176,7 @@ public class IndexControllerTest {
         controller = comDestaquesManuais();
         String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
         String id = this.slugify.slugify("http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934");
-        given(orgaos.findOne(id)).willReturn(new OrgaoXML().withId(id));
+        given(orgaos.obterOrgao(any())).willReturn(new OrgaoXML().withId(id));
 
         ModelAndView view = controller.redirectParaOrgao(urlOrgao);
 
@@ -186,7 +187,7 @@ public class IndexControllerTest {
     public void deveRedirecionarParaIndexQuandoHaProblemasComParametroOrgao() throws IOException {
         controller = comDestaquesManuais();
         String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
-        given(orgaos.findOne(urlOrgao)).willReturn(null);
+        given(orgaos.obterOrgao(any())).willReturn(null);
 
         ModelAndView view = controller.redirectParaOrgao(urlOrgao);
 

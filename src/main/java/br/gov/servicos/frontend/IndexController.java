@@ -2,7 +2,7 @@ package br.gov.servicos.frontend;
 
 import br.gov.servicos.destaques.AreasDeInteresseEmDestaque;
 import br.gov.servicos.destaques.ServicosEmDestaque;
-import br.gov.servicos.orgao.OrgaoRepository;
+import br.gov.servicos.orgao.OrgaoRepositoryUtil;
 import br.gov.servicos.v3.schema.OrgaoXML;
 import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
@@ -27,11 +27,11 @@ class IndexController {
 
     ServicosEmDestaque destaques;
     private AreasDeInteresseEmDestaque areasDestaque;
-    OrgaoRepository orgaos;
+    OrgaoRepositoryUtil orgaos;
     private Slugify slugify;
 
     @Autowired
-    IndexController(ServicosEmDestaque servicosEmDestaque, AreasDeInteresseEmDestaque areasDestaque, OrgaoRepository orgaos, Slugify slugify) {
+    IndexController(ServicosEmDestaque servicosEmDestaque, AreasDeInteresseEmDestaque areasDestaque, OrgaoRepositoryUtil orgaos, Slugify slugify) {
         this.destaques = servicosEmDestaque;
         this.areasDestaque = areasDestaque;
         this.orgaos = orgaos;
@@ -40,7 +40,9 @@ class IndexController {
 
     @RequestMapping(value = "/", params = "orgao")
     ModelAndView redirectParaOrgao(@RequestParam("orgao") String url) throws IOException {
-        OrgaoXML orgao = orgaos.findOne(slugify.slugify(url));
+        OrgaoXML orgao = orgaos.obterOrgao(new OrgaoXML()
+                .withId(slugify.slugify(url))
+                .withUrl(url));
         if (orgao == null)
             return index();
         return new ModelAndView(new RedirectView("/orgao/" + orgao.getId()));

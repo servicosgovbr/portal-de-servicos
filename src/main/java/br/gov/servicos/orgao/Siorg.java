@@ -49,8 +49,8 @@ public class Siorg {
     public Optional<OrgaoXML> obterOrgao(String url) {
         return findUnidade(url)
                 .map(u -> new OrgaoXML()
-                        .withId(slugify.slugify(url))
-                        .withUrl(url)
+                        .withId(slugify.slugify(u.codigoUnidade))
+                        .withUrl(u.codigoUnidade)
                         .withNome(format("%s (%s)", u.getNome(), u.getSigla())));
     }
 
