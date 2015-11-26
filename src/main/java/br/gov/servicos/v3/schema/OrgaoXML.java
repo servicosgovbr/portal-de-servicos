@@ -62,6 +62,9 @@ public class OrgaoXML {
     @Field(store = true, type = String, index = not_analyzed)
     String html;
 
+    @Field(store = true, type = String, index = not_analyzed)
+    String contatoHtml;
+
     @Component
     @FieldDefaults(level = PRIVATE, makeFinal = true)
     public static class PaginaOrgaoFormatter implements org.springframework.format.Formatter<OrgaoXML> {

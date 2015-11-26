@@ -31,45 +31,18 @@
 </span>
 
 <section layout:fragment="corpo">
-    <th:block th:if="${conteudo.html != null}">
+    <th:block th:if="${conteudo.conteudo != null}">
         <div th:utext="${conteudo.html}" class="markdown"></div>
     </th:block>
-    <th:block th:if="${conteudo.html == null}">
+    <th:block th:if="${conteudo.conteudo == null}">
         <div>
             <h2 th:text="${conteudo.nome}">Título do órgão se não existir conteúdo</h2>
         </div>
     </th:block>
 
-    <div class="markdown">
-        <h3>Contato</h3>
-
-        <th:block th:if="${@conteudoConfig.siteOficial(termo).isPresent()}">
-            <p>
-                Página oficial:
-                <a th:href="${@conteudoConfig.siteOficial(termo).get()}"
-                   th:text="${#strings.abbreviate(@conteudoConfig.siteOficial(termo).get(), 50)}"></a>
-            </p>
-        </th:block>
-
-        <th:block th:if="${@conteudoConfig.telefone(termo).isPresent()}">
-            <p>
-                Telefone:
-                <span th:text="${@conteudoConfig.telefone(termo).get()}">0800 555 123</span>
-            </p>
-        </th:block>
-
-        <p th:if="${@conteudoConfig.ouvidoria(termo).isPresent()}">
-            Para fazer uma reclamação, denúncia, sugestão ou elogio em relação a algum serviço deste órgão, visite o
-            sítio de sua <a th:href="${@conteudoConfig.ouvidoria(termo).get()}">ouvidoria</a>.
-        </p>
-
-        <p>
-            Para pedidos de informação pública deste órgão, consulte o
-            <a href="http://www.acessoainformacao.gov.br/sistema/site/index.html">
-                Sistema Eletrônico do Serviço de Informações ao Cidadão (e-SIC)
-            </a>.
-        </p>
-    </div>
+    <th:block th:if="${conteudo.contato != null}">
+        <div th:utext="${conteudo.contatoHtml}" class="markdown"></div>
+    </th:block>
 
     <div>
         <h3>Carta de serviço</h3>
@@ -94,6 +67,7 @@
         }
       ]
     }
+
 
 
     </script>

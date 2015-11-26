@@ -47,15 +47,27 @@ class ImportadorParaPaginasDeOrgao {
     }
 
     private OrgaoXML processaCampos(OrgaoXML orgaoXML) {
-        String markdown = orgaoXML.getNome().trim() + System.lineSeparator() +
-                "---" + System.lineSeparator() + System.lineSeparator() +
-                orgaoXML.getConteudo().trim();
-
         UrlsSiorg.salvarUrl(orgaoXML.getUrl());
+        String conteudoMarkdown = criaConteudoMarkdown(orgaoXML);
+        String contatoMarkdown = criaContatoMarkdown(orgaoXML);
+
         return orgaoXML
                 .withId(slugify.slugify(orgaoXML.getUrl()))
                 .withTipoConteudo(ORGAO.getNome())
                 .withConteudo(parser.conteudo(orgaoXML.getConteudo()))
-                .withHtml(parser.conteudoHtml(markdown));
+                .withHtml(parser.conteudoHtml(conteudoMarkdown))
+                .withContatoHtml(parser.conteudoHtml(contatoMarkdown));
+    }
+
+    private String criaContatoMarkdown(OrgaoXML orgaoXML) {
+        return orgaoXML.getContato() == null ? "" : "Contato" + System.lineSeparator() +
+                "---" + System.lineSeparator() + System.lineSeparator() +
+                orgaoXML.getContato().trim();
+    }
+
+    private String criaConteudoMarkdown(OrgaoXML orgaoXML) {
+        return orgaoXML.getConteudo() == null ? "" : orgaoXML.getNome().trim() + System.lineSeparator() +
+                "---" + System.lineSeparator() + System.lineSeparator() +
+                orgaoXML.getConteudo().trim();
     }
 }
