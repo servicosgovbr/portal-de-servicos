@@ -48,7 +48,8 @@
         <h3>Carta de serviço</h3>
 
         <p>Mais informações sobre todos os serviços oferecidos por esse órgão podem ser encontrados
-        <a href="" id="pdf">aqui</a>.
+            <button onclick="gerarPdf()">Gerar CARTA</button>
+            .
         </p>
     </div>
 
@@ -70,16 +71,26 @@
     </span>
 
     <script th:inline="javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-            var pdfMaker = new cartaParaPdf.PdfMaker();
-            var orgao = [[${orgaoXml}]];
-            var servicos = [[${servicosXmls}]];
-            document.getElementById("pdf").addEventListener("click", function() {
+        function gerarPdf() {
+            window.console.log('gerarPdf');
+            var id = [[${conteudo.id}]];
+            var nome = [[${conteudo.nome}]];
+            window.console.log(nome);
+            var url = '/carta/' + id;
+
+            window.console.log(url);
+            jQuery.getJSON(url, function (data) {
+                var pdfMaker = new cartaParaPdf.PdfMaker();
+                var orgao = data.xmlOrgao || '<orgao><nome>' + nome + '</nome></orgao>';
+                var servicos = data.xmlServicos;
+
+                window.console.log(orgao);
+                window.console.log(servicos);
+
                 pdfMaker.geraPdf(orgao, servicos);
             });
-        }, false);
+        }
     </script>
-
 </section>
 
 </body>

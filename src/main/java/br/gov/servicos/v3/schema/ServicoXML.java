@@ -58,12 +58,13 @@ public class ServicoXML {
     @Field(type = String, index = not_analyzed, store = true)
     String id;
 
+    @XmlTransient
+    @Field(store = true, type = String, index = not_analyzed)
+    String xml;
+
     @XmlElement(required = true)
     @Field(type = String, store = true)
     String nome;
-
-
-    String xml;
 
     @XmlElement
     @Field(type = String, store = true, index = not_analyzed)

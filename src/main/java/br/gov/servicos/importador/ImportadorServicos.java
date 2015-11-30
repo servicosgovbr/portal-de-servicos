@@ -4,6 +4,7 @@ import br.gov.servicos.config.PortalDeServicosIndex;
 import br.gov.servicos.orgao.Siorg;
 import br.gov.servicos.orgao.UrlsSiorg;
 import br.gov.servicos.servico.ServicoRepository;
+import br.gov.servicos.utils.LeitorDeArquivos;
 import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.ServicoXML;
 import com.github.slugify.Slugify;
@@ -13,6 +14,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.xml.transform.stream.StreamSource;
+import java.io.File;
+import java.io.StringReader;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -28,16 +32,19 @@ public class ImportadorServicos {
     ServicoRepository servicoRepository;
     Siorg siorg;
     Slugify slugify;
+    LeitorDeArquivos leitorDeArquivos;
 
     @Autowired
     ImportadorServicos(PortalDeServicosIndex indices,
                        ServicoRepository servicoRepository,
                        Siorg siorg,
-                       Slugify slugify) {
+                       Slugify slugify,
+                       LeitorDeArquivos leitorDeArquivos) {
         this.indices = indices;
         this.servicoRepository = servicoRepository;
         this.siorg = siorg;
         this.slugify = slugify;
+        this.leitorDeArquivos = leitorDeArquivos;
     }
 
     @SneakyThrows
@@ -49,12 +56,18 @@ public class ImportadorServicos {
                 Stream.of(repo.get("cartas-servico/v3/servicos").getFile()
                         .listFiles((d, n) -> n.endsWith(".xml")))
                         .parallel()
-                        .map(f -> unmarshal(f, ServicoXML.class))
+                        .map(this::deserializaServico)
                         .map(s -> s.withId(slugify.slugify(s.getNome())))
                         .map(s -> s.withOrgao(remapeiaESalvaOrgao(s.getOrgao())))
                         .peek(s -> log.debug("{} importado com sucesso", s.getId()))
                         .collect(toList())
         );
+    }
+
+    private ServicoXML deserializaServico(File f) {
+        String xml = leitorDeArquivos.ler(f).get();
+        return unmarshal(new StreamSource(new StringReader(xml)), ServicoXML.class)
+                .withXml(xml);
     }
 
     private OrgaoXML remapeiaESalvaOrgao(OrgaoXML orgao) {

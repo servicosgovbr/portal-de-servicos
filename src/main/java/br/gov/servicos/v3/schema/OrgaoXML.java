@@ -62,6 +62,10 @@ public class OrgaoXML {
     @Field(store = true, type = String, index = not_analyzed)
     String html;
 
+    @XmlTransient
+    @Field(store = true, type = String, index = not_analyzed)
+    String xml;
+
     @Field(store = true, type = String, index = not_analyzed)
     String contatoHtml;
 
