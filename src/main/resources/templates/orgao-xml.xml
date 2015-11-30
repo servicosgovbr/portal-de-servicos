@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<orgao xmlns="http://servicos.gov.br/v3/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://servicos.gov.br/v3/schema ">
-    <url th:text="${orgao.url}">http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/77</url>
-    <nome th:text="${orgao.nome}">Secretaria da Receita Federal do Brasil (RFB)</nome>
-    <conteudo th:inline="text"><![CDATA[[[${orgao.conteudo}]]]]></conteudo>
-    <contato th:if="${orgao.contato != null}" th:inline="text"><![CDATA[[[${orgao.contato}]]]]></contato>
-</orgao>
