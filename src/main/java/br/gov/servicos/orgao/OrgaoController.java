@@ -42,6 +42,19 @@ public class OrgaoController {
         return new ModelAndView("orgao-xml", "orgao", orgao);
     }
 
+    @RequestMapping("/orgao/{id}/servicos.json")
+    public ModelAndView orgaoXML(@PathVariable String id) {
+        Map<String, Object> model = new HashMap<>();
+
+        model.put("resultados", servicos.findByOrgao(new OrgaoXML().withId(id))
+                .stream()
+                .map(PaginaEstatica::fromServico)
+                .sorted(comparing(PaginaEstatica::getId))
+                .collect(toList()));
+
+        return new ModelAndView("orgao-xml", "orgao", orgao);
+    }
+
     @RequestMapping("/orgao/{id}")
     public ModelAndView orgao(@PathVariable("id") OrgaoXML orgaoXML) {
         Map<String, Object> model = new HashMap<>();

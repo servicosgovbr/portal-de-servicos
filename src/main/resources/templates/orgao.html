@@ -48,7 +48,7 @@
         <h3>Carta de serviço</h3>
 
         <p>Mais informações sobre todos os serviços oferecidos por esse órgão podem ser encontrados
-            <a href="">aqui</a>.
+        <a href="" id="pdf">aqui</a>.
         </p>
     </div>
 
@@ -68,6 +68,17 @@
             <i class="fa fa-github"></i>
         </a>
     </span>
+
+    <script th:inline="javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var pdfMaker = new cartaParaPdf.PdfMaker();
+            var orgao = [[${orgaoXml}]];
+            var servicos = [[${servicosXmls}]];
+            document.getElementById("pdf").addEventListener("click", function() {
+                pdfMaker.geraPdf(orgao, servicos);
+            });
+        }, false);
+    </script>
 
 </section>
 

@@ -62,6 +62,9 @@ public class ServicoXML {
     @Field(type = String, store = true)
     String nome;
 
+
+    String xml;
+
     @XmlElement
     @Field(type = String, store = true, index = not_analyzed)
     String sigla;
