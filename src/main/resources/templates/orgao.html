@@ -48,8 +48,7 @@
         <h3>Carta de serviço</h3>
 
         <p>Mais informações sobre todos os serviços oferecidos por esse órgão podem ser encontrados
-            <button onclick="gerarPdf()">Gerar CARTA</button>
-            .
+            <a href="#" onclick="gerarPdf()">aqui</a>.
         </p>
     </div>
 
@@ -72,20 +71,14 @@
 
     <script th:inline="javascript">
         function gerarPdf() {
-            window.console.log('gerarPdf');
             var id = [[${conteudo.id}]];
             var nome = [[${conteudo.nome}]];
-            window.console.log(nome);
             var url = '/carta/' + id;
 
-            window.console.log(url);
             jQuery.getJSON(url, function (data) {
                 var pdfMaker = new cartaParaPdf.PdfMaker();
                 var orgao = data.xmlOrgao || '<orgao><nome>' + nome + '</nome></orgao>';
                 var servicos = data.xmlServicos;
-
-                window.console.log(orgao);
-                window.console.log(servicos);
 
                 pdfMaker.geraPdf(orgao, servicos);
             });
