@@ -71,8 +71,7 @@ class ImportadorParaPaginasDeOrgao {
     }
 
     private String criaContatoMarkdown(OrgaoXML orgaoXML) {
-        return orgaoXML.getContato() == null ? "" : "Contato" + System.lineSeparator() +
-                "---" + System.lineSeparator() + System.lineSeparator() +
+        return orgaoXML.getContato() == null ? "" : "### Contato" + System.lineSeparator() +
                 orgaoXML.getContato().trim();
     }
 
