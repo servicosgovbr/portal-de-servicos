@@ -50,8 +50,7 @@ public class PortalDeServicosIndex {
             "orgaos",
             "servicos-por-area-de-interesse",
             "servicos-por-orgao",
-            "servicos-por-segmento-da-sociedade",
-            "conteudo-parser"
+            "servicos-por-segmento-da-sociedade"
     }, allEntries = true)
     public void recriar() throws IOException {
         recriarIndiceImportador();

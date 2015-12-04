@@ -62,6 +62,13 @@
         </li>
     </ul>
 
+    <span class="link-github">
+        <a target="_blank"
+           th:href="${'https://github.com/servicosgovbr/portal-de-servicos/edit/master/src/main/resources/conteudo/orgaos/' + conteudo.id + '.md'}">
+            <i class="fa fa-github"></i>
+        </a>
+    </span>
+
     <script th:inline="javascript">
         function gerarPdf() {
             var id = [[${conteudo.id}]];

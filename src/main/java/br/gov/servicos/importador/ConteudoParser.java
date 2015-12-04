@@ -5,7 +5,6 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +14,6 @@ import static org.jsoup.Jsoup.parse;
 @Slf4j
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-@Cacheable("conteudo-parser")
 public class ConteudoParser {
     Markdown markdown;
 
