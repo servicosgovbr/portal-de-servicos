@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body th:fragment="ponte(ponte)">
+<th:block th:if="${ponte != null}">
+    <h2 th:text="${ponte.titulo}">Titulo da aplicação</h2>
+    <form action="ponte/acao" method="post">
+        <th:block th:if="${!ponte.componentes.isEmpty()}" th:each="item : ${ponte.componentes}">
+            <th:block th:switch="${item.type}">
+                <th:block th:case="'input'">
+                    <th:block th:replace="ponte/componentes/input :: input(${item})">
+                        Componente input
+                    </th:block>
+                </th:block>
+                <th:block th:case="'label'">
+                    <th:block th:replace="ponte/componentes/label :: label(${item})">
+                        Componente label
+                    </th:block>
+                </th:block>
+                <th:block th:case="'button'">
+                    <th:block th:replace="ponte/componentes/button :: button(${item})">
+                        Componente button
+                    </th:block>
+                </th:block>
+            </th:block>
+        </th:block>
+        <input type="hidden" name="appId" th:value="${ponte.appId}"/>
+    </form>
+</th:block>
+</body>
+</html>
+

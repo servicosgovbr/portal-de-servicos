@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import javax.xml.transform.stream.StreamSource;
 import java.io.File;
 import java.io.StringReader;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -59,9 +60,16 @@ public class ImportadorServicos {
                         .map(this::deserializaServico)
                         .map(s -> s.withId(slugify.slugify(s.getNome())))
                         .map(s -> s.withOrgao(remapeiaESalvaOrgao(s.getOrgao())))
+                        .map(s -> s.withIdAplicacao(getIdAplicacao(s)))
                         .peek(s -> log.debug("{} importado com sucesso", s.getId()))
                         .collect(toList())
         );
+    }
+
+    private String getIdAplicacao(ServicoXML s) {
+        return Optional.ofNullable(s.getIdAplicacao())
+                .map(String::trim)
+                .orElse("");
     }
 
     private ServicoXML deserializaServico(File f) {

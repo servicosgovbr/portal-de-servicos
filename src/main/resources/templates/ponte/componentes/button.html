@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body th:fragment="button(componente)">
+<div>
+    <input type="hidden" name="action" th:value="${componente['action']}"/>
+    <input type="submit" th:value="${componente['text']}"/>
+</div>
+</body>
+</html>

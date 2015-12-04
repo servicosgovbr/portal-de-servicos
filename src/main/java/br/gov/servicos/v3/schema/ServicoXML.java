@@ -35,22 +35,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @AllArgsConstructor
 @FieldDefaults(level = PRIVATE)
 @XmlAccessorType(NONE)
-@XmlType(name = "Servico", propOrder = {
-        "nome",
-        "sigla",
-        "nomesPopulares",
-        "descricao",
-        "gratuito",
-        "contato",
-        "solicitantes",
-        "tempoTotalEstimado",
-        "etapas",
-        "orgao",
-        "segmentosDaSociedade",
-        "areasDeInteresse",
-        "palavrasChave",
-        "legislacoes",
-})
+@XmlType(name = "Servico")
 public class ServicoXML {
 
     @Id
@@ -84,6 +69,10 @@ public class ServicoXML {
     @XmlElement
     @Field(type = String, store = true)
     String contato;
+
+    @XmlElement(name = "id-aplicacao")
+    @Field(type = String, store = true)
+    String idAplicacao;
 
     @XmlElementWrapper(name = "solicitantes")
     @XmlElement(name = "solicitante")

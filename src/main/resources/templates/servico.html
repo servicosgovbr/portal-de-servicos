@@ -8,6 +8,12 @@
     <title th:text="${servico.nome}">Nome do Serviço</title>
     <meta property="og:title" th:content="${servico.nome}"/>
     <meta property="og:description" th:content="${servico.nome + ' no Portal de Serviços do Governo Federal'}"/>
+    <script language="javascript" type="text/javascript">
+      function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+      }
+
+    </script>
 </head>
 <body>
 
@@ -43,10 +49,11 @@
     <div class="row nomes-populares" th:unless="${servico.nomesPopulares == null or servico.nomesPopulares.isEmpty()}">
         <h4>
             Você também pode conhecer este serviço como:
-            <th:block th:text="${#strings.listJoin(servico.nomesPopulares, ', ')}"/>.
+            <th:block th:text="${#strings.listJoin(servico.nomesPopulares, ', ')}"/>
+            .
         </h4>
     </div>
-    
+
     <div class="row" th:include="fragments/servico/ancoras"></div>
     <div class="row" th:include="fragments/servico/descricao"></div>
     <div class="row" th:include="fragments/servico/solicitantes"></div>
@@ -54,6 +61,13 @@
     <div class="row" th:include="fragments/servico/tempo"></div>
     <div class="row" th:include="fragments/servico/legislacao"></div>
     <div class="row" th:include="fragments/servico/outras-info"></div>
+
+    <th:block th:if="${servico.idAplicacao != null}">
+        <iframe th:src="${'/ponte?appId=' + servico.idAplicacao}" width="100%" frameborder="0" scrolling="no"
+                onload="resizeIframe(this)">
+        </iframe>
+    </th:block>
+
     <div class="row" th:include="fragments/servico/feedback"></div>
 
     <div class="row botoes-rodape">
