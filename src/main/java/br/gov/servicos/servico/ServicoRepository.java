@@ -19,7 +19,8 @@ import static java.util.stream.Collectors.toList;
 import static org.elasticsearch.search.sort.SortOrder.ASC;
 
 public interface ServicoRepository extends ElasticsearchRepository<ServicoXML, String> {
-    
+
+    @Cacheable("servicos-por-orgao")
     default List<ServicoXML> findByOrgao(OrgaoXML orgao) {
         return findAll(new PageRequest(0, MAX_VALUE)).getContent()
                 .stream()
