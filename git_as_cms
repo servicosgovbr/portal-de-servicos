@@ -1,0 +1,8 @@
+
+- can we have access to the code you're using?
+- what kind of problems did you have using git?
+- did you have any performance problems?
+- did you have concurrent editing? thus, any concurrency issues?
+- did you have git conflicting issues? how did you solve/test it?
+- Why Github vs Git ?
+- how is your repo modeling? one repo clone for each editor instance?
