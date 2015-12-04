@@ -18,8 +18,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class PonteController {
-    String url = "http://localhost:8100/ponte";
-
+    final static String url = "http://localhost:8100/ponte";
     RestTemplate restTemplate;
 
     @Autowired

@@ -21,6 +21,11 @@
                         Componente button
                     </th:block>
                 </th:block>
+                <th:block th:case="'chave-valor'">
+                    <th:block th:replace="ponte/componentes/chaveValor :: chaveValor(${item})">
+                        Componente chave valor
+                    </th:block>
+                </th:block>
             </th:block>
         </th:block>
         <input type="hidden" name="appId" th:value="${ponte.appId}"/>
