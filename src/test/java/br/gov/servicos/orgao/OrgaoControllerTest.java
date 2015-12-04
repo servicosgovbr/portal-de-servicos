@@ -34,11 +34,14 @@ public class OrgaoControllerTest {
     @Mock
     ServicoRepository servicos;
 
+    @Mock
+    OrgaoXML.PaginaOrgaoFormatter formatter;
+
     OrgaoController controller;
 
     @Before
     public void setUp() {
-        controller = new OrgaoController(orgaos, orgaosUtil, servicos);
+        controller = new OrgaoController(orgaos, orgaosUtil, servicos, formatter);
     }
 
     @Test
@@ -46,6 +49,6 @@ public class OrgaoControllerTest {
         given(servicos.findByOrgao(new OrgaoXML().withId("receita-federal"))).willReturn(singletonList(SERVICO));
         given(orgaos.findOne("receita-federal")).willReturn(TestData.PAGINA_ORGAO);
 
-        assertModelAttributeValue(controller.orgao(new OrgaoXML().withId("receita-federal")), "resultados", singletonList(PaginaEstatica.fromServico(SERVICO)));
+        assertModelAttributeValue(controller.orgao("receita-federal"), "resultados", singletonList(PaginaEstatica.fromServico(SERVICO)));
     }
 }

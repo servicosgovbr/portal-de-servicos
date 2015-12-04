@@ -3,14 +3,18 @@ package br.gov.servicos.orgao;
 import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.OrgaoXML;
+import br.gov.servicos.v3.schema.OrgaoXML.PaginaOrgaoFormatter;
+import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.Formatter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import static java.util.Comparator.comparing;
@@ -24,12 +28,14 @@ public class OrgaoController {
     OrgaoRepository orgaoRepository;
     OrgaoRepositoryUtil orgaosRepositoryUtil;
     ServicoRepository servicos;
+    private Formatter<OrgaoXML> orgaoXMLFormatter;
 
     @Autowired
-    OrgaoController(OrgaoRepository orgaoRepository, OrgaoRepositoryUtil orgaosRepositoryUtil, ServicoRepository servicos) {
+    OrgaoController(OrgaoRepository orgaoRepository, OrgaoRepositoryUtil orgaosRepositoryUtil, ServicoRepository servicos, PaginaOrgaoFormatter orgaoXMLFormatter) {
         this.orgaoRepository = orgaoRepository;
         this.orgaosRepositoryUtil = orgaosRepositoryUtil;
         this.servicos = servicos;
+        this.orgaoXMLFormatter = orgaoXMLFormatter;
     }
 
     @RequestMapping("/orgaos")
@@ -38,7 +44,10 @@ public class OrgaoController {
     }
 
     @RequestMapping("/orgao/{id}")
-    public ModelAndView orgao(@PathVariable("id") OrgaoXML orgaoXML) {
+    @SneakyThrows
+    public ModelAndView orgao(@PathVariable("id") String idOrgao) {
+        OrgaoXML orgaoXML = orgaoXMLFormatter.parse(idOrgao, Locale.forLanguageTag("pt-BR"));
+
         Map<String, Object> model = new HashMap<>();
 
         model.put("termo", orgaoXML.getId());
