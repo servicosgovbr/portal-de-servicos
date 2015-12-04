@@ -87,8 +87,7 @@ public class OrgaoXML {
         public OrgaoXML parse(String id, Locale locale) {
             String url = UrlsSiorg.obterUrl(id);
             return Optional.ofNullable(orgaoRepository.findOne(slugify.slugify(id)))
-                    .orElse(siorg.obterOrgao(url)
-                            .orElse(null));
+                    .orElse(siorg.obterOrgao(url));
         }
 
         @Override

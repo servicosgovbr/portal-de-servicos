@@ -45,6 +45,6 @@ public class OrgaoRepositoryUtil {
 
     public OrgaoXML obterOrgao(OrgaoXML orgao) {
         return Optional.ofNullable(orgaoRepository.findOne(orgao.getId()))
-                .orElse(siorg.obterOrgao(orgao.getUrl()).orElse(null));
+                .orElse(siorg.obterOrgao(orgao.getUrl()));
     }
 }
