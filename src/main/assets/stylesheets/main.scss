@@ -910,11 +910,11 @@ p.formulario-opiniao {
 
   color: $azul-claro;
   background-color: $cinza-claro;
-  padding: 20px 20px 20px 20px;
-  text-align: center;
   border: 1px solid $cinza-medio;
-  border-radius: 4px;
   border-bottom: 4px solid $cinza-medio;
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 4px;
   height: 150px;
   margin-bottom: 30px;
   display: inline-block;
@@ -924,6 +924,7 @@ p.formulario-opiniao {
   h3 {
     font-size: 20px;    
     color: $azul-claro;
+    margin-top: 10px;
   }
 
   i {

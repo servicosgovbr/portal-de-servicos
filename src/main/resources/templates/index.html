@@ -27,13 +27,10 @@
  <div class="auto-grid" th:if="${!areasDestaque.isEmpty()}">
         <h2 class="titulo-home-azul">Categorias em destaque</h2>
         <ul> 
-            <div class="destaque-categoria" th:each="item : ${areasDestaque}">
-                <a th:href="@{/area-de-interesse/{id}(id=${item.id})}">
-                    <i th:class="'fa fa-' + ${item.fontAwesomeIcon}"></i>
-                    <h3 th:text="${item.value}">Nome área de interesse</h3>
-
-                </a>
-            </div>
+            <a class="destaque-categoria" th:each="item : ${areasDestaque}" th:href="@{/area-de-interesse/{id}(id=${item.id})}">
+                <i th:class="'fa fa-' + ${item.fontAwesomeIcon}"></i>
+                <h3 th:text="${item.value}">Nome área de interesse</h3>
+            </a>
         </ul>
     </div>
 </section>
