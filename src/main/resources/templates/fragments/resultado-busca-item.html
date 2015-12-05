@@ -9,7 +9,7 @@
     </a>
 </h3>
 
-<p th:text="${conteudo.conteudo}">
+<p th:text="${#strings.abbreviate(@conteudoParser.textoPuro(conteudo.conteudo), 140)}">
     Conteúdo principal
 </p>
 
