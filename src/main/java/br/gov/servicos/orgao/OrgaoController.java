@@ -4,8 +4,8 @@ import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.OrgaoXML.PaginaOrgaoFormatter;
-import lombok.SneakyThrows;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.Formatter;
 import org.springframework.stereotype.Controller;
@@ -23,6 +23,7 @@ import static lombok.AccessLevel.PRIVATE;
 
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
+@Slf4j
 public class OrgaoController {
 
     OrgaoRepository orgaoRepository;
@@ -44,20 +45,28 @@ public class OrgaoController {
     }
 
     @RequestMapping("/orgao/{id}")
-    @SneakyThrows
     public ModelAndView orgao(@PathVariable("id") String idOrgao) {
-        OrgaoXML orgaoXML = orgaoXMLFormatter.parse(idOrgao, Locale.forLanguageTag("pt-BR"));
+        try {
+            log.info("Carregando órgão: " + idOrgao);
+            OrgaoXML orgaoXML = orgaoXMLFormatter.parse(idOrgao, Locale.forLanguageTag("pt-BR"));
 
-        Map<String, Object> model = new HashMap<>();
+            Map<String, Object> model = new HashMap<>();
 
-        model.put("termo", orgaoXML.getId());
-        model.put("conteudo", orgaoXML);
-        model.put("resultados", servicos.findByOrgao(orgaoXML)
-                .stream()
-                .map(PaginaEstatica::fromServico)
-                .sorted(comparing(PaginaEstatica::getId))
-                .collect(toList()));
+            model.put("termo", orgaoXML.getId());
+            model.put("conteudo", orgaoXML);
 
-        return new ModelAndView("orgao", model);
+            log.info("Carregando serviços para órgão: " + idOrgao);
+            model.put("resultados", servicos.findByOrgao(orgaoXML)
+                    .stream()
+                    .map(PaginaEstatica::fromServico)
+                    .sorted(comparing(PaginaEstatica::getId))
+                    .collect(toList()));
+
+            log.info("Carregando página de órgão: " + idOrgao);
+            return new ModelAndView("orgao", model);
+        } catch (Throwable t) {
+            log.error("Erro carregando órgão", t);
+            throw new RuntimeException(t);
+        }
     }
 }
