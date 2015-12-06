@@ -29,7 +29,7 @@ public class SiorgTest {
 
     @Test
     public void retornaUnidadeDoOrgao() throws Exception {
-        String urlOrgao = "http://estruturaorganizacional.dados.gov.br/doc/unidade-organizacional/1934";
+        String urlOrgao = "http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/1934";
 
         given(restTemplate.getForEntity(urlOrgao, Siorg.Orgao.class))
                 .willReturn(new ResponseEntity<>(new Siorg.Orgao().withServico(new Siorg.Servico().withCodigoErro(0)).withUnidade(new Siorg.Unidade().withNome("Secretaria do Secretariado Secretarial").withSigla("SSS")), HttpStatus.OK));
