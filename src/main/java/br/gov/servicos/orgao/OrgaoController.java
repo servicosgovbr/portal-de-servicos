@@ -6,6 +6,7 @@ import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.OrgaoXML.PaginaOrgaoFormatter;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.exception.ExceptionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.Formatter;
 import org.springframework.stereotype.Controller;
@@ -66,7 +67,10 @@ public class OrgaoController {
             return new ModelAndView("orgao", model);
         } catch (Throwable t) {
             log.error("Erro carregando órgão", t);
-            throw new RuntimeException(t);
+            Map<String, Object> model = new HashMap<>();
+            model.put("errorMsg", t.getMessage());
+            model.put("errorTrace", ExceptionUtils.getFullStackTrace(t));
+            return new ModelAndView("error", model);
         }
     }
 }
