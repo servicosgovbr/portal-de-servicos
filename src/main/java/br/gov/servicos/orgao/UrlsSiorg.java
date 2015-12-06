@@ -1,6 +1,7 @@
 package br.gov.servicos.orgao;
 
 import br.gov.servicos.config.SlugifyConfig;
+import lombok.Getter;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -9,6 +10,7 @@ import java.util.regex.Pattern;
 
 public final class UrlsSiorg {
     private static Pattern URL_PREDICATE = Pattern.compile("(http://estruturaorganizacional\\.dados\\.gov\\.br/)(doc|id)(/unidade-organizacional/\\d+)");
+    @Getter
     private static Map<String, String> urls = new ConcurrentHashMap<>();
 
     public static String obterUrl(String id) {

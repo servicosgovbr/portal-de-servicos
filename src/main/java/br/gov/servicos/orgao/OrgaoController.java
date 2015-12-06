@@ -68,7 +68,8 @@ public class OrgaoController {
         } catch (Throwable t) {
             log.error("Erro carregando órgão", t);
             Map<String, Object> model = new HashMap<>();
-            model.put("errorMsg", t.getMessage());
+            model.put("errorMsg", idOrgao);
+            model.put("urls", UrlsSiorg.getUrls());
             model.put("errorTrace", ExceptionUtils.getFullStackTrace(t));
             return new ModelAndView("error", model);
         }
