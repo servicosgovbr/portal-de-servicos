@@ -21,9 +21,9 @@ import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
+@Slf4j
 @Controller
 @FieldDefaults(level = PRIVATE, makeFinal = true)
-@Slf4j
 public class OrgaoController {
 
     OrgaoRepository orgaoRepository;
