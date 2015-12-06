@@ -2,7 +2,6 @@ package br.gov.servicos.importador;
 
 import br.gov.servicos.config.PortalDeServicosIndex;
 import br.gov.servicos.orgao.Siorg;
-import br.gov.servicos.orgao.UrlsSiorg;
 import br.gov.servicos.servico.ServicoRepository;
 import br.gov.servicos.utils.LeitorDeArquivos;
 import br.gov.servicos.v3.schema.OrgaoXML;
@@ -80,7 +79,6 @@ public class ImportadorServicos {
 
     private OrgaoXML remapeiaESalvaOrgao(OrgaoXML orgao) {
         String url = orgao.getId();
-        UrlsSiorg.salvarUrl(url);
         return orgao.withId(slugify.slugify(url))
                 .withUrl(url);
     }

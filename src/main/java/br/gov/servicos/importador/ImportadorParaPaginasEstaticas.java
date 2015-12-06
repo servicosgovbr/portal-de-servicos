@@ -14,7 +14,7 @@ import java.io.File;
 import java.util.stream.Stream;
 
 import static br.gov.servicos.TipoPagina.PAGINA_ESTATICA;
-import static java.util.stream.Collectors.*;
+import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
 @Slf4j

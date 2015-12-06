@@ -3,6 +3,7 @@ package br.gov.servicos.frontend;
 import br.gov.servicos.cms.ConteudoController;
 import br.gov.servicos.fixtures.TestData;
 import br.gov.servicos.orgao.OrgaoController;
+import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.ServicoXML;
 import org.junit.Before;
 import org.junit.Test;
@@ -52,8 +53,8 @@ public class MioloControllerTest {
     public void mioloParaOrgaos() throws Exception {
         Map<String, Object> model = new HashMap<>();
         model.put("foo", "bar");
-        given(orgaos.orgao("orgao-1")).willReturn(new ModelAndView("orgao", model));
 
-        assertThat(miolo.getHtml("orgao-1").getModel(), is(model));
+        given(orgaos.orgao(new OrgaoXML().withId("orgao-1"))).willReturn(new ModelAndView("orgao", model));
+        assertThat(miolo.getHtml(new OrgaoXML().withId("orgao-1")).getModel(), is(model));
     }
 }

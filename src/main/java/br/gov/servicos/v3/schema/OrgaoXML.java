@@ -2,7 +2,6 @@ package br.gov.servicos.v3.schema;
 
 import br.gov.servicos.orgao.OrgaoRepository;
 import br.gov.servicos.orgao.Siorg;
-import br.gov.servicos.orgao.UrlsSiorg;
 import com.github.slugify.Slugify;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -85,9 +84,8 @@ public class OrgaoXML {
 
         @Override
         public OrgaoXML parse(String id, Locale locale) {
-            String url = UrlsSiorg.obterUrl(id);
             return Optional.ofNullable(orgaoRepository.findOne(slugify.slugify(id)))
-                    .orElse(siorg.obterOrgao(url));
+                    .orElse(siorg.obterOrgao(id));
         }
 
         @Override

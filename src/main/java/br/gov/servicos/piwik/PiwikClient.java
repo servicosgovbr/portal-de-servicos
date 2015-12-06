@@ -30,7 +30,7 @@ public class PiwikClient {
     }
 
     public List<PiwikPage> getPageUrls(String period, String date) {
-        if(!config.isEnabled()) {
+        if (!config.isEnabled()) {
             return emptyList();
         }
 

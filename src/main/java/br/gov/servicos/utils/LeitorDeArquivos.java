@@ -33,13 +33,13 @@ public class LeitorDeArquivos {
         }
         log.info("Arquivo {} encontrado", arquivo.getAbsolutePath());
 
-        try (InputStream in = new FileInputStream(arquivo)){
+        try (InputStream in = new FileInputStream(arquivo)) {
             return of(StreamUtils.copyToString(in, defaultCharset()));
         }
     }
 
     public Optional<String> ler(URI uri) throws MalformedURLException, IOException {
-        try(InputStream in = uri.toURL().openStream()) {
+        try (InputStream in = uri.toURL().openStream()) {
             return of(StreamUtils.copyToString(in, defaultCharset()));
         }
     }

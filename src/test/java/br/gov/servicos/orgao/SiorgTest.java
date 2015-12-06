@@ -24,7 +24,7 @@ public class SiorgTest {
 
     @Before
     public void setUp() throws Exception {
-        siorg = new Siorg(restTemplate, new Slugify());
+        siorg = new Siorg(restTemplate, new Slugify(), new OrgaoUtils());
     }
 
     @Test

@@ -1,7 +1,6 @@
 package br.gov.servicos.importador;
 
 import br.gov.servicos.orgao.OrgaoRepository;
-import br.gov.servicos.orgao.UrlsSiorg;
 import br.gov.servicos.utils.LeitorDeArquivos;
 import br.gov.servicos.v3.schema.OrgaoXML;
 import com.github.slugify.Slugify;
@@ -58,7 +57,6 @@ class ImportadorParaPaginasDeOrgao {
     }
 
     private OrgaoXML processaCampos(OrgaoXML orgaoXML) {
-        UrlsSiorg.salvarUrl(orgaoXML.getUrl());
         String conteudoMarkdown = criaConteudoMarkdown(orgaoXML);
         String contatoMarkdown = criaContatoMarkdown(orgaoXML);
 

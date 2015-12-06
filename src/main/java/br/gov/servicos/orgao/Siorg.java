@@ -14,9 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.function.Predicate;
-import java.util.regex.Pattern;
-
 import static lombok.AccessLevel.PRIVATE;
 
 @Slf4j
@@ -24,20 +21,22 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class Siorg {
 
-    public static final Predicate<String> URL_PREDICATE = Pattern.compile("http://estruturaorganizacional\\.dados\\.gov\\.br/(doc|id)/unidade-organizacional/\\d+").asPredicate();
+    private static final String BASE_URL = "http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/";
 
     RestTemplate restTemplate;
     Slugify slugify;
+    private OrgaoUtils orgaoUtils;
 
     @Autowired
-    public Siorg(RestTemplate restTemplate, Slugify slugify) {
+    public Siorg(RestTemplate restTemplate, Slugify slugify, OrgaoUtils orgaoUtils) {
         this.restTemplate = restTemplate;
         this.slugify = slugify;
+        this.orgaoUtils = orgaoUtils;
     }
 
     @Cacheable("orgaos-siorg")
-    public OrgaoXML obterOrgao(String url) {
-        Unidade u = findUnidade(url);
+    public OrgaoXML obterOrgao(String unsafeUrl) {
+        Unidade u = findUnidade(unsafeUrl);
         return new OrgaoXML()
                 .withId(slugify.slugify(u.codigoUnidade))
                 .withUrl(u.codigoUnidade)
@@ -45,11 +44,10 @@ public class Siorg {
     }
 
     @Cacheable("unidades-siorg")
-    public Unidade findUnidade(String url) {
-        if (URL_PREDICATE.negate().test(url)) {
-            String msg = String.format("URL %s não é válida para o Siorg", url);
-            throw new IllegalArgumentException(msg);
-        }
+    public Unidade findUnidade(String unsafeId) {
+        long orgaoId = orgaoUtils.obterId(unsafeId);
+
+        String url = BASE_URL + orgaoId;
 
         ResponseEntity<Orgao> entity = restTemplate.getForEntity(url, Orgao.class);
         Orgao body = entity.getBody();
