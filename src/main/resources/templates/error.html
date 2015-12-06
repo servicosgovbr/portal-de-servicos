@@ -48,15 +48,14 @@
                 <span class="ticket-erro"
                       th:text="${#httpServletRequest.getAttribute('req.ticket').substring(24)}"></span>.
 
-                <th:block th:if="${errorMsg != null}">
-                    Detalhes do erro:
-                    <div th:text="${errorMsg}">
-                        Detalhes de erro
-                    </div>
-                    <div th:text="${errorTrace}">
-                        Detalhes de erro
-                    </div>
-                </th:block>
+                Detalhes do erro:
+
+            <div th:text="${errorMsg}">
+                Detalhes de erro
+            </div>
+            <div th:text="${errorTrace}">
+                Detalhes de erro
+            </div>
             </p>
         </th:block>
 
