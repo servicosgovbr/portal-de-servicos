@@ -59,6 +59,7 @@ pds:
       - emissao-da-declaracao-de-aptidao-da-agricultura-familiar-dap
       - extrato-de-beneficios-previdenciarios-para-declaracao-de-imposto-de-renda
     areasDeInteresse:
+      - agua
       - saude
       - agropecuaria
       - comercio-e-servicos
