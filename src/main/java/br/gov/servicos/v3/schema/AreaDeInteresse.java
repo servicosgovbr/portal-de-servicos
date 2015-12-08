@@ -85,6 +85,9 @@ public enum AreaDeInteresse {
 
     @XmlEnumValue("Urbanismo")
     VCGE2_URBANISMO("Urbanismo", "building-o"),
+    
+    @XmlEnumValue("Água")
+    VCGE2_AGUA("Água", "tint"),
 
     //--------------
 
@@ -308,8 +311,7 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Vigilância Sanitária")
     VCGE2_VIGILANCIA_SANITARIA("Vigilância Sanitária"),
 
-    @XmlEnumValue("Água")
-    VCGE2_AGUA("Água"),
+
 
     @XmlEnumValue("Abastecimento")
     VCGE1_ABASTECIMENTO("Abastecimento"),
