@@ -42,7 +42,6 @@ public class PortalDeServicosIndex {
     @CacheEvict(value = {
             "buscas",
             "html",
-            "servicos-destaques",
             "pagina-estatica",
             "pagina-tematica",
             "areas-de-interesse",

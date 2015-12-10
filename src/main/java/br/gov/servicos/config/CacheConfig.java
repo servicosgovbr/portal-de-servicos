@@ -7,7 +7,7 @@ import org.springframework.cache.guava.GuavaCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import static java.util.concurrent.TimeUnit.HOURS;
+import static java.util.concurrent.TimeUnit.MINUTES;
 
 @Configuration
 @EnableCaching
@@ -16,7 +16,7 @@ public class CacheConfig {
     @Bean
     public CacheManager cacheManager() {
         GuavaCacheManager manager = new GuavaCacheManager();
-        manager.setCacheBuilder(CacheBuilder.newBuilder().expireAfterWrite(1, HOURS));
+        manager.setCacheBuilder(CacheBuilder.newBuilder().expireAfterWrite(10, MINUTES));
         return manager;
     }
 
