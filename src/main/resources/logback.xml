@@ -9,7 +9,7 @@
     <logger name="org.apache.http" level="INFO"/>
     <logger name="br.gov.servicos" level="DEBUG"/>
 
-    <root>
+    <root level="ERROR">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>
