@@ -12,8 +12,8 @@ cd '/root/docker'
 git pull --rebase
 
 
-docker rm -v $(docker ps -a -q -f status=exited)
-docker rmi $(docker images -f "dangling=true" -q)
+docker rm -v -f $(docker ps -a -q -f status=exited)
+docker rmi -f $(docker images -f "dangling=true" -q)
 
 docker-compose stop portal1 portal2
 docker-compose kill portal1 portal2
