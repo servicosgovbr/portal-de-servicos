@@ -12,12 +12,10 @@ import static java.util.concurrent.TimeUnit.MINUTES;
 @Configuration
 @EnableCaching
 public class CacheConfig {
-
     @Bean
     public CacheManager cacheManager() {
         GuavaCacheManager manager = new GuavaCacheManager();
         manager.setCacheBuilder(CacheBuilder.newBuilder().expireAfterWrite(10, MINUTES));
         return manager;
     }
-
 }

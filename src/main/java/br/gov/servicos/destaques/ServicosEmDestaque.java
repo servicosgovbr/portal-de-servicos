@@ -49,7 +49,6 @@ public class ServicosEmDestaque {
         this.destaquesAutomaticos = destaquesAutomaticos;
     }
 
-    @Cacheable("servicos-destaque")
     public List<ServicoXML> servicos(int quantidade) {
         if (destaquesAutomaticos) {
             return completaSevicosAteOLimite(
