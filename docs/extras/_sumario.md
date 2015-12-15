@@ -1,2 +1,0 @@
-- [Extras](/extras/index.md)
-  - [Documento de Implantação](./extras/documento-de-implantacao.md)

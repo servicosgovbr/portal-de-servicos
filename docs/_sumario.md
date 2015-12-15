@@ -10,4 +10,4 @@
 {%include './design/_sumario.md' %}
 {%include './conteudo/_sumario.md' %}
 {%include './desenvolvimento/_sumario.md' %}
-{%include './extras/_sumario.md' %}
+{%include './implantacao/_sumario.md' %}
