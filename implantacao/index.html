@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Documento de Implantação | Portal de Serviços</title>
+        <title>Implantação | Portal de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.5">
@@ -37,8 +37,10 @@
         
     
     
+    <link rel="next" href="../implantacao/documento-de-implantacao.html" />
     
-    <link rel="prev" href="../extras/index.html" />
+    
+    <link rel="prev" href="../desenvolvimento/usabilidade.html" />
     
 
         
@@ -47,11 +49,11 @@
         
         
     <div class="book"
-        data-level="11.1"
-        data-chapter-title="Documento de Implantação"
-        data-filepath="extras/documento-de-implantacao.md"
+        data-level="11"
+        data-chapter-title="Implantação"
+        data-filepath="implantacao/index.md"
         data-basepath=".."
-        data-revision="Tue Dec 15 2015 18:18:20 GMT+0000 (UTC)"
+        data-revision="Tue Dec 15 2015 19:05:12 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1340,32 +1342,32 @@
             
         </li>
     
-        <li class="chapter " data-level="11" data-path="extras/index.html">
+        <li class="chapter active" data-level="11" data-path="implantacao/index.html">
             
                 
-                    <a href="../extras/index.html">
+                    <a href="../implantacao/index.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>11.</b>
                         
-                        Extras
+                        Implantação
                     </a>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="11.1" data-path="extras/documento-de-implantacao.html">
+        <li class="chapter " data-level="11.1" data-path="implantacao/documento-de-implantacao.html">
             
                 
-                    <a href="../extras/documento-de-implantacao.html">
+                    <a href="../implantacao/documento-de-implantacao.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>11.1.</b>
                         
-                        Documento de Implantação
+                        Detalhes de Implantação
                     </a>
             
             
@@ -1409,638 +1411,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="documento-de-implanta&#xE7;&#xE3;o">Documento de Implanta&#xE7;&#xE3;o</h1>
-<p>Neste documento est&#xE3;o todas as informa&#xE7;&#xF5;es necess&#xE1;rias &#xE0; implanta&#xE7;&#xE3;o e opera&#xE7;&#xE3;o do Portal de Servi&#xE7;os e Editor de Servi&#xE7;os em ambientes de, ou similares a, produ&#xE7;&#xE3;o.</p>
-<h1 id="infraestrutura">Infraestrutura</h1>
-<p><img src="../desenvolvimento/ambiente-docker.png" alt="Diagrama da rede em ambiente similar a produ&#xE7;&#xE3;o"></p>
-<h2 id="ambientes-docker">Ambientes Docker</h2>
-<p>Estes ambientes cont&#xE9;m uma m&#xE1;quina virtual com as seguintes aplica&#xE7;&#xF5;es Docker:</p>
-<ul>
-<li>Balanceador de carga (haproxy)</li>
-<li>Portal de Servi&#xE7;os 1</li>
-<li>Portal de Servi&#xE7;os 2</li>
-<li>Editor de Servi&#xE7;os 1</li>
-<li>Editor de Servi&#xE7;os 2</li>
-<li>ElasticSearch 1</li>
-<li>ElasticSearch 2</li>
-<li>cAdvisor</li>
-<li>Logspout</li>
-<li>Logstash</li>
-</ul>
-<p>Estas est&#xE3;o definidas na configura&#xE7;&#xE3;o, em formato <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a>, do <a href="https://github.com/servicosgovbr/docker" target="_blank">reposit&#xF3;rio relacionado</a>.</p>
-<h2 id="portas-e-firewalls">Portas e firewalls</h2>
-<p>Por padr&#xE3;o, o balanceador &#xE9; o &#xFA;nico cont&#xEA;iner que exp&#xF5;e portas abertas para o host. Todo o tr&#xE1;fego deve ser direcionado a estas portas, e o balanceador lida com a distribui&#xE7;&#xE3;o interna. S&#xE3;o elas:</p>
-<ul>
-<li>80/tcp (HTTP): Tr&#xE1;fego para o Portal de Servi&#xE7;os (<code>/*</code>) e Editor de Servi&#xE7;os (<code>/editar/*</code>)</li>
-<li>8080/tcp (HTTP): Tr&#xE1;fego para o cAdvisor (<code>/*</code>) e estat&#xED;sticas do HAProxy (<code>/lb-stats</code>)</li>
-<li>5601/tcp (HTTP): Tr&#xE1;fego para o Kibana (<code>/*</code>)</li>
-</ul>
-<h3 id="portas-internas">Portas internas</h3>
-<p>Estas s&#xE3;o as portas utilizadas internamente para comunica&#xE7;&#xE3;o entre cont&#xEA;ineres:</p>
-<table>
-<thead>
-<tr>
-<th>Origem</th>
-<th>Destino</th>
-<th>Portas</th>
-<th>Notas</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Balanceador</td>
-<td>Portal de Servi&#xE7;os</td>
-<td>8080/tcp</td>
-<td></td>
-</tr>
-<tr>
-<td>Balanceador</td>
-<td>Editor de Servi&#xE7;os</td>
-<td>8090/tcp</td>
-<td></td>
-</tr>
-<tr>
-<td>Balanceador</td>
-<td>cAdvisor</td>
-<td>8080/tcp</td>
-<td></td>
-</tr>
-<tr>
-<td>Balanceador</td>
-<td>Kibana</td>
-<td>5601/tcp</td>
-<td></td>
-</tr>
-<tr>
-<td>Balanceador</td>
-<td>ElasticSearch</td>
-<td>9200/tcp e 9300/tcp</td>
-<td>Usadas apenas para monitoria</td>
-</tr>
-<tr>
-<td>Balanceador</td>
-<td>Logstash</td>
-<td>5000/tcp</td>
-<td>Usada apenas para monitoria</td>
-</tr>
-<tr>
-<td>Portal de Servi&#xE7;os</td>
-<td>ElasticSearch</td>
-<td>9300/tcp</td>
-<td></td>
-</tr>
-<tr>
-<td>Logspout</td>
-<td>Logstash</td>
-<td>5000/udp</td>
-<td></td>
-</tr>
-<tr>
-<td>Logstash</td>
-<td>ElasticSearch</td>
-<td>9300/tcp</td>
-<td></td>
-</tr>
-<tr>
-<td>Kibana</td>
-<td>ElasticSearch</td>
-<td>9200/tcp</td>
-<td>Usa apenas o ElasticSearch 1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="volumes-externos">Volumes externos</h3>
-<p>Os seguintes arquivos e diret&#xF3;rios s&#xE3;o disponibilizados da m&#xE1;quina host para os cont&#xEA;ineres:</p>
-<table>
-<thead>
-<tr>
-<th>Cont&#xEA;iner</th>
-<th>Volume</th>
-<th>Backup?</th>
-<th>Notas</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Editor de Servi&#xE7;os 1</td>
-<td>/root/.ssh</td>
-<td>Sim</td>
-<td>Chave SSH para publica&#xE7;&#xE3;o no Github, somente leitura</td>
-</tr>
-<tr>
-<td>Editor de Servi&#xE7;os 2</td>
-<td>/root/.ssh</td>
-<td>Sim</td>
-<td>Chave SSH para publica&#xE7;&#xE3;o no Github, somente leitura</td>
-</tr>
-<tr>
-<td>cAdvisor</td>
-<td>/var/run</td>
-<td>N&#xE3;o</td>
-<td></td>
-</tr>
-<tr>
-<td>cAdvisor</td>
-<td>/</td>
-<td>N&#xE3;o</td>
-<td>Somente leitura</td>
-</tr>
-<tr>
-<td>cAdvisor</td>
-<td>/sys</td>
-<td>N&#xE3;o</td>
-<td>Somente leitura</td>
-</tr>
-<tr>
-<td>cAdvisor</td>
-<td>/var/lib/docker/</td>
-<td>N&#xE3;o</td>
-<td>Somente leitura</td>
-</tr>
-<tr>
-<td>Logspout</td>
-<td>/var/run/docker.sock</td>
-<td>N&#xE3;o</td>
-<td></td>
-</tr>
-<tr>
-<td>ElasticSearch 1</td>
-<td>/usr/share/elasticsearch/es1/data</td>
-<td>Sim</td>
-<td></td>
-</tr>
-<tr>
-<td>ElasticSearch 2</td>
-<td>/usr/share/elasticsearch/es2/data</td>
-<td>Sim</td>
-<td></td>
-</tr>
-<tr>
-<td>Logstash</td>
-<td>/root/docker/logstash</td>
-<td>N&#xE3;o</td>
-<td>Somente leitura</td>
-</tr>
-</tbody>
-</table>
-<h2 id="configura&#xE7;&#xE3;o">Configura&#xE7;&#xE3;o</h2>
-<p>Tanto o Portal quanto o Editor de Servi&#xE7;os utilizam vari&#xE1;veis de ambiente para configura&#xE7;&#xE3;o. Todas elas t&#xEA;m valores padr&#xE3;o, e algumas s&#xE3;o redefinidas na configura&#xE7;&#xE3;o dos cont&#xEA;iners usando o <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a> (mais especificamente, atrav&#xE9;s da diretiva <code>environment</code> dos arquivos <code>docker-compose.yml</code> do <a href="https://github.com/servicosgovbr/docker/blob/master/portal-de-servicos/docker-compose.yml" target="_blank">Portal</a> e do <a href="https://github.com/servicosgovbr/docker/blob/master/editor-de-servicos/docker-compose.yml" target="_blank">Editor</a>).</p>
-<p>Os arquivos que listam as configura&#xE7;&#xF5;es padr&#xE3;o s&#xE3;o:</p>
-<ul>
-<li>Portal de Servi&#xE7;os: <a href="https://github.com/servicosgovbr/portal-de-servicos/blob/master/scripts/portal-de-servicos.default.config" target="_blank"><code>scripts/portal-de-servicos.default.config</code></a></li>
-<li>Editor de Servi&#xE7;os: <a href="https://github.com/servicosgovbr/editor-de-servicos/blob/master/scripts/editor-de-servicos.default.config" target="_blank"><code>scripts/editor-de-servicos.default.config</code></a></li>
-</ul>
-<h2 id="checklist-de-implanta&#xE7;&#xE3;o">Checklist de Implanta&#xE7;&#xE3;o</h2>
-<h3 id="primeira-instala&#xE7;&#xE3;o">Primeira instala&#xE7;&#xE3;o</h3>
-<p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, sem nenhuma configura&#xE7;&#xE3;o adicional efetuada.</p>
-<ul>
-<li>Verifique que o kernel instalado &#xE9;, no m&#xED;nimo, 3.10, rodando em modo x64:</li>
-</ul>
-<pre><code class="lang-bash">uname -r 
-<span class="hljs-number">3.10</span>.<span class="hljs-number">0</span>-<span class="hljs-number">229</span>.el7.x86_64
-</code></pre>
-<p>Caso contr&#xE1;rio, &#xE9; preciso realizar as atualiza&#xE7;&#xF5;es necess&#xE1;rias antes de continuar.</p>
-<ul>
-<li>Desabilite o <a href="https://wiki.centos.org/HowTos/SELinux" target="_blank">SELinux</a> temporariamente:</li>
-</ul>
-<pre><code class="lang-bash">setenforce <span class="hljs-number">0</span>
-</code></pre>
-<ul>
-<li>Instale o <a href="http://www.docker.com" target="_blank">Docker</a>:</li>
-</ul>
-<pre><code class="lang-bash">curl <span class="hljs-operator">-s</span>SL https://get.docker.com | sh
-</code></pre>
-<ul>
-<li>Inicie o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a>:</li>
-</ul>
-<pre><code class="lang-bash">systemctl start docker
-</code></pre>
-<ul>
-<li>Verifique que o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> inicializou corretamente:</li>
-</ul>
-<pre><code class="lang-bash">docker ps
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-</code></pre><ul>
-<li>Verifique que o <a href="http://www.docker.com" target="_blank">Docker</a> consegue baixar e instanciar cont&#xEA;ineres:</li>
-</ul>
-<pre><code class="lang-bash">docker run alpine <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;ol&#xE1;&quot;</span>
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>Unable to find image &apos;alpine:latest&apos; locally
-latest: Pulling from library/alpine
-31f630c65071: Already exists 
-library/alpine:latest: The image you are pulling has been verified. Important: image verification is a tech preview feature and should not be relied on to provide security.
-Digest: sha256:c471fce1d08618adf4c6c0d72c047b9f3d5ef82cae0ca9a157ce1c800d42722f
-Status: Downloaded newer image for alpine:latest
-ol&#xE1;
-</code></pre><ul>
-<li>Configure o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> para inicializar durante o boot:</li>
-</ul>
-<pre><code class="lang-bash">chkconfig docker on
-</code></pre>
-<ul>
-<li>Instale o <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a>:</li>
-</ul>
-<pre><code class="lang-bash">curl -L https://github.com/docker/compose/releases/download/<span class="hljs-number">1.4</span>.<span class="hljs-number">0</span>/docker-compose-`uname <span class="hljs-operator">-s</span>`-`uname -m` &gt; /usr/bin/docker-compose
-chmod +x /usr/bin/docker-compose
-</code></pre>
-<ul>
-<li>Verifique a instala&#xE7;&#xE3;o do <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a></li>
-</ul>
-<pre><code class="lang-bash">docker-compose version
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>docker-compose version: 1.4.0
-docker-py version: 1.3.1
-CPython version: 2.7.9
-OpenSSL version: OpenSSL 1.0.1e 11 Feb 2013
-</code></pre><ul>
-<li>Instale o <a href="http://git-scm.org" target="_blank">Git</a>:</li>
-</ul>
-<pre><code class="lang-bash">yum install -y git
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>...
-
-Installed:
-  git.x86_64 0:1.8.3.1-4.el7                                                                                                                                                                                       
-
-...
-</code></pre><ul>
-<li>Clone o reposit&#xF3;rio <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a> no diret&#xF3;rio <code>/root</code>:</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root
-git <span class="hljs-built_in">clone</span> https://github.com/servicosgovbr/docker
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>Cloning into &apos;docker&apos;...
-remote: Counting objects: 152, done.
-remote: Compressing objects: 100% (61/61), done.
-remote: Total 152 (delta 34), reused 0 (delta 0), pack-reused 85
-Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
-Resolving deltas: 100% (77/77), done.
-</code></pre><ul>
-<li>Construa e rode os cont&#xEA;ineres:</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> docker
-./build-all <span class="hljs-comment"># caso prefira baixar as imagens do docker hub, omita este passo</span>
-docker-compose up <span class="hljs-operator">-d</span>
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>Pulling cadvisor (google/cadvisor:latest)...
-latest: Pulling from google/cadvisor
-511136ea3c5a: Pull complete
-46e263e5de56: Pull complete
-cf677a5f718c: Pull complete
-...
-Creating cadvisor...
-Creating editor2...
-Creating editor1...
-Creating es2...
-Creating es1...
-Creating logstash...
-Creating logspout...
-Creating portal2...
-Creating kibana...
-Creating portal1...
-Creating balanceador...
-</code></pre><p>Caso a seguinte mensagem seja exibida:</p>
-<pre><code>Cannot start container faf8df3b73d4ddbfad550942020413e98ae8dd3bf84dc19b2b880273e261e5f2: Cannot link to a non running container: /logspout AS /balanceador/logspou
-</code></pre><p>Ocorreu um problema na inicializa&#xE7;&#xE3;o do Logspout (que precisa do Logstash rodando para concluir com sucesso), devido &#xE0; ordem com que os servi&#xE7;os iniciam no Docker-Compose. Este problema pode ser resolvido aguardando por volta de 1 minuto (ou tempo suficiente para o Logstash inicializar completamente) e rodando <code>docker-compose up -d</code> novamente.</p>
-<ul>
-<li>Verifique que os cont&#xEA;ineres est&#xE3;o executando corretamente:</li>
-</ul>
-<pre><code class="lang-bash">docker-compose ps
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>   Name                  Command               State                                 Ports                                
--------------------------------------------------------------------------------------------------------------------------
-balanceador   haproxy -f /usr/local/etc/ ...   Up      0.0.0.0:5601-&gt;5601/tcp, 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:8080-&gt;8080/tcp 
-cadvisor      /usr/bin/cadvisor                Up      8080/tcp                                                           
-editor1       /bin/sh -c sh /run.sh            Up      8090/tcp                                                           
-editor2       /bin/sh -c sh /run.sh            Up      8090/tcp                                                           
-es1           /docker-entrypoint.sh elas ...   Up      9200/tcp, 9300/tcp                                                 
-es2           /docker-entrypoint.sh elas ...   Up      9200/tcp, 9300/tcp                                                 
-kibana        /docker-entrypoint.sh kibana     Up      5601/tcp                                                           
-logspout      /bin/logspout                    Up      80/tcp, 8000/tcp                                                   
-logstash      /docker-entrypoint.sh logs ...   Up      5000/tcp                                                           
-portal1       /bin/sh -c sh /run.sh            Up      8080/tcp                                                           
-portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
-</code></pre><ul>
-<li>Verifique que a vers&#xE3;o do Portal de Servi&#xE7;os &#xE9; a desejada:</li>
-</ul>
-<pre><code class="lang-bash">curl localhost/info
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;1529&quot;</span>,
-  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:43&quot;</span>,
-  <span class="hljs-string">&quot;git&quot;</span>: {
-    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
-    <span class="hljs-string">&quot;commit&quot;</span>: {
-      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;e5e9f74&quot;</span>,
-      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:37&quot;</span>
-    }
-  }
-}
-</code></pre>
-<ul>
-<li>Verifique que a vers&#xE3;o do Editor de Servi&#xE7;os &#xE9; a desejada:</li>
-</ul>
-<pre><code class="lang-bash">curl localhost/editar/info
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;627&quot;</span>,
-  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:42&quot;</span>,
-  <span class="hljs-string">&quot;git&quot;</span>: {
-    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
-    <span class="hljs-string">&quot;commit&quot;</span>: {
-      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;4b85c92&quot;</span>,
-      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:39&quot;</span>
-    }
-  }
-}
-</code></pre>
-<ul>
-<li>Verificar que a sa&#xFA;de do cluster est&#xE1; <code>UP</code>:</li>
-</ul>
-<pre><code class="lang-bash">curl localhost/health
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-  <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (622 docs)&quot;</span>,
-    <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
-  },
-  <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
-    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">3</span>,
-    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;es1&quot;</span>,
-    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;logstash-d9ccaa4d20c4-1-11624&quot;</span>,
-    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;es2&quot;</span>
-  },
-  <span class="hljs-string">&quot;cache&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UNKNOWN&quot;</span>
-  },
-  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378258944</span>,
-    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
-  }
-}
-</code></pre>
-<p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
-<h3 id="atualiza&#xE7;&#xF5;es-posteriores">Atualiza&#xE7;&#xF5;es posteriores</h3>
-<p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, que j&#xE1; tem os cont&#xEA;ineres <a href="http://www.docker.com" target="_blank">Docker</a> rodando.</p>
-<ul>
-<li>Atualize o reposit&#xF3;rio <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a> no diret&#xF3;rio <code>/root</code>:</li>
-</ul>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root
-git pull
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>remote: Counting objects: 27, done.
-remote: Compressing objects: 100% (17/17), done.
-remote: Total 27 (delta 15), reused 22 (delta 10), pack-reused 0
-Unpacking objects: 100% (27/27), done.
-From github.com:servicosgovbr/docker
-   1f736fb..f069a55  master     -&gt; origin/master
-First, rewinding head to replay your work on top of it...
-Fast-forwarded master to f069a5552fec4c8bc9226c7941bb89fe0420ed75.
-</code></pre><ul>
-<li>Rode os cont&#xEA;ineres:</li>
-</ul>
-<pre><code class="lang-bash">docker-compose up <span class="hljs-operator">-d</span>
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>Creating cadvisor...
-Creating editor2...
-Creating editor1...
-Creating es2...
-Creating es1...
-Creating logstash...
-Creating logspout...
-Creating portal2...
-Creating kibana...
-Creating portal1...
-Creating balanceador...
-</code></pre><ul>
-<li>Verifique que os cont&#xEA;ineres est&#xE3;o executando corretamente:</li>
-</ul>
-<pre><code class="lang-bash">docker-compose ps
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>   Name                  Command               State                                 Ports                                
--------------------------------------------------------------------------------------------------------------------------
-balanceador   haproxy -f /usr/local/etc/ ...   Up      0.0.0.0:5601-&gt;5601/tcp, 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:8080-&gt;8080/tcp 
-cadvisor      /usr/bin/cadvisor                Up      8080/tcp                                                           
-editor1       /bin/sh -c sh /run.sh            Up      8090/tcp                                                           
-editor2       /bin/sh -c sh /run.sh            Up      8090/tcp                                                           
-es1           /docker-entrypoint.sh elas ...   Up      9200/tcp, 9300/tcp                                                 
-es2           /docker-entrypoint.sh elas ...   Up      9200/tcp, 9300/tcp                                                 
-kibana        /docker-entrypoint.sh kibana     Up      5601/tcp                                                           
-logspout      /bin/logspout                    Up      80/tcp, 8000/tcp                                                   
-logstash      /docker-entrypoint.sh logs ...   Up      5000/tcp                                                           
-portal1       /bin/sh -c sh /run.sh            Up      8080/tcp                                                           
-portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
-</code></pre><ul>
-<li>Verifique que a vers&#xE3;o do Portal de Servi&#xE7;os &#xE9; a desejada:</li>
-</ul>
-<pre><code class="lang-bash">curl localhost/info
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;1529&quot;</span>,
-  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:43&quot;</span>,
-  <span class="hljs-string">&quot;git&quot;</span>: {
-    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
-    <span class="hljs-string">&quot;commit&quot;</span>: {
-      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;e5e9f74&quot;</span>,
-      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:37&quot;</span>
-    }
-  }
-}
-</code></pre>
-<ul>
-<li>Verifique que a vers&#xE3;o do Editor de Servi&#xE7;os &#xE9; a desejada:</li>
-</ul>
-<pre><code class="lang-bash">curl localhost/editar/info
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;627&quot;</span>,
-  <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:42&quot;</span>,
-  <span class="hljs-string">&quot;git&quot;</span>: {
-    <span class="hljs-string">&quot;branch&quot;</span>: <span class="hljs-string">&quot;master&quot;</span>,
-    <span class="hljs-string">&quot;commit&quot;</span>: {
-      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;4b85c92&quot;</span>,
-      <span class="hljs-string">&quot;time&quot;</span>: <span class="hljs-string">&quot;2015-08-28 00:39&quot;</span>
-    }
-  }
-}
-</code></pre>
-<ul>
-<li>Verificar que a sa&#xFA;de do cluster est&#xE1; <code>UP</code>:</li>
-</ul>
-<pre><code class="lang-bash">curl localhost/health
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-  <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (622 docs)&quot;</span>,
-    <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
-  },
-  <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
-    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">3</span>,
-    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;es1&quot;</span>,
-    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;logstash-d9ccaa4d20c4-1-11624&quot;</span>,
-    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;es2&quot;</span>
-  },
-  <span class="hljs-string">&quot;cache&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UNKNOWN&quot;</span>
-  },
-  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378258944</span>,
-    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
-  }
-}
-</code></pre>
-<p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
-<h3 id="problemas-conhecidos">Problemas conhecidos</h3>
-<h4 id="altera&#xE7;&#xF5;es-na-rede-firewall-ou-iptables">Altera&#xE7;&#xF5;es na rede, firewall ou iptables</h4>
-<p>O Docker necessita ser reiniciado quando uma mudan&#xE7;a estrutural ou de configura&#xE7;&#xE3;o de redes &#xE9; realizada na m&#xE1;quina host.</p>
-<p>Presumindo uma m&#xE1;quina [CentOS] 7 64bit, que j&#xE1; possui os cont&#xEA;ineres <a href="http://www.docker.com" target="_blank">Docker</a> rodando, recomendamos que os seguintes comandos sejam executados:</p>
-<ul>
-<li>No reposit&#xF3;rio local <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a>, pare os cont&#xEA;ineres:</li>
-</ul>
-<pre><code class="lang-bash">docker stop $(docker ps <span class="hljs-operator">-a</span> -q)
-docker <span class="hljs-built_in">kill</span> $(docker ps <span class="hljs-operator">-a</span> -q)
-</code></pre>
-<ul>
-<li>Reinicie o Docker:</li>
-</ul>
-<pre><code class="lang-bash">systemctl restart docker
-</code></pre>
-<ul>
-<li>Inicie os cont&#xEA;ineres novamente:</li>
-</ul>
-<pre><code class="lang-bash">docker-compose up <span class="hljs-operator">-d</span>
-</code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>Creating cadvisor...
-Creating editor2...
-Creating editor1...
-Creating es2...
-Creating es1...
-Creating logstash...
-Creating logspout...
-Creating portal2...
-Creating kibana...
-Creating portal1...
-Creating balanceador...
-</code></pre><hr>
-<h1 id="backups">Backups</h1>
-<p>Backups devem ser feitos dos seguintes caminhos:</p>
-<table>
-<thead>
-<tr>
-<th>Caminho</th>
-<th>Incremental?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>/root/.ssh</td>
-<td>N&#xE3;o</td>
-</tr>
-<tr>
-<td>/usr/share/elasticsearch/es1/data</td>
-<td>Sim</td>
-</tr>
-<tr>
-<td>/usr/share/elasticsearch/es2/data</td>
-<td>Sim</td>
-</tr>
-<tr>
-<td>/var/log/<em>*/</em></td>
-<td>Sim</td>
-</tr>
-</tbody>
-</table>
-<p>A reten&#xE7;&#xE3;o dos mesmos pode variar dependendo do ambiente. Recomenda-se ao menos 30 dias.</p>
-<hr>
-<h1 id="monitoramento">Monitoramento</h1>
-<p>A monitora&#xE7;&#xE3;o da sa&#xFA;de do host &#xE9; feita de maneira externa, utilizando Nagios. Para o monitoramento das inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>, com informa&#xE7;&#xF5;es mais detalhadas, as seguintes op&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis:</p>
-<h2 id="balanceador-de-carga">Balanceador de Carga</h2>
-<p>As estat&#xED;sticas do HAProxy ficam dispon&#xED;veis atrav&#xE9;s da porta de administra&#xE7;&#xE3;o (8080/tcp), no endere&#xE7;o <code>/lb-stats</code>. Por exemplo, em produ&#xE7;&#xE3;o, estas est&#xE3;o dispon&#xED;veis em <code>http://servicos.gov.br:8080/lb-stats</code>.</p>
-<p>Nesta p&#xE1;gina est&#xE3;o contidas algumas estat&#xED;sticas de acesso, em n&#xFA;meros de I/O brutos, bem como de disponibilidade dos servi&#xE7;os gerenciados.</p>
-<h2 id="portal-de-servi&#xE7;os">Portal de Servi&#xE7;os</h2>
-<p>O Portal de Servi&#xE7;os disponibiliza informa&#xE7;&#xF5;es de sa&#xFA;de atrav&#xE9;s do endere&#xE7;o <code>/health</code>, que retorna JSON similar ao seguinte:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-  <span class="hljs-string">&quot;portalDeServicosIndex&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;pds-importador&quot;</span>: <span class="hljs-string">&quot;ok (622 docs)&quot;</span>,
-    <span class="hljs-string">&quot;pds-persistente&quot;</span>: <span class="hljs-string">&quot;ok (0 docs)&quot;</span>
-  },
-  <span class="hljs-string">&quot;elasticSearch&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;GREEN&quot;</span>,
-    <span class="hljs-string">&quot;nodes&quot;</span>: <span class="hljs-number">3</span>,
-    <span class="hljs-string">&quot;node-0&quot;</span>: <span class="hljs-string">&quot;es1&quot;</span>,
-    <span class="hljs-string">&quot;node-1&quot;</span>: <span class="hljs-string">&quot;logstash-d9ccaa4d20c4-1-11624&quot;</span>,
-    <span class="hljs-string">&quot;node-2&quot;</span>: <span class="hljs-string">&quot;es2&quot;</span>
-  },
-  <span class="hljs-string">&quot;cache&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UNKNOWN&quot;</span>
-  },
-  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378258944</span>,
-    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
-  }
-}
-</code></pre>
-<p>Nele, &#xE9; poss&#xED;vel ver o estado geral da aplica&#xE7;&#xE3;o (<code>status</code>), do &#xED;ndice no ElasticSearch (<code>portalDeServicosIndex</code>), informa&#xE7;&#xF5;es de conex&#xE3;o ao ElasticSearch (<code>elasticsearch</code>), do estado do cache interno de p&#xE1;ginas (<code>cache</code>) e espa&#xE7;o em disco (<code>diskSpace</code>).</p>
-<h2 id="editor-de-servi&#xE7;os">Editor de Servi&#xE7;os</h2>
-<p>O Editor de Servi&#xE7;os disponibiliza informa&#xE7;&#xF5;es de sa&#xFA;de atrav&#xE9;s do endere&#xE7;o <code>/editar/health</code>, que retorna JSON similar ao seguinte:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-  <span class="hljs-string">&quot;diskSpace&quot;</span>: {
-    <span class="hljs-string">&quot;status&quot;</span>: <span class="hljs-string">&quot;UP&quot;</span>,
-    <span class="hljs-string">&quot;free&quot;</span>: <span class="hljs-number">17378254848</span>,
-    <span class="hljs-string">&quot;threshold&quot;</span>: <span class="hljs-number">10485760</span>
-  }
-}
-</code></pre>
-<p>Nele, &#xE9; poss&#xED;vel ver o estado geral da aplica&#xE7;&#xE3;o (<code>status</code>) e do espa&#xE7;o em disco (<code>diskSpace</code>).</p>
-<h2 id="kibana">Kibana</h2>
-<p>Todos os logs gerados pelas aplica&#xE7;&#xF5;es s&#xE3;o redirecionados para o <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> atrav&#xE9;s do <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash</a>. Eles s&#xE3;o indexados e podem ser auditados, buscados e visualizados atrav&#xE9;s do <a href="https://www.elastic.co/products/kibana" target="_blank">Kibana</a>, que fica dispon&#xED;vel na porta 5601/tcp. Por exemplo, em produ&#xE7;&#xE3;o, a ferramenta est&#xE1; dispon&#xED;vel em <code>http://servicos.gov.br:5601/</code>.</p>
-<hr>
-<h1 id="escalabilidade">Escalabilidade</h1>
-<p>&#xC9; poss&#xED;vel aumentar a capacidade de carga do sistema de duas maneiras:</p>
-<h2 id="aumentando-a-capacidade-do-servidor-vertical">Aumentando a capacidade do servidor (vertical)</h2>
-<p>Servidores est&#xE3;o atualmente provisionados de acordo com a se&#xE7;&#xE3;o &quot;<a href="../desenvolvimento/implantacao-e-execucao.html">Implanta&#xE7;&#xE3;o e execu&#xE7;&#xE3;o</a>&quot;. Para adicionar mais capacidade, &#xE9; necess&#xE1;rio revisar as configura&#xE7;&#xF5;es pertinentes e analisar a performance total novamente (ver: &quot;<a href="performance.md">Performance</a>&quot;).</p>
-<h2 id="aumentando-a-quantidade-de-servidores-horizontal">Aumentando a quantidade de servidores (horizontal)</h2>
-<p>Para adicionar um servidor de aplica&#xE7;&#xE3;o, ser&#xE1; necess&#xE1;rio:</p>
-<ul>
-<li>Dar um novo IP externo ao host <a href="http://www.docker.com" target="_blank">Docker</a></li>
-<li>Criar um balanceador de carga com o IP externo anterior (ao qual o servicos.gov.br aponta)</li>
-<li>Configurar o balanceador de carga criado para redirecionar tr&#xE1;fego ao host <a href="http://www.docker.com" target="_blank">Docker</a></li>
-<li>Criar novas inst&#xE2;ncias do host <a href="http://www.docker.com" target="_blank">Docker</a>, id&#xEA;nticas, conforme necess&#xE1;rio</li>
-<li>Adicion&#xE1;-las ao balanceador de carga criado no passos anteriores</li>
-</ul>
-<p>Ao fim destes passos, a arquitetura dever&#xE1; seguir o diagrama abaixo:</p>
-<p><img src="../desenvolvimento/ambiente-docker-escalado.png" alt="Diagrama de ambiente com dois hosts"></p>
-
+                        
                     
                     </section>
                 
@@ -2050,8 +1421,10 @@ Creating balanceador...
         </div>
 
         
-        <a href="../extras/index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Extras"><i class="fa fa-angle-left"></i></a>
+        <a href="../desenvolvimento/usabilidade.html" class="navigation navigation-prev " aria-label="Previous page: Usabilidade"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../implantacao/documento-de-implantacao.html" class="navigation navigation-next " aria-label="Next page: Detalhes de Implantação"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
