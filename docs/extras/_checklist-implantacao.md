@@ -2,7 +2,7 @@
 
 {% include '../desenvolvimento/_checklist-primeira-instalacao.md' %}
 
-### Instalações subsequentes
+### Atualizações posteriores
 
 {% include '../desenvolvimento/_checklist-atualizacoes.md' %}
 
