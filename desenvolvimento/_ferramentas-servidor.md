@@ -51,3 +51,15 @@ Gerador de _slugs_, strings de texto simples e que podem ser utilizadas segurame
 Mecanismo de busca de dados e documentos, descrito em mais detalhes na seção "[ElasticSearch](./elasticsearch.md)".
 
 [ElasticSearch]:http://elasticsearch.org
+
+### [PostgreSQL]
+
+Banco de dados relacional com código livre que se caracteriza esencialmente por grande aderência às normas SQL e sua extensibilidade, dessa maneira sendo uma opção flexível e popular.
+
+[PostgreSQL]:http://www.postgresql.org
+
+### [FlywayDB]
+
+Ferramenta para migração de banco de dados.
+
+[FlywayDB]:http://flywaydb.org

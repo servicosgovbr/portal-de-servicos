@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Princípios de design | Portal de Serviços</title>
+        <title>Persistencia de Acesso e Permissões | Portal de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.5">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../design/grade.html" />
+    <link rel="next" href="../desenvolvimento/configuracao.html" />
     
     
-    <link rel="prev" href="../design/index.html" />
+    <link rel="prev" href="../desenvolvimento/deploy-local.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="8.1"
-        data-chapter-title="Princípios de design"
-        data-filepath="design/principios-de-design.md"
+        data-level="10.5.2"
+        data-chapter-title="Persistencia de Acesso e Permissões"
+        data-filepath="desenvolvimento/persistencia-acesso-permissoes.md"
         data-basepath=".."
         data-revision="Tue Dec 15 2015 18:18:20 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -716,7 +716,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="8.1" data-path="design/principios-de-design.html">
+        <li class="chapter " data-level="8.1" data-path="design/principios-de-design.html">
             
                 
                     <a href="../design/principios-de-design.html">
@@ -1020,7 +1020,7 @@
             
         </li>
     
-        <li class="chapter " data-level="10.5.2" data-path="desenvolvimento/persistencia-acesso-permissoes.html">
+        <li class="chapter active" data-level="10.5.2" data-path="desenvolvimento/persistencia-acesso-permissoes.html">
             
                 
                     <a href="../desenvolvimento/persistencia-acesso-permissoes.html">
@@ -1411,17 +1411,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="princ&#xED;pios-de-design">Princ&#xED;pios de design</h1>
-<h4 id="1-consist&#xEA;ncia-com-os-demais-portais-do-governo-federal">1. Consist&#xEA;ncia com os demais portais do Governo Federal</h4>
-<p>Consist&#xEA;ncia &#xE9; um dos fatores mais importantes quando se tratam de usu&#xE1;rios principiantes, e no caso do Portal de Servi&#xE7;os, os usu&#xE1;rios compreendem desde as pessoas mais simples at&#xE9; usu&#xE1;rios avan&#xE7;ados.</p>
-<h4 id="2-conte&#xFA;do-&#xFA;til-em-primeiro-lugar">2. Conte&#xFA;do &#xFA;til em primeiro lugar</h4>
-<p>O principal objetivo do Portal de Servi&#xE7;os &#xE9; entregar conte&#xFA;do &#xFA;til para os cidad&#xE3;os, portanto a prioridade sempre ser&#xE1; mostrar o conte&#xFA;do em primeiro plano.</p>
-<h4 id="3-comportamentos-coerentes">3. Comportamentos coerentes</h4>
-<p>Se funciona como um bot&#xE3;o, deve se parecer com um bot&#xE3;o. O conceito de <em>affordance</em>, utilizado por Donald Norman &#xE9; chave, pois todas as intera&#xE7;&#xF5;es devem ser claras. </p>
-<h4 id="4-sempre-localizar-o-usu&#xE1;rio">4. Sempre localizar o usu&#xE1;rio</h4>
-<p>Durante a navega&#xE7;&#xE3;o os usu&#xE1;rios devem sempre saber em qual &#xE1;rea do Portal de Servi&#xE7;os est&#xE3;o, de onde vieram e para onde podem ir, para se sentirem seguros e confiantes na informa&#xE7;&#xE3;o encontrada.</p>
-<h4 id="5-intera&#xE7;&#xF5;es-humanizadas">5. Intera&#xE7;&#xF5;es humanizadas</h4>
-<p>Sempre fazer com que o usu&#xE1;rio se sinta confort&#xE1;vel, atrav&#xE9;s de conte&#xFA;dos e mensagens de feedback amig&#xE1;veis e sempre f&#xE1;ceis de ser compreendidos.</p>
+                        <h1 id="persist&#xEA;ncia-de-acesso-e-permiss&#xF5;es">Persist&#xEA;ncia de Acesso e Permiss&#xF5;es</h1>
+<h2 id="migra&#xE7;&#xE3;o-de-banco-de-dados">Migra&#xE7;&#xE3;o de banco de dados</h2>
+<p>Para migra&#xE7;&#xE3;o do banco de dados o editor utiliza a ferramenta <a href="http://flywaydb.org/" target="_blank">Flyway</a>.</p>
+<p>Cada vez que uma nova altera&#xE7;&#xE3;o no banco &#xE9; requisitada precisamos criar um arquivo de migra&#xE7;&#xE3;o. A ferramenta Flyway vai executar essa migra&#xE7;&#xE3;o caso n&#xE3;o tenha sido executada ainda naquele ambiente.</p>
+<p>Os arquivos de migra&#xE7;&#xE3;o devem ser colocados na pasta <strong>src/main/resources/db/migration/</strong>. Ele deve estar no formato SQL e deve ter o prefixo <code>V&lt;N&gt;__</code> (N &#xE9; a vers&#xE3;o da migra&#xE7;&#xE3;o). O numero da vers&#xE3;o deve ser um digito acima da vers&#xE3;o mais nova existente. Por exemplo, se a migra&#xE7;&#xE3;o com vers&#xE3;o mais nova na pasta seja <em>V15__adicionar_coluna.sql</em>, ent&#xE3;o a nova migra&#xE7;&#xE3;o deve ter o prefixo <code>V16__</code>.</p>
+<p><strong>&#xC9; importante ter cuidado para n&#xE3;o perder dados com as instru&#xE7;&#xF5;es SQL adicionadas nos arquivos de migra&#xE7;&#xE3;o.</strong></p>
 
                     
                     </section>
@@ -1432,10 +1427,10 @@
         </div>
 
         
-        <a href="../design/index.html" class="navigation navigation-prev " aria-label="Previous page: Design"><i class="fa fa-angle-left"></i></a>
+        <a href="../desenvolvimento/deploy-local.html" class="navigation navigation-prev " aria-label="Previous page: Desenvolvimento local"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../design/grade.html" class="navigation navigation-next " aria-label="Next page: Grade"><i class="fa fa-angle-right"></i></a>
+        <a href="../desenvolvimento/configuracao.html" class="navigation navigation-next " aria-label="Next page: Configuração"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

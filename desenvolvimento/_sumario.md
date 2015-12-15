@@ -5,6 +5,7 @@
   - [Dados Criptografados](/desenvolvimento/dados-criptografados.md)
   - [Implantação e execução](/desenvolvimento/implantacao-e-execucao.md)
     - [Desenvolvimento local](/desenvolvimento/deploy-local.md)
+    - [Persistencia de Acesso e Permissões](/desenvolvimento/persistencia-acesso-permissoes.md)
   - [Configuração](/desenvolvimento/configuracao.md)
   - [Testes](/desenvolvimento/testes.md)
   - [Entrega Contínua](/desenvolvimento/entrega-continua.md)
