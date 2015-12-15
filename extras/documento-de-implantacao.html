@@ -51,7 +51,7 @@
         data-chapter-title="Documento de Implantação"
         data-filepath="extras/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Mon Dec 14 2015 17:27:52 GMT+0000 (UTC)"
+        data-revision="Tue Dec 15 2015 12:43:54 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1900,7 +1900,39 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 }
 </code></pre>
 <p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
-<hr>
+<h3 id="problemas-conhecidos">Problemas conhecidos</h3>
+<h4 id="altera&#xE7;&#xF5;es-na-rede-firewall-ou-iptables">Altera&#xE7;&#xF5;es na rede, firewall ou iptables</h4>
+<p>O Docker necessita ser reiniciado quando uma mudan&#xE7;a estrutural ou de configura&#xE7;&#xE3;o de redes &#xE9; realizada na m&#xE1;quina host.</p>
+<p>Presumindo uma m&#xE1;quina [CentOS] 7 64bit, que j&#xE1; possui os cont&#xEA;ineres <a href="http://www.docker.com" target="_blank">Docker</a> rodando, recomendamos que os seguintes comandos sejam executados:</p>
+<ul>
+<li>No reposit&#xF3;rio local <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a>, pare os cont&#xEA;ineres:</li>
+</ul>
+<pre><code class="lang-bash">docker stop $(docker ps <span class="hljs-operator">-a</span> -q)
+docker <span class="hljs-built_in">kill</span> $(docker ps <span class="hljs-operator">-a</span> -q)
+</code></pre>
+<ul>
+<li>Reinicie o Docker:</li>
+</ul>
+<pre><code class="lang-bash">systemctl restart docker
+</code></pre>
+<ul>
+<li>Inicie os cont&#xEA;ineres novamente:</li>
+</ul>
+<pre><code class="lang-bash">docker-compose up <span class="hljs-operator">-d</span>
+</code></pre>
+<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<pre><code>Creating cadvisor...
+Creating editor2...
+Creating editor1...
+Creating es2...
+Creating es1...
+Creating logstash...
+Creating logspout...
+Creating portal2...
+Creating kibana...
+Creating portal1...
+Creating balanceador...
+</code></pre><hr>
 <h1 id="backups">Backups</h1>
 <p>Backups devem ser feitos dos seguintes caminhos:</p>
 <table>
