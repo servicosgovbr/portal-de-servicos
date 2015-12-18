@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Fri Dec 18 2015 13:06:12 GMT+0000 (UTC)"
+        data-revision="Fri Dec 18 2015 14:24:54 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1681,9 +1681,15 @@ remote: Compressing objects: 100% (61/61), done.
 remote: Total 152 (delta 34), reused 0 (delta 0), pack-reused 85
 Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
-</code></pre><ul>
-<li>Construa e rode os cont&#xEA;ineres:</li>
+</code></pre><p>Configure o certificado SSL. &#xC9; necess&#xE1;rio somente um arquivo .pem, gerado a partir do certificado original. Para gerar esse arquivo .pem, &#xE9; necess&#xE1;rio realizar os seguintes passos:</p>
+<ul>
+<li>Copiar arquivos disponibilizados do certificado digital para <code>/root/docker/balanceador/ssl/private</code></li>
+<li>Remover a senha da chave privada: <code>openssl rsa -in servicos.gov.br.key -out servicos.gov.br.key.out</code></li>
+<li>Gerar arquivo .cer: <code>openssl pkcs7 -print_certs -in SERVICOSGOVBR.p7b -out SERVICOSGOVBR.cer</code></li>
+<li>Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: <code>openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx</code></li>
+<li>Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: <code>openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes</code></li>
 </ul>
+<p>Construa e rode os cont&#xEA;ineres:</p>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span> docker
 ./build-all <span class="hljs-comment"># caso prefira baixar as imagens do docker hub, omita este passo</span>
 docker-compose up <span class="hljs-operator">-d</span>
