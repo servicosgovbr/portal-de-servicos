@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="/assets/main.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/assets/print.css" media="print"/>
+</head>
 <body th:fragment="ponte(ponte)">
 <th:block th:if="${ponte != null}">
     <h2 th:text="${ponte.titulo}">Titulo da aplicação</h2>
-    <form action="ponte/acao" method="post">
+    <form id="ponte" action="ponte/acao" method="post">
         <th:block th:if="${!ponte.componentes.isEmpty()}" th:each="item : ${ponte.componentes}">
             <th:block th:switch="${item.type}">
                 <th:block th:case="'input'">
