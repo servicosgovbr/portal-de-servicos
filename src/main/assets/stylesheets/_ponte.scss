@@ -1,4 +1,6 @@
 #ponte {
+	margin-left: 40px;
+
 	input[type='text'] {
 		height: 43px;
 		border-radius: 4px;
@@ -14,8 +16,9 @@
 	    margin-bottom: .75em;
 	    padding: .5em;
 	    transition: border-color;
-	    width: 267px;
+	    width: 200px;
     	margin-top: 10px;
+    	margin-right: 10px;
 	}
 
 	input[type='submit'] {
@@ -33,13 +36,39 @@
 	    border-top: 3px solid #1f4da3;
 	    margin: 0;
 	    cursor: pointer;
+	    display: inline-block;
 	}
 
 	label {
 		display: block;
 	}
 
-	div {
-		display: inline-block;
+	h3 {
+		margin-left: 30px;
+		margin-bottom: 10px;
+		font-size: 1.3em;
+	}
+
+	.chave-valor {
+		label {
+			display: inline-block;
+
+			&:first-child {
+				width: 170px;
+				text-align: right;
+			}
+		}
+
+		&:nth-child(16) {
+			margin-top: 15px;
+			padding-top: 15px;
+			border-top: 2px dotted #ccc;
+		}
+
+		&:nth-child(30) {
+			margin-top: 15px;
+			padding-top: 15px;
+			border-top: 2px dotted #ccc;
+		}
 	}
 }

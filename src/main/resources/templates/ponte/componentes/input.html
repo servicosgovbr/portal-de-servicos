@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <body th:fragment="input(componente)">
-<div>
     <label th:text="${componente['label']}">label input</label>
     <input type="text" th:name="${componente['name']}" th:value="${componente['value']}"/>
-</div>
 </body>
 </html>
