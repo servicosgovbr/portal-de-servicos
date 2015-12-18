@@ -62,12 +62,6 @@
     <div class="row" th:include="fragments/servico/legislacao"></div>
     <div class="row" th:include="fragments/servico/outras-info"></div>
 
-    <th:block th:if="${!servico.idAplicacao.trim().isEmpty()}">
-        <iframe th:src="${'/ponte?appId=' + servico.idAplicacao}" width="100%" frameborder="0" scrolling="no"
-                onload="resizeIframe(this)">
-        </iframe>
-    </th:block>
-
     <div class="row" th:include="fragments/servico/feedback"></div>
 
     <div class="row botoes-rodape">

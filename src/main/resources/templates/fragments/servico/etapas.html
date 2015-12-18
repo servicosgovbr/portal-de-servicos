@@ -13,6 +13,14 @@
 
         <div class="etapa markdown" th:utext="${@markdown.render(etapa.descricao)}">Descrição da etapa</div>
 
+        <th:block th:if="${!servico.idAplicacao.trim().isEmpty()}">
+            <th:block th:if="${row.index == 0}">
+                <iframe th:src="${'/ponte?appId=' + servico.idAplicacao}" width="100%" frameborder="0" scrolling="no"
+                        onload="resizeIframe(this)">
+                </iframe>
+            </th:block>
+        </th:block>
+
         <div class="subtitulo-etapa" th:unless="${etapa.documentos.isEmpty()}">
 
             <p class="titulo-documento">Documentação</p>
@@ -23,7 +31,7 @@
             </ul>
 
             <ul class="caso-descricao" th:each="caso : ${etapa.documentos.casos}">
-                <div  class="info-etapa" th:text="${caso.descricao}"></div>
+                <div class="info-etapa" th:text="${caso.descricao}"></div>
                 <li th:each="doc : ${caso.itens}">
                     <span th:text="${doc}">Documento necessário</span>
                 </li>
@@ -43,7 +51,7 @@
             </ul>
 
             <ul class="caso-descricao" th:each="caso : ${etapa.custos.casos}">
-                <div  class="info-etapa" th:text="${caso.descricao}"></div>
+                <div class="info-etapa" th:text="${caso.descricao}"></div>
                 <li th:each="custo : ${caso.custos}">
                     <span th:text="${custo.descricao}">Descrição</span>:
                     <span th:text="${custo.moeda ?: 'R$'}">R$</span>
