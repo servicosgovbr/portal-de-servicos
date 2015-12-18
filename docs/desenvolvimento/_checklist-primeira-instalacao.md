@@ -120,7 +120,15 @@ Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
 ```
 
-- Construa e rode os contêineres:
+Configure o certificado SSL. É necessário somente um arquivo .pem, gerado a partir do certificado original. Para gerar esse arquivo .pem, é necessário realizar os seguintes passos:
+
+- Copiar arquivos disponibilizados do certificado digital para `/root/docker/balanceador/ssl/private`
+- Remover a senha da chave privada: `openssl rsa -in servicos.gov.br.key -out servicos.gov.br.key.out`
+- Gerar arquivo .cer: `openssl pkcs7 -print_certs -in SERVICOSGOVBR.p7b -out SERVICOSGOVBR.cer`
+- Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: `openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx`
+- Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: `openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes`
+
+Construa e rode os contêineres:
 
 ```bash
 cd docker
