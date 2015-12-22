@@ -8,7 +8,7 @@
 <th:block th:if="${ponte != null}">
     <h2 th:text="${ponte.titulo}">Titulo da aplicação</h2>
     <form id="ponte" action="ponte/acao" method="post">
-        <th:block th:if="${!ponte.componentes.isEmpty()}" th:each="item : ${ponte.componentes}">
+        <th:block th:if="${!ponte.componentes.isEmpty()}" th:each="item, row : ${ponte.componentes}">
             <th:block th:switch="${item.type}">
                 <th:block th:case="'input'">
                     <th:block th:replace="ponte/componentes/input :: input(${item})">
@@ -31,6 +31,9 @@
                     </th:block>
                 </th:block>
             </th:block>
+            <th:block th:if="${row.index} == 14"><a href="/assets/darf.pdf" target="_blank">Baixe a DARF</a></th:block>
+            <th:block th:if="${row.index} == 28"><a href="/assets/darf.pdf" target="_blank">Baixe a DARF</a></th:block>
+            <th:block th:if="${row.index} == 42"><a href="/assets/darf.pdf" target="_blank">Baixe a DARF</a></th:block>
         </th:block>
         <input type="hidden" name="appId" th:value="${ponte.appId}"/>
     </form>

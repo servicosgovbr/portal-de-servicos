@@ -49,6 +49,13 @@
 		font-size: 1.3em;
 	}
 
+	a {
+		text-decoration: underline;
+		color: #2c66ce;
+		display: block;
+    	margin: 10px 11%;
+	}
+
 	.chave-valor {
 		label {
 			display: inline-block;
@@ -59,13 +66,13 @@
 			}
 		}
 
-		&:nth-child(16) {
+		&:nth-child(17) {
 			margin-top: 15px;
 			padding-top: 15px;
 			border-top: 2px dotted #ccc;
 		}
 
-		&:nth-child(30) {
+		&:nth-child(32) {
 			margin-top: 15px;
 			padding-top: 15px;
 			border-top: 2px dotted #ccc;

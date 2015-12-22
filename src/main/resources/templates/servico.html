@@ -10,9 +10,12 @@
     <meta property="og:description" th:content="${servico.nome + ' no Portal de Serviços do Governo Federal'}"/>
     <script language="javascript" type="text/javascript">
       function resizeIframe(obj) {
-        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        if(obj.contentWindow.document.body.scrollHeight === 150) {
+            obj.style.height = '100px';    
+        } else {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
       }
-
     </script>
 </head>
 <body>
@@ -30,8 +33,8 @@
 
     <a href="" itemprop="url">
         <span itemprop="title">
-            <th:block th:text="${servico.nome}"/> <th:block th:text="|(${servico.sigla})|"
-                                                            th:unless="${#strings.isEmpty(servico.sigla)}"/>
+            <th:block th:text="${servico.nome}"/> 
+            <th:block th:text="|(${servico.sigla})|" th:unless="${#strings.isEmpty(servico.sigla)}"/>
         </span>
     </a>
 </span>
