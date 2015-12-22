@@ -46,14 +46,27 @@
 	h3 {
 		margin-left: 30px;
 		margin-bottom: 10px;
-		font-size: 1.3em;
+		font-size: 1.2em;
 	}
 
 	a {
-		text-decoration: underline;
-		color: #2c66ce;
-		display: block;
-    	margin: 10px 11%;
+		text-decoration: none;
+	    color: #2c66ce;
+	    display: block;
+	    margin: 20px 6%;
+	    width: 223px;
+	    color: #ffffff;
+	    background-color: #1f4da3;
+	    display: block;
+	    font-family: "open_sansbold", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	    font-size: 1em;
+	    padding: 8px 8px 8px 8px;
+	    border-radius: 4px;
+	    border-left: none;
+	    border-bottom: 2px solid #244683;
+	    border-right: 2px solid #244683;
+	    border-top: 3px solid #1f4da3;
+	    cursor: pointer;
 	}
 
 	.chave-valor {
