@@ -15,8 +15,7 @@
 
         <th:block th:if="${!servico.idAplicacao.trim().isEmpty()}">
             <th:block th:if="${row.index == 0}">
-                <iframe th:src="${'/ponte?appId=' + servico.idAplicacao}" width="100%" frameborder="0" scrolling="no"
-                        onload="resizeIframe(this)">
+                <iframe th:src="${'/ponte?appId=' + servico.idAplicacao}" width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)">
                 </iframe>
             </th:block>
         </th:block>

@@ -28,8 +28,12 @@ public class PonteController {
 
     @RequestMapping(value = "/ponte", method = GET)
     ModelAndView carregarApp(@RequestParam("appId") String appId) {
-        ResponseEntity<RespostaPonte> entity = restTemplate.postForEntity(url, new RequestPonte().withAppId(appId), RespostaPonte.class);
-        return new ModelAndView("ponte/index", "ponte", entity.getBody());
+        try {
+            ResponseEntity<RespostaPonte> entity = restTemplate.postForEntity(url, new RequestPonte().withAppId(appId), RespostaPonte.class);
+            return new ModelAndView("ponte/index", "ponte", entity.getBody());
+        } catch (Exception e) {
+            return new ModelAndView("erroPonte");
+        }
     }
 
     @RequestMapping(value = "/ponte/acao", method = POST)
