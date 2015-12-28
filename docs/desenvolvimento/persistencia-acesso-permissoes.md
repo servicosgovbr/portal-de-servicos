@@ -4,7 +4,7 @@
 
 Para acessar os dados do banco de dados H2, que roda localmente, é necessário:
 
-- Adicionar o bloco de código abaixo na classe WebMVCConfig.java do Editor de Serviços:
+- Adicionar o bloco de código abaixo na classe `WebMVCConfig.java` do Editor de Serviços:
 
 ```
 public ServletRegistrationBean h2servletRegistration() {
