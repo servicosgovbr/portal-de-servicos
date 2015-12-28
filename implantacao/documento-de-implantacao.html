@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Mon Dec 28 2015 19:05:03 GMT+0000 (UTC)"
+        data-revision="Mon Dec 28 2015 21:01:15 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1921,6 +1921,21 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 }
 </code></pre>
 <p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
+<h3 id="atualiza&#xE7;&#xF5;es-em-ambientes-sem-integra&#xE7;&#xE3;o-cont&#xED;nua">Atualiza&#xE7;&#xF5;es em ambientes sem integra&#xE7;&#xE3;o cont&#xED;nua</h3>
+<p>Para realizar uma atualiza&#xE7;&#xE3;o    em ambiente hospedado em datacenters do governo, que n&#xE3;o possuem <strong>acesso</strong> a ferramenta de integra&#xE7;&#xE3;o cont&#xED;nua, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
+<ol>
+<li>Garantir que a configura&#xE7;&#xE3;o inicial do docker j&#xE1; foi realizada na m&#xE1;quina host, conforme <a href="%27_checklist-primeira-instalacao.md%27">se&#xE7;&#xE3;o inicial</a> de implanta&#xE7;&#xE3;o</li>
+<li>Acessar ambiente utilizando SSH: 
+<code>ssh &lt;usu&#xE1;rio&gt;@&lt;ip do servidor&gt;</code></li>
+<li>Utilizar o usu&#xE1;rio root:
+<code>sudo su</code></li>
+<li>Ir para o diret&#xF3;rio do docker:
+<code>cd /root/docker/</code></li>
+<li>Executar script bash que atualiza as inst&#xE2;ncias do Portal de Servi&#xE7;os e do Editor de Servi&#xE7;os:
+<code>./scripts/update_editor_portal_container</code></li>
+<li>Para verificar que as atualiza&#xE7;&#xF5;es est&#xE3;o sendo aplicadas corretamente, verificar os logs do Docker. Por exemplo: 
+<code>docker logs -f Editor1</code></li>
+</ol>
 <h3 id="problemas-conhecidos">Problemas conhecidos</h3>
 <h4 id="altera&#xE7;&#xF5;es-na-rede-firewall-ou-iptables">Altera&#xE7;&#xF5;es na rede, firewall ou iptables</h4>
 <p>O Docker necessita ser reiniciado quando uma mudan&#xE7;a estrutural ou de configura&#xE7;&#xE3;o de redes &#xE9; realizada na m&#xE1;quina host.</p>
