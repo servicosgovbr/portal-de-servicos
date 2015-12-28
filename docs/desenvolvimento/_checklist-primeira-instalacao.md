@@ -120,7 +120,7 @@ Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
 ```
 
-Configure o certificado SSL. É necessário somente um arquivo .pem, gerado a partir do certificado original. Para gerar esse arquivo .pem, é necessário realizar os seguintes passos:
+Configure o certificado SSL. Para gerar o certificado corretamente é necessário somente criar um arquivo .pem, obtido a partir do certificado original. Para gerar esse arquivo .pem, é necessário realizar os seguintes passos:
 
 - Copiar arquivos disponibilizados do certificado digital para `/root/docker/balanceador/ssl/private`
 - Remover a senha da chave privada: `openssl rsa -in servicos.gov.br.key -out servicos.gov.br.key.out`
