@@ -1,4 +1,4 @@
-Para realizar uma atualização	em ambiente hospedado em datacenters do governo, que não possuem **acesso** a ferramenta de integração contínua, os seguintes passos são necessários:
+Para realizar uma atualização	em ambientes hospedados em datacenters do governo, que não possuem **acesso** a ferramenta de integração contínua, os seguintes passos são necessários:
 
 1. Garantir que a configuração inicial do docker já foi realizada na máquina host, conforme seção inicial de implantação
 2. Acessar ambiente utilizando SSH: 
