@@ -53,7 +53,7 @@
         data-chapter-title="Persistencia de Acesso e Permissões"
         data-filepath="desenvolvimento/persistencia-acesso-permissoes.md"
         data-basepath=".."
-        data-revision="Mon Dec 28 2015 18:34:00 GMT+0000 (UTC)"
+        data-revision="Mon Dec 28 2015 19:05:03 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1412,10 +1412,26 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="persist&#xEA;ncia-de-acesso-e-permiss&#xF5;es">Persist&#xEA;ncia de Acesso e Permiss&#xF5;es</h1>
+<h2 id="acesso-local-ao-banco-de-dados">Acesso local ao banco de dados</h2>
+<p>Para acessar os dados do banco de dados H2, que roda localmente, &#xE9; necess&#xE1;rio:</p>
+<ul>
+<li>Adicionar o bloco de c&#xF3;digo abaixo na classe WebMVCConfig.java do Editor de Servi&#xE7;os:</li>
+</ul>
+<pre><code>public ServletRegistrationBean h2servletRegistration() {
+    ServletRegistrationBean registration = new ServletRegistrationBean(new WebServlet());
+    registration.addUrlMappings(&quot;/console/*&quot;);
+    registration.addInitParameter(&quot;webAllowOthers&quot;, &quot;true&quot;);
+    return registration;
+}
+</code></pre><ul>
+<li>Liberar acesso a URL relativa no arquivo application.yaml do Editor de Servi&#xE7;os. Para isso, adicionar a string <code>/console/**</code> na propriedade <code>security.ignored</code></li>
+<li>Executar o Editor de Servi&#xE7;os utilizando o Gradle</li>
+<li>Acessar a URL <code>localhost:8080/console</code></li>
+</ul>
 <h2 id="migra&#xE7;&#xE3;o-de-banco-de-dados">Migra&#xE7;&#xE3;o de banco de dados</h2>
-<p>Para migra&#xE7;&#xE3;o do banco de dados o editor utiliza a ferramenta <a href="http://flywaydb.org/" target="_blank">Flyway</a>.</p>
-<p>Cada vez que uma nova altera&#xE7;&#xE3;o no banco &#xE9; requisitada precisamos criar um arquivo de migra&#xE7;&#xE3;o. A ferramenta Flyway vai executar essa migra&#xE7;&#xE3;o caso n&#xE3;o tenha sido executada ainda naquele ambiente.</p>
-<p>Os arquivos de migra&#xE7;&#xE3;o devem ser colocados na pasta <strong>src/main/resources/db/migration/</strong>. Ele deve estar no formato SQL e deve ter o prefixo <code>V&lt;N&gt;__</code> (N &#xE9; a vers&#xE3;o da migra&#xE7;&#xE3;o). O numero da vers&#xE3;o deve ser um digito acima da vers&#xE3;o mais nova existente. Por exemplo, se a migra&#xE7;&#xE3;o com vers&#xE3;o mais nova na pasta seja <em>V15__adicionar_coluna.sql</em>, ent&#xE3;o a nova migra&#xE7;&#xE3;o deve ter o prefixo <code>V16__</code>.</p>
+<p>Para migra&#xE7;&#xE3;o do banco de dados, o Editor de Servi&#xE7;os utiliza a ferramenta <a href="http://flywaydb.org/" target="_blank">Flyway</a>.</p>
+<p>Cada vez que uma nova altera&#xE7;&#xE3;o no banco &#xE9; requisitada, precisamos criar um arquivo de migra&#xE7;&#xE3;o. A ferramenta Flyway vai executar essa migra&#xE7;&#xE3;o caso n&#xE3;o tenha sido executada ainda naquele ambiente.</p>
+<p>Os arquivos de migra&#xE7;&#xE3;o devem ser colocados na pasta <strong>src/main/resources/db/migration/</strong>. Eles devem estar no formato SQL e devem ter o prefixo <code>V&lt;N&gt;__</code> (N &#xE9; a vers&#xE3;o da migra&#xE7;&#xE3;o). O numero da vers&#xE3;o deve ser um digito acima da vers&#xE3;o mais nova existente. Por exemplo, se a migra&#xE7;&#xE3;o com vers&#xE3;o mais nova na pasta seja <em>V15__adicionar_coluna.sql</em>, ent&#xE3;o a nova migra&#xE7;&#xE3;o deve ter o prefixo <code>V16__</code>.</p>
 <p><strong>&#xC9; importante ter cuidado para n&#xE3;o perder dados com as instru&#xE7;&#xF5;es SQL adicionadas nos arquivos de migra&#xE7;&#xE3;o.</strong></p>
 
                     
