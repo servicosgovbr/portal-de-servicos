@@ -1,10 +1,29 @@
 # Persistência de Acesso e Permissões
 
+## Reiniciar Editor de Serviços 
+
+Após qualquer alteração no arquivo `permissoes.yaml`, é necessário reiniciar a aplicação do Editor de Serviços. Os seguintes passos são essencias para garantir que essa mudança seja refletida corretamente:
+
+1. Acessar ambiente remoto utilizando SSH: 
+`ssh <usuário>@<ip do servidor>`
+2. Utilizar o usuário root:
+`sudo su`
+3. Ir para o diretório do docker:
+`cd /root/docker/`
+4. Parar as instâncias do Editor de Serviços:
+`docker stop editor1 editor2`
+5. Atualizar imagem local para conter a última versão do código do Editor de Serviços:
+`./build editor-de-servicos`
+6. Reiniciar as instâncias do Editor de Serviços:
+`docker-compose up -d`
+7. Reiniciar a instância do Balanceador:
+`docker restart balanceador`
+
 ## Acesso local ao banco de dados
 
-Para acessar os dados do banco de dados H2, que roda localmente, é necessário:
+Para acessar os dados do banco de dados H2, que é utilizado somente para desenvolvimento local, é necessário:
 
-- Adicionar o bloco de código abaixo na classe `WebMVCConfig.java` do Editor de Serviços:
+- Adicionar o bloco de código abaixo na classe `WebMVCConfig.java` do repositório do Editor de Serviços:
 
 ```
 public ServletRegistrationBean h2servletRegistration() {
@@ -15,7 +34,7 @@ public ServletRegistrationBean h2servletRegistration() {
 }
 ```
 
-- Liberar acesso a URL relativa no arquivo application.yaml do Editor de Serviços. Para isso, adicionar a string `/console/**` na propriedade `security.ignored`
+- Liberar acesso a URL relativa no arquivo `application.yaml` do Editor de Serviços. Para isso, adicionar a string `/console/**` na propriedade `security.ignored`
 - Executar o Editor de Serviços utilizando o Gradle
 - Acessar a URL `localhost:8080/console`
 
