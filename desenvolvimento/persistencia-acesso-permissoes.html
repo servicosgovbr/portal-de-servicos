@@ -53,7 +53,7 @@
         data-chapter-title="Persistencia de Acesso e Permissões"
         data-filepath="desenvolvimento/persistencia-acesso-permissoes.md"
         data-basepath=".."
-        data-revision="Tue Dec 29 2015 20:37:28 GMT+0000 (UTC)"
+        data-revision="Wed Dec 30 2015 13:59:36 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1412,10 +1412,28 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="persist&#xEA;ncia-de-acesso-e-permiss&#xF5;es">Persist&#xEA;ncia de Acesso e Permiss&#xF5;es</h1>
+<h2 id="reiniciar-editor-de-servi&#xE7;os">Reiniciar Editor de Servi&#xE7;os</h2>
+<p>Ap&#xF3;s qualquer altera&#xE7;&#xE3;o no arquivo <code>permissoes.yaml</code>, &#xE9; necess&#xE1;rio reiniciar a aplica&#xE7;&#xE3;o do Editor de Servi&#xE7;os. Os seguintes passos s&#xE3;o essencias para garantir que essa mudan&#xE7;a seja refletida corretamente:</p>
+<ol>
+<li>Acessar ambiente remoto utilizando SSH: 
+<code>ssh &lt;usu&#xE1;rio&gt;@&lt;ip do servidor&gt;</code></li>
+<li>Utilizar o usu&#xE1;rio root:
+<code>sudo su</code></li>
+<li>Ir para o diret&#xF3;rio do docker:
+<code>cd /root/docker/</code></li>
+<li>Parar as inst&#xE2;ncias do Editor de Servi&#xE7;os:
+<code>docker stop editor1 editor2</code></li>
+<li>Atualizar imagem local para conter a &#xFA;ltima vers&#xE3;o do c&#xF3;digo do Editor de Servi&#xE7;os:
+<code>./build editor-de-servicos</code></li>
+<li>Reiniciar as inst&#xE2;ncias do Editor de Servi&#xE7;os:
+<code>docker-compose up -d</code></li>
+<li>Reiniciar a inst&#xE2;ncia do Balanceador:
+<code>docker restart balanceador</code></li>
+</ol>
 <h2 id="acesso-local-ao-banco-de-dados">Acesso local ao banco de dados</h2>
-<p>Para acessar os dados do banco de dados H2, que roda localmente, &#xE9; necess&#xE1;rio:</p>
+<p>Para acessar os dados do banco de dados H2, que &#xE9; utilizado somente para desenvolvimento local, &#xE9; necess&#xE1;rio:</p>
 <ul>
-<li>Adicionar o bloco de c&#xF3;digo abaixo na classe <code>WebMVCConfig.java</code> do Editor de Servi&#xE7;os:</li>
+<li>Adicionar o bloco de c&#xF3;digo abaixo na classe <code>WebMVCConfig.java</code> do reposit&#xF3;rio do Editor de Servi&#xE7;os:</li>
 </ul>
 <pre><code>public ServletRegistrationBean h2servletRegistration() {
     ServletRegistrationBean registration = new ServletRegistrationBean(new WebServlet());
@@ -1424,7 +1442,7 @@
     return registration;
 }
 </code></pre><ul>
-<li>Liberar acesso a URL relativa no arquivo application.yaml do Editor de Servi&#xE7;os. Para isso, adicionar a string <code>/console/**</code> na propriedade <code>security.ignored</code></li>
+<li>Liberar acesso a URL relativa no arquivo <code>application.yaml</code> do Editor de Servi&#xE7;os. Para isso, adicionar a string <code>/console/**</code> na propriedade <code>security.ignored</code></li>
 <li>Executar o Editor de Servi&#xE7;os utilizando o Gradle</li>
 <li>Acessar a URL <code>localhost:8080/console</code></li>
 </ul>
