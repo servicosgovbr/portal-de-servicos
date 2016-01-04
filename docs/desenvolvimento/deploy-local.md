@@ -70,6 +70,15 @@ Para obter mais detalhes das operações que o Portal de Serviços está executa
 ./gradlew bootRun
 ```
 
+### Visualizar e Depurar execução da Aplicação
+
+Para obter mais detalhes da execução do código do Portal de Serviços e poder depurar o comportamento da aplicação, os seguintes passos são necessários:
+
+1. No IntelliJ IDEA, configurar ferramenta para **debug** remoto da JVM. A configuração padrão do IntelliJ IDEA deve ser utilizada (`localhost:5005`)
+2. Executar aplicação localmente, utilizando o paramêtro de **debug** `./gradlew clean BootRun --debug-jvm`
+3. No console, a seguinte mensagem aparecerá `Listening for transport dt_socket at address: 5005`
+4. Escolher ponto desejado do código para interromper execução
+5. Iniciar funcionalidade de **debug** no IntelliJ IDEA
 
 ## Atualizar conteúdo do site
 
