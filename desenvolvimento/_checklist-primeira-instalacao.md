@@ -124,9 +124,9 @@ Resolving deltas: 100% (77/77), done.
 
 Para o correto funcionamento do Editor de Serviços, os seguintes passos são necessários:
 
-1. Criar uma nova chave SSH, conforme cenários explicitados [aqui] (https://help.github.com/articles/generating-ssh-keys/) 
+1. Criar uma nova chave SSH, conforme página de [SHH Keys] do GitHub 
 2. Colocar essa chave na pasta `/root/.ssh` 
-3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados [aqui] (https://developer.github.com/guides/managing-deploy-keys/)
+3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados na página de [Deploy Keys] do GitHub 
 
 ### Certificado Digital SSL
 
@@ -185,3 +185,5 @@ A instalação está concluída.
 [Docker]:http://www.docker.com
 [Docker-Compose]:http://www.docker.com/compose
 [Git]:http://git-scm.org
+[SHH Keys]:https://help.github.com/articles/generating-ssh-keys/ 
+[Deploy Keys]:https://developer.github.com/guides/managing-deploy-keys/
