@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Wed Dec 30 2015 13:59:36 GMT+0000 (UTC)"
+        data-revision="Mon Jan 04 2016 11:48:45 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1590,6 +1590,54 @@
 <li>Portal de Servi&#xE7;os: <a href="https://github.com/servicosgovbr/portal-de-servicos/blob/master/scripts/portal-de-servicos.default.config" target="_blank"><code>scripts/portal-de-servicos.default.config</code></a></li>
 <li>Editor de Servi&#xE7;os: <a href="https://github.com/servicosgovbr/editor-de-servicos/blob/master/scripts/editor-de-servicos.default.config" target="_blank"><code>scripts/editor-de-servicos.default.config</code></a></li>
 </ul>
+<h2 id="acessos-e-conex&#xF5;es">Acessos e Conex&#xF5;es</h2>
+<p>Atrav&#xE9;s de acordos t&#xE9;cnicos e conversas com os respons&#xE1;veis pela infraestrutura do Minist&#xE9;rio do Planejamento, as seguintes regras acessos de <strong><em>firewall</em></strong> foram definidas como essenciais para garantir a interoperabilidade do Portal de Servi&#xE7;os: </p>
+<p><strong>Acessos que devem estar liberados na entrada das m&#xE1;quinas de Desenvolvimento e Produ&#xE7;&#xE3;o</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Desenvolvimento (189.9.150.163)</th>
+<th>Produ&#xE7;&#xE3;o (189.9.151.72)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snap (54.186.9.43)</td>
+<td>22, 80, 443</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>Internet</td>
+<td>80, 443</td>
+<td>80, 443</td>
+</tr>
+<tr>
+<td>Minist&#xE9;rio do Planejamento</td>
+<td>22, 80, 443, 8080, 5601</td>
+<td>80, 443, 8080, 5601</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Acessos que devem estar liberados na sa&#xED;da das m&#xE1;quinas de Desenvolvimento e Produ&#xE7;&#xE3;o</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Servidor Git (192.30.252.0/22)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desenvolvimento (189.9.150.163)</td>
+<td>22, 80, 443</td>
+</tr>
+<tr>
+<td>Produ&#xE7;&#xE3;o (189.9.151.72)</td>
+<td>22, 80, 443</td>
+</tr>
+</tbody>
+</table>
 <h2 id="checklist-de-implanta&#xE7;&#xE3;o">Checklist de Implanta&#xE7;&#xE3;o</h2>
 <h3 id="primeira-instala&#xE7;&#xE3;o">Primeira instala&#xE7;&#xE3;o</h3>
 <p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, sem nenhuma configura&#xE7;&#xE3;o adicional efetuada.</p>
