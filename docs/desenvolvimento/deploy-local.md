@@ -53,9 +53,24 @@ Caso queira que o conteúdo do site seja gerado automaticamente, basta configura
 FLAGS_IMPORTAR_AUTOMATICAMENTE=true ./gradlew bootRun
 ```
 
-Após alguns segundos, o servidor estará disponível em [localhost:8080](http://localhost:8080/). Arquivos estáticos (html, js, css) alterados estarão disponíveis alguns segundos após alterações.
+Após alguns segundos, o servidor estará disponível em [localhost:8080](http://localhost:8080/).
 
-### Visibilidade dos logs da Aplicação
+### Alterações em arquivos estáticos
+
+
+Alterações locais em arquivos estáticos (html, js, css) só  estarão integralmente disponíveis após execução da ferramenta `Brunch`. O seguinte comando deve ser utilizado para executar o processamento dos arquivos estáticos:
+
+```
+./brunch build
+```
+
+Para forçar a execução da ferramenta `Brunch` toda vez que uma alteração é realizada em um arquivo estático, o seguinte comando deve ser utilizado: 
+
+```
+./brunch watch
+```
+
+### Visibilidade dos logs da aplicação
 
 Para obter mais detalhes das operações que o Portal de Serviços está executando, é necessário alterar as configurações de log da aplicação. Os seguintes passos são necessários:
 
@@ -70,7 +85,7 @@ Para obter mais detalhes das operações que o Portal de Serviços está executa
 ./gradlew bootRun
 ```
 
-### Visualizar e Depurar execução da Aplicação
+### Visualizar e depurar execução da aplicação
 
 Para obter mais detalhes da execução do código do Portal de Serviços e poder depurar o comportamento da aplicação, os seguintes passos são necessários:
 
