@@ -53,7 +53,7 @@
         data-chapter-title="Desenvolvimento local"
         data-filepath="desenvolvimento/deploy-local.md"
         data-basepath=".."
-        data-revision="Mon Jan 04 2016 11:48:45 GMT+0000 (UTC)"
+        data-revision="Mon Jan 04 2016 20:04:35 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1434,8 +1434,13 @@ git clone &quot;https://github.com/servicosgovbr/portal-de-servicos.git&quot;
 <pre><code>./gradlew bootRun
 </code></pre><p>Caso queira que o conte&#xFA;do do site seja gerado automaticamente, basta configurar a vari&#xE1;vel <code>FLAGS_IMPORTAR_AUTOMATICAMENTE</code>:</p>
 <pre><code>FLAGS_IMPORTAR_AUTOMATICAMENTE=true ./gradlew bootRun
-</code></pre><p>Ap&#xF3;s alguns segundos, o servidor estar&#xE1; dispon&#xED;vel em <a href="http://localhost:8080/" target="_blank">localhost:8080</a>. Arquivos est&#xE1;ticos (html, js, css) alterados estar&#xE3;o dispon&#xED;veis alguns segundos ap&#xF3;s altera&#xE7;&#xF5;es.</p>
-<h3 id="visibilidade-dos-logs-da-aplica&#xE7;&#xE3;o">Visibilidade dos logs da Aplica&#xE7;&#xE3;o</h3>
+</code></pre><p>Ap&#xF3;s alguns segundos, o servidor estar&#xE1; dispon&#xED;vel em <a href="http://localhost:8080/" target="_blank">localhost:8080</a>.</p>
+<h3 id="altera&#xE7;&#xF5;es-em-arquivos-est&#xE1;ticos">Altera&#xE7;&#xF5;es em arquivos est&#xE1;ticos</h3>
+<p>Altera&#xE7;&#xF5;es locais em arquivos est&#xE1;ticos (html, js, css) s&#xF3;  estar&#xE3;o integralmente dispon&#xED;veis ap&#xF3;s execu&#xE7;&#xE3;o da ferramenta <code>Brunch</code>. O seguinte comando deve ser utilizado para executar o processamento dos arquivos est&#xE1;ticos:</p>
+<pre><code>./brunch build
+</code></pre><p>Para for&#xE7;ar a execu&#xE7;&#xE3;o da ferramenta <code>Brunch</code> toda vez que uma altera&#xE7;&#xE3;o &#xE9; realizada em um arquivo est&#xE1;tico, o seguinte comando deve ser utilizado: </p>
+<pre><code>./brunch watch
+</code></pre><h3 id="visibilidade-dos-logs-da-aplica&#xE7;&#xE3;o">Visibilidade dos logs da aplica&#xE7;&#xE3;o</h3>
 <p>Para obter mais detalhes das opera&#xE7;&#xF5;es que o Portal de Servi&#xE7;os est&#xE1; executando, &#xE9; necess&#xE1;rio alterar as configura&#xE7;&#xF5;es de log da aplica&#xE7;&#xE3;o. Os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
 <ol>
 <li>No arquivo <code>build/resources/main/logback.xml</code>, o param&#xEA;tro <code>encoder</code> deve ser alterado com o seguinte valor: <pre><code>&lt;encoder&gt;
@@ -1444,6 +1449,15 @@ git clone &quot;https://github.com/servicosgovbr/portal-de-servicos.git&quot;
 </code></pre></li>
 <li>O servidor da aplica&#xE7;&#xE3;o deve ser reiniciado com <pre><code>./gradlew bootRun
 </code></pre></li>
+</ol>
+<h3 id="visualizar-e-depurar-execu&#xE7;&#xE3;o-da-aplica&#xE7;&#xE3;o">Visualizar e depurar execu&#xE7;&#xE3;o da aplica&#xE7;&#xE3;o</h3>
+<p>Para obter mais detalhes da execu&#xE7;&#xE3;o do c&#xF3;digo do Portal de Servi&#xE7;os e poder depurar o comportamento da aplica&#xE7;&#xE3;o, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
+<ol>
+<li>No IntelliJ IDEA, configurar ferramenta para <strong>debug</strong> remoto da JVM. A configura&#xE7;&#xE3;o padr&#xE3;o do IntelliJ IDEA deve ser utilizada (<code>localhost:5005</code>)</li>
+<li>Executar aplica&#xE7;&#xE3;o localmente, utilizando o param&#xEA;tro de <strong>debug</strong> <code>./gradlew clean BootRun --debug-jvm</code></li>
+<li>No console, a seguinte mensagem aparecer&#xE1; <code>Listening for transport dt_socket at address: 5005</code></li>
+<li>Escolher ponto desejado do c&#xF3;digo para interromper execu&#xE7;&#xE3;o</li>
+<li>Iniciar funcionalidade de <strong>debug</strong> no IntelliJ IDEA</li>
 </ol>
 <h2 id="atualizar-conte&#xFA;do-do-site">Atualizar conte&#xFA;do do site</h2>
 <p>Caso tenha alterado algum cont&#xE9;udo est&#xE1;tico do site, para que sua instancia local reflita as mudan&#xE7;as realizadas, voc&#xEA; ter&#xE1; reiniciar a aplica&#xE7;&#xE3;o com o comando mostrado na sess&#xE3;o acima. Caso n&#xE3;o queira reiniciar a aplica&#xE7;&#xE3;o, tamb&#xE9;m &#xE9; poss&#xED;vel obter o mesmo resultando simplesmente acessando o endere&#xE7;o <a href="http://localhost:8080/jolokia/exec/ServicosGovBr:type=Importador/importar" target="_blank">http://localhost:8080/jolokia/exec/ServicosGovBr:type=Importador/importar</a></p>

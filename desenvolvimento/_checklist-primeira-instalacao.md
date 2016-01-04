@@ -120,13 +120,25 @@ Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
 ```
 
-Configure o certificado SSL. Para gerar o certificado corretamente é necessário somente criar um arquivo .pem, obtido a partir do certificado original. Para gerar esse arquivo .pem, é necessário realizar os seguintes passos:
+### Chaves SSH
+
+Para o correto funcionamento do Editor de Serviços, os seguintes passos são necessários:
+
+1. Criar uma nova chave SSH, conforme cenários explicitados [aqui] (https://help.github.com/articles/generating-ssh-keys/) 
+2. Colocar essa chave na pasta `/root/.ssh` 
+3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados [aqui] (https://developer.github.com/guides/managing-deploy-keys/)
+
+### Certificado Digital SSL
+
+O Editor de Serviços utiliza um certificado digital para aumentar a segurança da comunicação entre usuário e a aplicação. Para gerar esse certificado digital corretamente é necessário criar um arquivo `.pem`, obtido a partir do certificado original. Para gerar esse arquivo `.pem`, os seguintes passos são necessários:
 
 - Copiar arquivos disponibilizados do certificado digital para `/root/docker/balanceador/ssl/private`
 - Remover a senha da chave privada: `openssl rsa -in servicos.gov.br.key -out servicos.gov.br.key.out`
 - Gerar arquivo .cer: `openssl pkcs7 -print_certs -in SERVICOSGOVBR.p7b -out SERVICOSGOVBR.cer`
 - Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: `openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx`
 - Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: `openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes`
+
+### Construindo os Contêineres 
 
 Construa e rode os contêineres:
 

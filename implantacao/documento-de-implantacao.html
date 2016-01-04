@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Mon Jan 04 2016 11:48:45 GMT+0000 (UTC)"
+        data-revision="Mon Jan 04 2016 20:04:35 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1729,7 +1729,15 @@ remote: Compressing objects: 100% (61/61), done.
 remote: Total 152 (delta 34), reused 0 (delta 0), pack-reused 85
 Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
-</code></pre><p>Configure o certificado SSL. Para gerar o certificado corretamente &#xE9; necess&#xE1;rio somente criar um arquivo .pem, obtido a partir do certificado original. Para gerar esse arquivo .pem, &#xE9; necess&#xE1;rio realizar os seguintes passos:</p>
+</code></pre><h3 id="chaves-ssh">Chaves SSH</h3>
+<p>Para o correto funcionamento do Editor de Servi&#xE7;os, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
+<ol>
+<li>Criar uma nova chave SSH, conforme cen&#xE1;rios explicitados [aqui] (<a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">https://help.github.com/articles/generating-ssh-keys/</a>) </li>
+<li>Colocar essa chave na pasta <code>/root/.ssh</code> </li>
+<li>Importar chave com permiss&#xE3;o de leitura e escrita no reposit&#xF3;rio de <code>cartas-de-servicos</code>. Detalhes sobre esse processo podem ser encontrados [aqui] (<a href="https://developer.github.com/guides/managing-deploy-keys/" target="_blank">https://developer.github.com/guides/managing-deploy-keys/</a>)</li>
+</ol>
+<h3 id="certificado-digital-ssl">Certificado Digital SSL</h3>
+<p>O Editor de Servi&#xE7;os utiliza um certificado digital para aumentar a seguran&#xE7;a da comunica&#xE7;&#xE3;o entre usu&#xE1;rio e a aplica&#xE7;&#xE3;o. Para gerar esse certificado digital corretamente &#xE9; necess&#xE1;rio criar um arquivo <code>.pem</code>, obtido a partir do certificado original. Para gerar esse arquivo <code>.pem</code>, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
 <ul>
 <li>Copiar arquivos disponibilizados do certificado digital para <code>/root/docker/balanceador/ssl/private</code></li>
 <li>Remover a senha da chave privada: <code>openssl rsa -in servicos.gov.br.key -out servicos.gov.br.key.out</code></li>
@@ -1737,6 +1745,7 @@ Resolving deltas: 100% (77/77), done.
 <li>Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: <code>openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx</code></li>
 <li>Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: <code>openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes</code></li>
 </ul>
+<h3 id="construindo-os-cont&#xEA;ineres">Construindo os Cont&#xEA;ineres</h3>
 <p>Construa e rode os cont&#xEA;ineres:</p>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span> docker
 ./build-all <span class="hljs-comment"># caso prefira baixar as imagens do docker hub, omita este passo</span>
