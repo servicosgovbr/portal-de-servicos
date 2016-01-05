@@ -19,19 +19,14 @@ Foram cinco cores definidas para estilizar o site, e estas são utilizadas com o
 [tema branco]:https://github.com/plonegovbr/brasil.gov.temas#id6
 [estilos]:http://www.secom.gov.br/orientacoes-gerais/comunicacao-digital/guia-de-estilo-identidade-padrao-comunicacao-digital-fev2015.pdf
 
-| COR          | CÓDIGO		| EXEMPLO
-| -----------  | :---------: | ------------------------------------------------------------------ |
-| Azul Claro   | `#3f7ef4`   | <div class="swatch" style="background-color: #3f7ef4">&nbsp;</div> |
-| Azul 		   | `#2c66ce`   | <div class="swatch" style="background-color: #2c66ce">&nbsp;</div> |
-| Azul Escuro  | `#1f4da3`   | <div class="swatch" style="background-color: #1f4da3">&nbsp;</div> |
-| Branco       | `#ffffff`   | <div class="swatch" style="background-color: #ffffff">&nbsp;</div> |
-| Cinza claro  | `#f0f2f1`   | <div class="swatch" style="background-color: #f0f2f1">&nbsp;</div> |
-| Cinza médio  | `#d5d5d5`   | <div class="swatch" style="background-color: #d5d5d5">&nbsp;</div> |
-| Cinza escuro | `#606060`   | <div class="swatch" style="background-color: #606060">&nbsp;</div> |
-| Vermelho     | `#ff5151`   | <div class="swatch" style="background-color: #ff5151">&nbsp;</div> |
-| Verde        | `#33ba7c`   | <div class="swatch" style="background-color: #33ba7c">&nbsp;</div> |
-| Verde escuro | `#199772`   | <div class="swatch" style="background-color: #199772">&nbsp;</div> |
-
+| COR         | CÓDIGO		| EXEMPLO
+| ----------- | :---------: | ------------------------------------------------------------------ |
+| Azul Claro  | `#2c66ce`   | <div class="swatch" style="background-color: #2c66ce">&nbsp;</div> |
+| Azul Escuro | `#1f4da3`   | <div class="swatch" style="background-color: #1f4da3">&nbsp;</div> |
+| Branco      | `#ffffff`   | <div class="swatch" style="background-color: #ffffff">&nbsp;</div> |
+| Cinza claro | `#f0f2f1`   | <div class="swatch" style="background-color: #f0f2f1">&nbsp;</div> |
+| Cinza médio | `#d5d5d5`   | <div class="swatch" style="background-color: #d5d5d5">&nbsp;</div> |
+| Cinza escuro| `#606060`   | <div class="swatch" style="background-color: #606060">&nbsp;</div> |
 
 ### Contraste
 
