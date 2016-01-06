@@ -30,13 +30,16 @@ systemctl start docker
 - Verifique que o serviço do [Docker] inicializou corretamente:
 
 ```bash
-docker ps
+systemctl status docker
 ```
 
 O comando acima deve produzir saída similar à seguinte:
 
 ```
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Wed 2016-01-06 17:56:04 UTC; 4s ago
+     Docs: https://docs.docker.com
 ```
 
 - Verifique que o [Docker] consegue baixar e instanciar contêineres:
@@ -143,7 +146,7 @@ O Editor de Serviços utiliza um certificado digital para aumentar a segurança 
 Construa e rode os contêineres:
 
 ```bash
-cd docker
+cd /root/docker
 ./build-all # caso prefira baixar as imagens do docker hub, omita este passo
 docker-compose up -d
 ```
