@@ -146,7 +146,7 @@ O Editor de Serviços utiliza um certificado digital para aumentar a segurança 
 Construa e rode os contêineres:
 
 ```bash
-cd docker
+cd /root/docker
 ./build-all # caso prefira baixar as imagens do docker hub, omita este passo
 docker-compose up -d
 ```
