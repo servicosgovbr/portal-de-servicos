@@ -99,3 +99,9 @@ O comando acima deve produzir saída similar à seguinte:
   }
 }
 ```
+
+Caso alguma das verificações não tenha sucesso, você pode verificar o log dos contêineres utilizando o seguinte comando:
+
+```
+docker-compose logs
+```
