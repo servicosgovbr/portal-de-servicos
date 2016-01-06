@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Wed Jan 06 2016 18:08:11 GMT+0000 (UTC)"
+        data-revision="Wed Jan 06 2016 19:14:52 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1666,10 +1666,13 @@
 <ul>
 <li>Verifique que o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> inicializou corretamente:</li>
 </ul>
-<pre><code class="lang-bash">docker ps
+<pre><code class="lang-bash">systemctl status docker
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+<pre><code>&#x25CF; docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Wed 2016-01-06 17:56:04 UTC; 4s ago
+     Docs: https://docs.docker.com
 </code></pre><ul>
 <li>Verifique que o <a href="http://www.docker.com" target="_blank">Docker</a> consegue baixar e instanciar cont&#xEA;ineres:</li>
 </ul>
@@ -1747,7 +1750,7 @@ Resolving deltas: 100% (77/77), done.
 </ul>
 <h3 id="construindo-os-cont&#xEA;ineres">Construindo os Cont&#xEA;ineres</h3>
 <p>Construa e rode os cont&#xEA;ineres:</p>
-<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> docker
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root/docker
 ./build-all <span class="hljs-comment"># caso prefira baixar as imagens do docker hub, omita este passo</span>
 docker-compose up <span class="hljs-operator">-d</span>
 </code></pre>
@@ -1857,7 +1860,9 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
   }
 }
 </code></pre>
-<p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
+<p>Caso alguma das verifica&#xE7;&#xF5;es n&#xE3;o tenha sucesso, voc&#xEA; pode verificar o log dos cont&#xEA;ineres utilizando o seguinte comando:</p>
+<pre><code>docker-compose logs
+</code></pre><p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
 <h3 id="atualiza&#xE7;&#xF5;es-posteriores">Atualiza&#xE7;&#xF5;es posteriores</h3>
 <p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, que j&#xE1; tem os cont&#xEA;ineres <a href="http://www.docker.com" target="_blank">Docker</a> rodando.</p>
 <ul>
@@ -1977,7 +1982,9 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
   }
 }
 </code></pre>
-<p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
+<p>Caso alguma das verifica&#xE7;&#xF5;es n&#xE3;o tenha sucesso, voc&#xEA; pode verificar o log dos cont&#xEA;ineres utilizando o seguinte comando:</p>
+<pre><code>docker-compose logs
+</code></pre><p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
 <h3 id="atualiza&#xE7;&#xF5;es-em-ambientes-sem-integra&#xE7;&#xE3;o-cont&#xED;nua">Atualiza&#xE7;&#xF5;es em ambientes sem integra&#xE7;&#xE3;o cont&#xED;nua</h3>
 <p>Para realizar uma atualiza&#xE7;&#xE3;o    em ambientes hospedados em datacenters do governo, que n&#xE3;o possuem <strong>acesso</strong> a ferramenta de integra&#xE7;&#xE3;o cont&#xED;nua, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
 <ol>
