@@ -41,13 +41,21 @@ class ServicoController {
 
     @RequestMapping(value = "/servicos", method = GET)
     ModelAndView todos(@RequestParam(required = false) Character letra) {
-        Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse('A');
+        Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse(null);
         Map<Character, List<ServicoXML>> servicosPorLetra = servicosAgrupadosPorLetraInicial();
+
+        List<ServicoXML> listaServicos;
+
+        if (primeiraLetra != null) {
+            listaServicos = servicosPorLetra.getOrDefault(primeiraLetra, Collections.<ServicoXML>emptyList());
+        } else {
+            listaServicos = servicos.findAll(new PageRequest(0, Integer.MAX_VALUE)).getContent();
+        }
 
         Map<String, Object> model = new HashMap<>();
         model.put("letraAtiva", primeiraLetra);
 
-        model.put("servicos", servicosPorLetra.getOrDefault(primeiraLetra, Collections.<ServicoXML>emptyList())
+        model.put("servicos", listaServicos
                 .stream()
                 .sorted(comparing(ServicoXML::getNome))
                 .map(PaginaEstatica::fromServico)

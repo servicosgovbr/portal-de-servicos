@@ -10,6 +10,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
+import java.util.List;
+
 import static br.gov.servicos.cms.PaginaEstatica.fromServico;
 import static br.gov.servicos.fixtures.TestData.SERVICO;
 import static java.util.Arrays.asList;
@@ -17,6 +19,7 @@ import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.BDDMockito.given;
@@ -59,7 +62,7 @@ public class ServicoXMLControllerTest {
 
         given(servicos.findAll(any(PageRequest.class))).willReturn(new PageImpl<>(asList(servicoA, servicoB)));
 
-        assertModelAttributeValue(controller.todos(null), "servicos", singletonList(fromServico(servicoA)));
+        assertModelAttributeValue(controller.todos(null), "servicos", asList(fromServico(servicoA), fromServico(servicoB)));
         assertModelAttributeValue(controller.todos('B'), "servicos", singletonList(fromServico(servicoB)));
     }
 
@@ -75,7 +78,6 @@ public class ServicoXMLControllerTest {
 
     @Test
     public void deveRetornarQualEALetraFiltrada() {
-        assertModelAttributeValue(controller.todos(null), "letraAtiva", 'A');
         assertModelAttributeValue(controller.todos('B'), "letraAtiva", 'B');
     }
 
