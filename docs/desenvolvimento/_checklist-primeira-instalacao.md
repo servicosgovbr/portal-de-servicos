@@ -1,4 +1,4 @@
-Todos os comandos a seguir devem ser rodados como super-usuário (root), e presumem uma máquina [CentOS] 7 64bit, sem nenhuma configuração adicional efetuada.
+Todos os comandos a seguir devem ser rodados como super-usuário (root), e presumem uma máquina [CentOS] 7 64bit, sem nenhuma configuração adicional efetuada. As versões do CentOS utilizadas para homologação foram: 7.1 e 7.2. Além disso, ser **64bit** é realmente necessário, pois é a única plataforma suportada pelo Docker na arquitetura X86.
 
 - Verifique que o kernel instalado é, no mínimo, 3.10, rodando em modo x64:
 
