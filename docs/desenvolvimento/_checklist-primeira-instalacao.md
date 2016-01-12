@@ -141,6 +141,20 @@ O Editor de Serviços utiliza um certificado digital para aumentar a segurança 
 - Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: `openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx`
 - Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: `openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes`
 
+### Redirecionando de tráfego
+
+É possível que o ambiente em que a instalação esteja sendo realizada possua restrições de firewall. Algumas das restrições que enfrentamos anteriormente, em ambiente do governo, foram restrições de tráfego na porta 22 para o GitHub. Nesse caso, sugere-se uma solução de contorno. Essa solução de contorno irá redirecionar todo o tráfego da porta 22 para a porta 443. Considera-se que a porta 443 não possua restrições, e que esse tipo de redirecionamento seja permitido na infra-estrutura em que está sendo realizada a instalação.
+
+Para isso, a seguinte alteração é necessária no arquivo `/root/.ssh/config`:
+
+```
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+```
+
+O código acima deve ser adicionado no arquivo `config`. Caso o arquivo não exista, sugere-se a criação do arquivo. Maiores informações podem ser encontradas na [documentação oficial] do Github.
+
 ### Construindo os Contêineres 
 
 Construa e rode os contêineres:
@@ -190,3 +204,4 @@ A instalação está concluída.
 [Git]:http://git-scm.org
 [SHH Keys]:https://help.github.com/articles/generating-ssh-keys/ 
 [Deploy Keys]:https://developer.github.com/guides/managing-deploy-keys/
+[documentação oficial]:https://help.github.com/articles/using-ssh-over-the-https-port/
