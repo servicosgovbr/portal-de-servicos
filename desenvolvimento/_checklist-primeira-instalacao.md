@@ -1,4 +1,4 @@
-Todos os comandos a seguir devem ser rodados como super-usuário (root), e presumem uma máquina [CentOS] 7 64bit, sem nenhuma configuração adicional efetuada.
+Todos os comandos a seguir devem ser rodados como super-usuário (root), e presumem uma máquina [CentOS] 7 64bit, sem nenhuma configuração adicional efetuada. As versões do CentOS utilizadas para homologação foram: 7.1 e 7.2. Além disso, ser **64bit** é realmente necessário, pois é a única plataforma suportada pelo Docker na arquitetura X86.
 
 - Verifique que o kernel instalado é, no mínimo, 3.10, rodando em modo x64:
 
@@ -127,9 +127,9 @@ Resolving deltas: 100% (77/77), done.
 
 Para o correto funcionamento do Editor de Serviços, os seguintes passos são necessários:
 
-1. Criar uma nova chave SSH, conforme página de [SHH Keys] do GitHub 
+1. Criar uma nova chave SSH, conforme página de [SHH Keys] do GitHub. A chave criada não deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail válido de uma conta existente no GitHub  
 2. Colocar essa chave na pasta `/root/.ssh` 
-3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados na página de [Deploy Keys] do GitHub 
+3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados na página de [Deploy Keys] do GitHub. A chave importada deve ser utilizada exclusivamente no repositório de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro será exibida. 
 
 ### Certificado Digital SSL
 
@@ -140,6 +140,20 @@ O Editor de Serviços utiliza um certificado digital para aumentar a segurança 
 - Gerar arquivo .cer: `openssl pkcs7 -print_certs -in SERVICOSGOVBR.p7b -out SERVICOSGOVBR.cer`
 - Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: `openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx`
 - Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: `openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes`
+
+### Redirecionando de tráfego
+
+É possível que o ambiente em que a instalação esteja sendo realizada possua restrições de firewall. Algumas das restrições que enfrentamos anteriormente, em ambiente do governo, foram restrições de tráfego na porta 22 para o GitHub. Nesse caso, sugere-se uma solução de contorno. Essa solução de contorno irá redirecionar todo o tráfego da porta 22 para a porta 443. Considera-se que a porta 443 não possua restrições, e que esse tipo de redirecionamento seja permitido na infra-estrutura em que está sendo realizada a instalação.
+
+Para isso, a seguinte alteração é necessária no arquivo `/root/.ssh/config`:
+
+```
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+```
+
+O código acima deve ser adicionado no arquivo `config`. Caso o arquivo não exista, sugere-se a criação do arquivo. Maiores informações podem ser encontradas na [documentação oficial] do Github.
 
 ### Construindo os Contêineres 
 
@@ -190,3 +204,4 @@ A instalação está concluída.
 [Git]:http://git-scm.org
 [SHH Keys]:https://help.github.com/articles/generating-ssh-keys/ 
 [Deploy Keys]:https://developer.github.com/guides/managing-deploy-keys/
+[documentação oficial]:https://help.github.com/articles/using-ssh-over-the-https-port/

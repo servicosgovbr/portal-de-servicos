@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Mon Jan 11 2016 22:45:45 GMT+0000 (UTC)"
+        data-revision="Tue Jan 12 2016 13:13:13 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1640,7 +1640,7 @@
 </table>
 <h2 id="checklist-de-implanta&#xE7;&#xE3;o">Checklist de Implanta&#xE7;&#xE3;o</h2>
 <h3 id="primeira-instala&#xE7;&#xE3;o">Primeira instala&#xE7;&#xE3;o</h3>
-<p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, sem nenhuma configura&#xE7;&#xE3;o adicional efetuada.</p>
+<p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, sem nenhuma configura&#xE7;&#xE3;o adicional efetuada. As vers&#xF5;es do CentOS utilizadas para homologa&#xE7;&#xE3;o foram: 7.1 e 7.2. Al&#xE9;m disso, ser <strong>64bit</strong> &#xE9; realmente necess&#xE1;rio, pois &#xE9; a &#xFA;nica plataforma suportada pelo Docker na arquitetura X86.</p>
 <ul>
 <li>Verifique que o kernel instalado &#xE9;, no m&#xED;nimo, 3.10, rodando em modo x64:</li>
 </ul>
@@ -1735,9 +1735,9 @@ Resolving deltas: 100% (77/77), done.
 </code></pre><h3 id="chaves-ssh">Chaves SSH</h3>
 <p>Para o correto funcionamento do Editor de Servi&#xE7;os, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
 <ol>
-<li>Criar uma nova chave SSH, conforme p&#xE1;gina de <a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">SHH Keys</a> do GitHub </li>
+<li>Criar uma nova chave SSH, conforme p&#xE1;gina de <a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">SHH Keys</a> do GitHub. A chave criada n&#xE3;o deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail v&#xE1;lido de uma conta existente no GitHub  </li>
 <li>Colocar essa chave na pasta <code>/root/.ssh</code> </li>
-<li>Importar chave com permiss&#xE3;o de leitura e escrita no reposit&#xF3;rio de <code>cartas-de-servicos</code>. Detalhes sobre esse processo podem ser encontrados na p&#xE1;gina de <a href="https://developer.github.com/guides/managing-deploy-keys/" target="_blank">Deploy Keys</a> do GitHub </li>
+<li>Importar chave com permiss&#xE3;o de leitura e escrita no reposit&#xF3;rio de <code>cartas-de-servicos</code>. Detalhes sobre esse processo podem ser encontrados na p&#xE1;gina de <a href="https://developer.github.com/guides/managing-deploy-keys/" target="_blank">Deploy Keys</a> do GitHub. A chave importada deve ser utilizada exclusivamente no reposit&#xF3;rio de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro ser&#xE1; exibida. </li>
 </ol>
 <h3 id="certificado-digital-ssl">Certificado Digital SSL</h3>
 <p>O Editor de Servi&#xE7;os utiliza um certificado digital para aumentar a seguran&#xE7;a da comunica&#xE7;&#xE3;o entre usu&#xE1;rio e a aplica&#xE7;&#xE3;o. Para gerar esse certificado digital corretamente &#xE9; necess&#xE1;rio criar um arquivo <code>.pem</code>, obtido a partir do certificado original. Para gerar esse arquivo <code>.pem</code>, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
@@ -1748,6 +1748,13 @@ Resolving deltas: 100% (77/77), done.
 <li>Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: <code>openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx</code></li>
 <li>Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: <code>openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes</code></li>
 </ul>
+<h3 id="redirecionando-de-tr&#xE1;fego">Redirecionando de tr&#xE1;fego</h3>
+<p>&#xC9; poss&#xED;vel que o ambiente em que a instala&#xE7;&#xE3;o esteja sendo realizada possua restri&#xE7;&#xF5;es de firewall. Algumas das restri&#xE7;&#xF5;es que enfrentamos anteriormente, em ambiente do governo, foram restri&#xE7;&#xF5;es de tr&#xE1;fego na porta 22 para o GitHub. Nesse caso, sugere-se uma solu&#xE7;&#xE3;o de contorno. Essa solu&#xE7;&#xE3;o de contorno ir&#xE1; redirecionar todo o tr&#xE1;fego da porta 22 para a porta 443. Considera-se que a porta 443 n&#xE3;o possua restri&#xE7;&#xF5;es, e que esse tipo de redirecionamento seja permitido na infra-estrutura em que est&#xE1; sendo realizada a instala&#xE7;&#xE3;o.</p>
+<p>Para isso, a seguinte altera&#xE7;&#xE3;o &#xE9; necess&#xE1;ria no arquivo <code>/root/.ssh/config</code>:</p>
+<pre><code>Host github.com
+  Hostname ssh.github.com
+  Port 443
+</code></pre><p>O c&#xF3;digo acima deve ser adicionado no arquivo <code>config</code>. Caso o arquivo n&#xE3;o exista, sugere-se a cria&#xE7;&#xE3;o do arquivo. Maiores informa&#xE7;&#xF5;es podem ser encontradas na <a href="https://help.github.com/articles/using-ssh-over-the-https-port/" target="_blank">documenta&#xE7;&#xE3;o oficial</a> do Github.</p>
 <h3 id="construindo-os-cont&#xEA;ineres">Construindo os Cont&#xEA;ineres</h3>
 <p>Construa e rode os cont&#xEA;ineres:</p>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root/docker
@@ -1797,7 +1804,7 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 </code></pre><ul>
 <li>Verifique que a vers&#xE3;o do Portal de Servi&#xE7;os &#xE9; a desejada:</li>
 </ul>
-<pre><code class="lang-bash">curl localhost/info
+<pre><code class="lang-bash">curl -k https://localhost/info
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code class="lang-json">{
@@ -1815,7 +1822,7 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 <ul>
 <li>Verifique que a vers&#xE3;o do Editor de Servi&#xE7;os &#xE9; a desejada:</li>
 </ul>
-<pre><code class="lang-bash">curl localhost/editar/info
+<pre><code class="lang-bash">curl -k https://localhost/editar/info
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code class="lang-json">{
@@ -1833,7 +1840,7 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 <ul>
 <li>Verificar que a sa&#xFA;de do cluster est&#xE1; <code>UP</code>:</li>
 </ul>
-<pre><code class="lang-bash">curl localhost/health
+<pre><code class="lang-bash">curl -k https://localhost/health
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code class="lang-json">{
@@ -1919,7 +1926,7 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 </code></pre><ul>
 <li>Verifique que a vers&#xE3;o do Portal de Servi&#xE7;os &#xE9; a desejada:</li>
 </ul>
-<pre><code class="lang-bash">curl localhost/info
+<pre><code class="lang-bash">curl -k https://localhost/info
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code class="lang-json">{
@@ -1937,7 +1944,7 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 <ul>
 <li>Verifique que a vers&#xE3;o do Editor de Servi&#xE7;os &#xE9; a desejada:</li>
 </ul>
-<pre><code class="lang-bash">curl localhost/editar/info
+<pre><code class="lang-bash">curl -k https://localhost/editar/info
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code class="lang-json">{
@@ -1955,7 +1962,7 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 <ul>
 <li>Verificar que a sa&#xFA;de do cluster est&#xE1; <code>UP</code>:</li>
 </ul>
-<pre><code class="lang-bash">curl localhost/health
+<pre><code class="lang-bash">curl -k https://localhost/health
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code class="lang-json">{
