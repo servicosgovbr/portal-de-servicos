@@ -53,7 +53,7 @@
         data-chapter-title="Persistencia de Acesso e Permissões"
         data-filepath="desenvolvimento/persistencia-acesso-permissoes.md"
         data-basepath=".."
-        data-revision="Tue Jan 12 2016 13:32:27 GMT+0000 (UTC)"
+        data-revision="Tue Jan 12 2016 14:07:41 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1451,6 +1451,24 @@
 <p>Cada vez que uma nova altera&#xE7;&#xE3;o no banco &#xE9; requisitada, precisamos criar um arquivo de migra&#xE7;&#xE3;o. A ferramenta Flyway vai executar essa migra&#xE7;&#xE3;o caso n&#xE3;o tenha sido executada ainda naquele ambiente.</p>
 <p>Os arquivos de migra&#xE7;&#xE3;o devem ser colocados na pasta <strong>src/main/resources/db/migration/</strong>. Eles devem estar no formato SQL e devem ter o prefixo <code>V&lt;N&gt;__</code> (N &#xE9; a vers&#xE3;o da migra&#xE7;&#xE3;o). O numero da vers&#xE3;o deve ser um digito acima da vers&#xE3;o mais nova existente. Por exemplo, se a migra&#xE7;&#xE3;o com vers&#xE3;o mais nova na pasta seja <em>V15__adicionar_coluna.sql</em>, ent&#xE3;o a nova migra&#xE7;&#xE3;o deve ter o prefixo <code>V16__</code>.</p>
 <p><strong>&#xC9; importante ter cuidado para n&#xE3;o perder dados com as instru&#xE7;&#xF5;es SQL adicionadas nos arquivos de migra&#xE7;&#xE3;o.</strong></p>
+<h2 id="backup-de-usu&#xE1;rios-e-permiss&#xF5;es">Backup de Usu&#xE1;rios e Permiss&#xF5;es</h2>
+<p>Para efetuar o backup  dos dados do banco de dados que d&#xE1; suporte &#xE0; aplica&#xE7;&#xE3;o, contidos no cont&#xEA;iner dbdata, &#xE9; necess&#xE1;rio realizar os seguintes passos:</p>
+<ol>
+<li>Criar novo cont&#xEA;iner docker que se conecta com a pasta <code>/dbdata</code> onde est&#xE1; localizado os dados do banco</li>
+<li>Esse cont&#xEA;iner deve ter uma pasta <code>/backup</code> compartilhada com o sistema</li>
+<li>Executar comando para comprimir a pasta <code>/dbdata</code> na pasta <code>/backup</code>:<pre><code>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c &quot;tar cvf /backup/backup-$(date &apos;+%d_%m_%y_%H_%M&apos;).tar /dbdata&quot;
+</code></pre></li>
+</ol>
+<p>Para recuperar os dados a partir de um backup:</p>
+<ol>
+<li>Pare a execu&#xE7;&#xE3;o dos cont&#xEA;ineres no host do Docker
+<code>cd ~/docker/</code> e <code>docker-compose stop</code></li>
+<li>Execute o data volume cont&#xEA;iner dbdata com o arquivo backup.tar descomprimido:<pre><code>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c &quot;rm -rf /dbdata/* &amp;&amp; cd /tmp &amp;&amp; tar xvf /backup/backup-22_12_15_07_51.tar &amp;&amp; mv dbdata/* ../dbdata/&quot;
+</code></pre></li>
+<li>Ligue os novamente os cont&#xEA;ineres:        <code>docker-compose up</code></li>
+</ol>
+<p>Recomenda-se que o backup dos dados dos usu&#xE1;rios seja efetuado diariamente por uma rotina autom&#xE1;tica. Considerando que o volume de dados armazenados ser&#xE1; pequeno, o armazenamento di&#xE1;rio n&#xE3;o dever&#xE1; ser um problema. Al&#xE9;m disso, recomenda-se que os backups mais antigos que sete dias sejam descartados automaticamente. Essa rotina de dele&#xE7;&#xE3;o autom&#xE1;tica dever&#xE1; ser executada somente se backups dos &#xFA;ltimos sete dias existirem de fato.</p>
+<p><strong>Aten&#xE7;&#xE3;o</strong>: recomenda-se  que o backup seja armazenado em um volume externo da m&#xE1;quina host do Docker. </p>
 
                     
                     </section>

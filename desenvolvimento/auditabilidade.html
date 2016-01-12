@@ -53,7 +53,7 @@
         data-chapter-title="Auditabilidade"
         data-filepath="desenvolvimento/auditabilidade.md"
         data-basepath=".."
-        data-revision="Tue Jan 12 2016 13:32:27 GMT+0000 (UTC)"
+        data-revision="Tue Jan 12 2016 14:07:41 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1413,6 +1413,10 @@
                     
                         <h1 id="auditabilidade">Auditabilidade</h1>
 <p>Quaisquer transa&#xE7;&#xF5;es de escrita (modifica&#xE7;&#xE3;o ou remo&#xE7;&#xE3;o) iniciadas por um usu&#xE1;rio devem conter informa&#xE7;&#xF5;es de auditoria nos logs. Mais detalhes na se&#xE7;&#xE3;o <a href="seguranca.html">Seguran&#xE7;a</a>.</p>
+<h3 id="armazenamento-e-limpeza-de-logs">Armazenamento e Limpeza de Logs</h3>
+<p>Para garantir o funcionamento da aplica&#xE7;&#xE3;o e a sa&#xFA;de do ambiente, um rotacionamento de logs foi implementado. Os logs gerados pelas aplica&#xE7;&#xF5;es, Portal de Servi&#xE7;os e Editor de Servi&#xE7;os, s&#xE3;o redirecionados para o ElasticSearch. </p>
+<p>O servi&#xE7;o respons&#xE1;vel por remover os &#xED;ndices dos logs gerados do ElasticSearch &#xE9; chamado de <strong>ElasticSearch Curator</strong>. Atualmente, essa ferramenta est&#xE1; configurada para limpar todos os &#xED;ndices criados que ultrapassem 20GB. Uma verifica&#xE7;&#xE3;o &#xE9; realizada a cada duas horas.</p>
+<p>A configura&#xE7;&#xE3;o da ferramenta para limpeza dos logs &#xE9; realizada nos scripts da infra-estrutura da aplica&#xE7;&#xE3;o. Maiores detalhes podem ser encontrados no <a href="https://github.com/servicosgovbr/docker/pull/7" target="_blank">c&#xF3;digo do Portal de Servi&#xE7;os</a> e na <a href="https://github.com/elastic/curator" target="_blank">documenta&#xE7;&#xE3;o oficial</a> da ferramenta escolhida.</p>
 
                     
                     </section>
