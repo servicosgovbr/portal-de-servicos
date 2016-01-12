@@ -25,7 +25,7 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 - Verifique que a versão do Portal de Serviços é a desejada:
 
 ```bash
-curl localhost/info
+curl -k https://localhost/info
 ```
 
 O comando acima deve produzir saída similar à seguinte:
@@ -47,7 +47,7 @@ O comando acima deve produzir saída similar à seguinte:
 - Verifique que a versão do Editor de Serviços é a desejada:
 
 ```bash
-curl localhost/editar/info
+curl -k https://localhost/editar/info
 ```
 
 O comando acima deve produzir saída similar à seguinte:
@@ -69,7 +69,7 @@ O comando acima deve produzir saída similar à seguinte:
 - Verificar que a saúde do cluster está `UP`:
 
 ```bash
-curl localhost/health
+curl -k https://localhost/health
 ```
 
 O comando acima deve produzir saída similar à seguinte:
