@@ -127,9 +127,9 @@ Resolving deltas: 100% (77/77), done.
 
 Para o correto funcionamento do Editor de Serviços, os seguintes passos são necessários:
 
-1. Criar uma nova chave SSH, conforme página de [SHH Keys] do GitHub 
+1. Criar uma nova chave SSH, conforme página de [SHH Keys] do GitHub. A chave criada não deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail válido de uma conta existente no GitHub  
 2. Colocar essa chave na pasta `/root/.ssh` 
-3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados na página de [Deploy Keys] do GitHub 
+3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados na página de [Deploy Keys] do GitHub. A chave importada deve ser utilizada exclusivamente no repositório de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro será exibida. 
 
 ### Certificado Digital SSL
 
