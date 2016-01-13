@@ -53,7 +53,7 @@
         data-chapter-title="Entrega Contínua"
         data-filepath="desenvolvimento/entrega-continua.md"
         data-basepath=".."
-        data-revision="Wed Jan 13 2016 17:24:39 GMT+0000 (UTC)"
+        data-revision="Wed Jan 13 2016 17:47:53 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1420,8 +1420,8 @@
 <p>Roda todos os testes unit&#xE1;rios, de integra&#xE7;&#xE3;o, e as checagens est&#xE1;ticas (<a href="ferramentas-utilizadas.html">FindBugs, Checkstyle, etc.</a>). Finalmente, publica os resultados do relat&#xF3;rio de cobertura de testes no <a href="https://coveralls.io/r/servicosgovbr/portal-de-servicos?branch=master" target="_blank">Coveralls</a>. Todos os relat&#xF3;rios de execu&#xE7;&#xE3;o tamb&#xE9;m s&#xE3;o publicados como artefatos, que podem ser baixados em formato HTML e XML.</p>
 <h3 id="pacotes">PACOTES</h3>
 <p>Cria um arquivo JAR contendo todas as depend&#xEA;ncias do projeto (uberjar) necess&#xE1;rias para a execu&#xE7;&#xE3;o da aplia&#xE7;&#xE3;o, e embute este JAR em um arquivo RPM espec&#xED;fico para nossa plataforma-alvo (CentOS 7 x64). Este RPM &#xE9; ent&#xE3;o publicado em um <a href="repositorio-yum.html">reposit&#xF3;rio Yum</a>, e fica dispon&#xED;vel para instala&#xE7;&#xE3;o e atualiza&#xE7;&#xE3;o.</p>
-<h3 id="alpha">ALPHA</h3>
-<p>(Re)instala o pacote RPM gerado no passo anterior em uma imagem Docker baseada no CentOS 7 x64, e reinicia a aplica&#xE7;&#xE3;o rodando na <a href="http://104.236.231.239" target="_blank">DigitalOcean</a>, bem como outros servi&#xE7;os necess&#xE1;rios. Ap&#xF3;s alguns segundos, a nova vers&#xE3;o da aplica&#xE7;&#xE3;o est&#xE1; pronta para receber requisi&#xE7;&#xF5;es.</p>
+<h3 id="dev">DEV</h3>
+<p>(Re)instala o pacote RPM gerado no passo anterior em uma imagem Docker baseada no CentOS 7 x64, e reinicia a aplica&#xE7;&#xE3;o rodando no <a href="189.9.150.163">ambiente de teste</a>, bem como outros servi&#xE7;os necess&#xE1;rios. Ap&#xF3;s alguns segundos, a nova vers&#xE3;o da aplica&#xE7;&#xE3;o est&#xE1; pronta para receber requisi&#xE7;&#xF5;es.</p>
 <h3 id="docs">DOCS</h3>
 <p>Atualiza a <em>branch</em> <code>gh-pages</code>, utilizada pelo <a href="https://pages.github.com/" target="_blank">Github Pages</a> com o resultado da compila&#xE7;&#xE3;o da documenta&#xE7;&#xE3;o (localizada no diret&#xF3;rio <code>docs</code>) pelo <a href="http://gitbook.com" target="_blank">Gitbook</a>. Esta fica dispon&#xED;vel em <a href="http://servicosgovbr.github.io" target="_blank">servicosgovbr.github.io</a>.</p>
 <h3 id="aviso">AVISO</h3>
