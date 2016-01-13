@@ -7,6 +7,7 @@ import com.github.slugify.Slugify;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,10 +47,18 @@ class PublicoAlvoController {
     ModelAndView publicoAlvo(@PathVariable("id") SegmentoDaSociedade segmento,
                              @RequestParam(required = false) Character letra) {
 
-        Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse('A');
+        Character primeiraLetra = ofNullable(letra).map(Character::toUpperCase).orElse(null);
         Map<Character, List<ServicoXML>> servicosPorLetraInicial = servicosAgrupadosPorLetraInicial(segmento);
 
-        List<PaginaEstatica> servicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<ServicoXML>emptyList())
+        List<ServicoXML> listaServicos;
+
+        if (primeiraLetra != null) {
+            listaServicos = servicosPorLetraInicial.getOrDefault(primeiraLetra, Collections.<ServicoXML>emptyList());
+        } else {
+            listaServicos = servicos.findBySegmentoDaSociedade(segmento);
+        }
+
+        List<PaginaEstatica> servicos = listaServicos
                 .stream()
                 .sorted(comparing(ServicoXML::getNome))
                 .map(PaginaEstatica::fromServico)

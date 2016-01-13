@@ -19,6 +19,7 @@ import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Matchers.isNull;
 import static org.springframework.test.web.ModelAndViewAssert.assertModelAttributeValue;
 import static org.springframework.test.web.ModelAndViewAssert.assertViewName;
 
@@ -52,7 +53,7 @@ public class PublicoAlvoControllerTest {
     @Test
     public void deveRetornarOsServicosRelacionadosAoPublicoAlvo() {
         assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, null), "servicos",
-                singletonList(PaginaEstatica.fromServico(SERVICO.withNome("AAAA"))));
+                asList(PaginaEstatica.fromServico(SERVICO.withNome("AAAA")), PaginaEstatica.fromServico(SERVICO.withNome("XXXX"))));
     }
 
     @Test
@@ -68,7 +69,6 @@ public class PublicoAlvoControllerTest {
 
     @Test
     public void deveRetornarALetraAtiva() {
-        assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, null), "letraAtiva", 'A');
         assertModelAttributeValue(publicosAlvo.publicoAlvo(CIDADAOS, 'x'), "letraAtiva", 'X');
     }
 
