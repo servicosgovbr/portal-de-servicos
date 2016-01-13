@@ -18,9 +18,9 @@ Roda todos os testes unitários, de integração, e as checagens estáticas ([Fi
 
 Cria um arquivo JAR contendo todas as dependências do projeto (uberjar) necessárias para a execução da apliação, e embute este JAR em um arquivo RPM específico para nossa plataforma-alvo (CentOS 7 x64). Este RPM é então publicado em um [repositório Yum](./repositorio-yum.md), e fica disponível para instalação e atualização.
 
-### ALPHA
+### DEV
 
-(Re)instala o pacote RPM gerado no passo anterior em uma imagem Docker baseada no CentOS 7 x64, e reinicia a aplicação rodando na [DigitalOcean](http://104.236.231.239), bem como outros serviços necessários. Após alguns segundos, a nova versão da aplicação está pronta para receber requisições.
+(Re)instala o pacote RPM gerado no passo anterior em uma imagem Docker baseada no CentOS 7 x64, e reinicia a aplicação rodando no [ambiente de teste](189.9.150.163), bem como outros serviços necessários. Após alguns segundos, a nova versão da aplicação está pronta para receber requisições.
 
 ### DOCS
 
