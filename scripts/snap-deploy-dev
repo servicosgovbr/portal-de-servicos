@@ -17,7 +17,7 @@ docker-compose stop portal1 portal2
 docker-compose kill portal1 portal2
 docker-compose rm -f portal1 portal2
 
-./build portal-de-servicos
+./build-all
 
 docker-compose up -d
 docker-compose restart balanceador
