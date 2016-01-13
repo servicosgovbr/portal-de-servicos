@@ -20,3 +20,13 @@ Host alpha
   LogLevel=quiet
   UserKnownHostsFile=/dev/null
   StrictHostKeyChecking=no
+
+Host dev
+  Hostname 189.9.150.163
+  User root
+  Port 22
+  IdentityFile ./secrets/id_rsa_dev
+  IdentityFile /var/snap-ci/repo/id_rsa_dev
+  LogLevel=quiet
+  UserKnownHostsFile=/dev/null
+  StrictHostKeyChecking=no
