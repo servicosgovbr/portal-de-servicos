@@ -3,7 +3,7 @@ set -x
 set -e
 set -o pipefail
 
-ssh -F .sshconfig dev 'sudo /bin/bash -s' << "EOF"
+ssh -F .sshconfig dev '/bin/bash -s' << "EOF"
 set -x
 set -e
 set -o pipefail
