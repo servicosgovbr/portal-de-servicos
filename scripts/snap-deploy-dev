@@ -12,6 +12,7 @@ cd '/root/docker'
 git pull --rebase
 
 export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-teste.git'
+export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-teste.git'
 
 ./build-all
 
