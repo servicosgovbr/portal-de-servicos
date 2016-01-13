@@ -11,6 +11,8 @@ set -o pipefail
 cd '/root/docker'
 git pull --rebase
 
+export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-teste.git'
+
 docker-compose stop portal1 portal2
 docker-compose kill portal1 portal2
 docker-compose rm -f portal1 portal2
