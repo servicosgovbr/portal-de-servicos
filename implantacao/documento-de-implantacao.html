@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Thu Jan 14 2016 16:50:07 GMT+0000 (UTC)"
+        data-revision="Thu Jan 14 2016 22:24:48 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1640,7 +1640,8 @@
 </table>
 <h2 id="checklist-de-implanta&#xE7;&#xE3;o">Checklist de Implanta&#xE7;&#xE3;o</h2>
 <h3 id="primeira-instala&#xE7;&#xE3;o">Primeira instala&#xE7;&#xE3;o</h3>
-<p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, sem nenhuma configura&#xE7;&#xE3;o adicional efetuada. As vers&#xF5;es do CentOS utilizadas para homologa&#xE7;&#xE3;o foram: 7.1 e 7.2. Al&#xE9;m disso, ser <strong>64bit</strong> &#xE9; realmente necess&#xE1;rio, pois &#xE9; a &#xFA;nica plataforma suportada pelo Docker na arquitetura X86.</p>
+<p>Todos os comandos a seguir devem ser executados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, sem nenhuma configura&#xE7;&#xE3;o adicional efetuada. As vers&#xF5;es do CentOS utilizadas para homologa&#xE7;&#xE3;o foram: 7.1 e 7.2. Al&#xE9;m disso, ser <strong>64bit</strong> &#xE9; realmente necess&#xE1;rio, pois &#xE9; a &#xFA;nica plataforma suportada pelo Docker na arquitetura X86.</p>
+<h3 id="configura&#xE7;&#xE3;o-inicial">Configura&#xE7;&#xE3;o Inicial</h3>
 <ul>
 <li>Verifique que o kernel instalado &#xE9;, no m&#xED;nimo, 3.10, rodando em modo x64:</li>
 </ul>
@@ -1719,7 +1720,8 @@ Installed:
   git.x86_64 0:1.8.3.1-4.el7                                                                                                                                                                                       
 
 ...
-</code></pre><ul>
+</code></pre><h3 id="clone-reposit&#xF3;rio-docker">Clone Reposit&#xF3;rio Docker</h3>
+<ul>
 <li>Clone o reposit&#xF3;rio <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a> no diret&#xF3;rio <code>/root</code>:</li>
 </ul>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root
@@ -1870,6 +1872,38 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 <p>Caso alguma das verifica&#xE7;&#xF5;es n&#xE3;o tenha sucesso, voc&#xEA; pode verificar o log dos cont&#xEA;ineres utilizando o seguinte comando:</p>
 <pre><code>docker-compose logs
 </code></pre><p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
+<h3 id="instala&#xE7;&#xF5;es-problem&#xE1;ticas">Instala&#xE7;&#xF5;es problem&#xE1;ticas</h3>
+<p>Os passos dessa se&#xE7;&#xE3;o devem ser seguidos apenas se a m&#xE1;quina utilizada para implanta&#xE7;&#xE3;o j&#xE1; possui a configura&#xE7;&#xE3;o inicial e uma instala&#xE7;&#xE3;o pr&#xE9;via realizada.</p>
+<ol>
+<li>No reposit&#xF3;rio local <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a>, pare e remova os cont&#xEA;ineres:</li>
+</ol>
+<pre><code class="lang-bash">docker stop $(docker ps <span class="hljs-operator">-a</span> -q)
+docker <span class="hljs-built_in">kill</span> $(docker ps <span class="hljs-operator">-a</span> -q)
+</code></pre>
+<ol>
+<li>Reinicie o Docker:</li>
+</ol>
+<pre><code class="lang-bash">systemctl restart docker
+</code></pre>
+<ol>
+<li><p>Remova o reposit&#xF3;rio local <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a></p>
+</li>
+<li><p>Clone o reposit&#xF3;rio <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a> no diret&#xF3;rio <code>/root</code>:</p>
+</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root
+git <span class="hljs-built_in">clone</span> https://github.com/servicosgovbr/docker
+</code></pre>
+<ol>
+<li><p>O certificado digital dever&#xE1; ser instalado novamente na pasta do <code>docker</code>, conforme instru&#xE7;&#xF5;es da se&#xE7;&#xE3;o &quot;Certificado Digital SSL&quot;</p>
+</li>
+<li><p>Construa e rode os cont&#xEA;ineres:</p>
+</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root/docker
+./build-all <span class="hljs-comment"># caso prefira baixar as imagens do docker hub, omita este passo</span>
+docker-compose up <span class="hljs-operator">-d</span>
+</code></pre>
 <h3 id="atualiza&#xE7;&#xF5;es-posteriores">Atualiza&#xE7;&#xF5;es posteriores</h3>
 <p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, que j&#xE1; tem os cont&#xEA;ineres <a href="http://www.docker.com" target="_blank">Docker</a> rodando.</p>
 <ul>
