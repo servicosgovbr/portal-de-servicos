@@ -8,6 +8,6 @@ Para realizar uma atualização	em ambientes hospedados em datacenters do govern
 4. Ir para o diretório do docker:
 `cd /root/docker/`
 5. Executar script bash que atualiza as instâncias do Portal de Serviços e do Editor de Serviços:
-`./scripts/update_editor_portal_container`
+`./scripts/update_portal_de_servicos`
 6. Para verificar que as atualizações estão sendo aplicadas corretamente, verificar os logs do Docker. Por exemplo: 
 `docker logs -f Editor1`
