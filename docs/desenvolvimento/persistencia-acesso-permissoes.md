@@ -70,7 +70,8 @@ Para recuperar os dados a partir de um backup:
 ```
 docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c "rm -rf /dbdata/* && cd /tmp && tar xvf /backup/backup-22_12_15_07_51.tar && mv dbdata/* ../dbdata/"
 ```
-3. Ligue os novamente os contêineres:		`docker-compose up`
+3. Ligue novamente os contêineres:	
+`docker-compose up`
 
 Recomenda-se que o backup dos dados dos usuários seja efetuado diariamente por uma rotina automática. Considerando que o volume de dados armazenados será pequeno, o armazenamento diário não deverá ser um problema. Além disso, recomenda-se que os backups mais antigos que sete dias sejam descartados automaticamente. Essa rotina de deleção automática deverá ser executada somente se backups dos últimos sete dias existirem de fato.
 
