@@ -53,7 +53,7 @@
         data-chapter-title="Persistencia de Acesso e Permissões"
         data-filepath="desenvolvimento/persistencia-acesso-permissoes.md"
         data-basepath=".."
-        data-revision="Wed Jan 13 2016 21:44:02 GMT+0000 (UTC)"
+        data-revision="Thu Jan 14 2016 12:27:00 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1465,7 +1465,7 @@
 <code>cd ~/docker/</code> e <code>docker-compose stop</code></li>
 <li>Execute o data volume cont&#xEA;iner dbdata com o arquivo backup.tar descomprimido:<pre><code>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c &quot;rm -rf /dbdata/* &amp;&amp; cd /tmp &amp;&amp; tar xvf /backup/backup-22_12_15_07_51.tar &amp;&amp; mv dbdata/* ../dbdata/&quot;
 </code></pre></li>
-<li>Ligue os novamente os cont&#xEA;ineres:        <code>docker-compose up</code></li>
+<li>Ligue novamente os cont&#xEA;ineres:<br><code>docker-compose up</code></li>
 </ol>
 <p>Recomenda-se que o backup dos dados dos usu&#xE1;rios seja efetuado diariamente por uma rotina autom&#xE1;tica. Considerando que o volume de dados armazenados ser&#xE1; pequeno, o armazenamento di&#xE1;rio n&#xE3;o dever&#xE1; ser um problema. Al&#xE9;m disso, recomenda-se que os backups mais antigos que sete dias sejam descartados automaticamente. Essa rotina de dele&#xE7;&#xE3;o autom&#xE1;tica dever&#xE1; ser executada somente se backups dos &#xFA;ltimos sete dias existirem de fato.</p>
 <p><strong>Aten&#xE7;&#xE3;o</strong>: recomenda-se  que o backup seja armazenado em um volume externo da m&#xE1;quina host do Docker. </p>
