@@ -145,9 +145,9 @@ Caso, não for possível encontrar o repositório que a chave deve ser importada
 2. No lado direto inferior da interface, clicar em "Deploy Keys"
 3. Clicar em "Add Deploy Key"
 4. Criar um nome para a nova chave, no campo "Title"
-5. Inserir o conteúdo da chave pública criada, no campo "Key"
+5. Inserir o conteúdo da chave pública criada anteriormente no campo "Key"
 6. Selecionar a opção "Allow write access"
-7. Clicar no botão "Add Key"
+7. Clicar no botão "Add Key" para adicionar a chave
 
 ### Certificado Digital SSL
 
