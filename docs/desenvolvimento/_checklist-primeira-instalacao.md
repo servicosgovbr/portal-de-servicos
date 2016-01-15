@@ -161,10 +161,17 @@ O código acima deve ser adicionado no arquivo `config`. Caso o arquivo não exi
 
 ### Utilizando variáveis de ambiente
 
-Antes de inicializar os contêineres, é necessário que as seguintes variáveis de ambiente sejam configuradas:
+Antes de inicializar os contêineres, é necessário que as seguintes variáveis de ambiente sejam configuradas para a instalação inicial:
 
 - `export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-servico.git'`
 - `export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'`
+
+Após executar esses comandos, precisamos persistir os valores das váriaveis. Devemos criar um arquivo em `/etc/profile.d/repositorios.sh` com o seguinte conteúdo:
+
+```
+export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-servico.git'
+export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'
+```
 
 ### Construindo os Contêineres 
 
