@@ -58,3 +58,8 @@ pds:
       - trabalho
       - educacao
       - economia-e-financas
+
+fallback:
+  pds:
+    cartas:
+      repositorio: "https://github.com/servicosgovbr/cartas-de-servico.git"

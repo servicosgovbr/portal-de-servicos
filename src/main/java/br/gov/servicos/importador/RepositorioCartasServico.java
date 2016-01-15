@@ -22,6 +22,7 @@ import java.nio.file.Files;
 import static lombok.AccessLevel.PRIVATE;
 import static org.eclipse.jgit.api.ResetCommand.ResetType.HARD;
 import static org.eclipse.jgit.merge.MergeStrategy.THEIRS;
+import static org.springframework.util.StringUtils.isEmpty;
 
 @Slf4j
 @Component
@@ -34,8 +35,10 @@ public class RepositorioCartasServico {
     File caminhoLocal;
 
     @Autowired
-    public RepositorioCartasServico(@Value("${pds.cartas.repositorio}") String urlRepositorio) {
-        this.urlRepositorio = urlRepositorio;
+    public RepositorioCartasServico(@Value("${pds.cartas.repositorio}") String urlRepositorio,
+                                    @Value("${fallback.pds.cartas.repositorio}") String urlFallbackRepositorio) {
+        String url = isEmpty(urlRepositorio) ? urlFallbackRepositorio : urlRepositorio;
+        this.urlRepositorio = url;
     }
 
     @SneakyThrows
