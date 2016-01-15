@@ -4,7 +4,7 @@ O Docker necessita ser reiniciado quando uma mudança estrutural ou de configura
 
 Presumindo uma máquina [CentOS] 7 64bit, que já possui os contêineres [Docker] rodando, recomendamos que os seguintes comandos sejam executados:
 
-- No repositório local [servicosgovbr/docker](https://github.com/servicosgovbr/docker), pare os contêineres:
+- No repositório local [servicosgovbr/docker](https://github.com/servicosgovbr/docker), pare e remova os contêineres:
 
 ```bash
 docker stop $(docker ps -a -q)
@@ -38,5 +38,6 @@ Creating kibana...
 Creating portal1...
 Creating balanceador...
 ```
+**Lembrete:** Antes de executar os passos descritos acima, é muito importante que um backup válido dos usuários e permissões exista. Caso contrário, todos os usuários criados para aquele ambiente serão perdidos. Maiores informações sobre como proceder com a criação de um backup podem ser encontradas na seção de Persistência de Acesso e Permissões.
 
 [Docker]:http://www.docker.com
