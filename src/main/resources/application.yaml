@@ -43,27 +43,6 @@ pds:
     servicos:
       - prouni-programa-universidade-para-todos
       - sisu-sistema-de-selecao-unificada
-      - consulta-situacao-do-requerimento-de-beneficio-previdenciario
-      - programa-de-financiamento-estudantil-fies
-      - restituicao-e-situacao-da-declaracao-do-imposto-de-renda-pessoa-fisica-irpf
-      - vagas-de-emprego-sine-e-portal-mais-emprego
-      - cadastro-unico-para-programas-sociais-do-governo-federal
-      - calculadora-do-cidadao
-      - comprovante-de-inscricao-e-de-situacao-cadastral-no-cnpj
-      - emissao-de-certidao-previdenciaria-certidao-contribuicoes-previdenciarias-certidoes-e-situacao-fiscal
-      - seguro-desemprego
-      - multas-de-transito-departamento-de-policia-rodoviaria-federal
-      - simulacao-da-contagem-de-tempo-de-contribuicao-previdenciaria
-      - inscricao-junto-a-previdencia-social
-      - aqui-tem-farmacia-popular
-      - emissao-da-declaracao-de-aptidao-da-agricultura-familiar-dap
-      - extrato-de-beneficios-previdenciarios-para-declaracao-de-imposto-de-renda
     areasDeInteresse:
       - saude
       - agropecuaria
-      - comercio-e-servicos
-      - comunicacoes
-      - cultura
-      - trabalho
-      - educacao
-      - economia-e-financas
