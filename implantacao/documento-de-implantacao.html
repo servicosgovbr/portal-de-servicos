@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Fri Jan 15 2016 18:32:29 GMT+0000 (UTC)"
+        data-revision="Fri Jan 15 2016 19:18:05 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1740,6 +1740,18 @@ Resolving deltas: 100% (77/77), done.
 <li>Criar uma nova chave SSH, conforme p&#xE1;gina de <a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">SHH Keys</a> do GitHub. A chave criada n&#xE3;o deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail v&#xE1;lido de uma conta existente no GitHub  </li>
 <li>Colocar essa chave na pasta <code>/root/.ssh</code> </li>
 <li>Importar chave com permiss&#xE3;o de leitura e escrita no reposit&#xF3;rio de <code>cartas-de-servicos</code>. Detalhes sobre esse processo podem ser encontrados na p&#xE1;gina de <a href="https://developer.github.com/guides/managing-deploy-keys/" target="_blank">Deploy Keys</a> do GitHub. A chave importada deve ser utilizada exclusivamente no reposit&#xF3;rio de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro ser&#xE1; exibida. </li>
+</ol>
+<p><strong>Notas:</strong> </p>
+<p>&#xC9; importante que o usu&#xE1;rio que ir&#xE1; realizar a opera&#xE7;&#xE3;o de importa&#xE7;&#xE3;o tenha as devidas permiss&#xF5;es no reposit&#xF3;rio <code>cartas-de-servico</code> do GitHub. Caso o usu&#xE1;rio n&#xE3;o tenha permiss&#xF5;es suficientes, &#xE9; necess&#xE1;rio contactar os administradores do reposit&#xF3;rio.</p>
+<p>Caso, n&#xE3;o for poss&#xED;vel encontrar o reposit&#xF3;rio que a chave deve ser importada, acessar o seguinte <a href="https://github.com/servicosgovbr/cartas-de-servico" target="_blank">reposit&#xF3;rio</a> no GitHub. Estando na p&#xE1;gina do reposit&#xF3;rio, os seguintes passos devem ser realizados:</p>
+<ol>
+<li>Clicar em &quot;Settings&quot;</li>
+<li>No lado direto inferior da interface, clicar em &quot;Deploy Keys&quot;</li>
+<li>Clicar em &quot;Add Deploy Key&quot;</li>
+<li>Criar um nome para a nova chave, no campo &quot;Title&quot;</li>
+<li>Inserir o conte&#xFA;do da chave p&#xFA;blica criada, no campo &quot;Key&quot;</li>
+<li>Selecionar a op&#xE7;&#xE3;o &quot;Allow write access&quot;</li>
+<li>Clicar no bot&#xE3;o &quot;Add Key&quot;</li>
 </ol>
 <h3 id="certificado-digital-ssl">Certificado Digital SSL</h3>
 <p>O Editor de Servi&#xE7;os utiliza um certificado digital para aumentar a seguran&#xE7;a da comunica&#xE7;&#xE3;o entre usu&#xE1;rio e a aplica&#xE7;&#xE3;o. Para gerar esse certificado digital corretamente &#xE9; necess&#xE1;rio criar um arquivo <code>.pem</code>, obtido a partir do certificado original. Para gerar esse arquivo <code>.pem</code>, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
