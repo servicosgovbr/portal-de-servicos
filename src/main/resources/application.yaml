@@ -41,14 +41,14 @@ pds:
     repositorio: "https://github.com/servicosgovbr/cartas-de-teste.git"
   destaques:
     servicos:
-      - prouni-programa-universidade-para-todos
-      - sisu-sistema-de-selecao-unificada
-      - consulta-situacao-do-requerimento-de-beneficio-previdenciario
-      - programa-de-financiamento-estudantil-fies
-      - restituicao-e-situacao-da-declaracao-do-imposto-de-renda-pessoa-fisica-irpf
-      - vagas-de-emprego-sine-e-portal-mais-emprego
-      - cadastro-unico-para-programas-sociais-do-governo-federal
-      - calculadora-do-cidadao
+      - teste2
+      - teste
+      - teste-teste-3
+      - teste-mps-teste-2
+      - teste-fabricio
+      - teste-de-servico-repo
+      - servico-de-mau-editor
+      - teste-09
     areasDeInteresse:
       - saude
       - agropecuaria
