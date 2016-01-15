@@ -205,32 +205,33 @@ A instalação está concluída.
 
 ### Instalações problemáticas
  
-Os passos dessa seção devem ser seguidos apenas se a máquina utilizada para implantação já possui a configuração inicial e uma instalação prévia realizada.
+Os passos dessa seção devem ser seguidos **apenas** se a máquina utilizada para implantação já possui a configuração inicial e uma instalação prévia realizada.
 
-1. No repositório local [servicosgovbr/docker](https://github.com/servicosgovbr/docker), pare e remova os contêineres:
+- No repositório local [servicosgovbr/docker](https://github.com/servicosgovbr/docker), pare e remova os contêineres:
 
-```bash
+```
 docker stop $(docker ps -a -q)
 docker kill $(docker ps -a -q)
 ```
 
-2. Reinicie o Docker:
+- Reinicie o Docker:
 
 ```bash
 systemctl restart docker
 ```
 
-3. Remova o repositório local [servicosgovbr/docker](https://github.com/servicosgovbr/docker)
+- Remova o repositório local [servicosgovbr/docker](https://github.com/servicosgovbr/docker)
 
-4. Clone o repositório [servicosgovbr/docker](https://github.com/servicosgovbr/docker) no diretório `/root`:
+- Clone o repositório [servicosgovbr/docker](https://github.com/servicosgovbr/docker) no diretório `/root`:
 
 ```bash
 cd /root
 git clone https://github.com/servicosgovbr/docker
 ```
-5. O certificado digital deverá ser instalado novamente na pasta do `docker`, conforme instruções da seção "Certificado Digital SSL"
 
-6. Construa e rode os contêineres:
+- O certificado digital deverá ser instalado novamente na pasta do `docker`, conforme instruções da seção "Certificado Digital SSL"
+
+- Construa e rode os contêineres:
 
 ```bash
 cd /root/docker
