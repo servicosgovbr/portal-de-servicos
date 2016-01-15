@@ -43,12 +43,6 @@ pds:
     servicos:
       - teste2
       - teste
-      - teste-teste-3
-      - teste-mps-teste-2
-      - teste-fabricio
-      - teste-de-servico-repo
-      - servico-de-mau-editor
-      - teste-09
     areasDeInteresse:
       - saude
       - agropecuaria
