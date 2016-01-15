@@ -159,6 +159,13 @@ Host github.com
 
 O código acima deve ser adicionado no arquivo `config`. Caso o arquivo não exista, sugere-se a criação do arquivo. Maiores informações podem ser encontradas na [documentação oficial] do Github.
 
+### Utilizando variáveis de ambiente
+
+Antes de inicializar os contêineres, é necessário que as seguintes variáveis de ambiente sejam configuradas:
+
+- `export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-servico.git'`
+- `export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'`
+
 ### Construindo os Contêineres 
 
 Construa e rode os contêineres:
@@ -203,7 +210,7 @@ Ocorreu um problema na inicialização do Logspout (que precisa do Logstash roda
 
 A instalação está concluída.
 
-### Instalações problemáticas
+### Instalações Auxiliares
  
 Os passos dessa seção devem ser seguidos **apenas** se a máquina utilizada para implantação já possui a configuração inicial e uma instalação prévia realizada.
 
