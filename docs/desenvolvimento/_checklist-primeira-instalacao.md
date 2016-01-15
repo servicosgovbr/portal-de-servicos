@@ -135,6 +135,20 @@ Para o correto funcionamento do Editor de Serviços, os seguintes passos são ne
 2. Colocar essa chave na pasta `/root/.ssh` 
 3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados na página de [Deploy Keys] do GitHub. A chave importada deve ser utilizada exclusivamente no repositório de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro será exibida. 
 
+**Notas:** 
+
+É importante que o usuário que irá realizar a operação de importação tenha as devidas permissões no repositório `cartas-de-servico` do GitHub. Caso o usuário não tenha permissões suficientes, é necessário contactar os administradores do repositório.
+
+Caso, não for possível encontrar o repositório que a chave deve ser importada, acessar o seguinte [repositório] no GitHub. Estando na página do repositório, os seguintes passos devem ser realizados:
+
+1. Clicar em "Settings"
+2. No lado direto inferior da interface, clicar em "Deploy Keys"
+3. Clicar em "Add Deploy Key"
+4. Criar um nome para a nova chave, no campo "Title"
+5. Inserir o conteúdo da chave pública criada, no campo "Key"
+6. Selecionar a opção "Allow write access"
+7. Clicar no botão "Add Key"
+
 ### Certificado Digital SSL
 
 O Editor de Serviços utiliza um certificado digital para aumentar a segurança da comunicação entre usuário e a aplicação. Para gerar esse certificado digital corretamente é necessário criar um arquivo `.pem`, obtido a partir do certificado original. Para gerar esse arquivo `.pem`, os seguintes passos são necessários:
@@ -259,3 +273,4 @@ docker-compose up -d
 [SHH Keys]:https://help.github.com/articles/generating-ssh-keys/ 
 [Deploy Keys]:https://developer.github.com/guides/managing-deploy-keys/
 [documentação oficial]:https://help.github.com/articles/using-ssh-over-the-https-port/
+[repositório]:https://github.com/servicosgovbr/cartas-de-servico
