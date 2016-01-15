@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Fri Jan 15 2016 17:47:58 GMT+0000 (UTC)"
+        data-revision="Fri Jan 15 2016 18:14:06 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1758,12 +1758,15 @@ Resolving deltas: 100% (77/77), done.
   Port 443
 </code></pre><p>O c&#xF3;digo acima deve ser adicionado no arquivo <code>config</code>. Caso o arquivo n&#xE3;o exista, sugere-se a cria&#xE7;&#xE3;o do arquivo. Maiores informa&#xE7;&#xF5;es podem ser encontradas na <a href="https://help.github.com/articles/using-ssh-over-the-https-port/" target="_blank">documenta&#xE7;&#xE3;o oficial</a> do Github.</p>
 <h3 id="utilizando-vari&#xE1;veis-de-ambiente">Utilizando vari&#xE1;veis de ambiente</h3>
-<p>Antes de inicializar os cont&#xEA;ineres, &#xE9; necess&#xE1;rio que as seguintes vari&#xE1;veis de ambiente sejam configuradas:</p>
+<p>Antes de inicializar os cont&#xEA;ineres, &#xE9; necess&#xE1;rio que as seguintes vari&#xE1;veis de ambiente sejam configuradas para a instala&#xE7;&#xE3;o inicial:</p>
 <ul>
 <li><code>export EDS_CARTAS_REPOSITORIO=&apos;git@github.com:servicosgovbr/cartas-de-servico.git&apos;</code></li>
 <li><code>export PDS_CARTAS_REPOSITORIO=&apos;https://github.com/servicosgovbr/cartas-de-servico.git&apos;</code></li>
 </ul>
-<h3 id="construindo-os-cont&#xEA;ineres">Construindo os Cont&#xEA;ineres</h3>
+<p>Ap&#xF3;s executar esses comandos, precisamos persistir os valores das v&#xE1;riaveis. Devemos criar um arquivo em <code>/etc/profile.d/repositorios.sh</code> com o seguinte conte&#xFA;do:</p>
+<pre><code>export EDS_CARTAS_REPOSITORIO=&apos;git@github.com:servicosgovbr/cartas-de-servico.git&apos;
+export PDS_CARTAS_REPOSITORIO=&apos;https://github.com/servicosgovbr/cartas-de-servico.git&apos;
+</code></pre><h3 id="construindo-os-cont&#xEA;ineres">Construindo os Cont&#xEA;ineres</h3>
 <p>Construa e rode os cont&#xEA;ineres:</p>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root/docker
 ./build-all <span class="hljs-comment"># caso prefira baixar as imagens do docker hub, omita este passo</span>
