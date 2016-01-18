@@ -5,7 +5,7 @@ Todos os comandos a seguir devem ser executados como super-usuário (root), e pr
 - Verifique que o kernel instalado é, no mínimo, 3.10, rodando em modo x64:
 
 ```bash
-uname -r 
+uname -r
 3.10.0-229.el7.x86_64
 ```
 
@@ -55,7 +55,7 @@ O comando acima deve produzir saída similar à seguinte:
 ```
 Unable to find image 'alpine:latest' locally
 latest: Pulling from library/alpine
-31f630c65071: Already exists 
+31f630c65071: Already exists
 library/alpine:latest: The image you are pulling has been verified. Important: image verification is a tech preview feature and should not be relied on to provide security.
 Digest: sha256:c471fce1d08618adf4c6c0d72c047b9f3d5ef82cae0ca9a157ce1c800d42722f
 Status: Downloaded newer image for alpine:latest
@@ -102,7 +102,7 @@ O comando acima deve produzir saída similar à seguinte:
 ...
 
 Installed:
-  git.x86_64 0:1.8.3.1-4.el7                                                                                                                                                                                       
+  git.x86_64 0:1.8.3.1-4.el7
 
 ...
 ```
@@ -127,38 +127,6 @@ Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
 ```
 
-### Chaves SSH
-
-Para o correto funcionamento do Editor de Serviços, os seguintes passos são necessários:
-
-1. Criar uma nova chave SSH, conforme página de [SHH Keys] do GitHub. A chave criada não deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail válido de uma conta existente no GitHub  
-2. Colocar essa chave na pasta `/root/.ssh` 
-3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados na página de [Deploy Keys] do GitHub. A chave importada deve ser utilizada exclusivamente no repositório de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro será exibida. 
-
-**Notas:** 
-
-É importante que o usuário que irá realizar a operação de importação tenha as devidas permissões no repositório `cartas-de-servico` do GitHub. Caso o usuário não tenha permissões suficientes, é necessário contactar os administradores do repositório.
-
-Caso, não for possível encontrar o repositório que a chave deve ser importada, acessar o seguinte [repositório] no GitHub. Estando na página do repositório, os seguintes passos devem ser realizados:
-
-1. Clicar em "Settings"
-2. No lado direto inferior da interface, clicar em "Deploy Keys"
-3. Clicar em "Add Deploy Key"
-4. Criar um nome para a nova chave, no campo "Title"
-5. Inserir o conteúdo da chave pública criada anteriormente no campo "Key"
-6. Selecionar a opção "Allow write access"
-7. Clicar no botão "Add Key" para adicionar a chave
-
-### Certificado Digital SSL
-
-O Editor de Serviços utiliza um certificado digital para aumentar a segurança da comunicação entre usuário e a aplicação. Para gerar esse certificado digital corretamente é necessário criar um arquivo `.pem`, obtido a partir do certificado original. Para gerar esse arquivo `.pem`, os seguintes passos são necessários:
-
-- Copiar arquivos disponibilizados do certificado digital para `/root/docker/balanceador/ssl/private`
-- Remover a senha da chave privada: `openssl rsa -in servicos.gov.br.key -out servicos.gov.br.key.out`
-- Gerar arquivo .cer: `openssl pkcs7 -print_certs -in SERVICOSGOVBR.p7b -out SERVICOSGOVBR.cer`
-- Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: `openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx`
-- Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: `openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes`
-
 ### Redirecionando de tráfego
 
 É possível que o ambiente em que a instalação esteja sendo realizada possua restrições de firewall. Algumas das restrições que enfrentamos anteriormente, em ambiente do governo, foram restrições de tráfego na porta 22 para o GitHub. Nesse caso, sugere-se uma solução de contorno. Essa solução de contorno irá redirecionar todo o tráfego da porta 22 para a porta 443. Considera-se que a porta 443 não possua restrições, e que esse tipo de redirecionamento seja permitido na infra-estrutura em que está sendo realizada a instalação.
@@ -172,6 +140,44 @@ Host github.com
 ```
 
 O código acima deve ser adicionado no arquivo `config`. Caso o arquivo não exista, sugere-se a criação do arquivo. Maiores informações podem ser encontradas na [documentação oficial] do Github.
+
+### Chaves SSH
+
+Para o correto funcionamento do Editor de Serviços, os seguintes passos são necessários:
+
+1. Criar uma nova chave SSH, conforme página de [SHH Keys] do GitHub. A chave criada não deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail válido de uma conta existente no GitHub e que o usuário esteja autorizado a acessar os projetos da [organização do servicos.gov.br].
+2. Colocar essa chave na pasta `/root/.ssh`.
+3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados na nota abaixo, ou na página de [Deploy Keys] do GitHub. A chave importada deve ser utilizada exclusivamente no repositório de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro será exibida.
+
+**Notas:**
+
+É importante que o usuário que irá realizar a operação de importação tenha as devidas permissões no repositório `cartas-de-servico` do GitHub. Caso o usuário não tenha permissões suficientes, é necessário contactar os administradores do repositório.
+
+Caso, não for possível encontrar o repositório que a chave deve ser importada, acessar o seguinte [repositório] no GitHub. Estando na página do repositório, os seguintes passos devem ser realizados:
+
+1. Clicar em "Settings"
+2. No lado direto inferior da interface, clicar em "Deploy Keys"
+3. Clicar em "Add Deploy Key"
+4. Criar um nome para a nova chave, no campo "Title"
+5. Inserir o conteúdo da chave pública criada anteriormente no campo "Key"
+6. Selecionar a opção "Allow write access"
+7. Clicar no botão "Add Key" para adicionar a chave
+
+Para visualizar as chaves de deploy você pode acessar o seguinte [link](https://github.com/servicosgovbr/cartas-de-servico/settings/keys).
+
+### Certificado Digital SSL
+
+O Editor de Serviços utiliza um certificado digital para aumentar a segurança da comunicação entre usuário e a aplicação. Deve ser utilizado o certificado auto assinado enviado por email, ou um do mesmo padrão criado a partir dos passos a seguir.
+
+#### Geração de um certificado digital
+
+Para gerar esse certificado digital corretamente é necessário criar um arquivo `.pem`, obtido a partir do certificado original. Para gerar esse arquivo `.pem`, os seguintes passos são necessários:
+
+- Copiar arquivos disponibilizados do certificado digital para `/root/docker/balanceador/ssl/private`
+- Remover a senha da chave privada: `openssl rsa -in servicos.gov.br.key -out servicos.gov.br.key.out`
+- Gerar arquivo .cer: `openssl pkcs7 -print_certs -in SERVICOSGOVBR.p7b -out SERVICOSGOVBR.cer`
+- Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: `openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx`
+- Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: `openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes`
 
 ### Utilizando variáveis de ambiente
 
@@ -187,7 +193,7 @@ export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-servico.gi
 export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'
 ```
 
-### Construindo os Contêineres 
+### Construindo os Contêineres
 
 Construa e rode os contêineres:
 
@@ -232,7 +238,7 @@ Ocorreu um problema na inicialização do Logspout (que precisa do Logstash roda
 A instalação está concluída.
 
 ### Instalações Auxiliares
- 
+
 Os passos dessa seção devem ser seguidos **apenas** se a máquina utilizada para implantação já possui a configuração inicial e uma instalação prévia realizada.
 
 - No repositório local [servicosgovbr/docker](https://github.com/servicosgovbr/docker), pare e remova os contêineres:
@@ -270,7 +276,8 @@ docker-compose up -d
 [Docker]:http://www.docker.com
 [Docker-Compose]:http://www.docker.com/compose
 [Git]:http://git-scm.org
-[SHH Keys]:https://help.github.com/articles/generating-ssh-keys/ 
+[SHH Keys]:https://help.github.com/articles/generating-ssh-keys/
 [Deploy Keys]:https://developer.github.com/guides/managing-deploy-keys/
 [documentação oficial]:https://help.github.com/articles/using-ssh-over-the-https-port/
 [repositório]:https://github.com/servicosgovbr/cartas-de-servico
+[organização do servicos.gov.br]:https://github.com/servicosgovbr

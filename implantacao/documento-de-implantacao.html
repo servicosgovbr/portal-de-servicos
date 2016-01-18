@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Fri Jan 15 2016 20:20:00 GMT+0000 (UTC)"
+        data-revision="Mon Jan 18 2016 20:53:07 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1645,7 +1645,7 @@
 <ul>
 <li>Verifique que o kernel instalado &#xE9;, no m&#xED;nimo, 3.10, rodando em modo x64:</li>
 </ul>
-<pre><code class="lang-bash">uname -r 
+<pre><code class="lang-bash">uname -r
 <span class="hljs-number">3.10</span>.<span class="hljs-number">0</span>-<span class="hljs-number">229</span>.el7.x86_64
 </code></pre>
 <p>Caso contr&#xE1;rio, &#xE9; preciso realizar as atualiza&#xE7;&#xF5;es necess&#xE1;rias antes de continuar.</p>
@@ -1682,7 +1682,7 @@
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
 <pre><code>Unable to find image &apos;alpine:latest&apos; locally
 latest: Pulling from library/alpine
-31f630c65071: Already exists 
+31f630c65071: Already exists
 library/alpine:latest: The image you are pulling has been verified. Important: image verification is a tech preview feature and should not be relied on to provide security.
 Digest: sha256:c471fce1d08618adf4c6c0d72c047b9f3d5ef82cae0ca9a157ce1c800d42722f
 Status: Downloaded newer image for alpine:latest
@@ -1717,7 +1717,7 @@ OpenSSL version: OpenSSL 1.0.1e 11 Feb 2013
 <pre><code>...
 
 Installed:
-  git.x86_64 0:1.8.3.1-4.el7                                                                                                                                                                                       
+  git.x86_64 0:1.8.3.1-4.el7
 
 ...
 </code></pre><h3 id="clone-reposit&#xF3;rio-docker">Clone Reposit&#xF3;rio Docker</h3>
@@ -1734,14 +1734,21 @@ remote: Compressing objects: 100% (61/61), done.
 remote: Total 152 (delta 34), reused 0 (delta 0), pack-reused 85
 Receiving objects: 100% (152/152), 18.87 KiB | 0 bytes/s, done.
 Resolving deltas: 100% (77/77), done.
-</code></pre><h3 id="chaves-ssh">Chaves SSH</h3>
+</code></pre><h3 id="redirecionando-de-tr&#xE1;fego">Redirecionando de tr&#xE1;fego</h3>
+<p>&#xC9; poss&#xED;vel que o ambiente em que a instala&#xE7;&#xE3;o esteja sendo realizada possua restri&#xE7;&#xF5;es de firewall. Algumas das restri&#xE7;&#xF5;es que enfrentamos anteriormente, em ambiente do governo, foram restri&#xE7;&#xF5;es de tr&#xE1;fego na porta 22 para o GitHub. Nesse caso, sugere-se uma solu&#xE7;&#xE3;o de contorno. Essa solu&#xE7;&#xE3;o de contorno ir&#xE1; redirecionar todo o tr&#xE1;fego da porta 22 para a porta 443. Considera-se que a porta 443 n&#xE3;o possua restri&#xE7;&#xF5;es, e que esse tipo de redirecionamento seja permitido na infra-estrutura em que est&#xE1; sendo realizada a instala&#xE7;&#xE3;o.</p>
+<p>Para isso, a seguinte altera&#xE7;&#xE3;o &#xE9; necess&#xE1;ria no arquivo <code>/root/.ssh/config</code>:</p>
+<pre><code>Host github.com
+  Hostname ssh.github.com
+  Port 443
+</code></pre><p>O c&#xF3;digo acima deve ser adicionado no arquivo <code>config</code>. Caso o arquivo n&#xE3;o exista, sugere-se a cria&#xE7;&#xE3;o do arquivo. Maiores informa&#xE7;&#xF5;es podem ser encontradas na <a href="https://help.github.com/articles/using-ssh-over-the-https-port/" target="_blank">documenta&#xE7;&#xE3;o oficial</a> do Github.</p>
+<h3 id="chaves-ssh">Chaves SSH</h3>
 <p>Para o correto funcionamento do Editor de Servi&#xE7;os, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
 <ol>
-<li>Criar uma nova chave SSH, conforme p&#xE1;gina de <a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">SHH Keys</a> do GitHub. A chave criada n&#xE3;o deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail v&#xE1;lido de uma conta existente no GitHub  </li>
-<li>Colocar essa chave na pasta <code>/root/.ssh</code> </li>
-<li>Importar chave com permiss&#xE3;o de leitura e escrita no reposit&#xF3;rio de <code>cartas-de-servicos</code>. Detalhes sobre esse processo podem ser encontrados na p&#xE1;gina de <a href="https://developer.github.com/guides/managing-deploy-keys/" target="_blank">Deploy Keys</a> do GitHub. A chave importada deve ser utilizada exclusivamente no reposit&#xF3;rio de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro ser&#xE1; exibida. </li>
+<li>Criar uma nova chave SSH, conforme p&#xE1;gina de <a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">SHH Keys</a> do GitHub. A chave criada n&#xE3;o deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail v&#xE1;lido de uma conta existente no GitHub e que o usu&#xE1;rio esteja autorizado a acessar os projetos da <a href="https://github.com/servicosgovbr" target="_blank">organiza&#xE7;&#xE3;o do servicos.gov.br</a>.</li>
+<li>Colocar essa chave na pasta <code>/root/.ssh</code>.</li>
+<li>Importar chave com permiss&#xE3;o de leitura e escrita no reposit&#xF3;rio de <code>cartas-de-servicos</code>. Detalhes sobre esse processo podem ser encontrados na nota abaixo, ou na p&#xE1;gina de <a href="https://developer.github.com/guides/managing-deploy-keys/" target="_blank">Deploy Keys</a> do GitHub. A chave importada deve ser utilizada exclusivamente no reposit&#xF3;rio de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro ser&#xE1; exibida.</li>
 </ol>
-<p><strong>Notas:</strong> </p>
+<p><strong>Notas:</strong></p>
 <p>&#xC9; importante que o usu&#xE1;rio que ir&#xE1; realizar a opera&#xE7;&#xE3;o de importa&#xE7;&#xE3;o tenha as devidas permiss&#xF5;es no reposit&#xF3;rio <code>cartas-de-servico</code> do GitHub. Caso o usu&#xE1;rio n&#xE3;o tenha permiss&#xF5;es suficientes, &#xE9; necess&#xE1;rio contactar os administradores do reposit&#xF3;rio.</p>
 <p>Caso, n&#xE3;o for poss&#xED;vel encontrar o reposit&#xF3;rio que a chave deve ser importada, acessar o seguinte <a href="https://github.com/servicosgovbr/cartas-de-servico" target="_blank">reposit&#xF3;rio</a> no GitHub. Estando na p&#xE1;gina do reposit&#xF3;rio, os seguintes passos devem ser realizados:</p>
 <ol>
@@ -1753,8 +1760,11 @@ Resolving deltas: 100% (77/77), done.
 <li>Selecionar a op&#xE7;&#xE3;o &quot;Allow write access&quot;</li>
 <li>Clicar no bot&#xE3;o &quot;Add Key&quot; para adicionar a chave</li>
 </ol>
+<p>Para visualizar as chaves de deploy voc&#xEA; pode acessar o seguinte <a href="https://github.com/servicosgovbr/cartas-de-servico/settings/keys" target="_blank">link</a>.</p>
 <h3 id="certificado-digital-ssl">Certificado Digital SSL</h3>
-<p>O Editor de Servi&#xE7;os utiliza um certificado digital para aumentar a seguran&#xE7;a da comunica&#xE7;&#xE3;o entre usu&#xE1;rio e a aplica&#xE7;&#xE3;o. Para gerar esse certificado digital corretamente &#xE9; necess&#xE1;rio criar um arquivo <code>.pem</code>, obtido a partir do certificado original. Para gerar esse arquivo <code>.pem</code>, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
+<p>O Editor de Servi&#xE7;os utiliza um certificado digital para aumentar a seguran&#xE7;a da comunica&#xE7;&#xE3;o entre usu&#xE1;rio e a aplica&#xE7;&#xE3;o. Deve ser utilizado o certificado auto assinado enviado por email, ou um do mesmo padr&#xE3;o criado a partir dos passos a seguir.</p>
+<h4 id="gera&#xE7;&#xE3;o-de-um-certificado-digital">Gera&#xE7;&#xE3;o de um certificado digital</h4>
+<p>Para gerar esse certificado digital corretamente &#xE9; necess&#xE1;rio criar um arquivo <code>.pem</code>, obtido a partir do certificado original. Para gerar esse arquivo <code>.pem</code>, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
 <ul>
 <li>Copiar arquivos disponibilizados do certificado digital para <code>/root/docker/balanceador/ssl/private</code></li>
 <li>Remover a senha da chave privada: <code>openssl rsa -in servicos.gov.br.key -out servicos.gov.br.key.out</code></li>
@@ -1762,13 +1772,6 @@ Resolving deltas: 100% (77/77), done.
 <li>Converter o certificado de pkcs7 para pkcs12, de forma a colocar a chave privada e o certificado no mesmo arquivo: <code>openssl pkcs12 -export -in SERVICOSGOVBR.cer -inkey servicos.gov.br.key.out -out SERVICOSGOVBR.pfx</code></li>
 <li>Converter de pkcs12 para .pem, formato que o balanceador sabe trabalhar: <code>openssl pkcs12 -in SERVICOSGOVBR.pfx -out SERVICOSGOVBR.pem -nodes</code></li>
 </ul>
-<h3 id="redirecionando-de-tr&#xE1;fego">Redirecionando de tr&#xE1;fego</h3>
-<p>&#xC9; poss&#xED;vel que o ambiente em que a instala&#xE7;&#xE3;o esteja sendo realizada possua restri&#xE7;&#xF5;es de firewall. Algumas das restri&#xE7;&#xF5;es que enfrentamos anteriormente, em ambiente do governo, foram restri&#xE7;&#xF5;es de tr&#xE1;fego na porta 22 para o GitHub. Nesse caso, sugere-se uma solu&#xE7;&#xE3;o de contorno. Essa solu&#xE7;&#xE3;o de contorno ir&#xE1; redirecionar todo o tr&#xE1;fego da porta 22 para a porta 443. Considera-se que a porta 443 n&#xE3;o possua restri&#xE7;&#xF5;es, e que esse tipo de redirecionamento seja permitido na infra-estrutura em que est&#xE1; sendo realizada a instala&#xE7;&#xE3;o.</p>
-<p>Para isso, a seguinte altera&#xE7;&#xE3;o &#xE9; necess&#xE1;ria no arquivo <code>/root/.ssh/config</code>:</p>
-<pre><code>Host github.com
-  Hostname ssh.github.com
-  Port 443
-</code></pre><p>O c&#xF3;digo acima deve ser adicionado no arquivo <code>config</code>. Caso o arquivo n&#xE3;o exista, sugere-se a cria&#xE7;&#xE3;o do arquivo. Maiores informa&#xE7;&#xF5;es podem ser encontradas na <a href="https://help.github.com/articles/using-ssh-over-the-https-port/" target="_blank">documenta&#xE7;&#xE3;o oficial</a> do Github.</p>
 <h3 id="utilizando-vari&#xE1;veis-de-ambiente">Utilizando vari&#xE1;veis de ambiente</h3>
 <p>Antes de inicializar os cont&#xEA;ineres, &#xE9; necess&#xE1;rio que as seguintes vari&#xE1;veis de ambiente sejam configuradas para a instala&#xE7;&#xE3;o inicial:</p>
 <ul>
