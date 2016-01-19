@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Mon Jan 18 2016 20:53:07 GMT+0000 (UTC)"
+        data-revision="Tue Jan 19 2016 18:19:21 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -2151,7 +2151,7 @@ Creating balanceador...
 <p><strong>Aten&#xE7;&#xE3;o</strong>: recomenda-se  que o backup seja armazenado em um volume externo da m&#xE1;quina host do Docker.</p>
 <hr>
 <h1 id="monitoramento">Monitoramento</h1>
-<p>A monitora&#xE7;&#xE3;o da sa&#xFA;de do host &#xE9; feita de maneira externa, utilizando Nagios. Para o monitoramento das inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a>, com informa&#xE7;&#xF5;es mais detalhadas, as seguintes op&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis:</p>
+<p>A monitora&#xE7;&#xE3;o da sa&#xFA;de do host &#xE9; feita de maneira externa, utilizando Nagios. Para o monitoramento das inst&#xE2;ncias da aplica&#xE7;&#xE3;o e <a href="../desenvolvimento/elasticsearch.html">ElasticSearch</a>, com informa&#xE7;&#xF5;es mais detalhadas, as seguintes op&#xE7;&#xF5;es est&#xE3;o dispon&#xED;veis:</p>
 <h2 id="balanceador-de-carga">Balanceador de Carga</h2>
 <p>As estat&#xED;sticas do HAProxy ficam dispon&#xED;veis atrav&#xE9;s da porta de administra&#xE7;&#xE3;o (8080/tcp), no endere&#xE7;o <code>/lb-stats</code>. Por exemplo, em produ&#xE7;&#xE3;o, estas est&#xE3;o dispon&#xED;veis em <code>http://servicos.gov.br:8080/lb-stats</code>.</p>
 <p>Nesta p&#xE1;gina est&#xE3;o contidas algumas estat&#xED;sticas de acesso, em n&#xFA;meros de I/O brutos, bem como de disponibilidade dos servi&#xE7;os gerenciados.</p>
@@ -2195,12 +2195,12 @@ Creating balanceador...
 </code></pre>
 <p>Nele, &#xE9; poss&#xED;vel ver o estado geral da aplica&#xE7;&#xE3;o (<code>status</code>) e do espa&#xE7;o em disco (<code>diskSpace</code>).</p>
 <h2 id="kibana">Kibana</h2>
-<p>Todos os logs gerados pelas aplica&#xE7;&#xF5;es s&#xE3;o redirecionados para o <a href="desenvolvimento/elasticsearch.md">ElasticSearch</a> atrav&#xE9;s do <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash</a>. Eles s&#xE3;o indexados e podem ser auditados, buscados e visualizados atrav&#xE9;s do <a href="https://www.elastic.co/products/kibana" target="_blank">Kibana</a>, que fica dispon&#xED;vel na porta 5601/tcp. Por exemplo, em produ&#xE7;&#xE3;o, a ferramenta est&#xE1; dispon&#xED;vel em <code>http://servicos.gov.br:5601/</code>.</p>
+<p>Todos os logs gerados pelas aplica&#xE7;&#xF5;es s&#xE3;o redirecionados para o <a href="../desenvolvimento/elasticsearch.html">ElasticSearch</a> atrav&#xE9;s do <a href="https://www.elastic.co/products/logstash" target="_blank">Logstash</a>. Eles s&#xE3;o indexados e podem ser auditados, buscados e visualizados atrav&#xE9;s do <a href="https://www.elastic.co/products/kibana" target="_blank">Kibana</a>, que fica dispon&#xED;vel na porta 5601/tcp. Por exemplo, em produ&#xE7;&#xE3;o, a ferramenta est&#xE1; dispon&#xED;vel em <code>http://servicos.gov.br:5601/</code>.</p>
 <hr>
 <h1 id="escalabilidade">Escalabilidade</h1>
 <p>&#xC9; poss&#xED;vel aumentar a capacidade de carga do sistema de duas maneiras:</p>
 <h2 id="aumentando-a-capacidade-do-servidor-vertical">Aumentando a capacidade do servidor (vertical)</h2>
-<p>Servidores est&#xE3;o atualmente provisionados de acordo com a se&#xE7;&#xE3;o &quot;<a href="../desenvolvimento/implantacao-e-execucao.html">Implanta&#xE7;&#xE3;o e execu&#xE7;&#xE3;o</a>&quot;. Para adicionar mais capacidade, &#xE9; necess&#xE1;rio revisar as configura&#xE7;&#xF5;es pertinentes e analisar a performance total novamente (ver: &quot;<a href="performance.md">Performance</a>&quot;).</p>
+<p>Servidores est&#xE3;o atualmente provisionados de acordo com a se&#xE7;&#xE3;o &quot;<a href="../desenvolvimento/implantacao-e-execucao.html">Implanta&#xE7;&#xE3;o e execu&#xE7;&#xE3;o</a>&quot;. Para adicionar mais capacidade, &#xE9; necess&#xE1;rio revisar as configura&#xE7;&#xF5;es pertinentes e analisar a performance total novamente (ver: &quot;<a href="../desenvolvimento/performance.html">Performance</a>&quot;).</p>
 <h2 id="aumentando-a-quantidade-de-servidores-horizontal">Aumentando a quantidade de servidores (horizontal)</h2>
 <p>Para adicionar um servidor de aplica&#xE7;&#xE3;o, ser&#xE1; necess&#xE1;rio:</p>
 <ul>
