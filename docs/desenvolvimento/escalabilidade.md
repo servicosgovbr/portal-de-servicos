@@ -4,7 +4,7 @@
 
 ## Aumentando a capacidade do servidor (vertical)
 
-Servidores estão atualmente provisionados de acordo com a seção "[Implantação e execução](../desenvolvimento/implantacao-e-execucao.md)". Para adicionar mais capacidade, é necessário revisar as configurações pertinentes e analisar a performance total novamente (ver: "[Performance](./performance.md)").
+Servidores estão atualmente provisionados de acordo com a seção "[Implantação e execução](../desenvolvimento/implantacao-e-execucao.md)". Para adicionar mais capacidade, é necessário revisar as configurações pertinentes e analisar a performance total novamente (ver: "[Performance](../desenvolvimento/performance.md)").
 
 ## Aumentando a quantidade de servidores (horizontal)
 
