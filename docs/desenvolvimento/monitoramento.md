@@ -62,6 +62,6 @@ Nele, é possível ver o estado geral da aplicação (`status`) e do espaço em 
 
 Todos os logs gerados pelas aplicações são redirecionados para o [ElasticSearch] através do [Logstash]. Eles são indexados e podem ser auditados, buscados e visualizados através do [Kibana], que fica disponível na porta 5601/tcp. Por exemplo, em produção, a ferramenta está disponível em `http://servicos.gov.br:5601/`.
 
-[ElasticSearch]:/desenvolvimento/elasticsearch.md
+[ElasticSearch]:../desenvolvimento/elasticsearch.md
 [Logstash]:https://www.elastic.co/products/logstash
 [Kibana]:https://www.elastic.co/products/kibana
