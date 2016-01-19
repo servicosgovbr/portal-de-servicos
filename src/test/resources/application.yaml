@@ -54,3 +54,8 @@ pds:
     telefones:
       arquivo-nacional-an: "123"
       banco-central-do-brasil-bcb: "0800 456 789"
+
+fallback:
+  pds:
+    cartas:
+      repositorio: "https://github.com/servicosgovbr/cartas-de-teste.git"
