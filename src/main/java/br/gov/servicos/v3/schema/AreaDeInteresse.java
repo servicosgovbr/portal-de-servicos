@@ -412,7 +412,7 @@ public enum AreaDeInteresse {
     VCGE1_TURISMO("Turismo"),
 
     @XmlEnumValue("Urbanismo")
-    VCGE1_URBANISMO("Urbanismo"),
+    VCGE1_URBANISMO("Urbanismo");
 
     //@XmlEnumValue("Águas")
     //VCGE1_AGUAS("Águas");
