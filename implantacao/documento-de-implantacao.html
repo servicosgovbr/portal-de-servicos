@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Tue Jan 19 2016 18:26:12 GMT+0000 (UTC)"
+        data-revision="Fri Jan 22 2016 14:40:35 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1741,7 +1741,11 @@ Resolving deltas: 100% (77/77), done.
   Hostname ssh.github.com
   Port 443
 </code></pre><p>O c&#xF3;digo acima deve ser adicionado no arquivo <code>config</code>. Caso o arquivo n&#xE3;o exista, sugere-se a cria&#xE7;&#xE3;o do arquivo. Maiores informa&#xE7;&#xF5;es podem ser encontradas na <a href="https://help.github.com/articles/using-ssh-over-the-https-port/" target="_blank">documenta&#xE7;&#xE3;o oficial</a> do Github.</p>
-<h3 id="chaves-ssh">Chaves SSH</h3>
+<p>Para testar a conex&#xE3;o e aceitar o certificado de acesso, utilize o seguinte comando:</p>
+<pre><code>ssh -T git@github.com
+</code></pre><p>O resultado esperado &#xE9; a seguinte mensagem:</p>
+<pre><code>You&apos;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><h3 id="chaves-ssh">Chaves SSH</h3>
 <p>Para o correto funcionamento do Editor de Servi&#xE7;os, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
 <ol>
 <li>Criar uma nova chave SSH, conforme p&#xE1;gina de <a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">SHH Keys</a> do GitHub. A chave criada n&#xE3;o deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail v&#xE1;lido de uma conta existente no GitHub e que o usu&#xE1;rio esteja autorizado a acessar os projetos da <a href="https://github.com/servicosgovbr" target="_blank">organiza&#xE7;&#xE3;o do servicos.gov.br</a>.</li>

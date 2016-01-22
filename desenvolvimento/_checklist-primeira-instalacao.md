@@ -141,6 +141,18 @@ Host github.com
 
 O código acima deve ser adicionado no arquivo `config`. Caso o arquivo não exista, sugere-se a criação do arquivo. Maiores informações podem ser encontradas na [documentação oficial] do Github.
 
+Para testar a conexão e aceitar o certificado de acesso, utilize o seguinte comando:
+
+```
+ssh -T git@github.com
+```
+
+O resultado esperado é a seguinte mensagem:
+
+```
+You've successfully authenticated, but GitHub does not provide shell access.
+```
+
 ### Chaves SSH
 
 Para o correto funcionamento do Editor de Serviços, os seguintes passos são necessários:
