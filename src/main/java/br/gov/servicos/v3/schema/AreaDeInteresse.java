@@ -414,8 +414,8 @@ public enum AreaDeInteresse {
     @XmlEnumValue("Urbanismo")
     VCGE1_URBANISMO("Urbanismo"),
 
-    @XmlEnumValue("Águas")
-    VCGE1_AGUAS("Águas");
+    //@XmlEnumValue("Águas")
+    //VCGE1_AGUAS("Águas");
 
     private final String id;
     private final String value;
