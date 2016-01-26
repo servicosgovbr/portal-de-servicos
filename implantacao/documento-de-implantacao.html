@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Fri Jan 22 2016 14:40:35 GMT+0000 (UTC)"
+        data-revision="Tue Jan 26 2016 12:11:25 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -2067,6 +2067,7 @@ Esse script ir&#xE1; apagar todos os cont&#xEA;ineres e imagens locais do Docker
 <code>sudo su</code></li>
 <li>Ir para o diret&#xF3;rio do docker:
 <code>cd /root/docker/</code></li>
+<li>Ir para o diret&#xF3;rio scripts do docker (<code>cd scripts</code>) e abrir o arquivo <code>portal-de-servicos.default.config</code>. Setar o TOKEN na vari&#xE1;vel <code>PDS_PIWIK_TOKEN</code> (Para acessar o TOKEN entrar em contato com a Coordena&#xE7;&#xE3;o-Geral de Dados e Servi&#xE7;os P&#xFA;blicos Digitais)</li>
 <li>Executar script bash que atualiza as inst&#xE2;ncias do Portal de Servi&#xE7;os e do Editor de Servi&#xE7;os:
 <code>./scripts/update_portal_de_servicos</code></li>
 <li>Para verificar que as atualiza&#xE7;&#xF5;es est&#xE3;o sendo aplicadas corretamente, verificar os logs do Docker. Por exemplo: 
