@@ -9,7 +9,7 @@ if [ ! -d "${SNAP_CACHE_DIR}" ]; then
 fi
 
 echo "Instalando dependências..."
-sudo yum install -y rpm-build python-rsa-3.1.1-5.el6.noarch python-boto deltarpm python-deltarpm
+sudo yum install -y rpm-build python-boto deltarpm python-deltarpm
 
 echo "Importando chave privada GPG..."
 rm -rf ~/.gnupg
