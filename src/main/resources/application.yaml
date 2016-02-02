@@ -36,7 +36,7 @@ pds:
     enabled: false
     url: "https://estatisticas.presidencia.gov.br/"
     token: ""
-    site: 52
+    site: 2
   cartas:
     repositorio: "https://github.com/servicosgovbr/cartas-de-teste.git"
   destaques:
