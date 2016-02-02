@@ -30,9 +30,25 @@ class RobotsTxtController {
                     "Disallow: /%n");
         }
 
+        /* Quando permitido robos de sites de pesquisa, permite apenas o Googlebot (bot do google.com),
+         * o Bingbot (bot do bing.com) e o Teoma (bot do ask.com),e bloqueia os demais robos de pesquisa
+         * para evitar possiveis robos de malwares.
+         * Tambem adiciona o sitemap.xml, arquivo com referencia a todas as URLs do site
+         */
         BaseUrl baseUrl = new BaseUrl(request);
-        return format("Sitemap: %s%n%n" +
-                "User-agent: *%n" +
-                "Disallow:%n", baseUrl.and("/sitemap.xml"));
+        return format("Sitemap: %s %n%n" +
+                "User-agent: Googlebot %n" +
+                "Disallow: %n%n" +
+                "User-agent: Googlebot-Image %n" +
+                "Disallow: %n%n" +
+                "User-agent: Googlebot-News %n" +
+                "Disallow: %n%n" +
+                "User-agent: Bingbot %n" +
+                "Disallow: %n%n" +
+                "User-agent: Teoma %n" +
+                "Disallow: %n%n" +
+                "User-agent: * %n" +
+                "Disallow: /%n",
+                baseUrl.and("/sitemap.xml"));
     }
 }
