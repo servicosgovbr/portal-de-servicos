@@ -218,7 +218,7 @@ export PDS_PIWIK_ENABLED='true'
 export PDS_PIWIK_SITE=2
 export PDS_PIWIK_URL="https://estatisticas.presidencia.gov.br/"
 export PDS_PIWIK_TOKEN='' (Entrar em contato com a Coordenação-Geral de Dados e Serviços Públicos Digitais ou colocar TOKEN próprio)
-export FLAGS_PERMITIR_ROBOS='true'
+export FLAGS_PERMITIR_ROBOS='true' 
 ```
 
 ### Construindo os Contêineres
