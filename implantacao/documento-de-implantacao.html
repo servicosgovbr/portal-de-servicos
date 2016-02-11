@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Thu Feb 11 2016 12:50:35 GMT+0000 (UTC)"
+        data-revision="Thu Feb 11 2016 17:24:47 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1782,9 +1782,25 @@ Resolving deltas: 100% (77/77), done.
 <li><code>export EDS_CARTAS_REPOSITORIO=&apos;git@github.com:servicosgovbr/cartas-de-servico.git&apos;</code></li>
 <li><code>export PDS_CARTAS_REPOSITORIO=&apos;https://github.com/servicosgovbr/cartas-de-servico.git&apos;</code></li>
 </ul>
+<p>Para utiliza&#xE7;&#xE3;o do PIWIK, &#xE9; necess&#xE1;rio antes da inicializa&#xE7;&#xE3;o dos cont&#xEA;iners configurar as seguintes vari&#xE1;veis de ambiente (os valores abaixo s&#xE3;o referentes ao PIWIK do portal de servi&#xE7;os no Minist&#xE9;rio do Planejamento):</p>
+<ul>
+<li><code>export PDS_PIWIK_ENABLED=&apos;true&apos;</code></li>
+<li><code>export PDS_PIWIK_SITE=2</code></li>
+<li><code>export PDS_PIWIK_URL=&quot;https://estatisticas.presidencia.gov.br/&quot;</code></li>
+<li><code>export PDS_PIWIK_TOKEN=&apos;&apos;</code> (Para acessar o TOKEN do portal instalado no Minist&#xE9;rio do Planejamento entrar em contato com a Coordena&#xE7;&#xE3;o-Geral de Dados e Servi&#xE7;os P&#xFA;blicos Digitais. Nos outros casos deve ser utilizado PIWIK e TOKEN pr&#xF3;prios)</li>
+</ul>
+<p>Para habilitar rob&#xF4;s de busca, configurar a seguinte vari&#xE1;vel de ambiente:</p>
+<ul>
+<li><code>export FLAGS_PERMITIR_ROBOS=&apos;true&apos;</code></li>
+</ul>
 <p>Ap&#xF3;s executar esses comandos, precisamos persistir os valores das v&#xE1;riaveis. Devemos criar um arquivo em <code>/etc/profile.d/repositorios.sh</code> com o seguinte conte&#xFA;do:</p>
 <pre><code>export EDS_CARTAS_REPOSITORIO=&apos;git@github.com:servicosgovbr/cartas-de-servico.git&apos;
 export PDS_CARTAS_REPOSITORIO=&apos;https://github.com/servicosgovbr/cartas-de-servico.git&apos;
+export PDS_PIWIK_ENABLED=&apos;true&apos;
+export PDS_PIWIK_SITE=2
+export PDS_PIWIK_URL=&quot;https://estatisticas.presidencia.gov.br/&quot;
+export PDS_PIWIK_TOKEN=&apos;&apos; (Entrar em contato com a Coordena&#xE7;&#xE3;o-Geral de Dados e Servi&#xE7;os P&#xFA;blicos Digitais ou colocar TOKEN pr&#xF3;prio)
+export FLAGS_PERMITIR_ROBOS=&apos;true&apos;
 </code></pre><h3 id="construindo-os-cont&#xEA;ineres">Construindo os Cont&#xEA;ineres</h3>
 <p>Construa e rode os cont&#xEA;ineres:</p>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root/docker

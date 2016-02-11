@@ -198,11 +198,27 @@ Antes de inicializar os contêineres, é necessário que as seguintes variáveis
 - `export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-servico.git'`
 - `export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'`
 
+Para utilização do PIWIK, é necessário antes da inicialização dos contêiners configurar as seguintes variáveis de ambiente (os valores abaixo são referentes ao PIWIK do portal de serviços no Ministério do Planejamento):
+
+- `export PDS_PIWIK_ENABLED='true'`
+- `export PDS_PIWIK_SITE=2`
+- `export PDS_PIWIK_URL="https://estatisticas.presidencia.gov.br/"`
+- `export PDS_PIWIK_TOKEN=''` (Para acessar o TOKEN do portal instalado no Ministério do Planejamento entrar em contato com a Coordenação-Geral de Dados e Serviços Públicos Digitais. Nos outros casos deve ser utilizado PIWIK e TOKEN próprios)
+
+Para habilitar robôs de busca, configurar a seguinte variável de ambiente:
+
+- `export FLAGS_PERMITIR_ROBOS='true'`
+
 Após executar esses comandos, precisamos persistir os valores das váriaveis. Devemos criar um arquivo em `/etc/profile.d/repositorios.sh` com o seguinte conteúdo:
 
 ```
 export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-servico.git'
 export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'
+export PDS_PIWIK_ENABLED='true'
+export PDS_PIWIK_SITE=2
+export PDS_PIWIK_URL="https://estatisticas.presidencia.gov.br/"
+export PDS_PIWIK_TOKEN='' (Entrar em contato com a Coordenação-Geral de Dados e Serviços Públicos Digitais ou colocar TOKEN próprio)
+export FLAGS_PERMITIR_ROBOS='true' 
 ```
 
 ### Construindo os Contêineres
