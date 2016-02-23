@@ -9,7 +9,11 @@ set -e
 set -o pipefail
 
 cd '/root/docker'
+git status
+git diff
+git stash
 git pull --rebase
+git stash pop
 
 export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-teste.git'
 export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-teste.git'
