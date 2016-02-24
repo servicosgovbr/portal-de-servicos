@@ -11,16 +11,6 @@ RequestTTY auto
 RhostsRSAAuthentication no
 StrictHostKeyChecking no
 
-Host alpha
-  Hostname 104.236.231.239
-  User root
-  Port 22
-  IdentityFile ./secrets/id_rsa_alpha
-  IdentityFile /var/snap-ci/repo/id_rsa_alpha
-  LogLevel=quiet
-  UserKnownHostsFile=/dev/null
-  StrictHostKeyChecking=no
-
 Host dev
   Hostname 189.9.150.163
   User root
