@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Wed Feb 24 2016 14:05:09 GMT+0000 (UTC)"
+        data-revision="Mon Feb 29 2016 19:42:38 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1655,25 +1655,39 @@
 <pre><code class="lang-bash">setenforce <span class="hljs-number">0</span>
 </code></pre>
 <ul>
+<li>Verifique se OverlayFS est&#xE1; habilitado:</li>
+</ul>
+<pre><code class="lang-bash">lsmod | grep overlay
+</code></pre>
+<ul>
+<li>Caso n&#xE3;o esteja, habilite o OverlayFS:</li>
+</ul>
+<pre><code class="lang-bash">modprobe overlay
+</code></pre>
+<ul>
 <li>Instale o <a href="http://www.docker.com" target="_blank">Docker</a>:</li>
 </ul>
 <pre><code class="lang-bash">curl <span class="hljs-operator">-s</span>SL https://get.docker.com | sh
 </code></pre>
 <ul>
-<li>Inicie o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a>:</li>
+<li>Inicie o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> com o overlay:</li>
 </ul>
-<pre><code class="lang-bash">systemctl start docker
+<pre><code class="lang-bash">docker daemon --storage-driver=overlay &amp;
 </code></pre>
 <ul>
 <li>Verifique que o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> inicializou corretamente:</li>
 </ul>
-<pre><code class="lang-bash">systemctl status docker
+<pre><code class="lang-bash">docker info
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>&#x25CF; docker.service - Docker Application Container Engine
-   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
-   Active: active (running) since Wed 2016-01-06 17:56:04 UTC; 4s ago
-     Docs: https://docs.docker.com
+<pre><code>Containers: 0
+Images: 0
+Storage Driver: overlay
+ Backing Filesystem: extfs
+Execution Driver: native-0.2
+Logging Driver: json-file
+Kernel Version: 3.19.0-15-generic
+Operating System: Ubuntu 15.04
 </code></pre><ul>
 <li>Verifique que o <a href="http://www.docker.com" target="_blank">Docker</a> consegue baixar e instanciar cont&#xEA;ineres:</li>
 </ul>
@@ -1799,9 +1813,10 @@ export PDS_CARTAS_REPOSITORIO=&apos;https://github.com/servicosgovbr/cartas-de-s
 export PDS_PIWIK_ENABLED=&apos;true&apos;
 export PDS_PIWIK_SITE=2
 export PDS_PIWIK_URL=&quot;https://estatisticas.presidencia.gov.br/&quot;
-export PDS_PIWIK_TOKEN=&apos;&apos; (Entrar em contato com a Coordena&#xE7;&#xE3;o-Geral de Dados e Servi&#xE7;os P&#xFA;blicos Digitais ou colocar TOKEN pr&#xF3;prio)
+export PDS_PIWIK_TOKEN=&apos;&apos; 
 export FLAGS_PERMITIR_ROBOS=&apos;true&apos;
-</code></pre><h3 id="construindo-os-cont&#xEA;ineres">Construindo os Cont&#xEA;ineres</h3>
+</code></pre><p>Ressaltamos que para acessar o TOKEN entrar em contato com a Coordena&#xE7;&#xE3;o-Geral de Dados e Servi&#xE7;os P&#xFA;blicos Digitais.</p>
+<h3 id="construindo-os-cont&#xEA;ineres">Construindo os Cont&#xEA;ineres</h3>
 <p>Construa e rode os cont&#xEA;ineres:</p>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root/docker
 ./build-all <span class="hljs-comment"># caso prefira baixar as imagens do docker hub, omita este passo</span>
@@ -1916,7 +1931,28 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 <p>Caso alguma das verifica&#xE7;&#xF5;es n&#xE3;o tenha sucesso, voc&#xEA; pode verificar o log dos cont&#xEA;ineres utilizando o seguinte comando:</p>
 <pre><code>docker-compose logs
 </code></pre><p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
-<h3 id="instala&#xE7;&#xF5;es-auxiliares">Instala&#xE7;&#xF5;es Auxiliares</h3>
+<p><strong>IMPORTANTE</strong></p>
+<p>Devido a <a href="https://github.com/servicosgovbr/docker/issues/12" target="_blank">Issue #12</a> &#xE9; necess&#xE1;rio realizar na primeira atualiza&#xE7;&#xE3;o executar esses comandos:</p>
+<pre><code>docker-compose stop portal1
+docker-compose kill portal1
+docker rm -f portal1 (Neste comando ocorrer&#xE1; um erro de remo&#xE7;&#xE3;o do container, pode prosseguir com os outros comandos)
+docker-compose up -d portal1
+
+docker-compose stop portal2
+docker-compose kill portal2
+docker rm -f portal2 (Neste comando ocorrer&#xE1; um erro de remo&#xE7;&#xE3;o do container, pode prosseguir com os outros comandos)
+docker-compose up -d portal2
+
+docker-compose stop editor1
+docker-compose kill editor1
+docker rm -f editor1 (Neste comando ocorrer&#xE1; um erro de remo&#xE7;&#xE3;o do container, pode prosseguir com os outros comandos)
+docker-compose up -d editor1
+
+docker-compose stop editor2
+docker-compose kill editor2
+docker rm -f editor2 (Neste comando ocorrer&#xE1; um erro de remo&#xE7;&#xE3;o do container, pode prosseguir com os outros comandos)
+docker-compose up -d editor2
+</code></pre><h3 id="instala&#xE7;&#xF5;es-auxiliares">Instala&#xE7;&#xF5;es Auxiliares</h3>
 <p>Os passos dessa se&#xE7;&#xE3;o devem ser seguidos <strong>apenas</strong> se a m&#xE1;quina utilizada para implanta&#xE7;&#xE3;o j&#xE1; possui a configura&#xE7;&#xE3;o inicial e uma instala&#xE7;&#xE3;o pr&#xE9;via realizada.</p>
 <ul>
 <li>No reposit&#xF3;rio local <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a>, pare e remova os cont&#xEA;ineres:</li>

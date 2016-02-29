@@ -17,31 +17,47 @@ Caso contrário, é preciso realizar as atualizações necessárias antes de con
 setenforce 0
 ```
 
+- Verifique se OverlayFS está habilitado:
+
+```bash
+lsmod | grep overlay
+```
+
+- Caso não esteja, habilite o OverlayFS:
+   
+```bash
+modprobe overlay
+```
+
 - Instale o [Docker]:
 
 ```bash
 curl -sSL https://get.docker.com | sh
 ```
 
-- Inicie o serviço do [Docker]:
+- Inicie o serviço do [Docker] com o overlay:
 
 ```bash
-systemctl start docker
+docker daemon --storage-driver=overlay &
 ```
 
 - Verifique que o serviço do [Docker] inicializou corretamente:
 
 ```bash
-systemctl status docker
+docker info
 ```
 
 O comando acima deve produzir saída similar à seguinte:
 
 ```
-● docker.service - Docker Application Container Engine
-   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
-   Active: active (running) since Wed 2016-01-06 17:56:04 UTC; 4s ago
-     Docs: https://docs.docker.com
+Containers: 0
+Images: 0
+Storage Driver: overlay
+ Backing Filesystem: extfs
+Execution Driver: native-0.2
+Logging Driver: json-file
+Kernel Version: 3.19.0-15-generic
+Operating System: Ubuntu 15.04
 ```
 
 - Verifique que o [Docker] consegue baixar e instanciar contêineres:
@@ -217,9 +233,10 @@ export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servic
 export PDS_PIWIK_ENABLED='true'
 export PDS_PIWIK_SITE=2
 export PDS_PIWIK_URL="https://estatisticas.presidencia.gov.br/"
-export PDS_PIWIK_TOKEN='' (Entrar em contato com a Coordenação-Geral de Dados e Serviços Públicos Digitais ou colocar TOKEN próprio)
+export PDS_PIWIK_TOKEN='' 
 export FLAGS_PERMITIR_ROBOS='true' 
 ```
+Ressaltamos que para acessar o TOKEN entrar em contato com a Coordenação-Geral de Dados e Serviços Públicos Digitais.
 
 ### Construindo os Contêineres
 
@@ -265,6 +282,31 @@ Ocorreu um problema na inicialização do Logspout (que precisa do Logstash roda
 
 A instalação está concluída.
 
+**IMPORTANTE**
+
+Devido a [Issue #12](https://github.com/servicosgovbr/docker/issues/12) é necessário realizar na primeira atualização executar esses comandos:
+
+```
+docker-compose stop portal1
+docker-compose kill portal1
+docker rm -f portal1 (Neste comando ocorrerá um erro de remoção do container, pode prosseguir com os outros comandos)
+docker-compose up -d portal1
+
+docker-compose stop portal2
+docker-compose kill portal2
+docker rm -f portal2 (Neste comando ocorrerá um erro de remoção do container, pode prosseguir com os outros comandos)
+docker-compose up -d portal2
+
+docker-compose stop editor1
+docker-compose kill editor1
+docker rm -f editor1 (Neste comando ocorrerá um erro de remoção do container, pode prosseguir com os outros comandos)
+docker-compose up -d editor1
+
+docker-compose stop editor2
+docker-compose kill editor2
+docker rm -f editor2 (Neste comando ocorrerá um erro de remoção do container, pode prosseguir com os outros comandos)
+docker-compose up -d editor2
+```
 ### Instalações Auxiliares
 
 Os passos dessa seção devem ser seguidos **apenas** se a máquina utilizada para implantação já possui a configuração inicial e uma instalação prévia realizada.
