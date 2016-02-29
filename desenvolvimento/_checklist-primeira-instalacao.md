@@ -284,7 +284,7 @@ A instalação está concluída.
 
 **IMPORTANTE**
 
-Devido a [Issue #12](https://github.com/servicosgovbr/docker/issues/12) é necessário realizar na primeira atualização executar esses comandos:
+Devido a [Issue #12](https://github.com/servicosgovbr/docker/issues/12) é necessário realizar na primeira atualização os seguintes comandos:
 
 ```
 docker-compose stop portal1
