@@ -12,4 +12,4 @@ Para realizar uma atualização	em ambientes hospedados em datacenters do govern
 6. Caso queira atualizar todas as instâncias, executar o script bash:
 `./scripts/update_portal_de_servicos`
 7. Para verificar que as atualizações estão sendo aplicadas corretamente, verificar os logs do Docker. Por exemplo: 
- `docker logs -f Editor1`
+  `docker logs -f Editor1`
