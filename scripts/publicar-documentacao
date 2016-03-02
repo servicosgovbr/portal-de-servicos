@@ -17,7 +17,7 @@ popd
 
 pushd docs
   npm install gitbook-cli
-  ./node_modules/.bin/gitbook build
+  ../node_modules/.bin/gitbook build
 
   rm -rf "${SNAP_CACHE_DIR}/gh-pages/*"
   mv _book/* "${SNAP_CACHE_DIR}/gh-pages/"
