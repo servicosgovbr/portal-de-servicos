@@ -17,28 +17,16 @@ Caso contrário, é preciso realizar as atualizações necessárias antes de con
 setenforce 0
 ```
 
-- Verifique se OverlayFS está habilitado:
-
-```bash
-lsmod | grep overlay
-```
-
-- Caso não esteja, habilite o OverlayFS:
-   
-```bash
-modprobe overlay
-```
-
-- Instale o [Docker]:
+- Instale o [Docker], caso não esteja instalado:
 
 ```bash
 curl -sSL https://get.docker.com | sh
 ```
 
-- Inicie o serviço do [Docker] com o overlay:
+- Inicie o serviço do [Docker] com o Storage Driver escolhido (caso queira alterar o Storage Driver padrão do Docker, pule este passo e execute os passos da próxima seção **Alterando o Storage Driver do Docker**):
 
 ```bash
-docker daemon --storage-driver=overlay &
+systemctl start docker
 ```
 
 - Verifique que o serviço do [Docker] inicializou corretamente:
@@ -57,7 +45,6 @@ Storage Driver: overlay
 Execution Driver: native-0.2
 Logging Driver: json-file
 Kernel Version: 3.19.0-15-generic
-Operating System: Ubuntu 15.04
 ```
 
 - Verifique que o [Docker] consegue baixar e instanciar contêineres:
@@ -280,8 +267,6 @@ Ocorreu um problema na inicialização do Logspout (que precisa do Logstash roda
 
 {% include '../desenvolvimento/_checklist-verificacoes.md' %}
 
-A instalação está concluída.
-
 **IMPORTANTE**
 
 Devido a [Issue #12](https://github.com/servicosgovbr/docker/issues/12) é necessário realizar na primeira atualização os seguintes comandos:
@@ -307,6 +292,47 @@ docker-compose kill editor2
 docker rm -f editor2 (Neste comando ocorrerá um erro de remoção do container, pode prosseguir com os outros comandos)
 docker-compose up -d editor2
 ```
+
+A instalação está concluída.
+
+### Alterando o Storage Driver do Docker
+
+Esta seção é direcionada caso opte por alterar o Storage Driver padrão do Docker. Caso o Docker já esteja instalado e rodando contêineres, é preciso executar o passo abaixo:
+
+- Remova os contêineres e as imagens, depois pare o serviço do Docker e remova a pasta /var/lib/docker/:
+
+```
+docker stop $(docker ps -a -q)
+docker kill $(docker ps -a -q)
+docker rm -f $(docker ps -a -q)
+
+docker rmi $(docker images -a -q)
+
+systemctl stop docker
+
+rm -rf /var/lib/docker/
+```
+
+Agora para trocar o Storage Driver, execute os seguintes passos:
+
+- Verifique se Storage Driver escolhido (overlay, aufs, devicemapper e etc) está habilitado:
+
+```bash
+lsmod | grep overlay
+```
+
+- Caso não esteja, habilite o Storage Driver escolhido:
+   
+```bash
+modprobe overlay
+```
+
+- Execute o serviço novamente, com o novo Storage Driver escolhido (overlay, aufs, devicemapper e etc):
+
+```bash
+docker daemon --storage-driver=overlay &
+```
+
 ### Instalações Auxiliares
 
 Os passos dessa seção devem ser seguidos **apenas** se a máquina utilizada para implantação já possui a configuração inicial e uma instalação prévia realizada.
