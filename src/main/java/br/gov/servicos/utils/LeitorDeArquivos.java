@@ -38,7 +38,7 @@ public class LeitorDeArquivos {
         }
     }
 
-    public Optional<String> ler(URI uri) throws MalformedURLException, IOException {
+    public Optional<String> ler(URI uri) throws IOException {
         try (InputStream in = uri.toURL().openStream()) {
             return of(StreamUtils.copyToString(in, defaultCharset()));
         }
