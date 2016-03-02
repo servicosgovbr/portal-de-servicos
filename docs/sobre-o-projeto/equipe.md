@@ -22,6 +22,8 @@ O projeto do Portal de Serviços conta com duas equipes multi-disciplinares e co
 * [Sergio Nascimento](mailto:sergio.nascimento@sdh.gov.br)
 * [Silvia Belarmino](mailto:silvia.belarmino@planejamento.gov.br)
 * [Vitor Isaac](mailto:vitor.souza@planejamento.gov.br)
+* [Ricardo de Lima](mailto:ricardo.dlima@planejamento.gov.br)
+* [Guilherme Borges](mailto:guilherme.borges@planejamento.gov.br)
 
 ### [Ministério da Previdência Social](http://mps.gov.br)
 
