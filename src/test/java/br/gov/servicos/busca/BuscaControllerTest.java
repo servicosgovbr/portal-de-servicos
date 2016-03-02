@@ -67,7 +67,7 @@ public class BuscaControllerTest {
     public void retornaSugestoesDeBusca() throws Exception {
         doReturn(singletonList(PAGINA_ESTATICA_DE_TEMATICA.withNome("Seguro-desemprego")))
                 .when(buscador)
-                .buscaSemelhante(ofNullable("empreg"));
+                .buscaSemelhante(of("empreg"));
 
         String sugestao = controller.sugestao("empreg");
 
