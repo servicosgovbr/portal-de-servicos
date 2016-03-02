@@ -34,10 +34,6 @@ public class PiwikClientTest {
     @Mock(answer = RETURNS_SMART_NULLS)
     RestTemplate restTemplate;
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
     @Test
     public void deveRetornarListaVaziaQuandoDesabilitado() throws Exception {
         PiwikClient piwikClient = new PiwikClient(restTemplate, new PiwikConfig()
