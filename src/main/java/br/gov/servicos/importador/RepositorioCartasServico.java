@@ -37,8 +37,7 @@ public class RepositorioCartasServico {
     @Autowired
     public RepositorioCartasServico(@Value("${pds.cartas.repositorio}") String urlRepositorio,
                                     @Value("${fallback.pds.cartas.repositorio}") String urlFallbackRepositorio) {
-        String url = isEmpty(urlRepositorio) ? urlFallbackRepositorio : urlRepositorio;
-        this.urlRepositorio = url;
+        this.urlRepositorio = isEmpty(urlRepositorio) ? urlFallbackRepositorio : urlRepositorio;
     }
 
     @SneakyThrows
