@@ -15,8 +15,8 @@ pushd "${SNAP_CACHE_DIR}/gh-pages"
   rm -rf *
 popd
 
+npm install gitbook-cli
 pushd docs
-  npm install gitbook-cli
   ../node_modules/.bin/gitbook build
 
   rm -rf "${SNAP_CACHE_DIR}/gh-pages/*"
