@@ -174,25 +174,4 @@
       background-color: $branco;
     }
   }
-
-  #barra-opiniao {
-    background-color: $azul-claro;
-    padding-left: $mobile-margin-left;
-    padding-right: $mobile-margin-right;
-
-    p {
-      @include outer-container(73.80em);
-      font-size: $baseFontSize * 0.8125;
-      padding: 5px 0 5px 0;
-      margin-bottom: 0;
-      color: $branco;
-      line-height: $baseLineHeight + 0.2em;
-
-      a {
-        color: $branco;
-        font-family: open_sansbold;
-        text-decoration: underline;
-      }
-    }
-  }
 }

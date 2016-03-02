@@ -12,19 +12,6 @@ endpoints:
 server:
   port: ${port:8080}
 
-mail:
-  protocol: smtp
-  host: localhost
-  port: 2500
-  timeout: 5000
-  smtp:
-    auth: false
-    starttls: false
-  from: nao-responda@servicos.gov.br
-  to: servicos@planejamento.gov.br
-  username:
-  password:
-
 flags:
   importar.automaticamente: false
   permitir.robos: false

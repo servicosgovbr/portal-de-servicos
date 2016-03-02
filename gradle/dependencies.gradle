@@ -17,7 +17,6 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web:1.2.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf:1.2.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-actuator:1.2.3.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-mail:1.2.3.RELEASE'
     compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch:1.2.3.RELEASE'
     compile 'org.springframework:spring-context-support:4.1.6.RELEASE'
 

@@ -2,7 +2,6 @@ package br.gov.servicos.fixtures;
 
 import br.gov.servicos.cms.PaginaEstatica;
 import br.gov.servicos.cms.PaginaTematica;
-import br.gov.servicos.metricas.Opiniao;
 import br.gov.servicos.v3.schema.OrgaoXML;
 import br.gov.servicos.v3.schema.ServicoXML;
 
@@ -36,14 +35,6 @@ public class TestData {
             .withTipoConteudo("pagina-tematica")
             .withNome("Página órgão")
             .withConteudo("Descrição conteúdo");
-
-
-    public static final Opiniao OPINIAO = new Opiniao()
-            .withUrl("/servico/foo")
-            .withQueryString("bar=baz")
-            .withTimestamp(123L)
-            .withConteudoEncontrado(true)
-            .withMensagem("Otimo site");
 
     public static final List<OrgaoXML> ORGAOS = unmodifiableList(asList(
             new OrgaoXML().withId("arquivo-nacional-an"),
