@@ -20,7 +20,7 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.Locale;
 
-import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static java.util.Optional.ofNullable;
 import static javax.xml.bind.annotation.XmlAccessType.NONE;
 import static lombok.AccessLevel.PRIVATE;
@@ -28,7 +28,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_
 import static org.springframework.data.elasticsearch.annotations.FieldType.Object;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
 
-@Document(indexName = IMPORTADOR, type = "servico")
+@Document(indexName = PORTAL_DE_SERVICOS_INDEX, type = "servico")
 @Data
 @Wither
 @NoArgsConstructor

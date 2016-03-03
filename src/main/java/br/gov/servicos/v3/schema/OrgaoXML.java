@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.*;
 import java.util.Locale;
 import java.util.Optional;
 
-import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
@@ -31,7 +31,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @NoArgsConstructor
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Orgao")
-@Document(indexName = IMPORTADOR, type = "orgao")
+@Document(indexName = PORTAL_DE_SERVICOS_INDEX, type = "orgao")
 public class OrgaoXML {
 
     @XmlAttribute(name = "id", required = true)

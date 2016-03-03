@@ -17,8 +17,7 @@ O Portal de Serviços disponibiliza informações de saúde através do endereç
   "status": "UP",
   "portalDeServicosIndex": {
     "status": "UP",
-    "pds-importador": "ok (622 docs)",
-    "pds-persistente": "ok (0 docs)"
+    "portal-de-servicos": "ok (622 docs)"
   },
   "elasticSearch": {
     "status": "GREEN",

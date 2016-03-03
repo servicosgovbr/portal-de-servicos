@@ -10,8 +10,7 @@ import org.springframework.boot.actuate.health.Status;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.query.SearchQuery;
 
-import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
-import static br.gov.servicos.config.PortalDeServicosIndex.PERSISTENTE;
+import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.BDDMockito.given;
@@ -34,38 +33,32 @@ public class PortalDeServicosIndexHealthIndicatorTest {
     public void retornaUpParaAmbosIndicesCriados() throws Exception {
         given(es.count(any(SearchQuery.class))).willReturn(42L);
 
-        given(es.indexExists(IMPORTADOR)).willReturn(true);
-        given(es.indexExists(PERSISTENTE)).willReturn(true);
+        given(es.indexExists(PORTAL_DE_SERVICOS_INDEX)).willReturn(true);
 
         Health health = indicator.health();
 
         assertThat(health.getStatus(), is(Status.UP));
-        assertThat(health.getDetails().get(IMPORTADOR), is("ok (42 docs)"));
-        assertThat(health.getDetails().get(PERSISTENTE), is("ok (42 docs)"));
+        assertThat(health.getDetails().get(PORTAL_DE_SERVICOS_INDEX), is("ok (42 docs)"));
     }
 
     @Test
     public void retornaDownParaAmbosIndicesNaoCriados() throws Exception {
-        given(es.indexExists(IMPORTADOR)).willReturn(false);
-        given(es.indexExists(PERSISTENTE)).willReturn(false);
+        given(es.indexExists(PORTAL_DE_SERVICOS_INDEX)).willReturn(false);
 
         Health health = indicator.health();
 
         assertThat(health.getStatus(), is(Status.DOWN));
-        assertThat(health.getDetails().get(IMPORTADOR), is("missing"));
-        assertThat(health.getDetails().get(PERSISTENTE), is("missing"));
+        assertThat(health.getDetails().get(PORTAL_DE_SERVICOS_INDEX), is("missing"));
     }
 
     @Test
     public void retornaDownParaExcecoes() throws Exception {
-        given(es.indexExists(IMPORTADOR)).willReturn(false);
-        given(es.indexExists(PERSISTENTE)).willThrow(new RuntimeException("boom"));
+        given(es.indexExists(PORTAL_DE_SERVICOS_INDEX)).willThrow(new RuntimeException("boom"));
 
         Health health = indicator.health();
 
         assertThat(health.getStatus(), is(Status.DOWN));
-        assertThat(health.getDetails().get(PERSISTENTE), is("exception"));
-        assertThat(health.getDetails().get(PERSISTENTE), is("exception"));
+        assertThat(health.getDetails().get(PORTAL_DE_SERVICOS_INDEX), is("exception"));
         assertThat(health.getDetails().get("error"), is("java.lang.RuntimeException: boom"));
     }
 

@@ -17,7 +17,7 @@ import java.text.ParseException;
 import java.util.Locale;
 
 import static br.gov.servicos.TipoPagina.SERVICO;
-import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
 import static org.springframework.data.elasticsearch.annotations.FieldType.String;
@@ -25,7 +25,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @Value
 @Wither
 @AllArgsConstructor(access = PRIVATE)
-@Document(indexName = IMPORTADOR, type = "pagina-estatica")
+@Document(indexName = PORTAL_DE_SERVICOS_INDEX, type = "pagina-estatica")
 public class PaginaEstatica {
 
     @Id

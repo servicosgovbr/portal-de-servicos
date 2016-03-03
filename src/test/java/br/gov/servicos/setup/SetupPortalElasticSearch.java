@@ -21,8 +21,7 @@ public class SetupPortalElasticSearch {
 
     @SneakyThrows
     public void setup() {
-        es.deleteIndex(PortalDeServicosIndex.IMPORTADOR);
-        es.deleteIndex(PortalDeServicosIndex.PERSISTENTE);
+        es.deleteIndex(PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX);
 
         portalIndex.recriar();
     }

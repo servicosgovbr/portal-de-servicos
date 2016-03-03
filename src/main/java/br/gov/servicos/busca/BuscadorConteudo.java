@@ -21,7 +21,7 @@ import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static br.gov.servicos.TipoPagina.*;
-import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.toList;
@@ -77,7 +77,7 @@ public class BuscadorConteudo {
         return termo.map(criaQuery)
                 .map(q -> et.query(
                         new NativeSearchQueryBuilder()
-                                .withIndices(IMPORTADOR)
+                                .withIndices(PORTAL_DE_SERVICOS_INDEX)
                                 .withTypes(ORGAO.getNome(), PAGINA_TEMATICA.getNome(), SERVICO.getNome())
                                 .withFields("id", "tipoConteudo", "nome", "conteudo", "descricao")
                                 .withQuery(q)

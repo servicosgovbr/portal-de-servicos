@@ -8,8 +8,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Component;
 
-import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
-import static br.gov.servicos.config.PortalDeServicosIndex.PERSISTENTE;
+import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static java.lang.String.format;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -28,26 +27,19 @@ public class PortalDeServicosIndexHealthIndicator implements HealthIndicator {
     public Health health() {
         Health.Builder health = Health.unknown();
 
-        health = indice(health, IMPORTADOR);
-        health = indice(health, PERSISTENTE);
+        try {
+            if (es.indexExists(PORTAL_DE_SERVICOS_INDEX)) {
+                long count = es.count(new NativeSearchQueryBuilder().withIndices(PORTAL_DE_SERVICOS_INDEX).build());
+                health = health.up().withDetail(PORTAL_DE_SERVICOS_INDEX, format("ok (%d docs)", count));
+            } else {
+                health = health.down().withDetail(PORTAL_DE_SERVICOS_INDEX, "missing");
+            }
+
+        } catch (Exception e) {
+            health = health.down().withDetail(PORTAL_DE_SERVICOS_INDEX, "exception").withException(e);
+        }
 
         return health.build();
     }
 
-    private Health.Builder indice(Health.Builder health, String indice) {
-        Health.Builder result = health;
-        try {
-
-            if (es.indexExists(indice)) {
-                long count = es.count(new NativeSearchQueryBuilder().withIndices(indice).build());
-                result = health.up().withDetail(indice, format("ok (%d docs)", count));
-            } else {
-                result = health.down().withDetail(indice, "missing");
-            }
-            return result;
-
-        } catch (Exception e) {
-            return result.down().withDetail(indice, "exception").withException(e);
-        }
-    }
 }

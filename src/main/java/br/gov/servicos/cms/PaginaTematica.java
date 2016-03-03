@@ -21,7 +21,7 @@ import java.text.ParseException;
 import java.util.Locale;
 
 import static br.gov.servicos.TipoPagina.SERVICO;
-import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
+import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static javax.xml.bind.annotation.XmlAccessType.NONE;
 import static lombok.AccessLevel.PRIVATE;
 import static org.springframework.data.elasticsearch.annotations.FieldIndex.not_analyzed;
@@ -30,7 +30,7 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Strin
 @Value
 @Wither
 @AllArgsConstructor(access = PRIVATE)
-@Document(indexName = IMPORTADOR, type = "pagina-tematica")
+@Document(indexName = PORTAL_DE_SERVICOS_INDEX, type = "pagina-tematica")
 @XmlAccessorType(NONE)
 @XmlType(name = "PaginaTematica")
 public class PaginaTematica {

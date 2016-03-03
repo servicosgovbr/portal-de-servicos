@@ -20,8 +20,7 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(makeFinal = true, level = PRIVATE)
 public class PortalDeServicosIndex {
 
-    public static final String IMPORTADOR = "pds-importador";
-    public static final String PERSISTENTE = "pds-persistente";
+    public static final String PORTAL_DE_SERVICOS_INDEX = "portal-de-servicos";
 
     private static final String SETTINGS = "/elasticsearch/settings.json";
 
@@ -52,7 +51,6 @@ public class PortalDeServicosIndex {
     }, allEntries = true)
     public void recriar() throws IOException {
         recriarIndiceImportador();
-        criarIndicePersistenteSeNaoExistir();
 
         es.putMapping(OrgaoXML.class);
         es.putMapping(ServicoXML.class);
@@ -60,16 +58,11 @@ public class PortalDeServicosIndex {
         es.putMapping(PaginaTematica.class);
     }
 
-    private void criarIndicePersistenteSeNaoExistir() throws IOException {
-        if (!es.indexExists(PERSISTENTE))
-            es.createIndex(PERSISTENTE, settings());
-    }
-
     private void recriarIndiceImportador() throws IOException {
-        if (es.indexExists(IMPORTADOR)) {
-            es.deleteIndex(IMPORTADOR);
+        if (es.indexExists(PORTAL_DE_SERVICOS_INDEX)) {
+            es.deleteIndex(PORTAL_DE_SERVICOS_INDEX);
         }
-        es.createIndex(IMPORTADOR, settings());
+        es.createIndex(PORTAL_DE_SERVICOS_INDEX, settings());
     }
 
 }

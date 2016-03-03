@@ -9,8 +9,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 
-import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
-import static br.gov.servicos.config.PortalDeServicosIndex.PERSISTENTE;
+import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static lombok.AccessLevel.PRIVATE;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
@@ -34,42 +33,25 @@ public class PortalDeServicosIndexTest {
     public void deveCriarIndicePDSImportadorQuandoNaoExiste() throws Exception {
         esConfig.recriar();
 
-        verify(es, never()).deleteIndex(eq(IMPORTADOR));
-        verify(es).createIndex(eq(IMPORTADOR), anyString());
+        verify(es, never()).deleteIndex(eq(PORTAL_DE_SERVICOS_INDEX));
+        verify(es).createIndex(eq(PORTAL_DE_SERVICOS_INDEX), anyString());
     }
 
     @Test
     public void deveDeletarECriarIndicePDSImportadorQuandoExistir() throws Exception {
         doReturn(true)
                 .when(es)
-                .indexExists(IMPORTADOR);
+                .indexExists(PORTAL_DE_SERVICOS_INDEX);
 
         esConfig.recriar();
 
-        verify(es).deleteIndex(eq(IMPORTADOR));
-        verify(es).createIndex(eq(IMPORTADOR), anyString());
+        verify(es).deleteIndex(eq(PORTAL_DE_SERVICOS_INDEX));
+        verify(es).createIndex(eq(PORTAL_DE_SERVICOS_INDEX), anyString());
     }
 
     @Test
     public void deveAdicionarMapeamentos() throws Exception {
         esConfig.recriar();
         verify(es).putMapping(ServicoXML.class);
-    }
-
-    @Test
-    public void deveCriarIndicePDSPersistenteQuandoNaoExiste() throws Exception {
-        esConfig.recriar();
-        verify(es).createIndex(eq(PERSISTENTE), anyString());
-    }
-
-    @Test
-    public void naoDeveCriarIndicePDSPersistenteSeExistir() throws Exception {
-        doReturn(true)
-                .when(es)
-                .indexExists(PERSISTENTE);
-
-        esConfig.recriar();
-
-        verify(es, never()).createIndex(eq(PERSISTENTE), anyString());
     }
 }

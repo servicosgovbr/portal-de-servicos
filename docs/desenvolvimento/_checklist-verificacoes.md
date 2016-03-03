@@ -79,8 +79,7 @@ O comando acima deve produzir saída similar à seguinte:
   "status": "UP",
   "portalDeServicosIndex": {
     "status": "UP",
-    "pds-importador": "ok (622 docs)",
-    "pds-persistente": "ok (0 docs)"
+    "portal-de-servicos": "ok (622 docs)"
   },
   "elasticSearch": {
     "status": "GREEN",

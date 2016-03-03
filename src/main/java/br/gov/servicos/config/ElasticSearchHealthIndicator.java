@@ -12,8 +12,7 @@ import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.stereotype.Component;
 
-import static br.gov.servicos.config.PortalDeServicosIndex.IMPORTADOR;
-import static br.gov.servicos.config.PortalDeServicosIndex.PERSISTENTE;
+import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static lombok.AccessLevel.PRIVATE;
 import static org.elasticsearch.action.admin.cluster.health.ClusterHealthStatus.GREEN;
 
@@ -31,7 +30,7 @@ public class ElasticSearchHealthIndicator implements HealthIndicator {
     @Override
     public Health health() {
         try {
-            ClusterHealthRequest request = new ClusterHealthRequest(IMPORTADOR, PERSISTENTE);
+            ClusterHealthRequest request = new ClusterHealthRequest(PORTAL_DE_SERVICOS_INDEX);
             ClusterHealthResponse response = client.cluster().health(request).actionGet();
 
             Health.Builder health = response.getStatus() != GREEN ? Health.down() : Health.up();
