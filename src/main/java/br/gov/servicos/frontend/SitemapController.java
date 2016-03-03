@@ -23,9 +23,12 @@ import static lombok.AccessLevel.PRIVATE;
 public class SitemapController {
 
     ServicoRepository servicos;
+
     OrgaoRepository orgaos;
-    private PaginaTematicaRepository paginasTematicas;
-    private PaginaEstaticaRepository paginasEstaticas;
+
+    PaginaTematicaRepository paginasTematicas;
+
+    PaginaEstaticaRepository paginasEstaticas;
 
     @Autowired
     SitemapController(ServicoRepository servicos,

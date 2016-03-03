@@ -16,8 +16,7 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class CacheHealthIndicator implements HealthIndicator {
 
-
-    private CacheManager cacheManager;
+    CacheManager cacheManager;
 
     @Autowired
     public CacheHealthIndicator(CacheManager cacheManager) {

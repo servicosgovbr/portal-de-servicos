@@ -21,11 +21,14 @@ import java.util.Map;
 public class Importador {
 
     RepositorioCartasServico repositorioCartasServico;
-    ImportadorServicos servicos;
-    ImportadorParaPaginasEstaticas estaticas;
-    ImportadorParaPaginasTematicas tematicas;
-    ImportadorParaPaginasDeOrgao orgaos;
 
+    ImportadorServicos servicos;
+
+    ImportadorParaPaginasEstaticas estaticas;
+
+    ImportadorParaPaginasTematicas tematicas;
+
+    ImportadorParaPaginasDeOrgao orgaos;
 
     @Autowired
     public Importador(RepositorioCartasServico repositorioCartasServico,

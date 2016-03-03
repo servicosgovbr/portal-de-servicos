@@ -26,9 +26,12 @@ class IndexController {
     private static final int SERVICOS_DESTACADOS = 8;
 
     ServicosEmDestaque destaques;
-    private AreasDeInteresseEmDestaque areasDestaque;
+
+    AreasDeInteresseEmDestaque areasDestaque;
+
     OrgaoRepositoryUtil orgaos;
-    private Slugify slugify;
+
+    Slugify slugify;
 
     @Autowired
     IndexController(ServicosEmDestaque servicosEmDestaque, AreasDeInteresseEmDestaque areasDestaque, OrgaoRepositoryUtil orgaos, Slugify slugify) {

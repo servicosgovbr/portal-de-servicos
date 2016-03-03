@@ -24,8 +24,10 @@ public class Siorg {
     private static final String BASE_URL = "http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/";
 
     RestTemplate restTemplate;
+
     Slugify slugify;
-    private OrgaoUtils orgaoUtils;
+
+    OrgaoUtils orgaoUtils;
 
     @Autowired
     public Siorg(RestTemplate restTemplate, Slugify slugify, OrgaoUtils orgaoUtils) {

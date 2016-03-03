@@ -25,19 +25,19 @@ import static java.util.stream.Collectors.toList;
 @Controller
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 
-public class CartasDePDFCOntroller {
+public class CartasEmPdfController {
 
-    ServicoRepository servicoRepository;
+    ServicoRepository servicos;
 
     @Autowired
-    public CartasDePDFCOntroller(ServicoRepository servicoRepository) {
-        this.servicoRepository = servicoRepository;
+    public CartasEmPdfController(ServicoRepository servicos) {
+        this.servicos = servicos;
     }
 
     @RequestMapping(value = "/carta/{id}", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
     @ResponseBody
     public Carta carta(@PathVariable("id") OrgaoXML orgaoXML) {
-        List<String> servicos = servicoRepository.findByOrgao(orgaoXML)
+        List<String> servicos = this.servicos.findByOrgao(orgaoXML)
                 .stream()
                 .map(ServicoXML::getXml)
                 .collect(toList());
@@ -53,6 +53,7 @@ public class CartasDePDFCOntroller {
     @NoArgsConstructor
     public class Carta {
         String xmlOrgao;
+
         List<String> xmlServicos;
     }
 

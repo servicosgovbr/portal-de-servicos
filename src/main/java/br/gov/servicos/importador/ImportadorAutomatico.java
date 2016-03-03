@@ -17,6 +17,7 @@ import static lombok.AccessLevel.PRIVATE;
 class ImportadorAutomatico {
 
     Importador importador;
+
     boolean flag;
 
     @Autowired

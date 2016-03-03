@@ -21,9 +21,12 @@ import static java.util.stream.Collectors.toCollection;
 @Component
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class OrgaoRepositoryUtil {
+
     ServicoRepository servicos;
+
     OrgaoRepository orgaoRepository;
-    private Siorg siorg;
+
+    Siorg siorg;
 
     @Autowired
     OrgaoRepositoryUtil(ServicoRepository servicos, OrgaoRepository orgaoRepository, Siorg siorg) {

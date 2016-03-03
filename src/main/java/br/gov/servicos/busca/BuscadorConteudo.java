@@ -20,7 +20,7 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-import static br.gov.servicos.TipoPagina.*;
+import static br.gov.servicos.cms.TipoPagina.*;
 import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static java.lang.Integer.MAX_VALUE;
 import static java.util.Collections.emptyList;

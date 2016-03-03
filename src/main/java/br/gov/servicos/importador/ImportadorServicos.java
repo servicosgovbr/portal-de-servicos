@@ -29,9 +29,13 @@ import static lombok.AccessLevel.PRIVATE;
 public class ImportadorServicos {
 
     PortalDeServicosIndex indices;
+
     ServicoRepository servicoRepository;
+
     Siorg siorg;
+
     Slugify slugify;
+
     LeitorDeArquivos leitorDeArquivos;
 
     @Autowired

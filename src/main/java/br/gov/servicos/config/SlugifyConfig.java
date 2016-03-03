@@ -10,6 +10,7 @@ import java.util.Collections;
 
 @Configuration
 public class SlugifyConfig {
+
     @Bean
     public Slugify slugify() throws IOException {
         return new Slugify();

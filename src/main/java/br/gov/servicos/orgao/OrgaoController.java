@@ -23,20 +23,22 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class OrgaoController {
 
-    OrgaoRepository orgaoRepository;
-    OrgaoRepositoryUtil orgaosRepositoryUtil;
+    OrgaoRepository orgaos;
+
+    OrgaoRepositoryUtil orgaoUtils;
+
     ServicoRepository servicos;
 
     @Autowired
-    OrgaoController(OrgaoRepository orgaoRepository, OrgaoRepositoryUtil orgaosRepositoryUtil, ServicoRepository servicos) {
-        this.orgaoRepository = orgaoRepository;
-        this.orgaosRepositoryUtil = orgaosRepositoryUtil;
+    OrgaoController(OrgaoRepository orgaos, OrgaoRepositoryUtil orgaoUtils, ServicoRepository servicos) {
+        this.orgaos = orgaos;
+        this.orgaoUtils = orgaoUtils;
         this.servicos = servicos;
     }
 
     @RequestMapping("/orgaos")
     ModelAndView orgaos() {
-        return new ModelAndView("orgaos", "orgaos", orgaosRepositoryUtil.findAll());
+        return new ModelAndView("orgaos", "orgaos", orgaoUtils.findAll());
     }
 
     @RequestMapping("/orgao/{id}")

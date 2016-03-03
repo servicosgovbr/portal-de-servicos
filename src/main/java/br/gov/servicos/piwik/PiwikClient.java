@@ -21,6 +21,7 @@ import static org.springframework.web.util.UriComponentsBuilder.fromHttpUrl;
 public class PiwikClient {
 
     RestTemplate restTemplate;
+
     PiwikConfig config;
 
     @Autowired

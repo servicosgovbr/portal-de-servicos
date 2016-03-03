@@ -15,7 +15,7 @@ import java.io.File;
 import java.io.StringReader;
 import java.util.stream.Stream;
 
-import static br.gov.servicos.TipoPagina.ORGAO;
+import static br.gov.servicos.cms.TipoPagina.ORGAO;
 import static java.util.stream.Collectors.toList;
 import static javax.xml.bind.JAXB.unmarshal;
 import static lombok.AccessLevel.PRIVATE;
@@ -25,9 +25,12 @@ import static lombok.AccessLevel.PRIVATE;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 class ImportadorParaPaginasDeOrgao {
 
-    private Slugify slugify;
+    Slugify slugify;
+
     ConteudoParser parser;
+
     OrgaoRepository orgaoRepository;
+
     LeitorDeArquivos leitorDeArquivos;
 
     @Autowired

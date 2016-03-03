@@ -15,6 +15,7 @@ import static org.jsoup.Jsoup.parse;
 @Component
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class ConteudoParser {
+
     Markdown markdown;
 
     @Autowired

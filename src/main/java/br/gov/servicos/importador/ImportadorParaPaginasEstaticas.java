@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.util.stream.Stream;
 
-import static br.gov.servicos.TipoPagina.PAGINA_ESTATICA;
+import static br.gov.servicos.cms.TipoPagina.PAGINA_ESTATICA;
 import static java.util.stream.Collectors.toList;
 import static lombok.AccessLevel.PRIVATE;
 
@@ -23,6 +23,7 @@ import static lombok.AccessLevel.PRIVATE;
 public class ImportadorParaPaginasEstaticas {
 
     PaginaEstaticaRepository repository;
+
     ConteudoParser parser;
 
     @Autowired

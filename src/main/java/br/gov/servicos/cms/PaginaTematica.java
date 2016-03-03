@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
 import java.text.ParseException;
 import java.util.Locale;
 
-import static br.gov.servicos.TipoPagina.SERVICO;
+import static br.gov.servicos.cms.TipoPagina.SERVICO;
 import static br.gov.servicos.config.PortalDeServicosIndex.PORTAL_DE_SERVICOS_INDEX;
 import static javax.xml.bind.annotation.XmlAccessType.NONE;
 import static lombok.AccessLevel.PRIVATE;

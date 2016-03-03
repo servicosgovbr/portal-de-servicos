@@ -22,6 +22,7 @@ import static lombok.AccessLevel.PRIVATE;
 class AreaDeInteresseController {
 
     ServicoRepository servicos;
+
     Markdown markdown;
 
     @Autowired

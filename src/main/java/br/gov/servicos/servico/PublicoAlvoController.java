@@ -28,6 +28,7 @@ import static lombok.AccessLevel.PRIVATE;
 class PublicoAlvoController {
 
     ServicoRepository servicos;
+
     Slugify slugify;
 
     @Autowired

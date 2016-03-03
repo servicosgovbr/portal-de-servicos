@@ -35,8 +35,9 @@ public class RepositorioCartasServico {
     File caminhoLocal;
 
     @Autowired
-    public RepositorioCartasServico(@Value("${pds.cartas.repositorio}") String urlRepositorio,
-                                    @Value("${fallback.pds.cartas.repositorio}") String urlFallbackRepositorio) {
+    public RepositorioCartasServico(
+            @Value("${pds.cartas.repositorio}") String urlRepositorio,
+            @Value("${fallback.pds.cartas.repositorio}") String urlFallbackRepositorio) {
         this.urlRepositorio = isEmpty(urlRepositorio) ? urlFallbackRepositorio : urlRepositorio;
     }
 
