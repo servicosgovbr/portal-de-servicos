@@ -1,5 +1,17 @@
+buildscript {
+    repositories {
+        maven { url 'http://repo.spring.io/plugins-release' }
+    }
+
+    dependencies {
+        classpath 'org.springframework.build.gradle:propdeps-plugin:0.0.7'
+    }
+}
+
 apply plugin: 'java'
 apply plugin: 'spring-boot'
+apply plugin: 'propdeps'
+apply plugin: 'propdeps-idea'
 apply plugin: 'idea'
 apply plugin: 'project-report'
 apply plugin: 'jacoco'
