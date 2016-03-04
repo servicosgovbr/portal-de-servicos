@@ -21,6 +21,8 @@ import java.nio.file.Files;
 
 import static lombok.AccessLevel.PRIVATE;
 import static org.eclipse.jgit.api.ResetCommand.ResetType.HARD;
+import static org.eclipse.jgit.lib.Constants.MASTER;
+import static org.eclipse.jgit.lib.Constants.R_HEADS;
 import static org.eclipse.jgit.merge.MergeStrategy.THEIRS;
 import static org.springframework.util.StringUtils.isEmpty;
 
@@ -42,12 +44,43 @@ public class RepositorioCartasServico {
     }
 
     @SneakyThrows
-    public void prepararRepositorio() {
+    public boolean contemAtualizacoes() {
         if (caminhoLocal == null) {
             caminhoLocal = clonarRepositorio(criarDiretorioTemporario());
             caminhoLocal.deleteOnExit();
-        } else {
-            atualizarRepositorio();
+            return true;
+
+        }
+
+        log.debug("Atualizando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
+        try (Git repositorio = Git.open(caminhoLocal)) {
+            String oldHead = repositorio.getRepository().getRef(R_HEADS + MASTER).getObjectId().getName();
+
+            PullResult result = repositorio.pull()
+                    .setProgressMonitor(new LogstashProgressMonitor(log))
+                    .setStrategy(THEIRS)
+                    .call();
+
+            if (!result.isSuccessful()) {
+                log.error("Erro ao atualizar repositório: {}", result);
+                return false;
+            }
+
+            String head = repositorio.reset()
+                    .setMode(HARD)
+                    .setRef("refs/remotes/origin/master")
+                    .call()
+                    .getObjectId()
+                    .getName();
+
+            if (oldHead.equals(head)) {
+                log.info("Repositório de cartas de serviço em {} já está na versão mais recente: {}", caminhoLocal, head);
+                return false;
+
+            }
+
+            log.info("Repositório de cartas de serviço em {} atualizado da versão {} para {}", caminhoLocal, oldHead, head);
+            return true;
         }
     }
 
@@ -75,25 +108,4 @@ public class RepositorioCartasServico {
         }
     }
 
-    private void atualizarRepositorio() throws IOException, GitAPIException {
-        log.debug("Atualizando repositório de cartas de serviço de {} para {}", urlRepositorio, caminhoLocal);
-        try (Git repositorio = Git.open(caminhoLocal)) {
-            PullResult result = repositorio.pull()
-                    .setProgressMonitor(new LogstashProgressMonitor(log))
-                    .setStrategy(THEIRS)
-                    .call();
-
-            if (result.isSuccessful()) {
-                String head = repositorio.reset()
-                        .setMode(HARD)
-                        .setRef("refs/remotes/origin/master")
-                        .call()
-                        .getName();
-
-                log.info("Repositório de cartas de serviço em {} atualizado para a versão {}", caminhoLocal, head);
-            } else {
-                log.error("Erro ao atualizar repositório: {}", result);
-            }
-        }
-    }
 }

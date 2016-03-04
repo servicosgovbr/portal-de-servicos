@@ -47,9 +47,11 @@ public class Importador {
     public Map<String, Object> importar() {
         log.info("Iniciando a importação");
 
-        repositorioCartasServico.prepararRepositorio();
-
         Map<String, Object> retorno = new HashMap<>();
+        if(!repositorioCartasServico.contemAtualizacoes()) {
+            return retorno;
+        }
+
         retorno.put("servicos", servicos.importar(repositorioCartasServico));
         retorno.put("paginas-estaticas", estaticas.importar(repositorioCartasServico));
         retorno.put("paginas-tematicas", tematicas.importar(repositorioCartasServico));
