@@ -48,7 +48,7 @@ public class Importador {
         log.info("Iniciando a importação");
 
         Map<String, Object> retorno = new HashMap<>();
-        if(!repositorioCartasServico.contemAtualizacoes()) {
+        if (!repositorioCartasServico.contemAtualizacoes()) {
             return retorno;
         }
 

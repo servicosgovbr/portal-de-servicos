@@ -293,7 +293,6 @@ public enum AreaDeInteresse {
     VCGE2_VIGILANCIA_SANITARIA("Vigilância Sanitária"),
 
 
-
     @XmlEnumValue("Abastecimento")
     VCGE1_ABASTECIMENTO("Abastecimento"),
 

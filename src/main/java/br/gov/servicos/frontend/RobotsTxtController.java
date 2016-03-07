@@ -37,18 +37,18 @@ class RobotsTxtController {
          */
         BaseUrl baseUrl = new BaseUrl(request);
         return format("Sitemap: %s %n%n" +
-                "User-agent: Googlebot %n" +
-                "Disallow: %n%n" +
-                "User-agent: Googlebot-Image %n" +
-                "Disallow: %n%n" +
-                "User-agent: Googlebot-News %n" +
-                "Disallow: %n%n" +
-                "User-agent: Bingbot %n" +
-                "Disallow: %n%n" +
-                "User-agent: Teoma %n" +
-                "Disallow: %n%n" +
-                "User-agent: * %n" +
-                "Disallow: /%n",
+                        "User-agent: Googlebot %n" +
+                        "Disallow: %n%n" +
+                        "User-agent: Googlebot-Image %n" +
+                        "Disallow: %n%n" +
+                        "User-agent: Googlebot-News %n" +
+                        "Disallow: %n%n" +
+                        "User-agent: Bingbot %n" +
+                        "Disallow: %n%n" +
+                        "User-agent: Teoma %n" +
+                        "Disallow: %n%n" +
+                        "User-agent: * %n" +
+                        "Disallow: /%n",
                 baseUrl.and("/sitemap.xml"));
     }
 }
