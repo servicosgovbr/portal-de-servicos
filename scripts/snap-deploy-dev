@@ -18,13 +18,8 @@ git stash pop || true
 export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-teste.git'
 export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-teste.git'
 
-./build portal-de-servicos
-
-docker-compose stop portal1 portal2
-docker-compose kill portal1 portal2
-docker-compose rm -f portal1 portal2
-
-docker-compose up -d
+./scripts/update_portal_container
+./scripts/update_editor_container
 docker-compose restart balanceador
 
 EOF
