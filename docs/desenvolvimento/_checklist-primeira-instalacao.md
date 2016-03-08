@@ -35,16 +35,18 @@ systemctl start docker
 docker info
 ```
 
-O comando acima deve produzir saída similar à seguinte:
+O comando acima deve produzir saída contendo texto similar ao seguinte:
 
 ```
 Containers: 0
+ Running: 0
+ Paused: 0
+ Stopped: 0
 Images: 0
+Server Version: 1.10.2
 Storage Driver: overlay
  Backing Filesystem: extfs
 Execution Driver: native-0.2
-Logging Driver: json-file
-Kernel Version: 3.19.0-15-generic
 ```
 
 - Verifique que o [Docker] consegue baixar e instanciar contêineres:
@@ -87,10 +89,10 @@ docker-compose version
 O comando acima deve produzir saída similar à seguinte:
 
 ```
-docker-compose version: 1.4.0
-docker-py version: 1.3.1
-CPython version: 2.7.9
-OpenSSL version: OpenSSL 1.0.1e 11 Feb 2013
+docker-compose version 1.6.2, build 4d72027
+docker-py version: 1.7.2
+CPython version: 2.7.11
+OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
 ```
 
 - Instale o [Git]:
@@ -160,7 +162,7 @@ You've successfully authenticated, but GitHub does not provide shell access.
 
 Para o correto funcionamento do Editor de Serviços, os seguintes passos são necessários:
 
-1. Criar uma nova chave SSH, conforme página de [SHH Keys] do GitHub. A chave criada não deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail válido de uma conta existente no GitHub e que o usuário esteja autorizado a acessar os projetos da [organização do servicos.gov.br].
+1. Criar uma nova chave SSH, conforme página de [SSH Keys] do GitHub. A chave criada não deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail válido de uma conta existente no GitHub e que o usuário esteja autorizado a acessar os projetos da [organização do servicos.gov.br].
 2. Colocar essa chave na pasta `/root/.ssh`.
 3. Importar chave com permissão de leitura e escrita no repositório de `cartas-de-servicos`. Detalhes sobre esse processo podem ser encontrados na nota abaixo, ou na página de [Deploy Keys] do GitHub. A chave importada deve ser utilizada exclusivamente no repositório de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro será exibida.
 
@@ -372,7 +374,7 @@ docker-compose up -d
 [Docker]:http://www.docker.com
 [Docker-Compose]:http://www.docker.com/compose
 [Git]:http://git-scm.org
-[SHH Keys]:https://help.github.com/articles/generating-ssh-keys/
+[SSH Keys]:https://help.github.com/articles/generating-ssh-keys/
 [Deploy Keys]:https://developer.github.com/guides/managing-deploy-keys/
 [documentação oficial]:https://help.github.com/articles/using-ssh-over-the-https-port/
 [repositório]:https://github.com/servicosgovbr/cartas-de-servico
