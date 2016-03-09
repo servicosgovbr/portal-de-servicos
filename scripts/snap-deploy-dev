@@ -15,11 +15,9 @@ git stash || true
 git pull --rebase
 git stash pop || true
 
-export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-teste.git'
-export EDS_CARTAS_REPOSITORIO='git@github.com:servicosgovbr/cartas-de-teste.git'
+export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'
 
 ./scripts/update_portal_container
-./scripts/update_editor_container
 docker-compose restart balanceador
 
 EOF
