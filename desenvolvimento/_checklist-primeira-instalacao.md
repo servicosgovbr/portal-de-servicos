@@ -335,7 +335,7 @@ modprobe overlay
 docker daemon --storage-driver=overlay &
 ```
 
-### Instalações Auxiliares
+### Restaurando o Repositório Local
 
 Os passos dessa seção devem ser seguidos **apenas** se a máquina utilizada para implantação já possui a configuração inicial e uma instalação prévia realizada.
 
