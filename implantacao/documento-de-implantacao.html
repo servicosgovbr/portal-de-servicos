@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Wed Mar 09 2016 07:01:45 GMT+0000 (UTC)"
+        data-revision="Wed Mar 09 2016 21:03:54 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1655,12 +1655,12 @@
 <pre><code class="lang-bash">setenforce <span class="hljs-number">0</span>
 </code></pre>
 <ul>
-<li>Instale o <a href="http://www.docker.com" target="_blank">Docker</a>, caso n&#xE3;o esteja instalado:</li>
+<li>Instale o <a href="http://www.docker.com" target="_blank">Docker</a>:</li>
 </ul>
 <pre><code class="lang-bash">curl <span class="hljs-operator">-s</span>SL https://get.docker.com | sh
 </code></pre>
 <ul>
-<li>Inicie o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> com o Storage Driver escolhido (caso queira alterar o Storage Driver padr&#xE3;o do Docker, pule este passo e execute os passos da pr&#xF3;xima se&#xE7;&#xE3;o <strong>Alterando o Storage Driver do Docker</strong>):</li>
+<li>Inicie o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> (caso queira alterar o Storage Driver padr&#xE3;o do Docker, pule este passo e execute os passos da pr&#xF3;xima se&#xE7;&#xE3;o <strong>Alterando o Storage Driver do Docker</strong>):</li>
 </ul>
 <pre><code class="lang-bash">systemctl start docker
 </code></pre>
@@ -1709,7 +1709,7 @@ chmod +x /usr/bin/docker-compose
 <pre><code class="lang-bash">docker-compose version
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>docker-compose version 1.6.2, build 4d72027
+<pre><code>docker-compose version 1.4.0, build 4d72027
 docker-py version: 1.7.2
 CPython version: 2.7.11
 OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016

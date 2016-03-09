@@ -17,13 +17,13 @@ Caso contrário, é preciso realizar as atualizações necessárias antes de con
 setenforce 0
 ```
 
-- Instale o [Docker], caso não esteja instalado:
+- Instale o [Docker]:
 
 ```bash
 curl -sSL https://get.docker.com | sh
 ```
 
-- Inicie o serviço do [Docker] com o Storage Driver escolhido (caso queira alterar o Storage Driver padrão do Docker, pule este passo e execute os passos da próxima seção **Alterando o Storage Driver do Docker**):
+- Inicie o serviço do [Docker] (caso queira alterar o Storage Driver padrão do Docker, pule este passo e execute os passos da próxima seção **Alterando o Storage Driver do Docker**):
 
 ```bash
 systemctl start docker
@@ -89,7 +89,7 @@ docker-compose version
 O comando acima deve produzir saída similar à seguinte:
 
 ```
-docker-compose version 1.6.2, build 4d72027
+docker-compose version 1.4.0, build 4d72027
 docker-py version: 1.7.2
 CPython version: 2.7.11
 OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
