@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Mon Mar 07 2016 17:21:27 GMT+0000 (UTC)"
+        data-revision="Wed Mar 09 2016 06:47:32 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1669,14 +1669,16 @@
 </ul>
 <pre><code class="lang-bash">docker info
 </code></pre>
-<p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
+<p>O comando acima deve produzir sa&#xED;da contendo texto similar ao seguinte:</p>
 <pre><code>Containers: 0
+ Running: 0
+ Paused: 0
+ Stopped: 0
 Images: 0
+Server Version: 1.10.2
 Storage Driver: overlay
  Backing Filesystem: extfs
 Execution Driver: native-0.2
-Logging Driver: json-file
-Kernel Version: 3.19.0-15-generic
 </code></pre><ul>
 <li>Verifique que o <a href="http://www.docker.com" target="_blank">Docker</a> consegue baixar e instanciar cont&#xEA;ineres:</li>
 </ul>
@@ -1707,10 +1709,10 @@ chmod +x /usr/bin/docker-compose
 <pre><code class="lang-bash">docker-compose version
 </code></pre>
 <p>O comando acima deve produzir sa&#xED;da similar &#xE0; seguinte:</p>
-<pre><code>docker-compose version: 1.4.0
-docker-py version: 1.3.1
-CPython version: 2.7.9
-OpenSSL version: OpenSSL 1.0.1e 11 Feb 2013
+<pre><code>docker-compose version 1.6.2, build 4d72027
+docker-py version: 1.7.2
+CPython version: 2.7.11
+OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
 </code></pre><ul>
 <li>Instale o <a href="http://git-scm.org" target="_blank">Git</a>:</li>
 </ul>
@@ -1751,7 +1753,7 @@ Resolving deltas: 100% (77/77), done.
 </code></pre><h3 id="chaves-ssh">Chaves SSH</h3>
 <p>Para o correto funcionamento do Editor de Servi&#xE7;os, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
 <ol>
-<li>Criar uma nova chave SSH, conforme p&#xE1;gina de <a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">SHH Keys</a> do GitHub. A chave criada n&#xE3;o deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail v&#xE1;lido de uma conta existente no GitHub e que o usu&#xE1;rio esteja autorizado a acessar os projetos da <a href="https://github.com/servicosgovbr" target="_blank">organiza&#xE7;&#xE3;o do servicos.gov.br</a>.</li>
+<li>Criar uma nova chave SSH, conforme p&#xE1;gina de <a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank">SSH Keys</a> do GitHub. A chave criada n&#xE3;o deve conter nenhum tipo de passphrase. Sugere-se que essa chave seja associada a um e-mail v&#xE1;lido de uma conta existente no GitHub e que o usu&#xE1;rio esteja autorizado a acessar os projetos da <a href="https://github.com/servicosgovbr" target="_blank">organiza&#xE7;&#xE3;o do servicos.gov.br</a>.</li>
 <li>Colocar essa chave na pasta <code>/root/.ssh</code>.</li>
 <li>Importar chave com permiss&#xE3;o de leitura e escrita no reposit&#xF3;rio de <code>cartas-de-servicos</code>. Detalhes sobre esse processo podem ser encontrados na nota abaixo, ou na p&#xE1;gina de <a href="https://developer.github.com/guides/managing-deploy-keys/" target="_blank">Deploy Keys</a> do GitHub. A chave importada deve ser utilizada exclusivamente no reposit&#xF3;rio de cartas. Caso a chave for utilizada em algum outro lugar, uma mensagem de erro ser&#xE1; exibida.</li>
 </ol>
