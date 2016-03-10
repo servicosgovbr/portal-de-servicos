@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Wed Mar 09 2016 21:09:51 GMT+0000 (UTC)"
+        data-revision="Thu Mar 10 2016 17:41:59 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -2129,10 +2129,10 @@ portal2       /bin/sh -c sh /run.sh            Up      8080/tcp
 Esse script ir&#xE1; apagar todos os cont&#xEA;ineres e imagens locais do Docker. Imagens contendo as &#xFA;ltimas vers&#xF5;es do ambiente ser&#xE3;o obtidas da Internet. Al&#xE9;m disso, o ambiente ser&#xE1; constru&#xED;do de maneira autom&#xE1;tica novamente.</p>
 <p><strong>Lembrete:</strong> Antes de executar o comando acima, &#xE9; muito importante que um backup v&#xE1;lido dos usu&#xE1;rios e permiss&#xF5;es exista. Caso contr&#xE1;rio, todos os usu&#xE1;rios criados para aquele ambiente ser&#xE3;o perdidos. Maiores informa&#xE7;&#xF5;es sobre como proceder com a cria&#xE7;&#xE3;o de um backup podem ser encontradas na se&#xE7;&#xE3;o de Backup (Usu&#xE1;rios e Permiss&#xF5;es).</p>
 <h3 id="atualiza&#xE7;&#xF5;es-em-ambientes-sem-integra&#xE7;&#xE3;o-cont&#xED;nua">Atualiza&#xE7;&#xF5;es em ambientes sem integra&#xE7;&#xE3;o cont&#xED;nua</h3>
-<p>Para realizar uma atualiza&#xE7;&#xE3;o    em ambientes hospedados em datacenters do governo, que n&#xE3;o possuem <strong>acesso</strong> a ferramenta de integra&#xE7;&#xE3;o cont&#xED;nua, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
+<p>Para realizar uma atualiza&#xE7;&#xE3;o em ambientes hospedados em datacenters do governo, que n&#xE3;o possuem acesso ao Snap, os seguintes passos s&#xE3;o necess&#xE1;rios:</p>
 <ol>
 <li>Garantir que a configura&#xE7;&#xE3;o inicial do docker j&#xE1; foi realizada na m&#xE1;quina host, conforme se&#xE7;&#xE3;o inicial de implanta&#xE7;&#xE3;o</li>
-<li>Acessar ambiente utilizando SSH: 
+<li>Acessar ambiente utilizando SSH:
 <code>ssh &lt;usu&#xE1;rio&gt;@&lt;ip do servidor&gt;</code></li>
 <li>Utilizar o usu&#xE1;rio root:
 <code>sudo su</code></li>
@@ -2140,8 +2140,6 @@ Esse script ir&#xE1; apagar todos os cont&#xEA;ineres e imagens locais do Docker
 <code>cd /root/docker/</code></li>
 <li>Executar script bash que atualiza as inst&#xE2;ncias do Portal de Servi&#xE7;os e do Editor de Servi&#xE7;os:
 <code>./scripts/update_portal_container</code> e <code>./scripts/update_editor_container</code></li>
-<li>Caso queira atualizar todas as inst&#xE2;ncias, executar o script bash:
-<code>./scripts/update_portal_de_servicos</code></li>
 <li>Para verificar que as atualiza&#xE7;&#xF5;es est&#xE3;o sendo aplicadas corretamente, verificar os logs do Docker. Por exemplo: 
 <code>docker logs -f editor1</code></li>
 </ol>
