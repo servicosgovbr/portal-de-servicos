@@ -19,7 +19,7 @@ Para efetuar o backup  dos dados do banco de dados que dá suporte à aplicaçã
 2. Esse contêiner deve ter uma pasta `/backup` compartilhada com o sistema
 3. Executar comando para comprimir a pasta `/dbdata` na pasta `/backup`:
 ```
-docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c "tar cvf /backup/backup-$(date '+%d_%m_%y_%H_%M').tar /dbdata"
+docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c "tar czvf /backup/backup-$(date '+%d_%m_%y_%H_%M').tar.gz /dbdata"
 ```
 
 Para recuperar os dados a partir de um backup:
@@ -28,7 +28,7 @@ Para recuperar os dados a partir de um backup:
 `cd ~/docker/` e `docker-compose stop`
 2. Execute o data volume contêiner dbdata com o arquivo backup.tar descomprimido:
 ```
-docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c "rm -rf /dbdata/* && cd /tmp && tar xvf /backup/backup-22_12_15_07_51.tar && mv dbdata/* ../dbdata/"
+docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c "rm -rf /dbdata/* && cd /tmp && tar xzvf /backup/backup-22_12_15_07_51.tar.gz && mv dbdata/* ../dbdata/"
 ```
 3. Ligue novamente os contêineres:	
 `docker-compose up`
