@@ -69,7 +69,6 @@
 
     <div class="row botoes-rodape">
         <a class="acao-servico right"
-           th:if="${@cookies.contem('JSESSIONID')}"
            th:href="${'/editar/servico/' + servico.id }">
             Editar esta página <i class="fa fa-edit"></i>
         </a>
