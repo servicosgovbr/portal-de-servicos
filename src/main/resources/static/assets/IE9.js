@@ -425,7 +425,7 @@ var Parser = RegGrp.extend({ignoreCase: true});
 var SINGLE_QUOTES       = /'/g,
     ESCAPED             = /'(\d+)'/g,
     ESCAPE              = /\\/g,
-    UNESCAPE            = /\\([nrtf'"])/g
+    UNESCAPE            = /\\([nrtf'"])/g,
     UNICODE             = /\\([\da-fA-F]{1,4})/g;
 
 var strings = [];
