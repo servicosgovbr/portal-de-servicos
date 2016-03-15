@@ -10,7 +10,7 @@ jQuery(function($) {
     $('body').removeClass('contraste');
   }
 
-  $('#siteaction-contraste a').click(function(e) {
+  $('#siteaction-contraste').find('a').click(function(e) {
     (Cookies.get('contraste') === 'on') ? contrasteOff() : contrasteOn();
     e.preventDefault();
     return false;
