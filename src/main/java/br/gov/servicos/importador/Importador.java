@@ -44,6 +44,7 @@ public class Importador {
     }
 
     @ManagedOperation
+    @SuppressWarnings("UnusedReturnValue")
     public Map<String, Object> importar() {
         log.info("Iniciando a importação");
 

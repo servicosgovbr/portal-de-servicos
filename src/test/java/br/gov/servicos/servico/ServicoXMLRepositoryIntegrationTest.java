@@ -58,6 +58,7 @@ public class ServicoXMLRepositoryIntegrationTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void listaServicosPorAreaDeInteresse() throws Exception {
         servicos.save(SERVICO.withId("servico-1").withNome("Serviço 1").withAreasDeInteresse(asList(VCGE2_TURISMO, VCGE2_COMUNICACOES)));
         servicos.save(SERVICO.withId("servico-2").withNome("Serviço 2").withAreasDeInteresse(asList(VCGE2_TURISMO, VCGE2_BIODIVERSIDADE)));
@@ -82,6 +83,7 @@ public class ServicoXMLRepositoryIntegrationTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void listaServicosPorSegmentoDaSociedade() throws Exception {
         servicos.save(SERVICO.withId("servico-1").withNome("Serviço 1").withSegmentosDaSociedade(asList(CIDADAOS, EMPRESAS)));
         servicos.save(SERVICO.withId("servico-2").withNome("Serviço 2").withSegmentosDaSociedade(singletonList(EMPRESAS)));

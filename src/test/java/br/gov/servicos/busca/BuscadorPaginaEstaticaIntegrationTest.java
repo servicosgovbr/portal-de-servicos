@@ -51,6 +51,7 @@ public class BuscadorPaginaEstaticaIntegrationTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void deveInserirUmServicoEUmConteudoERetornarDoisConteudos() throws Exception {
         servicos.save(SERVICO);
         paginas.save(PAGINA_TEMATICA);
@@ -63,6 +64,7 @@ public class BuscadorPaginaEstaticaIntegrationTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void deveRetornarApenasConteudosQueTenhamAPalavraDescricao() throws Exception {
         servicos.save(SERVICO);
         servicos.save(new ServicoXML().withNome("Um titulo").withDescricao("Texto"));
@@ -75,6 +77,7 @@ public class BuscadorPaginaEstaticaIntegrationTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void deveAcharSemAcentuacao() throws Exception {
         servicos.save(new ServicoXML().withId("um-titulo").withNome("Um titulo").withDescricao("Descricao"));
 
@@ -113,6 +116,7 @@ public class BuscadorPaginaEstaticaIntegrationTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void deveConterTipoConteudo() throws Exception {
         servicos.save(SERVICO);
         paginas.save(PAGINA_TEMATICA);
