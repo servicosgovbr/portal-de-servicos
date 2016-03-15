@@ -2683,7 +2683,7 @@ var cssQuery = (function() {
   var BRACES = /\{/g, BRACES_ESCAPED = /\\{/g;
 
   function closeBlock(group) {
-    return Array((group.replace(BRACES_ESCAPED, "").match(BRACES) || "").length + 1).join("}");
+    return new Array((group.replace(BRACES_ESCAPED, "").match(BRACES) || "").length + 1).join("}");
   };
 
   FILTER = new CSSSelectorParser(FILTER);
