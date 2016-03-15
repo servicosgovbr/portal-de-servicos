@@ -597,7 +597,7 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
   padding: 8px 13px 8px 13px;
   background: $cinza-claro;
   text-decoration: none;
-  margin: 0px 0px 20px 0;
+  margin: 0 0 20px 0;
   display: inline-block;
   color: $azul-claro !important;
   border: none;
@@ -629,7 +629,7 @@ a.acao-servico, button.acao-servico, input[type="submit"].acao-servico {
   }
 
   p.etapa {
-    margin-left: 0px;
+    margin-left: 0;
     display: inline-block;
   }
 
@@ -723,7 +723,7 @@ ul#resultados-busca {
     display: inline-block;
 
     a {
-      padding: 0px 7px;
+      padding: 0 7px;
     }
   }
 
