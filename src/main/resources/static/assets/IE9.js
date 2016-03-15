@@ -1315,8 +1315,8 @@ var NUMERIC = "[.\\d]";
       if (child && child.nodeName < "@") child = IE7._getElementSibling(child, isTopMargin ? "next" : "previous");
       if (child && child.currentStyle.styleFloat === "none" && child.currentStyle.hasLayout) {
         collapseMargin(child, type);
-        margin = _getMargin(element, element.currentStyle[type]);
-        childMargin = _getMargin(child, child.currentStyle[type]);
+        var margin = _getMargin(element, element.currentStyle[type]);
+        var childMargin = _getMargin(child, child.currentStyle[type]);
         if (margin < 0 || childMargin < 0) {
           element.runtimeStyle[type] = margin + childMargin;
         } else {
