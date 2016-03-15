@@ -31,10 +31,8 @@ public class PortalDeServicosIndex {
         this.es = es;
     }
 
-    private static String settings() throws IOException {
-        ClassPathResource resource = new ClassPathResource(SETTINGS);
-
-        return read(resource);
+    private static String settings() {
+        return read(new ClassPathResource(SETTINGS));
     }
 
     @CacheEvict(value = {
