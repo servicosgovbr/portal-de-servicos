@@ -1,7 +1,6 @@
 package br.gov.servicos.piwik;
 
 import br.gov.servicos.config.PiwikConfig;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -17,8 +16,6 @@ import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Answers.RETURNS_SMART_NULLS;
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyObject;
 import static org.mockito.Mockito.*;
 import static org.springframework.http.HttpStatus.OK;
 

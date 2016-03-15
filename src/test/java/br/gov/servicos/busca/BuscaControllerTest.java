@@ -11,10 +11,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.elasticsearch.core.FacetedPageImpl;
 
 import static br.gov.servicos.fixtures.TestData.PAGINA_ESTATICA_DE_TEMATICA;
-import static br.gov.servicos.fixtures.TestData.PAGINA_TEMATICA;
 import static java.util.Collections.singletonList;
 import static java.util.Optional.of;
-import static java.util.Optional.ofNullable;
 import static lombok.AccessLevel.PRIVATE;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
