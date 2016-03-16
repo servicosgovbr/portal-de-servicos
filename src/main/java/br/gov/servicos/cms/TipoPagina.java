@@ -5,7 +5,6 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Getter
@@ -19,13 +18,13 @@ public enum TipoPagina {
 
     String nome;
 
-    Path caminhoPasta;
+    String caminhoPasta;
 
     String extensao;
 
     TipoPagina(String caminhoPasta, String extensao) {
         this.nome = SlugifyConfig.slugify(name());
-        this.caminhoPasta = Paths.get(caminhoPasta);
+        this.caminhoPasta = Paths.get(caminhoPasta).toString();
         this.extensao = "." + extensao;
     }
 

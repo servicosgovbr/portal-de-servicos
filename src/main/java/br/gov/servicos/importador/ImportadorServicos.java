@@ -52,7 +52,7 @@ public class ImportadorServicos {
     }
 
     @SneakyThrows
-    public Iterable<ServicoXML> importar(RepositorioCartasServico repo) {
+    Iterable<ServicoXML> importar(RepositorioCartasServico repo) {
         log.info("Iniciando importação de serviços...");
         indices.recriar();
 
@@ -83,7 +83,8 @@ public class ImportadorServicos {
 
     private OrgaoXML remapeiaESalvaOrgao(OrgaoXML orgao) {
         String url = orgao.getId();
-        return orgao.withId(slugify.slugify(url))
+        return orgao
+                .withId(slugify.slugify(url))
                 .withUrl(url);
     }
 }

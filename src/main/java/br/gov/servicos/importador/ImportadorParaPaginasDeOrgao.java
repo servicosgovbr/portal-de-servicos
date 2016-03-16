@@ -43,10 +43,10 @@ class ImportadorParaPaginasDeOrgao {
 
     @SneakyThrows
     Iterable<OrgaoXML> importar(RepositorioCartasServico repositorioCartasServico) {
-        File diretorioOrgaos = repositorioCartasServico.get(ORGAO.getCaminhoPasta().toString()).getFile();
+        File dir = repositorioCartasServico.get(ORGAO.getCaminhoPasta()).getFile();
 
-        log.info("Importando órgãos em {}", diretorioOrgaos);
-        return orgaoRepository.save(Stream.of(diretorioOrgaos.listFiles((d, n) -> n.endsWith(ORGAO.getExtensao())))
+        log.info("Importando órgãos em {}", dir);
+        return orgaoRepository.save(Stream.of(dir.listFiles((d, n) -> n.endsWith(ORGAO.getExtensao())))
                 .map(this::deserializaOrgao)
                 .map(this::processaCampos)
                 .peek(s -> log.debug("{} importado com sucesso", s.getId()))

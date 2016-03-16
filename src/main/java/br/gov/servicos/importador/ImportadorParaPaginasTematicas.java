@@ -34,8 +34,8 @@ public class ImportadorParaPaginasTematicas {
     }
 
     @SneakyThrows
-    public Iterable<PaginaTematica> importar(RepositorioCartasServico repositorio) {
-        File dir = repositorio.get(PAGINA_TEMATICA.getCaminhoPasta().toString()).getFile();
+    Iterable<PaginaTematica> importar(RepositorioCartasServico repositorio) {
+        File dir = repositorio.get(PAGINA_TEMATICA.getCaminhoPasta()).getFile();
 
         log.info("Importando páginas especiais em {}", dir);
         return repository.save(Stream.of(dir.listFiles((d, n) -> n.endsWith(PAGINA_TEMATICA.getExtensao())))
