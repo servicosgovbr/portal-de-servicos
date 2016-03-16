@@ -59,6 +59,7 @@ public class Importador {
         retorno.put("orgaos", orgaos.importar(repositorioCartasServico));
 
         log.info("Importação concluída com sucesso");
+        ImportadorHealthIndicator.importacaoConcluida();
         return retorno;
     }
 
