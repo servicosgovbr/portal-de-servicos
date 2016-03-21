@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Thu Mar 10 2016 17:41:59 GMT+0000 (UTC)"
+        data-revision="Mon Mar 21 2016 17:49:57 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -2211,14 +2211,14 @@ Creating balanceador...
 <ol>
 <li>Criar novo cont&#xEA;iner docker que se conecta com a pasta <code>/dbdata</code> onde est&#xE1; localizado os dados do banco</li>
 <li>Esse cont&#xEA;iner deve ter uma pasta <code>/backup</code> compartilhada com o sistema</li>
-<li>Executar comando para comprimir a pasta <code>/dbdata</code> na pasta <code>/backup</code>:<pre><code>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c &quot;tar cvf /backup/backup-$(date &apos;+%d_%m_%y_%H_%M&apos;).tar /dbdata&quot;
+<li>Executar comando para comprimir a pasta <code>/dbdata</code> na pasta <code>/backup</code>:<pre><code>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c &quot;tar czvf /backup/backup-$(date &apos;+%d_%m_%y_%H_%M&apos;).tar.gz /dbdata&quot;
 </code></pre></li>
 </ol>
 <p>Para recuperar os dados a partir de um backup:</p>
 <ol>
 <li>Pare a execu&#xE7;&#xE3;o dos cont&#xEA;ineres no host do Docker
 <code>cd ~/docker/</code> e <code>docker-compose stop</code></li>
-<li>Execute o data volume cont&#xEA;iner dbdata com o arquivo backup.tar descomprimido:<pre><code>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c &quot;rm -rf /dbdata/* &amp;&amp; cd /tmp &amp;&amp; tar xvf /backup/backup-22_12_15_07_51.tar &amp;&amp; mv dbdata/* ../dbdata/&quot;
+<li>Execute o data volume cont&#xEA;iner dbdata com o arquivo backup.tar descomprimido:<pre><code>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c &quot;rm -rf /dbdata/* &amp;&amp; cd /tmp &amp;&amp; tar xzvf /backup/backup-22_12_15_07_51.tar.gz &amp;&amp; mv dbdata/* ../dbdata/&quot;
 </code></pre></li>
 <li>Ligue novamente os cont&#xEA;ineres:<br><code>docker-compose up</code></li>
 </ol>
