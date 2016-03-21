@@ -18,6 +18,5 @@ git stash pop || true
 export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'
 
 ./scripts/update_portal_container
-docker-compose restart balanceador
 
 EOF
