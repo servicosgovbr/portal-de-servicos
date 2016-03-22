@@ -15,7 +15,7 @@ git stash || true
 git pull --rebase
 git stash pop || true
 
-export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-servico.git'
+export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-teste.git'
 
 ./scripts/update_portal_container
 
