@@ -1,0 +1,1 @@
+docs/sobre-o-projeto/equipe.md
