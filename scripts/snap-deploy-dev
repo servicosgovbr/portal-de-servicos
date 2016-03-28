@@ -17,6 +17,9 @@ git stash pop || true
 
 export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-teste.git'
 
+export SNAP_API_KEY="${SNAP_API_KEY}"
+export SNAP_PIPELINE_COUNTER="${SNAP_PIPELINE_COUNTER}"
+
 ./scripts/update_portal_container
 
 EOF
