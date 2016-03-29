@@ -23,7 +23,16 @@ setenforce 0
 curl -sSL https://get.docker.com | sh
 ```
 
-- Inicie o serviço do [Docker] (caso queira alterar o Storage Driver padrão do Docker, pule este passo e execute os passos da próxima seção **Alterando o Storage Driver do Docker**):
+- Crie os volumes de dados e metadados do Docker:
+
+```bash
+pvcreate /dev/sdb1 
+vgcreate vg-docker /dev/sdb1 
+lvcreate -L 7G -n data vg-docker
+lvcreate -L 2G -n metadata vg-docker
+```
+
+- Inicie o serviço do [Docker]:
 
 ```bash
 systemctl start docker
@@ -44,10 +53,27 @@ Containers: 0
  Stopped: 0
 Images: 0
 Server Version: 1.10.2
-Storage Driver: overlay
- Backing Filesystem: extfs
-Execution Driver: native-0.2
+Storage Driver: devicemapper
+ Pool Name: docker-253:1-124711-pool
+ Pool Blocksize: 65.54 kB
+ Base Device Size: 10.74 GB
+ Backing Filesystem: xfs
+ Data file: /dev/vg-docker/data
+ Metadata file: /dev/vg-docker/metadata
+ Data Space Used: 2.989 GB
+ Data Space Total: 8.59 GB
+ Data Space Available: 5.601 GB
+ Metadata Space Used: 7.025 MB
+ Metadata Space Total: 1.074 GB
+ Metadata Space Available: 1.067 GB
+ Udev Sync Supported: true
+ Deferred Removal Enabled: false
+ Deferred Deletion Enabled: false
+ Deferred Deleted Device Count: 0
+ Library Version: 1.02.107-RHEL7 (2015-12-01)
 ```
+
+(note os nomes do `Data file` e `Metadata file`, que são os volumes LVM criados no passo anterior.)
 
 - Verifique que o [Docker] consegue baixar e instanciar contêineres:
 
@@ -296,44 +322,6 @@ docker-compose up -d editor2
 ```
 
 A instalação está concluída.
-
-### Alterando o Storage Driver do Docker
-
-Esta seção é direcionada caso opte por alterar o Storage Driver padrão do Docker. Caso o Docker já esteja instalado e rodando contêineres, é preciso executar o passo abaixo:
-
-- Remova os contêineres e as imagens, depois pare o serviço do Docker e remova a pasta /var/lib/docker/:
-
-```
-docker stop $(docker ps -a -q)
-docker kill $(docker ps -a -q)
-docker rm -f $(docker ps -a -q)
-
-docker rmi $(docker images -a -q)
-
-systemctl stop docker
-
-rm -rf /var/lib/docker/
-```
-
-Agora para trocar o Storage Driver, execute os seguintes passos:
-
-- Verifique se Storage Driver escolhido (overlay, aufs, devicemapper e etc) está habilitado:
-
-```bash
-lsmod | grep overlay
-```
-
-- Caso não esteja, habilite o Storage Driver escolhido:
-   
-```bash
-modprobe overlay
-```
-
-- Execute o serviço novamente, com o novo Storage Driver escolhido (overlay, aufs, devicemapper e etc):
-
-```bash
-docker daemon --storage-driver=overlay &
-```
 
 ### Restaurando o Repositório Local
 
