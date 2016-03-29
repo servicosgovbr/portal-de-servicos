@@ -3,7 +3,7 @@ set -x
 set -e
 set -o pipefail
 
-ssh -F .sshconfig dev '/bin/bash -s' << "EOF"
+ssh -F .sshconfig dev "export SNAP_API_KEY=${SNAP_API_KEY}; export SNAP_PIPELINE_COUNTER=${SNAP_PIPELINE_COUNTER}; /bin/bash -s" << "EOF"
 set -x
 set -e
 set -o pipefail
@@ -16,9 +16,6 @@ git pull --rebase
 git stash pop || true
 
 export PDS_CARTAS_REPOSITORIO='https://github.com/servicosgovbr/cartas-de-teste.git'
-
-export SNAP_API_KEY="${SNAP_API_KEY}"
-export SNAP_PIPELINE_COUNTER="${SNAP_PIPELINE_COUNTER}"
 
 ./scripts/update_portal_container
 
