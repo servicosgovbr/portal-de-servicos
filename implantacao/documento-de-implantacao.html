@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Thu Mar 31 2016 20:07:19 GMT+0000 (UTC)"
+        data-revision="Thu Mar 31 2016 21:51:26 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -2015,6 +2015,16 @@ From github.com:servicosgovbr/docker
 First, rewinding head to replay your work on top of it...
 Fast-forwarded master to f069a5552fec4c8bc9226c7941bb89fe0420ed75.
 </code></pre><ul>
+<li>Parar os cont&#xEA;ineres:</li>
+</ul>
+<pre><code class="lang-bash">docker-compose stop
+</code></pre>
+<ul>
+<li>Baixe as novas imagens:</li>
+</ul>
+<pre><code class="lang-bash">docker-compose pull
+</code></pre>
+<ul>
 <li>Rode os cont&#xEA;ineres:</li>
 </ul>
 <pre><code class="lang-bash">docker-compose up <span class="hljs-operator">-d</span>
