@@ -19,7 +19,16 @@ From github.com:servicosgovbr/docker
 First, rewinding head to replay your work on top of it...
 Fast-forwarded master to f069a5552fec4c8bc9226c7941bb89fe0420ed75.
 ```
+- Parar os contêineres:
 
+```bash
+docker-compose stop
+```
+- Baixe as novas imagens:
+
+```bash
+docker-compose pull
+```
 - Rode os contêineres:
 
 ```bash
