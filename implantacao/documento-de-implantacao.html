@@ -51,7 +51,7 @@
         data-chapter-title="Detalhes de Implantação"
         data-filepath="implantacao/documento-de-implantacao.md"
         data-basepath=".."
-        data-revision="Tue Mar 29 2016 16:15:38 GMT+0000 (UTC)"
+        data-revision="Thu Mar 31 2016 20:07:19 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1660,7 +1660,15 @@
 <pre><code class="lang-bash">curl <span class="hljs-operator">-s</span>SL https://get.docker.com | sh
 </code></pre>
 <ul>
-<li>Inicie o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a> (caso queira alterar o Storage Driver padr&#xE3;o do Docker, pule este passo e execute os passos da pr&#xF3;xima se&#xE7;&#xE3;o <strong>Alterando o Storage Driver do Docker</strong>):</li>
+<li>Crie os volumes de dados e metadados do Docker:</li>
+</ul>
+<pre><code class="lang-bash">pvcreate /dev/sdb1 
+vgcreate vg-docker /dev/sdb1 
+lvcreate -L <span class="hljs-number">7</span>G -n data vg-docker
+lvcreate -L <span class="hljs-number">2</span>G -n metadata vg-docker
+</code></pre>
+<ul>
+<li>Inicie o servi&#xE7;o do <a href="http://www.docker.com" target="_blank">Docker</a>:</li>
 </ul>
 <pre><code class="lang-bash">systemctl start docker
 </code></pre>
@@ -1676,10 +1684,26 @@
  Stopped: 0
 Images: 0
 Server Version: 1.10.2
-Storage Driver: overlay
- Backing Filesystem: extfs
-Execution Driver: native-0.2
-</code></pre><ul>
+Storage Driver: devicemapper
+ Pool Name: docker-253:1-124711-pool
+ Pool Blocksize: 65.54 kB
+ Base Device Size: 10.74 GB
+ Backing Filesystem: xfs
+ Data file: /dev/vg-docker/data
+ Metadata file: /dev/vg-docker/metadata
+ Data Space Used: 2.989 GB
+ Data Space Total: 8.59 GB
+ Data Space Available: 5.601 GB
+ Metadata Space Used: 7.025 MB
+ Metadata Space Total: 1.074 GB
+ Metadata Space Available: 1.067 GB
+ Udev Sync Supported: true
+ Deferred Removal Enabled: false
+ Deferred Deletion Enabled: false
+ Deferred Deleted Device Count: 0
+ Library Version: 1.02.107-RHEL7 (2015-12-01)
+</code></pre><p>(note os nomes do <code>Data file</code> e <code>Metadata file</code>, que s&#xE3;o os volumes LVM criados no passo anterior.)</p>
+<ul>
 <li>Verifique que o <a href="http://www.docker.com" target="_blank">Docker</a> consegue baixar e instanciar cont&#xEA;ineres:</li>
 </ul>
 <pre><code class="lang-bash">docker run alpine <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;ol&#xE1;&quot;</span>
@@ -1942,36 +1966,6 @@ docker-compose kill editor2
 docker rm -f editor2 (Neste comando ocorrer&#xE1; um erro de remo&#xE7;&#xE3;o do container, pode prosseguir com os outros comandos)
 docker-compose up -d editor2
 </code></pre><p>A instala&#xE7;&#xE3;o est&#xE1; conclu&#xED;da.</p>
-<h3 id="alterando-o-storage-driver-do-docker">Alterando o Storage Driver do Docker</h3>
-<p>Esta se&#xE7;&#xE3;o &#xE9; direcionada caso opte por alterar o Storage Driver padr&#xE3;o do Docker. Caso o Docker j&#xE1; esteja instalado e rodando cont&#xEA;ineres, &#xE9; preciso executar o passo abaixo:</p>
-<ul>
-<li>Remova os cont&#xEA;ineres e as imagens, depois pare o servi&#xE7;o do Docker e remova a pasta /var/lib/docker/:</li>
-</ul>
-<pre><code>docker stop $(docker ps -a -q)
-docker kill $(docker ps -a -q)
-docker rm -f $(docker ps -a -q)
-
-docker rmi $(docker images -a -q)
-
-systemctl stop docker
-
-rm -rf /var/lib/docker/
-</code></pre><p>Agora para trocar o Storage Driver, execute os seguintes passos:</p>
-<ul>
-<li>Verifique se Storage Driver escolhido (overlay, aufs, devicemapper e etc) est&#xE1; habilitado:</li>
-</ul>
-<pre><code class="lang-bash">lsmod | grep overlay
-</code></pre>
-<ul>
-<li>Caso n&#xE3;o esteja, habilite o Storage Driver escolhido:</li>
-</ul>
-<pre><code class="lang-bash">modprobe overlay
-</code></pre>
-<ul>
-<li>Execute o servi&#xE7;o novamente, com o novo Storage Driver escolhido (overlay, aufs, devicemapper e etc):</li>
-</ul>
-<pre><code class="lang-bash">docker daemon --storage-driver=overlay &amp;
-</code></pre>
 <h3 id="restaurando-o-reposit&#xF3;rio-local">Restaurando o Reposit&#xF3;rio Local</h3>
 <p>Os passos dessa se&#xE7;&#xE3;o devem ser seguidos <strong>apenas</strong> se a m&#xE1;quina utilizada para implanta&#xE7;&#xE3;o j&#xE1; possui a configura&#xE7;&#xE3;o inicial e uma instala&#xE7;&#xE3;o pr&#xE9;via realizada.</p>
 <ul>
