@@ -1,9 +1,9 @@
 Todos os comandos a seguir devem ser rodados como super-usuário (root), e presumem uma máquina [CentOS] 7 64bit, que já tem os contêineres [Docker] rodando.
 
-- Atualize o repositório [servicosgovbr/docker](https://github.com/servicosgovbr/docker) no diretório `/root`:
+- Atualize o repositório [servicosgovbr/docker](https://github.com/servicosgovbr/docker) no diretório `/root/docker/`:
 
 ```bash
-cd /root
+cd /root/docker/
 git pull
 ```
 
