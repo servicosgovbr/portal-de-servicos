@@ -295,32 +295,6 @@ Ocorreu um problema na inicialização do Logspout (que precisa do Logstash roda
 
 {% include '../desenvolvimento/_checklist-verificacoes.md' %}
 
-**IMPORTANTE**
-
-Devido a [Issue #12](https://github.com/servicosgovbr/docker/issues/12) é necessário realizar na primeira atualização os seguintes comandos:
-
-```
-docker-compose stop portal1
-docker-compose kill portal1
-docker rm -f portal1 (Neste comando ocorrerá um erro de remoção do container, pode prosseguir com os outros comandos)
-docker-compose up -d portal1
-
-docker-compose stop portal2
-docker-compose kill portal2
-docker rm -f portal2 (Neste comando ocorrerá um erro de remoção do container, pode prosseguir com os outros comandos)
-docker-compose up -d portal2
-
-docker-compose stop editor1
-docker-compose kill editor1
-docker rm -f editor1 (Neste comando ocorrerá um erro de remoção do container, pode prosseguir com os outros comandos)
-docker-compose up -d editor1
-
-docker-compose stop editor2
-docker-compose kill editor2
-docker rm -f editor2 (Neste comando ocorrerá um erro de remoção do container, pode prosseguir com os outros comandos)
-docker-compose up -d editor2
-```
-
 A instalação está concluída.
 
 ### Restaurando o Repositório Local
