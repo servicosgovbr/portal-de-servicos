@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<body>
+<body th:with='numeroIdOrgao=${servico.orgao.id.substring(servico.orgao.id.lastIndexOf("-")+1)}'>
 
-<p>Para realizar uma denúncia, reclamação, solicitação ou fazer uma sugestão ou elogio para este serviço, acesse a página da <a href="https://sistema.ouvidorias.gov.br/" target="_blank">Ouvidoria</a> do Poder Executivo Federal.</p>
+<p>Para realizar uma denúncia, reclamação, solicitação ou fazer uma sugestão ou elogio para este serviço do Poder Executivo Federal.</p>
+<br/>
+
+<a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=1" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=1(orgaoDestinatario=${numeroIdOrgao})}'>
+  <i class="fa fa-2x fa-bullhorn" title="Denúncia" aria-hidden="true"></i>
+  <span>Denúncia</span>
+</a>
+
+<a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=2" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=2(orgaoDestinatario=${numeroIdOrgao})}'>
+  <i class="fa fa-2x fa-thumbs-o-down" title="Reclamação" aria-hidden="true"></i>
+  <span>Reclamação</span>
+</a>
+
+<a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=5" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=3(orgaoDestinatario=${numeroIdOrgao})}'>
+  <i class="fa fa-2x fa-child" title="Solicitação" aria-hidden="true"></i>
+  <span>Solicitação</span>
+</a>
+
+<a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=4" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=3(orgaoDestinatario=${numeroIdOrgao})}'>
+  <i class="fa fa-2x fa-commenting-o" title="Sugestão" aria-hidden="true"></i>
+  <span>Sugestão</span>
+</a>
+
+<a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=3" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=3(orgaoDestinatario=${numeroIdOrgao})}'>
+  <i class="fa fa-2x  fa-thumbs-o-up" title="Elogio" aria-hidden="true"></i>
+  <span>Elogio</span>
+</a>
+
 </body>
 </html>
