@@ -42,6 +42,10 @@
   display: none !important;
 }
 
+.fa-middle {
+  vertical-align: middle;
+}
+
 #conteudo, .conteudo {
   @include span-columns(9);
   @include omega();
@@ -110,6 +114,31 @@
   .info-extra {
     font-family: $openSansRegular;
     display: inline-block;
+  }
+
+  .feedback-ouvidoria {
+    margin: 15px 40px;
+    background-color: $branco;
+    border: 1px solid $cinza-medio;
+    border-top: 1px solid $cinza-medio;
+    font-size: 15px;
+    padding: 15px 20px;
+
+    .titulo-ouvidoria { 
+      color: $azul-claro;
+      height: 40px;
+      background-color: $cinza-claro;
+      text-transform: uppercase;
+      font-family: $openSansBold;
+      font-size: 13px;
+      border-bottom: 1px solid $cinza-medio;
+      padding: 11px 20px 0 20px;
+      margin-bottom: 15px;
+    }
+ 
+	 a {
+      padding: 20px 15px;
+    }
   }
 
   .subtitulo-etapa {

@@ -3,32 +3,31 @@
       xmlns:th="http://www.thymeleaf.org">
 <body th:with='orgaoDestinatario=${servico.orgao.id.substring(servico.orgao.id.lastIndexOf("-")+1)}'>
 
-<p>Para realizar uma denúncia, reclamação, solicitação ou fazer uma sugestão ou elogio para este serviço do Poder Executivo Federal.</p>
-<br/>
 <div class="feedback-ouvidoria">
+<p class="titulo-ouvidoria">Avalie esse serviço: </p>
 
 <a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=1" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=1(orgaoDestinatario=${orgaoDestinatario})}'>
-  <i class="fa fa-2x fa-bullhorn" title="Denúncia" aria-hidden="true"></i>
+  <i class="fa fa-2x fa-bullhorn fa-middle" title="Denúncia" aria-hidden="true"></i>
   <span>Denúncia</span>
 </a>
 
 <a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=2" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=2(orgaoDestinatario=${orgaoDestinatario})}'>
-  <i class="fa fa-2x fa-thumbs-o-down" title="Reclamação" aria-hidden="true"></i>
+  <i class="fa fa-2x fa-thumbs-o-down fa-middle" title="Reclamação" aria-hidden="true"></i>
   <span>Reclamação</span>
 </a>
 
 <a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=5" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=4(orgaoDestinatario=${orgaoDestinatario})}'>
-  <i class="fa fa-2x fa-child" title="Solicitação" aria-hidden="true"></i>
+  <i class="fa fa-2x fa-child fa-middle" title="Solicitação" aria-hidden="true"></i>
   <span>Solicitação</span>
 </a>
 
 <a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=4" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=5(orgaoDestinatario=${orgaoDestinatario})}'>
-  <i class="fa fa-2x fa-commenting-o" title="Sugestão" aria-hidden="true"></i>
+  <i class="fa fa-2x fa-commenting-o fa-middle" title="Sugestão" aria-hidden="true"></i>
   <span>Sugestão</span>
 </a>
 
 <a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=3" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=3(orgaoDestinatario=${orgaoDestinatario})}'>
-  <i class="fa fa-2x fa-thumbs-o-up" title="Elogio" aria-hidden="true"></i>
+  <i class="fa fa-2x fa-thumbs-o-up fa-middle" title="Elogio" aria-hidden="true"></i>
   <span>Elogio</span>
 </a>
 </div>
