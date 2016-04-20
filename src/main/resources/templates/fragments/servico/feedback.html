@@ -4,7 +4,7 @@
 <body th:with='orgaoDestinatario=${servico.orgao.id.substring(servico.orgao.id.lastIndexOf("-")+1)}'>
 
 <div class="feedback-ouvidoria">
-<p class="titulo-ouvidoria">Avalie esse serviço: </p>
+<!--<p class="titulo-ouvidoria">Avalie esse serviço: </p>-->
 
 <a href="https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=1" th:href='@{https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?tipo=1(orgaoDestinatario=${orgaoDestinatario})}'>
   <i class="fa fa-2x fa-bullhorn fa-middle" title="Denúncia" aria-hidden="true"></i>
