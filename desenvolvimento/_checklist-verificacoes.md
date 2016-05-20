@@ -22,6 +22,7 @@ portal1       /bin/sh -c sh /run.sh            Up      8080/tcp
 portal2       /bin/sh -c sh /run.sh            Up      8080/tcp                                                           
 ```
 
+
 - Verifique que a versão do Portal de Serviços é a desejada:
 
 ```bash
