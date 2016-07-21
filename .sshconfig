@@ -12,7 +12,7 @@ RhostsRSAAuthentication no
 StrictHostKeyChecking no
 
 Host dev
-  Hostname 189.9.150.163
+  Hostname 189.9.151.81
   User root
   Port 22
   IdentityFile ./secrets/id_rsa_dev
