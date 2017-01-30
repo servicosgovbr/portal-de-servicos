@@ -48,7 +48,7 @@ O comando acima deve produzir saída similar à seguinte:
 - Verifique que a versão do Editor de Serviços é a desejada:
 
 ```bash
-curl -k https://localhost/editar/info
+curl -k https://localhost/editor/info
 ```
 
 O comando acima deve produzir saída similar à seguinte:
