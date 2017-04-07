@@ -2,11 +2,6 @@
 
 A monitoração da saúde do host é feita de maneira externa, utilizando Nagios. Para o monitoramento das instâncias da aplicação e [ElasticSearch], com informações mais detalhadas, as seguintes opções estão disponíveis:
 
-## Balanceador de Carga
-
-As estatísticas do HAProxy ficam disponíveis através da porta de administração (8080/tcp), no endereço `/lb-stats`. Por exemplo, em produção, estas estão disponíveis em `http://servicos.gov.br:8080/lb-stats`.
- 
-Nesta página estão contidas algumas estatísticas de acesso, em números de I/O brutos, bem como de disponibilidade dos serviços gerenciados.
 
 ## Portal de Serviços
 
@@ -56,10 +51,6 @@ O Editor de Serviços disponibiliza informações de saúde através do endereç
 ```
 
 Nele, é possível ver o estado geral da aplicação (`status`) e do espaço em disco (`diskSpace`).
-
-## Kibana
-
-Todos os logs gerados pelas aplicações são redirecionados para o [ElasticSearch] através do [Logstash]. Eles são indexados e podem ser auditados, buscados e visualizados através do [Kibana], que fica disponível na porta 5601/tcp. Por exemplo, em produção, a ferramenta está disponível em `http://servicos.gov.br:5601/`.
 
 [ElasticSearch]:../desenvolvimento/elasticsearch.md
 [Logstash]:https://www.elastic.co/products/logstash
