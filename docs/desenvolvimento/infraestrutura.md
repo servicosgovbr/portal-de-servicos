@@ -9,7 +9,7 @@ Estes ambientes contém uma máquina virtual com as seguintes aplicações Docke
 * Portal de Serviços
 * Editor de Serviços
 * Postgres
-* ElasticSearch 
+* ElasticSearch
 
 Estas estão definidas na configuração, em formato [Docker-Compose], do [repositório relacionado][DOCKER-REPO].
 
@@ -28,7 +28,7 @@ Estas são as portas utilizadas internamente para comunicação entre contêiner
 
 | Origem             | Destino            | Portas              | Notas                        |
 |--------------------|--------------------|---------------------|------------------------------|
-| Portal de Serviços | ElasticSearch      | 9300/tcp            |                              |
+| Portal de Serviços | ElasticSearch      | 9300/tcp            |                             -|
 
 
 ### Volumes externos
@@ -38,5 +38,4 @@ Os seguintes arquivos e diretórios são disponibilizados da máquina host para 
 | Contêiner            | Volume                            | Backup? | Notas                                                |
 |----------------------|-----------------------------------|---------|------------------------------------------------------|
 | Editor de Serviços   | /root/.ssh                        | Sim     | Chave SSH para publicação no Github, somente leitura |
-| ElasticSearch        | /usr/share/elasticsearch/es1/data | Sim     |                                                      |
-
+| ElasticSearch        | /usr/share/elasticsearch/es1/data | Sim     |                                                     -|
