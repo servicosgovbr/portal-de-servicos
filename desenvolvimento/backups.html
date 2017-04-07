@@ -1,1417 +1,1289 @@
+
 <!DOCTYPE HTML>
 <html lang="pt" >
-    
     <head>
-        
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Backups | Portal de Serviços</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Backups · Portal de Serviços</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
-        <meta name="HandheldFriendly" content="true"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
+    
     <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+    
         
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+    
         
     
         
-        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
-        
     
+        
     
 
         
     
     
-    <link rel="next" href="../desenvolvimento/compatibilidade-de-plataformas.html" />
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="compatibilidade-de-plataformas.html" />
     
     
-    <link rel="prev" href="../desenvolvimento/auditabilidade.html" />
+    <link rel="prev" href="auditabilidade.html" />
     
 
-        
     </head>
     <body>
         
+<div class="book">
+    <div class="book-summary">
         
-    <div class="book"
-        data-level="10.10.3"
-        data-chapter-title="Backups"
-        data-filepath="desenvolvimento/backups.md"
-        data-basepath=".."
-        data-revision="Fri May 20 2016 20:08:37 GMT+0000 (UTC)"
-        data-innerlanguage="">
-    
-
-<div class="book-summary">
-    <nav role="navigation">
-        <ul class="summary">
             
-            
-            
-            
-
-            
-
-            
-    
-        <li class="chapter " data-level="0" data-path="index.html">
-            
-                
-                    <a href="../index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                        Introdução
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1" data-path="sobre-este-documento/index.html">
-            
-                
-                    <a href="../sobre-este-documento/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.</b>
-                        
-                        Sobre este documento
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.1" data-path="sobre-este-documento/convencoes-adotadas.html">
-            
-                
-                    <a href="../sobre-este-documento/convencoes-adotadas.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.1.</b>
-                        
-                        Convenções adotadas
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="sobre-este-documento/como-contribuir.html">
-            
-                
-                    <a href="../sobre-este-documento/como-contribuir.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.2.</b>
-                        
-                        Como contribuir
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="2" data-path="principios/index.html">
-            
-                
-                    <a href="../principios/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.</b>
-                        
-                        Princípios
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3" data-path="sobre-o-projeto/index.html">
-            
-                
-                    <a href="../sobre-o-projeto/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                        Sobre o projeto
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="3.1" data-path="sobre-o-projeto/equipe.html">
-            
-                
-                    <a href="../sobre-o-projeto/equipe.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.1.</b>
-                        
-                        Equipe
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="sobre-o-projeto/contato.html">
-            
-                
-                    <a href="../sobre-o-projeto/contato.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.2.</b>
-                        
-                        Contato
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="sobre-o-projeto/como-contribuir.html">
-            
-                
-                    <a href="../sobre-o-projeto/como-contribuir.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.3.</b>
-                        
-                        Como contribuir
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="sobre-o-projeto/como-relatar-problemas.html">
-            
-                
-                    <a href="../sobre-o-projeto/como-relatar-problemas.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.4.</b>
-                        
-                        Como relatar problemas
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.5" data-path="sobre-o-projeto/licenca.html">
-            
-                
-                    <a href="../sobre-o-projeto/licenca.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.5.</b>
-                        
-                        Licença de uso
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="4" data-path="servicos/index.html">
-            
-                
-                    <a href="../servicos/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.</b>
-                        
-                        Serviços
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="4.1" data-path="servicos/o-que-e-um-servico.html">
-            
-                
-                    <a href="../servicos/o-que-e-um-servico.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.1.</b>
-                        
-                        O que é um serviço?
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="servicos/etapas-da-oferta.html">
-            
-                
-                    <a href="../servicos/etapas-da-oferta.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.2.</b>
-                        
-                        Etapas da oferta de serviços
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="servicos/modelos-de-maturidade.html">
-            
-                
-                    <a href="../servicos/modelos-de-maturidade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.3.</b>
-                        
-                        Modelos de maturidade
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="servicos/criterios-para-escolha.html">
-            
-                
-                    <a href="../servicos/criterios-para-escolha.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.4.</b>
-                        
-                        Critérios para escolha
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5" data-path="servicos/personas-identificadas.html">
-            
-                
-                    <a href="../servicos/personas-identificadas.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.5.</b>
-                        
-                        Personas identificadas
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="4.5.1" data-path="servicos/persona-aposentando.html">
-            
-                
-                    <a href="../servicos/persona-aposentando.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.5.1.</b>
-                        
-                        Joana, Aposentanda
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5.2" data-path="servicos/persona-estudante.html">
-            
-                
-                    <a href="../servicos/persona-estudante.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.5.2.</b>
-                        
-                        Eduardo, Estudante
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5.3" data-path="servicos/persona-exportador.html">
-            
-                
-                    <a href="../servicos/persona-exportador.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.5.3.</b>
-                        
-                        Marcelo, Exportador
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6" data-path="servicos/jornadas-identificadas.html">
-            
-                
-                    <a href="../servicos/jornadas-identificadas.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.6.</b>
-                        
-                        Mapas de experiência
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="4.6.1" data-path="servicos/jornada-aposentando.html">
-            
-                
-                    <a href="../servicos/jornada-aposentando.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.6.1.</b>
-                        
-                        Joana, Aposentando
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6.2" data-path="servicos/jornada-estudante.html">
-            
-                
-                    <a href="../servicos/jornada-estudante.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.6.2.</b>
-                        
-                        Eduardo, Estudante
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6.3" data-path="servicos/jornada-exportador.html">
-            
-                
-                    <a href="../servicos/jornada-exportador.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.6.3.</b>
-                        
-                        Marcelo, Exportador
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="5" data-path="modelo-de-explicitacao/index.html">
-            
-                
-                    <a href="../modelo-de-explicitacao/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.</b>
-                        
-                        Modelo de explicitação de serviço
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1" data-path="modelo-de-explicitacao/definicao-tecnica.html">
-            
-                
-                    <a href="../modelo-de-explicitacao/definicao-tecnica.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.1.</b>
-                        
-                        Definição técnica
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="modelo-de-explicitacao/versoes.html">
-            
-                
-                    <a href="../modelo-de-explicitacao/versoes.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.2.</b>
-                        
-                        Versões
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" data-path="modelo-de-explicitacao/estrutura-de-diretorios.html">
-            
-                
-                    <a href="../modelo-de-explicitacao/estrutura-de-diretorios.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.3.</b>
-                        
-                        Estrutura de diretórios
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="modelo-de-explicitacao/mer.html">
-            
-                
-                    <a href="../modelo-de-explicitacao/mer.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.4.</b>
-                        
-                        Diagrama de entidade relacionamento
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.5" data-path="modelo-de-explicitacao/migracoes-de-dados.html">
-            
-                
-                    <a href="../modelo-de-explicitacao/migracoes-de-dados.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.5.</b>
-                        
-                        Migrações de dados
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.6" data-path="modelo-de-explicitacao/mapeamento-vcge.html">
-            
-                
-                    <a href="../modelo-de-explicitacao/mapeamento-vcge.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.6.</b>
-                        
-                        Mapeamento VCGE 1.0 para VCGE 2.0.3
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="metricas/index.html">
-            
-                
-                    <a href="../metricas/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.</b>
-                        
-                        Métricas
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="6.1" data-path="metricas/kpis.html">
-            
-                
-                    <a href="../metricas/kpis.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.1.</b>
-                        
-                        KPIs
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="metricas/plataforma-de-performance.html">
-            
-                
-                    <a href="../metricas/plataforma-de-performance.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.2.</b>
-                        
-                        Plataforma de desempenho
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="7" data-path="metodologia-de-desenvolvimento/index.html">
-            
-                
-                    <a href="../metodologia-de-desenvolvimento/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        Metodologia de desenvolvimento
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="7.1" data-path="metodologia-de-desenvolvimento/hipoteses.html">
-            
-                
-                    <a href="../metodologia-de-desenvolvimento/hipoteses.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.1.</b>
-                        
-                        Hipóteses
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.2" data-path="metodologia-de-desenvolvimento/metricas.html">
-            
-                
-                    <a href="../metodologia-de-desenvolvimento/metricas.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.2.</b>
-                        
-                        Métricas
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.3" data-path="metodologia-de-desenvolvimento/fluxo-de-trabalho.html">
-            
-                
-                    <a href="../metodologia-de-desenvolvimento/fluxo-de-trabalho.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.3.</b>
-                        
-                        Fluxo de trabalho
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="7.4" data-path="metodologia-de-desenvolvimento/kanban-e-iteracoes.html">
-            
-                
-                    <a href="../metodologia-de-desenvolvimento/kanban-e-iteracoes.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.4.</b>
-                        
-                        Kanban e Iterações
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="8" data-path="design/index.html">
-            
-                
-                    <a href="../design/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.</b>
-                        
-                        Design
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="8.1" data-path="design/principios-de-design.html">
-            
-                
-                    <a href="../design/principios-de-design.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.1.</b>
-                        
-                        Princípios de design
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.2" data-path="design/grade.html">
-            
-                
-                    <a href="../design/grade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.2.</b>
-                        
-                        Grade
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.3" data-path="design/tipografia.html">
-            
-                
-                    <a href="../design/tipografia.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.3.</b>
-                        
-                        Tipografia
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.4" data-path="design/cores.html">
-            
-                
-                    <a href="../design/cores.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.4.</b>
-                        
-                        Cores
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.5" data-path="design/imagens-e-icones.html">
-            
-                
-                    <a href="../design/imagens-e-icones.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.5.</b>
-                        
-                        Imagens e ícones
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.6" data-path="design/testes-de-usabilidade.html">
-            
-                
-                    <a href="../design/testes-de-usabilidade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.6.</b>
-                        
-                        Testes de Usabilidade
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="8.6.1" data-path="design/roteiro-teste-de-usabilidade.html">
-            
-                
-                    <a href="../design/roteiro-teste-de-usabilidade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.6.1.</b>
-                        
-                        Roteiro de Teste de Usabilidade
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="9" data-path="conteudo/index.html">
-            
-                
-                    <a href="../conteudo/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>9.</b>
-                        
-                        Conteúdo
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="9.1" data-path="conteudo/dicas-bom-conteudo.html">
-            
-                
-                    <a href="../conteudo/dicas-bom-conteudo.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>9.1.</b>
-                        
-                        Dicas para um bom conteúdo
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="9.2" data-path="conteudo/conteudo-relevante.html">
-            
-                
-                    <a href="../conteudo/conteudo-relevante.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>9.2.</b>
-                        
-                        Conteúdo relevante
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="9.3" data-path="conteudo/conteudo-acessivel.html">
-            
-                
-                    <a href="../conteudo/conteudo-acessivel.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>9.3.</b>
-                        
-                        Conteúdo acessível
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="9.4" data-path="conteudo/titulos.html">
-            
-                
-                    <a href="../conteudo/titulos.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>9.4.</b>
-                        
-                        Títulos
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="10" data-path="desenvolvimento/index.html">
-            
-                
-                    <a href="../desenvolvimento/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.</b>
-                        
-                        Desenvolvimento
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="10.1" data-path="desenvolvimento/arquitetura.html">
-            
-                
-                    <a href="../desenvolvimento/arquitetura.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.1.</b>
-                        
-                        Arquitetura
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.2" data-path="desenvolvimento/ferramentas-utilizadas.html">
-            
-                
-                    <a href="../desenvolvimento/ferramentas-utilizadas.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.2.</b>
-                        
-                        Ferramentas utilizadas
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.3" data-path="desenvolvimento/infraestrutura.html">
-            
-                
-                    <a href="../desenvolvimento/infraestrutura.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.3.</b>
-                        
-                        Infraestrutura
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.4" data-path="desenvolvimento/dados-criptografados.html">
-            
-                
-                    <a href="../desenvolvimento/dados-criptografados.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.4.</b>
-                        
-                        Dados Criptografados
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.5" data-path="desenvolvimento/implantacao-e-execucao.html">
-            
-                
-                    <a href="../desenvolvimento/implantacao-e-execucao.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.5.</b>
-                        
-                        Implantação e execução
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="10.5.1" data-path="desenvolvimento/deploy-local.html">
-            
-                
-                    <a href="../desenvolvimento/deploy-local.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.5.1.</b>
-                        
-                        Desenvolvimento local
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.5.2" data-path="desenvolvimento/persistencia-acesso-permissoes.html">
-            
-                
-                    <a href="../desenvolvimento/persistencia-acesso-permissoes.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.5.2.</b>
-                        
-                        Persistencia de Acesso e Permissões
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="10.6" data-path="desenvolvimento/configuracao.html">
-            
-                
-                    <a href="../desenvolvimento/configuracao.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.6.</b>
-                        
-                        Configuração
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.7" data-path="desenvolvimento/testes.html">
-            
-                
-                    <a href="../desenvolvimento/testes.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.7.</b>
-                        
-                        Testes
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.8" data-path="desenvolvimento/entrega-continua.html">
-            
-                
-                    <a href="../desenvolvimento/entrega-continua.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.8.</b>
-                        
-                        Entrega Contínua
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="10.8.1" data-path="desenvolvimento/repositorio-yum.html">
-            
-                
-                    <a href="../desenvolvimento/repositorio-yum.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.8.1.</b>
-                        
-                        Repositório Yum
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="10.9" data-path="desenvolvimento/elasticsearch.html">
-            
-                
-                    <a href="../desenvolvimento/elasticsearch.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.9.</b>
-                        
-                        ElasticSearch
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10" data-path="desenvolvimento/requisitos-transversais.html">
-            
-                
-                    <a href="../desenvolvimento/requisitos-transversais.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.</b>
-                        
-                        Requisitos Transversais
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="10.10.1" data-path="desenvolvimento/acessibilidade.html">
-            
-                
-                    <a href="../desenvolvimento/acessibilidade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.1.</b>
-                        
-                        Acessibilidade
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.2" data-path="desenvolvimento/auditabilidade.html">
-            
-                
-                    <a href="../desenvolvimento/auditabilidade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.2.</b>
-                        
-                        Auditabilidade
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter active" data-level="10.10.3" data-path="desenvolvimento/backups.html">
-            
-                
-                    <a href="../desenvolvimento/backups.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.3.</b>
-                        
-                        Backups
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.4" data-path="desenvolvimento/compatibilidade-de-plataformas.html">
-            
-                
-                    <a href="../desenvolvimento/compatibilidade-de-plataformas.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.4.</b>
-                        
-                        Compatibilidade de plataformas
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.5" data-path="desenvolvimento/dependencias-de-terceiros.html">
-            
-                
-                    <a href="../desenvolvimento/dependencias-de-terceiros.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.5.</b>
-                        
-                        Dependências de terceiros
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.6" data-path="desenvolvimento/disponibilidade.html">
-            
-                
-                    <a href="../desenvolvimento/disponibilidade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.6.</b>
-                        
-                        Disponibilidade
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.7" data-path="desenvolvimento/documentacao.html">
-            
-                
-                    <a href="../desenvolvimento/documentacao.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.7.</b>
-                        
-                        Documentação
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.8" data-path="desenvolvimento/escalabilidade.html">
-            
-                
-                    <a href="../desenvolvimento/escalabilidade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.8.</b>
-                        
-                        Escalabilidade
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.9" data-path="desenvolvimento/monitoramento.html">
-            
-                
-                    <a href="../desenvolvimento/monitoramento.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.9.</b>
-                        
-                        Monitoramento
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.10" data-path="desenvolvimento/performance.html">
-            
-                
-                    <a href="../desenvolvimento/performance.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.10.</b>
-                        
-                        Performance
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.11" data-path="desenvolvimento/privacidade.html">
-            
-                
-                    <a href="../desenvolvimento/privacidade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.11.</b>
-                        
-                        Privacidade
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.12" data-path="desenvolvimento/seguranca.html">
-            
-                
-                    <a href="../desenvolvimento/seguranca.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.12.</b>
-                        
-                        Segurança
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="10.10.13" data-path="desenvolvimento/usabilidade.html">
-            
-                
-                    <a href="../desenvolvimento/usabilidade.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>10.10.13.</b>
-                        
-                        Usabilidade
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="11" data-path="implantacao/index.html">
-            
-                
-                    <a href="../implantacao/index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>11.</b>
-                        
-                        Implantação
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="11.1" data-path="implantacao/documento-de-implantacao.html">
-            
-                
-                    <a href="../implantacao/documento-de-implantacao.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>11.1.</b>
-                        
-                        Detalhes de Implantação
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-
-            
-            <li class="divider"></li>
-            <li>
-                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                    Publicado com GitBook
-                </a>
-            </li>
-            
-        </ul>
-    </nav>
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escreva para pesquisar" />
 </div>
 
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introdução
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../sobre-este-documento/">
+            
+                <a href="../sobre-este-documento/">
+            
+                    
+                    Sobre este documento
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../sobre-este-documento/convencoes-adotadas.html">
+            
+                <a href="../sobre-este-documento/convencoes-adotadas.html">
+            
+                    
+                    Convenções adotadas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../sobre-este-documento/como-contribuir.html">
+            
+                <a href="../sobre-este-documento/como-contribuir.html">
+            
+                    
+                    Como contribuir
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../principios/">
+            
+                <a href="../principios/">
+            
+                    
+                    Princípios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../sobre-o-projeto/">
+            
+                <a href="../sobre-o-projeto/">
+            
+                    
+                    Sobre o projeto
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../sobre-o-projeto/equipe.html">
+            
+                <a href="../sobre-o-projeto/equipe.html">
+            
+                    
+                    Equipe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../sobre-o-projeto/contato.html">
+            
+                <a href="../sobre-o-projeto/contato.html">
+            
+                    
+                    Contato
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../sobre-o-projeto/como-contribuir.html">
+            
+                <a href="../sobre-o-projeto/como-contribuir.html">
+            
+                    
+                    Como contribuir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../sobre-o-projeto/como-relatar-problemas.html">
+            
+                <a href="../sobre-o-projeto/como-relatar-problemas.html">
+            
+                    
+                    Como relatar problemas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../sobre-o-projeto/licenca.html">
+            
+                <a href="../sobre-o-projeto/licenca.html">
+            
+                    
+                    Licença de uso
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../servicos/">
+            
+                <a href="../servicos/">
+            
+                    
+                    Serviços
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../servicos/o-que-e-um-servico.html">
+            
+                <a href="../servicos/o-que-e-um-servico.html">
+            
+                    
+                    O que é um serviço?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../servicos/etapas-da-oferta.html">
+            
+                <a href="../servicos/etapas-da-oferta.html">
+            
+                    
+                    Etapas da oferta de serviços
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../servicos/modelos-de-maturidade.html">
+            
+                <a href="../servicos/modelos-de-maturidade.html">
+            
+                    
+                    Modelos de maturidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../servicos/criterios-para-escolha.html">
+            
+                <a href="../servicos/criterios-para-escolha.html">
+            
+                    
+                    Critérios para escolha
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../servicos/personas-identificadas.html">
+            
+                <a href="../servicos/personas-identificadas.html">
+            
+                    
+                    Personas identificadas
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="../servicos/persona-aposentando.html">
+            
+                <a href="../servicos/persona-aposentando.html">
+            
+                    
+                    Joana, Aposentanda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="../servicos/persona-estudante.html">
+            
+                <a href="../servicos/persona-estudante.html">
+            
+                    
+                    Eduardo, Estudante
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="../servicos/persona-exportador.html">
+            
+                <a href="../servicos/persona-exportador.html">
+            
+                    
+                    Marcelo, Exportador
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../servicos/jornadas-identificadas.html">
+            
+                <a href="../servicos/jornadas-identificadas.html">
+            
+                    
+                    Mapas de experiência
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="../servicos/jornada-aposentando.html">
+            
+                <a href="../servicos/jornada-aposentando.html">
+            
+                    
+                    Joana, Aposentando
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.2" data-path="../servicos/jornada-estudante.html">
+            
+                <a href="../servicos/jornada-estudante.html">
+            
+                    
+                    Eduardo, Estudante
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.3" data-path="../servicos/jornada-exportador.html">
+            
+                <a href="../servicos/jornada-exportador.html">
+            
+                    
+                    Marcelo, Exportador
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../modelo-de-explicitacao/">
+            
+                <a href="../modelo-de-explicitacao/">
+            
+                    
+                    Modelo de explicitação de serviço
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../modelo-de-explicitacao/definicao-tecnica.html">
+            
+                <a href="../modelo-de-explicitacao/definicao-tecnica.html">
+            
+                    
+                    Definição técnica
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../modelo-de-explicitacao/versoes.html">
+            
+                <a href="../modelo-de-explicitacao/versoes.html">
+            
+                    
+                    Versões
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../modelo-de-explicitacao/estrutura-de-diretorios.html">
+            
+                <a href="../modelo-de-explicitacao/estrutura-de-diretorios.html">
+            
+                    
+                    Estrutura de diretórios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../modelo-de-explicitacao/mer.html">
+            
+                <a href="../modelo-de-explicitacao/mer.html">
+            
+                    
+                    Diagrama de entidade relacionamento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../modelo-de-explicitacao/migracoes-de-dados.html">
+            
+                <a href="../modelo-de-explicitacao/migracoes-de-dados.html">
+            
+                    
+                    Migrações de dados
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../modelo-de-explicitacao/mapeamento-vcge.html">
+            
+                <a href="../modelo-de-explicitacao/mapeamento-vcge.html">
+            
+                    
+                    Mapeamento VCGE 1.0 para VCGE 2.0.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../metricas/">
+            
+                <a href="../metricas/">
+            
+                    
+                    Métricas
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../metricas/kpis.html">
+            
+                <a href="../metricas/kpis.html">
+            
+                    
+                    KPIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../metricas/plataforma-de-performance.html">
+            
+                <a href="../metricas/plataforma-de-performance.html">
+            
+                    
+                    Plataforma de desempenho
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../metodologia-de-desenvolvimento/">
+            
+                <a href="../metodologia-de-desenvolvimento/">
+            
+                    
+                    Metodologia de desenvolvimento
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../metodologia-de-desenvolvimento/hipoteses.html">
+            
+                <a href="../metodologia-de-desenvolvimento/hipoteses.html">
+            
+                    
+                    Hipóteses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../metodologia-de-desenvolvimento/metricas.html">
+            
+                <a href="../metodologia-de-desenvolvimento/metricas.html">
+            
+                    
+                    Métricas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../metodologia-de-desenvolvimento/fluxo-de-trabalho.html">
+            
+                <a href="../metodologia-de-desenvolvimento/fluxo-de-trabalho.html">
+            
+                    
+                    Fluxo de trabalho
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../metodologia-de-desenvolvimento/kanban-e-iteracoes.html">
+            
+                <a href="../metodologia-de-desenvolvimento/kanban-e-iteracoes.html">
+            
+                    
+                    Kanban e Iterações
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../design/">
+            
+                <a href="../design/">
+            
+                    
+                    Design
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../design/principios-de-design.html">
+            
+                <a href="../design/principios-de-design.html">
+            
+                    
+                    Princípios de design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../design/grade.html">
+            
+                <a href="../design/grade.html">
+            
+                    
+                    Grade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../design/tipografia.html">
+            
+                <a href="../design/tipografia.html">
+            
+                    
+                    Tipografia
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../design/cores.html">
+            
+                <a href="../design/cores.html">
+            
+                    
+                    Cores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../design/imagens-e-icones.html">
+            
+                <a href="../design/imagens-e-icones.html">
+            
+                    
+                    Imagens e ícones
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../design/testes-de-usabilidade.html">
+            
+                <a href="../design/testes-de-usabilidade.html">
+            
+                    
+                    Testes de Usabilidade
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.6.1" data-path="../design/roteiro-teste-de-usabilidade.html">
+            
+                <a href="../design/roteiro-teste-de-usabilidade.html">
+            
+                    
+                    Roteiro de Teste de Usabilidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../conteudo/">
+            
+                <a href="../conteudo/">
+            
+                    
+                    Conteúdo
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../conteudo/dicas-bom-conteudo.html">
+            
+                <a href="../conteudo/dicas-bom-conteudo.html">
+            
+                    
+                    Dicas para um bom conteúdo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../conteudo/conteudo-relevante.html">
+            
+                <a href="../conteudo/conteudo-relevante.html">
+            
+                    
+                    Conteúdo relevante
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../conteudo/conteudo-acessivel.html">
+            
+                <a href="../conteudo/conteudo-acessivel.html">
+            
+                    
+                    Conteúdo acessível
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../conteudo/titulos.html">
+            
+                <a href="../conteudo/titulos.html">
+            
+                    
+                    Títulos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Desenvolvimento
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="arquitetura.html">
+            
+                <a href="arquitetura.html">
+            
+                    
+                    Arquitetura
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="ferramentas-utilizadas.html">
+            
+                <a href="ferramentas-utilizadas.html">
+            
+                    
+                    Ferramentas utilizadas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="infraestrutura.html">
+            
+                <a href="infraestrutura.html">
+            
+                    
+                    Infraestrutura
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="dados-criptografados.html">
+            
+                <a href="dados-criptografados.html">
+            
+                    
+                    Dados Criptografados
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="implantacao-e-execucao.html">
+            
+                <a href="implantacao-e-execucao.html">
+            
+                    
+                    Implantação e execução
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.5.1" data-path="deploy-local.html">
+            
+                <a href="deploy-local.html">
+            
+                    
+                    Desenvolvimento local
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5.2" data-path="persistencia-acesso-permissoes.html">
+            
+                <a href="persistencia-acesso-permissoes.html">
+            
+                    
+                    Persistencia de Acesso e Permissões
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="configuracao.html">
+            
+                <a href="configuracao.html">
+            
+                    
+                    Configuração
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="testes.html">
+            
+                <a href="testes.html">
+            
+                    
+                    Testes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="entrega-continua.html">
+            
+                <a href="entrega-continua.html">
+            
+                    
+                    Entrega Contínua
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.8.1" data-path="repositorio-yum.html">
+            
+                <a href="repositorio-yum.html">
+            
+                    
+                    Repositório Yum
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="elasticsearch.html">
+            
+                <a href="elasticsearch.html">
+            
+                    
+                    ElasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10" data-path="requisitos-transversais.html">
+            
+                <a href="requisitos-transversais.html">
+            
+                    
+                    Requisitos Transversais
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.10.1" data-path="acessibilidade.html">
+            
+                <a href="acessibilidade.html">
+            
+                    
+                    Acessibilidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.2" data-path="auditabilidade.html">
+            
+                <a href="auditabilidade.html">
+            
+                    
+                    Auditabilidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11.10.3" data-path="backups.html">
+            
+                <a href="backups.html">
+            
+                    
+                    Backups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.4" data-path="compatibilidade-de-plataformas.html">
+            
+                <a href="compatibilidade-de-plataformas.html">
+            
+                    
+                    Compatibilidade de plataformas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.5" data-path="dependencias-de-terceiros.html">
+            
+                <a href="dependencias-de-terceiros.html">
+            
+                    
+                    Dependências de terceiros
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.6" data-path="disponibilidade.html">
+            
+                <a href="disponibilidade.html">
+            
+                    
+                    Disponibilidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.7" data-path="documentacao.html">
+            
+                <a href="documentacao.html">
+            
+                    
+                    Documentação
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.8" data-path="escalabilidade.html">
+            
+                <a href="escalabilidade.html">
+            
+                    
+                    Escalabilidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.9" data-path="monitoramento.html">
+            
+                <a href="monitoramento.html">
+            
+                    
+                    Monitoramento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.10" data-path="performance.html">
+            
+                <a href="performance.html">
+            
+                    
+                    Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.11" data-path="privacidade.html">
+            
+                <a href="privacidade.html">
+            
+                    
+                    Privacidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.12" data-path="seguranca.html">
+            
+                <a href="seguranca.html">
+            
+                    
+                    Segurança
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.10.13" data-path="usabilidade.html">
+            
+                <a href="usabilidade.html">
+            
+                    
+                    Usabilidade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../implantacao/">
+            
+                <a href="../implantacao/">
+            
+                    
+                    Implantação
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../implantacao/documento-de-implantacao.html">
+            
+                <a href="../implantacao/documento-de-implantacao.html">
+            
+                    
+                    Detalhes de Implantação
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado com GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
     <div class="book-body">
-        <div class="body-inner">
-            <div class="book-header" role="navigation">
-    <!-- Actions Left -->
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
     
 
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >Portal de Serviços</a>
+        <a href=".." >Backups</a>
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1" role="main">
-                <div class="page-inner">
-                
-                
-                    <section class="normal" id="section-">
-                    
-                        <h1 id="backups">Backups</h1>
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="backups">Backups</h1>
 <p>Backups devem ser feitos dos seguintes caminhos:</p>
 <table>
 <thead>
@@ -1459,50 +1331,86 @@
 <p>Recomenda-se que o backup dos dados dos usu&#xE1;rios seja efetuado diariamente por uma rotina autom&#xE1;tica. Considerando que o volume de dados armazenados ser&#xE1; pequeno, o armazenamento di&#xE1;rio n&#xE3;o dever&#xE1; ser um problema. Al&#xE9;m disso, recomenda-se que os backups mais antigos que sete dias sejam descartados automaticamente. Essa rotina de dele&#xE7;&#xE3;o autom&#xE1;tica dever&#xE1; ser executada somente se backups dos &#xFA;ltimos sete dias existirem de fato.</p>
 <p><strong>Aten&#xE7;&#xE3;o</strong>: recomenda-se  que o backup seja armazenado em um volume externo da m&#xE1;quina host do Docker.</p>
 
-                    
-                    </section>
-                
-                
-                </div>
-            </div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
         </div>
-
-        
-        <a href="../desenvolvimento/auditabilidade.html" class="navigation navigation-prev " aria-label="Previous page: Auditabilidade"><i class="fa fa-angle-left"></i></a>
-        
-        
-        <a href="../desenvolvimento/compatibilidade-de-plataformas.html" class="navigation navigation-next " aria-label="Next page: Compatibilidade de plataformas"><i class="fa fa-angle-right"></i></a>
-        
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
     </div>
 </div>
 
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="auditabilidade.html" class="navigation navigation-prev " aria-label="Previous page: Auditabilidade">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="compatibilidade-de-plataformas.html" class="navigation navigation-next " aria-label="Next page: Compatibilidade de plataformas">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
         
-<script src="../gitbook/app.js"></script>
+    </div>
 
-    
-    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
-    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
-    
-
-<script>
-require(["gitbook"], function(gitbook) {
-    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
-    gitbook.start(config);
-});
-</script>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Backups","level":"1.11.10.3","depth":3,"next":{"title":"Compatibilidade de plataformas","level":"1.11.10.4","depth":3,"path":"desenvolvimento/compatibilidade-de-plataformas.md","ref":"desenvolvimento/compatibilidade-de-plataformas.md","articles":[]},"previous":{"title":"Auditabilidade","level":"1.11.10.2","depth":3,"path":"desenvolvimento/auditabilidade.md","ref":"desenvolvimento/auditabilidade.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"_sumario.md"},"variables":{},"title":"Portal de Serviços","language":"pt","gitbook":">=2.0.0"},"file":{"path":"desenvolvimento/backups.md","mtime":"2017-04-07T18:58:47.796Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-07T19:52:37.579Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
 
         
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
     </body>
-    
 </html>
+
