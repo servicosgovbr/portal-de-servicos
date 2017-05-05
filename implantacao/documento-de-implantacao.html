@@ -1293,7 +1293,7 @@
 <li>Postgres</li>
 <li>ElasticSearch</li>
 </ul>
-<p>Estas est&#xE3;o definidas na configura&#xE7;&#xE3;o, em formato <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a>, do <a href="https://github.com/servicosgovbr/docker" target="_blank">reposit&#xF3;rio relacionado</a>.</p>
+<p>Estas est&#xE3;o definidas na configura&#xE7;&#xE3;o, em formato <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a>, do <a href="https://git.planejamento.gov.br/sti/portal-servicos-editor-de-servicos/tree/1.0.31-OS9-Sprint6/docker" target="_blank">reposit&#xF3;rio relacionado</a>.</p>
 <h2 id="portas-e-firewalls">Portas e firewalls</h2>
 <p>Todo o tr&#xE1;fego deve ser direcionado a estas portas:</p>
 <ul>
@@ -1315,7 +1315,18 @@
 <td>Portal de Servi&#xE7;os</td>
 <td>ElasticSearch</td>
 <td>9300/tcp</td>
-<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Portal de Servi&#xE7;os</td>
+<td>Postgres</td>
+<td>5432/tcp</td>
+<td></td>
+</tr>
+<tr>
+<td>Editor de Servi&#xE7;os</td>
+<td>Postgres</td>
+<td>5432/tcp</td>
 </tr>
 </tbody>
 </table>
@@ -1341,16 +1352,21 @@
 <td>ElasticSearch</td>
 <td>/usr/share/elasticsearch/es1/data</td>
 <td>Sim</td>
-<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Postgres</td>
+<td>/var/lib/postgresql/data</td>
+<td>Sim</td>
 </tr>
 </tbody>
 </table>
 <h2 id="configura&#xE7;&#xE3;o">Configura&#xE7;&#xE3;o</h2>
-<p>Tanto o Portal quanto o Editor de Servi&#xE7;os utilizam vari&#xE1;veis de ambiente para configura&#xE7;&#xE3;o. Todas elas t&#xEA;m valores padr&#xE3;o, e algumas s&#xE3;o redefinidas na configura&#xE7;&#xE3;o dos cont&#xEA;iners usando o <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a> (mais especificamente, atrav&#xE9;s da diretiva <code>environment</code> dos arquivos <code>docker-compose.yml</code> do <a href="https://git.planejamento.gov.br/sti/portal-servicos/tree/master/portal-de-servicos/docker/docker-compose-builder/docker-compose/docker-compose.prod.yml" target="_blank">Portal</a> e do <a href="https://git.planejamento.gov.br/sti/portal-servicos-editor-de-servicos/tree/master/docker/docker-compose-builder/docker-compose/docker-compose.prod.yml" target="_blank">Editor</a>).</p>
+<p>Tanto o Portal quanto o Editor de Servi&#xE7;os utilizam vari&#xE1;veis de ambiente para configura&#xE7;&#xE3;o. Todas elas t&#xEA;m valores padr&#xE3;o, e algumas s&#xE3;o redefinidas na configura&#xE7;&#xE3;o dos cont&#xEA;iners usando o <a href="http://www.docker.com/compose" target="_blank">Docker-Compose</a> (mais especificamente, atrav&#xE9;s da diretiva <code>environment</code> dos arquivos <code>docker-compose.yml</code> do <a href="https://git.planejamento.gov.br/sti/portal-servicos/blob/1.0.20-OS9-Sprint6/docker/docker-compose-builder/docker-compose/docker-compose.prod.yml" target="_blank">Portal</a> e do <a href="https://git.planejamento.gov.br/sti/portal-servicos-editor-de-servicos/blob/1.0.31-OS9-Sprint6/docker/docker-compose-builder/docker-compose/docker-compose.prod.yml" target="_blank">Editor</a>).</p>
 <p>Os arquivos que listam as configura&#xE7;&#xF5;es padr&#xE3;o s&#xE3;o:</p>
 <ul>
-<li>Portal de Servi&#xE7;os: <a href="https://git.planejamento.gov.br/sti/portal-servicos/tree/master/portal-de-servicos/scripts/portal-de-servicos.default.config" target="_blank"><code>scripts/portal-de-servicos.default.config</code></a></li>
-<li>Editor de Servi&#xE7;os: <a href="https://git.planejamento.gov.br/sti/portal-servicos-editor-de-servicos/tree/master/scripts/editor-de-servicos.default.config" target="_blank"><code>scripts/editor-de-servicos.default.config</code></a></li>
+<li>Portal de Servi&#xE7;os: <a href="https://git.planejamento.gov.br/sti/portal-servicos/blob/1.0.20-OS9-Sprint6/scripts/portal-de-servicos.default.config" target="_blank"><code>scripts/portal-de-servicos.default.config</code></a></li>
+<li>Editor de Servi&#xE7;os: <a href="https://git.planejamento.gov.br/sti/portal-servicos-editor-de-servicos/blob/1.0.31-OS9-Sprint6/docker/docker-compose-builder/docker-compose/docker-compose.prod.yml" target="_blank"><code>scripts/editor-de-servicos.default.config</code></a></li>
 </ul>
 <h2 id="acessos-e-conex&#xF5;es">Acessos e Conex&#xF5;es</h2>
 <p>Atrav&#xE9;s de acordos t&#xE9;cnicos e conversas com os respons&#xE1;veis pela infraestrutura do Minist&#xE9;rio do Planejamento, as seguintes regras acessos de <strong><em>firewall</em></strong> foram definidas como essenciais para garantir a interoperabilidade do Portal de Servi&#xE7;os: </p>
@@ -1364,11 +1380,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Snap (54.186.9.43)</td>
-<td>22, 80, 443</td>
-<td>NA</td>
-</tr>
 <tr>
 <td>Internet</td>
 <td>80, 443</td>
@@ -1569,6 +1580,12 @@ export PDS_PIWIK_SITE=2
 export PDS_PIWIK_URL=&quot;https://estatisticas.presidencia.gov.br/&quot;
 export PDS_PIWIK_TOKEN=&apos;&apos;
 export FLAGS_PERMITIR_ROBOS=&apos;true&apos;
+export PORTAL_URL=&apos;http://servicos.nuvem.gov.br&apos;
+export EDITOR_URL=&apos;http://servicos.nuvem.gov.br&apos;
+export CAPTCHA_KEYS_SITE=&apos;6LfHRQwUAAAAACGReFwiW-fQ_fR78WQYXagi_sBR&apos;
+export CAPTCHA_KEYS_SECRET=&apos;6LfHRQwUAAAAAES36H-lRrPUPlZNAP5hyFU2KsI3&apos;
+export MAIL_REMETENTE=&apos;governodigital@planejamento.gov.br&apos;
+export MAIL_SUBJECT=&apos;Recuperar acesso&apos;
 </code></pre><p>Ressaltamos que para acessar o TOKEN entrar em contato com a Coordena&#xE7;&#xE3;o-Geral de Dados e Servi&#xE7;os P&#xFA;blicos Digitais.</p>
 <h3 id="construindo-os-cont&#xEA;ineres">Construindo os Cont&#xEA;ineres</h3>
 <p>Construa e rode os cont&#xEA;ineres:</p>
@@ -1629,7 +1646,7 @@ Vers&#xE3;o: vers&#xE3;o que ser&#xE1; criado a imagem <span class="hljs-keyword
 <h3 id="atualiza&#xE7;&#xF5;es-posteriores">Atualiza&#xE7;&#xF5;es posteriores</h3>
 <p>Todos os comandos a seguir devem ser rodados como super-usu&#xE1;rio (root), e presumem uma m&#xE1;quina [CentOS] 7 64bit, que j&#xE1; tem os cont&#xEA;ineres <a href="http://www.docker.com" target="_blank">Docker</a> rodando.</p>
 <ul>
-<li>Atualize o reposit&#xF3;rio <a href="https://github.com/servicosgovbr/docker" target="_blank">servicosgovbr/docker</a> no diret&#xF3;rio <code>/root/docker/</code>:</li>
+<li>Atualize os reposit&#xF3;rios <a href="https://git.planejamento.gov.br/sti/portal-servicos" target="_blank">servicosgovbr/portal</a> e <a href="https://git.planejamento.gov.br/sti/portal-servicos-editor-de-servicos" target="_blank">servicosgovbr/editor</a> no diret&#xF3;rio <code>/root/</code>:</li>
 </ul>
 <pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /root/portal-servicos-editor-de-servicos
 git pull
@@ -1734,26 +1751,24 @@ Creating balanceador...
 <td>/var/log/<em>*/</em></td>
 <td>Sim</td>
 </tr>
+<tr>
+<td>/var/lib/postgresql/data</td>
+<td>Sim</td>
+</tr>
 </tbody>
 </table>
 <p>A reten&#xE7;&#xE3;o dos mesmos pode variar dependendo do ambiente. Recomenda-se ao menos 30 dias.</p>
 <h2 id="usu&#xE1;rios-e-permiss&#xF5;es">Usu&#xE1;rios e Permiss&#xF5;es</h2>
-<p>Para efetuar o backup  dos dados do banco de dados que d&#xE1; suporte &#xE0; aplica&#xE7;&#xE3;o, contidos no cont&#xEA;iner dbdata, &#xE9; necess&#xE1;rio realizar os seguintes passos:</p>
+<p>Para efetuar o backup dos dados do banco de dados que d&#xE1; suporte &#xE0; aplica&#xE7;&#xE3;o, contidos no NFS SERVER, &#xE9; necess&#xE1;rio realizar os seguintes passos:</p>
 <ol>
-<li>Criar novo cont&#xEA;iner docker que se conecta com a pasta <code>/dbdata</code> onde est&#xE1; localizado os dados do banco</li>
-<li>Esse cont&#xEA;iner deve ter uma pasta <code>/backup</code> compartilhada com o sistema</li>
-<li>Executar comando para comprimir a pasta <code>/dbdata</code> na pasta <code>/backup</code>:<pre><code>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c &quot;tar czvf /backup/backup-$(date &apos;+%d_%m_%y_%H_%M&apos;).tar.gz /dbdata&quot;
+<li>Compactar a pasta <code>/exports</code> onde est&#xE1; localizado os dados do banco no servidor do NFS SERVER</li>
+<li>Esse servidor deve ter uma pasta <code>/exports</code> compartilhada com o sistema</li>
+<li>Executar comando para realizar o backup a pasta <code>/exports</code> no servidor do NFS SERVER preservando as permiss&#xE3;o de usu&#xE1;rios e grupo da pasta:<pre><code>rsync -av /exporte.$(date &apos;+%d_%m_%y_%H_%M&apos;)
 </code></pre></li>
 </ol>
 <p>Para recuperar os dados a partir de um backup:</p>
-<ol>
-<li>Pare a execu&#xE7;&#xE3;o dos cont&#xEA;ineres no host do Docker
-<code>cd ~/docker/</code> e <code>docker-compose stop</code></li>
-<li>Execute o data volume cont&#xEA;iner dbdata com o arquivo backup.tar descomprimido:<pre><code>docker run --volumes-from dbdata -v $(pwd):/backup ubuntu bash -c &quot;rm -rf /dbdata/* &amp;&amp; cd /tmp &amp;&amp; tar xzvf /backup/backup-22_12_15_07_51.tar.gz &amp;&amp; mv dbdata/* ../dbdata/&quot;
-</code></pre></li>
-<li>Ligue novamente os cont&#xEA;ineres:<br><code>docker-compose up</code></li>
-</ol>
-<p>Recomenda-se que o backup dos dados dos usu&#xE1;rios seja efetuado diariamente por uma rotina autom&#xE1;tica. Considerando que o volume de dados armazenados ser&#xE1; pequeno, o armazenamento di&#xE1;rio n&#xE3;o dever&#xE1; ser um problema. Al&#xE9;m disso, recomenda-se que os backups mais antigos que sete dias sejam descartados automaticamente. Essa rotina de dele&#xE7;&#xE3;o autom&#xE1;tica dever&#xE1; ser executada somente se backups dos &#xFA;ltimos sete dias existirem de fato.</p>
+<pre><code>mv exporte.data-atual /exports
+</code></pre><p>Recomenda-se que o backup dos dados dos usu&#xE1;rios seja efetuado diariamente por uma rotina autom&#xE1;tica. Considerando que o volume de dados armazenados ser&#xE1; pequeno, o armazenamento di&#xE1;rio n&#xE3;o dever&#xE1; ser um problema. Al&#xE9;m disso, recomenda-se que os backups mais antigos que sete dias sejam descartados automaticamente. Essa rotina de dele&#xE7;&#xE3;o autom&#xE1;tica dever&#xE1; ser executada somente se backups dos &#xFA;ltimos sete dias existirem de fato.</p>
 <p><strong>Aten&#xE7;&#xE3;o</strong>: recomenda-se  que o backup seja armazenado em um volume externo da m&#xE1;quina host do Docker.</p>
 <hr>
 <h1 id="monitoramento">Monitoramento</h1>
@@ -1851,7 +1866,7 @@ Creating balanceador...
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Detalhes de Implantação","level":"1.12.1","depth":2,"previous":{"title":"Implantação","level":"1.12","depth":1,"path":"implantacao/index.md","ref":"implantacao/index.md","articles":[{"title":"Detalhes de Implantação","level":"1.12.1","depth":2,"path":"implantacao/documento-de-implantacao.md","ref":"./implantacao/documento-de-implantacao.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"_sumario.md"},"variables":{},"title":"Portal de Serviços","language":"pt","gitbook":">=2.0.0"},"file":{"path":"implantacao/documento-de-implantacao.md","mtime":"2017-04-07T18:58:47.804Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-07T19:52:37.579Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Detalhes de Implantação","level":"1.12.1","depth":2,"previous":{"title":"Implantação","level":"1.12","depth":1,"path":"implantacao/index.md","ref":"implantacao/index.md","articles":[{"title":"Detalhes de Implantação","level":"1.12.1","depth":2,"path":"implantacao/documento-de-implantacao.md","ref":"./implantacao/documento-de-implantacao.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"_sumario.md"},"variables":{},"title":"Portal de Serviços","language":"pt","gitbook":">=2.0.0"},"file":{"path":"implantacao/documento-de-implantacao.md","mtime":"2017-05-05T16:34:44.119Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-05T16:53:00.757Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1859,10 +1874,6 @@ Creating balanceador...
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

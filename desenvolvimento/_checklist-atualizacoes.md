@@ -1,6 +1,6 @@
 Todos os comandos a seguir devem ser rodados como super-usuário (root), e presumem uma máquina [CentOS] 7 64bit, que já tem os contêineres [Docker] rodando.
 
-- Atualize o repositório [servicosgovbr/docker](https://github.com/servicosgovbr/docker) no diretório `/root/docker/`:
+- Atualize os repositórios [servicosgovbr/portal](https://git.planejamento.gov.br/sti/portal-servicos) e [servicosgovbr/editor](https://git.planejamento.gov.br/sti/portal-servicos-editor-de-servicos) no diretório `/root/`:
 
 ```bash
 cd /root/portal-servicos-editor-de-servicos
