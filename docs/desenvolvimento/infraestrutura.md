@@ -14,7 +14,7 @@ Estes ambientes contém uma máquina virtual com as seguintes aplicações Docke
 Estas estão definidas na configuração, em formato [Docker-Compose], do [repositório relacionado][DOCKER-REPO].
 
 [Docker-Compose]:http://docker.com/compose
-[DOCKER-REPO]:https://github.com/servicosgovbr/docker
+[DOCKER-REPO]:https://git.planejamento.gov.br/sti/portal-servicos-editor-de-servicos/tree/1.0.31-OS9-Sprint6/docker
 
 ## Portas e firewalls
 
@@ -28,7 +28,9 @@ Estas são as portas utilizadas internamente para comunicação entre contêiner
 
 | Origem             | Destino            | Portas              | Notas                        |
 |--------------------|--------------------|---------------------|------------------------------|
-| Portal de Serviços | ElasticSearch      | 9300/tcp            |                             -|
+| Portal de Serviços | ElasticSearch      | 9300/tcp            |                              |
+| Portal de Serviços | Postgres           | 5432/tcp            |                              |
+| Editor de Serviços | Postgres           | 5432/tcp            |                              |
 
 
 ### Volumes externos
@@ -38,4 +40,5 @@ Os seguintes arquivos e diretórios são disponibilizados da máquina host para 
 | Contêiner            | Volume                            | Backup? | Notas                                                |
 |----------------------|-----------------------------------|---------|------------------------------------------------------|
 | Editor de Serviços   | /root/.ssh                        | Sim     | Chave SSH para publicação no Github, somente leitura |
-| ElasticSearch        | /usr/share/elasticsearch/es1/data | Sim     |                                                     -|
+| ElasticSearch        | /usr/share/elasticsearch/es1/data | Sim     |                                                      |
+| Postgres             | /var/lib/postgresql/data          | Sim     |                                                      |

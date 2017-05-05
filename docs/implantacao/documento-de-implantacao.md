@@ -16,10 +16,9 @@ Através de acordos técnicos e conversas com os responsáveis pela infraestrutu
 
 |   |Desenvolvimento (189.9.150.163)|Produção (189.9.151.72)|
 |---|-------------------------------|-----------------------|
-| Snap (54.186.9.43)        |22, 80, 443|NA                 |   
 | Internet                  |80, 443    |80, 443            |  
 | Ministério do Planejamento|22, 80, 443, 8080, 5601|80, 443, 8080, 5601|  
- 
+
 **Acessos que devem estar liberados na saída das máquinas de Desenvolvimento e Produção**
 
 |   |Servidor Git (192.30.252.0/22)|

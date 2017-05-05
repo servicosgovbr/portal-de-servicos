@@ -221,6 +221,12 @@ export PDS_PIWIK_SITE=2
 export PDS_PIWIK_URL="https://estatisticas.presidencia.gov.br/"
 export PDS_PIWIK_TOKEN=''
 export FLAGS_PERMITIR_ROBOS='true'
+export PORTAL_URL='http://servicos.nuvem.gov.br'
+export EDITOR_URL='http://servicos.nuvem.gov.br'
+export CAPTCHA_KEYS_SITE='6LfHRQwUAAAAACGReFwiW-fQ_fR78WQYXagi_sBR'
+export CAPTCHA_KEYS_SECRET='6LfHRQwUAAAAAES36H-lRrPUPlZNAP5hyFU2KsI3'
+export MAIL_REMETENTE='governodigital@planejamento.gov.br'
+export MAIL_SUBJECT='Recuperar acesso'
 ```
 Ressaltamos que para acessar o TOKEN entrar em contato com a Coordenação-Geral de Dados e Serviços Públicos Digitais.
 
