@@ -14,11 +14,13 @@ A implementação do Portal de Serviços é guiada por três padrões de desenho
 
 ## Visão Geral
 
-[![Visão geral da arquitetura - diagrama de classes - models](./servico-entities-os10.png)](./servico-entities-os10.png)
+[![Visão geral da arquitetura - diagrama de classes - models](./servico-entities-os12.png)](./servico-entities-os12.png)
 
-[![Visão geral da arquitetura - diagrama de classes - controllers](./servico-controllers-os10.png)](./servico-controllers-os10.png)
+[![Visão geral da arquitetura - diagrama de classes - controllers](./servico-controllers-os12.png)](./servico-controllers-os12.png)
 
-[![Visão geral da arquitetura - diagrama de classes - services](./servico-services-os10.png)](./servico-services-os10.png)
+[![Visão geral da arquitetura - diagrama de classes - controllers](./servico-controllers-api-os12.png)](./servico-controllers-api-os12.png)
+
+[![Visão geral da arquitetura - diagrama de classes - services](./servico-services-os12.png)](./servico-services-os12.png)
 
 # Portal
 
