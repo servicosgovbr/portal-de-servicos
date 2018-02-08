@@ -8,12 +8,12 @@ Pretendemos utilizar e acompanhar [as ferramentas e bibliotecas](./ferramentas-u
 
 ### Objetivos técnicos
 
-* Código limpo e de fácil compreensão
-* Documentação técnica gerada automaticamente através do código
-* Configuração programática
-* Gerenciamento de dependências centralizado
-* Testes automatizados de alta qualidade
-* Pacotes gerados automaticamente para as plataformas-alvo
-* Implantação e execução no menor número de passos possível
+* Código limpo e de fácil compreensão;
+* Documentação técnica gerada automaticamente através do código;
+* Configuração programática;
+* Gerenciamento de dependências centralizado;
+* Testes automatizados de alta qualidade;
+* Pacotes gerados automaticamente para as plataformas-alvo;
+* Implantação e execução no menor número de passos possível;
 
 [Java]:http://www.java.com
