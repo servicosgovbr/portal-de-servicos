@@ -1,4 +1,3 @@
-[![Status da construção](https://snap-ci.com/servicosgovbr/portal-de-servicos/branch/master/build_image)](https://snap-ci.com/servicosgovbr/portal-de-servicos/branch/master)
 [![Documentação](https://img.shields.io/badge/docs-latest-brightgreen.svg)](http://servicosgovbr.github.io/portal-de-servicos/)
 [![Cobertura de Testes](https://coveralls.io/repos/servicosgovbr/portal-de-servicos/badge.svg?branch=master)](https://coveralls.io/r/servicosgovbr/portal-de-servicos?branch=master)
 [![Nossas hipóteses](https://badge.waffle.io/servicosgovbr/portal-de-servicos.svg?label=in%20progress&title=Nossas%20hipóteses)](http://waffle.io/servicosgovbr/portal-de-servicos)
