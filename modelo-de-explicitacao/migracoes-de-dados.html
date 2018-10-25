@@ -7,7 +7,7 @@
         <title>Migrações de dados · Portal de Serviços</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -70,10 +70,6 @@
     <div class="book-summary">
         
             
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Escreva para pesquisar" />
-</div>
-
             
                 <nav role="navigation">
                 
@@ -1238,6 +1234,64 @@
             
         </li>
     
+        <li class="chapter " data-level="1.13" data-path="../integracao/">
+            
+                <a href="../integracao/">
+            
+                    
+                    Integração
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../integracao/brasil_cidadao.html">
+            
+                <a href="../integracao/brasil_cidadao.html">
+            
+                    
+                    Brasil Cidadão
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../integracao/eouv.html">
+            
+                <a href="../integracao/eouv.html">
+            
+                    
+                    eOuv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../integracao/portais_estaduais_municipais.html">
+            
+                <a href="../integracao/portais_estaduais_municipais.html">
+            
+                    
+                    Portais Estaduais/Municipais
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -1278,93 +1332,90 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
-    <div class="search-noresults">
-    
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="migra&#xE7;&#xF5;es-de-dados">Migra&#xE7;&#xF5;es de dados</h1>
 <p>A antiga plataforma do servicos.gov.br exportava um arquivo XML no seguinte formato:</p>
-<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
-<span class="hljs-tag">&lt;<span class="hljs-name">dados</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">servicos</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">servico</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>&gt;</span>Aux&#xED;lio-Doen&#xE7;a<span class="hljs-tag">&lt;/<span class="hljs-name">titulo</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">descricao</span>&gt;</span>
+<pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">dados</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">servicos</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">servico</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Aux&#xED;lio-Doen&#xE7;a<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>
                 Benef&#xED;cio concedido ao segurado impedido de trabalhar...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">descricao</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">requisitos</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">requisitos</span>&gt;</span>
                 ...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">requisitos</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">etapas</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">requisitos</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">etapas</span>&gt;</span>
                 ...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">etapas</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">canaisPrestacaoServico</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">canalPrestacaoServico</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">tipoCanalPrestacaoServico</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>&gt;</span>Presencial<span class="hljs-tag">&lt;/<span class="hljs-name">titulo</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">tipoCanalPrestacaoServico</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">descricao</span>&gt;</span>Servi&#xE7;o prestado nas Ag&#xEA;ncia da Previd&#xEA;ncia Social.<span class="hljs-tag">&lt;/<span class="hljs-name">descricao</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">canalPrestacaoServico</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">etapas</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">canaisPrestacaoServico</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">canalPrestacaoServico</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">tipoCanalPrestacaoServico</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Presencial<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">tipoCanalPrestacaoServico</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>Servi&#xE7;o prestado nas Ag&#xEA;ncia da Previd&#xEA;ncia Social.<span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">canalPrestacaoServico</span>&gt;</span>
                 ...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">canaisPrestacaoServico</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">taxa</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">taxa</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">informacoesUteis</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">informacaoUtil</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">tipoInformacaoUtil</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>&gt;</span>Agendamento<span class="hljs-tag">&lt;/<span class="hljs-name">titulo</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">tipoInformacaoUtil</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">descricao</span>&gt;</span>Agende aqui seu atendimento.<span class="hljs-tag">&lt;/<span class="hljs-name">descricao</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://www2.dataprev.gov.br/sabiweb/agendamento/inicio.view<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">informacaoUtil</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">canaisPrestacaoServico</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">taxa</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">taxa</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">informacoesUteis</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">informacaoUtil</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">tipoInformacaoUtil</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Agendamento<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">tipoInformacaoUtil</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>Agende aqui seu atendimento.<span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://www2.dataprev.gov.br/sabiweb/agendamento/inicio.view<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">informacaoUtil</span>&gt;</span>
                 ...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">informacoesUteis</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">compromissosAtendimento</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">informacoesUteis</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">compromissosAtendimento</span>&gt;</span>
                 ...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">compromissosAtendimento</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">legislacoes</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">compromissosAtendimento</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">legislacoes</span>&gt;</span>
                 ...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">legislacoes</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">palavrasChave</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">legislacoes</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">palavrasChave</span>&gt;</span>
                 ...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">palavrasChave</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">orgaoResponsavel</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>&gt;</span>Ministerio da Previdencia Social - MPS<span class="hljs-tag">&lt;/<span class="hljs-name">titulo</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">orgaoResponsavel</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">orgaoPrestador</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>&gt;</span>Instituto Nacional do Seguro Social - INSS.<span class="hljs-tag">&lt;/<span class="hljs-name">titulo</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">endereco</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">endereco</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">telefone</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">telefone</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">orgaoPrestador</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">publicosAlvo</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">publicoAlvo</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>&gt;</span>Servi&#xE7;os aos cidad&#xE3;os<span class="hljs-tag">&lt;/<span class="hljs-name">titulo</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">linhasDaViva</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">linhaDaVida</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>&gt;</span>Cuidando da sa&#xFA;de<span class="hljs-tag">&lt;/<span class="hljs-name">titulo</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">eventoslinhaDaVida</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">eventolinhaDaVida</span>&gt;</span>
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>&gt;</span>Seguro de vida e patrimonial<span class="hljs-tag">&lt;/<span class="hljs-name">titulo</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">eventolinhaDaVida</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">palavrasChave</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">orgaoResponsavel</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Ministerio da Previdencia Social - MPS<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">orgaoResponsavel</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">orgaoPrestador</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Instituto Nacional do Seguro Social - INSS.<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">endereco</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">endereco</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">telefone</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">telefone</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">orgaoPrestador</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">publicosAlvo</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">publicoAlvo</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Servi&#xE7;os aos cidad&#xE3;os<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">linhasDaViva</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">linhaDaVida</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Cuidando da sa&#xFA;de<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">eventoslinhaDaVida</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-title">eventolinhaDaVida</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Seguro de vida e patrimonial<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-title">eventolinhaDaVida</span>&gt;</span>
                                 ...
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">eventoslinhaDaVida</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">linhaDaVida</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-title">eventoslinhaDaVida</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">linhaDaVida</span>&gt;</span>
                         ...
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">linhasDaViva</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">publicoAlvo</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">linhasDaViva</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">publicoAlvo</span>&gt;</span>
                 ...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">publicosAlvo</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">areasInteresse</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">area</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>&gt;</span>Previd&#xEA;ncia Social<span class="hljs-tag">&lt;/<span class="hljs-name">titulo</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">area</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">publicosAlvo</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">areasInteresse</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">area</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>&gt;</span>Previd&#xEA;ncia Social<span class="hljs-tag">&lt;/<span class="hljs-title">titulo</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">area</span>&gt;</span>
                 ...
-            <span class="hljs-tag">&lt;/<span class="hljs-name">areasInteresse</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">servico</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">areasInteresse</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">servico</span>&gt;</span>
         ...
-    <span class="hljs-tag">&lt;/<span class="hljs-name">servicos</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">dados</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">servicos</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">dados</span>&gt;</span>
 </code></pre>
 <h2 id="campos-convertidos">Campos convertidos</h2>
 <p>Para as migra&#xE7;&#xF5;es de dados para a vers&#xE3;o mais recente, os seguintes campos foram mapeados:</p>
@@ -1521,71 +1572,55 @@ ou agendamento do servi&#xE7;o.</p>
 <code>Web</code> ou <code>Agendamento</code> foram convertidos em links Markdown ao final da descri&#xE7;&#xE3;o principal do servi&#xE7;o (<code>descricao</code>).</p>
 <h2 id="resultados">Resultados</h2>
 <p>Ao final da convers&#xE3;o, a carta exemplificada acima fica assim:</p>
-<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span> standalone=<span class="hljs-string">&quot;no&quot;</span><span class="hljs-meta">?&gt;</span></span>
-<span class="hljs-tag">&lt;<span class="hljs-name">servico</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://servicos.gov.br/v3/schema&quot;</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://servicos.gov.br/v3/schema ../servico.xsd&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">nome</span>&gt;</span>Aux&#xED;lio-Doen&#xE7;a<span class="hljs-tag">&lt;/<span class="hljs-name">nome</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">sigla</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">nomes-populares</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">descricao</span>&gt;</span>
+<pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">servico</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">&quot;http://servicos.gov.br/v3/schema&quot;</span> <span class="hljs-attribute">xmlns:xsi</span>=<span class="hljs-value">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="hljs-attribute">xsi:schemaLocation</span>=<span class="hljs-value">&quot;http://servicos.gov.br/v3/schema ../servico.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">nome</span>&gt;</span>Aux&#xED;lio-Doen&#xE7;a<span class="hljs-tag">&lt;/<span class="hljs-title">nome</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sigla</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">nomes-populares</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>
         Benef&#xED;cio concedido ao segurado impedido de trabalhar...
-    <span class="hljs-tag">&lt;/<span class="hljs-name">descricao</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">gratuito</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">solicitantes</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">tempo-total-estimado</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">descricao</span>/&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">tempo-total-estimado</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">etapas</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">etapa</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">titulo</span>/&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">descricao</span>/&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">documentos</span>/&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">custos</span>/&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">canais-de-prestacao</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">default</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">canal-de-prestacao</span> <span class="hljs-attr">tipo</span>=<span class="hljs-string">&quot;web-agendar&quot;</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">descricao</span>&gt;</span>http://www2.dataprev.gov.br/sabiweb/agendamento/inicio.view<span class="hljs-tag">&lt;/<span class="hljs-name">descricao</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">canal-de-prestacao</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">canal-de-prestacao</span> <span class="hljs-attr">tipo</span>=<span class="hljs-string">&quot;presencial&quot;</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">descricao</span>&gt;</span>Servi&#xE7;o prestado nas Ag&#xEA;ncia da Previd&#xEA;ncia Social.<span class="hljs-tag">&lt;/<span class="hljs-name">descricao</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">canal-de-prestacao</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">default</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">canais-de-prestacao</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">etapa</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">etapas</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">orgao</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;ministerio-da-previdencia-social-mps&quot;</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">segmentos-da-sociedade</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">item</span>&gt;</span>Cidad&#xE3;os<span class="hljs-tag">&lt;/<span class="hljs-name">item</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">segmentos-da-sociedade</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">eventos-da-linha-da-vida</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">item</span>&gt;</span>Cuidados com a sa&#xFA;de<span class="hljs-tag">&lt;/<span class="hljs-name">item</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">eventos-da-linha-da-vida</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">areas-de-interesse</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">item</span>&gt;</span>Previd&#xEA;ncia Social<span class="hljs-tag">&lt;/<span class="hljs-name">item</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">areas-de-interesse</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">palavras-chave</span>/&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">legislacoes</span>/&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">servico</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">gratuito</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">solicitantes</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">tempo-total-estimado</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">tempo-total-estimado</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">etapas</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">etapa</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">titulo</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">documentos</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">custos</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">canais-de-prestacao</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">default</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">canal-de-prestacao</span> <span class="hljs-attribute">tipo</span>=<span class="hljs-value">&quot;web-agendar&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>http://www2.dataprev.gov.br/sabiweb/agendamento/inicio.view<span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">canal-de-prestacao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">canal-de-prestacao</span> <span class="hljs-attribute">tipo</span>=<span class="hljs-value">&quot;presencial&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">descricao</span>&gt;</span>Servi&#xE7;o prestado nas Ag&#xEA;ncia da Previd&#xEA;ncia Social.<span class="hljs-tag">&lt;/<span class="hljs-title">descricao</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">canal-de-prestacao</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">default</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">canais-de-prestacao</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">etapa</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">etapas</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">orgao</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;ministerio-da-previdencia-social-mps&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">segmentos-da-sociedade</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">item</span>&gt;</span>Cidad&#xE3;os<span class="hljs-tag">&lt;/<span class="hljs-title">item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">segmentos-da-sociedade</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">eventos-da-linha-da-vida</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">item</span>&gt;</span>Cuidados com a sa&#xFA;de<span class="hljs-tag">&lt;/<span class="hljs-title">item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">eventos-da-linha-da-vida</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">areas-de-interesse</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">item</span>&gt;</span>Previd&#xEA;ncia Social<span class="hljs-tag">&lt;/<span class="hljs-title">item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">areas-de-interesse</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">palavras-chave</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">legislacoes</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">servico</span>&gt;</span>
 </code></pre>
 
                                 
                                 </section>
                             
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
                         </div>
                     </div>
                 
@@ -1609,7 +1644,7 @@ ou agendamento do servi&#xE7;o.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Migrações de dados","level":"1.6.5","depth":2,"next":{"title":"Mapeamento VCGE 1.0 para VCGE 2.0.3","level":"1.6.6","depth":2,"path":"modelo-de-explicitacao/mapeamento-vcge.md","ref":"modelo-de-explicitacao/mapeamento-vcge.md","articles":[]},"previous":{"title":"Diagrama de entidade relacionamento","level":"1.6.4","depth":2,"path":"modelo-de-explicitacao/mer.md","ref":"modelo-de-explicitacao/mer.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"_sumario.md"},"variables":{},"title":"Portal de Serviços","language":"pt","gitbook":">=2.0.0"},"file":{"path":"modelo-de-explicitacao/migracoes-de-dados.md","mtime":"2017-06-19T13:40:29.011Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-10-06T18:38:13.879Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Migrações de dados","level":"1.6.5","depth":2,"next":{"title":"Mapeamento VCGE 1.0 para VCGE 2.0.3","level":"1.6.6","depth":2,"path":"modelo-de-explicitacao/mapeamento-vcge.md","ref":"modelo-de-explicitacao/mapeamento-vcge.md","articles":[]},"previous":{"title":"Diagrama de entidade relacionamento","level":"1.6.4","depth":2,"path":"modelo-de-explicitacao/mer.md","ref":"modelo-de-explicitacao/mer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","instapaper","twitter","weibo"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"_sumario.md"},"variables":{},"title":"Portal de Serviços","language":"pt","gitbook":">=2.0.0"},"file":{"path":"modelo-de-explicitacao/migracoes-de-dados.md","mtime":"2018-05-08T19:26:42.266Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-25T14:28:45.042Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1619,7 +1654,11 @@ ou agendamento do servi&#xE7;o.</p>
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/lunr.min.js"></script>
         
     
         
@@ -1639,7 +1678,7 @@ ou agendamento do servi&#xE7;o.</p>
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
         
     
 
