@@ -70,6 +70,10 @@
     <div class="book-summary">
         
             
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escreva para pesquisar" />
+</div>
+
             
                 <nav role="navigation">
                 
@@ -1332,6 +1336,9 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
+<div id="book-search-results">
+    <div class="search-noresults">
+    
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="princ&#xED;pios-de-design">Princ&#xED;pios de design</h1>
@@ -1349,6 +1356,22 @@
                                 
                                 </section>
                             
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
                         </div>
                     </div>
                 
@@ -1372,7 +1395,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Princípios de design","level":"1.9.1","depth":2,"next":{"title":"Grade","level":"1.9.2","depth":2,"path":"design/grade.md","ref":"design/grade.md","articles":[]},"previous":{"title":"Design","level":"1.9","depth":1,"path":"design/index.md","ref":"design/index.md","articles":[{"title":"Princípios de design","level":"1.9.1","depth":2,"path":"design/principios-de-design.md","ref":"design/principios-de-design.md","articles":[]},{"title":"Grade","level":"1.9.2","depth":2,"path":"design/grade.md","ref":"design/grade.md","articles":[]},{"title":"Tipografia","level":"1.9.3","depth":2,"path":"design/tipografia.md","ref":"design/tipografia.md","articles":[]},{"title":"Cores","level":"1.9.4","depth":2,"path":"design/cores.md","ref":"design/cores.md","articles":[]},{"title":"Imagens e ícones","level":"1.9.5","depth":2,"path":"design/imagens-e-icones.md","ref":"design/imagens-e-icones.md","articles":[]},{"title":"Testes de Usabilidade","level":"1.9.6","depth":2,"path":"design/testes-de-usabilidade.md","ref":"design/testes-de-usabilidade.md","articles":[{"title":"Roteiro de Teste de Usabilidade","level":"1.9.6.1","depth":3,"path":"design/roteiro-teste-de-usabilidade.md","ref":"design/roteiro-teste-de-usabilidade.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{"maxIndexSize":1000000},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"all":["facebook","google","instapaper","twitter","weibo"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"_sumario.md"},"variables":{},"title":"Portal de Serviços","language":"pt","gitbook":">=2.0.0"},"file":{"path":"design/principios-de-design.md","mtime":"2018-05-08T19:26:42.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-25T14:28:45.042Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Princípios de design","level":"1.9.1","depth":2,"next":{"title":"Grade","level":"1.9.2","depth":2,"path":"design/grade.md","ref":"design/grade.md","articles":[]},"previous":{"title":"Design","level":"1.9","depth":1,"path":"design/index.md","ref":"design/index.md","articles":[{"title":"Princípios de design","level":"1.9.1","depth":2,"path":"design/principios-de-design.md","ref":"design/principios-de-design.md","articles":[]},{"title":"Grade","level":"1.9.2","depth":2,"path":"design/grade.md","ref":"design/grade.md","articles":[]},{"title":"Tipografia","level":"1.9.3","depth":2,"path":"design/tipografia.md","ref":"design/tipografia.md","articles":[]},{"title":"Cores","level":"1.9.4","depth":2,"path":"design/cores.md","ref":"design/cores.md","articles":[]},{"title":"Imagens e ícones","level":"1.9.5","depth":2,"path":"design/imagens-e-icones.md","ref":"design/imagens-e-icones.md","articles":[]},{"title":"Testes de Usabilidade","level":"1.9.6","depth":2,"path":"design/testes-de-usabilidade.md","ref":"design/testes-de-usabilidade.md","articles":[{"title":"Roteiro de Teste de Usabilidade","level":"1.9.6.1","depth":3,"path":"design/roteiro-teste-de-usabilidade.md","ref":"design/roteiro-teste-de-usabilidade.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"_sumario.md"},"variables":{},"title":"Portal de Serviços","language":"pt","gitbook":">=2.0.0"},"file":{"path":"design/principios-de-design.md","mtime":"2018-10-26T19:51:05.109Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-26T20:08:33.183Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1382,11 +1405,7 @@
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
         
     
         
@@ -1406,7 +1425,7 @@
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
