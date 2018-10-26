@@ -9,21 +9,31 @@ Atenção: O endpoint tem que ser público sem nenhum tipo de autenticação.
 
 ```
 {
+id (string, optional): ID do Serviço,
 name (string): Nome do Serviço,
 description (string): Descrição do Serviço,
 url (url): URL para mais detalhes do Serviço,
-popular_names (Array[string], optional): Nomes populares do Serviço,
-keywords (Array[string], optional): Palavras Chaves relacionadas ao Serviço
+date (date, optional): Data que o Serviço foi publicado no portal,
+organization (Object {name, id, url}, optional): Organização/Órgão do Serviço,
+popular_names (Array[name: string], optional): Nomes populares do Serviço,
+keywords (Array[name: string], optional): Palavras Chaves relacionadas ao Serviço
 }
 ```
 
 
 Exemplo em JSON:
 ```json
-{
+[{
+    "id": "ASDPO1234",
     "name": "Serviço para o cidadão",
     "description": "Descrição detalhada do serviço.",
     "url": "https://www.meuportal.gov.br/servicos/servico-para-cidadao",
+    "date": "2001-10-26T16:06:46Z",
+    "organization": {
+        "name": "Departamento para o cidadão",
+        "id": "DPT-123asAD",
+        "url": "https://www.meuportal.gov.br/orgao/departamento-para-cidadao"
+      },
     "popular_names": [
       {
         "name": "Serviço importante",
@@ -40,7 +50,9 @@ Exemplo em JSON:
         "name": "SPC",
       }
     ]
-}
+},
+{ ... }
+]
 ```
 
 Após a disponibilização desse endpoint entre em contato com os responsáveis pelo Portal de Serviços para que possam configurar a integração.
