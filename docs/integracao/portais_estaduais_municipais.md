@@ -57,6 +57,10 @@ Exemplo em JSON:
 
 Após a disponibilização desse endpoint entre em contato com os responsáveis pelo Portal de Serviços para que possam configurar a integração.
 
+## Fluxo de Importação
+
+[![Portal de Serviços - Fluxo de Importação](./integracaoportalestadual.png)](./integracaoportalestadual.png)
+
 ## Visualização no Portal de Serviços
 
 Na pesquisa a visualização no Portal de Serviços Federais será :
