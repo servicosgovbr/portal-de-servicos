@@ -1,3 +1,0 @@
-- [Métricas](/metricas/index.md)
-  - [KPIs](/metricas/kpis.md)
-  - [Plataforma de desempenho](/metricas/plataforma-de-performance.md)
