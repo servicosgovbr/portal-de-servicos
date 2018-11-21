@@ -1,5 +1,18 @@
 # Portais Estaduais e Municipais
 
+## Rotina de Integração com Serviços Estaduais
+
+O Portal de Serviços executa uma rotina  automática e periódica que busca as informações de serviços nas APIs dos Portais Estaduais cadastrados. A rotina busca os metadados de nome, descrição, nomes populares, palavras chaves e url de execução do serviço conforme seção **Passos da Integração** mais abaixo.
+
+Existe uma área no Editor de Serviços que faz o cadastro da API de serviço no Portal Estadual. São cadastrados o Nome do Portal, Nome do Estado, Sigla do Estado, URL da API e Periodicidade de execução da rotina que rotina busca as informações.
+
+[![Editor de Serviços - Tela de Cadastro de Portal Estadual](./editorcadastroestado.png)](./editorcadastroestado.png)
+
+
+## Fluxo de Importação
+
+[![Portal de Serviços - Fluxo de Importação](./integracaoportalestadual.png)](./integracaoportalestadual.png)
+
 
 ## Passos da Integração
 
@@ -56,10 +69,6 @@ Exemplo em JSON:
 ```
 
 Após a disponibilização desse endpoint entre em contato com os responsáveis pelo Portal de Serviços para que possam configurar a integração.
-
-## Fluxo de Importação
-
-[![Portal de Serviços - Fluxo de Importação](./integracaoportalestadual.png)](./integracaoportalestadual.png)
 
 ## Visualização no Portal de Serviços
 
