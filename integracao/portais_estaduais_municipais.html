@@ -1340,6 +1340,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="portais-estaduais-e-municipais">Portais Estaduais e Municipais</h1>
+<h2 id="rotina-de-integra&#xE7;&#xE3;o-com-servi&#xE7;os-estaduais">Rotina de Integra&#xE7;&#xE3;o com Servi&#xE7;os Estaduais</h2>
+<p>O Portal de Servi&#xE7;os executa uma rotina  autom&#xE1;tica e peri&#xF3;dica que busca as informa&#xE7;&#xF5;es de servi&#xE7;os nas APIs dos Portais Estaduais cadastrados. A rotina busca os metadados de nome, descri&#xE7;&#xE3;o, nomes populares, palavras chaves e url de execu&#xE7;&#xE3;o do servi&#xE7;o conforme se&#xE7;&#xE3;o <strong>Passos da Integra&#xE7;&#xE3;o</strong> mais abaixo.</p>
+<p>Existe uma &#xE1;rea no Editor de Servi&#xE7;os que faz o cadastro da API de servi&#xE7;o no Portal Estadual. S&#xE3;o cadastrados o Nome do Portal, Nome do Estado, Sigla do Estado, URL da API e Periodicidade de execu&#xE7;&#xE3;o da rotina que rotina busca as informa&#xE7;&#xF5;es.</p>
+<p><a href="editorcadastroestado.png"><img src="editorcadastroestado.png" alt="Editor de Servi&#xE7;os - Tela de Cadastro de Portal Estadual"></a></p>
+<h2 id="fluxo-de-importa&#xE7;&#xE3;o">Fluxo de Importa&#xE7;&#xE3;o</h2>
+<p><a href="integracaoportalestadual.png"><img src="integracaoportalestadual.png" alt="Portal de Servi&#xE7;os - Fluxo de Importa&#xE7;&#xE3;o"></a></p>
 <h2 id="passos-da-integra&#xE7;&#xE3;o">Passos da Integra&#xE7;&#xE3;o</h2>
 <p>Os portais de servicos estaduais e municipais que desejem ter seus servi&#xE7;os p&#xFA;blicos exibidos no Portal de Servi&#xE7;os Federal devem ter um endpoint em XML ou JSON que lista os servi&#xE7;os com name, description, url, popular_names, keywords:</p>
 <p>Aten&#xE7;&#xE3;o: O endpoint tem que ser p&#xFA;blico sem nenhum tipo de autentica&#xE7;&#xE3;o.</p>
@@ -1386,8 +1392,6 @@ keywords (Array[name: string], optional): Palavras Chaves relacionadas ao Servi&
 ]
 </code></pre>
 <p>Ap&#xF3;s a disponibiliza&#xE7;&#xE3;o desse endpoint entre em contato com os respons&#xE1;veis pelo Portal de Servi&#xE7;os para que possam configurar a integra&#xE7;&#xE3;o.</p>
-<h2 id="fluxo-de-importa&#xE7;&#xE3;o">Fluxo de Importa&#xE7;&#xE3;o</h2>
-<p><a href="integracaoportalestadual.png"><img src="integracaoportalestadual.png" alt="Portal de Servi&#xE7;os - Fluxo de Importa&#xE7;&#xE3;o"></a></p>
 <h2 id="visualiza&#xE7;&#xE3;o-no-portal-de-servi&#xE7;os">Visualiza&#xE7;&#xE3;o no Portal de Servi&#xE7;os</h2>
 <p>Na pesquisa a visualiza&#xE7;&#xE3;o no Portal de Servi&#xE7;os Federais ser&#xE1; :</p>
 <p><a href="pesquisa_servicos.png"><img src="pesquisa_servicos.png" alt="Portal de Servi&#xE7;os - Pesquisa de Servi&#xE7;os"></a></p>
@@ -1432,7 +1436,7 @@ keywords (Array[name: string], optional): Palavras Chaves relacionadas ao Servi&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Portais Estaduais/Municipais","level":"1.13.3","depth":2,"previous":{"title":"eOuv","level":"1.13.2","depth":2,"path":"integracao/eouv.md","ref":"integracao/eouv.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"_sumario.md"},"variables":{},"title":"Portal de Serviços","language":"pt","gitbook":">=2.0.0"},"file":{"path":"integracao/portais_estaduais_municipais.md","mtime":"2018-11-20T17:46:51.904Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-20T17:54:47.634Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Portais Estaduais/Municipais","level":"1.13.3","depth":2,"previous":{"title":"eOuv","level":"1.13.2","depth":2,"path":"integracao/eouv.md","ref":"integracao/eouv.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"_sumario.md"},"variables":{},"title":"Portal de Serviços","language":"pt","gitbook":">=2.0.0"},"file":{"path":"integracao/portais_estaduais_municipais.md","mtime":"2018-11-21T17:39:38.515Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-21T17:39:50.758Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
