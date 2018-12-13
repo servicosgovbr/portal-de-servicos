@@ -29,7 +29,7 @@ url (url): URL para mais detalhes do Serviço,
 date (date, optional): Data que o Serviço foi publicado no portal,
 organization (Object {name, id, url}, optional): Organização/Órgão do Serviço,
 popular_names (Array[name: string], optional): Nomes populares do Serviço,
-keywords (Array[name: string], optional): Palavras Chaves relacionadas ao Serviço
+keywords (Array[string], optional): Palavras Chaves relacionadas ao Serviço
 }
 ```
 
@@ -55,14 +55,7 @@ Exemplo em JSON:
         "name": "Outro nome popular",
       }
     ],
-    "keywords": [
-      {
-        "name": "Obter serviço",
-      },
-      {
-        "name": "SPC",
-      }
-    ]
+    "keywords": ["Obter serviço", "SPC"]
 },
 { ... }
 ]
